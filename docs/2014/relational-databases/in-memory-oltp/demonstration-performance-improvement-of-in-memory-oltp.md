@@ -1,5 +1,5 @@
 ---
-title: 'Demonstração: Aprimoramento do desempenho do OLTP in-memory | Microsoft Docs'
+title: 'Demonstração: melhoria do desempenho do OLTP in-memory | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071781"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demonstração: aprimoramento do desempenho do OLTP na memória
@@ -181,14 +181,14 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
   
  Os resultados esperados fornecem tempos de resposta reais mostrando como usar tabelas com otimização de e procedimentos armazenados compilados nativamente normalmente fornecem tempos de resposta consistentemente mais rápidos que as mesmas cargas de trabalho executadas em tabelas baseadas em disco tradicionais.  
   
-## <a name="see-also"></a>Consulte também  
- [Extensões do AdventureWorks para demonstrar OLTP na memória](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
- [OLTP in-memory &#40;Otimização na memória&#41;](in-memory-oltp-in-memory-optimization.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Extensões para o AdventureWorks para demonstrar o OLTP na memória](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
+ [O OLTP na memória &#40;a otimização na memória&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Tabelas com otimização de memória](memory-optimized-tables.md)   
  [Procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)   
  [Requisitos para usar tabelas com otimização de memória](requirements-for-using-memory-optimized-tables.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Opções de arquivo e grupos de arquivos ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREATE PROCEDURE e tabelas com otimização de memória](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [CRIAR procedimento e tabelas com otimização de memória](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

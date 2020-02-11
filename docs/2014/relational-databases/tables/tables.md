@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211783"
 ---
 # <a name="tables"></a>Tabelas
@@ -27,7 +27,7 @@ ms.locfileid: "68211783"
   
 -   Você pode atribuir propriedades à tabela e a cada coluna na tabela para controlar os dados que são permitidos e outras propriedades. Por exemplo, você poderá criar restrições em uma coluna para desaprovar valores nulos ou fornecer um valor padrão se um valor não for especificado, ou você poderá atribuir uma restrição chave na tabela que impõe exclusividade ou define uma relação entre tabelas.  
   
--   Os dados da tabela podem ser compactados por linha ou por página. A compactação de dados pode permitir armazenar mais linhas em uma página. Para obter mais informações, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+-   Os dados da tabela podem ser compactados por linha ou por página. A compactação de dados pode permitir armazenar mais linhas em uma página. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="types-of-tables"></a>Tipos de tabelas  
  Além da função padrão de tabelas básicas definidas pelo usuário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece os tipos de tabelas a seguir que servem para propósitos especiais em um banco de dados.  
@@ -39,7 +39,7 @@ ms.locfileid: "68211783"
  Tabelas temporárias são armazenadas em `tempdb`. Há dois tipos de tabelas temporárias: local e global. Elas diferem uma da outra pelo nome, visibilidade e disponibilidade. As tabelas temporárias locais têm um único sinal numérico (#) como primeiro caractere no nome; elas são visíveis somente na conexão atual para o usuário e são excluídas quando o usuário se desconecta da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As tabelas temporárias globais têm dois sinais numéricos (##) como primeiros caracteres no nome; elas são visíveis a qualquer usuário após serem criadas e são excluídas quando todos os usuários que consultam a tabela se desconectam da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tabelas do sistema  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os dados que definem a configuração do servidor e todas as suas tabelas em um conjunto especial de tabelas conhecido como tabelas do sistema. Usuários não podem consultar nem atualizar diretamente as tabelas do sistema. A informações das tabelas do sistema são disponibilizadas por meio de exibições do sistema. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](/sql/t-sql/language-reference).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]armazena os dados que definem a configuração do servidor e todas as suas tabelas em um conjunto especial de tabelas conhecidas como tabelas do sistema. Usuários não podem consultar nem atualizar diretamente as tabelas do sistema. A informações das tabelas do sistema são disponibilizadas por meio de exibições do sistema. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](/sql/t-sql/language-reference).  
   
  Tabelas largas  
  As tabelas largas usam [colunas esparsas](use-sparse-columns.md) para aumentar para 30.000 o total de colunas que uma tabela pode ter. Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos às custas de maior sobrecarga para recuperar valores não nulos. Uma tabela ampla definiu um [conjunto de colunas](use-column-sets.md), que é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. O número de índices e estatísticas também é aumentado para 1.000 e 30.000, respectivamente. O tamanho máximo de uma linha de tabela larga é de 8.019 bytes. Portanto, a maior parte dos dados contidos em qualquer linha específica deve ser NULL. O número máximo de colunas não esparsas mais as colunas computadas de uma tabela larga continua sendo 1.024.  
@@ -79,12 +79,12 @@ ms.locfileid: "68211783"
 |Descreve como alterar o nome de uma coluna.|[Renomear colunas &#40;Mecanismo de Banco de Dados&#41;](rename-columns-database-engine.md)|  
 |Descreve como copiar colunas de uma tabela para outra, copiando apenas a definição da coluna ou a definição e os dados.|[Copiar colunas de uma tabela para outra &#40;Mecanismo de Banco de Dados&#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
 |Descreve como modificar uma definição de coluna, alterando o tipo de dados ou outra propriedade.|[Modificar colunas &#40;Mecanismo de Banco de Dados&#41;](modify-columns-database-engine.md)|  
-|Descreve como alterar a ordem na qual as colunas aparecem.|[Alterar ordem das colunas em uma tabela](change-column-order-in-a-table.md)|  
+|Descreve como alterar a ordem na qual as colunas aparecem.|[Alterar ordem de colunas em uma tabela](change-column-order-in-a-table.md)|  
 |Descreve como criar uma coluna computada em uma tabela.|[Especificar colunas computadas em uma tabela](specify-computed-columns-in-a-table.md)|  
 |Descreve como especificar um valor padrão para uma coluna. Este valor é usado quando outro valor não é fornecido.|[Especificar valores padrão para colunas](specify-default-values-for-columns.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Restrições de chave primária e chave estrangeira](primary-and-foreign-key-constraints.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Restrições de chave primária e estrangeira](primary-and-foreign-key-constraints.md)   
  [Restrições exclusivas e restrições de verificação](unique-constraints-and-check-constraints.md)  
   
   

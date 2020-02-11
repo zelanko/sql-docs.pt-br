@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa5f333b050d817d68c8769d7e53a9455581a3ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768652"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Desenvolvendo objetos personalizados para o Integration Services
-  Quando os objetos de fluxo de controle e de fluxo de dados incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não atendem completamente a seus requisitos, você pode desenvolver muitos tipos de objetos personalizados, incluindo:  
+  Quando os objetos fluxo de controle e fluxo de dados incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não atendem totalmente às suas necessidades, você pode desenvolver muitos tipos de objetos personalizados por conta própria:  
   
 -   **Tarefas personalizadas**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62768652"
  Se você não tiver que reutilizar a funcionalidade personalizada em múltiplos pacotes, a tarefa Script e o componente Script proporcionam o total poder de uma linguagem de programação gerenciada, com significativamente menos códigos de infraestrutura para gravar. Para obter mais informações, consulte [Comparar soluções de script e objetos personalizados](../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md).  
   
 ## <a name="steps-in-developing-a-custom-object-for-integration-services"></a>Etapas para desenvolver um objeto personalizado para o Integration Services  
- Quando você desenvolve um objeto personalizado para usar no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você desenvolve uma Biblioteca de Classes (DLL) que será carregada em tempo de design e em tempo de execução pelo SSIS Designer e pelo tempo de execução do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Os métodos mais importantes que você deve implementar não são métodos que você chama do seu próprio código, mas métodos que o tempo de execução chama em momentos apropriados para inicializar e validar seu componente e invocar sua funcionalidade.  
+ Quando você desenvolve um objeto personalizado para usar no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você desenvolve uma Biblioteca de Classes (DLL) que será carregada em tempo de design e em runtime pelo SSIS Designer e pelo runtime do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Os métodos mais importantes que você deve implementar não são métodos que você chama do seu próprio código, mas métodos que o runtime chama em momentos apropriados para inicializar e validar seu componente e invocar sua funcionalidade.  
   
  Eis as etapas que você deve seguir para desenvolver um objeto personalizado:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62768652"
 ## <a name="base-classes-attributes-and-important-methods"></a>Classes base, atributos e métodos importantes  
  Esta tabela fornece uma referência fácil aos elementos mais importantes no modelo de objeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para cada tipo de objeto personalizado que você pode desenvolver.  
   
-|Objeto personalizado|Classe base|attribute|Métodos importantes|  
+|Objeto personalizado|Classe base|Atributo|Métodos importantes|  
 |-------------------|----------------|---------------|-----------------------|  
 |Tarefa|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |Gerenciador de conexões|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
@@ -110,9 +110,9 @@ ms.locfileid: "62768652"
   
 -   Entrada de blog, [O processo de criação de solução do Visual Studio dá um aviso sobre a dependência indireta no assembly do .NET Framework devido a referências SSIS](https://go.microsoft.com/fwlink/?LinkId=215662), em blogs.msdn.com.  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Persistência de objetos personalizados](persisting-custom-objects.md)   
  [Compilando, implantando e depurando objetos personalizados](building-deploying-and-debugging-custom-objects.md)  
   

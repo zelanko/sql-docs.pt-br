@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211736"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Sobre o change data capture (SQL Server)
@@ -29,14 +29,14 @@ ms.locfileid: "68211736"
 ## <a name="change-data-capture-data-flow"></a>Fluxo de dados do Change Data Capture  
  A ilustração seguinte mostra o fluxo de dados principal para a captura de dados de alteração.  
   
- ![Change data capture data flow](../../database-engine/media/cdcdataflow.gif "Change data capture data flow")  
+ ![Fluxo de dados da captura de dados de alterações](../../database-engine/media/cdcdataflow.gif "Fluxo de dados da captura de dados de alterações")  
   
  A origem de dados de alterações para a captura de dados de alterações é o log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Como inserções, atualizações e exclusões são aplicadas às tabelas de origem rastreadas, as entradas que descrevem essas alterações são adicionadas ao log. O log atua como entrada para o processo de captura. O processo lê o log e adiciona informações sobre alterações à tabela de alteração associada da tabela controlada. As funções são fornecidas para enumerar as alterações exibidas nas tabelas de alteração em um intervalo especificado, retornando informações em um conjunto de resultados filtrados. O conjunto de resultados filtrados é normalmente usado por um processo de aplicativo para atualizar uma representação da origem em algum ambiente externo.  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Compreendendo o Change Data Capture e a instância de captura  
  Antes do rastreamento das alterações em qualquer tabela individual dentro de um banco de dados, a captura de dados de alterações deve ser explicitamente habilitada para o banco de dados. Isso é feito usando o procedimento armazenado [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql). Quando o banco de dados está habilitado, é possível identificar as tabelas de origem como tabelas controladas usando o procedimento armazenado [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql). Quando uma tabela está habilitada para Change Data Capture, uma instância de captura associada é criada para dar suporte à disseminação dos dados de alteração na tabela de origem. A instância de captura consiste em uma tabela de alteração e até duas funções de consulta. Os metadados que descrevem os detalhes da configuração de uma instância de captura são mantidos nas tabelas de metadados de captura de dados de alteração `cdc.change_tables`, `cdc.index_columns` e `cdc.captured_columns`. Estas informações podem ser recuperadas usando o procedimento armazenado [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql).  
   
- Todos os objetos associados a uma instância de captura são criados no esquema de captura de dados de alteração do banco de dados habilitado. Os requisitos para o nome da instância de captura deve ser um nome de objeto válido e exclusivo entre as instâncias de captura de banco de dados. Por padrão, o nome é \<*schema name*_*table name*> da tabela de origem. Sua tabela de alteração associada é nomeada acrescentando `_CT` ao nome da instância de captura. A função que é usada para consultar todas as alterações é nomeada acrescentando `fn_cdc_get_all_changes_` ao nome da instância de captura. Se a instância de captura está configurada para suportar `net changes`, o `net_changes` consulta função também é criada e nomeada acrescentando **fn_cdc_get_net_changes\_**  ao nome de instância de captura.  
+ Todos os objetos associados a uma instância de captura são criados no esquema de captura de dados de alteração do banco de dados habilitado. Os requisitos para o nome da instância de captura deve ser um nome de objeto válido e exclusivo entre as instâncias de captura de banco de dados. Por padrão, o nome é \<o nome do *esquema*_*nome da tabela*> da tabela de origem. Sua tabela de alteração associada é nomeada acrescentando `_CT` ao nome da instância de captura. A função que é usada para consultar todas as alterações é nomeada acrescentando `fn_cdc_get_all_changes_` ao nome da instância de captura. Se a instância de captura estiver configurada para oferecer suporte `net changes`, a função de `net_changes` consulta também será criada e nomeada pelo **fn_cdc_get_net_changes\_ ** por prependentes para o nome da instância de captura.  
   
 ## <a name="change-table"></a>Tabela de alteração  
  As primeiras cinco colunas de uma tabela de alteração de captura de dados de alterações são colunas de metadados. Elas fornecem informações adicionais pertinentes à alteração registrada. As colunas restantes espelham as colunas capturadas identificadas da tabela de origem em nome e, geralmente, em tipo. Estas colunas mantêm os dados de coluna capturados que são juntados na tabela de origem.  
@@ -106,7 +106,7 @@ ms.locfileid: "68211736"
   
  O Change Data Capture não funciona corretamente quando o serviço Mecanismo de Banco de Dados ou o serviço SQL Server Agent está sendo executado na conta NETWORK SERVICE. Isso pode resultar no erro 22832.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Controle de alterações de dados &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
  [Habilitar e desabilitar a captura de dados de alterações &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [Trabalhar com dados de alterações &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)   

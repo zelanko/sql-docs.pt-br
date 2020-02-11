@@ -15,14 +15,14 @@ ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965198"
 ---
 # <a name="sortorder-property-example-vb"></a>Exemplo da propriedade SortOrder (VB)
-Este exemplo demonstra a [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriedade de uma [coluna](../../../ado/reference/adox-api/column-object-adox.md) que foi acrescentado para o [colunas](../../../ado/reference/adox-api/columns-collection-adox.md) coleção de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código acrescenta um índice em ordem crescente para a coluna de país na **funcionários** de tabela, em seguida, exibe os registros. Em seguida, o código acrescenta um índice decrescente para a coluna de país na **funcionários** de tabela e exibe os registros novamente. A diferença entre crescente e decrescente índices será mostrada.  
+Este exemplo demonstra a propriedade [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) de uma [coluna](../../../ado/reference/adox-api/column-object-adox.md) que foi anexada à coleção [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código anexa um índice crescente à coluna Country na tabela **Employees** e, em seguida, exibe os registros. Em seguida, o código acrescenta um índice decrescente à coluna Country na tabela **Employees** e exibe os registros novamente. A diferença entre índices crescentes e decrescentes é mostrada.  
   
 ```  
 ' BeginSortOrderVB  
@@ -136,7 +136,7 @@ End Sub
 ' EndSortOrderVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Coleção Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   

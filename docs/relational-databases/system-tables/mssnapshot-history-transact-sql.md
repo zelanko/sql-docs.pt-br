@@ -18,33 +18,33 @@ ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a84b8c8caae460975a871a22d7cdac6d741d4d93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997274"
 ---
-# <a name="mssnapshothistory-transact-sql"></a>MSsnapshot_history (Transact-SQL)
+# <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSsnapshot_history** tabela contém linhas de histórico para Snapshot Agents associados ao distribuidor local. Esta tabela é armazenada no banco de dados de distribuição.  
+  A tabela **MSsnapshot_history** contém linhas de histórico para os agentes de instantâneo associados ao distribuidor local. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|A ID do Snapshot Agent.|  
-|**runstatus**|**int**|O status da execução:<br /><br /> **1** = início.<br /><br /> **2** = êxito.<br /><br /> **3** = em andamento.<br /><br /> **4** = ocioso.<br /><br /> **5** = repetição.<br /><br /> **6** = falha.|  
+|**runstatus**|**int**|O status da execução:<br /><br /> **1** = iniciar.<br /><br /> **2** = com sucesso.<br /><br /> **3** = em andamento.<br /><br /> **4** = ocioso.<br /><br /> **5** = tentar novamente.<br /><br /> **6** = falha.|  
 |**start_time**|**datetime**|A hora inicial de execução do trabalho.|  
 |**time**|**datetime**|A hora de registro da mensagem.|  
-|**duration**|**int**|A duração, em segundos, da sessão de mensagem.|  
-|**Comentários**|**nvarchar(255)**|O texto da mensagem.|  
+|**permanência**|**int**|A duração, em segundos, da sessão de mensagem.|  
+|**feitos**|**nvarchar (255)**|O texto da mensagem.|  
 |**delivered_transactions**|**int**|O número total de transações entregues na sessão.|  
 |**delivered_commands**|**int**|O número de comandos entregues por segundo.|  
 |**delivery_rate**|**float(53)**|A média de comandos entregues por segundo.|  
-|**error_id**|**int**|A ID do erro na [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) tabela do sistema.|  
+|**error_id**|**int**|A ID do erro na tabela do sistema [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) .|  
 |**timestamp**|**timestamp**|A coluna de carimbo de data e hora dessa tabela.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

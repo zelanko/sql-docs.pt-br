@@ -14,24 +14,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046002"
 ---
 # <a name="detail-property"></a>Propriedade Detail
-  A propriedade **Detail** da classe **SoapException** do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tem a seguinte estrutura XML:  
+  A propriedade **Detail** da classe SoapException[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ** do ** tem a seguinte estrutura XML:  
   
 ## <a name="elements"></a>Elementos  
- **Detail**  
+ **Detalhes**  
  O elemento de alto nível que contém todos os outros elementos de detalhe de erro.  
   
  **ErrorCode**  
  O código de erro específico do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  **HttpStatus**  
- O código de status HTTP.  
+ O código de status do HTTP.  
   
  **Mensagem**  
  A mensagem de erro e o código de erro atribuídos pelo servidor de relatório.  
@@ -46,12 +46,12 @@ ms.locfileid: "63046002"
  O nome do produto. O valor padrão é **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- A versão do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. O tamanho máximo é de 15 caracteres. O formato do número de versão deve ser da seguinte maneira: 8.00.0xxx.00.  
+ A versão do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. O tamanho máximo é de 15 caracteres. O formato do número da versão deve ser assim: 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  A ID de localidade ou ID de idioma da DLL INTL do aplicativo (por exemplo, 0x41A).  
   
- **OperatingSystem**  
+ **Operacional**  
  O sistema operacional em que o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] está instalado. Os valores válidos incluem **0** para o sistema operacional independente, **1** para o [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)] e **16** para o Windows XP.  
   
  **CountryLocaleId**  
@@ -69,7 +69,7 @@ ms.locfileid: "63046002"
  **Warnings**  
  Uma cadeia de caracteres XML que contém os avisos retornados do processamento de relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Introdução ao tratamento de exceção no Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Classe SoapException do Reporting Services](reporting-services-soapexception-class.md)   
  [Usar a propriedade Detail para manipular erros específicos](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  

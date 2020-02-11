@@ -1,5 +1,5 @@
 ---
-title: Propriedades do catálogo de texto completo (página geral) | Microsoft Docs
+title: Propriedades do catálogo de texto completo (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779659"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriedades do Catálogo de Texto Completo (página Geral)
@@ -28,69 +28,69 @@ ms.locfileid: "62779659"
 ## <a name="options"></a>Opções  
   
 ### <a name="properties"></a>Propriedades  
- **Catálogo padrão**  
+ **Catálogo Padrão**  
  Exibe se o catálogo é o catálogo padrão do banco de dados.  
   
- **Status de população**  
+ **Status de População**  
  Indica o status do catálogo. Os valores possíveis são:  
   
 -   **Idle**  
   
 -   **Rastreamento em andamento**  
   
--   **Em Pausa**  
+-   **Em pausa**  
   
--   **Limitado**  
+-   **Acelerado**  
   
--   **Recuperando**  
+-   **Recuperação**  
   
--   **desligamento**  
+-   **Desligar**  
   
 -   **População incremental em andamento**  
   
 -   **Criando índice**  
   
--   **Disco está em pausa completo**  
+-   **O disco está em pausa total**  
   
--   **Change tracking**  
+-   **Controle de alterações**  
   
- **Contagem de itens**  
+ **Contagem de Itens**  
  Exibe o número de itens de texto completo no catálogo.  
   
- **Tamanho do catálogo**  
+ **Tamanho do Catálogo**  
  Exibe o tamanho, em megabytes, do catálogo de texto completo.  
   
  **Nome**  
  Nome do catálogo de texto completo.  
   
  **Diferenciar acentos**  
- Exibe ou modifica se o catálogo diferencia ou não marcas diacríticas, como um til ( **~** ), um acento agudo ( **'** ) ou um trema (**¨**). Os valores válidos são:  
+ Exiba ou modifique se o catálogo é sensível a sinais diacríticos, como til (**~**), acento agudo (**́**) ou trema (**̈**). Os valores válidos são:  
   
 -   **Não**  
   
 -   **Sim**  
   
--   Para obter informações sobre sinais diacríticos, consulte [diacríticos](https://www.merriam-webster.com/dictionary/diacritic) no dicionário Webster Merriam.  
+-   Para obter informações sobre sinais diacríticos, consulte [sinais diacríticos](https://www.merriam-webster.com/dictionary/diacritic) no dicionário Merriam-Webster.  
   
- **Data da última população**  
+ **Data da Última População**  
  Exibe a data em que o catálogo foi populado pela última vez.  
   
  **Proprietário**  
  Proprietário do catálogo de texto completo.  
   
- **Contagem de chaves exclusivas**  
+ **Contagem de Chaves Exclusivas**  
  Número de palavras exclusivas que formam o índice de texto completo para o catálogo.  
   
 ### <a name="catalog-action"></a>Ação do Catálogo  
   
 |||  
 |-|-|  
-|**Nenhum**|Não executa operações de **Otimizar catálogo**, **Recriar catálogo**nem **Repopular catálogo** .|  
+|**Nenhuma**|Não executa operações de **Otimizar catálogo**, **Recriar catálogo**nem **Repopular catálogo** .|  
 |**Otimizar catálogo**|Otimiza a utilização de espaço do catálogo e melhora o desempenho de consultas. Também melhora a exatidão da classificação de relevância de resultados de pesquisa.<br /><br /> Esta ação executa ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE.|  
 |**Recriar catálogo**|Exclui e recria o catálogo de texto completo. Esta operação deve ser executada se uma propriedade de catálogo fundamental for alterada, como distinção de acentos.<br /><br /> Para que a recriação seja bem-sucedida, o grupo de arquivos em que reside o catálogo de texto completo deve estar online ou poder ser lido-gravado. Após a recriação, o índice de texto completo será populado novamente.<br /><br /> Esta ação executa ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
 |**Repopular catálogo**|Atualiza o catálogo com alterações recentes dos dados. Esta opção requer tempo para manutenção do catálogo.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Popular índices de texto completo](../relational-databases/indexes/indexes.md)  
   
   

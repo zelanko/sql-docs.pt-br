@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767869"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS
@@ -50,7 +50,7 @@ ms.locfileid: "62767869"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>Para executar o assistente no prompt de comando  
   
--   No prompt de comando, execute o arquivo de SSISUpgrade.exe do **C:\Program Files\Microsoft SQL Server\120\DTS\Binn** pasta.  
+-   No prompt de comando, execute o arquivo SSISUpgrade. exe na pasta **C:\Program Files\Microsoft SQL Server\120\DTS\Binn**  
   
 ## <a name="backing-up-the-original-packages"></a>Fazendo backup de pacotes originais  
  Para fazer backup de pacotes originais, esses pacotes originais e os pacotes atualizados devem ser armazenados na mesma pasta no sistema de arquivos. Dependendo do modo como você executa o assistente, o local de armazenamento pode ser selecionado automaticamente.  
@@ -86,7 +86,7 @@ ms.locfileid: "62767869"
 2.  Na página **Selecionar Opções de Gerenciamento de Pacote** do assistente, selecione a opção **Fazer backup dos pacotes originais** .  
   
     > [!WARNING]  
-    >  O **fazer Backup dos pacotes originais** opção não será exibida quando você abre um [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] project no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], que automaticamente inicia o assistente.  
+    >  A opção **fazer backup de pacotes originais** não é exibida quando você [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] abre [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] um projeto [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]do ou no, que inicia automaticamente o assistente.  
   
 3.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], execute o Assistente de Atualização de Pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   

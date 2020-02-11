@@ -1,5 +1,5 @@
 ---
-title: StdevP (MDX) | Microsoft Docs
+title: DESVPADP (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4560ecbecd5db2e0f93e6910239fde27d54c028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036871"
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
 
 
-  Retorna o desvio padrão da população de uma expressão numérica avaliada sobre um conjunto, usando a fórmula de população polarizada (dividindo por *n*).  
+  Retorna o desvio padrão da população de uma expressão numérica avaliada em um conjunto, usando a fórmula de população tendenciosa (dividindo por *n*).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
 ## <a name="remarks"></a>Comentários  
- O **StdevP** função usa a população polarizada fórmulas, enquanto o [Stdev](../mdx/stdev-mdx.md) função usa a fórmula de população não polarizada.  
+ A função **DESVPADP** usa a fórmula de população tendenciosa, enquanto a função [DESVPAD](../mdx/stdev-mdx.md) usa a fórmula de população não polarizada.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna o desvio padrão para Quantidade de Pedidos pela Internet, avaliado em relação aos três primeiros meses do ano calendário 2003, usando a fórmula de população polarizada.  
@@ -51,7 +51,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

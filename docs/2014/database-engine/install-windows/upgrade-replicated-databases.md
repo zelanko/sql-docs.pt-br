@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775310"
 ---
 # <a name="upgrade-replicated-databases"></a>Atualizar bancos de dados replicados
@@ -65,7 +65,7 @@ ms.locfileid: "62775310"
   
 -   [Criar e aplicar o instantâneo inicial](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [Iniciar e interromper um Agente de Replicação &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
+-   [Iniciar e interromper um agente de replicação &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
 -   [Criar e aplicar o instantâneo inicial](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62775310"
  Depois de atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma topologia que utiliza a replicação de mesclagem, altere o nível de compatibilidade de publicação de qualquer publicação caso queira usar novos recursos.  
   
 ## <a name="upgrading-to-standard-workgroup-or-express-editions"></a>Atualizando as edições Standard, Workgroup ou Express  
- Antes de fazer upgrade de uma edição do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para outra, verifique se há suporte para a funcionalidade atualmente utilizada na edição para a qual deseja fazer upgrade. Para obter mais informações, consulte a seção sobre replicação em [recursos compatíveis com as edições do SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Antes de atualizar de uma edição do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para outra, verifique se a funcionalidade que você está usando tem suporte na edição para a qual deseja atualizar. Para obter mais informações, consulte a seção sobre replicação em [recursos com suporte nas edições do SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="web-synchronization-for-merge-replication"></a>Sincronização da Web para replicação de mesclagem.  
  A opção de sincronização da Web para replicação de mesclagem requer que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) seja copiado para o diretório virtual do servidor IIS (Serviços de Informações da Internet) usado para sincronização. Quando você configura a sincronização da Web, o arquivo é copiado para o diretório virtual pelo Assistente para Configuração da Sincronização da Web. Se você atualizar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalados no servidor IIS, deverá copiar replisapi.dll manualmente do diretório COM para o diretório virtual no servidor IIS. Para obter mais informações sobre como configurar a sincronização da Web, veja [Configurar sincronização da Web](../../../2014/relational-databases/replication/configure-web-synchronization.md).  
@@ -88,9 +88,9 @@ ms.locfileid: "62775310"
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>Restaurando um banco de dados replicado de uma versão anterior  
  Para assegurar que as configurações de replicação sejam mantidas na restauração do backup de um banco de dados replicado de uma versão anterior, restaure para um servidor e um banco de dados que tenham os mesmos nomes que o servidor e o banco de dados dos quais foi obtido o backup.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Perguntas Frequentes sobre Administração de Replicação](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
- [Compatibilidade com versões anteriores de replicação](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
+ [Compatibilidade com versões anteriores da replicação](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Atualizar para o SQL Server 2014](upgrade-sql-server.md)  
   

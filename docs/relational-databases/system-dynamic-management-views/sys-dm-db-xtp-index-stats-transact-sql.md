@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_index_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,24 +21,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6e6370f4cbfcbc38478e562c3b74ff24ffde962f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026827"
 ---
-# <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Contém estatísticas coletadas desde a última reinicialização do banco de dados.  
   
- Para obter mais informações, consulte [OLTP in-memory &#40;otimização na memória&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) e [Guidelines for Using Indexes em tabelas com otimização de memória](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
+ Para obter mais informações, consulte [OLTP in-memory &#40;otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) e [diretrizes para usar índices em tabelas com otimização de memória](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
 
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|ID do objeto ao qual este índice pertence.|  
-|xtp_object_id|**bigint**|ID interna correspondente para a versão atual do objeto.<br /><br /> Observação: Aplica-se a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
+|xtp_object_id|**bigint**|ID interna correspondente à versão atual do objeto.<br /><br /> Observação: aplica- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]se a.|  
 |index_id|**bigint**|ID do índice. O index_id só é exclusivo dentro do objeto.|  
 |scans_started|**bigint**|Número de verificações de índice OLTP na memória executadas. Cada seleção, inserção, atualização ou exclusão exige uma verificação de índice.|  
 |scans_retries|**bigint**|Número de verificações de índice que precisavam ser tentadas novamente,|  
@@ -54,12 +54,12 @@ ms.locfileid: "68026827"
 |phantom_expired_rows_encountered|**bigint**|Somente para uso interno.|  
 |phantom_expired_removed_rows_encountered|**bigint**|Somente para uso interno.|  
 |phantom_expired_rows_removed|**bigint**|Somente para uso interno.|  
-|object_address|**varbinary(8)**|Somente para uso interno.|  
+|object_address|**varbinary (8)**|Somente para uso interno.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no banco de dados atual.  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de tabela com otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002559"
 ---
-# <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
+# <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Faz com que procedimentos armazenados, gatilhos e funções definidas pelo usuário sejam recompilados na próxima execução. Isso é feito com a remoção do plano existente do cache de procedimento que força um novo plano a ser criado na próxima vez que o procedimento ou gatilho é executado. Em uma coleção [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], o evento SP:CacheInsert é registrado em log em vez do evento SP:Recompile.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,8 +40,8 @@ sp_recompile [ @objname = ] 'object'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @objname=] '*objeto*'  
- O nome qualificado ou não qualificado de um procedimento armazenado, gatilho, tabela, exibição ou função definida pelo usuário no banco de dados atual. *objeto* está **nvarchar(776)** , sem padrão. Se *objeto* é o nome de um gatilho de função definida pelo usuário, o procedimento armazenado, gatilho ou procedimento armazenado ou função será recompilado na próxima vez que for executado. Se *objeto* é o nome de uma tabela ou exibição, todos os procedimentos armazenados, gatilhos ou funções definidas pelo usuário que referenciam a tabela ou exibição serão recompiladas na próxima vez que forem executados.  
+ [ @objname= ] '*objeto*'  
+ O nome qualificado ou não qualificado de um procedimento armazenado, gatilho, tabela, exibição ou função definida pelo usuário no banco de dados atual. *Object* é **nvarchar (776)**, sem padrão. Se *Object* for o nome de um procedimento armazenado, um gatilho ou uma função definida pelo usuário, o procedimento armazenado, o gatilho ou a função serão recompilados na próxima vez em que for executado. Se *Object* for o nome de uma tabela ou exibição, todos os procedimentos armazenados, gatilhos ou funções definidas pelo usuário que fazem referência à tabela ou exibição serão recompilados na próxima vez em que forem executados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  
@@ -67,8 +67,8 @@ EXEC sp_recompile N'Sales.Customer';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [CRIAR procedimento &#40;&#41;Transact-SQL](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035652"
 ---
 # <a name="projects-sql-server-management-studio"></a>Projetos (SQL Server Management Studio)
@@ -55,8 +55,8 @@ ms.locfileid: "63035652"
 |Descreve como alterar as informações de conexão para uma consulta.|[Alterar a conexão associada a uma consulta](change-the-connection-associated-with-a-query.md)|  
 |Descreve como alterar propriedades de conexão.|[Exibir ou alterar as propriedades de uma conexão em um projeto](view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de soluções](solution-explorer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de Soluções](solution-explorer.md)   
  [Soluções &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [Controle do código-fonte do Gerenciador de Soluções](../../database-engine/solution-explorer-source-control.md)  
   

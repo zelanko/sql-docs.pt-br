@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1ffcb57a48c7d6e265daa786912cfd37f0b43754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001521"
 ---
 # <a name="comments-mdx-syntax"></a>Comments (sintaxe MDX)
@@ -29,13 +29,13 @@ ms.locfileid: "68001521"
  O MDX oferece suporte a três tipos de caracteres de comentário:  
   
  // (barras duplas)  
- Esses caracteres de comentário podem ser utilizados na mesma linha que o código a ser executado, ou em uma linha específica. Tudo que estiver a partir das barras duplas até o final da linha faz parte do comentário. Em um comentário de várias linhas, as barras duplas devem ser exibidas no início de cada linha de comentário. Para obter mais informações, consulte [ &#40;comentário&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md).  
+ Esses caracteres de comentário podem ser utilizados na mesma linha que o código a ser executado, ou em uma linha específica. Tudo que estiver a partir das barras duplas até o final da linha faz parte do comentário. Em um comentário de várias linhas, as barras duplas devem ser exibidas no início de cada linha de comentário. Para obter mais informações, consulte [&#40;comentário&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md).  
   
  -- (hífens duplos)  
- Esses caracteres de comentário podem ser utilizados na mesma linha que o código a ser executado, ou em uma linha específica. Tudo que estiver a partir dos hífens duplos até o final da linha faz parte do comentário. Em um comentário de várias linhas, os hífens duplos devem ser exibidos no início de cada linha de comentário. Para obter mais informações, consulte [– &#40;comentário&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md).  
+ Esses caracteres de comentário podem ser utilizados na mesma linha que o código a ser executado, ou em uma linha específica. Tudo que estiver a partir dos hífens duplos até o final da linha faz parte do comentário. Em um comentário de várias linhas, os hífens duplos devem ser exibidos no início de cada linha de comentário. Para obter mais informações, consulte [&#40;comentário&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md).  
   
- /* ... \*/ (barra-asterisco pares de caracteres)  
- Esses caracteres de comentário podem ser usados na mesma linha de código para ser executado, em linhas por si só, ou até mesmo dentro do código executável. Tudo, desde o par de comentário de abertura (/\*) para o par de comentário de fechamento (\*/) é considerado parte do comentário. Um comentário de várias linhas, o par de caracteres de comentário de abertura (/\*) deve iniciar o comentário e o par de caracteres de comentário de fechamento (\*/) deve terminar o comentário. Nenhum outro caractere de comentário pode aparecer em nenhuma linha do comentário. Para obter mais informações, consulte [/ *... \*/ (Comentário)](../mdx/comment-mdx.md).  
+ /* ... \*/(pares de caracteres de barra invertida-asterisco)  
+ Esses caracteres de comentário podem ser usados na mesma linha que o código a ser executado, nas linhas ou mesmo no código executável. Tudo do par de comentário aberto (/\*) para o par de comentário de\*fechamento (/) é considerado parte do comentário. Para um comentário de várias linhas, o par de caracteres de comentário aberto (\*/) deve iniciar o comentário e o par de caracteres de comentário de\*fechamento (/) deve terminar o comentário. Nenhum outro caractere de comentário pode aparecer em nenhuma linha do comentário. Para obter mais informações, consulte [/*... / \*(Comentário)](../mdx/comment-mdx.md).  
   
 ## <a name="example"></a>Exemplo  
  A consulta a seguir mostra exemplos dos três tipos de comentário:  
@@ -62,7 +62,7 @@ ms.locfileid: "68001521"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
- [Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Elementos de sintaxe MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
   
   

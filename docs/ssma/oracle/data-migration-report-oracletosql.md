@@ -11,37 +11,37 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264247"
 ---
 # <a name="data-migration-report--oracletosql"></a>Relatório de migração de dados (OracleToSQL)
-O **relatório de migração de dados** caixa de diálogo é exibida após a migração de dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+A caixa de diálogo **relatório de migração de dados** é exibida após [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a migração de dados para o.  
   
 ## <a name="options"></a>Opções  
 **Status**  
-Mostra o status da migração da fonte de dados no banco de dados de destino.  
+Mostra o status da migração de dados da origem para o banco de dados de destino.  
   
-**From**  
+**De**  
 A tabela de origem.  
   
-**To**  
+**Para**  
 A tabela de destino.  
   
 **Número total de linhas**  
 O número de linhas de dados na tabela de origem.  
   
 **Número de linhas migradas com êxito**  
-O número de linhas de dados migrados com êxito para a tabela de destino.  
+O número de linhas de dados migradas com êxito para a tabela de destino.  
   
-**Taxa de**  
-A porcentagem de linhas foi migrado com êxito.  
+**Proporção**  
+A porcentagem de linhas migradas com êxito.  
   
 **Detalhes**  
-Se a falha na migração de dados, clique para exibir detalhes da migração para a linha selecionada no relatório. O SSMA exibirá o motivo da falha.  
+Se houver falha na migração de dados, clique para exibir os detalhes de migração para a linha selecionada no relatório. O SSMA exibirá o motivo da falha.  
   
 **Salvar relatório**  
-Salva o relatório para um. CSV, arquivo (valores separados por vírgula), que pode ser examinado usando o Microsoft Excel.  
+Salva o relatório em um. Arquivo CSV, (valores separados por vírgula), que pode ser examinado usando o Microsoft Excel.  
   

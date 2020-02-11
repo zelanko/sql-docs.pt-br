@@ -1,5 +1,5 @@
 ---
-title: Linguagem (SQL) | Microsoft Docs
+title: Linguagem SQL (SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,37 +15,37 @@ ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6cae344e97bf6e5dc8affbf164f80eb8935846e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019033"
 ---
 # <a name="structured-query-language-sql"></a>SQL (Structured Query Language)
-Um típico DBMS permite aos usuários armazenar, acessar e modificar dados de forma eficiente e organizada. Originalmente, os usuários de DBMSs eram os programadores. Acessar os dados armazenados, é necessário escrever um programa em uma linguagem de programação como COBOL. Embora muitas vezes, esses programas foram escritos para apresentar uma interface amigável para um usuário não técnico, acesso aos dados em si os serviços necessários de um programador experiente. Casual acesso aos dados não era prático.  
+Um DBMS típico permite que os usuários armazenem, acessem e modifiquem dados de uma maneira organizada e eficiente. Originalmente, os usuários de DBMS eram programadores. O acesso aos dados armazenados exigia a gravação de um programa em uma linguagem de programação, como o COBOL. Embora esses programas geralmente tenham sido escritos para apresentar uma interface amigável a um usuário não técnico, o acesso aos dados em si exigia os serviços de um programador experiente. O acesso casual aos dados não era prático.  
   
- Os usuários não foram totalmente satisfeitos com essa situação. Enquanto eles poderiam acessar dados, muitas vezes necessário convencendo um programador DBMS para escrever software especial. Por exemplo, se um departamento de vendas queria ver o total de vendas do mês anterior por cada um de seus vendedores e quisesse essas informações classificadas em ordem pelo comprimento de cada vendedor de serviço da empresa, ele tinha duas opções: Ou um programa já existia que as informações sejam acessados exatamente dessa forma de permissão ou o departamento precisava pedir que um programador de escrever um programa desse tipo. Em muitos casos, isso era mais trabalho do que valeu a pena e sempre foi uma solução dispendiosa para consultas ocasionais ou ad-hoc. Conforme mais e mais usuários quisesse acesso fácil, esse problema cresceu maiores.  
+ Os usuários não estavam totalmente satisfeitos com essa situação. Embora eles pudessem acessar dados, muitas vezes exigiam convencer um programador de DBMS a escrever software especial. Por exemplo, se um departamento de vendas quisesse ver o total de vendas no mês anterior por cada um de seus vendedores e quisesse que essas informações fossem classificadas em ordem pelo período de serviço de cada vendedor na empresa, ela tinha duas opções: um programa já existia permitia que as informações fossem acessadas exatamente dessa forma ou que o departamento tinha que pedir a um programador para escrever tal programa. Em muitos casos, isso era mais trabalho do que era válido e era sempre uma solução cara para consultas unidirecionais, ou ad hoc. À medida que mais e mais usuários queriam acesso fácil, esse problema cresceu maior e maior.  
   
- Permitir que os usuários acessem os dados em uma base ad hoc necessário dando-lhes um idioma no qual expressar suas solicitações. Uma única solicitação para um banco de dados é definida como uma consulta; Essa é uma linguagem é chamada de uma linguagem de consulta. Muitas linguagens de consulta foram desenvolvidas para essa finalidade, mas uma destas opções se tornaram mais populares: Linguagem de consulta estruturada, inventou na IBM na década de 1970. Ele é mais conhecido por seu acrônimo, SQL e é pronunciado como "ell de sinalização ess" e "continuação". SQL se tornou um padrão em 1986 de ANSI e um arquivo ISO padrão em 1987; ele é usado atualmente em um ótimo muitos sistemas de gerenciamento de banco de dados.  
+ Permitir que os usuários acessem dados em uma base ad hoc necessária, fornecendo a eles um idioma no qual expressar suas solicitações. Uma única solicitação para um banco de dados é definida como uma consulta; essa linguagem é chamada de linguagem de consulta. Muitas linguagens de consulta foram desenvolvidas para essa finalidade, mas uma delas se tornou a mais popular: linguagem SQL, inventada na IBM na 70. Ele é mais comumente conhecido por seu acrônimo, SQL e é pronunciado como "ESS-Cue-ell" e como "sequência". O SQL tornou-se um padrão ANSI em 1986 e um padrão ISO em 1987; Ele é usado hoje em vários sistemas de gerenciamento de bancos de dados.  
   
- Embora o SQL resolvido ad-hoc necessidades dos usuários, a necessidade de acesso a dados por programas de computador não vão embora. Na verdade, a maioria dos acesso de banco de dados ainda era (e é) através de programação, na forma de relatórios agendados regularmente e análise estatística, programas de entrada de dados, como aquelas usadas para entrada de pedido e dados de programas de manipulação, como aqueles usados para reconciliar contas e Gere ordens de trabalho.  
+ Embora o SQL tenha resolvido as necessidades ad hoc dos usuários, a necessidade de acesso a dados por programas de computador não desaparece. Na verdade, a maior parte do acesso ao banco de dados ainda era (e é) programática, na forma de relatórios agendados regularmente e análises estatísticas, programas de entrada de dados como aqueles usados para a entrada de pedidos e programas de manipulação de dados, como aqueles usados para reconciliar contas e gerar ordens de trabalho.  
   
- Esses programas também usam o SQL, usando um dos três seguintes técnicas:  
+ Esses programas também usam o SQL, usando uma das três técnicas a seguir:  
   
--   **Embedded SQL**, no qual o SQL são incorporadas em uma linguagem de host, como C ou COBOL.  
+-   **SQL inserido**, no qual as instruções SQL são inseridas em um idioma de host como C ou COBOL.  
   
--   **Módulos SQL**em quais instruções SQL são compiladas no DBMS e são chamadas de uma linguagem host.  
+-   **Módulos SQL**, nos quais as instruções SQL são compiladas no DBMS e chamadas de um idioma de host.  
   
--   **Interface de nível de chamada**, ou a CLI, que consiste em funções chamadas para passar instruções SQL para o DBMS e recuperar os resultados do DBMS.  
+-   **Interface de nível de chamada**, ou CLI, que consiste em funções chamadas para passar instruções SQL para o DBMS e para recuperar os resultados do DBMS.  
   
 > [!NOTE]  
->  É um acidente de histórico que o termo de interface de nível de chamada é usado em vez de programação de aplicativo (API) de interface outro termo para a mesma coisa. No mundo do banco de dados, a API é usada para descrever SQL em si: SQL é a API de um DBMS.  
+>  É um acidente histórico que o termo interface de nível de chamada é usado em vez da API (interface de programação de aplicativo), outro termo para a mesma coisa. No mundo do banco de dados, a API é usada para descrever o próprio SQL: SQL é a API para um DBMS.  
   
- Uma dessas opções, embedded SQL é mais comumente usados, embora DBMSs da maioria dos principais oferecer suporte a CLIs proprietárias.  
+ Dessas opções, o SQL inserido é o mais comumente usado, embora a maioria dos DBMSs ofereçam suporte a CLIs proprietárias.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
--   [Processar uma instrução SQL](../../odbc/reference/processing-a-sql-statement.md)  
+-   [Processando uma instrução SQL](../../odbc/reference/processing-a-sql-statement.md)  
   
 -   [SQL inserido](../../odbc/reference/embedded-sql.md)  
   

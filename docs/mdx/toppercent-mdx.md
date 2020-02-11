@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036587"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
@@ -35,21 +35,21 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  Uma expressão numérica válida que especifica o percentual de tuplas a ser retornado.  
   
 > [!IMPORTANT]  
->  *Percentual* precisa ser um valor positivo; valores negativos geram um erro.  
+>  O *percentual* precisa ser um valor positivo; os valores negativos geram um erro.  
   
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
 ## <a name="remarks"></a>Comentários  
- O **TopPercent** função calcula a soma da expressão numérica especificada avaliada no conjunto especificado, classificando o conjunto em ordem decrescente. A função retorna os elementos com os valores mais altos, cujo percentual cumulativo do valor total somado seja pelo menos o percentual especificado. Essa função retorna o subconjunto menor de um conjunto cujo total cumulativo é pelo menos o percentual especificado. Os elementos retornados são classificados do maior para menor.  
+ A função **TopPercent** calcula a soma da expressão numérica especificada avaliada sobre o conjunto especificado, classificando o conjunto em ordem decrescente. A função retorna os elementos com os valores mais altos, cujo percentual cumulativo do valor total somado seja pelo menos o percentual especificado. Essa função retorna o subconjunto menor de um conjunto cujo total cumulativo é pelo menos o percentual especificado. Os elementos retornados são classificados do maior para menor.  
   
 > [!WARNING]  
->  Se *Numeric_Expression* retorna qualquer valor negativo, em seguida, **TopPercent** retorna apenas um (1) linha.  
+>  Se *Numeric_Expression* retornar qualquer valor negativo, **TopPercent** retornará apenas uma (1) linha.  
 >   
 >  Consulte o segundo exemplo para obter uma apresentação detalhada desse comportamento.  
   
 > [!IMPORTANT]  
->  Como o [BottomPercent](../mdx/bottompercent-mdx.md) função, o **TopPercent** função sempre quebra a hierarquia.  
+>  Assim como a função [BottomPercent](../mdx/bottompercent-mdx.md) , a função **TopPercent** sempre interrompe a hierarquia.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna as melhores cidades que ajudam a fazer os 10% principais das vendas do revendedor para a categoria Bike. O resultado é classificado em ordem decrescente, começando com a cidade que tem o valor mais alto de vendas.  
@@ -69,10 +69,10 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ||Reseller Sales Amount|  
 |-|---------------------------|  
-|Toronto|$3,508,904.84|  
-|London|$1,521,530.09|  
-|Seattle|$1,209,418.16|  
-|Paris|$1,170,425.18|  
+|Toronto|$3508904.84|  
+|Londres|$1521530.09|  
+|Seattle|$1209418.16|  
+|Paris|$1170425.18|  
   
  O conjunto original de dados pode ser obtido com a consulta seguinte e retorna 588 linhas:  
   
@@ -89,7 +89,7 @@ WHERE([Product].[Product Categories].[Bikes])
 ```  
   
 ## <a name="example"></a>Exemplo  
- A instrução a seguir o ajudará a entender o efeito dos valores negativos na *Numeric_Expression*. Primeiro, vamos criar algum contexto onde podemos apresentar o comportamento.  
+ O passo a seguir ajudará a entender o efeito de valores negativos no *Numeric_Expression*. Primeiro, vamos criar algum contexto onde podemos apresentar o comportamento.  
   
  A consulta a seguir retorna uma tabela de Resellers 'Sales Amount', 'Total Product Cost' e 'Gross Profit', em ordem decrescente de lucro. Observe que somente há valores negativos para lucro; portanto, a menor perda aparecerá no início.  
   
@@ -104,12 +104,12 @@ FROM [Adventure Works]
   
 ||Reseller Sales Amount|Custo do produto total do revendedor|Lucro bruto do revendedor|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
-|46 de azul, Touring-2000|$321,027.03|$333,021.50|($11,994.47)|  
-|62 de azul, Touring-3000|$87,773.61|$100,133.52|($12,359.91)|  
+|Touring-2000 Blue, 50|$157444.56|$163112.57|($5668.01)|  
+|Touring-2000 azul, 46|$321027.03|$333021.50|($11994.47)|  
+|Touring-3000 azul, 62|$87773.61|$100133.52|($12359.91)|  
 |...|...|...|...|  
-|46 de amarelo, Touring-1000|$1,016,312.83|$1,234,454.27|($218,141.44)|  
-|Touring-1000 Yellow, 60|$1,184,363.30|$1,443,407.51|($259,044.21)|  
+|Touring-1000 amarelo, 46|$1016312.83|$1234454.27|($218141.44)|  
+|Touring-1000 Yellow, 60|$1184363.30|$1443407.51|($259044.21)|  
   
  Agora, se pedissem a você para apresentar as principais bicicletas 100% por lucro, seria necessário escrever uma consulta como:  
   
@@ -120,13 +120,13 @@ FROM [Adventure Works]
   
 ```  
   
- Observe que a consulta solicita um percentual de 100%; o que significa que todas as linhas devem ser retornadas. No entanto, porque há valores negativos na *Numeric_Expression* , somente uma linha é retornada.  
+ Observe que a consulta solicita um percentual de 100%; o que significa que todas as linhas devem ser retornadas. No entanto, como há valores negativos no *Numeric_Expression* , apenas uma linha é retornada.  
   
 ||Reseller Sales Amount|Custo do produto total do revendedor|Lucro bruto do revendedor|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
+|Touring-2000 Blue, 50|$157444.56|$163112.57|($5668.01)|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

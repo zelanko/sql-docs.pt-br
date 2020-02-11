@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8a5eca5aef966d205ef550b05eff2d7055e4cb28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127175"
 ---
-# <a name="srvparamname-extended-stored-procedure-api"></a>srv_paramname (API de procedimento armazenado estendido)
+# <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname (API de procedimento armazenado estendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  Retorna o nome de um parâmetro de chamada de procedimento armazenado remoto.  
   
@@ -49,19 +49,19 @@ SRV_PROC * srvproc,intn, int *len );
  *n*  
  Indica o número do parâmetro. O primeiro parâmetro é 1.  
   
- *len*  
+ *Len*  
  Fornece um ponteiro para uma variável `int` que contém o comprimento, em bytes, do nome do parâmetro. Se *len* for NULL, o tamanho do nome do parâmetro do procedimento armazenado remoto não será retornado.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  Um ponteiro para uma cadeia de caracteres com terminação nula que contém o nome do parâmetro. O tamanho do nome do parâmetro é armazenado em *len*. Se não houver *n*-ésimo parâmetro nem um procedimento armazenado remoto, será retornado NULL, *len* será definido como -1 e uma mensagem de erro informativa será enviada. Se o nome do parâmetro for o NULL, *len* será definido como 0 e uma cadeia de caracteres vazia que termina em nulo será retornada.  
   
 ## <a name="remarks"></a>Comentários  
- Essa função obtém o nome de um parâmetro de chamada de procedimento armazenado remoto. Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  
+ Essa função obtém o nome de um parâmetro de chamada de procedimento armazenado remoto. Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador de SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  
   
 > [!IMPORTANT]  
 >  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Consulte também  
- [srv_rpcparams &#40;API de Procedimento Armazenado Estendido&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>Consulte Também  
+ [srv_rpcparams &#40;API de procedimento armazenado estendido&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
   
   

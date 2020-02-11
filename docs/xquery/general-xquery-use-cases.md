@@ -1,5 +1,5 @@
 ---
-title: Casos de uso gerais de XQuery | Microsoft Docs
+title: Casos de uso gerais do XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1e844425f0c512cfe7c15354bf1aeb100d6104e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004528"
 ---
 # <a name="general-xquery-use-cases"></a>Casos gerais de uso de XQuery
@@ -28,7 +28,7 @@ ms.locfileid: "68004528"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-query-catalog-descriptions-to-find-products-and-weights"></a>A. Consultar descrições de catálogo para localizar produtos e pesos  
+### <a name="a-query-catalog-descriptions-to-find-products-and-weights"></a>a. Consultar descrições de catálogo para localizar produtos e pesos  
  A consulta a seguir retorna as IDs e os pesos de modelo do produto , se existentes, da descrição do catálogo de produtos. A consulta constrói XML que tenha a seguinte forma:  
   
 ```  
@@ -54,13 +54,13 @@ WHERE CatalogDescription is not null
   
  Observe o seguinte na consulta anterior:  
   
--   O **namespace** palavra-chave no prólogo do XQuery define um prefixo de namespace que é usado no corpo da consulta.  
+-   A palavra-chave **namespace** no prólogo XQuery define um prefixo de namespace que é usado no corpo da consulta.  
   
 -   O corpo da consulta constrói o XML exigido.  
   
--   Na cláusula WHERE, o **exist ()** método é usado para localizar somente as linhas que contêm descrições de catálogo de produtos. Ou seja, o XML que contém o <`ProductDescription`> elemento.  
+-   Na cláusula WHERE, o método **exist ()** é usado para localizar apenas as linhas que contêm descrições do catálogo de produtos. Ou seja, o XML que contém o elemento `ProductDescription` <>.  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <Product ProductModelID="19"/>  
@@ -71,7 +71,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- A consulta a seguir recupera as mesmas informações, mas somente para aqueles modelos de produto cuja descrição de catálogo inclui o peso, o <`Weight`> elemento, nas especificações, o <`Specifications`> elemento. Este exemplo usa WITH XMLNAMESPACES para declarar o prefixo pd e sua associação de namespace. Dessa forma, a associação não é descrita em ambos os **Query ()** método e, na **exist ()** método.  
+ A consulta a seguir recupera as mesmas informações, mas apenas para os modelos de produto cuja descrição de catálogo inclui o peso `Weight` , o <> elemento, nas especificações, `Specifications` o elemento de> <. Este exemplo usa WITH XMLNAMESPACES para declarar o prefixo pd e sua associação de namespace. Dessa forma, a associação não é descrita no método **Query ()** e no método **exist ()** .  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -86,10 +86,10 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- Na consulta anterior, o **exist ()** método da **xml** tipo de dados na cláusula WHERE verifica para ver se há um <`Weight`> elemento no <`Specifications`> elemento.  
+ Na consulta anterior, o método **exist ()** do tipo de dados **XML** na cláusula WHERE verifica se há um elemento <`Weight`> no elemento <`Specifications`>.  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. Localizar IDs de modelos de produtos cujas descrições de catálogo incluem ângulo frontal e pequenas fotos  
- A descrição do catálogo de produto XML inclui as imagens de produto, o <`Picture`> elemento. Cada foto tem várias propriedades. Eles incluem o ângulo da foto, o <`Angle`> elemento e o tamanho, o <`Size`> elemento.  
+ A descrição do catálogo de produtos XML inclui as imagens do produto `Picture` , o elemento <>. Cada foto tem várias propriedades. Isso inclui o ângulo de imagem, o `Angle` <> elemento e o tamanho, o elemento `Size`> <.  
   
  Para modelos de produtos cujas descrições de catálogo incluem ângulo frontal e pequenas fotos, a consulta constrói um XML com o seguinte formato:  
   
@@ -117,9 +117,9 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
  Observe o seguinte na consulta anterior:  
   
--   Na cláusula WHERE, o **exist ()** método é usado para recuperar apenas as linhas que tenham descrições de catálogo de produto com o <`Picture`> elemento.  
+-   Na cláusula WHERE, o método **exist ()** é usado para recuperar somente as linhas que têm descrições do catálogo de produtos com `Picture` o elemento <>.  
   
--   A cláusula WHERE usa o **Value ()** método duas vezes para comparar os valores da <`Size`> e <`Angle`> elementos.  
+-   A cláusula WHERE usa o método **Value ()** duas vezes para comparar os valores dos elementos <`Size`> e <`Angle`>.  
   
  Este é um resultado parcial:  
   
@@ -135,8 +135,8 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. Criar uma lista simples de produto pares de nome e o recurso de modelo, cada par incluído no \<recursos > elemento  
- Na descrição de catálogo de modelo de produto, o XML inclui várias características de produto. Todos esses recursos estão incluídos no <`Features`> elemento. A consulta usa [construção XML (XQuery)](../xquery/xml-construction-xquery.md) para construir o XML necessário. A expressão nas chaves é substituída pelo resultado.  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. Crie uma lista simples dos pares de nome e recurso do modelo de produto, com cada par incluído \<no elemento recursos>  
+ Na descrição de catálogo de modelo de produto, o XML inclui várias características de produto. Todos esses recursos estão incluídos no elemento <`Features`>. A consulta usa a [construção XML (XQuery)](../xquery/xml-construction-xquery.md) para construir o XML necessário. A expressão nas chaves é substituída pelo resultado.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -155,11 +155,11 @@ WHERE ProductModelID=19
   
  Observe o seguinte na consulta anterior:  
   
--   $pd / PD/P1:Features/ / * retorna apenas o elemento filhos do nó <`Features`>, mas $pd PD/P1:Features/Node () retorna todos os nós. Isso inclui os nós de elemento, nós de texto, as instruções de processamento e os comentários.  
+-   $pd/P1: Features/* retorna somente os filhos do nó de elemento `Features` de <>, mas $PD/P1: Features/node () retorna todos os nós. Isso inclui os nós de elemento, nós de texto, as instruções de processamento e os comentários.  
   
 -   Os dois loops FOR geram um produto Cartesiano do qual o nome de produto e a característica individual são retornados.  
   
--   O **ProductName** é um atributo. A construção XML nesta consulta retorna-o como um elemento.  
+-   O **NomeDoProduto** é um atributo. A construção XML nesta consulta retorna-o como um elemento.  
   
  Este é um resultado parcial:  
   
@@ -186,8 +186,8 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. Na descrição de catálogo de um modelo de produto, ID de nome, modelo de modelo de lista do produto e recursos agrupados dentro de um \<produto > elemento  
- Usando as informações armazenadas na descrição de catálogo do modelo de produto, a consulta a seguir lista o nome de modelo do produto, ID do modelo, e recursos agrupados dentro de um \<produto > elemento.  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. Na descrição do catálogo de um modelo de produto, liste o nome do modelo de produto, a ID do modelo e \<os recursos agrupados dentro de um elemento de> do produto  
+ Usando as informações armazenadas na descrição do catálogo do modelo do produto, a consulta a seguir lista o nome do modelo do produto, a ID do modelo e os \<recursos agrupados dentro de um elemento de> de produto.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -223,7 +223,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. Recuperar as descrições de recursos de modelos do produto  
- A consulta a seguir constrói XML que inclui um <`Product`> elemento que tem **Productmodelid**, **ProductModelName** atributos e os primeiros dois recursos de produto. Especificamente, os primeiros dois recursos de produto são os primeiros dois elementos filho da <`Features`> elemento. Se houver mais recursos, ele retornará um <`There-is-more/`> elemento.  
+ A consulta a seguir constrói XML que inclui um elemento `Product` <> que tem os atributos **ProducModelID**, **ProductModelName** e os dois primeiros recursos do produto. Especificamente, os dois primeiros recursos do produto são os dois primeiros elementos filho do elemento `Features` <>. Se houver mais recursos, ele retornará um elemento <`There-is-more/`> vazio.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -249,10 +249,10 @@ WHERE CatalogDescription is not NULL
   
  Observe o seguinte na consulta anterior:  
   
--   O FOR... Return recupera os primeiros dois recursos de produto. O **Position ()** função é usada para localizar a posição dos elementos na sequência.  
+-   O para... A estrutura de loop de retorno recupera os dois primeiros recursos do produto. A função **Position ()** é usada para localizar a posição dos elementos na sequência.  
   
 ### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>F. Localizar nomes de elementos na descrição do catálogo de produtos que terminam com "ons"  
- A consulta a seguir pesquisa as descrições de catálogo e retorna todos os elementos de <`ProductDescription`> elemento cujo nome termina com "ões".  
+ A consulta a seguir pesquisa as descrições do catálogo e retorna todos os elementos no `ProductDescription` elemento <> cujo nome termina com "los".  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -295,17 +295,17 @@ WHERE CatalogDescription.value('
      contains( string( (/pd:ProductDescription/pd:Summary)[1] ),"Aerodynamic")','bit') = 1  
 ```  
   
- Observe que a consulta SELECT especifica **Query ()** e **Value ()** métodos os **xml** tipo de dados. Portanto, em vez de repetir a declaração namespaces duas vezes em dois prólogos de consulta diferentes, o prefixo pd será usado na consulta e será definido apenas uma vez usando WITH XMLNAMESPACES.  
+ Observe que a consulta SELECT especifica os métodos **Query ()** e **Value ()** do tipo de dados **XML** . Portanto, em vez de repetir a declaração namespaces duas vezes em dois prólogos de consulta diferentes, o prefixo pd será usado na consulta e será definido apenas uma vez usando WITH XMLNAMESPACES.  
   
  Observe o seguinte na consulta anterior:  
   
--   A cláusula WHERE é usada para recuperar apenas as linhas onde a descrição de catálogo contém a palavra "Aerodinâmico" no <`Summary`> elemento.  
+-   A cláusula WHERE é usada para recuperar apenas as linhas em que a descrição do catálogo contém a palavra "Aerodynamic" no `Summary` elemento <>.  
   
--   O **Contains ()** função é usada para ver se a palavra está incluída no texto.  
+-   A função **Contains ()** é usada para ver se a palavra está incluída no texto.  
   
--   O **Value ()** método o **xml** tipo de dados compara o valor retornado por **Contains ()** como 1.  
+-   O método **Value ()** do tipo de dados **XML** compara o valor retornado por **Contains ()** como 1.  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 ProductModelID Result        
@@ -321,7 +321,7 @@ ProductModelID Result
 ```  
   
 ### <a name="h-find-product-models-whose-catalog-descriptions-do-not-include-product-model-pictures"></a>H. Localizar modelos de produtos cujas descrições de catálogo não incluem fotos do modelo do produto  
- A seguinte consulta recupera ProductModelIDs para modelos de produto cujas descrições de catálogo não não incluem um <`Picture`> elemento.  
+ A consulta a seguir recupera ProductModelIDs para modelos de produto cujas descrições de catálogo não incluem `Picture` um elemento <>.  
   
 ```  
 SELECT  ProductModelID  
@@ -334,16 +334,16 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
   
  Observe o seguinte na consulta anterior:  
   
--   Se o **exist ()** método na cláusula WHERE retorna False (0), a ID do modelo de produto é retornada. Caso contrário, não é retornado.  
+-   Se o método **exist ()** na cláusula WHERE retornar false (0), a ID do modelo do produto será retornada. Caso contrário, não é retornado.  
   
--   Como todas as descrições de produto incluem um <`Picture`> elemento, o conjunto de resultados é vazio neste caso.  
+-   Como todas as descrições de produtos incluem um `Picture` elemento <>, o conjunto de resultados é vazio nesse caso.  
   
-## <a name="see-also"></a>Consulte também  
- [XQueries que envolvem hierarquias](../xquery/xqueries-involving-hierarchy.md)   
- [XQueries que envolvem ordem](../xquery/xqueries-involving-order.md)   
- [Xqueries que manipulam dados relacionais](../xquery/xqueries-handling-relational-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [XQueries envolvendo hierarquia](../xquery/xqueries-involving-hierarchy.md)   
+ [XQueries envolvendo a ordem](../xquery/xqueries-involving-order.md)   
+ [XQueries manipulando dados relacionais](../xquery/xqueries-handling-relational-data.md)   
  [Pesquisa de cadeia de caracteres em XQuery](../xquery/string-search-in-xquery.md)   
- [Manipulando Namespaces em XQuery](../xquery/handling-namespaces-in-xquery.md)   
+ [Manipulando namespaces no XQuery](../xquery/handling-namespaces-in-xquery.md)   
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

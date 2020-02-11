@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771582"
 ---
 # <a name="folder-properties-dialog-box"></a>Caixa de diálogo Propriedades da Pasta
-  Uma pasta contém projetos e ambientes no catálogo do `SSISDB`. Cada pasta define permissões que se aplicam aos conteúdo da pasta. Para obter mais informações sobre permissões do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [catalog.grant_permission &#40;Banco de Dados do SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  
+  Uma pasta contém projetos e ambientes no catálogo do `SSISDB`. Cada pasta define permissões que se aplicam aos conteúdo da pasta. Para obter mais informações sobre permissões do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [catalog.grant_permission &#40;Banco de Dados do SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  
   
 ## <a name="to-set-folder-description-and-permissions"></a>Para definir descrição de pasta e permissões  
   
@@ -36,8 +36,8 @@ ms.locfileid: "62771582"
   
 5.  Clique em **OK** para aceitar as alterações e feche a caixa de diálogo **Propriedades das Pastas** .  
   
-## <a name="see-also"></a>Consulte também  
- [Servidor do Integration Services &#40;SSIS&#41;](integration-services-ssis-server-and-catalog.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Servidor do SSIS &#40;Integration Services&#41;](integration-services-ssis-server-and-catalog.md)   
  [catalog.grant_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 637c60fd6d7ba53087a145135d7152066983b644
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63130627"
 ---
 # <a name="smo-object-model"></a>Modelo de objeto SMO
@@ -30,8 +30,8 @@ ms.locfileid: "63130627"
   
  O modelo de objeto SMO é composto de vários namespaces. Para obter mais informações, consulte o [Namespaces do SMO](smo-object-model-namespaces.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Diagrama de modelo de objeto do SMO](smo-object-model-diagram.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Diagrama de modelo de objeto SMO](smo-object-model-diagram.md)   
  [Namespaces do SMO](smo-object-model-namespaces.md)   
  [Provedor WMI para conceitos de gerenciamento de configuração](../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
