@@ -17,10 +17,10 @@ ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a9b99842a92649a42e9a0a42e6732368dc5e06ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081351"
 ---
 # <a name="using-systemtransactions"></a>Usando System.Transactions
@@ -31,7 +31,7 @@ ms.locfileid: "68081351"
   
  Se ocorrer uma exceção no **TransactionScope**, a transação será marcada como inconsistente e abandonada. Ela será revertida quando o **TransactionScope** for descartado. Se nenhuma exceção ocorrer, as transações participantes serão confirmadas.  
   
- **TransactionScope** deve ser usado somente quando são acessados gerenciadores de recursos externos ou fontes de dados locais e remotas. Isso porque **TransactionScope** sempre causa a elevação de transações, mesmo que esteja sendo usado apenas em uma conexão de contexto.  
+ O **TransactionScope** deve ser usado somente quando fontes de dados locais e remotas ou gerenciadores de recursos externos estiverem sendo acessados. Isso porque **TransactionScope** sempre causa a elevação de transações, mesmo que esteja sendo usado apenas em uma conexão de contexto.  
   
 > [!NOTE]  
 >  Por padrão, a classe **TransactionScope** cria uma transação com um **System.Transactions.Transaction.IsolationLevel** de **Serializable** . Dependendo do seu aplicativo, talvez você queira considerar abaixar o nível de isolamento para evitar uma contenção elevada em seu aplicativo.  
@@ -105,7 +105,7 @@ using (TransactionScope transScope = new TransactionScope())
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Integração CLR e transações](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

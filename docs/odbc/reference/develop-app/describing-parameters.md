@@ -13,21 +13,21 @@ ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d32e5212ba1ba28262d871498f2974485d38233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68040022"
 ---
 # <a name="describing-parameters"></a>Descrever parâmetros
-**SQLBindParameter** tem argumentos que descrevem o parâmetro: o tipo SQL, precisão e escala. O driver usa essas informações, ou *metadados,* para converter o valor do parâmetro para o tipo necessário pela fonte de dados. À primeira vista, pode parecer que o driver está em uma posição melhor para conhecer os metadados de parâmetro que o aplicativo; Afinal de contas, o driver pode facilmente descobrir os metadados para um resultado de coluna do conjunto. Na verdade, isso não for o caso. Em primeiro lugar, a maioria das fontes de dados não fornecem uma maneira para o driver descobrir os metadados de parâmetro. Segundo, a maioria dos aplicativos já conhece os metadados.  
+**SQLBindParameter** tem argumentos que descrevem o parâmetro: seu tipo, precisão e escala SQL. O driver usa essas informações, ou *metadados,* para converter o valor do parâmetro para o tipo necessário para a fonte de dados. À primeira vista, pode parecer que o driver está em uma posição melhor para saber os metadados do parâmetro do que o aplicativo; Afinal, o driver pode facilmente descobrir os metadados de uma coluna de conjunto de resultados. Acontece que esse não é o caso. Primeiro, a maioria das fontes de dados não fornece uma maneira para o driver descobrir os metadados do parâmetro. Segundo, a maioria dos aplicativos já conhecem os metadados.  
   
- Se uma instrução SQL é embutido no código do aplicativo, o gravador de aplicativos já conhece o tipo de cada parâmetro. Se uma instrução SQL é criada pelo aplicativo em tempo de execução, o aplicativo pode determinar os metadados ao criar a instrução. Por exemplo, quando o aplicativo constrói a cláusula  
+ Se uma instrução SQL for embutida em código no aplicativo, o gravador de aplicativos já saberá o tipo de cada parâmetro. Se uma instrução SQL for construída pelo aplicativo em tempo de execução, o aplicativo poderá determinar os metadados à medida que criar a instrução. Por exemplo, quando o aplicativo constrói a cláusula  
   
 ```  
 WHERE OrderID = ?  
 ```  
   
- ele pode chamar **SQLColumns** para a coluna OrderID.  
+ Ele pode chamar **SQLColumns** para a coluna OrderID.  
   
- A única situação em que o aplicativo não é possível determinar facilmente os metadados de parâmetro é quando o usuário insere uma instrução parametrizada. Nesse caso, o aplicativo chama **SQLPrepare** para preparar a instrução **SQLNumParams** para determinar o número de parâmetros, e **SQLDescribeParam** para descrever cada parâmetro. No entanto, conforme observado anteriormente, a maioria das fontes de dados não fornecem uma maneira para descobrir os metadados de parâmetro, portanto, o driver **SQLDescribeParam** não tem amplo suporte.
+ A única situação na qual o aplicativo não pode determinar facilmente os metadados do parâmetro é quando o usuário insere uma instrução parametrizada. Nesse caso, o aplicativo chama **SQLPrepare** para preparar a instrução, **SQLNumParams** para determinar o número de parâmetros e **SQLDescribeParam** para descrever cada parâmetro. No entanto, como foi observado anteriormente, a maioria das fontes de dados não fornece uma maneira para o driver descobrir os metadados do parâmetro; portanto, não há suporte amplo para **SQLDescribeParam** .

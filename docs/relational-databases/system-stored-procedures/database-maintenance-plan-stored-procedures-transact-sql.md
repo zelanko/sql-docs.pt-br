@@ -1,5 +1,5 @@
 ---
-title: Plano de manutenção de banco de dados procedimentos armazenados (Transact-SQL) | Microsoft Docs
+title: Procedimentos armazenados do plano de manutenção de banco de dados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6b06a0bdbb0cfa7e80d30128ccce71661edde219
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942304"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>Procedimentos armazenados do plano de manutenção do banco de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao sistema a seguir procedimentos armazenados que são usados para configurar tarefas de manutenção. Esses procedimentos armazenados são usados com planos de manutenção de banco de dados. Este recurso foi substituído por planos de manutenção que não usam esses procedimentos armazenados. Use esses procedimentos para manter planos de manutenção de banco de dados em instalações que foram atualizadas a partir de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para configurar tarefas de manutenção. Esses procedimentos armazenados são usados com planos de manutenção de banco de dados. Este recurso foi substituído por planos de manutenção que não usam esses procedimentos armazenados. Use esses procedimentos para manter planos de manutenção de banco de dados em instalações que foram atualizadas a partir de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67942304"
 |[sp_add_maintenance_plan_job](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-job-transact-sql.md)|[sp_help_maintenance_plan](../../relational-databases/system-stored-procedures/sp-help-maintenance-plan-transact-sql.md)|  
 |[sp_delete_maintenance_plan](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-transact-sql.md)||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Selecione uma caixa de diálogo de coluna (Assistente de Business Intelligence) | Microsoft Docs
+title: Caixa de diálogo Selecionar uma coluna (Assistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a8feb2b80a629d51c7447843ff5a8b41f0700b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069837"
 ---
 # <a name="select-a-column-dialog-box-business-intelligence-wizard"></a>Caixa de diálogo Selecionar uma Coluna (Assistente de Business Intelligence)
@@ -26,9 +26,9 @@ ms.locfileid: "66069837"
  **Exibição de árvore**  
  Clique em uma coluna para selecionar uma coluna do Assistente de Business Intelligence.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

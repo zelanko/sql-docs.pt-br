@@ -15,14 +15,14 @@ ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8333000c9bb806116244ac6d4f654fa195205868
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107459"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Instruções SQL construídas em tempo de execução
-Aplicativos que realizam análises ad hoc comumente construa instruções SQL em tempo de execução. Por exemplo, uma planilha pode permitir que um usuário selecionar colunas do qual recuperar dados:  
+Os aplicativos que executam a análise ad hoc normalmente criam instruções SQL em tempo de execução. Por exemplo, uma planilha pode permitir que um usuário Selecione colunas da qual recuperar dados:  
   
 ```  
 // SQL_Statements_Constructed_at_Run_Time.cpp  
@@ -68,8 +68,8 @@ int main() {
 }  
 ```  
   
- Outra classe de aplicativos que normalmente constrói instruções SQL em tempo de execução são ambientes de desenvolvimento de aplicativo. No entanto, as instruções que eles constroem são embutidos em código no aplicativo que elas estão criando, onde podem normalmente ser otimizadas e testadas.  
+ Outra classe de aplicativos que normalmente constrói instruções SQL em tempo de execução são ambientes de desenvolvimento de aplicativos. No entanto, as instruções que eles constroem são embutidas em código no aplicativo que estão compilando, em que normalmente eles podem ser otimizados e testados.  
   
- Aplicativos que construa instruções SQL em tempo de execução podem fornecer uma enorme flexibilidade ao usuário. Como pode ser visto no exemplo anterior, que não oferecia suporte até mesmo operações comuns como **onde** cláusulas **ORDER BY** cláusulas ou junções, construindo instruções SQL em tempo de execução é consideravelmente mais complexo que codificar instruções. Além disso, testar tais aplicativos é problemático porque eles podem construir um número arbitrário de instruções SQL.  
+ Os aplicativos que constroem instruções SQL em tempo de execução podem fornecer uma enorme flexibilidade ao usuário. Como pode ser visto no exemplo anterior, que não dá suporte a tais operações comuns como cláusulas **Where** , cláusulas **order by** ou junções, a construção de instruções SQL em tempo de execução é muito mais complexa do que as instruções de codificação embutida. Além disso, o teste desses aplicativos é problemático porque eles podem construir um número arbitrário de instruções SQL.  
   
- Uma desvantagem potencial de construindo instruções SQL em tempo de execução é que leva muito mais tempo para construir uma instrução que usar uma instrução embutido em código. Felizmente, isso raramente é uma preocupação. Esses aplicativos tendem a ser intensivos de interface do usuário e o tempo que o aplicativo passa construindo instruções SQL é geralmente pequeno em comparação com o tempo que o usuário gasta inserindo critérios.
+ Uma desvantagem potencial da construção de instruções SQL em tempo de execução é que demora muito mais tempo para construir uma instrução do que usar uma instrução embutida em código. Felizmente, isso raramente é uma preocupação. Esses aplicativos tendem a ser intensivas na interface do usuário e o tempo que o aplicativo gasta construindo instruções SQL é geralmente pequeno em comparação com o tempo que o usuário gasta ao inserir critérios.
