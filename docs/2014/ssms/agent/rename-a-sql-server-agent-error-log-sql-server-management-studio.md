@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3405f69ce36b4b46cdb519d281ab910d7220887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62649913"
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Rename a SQL Server Agent Error Log (SQL Server Management Studio)
-  Este tópico descreve como renomear o arquivo em que são gravados os erros do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Este tópico descreve como renomear o arquivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde os erros do Agent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] são gravados no usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o.  
   
  **Neste tópico**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62649913"
   
      [Segurança](#Security)  
   
--   [Para renomear um log de erros do SQL Server Agent usando o SQL Server Management Studio](#SSMSProcedure)  
+-   [Para renomear um SQL Server Agent log de erros usando SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -41,7 +41,8 @@ ms.locfileid: "62649913"
   
 -   O Pesquisador de Objetos só exibirá o nó [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se você tiver permissão para usá-lo.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não irá gravar no novo arquivo de log até que o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seja reiniciado.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não irá gravar no novo arquivo de log até que o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seja reiniciado.  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -56,7 +57,7 @@ ms.locfileid: "62649913"
   
 -   Ajustar cotas de memória para um processo (SeIncreaseQuotaPrivilege)  
   
- Para obter mais informações sobre as permissões do Windows necessárias para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço do Agent, consulte [selecionar uma conta para o serviço do SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [configurar contas de serviço do Windows e Permissões](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Para obter mais informações sobre as permissões do Windows necessárias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a conta de serviço do Agent, consulte [selecionar uma conta para o serviço de SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
