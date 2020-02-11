@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073391"
 ---
 # <a name="parent-child-hierarchy"></a>Hierarquia pai-filho
@@ -35,7 +35,7 @@ ms.locfileid: "66073391"
 ## <a name="dimension-schema"></a>Esquema de dimensão  
  O esquema de dimensão de uma hierarquia pai-filho depende de uma relação de autorreferência existente na tabela principal da dimensão. Por exemplo, o diagrama a seguir ilustra a tabela principal da dimensão **DimOrganization** do banco de dados de exemplo [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] .  
   
- ![Junção referenciada automaticamente na tabela DimOrganization](../dev-guide/media/dimorganization.gif "auto-referenciada de junção na tabela DimOrganization")  
+ ![Junção autorreferenciável na tabela DimOrganization](../dev-guide/media/dimorganization.gif "Junção autorreferenciável na tabela DimOrganization")  
   
  Nessa tabela de dimensão, a coluna **ParentOrganizationKey** possui uma relação de chave estrangeira com a coluna da chave primária **OrganizationKey** . Em outras palavras, cada registro dessa tabela pode ser relacionado por meio de uma relação pai-filho com outro registro da tabela. Geralmente, esse tipo de autojunção é usado para representar os dados de uma empresa, como a estrutura de gerenciamento dos funcionários de um departamento.  
   
@@ -44,14 +44,14 @@ ms.locfileid: "66073391"
   
  Entretanto, dimensões pai-filho constroem hierarquias pai-filho analisando os dados contidos na tabela principal da dimensão e, em seguida, avaliando as relações pai-filho entre os registros da tabela. Para obter mais informações sobre hierarquias pai-filho, consulte [Hierarquias de usuários](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md).  
   
- As hierarquias pai-filho não extraem os nomes dos níveis de uma hierarquia pai-filho dos atributos usados para criar a hierarquia. Em vez disso, essas dimensões criam os nomes dos níveis automaticamente usando uma expressão de modelo, uma cadeia de caracteres de nomenclatura você pode especificar no nível do atributo pai que controla como o atributo gera a hierarquia de atributo. Para obter mais informações sobre como definir o modelo de nomeação para um atributo pai, consulte [Atributos e hierarquias de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+ As hierarquias pai-filho não extraem os nomes dos níveis de uma hierarquia pai-filho dos atributos usados para criar a hierarquia. Em vez disso, essas dimensões criam nomes de nível automaticamente usando um modelo de nomeação – uma expressão de cadeia de caracteres que você pode especificar no nível do atributo pai que controla como o atributo gera a hierarquia de atributo. Para obter mais informações sobre como definir o modelo de nomeação para um atributo pai, consulte [Atributos e hierarquias de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
 ## <a name="data-members"></a>Membros de dados  
  Normalmente, os membros folha de uma dimensão contêm dados extraídos diretamente de fontes de dados subjacentes, enquanto os membros não folha contêm dados provenientes de agregações realizadas pelos membros filho.  
   
  No entanto, as hierarquias pai-filho devem ter alguns membros não folha cujos dados sejam provenientes de fontes de dados subjacentes, além dos dados agregados dos membros filho. Para esses membros não folha de uma hierarquia pai-filho, membros filho especiais gerados pelo sistema podem ser criados, contendo dados da tabela de fatos subjacente. Denominados *membros de dados*, esses membros filho especiais contêm um valor que é diretamente associado a um membro não folha e é independente do valor resumido calculado a partir dos descendentes do membro não folha. Para obter mais informações sobre membros de dados, consulte [Atributos em hierarquias pai-filho](parent-child-dimension-attributes.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atributos em hierarquias pai-filho](parent-child-dimension-attributes.md)   
  [Propriedades de dimensão do banco de dados](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   

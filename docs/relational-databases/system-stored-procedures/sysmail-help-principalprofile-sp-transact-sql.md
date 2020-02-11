@@ -18,19 +18,19 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044522"
 ---
-# <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
+# <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lista informações sobre associações entre perfis de Database Mail e entidades do banco de dados.  
   
  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,13 +41,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @principal_id = ] principal_id` É a ID do usuário de banco de dados ou função na **msdb** banco de dados para a associação à lista. *principal_id* está **int**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* pode ser especificado.  
+`[ @principal_id = ] principal_id`É a ID do usuário do banco de dados ou da função no banco de dados **msdb** para a associação a ser listada. *principal_id* é **int**, com um padrão de NULL. *Principal_id* ou *principal_name* pode ser especificado.  
   
-`[ @principal_name = ] 'principal_name'` É o nome do usuário de banco de dados ou função na **msdb** banco de dados para a associação à lista. *principal_name* está **sysname**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* pode ser especificado.  
+`[ @principal_name = ] 'principal_name'`É o nome do usuário do banco de dados ou da função no banco de dados **msdb** para a associação a ser listada. *principal_name* é **sysname**, com um padrão de NULL. *Principal_id* ou *principal_name* pode ser especificado.  
   
-`[ @profile_id = ] profile_id` É a ID do perfil da associação a ser listada. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* pode ser especificado.  
+`[ @profile_id = ] profile_id`É a ID do perfil para a associação a ser listada. *profile_id* é **int**, com um padrão de NULL. *Profile_id* ou *profile_name* pode ser especificado.  
   
-`[ @profile_name = ] 'profile_name'` É o nome do perfil para a associação à lista. *profile_name* está **sysname**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* pode ser especificado.  
+`[ @profile_name = ] 'profile_name'`É o nome do perfil para a associação a ser listada. *profile_name* é **sysname**, com um padrão de NULL. *Profile_id* ou *profile_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -57,7 +57,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
 ||||  
 |-|-|-|  
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |**principal_id**|**int**|O ID do usuário do banco de dados.|  
 |**principal_name**|**sysname**|O nome do usuário do banco de dados.|  
 |**profile_id**|**int**|O número do ID do perfil de Database Mail.|  
@@ -65,16 +65,16 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |**is_default**|**bit**|O sinalizador que indica se este é o perfil padrão do usuário.|  
   
 ## <a name="remarks"></a>Comentários  
- Se **sysmail_help_principalprofile_sp** é chamado sem parâmetros, o conjunto de resultados retornado listará todas as associações na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Caso contrário, o conjunto de resultados conterá informações sobre as associações correspondentes aos parâmetros fornecidos. Por exemplo, o procedimento lista todas as associações de um perfil quando o nome de perfil for fornecido.  
+ Se **sysmail_help_principalprofile_sp** for invocado sem parâmetros, o conjunto de resultados retornado listará todas as associações na instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Caso contrário, o conjunto de resultados conterá informações sobre as associações correspondentes aos parâmetros fornecidos. Por exemplo, o procedimento lista todas as associações de um perfil quando o nome de perfil for fornecido.  
   
- **sysmail_help_principalprofile_sp** está no **msdb** é de propriedade e o banco de dados do **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
+ **sysmail_help_principalprofile_sp** está no banco de dados **msdb** e pertence ao esquema **dbo** . O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-listing-information-for-a-specific-association"></a>A. Listando informações de uma associação específica  
+### <a name="a-listing-information-for-a-specific-association"></a>a. Listando informações de uma associação específica  
  O exemplo a seguir mostra a lista de informações de todas as associações entre o perfil `AdventureWorks Administrator` e a entidade `ApplicationLogin` no banco de dados `msdb`.  
   
 ```  
@@ -107,8 +107,8 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Procedimentos armazenados do Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176020"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptador de nuvem para SQL Server
-  O serviço de adaptador de nuvem é criado como parte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do provisionamento em uma VM do Azure. O serviço de Adaptador de Nuvem gera um certificado SSL autoassinado como parte da sua primeira execução e é executado como uma conta **Sistema Local** . Ele gera um arquivo de configuração que é usado para autoconfiguração. O Adaptador de Nuvem também cria uma regra de Firewall do Windows para permitir suas conexões TCP de entrada na porta padrão 11435.  
+  O serviço de Adaptador de Nuvem é criado como parte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do provisionamento em uma VM do Azure. O serviço de Adaptador de Nuvem gera um certificado SSL autoassinado como parte da sua primeira execução e é executado como uma conta **Sistema Local** . Ele gera um arquivo de configuração que é usado para autoconfiguração. O adaptador de nuvem também cria uma regra do Firewall do Windows para permitir suas conexões TCP de entrada na porta padrão 11435.  
   
  O Adaptador de Nuvem é um serviço síncrono sem monitoração de estado que recebe mensagens da instância local do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando o serviço de Adaptador de Nuvem é interrompido, ele interrompe o Adaptador de Nuvem de acesso remoto, desassocia o certificado SSL e desabilita a regra de Firewall do Windows.  
   
@@ -47,23 +47,23 @@ ms.locfileid: "70176020"
   
 -   **Parâmetros do arquivo de configuração** -  
   
-    -   \<configuration>  
+    -   \<> de configuração  
   
         -   \<appSettings>  
   
-            -   \<add key="WebServicePort" value="" />  
+            -   \<Add Key = "WebServicePort" valor = ""/>  
   
             -   \<Add Key = "WebServiceCertificate" valor = "GUID"/>  
   
-            -   \<add key="ExposeExceptionDetails" value="true" />  
+            -   \<Add Key = "ExposeExceptionDetails" valor = "verdadeiro"/>  
   
-        -   \</appSettings>  
+        -   \<>/appSettings  
   
-    -   \</configuration>  
+    -   \<>/configuração  
   
 -   **Detalhes do certificado** -o certificado tem os seguintes valores:  
   
-    -   Subject-"CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
+    -   Subject-"CN = CloudAdapter\<VMName>, dc = SQL Server, DC = Microsoft"  
   
     -   O certificado deve ter somente o EKU da Autenticação do Servidor habilitado.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "70176020"
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|Se não for especificada, use 11435.|  
 |WebServiceCertificate|Impressão digital|Vazio|Se estiver vazio, um novo certificado autoassinado será gerado.|  
-|ExposeExceptionDetails|True/False|False||  
+|ExposeExceptionDetails|Verdadeiro/Falso|Falso||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>Solução de problemas do Adaptador de Nuvem  
  Use as informações a seguir para solucionar problemas do Adaptador de Nuvem para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -84,7 +84,7 @@ ms.locfileid: "70176020"
   
 -   **Rastreamento, eventos** – todos os eventos são gravados no log de eventos do aplicativo.  
   
--   **Controle, configuração** -use o arquivo de configuração localizado em:  C:\Arquivos de Programas\microsoft SQL\\Server\120\Tools\CloudAdapter.  
+-   **Controle, configuração** -use o arquivo de configuração localizado em: C:\Arquivos de Programas\microsoft\\SQL Server\120\Tools\CloudAdapter.  
   
 |Erro|ID do erro|Causa|Resolução|  
 |-----------|--------------|-----------|----------------|  
@@ -95,7 +95,7 @@ ms.locfileid: "70176020"
 |O certificado [{Impressão digital}] expirou.|45565|Certificado expirado fazia referência do arquivo de configuração.|Adicione um certificado válido e atualize o arquivo de configuração com a respectiva impressão digital.|  
 |Erro do serviço Web {0}:.|45571|Descrito na exceção.|Habilite ExposeExceptionDetails e use as informações estendidas da exceção.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implantar um banco de dados do SQL Server em uma máquina virtual do Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Selecione uma fonte de dados (Assistente de exibição de fonte de dados) (Analysis Services) | Microsoft Docs
+title: Selecionar uma fonte de dados (Assistente de exibição da fonte de dados) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069857"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>Selecionar Fonte de Dados (Assistente de Exibição da Fonte de Dados) (Analysis Services)
@@ -37,9 +37,9 @@ ms.locfileid: "66069857"
  **Nova fonte de dados**  
  Abre a caixa de diálogo Assistente para Fonte de Dados na qual é possível criar uma nova fonte de dados que será adicionada ao projeto.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de exibição de fonte de dados &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
- [Exibições de fontes de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Ajuda F1 do Assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de exibição da fonte de dados &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Exibições da fonte de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Ajuda F1 do assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
   
   

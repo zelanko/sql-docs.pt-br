@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63119bf6d8ba4e9d907b9c6cdfb6bfe0b7765941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105938"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Relatórios detalhados (Construtor de Relatórios e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66105938"
 > [!NOTE]  
 >  Ao trabalhar no Construtor de Relatórios, você deve estar conectado a um servidor de relatório para exibir o relatório detalhado que é aberto quando clica no link de detalhamento no relatório principal.  
   
- Para começar rapidamente nos relatórios detalhados, confira o [Tutorial: Criar relatórios principal e de detalhamento &#40;Construtor de Relatórios&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Relatório detalhado também é caracterizado em duas soluções de business intelligence, [BI Reporting: Reports and Subscriptions Scenario](https://technet.microsoft.com/bi/ff769487.aspx) e [Corporate Dashboards: Solução de vendas](https://technet.microsoft.com/bi/ff643005.aspx)  
+ Para se familiarizar rapidamente com os relatórios detalhados, consulte [Tutorial: Criando relatórios principais e de detalhamento &#40;Construtor de Relatórios&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). O relatório detalhado também é caracterizado em duas soluções de business intelligence, [BI Reporting: Reports and Subscriptions Scenario](https://technet.microsoft.com/bi/ff769487.aspx) e [Corporate Dashboards: Sales Solution](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -50,7 +50,7 @@ ms.locfileid: "66105938"
 ## <a name="viewing-a-drillthrough-report"></a>Exibindo um relatório detalhado  
  Para exibir um relatório de resumo com links de detalhamento após sua publicação, é preciso verificar se os relatórios detalhados estão no mesmo servidor do relatório de resumo. Em todas as situações, o usuário deve ter permissões no relatório detalhado para exibi-lo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

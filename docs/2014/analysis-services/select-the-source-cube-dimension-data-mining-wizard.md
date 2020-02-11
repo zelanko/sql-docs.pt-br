@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069226"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Selecionar a dimensão do cubo de origem (Assistente de Mineração de Dados)
@@ -26,7 +26,7 @@ ms.locfileid: "66069226"
 >  Essa página será exibida apenas se você tiver selecionado **De cubo existente** na página **Selecionar o Método de Definição** do assistente.  
   
 ## <a name="options"></a>Opções  
- **Selecione uma dimensão de cubo de origem**  
+ **Selecionar a Dimensão do Cubo de Origem**  
  Selecione a dimensão do cubo que fornecerá os dados de origem para sua estrutura de mineração.  
   
 ## <a name="choosing-a-dimension"></a>Escolhendo uma dimensão  
@@ -38,9 +38,9 @@ ms.locfileid: "66069226"
   
  Se a dimensão escolhida não contiver todos os atributos relacionados necessários para criar o modelo de mineração de dados, talvez seja necessário modificá-la. Para obter mais informações, consulte [Definir as dimensões do banco de dados](multidimensional-models/define-database-dimensions.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Criar a estrutura de mineração de dados &#40;Assistente de mineração de dados&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [Selecione a chave do caso &#40;Assistente de mineração de dados&#41;](select-the-case-key-data-mining-wizard.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de mineração de dados &#40;Analysis Services Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Criar a estrutura de mineração de dados &#40;assistente de mineração de dados&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [Selecione a chave de caso &#40;assistente de mineração de dados&#41;](select-the-case-key-data-mining-wizard.md)  
   
   

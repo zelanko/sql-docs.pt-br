@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068219"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Especificar Critérios de Consulta (Assistente de Otimização com Base no Uso)
@@ -26,7 +26,7 @@ ms.locfileid: "66068219"
 >  Essa página será desabilitada se o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não puder se conectar com o log de consultas.  
   
 ## <a name="options"></a>Opções  
- **Estatísticas de log de consulta**  
+ **Estatísticas de log de consultas**  
  Exibe informações sobre as consultas armazenadas no log de consultas das partições selecionadas. Os seguintes itens são exibidos:  
   
 |Termo|Definição|  
@@ -42,20 +42,20 @@ ms.locfileid: "66068219"
 > [!NOTE]  
 >  Se a **Data de término date** não for selecionada, todas as consultas no log de consultas na data e hora especificadas ou para essa opção ou posteriores serão consideradas.  
   
- **Data de término**  
+ **Data de término date**  
  Filtra consultas no log de consultas com base em uma data e hora de término. Escolha ou digite uma data na lista suspensa.  
   
 > [!NOTE]  
 >  Se a **Data de início** não for selecionada, todas as consultas no log de consultas antes ou na data e hora especificadas para essa opção serão consideradas.  
   
- **Usuários**  
- Filtra consultas no log de consultas com base em um conjunto de usuários especificado. Clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Seleção de Usuários** e escolher os usuários nos quais filtrar consultas. Para obter mais informações sobre a caixa de diálogo **Seleção de Usuários**, consulte [Caixa de diálogo Seleção de Usuários &#40;Analysis Services – Dados Multidimensionais&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
+ **Podem**  
+ Filtra consultas no log de consultas com base em um conjunto de usuários especificado. Clique no botão de reticências (**...**) para exibir a caixa de diálogo **Seleção de Usuários** e escolher os usuários nos quais filtrar consultas. Para obter mais informações sobre a caixa de diálogo **Seleção de Usuários**, consulte [Caixa de diálogo Seleção de Usuários &#40;Analysis Services – Dados Multidimensionais&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Consultas mais frequentes**  
  Filtra consultas no log de consultas com base na porcentagem mais alta de consultas distintas executadas com maior frequência para as partições selecionadas. Escolha ou digite um valor percentual na caixa de texto.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de otimização com base no uso](usage-based-optimization-wizard-f1-help.md)   
- [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de otimização com base no uso](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services assistentes &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068137"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Especificar tipos de tabelas (Assistente de Mineração de Dados)
@@ -25,24 +25,24 @@ ms.locfileid: "66068137"
 > [!NOTE]  
 >  Você pode adicionar tabelas mais tarde na guia **Estrutura de Mineração** do **Designer de Data Mining**.  
   
- **Para obter mais informações:** [Tabelas aninhadas &#40;Analysis Services - mineração de dados&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [tabelas aninhadas &#40;Analysis Services de mineração de dados&#41;](data-mining/nested-tables-analysis-services-data-mining.md), o [assistente de mineração de dados &#40;Analysis Services&#41;de mineração de dados ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Tabelas**  
  Exibe as tabelas na exibição da fonte de dados selecionada na página **Selecionar Exibição da Fonte de Dados** do assistente.  
   
- **Caso**  
+ **Casos**  
  Selecione uma tabela a ser usada como a tabela de casos.  
   
- **Aninhados**  
+ **Construção**  
  Selecione as tabelas a serem usadas como tabelas aninhadas.  
   
 > [!NOTE]  
 >  Essas tabelas devem ter uma relação de muitos para um com a tabela de casos e não uma relação de um para muitos. Você deve especificar essa relação na exibição da fonte de dados para poder selecionar a tabela como aninhada.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Selecionar exibição da fonte de dados &#40;Assistente de mineração de dados&#41;](select-data-source-view-data-mining-wizard.md)   
- [Especificar os dados de treinamento &#40;Assistente de mineração de dados&#41;](specify-the-training-data-data-mining-wizard.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de mineração de dados &#40;Analysis Services Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Selecione exibição da fonte de dados &#40;assistente de mineração de dados&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Especifique os dados de treinamento &#40;assistente de mineração de dados&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

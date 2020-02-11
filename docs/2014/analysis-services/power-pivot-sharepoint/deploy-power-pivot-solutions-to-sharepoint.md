@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c91225761c76a58b81d8895698ca059014969f0f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782826"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Implantar soluções PowerPivot para SharePoint
@@ -26,19 +26,19 @@ ms.locfileid: "72782826"
   
  Este tópico contém as seguintes seções:  
   
- [Pré-requisito: verificar se o aplicativo Web usa a autenticação de modo clássico](#bkmk_classic)  
+ [Pré-requisito: Verifique se o aplicativo Web usa a autenticação de modo clássico](#bkmk_classic)  
   
  [Etapa 1: implantar a solução de farm](#bkmk_farm)  
   
- [Etapa 2: implantar a solução de aplicativo Web PowerPivot na administração central](#deployCA)  
+ [Etapa 2: implantar a solução de aplicativo Web do PowerPivot na Administração Central](#deployCA)  
   
- [Etapa 3: implantar a solução de aplicativo Web PowerPivot em outros aplicativos Web](#deployUI)  
+ [Etapa 3: implantar a solução de aplicativo Web do PowerPivot em outros aplicativos Web](#deployUI)  
   
  [Reimplantar ou cancelar a solução](#retract)  
   
  [Sobre as soluções PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Pré-requisito: verificar se o aplicativo Web usa a autenticação de modo clássico  
+##  <a name="bkmk_classic"></a>Pré-requisito: Verifique se o aplicativo Web usa a autenticação de modo clássico  
  O PowerPivot para SharePoint tem suporte apenas para aplicativos Web que utilizam a autenticação de modo clássico do Windows. Para verificar se o aplicativo usa o modo clássico, execute o seguinte cmdlet do PowerShell no **Shell de gerenciamento do sharepoint 2010**, substituindo `http://<top-level site name>` pelo nome do seu site do SharePoint:  
   
 ```powershell
@@ -47,8 +47,8 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  O valor retornado deve ser **false**. Se for **true**, você não poderá acessar dados PowerPivot com este aplicativo Web.  
   
-##  <a name="bkmk_farm"></a> Etapa 1: implantar a solução de farm  
- Esta seção mostra como implantar soluções usando o PowerShell, mas você também pode usar a Ferramenta de Configuração do PowerPivot para concluir esta tarefa. Para obter mais informações, consulte [Configurar ou reparar PowerPivot para SharePoint &#40;ferramenta&#41;de configuração do PowerPivot 2010](../configure-repair-powerpivot-sharepoint-2010.md).  
+##  <a name="bkmk_farm"></a>Etapa 1: implantar a solução de farm  
+ Esta seção mostra como implantar soluções usando o PowerShell, mas você também pode usar a Ferramenta de Configuração do PowerPivot para concluir esta tarefa. Para obter mais informações, consulte [Configurar ou reparar 2010 PowerPivot para SharePoint &#40;ferramenta de configuração do PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Esta tarefa somente precisa ser executada uma vez, depois de instalar o PowerPivot para SharePoint.  
   
@@ -104,13 +104,13 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 3.  Clique em **Implantar Solução**.  
   
-4.  Em **implantar em?** , selecione o aplicativo Web do SharePoint para o qual você deseja adicionar suporte ao recurso do PowerPivot.  
+4.  Em **implantar em?**, selecione o aplicativo Web do SharePoint para o qual você deseja adicionar suporte ao recurso do PowerPivot.  
   
 5.  Clique em **OK**.  
   
 6.  Repita para outros aplicativos Web do SharePoint que também oferecerão suporte ao acesso a dados PowerPivot.  
   
-##  <a name="retract"></a> Reimplantar ou cancelar a solução  
+##  <a name="retract"></a>Reimplantar ou cancelar a solução  
  Embora a Administração Central do SharePoint forneça o cancelamento da solução, você não precisa cancelar o arquivo powerpivotwebapp.wsp, a menos que esteja solucionando problemas sistematicamente de uma instalação ou um problema de implantação do patch.  
   
 1.  Na Administração Central do SharePoint 2010, em Configurações do Sistema, clique em **Gerenciar soluções de farm**.  
@@ -119,7 +119,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 3.  Clique em **Cancelar Solução**.  
   
- Se você encontrar problemas de implantação de servidor que você rastreie de volta para a solução de farm, você pode reimplantá-lo executando a opção de **reparo** na ferramenta de configuração do PowerPivot. As operações de reparo pela ferramenta são preferíveis porque exigem menos etapas de sua parte. Para obter mais informações, consulte [Configurar ou reparar PowerPivot para SharePoint &#40;ferramenta&#41;de configuração do PowerPivot 2010](../configure-repair-powerpivot-sharepoint-2010.md).  
+ Se você encontrar problemas de implantação de servidor que você rastreie de volta para a solução de farm, você pode reimplantá-lo executando a opção de **reparo** na ferramenta de configuração do PowerPivot. As operações de reparo pela ferramenta são preferíveis porque exigem menos etapas de sua parte. Para obter mais informações, consulte [Configurar ou reparar 2010 PowerPivot para SharePoint &#40;ferramenta de configuração do PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Se você ainda desejar reimplantar todas as soluções, siga esta ordem:  
   
@@ -142,12 +142,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  A solução do aplicativo Web é implantada inicialmente na Administração Central, seguida por implantações subsequentes da solução em qualquer aplicativo Web adicional que dará suporte a solicitações para dados PowerPivot. Para implantar a solução de aplicativo Web da Administração Central, você deve usar a Ferramenta de Configuração do PowerPivot ou cmdlet do PowerShell. Para todos os outros aplicativos Web, você pode implantar a solução de aplicativo Web manualmente usando a Administração Central ou PowerShell.  
   
-|Solução|Descrição|  
+|Solução|DESCRIÇÃO|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Adiciona o Microsoft.AnalysisServices.SharePoint.Integration.dll ao assembly global.<br /><br /> Adiciona o Microsoft.AnalysisServices.ChannelTransport.dll ao assembly global.<br /><br /> Instala recursos e arquivos de recurso e registra tipos de conteúdo.<br /><br /> Adiciona modelos de biblioteca para bibliotecas da Galeria PowerPivot e do Feed de Dados.<br /><br /> Adiciona páginas de aplicativos para configuração de aplicativos de serviço, Painel de Gerenciamento PowerPivot, atualização de dados e Galeria PowerPivot.|  
 |Powerpivotwebapp.wsp|Adiciona arquivos de recursos Microsoft.AnalysisServices.SharePoint.Integration.dll à pasta de extensões no servidor Web front-end.<br /><br /> Adiciona serviço Web do PowerPivot ao front-end Web.<br /><br /> Adiciona geração de imagens em miniatura para Galeria PowerPivot.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualizar PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [Administração e configuração do servidor PowerPivot na  de administração central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Administração e configuração do servidor PowerPivot na administração central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Configuração do PowerPivot usando o Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  

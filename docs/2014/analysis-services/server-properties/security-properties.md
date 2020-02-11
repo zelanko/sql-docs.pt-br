@@ -20,16 +20,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068904"
 ---
 # <a name="security-properties"></a>Propriedades de segurança
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de segurança listadas na tabela a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** Modo de servidor multidimensional e Tabular  
+ **Aplica-se a:** Modo de servidor multidimensional e tabular  
   
 ## <a name="properties"></a>Propriedades  
  `RequireClientAuthentication`  
@@ -59,7 +60,7 @@ ms.locfileid: "66068904"
  `DataProtection\ RequiredProtectionLevel`  
  Uma propriedade de inteiro de 32 bits assinada que define o nível de proteção exigido para todas as requisições do cliente. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |*0*|Nenhum, texto não criptografado permitido.|  
 |*1*|(Padrão) Criptografia necessária, sem log de texto não criptografado.|  
@@ -68,8 +69,8 @@ ms.locfileid: "66068904"
  `AdministrativeDataProtection\ RequiredProtectionLevel`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar propriedades de servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar propriedades do servidor no Analysis Services](server-properties-in-analysis-services.md)   
+ [Determinar o modo de servidor de uma instância de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

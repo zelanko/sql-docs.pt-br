@@ -1,5 +1,5 @@
 ---
-title: Editor da tarefa controle CDC | Microsoft Docs
+title: Editor da tarefa controle de CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061123"
 ---
 # <a name="cdc-control-task-editor"></a>CDC Control Task Editor
@@ -57,7 +57,7 @@ ms.locfileid: "66061123"
   
 -   **Marcar o intervalo processado**: esta operação é usada em um pacote de processamento de alteração no fim de uma execução de CDC (depois que o fluxo de dados de CDC é concluído com êxito) para registrar o último LSN que foi processado completamente na execução de CDC. Da próxima vez que o `GetProcessingRange` é executado, esta posição determina o início do próximo intervalo de processamento.  
   
--   **Redefinir estado de CDC**: Esta operação é usada para reiniciar o estado de CDC persistente associado ao contexto de CDC atual. Depois que esta operação é executada, o LSN máximo atual da tabela `sys.fn_cdc_get_max_lsn` do carimbo de data/hora de LSN torna-se o início do intervalo para o próximo intervalo de processamento. Esta operação exige uma conexão com o banco de dados de origem.  
+-   **Reiniciar estado de CDC**: esta operação é usada para reiniciar o estado de CDC persistente associado ao contexto de CDC atual. Depois que esta operação é executada, o LSN máximo atual da tabela `sys.fn_cdc_get_max_lsn` do carimbo de data/hora de LSN torna-se o início do intervalo para o próximo intervalo de processamento. Esta operação exige uma conexão com o banco de dados de origem.  
   
      Um exemplo de quando esta operação é usada é quando você deseja processar somente os registros de alteração recém-criados e ignorar todos os registros de alteração antigos.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66061123"
  **Nome do estado**  
  Digite um nome para associar com o estado de CDC persistente. A carga cheia e os pacotes CDC que funcionam com o mesmo contexto de CDC especificará um nome de estado comum. Esse nome é usado para verificar a linha de estado na tabela de estado  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades personalizadas da tarefa Controle de CDC](control-flow/cdc-control-task-custom-properties.md)  
   
   

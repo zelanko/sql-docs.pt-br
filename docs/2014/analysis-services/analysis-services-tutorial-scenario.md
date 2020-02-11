@@ -1,5 +1,5 @@
 ---
-title: Cenário do Tutorial do Analysis Services | Microsoft Docs
+title: Cenário do tutorial de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062440"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Cenário do tutorial de Analysis Services
-  Este tutorial baseia-se na [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde a empresa emprega 500 trabalhadores. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  
+  Este tutorial baseia-se na [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde a empresa emprega 500 trabalhadores. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  
   
  Nos últimos anos, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] adquiriu uma fábrica pequena, a Importadores Neptuno, situada no México. A Importadores Neptuno fabrica vários subcomponentes importantes para a linha de produtos da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Esses subcomponentes são transportados para as instalações de Bothell para o assembly de produto final. Em 2005, a Importadores Neptuno se tornou o fabricante e o distribuidor exclusivo do grupo de produtos de bicicleta de passeio.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "66062440"
 -   É difícil examinar as informações. O departamento financeiro atual usa o banco de dados **AdventureWorksDW2012** apenas como uma fonte de dados para consultas em massa. O departamento baixa os dados em planilhas individuais e seus membros passam horas preparando dados e trabalhando com as planilhas. A empresa tem dificuldades em preparar, examinar e gerenciar os relatórios financeiros corporativos.  
   
 ## <a name="the-solution"></a>A solução  
- A equipe do data warehouse realizou recentemente uma revisão do design do sistema de análise atual. A revisão incluiu a análise de lacunas nos assuntos atuais e futuras demandas. A equipe do data warehouse determinou que o banco de dados **AdventureWorksDW2012** é um banco de dados dimensional bem projetado com dimensões compatíveis e chaves alternativas. As dimensões adequadas permitem que a dimensão seja usada em vários data marts, como a dimensão de tempo ou de produto. As chaves substitutas são chaves artificiais que vinculam a dimensão e as tabelas de fatos, e são usadas para garantir a singularidade e para melhorar o desempenho. Além disso, a equipe do data warehouse determinou que não há problemas significativos com o carregamento e o gerenciamento das tabelas base no banco de dados **AdventureWorksDW2012** . A equipe decidiu usar o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para:  
+ A equipe do data warehouse realizou recentemente uma revisão do design do sistema de análise atual. A revisão incluiu a análise de lacunas nos assuntos atuais e futuras demandas. A equipe do data warehouse determinou que o banco de dados **AdventureWorksDW2012** é um banco de dados dimensional bem projetado com dimensões compatíveis e chaves alternativas. As dimensões adequadas permitem que a dimensão seja usada em vários data marts, como a dimensão de tempo ou de produto. As chaves substitutas são chaves artificiais que vinculam a dimensão e as tabelas de fatos, e são usadas para garantir a singularidade e para melhorar o desempenho. Além disso, a equipe do data warehouse determinou que não há problemas significativos com o carregamento e o gerenciamento das tabelas base no banco de dados **AdventureWorksDW2012** . Portanto, a equipe decidiu usar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o para realizar o seguinte:  
   
 -   Fornecer acesso de dados unificado por uma camada de metadados comum para análise analítica e geração de relatórios.  
   
@@ -60,9 +61,9 @@ ms.locfileid: "66062440"
   
 -   Apresentar uma chance de trabalho a usuários empresariais que estejam fora dos Estados Unidos.  
   
- As lições no tutorial do Analysis Services fornecem orientação sobre como criar um banco de dados de cubo que atende a todas estas metas. Para começar, vá para a primeira lição: [Lição 1: Criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md).  
+ As lições no tutorial do Analysis Services fornecem orientação sobre como criar um banco de dados de cubo que atende a todas estas metas. Para começar, continue na primeira lição: [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Modelagem multidimensional &#40;tutorial do Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   
