@@ -1,5 +1,5 @@
 ---
-title: Criando previsões de série temporal (Tutorial de mineração de dados intermediário) | Microsoft Docs
+title: Criando previsões de série temporal (tutorial intermediário de mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313885"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Criando previsões de série temporal (Tutorial de mineração de dados intermediário)
@@ -29,53 +29,53 @@ ms.locfileid: "63313885"
   
 #### <a name="to-select-a-model-and-input-table"></a>Para selecionar um modelo e uma tabela de entrada  
   
-1.  No **previsão do modelo de mineração** guia do Designer de mineração de dados, no **modelo de mineração** , clique em **Selecionar modelo**.  
+1.  Na guia **previsão do modelo de mineração** do designer de mineração de dados, na caixa **modelo de mineração** , clique em **selecionar modelo**.  
   
-2.  No **Selecionar modelo de mineração** caixa de diálogo, expanda a estrutura previsão, selecione o **Forecasting** de modelo na lista e, em seguida, clique em **Okey**.  
+2.  Na caixa de diálogo **selecionar modelo de mineração** , expanda a estrutura de previsão, selecione o modelo de **previsão** na lista e clique em **OK**.  
   
-3.  Ignorar a **Selecionar tabela (s) de entrada** caixa.  
+3.  Ignore a caixa **selecionar tabela (s) de entrada** .  
   
     > [!NOTE]  
     >  Para um modelo de série temporal, você não precisa especificar uma entrada separada, a menos que esteja fazendo previsão cruzada.  
   
-4.  No **fonte** coluna, na grade a **previsão do modelo de mineração** guia, clique na célula na primeira linha vazia e, em seguida, selecione **modelo de mineração previsão**.  
+4.  Na coluna **origem** , na grade da guia Previsão do **modelo de mineração** , clique na célula da primeira linha vazia e selecione **previsão modelo de mineração**.  
   
-5.  No **campo** coluna, selecione **região modelo**.  
+5.  Na coluna **campo** , selecione **região do modelo**.  
   
      Essa ação adiciona o identificador da série à consulta de previsão para indicar a combinação de modelo e região a que a previsão se aplica.  
   
-6.  Clique na próxima linha vazia na **fonte** coluna e, em seguida, selecione **função de previsão**.  
+6.  Clique na próxima linha vazia na coluna **origem** e selecione **função de previsão**.  
   
-7.  No **campo** coluna, selecione **PredictTimeSeries**.  
+7.  Na coluna **campo** , selecione **PredictTimeSeries**.  
   
     > [!NOTE]  
-    >  Também é possível usar a função `Predict` com modelos de série temporal. No entanto, por padrão, a função Prever cria somente uma previsão para cada série. Portanto, para especificar várias etapas de previsão, você deve usar o **PredictTimeSeries** função.  
+    >  Também é possível usar a função `Predict` com modelos de série temporal. No entanto, por padrão, a função Prever cria somente uma previsão para cada série. Portanto, para especificar várias etapas de previsão, você deve usar a função **PredictTimeSeries** .  
   
-8.  No **modelo de mineração** painel, selecione a coluna do modelo de mineração, **quantidade.** Arraste valor até o **critérios/argumentos** caixa para o **PredictTimeSeries** função que você adicionou anteriormente.  
+8.  No painel **modelo de mineração** , selecione a coluna do modelo de mineração, **valor.** Arraste valor para a caixa **critérios/argumentos** para a função **PredictTimeSeries** que você adicionou anteriormente.  
   
-9. Clique o **critérios/argumentos** caixa e, em seguida, digite uma vírgula, seguida por **5**, após o nome do campo.  
+9. Clique na caixa **critérios/argumentos** e digite uma vírgula, seguida por **5**, após o nome do campo.  
   
-     O texto a **critérios/argumentos** caixa agora deve exibir o seguinte:  
+     O texto na caixa **critérios/argumentos** agora deve exibir o seguinte:  
   
      `[Forecasting].[Amount],5`  
   
-10. No **Alias** coluna, digite `PredictAmount`.  
+10. Na coluna **alias** , digite `PredictAmount`.  
   
-11. Clique na próxima linha vazia na **fonte** coluna e, em seguida, selecione **função de previsão** novamente.  
+11. Clique na próxima linha vazia na coluna **origem** e selecione a função de **previsão** novamente.  
   
-12. No **campo** coluna, selecione **PredictTimeSeries**.  
+12. Na coluna **campo** , selecione **PredictTimeSeries**.  
   
-13. No **modelo de mineração** painel, selecione a coluna quantidade e, em seguida, arraste-o para o **critérios/argumento** caixa para a segunda **PredictTimeSeries** função.  
+13. No painel **modelo de mineração** , selecione a quantidade da coluna e arraste-a para a caixa **critérios/argumentos** da segunda função **PredictTimeSeries** .  
   
-14. Clique o **critérios/argumentos** caixa e, em seguida, digite uma vírgula, seguida por **5**, após o nome do campo.  
+14. Clique na caixa **critérios/argumentos** e digite uma vírgula, seguida por **5**, após o nome do campo.  
   
-     O texto a **critérios/argumentos** caixa agora deve exibir o seguinte:  
+     O texto na caixa **critérios/argumentos** agora deve exibir o seguinte:  
   
      `[Forecasting].[ Quantity],5`  
   
-15. No **Alias** coluna, digite `PredictQuantity`.  
+15. Na coluna **alias** , digite `PredictQuantity`.  
   
-16. Clique em **alternar para a exibição de resultado de consulta**.  
+16. Clique em **alternar para a exibição de resultado da consulta**.  
   
      Os resultados da consulta serão exibidos em formato tabular.  
   
@@ -83,17 +83,17 @@ ms.locfileid: "63313885"
   
  Resultados de exemplo (os valores são truncados em duas casas decimais):  
   
- **M200 Europa PredictAmount**  
+ **Europa M200l PredictAmount**  
   
-|$TIME|Valor|  
+|$TIME|Amount|  
 |-----------|------------|  
-|7/25/2008|99978.00|  
-|8/25/2008|145575.07|  
-|9/25/2008|116835.19|  
-|10/25/2008|116537.38|  
-|11/25/2008|107760.55|  
+|7/25/2008|99978, 0|  
+|8/25/2008|145575, 7|  
+|9/25/2008|116835,19|  
+|10/25/2008|116537,38|  
+|11/25/2008|107760,55|  
   
- **M200 Europa PredictQuantity**  
+ **Europa M200l PredictQuantity**  
   
 |$TIME|Quantidade|  
 |-----------|--------------|  
@@ -103,17 +103,17 @@ ms.locfileid: "63313885"
 |10/25/2008|57|  
 |11/25/2008|54|  
   
- **M200 América do Norte - PredictAmount**  
+ **M200 América do Norte-PredictAmount**  
   
-|$TIME|Valor|  
+|$TIME|Amount|  
 |-----------|------------|  
-|7/25/2008|348533.93|  
-|8/25/2008|340097.98|  
-|9/25/2008|257986.19|  
-|10/25/2008|374658.24|  
-|11/25/2008|379241.44|  
+|7/25/2008|348533,93|  
+|8/25/2008|340097,98|  
+|9/25/2008|257986,19|  
+|10/25/2008|374658,24|  
+|11/25/2008|379241,44|  
   
- **M200 América do Norte - PredictQuantity**  
+ **M200 América do Norte-PredictQuantity**  
   
 |$TIME|Quantidade|  
 |-----------|--------------|  
@@ -133,7 +133,7 @@ ms.locfileid: "63313885"
   
 #### <a name="to-flatten-the-results-in-the-results-pane"></a>Para mesclar os resultados no painel Resultados  
   
-1.  No construtor de consultas de previsão, clique em **alternar para modo de design de consulta**.  
+1.  No Construtor de Consultas de previsão, clique em **alternar para a exibição de design de consulta**.  
   
      A exibição é alterada para permitir a edição manual do texto da consulta DMX.  
   
@@ -162,17 +162,17 @@ ms.locfileid: "63313885"
   
     ```  
   
-4.  Clique em **alternar para a exibição de resultado de consulta**.  
+4.  Clique em **alternar para a exibição de resultado da consulta**.  
   
 #### <a name="to-export-prediction-query-results"></a>Para exportar resultados da consulta de previsão  
   
 1.  Clique em **salvar resultados da consulta**.  
   
-2.  No **salvar dados de mineração de resultado da consulta** caixa de diálogo, para **fonte de dados**, selecione [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Também será possível criar uma fonte de dados se você quiser salvar os dados em um banco de dados relacional diferente.  
+2.  Na caixa de diálogo **salvar resultado da consulta de mineração de dados** , para fonte [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]de **dados**, selecione. Também será possível criar uma fonte de dados se você quiser salvar os dados em um banco de dados relacional diferente.  
   
-3.  No **nome da tabela** coluna, digite um novo temporário nome, da tabela, como **previsões de teste**.  
+3.  Na coluna **nome da tabela** , digite um novo nome de tabela temporária, como **previsões de teste**.  
   
-4.  Clique em **Salvar**.  
+4.  Clique em **Save** (Salvar).  
   
     > [!NOTE]  
     >  Para exibir a tabela criada, crie uma conexão ao mecanismo de banco de dados da instância onde os dados foram salvos e crie uma consulta.  
@@ -183,9 +183,9 @@ ms.locfileid: "63313885"
  As tarefas restantes deste tutorial são opcionais e descrevem previsões de série temporal avançadas. Se você decidir ir adiante, aprenderá a adicionar novos dados ao seu modelo e criar previsões na série estendida. Você também aprenderá a executar a previsão cruzada, usando a tendência no modelo, mas substituindo os dados por uma nova série de dados.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Advanced previsões de série temporal &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
+ [Previsões de série temporal avançada &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplos de consulta de modelos de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exemplos de consulta de um modelo de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

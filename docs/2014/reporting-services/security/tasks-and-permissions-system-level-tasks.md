@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3c1785e927bf2d2b90322c90f2adace4555047af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101538"
 ---
 # <a name="system-level-tasks"></a>Tarefas de nível de sistema
@@ -40,7 +40,7 @@ ms.locfileid: "66101538"
 |Exibir propriedades do servidor de relatório|Ler Propriedades do Sistema|  
 |Exibir agendas compartilhadas|Ler Agendas|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceder permissões em um servidor de relatório no Modo Nativo](granting-permissions-on-a-native-mode-report-server.md)  
   
   
