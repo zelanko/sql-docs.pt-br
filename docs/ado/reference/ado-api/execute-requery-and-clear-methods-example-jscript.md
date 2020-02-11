@@ -1,5 +1,5 @@
 ---
-title: Execute, Requery e Clear (JScript) exemplo dos métodos | Microsoft Docs
+title: Exemplo dos métodos Execute, Requery e Clear (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f4ceafffc9d6b87428ae3da58a2f824bb7ed3c34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918819"
 ---
-# <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute, Requery e Clear exemplo dos métodos (JScript)
-Este exemplo demonstra a **Execute** método quando executado tanto uma [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto e uma [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Ele também usa o [Requery](../../../ado/reference/ado-api/requery-method.md) método para recuperar os dados atuais em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e o [limpar](../../../ado/reference/ado-api/clear-method-ado.md) método para limpar o conteúdo do [erros](../../../ado/reference/ado-api/errors-collection-ado.md)coleção. (O **erros** coleção seja acessada por meio do **Conexão** objeto do [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriedade do [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Nomeie o arquivo **ExecuteJS.asp**.  
+# <a name="execute-requery-and-clear-methods-example-jscript"></a>Exemplo dos métodos Execute, Requery e Clear (JScript)
+Este exemplo demonstra o método **Execute** quando executado a partir de um objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) e um objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Ele também usa o método [Requery](../../../ado/reference/ado-api/requery-method.md) para recuperar dados atuais em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e o método [Clear](../../../ado/reference/ado-api/clear-method-ado.md) para limpar o conteúdo da coleção de [erros](../../../ado/reference/ado-api/errors-collection-ado.md) . (A coleção de **erros** é acessada por meio do objeto de **conexão** da propriedade [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) do [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).) Nomeie o arquivo **ExecuteJS. asp**.  
   
 ```  
 <!-- BeginExecuteJS -->  
@@ -178,12 +178,12 @@ BODY {
 <!-- EndExecuteJS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Objeto Error](../../../ado/reference/ado-api/error-object.md)   
- [Executar método (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Executar método (Conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Objeto de erro](../../../ado/reference/ado-api/error-object.md)   
+ [Método Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Método Execute (conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Método Requery](../../../ado/reference/ado-api/requery-method.md)
