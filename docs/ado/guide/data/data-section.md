@@ -13,36 +13,36 @@ ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925648"
 ---
 # <a name="data-section"></a>Seção de dados
-A seção de dados define os dados do conjunto de linhas, juntamente com qualquer pendente atualizações, inserções ou exclusões. A seção de dados pode conter zero ou mais linhas. Ele pode conter apenas dados de um conjunto de linhas em que a linha é definida pelo esquema. Além disso, conforme observado anteriormente, as colunas, sem nenhum dado podem ser omitidas. Se um atributo ou o subelemento for usado na seção de dados e essa construção não foi definida na seção de esquema, ele será ignorado silenciosamente.  
+A seção de dados define os dados do conjunto de linhas junto com quaisquer atualizações, inserções ou exclusões pendentes. A seção de dados pode conter zero ou mais linhas. Ele só pode conter dados de um conjunto de linhas em que a linha é definida pelo esquema. Além disso, conforme observado anteriormente, as colunas sem dados podem ser omitidas. Se um atributo ou subelemento for usado na seção de dados e essa construção não tiver sido definida na seção de esquema, ela será silenciosamente ignorada.  
   
-## <a name="string"></a>Cadeia de caracteres  
- Os caracteres XML reservados nos dados de texto devem ser substituídos com entidades de caractere apropriado. Por exemplo, o nome da empresa "Garagem de José", a aspa simples deve ser substituída por uma entidade. A linha real seria semelhante ao seguinte:  
+## <a name="string"></a>String  
+ Caracteres XML reservados em dados de texto devem ser substituídos por entidades de caracteres apropriadas. Por exemplo, no nome da empresa "João ' s garagem", a aspa simples deve ser substituída por uma entidade. A linha real seria semelhante ao seguinte:  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- Os seguintes caracteres são reservados no XML e deve ser substituídos por entidades de caractere: {",", &,\<, >}.  
+ Os seguintes caracteres são reservados em XML e devem ser substituídos por entidades de caracteres: {', ",\<&,, >}.  
   
-## <a name="binary"></a>Binary  
- Dados binários são codificados hex (ou seja, os mapas de um byte em dois caracteres, um caractere por nibble).  
+## <a name="binary"></a>Binário  
+ Os dados binários são de bin. Hex codificados (ou seja, um byte é mapeado para dois caracteres, um caractere por Nibble).  
   
 ## <a name="datetime"></a>DateTime  
- O formato VT_DATE variant não é diretamente suportado pelos tipos de dados XML-Data. O formato correto para datas com o componente de uma data e a hora é aaaa-mm-ddTHH.  
+ O formato da variante VT_DATE não é compatível diretamente com os tipos de dados XML-Data. O formato correto para datas com um componente de dados e hora é aaaa-mm-ddThh: mm: SS.  
   
- Para obter mais informações sobre formatos de data especificada por XML, consulte a [especificação W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  
+ Para obter mais informações sobre formatos de data especificados pelo XML, consulte a [especificação de dados XML do W3C](https://go.microsoft.com/fwlink/?LinkId=5692).  
   
- Quando a especificação de XML-Data define dois tipos de dados equivalente (por exemplo, i4 = = int), ADO será escrever o nome amigável, mas lidos em ambos.  
+ Quando a especificação de dados XML define dois tipos de dados equivalentes (por exemplo, i4 = = int), o ADO gravará o nome amigável, mas será lido em ambos.  
   
-## <a name="managing-pending-changes"></a>Gerenciamento de alterações pendentes  
- Um conjunto de registros pode ser aberto no imediata ou modo de atualização em lotes. Quando eles são abertos no modo de atualização em lotes com cursores do lado do cliente, são todas as alterações feitas ao conjunto de registros em um estado pendente até que o método UpdateBatch seja chamado. As alterações pendentes também são persistidos quando o conjunto de registros é salvo. Em XML, eles são representados pelo uso de "atualização" elementos definidos no urn: schemas-microsoft-com:rowset. Além disso, se um conjunto de linhas pode ser atualizado, a propriedade atualizável deve ser definida como true na definição de linha. Por exemplo, para definir que a tabela Shippers (transportadores) contém as alterações pendentes, seria a definição de linha aparência semelhante seguinte.  
+## <a name="managing-pending-changes"></a>Gerenciando alterações pendentes  
+ Um conjunto de registros pode ser aberto no modo de atualização imediata ou em lote. Quando eles são abertos no modo de atualização do lote com cursores do lado do cliente, todas as alterações feitas no conjunto de registros estão em um estado pendente até que o método UpdateBatch seja chamado. As alterações pendentes também são persistidas quando o conjunto de registros é salvo. Em XML, eles são representados pelo uso dos elementos "Update" definidos em urn: schemas-microsoft-com: Rowset. Além disso, se um conjunto de linhas puder ser atualizado, a propriedade Updatable deverá ser definida como true na definição da linha. Por exemplo, para definir que a tabela transportadoras contenha alterações pendentes, a definição de linha seria parecida com a seguinte.  
   
 ```  
 <s:ElementType name="row" content="eltOnly" updatable="true">  
@@ -53,9 +53,9 @@ A seção de dados define os dados do conjunto de linhas, juntamente com qualque
 </s:ElementType>  
 ```  
   
- Isso informa ao provedor de persistência para dados de superfície para que o ADO pode construir um objeto Recordset atualizável.  
+ Isso informa o provedor de persistência para dados de superfície para que o ADO possa construir um objeto Recordset atualizável.  
   
- Os dados de exemplo a seguir mostram como inserções, as alterações e exclusões de examinar o arquivo persistente.  
+ Os dados de exemplo a seguir mostram como inserções, alterações e exclusões examinam o arquivo persistente.  
   
 ```  
 <rs:data>  
@@ -82,7 +82,7 @@ A seção de dados define os dados do conjunto de linhas, juntamente com qualque
 </rs:data>  
 ```  
   
- Uma atualização sempre contém os dados da linha original inteiro seguidos dos dados de linha alterada. A linha alterada pode conter todas as colunas ou apenas as colunas que realmente foram alterados. No exemplo anterior, a linha para a transportadora 2 não é alterada, e somente a coluna telefone alterou os valores para a transportadora 3 e, portanto, a única coluna incluída na linha alterada. As linhas inseridas para Shippers (transportadores), 12, 13 e 14 são em lote juntos marca do rs: inserir em uma. Observe que linhas excluídas podem também ser agrupadas, embora isso não é mostrado no exemplo anterior.  
+ Uma atualização sempre contém os dados de linha originais completos seguidos pelos dados de linha alterados. A linha alterada pode conter todas as colunas ou apenas as colunas que realmente foram alteradas. No exemplo anterior, a linha do transportadora 2 não é alterada e somente a coluna telefone tem valores alterados para o transportador 3 e, portanto, é a única coluna incluída na linha alterada. As linhas inseridas para as transportadoras 12, 13 e 14 são agrupadas em uma marca RS: INSERT. Observe que as linhas excluídas também podem ser agrupadas em lote, embora isso não seja mostrado no exemplo anterior.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

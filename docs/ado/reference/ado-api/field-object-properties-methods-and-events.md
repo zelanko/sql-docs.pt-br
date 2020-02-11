@@ -1,5 +1,5 @@
 ---
-title: As propriedades do objeto, métodos e eventos de campo | Microsoft Docs
+title: Propriedades, métodos e eventos do objeto Field | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,13 @@ ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 556ac82e9f588183effe2abe2e4b15e279258a3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932761"
 ---
-# <a name="field-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto Field
+# <a name="field-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Field
 ## <a name="propertiescollections"></a>Propriedades/coleções  
  [Propriedade ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67932761"
   
  [Propriedade Status (campo ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)  
   
- [Propriedade de tipo](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Propriedade Type](../../../ado/reference/ado-api/type-property-ado.md)  
   
  [Propriedade UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)  
   
@@ -50,8 +50,8 @@ ms.locfileid: "67932761"
   
  [Método GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)  
   
-## <a name="events"></a>Events  
- nenhuma.  
+## <a name="events"></a>Eventos  
+ Nenhum.  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)
+## <a name="see-also"></a>Consulte Também  
+ [Objeto Campo](../../../ado/reference/ado-api/field-object.md)

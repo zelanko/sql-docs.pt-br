@@ -1,5 +1,5 @@
 ---
-title: Exibições (Transact-SQL) do catálogo de esquemas XML (sistema de tipo XML) | Microsoft Docs
+title: Exibições de catálogo de esquemas XML (sistema de tipos XML) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aeedf7820309c7dfbb3e715eedfd6c9d7f67701
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929771"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>Exibições do catálogo de esquemas XML (Sistema tipo XML) (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "67929771"
 |[sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md)|[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)|  
 |[sys.xml_schema_wildcards](../../relational-databases/system-catalog-views/sys-xml-schema-wildcards-transact-sql.md)||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Exibições do sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

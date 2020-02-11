@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204697"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>Compreender a propriedade do diagrama de banco de dados (Visual Database Tools)
-  Para usar o Designer de Diagrama de Banco de Dados, ele precisa ser configurado primeiramente por um membro da função db_owner (função de bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) para controle do acesso a diagramas. Cada diagrama tem um e apenas um proprietário, o usuário que o criou. Para obter mais informações sobre como configurar a diagramação, consulte [definir o Designer de diagramas de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  Para usar o Designer de Diagrama de Banco de Dados, ele precisa ser configurado primeiramente por um membro da função db_owner (função de bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) para controle do acesso a diagramas. Cada diagrama tem um e apenas um proprietário, o usuário que o criou. Para obter mais informações sobre como configurar a diagramação, consulte [Configurar o designer de diagrama de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
  Pontos de destaque sobre propriedade de diagrama:  
   
@@ -34,8 +34,8 @@ ms.locfileid: "63204697"
   
 -   Se o proprietário de um diagrama for removido do banco de dados, o diagrama permanecerá no banco de dados até que um membro da função db_owner tente abri-lo. Nesse momento, o membro db_owner pode assumir a propriedade do diagrama.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)   
- [Configurar o Designer de Diagramas de Banco de Dados &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Configurar o designer de diagramas de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

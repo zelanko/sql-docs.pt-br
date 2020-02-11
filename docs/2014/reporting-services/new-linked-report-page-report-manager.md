@@ -1,5 +1,5 @@
 ---
-title: Nova página do relatório vinculado (Gerenciador de relatórios) | Microsoft Docs
+title: Página novo relatório vinculado (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108165"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Página Novo Relatório Vinculado (Gerenciador de Relatórios)
@@ -45,20 +45,20 @@ ms.locfileid: "66108165"
   
 ## <a name="options"></a>Opções  
  **Nome**  
- Especifique o nome do relatório vinculado. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Porém, você não deve usar os caracteres; ? : \@ & = +, $ / * \< > | "ou / ao especificar um nome.  
+ Especifique o nome do relatório vinculado. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Porém, você não deve usar os caracteres; ? : \@ & = +, $/* \< > | "or/ao especificar um nome.  
   
  **Descrição**  
  Digite uma descrição do conteúdo do relatório. Essa descrição aparece na página Conteúdo para usuários com permissão para acessar o relatório.  
   
- **Local**  
+ **Location**  
  Especifique o caminho de pasta que contém o relatório. Por padrão, relatórios vinculados são criados como irmãos para o relatório padrão. Clique em **Alterar Local** para colocar o relatório vinculado em uma pasta diferente.  
   
  **OK**  
  Clique em **OK** para salvar suas alterações e voltar à página de propriedades Geral do relatório padrão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um relatório vinculado](reports/create-a-linked-report.md)   
- [Página Propriedades Gerais, Relatórios &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Página Propriedades gerais, relatórios &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

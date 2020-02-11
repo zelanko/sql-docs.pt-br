@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155398"
 ---
 # <a name="create-filtered-indexes"></a>Criar índices filtrados
@@ -111,7 +111,7 @@ ms.locfileid: "63155398"
   
 6.  Em **Colunas de chave de índice**, clique em **Adicionar...** .  
   
-7.  Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
+7.  Na caixa de diálogo **selecionar colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
   
 8.  Clique em **OK**.  
   
@@ -180,6 +180,6 @@ ms.locfileid: "63155398"
     GO  
     ```  
   
- Para obter mais informações, veja [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
+ Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 2: Inicializar a caixa de listagem principal | Microsoft Docs'
+title: 'Etapa 2: inicializar a caixa de listagem principal | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924079"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Etapa 2: Inicializar a caixa de listagem principal
-Para declarar objetos globais de registro e o conjunto de registros, insira o código a seguir (geral) (declarações) para Form1:  
+Para declarar os objetos de registro global e conjunto de registros, insira o seguinte código no (geral) (declarações) para Form1:  
   
 ```  
 Option Explicit  
@@ -26,7 +26,7 @@ Dim grec As Record
 Dim grs As Recordset  
 ```  
   
- Esse código declara referências de objeto global para objetos de registro e o conjunto de registros que serão usados mais tarde neste cenário.  
+ Esse código declara referências de objeto global para objetos de registro e conjunto de registros que serão usados posteriormente neste cenário.  
   
 ## <a name="to-connect-to-a-url-and-populate-lstmain"></a>Para se conectar a uma URL e popular lstMain  
  Insira o seguinte código no manipulador de eventos de carregamento de formulário para Form1:  
@@ -45,11 +45,11 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Esse código instancia os objetos globais de registro e o conjunto de registros. O objeto de registro, `grec`, é aberta com uma URL especificada como o ActiveConnection. Se a URL existir, ele é aberto; Se ele ainda não existir, ele será criado. Observe que você deve substituir "<https://servername/foldername/>" com uma URL válida do seu ambiente.  
+ Esse código instancia os objetos de registro global e conjunto de registros. O objeto Record, `grec`, é aberto com uma URL especificada como a ActiveConnection. Se a URL existir, ela será aberta; Se ele ainda não existir, ele será criado. Observe que você deve substituir "<https://servername/foldername/>" por uma URL válida do seu ambiente.  
   
- O objeto de conjunto de registros `grs`, é aberta nos filhos do registro, `grec`. Em seguida, `lstMain` é preenchida com os nomes de arquivo dos recursos publicados para a URL.  
+ O objeto recordset, `grs`, é aberto nos filhos do registro, `grec`. Em `lstMain` seguida, é populado com os nomes de arquivo dos recursos publicados na URL.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Etapa 1: Configurar o projeto do Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [Etapa 3: Preencha a caixa de lista de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [Etapa 1: configurar o projeto de Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
+ [Etapa 3: Preencher a caixa de listagem de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

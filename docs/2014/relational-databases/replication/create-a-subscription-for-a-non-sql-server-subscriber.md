@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721668"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Criar uma assinatura para um Assinante não SQL Server
@@ -96,7 +96,7 @@ ms.locfileid: "62721668"
   
     -   Para a IBM DB2, o banco de dados é especificado na propriedade **Catálogo Inicial** da cadeia de caracteres da conexão DB2, que pode ser digitada no campo **Opções de conexões adicionais** descrito mais adiante neste processo.  
   
-8.  Na página **Segurança do Agente de Distribuição**, clique no botão de propriedades ( **...** ) próximo ao Assinante para acessar a caixa de diálogo **Segurança do Agente de Distribuição**.  
+8.  Na página **segurança do agente de distribuição** , clique no botão de Propriedades (**...**) ao lado do assinante para acessar a caixa de diálogo **segurança do agente de distribuição** .  
   
 9. Na caixa de diálogo **Segurança do Distribution Agent** :  
   
@@ -155,34 +155,34 @@ ms.locfileid: "62721668"
   
     -   Se o valor de `enabled_for_het_sub` for 1, os Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terão suporte.  
   
-    -   Se o valor de `enabled_for_het_sub` é 0, execute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando `enabled_for_het_sub` para **@property** e `true` para  **@value** .  
+    -   Se o valor de `enabled_for_het_sub` for 0, execute [Sp_changepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando `enabled_for_het_sub` para **@property** e `true` para **@value**.  
   
         > [!NOTE]  
         >  Antes de alterar `enabled_for_het_sub` para `true`, é preciso ignorar todas as assinaturas existentes para a publicação. Não é possível definir  `enabled_for_het_sub` como `true` quando a publicação oferecer suporte também a assinaturas de atualização. Alterar `enabled_for_het_sub` afetará outras propriedades de publicação. Para obter mais informações, consulte [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
-3.  No Publicador do banco de dados de publicação, execute [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication** , **@subscriber** ; um valor de **(destino padrão)** para **@destination_db** ; um valor de **push** para **@subscription_type** , e um valor de 3 para **@subscriber_type** (especifica um provedor OLE DB).  
+3.  No Publicador do banco de dados de publicação, execute [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication**, **@subscriber**, um valor de **(destino padrão)** para **@destination_db**, um valor de **Push** para **@subscription_type**e um valor de 3 para **@subscriber_type** (especifica um provedor de OLE DB).  
   
 4.  No Publicador do banco de dados de publicação, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Especifique o seguinte:  
   
-    -   Os parâmetros **@subscriber** e **@publication** .  
+    -   Os **@subscriber**parâmetros **@publication** e.  
   
-    -   Um valor de **(destino padrão)** para **@subscriber_db** ,  
+    -   Um valor de **(destino padrão)** para **@subscriber_db**,  
   
-    -   As propriedades de fonte de dados não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** e **@subscriber_catalog** .  
+    -   As propriedades da fonte que não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é de dados **@subscriber_provider**para **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string**, e **@subscriber_catalog**.  
   
-    -   Os parâmetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows com as quais o Distribution Agent do Distribuidor é executado para **@job_login** e **@job_password** .  
+    -   As [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciais do Windows sob as quais o agente de distribuição no distribuidor é **@job_login** executado **@job_password**para e.  
   
         > [!NOTE]  
-        >  As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password** . O Distribution Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
+        >  As conexões feitas usando a autenticação integrada do Windows sempre usam as credenciais **@job_login** do **@job_password**Windows especificadas por e. O Distribution Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
   
-    -   Um valor de **0** para **@subscriber_security_mode** e informações de logon do provedor OLE DB para **@subscriber_login** e **@subscriber_password** .  
+    -   Um valor de **0** para **@subscriber_security_mode** e as informações de logon do provedor **@subscriber_login** de **@subscriber_password**OLE DB para e.  
   
     -   Agenda para o trabalho do Distribution Agent para essa assinatura. Para obter mais informações, consulte [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
     >  Ao criar uma assinatura push em um Publicador com um Distribuidor remoto, os valores especificados para todos os parâmetros, inclusive *job_login* e *job_password*são enviados para o Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)   
  [Oracle Subscribers](non-sql/oracle-subscribers.md)   
  [Outros assinantes não SQL Server](non-sql/other-non-sql-server-subscribers.md)   

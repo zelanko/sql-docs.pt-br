@@ -16,18 +16,18 @@ ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2bbcd4c8c70d2d381df77ccf8a4a99cec82d3e49
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768235"
 ---
-# <a name="spdroppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
+# <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Descarta uma publicação e seu Snapshot Agent associado. Todas as assinaturas devem ser descartadas antes de descartar uma publicação. Os artigos na publicação são descartados automaticamente. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,9 +48,9 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="remarks"></a>Comentários  
  **sp_droppublication** é usado na replicação de instantâneo e na replicação transacional.  
   
- o **sp_droppublication** remove recursivamente todos os artigos associados a uma publicação e, em seguida, descarta a publicação em si. Uma publicação não poderá ser removida se tiver uma ou mais assinaturas associadas. Para obter informações sobre como remover assinaturas, consulte [excluir uma assinatura push](../../relational-databases/replication/delete-a-push-subscription.md) e [excluir uma assinatura pull](../../relational-databases/replication/delete-a-pull-subscription.md).  
+ **sp_droppublication** remove recursivamente todos os artigos associados a uma publicação e, em seguida, descarta a publicação em si. Uma publicação não poderá ser removida se tiver uma ou mais assinaturas associadas. Para obter informações sobre como remover assinaturas, consulte [excluir uma assinatura push](../../relational-databases/replication/delete-a-push-subscription.md) e [excluir uma assinatura pull](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- A execução de **sp_droppublication** para descartar uma publicação não remove objetos publicados do banco de dados de publicação ou dos objetos correspondentes do banco de dados de assinatura. Use drop \<Object > para remover esses objetos manualmente, se necessário.  
+ A execução de **sp_droppublication** para descartar uma publicação não remove objetos publicados do banco de dados de publicação ou dos objetos correspondentes do banco de dados de assinatura. Use DROP \<Object> para remover esses objetos manualmente, se necessário.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_droppublication**.  
@@ -58,11 +58,11 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="examples"></a>Exemplos  
  [!code-sql[HowTo#sp_droppublication](../../relational-databases/replication/codesnippet/tsql/sp-droppublication-trans_1.sql)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Excluir uma publicação](../../relational-databases/replication/publish/delete-a-publication.md)   
- [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helppublication](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

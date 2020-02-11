@@ -11,10 +11,10 @@ ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728240"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Editar e excluir um relacionamento de sincronização de entidade (Master Data Services)
@@ -70,7 +70,7 @@ ms.locfileid: "73728240"
   
 5.  Alterar **Frequência**. Selecione **Sincronização Sob Demanda**, ou selecione **Sincronização Automática** e configure uma frequência.  
   
-6.  Clique em **Salvar**.  
+6.  Clique em **Save** (Salvar).  
   
  **Para excluir um relacionamento de sincronização de entidade**  
   
@@ -84,7 +84,7 @@ ms.locfileid: "73728240"
   
 5.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e executar uma relação de sincronização de entidade &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [Relação de sincronização de entidade &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   

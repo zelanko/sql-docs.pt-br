@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400278"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Usando um banco de dados de preparo em Parallel data warehouse (PDW)
@@ -61,9 +61,9 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   O tamanho do log normalmente é semelhante ao tamanho da tabela replicada.  
   
-## <a name="Examples"></a>Disso  
+## <a name="Examples"></a>Exemplos  
   
-### <a name="a-create-a-staging-database"></a>R. Criar um banco de dados de preparo 
+### <a name="a-create-a-staging-database"></a>a. Criar um banco de dados de preparo 
 O exemplo a seguir cria um banco de dados de preparo, Stagedb, para uso com todas as cargas no dispositivo. Suponha que você estima que cinco tabelas replicadas de tamanho de 5 GB cada uma delas será carregada simultaneamente. Essa simultaneidade resulta na alocação de pelo menos 25 GB para o tamanho replicado. Suponha que você estima que seis tabelas distribuídas de tamanhos 100, 200, 400, 500, 500 e 550 GB serão carregadas simultaneamente. Essa simultaneidade resulta na alocação de pelo menos 2250 GB para o tamanho da tabela distribuída.  
   
 ```sql  

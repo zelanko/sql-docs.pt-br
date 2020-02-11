@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460006"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Ferramentas do Designer de Consulta e Exibição (Visual Database Tools)
   Quando você criar uma consulta, uma exibição, uma função embutida ou um único procedimento armazenado de instrução, o designer que você usa consiste em quatro painéis: painel diagrama , painel Critérios, painel SQL e painel Resultados.  
   
- ![Designer de consulta](../../database-engine/media//vs-queryviewdsgpanes.gif "Designer de consulta")  
+ ![Designer de consulta](../../database-engine/media//vs-queryviewdsgpanes.gif "Designer de Consulta")  
   
 -   O painel Diagrama exibe as tabelas e outros objetos com valores de tabela que você está consultando. Cada retângulo representa uma tabela ou um objeto com valor de tabela e mostra as colunas de dados disponíveis. Junções são indicadas por linhas entre os retângulos. Para obter mais informações, consulte [Painel Diagrama &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
@@ -47,9 +47,9 @@ ms.locfileid: "63460006"
 ## <a name="displaying-and-hiding-panes"></a>Exibindo e ocultando painéis  
  Para ocultar ou exibir um painel que não esteja visível, clique com o botão direito do mouse na superfície de design, aponte para **Painel**e clique no nome do painel. Se o Designer de Consulta e Exibição for aberto em modo Designer de Consultas, o painel de **Resultados** não estará disponível.  
   
-## <a name="see-also"></a>Consulte também  
- [Tópicos explicativos de consultas e exibições de design &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Abra o Designer de consulta e exibição &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções sobre como criar consultas e exibições &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Abra o designer de consulta e exibição &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
  [Editor SQL &#40;Visual Database Tools&#41;](sql-editor-visual-database-tools.md)  
   
   

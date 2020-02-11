@@ -1,5 +1,5 @@
 ---
-title: Microsoft Sequence Clustering Algorithm Technical Reference | Microsoft Docs
+title: Referência técnica do algoritmo Microsoft Sequence clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083842"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo MSC
@@ -99,7 +99,7 @@ ms.locfileid: "66083842"
  O padrão é 64.  
   
  MAXIMUM_STATES  
- Especifica o número máximo de estados de um atributo não sequencial para os quais o algoritmo oferece suporte. Se o número de estados de um atributo não sequencial for maior que o número máximo de estados, o algoritmo usa os estados mais populares do atributo e tratará os estados restantes como `Missing`.  
+ Especifica o número máximo de estados de um atributo não sequencial para os quais o algoritmo oferece suporte. Se o número de Estados de um atributo não sequencial for maior que o número máximo de Estados, o algoritmo usará os Estados mais populares do atributo e tratará os Estados `Missing`restantes como.  
   
  O padrão é 100.  
   
@@ -129,22 +129,22 @@ ms.locfileid: "66083842"
 ### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering dá suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir. Para obter mais informações sobre o significado dos tipos de conteúdo quando usados em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](content-types-data-mining.md).  
   
-|coluna|Tipos de conteúdo|  
+|Coluna|Tipos de conteúdo|  
 |------------|-------------------|  
 |Atributo de entrada|Contínuo, cíclico, discreto, diferenciado, chave, Key Sequence, tabela e ordenado|  
 |Atributo previsível|Contínuo, cíclico, discreto, diferenciado, tabela e ordenado|  
   
 ## <a name="remarks"></a>Comentários  
   
--   Use a função [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para a Previsão de Sequências. Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte a previsão de sequência, consulte [recursos compatíveis com as edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+-   Use a função [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para a Previsão de Sequências. Para obter mais informações sobre as edições [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do que dão suporte à previsão de sequência, consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSC não dá suporte ao uso de PMML para criar modelos de mineração.  
   
 -   O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering dá suporte ao detalhamento, ao uso de modelos de mineração OLAP e ao uso de dimensões de mineração de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmo de clustering de sequência da Microsoft](microsoft-sequence-clustering-algorithm.md)   
+ [Exemplos de consulta de modelo de clustering de sequência](clustering-model-query-examples.md)   
+ [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

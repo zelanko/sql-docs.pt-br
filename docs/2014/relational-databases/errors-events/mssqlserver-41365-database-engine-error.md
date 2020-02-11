@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dbf921e280b7b01685bb2d4817975149864614a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867937"
 ---
-# <a name="mssqlserver41365"></a>MSSQLSERVER_41365
+# <a name="mssqlserver_41365"></a>MSSQLSERVER_41365
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|41365|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|HK_MERGE_SCHEDULE_ERROR|  
 |Texto da mensagem|A solicitação de mesclagem para o intervalo de transações [%ld, %ld] no banco de dados %.*ls não foi agendada. Os arquivos de ponto de verificação que representam o intervalo não estão disponíveis para mesclagem ou parte de uma mesclagem contínua.|  
@@ -38,7 +38,7 @@ ms.locfileid: "62867937"
 ## <a name="user-action"></a>Ação do usuário  
  Forneça um melhor intervalo de transações para mesclagem/espera antes de emitir a mesma solicitação novamente. Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OLTP in-memory &#40;Otimização na memória&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

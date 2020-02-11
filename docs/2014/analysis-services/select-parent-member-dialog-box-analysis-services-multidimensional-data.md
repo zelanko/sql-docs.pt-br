@@ -1,5 +1,5 @@
 ---
-title: Selecione a caixa de diálogo do membro pai (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Selecionar membro pai (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d8407f04061075bb19aa0207595dc1fffab92c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069304"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Selecionar Membro Pai (Analysis Services - Dados Multidimensionais)
@@ -28,11 +28,11 @@ ms.locfileid: "66069304"
 >  Em determinados casos, como quando a hierarquia selecionada na **Árvore** está definida para um atributo no qual nenhum nível (Todos) está especificado, pode não haver nenhum membro pai para selecionar.  
   
 ## <a name="options"></a>Opções  
- **Árvore**  
+ **Três**  
  Selecione o membro pai a ser usado para o membro calculado.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de formulário de membro calculado &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de formulário de membro calculado &#40;guia cálculos, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

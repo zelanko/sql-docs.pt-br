@@ -1,5 +1,5 @@
 ---
-title: Constantes grandes são digitadas como tipos de valor grande nos modos de compatibilidade 90 ou posterior | Microsoft Docs
+title: Constantes grandes são digitadas como tipos de valor grande nos modos de compatibilidade 90 ou posteriores | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c7aded5577e28d94f42e108e46bb8a9c3cd6020
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094086"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>Constantes grandes são digitadas como tipos de valor grande no modo de compatibilidade 90 ou posterior
@@ -29,7 +29,7 @@ ms.locfileid: "66094086"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  Quando funções de cadeia de caracteres, como CHARINDEX e PATINDEX, são usadas com constantes de cadeia de caracteres ou constantes binárias que excedem 8.000 bytes, o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] retorna o erro 8116, e o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou versões posteriores retorna o erro 8152.  
   
  No [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], as funções de cadeia de caracteres retornam o erro 8116 quando são usadas com tipos de dados `text`, `ntext` e `image`.  
@@ -38,8 +38,8 @@ ms.locfileid: "66094086"
   
  No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou em versões posteriores, funções de cadeia de caracteres, como CHARINDEX e PATINDEX, assumem a cadeia de caracteres que tem a sequência de caracteres com menos de 8.000 bytes. É pos isso que o erro 8152 é exibido para CHARINDEX e PATINDEX.  
   
-## <a name="see-also"></a>Consulte também  
- [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

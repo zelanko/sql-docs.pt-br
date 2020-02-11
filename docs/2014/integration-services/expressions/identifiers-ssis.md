@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898854"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
@@ -112,9 +112,9 @@ ms.locfileid: "62898854"
 > [!IMPORTANT]  
 >  Você deve colocar entre colchetes a combinação de namespace e nome de variável qualificado para que o avaliador de expressão reconheça a variável.  
   
- Se o valor de **contagem** na **usuário** namespace for 10 e o valor de **contagem** na **MyNamespace** é 2, a expressão será avaliada como `true` porque o avaliador de expressão reconhece duas variáveis diferentes.  
+ Se o valor de **Count** no namespace **User** for 10 e o valor de **Count** em **MyNamespace** for 2, a expressão será avaliada como `true` porque o avaliador de expressão reconhece duas variáveis diferentes.  
   
- Se os nomes de variável não forem exclusivos, nenhum erro acontecerá. Em vez disso, o avaliador de expressão utiliza somente uma instância e retorna um resultado incorreto. Por exemplo, a expressão a seguir pretendia comparar os valores (10 e 2) para dois separado **contagem** variáveis, mas a expressão é avaliada como `false` porque o avaliador de expressão usa a mesma instância das  **Contagem de** variável duas vezes.  
+ Se os nomes de variável não forem exclusivos, nenhum erro acontecerá. Em vez disso, o avaliador de expressão utiliza somente uma instância e retorna um resultado incorreto. Por exemplo, a expressão a seguir foi destinada a comparar os valores (10 e 2) para duas variáveis de **contagem** separadas, mas `false` a expressão é avaliada como o avaliador de expressão usa a mesma instância da variável **Count** duas vezes.  
   
 ```  
 @Count > @Count  

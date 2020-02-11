@@ -14,10 +14,10 @@ ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: c167d33c29a78100e5a0f1bfcd987dc50368cdc4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729002"
 ---
 # <a name="navigational-access-master-data-services"></a>Acesso de navegação (Master Data Services)
@@ -44,7 +44,7 @@ ms.locfileid: "73729002"
   
  Quando atribui permissões a coleções, você pode ler ou atualizar o nome, o código, a descrição e a ID do proprietário. Você também pode ler o nome do modelo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como as permissões são determinadas &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

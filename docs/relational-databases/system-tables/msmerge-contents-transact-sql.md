@@ -18,32 +18,32 @@ ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4be6cffcc7e4f13b88d8037b53d438d604b9650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68089942"
 ---
-# <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
+# <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_contents** tabela contém uma linha para cada linha modificada no banco de dados atual desde que foi publicado. Essa tabela é usada pelo processo de mesclagem para determinar as linhas que foram alteradas. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
+  A tabela **MSmerge_contents** contém uma linha para cada linha modificada no banco de dados atual desde que foi publicada. Essa tabela é usada pelo processo de mesclagem para determinar as linhas que foram alteradas. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|O apelido da tabela publicada.|  
 |**rowguid**|**uniqueidentifier**|O identificador para a linha determinada.|  
-|**geração**|**bigint**|A geração da linha identificada pelo **tablenick** e **rowguid**.|  
+|**geração**|**bigint**|A geração da linha identificada pelo **tablenick** e **ROWGUID**.|  
 |**partchangegen**|**bigint**|A geração associada à última alteração de dados que poderia ter sido alterada se a linha pertencesse a uma publicação filtrada.|  
-|**lineage**|**varbinary(501)**|O apelido do Assinante, pares de números de versão que são usados para manter um histórico das alterações nessa linha.|  
-|**colvl**|**varbinary(7489)**|As informações de versão da coluna.|  
-|**marcador**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica a linha pai de alto nível **MSmerge_contents** (por **rowguid**) para cada linha filho correspondente em um registro lógico.|  
-|**logical_record_lineage**|**varbinary(501)**|O apelido do Assinante, pares de números de versão que são usados para manter um histórico das alterações na linha pai de alto nível em um registro lógico. Para todas as linhas filho em um registro lógico, esse valor é NULL.|  
+|**linhagem**|**varbinary (501)**|O apelido do Assinante, pares de números de versão que são usados para manter um histórico das alterações nessa linha.|  
+|**colvl**|**varbinary (7489)**|As informações de versão da coluna.|  
+|**Marker**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica a linha pai de nível superior em **MSmerge_contents** (por **ROWGUID**) para cada linha filho correspondente em um registro lógico.|  
+|**logical_record_lineage**|**varbinary (501)**|O apelido do Assinante, pares de números de versão que são usados para manter um histórico das alterações na linha pai de alto nível em um registro lógico. Para todas as linhas filho em um registro lógico, esse valor é NULL.|  
 |**logical_relation_change_gen**|**bigint**|O valor de geração associado à última alteração que causou realinhamento no registro lógico, onde uma linha existente foi movida para dentro ou fora de um registro lógico.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

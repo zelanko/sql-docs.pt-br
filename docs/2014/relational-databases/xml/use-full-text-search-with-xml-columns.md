@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193256"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Usar a pesquisa de texto completo com colunas XML
@@ -33,7 +33,7 @@ ms.locfileid: "63193256"
   
 2.  Em seguida, consulte esses valores de XML que usam o índice XML na coluna XML.  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemplo: Combinando a pesquisa de texto completo com a Consulta XML  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemplo: Combinando pesquisa de texto completo com consulta XML  
  Após o índice de texto completo ter sido criado na coluna XML, a seguinte consulta verifica se um valor XML contém as palavras "custom" no título de um manual:  
   
 ```  
@@ -62,7 +62,7 @@ WHERE  CONTAINS(xCol,'run')
   
  Quando o XML é decomposto em colunas relacionais usando AXSD que são indexadas por texto completo, as consultas XPath que ocorrem sobre a exibição em XML não executam pesquisa de texto completo nas tabelas subjacentes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices XML &#40;SQL Server&#41;](xml-indexes-sql-server.md)  
   
   

@@ -12,16 +12,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b228a27169a506c1a1b292ee670bd08e4633201f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73766354"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Usar UDTs grandes do CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Este exemplo mostra como buscar linhas com tipos grandes definidos pelo usuário em um conjunto de resultados. Para obter mais informações, consulte [tipos &#40;CLR grandes definidos pelo usuário&#41;OLE DB](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior.  
+  Este exemplo mostra como buscar linhas com tipos grandes definidos pelo usuário em um conjunto de resultados. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo contém dois projetos. Um projeto cria um assembly (DLL) de código-fonte C#. Este assembly contém o tipo CLR. Uma tabela será adicionada ao banco de dados. Uma coluna na tabela será de um tipo definido no assembly, por padrão, este exemplo usará o banco de dados mestre. O segundo projeto é um aplicativo nativo C que lê dados da tabela.  

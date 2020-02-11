@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 14: Adicionar tarefa Executar SQL ao fluxo de controle para executar o procedimento armazenado para MDS | Microsoft Docs'
+title: 'Tarefa 14: adicionando a tarefa Executar SQL ao fluxo de controle para executar o procedimento armazenado para o MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,66 +11,66 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3fe1eb6032d9d550b36252e16eee51c98c5d2384
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65477086"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tarefa 14: Adicionar a tarefa Executar SQL ao fluxo de controle para executar o procedimento armazenado para MDS
-  Depois de carregar dados nas tabelas de preparo do MDS, você executará um procedimento armazenado associado a essa tabela para carregar os dados de preparo nas tabelas adequadas no banco de dados MDS. Esse procedimento armazenado tem dois parâmetros necessários que você precisa passar: LogFlag e VersionName. LogFlag especifica se as transações serão registradas em log durante o processo de preparo e VersionName representa a versão do modelo. Ver [procedimento armazenado preparado](https://msdn.microsoft.com/library/hh231028.aspx) tópico para obter mais detalhes.  
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tarefa 14: Adicionando a tarefa Executar SQL ao fluxo de controle para executar o procedimento armazenado para MDS
+  Depois de carregar dados nas tabelas de preparo do MDS, você executará um procedimento armazenado associado a essa tabela para carregar os dados de preparo nas tabelas adequadas no banco de dados MDS. Esse procedimento armazenado tem dois parâmetros necessários que você precisa passar: LogFlag e VersionName. LogFlag especifica se as transações serão registradas em log durante o processo de preparo e VersionName representa a versão do modelo. Consulte o tópico de [procedimento armazenado em etapas](https://msdn.microsoft.com/library/hh231028.aspx) para obter mais detalhes.  
   
  Nesta tarefa, você adicionará a Tarefa Executar SQL ao fluxo de controle para invocar o procedimento armazenado para carregar os dados preparados nas tabelas adequadas do MDS.  
   
-1.  Agora, alterne para o **fluxo de controle** guia.  
+1.  Agora, alterne para a guia **fluxo de controle** .  
   
-2.  Arrastar e soltar **tarefa Executar SQL** da **caixa de ferramentas do SSIS** para o **fluxo de controle** guia.  
+2.  Arraste e solte a **tarefa Executar SQL** da **caixa de ferramentas do SSIS** para a guia fluxo de **controle** .  
   
-3.  Clique com botão direito **tarefa Executar SQL** na **fluxo de controle** guia e, em seguida, clique em **Renomear**. Tipo de **disparar procedimento armazenado para carregar dados no MDS** e pressione **ENTER**.  
+3.  Clique com o botão direito do mouse em **Executar tarefa SQL** na guia **fluxo de controle** e clique em **renomear**. Digite **acionar procedimento armazenado para carregar dados no MDS** e pressione **Enter**.  
   
-4.  Conectar-se **receber, limpar, corresponder e corrigir dados do fornecedor** à **disparar procedimento armazenado para carregar dados** usando o conector verde.  
+4.  Conecte os **dados de fornecedor de recebimento, limpeza, correspondência e** organização para **disparar o procedimento armazenado para carregar dados** usando o conector verde.  
   
-     ![Conecte-se a tarefa Executar SQL](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-01.jpg "conecte-se a tarefa Executar SQL")  
+     ![Conectar à tarefa Executar SQL.](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-01.jpg "Conectar à tarefa Executar SQL.")  
   
-5.  Usando o **variáveis** janela, adicione duas novas variáveis com as seguintes configurações. Se você não vir as **variáveis** janela, clique em **SSIS** na barra de menus, clique em **variáveis**.  
+5.  Usando a janela **variáveis** , adicione duas novas variáveis com as configurações a seguir. Se você não vir a janela **variáveis** , clique em **SSIS** na barra de menus e clique em **variáveis**.  
   
     |Nome|Tipo de Dados|Valor|  
     |----------|---------------|-----------|  
     |LogFlag|Int32|1|  
-    |VersionName|Cadeia de caracteres|VERSION_1|  
+    |VersionName|String|VERSION_1|  
   
-     ![Janela de variáveis do SSIS](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-02.jpg "janela variáveis do SSIS")  
+     ![Janela Variáveis do SSIS](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-02.jpg "Janela Variáveis do SSIS")  
   
 6.  Clique duas vezes em **disparar procedimento armazenado para carregar dados no MDS**.  
   
-7.  No **Editor da tarefa Executar SQL** caixa de diálogo, selecione **(local). MDS** (ou **localhost. MDS**) para **Conexão**.  
+7.  Na caixa de diálogo **Editor da tarefa Executar SQL** , selecione **(local). MDS** (ou **localhost. MDS**) para **conexão**.  
   
-8.  Tipo **EXEC [stg]. [ udp_Supplier_Leaf]?,?,?** para **instrução SQL**. Você pode verificar o nome usando o SQL Server Management Studio.  
+8.  Digite **exec [STG]. [ udp_Supplier_Leaf]?,?,?** **instrução for SQL**. Você pode verificar o nome usando o SQL Server Management Studio.  
   
-     ![Execute a caixa de diálogo Editor de SQL - configurações gerais](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-03.jpg "executar caixa de diálogo Editor de SQL - configurações gerais")  
+     ![Caixa de diálogo Editor de Tarefa Executar SQL - Configurações Gerais](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-03.jpg "Caixa de diálogo Editor de Tarefa Executar SQL - Configurações Gerais")  
   
 9. Clique em **mapeamento de parâmetro** no menu à esquerda.  
   
-10. No **mapeamento de parâmetros** , clique em **Add** para adicionar um mapeamento. Maximize a janela e redimensione as colunas para que você possa visualizar os valores nas listas suspensas corretamente.  
+10. Na página **mapeamento de parâmetros** , clique em **Adicionar** para adicionar um mapeamento. Maximize a janela e redimensione as colunas para que você possa visualizar os valores nas listas suspensas corretamente.  
   
 11. Selecione **User:: VersionName** na lista suspensa para o **nome da variável**.  
   
-12. Selecione **NVARCHAR** para **tipo de dados**.  
+12. Selecione **nvarchar** para **tipo de dados**.  
   
-13. Tipo de **0** (zero) em **nome do parâmetro**.  
+13. Digite **0** (zero) para o **nome do parâmetro**.  
   
 14. Repita as quatro etapas anteriores para adicionar mais duas variáveis.  
   
-    |Nome da Variável|Tipo de Dados (importante)|Nome do parâmetro|  
+    |Nome de variável|Tipo de Dados (importante)|Nome do Parâmetro|  
     |-------------------|-----------------------------|--------------------|  
     |User::LogFlag|LONG|1|  
     |User::BatchTag|NVARCHAR|2|  
   
-     ![Execute o Editor da tarefa SQL - mapeamento de parâmetro](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-04.jpg "executar Editor da tarefa SQL - mapeamento de parâmetro")  
+     ![Editor de Tarefa Executar SQL - Mapeamento de Parâmetros](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-04.jpg "Editor de Tarefa Executar SQL - Mapeamento de Parâmetros")  
   
-15. Clique em **Okey** para fechar o **Editor de SQL executar** caixa de diálogo.  
+15. Clique em **OK** para fechar a caixa de diálogo **Executar editor SQL** .  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 15: Compilar e executar o projeto do SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
+ [Tarefa 15: Criando e executando o projeto SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
   
   

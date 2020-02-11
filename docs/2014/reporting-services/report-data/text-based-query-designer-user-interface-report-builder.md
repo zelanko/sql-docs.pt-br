@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a71c1781432ee4ca35c72beb8b091380f2e72513
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891875"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta baseado em texto (Construtor de Relatórios)
@@ -29,31 +29,31 @@ ms.locfileid: "68891875"
   
  O designer de consulta baseado em texto exibe uma barra de ferramentas e os dois painéis a seguir:  
   
--   **Consulta** Mostra o texto da consulta, o nome da tabela ou o nome do procedimento armazenado, dependendo do tipo de consulta. Nem todos os tipos de consulta estão disponíveis para todos os tipos de fontes de dados. Por exemplo, nome da tabela tem suporte apenas para o tipo de fonte de dados OLE DB.  
+-   **Consulta** do Mostra o texto da consulta, o nome da tabela ou o nome do procedimento armazenado, dependendo do tipo de consulta. Nem todos os tipos de consulta estão disponíveis para todos os tipos de fontes de dados. Por exemplo, nome da tabela tem suporte apenas para o tipo de fonte de dados OLE DB.  
   
 -   **Resultado** Mostra os resultados da execução da consulta em tempo de design.  
   
 ## <a name="text-based-query-designer-toolbar"></a>Barra de ferramentas do Designer de Consulta baseado em texto  
  O designer de consulta baseado em texto fornece uma única barra de ferramentas para todos os tipos de comando. A tabela a seguir lista cada botão da barra de ferramentas e suas respectivas funções.  
   
-|Botão|Descrição|  
+|Botão|DESCRIÇÃO|  
 |------------|-----------------|  
-|**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Nem todos os tipos de fonte de dados dão suporte aos designers de consultas gráficas.|  
+|**Editar como texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Nem todos os tipos de fonte de dados dão suporte aos designers de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Apenas os tipos de arquivo .sql e .rdl têm suporte|  
 |![Executar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe o conjunto de resultados no painel Resultado.|  
-|**Tipo de Comando**|Selecione **Text**, **StoredProcedure**ou **TableDirect**. Se um procedimento armazenado tiver parâmetros, a caixa de diálogo **Definir Parâmetros de Consulta** será aberta quando você clicar em **Executar** na barra de ferramentas e os valores poderão ser preenchidos conforme necessário.<br /><br /> Observação: Se um procedimento armazenado retornar mais de um conjunto de resultados, somente o primeiro será usado para popular o conjunto de dados.|  
+|**Tipo de comando**|Selecione **Text**, **StoredProcedure**ou **TableDirect**. Se um procedimento armazenado tiver parâmetros, a caixa de diálogo **Definir Parâmetros de Consulta** será aberta quando você clicar em **Executar** na barra de ferramentas e os valores poderão ser preenchidos conforme necessário.<br /><br /> Observação: se um procedimento armazenado retornar mais de um conjunto de resultados, somente o primeiro deles será usado para popular o conjunto de dados.|  
   
 ### <a name="command-type-text"></a>Tipo de comando Text  
  Quando você cria um conjunto de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o designer de consulta relacional é aberto por padrão. Para mudar para o designer de consulta baseado em texto, clique no botão de alternância **Editar como Texto** na barra de ferramentas. O designer de consulta baseado em texto apresenta dois painéis: Consulta e Resultado. A imagem a seguir define cada painel.  
   
- ![Designer de consultas genérico para consulta de dados relacionais](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Designer de consultas genérico para consulta de dados relacionais")  
+ ![Designer de consulta genérico, para consulta de dados relacional](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Designer de consulta genérico, para consulta de dados relacional")  
   
  A tabela a seguir descreve a função de cada painel.  
   
 |Painel|Função|  
 |----------|--------------|  
 |Consulta|Exibe o texto da consulta do [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Use esse painel para gravar ou editar uma consulta do [!INCLUDE[tsql](../../../includes/tsql-md.md)] .|  
-|Resultado|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e clique em **Executar**ou clique no botão **Executar** na barra de ferramentas.|  
+|Result|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e clique em **Executar**ou clique no botão **Executar** na barra de ferramentas.|  
   
 #### <a name="example"></a>Exemplo  
  A consulta a seguir retorna a lista de sobrenomes [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]da tabela `ContactType` de banco de `Person` dados **2008** para o esquema.  
@@ -69,14 +69,14 @@ SELECT Name FROM Person.ContactType
   
  A figura a seguir mostra os painéis Consulta e Resultados quando você executa um procedimento armazenado. Neste caso, os parâmetros de entrada são constantes.  
   
- ![Procedimento armazenado no designer de consultas com base em texto](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "Procedimento armazenado no designer de consultas com base em texto")  
+ ![Procedimento armazenado no designer de consultas baseado em texto](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "Procedimento armazenado no designer de consultas baseado em texto")  
   
  A tabela a seguir descreve a função de cada painel.  
   
 |Painel|Função|  
 |----------|--------------|  
 |Consulta|Exibe o nome do procedimento armazenado e os parâmetros de entrada.|  
-|Resultado|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e clique em **Executar**ou clique no botão **Executar** na barra de ferramentas.|  
+|Result|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e clique em **Executar**ou clique no botão **Executar** na barra de ferramentas.|  
   
 #### <a name="example"></a>Exemplo  
  A consulta a seguir chama [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]o procedimento `uspGetWhereUsedProductID`armazenado **2008** . Você deve inserir um valor para o parâmetro do número de identificação do produto quando executar a consulta.  
@@ -85,7 +85,7 @@ SELECT Name FROM Person.ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Clique no botão **Executar** ( **!** ). Quando os parâmetros de consulta forem solicitados, use a seguinte tabela para digitar valores.  
+ Clique no botão **Executar** (**!**). Quando os parâmetros de consulta forem solicitados, use a seguinte tabela para digitar valores.  
   
 |||  
 |-|-|  
@@ -104,8 +104,8 @@ uspGetWhereUsedProductID
   
  Quando você insere o nome da tabela Person.ContactType, esse procedimento equivale à criação da instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] do `SELECT * FROM Person.ContactType`.  
   
-## <a name="see-also"></a>Consulte também  
- [Interface do usuário do Designer de Consultas Relacional &#40;Construtor de Relatórios&#41;](relational-query-designer-user-interface-report-builder.md)   
- [Designers de Consultas &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#40;Construtor de Relatórios de interface do usuário do designer de consulta relacional&#41;](relational-query-designer-user-interface-report-builder.md)   
+ [Designers de consulta &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md)  
   
   

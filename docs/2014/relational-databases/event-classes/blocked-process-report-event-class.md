@@ -15,22 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62664262"
 ---
 # <a name="blocked-process-report-event-class"></a>classe de evento Blocked Process Report
-  A classe de evento **Blocked Process Report** indica que uma tarefa foi bloqueada por um período mais longo que o especificado. Essa classe de evento não inclui tarefas de sistema ou tarefas que estejam esperando em recursos não detectáveis por deadlock.  
+  A classe de evento **bloqueado processo de relatório** indica que uma tarefa foi bloqueada por mais de um período de tempo especificado. Essa classe de evento não inclui tarefas de sistema ou tarefas que estejam esperando em recursos não detectáveis por deadlock.  
   
- Para configurar o limite e a frequência de geração dos relatórios, use o comando **sp_configure** para configurar a opção **blocked process threshold** , que pode ser definida em segundos. Por padrão, não são produzidos relatórios de processo bloqueado. Para obter mais informações sobre como configurar a opção **blocked process threshold**, veja [Opção blocked process threshold de configuração de servidor](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
+ Para configurar o limite e a frequência de geração dos relatórios, use o comando **sp_configure** para configurar a opção **blocked process threshold** , que pode ser definida em segundos. Por padrão, não são produzidos relatórios de processo bloqueado. Para obter mais informações sobre como configurar a opção **blocked process threshold** , veja [Opção blocked process threshold de configuração de servidor](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
   
  Para obter informações sobre como filtrar os dados retornados pela classe de evento **Blocked Process Report**, veja [Filtrar eventos em um rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md), [Definir um filtro de rastreamento &#40;Transact-SQL&#41;](../../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md) ou [sp_trace_setfilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql).  
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Colunas de dados da classe de evento Blocked Process Report  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID do banco de dados no qual foi adquirido o bloqueio. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**Duration**|**bigint**|O intervalo de tempo (em milissegundos) que o processo ficou bloqueado.|13|Sim|  
@@ -39,15 +39,15 @@ ms.locfileid: "62664262"
 |**EventSequence**|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
 |**IndexID**|**int**|ID do índice no objeto afetado pelo evento. Para determinar a ID do índice de um objeto, use a coluna **indid** da tabela do sistema **sysindexes** .|24|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
-|**LoginSid**|**image**|SID (identificador de segurança) do usuário que fez logon. Esse evento sempre é informado pelo thread do sistema. IsSystem = 1; SID = sa.|41|Sim|  
-|**Modo**|**int**|O estado que o evento recebeu ou que está solicitando.<br /><br /> 0= NULL<br /><br /> 1=Sch-S<br /><br /> 2=Sch-M<br /><br /> 3=S<br /><br /> 4=U<br /><br /> 5=X<br /><br /> 6=IS<br /><br /> 7=IU<br /><br /> 8=IX<br /><br /> 9=SIU<br /><br /> 10=SIX<br /><br /> 11=UIX<br /><br /> 12=BU<br /><br /> 13=RangeS-S<br /><br /> 14=RangeS-U<br /><br /> 15=RangeI-N<br /><br /> 16=RangeI-S<br /><br /> 17=RangeI-U<br /><br /> 18=RangeI-X<br /><br /> 19=RangeX-S<br /><br /> 20=RangeX-U<br /><br /> 21=RangeX-X|32|Sim|  
+|**LoginSid**|**imagem**|SID (identificador de segurança) do usuário que fez logon. Esse evento sempre é informado pelo thread do sistema. IsSystem = 1; SID = sa.|41|Sim|  
+|**Mode**|**int**|O estado que o evento recebeu ou que está solicitando.<br /><br /> 0= NULL<br /><br /> 1=Sch-S<br /><br /> 2=Sch-M<br /><br /> 3=S<br /><br /> 4=U<br /><br /> 5=X<br /><br /> 6=IS<br /><br /> 7=IU<br /><br /> 8=IX<br /><br /> 9=SIU<br /><br /> 10=SIX<br /><br /> 11=UIX<br /><br /> 12=BU<br /><br /> 13=RangeS-S<br /><br /> 14=RangeS-U<br /><br /> 15=RangeI-N<br /><br /> 16=RangeI-S<br /><br /> 17=RangeI-U<br /><br /> 18=RangeI-X<br /><br /> 19=RangeX-S<br /><br /> 20=RangeX-U<br /><br /> 21=RangeX-X|32|Sim|  
 |**ObjectID**|**int**|A ID atribuída pelo sistema, do objeto em que foi adquirido o bloqueio, se disponível e aplicável.|22|Sim|  
 |**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está sendo rastreada.|26||  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao SQL Server usando Login1 e executar uma instrução como Login2, **SessionLoginName** mostrará Login1, enquanto que **LoginName** mostrará Login2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**TextData**|**ntext**|Valor do texto dependente da classe de evento capturada no rastreamento.|1|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   

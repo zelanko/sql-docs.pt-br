@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829409"
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
@@ -64,11 +64,11 @@ ms.locfileid: "62829409"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da Tarefa Serviço da Web &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da tarefa serviço da Web &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da Tarefa Serviço Web &#40;Página Entrada&#41;](../web-service-task-editor-input-page.md)  
+-   [Editor da tarefa serviço Web &#40;página de entrada&#41;](../web-service-task-editor-input-page.md)  
   
--   [Editor da Tarefa Serviço Web &#40;Página Saída&#41;](../web-service-task-editor-output-page.md)  
+-   [Editor da tarefa serviço da Web &#40;página saída&#41;](../web-service-task-editor-output-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -82,8 +82,8 @@ ms.locfileid: "62829409"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Vídeo, [Como chamar um serviço Web usando a tarefa Serviço da Web (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), no technet.microsoft.com.  
+ Vídeo, [Como: Chamar um serviço Web usando a tarefa Serviço da Web (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), no technet.microsoft.com.  
   
- [Como consumir um serviço Web por meio do pacote do SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
+ [Como consumir o serviço Web por meio do pacote SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
   
   

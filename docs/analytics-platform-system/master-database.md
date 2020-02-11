@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400982"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Banco de dados mestre-data warehouse paralelos
@@ -21,7 +21,7 @@ O banco de dados mestre do SQL Server PDW armazena informações de logon no ní
   
 Para obter mais informações sobre bancos de dados do sistema, consulte [bancos de dados do sistema](system-databases.md).  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
 A lista a seguir descreve as operações que você não pode executar no banco de dados do SQL Server PDW mestre.  
   
 Você *não pode:*  
@@ -42,7 +42,7 @@ Você *não pode:*
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tarefa|Descrição|  
+|Tarefa|DESCRIÇÃO|  
 |--------|---------------|  
 |Crie um backup completo do mestre.|Exemplo:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Para obter mais informações, consulte [backup Database](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
 |Restaurar o banco de dados mestre|Para restaurar o banco de dados mestre, use a página [restaurar o banco de dados mestre](restore-the-master-database.md) na ferramenta de Configuration Manager.|  

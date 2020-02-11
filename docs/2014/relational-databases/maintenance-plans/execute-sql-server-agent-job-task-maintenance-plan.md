@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33f037f4d82cbf5bbdebde01a5c4492128ecc8ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206020"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>Tarefa Executar Trabalho do SQL Server Agent (Plano de Manutenção)
-  Use a caixa de diálogo **Tarefa Executar Trabalho do SQL Server Agent** para executar trabalhos do Microsoft SQL Server Agent dentro de um plano de manutenção. Essa opção não estará disponível se você não tiver nenhum trabalho do SQL Server Agent na conexão selecionada.  
+  Use a caixa de diálogo **tarefa executar SQL Server Agent trabalho** para executar trabalhos do Microsoft SQL Server Agent em um plano de manutenção. Essa opção não estará disponível se você não tiver nenhum trabalho do SQL Server Agent na conexão selecionada.  
   
  Essa tarefa usa a instrução **.sp_start_job** .  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68206020"
  **Conexão**  
  Selecione a conexão de servidor a ser usada na execução desta tarefa.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão com o servidor para usar ao executar esta tarefa. A caixa de diálogo **Nova Conexão** é descrita abaixo.  
   
  **Trabalhos do SQL Agent disponíveis**  
@@ -59,7 +59,7 @@ ms.locfileid: "68206020"
  Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] com a Autenticação do Microsoft Windows.  
   
  **Usar nome de usuário e senha específicos**  
- Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
+ Conecte-se com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
   
  **Nome de usuário**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
@@ -67,9 +67,9 @@ ms.locfileid: "68206020"
  **Senha**  
  Forneça uma senha a ser usada na autenticação. Essa opção não está disponível.  
   
-## <a name="see-also"></a>Consulte também  
- [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_add_job](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
  [Criar um trabalho](../../ssms/agent/create-a-job.md)   
- [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
+ [&#41;&#40;Transact-SQL de sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
   
   

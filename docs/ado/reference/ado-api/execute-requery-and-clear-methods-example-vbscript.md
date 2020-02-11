@@ -1,5 +1,5 @@
 ---
-title: Execute, Requery e Clear (VBScript) exemplo dos métodos | Microsoft Docs
+title: Exemplo dos métodos Execute, Requery e Clear (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,18 +17,18 @@ ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27a177b6a3d23f20790490e1f16fac2be4ec958f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918810"
 ---
-# <a name="execute-requery-and-clear-methods-example-vbscript"></a>Execute, Requery e Clear exemplo dos métodos (VBScript)
-Este exemplo demonstra a **Execute** método quando executado tanto uma [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto e uma [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Ele também usa o [Requery](../../../ado/reference/ado-api/requery-method.md) método para recuperar os dados atuais em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e o [limpar](../../../ado/reference/ado-api/clear-method-ado.md) método para limpar o conteúdo do [erros](../../../ado/reference/ado-api/errors-collection-ado.md)coleção. Os procedimentos ExecuteCommand e PrintOutput são necessários executar este procedimento.  
+# <a name="execute-requery-and-clear-methods-example-vbscript"></a>Exemplo dos métodos Execute, Requery e Clear (VBScript)
+Este exemplo demonstra o método **Execute** quando executado a partir de um objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) e um objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Ele também usa o método [Requery](../../../ado/reference/ado-api/requery-method.md) para recuperar dados atuais em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e o método [Clear](../../../ado/reference/ado-api/clear-method-ado.md) para limpar o conteúdo da coleção de [erros](../../../ado/reference/ado-api/errors-collection-ado.md) . Os procedimentos ExecuteCommand e MyOutput são necessários para que este procedimento seja executado.  
   
- Use o exemplo a seguir em um Active Server Page (ASP). Para exibir este exemplo totalmente funcional, você deve ter os dados de origem AdvWorks.mdb (instalada com amostras do SDK) localizado em C:\Program Files\Microsoft plataforma SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou editar o caminho no código de exemplo para refletir o local real desse arquivo. Este é um arquivo de banco de dados do Microsoft Access.  
+ Use o exemplo a seguir em uma página de Active Server (ASP). Para exibir esse exemplo totalmente funcional, você deve ter a fonte de dados AdvWorks. mdb (instalada com os exemplos de SDK) localizada em C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou editar o caminho no código de exemplo para refletir o local real deste arquivo. Este é um arquivo de banco de dados do Microsoft Access.  
   
- Use **localizar** para localizar o arquivo Adovbs.inc e coloque-o no diretório que você planeja usar. Recorte e cole o código a seguir no bloco de notas ou outro editor de texto e salve-o como **ExecuteVBS.asp**. Você pode exibir o resultado em qualquer navegador do cliente.  
+ Use **Localizar** para localizar o arquivo Adovbs. Inc e colocá-lo no diretório que você planeja usar. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **ExecuteVBS. asp**. Você pode exibir o resultado em qualquer navegador cliente.  
   
 ```  
 <!-- BeginExecuteVBS -->  
@@ -177,13 +177,13 @@ BODY {
 <!-- EndExecuteVBS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Objeto Error](../../../ado/reference/ado-api/error-object.md)   
- [Coleção Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Executar método (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Executar método (Conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Objeto de erro](../../../ado/reference/ado-api/error-object.md)   
+ [Coleta de erros (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Método Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Método Execute (conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Método Requery](../../../ado/reference/ado-api/requery-method.md)

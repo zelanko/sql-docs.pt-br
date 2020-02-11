@@ -1,5 +1,5 @@
 ---
-title: Criar ou editar a caixa de diálogo de relação (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo criar ou editar relação (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086782"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Criar ou Editar Relação (Analysis Services - Dados Multidimensionais)
@@ -31,7 +31,7 @@ ms.locfileid: "66086782"
 -   Clicando com o botão direito do mouse em uma relação no painel **Diagrama** do **Designer de Exibição da Fonte de Dados** e selecionando **Explorar Relação**.  
   
 > [!NOTE]  
->  É possível criar relações no **Designer de Exibição de Fonte de Dados** que não existem na fonte de dados subjacente e remover relações criadas pelo **Designer de Exibição de Fonte de Dados** das relações de chave estrangeira existentes na fonte de dados subjacente.  
+>  Você pode criar relações no **Designer de exibição da fonte de dados** que não existem na fonte de dados subjacente e remover relações criadas pelo **Designer de exibição da fonte de dados** de relações de chave estrangeira existentes na fonte de dados subjacente.  
   
 ## <a name="options"></a>Opções  
  **Tabela de origem (chave estrangeira)**  
@@ -46,14 +46,14 @@ ms.locfileid: "66086782"
  **Colunas de destino**  
  Selecione as colunas que são referenciadas pelas colunas na tabela de origem.  
   
- **inversa**  
+ **Ordem**  
  Clique para inverter a direção da relação.  
   
  **Descrição**  
  Digite uma descrição opcional para a relação.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [O designer de exibição da fonte de dados &#40;Analysis Services-dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

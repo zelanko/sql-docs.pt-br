@@ -1,5 +1,5 @@
 ---
-title: Colunas de estrutura de mineração | Microsoft Docs
+title: Colunas da estrutura de mineração | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c843a74b831315c98deda9a9d6fb0c3a463bc5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083408"
 ---
 # <a name="mining-structure-columns"></a>Colunas da estrutura de mineração
@@ -32,40 +32,40 @@ ms.locfileid: "66083408"
   
  A definição de uma coluna de estrutura de mineração deve conter as seguintes informações:  
   
--   **ID**: O nome exclusivo da coluna, geralmente o mesmo que o nome. Isso não pode ser alterado após a criação da estrutura de mineração, mas o nome pode ser alterado.  
+-   **ID**: o nome exclusivo da coluna, geralmente o mesmo que o nome. Isso não pode ser alterado após a criação da estrutura de mineração, mas o nome pode ser alterado.  
   
--   **Nome**: Um nome ou alias da coluna.  
+-   **Nome**: um nome ou alias para a coluna.  
   
--   **Conteúdo**: Uma enumeração que descreve se os dados são discretos ou contínuos.  
+-   **Content**: uma enumeração que descreve se os dados são discretos ou contínuos.  
   
--   **Digitar**: Uma enumeração que indica o tipo de dados geral.  
+-   **Tipo**: uma enumeração que indica o tipo de dados geral.  
   
--   **Distribuição**: Uma enumeração que descreve a distribuição esperada de valores. A distribuição será incluída se a coluna for contínua.  
+-   **Distribuição**: uma enumeração que descreve a distribuição esperada de valores. A distribuição será incluída se a coluna for contínua.  
   
--   **Sinalizadores de modelagem**: Uma enumeração que indica como tratar valores ausentes e assim por diante. Sinalizadores de modelagem também podem ser definidos no modelo de mineração, mas os sinalizadores de modelo diferem dos sinalizadores usados em colunas de estrutura.  
+-   **Sinalizadores de modelagem**: uma enumeração que indica como lidar com valores ausentes e assim por diante. Sinalizadores de modelagem também podem ser definidos no modelo de mineração, mas os sinalizadores de modelo diferem dos sinalizadores usados em colunas de estrutura.  
   
--   **Associações**: Propriedades que especificam os dados de origem.  
+-   **Associações**: propriedades que especificam os dados de origem.  
   
  Os algoritmos de terceiros também podem incluir propriedades personalizadas que podem ser definidas na coluna da estrutura de mineração.  
   
- Para obter mais informações sobre a estrutura e o modelo de mineração de dados, consulte [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md).  
+ Para obter mais informações sobre a estrutura e o modelo de mineração de dados, consulte [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md).  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Consulte os tópicos a seguir para obter mais informações sobre como definir e usar colunas da estrutura de mineração.  
   
 |Tópico|Links|  
 |-----------|-----------|  
-|Descreve os tipos de dados que você pode utilizar para definir uma coluna da estrutura de mineração.|[Tipos de dados &#40;Mineração de dados&#41;](data-types-data-mining.md)|  
-|Descreve os tipos de conteúdo que estão disponíveis para cada tipo de dados contido em uma coluna de estrutura de mineração. Tipos de conteúdo são dependentes do tipo de dados. O tipo de conteúdo é atribuído ao nível de modelo e determina como os dados de coluna são usados pelo modelo.|[Tipos de conteúdo &#40;Data Mining&#41;](content-types-data-mining.md)|  
-|Apresenta o conceito de tabelas aninhadas e explica como tabelas aninhadas podem ser adicionadas à fonte de dados como colunas de estrutura de mineração.|[Colunas classificadas &#40;Mineração de dados&#41;](classified-columns-data-mining.md)|  
-|Lista e explica as propriedades de distribuição que você pode definir em uma coluna de estrutura de mineração para especificar a distribuição esperada de valores na coluna.|[Distribuições de colunas &#40;Mineração de dados&#41;](column-distributions-data-mining.md)|  
-|Explica o conceito de discretização (às vezes chamado de *compartimentalização*) e descreve os métodos que o Analysis Services fornece para discretizar dados numéricos contínuos.|[Métodos de discretização &#40;Mineração de dados&#41;](discretization-methods-data-mining.md)|  
-|Descreve os sinalizadores de modelagem que você pode definir em uma coluna da estrutura de mineração.|[Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md)|  
-|Descreve as colunas classificadas, que são um tipo especial de coluna a ser usada para relacionar uma coluna da estrutura de mineração a outra.|[Colunas classificadas &#40;Mineração de dados&#41;](classified-columns-data-mining.md)|  
+|Descreve os tipos de dados que você pode utilizar para definir uma coluna da estrutura de mineração.|[Tipos de dados &#40;mineração de dados&#41;](data-types-data-mining.md)|  
+|Descreve os tipos de conteúdo que estão disponíveis para cada tipo de dados contido em uma coluna de estrutura de mineração. Tipos de conteúdo são dependentes do tipo de dados. O tipo de conteúdo é atribuído ao nível de modelo e determina como os dados de coluna são usados pelo modelo.|[Tipos de conteúdo &#40;mineração de dados&#41;](content-types-data-mining.md)|  
+|Apresenta o conceito de tabelas aninhadas e explica como tabelas aninhadas podem ser adicionadas à fonte de dados como colunas de estrutura de mineração.|[Colunas classificadas &#40;mineração de dados&#41;](classified-columns-data-mining.md)|  
+|Lista e explica as propriedades de distribuição que você pode definir em uma coluna de estrutura de mineração para especificar a distribuição esperada de valores na coluna.|[Distribuições de coluna &#40;mineração de dados&#41;](column-distributions-data-mining.md)|  
+|Explica o conceito de discretização (às vezes chamado de *compartimentalização*) e descreve os métodos que o Analysis Services fornece para discretizar dados numéricos contínuos.|[Métodos de discretização &#40;mineração de dados&#41;](discretization-methods-data-mining.md)|  
+|Descreve os sinalizadores de modelagem que você pode definir em uma coluna da estrutura de mineração.|[Sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)|  
+|Descreve as colunas classificadas, que são um tipo especial de coluna a ser usada para relacionar uma coluna da estrutura de mineração a outra.|[Colunas classificadas &#40;mineração de dados&#41;](classified-columns-data-mining.md)|  
 |Saiba como adicionar e modificar colunas de estrutura de mineração.|[Tarefas e instruções da estrutura de mineração](mining-structure-tasks-and-how-tos.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
  [Colunas do modelo de mineração](mining-model-columns.md)  
   
   

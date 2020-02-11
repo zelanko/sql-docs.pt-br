@@ -1,5 +1,5 @@
 ---
-title: O Editor da tarefa de observador de eventos do WMI (página geral) | Microsoft Docs
+title: Editor da tarefa detector de eventos do WMI (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bf462fc9084468b3a76b7c6bd61f07a16ae4f466
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054347"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>Editor da Tarefa Detector de Eventos do WMI (página Geral)
@@ -36,9 +36,9 @@ ms.locfileid: "66054347"
  **Descrição**  
  Digite uma descrição para a tarefa Detector de Eventos do WMI.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Detector de Eventos do WMI &#40;Página Opções do WMI&#41;](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
+ [Editor da tarefa Inspetor de eventos do WMI &#40;página Opções do WMI&#41;](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
  [Página Expressões](expressions/expressions-page.md)   
  [Tarefa Leitor de Dados do WMI](control-flow/wmi-data-reader-task.md)  
   

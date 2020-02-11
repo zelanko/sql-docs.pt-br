@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8db507966f9b3323e415ca7f2abfe4a12601c1c
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798023"
 ---
 # <a name="create-the-ssis-catalog"></a>Criar o catálogo do SSIS
@@ -24,7 +24,7 @@ ms.locfileid: "72798023"
   
 ### <a name="to-create-the-ssisdb-catalog-in-sql-server-management-studio"></a>Para criar o catálogo SSISDB no SQL Server Management Studio  
   
-1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Conecte-se ao Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72798023"
   
      O procedimento armazenado executa a manutenção do estado das operações para o catálogo SSISDB. Ele corrigirá o status de todos os pacotes que estavam sendo executados se e quando a instância do servidor [!INCLUDE[ssIS](../includes/ssis-md.md)] ficar inoperante.  
   
-6.  Digite uma senha e clique em **Ok**.  
+6.  Insira uma senha e clique em **OK**.  
   
      A senha protege a chave mestra do banco de dados que é usada para criptografar os dados do catálogo. Salve a senha em um local seguro. É recomendado que você também faça backup da chave mestra do banco de dados. Para obter mais informações, consulte [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
@@ -69,6 +69,6 @@ ms.locfileid: "72798023"
   
      Para obter mais exemplos de como usar o Windows PowerShell e o namespace <xref:Microsoft.SqlServer.Management.IntegrationServices>, confira a entrada de blog [SSIS e o PowerShell no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) em blogs.msdn.com. Para obter uma visão geral do namespace e dos exemplos de códigos, consulte a entrada do blog [Prévia do modelo do objeto gerenciado do catálogo do SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)em blogs.msdn.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Catálogo do SSIS](catalog/ssis-catalog.md)   
  [Fazer backup, restaurar e mover o catálogo do SSIS](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  

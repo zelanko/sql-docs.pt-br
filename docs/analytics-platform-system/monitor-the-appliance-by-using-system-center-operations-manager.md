@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400976"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitorar com o sistema de plataforma System Center Operations Manager-Analytics
@@ -21,7 +21,7 @@ Use o System Center Operations Manager (SCOM) para monitorar o dispositivo de si
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
   
 1.  System Center Operations Manager 2007 R2, 2012 ou 2012 SP1 devem estar instalados e em execução.  
   

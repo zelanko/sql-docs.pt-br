@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 575eab878e0ef9b4357c09a0a3deedf143c237b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098479"
 ---
-# <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
+# <a name="generatedatabaserightsscript-method-wmi-msreportserver_configurationsetting"></a>Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
   Gera um Script SQL que pode ser usado para conceder direitos de usuário ao banco de dados do servidor de relatório e a outros bancos de dados necessários para a execução de um servidor de relatório. O chamador deve se conectar ao servidor de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executar o script.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -42,8 +42,8 @@ public void GenerateDatabaseRightsScript(string UserName, string DatabaseName, b
 out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- *UserName*  
+## <a name="parameters"></a>parâmetros  
+ *Usu*  
  O nome de usuário ou o identificador de segurança (SID) do Windows do usuário ao qual o script concederá direitos.  
   
  *DatabaseName*  
@@ -58,7 +58,7 @@ out Int32 HRESULT);
  *Script*  
  [out] Uma cadeia de caracteres que contém o script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerado.  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -67,22 +67,28 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>Comentários  
  Se *DatabaseName* ficar vazio, *IsRemote* será ignorado e o valor do arquivo de configuração do servidor de relatório será usado como o nome do banco de dados.  
   
- Se *IsWindowsUser* é definido como `true`, *UserName* devem estar no formato \<domínio >\\< nome de usuário\>.  
+ Se *IsWindowsUser* for definido como `true`, *username* deverá estar no formato \<domínio>\\<nome de\>usuário.  
   
- Quando *IsWindowsUser* é definido como `true`, o script gerado concede direitos de logon para o usuário para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], definir o banco de dados do servidor de relatório como o banco de dados padrão e concede a **RSExec** função de banco de dados de servidor de relatório, relatório servidor banco de dados temporário, o banco de dados mestre e o banco de dados do sistema MSDB.  
+ Quando *IsWindowsUser* é definido como `true`, o script gerado concede direitos de logon ao usuário para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], definindo o banco de dados do servidor de relatório como o banco de dados padrão e concede a função **RSExec** no banco de dados do servidor de relatório, o banco de dados temporário do servidor de relatório, o banco de dados mestre e o banco de dados do sistema msdb.  
   
  Quando *IsWindowsUser* é definido como `true`, o método aceita os SIDs do Windows padrão como entrada. Quando um SID do Windows padrão ou nome de conta de serviço é fornecido, ele é convertido em uma cadeia de caracteres de nome de usuário. Se o banco de dados for local, a conta será convertida para a representação localizada correta da conta. Se o banco de dados for remoto, a conta será representada como a conta do computador.  
   
  A tabela a seguir mostra as contas que são convertidas e sua representação remota.  
   
-|Conta/SID que está convertido|Nome comum|Nome remoto|  
+|Conta/SID que está convertido|Nome Comum|Nome remoto|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Sistema Local|\<Domain>\\<ComputerName\>$|  
-|.\LocalSystem|Sistema Local|\<Domain>\\<ComputerName\>$|  
-|Nome do computador\sistema local|Sistema Local|\<Domain>\\<ComputerName\>$|  
-|LocalSystem|Sistema Local|\<Domain>\\<ComputerName\>$|  
-|(S-1-5-20)|Serviço de Rede|\<Domain>\\<ComputerName\>$|  
-|NT AUTHORITY\NetworkService|Serviço de Rede|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-18)|Sistema Local|
+  \<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|Sistema Local|
+  \<Domain>\\<ComputerName\>$|  
+|Nome do computador\sistema local|Sistema Local|
+  \<Domain>\\<ComputerName\>$|  
+|LocalSystem|Sistema Local|
+  \<Domain>\\<ComputerName\>$|  
+|(S-1-5-20)|Serviço de Rede|
+  \<Domain>\\<ComputerName\>$|  
+|NT AUTHORITY\NetworkService|Serviço de Rede|
+  \<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|Serviço Local|Erro – veja abaixo.|  
 |NT AUTHORITY\LocalService|Serviço Local|Erro – veja abaixo.|  
   
@@ -90,7 +96,7 @@ out Int32 HRESULT);
   
  Se a conta interna `LocalService` for especificada e o banco de dados do servidor de relatório for remoto, um erro será retornado.  
   
- Quando *IsWindowsUser* for true e o valor fornecido no *UserName* precisar ser convertido, o provedor WMI determinará se o banco de dados do servidor de relatório está localizado no mesmo computador ou em um computador remoto. Para determinar se a instalação é local, o provedor de WMI avaliará a propriedade DatabaseServerName da lista de valores a seguir. Se uma correspondência for localizada, o banco de dados é local. Caso contrário, é remoto. A comparação não diferencia maiúsculas e minúsculas.  
+ Quando *IsWindowsUser* for true e o valor fornecido no *UserName* precisar ser convertido, o provedor WMI determinará se o banco de dados do servidor de relatório está localizado no mesmo computador ou em um computador remoto. Para determinar se a instalação é local, o provedor de WMI avaliará a propriedade DatabaseServerName da lista de valores a seguir. Se uma correspondência for localizada, o banco de dados é local. Caso contrário, é remoto. A comparação não diferencia maiúsculas de minúsculas.  
   
 |Valor do DatabaseServerName|Exemplo|  
 |---------------------------------|-------------|  
@@ -98,24 +104,25 @@ out Int32 HRESULT);
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  
-|\<Machinename>|testlab14|  
-|\<MachineFQDN>|example.redmond.microsoft.com|  
+|\<MachineName>|testlab14|  
+|
+  \<MachineFQDN>|example.redmond.microsoft.com|  
 |\<IPAddress>|180.012.345,678|  
   
- Quando *IsWindowsUser* é definido como `true`, o provedor WMI chama LookupAccountName para obter o SID para a conta e, em seguida, chama LookupAccountSID para obter o nome para colocar no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] script. Isso assegura que o nome da conta usado transmitirá a validação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Quando *IsWindowsUser* é definido como `true`, o provedor WMI chama LOOKUPACCOUNTNAME para obter o SID da conta e, em seguida, chama LookupAccountSID para obter o nome a ser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colocado no script. Isso assegura que o nome da conta usado transmitirá a validação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Quando *IsWindowsUser* é definido como `false`, o script gerado concede a **RSExec** função no banco de dados de servidor de relatório, relatório servidor banco de dados temporário e o banco de dados MSDB.  
+ Quando *IsWindowsUser* é definido como `false`, o script gerado concede a função **RSExec** no banco de dados do servidor de relatório, no banco de dados temporário do servidor de relatório e no banco de dados msdb.  
   
- Quando *IsWindowsUser* é definido como `false`, o usuário do SQL Server já deve existir no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o script seja executado com êxito.  
+ Quando *IsWindowsUser* é definido como `false`, o usuário de SQL Server já deve existir no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que o script seja executado com êxito.  
   
  Se o servidor de relatório não tiver um banco de dados do servidor de relatório especificado, a ação de chamar GrantRightsToDatabaseUser retornará um erro.  
   
  O script gerado dá suporte ao [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 e ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ccb2689b24914a0a953c1b9f7325cd5aa9c75d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014116"
 ---
 # <a name="multipolygon"></a>MultiPolygon
@@ -38,7 +38,7 @@ ms.locfileid: "66014116"
   
 -   É uma instância de `MultiPolygon` vazia.  
   
--   Todas as instâncias que englobam a instância de `MultiPolygon` são instâncias de `Polygon` aceitas. Para obter mais informações sobre aceitas `Polygon` instâncias, consulte [polígono](../spatial/polygon.md).  
+-   Todas as instâncias que englobam a instância de `MultiPolygon` são instâncias de `Polygon` aceitas. Para obter mais informações sobre `Polygon` instâncias aceitas, consulte [Polygon](../spatial/polygon.md).  
   
  Os exemplos a seguir mostram as instâncias de `MultiPolygon` aceitas.  
   
@@ -59,7 +59,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>Instâncias válidas  
  Uma instância de `MultiPolygon` será válida se for uma instância de `MultiPolygon` vazia ou se atender aos critérios a seguir.  
   
-1.  Todas as instâncias que englobam a instância de `MultiPolygon` são instâncias de `Polygon` válidas. Para válido `Polygon` instâncias, consulte [polígono](../spatial/polygon.md).  
+1.  Todas as instâncias que englobam a instância de `MultiPolygon` são instâncias de `Polygon` válidas. Para instâncias `Polygon` válidas, consulte [Polygon](../spatial/polygon.md).  
   
 2.  Nenhuma das instâncias de `Polygon` que englobe a instância de `MultiPolygon` se sobreporá.  
   
@@ -72,7 +72,9 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` é válido porque as duas instâncias `Polygon` tocam somente um ponto tangente. `@g3` não é válido porque os interiores das duas instâncias `Polygon` sobrepõem-se.  
+ 
+  `@g2` é válido porque as duas instâncias `Polygon` tocam somente um ponto tangente. 
+  `@g3` não é válido porque os interiores das duas instâncias `Polygon` sobrepõem-se.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra a criação de uma instância de `geometry``MultiPolygon` e retorna o WKT (Well-Known Text) do segundo componente.  
@@ -90,7 +92,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Polygon](../spatial/polygon.md)   
  [STArea &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
  [STCentroid &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   

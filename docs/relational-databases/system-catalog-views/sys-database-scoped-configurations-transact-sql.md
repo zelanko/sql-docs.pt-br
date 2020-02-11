@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: da115c8d4cf48cfbcd6190c88a83bee4e61ae5a1
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73240762"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "73240762"
 
 Contém uma linha por configuração. 
 
-|Nome da coluna|Tipo de Dados|Description|
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|
 |-----------------|---------------|-----------------|
-|**configuration_id**|**Int**|ID da opção de configuração.|
-|**name**|**nvarchar(60)**|O nome da opção de configuração. Para obter informações sobre as possíveis configurações, consulte [ALTER DATABASE Scoped &#40;Configuration Transact-&#41;SQL](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
-|**value**|**sqlvariant**|O valor definido para esta opção de configuração para a réplica primária.|
+|**configuration_id**|**int**|ID da opção de configuração.|
+|**name**|**nvarchar (60)**|O nome da opção de configuração. Para obter informações sobre as configurações possíveis, consulte [ALTER DATABASE Scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
+|**valor**|**sqlvariant**|O valor definido para esta opção de configuração para a réplica primária.|
 |**value_for_secondary**|**sqlvariant**|O valor definido para esta opção de configuração para as réplicas secundárias.|
 |**is_value_default**|**bit** |Especifica se o valor definido é o valor padrão.|
 
@@ -43,9 +43,9 @@ Contém uma linha por configuração.
 
 Requer associação à função **pública** .
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
-Quando NULL é retornado como o valor de **value_for_secondary**, isso significa que o secundário está definido como PRIMARY.
+Quando NULL é retornado como o valor para **value_for_secondary**, isso significa que o secundário está definido como PRIMARY.
  
 As definições de configurações no escopo do banco de dados serão transferidas para o banco de dados. Isso significa que quando um determinado banco de dados é restaurado ou anexado, as definições de configuração existentes permanecem.
 

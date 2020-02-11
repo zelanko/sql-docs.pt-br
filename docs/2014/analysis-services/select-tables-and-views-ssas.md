@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069234"
 ---
 # <a name="select-tables-and-views-ssas"></a>Selecionar tabelas e exibições (SSAS)
@@ -33,7 +33,7 @@ ms.locfileid: "66069234"
  **Backup de banco de dados**  
  Exibe o banco de dados que você selecionou.  
   
- **Tabelas e exibições**  
+ **Tabelas e Exibições**  
  Lista as tabelas e exibições no banco de dados. Marque a caixa de seleção ao lado de cada tabela e exibição que você deseja importar.  
   
  **Tabela de origem**  
@@ -48,10 +48,10 @@ ms.locfileid: "66069234"
  **Detalhes do Filtro**  
  Quando um filtro é aplicado aos dados que estão sendo importados, exibe o filtro de importação de dados na caixa de diálogo **Detalhes do Filtro**. Para obter mais informações, consulte [Detalhes do filtro &#40;SSAS&#41;](filter-details-ssas.md).  
   
- **Visualizar e filtrar**  
+ **Visualização e Filtro**  
  Exibe a caixa de diálogo **Visualizar Tabela Selecionada**, que é usada para aplicar um filtro aos dados que estão sendo importados. Para obter mais informações, consulte [Visualizar Tabela Selecionada &#40;SSAS&#41;](preview-selected-table-ssas.md).  
   
- **Selecionar tabelas relacionadas**  
+ **Selecionar Tabelas Relacionadas**  
  Seleciona essas tabelas e exibições relacionadas a tabelas e exibições já selecionadas para importação.  
   
   

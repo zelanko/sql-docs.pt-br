@@ -1,5 +1,5 @@
 ---
-title: sql:mapped (SQLXML 4.0) | Microsoft Docs
+title: 'SQL: mapeado (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013482"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML Bulk Load processa as `sql:mapped` anotação no esquema XSD como esperado que é, se o esquema de mapeamento especifica `sql:mapped="false"` para qualquer elemento ou atributo, o XML Bulk Load não tentará armazenar os dados associados na coluna correspondente.  
+  O carregamento em massa de `sql:mapped` XML processa a anotação no esquema XSD como esperado – ou seja, se o esquema `sql:mapped="false"` de mapeamento especificar para qualquer elemento ou atributo, o carregamento em massa de XML não tentará armazenar os dados associados na coluna correspondente.  
   
  O XML Bulk Load ignora elementos e atributos que não estão mapeados (porque eles não estão descritos no esquema ou porque eles são anotados no esquema XSD com `sql:mapped="false"`). Todo os dados não mapeados entram na coluna de estouro, se essa coluna for especificada usando `sql:overflow-field`.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66013482"
 </xsd:schema>  
 ```  
   
- Porque o **HomePhone** atributo especifica `sql:mapped="false"`, o XML Bulk Load não mapeia esse atributo para a coluna correspondente. O esquema XSD identifica uma coluna de estouro (**OverflowColumn**) no qual o XML Bulk Load armazena estes dados não consumidos.  
+ Como o atributo **HomePhone** especifica `sql:mapped="false"`, o carregamento em massa de XML não mapeia esse atributo para a coluna correspondente. O esquema XSD identifica uma coluna de estouro (**OverflowColumn**) na qual o carregamento em massa de XML armazena esses dados não consumidos.  
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   
-1.  Criar a tabela a seguir na **tempdb** banco de dados:  
+1.  Crie a tabela a seguir no banco de dados **tempdb** :  
   
     ```  
     USE tempdb  

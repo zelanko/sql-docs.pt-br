@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 04f4dbeee8c160e968ee4b9df29e96d21d857e58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184389"
 ---
 # <a name="trustworthy-database-property"></a>Propriedade de banco de dados TRUSTWORTHY

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2e1484107e4ee5e7f7f2a10eaa719b5c96c098e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916884"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Configurações de backup de log de transações do envio de log
@@ -49,7 +49,7 @@ ms.locfileid: "62916884"
  Exibe o cronograma atual para realizar o backup dos logs de transações do banco de dados primário. Antes de criar o o trabalho de backup, você pode modificar este cronograma clicando em **Cronograma...** . Após a criação do trabalho, você pode modificar este cronograma clicando em **Editar Trabalho...** .  
   
 ### <a name="backup-job"></a>Trabalho de backup  
- **Cronograma...**  
+ **Agenda....**  
  Modificar o cronograma que foi criado quando o trabalho do SQL Server Agent foi criado  
   
  **Editar Trabalho...**  
@@ -70,7 +70,7 @@ ms.locfileid: "62916884"
 |**Compactar backup**|Clique em compactar backup, independentemente do padrão do nível do servidor.<br /><br /> **\*\* Importante \*\*** Por padrão, a compactação aumenta consideravelmente o uso da CPU, e o consumo adicional da CPU por parte do processo de compactação poderá afetar negativamente as operações simultâneas. Portanto, convém criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo [Administrador de Recursos](../resource-governor/resource-governor.md). Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
 |**Não compactar o backup**|Clique em criar um backup não compactado, independentemente do padrão do nível do servidor.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar um usuário para criar e gerenciar trabalhos do SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874033"
 ---
 # <a name="set-or-change-the-database-collation"></a>Definir ou alterar a ordenação de banco de dados
@@ -133,16 +133,16 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Suporte a ordenações e a Unicode](collation-and-unicode-support.md)   
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
+ [sys. fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [Nome de ordenação do SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
- [Nome de ordenação do Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
- [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)   
- [Precedência de ordenação &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
+ [Nome de agrupamento de SQL Server &#40;&#41;Transact-SQL](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
+ [Nome de agrupamento do Windows &#40;&#41;Transact-SQL](/sql/t-sql/statements/windows-collation-name-transact-sql)   
+ [AGRUPAR &#40;&#41;Transact-SQL](/sql/t-sql/statements/collations)   
+ [Precedência de agrupamento &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   

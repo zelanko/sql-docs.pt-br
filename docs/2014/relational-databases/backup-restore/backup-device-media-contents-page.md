@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876688"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo de backup (página Conteúdo da Mídia)
@@ -58,14 +58,14 @@ ms.locfileid: "62876688"
 |Cabeçalho|Valores|  
 |------------|------------|  
 |**Nome**|O nome do conjunto de backup.|  
-|**Tipo**|O objeto de backup: Banco de dados, arquivo, ou  *\<em branco >* (para logs de transação).|  
-|**Componente**|O tipo de backup realizado: Completo, diferencial ou Log de transações.|  
+|**Tipo**|O objeto armazenado em backup: banco de dados, arquivo ou *\<em branco>* (para logs de transação).|  
+|**Componente**|O tipo de backup efetuado: Completo, Diferencial ou Log de Transações.|  
 |**Servidor**|O nome da instância de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizou a operação de backup.|  
 |**Backup de banco de dados**|O nome do banco de dados cujo backup foi efetuado.|  
 |**Posição**|A posição do conjunto de backup no volume.|  
 |**Data**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
 |**Tamanho**|O tamanho do conjunto de backup em bytes.|  
-|**Nome do Usuário**|O nome do usuário que realizou a operação de backup.|  
+|**Nome de usuário**|O nome do usuário que realizou a operação de backup.|  
 |**Validade**|A data e hora de validade do conjunto de backup.|  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
@@ -88,7 +88,7 @@ ms.locfileid: "62876688"
   
 -   [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
   

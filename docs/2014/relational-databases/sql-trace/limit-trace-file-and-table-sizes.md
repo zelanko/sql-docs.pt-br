@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136457"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limitar o tamanho de arquivos e tabelas de rastreamento
@@ -29,7 +29,7 @@ ms.locfileid: "63136457"
 > [!NOTE]  
 >  Se os dados do rastreamento forem salvos em um arquivo que já existe, é possível adicionar dados ao arquivo ou substituir os que ele contém. Se optar por acrescentar os dados ao arquivo e o arquivo de rastreamento atingir ou exceder o tamanho máximo especificado, você será notificado e terá a oportunidade de aumentar o tamanho máximo de arquivo ou especificar um novo arquivo. O mesmo vale para tabelas de rastreamento.  
   
-## <a name="maximum-file-size"></a>Tamanho máximo de arquivo  
+## <a name="maximum-file-size"></a>Tamanho máximo do arquivo  
  Um rastreamento que possua tamanho máximo de arquivo parará de salvar informações no arquivo assim que esse tamanho for alcançado. Esta opção permite-lhe agrupar eventos em arquivos menores e mais fáceis de gerenciar. Além disso, limitar o tamanho do arquivo torna mais segura a execução de rastreamentos autônomos, pois o rastreamento é interrompido quando o tamanho máximo de arquivo é alcançado. Você pode definir o tamanho máximo de arquivos para rastreamentos criados por meio de procedimentos armazenados Transact-SQL ou usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Há um limite de 1 gigabyte (GB) para a opção de tamanho máximo de arquivo. O tamanho máximo de arquivo padrão é de 5 megabytes (MB).  
@@ -53,7 +53,7 @@ ms.locfileid: "63136457"
   
  [Definir um tamanho máximo para uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_create &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)  
   
   

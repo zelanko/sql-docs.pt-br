@@ -1,5 +1,5 @@
 ---
-title: Exemplo de OriginalValue e UnderlyingValue propriedades (VC + +) | Microsoft Docs
+title: Exemplo das propriedades OriginalValue e subdependvalue (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4950634f473ca70c26b7b2b2c8159fb9a75fb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931822"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Exemplo de OriginalValue e UnderlyingValue propriedades (VC + +)
-Este exemplo demonstra a [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propriedades exibindo uma mensagem se um registro de dados subjacentes foi alterada durante uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) atualização em lotes.  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Exemplo das propriedades OriginalValue e subdependvalue (VC + +)
+Este exemplo demonstra as propriedades [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [subdependentes](../../../ado/reference/ado-api/underlyingvalue-property.md) exibindo uma mensagem se os dados subjacentes de um registro foram alterados durante uma atualização de lote do [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="example"></a>Exemplo  
   
@@ -194,32 +194,32 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Dados mudaram!**  
+ **Os dados foram alterados!**  
 **ID do título: PS1372**  
 **Valor atual: self_help**   
 **Valor original: psicologia**   
 **Valor subjacente: sociologia**   
-**Dados mudaram!**  
+**Os dados foram alterados!**  
 **ID do título: PS2091**  
 **Valor atual: self_help**   
 **Valor original: psicologia**   
 **Valor subjacente: sociologia**   
-**Dados mudaram!**  
+**Os dados foram alterados!**  
 **ID do título: PS2106**  
 **Valor atual: self_help**   
 **Valor original: psicologia**   
 **Valor subjacente: sociologia**   
-**Dados mudaram!**  
+**Os dados foram alterados!**  
 **ID do título: PS3333**  
 **Valor atual: self_help**   
 **Valor original: psicologia**   
 **Valor subjacente: sociologia**   
-**Dados mudaram!**  
+**Os dados foram alterados!**  
 **ID do título: PS7777**  
 **Valor atual: self_help**   
 **Valor original: psicologia**   
 **Valor subjacente: sociologia**    
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propriedade UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

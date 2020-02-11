@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Publicando dados usando a replicação transacional | Microsoft Docs'
+title: 'Lição 1: Publicando dados que usam a replicação transacional | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721086"
 ---
-# <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lição 1: Publicando dados usando a replicação transacional
-  Nesta lição, você aprenderá a criar uma publicação transacional usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar um subconjunto filtrado da tabela **Produto** no banco de dados de exemplo do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Você também adicionará o logon do SQL Server usado pelo Distribution Agent à PAL (lista de acesso à publicação). Antes de iniciar este tutorial, você deverá ter completado o tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
+# <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lição 1: publicando dados que usam replicação transacional
+  Nesta lição, você criará uma publicação transacional usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o para publicar um subconjunto filtrado da tabela **Product** no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados de exemplo. Você também adicionará o logon do SQL Server usado pelo Distribution Agent à PAL (lista de acesso à publicação). Antes de iniciar este tutorial, você deverá ter completado o tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Para criar uma publicação e definir artigos  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62721086"
   
 4.  Na página Tipo de Publicação, selecione **Publicação transacional**e clique em **Avançar**.  
   
-5.  Na página Artigos, expanda o nó **Tabelas** , selecione a caixa de seleção **Produto** , expanda **Produto** e desmarque as caixas de seleção **ListPrice** e **StandardCost** . Clique em **Avançar**.  
+5.  Na página Artigos, expanda o nó **Tabelas** , selecione a caixa de seleção **Produto** , expanda **Produto** e desmarque as caixas de seleção **ListPrice** e **StandardCost** . Clique em **Próximo**.  
   
 6.  Na página Filtrar Linhas da Tabela, clique em **Adicionar**.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "62721086"
     WHERE [SafetyStockLevel] < 500  
     ```  
   
-8.  Clique em **OK**e em **Avançar**.  
+8.  Clique em **OK** e em **Avançar**.  
   
 9. Marque a caixa de seleção **Criar um instantâneo imediatamente e mantê-lo disponível para inicializar assinaturas** e clique em **Avançar**.  
   
 10. Na página Segurança do Agente, desmarque a caixa de seleção **Usar as configurações de segurança do Agente de Instantâneo** .  
   
-11. Clique em **Configurações de Segurança** do Snapshot Agent, insira \<_Machine_Name>_ **\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e clique em **OK**.  
+11. Clique **em configurações de segurança** para a agente de instantâneo \<, digite _Machine_Name>_ **\ repl_snapshot** na caixa **conta de processo** , forneça a senha dessa conta e clique em **OK**.  
   
 12. Repita a etapa anterior para configurar repl_logreader como a conta de processo do Agente de Leitor de Log e clique em **Concluir**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62721086"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>Para exibir o status de geração do instantâneo  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e depois expanda a pasta **Replicação** .  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e expanda a pasta **replicação** .  
   
 2.  Na pasta **Publicações Locais** , clique com o botão direito do mouse em **AdvWorksProductTrans**e clique em **Exibir Status do Agente de Instantâneo**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62721086"
   
 ### <a name="to-add-the-distribution-agent-login-to-the-pal"></a>Para adicionar o logon Distribution Agent à PAL  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e depois expanda a pasta **Replicação** .  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e expanda a pasta **replicação** .  
   
 2.  Na pasta **Publicações Locais** , clique com o botão direito do mouse em **AdvWorksProductTrans**e clique em **Propriedades**.  
   
@@ -76,12 +76,12 @@ ms.locfileid: "62721086"
   
 3.  Selecione a página **Lista de Acesso à Publicação** e clique em **Adicionar**.  
   
-4.  Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione _<Machine_Name>_ **\repl_distribution** e clique em **OK**. Clique em **OK**.  
+4.  Na caixa de diálogo **Adicionar acesso à publicação** , selecione _<Machine_Name>_ **\ repl_distribution** e clique em **OK**. Clique em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você criou a publicação transacional com êxito. A seguir, você assinará essa publicação. Veja a [Lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
+ Você criou a publicação transacional com êxito. A seguir, você assinará essa publicação. Consulte [Lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Filtrar os dados publicados](publish/filter-published-data.md)   
  [Define an Article](publish/define-an-article.md)   
  [Criar e aplicar o instantâneo](create-and-apply-the-snapshot.md)  

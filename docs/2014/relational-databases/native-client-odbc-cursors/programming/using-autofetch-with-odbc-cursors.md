@@ -1,5 +1,5 @@
 ---
-title: Usando a opção Autofetch com cursores ODBC | Microsoft Docs
+title: Usando a busca prévia com cursores ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 343975c2c6ad39c67dcd10c0d55886d21e69f3f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711554"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>Usando a opção Autofetch com cursores ODBC
-  Quando conectado a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a uma opção de autofetch ao usar qualquer tipo de cursor de servidor. Com a opção de autofetch, a **SQLExecute** ou **SQLExecDirect** função que abre o cursor também tem implícito [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)função (SQL_FIRST). As linhas que formam o primeiro conjunto de linhas são retornadas para as variáveis associadas de aplicativo como parte da execução da instrução, evitando outra viagem de ida e volta pela rede até o servidor. [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) não é suportado quando a opção autofetch está habilitada; as colunas do conjunto de resultados devem ser associadas a variáveis de programa.  
+  Quando conectado a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte a uma opção de AutoBusca ao usar qualquer tipo de cursor do servidor. Com a busca prévia, a função **SQLExecute** ou **SQLExecDirect** que abre o cursor também tem uma função implícita de [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)(SQL_FIRST). As linhas que formam o primeiro conjunto de linhas são retornadas para as variáveis associadas de aplicativo como parte da execução da instrução, evitando outra viagem de ida e volta pela rede até o servidor. Não há suporte para [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) quando a opção de AutoBusca está habilitada; as colunas do conjunto de resultados devem estar associadas a variáveis de programa.  
   
  Os aplicativos solicitam autofetch definindo o atributo de instrução SQL_SOPT_SS_CURSOR_OPTIONS específico de driver como SQL_CO_AF.  
   
-## <a name="see-also"></a>Consulte também  
- [Detalhes de programação de cursor &#40;ODBC&#41;](cursor-programming-details-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Detalhes de programação do cursor &#40;&#41;ODBC](cursor-programming-details-odbc.md)  
   
   

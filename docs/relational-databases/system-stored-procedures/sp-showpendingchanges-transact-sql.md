@@ -16,10 +16,10 @@ ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632740"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "73632740"
 
   Retorna um conjunto de resultados que mostra as alterações esperando para ser replicadas. Esse procedimento armazenado é executado no Publicador no banco de dados de publicação e no Assinante, no banco de dados de assinatura.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  Este procedimento fornece uma aproximação do número de alterações e as linhas que são envolvidas nessas alterações. Por exemplo, o procedimento recupera informações do Publicador ou Assinante, mas não de ambos ao mesmo tempo. As informações armazenadas no outro nó podem resultar em um conjunto menor de alterações a sincronizar do que o estimado pelo procedimento.  
@@ -43,17 +43,17 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @destination_server = ] 'destination_server'` é o nome do servidor onde as alterações replicadas são aplicadas. *destination_server* é **sysname**, com o valor padrão de NULL.  
+`[ @destination_server = ] 'destination_server'`É o nome do servidor onde as alterações replicadas são aplicadas. *destination_server* é **sysname**, com o valor padrão de NULL.  
   
-`[ @publication = ] 'publication'` é o nome da publicação. a *publicação* é **sysname**, com um valor padrão de NULL. Quando a *publicação* é especificada, os resultados são limitados apenas à publicação especificada.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um valor padrão de NULL. Quando a *publicação* é especificada, os resultados são limitados apenas à publicação especificada.  
   
-`[ @article = ] 'article'` é o nome do artigo. o *artigo* é **sysname**, com um valor padrão de NULL. Quando o *artigo* é especificado, os resultados são limitados apenas ao artigo especificado.  
+`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, com um valor padrão de NULL. Quando o *artigo* é especificado, os resultados são limitados apenas ao artigo especificado.  
   
-`[ @show_rows = ] 'show_rows'` especifica se o conjunto de resultados contém informações mais específicas sobre as alterações pendentes, com um valor padrão de **0**. Se um valor de **1** for especificado, o conjunto de resultados conterá as colunas is_delete e ROWGUID.  
+`[ @show_rows = ] 'show_rows'`Especifica se o conjunto de resultados contém informações mais específicas sobre as alterações pendentes, com um valor padrão de **0**. Se um valor de **1** for especificado, o conjunto de resultados conterá as colunas is_delete e ROWGUID.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|O nome do servidor para o qual as alterações estão sendo replicadas.|  
 |pub_name|**sysname**|O nome da publicação.|  
@@ -80,7 +80,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ## <a name="permissions"></a>Permissões  
  Somente membros da função de servidor fixa sysadmin ou função de banco de dados db_owner podem executar sp_showpendingchanges.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

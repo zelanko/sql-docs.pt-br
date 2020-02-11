@@ -15,10 +15,10 @@ ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ac3f582767e3df524716f92ea4d57e53cb7b9246
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728810"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Adicionar atributos a um grupo de controle de alterações (Master Data Services)
@@ -33,17 +33,17 @@ ms.locfileid: "73728810"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Os atributos devem existir para que possam ser adicionados ao grupo de controle de alterações. Para obter mais informações, veja [Create a Text Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md).  
+-   Os atributos devem existir para que possam ser adicionados ao grupo de controle de alterações. Para obter mais informações, veja [Criar um atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md).  
   
 ### <a name="to-add-attributes-to-a-change-tracking-group"></a>Para adicionar atributos a um grupo de controle de alterações  
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Na página **Gerenciar Modelo** , escolha um modelo na grade e clique em **Entidades**.  
+2.  Na página **gerenciar modelo** , selecione um modelo na grade e clique em **entidades**.  
   
 3.  Na página **Gerenciar Entidade** , selecione a linha da entidade para a qual deseja criar um atributo.  
   
@@ -65,15 +65,15 @@ ms.locfileid: "73728810"
   
 9. Clique em **Salvar atributo**.  
   
-     Para o atributo editado, a coluna **Habilitar Grupo de Controle de Alterações** da grade é alterada para **Sim (Grupo: número do grupo inserido)** .  
+     Para o atributo editado, a coluna **Habilitar Grupo de Controle de Alterações** da grade é alterada para **Sim (Grupo: número do grupo inserido)**.  
   
 10. Repita esse procedimento para todos os atributos que você deseja incluir no grupo. Use o mesmo número de grupo de controle de alterações para cada atributo no grupo.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
--   [Iniciar ações com base em alterações no valor do atributo &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [Iniciar ações com base nas alterações de valor de atributo &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [Criar um atributo baseado em domínio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   

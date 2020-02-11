@@ -16,10 +16,10 @@ ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8d7252f0335e2fc83c5b8e5e27f5e41535fdc7bc
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762260"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68762260"
 > [!IMPORTANT]  
 >  Quando um Publicador é configurado com um Distribuidor remoto, os valores fornecidos para todos os parâmetros, inclusive *job_login* e *job_password*, são enviados ao Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,13 +61,13 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`É a frequência com a qual agendar o agente. *frequency_type* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
-|**2**|Sob Demanda|  
-|**4**|Diariamente|  
+|**2**|Sob demanda|  
+|**quatro**|Diário|  
 |**8**|Semanalmente|  
-|**16**|Mensalmente|  
+|**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64**|Iniciar automaticamente|  
 |**128**|Recorrente|  
@@ -75,27 +75,27 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Especifica os dias em que o agente é executado. *frequency_interval* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**1**|Domingo|  
-|**2**|Segunda-feira|  
-|**3**|Terça-feira|  
-|**4**|Quarta-feira|  
-|**5**|Quinta-feira|  
-|**6**|Sexta-feira|  
+|**1**|Sunday|  
+|**2**|Monday|  
+|**Beta**|Terça-feira|  
+|**quatro**|Quarta-feira|  
+|**05**|Quinta-feira|  
+|**6**|Friday|  
 |**7**|Sábado|  
-|**8**|Day|  
-|**9**|Dias da semana|  
-|**10**|Dias de fim de semana|  
+|**8**|Dia|  
+|**99**|Dias da semana|  
+|**254**|Dias de fim de semana|  
 |NULL (padrão)||  
   
 `[ @frequency_subday = ] frequency_subday`É as unidades para *freq_subday_interval*. *frequency_subday* é **int**e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
-|**4**|Minuto|  
+|**quatro**|Minuto|  
 |**8**|Hora|  
 |NULL (padrão)||  
   
@@ -127,31 +127,31 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @job_login = ] 'job_login'`É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)** , com um padrão de NULL. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo. Isso não pode ser alterado para um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
+`[ @job_login = ] 'job_login'`É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, com um padrão de NULL. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo. Isso não pode ser alterado para um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 `[ @job_password = ] 'job_password'`É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, com um padrão de NULL. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o Publicador é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o Publicador não deve ser usado ao criar um agente de instantâneo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um Publicador.  
+>  o *Publicador* não deve ser usado ao criar um agente de instantâneo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_changepublication_snapshot** é usado na replicação de instantâneo, na replicação transacional e na replicação de mesclagem.  
+ **sp_changepublication_snapshot** é usado na replicação de instantâneos, na replicação transacional e na replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_changepublication_snapshot**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_changepublication_snapshot**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addpublication_snapshot](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

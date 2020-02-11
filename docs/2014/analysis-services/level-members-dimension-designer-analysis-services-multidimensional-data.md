@@ -1,5 +1,5 @@
 ---
-title: Nível e membros (guia navegador, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Nível e Membros (guia navegador, designer de dimensão) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078107"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Nível e Membros (guia Navegador, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
@@ -40,7 +40,7 @@ ms.locfileid: "66078107"
  **Nível atual**  
  Exibe o nível ao qual pertence o membro atualmente selecionado em **Árvore** .  
   
- **Árvore**  
+ **Três**  
  Exibe os membros da hierarquia e linguagem atualmente selecionadas.  
   
  Se as propriedades dos membros forem selecionadas da opção **Propriedades do Membro** do painel Barra de Ferramentas, cada propriedade de membro será exibida como uma coluna.  
@@ -59,7 +59,7 @@ ms.locfileid: "66078107"
 > [!NOTE]  
 >  Esta opção será exibida somente se o modo write-back for habilitado.  
   
- **Criar filho**  
+ **Criar Filho**  
  Cria um membro novo no nível inferior próximo do membro selecionado, como um filho do membro selecionado.  
   
 > [!NOTE]  
@@ -68,7 +68,7 @@ ms.locfileid: "66078107"
 > [!NOTE]  
 >  Esta opção será exibida somente se o modo write-back for habilitado.  
   
- **Cut**  
+ **Recortar**  
  Copia os membros selecionados à área de transferência e os remove da hierarquia.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "66078107"
 > [!NOTE]  
 >  Esta opção será exibida somente se o modo write-back for habilitado.  
   
- **Renomear**  
+ **Nome**  
  Selecione para editar o nome do membro selecionado.  
   
 > [!NOTE]  
@@ -101,7 +101,7 @@ ms.locfileid: "66078107"
 > [!NOTE]  
 >  Esta opção será exibida somente se o modo write-back for habilitado.  
   
- **Filtrar membros**  
+ **Filtrar Membros**  
  Exibe a caixa de diálogo **Filtrar Membros** para filtrar membros exibidos em **Nível e Membros** da hierarquia selecionada. Para obter mais informações sobre a caixa de diálogo **Filtrar Membros**, consulte [Caixa de diálogo Filtrar Membros &#40;Analysis Services – Dados Multidimensionais&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Expandir Tudo**  
@@ -113,17 +113,17 @@ ms.locfileid: "66078107"
  **Recolher Tudo**  
  Recolhe todos os membros em **Árvore**.  
   
- **Expandir membros**  
+ **Expandir Membros**  
  Expande o membro selecionado em **Árvore**.  
   
- **Recolher membro**  
+ **Recolher Membro**  
  Recolhe o membro selecionado em **Árvore**.  
   
- **Write-back**  
+ **-**  
  Selecione para habilitar o modo write-back.  
   
-## <a name="see-also"></a>Consulte também  
- [Barra de ferramentas &#40;guia do navegador, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Navegador &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Barra de ferramentas &#40;guia navegador, designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Navegador &#40;designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

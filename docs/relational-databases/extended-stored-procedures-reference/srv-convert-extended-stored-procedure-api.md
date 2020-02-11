@@ -20,17 +20,17 @@ ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064140"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  Altera dados de um tipo de dados para outro.  
   
@@ -69,7 +69,7 @@ destlen
  *srctype*  
  Especifica o tipo de dados dos dados a serem convertidos. Este parâmetro pode ser qualquer um dos tipos de dados da API de procedimento armazenado estendido.  
   
- *src*  
+ *orig*  
  Trata-se de um ponteiro para os dados a serem convertidos. Este parâmetro pode ser qualquer um dos tipos de dados da API de procedimento armazenado estendido.  
   
  *srclen*  
@@ -86,10 +86,10 @@ destlen
  *destlen*  
  Especifica o comprimento, em bytes, da variável de destino. Esse parâmetro é ignorado para tipos de dados com comprimento fixo. Para uma variável de destino do tipo SRVCHAR, o valor igual a *destlen* deve ser o tamanho total do espaço do buffer de destino. Um comprimento igual a -1 para uma variável de destino do tipo SRVCHAR ou SRVBINARY indica se há espaço suficiente disponível. Para uma variável de destino do tipo *srvchar*, um tamanho igual a -1 faz com que a cadeia de caracteres termine em nulo.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  O comprimento dos dados convertidos, em bytes, caso a conversão do tipo de dados tenha êxito. Quando **srv_convert** encontra uma solicitação para uma conversão para a qual não dá suporte, ele chama o manipulador de erro fornecido pelo desenvolvedor, se houver, define um número de erro global e retorna -1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A função **srv_willconvert** determina se uma conversão específica é permitida.  
   
  A conversão para os tipos de dados numéricos aproximados SRVFLT4 ou SRVFLT8 pode resultar em uma certa perda de precisão. A conversão dos tipos de dados numéricos aproximados SRVFLT4 ou SRVFLT8 em SRVCHAR ou SRVTEXT também pode resultar em alguma perda de precisão.  
@@ -114,7 +114,7 @@ destlen
 >  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Consulte Também  
- [srv_setutype &#40;API de Procedimento Armazenado Estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
- [srv_willconvert &#40;API de Procedimento Armazenado Estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
+ [srv_setutype &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
+ [srv_willconvert &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   
   

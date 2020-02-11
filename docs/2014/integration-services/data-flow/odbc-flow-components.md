@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e42099ede229ef7d0b10cf8d88b4ac92c60d3370
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901426"
 ---
 # <a name="odbc-flow-components"></a>Componentes de fluxo ODBC
@@ -110,8 +110,8 @@ Não há nenhum suporte de tipo de dados para tipos C extensíveis conforme desc
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|O tipo de dados numeric é mapeado para DT_NUMERIC quando P é maior que ou igual a 38 e S é maior que ou igual a 0 e S é menor que ou igual a P. O tipo de dados numeric é mapeado para DT_R8 quando pelo menos uma das seguintes opções for verdadeira:<br /><br />A precisão é maior que 38<br /><br />A escala é menor que zero<br /><br />A escala é maior que 38<br /><br />A escala é maior que a Precisão<br /><br /><br /><br />Observe que o tipo de dados numeric é mapeado para DT_CY quando declarado como um tipo de dados money.|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|O tipo de dados decimal é mapeado para DT_NUMERIC quando P é maior que ou igual a 38 e S é maior que ou igual a 0 e S é menor que ou igual a P. O tipo de dados decimal é mapeado para DT_R8 quando pelo menos uma das seguintes opções for verdadeira:<br /><br />A precisão é maior que 38<br /><br />A escala é menor que zero<br /><br />A escala é maior que 38<br /><br />A escala é maior que a Precisão<br /><br />Observe que o tipo de dados decimal é mapeado para DT_CY quando declarado como um tipo de dados money.|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|O tipo de dados numeric é mapeado para DT_NUMERIC quando P é maior ou igual a 38 e S é maior ou igual a 0 e S é menor ou igual a P. O tipo de dados numeric é mapeado para DT_R8 quando pelo menos uma das seguintes opções é verdadeira:<br /><br />A precisão é maior que 38<br /><br />A escala é menor que zero<br /><br />A escala é maior que 38<br /><br />A escala é maior que a Precisão<br /><br /><br /><br />Observe que o tipo de dados numeric é mapeado para DT_CY quando ele é declarado como um tipo de dados Money.|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|O tipo de dados decimal é mapeado para DT_NUMERIC quando P é maior ou igual a 38 e S é maior ou igual a 0 e S é menor ou igual a P. O tipo de dados decimal é mapeado para DT_R8 quando pelo menos uma das seguintes opções é verdadeira:<br /><br />A precisão é maior que 38<br /><br />A escala é menor que zero<br /><br />A escala é maior que 38<br /><br />A escala é maior que a Precisão<br /><br />Observe que o tipo de dados decimal é mapeado para DT_CY quando é declarado como um tipo de dados Money.|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|Os tipos de dados SQL_TIMESTAMP serão mapeados para DT_DBTIMESTAMP2 se a escala for maior que 3. Em todos os outros casos, eles são mapeados para DT_DBTIMESTAMP.|  

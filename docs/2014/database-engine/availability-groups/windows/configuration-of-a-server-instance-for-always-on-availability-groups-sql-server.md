@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3dcd239c782f53ec11970e94f89e5acfac982785
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228809"
 ---
 # <a name="configuration-of-a-server-instance-for-always-on-availability-groups-sql-server"></a>Configuração de uma instância de servidor para grupos de disponibilidade AlwaysOn (SQL Server)
@@ -28,14 +28,14 @@ ms.locfileid: "75228809"
   
  
   
-##  <a name="TermsAndDefinitions"></a>Termos e definições  
+##  <a name="TermsAndDefinitions"></a> Termos e definições  
   
  Uma solução de alta disponibilidade e de recuperação de desastres que fornece uma substituição em nível corporativo para o espelhamento de banco de dados. Um *grupo de disponibilidade* dá suporte a um ambiente de failover para um conjunto discreto de bancos de dados de usuário, conhecidos como *bancos de dados de disponibilidade*, que fazem failover juntos.  
   
  réplica de disponibilidade  
  Uma instanciação de um grupo de disponibilidade que é hospedado por uma instância específica do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e que mantém uma cópia local de cada banco de dados de disponibilidade pertencente ao grupo de disponibilidade. Existem dois tipos de réplica de disponibilidade: uma única *réplica primária* e uma a quatro *réplicas secundárias*. As instâncias do servidor que hospedam as réplicas de disponibilidade de um determinado grupo de disponibilidade residem em nós diferentes de um único cluster do WSFC (Windows Server Failover Clustering).  
   
- [ponto de extremidade espelhamento de banco de dados](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ [ponto de extremidade de espelhamento de banco de dados](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
  Um ponto de extremidade é um objeto do SQL Server que permite que o SQL Server se comunique pela rede. Para participar do espelhamento de banco de dados e/ou do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , uma instância de servidor requer um ponto de extremidade especial dedicado. Todas as conexões de espelhamento e de grupo de disponibilidade em uma instância de servidor usam o mesmo ponto de extremidade de espelhamento do banco de dados. Esse ponto de extremidade é um ponto de extremidade com finalidade especial usado exclusivamente para essas conexões de outras instâncias de servidor.  
   
 ##  <a name="ConfigSI"></a>Para configurar uma instância de servidor para dar suporte a Grupos de Disponibilidade AlwaysOn  
@@ -45,46 +45,46 @@ ms.locfileid: "75228809"
   
 2.  Verifique se a instância de servidor tem um ponto de extremidade de espelhamento de banco de dados.  
   
-##  <a name="RelatedTasks"></a>Tarefas relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para habilitar Grupos de Disponibilidade AlwaysOn**  
   
--   [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [Habilitar e desabilitar grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
- **Para determinar se existe um ponto de extremidade de espelhamento de banco de dados**  
+ **Para determinar se um ponto de extremidade de espelhamento de banco de dados existe**  
   
--   [sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
+-   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
  **Para criar um ponto de extremidade de espelhamento de banco de dados**  
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para Grupos de Disponibilidade AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Criar um ponto de extremidade de espelhamento de banco de dados para autenticação do Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Permitir que um ponto de extremidade de espelhamento de banco de dados Use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-##  <a name="RelatedContent"></a>Conteúdo relacionado  
+##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   **Bloga**  
+-   **Blogs:**  
   
      [Série de aprendizado do AlwaysON - HADRON: uso de trabalho do pool para bancos de dados habilitados do HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [Blogs da equipe do SQL Server AlwaysOn: o blog oficial da equipe do SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs de engenheiros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
+     [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Explica**  
+-   **Vídeos:**  
   
      [Microsoft SQL Server codinome "Denali" Série AlwaysOn, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server codinome "Denali" Série AlwaysOn, Parte 2: Criando uma solução de disponibilidade de missão crítica usando AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **White papers**  
+-   **Whitepapers:**  
   
      [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [White papers da Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server White papers da equipe de consultoria ao cliente](http://sqlcat.com/)  
+     [White papers da equipe de consultoria do cliente do SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
@@ -92,6 +92,6 @@ ms.locfileid: "75228809"
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Grupos de Disponibilidade AlwaysOn: interoperabilidade (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [Clustering de failover e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
- [O Windows Server failover clustering &#40;&#41; WSFC com SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Instâncias de cluster de failover do AlwaysOn](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   

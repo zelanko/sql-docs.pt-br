@@ -1,5 +1,5 @@
 ---
-title: Rolando e buscando linhas (ODBC) | Microsoft Docs
+title: Rolagem e busca de linhas (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,28 +16,28 @@ ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b326ed0c4e9a196904aa0f5c60b705243ef3bd97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061578"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Rolar e buscar linhas (ODBC)
-Ao usar um cursor rolável, aplicativos chamam **SQLFetchScroll** para posicionar as linhas de cursor e fetch. **SQLFetchScroll** oferece suporte à rolagem relativa (próximo, anterior e relativo *n* linhas), a rolagem absoluto (, sobrenome e de linha *n*) e o posicionamento do indicador. O *FetchOrientation* e *FetchOffset* argumentos **SQLFetchScroll** especificar qual conjunto de linhas para buscar, conforme mostrado nos diagramas a seguir.  
+Ao usar um cursor rolável, os aplicativos chamam **SQLFetchScroll** para posicionar o cursor e buscar linhas. O **SQLFetchScroll** dá suporte à rolagem relativa (linhas posteriores, anteriores e não relativas a *n* ), rolagem absoluta (primeira, última e linha *n*) e posicionamento por indicador. Os argumentos *FetchOrientation* e *FetchOffset* no **SQLFetchScroll** especificam qual conjunto de linhas deve ser obtido, conforme mostrado nos diagramas a seguir.  
   
- ![Em seguida, busca prévia, primeiro e último conjuntos de linhas](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
+ ![Buscando os conjuntos de linhas próximo, anterior, primeiro e último](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
   
- **Buscando o próximo, anterior, primeiros e últimos conjuntos de linhas**  
+ **Buscando os conjuntos de linhas próximo, anterior, primeiro e último**  
   
- ![Buscando o conjunto de linhas absoluto, relativo e indicado](../../../odbc/reference/develop-app/media/pr20_1.gif "pr20_1")  
+ ![Buscando um conjunto de linhas absoluto, relativo e indicado](../../../odbc/reference/develop-app/media/pr20_1.gif "pr20_1")  
   
- **Buscar conjuntos de linhas absolutos, relativos e indicadores**  
+ **Buscando conjuntos de linhas absolutos, relativos e marcados**  
   
- **SQLFetchScroll** posiciona o cursor para a linha especificada e retorna as linhas no conjunto de linhas a partir da linha. Se o conjunto de linhas especificado se sobrepõe o final do conjunto de resultados, um conjunto de linhas parcial será retornado. Se o conjunto de linhas especificado se sobrepõe o início do resultado definido, o primeiro conjunto de linhas no resultado do conjunto é normalmente retornado; Para obter detalhes completos, consulte a [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) descrição da função.  
+ **SQLFetchScroll** posiciona o cursor para a linha especificada e retorna as linhas no conjunto de linhas que começa com aquela linha. Se o conjunto de linhas especificado sobrepor o final do conjunto de resultados, um conjunto de linhas parcial será retornado. Se o conjunto de linhas especificado sobrepor o início do conjunto de resultados, o primeiro conjunto de linhas no conjunto de resultados geralmente será retornado; para obter detalhes completos, consulte a descrição da função [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) .  
   
- Em alguns casos, o aplicativo talvez queira posicionar o cursor sem recuperar todos os dados. Por exemplo, ela talvez queira testar se existe uma linha ou apenas obter o indicador da linha sem colocar outros dados pela rede. Para fazer isso, ele define o atributo da instrução SQL_ATTR_RETRIEVE_DATA para SQL_RD_OFF. A variável associada à coluna de indicador (se houver) é sempre atualizada, independentemente da configuração desse atributo de instrução.  
+ Em alguns casos, o aplicativo pode querer posicionar o cursor sem recuperar nenhum dado. Por exemplo, talvez queira testar se uma linha existe ou apenas obter o indicador para a linha sem colocar outros dados na rede. Para fazer isso, ele define o atributo da instrução SQL_ATTR_RETRIEVE_DATA como SQL_RD_OFF. A variável associada à coluna de indicador (se houver) é sempre atualizada, independentemente da configuração desse atributo de instrução.  
   
- Depois que o conjunto de linhas tiver sido recuperado, o aplicativo pode chamar **SQLSetPos** para posicionar a uma linha específica no conjunto de linhas ou atualizar linhas no conjunto de linhas. Para obter mais informações sobre como usar **SQLSetPos**, consulte [atualizando dados com SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
+ Depois que o conjunto de linhas for recuperado, o aplicativo poderá chamar **SQLSetPos** para posicioná-lo em uma linha específica no conjunto de linhas ou atualizar linhas no conjunto de linhas. Para obter mais informações sobre como usar o **SQLSetPos**, consulte [atualizando dados com o SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
 > [!NOTE]  
->  Rolagem é compatível com ODBC 2. *x* drivers por **SQLExtendedFetch**. Para obter mais informações, consulte [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.
+>  Há suporte para rolagem no ODBC 2. drivers *x* por **SQLExtendedFetch**. Para obter mais informações, consulte [cursores de bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)no apêndice G: diretrizes de driver para compatibilidade com versões anteriores.

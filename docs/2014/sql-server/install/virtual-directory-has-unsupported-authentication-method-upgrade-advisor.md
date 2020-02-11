@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 26420df466860677f22d39d57133568a2f02bc68
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952015"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>Diretório virtual com método de autenticação sem suporte (Supervisor de Atualização)
@@ -24,12 +24,12 @@ ms.locfileid: "71952015"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  A instalação não pode atualizar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que use um dos métodos de autenticação a seguir  
   
 -   Anônima  
@@ -43,7 +43,7 @@ ms.locfileid: "71952015"
 ## <a name="corrective-action"></a>Ação corretiva  
  Para continuar com atualização, modifique o método de autenticação do IIS dos diretórios virtuais do ReportServer e Reports. Para obter mais informações sobre como modificar os métodos de autenticação no IIS, consulte a documentação do IIS. Depois que você modificar o método de autenticação dos diretórios virtuais do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], execute novamente o Supervisor de Atualização para confirmar que não existe nenhum outro problema de atualização.  
   
-## <a name="see-also"></a>Consulte também  
- [Supervisor de atualização &#40;de problemas de atualização do Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Problemas de atualização do Reporting Services &#40;o supervisor de atualização&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

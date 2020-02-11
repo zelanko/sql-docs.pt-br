@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 07a53f979e721463c0f2cf95df1b79487e471579
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783942"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversões do tipo de dados datetime do C para SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Este tópico lista os problemas a serem considerados quando você converte de tipos C para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de data/hora.  
+  Este tópico lista os problemas a serem considerados quando você converte de tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] C em tipos de data/hora.  
   
- As conversões descritas na tabela a seguir se aplicam a conversões feitas no cliente. Nos casos em que o cliente especifica a precisão de fração de segundo para um parâmetro diferente daquele definido no servidor, a conversão do cliente pode ter sucesso, mas o servidor retornará um erro quando **SQLExecute** ou **SQLExecuteDirect** for chamado. Em particular, o ODBC trata qualquer truncamento de segundos fracionários como um erro, enquanto o comportamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é arredondado; por exemplo, o arredondamento ocorre quando você vai de **datetime2 (6)** para **datetime2 (2)** . Os valores da coluna datetime são arredondados para 1/300º de um segundo e as colunas smalldatetime têm os segundos definidos como zero pelo servidor.  
+ As conversões descritas na tabela a seguir se aplicam a conversões feitas no cliente. Nos casos em que o cliente especifica a precisão de fração de segundo para um parâmetro diferente daquele definido no servidor, a conversão do cliente pode ter sucesso, mas o servidor retornará um erro quando **SQLExecute** ou **SQLExecuteDirect** for chamado. Em particular, o ODBC trata qualquer truncamento de segundos fracionários como um erro, enquanto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o comportamento é arredondado; por exemplo, o arredondamento ocorre quando você vai de **datetime2 (6)** para **datetime2 (2)**. Os valores da coluna datetime são arredondados para 1/300º de um segundo e as colunas smalldatetime têm os segundos definidos como zero pelo servidor.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -33,21 +33,21 @@ ms.locfileid: "73783942"
 |SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
 |SQL_C_TIME|-|1|1|1,7|1, 5, 7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|N/A|N/A|1,10,11|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|N/D|N/D|1,10,11|N/D|N/D|N/D|N/D|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|N/A|N/A|N/A|N/A|1,10,11|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|N/A|N/A|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|N/A|N/A|N/A|N/A|N/A|N/A|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|N/D|N/D|N/D|N/D|1,10,11|N/D|N/D|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|N/D|N/D|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|N/D|N/D|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|N/D|N/D|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|N/D|N/D|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|N/D|N/D|N/D|N/D|N/D|N/D|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|N/D|N/D|N/D|N/D|N/D|N/D|N/D|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|N/D|N/D|N/D|N/D|N/D|N/D|N/D|  
   
 ## <a name="key-to-symbols"></a>Legenda dos símbolos  
   
--   **-** : não há suporte para nenhuma conversão. Será gerado um registro de diagnóstico com SQLSTATE 07006 e a mensagem "Violação do atributo de tipo de dados restrito".  
+-   **-**: Não há suporte para nenhuma conversão. Será gerado um registro de diagnóstico com SQLSTATE 07006 e a mensagem "Violação do atributo de tipo de dados restrito".  
   
 -   **1**: se os dados fornecidos não forem válidos, um registro de diagnóstico será gerado com SQLSTATE 22007 e a mensagem "formato de data/hora inválido".  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73783942"
   
     ||||  
     |-|-|-|  
-    |Tipo|Escala implícita<br /><br /> 0|Escala implícita<br /><br /> 1.. 9|  
+    |Type|Escala implícita<br /><br /> 0|Escala implícita<br /><br /> 1.. 9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      Entretanto, para SQL_C_TYPE_TIMESTAMP, se as frações de segundo puderem ser representadas com três dígitos sem perda de dados e o tamanho da coluna for 23 ou maior, serão gerados exatamente três dígitos de frações de segundo. Esse comportamento assegura a compatibilidade com versões anteriores de aplicativos desenvolvidos usando drivers ODBC mais antigos.  
@@ -90,9 +90,9 @@ ms.locfileid: "73783942"
   
      Um tamanho de coluna zero implica em tamanho ilimitado para tipos de caracteres de comprimento variável no ODBC (9 dígitos, a menos que a regra de 3 dígitos para SQL_C_TYPE_TIMESTAMP se aplique). A especificação de um tamanho de coluna zero com um tipo de caractere de comprimento fixo é um erro.  
   
--   **N/A**: os [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] existentes e o comportamento anterior são mantidos.  
+-   **N/A**: o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] comportamento existente e anterior é mantido.  
   
-## <a name="see-also"></a>Consulte também  
- [Aprimoramentos &#40;de data e hora do ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Melhorias de data e hora &#40;&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197771"
 ---
 # <a name="event-notifications"></a>Notificações de eventos
@@ -59,7 +59,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Gatilhos|Notificações de eventos|  
 |--------------|-------------------------|  
 |Os gatilhos DML respondem a eventos DML (linguagem de manipulação de dados). Gatilhos DDL respondem a eventos de linguagem de definição de dados (DDL).|Notificações de eventos respondem a eventos DDL e a um subconjunto de eventos de Rastreamento do SQL.|  
-|Gatilhos podem executar Transact-SQL ou código gerenciado CLR (Common Language Runtime).|Notificações de eventos não executam código. Em vez disso, eles enviam `xml` mensagens para um serviço Service Broker.|  
+|Gatilhos podem executar Transact-SQL ou código gerenciado CLR (Common Language Runtime).|Notificações de eventos não executam código. Em vez disso, `xml` eles enviam mensagens para um serviço de Service Broker.|  
 |Gatilhos são processados sincronicamente, dentro do escopo das transações que os acionam.|Notificações de eventos podem ser processadas de forma assíncrona e não são executadas no escopo das transações que as acionam.|  
 |O consumidor de um gatilho encontra-se estreitamente acoplado ao evento que o aciona.|O consumidor de uma notificação de eventos encontra-se desacoplado do evento que o aciona.|  
 |Gatilhos devem ser processados no servidor local.|Notificações de eventos podem ser processadas em um servidor remoto.|  
@@ -67,8 +67,8 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Os nomes dos gatilhos DML seguem o escopo do esquema. Os nomes dos gatilhos DDL seguem o escopo do banco de dados ou do servidor.|Os nomes das notificações de eventos seguem o escopo do servidor ou do banco de dados. Notificações de eventos em um evento QUEUE_ACTIVATION seguem o escopo de uma fila específica.|  
 |Gatilhos DML são de propriedade do mesmo proprietário das tabelas a que se aplicam.|O proprietário de uma notificação de eventos em uma fila pode ser diferente do proprietário do objeto a que se aplica.|  
 |Gatilhos têm suporte à cláusula EXECUTE AS.|Notificações de eventos não têm suporte à cláusula EXECUTE AS.|  
-|Informações de eventos de gatilho DDL podem ser capturadas por meio da função EVENTDATA, que retorna um `xml` tipo de dados.|Enviam notificações de eventos `xml` informações de evento para um serviço Service Broker. As informações são formatadas no mesmo esquema da função EVENTDATA.|  
-|Metadados sobre gatilhos localizam-se nas exibições de catálogo **sys.triggers** e **sys.server_triggers** .|Os metadados sobre notificações de evento localizam-se nas exibições de catálogo **sys.event_notifications** e **sys.server_event_notifications**.|  
+|Informações de evento de gatilho DDL podem ser capturadas usando a função EVENTDATA, `xml` que retorna um tipo de dados.|As notificações de `xml` eventos enviam informações de evento para um serviço Service Broker. As informações são formatadas no mesmo esquema da função EVENTDATA.|  
+|Metadados sobre gatilhos localizam-se nas exibições de catálogo **sys.triggers** e **sys.server_triggers** .|Os metadados sobre notificações de evento localizam-se nas exibições de catálogo **sys.event_notifications** e **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notificações de evento x Rastreamento do SQL  
  A tabela a seguir compara e contrasta o uso de notificações de evento e do Rastreamento do SQL para monitorar eventos de servidor.  
@@ -95,7 +95,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Descreve como configurar a caixa de diálogo do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para notificações de evento que enviam mensagens a um agente de serviços em um servidor remoto.|[Configurar segurança de caixa de diálogo para notificações de evento](configure-dialog-security-for-event-notifications.md)|  
 |Descreve como retornar informações sobre notificações de evento.|[Obter informações sobre notificações de eventos](get-information-about-event-notifications.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gatilhos DDL](../triggers/ddl-triggers.md)   
  [Gatilhos DML](../triggers/dml-triggers.md)   
  [Rastreamento do SQL](../sql-trace/sql-trace.md)  

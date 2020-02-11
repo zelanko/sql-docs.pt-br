@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085533"
 ---
 # <a name="create-a-cross-validation-report"></a>Criar um relatório de validação cruzada
@@ -90,7 +90,7 @@ ms.locfileid: "66085533"
   
 4.  Cole a seleção em uma pasta do Excel aberta. Se você usar a opção **Colar** , o relatório será colado no Excel como HTML, preservando a formatação de linhas e colunas. Se colar o relatório usando a opção **Colar Especial** para texto ou texto Unicode, o relatório será colado em um formato delimitado por linha.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Medidas no relatório de validação cruzada](measures-in-the-cross-validation-report.md)  
   
   

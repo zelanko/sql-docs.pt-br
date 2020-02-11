@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f70e66a02637b65e96cccc6001c9702d5253d5cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257376"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Exemplos do XML Bulk Load (SQLXML 4.0)
@@ -112,7 +112,7 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>R. Carregando o XML em massa em uma tabela  
+## <a name="a-bulk-loading-xml-in-a-table"></a>a. Carregando o XML em massa em uma tabela  
  Este exemplo estabelece uma conexão com a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que é especificada na propriedade ConnectionString (meuservidor). O exemplo também especifica a Propriedade LogFile. Portanto, a saída de erro é salva no arquivo especificado ("C:\error.log") que você também poderá decidir alterar para um local diferente. Observe também que o método Execute tem como parâmetros o arquivo de esquema de mapeamento (SampleSchema. xml) e o arquivo de dados XML (SampleXMLData. xml). Quando o carregamento em massa for executado, a tabela Cust que você criou no banco de dados **tempdb** conterá novos registros com base no conteúdo do arquivo de dados XML.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Para testar um exemplo de carregamento em massa  

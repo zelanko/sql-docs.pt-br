@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 5: Exportando os resultados para um arquivo do Excel da limpeza | Microsoft Docs'
+title: 'Tarefa 5: exportando resultados de limpeza para um arquivo do Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,42 +11,42 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489121"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tarefa 5: Exportar os resultados da limpeza para um arquivo do Excel
-  Nesta tarefa, você exportará resultados da atividade de limpeza para um arquivo do Excel. Ver [estágio de exportação](https://msdn.microsoft.com/library/hh213061.aspx#Export) tópico para obter mais detalhes.  
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tarefa 5: Exportando os resultados da limpeza para um arquivo do Excel
+  Nesta tarefa, você exportará resultados da atividade de limpeza para um arquivo do Excel. Confira o tópico [Exportar estágio](https://msdn.microsoft.com/library/hh213061.aspx#Export) para obter mais detalhes.  
   
 1.  No painel direito, selecione **Excel** para o **tipo de destino**.  
   
-2.  Clique em **navegue**, especifique o nome do arquivo de saída como **Cleansed Supplier List**e, em seguida, clique em **abrir**.  
+2.  Clique em **procurar**, especifique o nome do arquivo de saída como **lista de fornecedores limpos. xls**e clique em **abrir**.  
   
-3.  Selecione **Data Only** para o **saída** formato para exportar apenas os dados limpos. A segunda opção, **dados e informações de limpeza**, permite exportar os detalhes da atividade de limpeza juntamente com os dados limpos. O **padronizar formato** opção permite que você aplique quaisquer formatos de saída definidos em um domínio para os valores desse domínio. Você não definiu um formato de saída em nenhum domínio no tutorial.  
+3.  Selecione **dados somente** para o formato de **saída** para exportar apenas os dados limpos. A segunda opção, **dados e informações de limpeza**, permitem exportar detalhes da atividade de limpeza junto com os dados limpos. A opção **padronizar formato** permite aplicar qualquer formato de saída definido em um domínio aos valores desse domínio. Você não definiu um formato de saída em nenhum domínio no tutorial.  
   
-     ![Página resultados da limpeza de exportação](../../2014/tutorials/media/et-exportingcleansingresultstoanexcelfile.jpg "página resultados da limpeza de exportação")  
+     ![Página Exportar Resultados da Limpeza](../../2014/tutorials/media/et-exportingcleansingresultstoanexcelfile.jpg "Página Exportar Resultados da Limpeza")  
   
-4.  Clique em **exportar** para exportar os dados. Não clique **concluir** ainda.  
+4.  Clique em **Exportar** para exportar os dados. Não clique em **concluir** ainda.  
   
-5.  Clique em **feche** sobre o **exportando** caixa de diálogo.  
+5.  Clique em **fechar** na caixa de diálogo **Exportar** .  
   
-6.  Clique em **concluir** para concluir a atividade. Se você se esqueceu de exportar os resultados antes de clicar em **terminar**, clique em **Abrir projeto de qualidade de dados** na página principal do **cliente DQS**, selecione **Supplier limpar Lista** na lista de projetos e clique em **próxima** na parte inferior da tela para obter o **exportar** estágio do processo de limpeza novamente. Você também pode mudar para **gerenciar e exibir resultados** guia clicando **volta** botão.  
+6.  Clique em **concluir** para concluir a atividade. Se você se esqueceu de exportar os resultados antes de clicar em **concluir**, clique em **Abrir projeto de qualidade de dados** na página principal do cliente do **DQS**, selecione **Limpar lista de fornecedores** na lista de projetos e clique em **Avançar** na parte inferior da tela para obter o estágio de **exportação** do processo de limpeza novamente. Você também pode alternar para a guia **gerenciar e exibir resultados** clicando no botão **voltar** .  
   
-7.  Abra o **Cleansed Supplier List** e faça o seguinte:  
+7.  Abra a **lista de fornecedores limpos. xls** e faça o seguinte:  
   
-    1.  Certifique-se de que não há nenhum endereço de email que termine com Adventure-Work.com (sem o caractere ') procurando Adventure-Work.com na planilha.  
+    1.  Verifique se não há endereços de email que terminem com adventure-work.com (sem o caractere ') procurando por adventure-work.com na planilha.  
   
-    2.  Veja que não há nenhuma **EUA** valor na **país** coluna.  
+    2.  Veja que não há nenhum valor **usa** na coluna **Country** .  
   
-    3.  Pesquise **Los Angeles** e ver que o **estado** está definido como **CA**.  
+    3.  Procure **Los Angeles** e verifique se o **State** está definido como **CA**.  
   
-    4.  Confirme se não houver nenhum termos **co**, **corp.** , e **Inc.** .  
+    4.  Confirme que não há termos **co.**, **Corp.**, e **Inc.**.  
   
-    5.  Excluir o **Address Validation** coluna da planilha e salve o arquivo do excel. Essa coluna adicional corresponde ao domínio composto Address Validation.  
+    5.  Exclua a coluna **validação de endereço** da planilha e salve o arquivo do Excel. Essa coluna adicional corresponde ao domínio composto Address Validation.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 6: Importando valores do fornecedor projeto Limpar lista](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
+ [Tarefa 6: Importando valores do projeto Limpar Lista de Fornecedores](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

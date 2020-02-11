@@ -1,5 +1,5 @@
 ---
-title: Extensão das Regras de Negócio
+title: Business Rules Extension
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728681"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Extensão das Regras de Negócio (Master Data Services)
@@ -75,7 +75,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 -   Você deve ter permissão para acessar a área funcional Administração do Sistema.  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
 -   Scripts definidos pelo usuário foram adicionados ao banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -103,7 +103,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  Atribuir um valor a cada parâmetro  
   
-    5.  Clique em **Salvar**.  
+    5.  Clique em **Save** (Salvar).  
   
 8.  Faça o seguinte para utilizar um script definido pelo usuário como uma ação.  
   
@@ -111,11 +111,11 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  Na lista suspensa **Operador** , selecione a função definida pelo usuário em **Script definido pelo usuário** .  
   
-    3.  Clique em **Salvar**.  
+    3.  Clique em **Save** (Salvar).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Condições de regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Ações de regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
+ [Condições de regra de negócio &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [Ações de regra de negócio &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

@@ -17,14 +17,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 0c34eafe153c5361df1945b55094737fa529f617
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957201"
 ---
-# <a name="encryption-hierarchy"></a>Encryption Hierarchy
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]criptografa dados com uma infraestrutura hierárquica e uma infra-estrutura de gerenciamento de chaves. Cada camada criptografa a camada abaixo dela usando uma combinação de certificados, chaves assimétricas e chaves simétricas. Chaves assimétricas e chaves simétricas podem ser armazenadas fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um módulo EKM (Gerenciamento Extensível de Chaves).  
+# <a name="encryption-hierarchy"></a>Hierarquia de criptografia
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criptografa dados com uma criptografia hierárquica e infraestrutura de gerenciamento de chaves. Cada camada criptografa a camada abaixo dela usando uma combinação de certificados, chaves assimétricas e chaves simétricas. Chaves assimétricas e chaves simétricas podem ser armazenadas fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um módulo EKM (Gerenciamento Extensível de Chaves).  
   
  A ilustração a seguir mostra que cada camada da hierarquia de criptografia criptografa a camada abaixo dela e exibe as configurações de criptografia mais comuns. O acesso ao início da hierarquia normalmente é protegido por uma senha.  
   
@@ -55,10 +55,9 @@ ms.locfileid: "74957201"
 -   As chaves simétricas e assimétricas no EKM podem proteger o acesso às chaves simétricas e assimétricas armazenadas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A linha pontilhada associada ao EKM indica que as chaves no EKM podem substituir as chaves simétricas e assimétricas armazenadas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="encryption-mechanisms"></a>Mecanismos de criptografia  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece os seguintes mecanismos para criptografia:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece os seguintes mecanismos para criptografia:  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)]funções  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] funções  
   
 -   Chaves assimétricas  
   
@@ -66,7 +65,7 @@ ms.locfileid: "74957201"
   
 -   Certificados  
   
--   Transparent Data Encryption  
+-   Criptografia de Dados Transparente  
   
 ### <a name="transact-sql-functions"></a>Funções Transact-SQL  
  Itens individuais podem ser criptografados quando são inseridos ou atualizados usando funções [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Para obter mais informações, veja [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql) e [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbypassphrase-transact-sql).  
@@ -102,16 +101,16 @@ ms.locfileid: "74957201"
 ### <a name="symmetric-keys"></a>Chaves simétricas  
  Uma chave simétrica é uma chave usada para criptografia e descriptografia. A criptografia e a descriptografia que usam uma chave simétrica são rápidas e adequadas ao uso de rotina com dados confidenciais no banco de dados.  
   
-### <a name="transparent-data-encryption"></a>Transparent Data Encryption  
+### <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente  
  A TDE (Criptografia Transparente de Dados) é um caso especial de criptografia que usa uma chave simétrica. Ela criptografa um banco de dados inteiro usando a chave simétrica chamada de chave de criptografia de banco de dados. A chave de criptografia de banco de dados é protegida por outras chaves ou certificados que são protegidos pela chave mestra de banco de dados ou por uma chave assimétrica armazenada em um módulo EKM. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md).  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Protegendo SQL Server](../securing-sql-server.md)  
+ [Protegendo o SQL Server](../securing-sql-server.md)  
   
- [Funções de segurança &#40;&#41;Transact-SQL](/sql/t-sql/functions/security-functions-transact-sql)  
+ [Funções de segurança &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../permissions-hierarchy-database-engine.md)   
+ [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../permissions-hierarchy-database-engine.md)   
  [Protegíveis](../securables.md)  
   
   

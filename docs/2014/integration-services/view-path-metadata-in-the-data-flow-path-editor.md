@@ -1,5 +1,5 @@
 ---
-title: Exibir metadados do caminho no Editor de caminho de fluxo de dados | Microsoft Docs
+title: Exibir metadados de caminho no editor de caminho de fluxo de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054493"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Exibir metadados do caminho no Editor de Caminho do Fluxo de Dados
@@ -39,7 +39,7 @@ ms.locfileid: "66054493"
   
 7.  Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Caminhos do Integration Services](data-flow/integration-services-paths.md)   
  [Fluxo de Dados](data-flow/data-flow.md)  
   

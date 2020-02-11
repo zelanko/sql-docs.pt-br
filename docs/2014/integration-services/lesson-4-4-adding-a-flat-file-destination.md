@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: Adicionando um destino de arquivo simples | Microsoft Docs'
+title: 'Etapa 4: adicionar um destino de arquivo simples | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767368"
 ---
-# <a name="step-4-adding-a-flat-file-destination"></a>Etapa 4: Adicionar um destino de arquivo simples
+# <a name="step-4-adding-a-flat-file-destination"></a>Etapa 4: Adicionando um destino de arquivo simples
   A saída de erro da transformação Pesquisa de Códigos de Moeda redireciona para a transformação Script todas as linhas de dados que falharam na operação de pesquisa. Para aprimorar as informações sobre os erros que ocorreram, a transformação Script executa um script que adquire a descrição de erros.  
   
- Nessa tarefa, você salvará todas essas informações sobre as linhas com falha em um arquivo delimitado, para processamento posterior. Para salvar as linhas com falha, você deve adicionar e configurar um gerenciador de conexões de arquivo simples para o arquivo de texto que conterá os dados de erro e um arquivo simples de destino. Ao definir propriedades no gerenciador de conexões de arquivo simples que o arquivo simples usa, você pode especificar como o destino do arquivo simples formata e escreve o arquivo de texto. Para obter mais informações, consulte [Flat File Connection Manager](connection-manager/file-connection-manager.md) e [Flat File Destination](data-flow/flat-file-destination.md).  
+ Nessa tarefa, você salvará todas essas informações sobre as linhas com falha em um arquivo delimitado, para processamento posterior. Para salvar as linhas com falha, você deve adicionar e configurar um gerenciador de conexões de arquivo simples para o arquivo de texto que conterá os dados de erro e um arquivo simples de destino. Ao definir propriedades no gerenciador de conexões de arquivo simples que o arquivo simples usa, você pode especificar como o destino do arquivo simples formata e escreve o arquivo de texto. Para obter mais informações, consulte [Gerenciador de conexões de arquivo simples](connection-manager/file-connection-manager.md) e [destino de arquivo simples](data-flow/flat-file-destination.md).  
   
 ### <a name="to-add-and-configure-a-flat-file-destination"></a>Para adicionar e configurar um destino de arquivo simples  
   
@@ -36,11 +36,11 @@ ms.locfileid: "62767368"
   
 6.  Na caixa de diálogo **Formato de Arquivo Simples** , verifique se **Delimitado** está selecionado e depois clique em **OK**.  
   
-7.  No **Editor do Gerenciador de Conexão de arquivo simples**, no **nome do Gerenciador de Conexão** caixa, digite `Error Data`.  
+7.  No **Editor do Gerenciador de conexões de arquivo simples**, na caixa nome do Gerenciador de **conexões** , digite `Error Data`.  
   
 8.  Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples** , clique em **Procurar**e localize a pasta em que o arquivo será armazenado.  
   
-9. No **aberto** caixa de diálogo, para **nome do arquivo**, tipo `ErrorOutput.txt`e, em seguida, clique em **abrir**.  
+9. Na caixa de diálogo **abrir** , em **nome do arquivo**, `ErrorOutput.txt`digite e, em seguida, clique em **abrir**.  
   
 10. Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples** , verifique se a caixa **Localidade** contém Inglês (Estados Unidos) e **Página de código** contém 1252 (ANSI – Latim I).  
   
@@ -59,6 +59,6 @@ ms.locfileid: "62767368"
 15. Clique em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Etapa 5: Testando o pacote de Tutorial da lição 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+ [Etapa 5: Testando o pacote de tutorial da Lição 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

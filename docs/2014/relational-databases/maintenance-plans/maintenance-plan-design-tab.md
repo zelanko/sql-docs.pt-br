@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184545"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plano de manutenção (Guia Design)
-  Use o **Plano de Manutenção (Guia Design)** para especificar as propriedades de um plano de manutenção e seus subplanos. Arraste tarefas da caixa de ferramentas para o designer de plano. Clique com o botão direito do mouse em grupos de tarefas para criar caminhos de execução de ramificação. Os planos de manutenção são salvos como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e são executados pelos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Use o **plano de manutenção (guia Design)** para especificar as propriedades de um plano de manutenção e seus subplanos. Arraste tarefas da caixa de ferramentas para o designer de plano. Clique com o botão direito do mouse em grupos de tarefas para criar caminhos de execução de ramificação. Os planos de manutenção são salvos como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e são executados pelos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opções  
  **Adicionar Subplano**  
@@ -31,19 +31,19 @@ ms.locfileid: "63184545"
  **Propriedades do Subplano**  
  Exiba a caixa de diálogo **Propriedades do Subplano** . Selecione um subplano na grade e clique nesse ícone para inserir um nome, uma descrição e uma agenda para o subplano. Você também pode clicar duas vezes no subplano na grade para exibir a caixa de diálogo **Propriedades do Subplano** . Os nomes dos subplanos são limitados a 128 caracteres e suas descrições são limitadas a 512 caracteres.  
   
- **Exclua o Subplano Selecionado**  
+ **Excluir subplano selecionado**  
  Exclua o subplano selecionado.  
   
  **Agenda do Subplano**  
  Exiba a caixa de diálogo **Propriedades do Agendamento do Trabalho** . Selecione um subplano na grade e clique nesse ícone para configurar uma agenda para o subplano.  
   
- **Remover Agenda**  
+ **Remover agendamento**  
  Remova uma agenda do subplano selecionado.  
   
- **Gerenciar Conexões**  
+ **Gerenciar conexões**  
  Exiba a caixa de diálogo **Gerenciar Conexões** . Usado para adicionar conexões de instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adicionais ao plano de manutenção. Cada tarefa de manutenção no editor de subplano pode usar quaisquer dessas conexões. Quando executando, o plano de manutenção faz uma conexão do servidor do plano de manutenção para os servidores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados usando credenciais de conexão.  
   
- **Relatório e Registro em Log**  
+ **Relatório e registro em log**  
  Exiba a caixa de diálogo **Relatório e Registro em Log** , usada para gerenciar os relatórios relacionados com a atividade do plano de manutenção e para configurar o log ao servidor local ou remoto.  
   
  **Servidores**  
@@ -55,7 +55,7 @@ ms.locfileid: "63184545"
  **Descrição**  
  Exiba ou especifique uma descrição para o plano de manutenção. O comprimento máximo para uma descrição é 512 caracteres.  
   
- **Superfície do Designer**  
+ **Superfície do designer**  
  Executa design e mantém os planos de manutenção. Use a superfície de designer para adicionar tarefas de manutenção a um plano, remover tarefas de um plano, especificar os links com precedência entre tarefas e para indicar a ramificação ou paralelismo de uma tarefa.  
   
  Um link de precedência entre duas tarefas estabelece uma relação entre elas. A segunda tarefa (a *tarefa dependente*) é executada somente se o resultado da execução da primeira tarefa (a *tarefa precedente*) corresponde aos critérios especificados. Normalmente o resultado da execução especificado é **Êxito**, **Falha**ou **Conclusão**. A superfície do designer do plano de manutenção baseia-se na superfície do designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
@@ -83,13 +83,13 @@ ms.locfileid: "63184545"
 ## <a name="additional-features-available-from-the-shortcut-menu"></a>Recursos adicionais disponíveis no menu de atalho  
  Para ver opções adicionais, selecione uma ou mais tarefas na superfície de design e, então, clique com o botão direito do mouse para abrir o menu de atalho. Além das opções comuns **Cortar**, **Copiar**, **Colar**, **Excluir**e **Selecionar Tudo**, para algumas tarefas estão disponíveis as seguintes opções especiais.  
   
- **Adicionar Anotação**  
+ **Adicionar anotação**  
  Adiciona uma nota descritiva à superfície de design.  
   
  **Editar**  
  Abre a caixa de diálogo de propriedade para a tarefa.  
   
- **Disable**  
+ **Desabilitar**  
  Torna a tarefa temporariamente indisponível.  
   
  **Habilitar**  
@@ -101,20 +101,20 @@ ms.locfileid: "63184545"
  **Desagrupar**  
  Remove tarefas de um grupo.  
   
- **Dimensionamento automático**  
+ **AutoSize**  
  Define o tamanho de cada tarefa como o tamanho ótimo para aquela tarefa.  
   
- **Recolher**  
+ **Agrupa**  
  Oculta as tarefas dentro de um grupo.  
   
- **Expandir**  
+ **Expanda**  
  Mostra as tarefas em um grupo que anteriormente estava oculto usando **Recolher**.  
   
  **Zoom**  
  Altera o tamanho das tarefas na superfície de design  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Planos de manutenção](maintenance-plans.md)   
- [Criar um plano de manutenção](create-a-maintenance-plan.md)  
+ [Criar um Plano de Manutenção](create-a-maintenance-plan.md)  
   
   

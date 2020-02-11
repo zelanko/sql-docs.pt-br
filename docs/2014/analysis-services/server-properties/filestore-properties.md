@@ -1,5 +1,5 @@
 ---
-title: Propriedades Filestore | Microsoft Docs
+title: Propriedades do repositório de filestore | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,16 +25,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe11b7a9cda6b3e75cb97faa17a381e2b0ea1afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069092"
 ---
 # <a name="filestore-properties"></a>Propriedades FileStore
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de armazenamento de arquivos listadas nas tabelas a seguir. Estas são todas as propriedades avançadas que não devem ser alteradas, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** Modo de servidor multidimensional e Tabular  
+ **Aplica-se a:** Modo de servidor multidimensional e tabular  
   
 ## <a name="properties"></a>Propriedades  
  `MemoryLimit`  
@@ -54,7 +55,7 @@ ms.locfileid: "66069092"
   
  Em sistemas avançados, especialmente os com recursos de memória grandes e vários nós NUMA, pode ser vantajoso usar acesso aleatório ao arquivo. No modo de acesso aleatório, o Windows ignora operações de mapeamento de página que leem dados do disco no cache de arquivo do sistema, diminuindo, portanto, a contenção no cache.  
   
- Você precisará executar testes de comparação para determinar se o desempenho da consulta melhorou como o resultado da alteração desta propriedade. Para conhecer as práticas recomendadas sobre como fazer testes de comparação, inclusive limpar o cache e evitar erros comuns, consulte [Guia de operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539). Para obter informações adicionais sobre as vantagens e desvantagens de usar essa propriedade, consulte [ https://support.microsoft.com/kb/2549369 ](https://support.microsoft.com/kb/2549369).  
+ Você precisará executar testes de comparação para determinar se o desempenho da consulta melhorou como o resultado da alteração desta propriedade. Para conhecer as práticas recomendadas sobre como fazer testes de comparação, inclusive limpar o cache e evitar erros comuns, consulte [Guia de operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539). Para obter informações adicionais sobre as compensações de usar essa propriedade [https://support.microsoft.com/kb/2549369](https://support.microsoft.com/kb/2549369), consulte.  
   
  Para exibir ou modificar esta propriedade no Management Studio, habilite a lista de propriedades avançadas na página de propriedades do servidor. Você também pode alterar a propriedade no arquivo msmdsrv.ini. Reiniciar o servidor é recomendado depois de definir esta propriedade; caso contrário, os arquivos que já estão abertos continuarão sendo acessados no modo anterior.  
   
@@ -77,8 +78,8 @@ ms.locfileid: "66069092"
  `MemoryModel\InitialBonus`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar propriedades de servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar propriedades do servidor no Analysis Services](server-properties-in-analysis-services.md)   
+ [Determinar o modo de servidor de uma instância de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

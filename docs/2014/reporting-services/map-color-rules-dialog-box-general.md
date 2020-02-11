@@ -1,5 +1,5 @@
 ---
-title: Mapear a caixa de diálogo de regras de cor, geral | Microsoft Docs
+title: Caixa de diálogo Mapear regras de cores, geral | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108317"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Caixa de diálogo Regra de Cor do Mapa, Geral
@@ -26,7 +26,7 @@ ms.locfileid: "66108317"
  Para exibir todos os elementos de mapa de uma camada especificando um gradiente decorativo com diferentes cores primárias e secundárias, use a página **Preenchimento** da caixa de diálogo Mapear Propriedades do Polígono. As regras de cor têm prioridade sobre as propriedades de vídeo de uma camada. Para obter mais informações, consulte [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opções  
- **Aplicar estilo do modelo**  
+ **Aplicar estilo de modelo**  
  Selecione esta opção para usar a cor com base no tema que foi escolhido no assistente ou foi definido nas propriedades da camada do Polígono, da Linha ou do Ponto. Um tema define as opções padrão da cor, da fonte e das bordas do mapa. Nesta opção, nenhuma regra é aplicada para atribuir cores a cada elemento de mapa.  
   
  **Visualizar dados usando a paleta de cores**  
@@ -43,7 +43,7 @@ ms.locfileid: "66108317"
   
  Selecione na lista suspensa o campo se dados analíticos a ser usado. Dependendo da fonte de dados espaciais, a lista exibe campos da fonte de dados espaciais e de um conjunto de dados de relatório que tem uma relação entre os dados espaciais e os dados analíticos. Para criar essa relação, defina as opções de dados na página Dados Analíticos da camada do mapa selecionada.  
   
- **Paleta**  
+ **Palette**  
  Digite ou selecione o nome da paleta de cores.  
   
  **Cor inicial**  
@@ -58,7 +58,7 @@ ms.locfileid: "66108317"
  **Adicionar**  
  Clique em **Adicionar** para especificar as suas próprias cores para a regra de cor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
  [Alterar legendas de mapa, escala de cores e regras associadas &#40;Construtor de Relatórios e SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   

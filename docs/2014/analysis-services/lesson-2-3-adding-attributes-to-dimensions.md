@@ -1,5 +1,5 @@
 ---
-title: Adicionando atributos em dimensões | Microsoft Docs
+title: Adicionando atributos a dimensões | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079028"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Adicionando atributos em dimensões
@@ -38,7 +38,7 @@ ms.locfileid: "66079028"
   
     -   **MaritalStatus**  
   
-    -   **Gênero**  
+    -   **Sexo**  
   
     -   **EmailAddress**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66079028"
   
     -   **NumberCarsOwned**  
   
-    -   **Phone**  
+    -   **Telemóvel**  
   
     -   **DateFirstPurchase**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66079028"
   
 5.  Arraste as seguintes colunas da tabela **Geography** do painel **Exibição da Fonte de Dados** para o painel **Atributos** :  
   
-    -   **Cidade**  
+    -   **City**  
   
     -   **StateProvinceName**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66079028"
   
     -   **PostalCode**  
   
-6.  No menu Arquivo, clique em **Salvar Tudo**.  
+6.  No menu Arquivo , clique em **Salvar Tudo**.  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>Adicionando atributos à dimensão Produto  
   
@@ -108,24 +108,24 @@ ms.locfileid: "66079028"
   
     -   **DealerPrice**  
   
-    -   **Classe**  
+    -   **Classes**  
   
     -   **Estilo**  
   
     -   **ModelName**  
   
-    -   **StartDate**  
+    -   **Início**  
   
-    -   **EndDate**  
+    -   **Término**  
   
     -   **Status**  
   
-5.  No menu Arquivo, clique em **Salvar Tudo**.  
+5.  No menu Arquivo , clique em **Salvar Tudo**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Revisando as propriedades de dimensão e cubo](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de propriedades de atributo de dimensão](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

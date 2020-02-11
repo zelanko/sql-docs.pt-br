@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199947"
 ---
 # <a name="web-server-information"></a>Informações do Servidor Web
@@ -29,11 +29,11 @@ ms.locfileid: "63199947"
  **Como cada Assinante se conectará ao servidor Web?**  
  Especifique o tipo de autenticação usado para conexão com o servidor Web. Recomendamos o uso da Autenticação Básica para conexões com o servidor IIS junto com o SSL (Secure Sockets Layer). Se você selecionar Autenticação Básica, insira o logon e a senha que serão usados para conexão do Assinante com o servidor IIS.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma assinatura pull](create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)   
- [Assinantes Não SQL Server](non-sql/non-sql-server-subscribers.md)   
- [Assinar publicações](subscribe-to-publications.md)   
+ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
  [Sincronização da Web para replicação de mesclagem](web-synchronization-for-merge-replication.md)  
   
   

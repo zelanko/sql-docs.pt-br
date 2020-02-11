@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06a19a173fdd6f70b19e9a63c214616909708eec
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784735"
 ---
 # <a name="cursor-behaviors"></a>Comportamentos de cursor
@@ -50,7 +50,7 @@ ms.locfileid: "73784735"
 ## <a name="sensitivity"></a>Sensibilidade  
  Quando SQL_ATTR_CURSOR_SENSITIVITY é definido como SQL_SENSITIVE, o cursor reflete as modificações de dados feitas pelo usuário atual ou confirmadas por outros usuários. Quando SQL_ATTR_CURSOR_SENSITIVITY é definido como SQL_INSENSITIVE, o cursor não reflete as modificações de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Usando [propriedades de cursor](properties/cursor-properties.md) de cursor (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) 
+## <a name="see-also"></a>Consulte Também  
+ [Usando propriedades de cursor de cursor (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) [](properties/cursor-properties.md) 
   
   

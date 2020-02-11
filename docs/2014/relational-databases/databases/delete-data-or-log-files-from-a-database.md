@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0f2de1f7003e61dbdc8e82f7a9b549fd42c77fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917253"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>Excluir arquivos de dados ou de log de um banco de dados
@@ -68,7 +68,7 @@ ms.locfileid: "62917253"
   
  Para obter mais exemplos, consulte [Opções de arquivo e grupos de arquivos ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reduzir um banco de dados](shrink-a-database.md)   
  [Adicionar arquivos de dados ou de log a um banco de dados](add-data-or-log-files-to-a-database.md)  
   

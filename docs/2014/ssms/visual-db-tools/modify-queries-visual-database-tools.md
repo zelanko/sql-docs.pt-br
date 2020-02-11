@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f88c78aa67d65eb84bfaa282fe46a122dd2a382a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306033"
 ---
 # <a name="modify-queries-visual-database-tools"></a>Modificar consultas (Visual Database Tools)
@@ -33,8 +33,8 @@ ms.locfileid: "63306033"
   
  O Designer de Consulta está agora aberto e você pode fazer modificações.  
   
-## <a name="see-also"></a>Consulte também  
- [Executar consultas do &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Executar consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Trabalhar com dados no painel de resultados &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   

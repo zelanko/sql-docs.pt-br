@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo Novo grupo de medidas (Designer de cubo) | Microsoft Docs
+title: Caixa de diálogo novo grupo de medidas (Designer de cubo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072271"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>Caixa de diálogo Novo Grupo de Medidas (Designer de Cubo)
@@ -29,11 +29,11 @@ ms.locfileid: "66072271"
 -   Clicando com o botão direito do mouse no grupo de medidas ou medida no painel **Medidas** na guia **Estrutura do Cubo** do Designer de Cubo e selecionando **Novo Grupo de Medidas** no menu de contexto.  
   
 ## <a name="options"></a>Opções  
- **Selecione uma tabela da exibição da fonte de dados**  
+ **Selecione uma tabela na exibição da fonte de dados**  
  Selecione a tabela de fatos para o novo grupo de medidas. As tabelas não podem ser usadas mais de uma vez como tabelas de fatos dentro do mesmo cubo.  
   
-## <a name="see-also"></a>Consulte também  
- [Estrutura do cubo &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Estrutura de cubo &#40;designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

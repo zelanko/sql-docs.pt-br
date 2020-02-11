@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e348ace954e19c3e213c7de1779cbfbcb1768887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316094"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Criar diagramas de banco de dados (Visual Database Tools)
@@ -37,37 +37,37 @@ ms.locfileid: "63316094"
 ## <a name="tables-and-columns-in-a-database-diagram"></a>Tabelas e colunas de um diagrama de banco de dados  
  Dentro de um diagrama de banco de dados, cada tabela pode aparecer com três recursos distintos: uma barra de título, um seletor de linha e um conjunto de colunas de propriedade.  
   
- **Barra de Título** A barra de título mostra o nome da tabela  
+ **Barra de título** A barra de título mostra o nome da tabela  
   
  Se você modificou uma tabela e ainda não a salvou, um asterisco (*) aparecerá no final do nome da tabela, indicando que há alterações ainda não salvas. Para obter informações sobre como salvar tabelas e diagramas alterados, consulte [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
- **Seletor de linhas** Clique no seletor de linhas para selecionar uma coluna de banco de dados na tabela. O seletor de linhas exibirá um símbolo de chave caso a coluna conste da chave primária da tabela. Para obter informações sobre chaves primárias, consulte [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
+ **Seletor de linha** Você pode clicar no seletor de linha para selecionar uma coluna de banco de dados na tabela. O seletor de linhas exibirá um símbolo de chave caso a coluna conste da chave primária da tabela. Para obter informações sobre chaves primárias, consulte [restrições de chave primária e Foreign](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
- **Colunas de propriedade** O conjunto de colunas de propriedade é visível em algumas exibições de sua tabela. Você pode exibir uma tabela em qualquer uma das cinco exibições diferentes para poder gerenciar o tamanho e o layout do diagrama.  
+ **Colunas de propriedades** O conjunto de colunas de propriedade é visível somente em determinadas exibições da tabela. Você pode exibir uma tabela em qualquer uma das cinco exibições diferentes para poder gerenciar o tamanho e o layout do diagrama.  
   
  Para obter mais informações sobre modos de exibição de tabela, consulte [Personalizar a quantidade de informações exibidas em diagramas &#40;Visual Database Tools&#41;](customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md).  
   
 ## <a name="relationships-in-a-database-diagram"></a>As relações no diagrama de banco de dados  
  Em um diagrama de banco de dados, cada relação pode aparecer com três recursos distintos: pontos de extremidade, estilo de linha e tabelas relacionadas.  
   
- **Pontos de extremidade** Os pontos de extremidade da linha indicam se a relação é de um-para-um ou de um-para-muitos. Se uma relação tiver uma chave em um ponto de extremidade e o dígito oito no outro, trata-se de uma relação um para muitos. Se a relação tiver uma chave em cada ponto de extremidade, trata-se de uma relação um para um.  
+ **Pontos de extremidade** Os pontos de extremidade da linha indicam se a relação é um-para-um ou um-para-muitos. Se uma relação tiver uma chave em um ponto de extremidade e o dígito oito no outro, trata-se de uma relação um para muitos. Se a relação tiver uma chave em cada ponto de extremidade, trata-se de uma relação um para um.  
   
- **Estilo de linha** A linha em si (não seus pontos de extremidade) indica se o DBMS (sistema de gerenciamento de banco de dados) impõe a integridade referencial para a relação quando novos dados são adicionados à tabela de chave estrangeira. Se a linha parecer sólida, o DBMS imporá a integridade referencial à relação quando houver adição ou modificação de linhas na tabela de chave estrangeira. Se a linha parecer pontilhada, o DBMS não imporá a integridade referencial à relação quando houver adição ou modificação de linhas na tabela de chave estrangeira.  
+ **Estilo da linha** A própria linha (não seus pontos de extremidade) indica se o DBMS (sistema de gerenciamento de banco de dados) impõe a integridade referencial para a relação quando novos dados são adicionados à tabela de chave estrangeira. Se a linha parecer sólida, o DBMS imporá a integridade referencial à relação quando houver adição ou modificação de linhas na tabela de chave estrangeira. Se a linha parecer pontilhada, o DBMS não imporá a integridade referencial à relação quando houver adição ou modificação de linhas na tabela de chave estrangeira.  
   
- **Tabelas relacionadas** A linha da relação indica que existe uma relação de chave estrangeira entre uma e outra tabela. Em uma relação um para muitos, a tabela de chave estrangeira é a tabela próxima ao símbolo do dígito oito da linha. Se ambas as extremidades da linha estiverem anexadas à mesma tabela, trata-se de uma relação reflexiva. Para obter mais informações, consulte [Desenhar relações reflexivas &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md).  
+ **Tabelas relacionadas** A linha de relacionamento indica que existe uma relação de chave estrangeira entre uma tabela e outra. Em uma relação um para muitos, a tabela de chave estrangeira é a tabela próxima ao símbolo do dígito oito da linha. Se ambas as extremidades da linha estiverem anexadas à mesma tabela, trata-se de uma relação reflexiva. Para obter mais informações, consulte [Desenhar relações reflexivas &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Compreender a propriedade do diagrama de banco de dados &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)  
   
- [Navegar no Designer de Diagramas de Banco de Dados &#40;Visual Database Tools&#41;](navigate-in-database-diagram-designer-visual-database-tools.md)  
+ [Navegue no designer de diagramas de banco de dados &#40;Visual Database Tools&#41;](navigate-in-database-diagram-designer-visual-database-tools.md)  
   
- [Configurar o Designer de Diagramas de Banco de Dados &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)  
+ [Configurar o designer de diagramas de banco de dados &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)  
   
  [Atualizar diagramas de banco de dados de edições anteriores &#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
   
- [Abrir o Designer de Diagramas de Banco de Dados &#40;Visual Database Tools&#41;](open-database-diagram-designer-visual-database-tools.md)  
+ [Abrir o designer de diagramas de banco de dados &#40;Visual Database Tools&#41;](open-database-diagram-designer-visual-database-tools.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Trabalhar com tabelas no diagrama de banco de dados &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
  [Trabalhar com layout de diagrama &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  

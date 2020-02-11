@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828574"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
@@ -91,9 +91,9 @@ ms.locfileid: "62828574"
   
  As etapas ilustradas nesta figura são:  
   
--   **Alterações para a Tabela X** são uma origem de CDC que lê as alterações feitas à tabela X que foram feitas no intervalo de processamento CDC determinado no fluxo de controle pai.  
+-   **As alterações da tabela x** são uma fonte CDC que lê as alterações feitas na tabela x que foram feitas no intervalo de processamento de CDC determinado no fluxo de controle pai.  
   
--   **Separador de CDC X** é usado para dividir alterações em inserções, exclusões e atualizações. Neste cenário, supõe-se que a Origem CDC esteja configurada para gerar alterações Líquidas de forma que diferentes tipos de alteração possam ser processadas em paralelo.  
+-   O **divisor de CDC X** é usado para dividir as alterações em inserções, exclusões e atualizações. Neste cenário, supõe-se que a Origem CDC esteja configurada para gerar alterações Líquidas de forma que diferentes tipos de alteração possam ser processadas em paralelo.  
   
 -   As alterações específicas são então processadas posteriormente downstream. Nesta ilustração, as alterações são inseridas em tabelas usando vários Destinos ODBC, mas, em casos reais, o processamento pode ser diferente.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62828574"
   
  A figura a seguir mostra um pacote SSIS que poderia tratar o terceiro cenário:  
   
- ![Pacote SSIS tratando os três primeiros cenários](../media/scenario3.gif "Pacote SSIS tratando os três primeiros cenários")  
+ ![Pacote SSIS tratando o terceiro cenário](../media/scenario3.gif "Pacote SSIS tratando o terceiro cenário")  
   
  Após um pacote de carga inicial, um pacote de atualização do trickle-feed é executado repetidamente de acordo com uma agenda para processar as alterações à medida que elas ficam disponíveis para consumo.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62828574"
   
  O valor da variável de estado de CDC precisa ser mantido em um armazenamento persistente, deve ser lido antes de iniciar o processamento de CDC e deve ser salvo com o estado atual depois que o processamento é concluído. A tarefa de carregar e armazenar o estado de CDC pode ser tratada pelo desenvolvedor de SSIS, mas o componente de Controle de CDC pode automatizar esta tarefa mantendo o valor do Estado de CDC em uma tabela de banco de dados.  
   
-## <a name="security-considerations"></a>Considerações sobre segurança  
+## <a name="security-considerations"></a>Considerações de segurança  
  Esta seção lista algumas considerações de segurança relacionadas ao uso dos componentes de CDC no SSIS.  
   
 ### <a name="access-authorization-to-change-data"></a>Autorização de acesso a dados de alteração  
@@ -171,12 +171,12 @@ ms.locfileid: "62828574"
 ## <a name="cdc-state"></a>Estado CDC  
  Cada grupo de CDC tem um estado associado a ele, que é representado por uma cadeia de caracteres com um formato específico. Para obter mais informações, consulte [CDC Control Task](../control-flow/cdc-control-task.md). A tabela a seguir mostra os valores possíveis de estado de CDC.  
   
-|Estado|Descrição|  
+|Estado|DESCRIÇÃO|  
 |-----------|-----------------|  
 |0-(INITIAL)|O estado que existe antes que qualquer pacote seja executado no grupo de CDC atual. Este também é o estado quando o estado de CDC está vazio.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Este é o estado que existe quando o pacote de carga inicial é iniciado. Isto ocorre depois da chamada da operação **MarkInitialLoadStart** para a tarefa Controle CDC.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |2- ILEND (Initial-Load-Ended)|Este é o estado que existe quando o pacote de carga inicial é terminado com êxito. Isto ocorre depois da chamada da operação MarkInitialLoadEnd para a tarefa Controle CDC.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
-|3-ILUPDATE (Initial Load Update)|Este é o estado que existe depois da primeira execução do pacote de atualização depois da carga inicial, enquanto ainda processa o intervalo de processamento inicial. Isto ocorre depois da chamada da operação **GetProcessingRange** para a tarefa Controle CDC.<br /><br /> Se estiver usando a coluna **_$reprocessing** , ela será definida como 1 para indicar que o pacote pode estar reprocessando linhas já no destino.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
+|3-ILUPDATE (Initial Load Update)|Este é o estado que existe depois da primeira execução do pacote de atualização depois da carga inicial, enquanto ainda processa o intervalo de processamento inicial. Isto ocorre depois da chamada da operação **GetProcessingRange** para a tarefa Controle CDC.<br /><br /> Se estiver usando a coluna **_ $ reprocessando** , ela será definida como 1 para indicar que o pacote pode estar reprocessando as linhas que já estão no destino.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |4-TFEND (Trickle-Feed-Update-Ended)|Este é o estado esperado para execuções regulares de CDC. Ele indica que a execução anterior foi concluída com êxito e que uma nova execução com um novo intervalo de processamento pode ser iniciada.|  
 |5-TFSTART (Trickle-Feed-Update-Started)|Este é o estado que existe em execuções subsequentes do pacote de atualização depois da chamada da operação **GetProcessingRange** para a tarefa controle CDC.<br /><br /> Isto indica que uma execução CDC regular foi iniciada, mas não foi concluída ou ainda não foi concluída completamente (**MarkProcessedRange**).<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|Este é o estado em um **GetProcessingRange** que ocorre depois de TFSTART. Isto indica que a execução anterior não foi concluída com êxito.<br /><br /> Se estiver usando a coluna __$reprocessing, ela será definida como 1 para indicar que o pacote pode estar reprocessando linhas já no destino.|  
@@ -216,7 +216,7 @@ ms.locfileid: "62828574"
   
 -   Vídeo [CDC para bancos de dados Oracle usando o SQL Server Integration Services 2012 (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)em technet.microsoft.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefa Controle de CDC](../control-flow/cdc-control-task.md)  
   
   

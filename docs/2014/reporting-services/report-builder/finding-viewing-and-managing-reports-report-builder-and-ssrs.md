@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6e2dc5a7ff69a61aae3d72fb9d9feca6abc3253c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107832"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Localizando, exibindo e gerenciando relatórios (Construtor de Relatórios e SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107832"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a> Localizando e exibindo relatórios no Construtor de Relatórios  
+##  <a name="FindingAndViewingReportsRB30"></a>Localizando e exibindo relatórios no Construtor de Relatórios  
  Para localizar um relatório com o qual você deseja trabalhar ou para selecionar uma fonte de dados compartilhados, uma imagem ou um sub-relatório a ser usado em um relatório, procure no computador, nas pastas em um servidor de relatório ou em um site do SharePoint integrado ao Reporting Services.  
   
  Para localizar relatórios em um servidor de relatório, você deve especificar uma URL para o servidor de relatório e ter permissões apropriadas nas pastas que lhe permitem ler e salvar itens de relatório. Peça ao administrador do sistema o servidor de relatório para a URL e as permissões apropriadas.  
@@ -43,15 +43,15 @@ ms.locfileid: "66107832"
   
  O Construtor de Relatórios pode ajudá-lo com as seguintes tarefas:  
   
--   **Localizando relatórios** Quando você procura um relatório, pode usar o estilo familiar da caixa de diálogo **Abrir Arquivo** do Microsoft Office, personalizada para o Construtor de Relatórios. Você pode procurar as pastas em um servidor de relatório ou em um sistema de arquivos, inclusive Meus Relatórios, Sites e Servidores, Área de Trabalho, Meus Documentos, Meu Computador. Sites e Servidores fornece uma lista de servidores usados recentemente.  
+-   **Localizando relatórios** Ao procurar um relatório, você pode usar a caixa de diálogo familiar do **arquivo aberto** estilo de Microsoft Office que é personalizada para o construtor de relatórios. Você pode procurar as pastas em um servidor de relatório ou em um sistema de arquivos, inclusive Meus Relatórios, Sites e Servidores, Área de Trabalho, Meus Documentos, Meu Computador. Sites e Servidores fornece uma lista de servidores usados recentemente.  
   
--   **Localizando fontes de dados compartilhadas** Quando você procura uma fonte de dados compartilhada, pode escolher em uma lista de itens usados recentemente ou navegar até outra pasta no mesmo servidor de relatório do relatório.  
+-   **Localizando fontes de dados compartilhadas** Ao procurar uma fonte de dados compartilhada, você pode escolher em uma lista usada recentemente ou navegar para outra pasta no mesmo servidor de relatório que o relatório.  
   
 -   **Exibindo relatórios** Você visualiza um relatório no Construtor de Relatórios ao criar ou atualizar relatórios. Quando o Construtor de Relatórios está conectado a um servidor de relatório, esse servidor carrega e processa o relatório; caso contrário, os relatórios são processados localmente. O visualizador de relatório no Construtor de Relatórios exibe o relatório renderizado.  
   
 
   
-##  <a name="ViewingAndManagingReportServer"></a> Exibindo e gerenciando relatórios em um servidor de relatório  
+##  <a name="ViewingAndManagingReportServer"></a>Exibindo e gerenciando relatórios em um servidor de relatório  
  É possível usar o Gerenciador de Relatórios para exibir e gerenciar relatórios no servidor de relatório. Procure as pastas no servidor para localizar relatórios, executar relatórios para exibi-los em um navegador e executar tarefas de gerenciamento.  
   
  O Gerenciador de Relatórios pode ajudá-lo com as seguintes tarefas de gerenciamento:  
@@ -74,13 +74,13 @@ ms.locfileid: "66107832"
   
  O Gerenciador de Relatórios exibe relatórios no Visualizador de HTML do Reporting Services. O Visualizador de HTML fornece uma estrutura para a exibição de relatórios em HTML e inclui uma barra de ferramentas de relatório, uma seção de parâmetro, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório fornece as funcionalidades de navegação de página, zoom, atualização, pesquisa, exportação, impressão e feed de dados. A barra de ferramentas do relatório também é exibida em uma janela do navegador na parte superior de um relatório quando você acessa relatórios por uma URL. A funcionalidade de impressão é opcional e deve ser ativada pelo administrador. Quando disponível, um ícone Impressora é exibido na barra de ferramentas de relatório. As ilustrações a seguir mostram a barra de ferramentas de relatório em uma janela do Gerenciador de Relatórios e um close-up dos recursos da barra de ferramentas de relatório.  
   
- ![Barra de ferramentas de relatório no Gerenciador de Relatórios](../media/hs-reportserver-blowout.gif "Barra de ferramentas de relatório no Gerenciador de Relatórios")  
+ ![Barra de ferramentas Relatório no Gerenciador de Relatórios](../media/hs-reportserver-blowout.gif "Barra de ferramentas Relatório no Gerenciador de Relatórios")  
 Janela do Gerenciador de Relatórios  
   
- ![Barra de ferramentas do relatório](../media/htmlviewer-toolbar.gif "Barra de ferramentas do relatório")  
+ ![Barra de ferramentas de relatório](../media/htmlviewer-toolbar.gif "Barra de ferramentas do relatório")  
 Barra de ferramentas do relatório  
   
- Após a execução de um relatório, você pode exportá-lo para outro formato, como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel ou PDF. Também é possível exportar o relatório usando uma extensão de renderização de dados, como CSV, e depois usar o arquivo de dados CSV como entrada para outro aplicativo. Para obter mais informações sobre como exportar relatórios, consulte [exportando relatórios &#40;construtor de relatórios e SSRS&#41; ](export-reports-report-builder-and-ssrs.md) e [exportar um relatório como outro tipo de arquivo &#40;construtor de relatórios e SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ Após a execução de um relatório, você pode exportá-lo para outro formato, como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel ou PDF. Também é possível exportar o relatório usando uma extensão de renderização de dados, como CSV, e depois usar o arquivo de dados CSV como entrada para outro aplicativo. Para obter mais informações sobre como exportar relatórios, consulte [Exportando relatórios &#40;Construtor de relatórios e ssrs&#41;](export-reports-report-builder-and-ssrs.md) e [exportar um relatório como outro tipo de arquivo &#40;Construtor de Relatórios e SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
  A maneira mais fácil de selecionar e executar um relatório é abrir o Gerenciador de Relatórios e procurar ou navegar até o relatório a ser exibido. Para obter instruções passo a passo sobre como abrir relatórios, consulte [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../reports/open-and-close-a-report-report-manager.md).  
   
@@ -89,31 +89,32 @@ Barra de ferramentas do relatório
 ### <a name="refreshing-reports"></a>Atualizando relatórios  
  Com frequência, os dados de relatório são alterados e talvez você queira atualizar o relatório para exibir os dados mais novos. Você pode atualizar um relatório de três modos diferentes.  
   
-|Opção|Resultado|  
+|Opção|Result|  
 |------------|------------|  
-|Botão**Atualizar** na janela do navegador|Exibe o relatório armazenado no cache de sessão. Um cache de sessão é criado quando um usuário abre um relatório. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa sessões do navegador para manter uma experiência de exibição consistente enquanto um relatório é aberto.|  
+|Botão **Atualizar** na janela do navegador|Exibe o relatório armazenado no cache de sessão. Um cache de sessão é criado quando um usuário abre um relatório. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa sessões do navegador para manter uma experiência de exibição consistente enquanto um relatório é aberto.|  
 |![Botão Atualizar do navegador na barra de ferramentas de relatório](../media/htmlviewer-refresh.GIF "Botão Atualizar do navegador na barra de ferramentas de relatório")|Quando você clica no botão **Atualizar** na barra de ferramentas do relatório, o servidor de relatório executa novamente a consulta e atualiza os dados de relatório caso o relatório execute sob demanda. Se o relatório for armazenado em cache ou for um instantâneo, **Atualizar** será exibido no relatório armazenado no banco de dados do servidor de relatório.|  
 |Combinação de teclado CTRL+F5|Produz o mesmo resultado que clicar no botão **Atualizar** na barra de ferramentas do relatório.|  
   
 
   
-##  <a name="ViewingAndManagingSharePointSite"></a> Exibindo e gerenciando itens do servidor de relatórios de um site do SharePoint  
+##  <a name="ViewingAndManagingSharePointSite"></a>Exibindo e gerenciando itens do servidor de relatório de um site do SharePoint  
  Quando o administrador de sistema configurar um servidor de relatório para execução em modo integrado do SharePoint, será possível exibir e gerenciar relatórios e demais itens do servidor de relatório a partir do site do SharePoint.  
   
  O site do SharePoint inclui páginas para definir as propriedades da fonte de dados, histórico do relatório, opções de processamento do relatório, agendas, assinaturas, parâmetros de relatórios e para criar agendas compartilhadas. É possível gerenciar os itens do servidor de relatórios em um site do SharePoint do mesmo modo que você cria e gerencia os mesmos a partir de outras ferramentas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Para acessar as páginas do aplicativo, selecione ações específicas para itens a partir de um menu suspenso em um relatório ou outro item de servidor de relatórios que você adicionou anteriormente a uma biblioteca do SharePoint. Dependendo do item e suas permissões, você poderá também criar relatórios no Construtor de Relatórios, gerar modelos e definir a segurança de item de modelo.  
   
- Para obter mais informações sobre a tecnologia do SharePoint e do Reporting Services, consulte [Configuração e administração de um servidor de relatório &#40;modo do SharePoint do Reporting Services&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) nos [Manuais Online](https://go.microsoft.com/fwlink/?LinkId=154888) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
+ Para obter mais informações sobre a tecnologia do SharePoint e do Reporting Services, consulte [Configuração e administração de um servidor de relatório &#40;modo do SharePoint do Reporting Services&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) nos Manuais Online[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [ do ](https://go.microsoft.com/fwlink/?LinkId=154888) em msdn.microsoft.com.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Localizando itens de servidor de relatório em um site do SharePoint  
  Antes de poder definir as propriedades, primeiro você deve localizar o item. Os itens do servidor de relatório são sempre armazenados em bibliotecas ou em uma pasta de uma biblioteca.  
   
- Ao acessar o site do SharePoint, você verá a página Procurar e a guia de Ferramentas de Biblioteca. A página Procurar relaciona as bibliotecas e o conteúdo da biblioteca selecionada. É possível exibir o relatório, modelos de relatório e outros itens na biblioteca, explorar pastas e pesquisar o site para localizar itens.  
+ Ao acessar o site do SharePoint, você verá a página procurar e a guia ferramentas de biblioteca. A página procurar lista as bibliotecas e o conteúdo da biblioteca selecionada. É possível exibir o relatório, modelos de relatório e outros itens na biblioteca, explorar pastas e pesquisar o site para localizar itens.  
   
  Para distinguir os itens do servidor de relatório de outros itens em um site do SharePoint, você pode usar o ícone para identificar visualmente um item ou colocar pausar cursor do mouse sobre o tipo e ler a extensão do arquivo. A imagem a seguir mostra pastas, um modelo de relatório e uma definição de relatório na biblioteca **Relatórios** :  
   
- ![Biblioteca do SharePoint com itens do servidor de relatório](../media/rs-sharepointlibrary.gif "Biblioteca do SharePoint com itens do servidor de relatório")  
+ ![Biblioteca do Sharepoint com itens do servidor de relatório](../media/rs-sharepointlibrary.gif "Biblioteca do Sharepoint com itens do servidor de relatório")  
   
 ### <a name="viewing-reports"></a>Exibindo relatórios  
  As definições de relatório (arquivos .rdl) que você carrega em uma biblioteca do SharePoint são exibidas através de uma Web Part do Visualizador de Relatórios que é instalada pelo Suplemento Reporting Services. Uma associação do arquivo .rdl é definida automaticamente quando você instala o suplemento. Ao selecionar um relatório, ele é aberto automaticamente no Web Part. Depois que o relatório abrir, você poderá usar a barra de ferramentas do relatório incluída na Web Part para navegar em páginas, pesquisar, aplicar zoom e imprimir o relatório. A barra de ferramentas inclui a opção Exportar como Feed de Dados para exportar o relatório como um feed de dados Atom e um menu **Ações** com opções para imprimir, assinar e exportar o relatório em formatos diferentes como PDF, Word e Excel. No menu **Ações** , você também pode abrir o relatório no Construtor de Relatórios. A imagem a seguir mostra um relatório e as opções de Opções de exportação no menu **Ação** .  
@@ -121,19 +122,20 @@ Barra de ferramentas do relatório
  ![rs_SharePointRunReport](../media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
   
 ### <a name="managing-items-through-actions"></a>Gerenciando itens por meio de ações  
- As tarefas de gerenciamento têm suporte por meio das ações em um menu suspenso para cada item. Dependendo de suas permissões, cada item tem ações comuns que são padrão para todos os itens que estão armazenados em uma biblioteca do SharePoint. **Exibir Propriedades** e **Editar Propriedades** são exemplos de ações comuns. Ações personalizadas fornecem uma funcionalidade de gerenciamento específica para os itens. A imagem a seguir mostra as ações para uma definição de relatório. Exemplos de ações personalizadas para uma definição de relatório incluem **Gerenciar Assinaturas** e **Gerenciar Opções de Processamento**:  
+ As tarefas de gerenciamento têm suporte por meio das ações em um menu suspenso para cada item. Dependendo de suas permissões, cada item tem ações comuns que são padrão para todos os itens que estão armazenados em uma biblioteca do SharePoint. **Exibir Propriedades** e **Editar propriedades** são exemplos de ações comuns. Ações personalizadas fornecem uma funcionalidade de gerenciamento específica para os itens. A imagem a seguir mostra as ações para uma definição de relatório. Exemplos de ações personalizadas para uma definição de relatório incluem **Gerenciar Assinaturas** e **Gerenciar Opções de Processamento**:  
   
- ![Comandos de menu para itens do servidor de relatório](../media/rs-ecbforrsitems.gif "Comandos de menu para itens do servidor de relatório")  
+ ![Comandos de menu para itens de servidor de relatório](../media/rs-ecbforrsitems.gif "Comandos de menu para itens de servidor de relatório")  
   
 
   
-##  <a name="DeskTop"></a> Exibindo os relatórios em um aplicativo da área de trabalho  
+##  <a name="DeskTop"></a>Exibindo relatórios em um aplicativo de área de trabalho  
  Você pode ignorar totalmente a exibição do navegador e usar um aplicativo da área de trabalho (como o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel) como visualizador de relatórios. Para fazer isso, defina uma assinatura que especifica um formato de aplicativo de desktop e um destino de pasta compartilhado. O servidor de relatório gera seu relatório como um arquivo de aplicativo, anexa uma extensão de nome de arquivo e salva o relatório como um arquivo em seu disco rígido. Você pode usar o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel (ou outro aplicativo) em vez de um navegador para exibir seu relatório.  
   
 
   
-##  <a name="AboutUserSessions"></a> Sobre as sessões de usuário  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa sessões de navegador para manter a consistência enquanto exibe relatórios. As sessões se baseiam em conexões do navegador, não em usuários autenticados. Uma sessão nova é criada toda vez que um usuário abre um relatório em uma nova janela de navegador. Assim que uma sessão de navegador é estabelecida, você continua a trabalhar com a versão do relatório que foi aberta quando a sessão começou, mesmo que o relatório seja modificado no servidor de relatório. Por exemplo, se você abrir um relatório às 23 horas e um autor de relatório publicar novamente o mesmo relatório às 23h01, sua sessão conterá a versão que você abriu para a duração da sessão.  
+##  <a name="AboutUserSessions"></a>Sobre sessões de usuário  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa sessões de navegador para manter a consistência enquanto exibe relatórios. As sessões se baseiam em conexões do navegador, não em usuários autenticados. Uma sessão nova é criada toda vez que um usuário abre um relatório em uma nova janela de navegador. Assim que uma sessão de navegador é estabelecida, você continua a trabalhar com a versão do relatório que foi aberta quando a sessão começou, mesmo que o relatório seja modificado no servidor de relatório. Por exemplo, se você abrir um relatório às 23 horas e um autor de relatório publicar novamente o mesmo relatório às 23h01, sua sessão conterá a versão que você abriu para a duração da sessão.  
   
  Se você atualizar um relatório na mesma sessão usando o botão **Atualizar** do navegador, a versão da sessão original do relatório será exibida. Se você atualizar um relatório sob demanda usando o botão **Atualizar** na barra de ferramentas do relatório, o relatório será executado novamente e novos dados, se houver, serão exibidos.  
   
@@ -144,16 +146,16 @@ Barra de ferramentas do relatório
 ##  <a name="InThisSection"></a> Nesta seção  
  Os tópicos a seguir fornecem informações adicionais sobre como exibir e gerenciar relatórios.  
   
- [Localizando e exibindo relatórios no Gerenciador de relatórios &#40;relatórios e SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Localizando e exibindo relatórios no Report Manager &#40;Construtor de Relatórios e SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
  Descreve como usar o Gerenciador de Relatórios para localizar, exibir e gerenciar seus relatórios,  
   
  [Localizando e exibindo relatórios com um navegador &#40;Construtor de Relatórios e SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  Descreve como usar uma URL para localizar e exibir um relatório.  
   
- [Pesquisando relatórios e outros itens &#40;Construtor de Relatórios e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
+ [Procurando relatórios e outros itens &#40;Construtor de Relatórios e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
  Descreve como usar a funcionalidade de pesquisa no Gerenciador de Relatórios para localizar itens no servidor de relatório.  
   
- [Usando Meus Relatórios &#40;Construtor de Relatórios e SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
+ [Usando meus relatórios &#40;Construtor de Relatórios e SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
  Descreve como usar a pasta Meus Relatórios como um workspace pessoal que pode ser usado para armazenar e trabalhar com seus relatórios e para exibi-los.  
   
  [Visualizando relatórios no Construtor de Relatórios](previewing-reports-in-report-builder.md)  
@@ -161,9 +163,9 @@ Barra de ferramentas do relatório
   
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Salvando relatórios &#40;Construtor de Relatórios&#41;](saving-reports-report-builder.md)   
- [Construtor de relatórios no SQL Server 2014](report-builder-in-sql-server-2016.md)   
+ [Construtor de Relatórios no SQL Server 2014](report-builder-in-sql-server-2016.md)   
  [Instalar, desinstalar e oferecer suporte ao Construtor de Relatórios](../install-uninstall-and-report-builder-support.md)  
   
   

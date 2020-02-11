@@ -17,35 +17,35 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773422"
 ---
 # <a name="view-a-list-of-modified-files"></a>Exibir uma lista de arquivos modificados
-  Você pode usar o **check-ins pendentes** janela para exibir constantemente uma lista dos arquivos com check-out na solução atual e, em seguida, fazer check-in desses arquivos com um único botão clique em.  
+  Você pode usar a janela **check-ins pendentes** para exibir sempre uma lista dos arquivos com check-out na solução atual e fazer check-in desses arquivos com um único clique de botão.  
   
 ### <a name="to-view-a-list-of-modified-files"></a>Para exibir uma lista de arquivos modificados  
   
-1.  Sobre o **modo de exibição** menu, clique em **check-ins pendentes**.  
+1.  No menu **Exibir** , clique em **check-ins pendentes**.  
   
-2.  Para verificar nos arquivos selecionados, clique em **Fazer Check-In**. Como alternativa, você pode encaixar a **check-ins pendentes** janela no lado direito do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente para que você pode verificar os arquivos quando tiver terminado de trabalhar.  
+2.  Para fazer check-in nos arquivos selecionados, clique em **fazer check-in**. Como alternativa, você pode encaixar a janela **check-ins pendentes** no lado [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] direito do ambiente para que você possa fazer check-in nos arquivos quando terminar de trabalhar.  
   
-     **Fazer Check-in**  
+     **Check-in**  
      Faz o check-in na solução.  
   
      **Comentários**  
      Associa um comentário de texto sem-formatação ao check-in pendente. É criado um comentário e associado a cada versão de um projeto e armazenado no banco de dados de controle de código-fonte.  
   
      **Opções**  
-     Especifica as ações de controle do código-fonte deve tomar quando você clica o **Fazer Check-In** botão.  
+     Especifica as ações que o controle do código-fonte deve tomar quando você clica no botão **check-in** .  
   
-    -   **Mantenha todos Check-Out**  
+    -   **Mantenha Todos Check-out**  
   
          Especifica que suas alterações devem ser gravadas no provedor do controle do código-fonte mas que os arquivos devem permanecer check-out.  
   
-     **Sort**  
+     **Classificar**  
      Especifica a ordem de classificação para as colunas exibidas na lista Itens.  
   
      **Colunas**  
@@ -54,20 +54,20 @@ ms.locfileid: "62773422"
      **Exibição de árvore**  
      Exibe a hierarquia da pasta e do arquivo para a solução ou projeto que você está fazendo o check-in.  
   
-     **Modo de exibição simples**  
+     **Exibição Simples**  
      Exibe os arquivos dos quais está fazendo check-in como listas simples na conexão de controle do código-fonte.  
   
-     **Comparar versões**  
-     Abre o Visual SourceSafe **opções de diferença** caixa de diálogo, que compara um arquivo selecionado em seu projeto de ambiente de desenvolvimento para qualquer outro arquivo selecionado e mostra as diferenças, se houver.  
+     **Comparar Versões**  
+     Abre a caixa de diálogo **Opções de diferenças** do Visual SourceSafe, que compara um arquivo selecionado em seu projeto de ambiente de desenvolvimento com qualquer outro arquivo selecionado e mostra as diferenças, se houver.  
   
      **Desfazer check-out**  
-     Reverte o check-out de todos os itens selecionados na **check-ins pendentes** janela.  
+     Reverte o check-out de todos os itens selecionados na janela **check-ins pendentes** .  
   
      **Nome**  
      Exibe uma lista dos itens disponíveis para fazer check-in. Os itens mostram as caixas de seleção ao seu lado selecionadas. Se você não quiser fazer o check-in em um item específico, desmarque a caixa de seleção próxima a ele.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciar check-ins](../../2014/database-engine/manage-checkins.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciar Check-ins](../../2014/database-engine/manage-checkins.md)   
  [Gerenciar check-outs](../../2014/database-engine/manage-checkouts.md)  
   
   

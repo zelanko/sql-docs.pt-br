@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51cf4acc8ed270c8302137fe5050c06cb35e91ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023527"
 ---
-# <a name="mssqleng021798"></a>MSSQL_ENG021798
+# <a name="mssql_eng021798"></a>MSSQL_ENG021798
     
 ## <a name="message-details"></a>Detalhes da mensagem  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|21798|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
 |Texto da mensagem|O trabalho do agente '%s' deve ser adicionado por meio de '%s' antes de continuar. Consulte a documentação de '%s'.|  
@@ -39,14 +39,14 @@ ms.locfileid: "63023527"
   
 -   O procedimento armazenado **sp_addpublication** é executado antes da execução de [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Isso se aplica a todas as publicações transacionais.  
   
--   O procedimento armazenado **sp_addpublication** é executado antes da execução de [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql). Isso se aplica a publicações transacionais habilitadas para assinaturas de atualização enfileiradas (um valor TRUE para o parâmetro **@allow_queued_tran** de **sp_addpublication**).  
+-   O procedimento armazenado **sp_addpublication** é executado antes da execução de [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql). Isso se aplica a publicações transacionais habilitadas para assinaturas de atualização enfileiradas (um valor de TRUE para o **@allow_queued_tran** parâmetro de **sp_addpublication**).  
   
  Os procedimentos armazenados **sp_addlogreader_agent** e **sp_addqreader_agent** criam um trabalho de agente e permitem que você especifique a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows em que o agente é executado. Para usuários na função **sysadmin** , os trabalhos de agente são criados implicitamente se **sp_addlogreader_agent** e **sp_addqreader_agent** não forem executados. Os agentes são executados no contexto da conta do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no Distribuidor. Embora **sp_addlogreader_agent** e **sp_addqreader_agent** não sejam solicitados para usuários na função **sysadmin** , é uma prática recomendada de segurança especificar uma conta separada para os agentes. Para obter mais informações, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 ## <a name="user-action"></a>Ação do usuário  
- Certifique-se de executar os procedimentos na ordem correta. Para obter mais informações, consulte [criar uma publicação](publish/create-a-publication.md), atualize esses scripts para incluir os procedimentos armazenados e os parâmetros exigidos pela [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Para obter mais informações, consulte [Atualizar scripts de replicação &#40;programação Transact-SQL de replicação&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md).  
+ Certifique-se de executar os procedimentos na ordem correta. Para obter mais informações, consulte [criar uma publicação](publish/create-a-publication.md), atualizar esses scripts para incluir os procedimentos armazenados e os parâmetros [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] exigidos pelo e pelas versões posteriores. Para obter mais informações, consulte [Atualizar scripts de replicação &#40;programação Transact-SQL de replicação&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de erros e eventos &#40;Replicação&#41;](errors-and-events-reference-replication.md)  
   
   

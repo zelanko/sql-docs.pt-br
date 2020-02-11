@@ -1,5 +1,5 @@
 ---
-title: Planejar suporte ao relatório de mapa | Microsoft Docs
+title: Planejar o suporte a relatórios de mapa | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108077"
 ---
 # <a name="plan-for-map-report-support"></a>Planejar para suporte ao relatório de mapa
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] dá suporte a relatórios de mapa que usam fontes de dados espaciais. Os dados espaciais podem vir de bancos de dados do SQL Server, de arquivos de formas ESRI ou da Galeria de Mapas instalada com o Reporting Services ou o Construtor de Relatórios. Um mapa também pode exibir um plano de fundo de peças de mapas do Bing. Um autor de relatório pode criar um relatório que especifica dados espaciais ou peças de mapa do Bing como dinâmicos e recuperados em tempo de execução ou como estáticos e inseridos na definição de relatório.  
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]dá suporte a relatórios de mapa que usam fontes de dados espaciais. Os dados espaciais podem vir de bancos de dados do SQL Server, de arquivos de formas ESRI ou da Galeria de Mapas instalada com o Reporting Services ou o Construtor de Relatórios. Um mapa também pode exibir um plano de fundo de peças de mapas do Bing. Um autor de relatório pode criar um relatório que especifica dados espaciais ou peças de mapa do Bing como dinâmicos e recuperados em tempo de execução ou como estáticos e inseridos na definição de relatório.  
   
 ## <a name="support-for-bing-maps"></a>Suporte para Bing Maps  
  Os mapas podem incluir uma camada em segundo plano que exibe peças de mapa do Bing. Para exibir um relatório publicado que tem uma camada de peça de mapa, o servidor de relatório deve ser configurado para recuperar peças de mapa dos Serviços Web do Bing Maps. Para obter mais informações, consulte [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
   
- Em cada relatório, os autores de relatório podem especificar se usar uma conexão de Protocolo SSL para recuperar peças do servidor de peças de mapa. Para fazer isso, no painel Propriedades para a camada de peça, eles devem definir a propriedade de booliana UseSecureConnection para `true`.  
+ Em cada relatório, os autores de relatório podem especificar se usar uma conexão de Protocolo SSL para recuperar peças do servidor de peças de mapa. Para fazer isso, no painel Propriedades da camada do bloco, é necessário definir a propriedade booliana UseSecureConnection como `true`.  
   
 > [!NOTE]  
 >  Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](https://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkId=151372).  
@@ -47,9 +47,9 @@ ms.locfileid: "66108077"
   
 -   Quando os dados de mapa devem ser inseridos, ajuste o centro do visor e o nível de zoom para incluir apenas os dados de mapa necessários para o relatório.  
   
- Para obter mais informações, [Maps &#40;construtor de relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ Para obter mais informações, [mapas &#40;Construtor de relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Solucionar problemas de relatórios: mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

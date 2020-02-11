@@ -1,5 +1,5 @@
 ---
-title: Definir as opções de projeto (MySQLToSQL) | Microsoft Docs
+title: Configurando opções de projeto (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,21 +12,21 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944684"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Definir opções do projeto (MySQLToSQL)
-Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para tipos de dados de destino.  Antes de converter os objetos do SQL Server ou SQL Azure ou migrar dados para o SQL Server ou SQL Azure, verifique se as opções de configuração apropriadas para o projeto.  
+Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para os tipos de dados de destino.  Antes de converter objetos para SQL Server ou SQL Azure ou migrar dados para SQL Server ou SQL Azure, verifique se as opções de configuração são apropriadas para o projeto.  
   
-O SSMA permite configurar as opções padrão para todos os projetos. Essas opções são aplicadas a qualquer novo projeto criado por você. Em seguida, você pode personalizar as opções para cada projeto.  
+O SSMA permite que você configure as opções padrão para todos os projetos. Essas opções são aplicadas a qualquer novo projeto que você criar. Em seguida, você pode personalizar as opções para cada projeto.  
   
-## <a name="configuration-options-and-modes"></a>Modos e opções de configuração  
-O SSMA tem cinco conjuntos de configurações do projeto:  
+## <a name="configuration-options-and-modes"></a>Opções de configuração e modos  
+O SSMA tem cinco conjuntos de configurações de projeto:  
   
--   Informações do projeto  
+-   Informações do Projeto  
   
 -   Geral (conversão, migração e SQL Azure)  
   
@@ -36,7 +36,7 @@ O SSMA tem cinco conjuntos de configurações do projeto:
   
 -   Mapeamento de tipo  
   
-As configurações do projeto podem ser configuradas de quatro maneiras:  
+As configurações do projeto podem ser definidas de quatro maneiras:  
   
 -   Padrão  
   
@@ -46,60 +46,60 @@ As configurações do projeto podem ser configuradas de quatro maneiras:
   
 -   Personalizado  
   
-O modo padrão é recomendado para a maioria dos usuários. O modo otimista mantém mais da sintaxe atual do MySQL e é mais fácil de ler. No entanto, a manter a sintaxe atual pode não ser precisa. Se a sintaxe do MySQL deve ser convertida em sintaxe equivalente do SQL Server ou SQL Azure, o modo completo executa a conversão mais completa. O código resultante, no entanto, pode ser mais difícil de ler. No modo personalizado, você pode definir as opções.  
+O modo padrão é recomendado para a maioria dos usuários. O modo otimista mantém mais da sintaxe do MySQL atual e é mais fácil de ler. No entanto, manter a sintaxe atual pode não ser precisa. Se a sintaxe do MySQL precisar ser convertida em SQL Server equivalente ou sintaxe de SQL Azure, o modo completo executará a conversão mais completa. O código resultante, no entanto, pode ser mais difícil de ler. No modo personalizado, você pode definir as opções.  
   
-Para obter mais informações sobre as configurações e como as configurações são aplicadas em cada modo, consulte os tópicos a seguir:  
+Para obter mais informações sobre as configurações e como as configurações são aplicadas em cada modo, consulte os seguintes tópicos:  
   
 -   [Configurações do projeto &#40;conversão&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 -   [Configurações do projeto &#40;migração&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [Configurações de projeto (GUI) (SSMA comum)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Configurações do projeto (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
 -   [Configurações do projeto &#40;mapeamento de tipo&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
 -   [Configurações do projeto &#40;sincronização&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [Configurações do projeto &#40;banco de dados SQL do Azure&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [Configurações do projeto &#40;BD SQL do Azure&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>Definir opções do projeto  
-No SSMA, você pode configurar as configurações padrão para todos os projetos. Essas configurações são salvas no arquivo de configuração do SSMA e aplicadas a qualquer novo projeto criado por você.  
+No SSMA, você pode definir as configurações padrão para todos os projetos. Essas configurações são salvas no arquivo de configuração do SSMA e aplicadas a qualquer novo projeto que você criar.  
   
 **Para definir opções de projeto padrão**  
   
-1.  Sobre o **ferramentas** menu, clique em **configurações do projeto padrão**.  
+1.  No menu **ferramentas** , clique em **configurações de projeto padrão**.  
   
-2.  No **configurações de projeto padrão** caixa de diálogo, use um dos procedimentos a seguir:  
+2.  Na caixa de diálogo **configurações padrão do projeto** , use um dos seguintes procedimentos:  
   
-    1.  Selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibida / alterado de **versão de destino de migração** lista suspensa, clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione **Conversão ou migração ou SQL Azure** opção.  
+    1.  Selecione o tipo de projeto de migração para o qual as configurações devem ser exibidas/alteradas no menu suspenso **versão de destino de migração** , clique em **geral** na parte inferior do painel esquerdo e selecione opção de **conversão ou migração ou SQL Azure** .  
   
-    2.  Para selecionar um modo predefinido, selecione **padrão**, **Optimistic**, ou **completo** do **modo** caixa suspensa.  
+    2.  Para selecionar um modo predefinido, selecione **padrão**, **otimista**ou **completo** na caixa suspensa **modo** .  
   
     3.  Para especificar configurações personalizadas, selecione ou insira as novas configurações ou valores.  
   
-3.  Clique em **Okey** para salvar as configurações.  
+3.  Clique em **OK** para salvar as configurações.  
   
-Você também pode personalizar as configurações para o projeto atual. As configurações salvas do arquivo de projeto atual.  
+Você também pode personalizar as configurações para o projeto atual. As configurações são salvas no arquivo de projeto atual.  
   
-**Para personalizar as configurações para o projeto atual**  
+**Para personalizar as configurações do projeto atual**  
   
-1.  Sobre o **ferramentas** menu, clique em **ProjectSettings**.  
+1.  No menu **ferramentas** , clique em **ProjectSettings**.  
   
-2.  No **ProjectSettings** caixa de diálogo, use um dos procedimentos a seguir:  
+2.  Na caixa de diálogo **ProjectSettings** , use um dos seguintes procedimentos:  
   
-    1.  Para selecionar um modo predefinido, selecione **padrão**, **Optimistic**, ou **completo** do **modo** caixa suspensa.  
+    1.  Para selecionar um modo predefinido, selecione **padrão**, **otimista**ou **completo** na caixa suspensa **modo** .  
   
-    2.  Para especificar um modo personalizado, selecione **personalizado** da **modo** caixa suspensa. E, em seguida, selecione as configurações de projeto apropriado.  
+    2.  Para especificar um modo personalizado, selecione **personalizado** na caixa suspensa **modo** . E, em seguida, selecione as configurações de projeto apropriadas.  
   
-3.  Clique em **Okey** para salvar as configurações.  
+3.  Clique em **OK** para salvar as configurações.  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa da migração depende de suas necessidades de projeto:  
+A próxima etapa na migração depende de suas necessidades de projeto:  
   
--   Para personalizar o mapeamento de tipos de dados de origem e destino, consulte [MySQL de mapeamento e tipos de dados do SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [mapeando MySQL e SQL Server tipos de dados &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   Caso contrário, você pode converter as definições de objeto de banco de dados MySQL no SQL Server ou definições de objeto do SQL Azure. Para obter mais informações, consulte [conversão de bancos de dados MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   Caso contrário, você pode converter as definições de objeto do banco de dados MySQL em SQL Server ou SQL Azure definições de objeto. Para obter mais informações, consulte [convertendo bancos de dados MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>Consulte também  
-[Mapeando tipos de dados do SQL Server e MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Mapeando tipos de dados MySQL e SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

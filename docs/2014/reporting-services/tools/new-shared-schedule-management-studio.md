@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 083fa7998e347b3aa3abe7aacbf9585a18047b20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100232"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Nova Agenda Compartilhada (Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "66100232"
  **Nome**  
  Digite um nome para a agenda compartilhada. Esse nome aparece em listas suspensas quando os usuários selecionam uma agenda compartilhada para relatórios e assinaturas. Certifique-se de fornecer um nome descritivo que caiba facilmente dentro de uma lista e que diferencie com facilidade uma agenda compartilhada de outra. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os seguintes caracteres ao especificar um nome:  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? : \@ & = +, $/*\< >  
   
  " /  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66100232"
  **Uma vez**  
  Selecione esta opção para criar uma agenda que só executa uma vez, em uma data e hora específica.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Servidor de Relatório na ajuda F1 do Management Studio](report-server-in-management-studio-f1-help.md)   
  [Conectar-se a um servidor de relatório no Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Criar, modificar e excluir agendas](../subscriptions/create-modify-and-delete-schedules.md)   

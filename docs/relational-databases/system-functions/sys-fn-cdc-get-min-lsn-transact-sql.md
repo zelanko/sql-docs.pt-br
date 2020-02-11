@@ -21,18 +21,18 @@ ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046406"
 ---
-# <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
+# <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o valor da coluna start_lsn para a instância de captura especificada a [change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) tabela do sistema. Esse valor representa o ponto de extremidade inferior do intervalo de validade da instância de captura.  
+  Retorna o valor da coluna start_lsn para a instância de captura especificada da tabela do sistema [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) . Esse valor representa o ponto de extremidade inferior do intervalo de validade da instância de captura.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,10 +43,10 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="arguments"></a>Argumentos  
  **'** *capture_instance_name* **'**  
- É o nome da instância de captura. *capture_instance_name* está **sysname**.  
+ É o nome da instância de captura. *capture_instance_name* é **sysname**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **binary(10)**  
+ **binário (10)**  
   
 ## <a name="remarks"></a>Comentários  
  Retorna 0x00000000000000000000 quando a instância de captura não existe ou quando o chamador não está autorizado a acessar os dados de alteração associados a uma instância de captura.  
@@ -58,7 +58,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>A. Retornando o valor LSN mínimo de uma instância de captura especificada  
+### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>a. Retornando o valor LSN mínimo de uma instância de captura especificada  
  O exemplo a seguir retorna o valor LSN mínimo da instância de captura `HumanResources_Employee` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -94,8 +94,8 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys. fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

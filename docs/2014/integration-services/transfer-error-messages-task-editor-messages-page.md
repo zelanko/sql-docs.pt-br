@@ -1,5 +1,5 @@
 ---
-title: Transferir o Editor de tarefa de mensagens de erro (página mensagens) | Microsoft Docs
+title: Editor da tarefa transferir mensagens de erro (página mensagens) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055035"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Editor da Tarefa Transferir Mensagens de Erro (página Mensagens)
@@ -26,10 +26,10 @@ ms.locfileid: "66055035"
   
 ## <a name="options"></a>Opções  
  **SourceConnection**  
- Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de origem.  
+ Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de origem.  
   
  **DestinationConnection**  
- Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de destino.  
+ Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de destino.  
   
  **IfObjectExists**  
  Selecione se a tarefa deve substituir mensagens de erro definidas pelo usuário existentes, ignorar mensagens existentes ou causar falha se mensagens de erro de mesmo nome já existirem no servidor de destino.  
@@ -39,7 +39,7 @@ ms.locfileid: "66055035"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Verdadeiro**|Copia todas as mensagens definidas pelo usuário.|  
 |**Falso**|Copia só as mensagens definidas pelo usuário especificadas.|  
@@ -56,12 +56,12 @@ ms.locfileid: "66055035"
 > [!NOTE]  
 >  É necessário especificar o **SourceConnection** antes que seja possível selecionar mensagens de erro para copiar.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Mensagens de Erro &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa transferir mensagens de erro &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)   
- [Editor da Tarefa Transferir Mensagens de Erro &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Gerenciador de Conexões SMO](connection-manager/smo-connection-manager.md)  
+ [Editor da tarefa transferir mensagens de erro &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
   
   

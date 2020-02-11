@@ -17,17 +17,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71279981c5fd3879d633e0fdd8cdec74bed6deac
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887705"
 ---
 # <a name="updating-cells-xmla"></a>Atualizando células (XMLA)
-  Você pode usar o comando [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) para alterar o valor de uma ou mais células em um cubo habilitado para Write-back de cubo. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenaasinformaçõesatualizadasemumatabeladewrite-backseparadaparacadapartiçãoquecontémcélulas[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a serem atualizadas.  
+  Você pode usar o comando [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) para alterar o valor de uma ou mais células em um cubo habilitado para Write-back de cubo. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena as informações atualizadas em uma tabela de write-back separada para cada partição que contém células a serem atualizadas [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
->  O comando `UpdateCells` não oferece suporte a alocações durante o write-back de cubo. Para usar write-back alocado, você deve usar o comando de [instrução](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) para enviar uma instrução de atualização MDX (Multidimensional Expressions). Para obter mais informações, consulte [Update Cube &#40;Statement&#41;MDX](/sql/mdx/mdx-data-manipulation-update-cube).  
+>  O comando `UpdateCells` não oferece suporte a alocações durante o write-back de cubo. Para usar write-back alocado, você deve usar o comando de [instrução](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) para enviar uma instrução de atualização MDX (Multidimensional Expressions). Para obter mais informações, consulte a [instrução UPDATE CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-update-cube).  
   
 ## <a name="specifying-cells"></a>Especificando células  
  A propriedade [Cell](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) do `UpdateCells` comando contém as células a serem atualizadas. Você identifica cada célula na propriedade `Cell` que usa o número ordinal dessa célula. Conceitualmente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] numera as células de um cubo como se o cubo fosse uma matriz *p*-dimensional, em que *p* é o número de eixos. As células são tratadas em ordem linha-principal. A ilustração a seguir mostra a fórmula para o cálculo do número ordinal de uma célula.  
@@ -36,8 +36,8 @@ ms.locfileid: "68887705"
   
  Depois de saber o número ordinal de uma célula, você pode indicar o valor pretendido da célula na propriedade [Value](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/value-element-xmla) da propriedade [Cell](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) .  
   
-## <a name="see-also"></a>Consulte também  
- [Atualizar o &#40;elemento XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
+## <a name="see-also"></a>Consulte Também  
+ [Atualizar o elemento &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
  [Desenvolvendo com XMLA no Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

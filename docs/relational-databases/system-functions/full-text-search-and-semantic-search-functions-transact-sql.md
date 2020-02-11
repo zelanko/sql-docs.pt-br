@@ -1,5 +1,5 @@
 ---
-title: Pesquisa de texto completo e funções de pesquisa semântica (Transact-SQL) | Microsoft Docs
+title: Funções pesquisa de texto completo e pesquisa semântica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 58bf5650a5ab06783ad0c889bc3286184a7d73ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042748"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>Funções Pesquisa de Texto Completo e Pesquisa Semântica (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "68042748"
  Retorna uma tabela com zero, uma ou mais linhas para as colunas que contêm correspondências precisas ou difusas (menos precisas) com palavras individuais e frases, a proximidade entre as palavras em uma determinada distância ou correspondências ponderadas.  
   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
- Retorna uma tabela de zero, um ou mais linhas para as colunas que contêm valores que correspondem ao significado e não apenas a frase exata do texto especificado na *freetext_string*.  
+ Retorna uma tabela de zero, uma ou mais linhas para as colunas que contêm valores que correspondem ao significado, e não apenas às palavras exatas, do texto no *freetext_string*especificado.  
   
 ## <a name="semantic-search-functions"></a>Funções de pesquisa semântica  
  [semantickeyphrasetable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)  
  Retorna uma tabela com zero, uma ou mais linhas para essas frases-chave associadas às colunas da tabela especificada.  
   
  [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md)  
- Retorna uma tabela de zero, um ou mais linhas de frases-chave comuns entre dois documentos (um documento de origem e um documento correspondido) cujo conteúdo é semanticamente similar.  
+ Retorna uma tabela de zero, uma ou mais linhas de frases-chave comuns em dois documentos (um documento de origem e um documento correspondente) cujo conteúdo é semanticamente semelhante.  
   
  [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md)  
  Retorna uma tabela de zero, uma ou mais linhas para as colunas cujo conteúdo é semanticamente similar a um documento especificado.  

@@ -21,18 +21,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127402"
 ---
-# <a name="srvmessagehandler-extended-stored-procedure-api"></a>srv_message_handler (API de procedimento armazenado estendido)
+# <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API de procedimento armazenado estendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
- Chama o manipulador de mensagens instalado da API de procedimento armazenado estendido. Em geral, essa função é usada para chamar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um procedimento armazenado estendido para registrar um erro (definido pelo procedimento armazenado estendido) no arquivo de log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou no log de aplicativos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Chama o manipulador de mensagens instalado da API de procedimento armazenado estendido. Essa função geralmente é usada para chamar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um procedimento armazenado estendido para registrar um erro (definido pelo procedimento armazenado estendido) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log de erros [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou no log de aplicativos do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,10 +76,10 @@ oserrtextlen
  *errornum*  
  É um número de erro definido pelo procedimento armazenado estendido. Esse número deve ser de 50.001 a 2.147.483.647.  
   
- *severity*  
+ *Severity*  
  É um valor de severidade padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o erro. Esse número deve ser de 0 por 24.  
   
- *state*  
+ *status*  
  É um valor de estado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o erro.  
   
  *oserrnum*  
@@ -97,7 +97,7 @@ oserrtextlen
  *oserrtextlen*  
  É o tamanho da cadeia de caracteres de erro *oserrtext* do sistema operacional.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Comentários  
@@ -106,6 +106,6 @@ oserrtextlen
  Se a mensagem de erro for mais longa, ela será truncada para 412 bytes.  
   
 > [!IMPORTANT]  
->  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

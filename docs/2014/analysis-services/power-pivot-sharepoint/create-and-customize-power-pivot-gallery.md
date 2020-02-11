@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f29ddee8456149ca16dd886935138b0cc915f42d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229291"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Criar e personalizar uma galeria do PowerPivot
@@ -24,7 +24,7 @@ ms.locfileid: "75229291"
   
 -   [Pré-requisitos](#prereq)  
   
--   [Sobre](#overview)  
+-   [Visão geral](#overview)  
   
 -   [Criar a Galeria PowerPivot](#createlib)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "75229291"
   
 -   [Alternar para exibição de teatro ou exibição de galeria](#switch)  
   
-##  <a name="prereq"></a>Pré-requisitos  
+##  <a name="prereq"></a> Pré-requisitos  
   
 -   Você deve ter o Silverlight. O Silverlight pode ser baixado e instalado por meio do Microsoft Update. Se você exibir uma biblioteca da Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usando um navegador que não tenha o Silverlight, clique na página para instalá-lo. É necessário fechar e reabrir o navegador depois de instalá-lo.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "75229291"
   
  A seguinte tabela descreve os layouts diferentes para apresentar esboços em miniatura de cada página visualizada:  
   
-|Visualizar|Descrição|  
+|Visualizar|DESCRIÇÃO|  
 |----------|-----------------|  
 |Exibição de Galeria (padrão)|Galeria é a exibição padrão para uma Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . A visualização é exibida à esquerda. As miniaturas menores de cada planilha são exibidas ao lado dela em uma ordem sequencial da esquerda para a direita.|  
 |Todos os documentos|Esse é o layout padrão para bibliotecas de documentos. É possível escolher essa exibição para gerenciar documentos individuais ou exibir o conteúdo da biblioteca em um formato de lista.<br /><br /> Use essa exibição para editar propriedades, excluir ou mover documentos individuais.<br /><br /> Se habilitou o controle de versão, você deverá usar essa exibição para fazer check-in ou check-out de documentos da biblioteca.|  

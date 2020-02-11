@@ -18,20 +18,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074955"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Conceder permissões em uma dimensão (Analysis Services)
   A segurança de dimensão é usada para definir permissões em um objeto de dimensão, e não em seus dados. Normalmente, permitir ou negar acesso a operações de processamento é o principal objetivo ao definir as permissões em uma dimensão.  
   
- No entanto, seu objetivo, talvez, não seja controlar as operações de processamento, mas sim o acesso a dados de uma dimensão ou aos atributos e hierarquias nela contidos. Por exemplo, uma empresa com divisões regionais de vendas pode querer disponibilizar as informações de desempenho de vendas para os que estão fora da divisão. Para permitir ou negar acesso a partes de dados de dimensão para diferentes constituintes, você pode definir as permissões em atributos de dimensão e membros de dimensão. Observe que você não pode negar acesso a um objeto de dimensão individual em si, apenas a seus dados. Se o seu objetivo imediato é permitir ou negar acesso a membros de uma dimensão, incluindo os direitos de acesso a hierarquias de atributo individuais, consulte [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) para obter mais informações.  
+ No entanto, seu objetivo, talvez, não seja controlar as operações de processamento, mas sim o acesso a dados de uma dimensão ou aos atributos e hierarquias nela contidos. Por exemplo, uma empresa com divisões regionais de vendas pode querer disponibilizar as informações de desempenho de vendas para os que estão fora da divisão. Para permitir ou negar acesso a partes de dados de dimensão para diferentes constituintes, você pode definir as permissões em atributos de dimensão e membros de dimensão. Observe que você não pode negar acesso a um objeto de dimensão individual em si, apenas a seus dados. Se o seu objetivo imediato é permitir ou negar acesso a membros de uma dimensão, incluindo os direitos de acesso a hierarquias de atributo individuais, consulte [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) para obter mais informações.  
   
  O restante deste tópico abrange as permissões que podem ser definidas no próprio objeto de dimensão, incluindo:  
   
--   Permissões de leitura ou leitura/gravação (você só pode escolher entre leitura ou leitura/gravação; especificar "nenhum" não é uma opção). Como mencionado, se seu objetivo for restringir o acesso a dados de dimensão, consulte [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) para obter detalhes.  
+-   Permissões de leitura ou leitura/gravação (você só pode escolher entre leitura ou leitura/gravação; especificar "nenhum" não é uma opção). Como mencionado, se seu objetivo for restringir o acesso a dados de dimensão, consulte [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) para obter detalhes.  
   
 -   Permissões de processamento (faça isso quando cenários solicitarem uma estratégia de processamento que exija permissões personalizadas em objetos individuais)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66074955"
   
      Por padrão, as permissões são definidas como **Leitura**.  
   
-     Embora **Leitura/Gravação** esteja disponível, recomendamos não usar essa permissão. **Leitura/Gravação** é usada para cenários de write-back de dimensão, os quais foram preteridos. Ver [do Analysis Services preteridos Features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
+     Embora **Leitura/Gravação** esteja disponível, recomendamos não usar essa permissão. **Leitura/gravação** é usada para cenários de write-back de dimensão, que foram preteridos. Consulte [recursos de Analysis Services preteridos no SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
   
      Como opção, você pode definir as permissões **Ler Definição** e **Processo** em objetos de dimensão individuais, desde que essas permissões não estejam definidas no nível de banco de dados. Consulte [Conceder permissões de processo &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) e [Conceder permissões de leitura de definição em metadados de objeto &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) para obter detalhes.  
   
@@ -60,18 +60,18 @@ ms.locfileid: "66074955"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Funções** para o banco de dados adequado no Pesquisador de Objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
   
-2.  No **dimensões** painel, altere a dimensão é definida como \<nome do cubo > **dimensões do cubo**.  
+2.  No painel **dimensões** , altere o conjunto de dimensões para \<nome do cubo> **dimensões do cubo**.  
   
      Por padrão, as permissões são herdadas a partir de uma dimensão de banco de dados correspondente. Desmarque a caixa de seleção **Herdar** para alterar as permissões de **Leitura** para **Leitura/Gravação**. Antes de usar **Leitura/Gravação**, leia a observação na seção anterior.  
   
 > [!IMPORTANT]  
 >  Se você configurar permissões de função de banco de dados usando Objetos de Gerenciamento de Análise (AMO), qualquer referência a uma dimensão de cubo no atributo DimensionPermission de um cubo cortará a herança de permissão do atributo DimensionPermission do banco de dados. Para obter mais informações sobre AMO, consulte [Desenvolvendo com Objetos de Gerenciamento de Análise &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções e permissões &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder permissões em estruturas e modelos de mineração de dados &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Conceder permissões em estruturas e modelos de Data Mining &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder acesso personalizado a dados de dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [Conceder acesso personalizado a dados de célula &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

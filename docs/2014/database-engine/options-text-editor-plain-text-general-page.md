@@ -1,5 +1,5 @@
 ---
-title: Opções (página geral do Editor de texto - texto sem formatação –) | Microsoft Docs
+title: Opções (página Editor de texto – texto sem formatação-geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089275"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
@@ -37,7 +37,7 @@ ms.locfileid: "66089275"
  **Habilitar espaço virtual**  
  Insira espaços ao final de cada linha de texto. Selecione essa caixa de seleção para posicionar comentários em um ponto consistente próximo a seu texto.  
   
- **Quebra automática de linha**  
+ **Quebra automática de palavra**  
  Exibe na próxima linha qualquer parte de uma linha que se alongue horizontalmente além da área do editor visível. Marcar essa caixa de seleção habilita a opção **Exibir marcas visuais nas quebras automáticas de linha** .  
   
  **Mostrar glifos visuais para quebra automática de linha**  
@@ -46,7 +46,7 @@ ms.locfileid: "66089275"
 > [!NOTE]  
 >  Essas setas indicadoras não são adicionadas ao seu código e não aparecem na impressão. Eles são somente para referência.  
   
- **Aplicar comandos Recortar/copiar a linhas em branco quando não houver nenhuma seleção**  
+ **Aplicar comandos Recortar/Copiar a linhas em branco quando não houver seleção**  
  Defina o comportamento do editor ao colocar o ponto de inserção em uma linha em branco, não selecione nada e clique em **Copiar** ou **Recortar**.  
   
  Quando essa caixa de seleção está marcada, a linha em branco é copiada ou recortada. Se você clicar em **Colar**, uma nova linha em branco será inserida.  
@@ -62,7 +62,7 @@ ms.locfileid: "66089275"
 > [!NOTE]  
 >  Esses números de linha não são adicionados ao seu texto e não aparecem na impressão. Eles são somente para referência.  
   
- **Habilitar navegação de URL com clique simples**  
+ **Habilitar navegação de URL com um só clique**  
  Altera o cursor para um símbolo de mão apontando ao passar sobre uma URL no editor. Você pode clicar no URL para exibir a página indicada em seu navegador da Web.  
   
  **Barra de navegação**  

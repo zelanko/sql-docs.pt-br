@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629642"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Fazer backup e restaurar bancos de dados replicados
@@ -61,7 +61,7 @@ ms.locfileid: "62629642"
   
  Como parte de qualquer estratégia de recuperação, mantenha sempre um script atual de suas configurações de replicação em um local seguro. No caso de uma falha do servidor ou da necessidade de configurar um ambiente de teste, você poderá modificar o script alterando as referências no nome do servidor e isso poderá ser usado para ajudar a recriar suas configurações de replicação. Além de executar o script em suas configurações de replicação atuais, você deve executar o script de habilitação e desabilitação da replicação. Para obter informações sobre a execução do script de objetos de replicação, consulte [Scripting Replication](../scripting-replication.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   

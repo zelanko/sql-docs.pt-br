@@ -24,10 +24,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 89864caade618ad4e42890ae3711f3eee50ce231
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257459"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Criando atributos de tipo ID, IDREF e IDREFS válidos usando sql:prefix (SQLXML 4.0)
@@ -53,7 +53,7 @@ ms.locfileid: "75257459"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-id-and-idrefs-types"></a>R. Especificando os tipos ID e IDREFS  
+### <a name="a-specifying-id-and-idrefs-types"></a>a. Especificando os tipos ID e IDREFS  
  No esquema a seguir, o ** \<elemento>do cliente** consiste no ** \<elemento filho Order>** . O ** \<elemento Order>** também tem um elemento filho, o ** \<OrderDetail>** elemento.  
   
  O atributo **OrderIDList** de ** \<>do cliente** é um atributo de tipo IDREFS que se refere ao atributo **OrderID** do elemento ** \<Order>** .  

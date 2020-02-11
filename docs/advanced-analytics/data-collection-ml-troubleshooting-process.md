@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 15c570594f84bf8d1d61abac4bc4e4c372f18784
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727610"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Solucionar problemas de coleta de dados para aprendizado de máquina
@@ -76,7 +76,7 @@ Como último recurso, você pode abrir os arquivos no servidor para determinar a
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name\MSSQL\Binn\rlauncher.config`
 
-* SQL Server 2017
+* Microsoft SQL Server 2017
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Binn\rlauncher.config`
 
@@ -86,7 +86,7 @@ Para obter a versão do R e as versões do RevoScaleR, abra um prompt de comando
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64\RGui.exe`
 
-* SQL Server 2017
+* Microsoft SQL Server 2017
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
@@ -164,7 +164,7 @@ Obtenha o ERRORLOG mais recente do SQL Server. O conjunto completo de logs de er
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\Log\ExtensibilityLog`
 
-* SQL Server 2017
+* Microsoft SQL Server 2017
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.SQL2016\MSSQL\Log\ExtensibilityLog`
 
@@ -207,7 +207,7 @@ Você pode obter esses logs dos seguintes locais padrão:
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
-* SQL Server 2017
+* Microsoft SQL Server 2017
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 

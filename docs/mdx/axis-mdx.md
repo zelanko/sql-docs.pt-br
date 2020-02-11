@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fa65c1531be29273c0a838b978109bbd1c8a2b18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016983"
 ---
 # <a name="axis-mdx"></a>Axis (MDX)
@@ -32,7 +32,7 @@ Axis(Axis_Number)
  Uma expressão numérica válida que especifica o número de eixos.  
   
 ## <a name="remarks"></a>Comentários  
- O **eixo** função usa a posição de base zero de um eixo para retornar o conjunto de tuplas em um eixo. Por exemplo, `Axis(0)` retorna o eixo COLUMNS, `Axis(1)` retorna o eixo ROWS e assim por diante. O **eixo** função não pode ser usada no eixo do filtro. Esta função pode ser usada para que os membros calculados conheçam o contexto da consulta que está sendo executada. Por exemplo, você talvez precise de um membro calculado que fornece a soma somente dos membros selecionados no eixo Linhas. Também pode ser usada para fazer que a definição de um eixo dependa da definição de outro. Por exemplo, ordenando o conteúdo do eixo Linhas de acordo com o valor do primeiro item no eixo Colunas.  
+ A função **Axis** usa a posição de base zero de um eixo para retornar o conjunto de tuplas em um eixo. Por exemplo, `Axis(0)` retorna o eixo COLUMNS, `Axis(1)` retorna o eixo ROWS e assim por diante. A função **Axis** não pode ser usada no eixo de filtro. Esta função pode ser usada para que os membros calculados conheçam o contexto da consulta que está sendo executada. Por exemplo, você talvez precise de um membro calculado que fornece a soma somente dos membros selecionados no eixo Linhas. Também pode ser usada para fazer que a definição de um eixo dependa da definição de outro. Por exemplo, ordenando o conteúdo do eixo Linhas de acordo com o valor do primeiro item no eixo Colunas.  
   
 > [!NOTE]  
 >  Um eixo pode fazer referência apenas a um eixo anterior. Por exemplo, `Axis(0)` deve ocorrer depois do eixo COLUMNS ter sido avaliado, como em um eixo ROW ou PAGE.  
@@ -62,7 +62,7 @@ Axis(Axis_Number)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

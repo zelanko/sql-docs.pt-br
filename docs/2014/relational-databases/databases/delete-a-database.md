@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871908"
 ---
 # <a name="delete-a-database"></a>Excluir um banco de dados
@@ -45,7 +45,7 @@ ms.locfileid: "62871908"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [Depois de excluir um banco de dados](#FollowUp)  
+-   **Acompanhamento:**  [após excluir um banco de dados](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62871908"
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
   
--   Exclua todos os instantâneos do banco de dados que existam no banco de dados. Para obter mais informações, veja [Remover um instantâneo de banco de dados &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md).  
+-   Exclua todos os instantâneos do banco de dados que existam no banco de dados. Para obter mais informações, veja [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md).  
   
 -   Se o banco de dados estiver envolvido em envio de logs, remova o envio do logs.  
   
@@ -97,10 +97,10 @@ DROP DATABASE Sales, NewSales ;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de excluir um banco de dados  
+##  <a name="FollowUp"></a> Acompanhamento: após excluir um banco de dados  
  Faça backup do banco de dados **mestre** . Se o **mestre** precisar ser restaurado, todos os bancos de dados que tiverem sido excluídos desde o último backup do **mestre** ainda terão referências nas exibições do catálogo do sistema e poderão gerar mensagens de erro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   

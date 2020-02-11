@@ -1,5 +1,5 @@
 ---
-title: Banco de dados do espaço de trabalho (SSAS Tabular) | Microsoft Docs
+title: Banco de dados de espaço de trabalho (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8708bd3f4375179638ce5e86a0619a1e1ccf4d77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066256"
 ---
 # <a name="workspace-database-ssas-tabular"></a>Banco de dados do workspace (SSAS tabular)
   O banco de dados de workspace modelo de tabela, usado durante a criação de modelos, é criado quando você cria um novo projeto de modelo de tabela no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O banco de dados de workspace reside na memória em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que é executada em modo Tabela; em geral no mesmo computador que o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
- Este tópico inclui as seguintes seções:  
+ Este tópico inclui as seções a seguir:  
   
--   [Visão geral do banco de dados de espaço de trabalho](#bkmk_overview)  
+-   [Visão geral do Banco de Dados de Workspace](#bkmk_overview)  
   
--   [Propriedades do banco de dados de espaço de trabalho](#bkmk_ws_prop)  
+-   [Propriedades do banco de dados espaço de trabalho](#bkmk_ws_prop)  
   
--   [Usando o SSMS para gerenciar o banco de dados do espaço de trabalho](#bkmk_use_ssms)  
+-   [Usando o SSMS para gerenciar o banco de dados de espaço de trabalho](#bkmk_use_ssms)  
   
 -   [Tarefas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="bkmk_overview"></a> Visão geral do banco de dados de espaço de trabalho  
+##  <a name="bkmk_overview"></a>Visão geral do banco de dados Workspace  
  Um banco de dados de workspace é criado na instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], especificada na propriedade de Servidor de Workspace, quando você cria um novo projeto de Business Intelligence usando um dos modelos de projeto de modelo de tabela no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Cada projeto de modelo tabular terá seu próprio banco de dados de workspace. Você pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para exibir o banco de dados de workspace no servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O nome de banco de dados de workspace inclui o nome de projeto, seguido por um sublinhado, seguido pelo nome de usuário, seguido por um sublinhado, seguido por um GUID.  
   
  O banco de dados de workspace reside na memória enquanto o projeto de modelo tabular está aberto no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Quando você fecha o projeto, o banco de dados de workspace é mantido na memória, armazenado em disco e removido da memória (padrão), ou removido da memória e não armazenado em disco, como determinado pela propriedade de Retenção de Workspace. Para obter mais informações sobre a propriedade de Retenção de Workspace, consulte [Propriedades de Banco de Dados de Workspace](#bkmk_ws_prop) posteriormente neste tópico.  
@@ -55,19 +55,19 @@ ms.locfileid: "66066256"
   
 -   Você não pode importar dados de uma pasta de trabalho PowerPivot ao criar um novo projeto de modelo de tabela usando a Importação de modelo de projeto do PowerPivot.  
   
-##  <a name="bkmk_ws_prop"></a> Propriedades de Banco de Dados de Workspace  
+##  <a name="bkmk_ws_prop"></a>Propriedades do banco de dados espaço de trabalho  
  As propriedades de banco de dados de workspace são incluídas nas propriedades modelo. Para exibir propriedades de modelo, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no **Gerenciador de Soluções**, clique no arquivo **Model.bim** . As propriedades do modelo podem ser configuradas usando a janela **Propriedades** . As propriedades específicas do banco de dados de workspace incluem:  
   
 > [!NOTE]  
->  As propriedades **Servidor de Workspace**, **Retenção de Workspace** e **Backup de Dados** têm configurações padrão aplicadas quando você cria um novo projeto de modelo. Você pode alterar as configurações padrão para novos projetos de modelos na página **Modelagem de Dados** nas configurações do **Analysis Server** na caixa de diálogo Ferramentas\Opções. Estas propriedades, assim como outras, também podem ser definidas para cada projeto de modelo na janela **Propriedades** . Alterar as configurações padrão não se aplicará a projetos de modelo já criados. Para obter mais informações, consulte [Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  As propriedades **servidor de espaço de trabalho**, retenção de espaço de **trabalho**e **backup de dados** têm as configurações padrão aplicadas quando você cria um novo projeto de modelo. Você pode alterar as configurações padrão para novos projetos de modelos na página **Modelagem de Dados** nas configurações do **Analysis Server** na caixa de diálogo Ferramentas\Opções. Estas propriedades, assim como outras, também podem ser definidas para cada projeto de modelo na janela **Propriedades** . Alterar as configurações padrão não se aplicará a projetos de modelo já criados. Para obter mais informações, consulte [Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS de Tabela&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
-|Propriedade|Configuração padrão|Descrição|  
+|Propriedade|Configuração Padrão|DESCRIÇÃO|  
 |--------------|---------------------|-----------------|  
 |**Banco de dados do workspace**|O nome de projeto, seguido por um sublinhado, seguido pelo nome de usuário, seguido por um sublinhado, seguido por um GUID.|O nome do banco de dados de workspace usado por armazenar e editar o projeto de modelo de memória temporário. Depois que um projeto de modelo tabular é criado, este banco de dados aparecerá na instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificada na propriedade de **Servidor de Workspace**. Essa propriedade não pode ser configurada na janela Propriedades.|  
-|**Retenção de Workspace**|Descarregar na memória|Especifica como um banco de dados de workspace é retido depois que um projeto de modelo é fechado. Um banco de dados de workspace inclui metadados modelo e dados importados. Em alguns casos, o banco de dados de workspace pode ser muito grande e consumir uma grande quantidade de memória. Por padrão, quando você fecha um projeto de modelo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o banco de dados de workspace é descarregado da memória. Ao alterar essa configuração, é importante considerar os recursos de memória disponíveis, bem como a frequência na qual você planeja trabalhar no projeto de modelo. Essa configuração de propriedade tem as seguintes opções:<br /><br /> **Manter na memória** – Especifica manter o banco de dados de workspace na memória depois que um projeto de modelo é fechado. Essa opção consumirá mais memória. No entanto, ao abrir um projeto de modelo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], menos recursos serão consumidos e o banco de dados do workspace será carregado mais rapidamente.<br /><br /> **Descarregar da memória** – Especifica manter banco de dados de workspace em disco, e não mais na memória depois que um projeto de modelo é fechado. Essa opção consumirá menos memória. No entanto, ao abrir um projeto de modelo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o banco de dados de workspace deve ser reanexado; recursos adicionais serão consumidos e o projeto de modelo será carregado mais lentamente do que se o banco de dados de workspace fosse mantido na memória. Use essa opção quando os recursos de memória forem limitados ou ao trabalhar em um banco de dados de workspace remoto.<br /><br /> **Excluir workspace** – Especifica excluir o banco de dados de workspace da memória e não manter banco de dados de workspace em disco depois que o projeto de modelo é fechado. Essa opção consumirá menos memória e espaço de armazenamento. No entanto, ao abrir um projeto de modelo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], serão consumidos recursos adicionais e o projeto de modelo será carregado mais lentamente do que se o banco de dados de workspace fosse mantido na memória ou no disco. Use essa opção apenas ao trabalhar ocasionalmente em projetos modelo.<br /><br /> <br /><br /> A configuração padrão para essa propriedade pode ser alterada na página **Modelagem de Dados** nas configurações do **Analysis Server** na caixa de diálogo Ferramentas\Opções.|  
-|**Servidor de workspace**|localhost|Essa propriedade especifica o servidor fora-de-processo padrão que será usado para hospedar o banco de dados de workspace enquanto o projeto de modelo é criado no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Todas as instâncias disponíveis do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que executam no computador local são incluídas na caixa de listagem.<br /><br /> Para especificar um servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] diferente (executando em modo Tabular), digite o nome do servidor. O usuário conectado deve ser Administrador no servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Observe que, é recomendável especificar um local [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servidor como o servidor de espaço de trabalho. Para bancos de dados de workspace em um servidor remoto, não há suporte para a importação do PowerPivot, o backup dos dados não pode ser feito localmente e a interface do usuário pode experimentar latência durante consultas.<br /><br /> Observe também que a configuração padrão para essa propriedade pode ser alterada na página modelagem de dados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] as configurações na caixa de diálogo Ferramentas \ Opções.|  
+|**Retenção de espaço de trabalho**|Descarregar na memória|Especifica como um banco de dados de workspace é retido depois que um projeto de modelo é fechado. Um banco de dados de workspace inclui metadados modelo e dados importados. Em alguns casos, o banco de dados de workspace pode ser muito grande e consumir uma grande quantidade de memória. Por padrão, quando você fecha um projeto de modelo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o banco de dados de workspace é descarregado da memória. Ao alterar essa configuração, é importante considerar os recursos de memória disponíveis, bem como a frequência na qual você planeja trabalhar no projeto de modelo. Essa configuração de propriedade tem as seguintes opções:<br /><br /> **Manter na memória** – especifica para manter o banco de dados de espaço de trabalho na memória depois que um projeto de modelo é fechado. Essa opção consumirá mais memória. No entanto, ao abrir um projeto de modelo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], menos recursos serão consumidos e o banco de dados do workspace será carregado mais rapidamente.<br /><br /> **Descarregar da memória** -especifica para manter o banco de dados de espaço de trabalho em disco, mas não mais na memória depois que um projeto de modelo é fechado. Essa opção consumirá menos memória. No entanto, ao abrir um projeto de modelo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o banco de dados de workspace deve ser reanexado; recursos adicionais serão consumidos e o projeto de modelo será carregado mais lentamente do que se o banco de dados de workspace fosse mantido na memória. Use essa opção quando os recursos de memória forem limitados ou ao trabalhar em um banco de dados de workspace remoto.<br /><br /> **Excluir espaço de trabalho** -especifica para excluir o banco de dados de espaço de trabalho da memória e não manter o banco de dados de espaço de trabalho em disco após o projeto de modelo ser fechado Essa opção consumirá menos memória e espaço de armazenamento. No entanto, ao abrir um projeto de modelo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], serão consumidos recursos adicionais e o projeto de modelo será carregado mais lentamente do que se o banco de dados de workspace fosse mantido na memória ou no disco. Use essa opção apenas ao trabalhar ocasionalmente em projetos modelo.<br /><br /> <br /><br /> A configuração padrão para essa propriedade pode ser alterada na página **Modelagem de Dados** nas configurações do **Analysis Server** na caixa de diálogo Ferramentas\Opções.|  
+|**Servidor de espaço de trabalho**|localhost|Essa propriedade especifica o servidor fora-de-processo padrão que será usado para hospedar o banco de dados de workspace enquanto o projeto de modelo é criado no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Todas as instâncias disponíveis do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que executam no computador local são incluídas na caixa de listagem.<br /><br /> Para especificar um servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] diferente (executando em modo Tabular), digite o nome do servidor. O usuário conectado deve ser Administrador no servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Observe que é recomendável especificar um servidor local [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como o servidor de espaço de trabalho. Para bancos de dados de workspace em um servidor remoto, não há suporte para a importação do PowerPivot, o backup dos dados não pode ser feito localmente e a interface do usuário pode experimentar latência durante consultas.<br /><br /> Observe também que a configuração padrão para essa propriedade pode ser alterada na página modelagem de dados em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configurações na caixa de diálogo ferramentas \ Opções.|  
   
-##  <a name="bkmk_use_ssms"></a> Usando SSMS para gerenciar o banco de dados de workspace  
+##  <a name="bkmk_use_ssms"></a>Usando o SSMS para gerenciar o banco de dados de espaço de trabalho  
  Você pode usar o SSMS ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) para se conectar ao servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospeda o banco de dados de workspace. Normalmente, não há gerenciamento do banco de dados de workspace necessário; a exceção é desanexar ou excluir um banco de dados de workspace, o que deve ser feito no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!WARNING]  
@@ -75,12 +75,12 @@ ms.locfileid: "66066256"
   
 ##  <a name="bkmk_related_tasks"></a> Tarefas relacionadas  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Propriedades de modelo &#40;SSAS de Tabela&#41;](model-properties-ssas-tabular.md)|Fornece descrições e etapas de configuração para espaço de trabalho de um modelo propriedades de banco de dados.|  
+|[Propriedades de modelo &#40;SSAS de tabela&#41;](model-properties-ssas-tabular.md)|Fornece descrições e etapas de configuração para as propriedades do banco de dados de espaço de trabalho de um modelo.|  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS de Tabela&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Propriedades de projeto &#40;SSAS de Tabela&#41;](properties-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar propriedades de implantação e modelagem de dados padrão &#40;SSAS tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Propriedades do projeto &#40;SSAS tabular&#41;](properties-ssas-tabular.md)  
   
   

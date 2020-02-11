@@ -18,20 +18,20 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 65c4cd3f6ca07f2c3cb35dc7dcbaad373930ecc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066808"
 ---
-# <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
+# <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Esse procedimento armazenado recupera as configurações de um ou mais bancos de dados secundários.  
   
 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,19 +43,19 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @secondary_database = ] 'secondary_database'` É o nome do banco de dados secundário. *secondary_database* está **sysname**, sem padrão.  
+`[ @secondary_database = ] 'secondary_database'`É o nome do banco de dados secundário. *secondary_database* é **sysname**, sem padrão.  
   
-`[ @secondary_id = ] 'secondary_id'` A ID para o servidor secundário na configuração de envio de logs. *secondary_id* está **uniqueidentifier** e não pode ser NULL.  
+`[ @secondary_id = ] 'secondary_id'`A ID do servidor secundário na configuração de envio de logs. *secondary_id* é **uniqueidentifier** e não pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |**secondary_id**|ID de servidor secundário na configuração de envio de logs.|  
-|**primary_server**|O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs.|  
+|**primary_server**|Nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs.|  
 |**primary_database**|O nome do banco de dados primário na configuração de envio de log.|  
 |**backup_source_directory**|O diretório onde os arquivos de backup de log de transações do servidor primário são armazenados.|  
 |**backup_destination_directory**|O diretório no servidor secundário onde arquivos de backup são copiados.|  
@@ -66,7 +66,7 @@ sp_help_log_shipping_secondary_database
 |**monitor_server_security_mode**|O modo de segurança usado para conexão ao servidor monitor.<br /><br /> 1 = Autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.|  
 |**secondary_database**|Nome do banco de dados secundário na configuração de envio de logs.|  
 |**restore_delay**|A quantidade de tempo, em minutos, que o servidor secundário espera antes de restaurar um determinado arquivo de backup. O padrão é 0 minuto.|  
-|**restore_all**|Se definido como 1, o servidor secundário restaura todos os backups de log de transações disponíveis quando o trabalho de restauração é executado. Caso contrário, ele será interrompido depois de um arquivo foi restaurado.|  
+|**restore_all**|Se definido como 1, o servidor secundário restaura todos os backups de log de transações disponíveis quando o trabalho de restauração é executado. Caso contrário, ele parará após a restauração de um arquivo.|  
 |**restore_mode**|O modo de restauração do banco de dados secundário.<br /><br /> 0 = Log de restauração com NORECOVERY.<br /><br /> 1 = Log de restauração com STANDBY.|  
 |**disconnect_users**|Se definido como 1, os usuários são desconectados do banco de dados secundário quando uma operação de restauração é executada. Padrão = 0.|  
 |**block_size**|Tamanho, em bytes, usado como tamanho de bloco para o dispositivo de backup.|  
@@ -85,15 +85,15 @@ sp_help_log_shipping_secondary_database
 |**last_restored_latency**|Período em minutos decorrido entre o momento de criação do backup de log no primário e o momento em que ele foi restaurado no secundário.<br /><br /> O valor inicial é NULL.|  
   
 ## <a name="remarks"></a>Comentários  
- Se você incluir a *secondary_database* parâmetro, o conjunto de resultados conterá informações sobre o banco de dados secundário; se você incluir a *secondary_id* parâmetro, o conjunto de resultados conterá informações sobre todos os bancos de dados secundários associados àquela identificação secundária.  
+ Se você incluir o parâmetro *secondary_database* , o conjunto de resultados conterá informações sobre esse banco de dados secundário; Se você incluir o parâmetro *secondary_id* , o conjunto de resultados conterá informações sobre todos os bancos de dados secundários associados a essa ID secundária.  
   
- **sp_help_log_shipping_secondary_database** deve ser executado a partir de **mestre** banco de dados no servidor secundário.  
+ **sp_help_log_shipping_secondary_database** deve ser executado do banco de dados **mestre** no servidor secundário.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar esse procedimento.  
   
-## <a name="see-also"></a>Consulte também  
- [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_help_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

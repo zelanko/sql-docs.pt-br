@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875759"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar para um número de sequência de log (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62875759"
   
  Cada registro do log de transações é identificado de forma exclusiva por um LSN (número da sequência de log). Os LSNs são ordenados de tal modo que se LSN2 for maior do que LSN1, a alteração descrita pelo registro de log mencionado por LSN2 ocorreu depois da alteração descrita pelo registro de log LSN.  
   
- O LSN de um registro de log no qual ocorreu um evento significativo pode ser útil para construir sequências de restauração corretas. Como são ordenadas, as LSNs podem ser comparadas quanto à igualdade e desigualdade (isto é **\<** , **>** , **=** , **\<=** , **>=** ). Essas comparações são úteis ao construir sequências de restauração.  
+ O LSN de um registro de log no qual ocorreu um evento significativo pode ser útil para construir sequências de restauração corretas. Como LSNs são ordenados, eles podem ser comparados por igualdade e desigualdade (ou **\<** seja **>**, **=** ** \< **,, **>=**,,). Essas comparações são úteis ao construir sequências de restauração.  
   
 > [!NOTE]  
 >  Os LSNs são valores do tipo de dados `numeric`(25,0). Operações aritméticas (por exemplo, adição ou subtração) não são significativas e não devem ser usadas com LSNs.  
@@ -52,7 +52,7 @@ ms.locfileid: "62875759"
   
 -   [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)  
   
--   [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql); [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+-   [Sys. database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql); [Sys. master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
 -   [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
@@ -64,11 +64,11 @@ ms.locfileid: "62875759"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintaxe de Transact-SQL para restaurar para um LSN  
  Usando uma instrução [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) é possível parar no LSN ou imediatamente antes, da seguinte maneira:  
   
--   Use a cláusula WITH STOPATMARK **='** lsn: _<lsn_number>_ **'** , em que lsn: *\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log que contém o LSN especificado é o ponto de recuperação.  
+-   Use a cláusula WITH STOPATMARK **= '** LSN:_<lsn_number>_ **'** , em que LSN:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log que contém o LSN especificado é o ponto de recuperação.  
   
      O STOPATMARK efetua roll forward para o LSN e inclui o registro de log no roll forward.  
   
--   Use a cláusula WITH STOPBEFOREMARK **='** lsn: _<lsn_number>_ **'** , em que lsn: *\<lsnNumber>* é uma sequência que determina que o registro de log imediatamente anterior ao registro de log que contém o número do LSN especificado é o ponto de recuperação.  
+-   Use a cláusula WITH STOPBEFOREMARK **= '** LSN:_<lsn_number>_ **'** , em que LSN:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log imediatamente antes do registro de log que contém o número de LSN especificado é o ponto de recuperação.  
   
      O STOPATMARK efetua roll forward para o LSN e exclui o registro de log do roll forward.  
   
@@ -85,7 +85,7 @@ GO
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Restaurar um backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
@@ -97,7 +97,7 @@ GO
   
 -   [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicar backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [O log de transações &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  

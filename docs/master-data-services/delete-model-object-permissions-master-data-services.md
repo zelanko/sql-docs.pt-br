@@ -15,10 +15,10 @@ ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1ff59241067ad08e0acf738a34d59c59f837abfe
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728317"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Excluir permissões de objeto modelo (Master Data Services)
@@ -54,9 +54,9 @@ ms.locfileid: "73728317"
   
 8.  Clique no nó de árvore e no menu de contexto, clique em **Limpar Acesso**.  
   
-9. Clique em **Salvar**.  
+9. Clique em **Save** (Salvar).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

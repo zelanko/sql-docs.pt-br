@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277426"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Conectar-se a uma instância do Pesquisador de Objetos
@@ -28,7 +28,7 @@ ms.locfileid: "63277426"
   
  Para especificar configurações de conexão opcionais, siga estas etapas:  
   
-1.  Clique em **Conectar** na barra de ferramentas do Pesquisador de Objetos e clique no tipo de servidor para fazer a conexão. A caixa de diálogo **Conectar ao Servidor** é exibida.  
+1.  Clique em **Conectar** na barra de ferramentas do Pesquisador de Objetos e clique no tipo de servidor para fazer a conexão. A caixa de diálogo **Conectar-se ao Servidor** é exibida.  
   
 2.  Na caixa **Nome do Servidor** , digite o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63277426"
   
 4.  Clique na guia **Propriedades da Conexão** para definir as configurações adicionais. As configurações disponíveis variam, dependendo do tipo de servidor. As configurações a seguir estão disponíveis para o [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-    |Configuração|Descrição|  
+    |Configuração|DESCRIÇÃO|  
     |-------------|-----------------|  
     |**Conectar ao banco de dados**|Escolha um dos bancos de dados disponíveis no servidor. Esta lista só mostrará bancos de dados que você tem permissão para exibição.|  
     |**Protocolo de rede**|Selecione entre Memória Compartilhada, TCP/IP ou Pipes Nomeados.|  

@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079342"
 ---
 # <a name="defining-a-data-source"></a>Definindo uma fonte de dados
-  Depois de criar um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], normalmente, você começa a trabalhar com esse projeto definindo uma ou mais fontes de dados que serão usadas pelo projeto. Ao definir uma fonte de dados, você está definindo as informações da cadeia de conexão que será usada para conectar-se à fonte de dados. Para obter mais informações, veja [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
+  Depois de criar um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , normalmente, você começa a trabalhar com esse projeto definindo uma ou mais fontes de dados que serão usadas pelo projeto. Ao definir uma fonte de dados, você está definindo as informações da cadeia de conexão que será usada para conectar-se à fonte de dados. Para obter mais informações, veja [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  Na tarefa a seguir, você definirá o banco de dados de exemplo do AdventureWorksDWSQLServer2012 como a fonte de dados do projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Apesar de esse banco de dados estar hospedado no seu computador local por causa deste tutorial, os bancos de dados de origem são frequentemente hospedados em um ou mais computadores remotos.  
   
@@ -32,11 +32,11 @@ ms.locfileid: "66079342"
   
 4.  Na caixa de diálogo **Gerenciador de Conexões** , você define as propriedades de conexão da fonte de dados. Na caixa de listagem **Provedor** , verifique se a opção **OLE DB Nativo\SQL Server Native Client 11.0** está selecionada.  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] também dá suporte a outros provedores que são exibidos na lista **Provedor** .  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]também oferece suporte a outros provedores, que são exibidos na lista de **provedores** .  
   
-5.  No **nome do servidor** caixa de texto, digite `localhost`.  
+5.  Na caixa de texto **nome do servidor** , `localhost`digite.  
   
-     Para se conectar a uma instância nomeada no computador local, digite **localhost\\< nome da instância\>** . Para conectar-se ao computador específico em vez do computador local, digite o nome do computador ou o endereço IP.  
+     Para se conectar a uma instância nomeada no computador local, digite **localhost\\<nome\>da instância**. Para conectar-se ao computador específico em vez do computador local, digite o nome do computador ou o endereço IP.  
   
 6.  Verifique se a opção **Usar Autenticação do Windows** está selecionada. Na lista **Selecionar ou inserir um nome de banco de dados** , selecione **AdventureWorksDW2012**.  
   
@@ -44,7 +44,8 @@ ms.locfileid: "66079342"
   
 8.  Clique em **OK** e em **Avançar**.  
   
-9. Na página **Informações sobre Representação** do assistente, você define as credenciais de segurança que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usará para se conectar à fonte de dados. A representação afeta a conta do Windows usada para conexão à fonte de dados quando a Autenticação do Windows é selecionada. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não dá suporte à representação para o processamento de objetos OLAP. Selecione **Usar a conta de serviço**e clique em **Avançar**.  
+9. Na página **Informações sobre Representação** do assistente, você define as credenciais de segurança que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usará para se conectar à fonte de dados. A representação afeta a conta do Windows usada para conexão à fonte de dados quando a Autenticação do Windows é selecionada. 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não dá suporte à representação para o processamento de objetos OLAP. Selecione **Usar a conta de serviço**e clique em **Avançar**.  
   
 10. Na página **Concluindo o Assistente** , aceite o nome padrão, **Adventure Works DW 2012**, e clique em **Concluir** para criar a nova fonte de dados.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "66079342"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definindo uma exibição da fonte de dados](lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

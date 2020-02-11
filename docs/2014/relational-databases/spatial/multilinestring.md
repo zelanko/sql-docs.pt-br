@@ -13,23 +13,23 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014204"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  Um `MultiLineString` é uma coleção de zero ou mais `geometry` ou **geographyLineString** instâncias.  
+  Um `MultiLineString` é uma coleção de zero ou mais `geometry` instâncias ou **geographyLineString** .  
   
 ## <a name="multilinestring-instances"></a>Instâncias MultiLineString  
  A ilustração a seguir mostra exemplos de instâncias `MultiLineString`.  
   
- ![Exemplos de instâncias geométricas MultiLineString](../../database-engine/media/multilinestring.gif "Exemplos de instâncias geométricas MultiLineString")  
+ ![Exemplos das instâncias geométricas MultiLineString](../../database-engine/media/multilinestring.gif "Exemplos das instâncias geométricas MultiLineString")  
   
  Conforme mostrado na ilustração:  
   
--   Figura 1 é um simples `MultiLineString` instância cujo limite são os quatro pontos de extremidade de seus dois `LineString` elementos.  
+-   A Figura 1 é uma `MultiLineString` instância simples cujo limite é de quatro pontos de extremidade de seus `LineString` dois elementos.  
   
 -   A Figura 2 é uma instância `MultiLineString` simples porque apenas os pontos de extremidade da interseção de elementos `LineString` se cruzam. O limite são os dois pontos de extremidade que não se sobrepõem.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "66014204"
   
 -   A Figura 4 é uma instância `MultiLineString` não simples, não fechada.  
   
--   A Figura 5 é uma instância `MultiLineString` simples, não fechada. Não é fechada porque seus `LineStrings` elementos não estão fechados. Ela é simples porque nenhum dos interiores de qualquer uma das instâncias `LineStrings` se cruzam.  
+-   A Figura 5 é uma instância `MultiLineString` simples, não fechada. Ele não está fechado porque seus `LineStrings` elementos não estão fechados. Ela é simples porque nenhum dos interiores de qualquer uma das instâncias `LineStrings` se cruzam.  
   
 -   A Figura 6 é uma instância `MultiLineString` simples e fechada. Ela é fechada porque todos os seus elementos não estão fechados. Ela é simples porque nenhum de seus elementos se cruzam nos interiores.  
   
 ### <a name="accepted-instances"></a>Instâncias aceitas  
- Para uma instância `MultiLineString` ser aceita, ela precisa estar vazia ou conter apenas instâncias `LineString` que sejam aceitos. Para obter mais informações sobre aceitas `LineString` instâncias, consulte [LineString](../spatial/linestring.md). Veja a seguir exemplos de instâncias `MultiLineString` aceitas.  
+ Para uma instância `MultiLineString` ser aceita, ela precisa estar vazia ou conter apenas instâncias `LineString` que sejam aceitos. Para obter mais informações sobre `LineString` instâncias aceitas, consulte [LineString](../spatial/linestring.md). Veja a seguir exemplos de instâncias `MultiLineString` aceitas.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -74,7 +74,8 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` não é válido porque a segunda instância `LineString` sobrepõe a primeira instância `LineString` em um intervalo. Elas se tocam em um número infinito de pontos.  
+ 
+  `@g4` não é válido porque a segunda instância `LineString` sobrepõe a primeira instância `LineString` em um intervalo. Elas se tocam em um número infinito de pontos.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância simples do `geometry``MultiLineString` , que contém dois elementos de `LineString` com o SRID 0.  
@@ -92,7 +93,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [STLength &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STIsClosed &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
  [LineString](../spatial/linestring.md)   

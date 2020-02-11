@@ -21,21 +21,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fe249cd389e71fa5565e2877fba46b47cf0a4f38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108780"
 ---
-# <a name="syssystemsqlmodules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
+# <a name="syssystem_sql_modules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna uma linha por objeto de sistema que contém um módulo definido em linguagem SQL. Objetos de sistema do tipo FN, IF, P, PC, TF, V têm um módulo SQL associado. Para identificar o objeto recipiente, você pode unir esta exibição à [sys. system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md).  
+  Retorna uma linha por objeto de sistema que contém um módulo definido em linguagem SQL. Objetos de sistema do tipo FN, IF, P, PC, TF, V têm um módulo SQL associado. Para identificar o objeto recipiente, você pode adicionar essa exibição a [Sys. system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Número de identificação de objeto do objeto recipiente, exclusivo no banco de dados.|  
-|**definition**|**nvarchar(max)**|Texto SQL que define esse módulo.|  
+|**defini**|**nvarchar(max)**|Texto SQL que define esse módulo.|  
 |**uses_ansi_nulls**|**bit**|1 = O módulo foi criado com a opção de banco de dados SET ANSI_NULLS definida como ON.<br /><br /> Sempre retorna 1.|  
 |**uses_quoted_identifier**|**bit**|1 = O módulo foi criado com SET QUOTED_IDENTIFIER como ON.<br /><br /> Sempre retorna 1.|  
 |**is_schema_bound**|**bit**|0 = O módulo não foi criado com a opção SCHEMABINDING.<br /><br /> Sempre retorna 0.|  
@@ -45,12 +45,12 @@ ms.locfileid: "68108780"
 |**execute_as_principal_id**|**int**|Sempre retorna NULL.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.all_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql.md)   
+ [sys. all_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Exibições do catálogo do objeto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

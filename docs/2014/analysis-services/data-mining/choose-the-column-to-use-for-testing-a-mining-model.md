@@ -1,5 +1,5 @@
 ---
-title: Escolha a coluna para usar para testar um modelo de mineração | Microsoft Docs
+title: Escolha a coluna a ser usada para testar um modelo de mineração | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 719e4dc2e934ac430ab4910612265d4b3532ed14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085727"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Escolha a coluna para usar para teste em um modelo de mineração
@@ -26,13 +26,13 @@ ms.locfileid: "66085727"
   
  A lista a seguir descreve algumas considerações adicionais para escolher o atributo previsível para usar no teste:  
   
--   Alguns tipos de modelos de mineração de dados podem prever vários atributos, como redes neurais, que podem explorar as relações entre muitos atributos.  
+-   Alguns tipos de modelos de Data Mining podem prever vários atributos, como redes neurais, que podem explorar as relações entre muitos atributos.  
   
--   Outros tipos de mineração, modelos, como modelos de clustering-não necessariamente não tem um atributo previsível. Os modelos de clustering não podem ser testados a menos que tenham um atributo previsível.  
+-   Outros tipos de modelos de mineração, como modelos de clustering, não necessariamente têm um atributo previsível. Os modelos de clustering não podem ser testados a menos que tenham um atributo previsível.  
   
 -   Criar um gráfico de dispersão ou medir a exatidão de um modelo de regressão exige que você escolha um atributo previsível contínuo como o resultado. Nesse caso, você não pode especificar um valor de destino. Se você estiver criando algo diferente de um gráfico de dispersão, a coluna da estrutura de mineração subjacente também terá que ter um tipo de conteúdo **Discreto** ou **Discretizado**.  
   
--   Se você escolher um atributo discreto como o resultado previsível, também poderá especificar um valor de destino ou pode deixar em branco o campo **Valor de Previsão** . Se você incluir um **valor de previsão**, o gráfico medirá somente a efetividade do modelo ao prever o valor de destino. Se você não especificar um resultado de destino, o modelo será medido para sua exatidão em prever todos os resultados.  
+-   Se você escolher um atributo discreto como o resultado previsível, também poderá especificar um valor de destino ou pode deixar em branco o campo **Valor de Previsão** . Se você incluir um **valor de previsão**, o gráfico medirá apenas a eficácia do modelo ao prever o valor de destino. Se você não especificar um resultado de destino, o modelo será medido para sua exatidão em prever todos os resultados.  
   
 -   Se você quiser incluir diversos modelos e compará-los em um único gráfico de precisão, todos os modelos deverão usar a mesma coluna previsível.  
   
@@ -54,8 +54,8 @@ ms.locfileid: "66085727"
   
 5.  Se quiser determinar o nível de elevação para um modelo, selecione um valor de resultado específico para medir, escolhendo na lista **Valor de Previsão** .  
   
-## <a name="see-also"></a>Consulte também  
- [Escolher e mapear dados de testes modelo](choose-and-map-model-testing-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Escolher e mapear dados de teste de modelo](choose-and-map-model-testing-data.md)   
  [Escolher um tipo de gráfico de precisão e definir opções de gráfico](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

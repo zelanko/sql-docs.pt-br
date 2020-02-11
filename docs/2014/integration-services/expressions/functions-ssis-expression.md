@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769122"
 ---
 # <a name="functions-ssis-expression"></a>Funções (Expressão SSIS)
@@ -38,7 +38,7 @@ ms.locfileid: "62769122"
   
  A linguagem da expressão fornece as seguintes funções matemáticas.  
   
-|Função|Descrição|  
+|Função|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[ABS &#40;Expressão SSIS&#41;](abs-ssis-expression.md)|Retorna o valor positivo absoluto de uma expressão numérica.|  
 |[EXP &#40;Expressão SSIS&#41;](exp-ssis-expression.md)|Retorna o exponente para base e da expressão especificada.|  
@@ -54,7 +54,7 @@ ms.locfileid: "62769122"
   
  O avaliador da expressão fornece as seguintes funções de cadeia de caracteres.  
   
-|Função|Descrição|  
+|Função|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;Expressão SSIS&#41;](codepoint-ssis-expression.md)|Retorna o valor do código Unicode do caractere da extrema esquerda de uma expressão de caractere.|  
 |[FINDSTRING &#40;Expressão SSIS&#41;](findstring-ssis-expression.md)|Retorna o índice de base um da ocorrência especificada de uma cadeia de caracteres em uma expressão.|  
@@ -74,7 +74,7 @@ ms.locfileid: "62769122"
   
  O avaliador de expressão fornce as seguintes funções de data e hora.  
   
-|Função|Descrição|  
+|Função|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[DATEADD &#40;Expressão do SSIS&#41;](dateadd-ssis-expression.md)|Retorna um novo valor DT_DBTIMESTAMP adicionando um intervalo de data ou hora a uma data especificada.|  
 |[DATEDIFF &#40;Expressão do SSIS&#41;](datediff-ssis-expression.md)|Retorna o número de limites de data e hora entre duas datas especificadas.|  
@@ -87,14 +87,14 @@ ms.locfileid: "62769122"
   
  O avaliador da expressão fornece as seguintes funções nulas.  
   
-|Função|Descrição|  
+|Função|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[ISNULL &#40;Expressão SSIS&#41;](null-ssis-expression.md)|Retorna um resultado booliano, baseando-se em se uma expressão é nula.|  
 |[NULL &#40;Expressão SSIS&#41;](null-ssis-expression.md)|Retorna um valor nulo de um tipo de dados solicitado.|  
   
  São mostrados nomes de expressão em caracteres maiúsculos, mas os nomes de expressão não fazem distinção entre maiúsculas e minúsculas. Por exemplo, usando trabalhos "nulos" assim como "NULOS".  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Operadores &#40;Expressão do SSIS&#41;](operators-ssis-expression.md)   
  [Exemplos de expressões avançadas do Integration Services](examples-of-advanced-integration-services-expressions.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](integration-services-ssis-expressions.md)  

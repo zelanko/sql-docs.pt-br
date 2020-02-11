@@ -1,5 +1,5 @@
 ---
-title: Extensões específicas do SQL Server em processo para o ADO.NET | Microsoft Docs
+title: SQL Server extensões específicas em processo para ADO.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 98781a7258a4fa70f9f8c70c37140445af5bcb76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874710"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>Extensões específicas em processo do SQL Server para o ADO.NET

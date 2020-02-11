@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401186"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Regras de conversão de tipo de dados para data warehouse dwloader paralelos
@@ -86,7 +86,7 @@ A tabela a seguir define o formato padrão e as regras para carregar valores lit
 ### <a name="DateFormats"></a>Formatos DateTime  
 O Dwloader dá suporte aos seguintes formatos de dados para os dados de entrada que estão sendo carregados no SQL Server PDW. Mais detalhes são listados após a tabela.  
   
-|Datetime|smalldatetime|date|datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|date|datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[aa]aa HH:mm[:00]|[M[M]]M-[d]d-[aa]aa|[M[M]]M-[d]d-[aa]aa HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[aa]aa HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[aa]aa hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[aa]aa hh:mm[:00][tt]||[M[M]]M-[d]d-[aa]aa hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[aa]aa hh:mm:ss[.fffffff][tt] zzz|  
@@ -170,10 +170,10 @@ A tabela a seguir define o formato padrão e as regras para carregar valores lit
   
 |Tipo de dados de entrada|Exemplos de dados de entrada|Conversão para tipos de dados de caractere|  
 |---------------|-------------------|----------------------------------|  
-|Literal de cadeia de caracteres|Formato: ' cadeia de caracteres '<br /><br />Exemplo: ' abc '| ND |  
-|Literal de cadeia de caracteres Unicode|Formato: cadeia de caracteres N'character '<br /><br />Exemplo: N'abc '| ND |  
-|Literal inteiro|Formato: ffffffffffn<br /><br />Exemplo: 321312313123| ND |  
-|Literal decimal|Formato: FFFFFF. fffffff<br /><br />Exemplo: 12344,34455| ND |  
+|Literal de cadeia de caracteres|Formato: ' cadeia de caracteres '<br /><br />Exemplo: ' abc '| NA |  
+|Literal de cadeia de caracteres Unicode|Formato: cadeia de caracteres N'character '<br /><br />Exemplo: N'abc '| NA |  
+|Literal inteiro|Formato: ffffffffffn<br /><br />Exemplo: 321312313123| NA |  
+|Literal decimal|Formato: FFFFFF. fffffff<br /><br />Exemplo: 12344,34455| NA |  
 |Literal de dinheiro|Formato: $ffffff. fffnn<br /><br />Exemplo: $123456.99|O símbolo de moeda opcional não é inserido com o valor. Para inserir o símbolo de moeda, insira o valor como um literal de cadeia de caracteres. Isso corresponderá ao formato do carregador, que trata cada literal como um literal de cadeia de caracteres.<br /><br />Não são permitidas vírgulas.<br /><br />Se o número de dígitos após o ponto decimal exceder 2, o valor será arredondado para o valor mais próximo. Por exemplo, o valor 123,946789 é inserido como 123,95.<br /><br />Somente o estilo padrão 0 (sem vírgulas e 2 dígitos após o ponto decimal) é permitido ao usar a função CONVERT para inserir literais monetários.|  
   
 ### <a name="general-remarks"></a>Comentários gerais  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc317474384c59d396d5a0f1d5ee4f71883509d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061185"
 ---
 # <a name="trace-file-close-event-class"></a>classe de evento Trace File Close
@@ -26,7 +26,7 @@ ms.locfileid: "63061185"
   
 ## <a name="trace-file-close-event-class-data-columns"></a>Colunas de dados de classe do evento Trace File Close  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**EventClass**|**int**|Tipo de evento = 150.|27|Não|  
 |**EventSequence**|**int**|O carimbo de data e hora exclusivo do evento disparado no rastreamento. Este número aumenta de uma unidade a cada evento disparado.|51|Não|  
@@ -39,7 +39,7 @@ ms.locfileid: "63061185"
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

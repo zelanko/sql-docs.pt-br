@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7ecbfd2edd20a312fc8a6d451938f1407585ded5
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706956"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (módulo do Python no SQL Server)
@@ -30,7 +30,7 @@ A biblioteca do **microsoftml** é distribuída em vários produtos da Microsoft
 
 O módulo **microsoftml** se baseia no Python 3.5 e está disponível somente quando você instala um dos seguintes produtos ou downloads da Microsoft:
 
-+ [Serviços de aprendizado de máquina do SQL Server](../install/sql-machine-learning-services-windows-install.md)
++ [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 ou posterior](https://docs.microsoft.com/machine-learning-server/)
 + [Bibliotecas de clientes do Python para um cliente de ciência de dados](setup-python-client-tools-sql.md)
 

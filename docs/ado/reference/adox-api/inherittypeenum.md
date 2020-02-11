@@ -16,22 +16,22 @@ ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aef8f768dd991e4e6ed740cc56600a6f1a8020e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965955"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
-Especifica como objetos herdarão as permissões definidas com [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  
+Especifica como os objetos herdarão as permissões definidas com [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
-|**adInheritBoth**|3|Objetos e outros contêineres contidos pelo objeto principal herdam a entrada.|  
-|**adInheritContainers**|2|Outros contêineres que estão contidos pelo objeto principal herdam a entrada.|  
+|**adInheritBoth**|3|Os objetos e outros contêineres contidos no objeto primário herdam a entrada.|  
+|**adInheritContainers**|2|Outros contêineres que estão contidos pelo objeto primário herdam a entrada.|  
 |**adInheritNone**|0|Padrão. Nenhuma herança ocorre.|  
-|**adInheritNoPropagate**|4|O **adInheritObjects** e **adInheritContainers** sinalizadores não são propagados para uma entrada herdada.|  
-|**adInheritObjects**|1|Objetos não-recipiente no contêiner herdam as permissões.|  
+|**adInheritNoPropagate**|4|Os sinalizadores **adInheritObjects** e **adInheritContainers** não são propagados para uma entrada herdada.|  
+|**adInheritObjects**|1|Os objetos que não são de contêiner no contêiner herdam as permissões.|  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Método SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

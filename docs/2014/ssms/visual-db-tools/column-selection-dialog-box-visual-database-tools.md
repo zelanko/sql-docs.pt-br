@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 70d6cc06b0e53754c22e6a8233f529b03c8e4371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224651"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Caixa de diálogo Seleção de Coluna (Visual Database Tools)
@@ -48,7 +48,7 @@ ms.locfileid: "63224651"
  **Cancelar**  
  Cancela a modificação da exibição Personalizada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Personalizar o volume de informações exibidas em diagramas &#40;Visual Database Tools&#41;](customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   

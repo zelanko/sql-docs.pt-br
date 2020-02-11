@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876859"
 ---
 # <a name="back-up-database-backup-options-page"></a>Backup de Banco de Dados (página Opções de Backup)
@@ -53,7 +53,7 @@ ms.locfileid: "62876859"
   
 |||  
 |-|-|  
-|**After (após)**|Especifique o número de dias que devem decorrer antes de o conjunto de backup expirar e poder ser substituído. Esse valor pode ser de 0 a 99999 dias; 0 dia significa que o conjunto de backup nunca vai expirar.<br /><br /> O valor padrão de validade do backup é o valor definido na opção **Retenção de mídia de backup padrão (em dias)** . Para acessá-la, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos e selecione **Propriedades**; em seguida, clique na página **Definições de banco de dados** da caixa de diálogo **Propriedades do servidor** .|  
+|**Depois**|Especifique o número de dias que devem decorrer antes de o conjunto de backup expirar e poder ser substituído. Esse valor pode ser de 0 a 99999 dias; 0 dia significa que o conjunto de backup nunca vai expirar.<br /><br /> O valor padrão de validade do backup é o valor definido na opção **Retenção de mídia de backup padrão (em dias)** . Para acessá-la, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos e selecione **Propriedades**; em seguida, clique na página **Definições de banco de dados** da caixa de diálogo **Propriedades do servidor** .|  
 |**Em**|Defina uma data específica em que o conjunto de backup deverá expirar e poderá ser substituído.|  
   
 ### <a name="compression"></a>Compactação  
@@ -77,7 +77,7 @@ ms.locfileid: "62876859"
   
 -   AES 256  
   
--   Triple DES  
+-   DES triplo  
   
 > [!TIP]  
 >  A opção de criptografia estará desabilitada se você optou por anexar ao conjunto de backup existente.  
@@ -86,7 +86,7 @@ ms.locfileid: "62876859"
 >   
 >  Há suporte somente para as chaves que residem no EKM (Gerenciamento Extensível Chaves).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

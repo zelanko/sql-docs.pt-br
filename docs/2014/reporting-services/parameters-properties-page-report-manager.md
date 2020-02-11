@@ -1,5 +1,5 @@
 ---
-title: Página de propriedades de parâmetros (Gerenciador de relatórios) | Microsoft Docs
+title: Página de propriedades de parâmetros (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108116"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Página Propriedades de Parâmetro (Gerenciador de Relatórios)
@@ -33,17 +33,18 @@ ms.locfileid: "66108116"
   
 3.  No menu suspenso, clique em **Gerenciar**. Esse procedimento abre a página de propriedades Geral do relatório.  
   
-4.  Selecione a guia **Parâmetros** . Se a guia **Parâmetros** não estiver visível, o relatório não contém parâmetros.  
+4.  Selecione a guia **parâmetros** . Se a guia **parâmetros** não estiver visível, o relatório não conterá parâmetros.  
   
 ## <a name="options"></a>Opções  
  **Nome do parâmetro**  
  Especifica o nome do parâmetro.  
   
- **Tipo de Dados**  
+ **Tipo de dados**  
  Especifica o tipo de dados do parâmetro.  
   
- **Possui padrão**  
- Marque essa caixa de seleção para especificar se o parâmetro tem um valor padrão. Ao marcar essa caixa de seleção, **Valor Padrão**será habilitado. **Nulo** também será habilitado se o parâmetro de relatório aceitar valores nulos. Se **Possui Padrão** não for selecionado, será necessário ocultar o valor ou solicitar que o usuário forneça um valor quando o relatório for executado.  
+ **Possui Padrão**  
+ Marque essa caixa de seleção para especificar se o parâmetro tem um valor padrão. Ao marcar essa caixa de seleção, **Valor Padrão**será habilitado. 
+  **Nulo** também será habilitado se o parâmetro de relatório aceitar valores nulos. Se **Possui Padrão** não for selecionado, será necessário ocultar o valor ou solicitar que o usuário forneça um valor quando o relatório for executado.  
   
  **Valor padrão**  
  Especifique um valor para o parâmetro. Para especificar um valor padrão, **Possui Padrão** deve ser selecionado e **Nulo** não deve ser selecionado. Um valor padrão pode ser fornecido pela definição de relatório. Se **Valor Padrão** for populado com um ou mais valores estáticos, esses valores se originarão com o relatório. Se **Valor padrão** for **Com Base em Consultas**, o valor do parâmetro será determinado por uma consulta definida no relatório.  
@@ -60,16 +61,16 @@ ms.locfileid: "66108116"
   
  Desmarque esta caixa de seleção se você quiser o parâmetro seja visível no relatório.  
   
- **Avisar usuário**  
+ **Avisar Usuário**  
  Marque esta caixa de seleção para exibir uma caixa de texto que solicita aos usuários um valor de parâmetro.  
   
  Limpe essa caixa de seleção se você quiser executar o relatório no modo autônomo (por exemplo, para gerar o histórico do relatório ou instantâneos de execução de relatório), se quiser usar o mesmo valor de parâmetro para todos os usuários ou se não necessitar de entrada de usuário para o parâmetro.  
   
- **Texto de exibição**  
+ **Exibir texto**  
  Forneça uma cadeia de caracteres de texto que aparece próximo à caixa de texto de parâmetro. Essa cadeia de caracteres fornece um rótulo ou texto descritivo. Não há limite para o comprimento da cadeia de caracteres. Cadeias de caracteres de texto mais longo são encapsuladas no espaço fornecido.  
   
-## <a name="see-also"></a>Consulte também  
- [Página Propriedades Gerais, Relatórios &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Página Propriedades gerais, relatórios &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

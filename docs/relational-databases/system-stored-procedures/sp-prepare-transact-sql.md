@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085801"
 ---
-# <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
+# <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-Prepara um parametrizada [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução e retorna uma instrução *manipular* para execução.  `sp_prepare` é invocado pela especificação de ID = 11 em um pacote do protocolo TDS.  
+Prepara uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução parametrizada e retorna um *identificador* de instrução para execução.  `sp_prepare` é invocado com a especificação de ID = 11 em um pacote do protocolo TDS.  
   
- ![Ícone do link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone do link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,24 +39,24 @@ sp_prepare handle OUTPUT, params, stmt, options
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Identificador*  
- É gerado um SQL Server *identificador preparado* identificador. *manipular* é um parâmetro obrigatório com um **int** valor de retorno.  
+ *processamento*  
+ É um identificador de *identificador preparado* gerado pelo SQL Server. o *identificador* é um parâmetro necessário com um valor de retorno **int** .  
   
  *params*  
- Identifica instruções parametrizadas. O *params* definição de variáveis é substituída para marcadores de parâmetro na instrução. *params* é um parâmetro obrigatório que chama uma **ntext**, **nchar**, ou **nvarchar** valor de entrada. Insira um valor NULL se a instrução não for parametrizada.  
+ Identifica instruções parametrizadas. A definição *params* das variáveis é substituída por marcadores de parâmetro na instrução. *params* é um parâmetro necessário que chama um valor de entrada **ntext**, **nchar**ou **nvarchar** . Insira um valor NULL se a instrução não for parametrizada.  
   
  *stmt*  
- Define o conjunto de resultados do cursor. O *stmt* parâmetro é obrigatório e chamadas para um **ntext**, **nchar**, ou **nvarchar** valor de entrada.  
+ Define o conjunto de resultados do cursor. O parâmetro *stmt* é necessário e chama um valor de entrada **ntext**, **nchar**ou **nvarchar** .  
   
- *options*  
- Um parâmetro opcional que retorna uma descrição das colunas do conjunto de resultados de cursor. *opções* requer o seguinte valor de entrada de int:  
+ *Opções*  
+ Um parâmetro opcional que retorna uma descrição das colunas do conjunto de resultados de cursor. *as opções* exigem o seguinte valor de entrada int:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
 ## <a name="examples"></a>Exemplos  
-A. O exemplo a seguir prepara e executa uma instrução simples.  
+a. O exemplo a seguir prepara e executa uma instrução simples.  
   
 ```sql  
 DECLARE @P1 int;  
@@ -67,7 +67,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```
 
-B. O exemplo a seguir prepara uma instrução no banco de dados AdventureWorks2016 e, posteriormente, executa-o usando o identificador.
+B. O exemplo a seguir prepara uma instrução no banco de dados AdventureWorks2016 e depois a executa usando o identificador.
 
 ```sql
 -- Prepare query
@@ -93,7 +93,7 @@ GO
 (1 row affected)
 ```
 
-Em seguida, o aplicativo executa a consulta usando duas vezes o valor do identificador 1, antes de descartar o plano preparado.
+Em seguida, o aplicativo executa a consulta duas vezes usando o valor de identificador 1, antes de descartar o plano preparado.
 
 ```sql
 EXEC sp_execute 1, 49879;  
@@ -106,7 +106,7 @@ EXEC sp_unprepare 1;
 GO
 ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
 
