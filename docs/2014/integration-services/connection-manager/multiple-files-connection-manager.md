@@ -18,24 +18,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833609"
 ---
 # <a name="multiple-files-connection-manager"></a>Gerenciador de conexões de vários arquivos
   Um gerenciador de conexões de Vários Arquivos permite que um pacote faça referência a arquivos e pastas existentes ou crie arquivos e pastas em tempo de execução.  
   
 > [!NOTE]  
->  As tarefas internas e os componentes de fluxo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não usam o gerenciador de conexões de vários arquivos. No entanto você pode usar o gerenciador de conexões na tarefa Script ou no componente Script. Para obter informações sobre como usar gerenciadores de conexões na tarefa Script, consulte [Conectando-se a fontes de dados na tarefa Script](../extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). Para obter informações sobre como usar gerenciadores de conexão no componente Script, consulte [conexão a fontes de dados no componente Script] (... / extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md.  
+>  As tarefas internas e os componentes de fluxo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não usam o gerenciador de conexões de vários arquivos. No entanto você pode usar o gerenciador de conexões na tarefa Script ou no componente Script. Para obter informações sobre como usar gerenciadores de conexões na tarefa Script, consulte [Conectando-se a fontes de dados na tarefa Script](../extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). Para obter informações sobre como usar gerenciadores de conexões no componente Script, consulte [conectando-se a fontes de dados no componente Script] (.. /extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md.  
   
 ## <a name="usage-types-of-the-multiple-files-connection-manager"></a>Tipos de uso do gerenciador de conexões de vários arquivos  
  A propriedade `FileUsageType` do gerenciador de conexões de vários arquivos especifica como a conexão é utilizada. O gerenciador de conexões de vários arquivos pode criar arquivos, pastas e usar arquivos e pastas existentes.  
   
  A tabela a seguir lista os valores de `FileUsageType`.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**0**|O gerenciador de conexões de vários arquivos utiliza um arquivo existente.|  
 |**1**|O gerenciador de conexões de vários arquivos cria um arquivo.|  
@@ -59,7 +59,7 @@ ms.locfileid: "62833609"
   
  \<*path*>|\<*path*>  
   
- Você também pode especificar vários arquivos ou pastas usando caracteres curingas. Por exemplo, a unidade de todos os arquivos de texto em C, o valor de referência a `ConnectionString` propriedade pode ser definida como c:\\*. txt.  
+ Você também pode especificar vários arquivos ou pastas usando caracteres curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor `ConnectionString` da propriedade pode ser definido como C\\: *. txt.  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   

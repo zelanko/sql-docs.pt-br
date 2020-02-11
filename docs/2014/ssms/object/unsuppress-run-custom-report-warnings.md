@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62824385"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Cancelar supressão da execução de avisos de relatório personalizado
@@ -28,27 +28,27 @@ ms.locfileid: "62824385"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>Para cancelar a supressão da caixa de diálogo de aviso do relatório personalizado principal  
   
-1.  Conectar-se ao \< *Server*>\\<*compartilhamento*>|\<*unidade*> \ Documents and Settings\\< UserProfile\>data\microsoft\microsoft SQL Server\120\Tools\Shell\reports.xml.  
+1.  Conectar- \<se à*unidade* de*compartilhamento*>|\< *do servidor*>\\<> \Documents\>and Settings\\<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
   
-2.  Clique com botão direito `reports.xml`e, em seguida, clique em **editar**.  
+2.  Clique `reports.xml`com o botão direito do mouse em e clique em **Editar**.  
   
-3.  Alteração **\<SuppressWarning > true\</suppresswarning. > ao \<SuppressWarning > falso\</suppresswarning. >** .  
+3.  Altere**\<SuppressWarning>true\</SuppressWarning> para \<SuppressWarning>false\</SuppressWarning>**.  
   
 4.  Reinicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>Para cancelar a supressão da caixa de diálogo de aviso do relatório detalhado personalizado  
   
-1.  Conectar-se ao \< *Server*>\\<*compartilhamento*>|\<*unidade*> \ Documents and Settings\\< UserProfile\>data\microsoft\microsoft SQL Server\120\Tools\Shell\reports.xml.  
+1.  Conectar- \<se à*unidade* de*compartilhamento*>|\< *do servidor*>\\<> \Documents\>and Settings\\<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
   
-2.  Clique com botão direito `reports.xml`e clique em **editar**.  
+2.  Clique `reports.xml`com o botão direito do mouse e clique em **Editar**.  
   
-3.  Alteração  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > ao \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >** .  
+3.  Altere ** \<SuppressDrillthroughWarning>true\</SuppressDrillthroughWarning>para \<SuppressDrillthroughWarning>false\</SuppressDrillthroughWarning>**.  
   
 4.  Reinicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Relatórios personalizados no Management Studio](custom-reports-in-management-studio.md)   
- [Adicionar um relatório personalizado ao Management Studio](add-a-custom-report-to-management-studio.md)   
+ [Adicionar um relatório personalizado a Management Studio](add-a-custom-report-to-management-studio.md)   
  [Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

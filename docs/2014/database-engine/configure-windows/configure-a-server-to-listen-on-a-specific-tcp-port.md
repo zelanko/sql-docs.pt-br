@@ -1,5 +1,5 @@
 ---
-title: Configurar um servidor para escutar em uma porta de TCP específica (SQL Server Configuration Manager) | Microsoft Docs
+title: Configurar um servidor para escutar em uma porta TCP específica (SQL Server Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813582"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>Configurar um servidor para escuta em uma porta TCP específica (SQL Server Configuration Manager)
@@ -30,7 +30,7 @@ ms.locfileid: "62813582"
  Para obter mais informações sobre as configurações padrão do Firewall do Windows e uma descrição das portas TCP que afetam o Mecanismo de Banco de Dados, o Analysis Services, o Reporting Services e o Integration Services, veja [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!TIP]  
->  Ao selecionar um número de porta, consulte [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) para obter uma lista de números de porta atribuídos a aplicativos específicos. Selecione um número de porta não atribuído. Para obter mais informações, consulte [O intervalo de porta dinâmica para TCP/IP mudou no Windows Vista e no Windows Server 2008](https://support.microsoft.com/kb/929851).  
+>  Ao selecionar um número de porta, [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) consulte para obter uma lista de números de porta que são atribuídos a aplicativos específicos. Selecione um número de porta não atribuído. Para obter mais informações, consulte [O intervalo de porta dinâmica para TCP/IP mudou no Windows Vista e no Windows Server 2008](https://support.microsoft.com/kb/929851).  
   
 > [!WARNING]  
 >  O mecanismo de banco de dados começa a escutar em uma nova porta quando é reiniciado. Entretanto, o serviço de Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitora o Registro e relata o novo número de porta, assim que a configuração é alterada, mesmo que o mecanismo de banco de dados não esteja usando essa porta. Reinicie o mecanismo de banco de dados para garantir a consistência e evitar falhas de conexão.  
@@ -51,11 +51,11 @@ ms.locfileid: "62813582"
   
 3.  Se a caixa de diálogo **Portas TCP Dinâmicas** contiver **0**, indicando que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] está escutando em portas dinâmicas, exclua o 0.  
   
-4.  Na área da caixa **Propriedades de**_IP_ **n** , na caixa **Porta TCP** box, type the port number you want this Propriedades de address to listen on, and then click **OK**.  
+4.  Na caixa de **Propriedades** **IP**_n_ , na caixa **porta TCP** , digite o número da porta que você deseja que esse endereço IP escute e clique em **OK**.  
   
 5.  No painel de console, clique em **Serviços do SQL Server**.  
   
-6.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (** \<instance name> **)** e, depois, clique em **Reiniciar** para parar e reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+6.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (**\<nome da instância>**)** e clique em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **reiniciar**para parar e reiniciar.  
   
  Após configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para escutar em uma porta específica, há três maneiras de se conectar a uma porta específica com um aplicativo cliente:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62813582"
   
 -   Programe o cliente para se conectar usando uma cadeia de conexão personalizada.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar ou excluir um alias de servidor para ser usado por um cliente &#40;SQL Server Configuration Manager&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criar ou excluir um alias de servidor para uso por um cliente &#40;SQL Server Configuration Manager&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
   
   

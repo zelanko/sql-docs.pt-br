@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205059"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Consulta FOR XML comparada com consulta FOR XML aninhada
@@ -90,7 +90,7 @@ ORDER BY ProductCategoryID
 FOR XML AUTO, TYPE  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 < ProdCat ProductCategoryID="1" CategoryName="Bikes" />  
@@ -200,7 +200,7 @@ FOR XML AUTO, TYPE
   
  Se você remover a diretiva `ELEMENTS` da consulta `FOR XML` aninhada que gera subcategorias de produtos, todo o resultado será centrado em atributo. Em seguida, você pode escrever esta consulta sem aninhamento. A adição de resultados de `ELEMENTS` em um XML que é parcialmente centrado em atributo e em elemento. Esse resultado não pode ser gerado por uma consulta FOR XML de nível único.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar consultas FOR XML aninhadas](use-nested-for-xml-queries.md)  
   
   

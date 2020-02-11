@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807053"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Tarefa de Reorganização de Índice (Plano de Manutenção)
@@ -28,7 +28,7 @@ ms.locfileid: "62807053"
  **Conexão**  
  Selecione a conexão de servidor a ser usada na execução desta tarefa.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão com o servidor para usar ao executar esta tarefa. A caixa de diálogo **Nova Conexão** é descrita abaixo.  
   
  **Bancos de dados**  
@@ -40,7 +40,7 @@ ms.locfileid: "62807053"
   
 -   **Todos os bancos de dados do sistema**  
   
-     Gere um plano de manutenção que executa tarefas de manutenção em cada banco de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto o **tempdb**. Nenhuma tarefa de manutenção é executada nos bancos de dados criados pelo usuário.  
+     Gere um plano de manutenção que execute tarefas de manutenção em cada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um dos bancos de dados do sistema, exceto **tempdb**. Nenhuma tarefa de manutenção é executada nos bancos de dados criados pelo usuário.  
   
 -   **Todos os bancos de dados de usuários**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62807053"
  Limita a grade **Seleção** para exibir tabelas, exibições ou ambas.  
   
  **Seleção**  
- Especifique as tabelas ou índices afetados por esta tarefa. Não disponível quando a opção **Tabelas e Exibições** é selecionada na caixa **Objeto** .  
+ Especifique as tabelas ou índices afetados por esta tarefa. Não disponível quando **tabelas e exibições** está selecionada na caixa **objeto** .  
   
  **Compactar objetos grandes**  
  Desaloque espaço em tabelas e exibições quando possível. Esta opção usa `ALTER INDEX LOB_COMPACTION = ON`.  
@@ -79,10 +79,10 @@ ms.locfileid: "62807053"
  Especifica como autenticar no servidor.  
   
  **Use a segurança integrada do Windows**  
- Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] com a Autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Conecte-se a uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[msCoName](../../includes/msconame-md.md)] com a autenticação do Windows.  
   
  **Usar nome de usuário e senha específicos**  
- Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
+ Conecte-se com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
   
  **Nome de usuário**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
@@ -90,7 +90,7 @@ ms.locfileid: "62807053"
  **Senha**  
  Forneça uma senha a ser usada na autenticação. Essa opção não está disponível.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [DBCC INDEXDEFRAG &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-indexdefrag-transact-sql)  
   

@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667179"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Definir os limites e avisos no Replication Monitor
-  O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
+  O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
   
  Ao habilitar um aviso, você especifica um limite. Quando o limite é atingido ou excedido, um aviso é exibido (a menos que um problema com prioridade superior deva ser exibido). Além de exibir de um aviso no Replication Monitor, atingir um limite também pode disparar um alerta. Você pode habilitar avisos para as seguintes condições:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62667179"
   
 4.  Defina um limite para os avisos na coluna **Limite** . Por exemplo, ao selecionar **Avise se a latência exceder o limite** na etapa 3, é possível selecionar uma latência de **60 segundos** na coluna **Limite** .  
   
-5.  Clique em **salvar alterações**.  
+5.  Clique em **Salvar Alterações**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar um alerta para um limite  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62667179"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 ##  <a name="Merge"></a> Definir limites e avisos para uma publicação de mesclagem  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62667179"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 ##  <a name="Snapshot"></a> Definir limites e avisos para uma publicação de instantâneo  
   
@@ -139,7 +139,7 @@ ms.locfileid: "62667179"
   
 4.  Defina um limite para o aviso na coluna **Limite** . Por exemplo, você pode selecionar um valor de **70%** na coluna **Limite** .  
   
-5.  Clique em **salvar alterações**.  
+5.  Clique em **Salvar Alterações**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar um alerta para um limite  
   
@@ -159,9 +159,9 @@ ms.locfileid: "62667179"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando a Replicação](../monitoring-replication.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Formato de arquivo de texto (Driver de arquivo de texto) | Microsoft Docs
+title: Formato de arquivo de texto (driver de arquivo de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,37 +16,37 @@ ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 51619902398f0e3d0a8307a0c76a40ab898ce88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912438"
 ---
 # <a name="text-file-format-text-file-driver"></a>Text File Format (Driver de Arquivo de texto)
-O driver ODBC texto dá suporte a ambos os arquivos de texto delimitados e de largura fixa. Um arquivo de texto consiste em uma linha de cabeçalho opcional e zero ou mais linhas de texto.  
+O driver de texto ODBC dá suporte a arquivos de texto delimitados e de largura fixa. Um arquivo de texto consiste em uma linha de cabeçalho opcional e zero ou mais linhas de texto.  
   
- Embora a linha de cabeçalho usa o mesmo formato que outras linhas no arquivo de texto, o driver ODBC texto interpreta as entradas de linha de cabeçalho como nomes de coluna, não dados.  
+ Embora a linha de cabeçalho use o mesmo formato que as outras linhas no arquivo de texto, o driver de texto ODBC interpreta as entradas de linha de cabeçalho como nomes de coluna, não os dados.  
   
- Uma linha de texto delimitado contiver um ou mais valores de dados separados por delimitadores: vírgulas, tabulações ou um delimitador personalizado. O mesmo delimitador deve ser usado em todo o arquivo. Valores de dados nulos são indicados por dois delimitadores em uma linha sem dados entre eles. Cadeias de caracteres em uma linha de texto delimitado que podem ser colocadas entre aspas duplas (""). Nenhum espaço em branco pode ocorrer antes ou depois de valores delimitados.  
+ Uma linha de texto delimitada contém um ou mais valores de dados separados por delimitadores: vírgulas, tabulações ou um delimitador personalizado. O mesmo delimitador deve ser usado em todo o arquivo. Valores de dados nulos são indicados por dois delimitadores em uma linha sem dados entre eles. As cadeias de caracteres em uma linha de texto delimitada podem ser colocadas entre aspas duplas (""). Nenhum espaço em branco pode ocorrer antes ou depois de valores delimitados.  
   
  A largura de cada entrada de dados em uma linha de texto de largura fixa é especificada em um esquema. Valores de dados nulos são indicados por espaços em branco.  
   
- As tabelas estão limitadas a um máximo de 255 campos. Nomes de campo são limitados a 64 caracteres e larguras de campo são limitadas a 32.766 caracteres. Registros são limitados a 65.000 bytes.  
+ As tabelas são limitadas a um máximo de 255 campos. Os nomes de campo são limitados a 64 caracteres, e as larguras de campo são limitadas a 32.766 caracteres. Os registros são limitados a 65.000 bytes.  
   
- Um arquivo de texto pode ser aberto somente para um único usuário. Não há suporte para vários usuários.  
+ Um arquivo de texto só pode ser aberto para um único usuário. Não há suporte para vários usuários.  
   
- A gramática a seguir, escrita para programadores, define o formato de um arquivo de texto que pode ser lido pelo driver ODBC texto:  
+ A gramática a seguir, escrita para programadores, define o formato de um arquivo de texto que pode ser lido pelo driver de texto ODBC:  
   
 |Formatar|Representação|  
 |------------|--------------------|  
 |Não itálico|Caracteres que devem ser inseridos conforme mostrado|  
-|*Itálico*|Argumentos que são definidos em outro lugar na gramática|  
+|*itálico*|Argumentos que são definidos em outro lugar na gramática|  
 |colchetes ([])|Itens opcionais|  
 |chaves ({})|Uma lista de opções mutuamente exclusivas|  
-|barras verticais (&#124;)|Opções mutuamente exclusivas separadas|  
+|barras verticais (&#124;)|Separar opções mutuamente exclusivas|  
 |reticências (...)|Itens que podem ser repetidos uma ou mais vezes|  
   
- O formato de arquivo de texto é:  
+ O formato de um arquivo de texto é:  
   
 ```  
 text-file ::=  
@@ -113,11 +113,11 @@ delimited-null ::=
 ```  
   
 > [!NOTE]  
->  Para arquivos delimitados, um valor nulo é representado por nenhum dados entre dois delimitadores.  
+>  Para arquivos delimitados, um NULL é representado por nenhum dado entre dois delimitadores.  
   
 ```  
 fixed-width-null ::= <SPACE>...  
 ```  
   
 > [!NOTE]  
->  Para arquivos de largura fixa, um valor nulo é representado por espaços.
+>  Para arquivos de largura fixa, um NULL é representado por espaços.
