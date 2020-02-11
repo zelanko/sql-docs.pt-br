@@ -18,18 +18,18 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 32e9f15dca77a7c99d7d4a9ae314e074876c6274
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117805"
 ---
-# <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
+# <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aplica um trabalho a um ou mais servidores de destino ou aos servidores de destino pertencentes a um ou mais grupos de servidores de destino.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,27 +42,27 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` O número de identificação do trabalho a ser aplicado para o destino ou grupos de servidores de destino especificados. *job_id* está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id`O número de identificação do trabalho a ser aplicado aos servidores de destino especificados ou aos grupos de servidores de destino. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'` O nome do trabalho a ser aplicado aos servidores de destino associados ou grupos de servidores de destino. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'`O nome do trabalho a ser aplicado ao especificado nos servidores de destino associados ou aos grupos de servidores de destino. *job_name* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
+>  *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Uma lista separada por vírgulas de grupos de servidores de destino ao qual o trabalho especificado deve ser aplicado. *target_server_groups* está **nvarchar(2048)** , com um padrão NULL.  
+`[ @target_server_groups = ] 'target_server_groups'`Uma lista separada por vírgulas de grupos de servidores de destino aos quais o trabalho especificado deve ser aplicado. *target_server_groups* é **nvarchar (2048)**, com um padrão de NULL.  
   
-`[ @target_servers = ] 'target_servers'` Uma lista separada por vírgulas de servidores de destino ao qual o trabalho especificado deve ser aplicado. *target_servers*está **nvarchar(2048)** , com um padrão NULL.  
+`[ @target_servers = ] 'target_servers'`Uma lista separada por vírgulas de servidores de destino aos quais o trabalho especificado deve ser aplicado. *target_servers*é **nvarchar (2048)**, com um padrão de NULL.  
   
-`[ @operation = ] 'operation'` É se o trabalho especificado deve ser aplicado a ou removido do servidores de destino especificados ou grupos de servidores de destino. *operação*está **varchar(7)** , com um padrão APPLY. As operações válidas são **APPLY** e **remover**.  
+`[ @operation = ] 'operation'`É se o trabalho especificado deve ser aplicado ou removido dos servidores de destino especificados ou dos grupos de servidores de destino. a *operação*é **varchar (7)**, com um padrão de aplicar. As operações válidas são **aplicar** e **remover**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_apply_job_to_targets** fornece uma maneira fácil de aplicar (ou remover) um trabalho de vários servidores de destino, e é uma alternativa à chamada **sp_add_jobserver** (ou **sp_delete_jobserver**) uma vez para cada servidor de destino necessário.  
+ **sp_apply_job_to_targets** fornece uma maneira fácil de aplicar (ou remover) um trabalho de vários servidores de destino e é uma alternativa para chamar **sp_add_jobserver** (ou **sp_delete_jobserver**) uma vez para cada servidor de destino necessário.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função fixa de servidor pode executar este procedimento.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar este procedimento.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir aplica o trabalho `Backup Customer Information` criado anteriormente a todos os servidores de destino do grupo `Servers Maintaining Customer Information`.  
@@ -78,10 +78,10 @@ EXEC dbo.sp_apply_job_to_targets
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_add_jobserver](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_remove_job_from_targets](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
