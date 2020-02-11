@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705524"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gerenciar sessões de evento no Pesquisador de Objetos
@@ -36,7 +36,7 @@ ms.locfileid: "62705524"
  Para obter mais informações sobre como criar uma sessão de Eventos Estendidos, consulte [Criar uma sessão de Eventos Estendidos](../../database-engine/create-an-extended-events-session.md).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Iniciando ou interrompendo uma sessão de Eventos Estendidos  
- Você pode iniciar ou interromper uma sessão de eventos estendidos através de **Editor de consultas** usando o `ALTER EVENT SESSION` instrução, ou usando o **eventos estendidos** nó do **Pesquisador de objetos**.  
+ Você pode iniciar ou parar uma sessão de eventos estendidos por meio do editor `ALTER EVENT SESSION` de **consultas** usando a instrução ou usando o nó **eventos estendidos** do **pesquisador de objetos**.  
   
  Quando você interrompe uma sessão de eventos, a sessão não é mais listada como uma sessão ativa no DMV (exibição de gerenciamento dinâmico) sys.dm_xe_sessions. No entanto, a definição de sessão permanece intacta e você pode reiniciar a sessão. Para remover completamente uma definição de sessão, você deve excluir a sessão.  
   
@@ -73,7 +73,7 @@ STATE = STOP
   
 1.  Expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões**  
   
-2.  Clique com o botão direito do mouse na sessão a ser exportada e selecione **Export Session (Exportar Sessão)**.  
+2.  Clique com o botão direito do mouse na sessão a ser exportada e selecione **Export Session (Exportar Sessão)** .  
   
 3.  Na caixa de diálogo **Salvar Como** , selecione um local para salvar o arquivo, digite o nome do arquivo na caixa **Nome de arquivo** e clique em **Salvar**.  
   
@@ -128,7 +128,7 @@ STATE = STOP
  Quando você exclui uma sessão de eventos, todas as informações de configuração são removidas e a definição de sessão não aparece mais na exibição de catálogo sys.server_event_sessions.  
   
 > [!NOTE]  
->  system_health e AlwaysOn_health são incluídas com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não as exclua. system_health é habilitada por padrão (para obter mais informações, consulte [Usar a sessão de system_health](use-the-ssms-xe-profiler.md)). AlwaysOn_health está desativada por padrão. Essas sessões coletam dados que podem ser úteis para diagnosticar problemas de desempenho.  
+>  system_health e AlwaysOn_health estão incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; Não os exclua. system_health é habilitada por padrão (para obter mais informações, consulte [Usar a sessão de system_health](use-the-ssms-xe-profiler.md)). AlwaysOn_health está desativado por padrão. Essas sessões coletam dados que podem ser úteis para diagnosticar problemas de desempenho.  
   
  Para excluir uma sessão de Eventos Estendidos, você deve ter a permissão ALTER ANY EVENT SESSION.  
   

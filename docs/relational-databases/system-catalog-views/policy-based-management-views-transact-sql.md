@@ -1,5 +1,5 @@
 ---
-title: Exibições de gerenciamento baseado em políticas (Transact-SQL) | Microsoft Docs
+title: Exibições do gerenciamento baseado em políticas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 224d19231eae84658580e17666221d6b76d99f69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018445"
 ---
 # <a name="policy-based-management-views-transact-sql"></a>Exibições de Gerenciamento Baseado em Política (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68018445"
 |[syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md)|[syspolicy_system_health_state](../../relational-databases/system-catalog-views/syspolicy-system-health-state-transact-sql.md)|  
 |[syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md)||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

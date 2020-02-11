@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629394"
 ---
 # <a name="subscribers"></a>Publicadores
-  Especifique os Assinantes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que receberão uma assinatura para a publicação selecionada.  
+  Especifique os [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes ou não que receberão uma assinatura para a publicação selecionada.  
   
 ## <a name="options"></a>Opções  
- **Assinantes**  
- Marque a caixa de seleção na grade para habilitar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente ou a fonte de dados não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um Assinante da publicação escolhida na página **Publicação** . Se o Assinante não estiver na lista, clique em **Adicionar Assinante** ou **Adicionar Assinante SQL Server**.  
+ **Publicadores**  
+ Marque a caixa de seleção na grade para habilitar a fonte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente ou não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados como um assinante para a publicação escolhida na página **publicação** . Se o Assinante não estiver na lista, clique em **Adicionar Assinante** ou **Adicionar Assinante SQL Server**.  
   
  **Banco de dados de assinatura**  
  As informações exibidas e as informações exibidas nessa coluna dependem do tipo de Assinante listado na coluna **Assinantes** :  
@@ -38,7 +38,7 @@ ms.locfileid: "62629394"
   
 -   Para Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o banco de dados de assinatura não é exibido. Especifique o banco de dados, juntamente com outras informações de conexão, no campo **Nome da fonte de dados** da caixa de diálogo **Adicionar não SQL Server** . Essa caixa de diálogo está disponível clicando em **Adicionar Assinante** e depois clicando em **Adicionar Assinante não SQL Server**.  
   
- **Adicionar Assinante**  
+ **Adicionar assinante**  
  Adicione um servidor à lista de servidores que podem ser habilitados como Assinantes. Esse botão é exibido quando todas as condições seguintes são verdadeiras:  
   
 -   A publicação selecionada é uma publicação de instantâneo ou transacional que não oferece suporte a assinaturas de atualização.  
@@ -48,9 +48,9 @@ ms.locfileid: "62629394"
   
 -   A assinatura é uma assinatura push.  
   
--   O Editor da publicação selecionada é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior.  
+-   O editor da publicação selecionada é [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior.  
   
- Ao clicar em **Adicionar Assinante**, será mostrado um menu com duas opções: **Adicionar Assinante do SQL Server** e **Adicionar Assinante não SQL Server**. Clique em **Adicionar Assinante não SQL Server** para adicionar um Assinante Oracle ou IBM DB2.  
+ Clicar em **Adicionar Assinante** mostra um menu com duas opções: **Adicionar Assinante SQL Server** e **Adicionar Assinante não SQL Server**. Clique em **Adicionar Assinante não SQL Server** para adicionar um Assinante Oracle ou IBM DB2.  
   
  **Adicionar Assinante SQL Server**  
  Adicione um servidor à lista de servidores que podem ser habilitados como Assinantes. Esse botão é exibido quando uma ou mais das condições seguintes são verdadeiras:  
@@ -67,8 +67,8 @@ ms.locfileid: "62629394"
   
     -   A publicação permite assinaturas anônimas.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma assinatura pull](create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [Assinar publicações](subscribe-to-publications.md)  

@@ -1,5 +1,5 @@
 ---
-title: Migração de dados Oracle para o SQL Server (OracleToSQL) | Microsoft Docs
+title: Migrando dados do Oracle para o SQL Server (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,93 +14,93 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c37f9c8e39a8a9dd87eabecba445b5ce7cef9028
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264684"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Migração de dados do Oracle para o SQL Server (OracleToSQL)
-Depois de ter sincronizado com êxito com objetos convertidos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode migrar dados do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Depois de sincronizar com êxito os objetos convertidos com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o, você pode migrar dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle para o.  
   
 > [!IMPORTANT]  
-> Se o mecanismo que está sendo usado é o mecanismo de migração de dados do lado do servidor, em seguida, antes de migrar dados, você deve instalar o SSMA para Oracle pacote de extensão e os provedores da Oracle no computador que está executando o SSMA. Também deve estar executando o serviço SQL Server Agent. Para obter mais informações sobre como instalar o pacote de extensão, consulte [instalando os componentes do servidor (OracleToSQL)](https://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
+> Se o mecanismo que está sendo usado for o mecanismo de migração de dados do servidor, então, antes de poder migrar dados, você deverá instalar o pacote de extensão do SSMA para Oracle e os provedores Oracle no computador que está executando o SSMA. O serviço de SQL Server Agent também deve estar em execução. Para obter mais informações sobre como instalar o pacote de extensão, consulte [Installing Server Components (OracleToSQL)](https://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
   
 ## <a name="setting-migration-options"></a>Definindo opções de migração  
-Antes de migrar dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], examine as opções de migração de projeto na **configurações do projeto** caixa de diálogo.  
+Antes de migrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dados para o, examine as opções de migração do projeto na caixa de diálogo **configurações do projeto** .  
   
--   Usando essa caixa de diálogo, você pode definir opções de como o tamanho do lote de migração, bloqueio de tabela, verificação de restrição, manipulação de valor nulo e lidar com valor de identidade. Para obter mais informações sobre as configurações de projeto de migração, consulte [configurações do projeto (migração) (OracleToSQL)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60).  
+-   Usando essa caixa de diálogo, você pode definir opções como tamanho do lote de migração, bloqueio de tabela, verificação de restrição, manipulação de valor nulo e tratamento de valor de identidade. Para obter mais informações sobre as configurações de migração do projeto, consulte [configurações do projeto (migração) (OracleToSQL)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60).  
   
--   O **mecanismo de migração** na **configurações do projeto** caixa de diálogo permite que o usuário execute o processo de migração usando dois tipos de mecanismos de migração de dados:  
+-   O **mecanismo de migração** na caixa de diálogo **configurações do projeto** permite que o usuário execute o processo de migração usando dois tipos de mecanismos de migração de dados:  
   
-    1.  Mecanismo de migração de dados do lado cliente  
+    1.  Mecanismo de migração de dados do lado do cliente  
   
-    2.  Mecanismo de migração de dados do lado servidor  
+    2.  Mecanismo de migração de dados do servidor  
   
-**Migração de dados do lado do cliente:**  
+**Migração de dados no lado do cliente:**  
   
--   Para iniciar a migração de dados no lado do cliente, selecione a **mecanismo de migração de dados do lado do cliente** opção a **configurações do projeto** caixa de diálogo.  
+-   Para iniciar a migração de dados no lado do cliente, selecione a opção **mecanismo de migração de dados do cliente** na caixa de diálogo Configurações do **projeto** .  
   
--   Na **configurações do projeto**, o **mecanismo de migração de dados do lado do cliente** opção está definida.  
+-   Em **configurações do projeto**, a opção **mecanismo de migração de dados do lado do cliente** é definida.  
   
     > [!NOTE]  
-    > O **mecanismo de migração de dados do lado do cliente** reside dentro do aplicativo do SSMA e, portanto, não depende da disponibilidade do pacote de extensão.  
+    > O **mecanismo de migração de dados do lado do cliente** reside dentro do aplicativo SSMA e, portanto, não depende da disponibilidade do pacote de extensão.  
   
-**Migração de dados do lado do servidor:**  
+**Migração de dados no lado do servidor:**  
   
--   Durante a migração de dados do lado do servidor, o mecanismo no qual reside o banco de dados de destino. Ele é instalado pelo pacote de extensão. Para obter mais informações sobre como instalar o pacote de extensão, consulte [instalando os componentes do servidor no SQL Server](installing-ssma-components-on-sql-server-oracletosql.md)  
+-   Durante a migração de dados do lado do servidor, o mecanismo reside no banco de dados de destino. Ele é instalado por meio do pacote de extensão. Para obter mais informações sobre como instalar o pacote de extensão, consulte [Installing Server Components on SQL Server](installing-ssma-components-on-sql-server-oracletosql.md)  
   
--   Para iniciar a migração no lado do servidor, selecione a **mecanismo de migração de dados do lado do servidor** opção a **configurações do projeto** caixa de diálogo.  
+-   Para iniciar a migração no lado do servidor, selecione a opção **mecanismo de migração de dados do servidor** na caixa de diálogo Configurações do **projeto** .  
   
-## <a name="migrating-data-to-sql-server"></a>Migrando dados para o SQL Server  
-Migração de dados são uma operação de carregamento em massa que move as linhas de dados de tabelas do Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas em transações. O número de linhas carregado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em cada transação é configurado nas configurações do projeto.  
+## <a name="migrating-data-to-sql-server"></a>Migrando dados para SQL Server  
+A migração de dados é uma operação de carregamento em massa que move linhas de dados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas do Oracle para tabelas em transações. O número de linhas carregadas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em em cada transação é configurado nas configurações do projeto.  
   
-Para exibir mensagens de migração, certifique-se de que o painel de saída está visível. Caso contrário, do **modo de exibição** menu, selecione **saída**.  
+Para exibir as mensagens de migração, verifique se o painel de saída está visível. Caso contrário, no menu **Exibir** , selecione **saída**.  
   
 **Para migrar dados**  
   
 1.  Verifique o seguinte:  
   
-    -   Os provedores da Oracle são instalados no computador que está executando o SSMA.  
+    -   Os provedores Oracle são instalados no computador que está executando o SSMA.  
   
     -   Você sincronizou os objetos convertidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados.  
   
-2.  No Gerenciador de metadados do Oracle, selecione os objetos que contêm os dados que você deseja migrar:  
+2.  No Gerenciador de metadados Oracle, selecione os objetos que contêm os dados que você deseja migrar:  
   
-    -   Para migrar dados para todos os esquemas, marque a caixa de seleção ao lado **esquemas**.  
+    -   Para migrar dados para todos os esquemas, marque a caixa de seleção ao lado de **esquemas**.  
   
-    -   Para migrar os dados ou omitir tabelas individuais, primeiro expanda o esquema, expanda **tabelas**e, em seguida, selecione ou desmarque a caixa de seleção ao lado da tabela.  
+    -   Para migrar dados ou omitir tabelas individuais, primeiro expanda o esquema, expanda **tabelas**e marque ou desmarque a caixa de seleção ao lado da tabela.  
   
-3.  Para migrar dados, podem surgir dois casos:  
+3.  Para migrar dados, surgem dois casos:  
   
-    **Migração de dados do lado do cliente:**  
+    **Migração de dados no lado do cliente:**  
   
-    -   Para realizar **migração de dados do lado do cliente**, selecione o **mecanismo de migração de dados do lado do cliente** opção o **configurações de projeto** caixa de diálogo.  
+    -   Para executar a **migração de dados no lado do cliente**, selecione a opção mecanismo de migração de dados do **cliente** na caixa de diálogo Configurações do **projeto** .  
   
-    **Migração de dados do lado do servidor:**  
+    **Migração de dados no lado do servidor:**  
   
     -   Antes de executar a migração de dados no lado do servidor, verifique se:  
   
-        1.  O SSMA para Oracle extensão Pack está instalado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+        1.  O pacote de extensão do SSMA para Oracle é instalado na instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do.  
   
-        2.  O serviço SQL Server Agent está em execução na instância do SQL Server.  
+        2.  O serviço de SQL Server Agent está em execução na instância do SQL Server.  
   
-    -   Para realizar **migração de dados do lado do servidor**, selecione o **mecanismo de migração de dados do lado do servidor** opção o **configurações de projeto** caixa de diálogo.  
+    -   Para executar a **migração de dados no servidor**, selecione a opção mecanismo de migração de dados do **servidor** na caixa de diálogo Configurações do **projeto** .  
   
-4.  Clique com botão direito **esquemas** no Gerenciador de metadados do Oracle e clique **migrar dados**. Também é possível migrar dados para objetos individuais ou categorias de objetos: Clique com botão direito do objeto ou sua pasta pai; Selecione o **migrar dados** opção.  
+4.  Clique com o botão direito do mouse em **esquemas** no Gerenciador de metadados Oracle e clique em **migrar dados**. Você também pode migrar dados para objetos individuais ou categorias de objetos: clique com o botão direito do mouse no objeto ou em sua pasta pai; Selecione a opção **migrar dados** .  
   
     > [!NOTE]  
-    > Se o SSMA para Oracle pacote de extensão não está instalado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e se **mecanismo de migração de dados do lado do servidor** estiver selecionada, ao migrar os dados para o banco de dados de destino, o seguinte erro é encontrado: ' Componentes SSMA de migração de dados não foram encontrados no SQL Server, não será possível realizar a migração de dados do lado do servidor. Verifique se o pacote de extensão está instalado corretamente '. Clique em **Cancelar** para finalizar a migração de dados.  
+    > Se o pacote de extensão do SSMA para Oracle não estiver instalado na instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do e se o **mecanismo de migração de dados do servidor** for selecionado, ao migrar os dados para o banco de dado de destino, o seguinte erro será encontrado: ' componentes de migração de dados do SSMA não foram encontrados no SQL Server, a migração de dados do servidor não será possível. Verifique se o pacote de extensões está instalado corretamente '. Clique em **Cancelar** para encerrar a migração de dados.  
   
-5.  No **conectar-se ao Oracle** caixa de diálogo, insira as credenciais de conexão e, em seguida, clique em **Connect**. Para obter mais informações sobre como se conectar ao Oracle, consulte [conectar-se ao Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
+5.  Na caixa de diálogo **conectar ao Oracle** , insira as credenciais de conexão e clique em **conectar**. Para obter mais informações sobre como se conectar ao Oracle, consulte [conectar-se ao oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
-    Para conectar-se ao banco de dados de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], insira as credenciais de conexão na **conectar ao SQL Server** caixa de diálogo e clique em **Connect**. Para obter mais informações sobre como se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [conectar-se ao SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    Para se conectar ao banco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dados de destino, insira as credenciais de conexão na caixa de diálogo **conectar a SQL Server** e clique em **conectar**. Para obter mais informações sobre como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se conectar ao, consulte [conectar-se ao SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
-    Mensagens serão exibidas as **saída** painel. Quando a migração for concluída, o **relatório de migração de dados** é exibida. Se todos os dados não migrou, clique na linha que contém os erros e, em seguida, clique em **detalhes**. Quando tiver terminado com o relatório, clique em **fechar**. Para obter mais informações sobre o relatório de migração de dados, consulte [relatório de migração de dados (SSMA comum)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    As mensagens serão exibidas no painel de **saída** . Quando a migração for concluída, o **relatório de migração de dados** será exibido. Se algum dado não for migrado, clique na linha que contém os erros e, em seguida, clique em **detalhes**. Ao concluir o relatório, clique em **fechar**. Para obter mais informações sobre o relatório de migração de dados, consulte [relatório de migração de dados (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
-> Quando o SQL Express edition é usado como o banco de dados de destino, somente cliente lado migração de dados é permitida e não há suporte para a migração de dados do lado servidor.  
+> Quando o SQL Express Edition é usado como o banco de dados de destino, somente a migração de dado do lado do cliente é permitida e não há suporte para a migração de dados do lado do servidor.  
   
-## <a name="see-also"></a>Consulte também  
-[Migrando do Oracle bancos de dados para o SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Migrando bancos de dados Oracle para SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

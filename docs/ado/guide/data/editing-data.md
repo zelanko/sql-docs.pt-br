@@ -15,16 +15,16 @@ ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925499"
 ---
 # <a name="editing-data"></a>Editar dados
-Ter explicamos como usar o ADO para conectar a uma fonte de dados, executar um comando, obter os resultados um **conjunto de registros** do objeto e navegar no **conjunto de registros**. Esta seção se concentra na próxima operação ADO fundamental: edição de dados.  
+Explicamos como usar o ADO para se conectar a uma fonte de dados, executar um comando, obter os resultados em um objeto **Recordset** e navegar no **conjunto de registros**. Esta seção se concentra na próxima operação de ADO fundamental: editando dados.  
   
- Esta seção continua a usar a amostra **conjunto de registros** introduzido no [examinando dados](../../../ado/guide/data/examining-data.md), com uma alteração importante. O código a seguir é usado para abrir o **Recordset**:  
+ Esta seção continua a usar o **conjunto de registros** de exemplo introduzidos no [exame de dados](../../../ado/guide/data/examining-data.md), com uma alteração importante. O código a seguir é usado para abrir o **conjunto de registros**:  
   
 ```  
 'BeginEditIntro  
@@ -43,13 +43,13 @@ Ter explicamos como usar o ADO para conectar a uma fonte de dados, executar um c
 'EndEditIntro  
 ```  
   
- A alteração importante no código envolve a configuração de **CursorLocation** propriedade da **Conexão** igual do objeto **adUseClient** no  *GetNewConnection* função (mostrada no exemplo a seguir), que indica o uso de um cursor do cliente. Para obter mais informações sobre as diferenças entre os cursores do lado do cliente e servidor, consulte [Noções básicas sobre cursores e bloqueios](../../../ado/guide/data/understanding-cursors-and-locks.md).  
+ A alteração importante no código envolve a definição da propriedade **CursorLocation** do objeto de **conexão** igual a **adUseClient** na função *GetNewConnection* (mostrada no próximo exemplo), que indica o uso de um cursor do cliente. Para obter mais informações sobre as diferenças entre cursores do lado do cliente e do servidor, consulte [noções básicas sobre cursores e bloqueios](../../../ado/guide/data/understanding-cursors-and-locks.md).  
   
- O **CursorLocation** da propriedade **adUseClient** configuração move a posição do cursor da fonte de dados (o SQL Server, neste caso) para o local do código do cliente (a área de trabalho da estação de trabalho). Essa configuração força o ADO para invocar o mecanismo de Cursor do cliente para OLE DB no cliente para criar e gerenciar o cursor.  
+ A configuração **adUseClient** da propriedade **CursorLocation** move o local do cursor da fonte de dados (o SQL Server, nesse caso) para o local do código do cliente (a estação de trabalho desktop). Essa configuração força o ADO a invocar o mecanismo de cursor do cliente para OLE DB no cliente a fim de criar e gerenciar o cursor.  
   
- Você também deve ter notado que o **LockType** parâmetro do **abra** método alterado para **adLockBatchOptimistic**. Isso abre o cursor no modo de lote. (O provedor armazena em cache várias alterações e grava-os à fonte de dados subjacente, somente quando você chama o **UpdateBatch** método.) As alterações que foram feitas para o **conjunto de registros** não será atualizada no banco de dados até que o **UpdateBatch** método é chamado.  
+ Você também pode ter notado que o parâmetro **LockType** do método **Open** foi alterado para **adLockBatchOptimistic**. Isso abre o cursor no modo de lote. (O provedor armazena em cache várias alterações e as grava na fonte de dados subjacente somente quando você chama o método **UpdateBatch** .) As alterações feitas no conjunto de **registros** não serão atualizadas no banco de dados até que o método **UpdateBatch** seja chamado.  
   
- Por fim, o código nesta seção usa uma versão modificada da função GetNewConnection. Esta versão da função agora retorna um cursor do lado do cliente. A função tem esta aparência:  
+ Por fim, o código nesta seção usa uma versão modificada da função GetNewConnection. Esta versão da função agora retorna um cursor do lado do cliente. A função é parecida com esta:  
   
 ```  
 'BeginNewConnection  
@@ -81,14 +81,14 @@ End Function
 'EndNewConnection  
 ```  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
--   [Editando registros existentes](../../../ado/guide/data/editing-existing-records.md)  
+-   [Editar registros existentes](../../../ado/guide/data/editing-existing-records.md)  
   
--   [Adicionando registros](../../../ado/guide/data/adding-records.md)  
+-   [Adicionar registros](../../../ado/guide/data/adding-records.md)  
   
--   [Determinando o que tem suporte](../../../ado/guide/data/determining-what-is-supported.md)  
+-   [Determinar o que é compatível](../../../ado/guide/data/determining-what-is-supported.md)  
   
--   [Excluindo registros usando o método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
+-   [Excluir registros usando o método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [Alternativas: Usando instruções SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [Alternativas: usar instruções SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)

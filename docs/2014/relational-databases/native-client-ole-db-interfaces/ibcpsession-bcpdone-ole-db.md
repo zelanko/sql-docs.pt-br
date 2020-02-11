@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
+title: 'IBCPSession:: BCPDone (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743192"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -34,7 +34,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Nenhuma outra operação pode ser chamada na interface [IBCPSession](ibcpsession-ole-db.md) após a chamada ao método **BCPDone**. A única possibilidade é chamar o método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o método [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) .  
+ Nenhuma outra operação pode ser chamada na interface [IBCPSession](ibcpsession-ole-db.md) após a chamada ao método **BCPDone**. A única possibilidade é chamar o método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) para iniciar uma nova operação de cópia em massa. Isso é semelhante à chamada ao método [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  S_OK  
@@ -62,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Você pode usar BCP para adicionar estes dados novamente à tabela com o comando a seguir:  
   
- **bcp master..fltest em outfile.dat -n -T -S** *server*  
+ **mestre bcp.. fltest em outfile. dat-n-T-S** *Server*  
   
  É necessário especificar sqlncli11.lib ao compilar este exemplo.  
   
@@ -461,7 +461,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../native-client/features/performing-bulk-copy-operations.md)  
   

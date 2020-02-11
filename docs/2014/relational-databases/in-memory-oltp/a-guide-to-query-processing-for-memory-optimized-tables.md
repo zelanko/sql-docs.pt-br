@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811073"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
@@ -70,14 +70,14 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  O plano de execução estimado, conforme exibido pelo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] é como segue  
   
- ![Plano de consulta para uma junção de tabelas baseadas em disco.](../../database-engine/media/hekaton-query-plan-1.gif "Plano de consulta para uma junção de tabelas baseadas em disco.")  
+ ![Plano de consulta para a junção de tabelas com base em disco.](../../database-engine/media/hekaton-query-plan-1.gif "Plano de consulta para a junção de tabelas com base em disco.")  
 Plano de consulta para a junção de tabelas com base em disco.  
   
  Sobre esse plano de consulta:  
   
 -   As linhas da tabela Customer são recuperadas do índice clusterizado, que é a estrutura de dados primária e tem os dados de tabela completos.  
   
--   Os dados da tabela de pedidos são recuperados usando o índice não clusterizado na coluna CustomerID. Esse índice contém a coluna CustomerID, que é usada para a junção, e a coluna de chave primária OrderID, que é retornada ao usuário. O retorno de colunas adicionais da tabela Order exigiria pesquisas no índice clusterizado da tabela Order.  
+-   Os dados da tabela Order são recuperados usando o índice não clusterizado na coluna CustomerID. Esse índice contém a coluna CustomerID, que é usada para a junção, e a coluna de chave primária OrderID, que é retornada ao usuário. O retorno de colunas adicionais da tabela Order exigiria pesquisas no índice clusterizado da tabela Order.  
   
 -   O operador lógico `Inner Join` é implementado pelo operador físico `Merge Join`. Os outros tipos de junção física são `Nested Loops` e `Hash Join`. O operador `Merge Join` aproveita o fato de que ambos os índices são classificados na coluna de junção CustomerID.  
   
@@ -89,7 +89,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  O plano estimado para essa consulta é:  
   
- ![Plano de consulta para uma junção hash de tabelas baseadas em disco.](../../database-engine/media/hekaton-query-plan-2.gif "Plano de consulta para uma junção hash de tabelas baseadas em disco.")  
+ ![Plano de consulta para uma junção hash de tabelas com base em disco.](../../database-engine/media/hekaton-query-plan-2.gif "Plano de consulta para uma junção hash de tabelas com base em disco.")  
 Plano de consulta para uma junção hash de tabelas com base em disco.  
   
  Nessa consulta, as linhas da tabela Order são recuperadas usando o índice clusterizado. O operador físico `Hash Match` agora é usado para `Inner Join`. O índice clusterizado em Order não é classificado em CustomerID e, portanto, `Merge Join` exigiria um operador de classificação, o que afetaria o desempenho. Observe o custo relativo do operador `Hash Match` (75%) comparado com o custo do operador `Merge Join` no exemplo anterior (46%). O otimizador consideraria o operador `Hash Match` também no exemplo anterior, mas concluiu que o operador `Merge Join` forneceu melhor desempenho.  
@@ -97,7 +97,7 @@ Plano de consulta para uma junção hash de tabelas com base em disco.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Processamento de consulta para tabelas baseadas em disco  
  O diagrama a seguir descreve o fluxo de processamento de consulta no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para consultas ad hoc:  
   
- ![Pipeline de processamento de consulta do SQL Server.](../../database-engine/media/hekaton-query-plan-3.gif "Pipeline de processamento de consulta do SQL Server.")  
+ ![Pipeline do processamento de consulta do SQL Server.](../../database-engine/media/hekaton-query-plan-3.gif "Pipeline do processamento de consulta do SQL Server.")  
 Pipeline do processamento de consulta do SQL Server.  
   
  Neste cenário:  
@@ -114,14 +114,14 @@ Pipeline do processamento de consulta do SQL Server.
   
 6.  Os Métodos de Acesso recuperam as linhas das páginas de dados e de índice no pool de buffers e carregam as páginas do disco no pool de buffers conforme a necessidade.  
   
- Para o primeiro exemplo de consulta, o mecanismo de execução solicita linhas no índice clusterizado no cliente e o índice não clusterizado na ordem dos métodos de acesso. Os Métodos de Acesso passam pelas estruturas de índice da árvore B para recuperar as linhas solicitadas. Nesse caso, todas as linhas são recuperadas como os planos de chamada para verificações de índice completo.  
+ Para a primeira consulta de exemplo, o mecanismo de execução solicita dos Métodos de Acesso as linhas no índice clusterizado em Customer e no índice não clusterizado em Order. Os Métodos de Acesso passam pelas estruturas de índice da árvore B para recuperar as linhas solicitadas. Nesse caso, todas as linhas são recuperadas como os planos de chamada para verificações de índice completo.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Acesso do [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] ad hoc também são conhecidos como [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Interpretado se refere ao fato de que o plano de consulta é interpretado pelo mecanismo de execução da consulta para cada operador no plano de consulta. O mecanismo de execução lê o operador e seus parâmetros e executa a operação.  
   
  O [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado pode ser usado para acessar tabelas com otimização de memória e baseadas em disco. A figura a seguir ilustra o processamento de consulta para acesso do [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória:  
   
- ![Pipeline de processamento de consulta para TSQL interpretado.](../../database-engine/media/hekaton-query-plan-4.gif "Pipeline de processamento de consulta para TSQL interpretado.")  
+ ![Pipeline de processamento da consulta para tsql interpretado.](../../database-engine/media/hekaton-query-plan-4.gif "Pipeline de processamento da consulta para tsql interpretado.")  
 Pipeline do processamento de consulta para acesso do Transact-SQL interpretado a tabelas com otimização de memória.  
   
  Conforme ilustrado pela figura, na maioria das vezes, o pipeline do processamento de consulta permanece inalterado:  
@@ -159,7 +159,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  O plano estimado é o seguinte:  
   
- ![Plano de consulta para uma junção de tabelas com otimização de memória.](../../database-engine/media/hekaton-query-plan-5.gif "Plano de consulta para uma junção de tabelas com otimização de memória.")  
+ ![Plano de consulta para a junção de tabelas com otimização de memória.](../../database-engine/media/hekaton-query-plan-5.gif "Plano de consulta para a junção de tabelas com otimização de memória.")  
 Plano de consulta para a junção de tabelas com otimização de memória.  
   
  Observe as seguintes diferenças em relação ao plano para a mesma consulta em tabelas baseadas em disco (figura 1):  
@@ -195,12 +195,12 @@ END
 |-|-----------------------|-----------------|  
 |Compilação inicial|No momento da criação.|Na primeira execução.|  
 |Recompilação automática|Na primeira execução do procedimento após o reinício do banco de dados ou do servidor.|Na reinicialização do servidor. Ou, remoção do cache do plano, geralmente com base nas alterações de estatísticas ou esquema, ou demanda de memória.|  
-|Recompilação manual|Sem suporte. A solução alternativa é descartar e recriar o procedimento armazenado.|Use `sp_recompile`. Você pode remover manualmente o plano do cache, por exemplo, usando DBCC FREEPROCCACHE. Você também pode criar o procedimento armazenado WITH RECOMPILE e o procedimento armazenado será recompilado em cada execução.|  
+|Recompilação manual|Sem suporte. A solução alternativa é descartar e recriar o procedimento armazenado.|Usar o `sp_recompile`. Você pode remover manualmente o plano do cache, por exemplo, usando DBCC FREEPROCCACHE. Você também pode criar o procedimento armazenado WITH RECOMPILE e o procedimento armazenado será recompilado em cada execução.|  
   
 ### <a name="compilation-and-query-processing"></a>Processamento de compilação e consulta  
  O diagrama a seguir ilustra o processo de compilação para procedimentos armazenados compilados nativamente:  
   
- ![Compilação nativa de procedimentos armazenados.](../../database-engine/media/hekaton-query-plan-6.gif "Compilação nativa de procedimentos armazenados.")  
+ ![Compilação original dos procedimentos armazenados.](../../database-engine/media/hekaton-query-plan-6.gif "Compilação original dos procedimentos armazenados.")  
 Compilação original dos procedimentos armazenados.  
   
  O processo é descrito como:  
@@ -228,7 +228,7 @@ Execução de procedimentos armazenados compilados nativamente.
   
      Se a instrução tiver sido preparada, por exemplo, usando `sp_prep_exec`, o analisador não precisará extrair os parâmetros e o nome do procedimento no momento da execução.  
   
-3.  O tempo de execução do OLTP na memória localiza o ponto de entrada da DLL do procedimento armazenado.  
+3.  O runtime do OLTP na memória localiza o ponto de entrada da DLL do procedimento armazenado.  
   
 4.  O código de máquina no DLL é executado e os resultados são retornados para o cliente.  
   
@@ -255,15 +255,15 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>Operadores de consulta nos procedimentos armazenados compilados nativamente  
  A tabela a seguir resume os operadores de consulta com suporte em procedimentos armazenados compilados nativamente:  
   
-|Operator|Consulta de exemplo|  
+|Operador|Exemplo de consulta|  
 |--------------|------------------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
+|Delete (excluir)|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|Esse operador é usado para funções intrínsecas e conversões de tipo. Nem todas as funções e conversões de tipos têm suporte em procedimentos armazenados compilados nativamente.<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |Nested Loops Join|Nested Loops é o único operador de junção com suporte em procedimentos armazenados compilados nativamente. Todos os planos que contêm junções usarão o operador Nested loops, mesmo se o plano para a mesma consulta executada como [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado contiver uma junção de mesclagem ou hash.<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
-|Sort|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
+|Classificar|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`|  
 |Top-sort|A expressão `TOP` (o número de linhas a serem retornadas) não pode exceder 8.000 linhas. Menos se também houver operadores de junção e agregação na consulta. As junções e a agregação normalmente reduzem o número de linhas a serem classificadas, em comparação com a contagem de linhas das tabelas base.<br /><br /> `SELECT TOP 10 ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |Stream Aggregate|Observe que o operador Hash Match não tem suporte para agregação. Desse modo, todas as agregações em procedimentos armazenados compilados nativamente usam o operador Stream Aggregate, mesmo se o plano para a mesma consulta no [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado usar o operador Hash Match.<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
@@ -291,7 +291,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Depois de excluir todas as linhas, menos uma na tabela Customer:  
   
- ![Junções e estatísticas de coluna. ](../../database-engine/media/hekaton-query-plan-9.gif "Junções e estatísticas de coluna.")  
+ ![Estatísticas e junções de coluna.](../../database-engine/media/hekaton-query-plan-9.gif "Junções e estatísticas de coluna.")  
   
  Em relação a esse plano de consulta:  
   
@@ -302,7 +302,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Estatísticas e cardinalidade para tabelas com otimização de memória  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantém as estatísticas no nível de coluna para tabelas com otimização de memória. Além disso, ele mantém a contagem real de linhas da tabela. No entanto, em contraposição às tabelas baseadas em disco, as estatísticas de tabelas com otimização de memória não são atualizadas automaticamente. Portanto, as estatísticas precisam ser atualizadas manualmente depois que alterações significativas são feitas nas tabelas. Para obter mais informações, consulte [Estatísticas para tabelas com otimização de memória](memory-optimized-tables.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas com otimização de memória](memory-optimized-tables.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

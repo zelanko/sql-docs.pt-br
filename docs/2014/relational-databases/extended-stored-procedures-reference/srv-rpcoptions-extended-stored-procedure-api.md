@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0c97262ab6b3ee42b070511a813fcb4498b78d60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745815"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API de procedimento armazenado estendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  Retorna opções de tempo de execução para o procedimento armazenado remoto atual.  
   
@@ -48,15 +48,15 @@ srvproc
  *srvproc*  
  É um ponteiro para a estrutura SRV_PROC que é o identificador de uma conexão de cliente específica (neste caso, o identificador que recebeu o procedimento armazenado remoto). A estrutura contém informações que a biblioteca de APIs de procedimento armazenado estendido usa para gerenciar a comunicação e os dados entre o aplicativo e o cliente.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  Um bitmap que contém os sinalizadores de tempo de execução unidos em um OU lógico para o procedimento armazenado remoto atual. Se não houver um procedimento armazenado remoto atual, será retornado 0 e uma mensagem é gerada.  
   
 ## <a name="remarks"></a>Comentários  
  A seguinte tabela descreve cada sinalizador de tempo de execução.  
   
-|Sinalizador de tempo de execução|Descrição|  
+|Sinalizador de tempo de execução|DESCRIÇÃO|  
 |--------------------|-----------------|  
-|SRV_NOMETADATA|O cliente solicitou resultados sem informações de metadados. Esse sinalizador é usado somente quando o cliente está se comunicando com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um aplicativo de API de procedimento armazenado estendido não pode omitir informações de metadados.|  
+|SRV_NOMETADATA|O cliente solicitou resultados sem informações de metadados. Esse sinalizador só é usado quando o cliente está se comunicando com uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instância do. Um aplicativo de API de procedimento armazenado estendido não pode omitir informações de metadados.|  
 |SRV_RECOMPILE|O cliente solicitou a recompilação do procedimento armazenado remoto antes de executá-lo. Este sinalizador pode não se aplicar a um aplicativo de API de procedimento armazenado estendido.|  
   
 > [!IMPORTANT]  

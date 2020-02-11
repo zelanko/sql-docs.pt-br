@@ -1,5 +1,5 @@
 ---
-title: Colunas de texto e imagem associadas vs. Não associado a colunas Text e Image | Microsoft Docs
+title: Colunas de texto e imagem acopladas versus não associadas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,19 +21,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf8ac0cf868394d9aa8063220939feee69ac2f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626579"
 ---
-# <a name="bound-vs-unbound-text-and-image-columns"></a>Colunas de texto e imagem associadas vs. não associadas
-  Ao usar cursores de servidor, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client é otimizado para não transmitir os dados para desassociada **texto**, **ntext**, ou **imagem** colunas no tempo **SQLFetch** é executada. O **texto**, **ntext**, ou **imagem** dados não são realmente recuperados do servidor até que os problemas de aplicativos [SQLGetData](../native-client-odbc-api/sqlgetdata.md) para o coluna.  
+# <a name="bound-vs-unbound-text-and-image-columns"></a>Colunas image e text associadas e não associadas
+  Ao usar cursores de servidor, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o driver ODBC do Native Client é otimizado para não transmitir os dados para colunas **Text**, **ntext**ou **Image** não associadas no momento em que **SQLFetch** é executado. Os dados **Text**, **ntext**ou **Image** não são realmente recuperados do servidor até que o aplicativo emita [SQLGetData](../native-client-odbc-api/sqlgetdata.md) para a coluna.  
   
- Muitos aplicativos podem ser gravados para que nenhum **texto**, **ntext**, ou **imagem** dados seja exibidos enquanto um usuário está simplesmente rolando para cima para baixo em um cursor. Quando um usuário seleciona uma linha para obter mais detalhes, o aplicativo pode chamar **SQLGetData** para recuperar o **texto**, **ntext**, ou **imagem** dados. Esse procedimento impedirá a **texto**, **ntext**, ou **imagem** dados para qualquer uma das linhas que o usuário seleciona e pode, portanto, evitar a transmissão de muito grandes quantidades de dados.  
+ Muitos aplicativos podem ser escritos para que nenhum dado de **Text**, **ntext**ou **Image** seja exibido enquanto um usuário está simplesmente rolando para cima e para baixo em um cursor. Quando um usuário seleciona uma linha para obter mais detalhes, o aplicativo pode chamar **SQLGetData** para recuperar os dados de **Text**, **ntext**ou **Image** . Isso impedirá a transmissão dos dados **Text**, **ntext**ou **Image** para qualquer uma das linhas que o usuário não selecionar e, portanto, poderá impedir a transmissão de grandes quantidades de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciando colunas Text e Image](managing-text-and-image-columns.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciando colunas de texto e imagem](managing-text-and-image-columns.md)   
  [Comportamentos de cursor](../native-client-odbc-cursors/cursor-behaviors.md)  
   
   

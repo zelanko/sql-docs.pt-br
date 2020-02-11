@@ -16,10 +16,10 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f8073fcb4c92861ffb09da8739c7c9f8064d9d70
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769153"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68769153"
 
   Adiciona um novo trabalho de agente para agendar a sincronização de uma assinatura pull com uma publicação de mesclagem. Esse procedimento armazenado é executado no Assinante no banco de dados de assinatura.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -92,7 +92,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @name = ] 'name'`É o nome do agente. o *nome* é **sysname**, com um padrão de NULL.  
   
-`[ @publisher = ] 'publisher'`É o nome do servidor do Publicador. o Publicador é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'`É o nome do servidor do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
 `[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão.  
   
@@ -108,11 +108,11 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 `[ @publisher_password = ] 'publisher_password'`É a senha usada ao conectar-se ao Publicador. *publisher_password* é **sysname**, com um padrão de NULL.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]Quando possível, solicite que os usuários insiram credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
 `[ @publisher_encrypted_password = ]publisher_encrypted_password`Não há mais suporte para a configuração de *publisher_encrypted_password* . A tentativa de definir esse parâmetro de **bit** como **1** resultará em um erro.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o assinante é **sysname**, com um padrão de NULL.  
+`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, com um padrão de NULL.  
   
 `[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, com um padrão de NULL.  
   
@@ -143,19 +143,19 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 `[ @distributor_password = ] 'distributor_password'`É a senha do distribuidor. *distributor_password* será necessário se *distributor_security_mode* for definido como **0**. *distributor_password* é **sysname**, com um padrão de NULL.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]Quando possível, solicite que os usuários insiram credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
 `[ @encrypted_password = ] encrypted_password`Não há mais suporte para a configuração de *encrypted_password* . A tentativa de definir esse parâmetro de **bit** como **1** resultará em um erro.  
   
 `[ @frequency_type = ] frequency_type`É a frequência com a qual agendar a Agente de Mesclagem. *frequency_type* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
-|**2**|Sob Demanda|  
-|**4**|Diariamente|  
+|**2**|Sob demanda|  
+|**quatro**|Diário|  
 |**8**|Semanalmente|  
-|**16**|Mensalmente|  
+|**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64**|Iniciar automaticamente|  
 |**128**|Recorrente|  
@@ -166,40 +166,40 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_interval = ] frequency_interval`O dia ou os dias em que o Agente de Mesclagem é executado. *frequency_interval* é **int**e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**1**|Domingo|  
-|**2**|Segunda-feira|  
-|**3**|Terça-feira|  
-|**4**|Quarta-feira|  
-|**5**|Quinta-feira|  
-|**6**|Sexta-feira|  
+|**1**|Sunday|  
+|**2**|Monday|  
+|**Beta**|Terça-feira|  
+|**quatro**|Quarta-feira|  
+|**05**|Quinta-feira|  
+|**6**|Friday|  
 |**7**|Sábado|  
-|**8**|Day|  
-|**9**|Dias da semana|  
-|**10**|Dias de fim de semana|  
+|**8**|Dia|  
+|**99**|Dias da semana|  
+|**254**|Dias de fim de semana|  
 |NULL (padrão)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`É a data da Agente de Mesclagem. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**1**|First|  
+|**1**|Primeiro|  
 |**2**|Segundo|  
-|**4**|Terceiro|  
+|**quatro**|Terceiro|  
 |**8**|Quarto|  
-|**16**|Last|  
+|**16**|Último|  
 |NULL (padrão)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* é **int**, com um padrão de NULL.  
   
 `[ @frequency_subday = ] frequency_subday`É a frequência de reagendar durante o período definido. *frequency_subday* é **int**e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
-|**4**|Minuto|  
+|**quatro**|Minuto|  
 |**8**|Hora|  
 |NULL (padrão)||  
   
@@ -213,15 +213,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @active_end_date = ] active_end_date`É a data em que a Agente de Mesclagem para de ser agendada, formatada como AAAAMMDD. *active_end_date* é **int**, com um padrão de NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'`É um prompt de comando opcional que é fornecido para o Agente de Mesclagem. *optional_command_line* é **nvarchar (255)** , com um padrão de ' '. Pode ser usado para fornecer parâmetros adicionais ao Agente de Mesclagem, como no exemplo seguinte que aumenta o tempo limite de consulta padrão para `600` segundos:  
+`[ @optional_command_line = ] 'optional_command_line'`É um prompt de comando opcional que é fornecido para o Agente de Mesclagem. *optional_command_line* é **nvarchar (255)**, com um padrão de ' '. Pode ser usado para fornecer parâmetros adicionais ao Agente de Mesclagem, como no exemplo seguinte que aumenta o tempo limite de consulta padrão para `600` segundos:  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid`É o parâmetro de saída para a ID do trabalho. *merge_jobid* é **binary (16)** , com um padrão de NULL.  
+`[ @merge_jobid = ] merge_jobid`É o parâmetro de saída para a ID do trabalho. *merge_jobid* é **binary (16)**, com um padrão de NULL.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica se a assinatura pode ser sincronizada por meio do Gerenciador de sincronização do Windows. *enabled_for_syncmgr* é **nvarchar (5)** , com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ser sincronizada sem iniciar.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica se a assinatura pode ser sincronizada por meio do Gerenciador de sincronização do Windows. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ser sincronizada sem iniciar.  
   
 `[ @ftp_address = ] 'ftp_address'`Somente para compatibilidade com versões anteriores.  
   
@@ -231,15 +231,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @ftp_password = ] 'ftp_password'`Somente para compatibilidade com versões anteriores.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'`Especifica o local do qual os arquivos de instantâneo são captados. *alternate_snapshot_folder* é **nvarchar (255)** , com um padrão de NULL. Se for NULL, os arquivos de instantâneo serão retirados do local padrão especificado pelo Publicador.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'`Especifica o local do qual os arquivos de instantâneo são captados. *alternate_snapshot_folder* é **nvarchar (255)**, com um padrão de NULL. Se for NULL, os arquivos de instantâneo serão retirados do local padrão especificado pelo Publicador.  
   
-`[ @working_directory = ] 'working_directory'`É o nome do diretório de trabalho usado para armazenar temporariamente dados e arquivos de esquema para a publicação quando o FTP é usado para transferir arquivos de instantâneo. *working_directory* é **nvarchar (255)** , com um padrão de NULL.  
+`[ @working_directory = ] 'working_directory'`É o nome do diretório de trabalho usado para armazenar temporariamente dados e arquivos de esquema para a publicação quando o FTP é usado para transferir arquivos de instantâneo. *working_directory* é **nvarchar (255)**, com um padrão de NULL.  
   
-`[ @use_ftp = ] 'use_ftp'`Especifica o uso de FTP em vez do protocolo típico para recuperar instantâneos. *use_ftp* é **nvarchar (5)** , com um padrão de false.  
+`[ @use_ftp = ] 'use_ftp'`Especifica o uso de FTP em vez do protocolo típico para recuperar instantâneos. *use_ftp* é **nvarchar (5)**, com um padrão de false.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]`Usa o resolvedor interativo para resolver conflitos de todos os artigos que permitem a resolução interativa. *use_interactive_resolver* é **nvarchar (5)** , com um padrão de false.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]`Usa o resolvedor interativo para resolver conflitos de todos os artigos que permitem a resolução interativa. *use_interactive_resolver* é **nvarchar (5)**, com um padrão de false.  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
@@ -251,22 +251,22 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @job_name = ] 'job_name' ]`É o nome de um trabalho de agente existente. *job_name* é **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando a assinatura for sincronizada usando um trabalho existente em vez de um trabalho recém-criado (o padrão). Se você não for membro da função de servidor fixa **sysadmin** , deverá especificar *job_login* e *job_password* ao especificar *job_name*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]`O caminho para a pasta onde os arquivos de instantâneo serão lidos se um instantâneo de dados filtrados for usado. *dynamic_snapshot_location* é **nvarchar (260)** , com um padrão de NULL. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]`O caminho para a pasta onde os arquivos de instantâneo serão lidos se um instantâneo de dados filtrados for usado. *dynamic_snapshot_location* é **nvarchar (260)**, com um padrão de NULL. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 `[ @use_web_sync = ] use_web_sync`Indica que a sincronização da Web está habilitada. *use_web_sync* é **bit**, com um padrão de 0. **1** especifica que a assinatura pull pode ser sincronizada pela Internet usando http.  
   
-`[ @internet_url = ] 'internet_url'`É o local do ouvinte de replicação (REPLISAPI. DLL) para sincronização da Web. *internet_url* é **nvarchar (260)** , com um padrão de NULL. *internet_url* é uma URL totalmente qualificada, no formato `http://server.domain.com/directory/replisapi.dll`. Se o servidor for configurado para ouvir em uma porta diferente da porta 80, o número da porta também deverá ser fornecido no formato `http://server.domain.com:portnumber/directory/replisapi.dll`, onde `portnumber` representa a porta.  
+`[ @internet_url = ] 'internet_url'`É o local do ouvinte de replicação (REPLISAPI. DLL) para sincronização da Web. *internet_url* é **nvarchar (260)**, com um padrão de NULL. *internet_url* é uma URL totalmente qualificada, no formato `http://server.domain.com/directory/replisapi.dll`. Se o servidor for configurado para ouvir em uma porta diferente da porta 80, o número da porta também deverá ser fornecido no formato `http://server.domain.com:portnumber/directory/replisapi.dll`, onde `portnumber` representa a porta.  
   
 `[ @internet_login = ] 'internet_login'`É o logon que o Agente de Mesclagem usa ao se conectar ao servidor Web que está hospedando a sincronização da Web usando a autenticação básica HTTP. *internet_login* é **sysname**, com um padrão de NULL.  
   
-`[ @internet_password = ] 'internet_password'`É a senha que o Agente de Mesclagem usa ao se conectar ao servidor Web que está hospedando a sincronização da Web usando a autenticação básica HTTP. *internet_password* é **nvarchar (524)** , com um valor padrão de NULL.  
+`[ @internet_password = ] 'internet_password'`É a senha que o Agente de Mesclagem usa ao se conectar ao servidor Web que está hospedando a sincronização da Web usando a autenticação básica HTTP. *internet_password* é **nvarchar (524)**, com um valor padrão de NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
 `[ @internet_security_mode = ] internet_security_mode`É o método de autenticação usado pelo Agente de Mesclagem ao se conectar ao servidor Web durante a sincronização da Web usando HTTPS. *internet_security_mode* é **int** e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**0**|Autenticação Básica é usada.|  
 |**1** (padrão)|Autenticação Integrada do Windows é usada.|  
@@ -278,12 +278,12 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @hostname = ] 'hostname'`Substitui o valor de HOST_NAME () quando essa função é usada na cláusula WHERE de um filtro com parâmetros. o *nome do host* é **sysname**, com um padrão de NULL.  
   
-`[ @job_login = ] 'job_login'`É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)** , sem padrão. Essa conta do Windows é sempre usada para conexões do agente com o Assinante e para conexões com o Distribuidor e o Publicador ao usar a Autenticação Integrada do Windows.  
+`[ @job_login = ] 'job_login'`É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, sem padrão. Essa conta do Windows é sempre usada para conexões do agente com o Assinante e para conexões com o Distribuidor e o Publicador ao usar a Autenticação Integrada do Windows.  
   
 `[ @job_password = ] 'job_password'`É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, sem padrão.  
   
 > [!IMPORTANT]  
->  Não armazene informações de autenticação em arquivos de script. Para melhor segurança, nomes de logon e senhas devem ser fornecidos em tempo de execução.  
+>  Não armazene informações de autenticação em arquivos de script. Para melhor segurança, nomes de logon e senhas devem ser fornecidos em runtime.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -291,21 +291,21 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="remarks"></a>Comentários  
  **sp_addmergepullsubscription_agent** é usado na replicação de mesclagem e usa uma funcionalidade semelhante à [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
- Para obter um exemplo de como especificar as configurações de segurança corretamente ao executar **sp_addmergepullsubscription_agent**, consulte [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md).  
+ Para obter um exemplo de como especificar corretamente as configurações de segurança ao executar **sp_addmergepullsubscription_agent**, consulte [criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_addmergepullsubscription_agent**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addmergepullsubscription_agent**.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergepullsubscription](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergepullsubscription](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

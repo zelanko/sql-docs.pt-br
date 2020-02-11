@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017104"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
 
-  Uma função que retorna o conjunto de todos os ancestrais de um membro especificado em um nível especificado, ou à distância especificada, a partir do membro. Com o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], o conjunto retornado consistirá sempre em um único membro - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não oferece suporte a vários pais para um único membro.  
+  Uma função que retorna o conjunto de todos os ancestrais de um membro especificado em um nível especificado, ou à distância especificada, a partir do membro. Com [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]o, o conjunto retornado sempre consistirá em um único membro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -não dá suporte a vários pais para um único membro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,24 +38,24 @@ Ancestors(Member_Expression, Distance)
  *Level_Expression*  
  Uma linguagem MDX válida que retorna um nível.  
   
- *distância*  
+ *Alcance*  
  Uma expressão numérica válida que especifica a distância do membro especificado.  
   
 ## <a name="remarks"></a>Comentários  
- Com o **ancestrais** função, você fornece a função com uma expressão de membro MDX e, em seguida, fornecer a uma expressão MDX de um nível que é um ancestral daquele membro ou uma expressão numérica que representa o número de níveis acima daquele membro. Com essas informações, o **ancestrais** função retorna o conjunto de membros (que será um conjunto que consiste de um membro) naquele nível.  
+ Com a função **ancestrais** , você fornece a função com uma expressão de membro MDX e, em seguida, fornece uma expressão MDX de um nível que é um ancestral desse membro ou uma expressão numérica que representa o número de níveis acima daquele membro. Com essas informações, a função **ancestrais** retorna o conjunto de Membros (que será um conjunto que consiste em um membro) nesse nível.  
   
 > [!NOTE]  
->  Para retornar um membro ancestral, em vez de um conjunto ancestral, use o [ancestral](../mdx/ancestor-mdx.md) função.  
+>  Para retornar um membro ancestral, em vez de um conjunto ancestral, use a função [Ancestor](../mdx/ancestor-mdx.md) .  
   
- Se uma expressão de nível for especificada, o **ancestrais** função retorna o conjunto de todos os ancestrais do membro especificado no nível especificado. Se o membro especificado não estiver dentro da mesma hierarquia como o nível especificado, a função retornará um erro.  
+ Se uma expressão de nível for especificada, a função **ancestrais** retornará o conjunto de todos os ancestrais do membro especificado no nível especificado. Se o membro especificado não estiver na mesma hierarquia que o nível especificado, a função retornará um erro.  
   
- Se uma distância for especificada, o **ancestrais** função retorna o conjunto de todos os membros que são o número de etapas especificadas na hierarquia especificada por uma expressão de membro. Um membro pode ser especificado como um membro de uma hierarquia de atributo, uma hierarquia definida pelo usuário, ou, em alguns casos, uma hierarquia pai-filho. Um número 1 retorna o conjunto de membros no nível pai, e um número 2 retorna o conjunto de membros no nível avô (se houver um). Um número 0 retorna o conjunto que inclui só o próprio membro.  
+ Se uma distância for especificada, a função **ancestrais** retornará o conjunto de todos os membros que são o número de etapas especificadas na hierarquia especificada pela expressão de membro. Um membro pode ser especificado como um membro de uma hierarquia de atributo, uma hierarquia definida pelo usuário ou, em alguns casos, uma hierarquia pai-filho. Um número 1 retorna o conjunto de membros no nível pai, e um número 2 retorna o conjunto de membros no nível avô (se houver um). Um número 0 retorna o conjunto que inclui só o próprio membro.  
   
 > [!NOTE]  
->  Use essa forma do **ancestrais** função para casos em que o nível do pai é desconhecido ou não pode ser nomeado.  
+>  Use essa forma da função **ancestrais** para casos em que o nível do pai é desconhecido ou não pode ser nomeado.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa o **ancestrais** função para retornar a medida quantidade de vendas pela Internet para um membro, seu pai e seu avô. Este exemplo usa expressões de nível para especificar os níveis a serem retornados. Os níveis estão na mesma hierarquia que o membro especificado na expressão de membro.  
+ O exemplo a seguir usa a função **ancestrais** para retornar a medida do valor de vendas pela Internet para um membro, seu pai e seu avô. Este exemplo usa expressões de nível para especificar os níveis a serem retornados. Os níveis estão na mesma hierarquia que o membro especificado na expressão de membro.  
   
 ```  
 SELECT {  
@@ -67,7 +67,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
- O exemplo a seguir usa o **ancestrais** função para retornar a medida quantidade de vendas pela Internet para um membro, seu pai e seu avô. Este exemplo usa expressões numéricas para especificar os níveis que são retornados. Os níveis estão na mesma hierarquia que o membro especificado na expressão de membro.  
+ O exemplo a seguir usa a função **ancestrais** para retornar a medida do valor de vendas pela Internet para um membro, seu pai e seu avô. Este exemplo usa expressões numéricas para especificar os níveis que são retornados. Os níveis estão na mesma hierarquia que o membro especificado na expressão de membro.  
   
 ```  
 SELECT {  
@@ -85,7 +85,7 @@ SELECT {
 FROM  [Adventure Works]  
 ```  
   
- O exemplo a seguir usa o **ancestrais** função para retornar a medida quantidade de vendas pela Internet para o pai de um membro de uma hierarquia de atributo. Este exemplo usa uma expressão numérica para especificar o nível que é retornado. Desde que o membro na expressão de membro seja um membro de uma hierarquia de atributo, seu pai é o nível [All].  
+ O exemplo a seguir usa a função **ancestrais** para retornar a medida valor de vendas pela Internet para o pai de um membro de uma hierarquia de atributo. Este exemplo usa uma expressão numérica para especificar o nível que é retornado. Desde que o membro na expressão de membro seja um membro de uma hierarquia de atributo, seu pai é o nível [All].  
   
 ```  
 SELECT {  
@@ -97,7 +97,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

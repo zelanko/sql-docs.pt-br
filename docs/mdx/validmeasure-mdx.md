@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b3bce4baf3dc3499621f67defd40a4579e9cd460
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037954"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
@@ -32,13 +32,13 @@ ValidMeasure(Tuple_Expression)
  Uma linguagem MDX válida que retorna uma tupla.  
   
 ## <a name="remarks"></a>Comentários  
- O **ValidMeasure** função retorna o valor de uma tupla, ignorando atributos que não têm nenhuma relação com o grupo de medidas da medida cujo valor retorna de tupla. Um atributo pode não estar relacionado a uma medida por dois motivos:  
+ A função **ValidMeasure** retorna o valor de uma tupla, ignorando atributos que não têm nenhuma relação com o grupo de medidas da medida cujo valor a tupla retorna. Um atributo pode não estar relacionado a uma medida por dois motivos:  
   
 -   A dimensão do atributo não tem relação com o grupo de medidas da medida na tupla.  
   
 -   A dimensão do atributo não tem uma relação com o grupo de medidas da medida, mas o atributo de granularidade não é o atributo de chave, e o atributo de granularidade não tem uma relação direta com o atributo na tupla.  
   
- O comportamento especificado por essa função é o comportamento do lado do servidor padrão e é controlado pelo **IgnoreUnrelatedDimensions** propriedade no objeto de grupo de medidas.  
+ O comportamento especificado por essa função é o comportamento padrão do lado do servidor e é controlado pela propriedade **IgnoreUnrelatedDimensions** no objeto do grupo de medidas.  
   
  Para cada atributo na tupla especificada com granularidade (ou seja, onde o membro na tupla não seja o membro Todos), a coordenada atual para cada atributo é movida da seguinte forma:  
   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

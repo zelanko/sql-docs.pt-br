@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2560043ca6acc4b5df141bcbc898ac09b21f97a8
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811534"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de banco de dados WideWorldImporters
@@ -28,10 +28,10 @@ O WideWorldImporters usa esquemas para finalidades diferentes, como armazenar da
 
 Esses esquemas contêm os dados. Várias tabelas são necessárias para todos os outros esquemas e estão localizadas no esquema do aplicativo.
 
-|Esquema|Descrição|
+|Esquema|DESCRIÇÃO|
 |-----------------------------|---------------------|
 |Aplicativo|Usuários, contatos e parâmetros de todo o aplicativo. Isso também contém tabelas de referência com dados que são usados por vários esquemas|
-|Purchasing|Compras de itens de estoque de fornecedores e detalhes sobre fornecedores.|  
+|Compra|Compras de itens de estoque de fornecedores e detalhes sobre fornecedores.|  
 |Sales|Vendas de itens de estoque para clientes de varejo e detalhes sobre clientes e pessoas de vendas. |  
 |Warehouse|Estoque de item de estoque e transações.|  
 
@@ -39,7 +39,7 @@ Esses esquemas contêm os dados. Várias tabelas são necessárias para todos os
 
 Esses esquemas são usados para aplicativos externos que não têm permissão para acessar as tabelas de dados diretamente. Eles contêm exibições e procedimentos armazenados usados por aplicativos externos.
 
-|Esquema|Descrição|
+|Esquema|DESCRIÇÃO|
 |-----------------------------|---------------------|
 |Site|Todo o acesso ao banco de dados do site da empresa é por meio desse esquema.|
 |Relatórios|Todo o acesso ao banco de dados de Reporting Services relatórios é por meio desse esquema.|
@@ -51,7 +51,7 @@ Observe que os esquemas de relatórios e PowerBI não são usados na versão ini
 
 Esquemas de finalidade especial
 
-|Esquema|Descrição|
+|Esquema|DESCRIÇÃO|
 |-----------------------------|---------------------|
 |Integração|Objetos e procedimentos necessários para a integração do data warehouse (ou seja, migrar os dados para o banco de WideWorldImportersDW).|
 |Sequências|Armazena as sequências usadas por todas as tabelas no aplicativo.|
@@ -64,10 +64,10 @@ Todas as tabelas no banco de dados estão nos esquemas de data.
 
 Detalhes de parâmetros e pessoas (usuários e contatos), juntamente com tabelas de referência comuns (comuns a vários outros esquemas).
 
-|Tabela|Descrição|
+|Tabela|DESCRIÇÃO|
 |-----------------------------|---------------------|
-|Sistemaparameters|Contém parâmetros configuráveis para todo o sistema.|
-|Porta|Contém nomes de usuário, informações de contato, para todos os que usam o aplicativo e para as pessoas que a Wide World Importers lidam em organizações de clientes. Isso inclui a equipe, os clientes, os fornecedores e outros contatos. Para pessoas que receberam permissão para usar o sistema ou site, as informações incluem detalhes de logon.|
+|SystemParameters|Contém parâmetros configuráveis para todo o sistema.|
+|Pessoas|Contém nomes de usuário, informações de contato, para todos os que usam o aplicativo e para as pessoas que a Wide World Importers lidam em organizações de clientes. Isso inclui a equipe, os clientes, os fornecedores e outros contatos. Para pessoas que receberam permissão para usar o sistema ou site, as informações incluem detalhes de logon.|
 |Primeiras|Há muitos endereços armazenados no sistema, para pessoas, endereços de entrega da organização do cliente, endereços de retirada em fornecedores, etc. Sempre que um endereço é armazenado, há uma referência a uma cidade nesta tabela. Também há um local espacial para cada cidade.|
 |StateProvinces|As cidades fazem parte de Estados ou províncias. Esta tabela tem detalhes daqueles, incluindo dados espaciais que descrevem os limites de cada Estado ou província.|
 |Países|Estados ou províncias são parte dos países. Esta tabela tem detalhes daqueles, incluindo dados espaciais que descrevem os limites de cada país.|
@@ -79,9 +79,9 @@ Detalhes de parâmetros e pessoas (usuários e contatos), juntamente com tabelas
 
 Detalhes de fornecedores e compras de itens de estoque.
 
-|Tabela|Descrição|
+|Tabela|DESCRIÇÃO|
 |-----------------------------|---------------------|
-|Fornecedores|Tabela principal de entidades para fornecedores (organizações)|
+|Suppliers|Tabela principal de entidades para fornecedores (organizações)|
 |SupplierCategories|Categorias para fornecedores (por exemplo, Novelties, brinquedos, roupas, empacotamento etc.)|
 |SupplierTransactions|Todas as transações financeiras que são relacionadas ao fornecedor (faturas, pagamentos)|
 |PurchaseOrders|Detalhes de pedidos de compra do fornecedor|
@@ -92,14 +92,14 @@ Detalhes de fornecedores e compras de itens de estoque.
 
 Detalhes de clientes, vendedores e vendas de itens de estoque.
 
-|Tabela|Descrição|
+|Tabela|DESCRIÇÃO|
 |-----------------------------|---------------------|
-|Customers|Tabelas de entidade principal para clientes (organizações ou indivíduos)|
+|Clientes|Tabelas de entidade principal para clientes (organizações ou indivíduos)|
 |CustomerCategories|Categorias para clientes (do IE novidade lojas, supermercados, etc.)|
 |BuyingGroups|As organizações de clientes podem fazer parte de grupos que exercem maior poder de compra|
 |CustomerTransactions|Todas as transações financeiras relacionadas ao cliente (faturas, pagamentos)|
 |SpecialDeals|Preços especiais. Isso pode incluir preços fixos, desconto em dólares ou percentual de desconto.|
-|Orders|Detalhe de pedidos de clientes|
+|Pedidos|Detalhe de pedidos de clientes|
 |OrderLines|Linhas de detalhes de pedidos de clientes|
 |Faturas|Detalhes de notas fiscais de clientes|
 |InvoiceLines|Linhas de detalhes de notas fiscais do cliente|
@@ -108,7 +108,7 @@ Detalhes de clientes, vendedores e vendas de itens de estoque.
 
 Detalhes de itens de estoque, seus ententos e transações.
 
-|Tabela|Descrição|
+|Tabela|DESCRIÇÃO|
 |-----------------------------|---------------------|
 |StockItems|Tabela principal de entidade para itens de estoque|
 |StockItemHoldings|Colunas não temporais para itens de estoque. Essas são colunas atualizadas com frequência.|
@@ -121,7 +121,7 @@ Detalhes de itens de estoque, seus ententos e transações.
 |ColdRoomTemperatures|Temperaturas regularmente registradas de resfriadores de sala frio|
 
 
-## <a name="design-considerations"></a>Considerações de design
+## <a name="design-considerations"></a>Considerações sobre o design
 
 O design do banco de dados está sujeito e não há uma maneira correta ou errada de criar um banco de dados. Os esquemas e as tabelas neste banco de dados mostram ideias sobre como você pode criar seu próprio banco de dados.
 
@@ -131,9 +131,9 @@ O WideWorldImporters usa um pequeno número de esquemas para que seja fácil ent
 
 Sempre que possível, o banco de dados coloca tabelas que geralmente são consultadas juntas no mesmo esquema para minimizar a complexidade da junção.
 
-O esquema de banco de dados foi gerado pelo código com base em uma série de tabelas de metadados em outro banco de dados WWI_Preparation. Isso dá ao WideWorldImporters um grau muito alto de consistência de design, consistência de nomenclatura e integridade. Para obter detalhes sobre como o esquema foi gerado, consulte o código-fonte: [Wide-World-outporters/WWI-Database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
+O esquema de banco de dados foi gerado pelo código com base em uma série de tabelas de metadados em outro WWI_Preparation de banco de dados. Isso dá ao WideWorldImporters um grau muito alto de consistência de design, consistência de nomenclatura e integridade. Para obter detalhes sobre como o esquema foi gerado, consulte o código-fonte: [Wide-World-outporters/WWI-Database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
-### <a name="table-design"></a>Design de tabela
+### <a name="table-design"></a>Ao design da tabela
 
 - Todas as tabelas têm chaves primárias de coluna única para a simplicidade de junção.
 - Todos os esquemas, tabelas, colunas, índices e restrições de verificação têm uma propriedade estendida de descrição que pode ser usada para identificar a finalidade do objeto ou da coluna. As tabelas com otimização de memória são uma exceção a isso, pois atualmente não dão suporte a propriedades estendidas.
@@ -200,11 +200,11 @@ Esses procedimentos são usados para configurar o exemplo. Eles são usados para
 |AddRoleMemberIfNonexistant|Adiciona um membro a uma função se o membro ainda não estiver na função|
 |Configuration_ApplyAuditing|Adiciona auditoria. A auditoria de servidor é aplicada a bancos de dados Standard Edition; a auditoria de banco de dados adicional é adicionada para a Enterprise Edition.|
 |Configuration_ApplyColumnstoreIndexing|Aplica a indexação columnstore `Sales.OrderLines` para `Sales.InvoiceLines` e e reindexe adequadamente.|
-|Configuration_ApplyFullTextIndexing|Aplica índices de texto `Application.People`completo `Sales.Customers`a `Purchasing.Suppliers`,, `Warehouse.StockItems`e. Substitui `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers` ,,porprocedimentosdesubstituiçãoqueusamindexaçãodetextocompleto.`Website.SearchForStockItemsByTags` `Website.SearchForStockItems`|
+|Configuration_ApplyFullTextIndexing|Aplica índices de texto `Application.People`completo `Sales.Customers`a `Purchasing.Suppliers`,, `Warehouse.StockItems`e. Substitui `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers` `Website.SearchForStockItems`,, `Website.SearchForStockItemsByTags` por procedimentos de substituição que usam indexação de texto completo.|
 |Configuration_ApplyPartitioning|Aplica o particionamento de tabela `Sales.CustomerTransactions` para `Purchasing.SupplierTransactions`e e reorganiza os índices para adaptá-los.|
 |Configuration_ApplyRowLevelSecurity|Aplica a segurança em nível de linha para filtrar clientes por funções relacionadas à região de vendas.|
 |Configuration_ConfigureForEnterpriseEdition|Aplica indexação columnstore, texto completo, na memória, polybase e particionamento.|
-|Configuration_EnableInMemory|Adiciona um grupo de arquivos com otimização de memória (quando não estiver trabalhando no Azure `Warehouse.ColdRoomTemperatures`) `Warehouse.VehicleTemperatures` , substitui, por equivalentes na memória, e migra os dados, `Website.OrderLineList`recria os `Website.OrderIDList`tipos `Website.OrderList`de tabela `Website.SensorDataList` ,,, com equivalentes com otimização de memória, descarta e recria os procedimentos `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`e `Website.RecordColdRoomTemperatures` que usa esses tipos de tabela.|
+|Configuration_EnableInMemory|Adiciona um grupo de arquivos com otimização de memória (quando não estiver trabalhando no Azure `Warehouse.ColdRoomTemperatures`) `Warehouse.VehicleTemperatures` , substitui, por equivalentes na memória, e migra os dados, recria os `Website.OrderIDList`tipos `Website.OrderList`de `Website.OrderLineList`tabela `Website.SensorDataList` ,,, com equivalentes com otimização de memória, descarta e recria os `Website.InvoiceCustomerOrders`procedimentos `Website.InsertCustomerOrders`, e `Website.RecordColdRoomTemperatures` que usa esses tipos de tabela.|
 |Configuration_RemoveAuditing|Remove a configuração de auditoria.|
 |Configuration_RemoveRowLevelSecurity|Remove a configuração de segurança em nível de linha (necessária para alterações nas tabelas associadas).|
 |CreateRoleIfNonExistant|Cria uma função de banco de dados, caso ela ainda não exista.|

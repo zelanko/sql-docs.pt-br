@@ -1,5 +1,5 @@
 ---
-title: Mensagem de exceção programação da caixa | Microsoft Docs
+title: Programação da caixa de mensagem de exceção | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 205638b82e8d0d71a3d674bd970e4bf8d2e3ea5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753368"
 ---
 # <a name="exception-message-box-programming"></a>Programação da caixa de mensagem de exceção
-  A caixa de mensagem de exceção é uma interface programática que é instalada com o e usada por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes gráficos. A caixa de mensagem de exceção é um assembly gerenciado com suporte que você pode usar em aplicativos para proporcionar um controle significativamente maior sobre a experiência de troca de mensagens e oferecer aos usuários as opções de salvar o conteúdo da mensagem de erro para referência futura e obter ajuda sobre mensagens. Como a caixa de mensagem de exceção é instalada por todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exceto [!INCLUDE[ssEW](../../includes/ssew-md.md)], você pode usá-lo sem nenhuma configuração adicional em qualquer computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente componentes foram instalados.  
+  A caixa de mensagem de exceção é uma interface programática que é instalada com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e usada por componentes gráficos. A caixa de mensagem de exceção é um assembly gerenciado com suporte que você pode usar em aplicativos para proporcionar um controle significativamente maior sobre a experiência de troca de mensagens e oferecer aos usuários as opções de salvar o conteúdo da mensagem de erro para referência futura e obter ajuda sobre mensagens. Como a caixa de mensagem de exceção é instalada por todas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as [!INCLUDE[ssEW](../../includes/ssew-md.md)]edições do, exceto, você pode usá-la sem nenhuma configuração adicional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em qualquer computador em que os componentes cliente tenham sido instalados.  
   
  A classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> no namespace <xref:Microsoft.SqlServer.MessageBox> tem todas as funcionalidades da classe <xref:System.Windows.Forms.MessageBox> e muito mais. Ideal para qualquer tarefa na qual <xref:System.Windows.Forms.MessageBox> possa ser usado, a <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> foi projetada para tratar exceções de código gerenciado de forma esmerada. A caixa de mensagem de exceção permite que você faça o seguinte:  
   
@@ -33,12 +33,12 @@ ms.locfileid: "62753368"
   
 -   Permita que os usuários copiem o título da mensagem, o texto, o texto do botão e os links de ajuda (se houver) com facilidade para a Área de Transferência ou envie essas informações em uma mensagem de email.  
   
--   Exibir todos os erros e exceções de subjacentes em uma árvore de relações hierárquicas quando os usuários clicam **informações adicionais**.  
+-   Exibe todas as exceções e erros subjacentes em uma árvore de relações hierárquica quando os usuários clicam em **informações adicionais**.  
   
 -   Permita que os usuários decidam se a mensagem deverá ser exibida quando a mesma exceção ocorrer novamente.  
   
 -   Acesse um sistema de ajuda online usando um link de ajuda associado à exceção.  
   
- Para obter mais informações, consulte [caixa de mensagem de exceção de programa](../../../2014/database-engine/dev-guide/program-exception-message-box.md).  
+ Para obter mais informações, consulte [caixa de mensagem de exceção do programa](../../../2014/database-engine/dev-guide/program-exception-message-box.md).  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b673f87ffd04a1cf89b063cc129c769c258791ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038227"
 ---
 # <a name="mdx-data-definition---drop-kpi"></a>Definição de dados MDX – DROP KPI
@@ -34,7 +34,7 @@ DROP KPI CURRENTCUBE | Cube_Name.KPI_Name
  *KPI_Name*  
  Uma cadeia de caracteres válida que especifica o nome do KPI a ser eliminado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instrução CREATE KPI &#40;MDX&#41;](../mdx/mdx-data-definition-create-kpi.md)   
  [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   

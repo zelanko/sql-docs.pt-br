@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655332"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
@@ -56,7 +56,7 @@ ms.locfileid: "62655332"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Definir opções de resolução de conflitos de atualização na fila &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
--   Programação Transact-SQL de replicação:  [Habilitar atualização de assinaturas para publicações transacionais](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Programação Transact-SQL de replicação: [Habilitar atualização de assinaturas para publicações transacionais](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Para exibir conflitos de dados**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62655332"
 ### <a name="subscriber-wins"></a>Assinante vence  
  A detecção de conflitos segundo a política Assinante vence significa que a última transação de Assinante que atualizar o Publicador vence. Nesse caso, quando um conflito é detectado, a transação enviada pelo Assinante ainda é usada, e o Publicador é atualizado. Essa política é adequada para aplicativos em que essas alterações não comprometem a integridade de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)  
   
   

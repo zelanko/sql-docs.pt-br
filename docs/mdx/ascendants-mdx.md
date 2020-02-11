@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 16c6f812d1d7cae5a81a8e64fb425f4d33f4cb5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017064"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
@@ -32,10 +32,10 @@ Ascendants(Member_Expression)
  Uma linguagem MDX válida que retorna um membro.  
   
 ## <a name="remarks"></a>Comentários  
- O **ascendentes** função retorna todos os ancestrais de um membro do membro até a parte superior da hierarquia do membro; mais especificamente, ele executa uma passagem pós-pedido da hierarquia para o membro especificado e, em seguida, Retorna que todos os membros ascendentes relacionados ao membro, incluindo ele mesmo, em um conjunto. Isso está em contraste com o [ancestral](../mdx/ancestor-mdx.md) função, que retorna um membro ascendente específico, ou ancestral, em um nível específico.  
+ A função **ascendentes** retorna todos os ancestrais de um membro do próprio membro até a parte superior da hierarquia do membro; mais especificamente, ele executa uma passagem de ordem posterior da hierarquia para o membro especificado e, em seguida, retorna todos os membros de ascendentes relacionados ao membro, inclusive em um conjunto. Isso é diferente da função [ancestral](../mdx/ancestor-mdx.md) , que retorna um membro ascendentes específico, ou ancestral, em um nível específico.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna a contagem de pedidos do revendedor para o `[Sales Territory].[Northwest]` membro e todos os descendentes daquele membro a partir de **Adventure Works** cubo. O **ascendentes** função constrói o conjunto que inclui o `[Sales Territory].[Northwest]` membro e seus ascendentes para o eixo de linhas.  
+ O exemplo a seguir retorna a contagem de pedidos de revendedor para o `[Sales Territory].[Northwest]` membro e todos os ascendentes do membro do cubo **Adventure Works** . A função **ascendentes** constrói o conjunto que inclui o `[Sales Territory].[Northwest]` membro e seu ascendentes para o eixo de linhas.  
   
 ```  
 SELECT  
@@ -50,7 +50,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

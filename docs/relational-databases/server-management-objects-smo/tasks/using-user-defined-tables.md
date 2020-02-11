@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911213"
 ---
 # <a name="using-user-defined-tables"></a>Usando tabelas definidas pelo usuário
@@ -34,7 +34,7 @@ ms.locfileid: "70911213"
  A classe <xref:Microsoft.SqlServer.Management.Smo.DataType> é usada para especificar o tipo de dados que é associado a colunas e parâmetros. Use esse tipo para especificar o tipo de tabela definido pelo usuário como um parâmetro para funções definidas pelo usuário e procedimentos armazenados.  
   
 ## <a name="examples"></a>Exemplos  
-Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Criando uma tabela definida pelo usuário no Visual Basic  
@@ -255,7 +255,7 @@ $udf.TextBody = "BEGIN RETURN (GETDATE());end"
 $udf.Create()           
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Arquivos e grupos de arquivos do banco de dados](../../../relational-databases/databases/database-files-and-filegroups.md)   
   

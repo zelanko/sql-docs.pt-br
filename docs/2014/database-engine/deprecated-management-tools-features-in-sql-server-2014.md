@@ -1,5 +1,5 @@
 ---
-title: Recursos no SQL Server 2014 das ferramentas de gerenciamento preteridos | Microsoft Docs
+title: Recursos de ferramentas de gerenciamento preteridos no SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753948"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Recursos das Ferramentas de Gerenciamento obsoletos no SQL Server 2014
@@ -22,20 +22,20 @@ ms.locfileid: "62753948"
   
 |Recurso|Estágio de obsolescência|  
 |-------------|-----------------------|  
-|[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] API de servidor registrado|Anúncio|  
+|[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]API de servidor registrado|Anúncio|  
 |sqlps.exe|Aviso|  
 |osql.exe|Aviso|  
 |SQLMail|Aviso|  
-|Classe SMO: Classe do SQLServer|Anúncio|  
-|Classe SMO: Classe do SQLServer|Anúncio|  
-|Classe SMO: Classe. databaseoptions|Anúncio|  
-|Classe SMO: Propriedade. databaseddltrigger. notforreplication|Anúncio|  
+|Classe SMO: classe Microsoft.SQLServer.Management.Smo.Information|Anúncio|  
+|Classe SMO: classe Microsoft.SQLServer.Management.Smo.Settings|Anúncio|  
+|Classe SMO: classe Microsoft.SQLServer.Management.Smo.DatabaseOptions|Anúncio|  
+|Classe SMO: propriedade Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication|Anúncio|  
 |Database Project System, incluindo a integração com o controle de código-fonte, no SSMS|Anúncio|  
 |Notificações Net send ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent)|Anúncio|  
 |Notificações por pager ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent)|Anúncio|  
 |Subsistema ActiveX ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent)|Anúncio|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compatibilidade com versões anteriores](../../2014/getting-started/backward-compatibility.md)  
   
   

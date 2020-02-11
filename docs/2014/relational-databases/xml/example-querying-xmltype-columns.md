@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637726"
 ---
-# <a name="example-querying-xmltype-columns"></a>Exemplo: consultando colunas XMLType
+# <a name="example-querying-xmltype-columns"></a>Exemplo: Consultando colunas de tipo XML
   A consulta a seguir inclui colunas de tipo `xml`. A consulta recupera a ID, nome e etapas de fabricação do modelo do produto no primeiro local da coluna `Instructions` de tipo `xml`.  
   
 ## <a name="example"></a>Exemplo  
@@ -63,7 +63,7 @@ FOR XML RAW ('ProductModelData')
 go  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <ProductModelData ProductModelID="5" Name="HL Mountain Frame" />  
@@ -91,7 +91,7 @@ FOR XML RAW ('ProductModelData'), root('MyRoot'), ELEMENTS XSINIL
 go  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -113,7 +113,7 @@ go
 </MyRoot>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usar modo RAW com FOR XML](use-raw-mode-with-for-xml.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Usar o modo RAW com FOR XML](use-raw-mode-with-for-xml.md)  
   
   

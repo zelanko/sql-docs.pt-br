@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721880"
 ---
 # <a name="replication-agent-executables-concepts"></a>Conceitos dos executáveis do Replication Agent
@@ -34,7 +34,7 @@ ms.locfileid: "62721880"
   
  As instâncias dos agentes de replicação a seguir podem ser executadas por meio de arquivos executáveis.  
   
--   [Agente de Distribuição de Replicação](../agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../agents/replication-distribution-agent.md)  
   
 -   [Agente do Leitor de Log de Replicação](../agents/replication-log-reader-agent.md)  
   

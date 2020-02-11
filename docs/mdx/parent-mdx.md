@@ -1,5 +1,5 @@
 ---
-title: Função Parent (MDX) | Microsoft Docs
+title: Pai (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9449c81e9f8e8de0c21d96062337e91b2f56398d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037189"
 ---
 # <a name="parent-mdx"></a>Função Parent (MDX)
@@ -32,7 +32,7 @@ Member_Expression.Parent
  Uma linguagem MDX válida que retorna um membro.  
   
 ## <a name="remarks"></a>Comentários  
- O **pai** função retorna o membro pai do membro especificado.  
+ A função **Parent** retorna o membro pai do membro especificado.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir retornam o pai do membro 1º de julho de 2001. O primeiro exemplo especifica esse membro no contexto da hierarquia de atributo Data e retorna o membro Todos os Períodos.  
@@ -49,7 +49,7 @@ SELECT [Date].[Calendar].[July 1, 2001].Parent ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_column_store_row_group_operational_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_column_store_row_group_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,54 +14,54 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03e97e38eb396aa24c9779d07f269a60f117ab09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005044"
 ---
-# <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
+# <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Atual retorna o nível de linha e/s, bloqueio e método de acesso para rowgroups compactados em um índice columnstore. Use **sys.dm_db_column_store_row_group_operational_stats** para rastrear o período de tempo uma consulta de usuário deve aguardar para ler ou gravar em um rowgroup compactado ou uma partição de um índice columnstore e identificar rowgroups que estão encontrando atividade de e/s significativa ou pontos de acesso.  
+  Retorna a atividade atual de e/s de nível de linha, de bloqueio e de método de acesso para RowGroups compactados em um índice columnstore. Use **Sys. dm_db_column_store_row_group_operational_stats** para controlar o período de tempo que uma consulta de usuário deve aguardar para ler ou gravar em um rowgroup compactado ou partição de um índice columnstore e identificar grupos de itens que estão encontrando atividade de e/s significativa ou pontos de acesso.  
   
- Índices de columnstore na memória não aparecem nessa DMV.  
+ Os índices columnstore na memória não aparecem nessa DMV.  
  
  
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID da tabela com índice columnstore.|  
+|**object_id**|**int**|ID da tabela com o índice columnstore.|  
 |**index_id**|**int**|ID do índice columnstore.|  
 |**partition_number**|**int**|Número de partição com base 1 no índice ou heap.|  
-|**row_group_id**|**int**|ID do rowgroup no índice columnstore. Isso é exclusivo dentro de uma partição.|  
-|**scan_count**|**int**|Número de exames por meio do grupo de linhas, desde a última reinicialização do SQL.|  
-|**delete_buffer_scan_count**|**int**|Número de vezes que o buffer de exclusão foi usado para determinar as linhas excluídas nesse grupo de linhas. Isso inclui acessar a tabela de hash na memória e a árvore b subjacente.|  
-|**index_scan_count**|**int**|Número de vezes que a partição do índice columnstore foi examinada. Isso é o mesmo para todos os rowgroups na partição.|  
-|**rowgroup_lock_count**|**bigint**|Contagem cumulativa de solicitações de bloqueio para esse grupo de linhas desde a última reinicialização do SQL.|  
-|**rowgroup_lock_wait_count**|**bigint**|Número cumulativo de vezes que o mecanismo de banco de dados esperou por esse bloqueio de rowgroup desde a última reinicialização do SQL.|  
-|**rowgroup_lock_wait_in_ms**|**bigint**|Número cumulativo de milissegundos que o mecanismo de banco de dados aguardado esse bloqueio do rowgroup desde a última reinicialização do SQL.|  
+|**row_group_id**|**int**|ID do rowgroup no índice columnstore. Isso é exclusivo em uma partição.|  
+|**scan_count**|**int**|Número de verificações por meio do rowgroup desde a última reinicialização do SQL.|  
+|**delete_buffer_scan_count**|**int**|Número de vezes que o buffer de exclusão foi usado para determinar as linhas excluídas nesse rowgroup. Isso inclui o acesso à tabela de hash na memória e ao árvore b subjacente.|  
+|**index_scan_count**|**int**|Número de vezes que a partição de índice columnstore foi verificada. Isso é o mesmo para todos os grupos de rowgroup na partição.|  
+|**rowgroup_lock_count**|**bigint**|Contagem cumulativa de solicitações de bloqueio para este rowgroup desde a última reinicialização do SQL.|  
+|**rowgroup_lock_wait_count**|**bigint**|Número cumulativo de vezes que o mecanismo de banco de dados aguardou esse bloqueio de rowgroup desde a última reinicialização do SQL.|  
+|**rowgroup_lock_wait_in_ms**|**bigint**|Número cumulativo de milissegundos que o mecanismo de banco de dados aguardou nesse bloqueio de rowgroup desde a última reinicialização do SQL.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer as seguintes permissões:  
   
 -   Permissão CONTROL na tabela especificada por object_id.  
   
--   A permissão VIEW DATABASE STATE para retornar informações sobre todos os objetos de banco de dados, usando o curinga de objeto @*object_id* = NULL  
+-   Permissão VIEW DATABASE STATE para retornar informações sobre todos os objetos no banco de dados, usando o curinga do objeto @*object_id* = NULL  
   
  Conceder VIEW DATABASE STATE permite que todos os objetos no banco de dados sejam retornados, independentemente de qualquer permissão CONTROL negada a objetos específicos.  
   
- Negar VIEW DATABASE STATE impede que todos os objetos do banco de dados sejam retornados, independentemente de qualquer permissão CONTROL concedida a objetos específicos. Além disso, quando o curinga de banco de dados @*database_id*= NULL for especificado, o banco de dados é omitido.  
+ Negar VIEW DATABASE STATE impede que todos os objetos do banco de dados sejam retornados, independentemente de qualquer permissão CONTROL concedida a objetos específicos. Além disso, quando o curinga do banco de dados @*database_id*= NULL é especificado, o banco de dados é omitido.  
   
- Para obter mais informações, consulte [funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Para obter mais informações, consulte [funções e exibições de gerenciamento dinâmico &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições e funções de gerenciamento dinâmico relacionadas ao índice &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys. dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
+ [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   

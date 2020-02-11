@@ -1,5 +1,5 @@
 ---
-title: A execução ODBC preparada | Microsoft Docs
+title: Execução preparada ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2107ca1eeecc6fad24311c5bce629784ae4ceff0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68023285"
 ---
 # <a name="prepared-execution-odbc"></a>Execução preparada ODBC
-Execução preparada é uma maneira eficiente para executar uma instrução mais de uma vez. A instrução é compilada pela primeira vez, ou *preparado,* em um plano de acesso. O plano de acesso é, então, executado uma ou mais vezes em um momento posterior. Para obter mais informações sobre os planos de acesso, consulte [processar uma instrução SQL](../../../odbc/reference/processing-a-sql-statement.md).  
+A execução preparada é uma maneira eficiente de executar uma instrução mais de uma vez. A instrução é primeiro compilada ou *preparada* em um plano de acesso. O plano de acesso é então executado uma ou mais vezes em um momento posterior. Para obter mais informações sobre planos de acesso, consulte [processando uma instrução SQL](../../../odbc/reference/processing-a-sql-statement.md).  
   
- Execução preparada normalmente é usada por aplicativos verticais e personalizados para executar repetidamente a mesma instrução SQL com parâmetros. Por exemplo, o código a seguir prepara uma instrução para atualizar os preços das diferentes partes. Em seguida, executar a instrução várias vezes com valores de parâmetros diferentes cada vez.  
+ A execução preparada é comumente usada por aplicativos verticais e personalizados para executar repetidamente a mesma instrução SQL parametrizada. Por exemplo, o código a seguir prepara uma instrução para atualizar os preços de diferentes partes. Em seguida, ele executa a instrução várias vezes com valores de parâmetro diferentes a cada vez.  
   
 ```  
 SQLREAL       Price;  
@@ -47,48 +47,48 @@ while (GetPrice(&PartID, &Price)) {
 }  
 ```  
   
- Execução preparada é mais rápida que a execução direta para instruções executadas mais de uma vez, principalmente porque a instrução é compilada somente uma vez. instruções executadas diretamente são compiladas sempre que forem executados. Execução preparada também pode fornecer que uma redução no tráfego de rede porque o driver pode enviar um identificador de plano de acesso à fonte de dados cada vez que a instrução é executada, em vez de uma instrução SQL inteira, se o acesso a dados fonte dá suporte a identificadores de plano.  
+ A execução preparada é mais rápida do que a execução direta de instruções executadas mais de uma vez, principalmente porque a instrução é compilada apenas uma vez; as instruções executadas diretamente são compiladas cada vez que são executadas. A execução preparada também pode fornecer uma redução no tráfego de rede, pois o driver pode enviar um identificador de plano de acesso para a fonte de dados cada vez que a instrução for executada, em vez de uma instrução SQL inteira, se a fonte de dados der suporte a identificadores de plano de acesso.  
   
- O aplicativo pode recuperar os metadados do conjunto de resultados após a instrução é preparada e antes de ser executado. No entanto, retornando metadados para preparado, instruções não executadas é caras para alguns drivers e deve ser evitada pelos aplicativos interoperáveis se possível. Para obter mais informações, consulte [metadados de conjunto de resultados](../../../odbc/reference/develop-app/result-set-metadata.md).  
+ O aplicativo pode recuperar os metadados para o conjunto de resultados depois que a instrução é preparada e antes de ser executada. No entanto, retornar metadados para instruções preparadas e não executadas é caro para alguns drivers e deve ser evitado por aplicativos interoperáveis, se possível. Para obter mais informações, consulte [metadados do conjunto de resultados](../../../odbc/reference/develop-app/result-set-metadata.md).  
   
- A execução preparada não deve ser usada para instruções executadas uma única vez. Para tais instruções, é um pouco mais lento do que a execução direta porque ele requer uma chamada de função ODBC adicional.  
+ A execução preparada não deve ser usada para instruções executadas uma única vez. Para essas instruções, é um pouco mais lento do que a execução direta porque requer uma chamada de função ODBC adicional.  
   
 > [!IMPORTANT]  
->  Confirmar ou reverter uma transação, ou explicitamente chamando **SQLEndTran** ou trabalhando no modo de confirmação automática, faz com que algumas fontes de dados excluir os planos de acesso para todas as instruções em uma conexão. Para obter mais informações, consulte as opções SQL_CURSOR_COMMIT_BEHAVIOR e SQL_CURSOR_ROLLBACK_BEHAVIOR na [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função.  
+>  A confirmação ou reversão de uma transação, seja chamando explicitamente **SQLEndTran** ou trabalhando no modo de confirmação automática, faz com que algumas fontes de dados excluam os planos de acesso para todas as instruções em uma conexão. Para obter mais informações, consulte as opções SQL_CURSOR_COMMIT_BEHAVIOR e SQL_CURSOR_ROLLBACK_BEHAVIOR na descrição da função [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) .  
   
  Para preparar e executar uma instrução, o aplicativo:  
   
-1.  Chamadas **SQLPrepare** e passa uma cadeia de caracteres que contém a instrução SQL.  
+1.  Chama **SQLPrepare** e passa a ele uma cadeia de caracteres que contém a instrução SQL.  
   
-2.  Define os valores de quaisquer parâmetros. Parâmetros podem ser definidos, na verdade, antes ou depois de preparar a instrução. Para obter mais informações, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md), mais adiante nesta seção.  
+2.  Define os valores de qualquer parâmetro. Os parâmetros podem realmente ser definidos antes ou depois da preparação da instrução. Para obter mais informações, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md), mais adiante nesta seção.  
   
-3.  Chamadas **SQLExecute** e executa qualquer processamento adicional que é necessário, como buscar dados.  
+3.  Chama **SQLExecute** e faz qualquer processamento adicional necessário, como buscar dados.  
   
-4.  Repete as etapas 2 e 3 conforme necessário.  
+4.  Repete as etapas 2 e 3, conforme necessário.  
   
-5.  Quando **SQLPrepare** é chamado, o driver:  
+5.  Quando **SQLPrepare** for chamado, o driver:  
   
-    -   Modifica a instrução SQL para usar a gramática SQL da fonte de dados sem analisar a instrução. Isso inclui substituindo as sequências de escape discutidas [sequências de Escape no ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). O aplicativo pode recuperar o formulário modificado de uma instrução SQL, chamando **SQLNativeSql**. Sequências de escape não são substituídas, se o atributo de instrução SQL_ATTR_NOSCAN está definido.  
+    -   Modifica a instrução SQL para usar a gramática SQL da fonte de dados sem analisar a instrução. Isso inclui substituir as sequências de escape abordadas em [sequências de escape no ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). O aplicativo pode recuperar a forma modificada de uma instrução SQL chamando **SQLNativeSql**. As sequências de escape não serão substituídas se o atributo da instrução SQL_ATTR_NOSCAN for definido.  
   
-    -   Envia a instrução para a fonte de dados para preparação.  
+    -   Envia a instrução à fonte de dados para preparação.  
   
-    -   Armazena o identificador de plano de acesso retornado para execução posterior (se a preparação bem-sucedida) ou retorna erros (se a preparação da falha). Os erros incluem erros sintáticos, como o SQLSTATE 42000 (sintaxe ou violação de acesso) e erros semânticos, como o SQLSTATE 42S02 (Base a tabela ou exibição não encontrado).  
+    -   Armazena o identificador do plano de acesso retornado para execução posterior (se a preparação for bem-sucedida) ou retorna quaisquer erros (se a preparação falhar). Os erros incluem erros sintáticos como SQLSTATE 42000 (erro de sintaxe ou violação de acesso) e erros semânticos como SQLSTATE 42S02 (tabela base ou exibição não encontrada).  
   
         > [!NOTE]  
-        >  Alguns drivers não retornar erros neste momento, mas retornar em vez disso, quando a instrução é executada ou quando são chamadas de funções de catálogo. Portanto, **SQLPrepare** podem parecer ter êxito quando na verdade ele falhou.  
+        >  Alguns drivers não retornam erros neste ponto, mas, em vez disso, retornam-os quando a instrução é executada ou quando as funções de catálogo são chamadas. Portanto, o **SQLPrepare** pode parecer ter êxito quando, na verdade, falhou.  
   
 6.  Quando **SQLExecute** é chamado, o driver:  
   
-    -   Recupera os valores de parâmetro atuais e converte-os conforme necessário. Para obter mais informações, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md), mais adiante nesta seção.  
+    -   Recupera os valores de parâmetro atuais e os converte conforme necessário. Para obter mais informações, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md), mais adiante nesta seção.  
   
-    -   Envia o identificador do plano de acesso e os valores de parâmetro convertido para a fonte de dados.  
+    -   Envia o identificador do plano de acesso e os valores de parâmetro convertidos para a fonte de dados.  
   
-    -   Retorna todos os erros. Esses são erros de tempo de execução geralmente como o SQLSTATE 24000 (estado de cursor inválido). No entanto, alguns drivers retornam erros sintáticos e semânticos neste momento.  
+    -   Retorna quaisquer erros. Esses são geralmente erros de tempo de execução como o SQLSTATE 24000 (estado de cursor inválido). No entanto, alguns drivers retornam erros sintáticos e semânticos neste momento.  
   
- Se a fonte de dados não der suporte a preparação da instrução, o driver deve emulá-lo a medida do possível. Por exemplo, o driver pode fazer nada quando **SQLPrepare** é chamado e, em seguida, realizar a execução direta da instrução quando **SQLExecute** é chamado.  
+ Se a fonte de dados não oferecer suporte à preparação de instrução, o driver deverá emular isso na extensão possível. Por exemplo, o driver pode não fazer nada quando **SQLPrepare** é chamado e, em seguida, executa a execução direta da instrução quando **SQLExecute** é chamado.  
   
- Se a fonte de dados oferece suporte à verificação sem execução de sintaxe, o driver pode enviar a instrução de verificação quando **SQLPrepare** é chamado e enviar a instrução para execução quando **SQLExecute** é chamado.  
+ Se a fonte de dados der suporte à verificação de sintaxe sem execução, o driver poderá enviar a instrução para verificar quando **SQLPrepare** é chamado e enviar a instrução para execução quando **SQLExecute** é chamado.  
   
- Se o driver não pode emular a preparação da instrução, ele armazena a instrução quando **SQLPrepare** é chamado e a envia para execução quando **SQLExecute** é chamado.  
+ Se o driver não puder emular a preparação da instrução, ele armazenará a instrução quando **SQLPrepare** for chamado e o enviará para execução quando **SQLExecute** for chamado.  
   
- Como preparação da instrução emulado não é perfeita, **SQLExecute** pode retornar os erros normalmente retornados por **SQLPrepare**.
+ Como a preparação da instrução emulada não é perfeita, **SQLExecute** pode retornar erros normalmente retornados por **SQLPrepare**.

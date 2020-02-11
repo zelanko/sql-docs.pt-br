@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a329c8786ce580469e4601709509ca8a2de73f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037983"
 ---
 # <a name="using-tuple-functions"></a>Usando funções de tupla
@@ -22,7 +22,7 @@ ms.locfileid: "68037983"
   
  As funções de tupla, assim como as funções de membro e de conjunto, são essenciais para negociar as estruturas multidimensionais encontradas no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Há três funções de tupla em MDX, [atual &#40;MDX&#41;](../mdx/current-mdx.md), [Item &#40;tupla&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md) e [StrToTuple &#40;&#41;](../mdx/strtotuple-mdx.md). A consulta de exemplo a seguir mostra como usar cada uma:  
+ Há três funções de tupla em MDX, [atual &#40;mdx&#41;](../mdx/current-mdx.md), [Item &#40;tupla&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md) e [StrToTuple &#40;MDX ](../mdx/strtotuple-mdx.md)&#41;. A consulta de exemplo a seguir mostra como usar cada uma:  
   
  `WITH`  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68037983"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções &#40;sintaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [Usando funções de membro](../mdx/using-member-functions.md)   
  [Usando funções de conjunto](../mdx/using-set-functions.md)  

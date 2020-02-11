@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 898a36e6f8dc65be24f386159a34158f23c1125a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662399"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>Classe de evento FT:Crawl Stopped
@@ -26,7 +26,7 @@ ms.locfileid: "62662399"
   
 ## <a name="ftcrawl-stopped-event-class-data-columns"></a>Colunas de dados da classe de evento FT:Crawl Stopped  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID do banco de dados no qual o rastreamento de texto completo foi interrompido. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**EventClass**|**int**|Tipo de evento = 156.|27|Não|  
@@ -38,7 +38,7 @@ ms.locfileid: "62662399"
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

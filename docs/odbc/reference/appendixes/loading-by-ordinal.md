@@ -1,5 +1,5 @@
 ---
-title: Carregamento por Ordinal | Microsoft Docs
+title: Carregando por ordinal | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fdc7728fe06df708efd973423f5c8c05333ce189
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041605"
 ---
 # <a name="loading-by-ordinal"></a>Carregamento por ordinal
-Em ODBC *2.x*, carregamento por ordinal pôde ser executado para melhorar o desempenho do processo de conexão. ODBC *2.x* driver exporta uma função fictícia com o ordinal 199; quando o Gerenciador de Driver detecta a ele, ele resolve os endereços das funções ODBC por ordinal, e não por nome. Ainda há suporte para essa funcionalidade para ODBC *2.x* drivers, mas não há suporte para ODBC *3.x* drivers.
+No ODBC *2. x*, o carregamento por ordinal pode ser executado para melhorar o desempenho do processo de conexão. Um driver ODBC *2. x* exporta uma função fictícia com o ordinal 199; Quando o Gerenciador de driver o detecta, ele resolve os endereços das funções ODBC por ordinal, não pelo nome. Essa funcionalidade ainda tem suporte para drivers ODBC *2. x* , mas não tem suporte para drivers ODBC *3. x* .

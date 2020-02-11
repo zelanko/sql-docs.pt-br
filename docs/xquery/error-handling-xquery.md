@@ -1,5 +1,5 @@
 ---
-title: (XQuery) de tratamento de erro | Microsoft Docs
+title: Tratamento de erro (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038958"
 ---
 # <a name="error-handling-xquery"></a>Tratamento de erros (XQuery)
@@ -40,12 +40,12 @@ ms.locfileid: "68038958"
  Erros estáticos são retornados usando o mecanismo de erro [!INCLUDE[tsql](../includes/tsql-md.md)]. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os erros de tipo Xquery são retornados estaticamente. Para obter mais informações, consulte [XQuery e digitação estática](../xquery/xquery-and-static-typing.md).  
   
 ## <a name="dynamic-errors"></a>Erros dinâmicos  
- No XQuery, a maioria dos erros dinâmicos são mapeados para uma sequência vazia ("()"). No entanto, essas são as duas exceções: Condições de estouro nas funções de agregação do XQuery e erros de validação de XML-DML. Observe que a maioria dos erros dinâmicos é mapeada para uma sequência vazia. Caso contrário, a execução da consulta que se beneficia dos índices XML pode causar erros inesperados. Portanto, para prover uma execução eficiente sem gerar erros inesperados, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mapeia erros dinâmicos para ().  
+ No XQuery, a maioria dos erros dinâmicos são mapeados para uma sequência vazia ("()"). Entretanto, estas são as duas exceções: condições de estouro nas funções de agregação do XQuery e validação de erros XML-DML. Observe que a maioria dos erros dinâmicos é mapeada para uma sequência vazia. Caso contrário, a execução da consulta que se beneficia dos índices XML pode causar erros inesperados. Portanto, para prover uma execução eficiente sem gerar erros inesperados, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mapeia erros dinâmicos para ().  
   
  Frequentemente, na situação em que o erro dinâmico aconteceria dentro de um predicado, não causar o erro não é alterar as semânticas, porque () é mapeado para False. No entanto, em alguns casos, retornando () em vez de um erro dinâmico pode causar resultados inesperados. Os exemplos a seguir ilustram isso.  
   
-### <a name="example-using-the-avg-function-with-a-string"></a>Exemplo: Usando a função AVG () com uma cadeia de caracteres  
- No exemplo a seguir, o [função avg](../xquery/aggregate-functions-avg.md) é chamado para calcular a média dos três valores. Um desses valores é uma cadeia de caracteres. Em razão da instância XML nesse caso não ser digitada, todos os dados nela são de um tipo atômico não digitado. O **Avg ()** função converte primeiro esses valores para **xs: Double** antes de computar a média. No entanto, o valor `"Hello"`, não pode ser convertido **xs: Double** e cria um erro dinâmico. Nesse caso, em vez de retornar um erro dinâmico, a conversão de `"Hello"` à **xs: Double** faz com que uma sequência vazia. O **Avg ()** função ignora esse valor, calcula a média dos dois valores e retorna 150.  
+### <a name="example-using-the-avg-function-with-a-string"></a>Exemplo: usando a função avg () com uma cadeia de caracteres  
+ No exemplo a seguir, a [função AVG](../xquery/aggregate-functions-avg.md) é chamada para calcular a média dos três valores. Um desses valores é uma cadeia de caracteres. Em razão da instância XML nesse caso não ser digitada, todos os dados nela são de um tipo atômico não digitado. A função **AVG ()** primeiro converte esses valores em **xs: Double** antes de calcular a média. No entanto, o `"Hello"`valor,, não pode ser convertido em **xs: Double** e cria um erro dinâmico. Nesse caso, em vez de retornar um erro dinâmico, a conversão de `"Hello"` para **xs: Double** causa uma sequência vazia. A função **AVG ()** ignora esse valor, calcula a média dos outros dois valores e retorna 150.  
   
 ```  
 DECLARE @x xml  
@@ -57,10 +57,10 @@ SET @x=N'<root xmlns:myNS="test">
 SELECT @x.query('avg(//*)')  
 ```  
   
-### <a name="example-using-the-not-function"></a>Exemplo: Usando não função  
- Quando você usa o [não funcionar](../xquery/functions-on-boolean-values-not-function.md) em um predicado, por exemplo, `/SomeNode[not(Expression)]`, e a expressão causa um erro dinâmico, uma sequência vazia será retornada em vez de um erro. Aplicando **not ()** para a sequência vazia retorna True, em vez de um erro.  
+### <a name="example-using-the-not-function"></a>Exemplo: usando a função not  
+ Quando você usa a [função not](../xquery/functions-on-boolean-values-not-function.md) em um predicado, por `/SomeNode[not(Expression)]`exemplo,, e a expressão causa um erro dinâmico, uma sequência vazia será retornada em vez de um erro. A aplicação de **not ()** à sequência vazia retorna true, em vez de um erro.  
   
-### <a name="example-casting-a-string"></a>Exemplo: Uma cadeia de caracteres de conversão  
+### <a name="example-casting-a-string"></a>Exemplo: convertendo uma cadeia de caracteres  
  No exemplo a seguir, a cadeia de caracteres literal "NaN" é convertida em xs:string, depois em xs:double. O resultado é um conjunto de linhas vazio. Embora a cadeia de caracteres "NaN" não possa ser convertida em xs:double com sucesso, isso não pode ser determinado até que a cadeia de caracteres seja convertida primeiro em xs:string.  
   
 ```  
@@ -80,9 +80,9 @@ GO
 ```  
   
 #### <a name="implementation-limitations"></a>Limitações de implementação  
- O **fn:error()** não há suporte para a função.  
+ Não há suporte para a função **fn: Error ()** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Fundamentos de XQuery](../xquery/xquery-basics.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Comando SET BLOCKSIZE | Microsoft Docs
+title: Definir comando BLOCKSIZE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4fe84a470f5e877c73701168394cd85d75253fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997754"
 ---
 # <a name="set-blocksize-command"></a>Comando SET BLOCKSIZE
@@ -31,7 +31,7 @@ SET BLOCKSIZE TO nBytes
   
 ## <a name="arguments"></a>Argumentos  
  *nBytes*  
- Especifica o tamanho do bloco de alocar espaço em disco para campos de memorando. Se *nBytes* for 0, espaço em disco é alocado em bytes simples (blocos de 1 byte). Se *nBytes* é um número inteiro entre 1 e 32, espaço em disco é alocado em blocos de *nBytes* bytes multiplicado por 512. Se *nBytes* é maior que 32, espaço em disco é alocado em blocos de *nBytes* bytes. Se você especificar um valor de tamanho de bloco maior do que 32, você pode economizar espaço em disco considerável.  
+ Especifica o tamanho do bloco no qual o espaço em disco para campos de memorando é alocado. Se *nbytes* for 0, o espaço em disco será alocado em bytes únicos (blocos de 1 byte). Se *nbytes* for um inteiro entre 1 e 32, o espaço em disco será alocado em blocos de *nbytes* bytes multiplicados por 512. Se *nbytes* for maior que 32, o espaço em disco será alocado em blocos de *nbytes* bytes. Se você especificar um valor de tamanho de bloco maior que 32, poderá economizar espaço em disco significativo.  
   
 ## <a name="remarks"></a>Comentários  
- O valor padrão para definir o tamanho de bloco é 64. Para redefinir o tamanho do bloco para um valor diferente depois que o arquivo foi criado, defina-o para um novo valor e, em seguida, usar a cópia para criar uma nova tabela. A nova tabela tem o tamanho de bloco especificado.
+ O valor padrão para SET BLOCKSIZE é 64. Para redefinir o tamanho do bloco para um valor diferente depois que o arquivo tiver sido criado, defina-o como um novo valor e, em seguida, use Copiar para criar uma nova tabela. A nova tabela tem o tamanho de bloco especificado.

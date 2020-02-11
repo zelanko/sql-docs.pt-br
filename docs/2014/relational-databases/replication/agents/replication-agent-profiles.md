@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721748"
 ---
 # <a name="replication-agent-profiles"></a>Perfis do Agente de Replicação
@@ -68,29 +68,29 @@ ms.locfileid: "62721748"
   
 ||padrão|histórico detalhado|Gerenciador de Sincronização do Windows|Continuar em erros de consistência de dados|Perfil de distribuição para fluxo contínuo do banco de dados OLE|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1\.000|100000|2147473647|  
+|**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
-|**-CommitBatchThreshold**|1\.000|1\.000|1\.000|1\.000|1\.000|  
+|**-CommitBatchThreshold**|1000|1000|1000|1000|1000|  
 |**-HistoryVerboseLevel**|1|2|1|1|1|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|  
 |**-MaxBcpThreads**|1|1|1|1|1|  
 |**-MaxDeliveredTransactions**|0|0|0|0|0|  
-|**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32768|  
-|**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
+|**-OledbStreamThreshold**|NULO|NULO|NULO|NULO|32768|  
+|**-PacketSize**|NULO|NULO|NULO|NULO|32768|  
 |**-PollingInterval**|5|5|5|5|5|  
 |**-QueryTimeout**|1800|1800|1800|1800|1800|  
-|**-SkipErrors**|NULL|NULL|NULL|**-SkipErrors** 2601:2627:20598|NULL|  
+|**-SkipErrors**|NULO|NULO|NULO|**-SkipErrors** 2601:2627:20598|NULO|  
 |**-TransactionsPerHistory**|100|100|100|100|100|  
-|**-UseOledbStreaming**|NULL|NULL|NULL|NULL|**-UseOledbStreaming**|  
+|**-UseOledbStreaming**|NULO|NULO|NULO|NULO|**-UseOledbStreaming**|  
   
 ## <a name="merge-agent-profiles"></a>Perfis do Merge Agent  
  A tabela abaixo mostra os parâmetros definidos nos perfis para o Merge Agent. Cada coluna na tabela representa um perfil nomeado. Para obter mais informações sobre esses parâmetros, consulte [Replication Merge Agent](replication-merge-agent.md).  
   
 ||padrão|histórico detalhado|Gerenciador de Sincronização do Windows|validação do número de linhas.|validação do número de linhas e da soma de verificação|vínculo lento|servidor a servidor de alto volume|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1\.000|100000|100000|100000|100000|  
-|**-ChangesPerHistory**|100|50|50|100|100|100|1\.000|  
+|**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
+|**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
 |**-DestThreads**|2|1|1|1|1|1|4|  
 |**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
 |**-DownloadReadChangesPerBatch**|100|100|100|100|100|100|100|  
@@ -103,10 +103,10 @@ ms.locfileid: "62721748"
 |**-MaxUploadChanges**|0|0|0|0|0|0|0|  
 |**-MetadataRetentionCleanup**|1|1|1|1|1|1|1|  
 |**-NumDeadlockRetries**|5|5|5|5|5|5|5|  
-|**-ParallelUploadDownload**|NULL|NULL|NULL|NULL|NULL|NULL|1|  
+|**-ParallelUploadDownload**|NULO|NULO|NULO|NULO|NULO|NULO|1|  
 |**-PollingInterval**|60|60|60|60|60|60|60|  
 |**-QueryTimeout**|300|300|300|300|300|300|600|  
-|**-QueueSizeMultiplier**|NULL|NULL|NULL|NULL|NULL|NULL|5|  
+|**-QueueSizeMultiplier**|NULO|NULO|NULO|NULO|NULO|NULO|5|  
 |**-SrcThreads**|2|2|2|2|2|1|3|  
 |**-StartQueueTimeout**|0|0|0|0|0|0|0|  
 |**-UploadGenerationsPerBatch**|50|50|50|50|50|1|500|  
@@ -125,9 +125,9 @@ ms.locfileid: "62721748"
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](replication-agent-administration.md)   
  [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)   
- [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
+ [Conceitos dos executáveis do Replication Agent](../concepts/replication-agent-executables-concepts.md)  
   
   

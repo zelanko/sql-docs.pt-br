@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997357"
 ---
-# <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
+# <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Exibe a ordem de classificação e o conjunto de caracteres para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ sp_helpsort
  Retorna a ordenação padrão do servidor.  
   
 ## <a name="remarks"></a>Comentários  
- Se uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado com um agrupamento especificado para ser compatível com uma instalação anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_helpsort** retornará resultados em branco. Quando este comportamento ocorrer, será possível determinar a ordenação por meio de consulta ao objeto SERVERPROPERTY, como: `SELECT SERVERPROPERTY ('Collation');`.  
+ Se uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for instalada com um Agrupamento especificado para ser compatível com uma instalação anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_helpsort** retornará resultados em branco. Quando este comportamento ocorrer, será possível determinar a ordenação por meio de consulta ao objeto SERVERPROPERTY, como: `SELECT SERVERPROPERTY ('Collation');`.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
@@ -66,11 +66,11 @@ sp_helpsort;
   
  `Latin1-General, case-sensitive, accent-sensitive, kanatype-insensitive, width-insensitive for Unicode Data, SQL Server Sort Order 51 on Code Page 1252 for non-Unicode Data.`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
+ [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [AGRUPAR &#40;&#41;Transact-SQL](~/t-sql/statements/collations.md)   
+ [sys. fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  
   
   

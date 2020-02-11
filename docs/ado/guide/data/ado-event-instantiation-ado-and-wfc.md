@@ -11,10 +11,10 @@ ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212334"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Instanciação de evento ADO: ADO e WFC
@@ -60,9 +60,9 @@ O ADO para Windows Foundation classes (ADO/WFC) se baseia no modelo de evento AD
   
 7.  Quando você terminar de processar, remova seu manipulador da lista de manipuladores de eventos ADO/WFC. Use o método com um nome como **remover**_EventName_(*manipulador*).  
   
-## <a name="see-also"></a>Consulte também  
-   de [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Resumo do manipulador de eventos do ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Índice de sintaxe ADO-WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
-   de [parâmetros de evento](../../../ado/guide/data/event-parameters.md)  
+ [Parâmetros do evento](../../../ado/guide/data/event-parameters.md)   
  [Como os manipuladores de eventos funcionam juntos](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Tipos de eventos](../../../ado/guide/data/types-of-events.md)

@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524382"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
-  Este tópico descreve como remover um operadou para que ele deixe de receber notificações de alerta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Este tópico descreve como remover um operador para que eles não recebam [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais notificações de alerta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do Agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no [!INCLUDE[tsql](../../includes/tsql-md.md)]usando o ou o.  
   
  **Neste tópico**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62524382"
   
      [Segurança](#Security)  
   
--   **Para excluir um operador usando:**  
+-   **Para excluir um operador, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -86,6 +86,6 @@ ms.locfileid: "62524382"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_delete_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql).  
+ Para obter mais informações, consulte [sp_delete_operator &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql).  
   
   

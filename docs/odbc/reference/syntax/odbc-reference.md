@@ -14,14 +14,14 @@ ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fab61517e226a0f78089d909188a275a61d0928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036347"
 ---
 # <a name="odbc-reference"></a>Propriedade ODBC
-Os tópicos a seguir contêm sintaxe e semânticas informações para todas as funções ODBC.  
+Os tópicos a seguir contêm informações de sintaxe e semântica para todas as funções ODBC.  
   
 -   [Resumo de funções](../../../odbc/reference/syntax/function-summary.md)  
   
@@ -29,8 +29,8 @@ Os tópicos a seguir contêm sintaxe e semânticas informações para todas as f
   
 -   [Referência de API de DLL de instalação](../../../odbc/reference/syntax/setup-dll-api-reference.md)  
   
--   [Referência de API de DLL do instalador](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
+-   [Referência da API da DLL do instalador](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
   
--   [Referência de função DLL de conversão](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
+-   [Referência de função DLL de tradução](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
 -   [Referência da SPI (Interface do Provedor de Serviços) do ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

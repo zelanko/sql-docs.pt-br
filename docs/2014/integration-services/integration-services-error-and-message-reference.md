@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892637"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
@@ -67,11 +67,11 @@ ms.locfileid: "62892637"
 |0xC0010008|-1073676280|DTS_E_VERCOMMENTSTOOLONG|A propriedade VersionComments é muito longa. O limite é 1.024 caracteres. Tente encurtar a propriedade VersionComments.|  
 |0xC0010009|-1073676279|DTS_E_ELEMENTNOTFOUND|O elemento não pode ser encontrado em uma coleção. Esse erro ocorre quando se tenta recuperar um elemento de uma coleção em um contêiner durante a execução do pacote e o elemento não existe.|  
 |0xC001000A|-1073676278|DTS_E_PACKAGENOTFOUND|Não foi possível carregar o pacote especificado a partir do banco de dados do SQL Server.|  
-|0xC001000C|-1073676276|DTS_E_INVALIDVARIABLEVALUE|A atribuição de valor à variável não é válida. Esse erro ocorre quando o cliente ou uma tarefa atribui um objeto de tempo de execução a um valor de variável.|  
+|0xC001000C|-1073676276|DTS_E_INVALIDVARIABLEVALUE|A atribuição de valor à variável não é válida. Esse erro ocorre quando o cliente ou uma tarefa atribui um objeto de runtime a um valor de variável.|  
 |0xC001000D|-1073676275|DTS_E_RESERVEDNAMESPACE|Erro ao atribuir namespace à variável. O namespace "System" é reservado para uso do sistema. Esse erro ocorre quando um componente ou uma tarefa tenta criar uma variável com um namespace de "System".|  
 |0xC001000E|-1073676274|DTS_E_CONNECTIONNOTFOUND|Não foi possível encontrar a conexão "%1". Esse erro é acionado pela coleção Conexões quando o elemento específico de conexão não é encontrado.|  
 |0xC001000F|-1073676273|DTS_E_64BITVARIABLERECAST|A variável "%1" é uma variável de inteiro de 64 bits, que não tem suporte neste sistema operacional. A variável foi reconvertida a um inteiro de 32 bits.|  
-|0xC0010010|-1073676272|DTS_E_CANTCHANGEREADONLYATRUNTIME|Ocorreu uma tentativa de alteração para um atributo somente leitura na variável "%1". Esse erro ocorre quando se está alterando um atributo somente leitura de uma variável no tempo de execução. Os atributos somente leitura podem ser alterados apenas no tempo de design.|  
+|0xC0010010|-1073676272|DTS_E_CANTCHANGEREADONLYATRUNTIME|Ocorreu uma tentativa de alteração para um atributo somente leitura na variável "%1". Esse erro ocorre quando se está alterando um atributo somente leitura de uma variável no runtime. Os atributos somente leitura podem ser alterados apenas no tempo de design.|  
 |0xC0010011|-1073676271|DTS_E_VARIABLEINVALIDCONTAINERREF|Tentativa inválida de definir uma variável para uma referência de contêiner.  As variáveis não têm permissão para referenciar contêineres.|  
 |0xC0010013|-1073676269|DTS_E_INVALIDVARVALUE|Atribuição de valor ou objeto inválido à variável "%1". Esse erro ocorre quando o valor não é apropriado para variáveis.|  
 |0xC0010014|-1073676268|DTS_E_GENERICERROR|Ocorreu um ou mais erros. Deve haver mais erros específicos precedentes a este que expliquem os detalhes dos erros. Essa mensagem é usada como valor de retorno de funções que encontram erros.|  
@@ -94,7 +94,7 @@ ms.locfileid: "62892637"
 |0xC0010204|-1073675772|DTS_E_SETCACHEFORREADFAILED|Falha ao preparar o cache para fornecer dados.|  
 |0xC0010205|-1073675771|DTS_E_READNOTFILLEDCACHE|O cache está sendo gravado por %1 e não pode ser lido por %2.|  
 |0xC0010206|-1073675770|DTS_E_WRITEWHILECACHEINUSE|O cache está sendo lido a partir de %1 e não pode ser gravado por %2.|  
-|0xC0011001|-1073672191|DTS_E_CANTLOADFROMNODE|O objeto de tempo de execução não pode ser carregado a partir do nó XML especificado.  Isso ocorre quando se tenta carregar um pacote ou outro objeto de um nó XML que não é do tipo correto, como um nó XML não SSIS.|  
+|0xC0011001|-1073672191|DTS_E_CANTLOADFROMNODE|O objeto de runtime não pode ser carregado a partir do nó XML especificado.  Isso ocorre quando se tenta carregar um pacote ou outro objeto de um nó XML que não é do tipo correto, como um nó XML não SSIS.|  
 |0xC0011002|-1073672190|DTS_E_OPENPACKAGEFILE|Falha ao abrir o arquivo de pacote "%1" devido ao erro 0x%2!8.8X! "%3".  Isso ocorre quando se está abrindo um pacote e o arquivo não pode ser aberto ou carregado corretamente no documento XML. Esse erro pode resultar da especificação de um nome de arquivo incorreto ao chamar LoadPackage ou de um arquivo XML no formato incorreto.|  
 |0xC0011003|-1073672189|DTS_E_LOADPACKAGEXML|Falha ao carregar XML devido ao erro 0x%1!8.8X! "%2". Isso ocorre quando se está carregando um pacote e o arquivo não pode ser aberto ou carregado corretamente no documento XML.  Esse erro pode resultar da especificação de um nome de arquivo incorreto para o método LoadPackage ou de um arquivo XML no formato incorreto.|  
 |0xC0011004|-1073672188|DTS_E_LOADPACKAGEXMLFILE|Falha ao carregar XML do arquivo de pacote "%1" devido ao erro 0x%2!8.8X! "%3".  Isso ocorre quando se está carregando um pacote e o arquivo não pode ser aberto ou carregado corretamente no documento XML. Esse erro pode resultar da especificação de um nome de arquivo incorreto para o método LoadPackage ou de um arquivo XML no formato incorreto.|  
@@ -145,9 +145,9 @@ ms.locfileid: "62892637"
 |0xC0014017|-1073659881|DTS_E_TOEXECISNOTCHILD|Ao adicionar uma restrição de precedência, o executável To foi especificado não como filho deste contêiner.|  
 |0xC0014018|-1073659880|DTS_E_ODBCTRANSACTIONENLIST|Houve erro ao tentar inscrever uma conexão ODBC em uma transação. O SQLSetConnectAttr não definiu o atributo SQL_ATTR_ENLIST_IN_DTC.|  
 |0xC0014019|-1073659879|DTS_E_CONNECTIONOFFLINE|O gerenciador de conexões "%1" não adquirirá uma conexão porque a propriedade OfflineMode do pacote foi definida como TRUE. Quando a propriedade OfflineMode está definida como TRUE, não é possível adquirir conexões.|  
-|0xC001401A|-1073659878|DTS_E_BEGINTRANSACTION|O Tempo de Execução de SSIS não pode iniciar a transação distribuída devido ao erro 0x%1!8.8X! "%2". A transação de DTC não iniciou. Isso pode ocorrer porque o Serviço MSDTC não está em execução.|  
+|0xC001401A|-1073659878|DTS_E_BEGINTRANSACTION|O Runtime de SSIS não pode iniciar a transação distribuída devido ao erro 0x%1!8.8X! "%2". A transação de DTC não iniciou. Isso pode ocorrer porque o Serviço MSDTC não está em execução.|  
 |0xC001401B|-1073659877|DTS_E_SETQUALIFIERDESIGNTIMEONLY|O método SetQualifier não pode ser chamado em um gerenciador de conexões durante a execução do pacote. Esse método é usado somente no tempo de design.|  
-|0xC001401C|-1073659876|DTS_E_SQLPERSISTENCEVERSION|Para armazenar ou modificar pacotes no SQL Server é necessário que o tempo de execução e o banco de dados SSIS sejam da mesma versão. Não há suporte para o armazenamento de pacotes nas versões anteriores.|  
+|0xC001401C|-1073659876|DTS_E_SQLPERSISTENCEVERSION|Para armazenar ou modificar pacotes no SQL Server é necessário que o runtime e o banco de dados SSIS sejam da mesma versão. Não há suporte para o armazenamento de pacotes nas versões anteriores.|  
 |0xC001401D|-1073659875|DTS_E_CONNECTIONVALIDATIONFAILED|Falha de validação na conexão "%1".|  
 |0xC001401E|-1073659874|DTS_E_INVALIDFILENAMEINCONNECTION|O nome de arquivo "%1" especificado na conexão não era válido.|  
 |0xC001401F|-1073659873|DTS_E_MULTIPLEFILESONRETAINEDCONNECTION|Quando a propriedade Retain está definida como TRUE, não é possível especificar nomes de vários arquivos em uma conexão. Foram encontradas barras verticais na cadeia de caracteres de conexão, indicando que vários nomes de arquivo estão sendo especificados e, além disso, a propriedade Retain está definida como TRUE.|  
@@ -163,7 +163,7 @@ ms.locfileid: "62892637"
 |0xC0014029|-1073659863|DTS_E_INVALIDCERTHASHFORMAT|O valor de hash não é uma matriz unidimensional de bytes (erro: %1). Isso ocorre em CPackage::LoadUserCertificateByHash.|  
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|Os dados da matriz não podem ser acessados (erro: %1). Esse erro pode ocorrer sempre que GetDataFromSafeArray for chamado.|  
 |0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|Falha do objeto auxiliar gerenciado SSIS durante a criação com o erro 0x%1!8.8X! "%2". Isso ocorre sempre que há falha em CoCreateInstance CLSID_DTSManagedHelper.|  
-|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|Falha do Tempo de Execução SSIS em inscrever a conexão OLE DB em uma transação distribuída com o erro 0x%1!8.8X! "%2".|  
+|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|Falha do Runtime SSIS em inscrever a conexão OLE DB em uma transação distribuída com o erro 0x%1!8.8X! "%2".|  
 |0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|Falha na assinatura do pacote com o erro 0x%1!8.8X! "%2". Isso ocorre quando o método ManagedHelper.SignDocument falha.|  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|Falha ao procurar o envelope de assinatura XML no pacote XML com o erro 0x%1!8.8X! "%2". Isso ocorre em CPackage::LoadFromXML.|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|Falha ao obter fonte XML do objeto XML DOM com o erro 0x%1!8.8X! "%2". Isso ocorre quando há falha em IXMLDOMDocument::get_xml.|  
@@ -258,7 +258,7 @@ ms.locfileid: "62892637"
 |0xC0016021|-1073651679|DTS_E_PACKAGEMIGRATIONMODULELOAD|Falha ao carregar o módulo de migração de pacote.|  
 |0xC0016022|-1073651678|DTS_E_PACKAGEMIGRATIONMODULE|Falha no módulo de migração de pacote.|  
 |0xC0016023|-1073651677|DTS_E_CANTDETERMINEWHICHPROPTOPERSIST|Não é possível manter o objeto usando a persistência padrão. Esse erro ocorre quando a persistência padrão não consegue determinar quais objetos estão no objeto hospedado.|  
-|0xC0016024|-1073651676|DTS_E_CANTADDREMOVEWHENEXECUTING|Um elemento não pode ser adicionado ou removido de um pacote no modo de tempo de execução. Esse erro ocorre quando se tenta adicionar ou remover um objeto de uma coleção enquanto o pacote está em execução.|  
+|0xC0016024|-1073651676|DTS_E_CANTADDREMOVEWHENEXECUTING|Um elemento não pode ser adicionado ou removido de um pacote no modo de runtime. Esse erro ocorre quando se tenta adicionar ou remover um objeto de uma coleção enquanto o pacote está em execução.|  
 |0xC0016025|-1073651675|DTS_E_NODENOTFOUND|O nó "%1" não pode ser encontrado na persistência padrão personalizada. Esse erro ocorre se o XML padrão salvo de um objeto extensível for alterado de forma que o objeto salvo não pode mais ser encontrado, ou se o próprio objeto extensível for alterado.|  
 |0xC0016026|-1073651674|DTS_E_COLLECTIONLOCKED|Essa coleção não pode ser modificada durante a validação ou execução do pacote.|  
 |0xC0016027|-1073651673|DTS_E_COLLOCKED|A coleção "%1" não pode ser modificada durante a validação ou execução do pacote. "%2" não pode ser adicionado à coleção.|  
@@ -307,7 +307,7 @@ ms.locfileid: "62892637"
 |0xC001C011|-1073627119|DTS_E_VALUEINDEXNEGATIVE|O índice de valor é negativo. O Mapeamento de Variável ForEach número %1!d! para variável "%2".|  
 |0xC001C012|-1073627118|DTS_E_FOREACHVARIABLEMAPPING|Mapeamento de Variável ForEach número %1!d! para variável "%2" não pode ser aplicado.|  
 |0xC001C013|-1073627117|DTS_E_OBJECTNOTINFOREACHLOOP|Falha ao adicionar um objeto a um ForEachPropertyMapping que não é um filho direto do contêiner ForEachLoop.|  
-|0xC001F001|-1073614847|DTS_E_FAILEDSYSTEMVARIABLEREMOVE|Falha ao remover uma variável de sistema. Esse erro ocorre quando se remove uma variável que é necessária.  Variáveis necessárias são aquelas criadas pelo tempo de execução para comunicação entre tarefas e o tempo de execução.|  
+|0xC001F001|-1073614847|DTS_E_FAILEDSYSTEMVARIABLEREMOVE|Falha ao remover uma variável de sistema. Esse erro ocorre quando se remove uma variável que é necessária.  Variáveis necessárias são aquelas criadas pelo runtime para comunicação entre tarefas e o runtime.|  
 |0xC001F002|-1073614846|DTS_E_CHANGESYSTEMVARIABLEREADONLYFAILED|Falha na alteração da propriedade de uma variável porque é uma variável de sistema. As variáveis de sistema são somente leitura.|  
 |0xC001F003|-1073614845|DTS_E_CHANGESYSTEMVARIABLENAMEFAILED|Falha na alteração do nome de uma variável porque é uma variável de sistema. As variáveis de sistema são somente leitura.|  
 |0xC001F004|-1073614844|DTS_E_CHANGESYSTEMVARIABLENAMESPACEFAILED|Falha na alteração do namespace de uma variável porque é uma variável de sistema. As variáveis de sistema são somente leitura.|  
@@ -317,7 +317,7 @@ ms.locfileid: "62892637"
 |0xC001F010|-1073614832|DTS_E_INVALIDSTRING|Caracteres inválidos na cadeia de caracteres: "%1". Isso ocorre quando uma cadeia de caracteres fornecida a um valor de propriedade contém caracteres não imprimíveis.|  
 |0xC001F011|-1073614831|DTS_E_INVALIDOBJECTNAME|Nome do objeto SSIS é inválido. Mais erros específicos teriam sido gerados, explicando o problema exato de nomeação.|  
 |0xC001F021|-1073614815|DTS_E_PROPERTYREADONLY|A propriedade "%1" é somente leitura. Isso ocorre quando se tenta alterar uma propriedade somente leitura.|  
-|0xC001F022|-1073614814|DTS_E_FAILEDGETTYPEINFO|O objeto não dá suporte a informações de tipo. Isso ocorre quando o tempo de execução tenta obter as informações de tipo de um objeto para popular a coleção Properties.  O objeto deve dar suporte a informações de tipo.|  
+|0xC001F022|-1073614814|DTS_E_FAILEDGETTYPEINFO|O objeto não dá suporte a informações de tipo. Isso ocorre quando o runtime tenta obter as informações de tipo de um objeto para popular a coleção Properties.  O objeto deve dar suporte a informações de tipo.|  
 |0xC001F023|-1073614813|DTS_E_FAILEDPROPERTYGET|Erro durante a recuperação do valor da propriedade "%1". O código de erro é 0x%2!8.8X!.|  
 |0xC001F024|-1073614812|DTS_E_FAILEDPROPERTYGET_ERRORINFO|Erro durante a recuperação do valor da propriedade "%1". O código de erro é 0x%2!8.8X! "%3".|  
 |0xC001F025|-1073614811|DTS_E_FAILEDPROPERTYSET|Erro durante a definição do valor da propriedade "%1". O erro retornado é 0x%2!8.8X!.|  
@@ -338,7 +338,7 @@ ms.locfileid: "62892637"
 |0xC001F038|-1073614792|DTS_E_PMFAILALERTREMOVE|Falha ao alertar os mapeamentos de propriedade de que o destino está sendo removido.|  
 |0xC001F03A|-1073614790|DTS_E_INVALIDFOREACHPROPERTYMAPPING|Foi encontrado um mapeamento de propriedade inválido em For Each Loop. Isso ocorre quando há falha na restauração do mapeamento de propriedade ForEach.|  
 |0xC001F040|-1073614784|DTS_E_PMPROPERTYINVALID|Uma propriedade de destino foi especificada em um mapeamento de propriedade inválido. Isso ocorre quando uma propriedade é especificada em um objeto de destino não encontrado nesse objeto.|  
-|0xC001F041|-1073614783|DTS_E_INVALIDTASKMONIKERNOPARAM|Não é possível criar uma tarefa a partir do XML. Isso ocorre quando o tempo de execução não consegue resolver o nome para criar uma tarefa. Verifique se o nome está correto.|  
+|0xC001F041|-1073614783|DTS_E_INVALIDTASKMONIKERNOPARAM|Não é possível criar uma tarefa a partir do XML. Isso ocorre quando o runtime não consegue resolver o nome para criar uma tarefa. Verifique se o nome está correto.|  
 |0xC001F080|-1073614720|DTS_E_COULDNOTREPLACECHECKPOINTFILE|O arquivo de ponto de verificação existente não pode ser substituído pelo arquivo de ponto de verificação atualizado. O ponto de verificação foi criado com êxito em um arquivo temporário, mas houve falha na substituição do arquivo existente pelo arquivo novo.|  
 |0xC001F081|-1073614719|DTS_E_CHECKPOINTFILENOTSPECIFIED|O pacote está configurado para sempre reinicializar a partir de um ponto de verificação, mas o arquivo de ponto de verificação não está especificado.|  
 |0xC001F082|-1073614718|DTS_E_CHECKPOINTLOADXML|Falha na tentativa de carregar o arquivo de ponto de verificação de XML "%1" com o erro 0x%2!8.8X! "%3". Verifique se o nome de arquivo especificado está correto e se o arquivo existe.|  
@@ -348,7 +348,7 @@ ms.locfileid: "62892637"
 |0xC001F187|-1073614457|DTS_E_EXPREVALASSIGNMENTTOREADONLYVARIABLE|Erro ao usar uma variável somente leitura "%1" em uma expressão de atribuição. O resultado da expressão não pode ser atribuído à variável porque ela é somente leitura. Escolha uma variável na qual seja possível gravar, ou remova a expressão dessa variável.|  
 |0xC001F188|-1073614456|DTS_E_EXPREVALASSIGNMENTVARIABLELOCKFORWRITEFAILED|Não é possível avaliar a expressão "%1" porque a variável "%2" não existe ou não pode ser acessada para gravação. O resultado da expressão não pode ser atribuído à variável porque ela não foi encontrada, ou pôde ser bloqueada para acesso de gravação.|  
 |0xC001F189|-1073614455|DTS_E_EXPREVALRESULTTYPENOTSUPPORTED|A expressão "%1" tem um tipo de resultado "%2" que não pode ser convertido em um tipo com suporte.|  
-|0xC001F18A|-1073614454|DTS_E_EXPREVALRESULTTYPECONVERSIONFAILED|Falha na conversão do resultado da expressão "%1" do tipo "%2" em um tipo com suporte com o código de erro 0x%3!8.8X!. Ocorreu um erro inesperado ao tentar converter o resultado da expressão em um tipo com suporte dado pelo mecanismo de tempo de execução, mesmo sendo uma conversão de tipo com suporte.|  
+|0xC001F18A|-1073614454|DTS_E_EXPREVALRESULTTYPECONVERSIONFAILED|Falha na conversão do resultado da expressão "%1" do tipo "%2" em um tipo com suporte com o código de erro 0x%3!8.8X!. Ocorreu um erro inesperado ao tentar converter o resultado da expressão em um tipo com suporte dado pelo mecanismo de runtime, mesmo sendo uma conversão de tipo com suporte.|  
 |0xC001F200|-1073614336|DTS_E_DTSNAME_NOTNULL|O nome de objeto não é válido. O nome não pode ser definido como NULL.|  
 |0xC001F201|-1073614335|DTS_E_DTSNAME_NOTEMPTY|O nome de objeto não é válido. O nome não pode estar vazio.|  
 |0xC001F202|-1073614334|DTS_E_DTSNAME_LEGAL|O nome de objeto "%1" não é válido. O nome não pode conter nenhum dos caracteres a seguir: / \ : [ ] . =|  
@@ -375,7 +375,7 @@ ms.locfileid: "62892637"
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|Erro 0x%1!8.8X! ao preparar para carregar o pacote. %2.|  
 |0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|Falha do método Validate na tarefa com o código de erro 0x%1!8.8X! (%2). O método Validate deve ter êxito e indicar o resultado usando um parâmetro "out".|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|O método Execute na tarefa retornou o código de erro 0x%1!8.8X! (%2). O método Execute deve ter êxito e indicar o resultado usando um parâmetro "out".|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Falha na tarefa "%1": 0x%2!8.8X! ao recuperar dependências. O tempo de execução estava recuperando as dependências da coleção de dependências da tarefa quando ocorreu o erro. A tarefa pode ter implementado incorretamente uma das interfaces de dependência.|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Falha na tarefa "%1": 0x%2!8.8X! ao recuperar dependências. O runtime estava recuperando as dependências da coleção de dependências da tarefa quando ocorreu o erro. A tarefa pode ter implementado incorretamente uma das interfaces de dependência.|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|Houve erros durante a validação da tarefa.|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|O formato de cadeia de caracteres de conexão não é válido. Ele deve consistir em um ou mais componentes do formato X=Y, separados por ponto-e-vírgulas. Esse erro ocorre quando uma cadeia de caracteres de conexão sem nenhum componente é definida em um gerenciador de conexões de banco de dados.|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|Os componentes da cadeia de caracteres de conexão não podem conter ponto-e-vírgulas sem-aspas. Se o valor tiver que conter ponto e vírgula, coloque todo esse valor entre aspas. Esse erro ocorre quando os valores na cadeia de caracteres de conexão contêm ponto-e-vírgulas sem-aspas, como na propriedade InitialCatalog.|  
@@ -394,7 +394,7 @@ ms.locfileid: "62892637"
 |0xC002910A|-1073573622|DTS_E_AXTASKUTIL_SCRIPT_PARSING_FAILED|Ocorreu um erro fatal ao tentar analisar o texto do script. Verifique se o mecanismo de script para a linguagem escolhida está instalado corretamente.|  
 |0xC002910B|-1073573621|DTS_E_AXTASKUTIL_MSG_BAD_FUNCTION|O nome de função digitado não é válido. Verifique se foi especificado um nome válido de função.|  
 |0xC002910C|-1073573620|DTS_E_AXTASKUTIL_EXECUTION_FAILED|Ocorreu um erro durante a execução do script. Verifique se o mecanismo de script para a linguagem selecionada está instalado corretamente.|  
-|0xC002910D|-1073573619|DTS_E_AXTASKUTIL_ADDTYPELIB_FAILED|Ocorreu um erro ao adicionar a biblioteca de tipos gerenciados ao host de script. Verifique se o tempo de execução DTS 2000 está instalado.|  
+|0xC002910D|-1073573619|DTS_E_AXTASKUTIL_ADDTYPELIB_FAILED|Ocorreu um erro ao adicionar a biblioteca de tipos gerenciados ao host de script. Verifique se o runtime DTS 2000 está instalado.|  
 |0xC002910E|-1073573618|DTS_E_BITASK_INITIALIZATION_WITH_WRONG_XML_ELEMENT|A tarefa Inserção em Massa foi iniciada com um elemento XML errado.|  
 |0xC002910F|-1073573617|DTS_E_BITASK_DATA_FILE_NOT_SPECIFIED|Nome de arquivo de dados não especificado.|  
 |0xC0029110|-1073573616|DTS_E_BITASK_HANDLER_NOT_FOUND|Manipulador não encontrado.|  
@@ -1086,7 +1086,7 @@ ms.locfileid: "62892637"
 |0xC00470D5|-1073450795|DTS_E_THREADCOUNTOUTOFRANGE|Falha ao atribuir %3!d! à propriedade EngineThreads da tarefa de Fluxo de Dados. O valor deve estar entre %1!d! e %2!d!.|  
 |0xC00470D6|-1073450794|DTS_E_EXPREVALINVALIDTOKENSINGLEQUOTE|Falha na análise da expressão "%1". A aspa simples no número da linha "%2", número do caractere "%3", não era esperada.|  
 |0xC00470D7|-1073450793|DTS_E_EXPREVALINVALIDTOKENSINGLEEQUAL|Falha na análise da expressão "%1". O sinal de igualdade (=) no número da linha "%2", número do caractere "%3", não era esperado. Podem ser necessários dois sinais de igualdade (==) no local especificado.|  
-|0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|O componente "%1" não pôde armazenar em cache a coleção de controladores de referência de objeto de tempo de execução e retornou o código de erro 0x%2!8.8X!.|  
+|0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|O componente "%1" não pôde armazenar em cache a coleção de controladores de referência de objeto de runtime e retornou o código de erro 0x%2!8.8X!.|  
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|Existem várias colunas de entrada com o nome "%1". A coluna de entrada desejada deve ser especificada de forma exclusiva como [Nome do Componente]. [%2] ou referenciada por ID de linhagem. No momento, a coluna de entrada especificada existe em mais de um componente.|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|Falha na localização da coluna de entrada denominada "[%1].[%2]" com o código de erro 0x%3!8.8X!. A coluna de entrada não foi encontrada na coleção de colunas de entrada.|  
 |0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Existem diversas variáveis com o nome "%1". A variável desejada deve ser especificada de forma exclusiva como \@[Namespace::%2]. A variável existe em mais de um namespace.|  
@@ -1095,7 +1095,7 @@ ms.locfileid: "62892637"
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|A função LN não pode operar com zero ou valores negativos, e foi passado um zero ou um valor negativo à função LN.|  
 |0xC00470E1|-1073450783|DTS_E_EXPREVALLOGINVALIDPARAM|A função LOG não pode operar com zero ou valores negativos, e foi passado um zero ou um valor negativo à função LOG.|  
 |0xC00470E2|-1073450782|DTS_E_EXPREVALPOWERINVALIDPARAM|Os parâmetros passados à função POWER não podem ser avaliados e podem gerar um resultado indeterminado.|  
-|0xC00470E3|-1073450781|DTS_E_NOCANCELEVENT|O tempo de execução não pode fornecer um evento de cancelamento devido ao erro 0x%1!8.8X!.|  
+|0xC00470E3|-1073450781|DTS_E_NOCANCELEVENT|O runtime não pode fornecer um evento de cancelamento devido ao erro 0x%1!8.8X!.|  
 |0xC00470E4|-1073450780|DTS_E_CANCELRECEIVED|O pipeline recebeu uma solicitação de cancelamento e está sendo desligado.|  
 |0xC00470E5|-1073450779|DTS_E_EXPREVALUNARYOPOVERFLOW|O resultado da operação de subtração (negação) unária "%1" excede o tamanho máximo para tipo de dados de resultado "%2". A magnitude do resultado da operação estoura o tipo do resultado.|  
 |0xC00470E6|-1073450778|DTS_E_EXPREVALPLACEHOLDERINEXPRESSION|O espaço reservado "%1" foi encontrado em uma expressão. Ele deve ser substituído por um operando ou parâmetro real.|  
@@ -1147,8 +1147,8 @@ ms.locfileid: "62892637"
 |0xC0048018|-1073446888|DTS_E_BUFFERISPROCESSINPUT|Essa operação não pode ser chamada em um buffer passado para ProcessInput. Foi feita uma chamada para um método de buffer durante ProcessInput, mas essa chamada não é permitida durante ProcessInput.|  
 |0xC0048019|-1073446887|DTS_E_BUFFERGETTEMPFILENAME|O gerenciador de buffer não pôde adquirir um nome de arquivo temporário.|  
 |0xC004801A|-1073446886|DTS_E_REFERENCECOLUMNTOOWIDE|O código encontrou uma coluna larga demais.|  
-|0xC004801B|-1073446885|DTS_E_CANNOTGETRUNTIMECONNECTIONMANAGERID|Não é possível obter a identificação do gerenciador de conexões de tempo de execução especificado por "%1" na coleção de gerenciadores de conexões, Collections, de "%2", devido ao código de erro 0x%3!8.8X!. Verifique se a propriedade ConnectionManager.ID do objeto de conexão de tempo de execução foi definida para o componente.|  
-|0xC004801C|-1073446884|DTS_E_EMPTYRUNTIMECONNECTIONMANAGERID|O "%1" na coleção de gerenciadores de conexões, Connections, de "%2" não tem um valor de propriedade de ID. Verifique se a propriedade ConnectionManagerID do objeto de conexão de tempo de execução foi definida para o componente.|  
+|0xC004801B|-1073446885|DTS_E_CANNOTGETRUNTIMECONNECTIONMANAGERID|Não é possível obter a identificação do gerenciador de conexões de runtime especificado por "%1" na coleção de gerenciadores de conexões, Collections, de "%2", devido ao código de erro 0x%3!8.8X!. Verifique se a propriedade ConnectionManager.ID do objeto de conexão de runtime foi definida para o componente.|  
+|0xC004801C|-1073446884|DTS_E_EMPTYRUNTIMECONNECTIONMANAGERID|O "%1" na coleção de gerenciadores de conexões, Connections, de "%2" não tem um valor de propriedade de ID. Verifique se a propriedade ConnectionManagerID do objeto de conexão de runtime foi definida para o componente.|  
 |0xC004801D|-1073446883|DTS_E_METADATAREADONLY|Metadados não podem ser alterados durante a execução.|  
 |0xC004801F|-1073446881|DTS_E_UPGRADEFAILED|Os metadados de componente para "%1" não pôde ser atualizado para a versão mais recente do componente. Houve falha no método PerformUpgrade.|  
 |0xC0048020|-1073446880|DTS_E_COMPONENTVERSIONMISMATCH|A versão de %1 não é compatível com essa versão do DataFlow.|  
@@ -1323,7 +1323,7 @@ ms.locfileid: "62892637"
 |0xC0202077|-1071636361|DTS_E_TIMEGENCANTCONVERT|Tipo de dados sem-suporte para a coluna %1!d!.|  
 |0xC0202079|-1071636359|DTS_E_TIMEGENCANTREAD|Falha na tentativa de leitura de Microsoft.AnalysisServices.TimeDimGenerator com o código de erro 0x%1!8.8X!.|  
 |0xC020207A|-1071636358|DTS_E_TIMEGENCANTREADCOLUMN|Falha com código de erro 0x%2!8.8X! ao tentar ler a coluna "%2!d!" do Microsoft.AnalysisServices.TimeDimGenerator.|  
-|0xC020207B|-1071636357|DTS_E_RSTDESTBADVARIABLENAME|A propriedade VariableName não está definida como o nome de uma variável válida. É necessária uma variável de tempo de execução para permitir a gravação.|  
+|0xC020207B|-1071636357|DTS_E_RSTDESTBADVARIABLENAME|A propriedade VariableName não está definida como o nome de uma variável válida. É necessária uma variável de runtime para permitir a gravação.|  
 |0xC020207C|-1071636356|DTS_E_RSTDESTRSTCONFIGPROBLEM|Não é possível criar ou configurar o objeto ADODB.Recordset.|  
 |0xC020207D|-1071636355|DTS_E_RSTDESTRSTWRITEPROBLEM|Erro durante a gravação no objeto ADODB.Recordset.|  
 |0xC020207E|-1071636354|DTS_E_FILENAMEINVALID|O nome de arquivo não é válido. O nome de arquivo é um dispositivo ou contém caracteres inválidos.|  
@@ -1413,7 +1413,7 @@ ms.locfileid: "62892637"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|O número de linhas %2!ld! não é válido para a propriedade "%1". Ele deve ser maior que 0.|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|O adaptador foi solicitado a gravar uma cadeia de caracteres com %1!I64d! bytes de comprimento, mas todos os dados devem ter menos de 4294967295 bytes de comprimento.|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|Nenhuma entrada foi mapeada para uma saída. O "%1" deve ter pelo menos uma coluna de entrada mapeada para uma coluna de saída.|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|Conversão de "%1" com página de código %2!d! para "%3" com página de código %4!d! sem-suporte.|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|Conversão de "%1" com página de código %2!d! para "%3" com página de código %4!d! não é suportado.|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|O mapeamento de coluna de metadados externos para %1 não é válido.  A identificação da coluna de metadados externos não pode ser zero.|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|O %1 está mapeado para uma coluna de metadados externos que não existe.|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|Falha na gravação dos dados de objeto longo do tipo DT_TEXT, DT_NTEXT ou DT_IMAGE no buffer da tarefa de Fluxo de Dados para a coluna "%1".|  
@@ -1459,7 +1459,7 @@ ms.locfileid: "62892637"
 |0xC0204010|-1071628272|DTS_E_CANONLYSETCOMPFLAGSONSOURCE|A propriedade ComparisonFlags não pode ser definida como um valor diferente de zero para "%1" porque o "%2" não é saída de origem. A coluna de saída "colname" (ID) não pode ter uma propriedade ComparisonFlags definida como diferente de zero porque sua saída "outputname" (ID) não é saída de origem.|  
 |0xC0204011|-1071628271|DTS_E_NONSTRINGCOMPARISONFLAGSNOTZERO|Os sinalizadores de comparação para "%1" devem ser zero porque seu tipo não é de cadeia de caracteres. ComparisonFlags só pode ser diferente de zero para colunas do tipo cadeia de caracteres.|  
 |0xC0204012|-1071628270|DTS_E_COMPFLAGSONLYONSORTCOL|O "%1" não pode ter uma propriedade ComparisonFlags definida como diferente de zero porque seu SortKeyPosition está definido como zero. ComparisonFlags de uma coluna de saída só pode ser diferente de zero se seu SortKeyPosition também for diferente de zero.|  
-|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|A propriedade é somente leitura.|  
+|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|a propriedade é somente leitura.|  
 |0xC0204014|-1071628268|DTS_E_INVALIDDATATYPE|O %1 tinha um valor de tipo de dados inválido (%2!ld!) definido.|  
 |0xC0204015|-1071628267|DTS_E_CODEPAGEREQUIRED|O "%1" necessita de uma página de código para ser definido, mas o valor passado foi zero.|  
 |0xC0204016|-1071628266|DTS_E_INVALIDSTRINGLENGTH|O "%1" tem um comprimento que não é válido. O comprimento deve ficar entre %2!ld! e %3!ld!.|  
@@ -1522,7 +1522,7 @@ ms.locfileid: "62892637"
 |0xC0208018|-1071611880|DTS_E_CANTDELETECOLUMN|A coluna não pode ser excluída. O componente não permite excluir colunas dessa entrada ou saída.|  
 |0xC0208019|-1071611879|DTS_E_CANTADDCOLUMN|O componente não permite adicionar colunas a essa entrada ou saída.|  
 |0xC020801A|-1071611878|DTS_E_CANNOTTFINDRUNTIMECONNECTIONOBJECT|Não foi possível encontrar a conexão "%1". Verifique se o gerenciador de conexões tem uma conexão com esse nome.|  
-|0xC020801B|-1071611877|DTS_E_CANNOTFINDRUNTIMECONNECTIONMANAGER|Não é possível encontrar o gerenciador de conexões de tempo de execução com a ID "%1". Verifique se a coleção de gerenciadores de conexões tem um gerenciador de conexões com essa ID.|  
+|0xC020801B|-1071611877|DTS_E_CANNOTFINDRUNTIMECONNECTIONMANAGER|Não é possível encontrar o gerenciador de conexões de runtime com a ID "%1". Verifique se a coleção de gerenciadores de conexões tem um gerenciador de conexões com essa ID.|  
 |0xC020801C|-1071611876|DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Código de Erro SSIS DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER.  Falha da chamada do método AcquireConnection para o gerenciador de conexões "%1" com o código de erro 0x%2!8.8X!.  Pode haver mensagens de erro geradas antes dessa, com mais informações sobre as razões da falha na chamada do método AcquireConnection.|  
 |0xC020801D|-1071611875|DTS_E_ACQUIREDCONNECTIONISINVALID|A conexão adquirida do gerenciador de conexões "%1" não é válida.|  
 |0xC020801E|-1071611874|DTS_E_INCORRECTCONNECTIONMANAGERTYPE|O gerenciador de conexões "%1" é de um tipo incorreto.  O tipo necessário é "%2". O tipo disponível para componente é "%3".|  
@@ -1632,7 +1632,7 @@ ms.locfileid: "62892637"
 |0xC020824E|-1071611314|DTS_E_TXLOOKUP_OLEDBERR_FILLBUFFER|Ocorreu um erro OLE DB ao popular o cache interno. Verifique as propriedades SQLCommand e SqlCommandParam.|  
 |0xC020824F|-1071611313|DTS_E_TXLOOKUP_OLEDBERR_BINDPARAMETERS|Ocorreu um erro OLE DB ao associar os parâmetros. Verifique as propriedades SQLCommand e SqlCommandParam.|  
 |0xC0208250|-1071611312|DTS_E_TXLOOKUP_OLEDBERR_CREATEBINDING|Ocorreu um erro OLE DB ao criar associações. Verifique as propriedades SQLCommand e SqlCommandParam.|  
-|0xC0208251|-1071611311|DTS_E_TXLOOKUP_INVALID_CASE|Encontrado um caso inválido em uma instrução switch durante o tempo de execução.|  
+|0xC0208251|-1071611311|DTS_E_TXLOOKUP_INVALID_CASE|Encontrado um caso inválido em uma instrução switch durante o runtime.|  
 |0xC0208252|-1071611310|DTS_E_TXLOOKUP_MAINWORKSPACE_MALLOCERR|Não é possível alocar memória para uma linha nova do buffer de workspace principal. Houve falta de memória.|  
 |0xC0208253|-1071611309|DTS_E_TXLOOKUP_OLEDBERR_GETPARAMIROWSET|Ocorreu um erro OLE DB ao buscar um conjunto de linhas com parâmetros. Verifique as propriedades SQLCommand e SqlCommandParam.|  
 |0xC0208254|-1071611308|DTS_E_TXLOOKUP_OLEDBERR_GETPARAMSINGLEROW|Ocorreu um erro OLE DB ao buscar uma linha com parâmetros. Verifique as propriedades SQLCommand e SqlCommandParam.|  
@@ -1966,7 +1966,7 @@ ms.locfileid: "62892637"
 |0xC0209299|-1071607143|DTS_E_TXSCD_MAINWORKSPACE_CREATEERR|Não é possível criar um buffer de workspace.|  
 |0xC020929A|-1071607142|DTS_E_DTPXMLDOMCREATEERROR|Não é possível criar uma instância de documento XML DOM, verifique se os binários MSXML estão instalados e registrados corretamente.|  
 |0xC020929B|-1071607141|DTS_E_DTPXMLDOMLOADERROR|Não é possível carregar os dados XML em um DOM local para processamento.|  
-|0xC020929C|-1071607140|DTS_E_RSTDESTBADVARIABLETYPE|O tipo da variável de tempo de execução "%1" está incorreto. O tipo da variável de tempo de execução deve ser Object.|  
+|0xC020929C|-1071607140|DTS_E_RSTDESTBADVARIABLETYPE|O tipo da variável de runtime "%1" está incorreto. O tipo da variável de runtime deve ser Object.|  
 |0xC020929E|-1071607138|DTS_E_XMLDATAREADERMULTIPLEINLINEXMLSCHEMASNOTSUPPORTED|O Adaptador de Origem XML não processou os dados XML. Não existe suporte para vários esquemas embutidos.|  
 |0xC020929F|-1071607137|DTS_E_XMLDATAREADERANYTYPENOTSUPPORTED|O Adaptador de Origem XML não processou os dados XML. O conteúdo de um elemento não pode ser declarado como anyType.|  
 |0xC02092A0|-1071607136|DTS_E_XMLDATAREADERGROUPREFNOTSUPPORTED|O Adaptador de Origem XML não processou os dados XML. O conteúdo de um elemento não pode conter uma referência (ref) a um grupo.|  
@@ -1980,7 +1980,7 @@ ms.locfileid: "62892637"
 |0xC02092AA|-1071607126|DTS_E_RAWDESTBLOBDATATYPE|O %1 contém um tipo de dados inválido. As colunas com tipos de dados DT_IMAGE, DT_TEXT e DT_NTEXT não podem ser gravados em arquivos brutos.|  
 |0xC02092AB|-1071607125|DTS_E_RAWDESTWRONGEXTERNALMETADATAUSAGE|Esse componente usou a coleção de metadados externos de forma incorreta. O componente deveria usar metadados externos ao anexar ou truncar um arquivo existente. Do contrário, não são necessários metadados externos.|  
 |0xC02092AC|-1071607124|DTS_E_RAWDESTMAPPEDINPUTCOLUMN|%1 está mapeado para uma coluna de metadados externos com a identificação %2!d!. As colunas de entrada não devem ser mapeadas para colunas de metadados externos quando o valor Opção de Gravação selecionado for Criar Sempre.|  
-|0xC02092AD|-1071607123|DTS_E_RAWFILECANTOPENFORMETADATA|O arquivo não pode ser aberto para leitura de metadados. Se o arquivo não existir e o componente já definiu os metadados externos, defina a propriedade "ValidateExternalMetadata" como "false", e o arquivo será criado no tempo de execução.|  
+|0xC02092AD|-1071607123|DTS_E_RAWFILECANTOPENFORMETADATA|O arquivo não pode ser aberto para leitura de metadados. Se o arquivo não existir e o componente já definiu os metadados externos, defina a propriedade "ValidateExternalMetadata" como "false", e o arquivo será criado no runtime.|  
 |0xC02092AE|-1071607122|DTS_E_FAILEDTOACCESSLOBCOLUMN|Falha ao acessar dados de LOB do buffer de fluxo de dados para a coluna de origem de dados "%1" com o código de erro 0x%2!8.8X!.|  
 |0xC02092AF|-1071607121|DTS_E_XMLSRCUNABLETOPROCESSXMLDATA|O %1 não pôde processar os dados XML. %2|  
 |0xC02092B0|-1071607120|DTS_E_XMLSRCSTATIC_UNABLETOPROCESSXMLDATA|O Adaptador de Origem XML não processou os dados XML.|  
@@ -2140,7 +2140,7 @@ ms.locfileid: "62892637"
 |0x8020832B|-2145352917|DTS_W_TXFUZZYLOOKUP_JOINLENGTHMISMATCH|O comprimento da coluna de entrada '%1' não é igual ao comprimento da coluna de referência '%2' à qual está sendo feita a correspondência.|  
 |0x8020832D|-2145352915|DTS_W_TXFUZZYLOOKUP_CODEPAGE_MISMATCH|As páginas de código da coluna de origem DT_STR "%1" e da coluna de destino DT_STR "%2" não correspondem.  Isso pode causar resultados inesperados.|  
 |0x8020832E|-2145352914|DTS_W_FUZZYLOOKUP_TOOMANYEXACTMATCHCOLUMNS|Há mais de 16 junções de correspondência exata, assim o desempenho pode não ser o ideal. Reduza o número de junções de correspondência exata para melhorar o desempenho. O SQL Server tem como limite 16 colunas por índice, será usado o índice invertido para todas as pesquisas.|  
-|0x80208350|-2145352880|DTS_W_FUZZYLOOKUP_MEMLIMITANDEXHAUSTIVESPECIFIED|A opção Exhaustive exige que toda a referência seja carregada na memória principal.  Considerando que foi especificado um limite de memória para a propriedade MaxMemoryUsage propriedade, é possível que a tabela de referência inteira não caiba dentro desse limite e que a operação de correspondência falhe no tempo de execução.|  
+|0x80208350|-2145352880|DTS_W_FUZZYLOOKUP_MEMLIMITANDEXHAUSTIVESPECIFIED|A opção Exhaustive exige que toda a referência seja carregada na memória principal.  Considerando que foi especificado um limite de memória para a propriedade MaxMemoryUsage propriedade, é possível que a tabela de referência inteira não caiba dentro desse limite e que a operação de correspondência falhe no runtime.|  
 |0x80208351|-2145352879|DTS_W_FUZZYLOOKUP_EXACTMATCHCOLUMNSEXCEEDBYTELIMIT|Os comprimentos cumulativos das colunas especificadas nas junções de correspondência exata excedem o limite de 900 bytes para chaves de índice.  A Pesquisa Difusa cria um índice nas colunas de correspondência exata para melhorar o desempenho da pesquisa, e é possível que a criação desse índice falhe e a pesquisa volte a um método alternativo, talvez mais lento, de localização de correspondências. Se houver problema de desempenho, tente remover algumas colunas de junção de correspondência exata ou reduzir os comprimentos máximos das colunas de correspondência exata de comprimento variável.|  
 |0x80208352|-2145352878|DTS_W_FUZZYLOOKUP_EXACTMATCHINDEXCREATIONFAILED|Falha ao criar um índice para colunas de correspondência exata. Revertendo para o método alternativo de pesquisa difusa.|  
 |0x80208353|-2145352877|DTS_W_FUZZYGROUPINGINTERNALPIPELINEWARNING|O seguinte aviso de pipeline interno de Agrupamento Difuso ocorreu com o código de aviso 0x%1!8.8X!: "%2".|  
@@ -2192,7 +2192,7 @@ ms.locfileid: "62892637"
 |0x40016040|1073832000|DTS_I_CONFIGFROMSQLSERVER|O pacote está tentando configurar a partir do SQL Server usando a cadeia de caracteres de configuração "%1".|  
 |0x40016041|1073832001|DTS_I_CONFIGFROMFILE|O pacote está tentando configurar a partir do arquivo XML "%1".|  
 |0x40016042|1073832002|DTS_I_CONFIGFROMPARENTVARIABLE|O pacote está tentando configurar a partir da variável pai "%1".|  
-|0x40016043|1073832003|DTS_I_ATTEMPTINGUPGRADEOFDTS|Tentando uma atualização do SSIS da versão "%1" para a versão "%2". O pacote está tentando para atualizar o tempo de execução.|  
+|0x40016043|1073832003|DTS_I_ATTEMPTINGUPGRADEOFDTS|Tentando uma atualização do SSIS da versão "%1" para a versão "%2". O pacote está tentando para atualizar o runtime.|  
 |0x40016044|1073832004|DTS_I_ATTEMPTINGUPGRADEOFANEXTOBJ|Tentando atualizar "%1". O pacote está tentando atualizar um objeto extensível.|  
 |0x40016045|1073832005|DTS_I_SAVECHECKPOINTSTOFILE|O pacote salvará os pontos de verificação no arquivo "%1" durante a execução. O pacote está configurado para salvar os pontos de verificação.|  
 |0x40016046|1073832006|DTS_I_RESTARTFROMCHECKPOINTFILE|O pacote foi reinicializado a partir do arquivo "%1" de ponto de verificação. O pacote foi configurado para reinicializar a partir do ponto de verificação.|  
@@ -2268,7 +2268,7 @@ ms.locfileid: "62892637"
 |Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Função incorreta.|  
-|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|O sistema não pôde localizar o arquivo especificado.|  
+|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|O sistema não pode encontrar o arquivo especificado.|  
 |0x100|256|DTS_MSG_SERVER_STARTING|Iniciando o Microsoft SSIS Service.<br /><br /> Versão do servidor %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|O Microsoft SSIS Service foi iniciado.<br /><br /> Versão do servidor %1|  
 |0x102|258|DTS_MSG_SERVER_STOPPING|A operação de espera expirou.|  

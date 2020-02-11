@@ -16,10 +16,10 @@ ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 22ecb1601108562607d1fdc550daaa945fe72910
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770730"
 ---
 # <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68770730"
 
   Altera o agendamento do Distribution Agent ou Merge Agent para um assinante. Esse procedimento armazenado é executado no Publicador, em qualquer banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -70,12 +70,12 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
   
 `[ @active_start_date = ] active_start_date`É a data em que a tarefa de distribuição é agendada pela primeira vez, formatada como AAAAMMDD. *active_start_date* é **int**, com um padrão de **0**.  
   
-`[ @active_end_date = ] active_end_date`É a data em que a tarefa de distribuição para de ser agendada, formatada como AAAAMMDD. *active_end_date* é **int**, com um padrão de **99991231**, que significa 31 de dezembro de 9999.  
+`[ @active_end_date = ] active_end_date`É a data em que a tarefa de distribuição para de ser agendada, formatada como AAAAMMDD. *active_end_date* é **int**, com um padrão de **99991231**, o que significa 31 de dezembro de 9999.  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o Publicador é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o Publicador não deve ser usado ao alterar as propriedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do artigo em um Publicador.  
+>  o *Publicador* não deve ser usado ao alterar as propriedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do artigo em um Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -86,8 +86,8 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_changesubscriber_schedule**.  
   
-## <a name="see-also"></a>Consulte também  
- [sp_addsubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_addsubscriber_schedule](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

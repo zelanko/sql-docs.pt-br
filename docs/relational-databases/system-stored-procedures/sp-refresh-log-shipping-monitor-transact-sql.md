@@ -18,18 +18,18 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c19f9b99173ca04e6ce15862e22a25f8a2bf06e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002501"
 ---
-# <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
+# <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este procedimento armazenado atualiza as tabelas de monitor remoto com as últimas informações de um determinado servidor primário ou secundário para o agente de envio de logs especificado. O procedimento é invocado no servidor primário ou secundário.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,21 +43,21 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @agent_id = ] 'agent_id'` A ID primária para backup ou a ID secundária para cópia ou restauração. *agent_id* está **uniqueidentifier** e não pode ser NULL.  
+`[ @agent_id = ] 'agent_id'`A ID primária para backup ou a ID secundária para cópia ou restauração. *agent_id* é **uniqueidentifier** e não pode ser NULL.  
   
-`[ @agent_type = ] 'agent_type'` O tipo de trabalho de envio de log.  
+`[ @agent_type = ] 'agent_type'`O tipo de trabalho de envio de logs.  
   
  0 = Backup.  
   
  1 = Cópia.  
   
- 2 = restauração.  
+ 2 = restaurar.  
   
- *agent_type* está **tinyint** e não pode ser NULL.  
+ *agent_type* é **tinyint** e não pode ser nulo.  
   
-`[ @database = ] 'database'` O database primário ou secundário utilizado no log por agentes de backup ou restauração.  
+`[ @database = ] 'database'`O banco de dados primário ou secundário usado pelo registro em log por agentes de backup ou restauração.  
   
-`[ @mode ] n` Especifica se deve atualizar os dados do monitor ou limpá-lo. O tipo de dados *m* é tinyint e os valores suportados são:  
+`[ @mode ] n`Especifica se os dados do monitor devem ser atualizados ou limpos. O tipo de dados de *m* é tinyint e os valores com suporte são:  
   
  1 = atualização (Este é o valor padrão).  
   
@@ -67,17 +67,17 @@ sp_refresh_log_shipping_monitor
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- nenhuma.  
+ Nenhum.  
   
 ## <a name="remarks"></a>Comentários  
- **sp_refresh_log_shipping_monitor** atualiza a **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail** , e **log_shipping_monitor_error_detail** tabelas com quaisquer informações de sessão que já não foi transferido. Isto lhe permite sincronizar o servidor monitor com o servidor primário ou um secundário quando o monitor sair de sincronia por algum tempo. Além disso, permite-lhe limpar as informações de monitor no servidor monitor, se necessário.  
+ **sp_refresh_log_shipping_monitor** atualiza as tabelas **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail**e **log_shipping_monitor_error_detail** com todas as informações de sessão que ainda não foram transferidas. Isto lhe permite sincronizar o servidor monitor com o servidor primário ou um secundário quando o monitor sair de sincronia por algum tempo. Além disso, permite-lhe limpar as informações de monitor no servidor monitor, se necessário.  
   
- **sp_refresh_log_shipping_monitor** deve ser executado a partir de **mestre** banco de dados no servidor primário ou secundário.  
+ **sp_refresh_log_shipping_monitor** deve ser executado do banco de dados **mestre** no servidor primário ou secundário.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar esse procedimento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

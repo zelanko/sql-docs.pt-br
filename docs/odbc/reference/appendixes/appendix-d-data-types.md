@@ -1,5 +1,5 @@
 ---
-title: 'Apêndice D: Tipos de dados | Microsoft Docs'
+title: 'Apêndice D: tipos de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,27 +16,27 @@ ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e709c74062e31483b042c3930572fb63ca8c786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996204"
 ---
 # <a name="appendix-d-data-types"></a>Apêndice D: Tipos de dados
-ODBC define dois conjuntos de tipos de dados: Tipos de dados SQL e tipos de dados C. Tipos de dados SQL indicam o tipo de dados dos dados armazenados na fonte de dados. Tipos de dados C indicam o tipo de dados dos dados armazenados em buffers do aplicativo.  
+O ODBC define dois conjuntos de tipos de dados: tipos de dados SQL e tipos de dados C. Tipos de dados SQL indicam o tipo de dados dos dados armazenados na fonte de dados. Os tipos de dados C indicam o tipo de dados dos dados armazenados em buffers de aplicativo.  
   
- Tipos de dados SQL são definidos por cada DBMS de acordo com o padrão SQL-92. Para cada tipo de dados SQL especificado no padrão SQL-92, ODBC define um identificador de tipo, que é um **#define** valor que é passado como um argumento em funções ODBC ou retornada nos metadados de um conjunto de resultados. O SQL-92 somente tipos de dados não suportados pelo ODBC são BIT (o tipo de ODBC SQL_BIT tem características diferentes), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE e NATIONAL_CHARACTER. Drivers são responsáveis por mapeamento de tipos de dados do SQL de específico da fonte de dados para identificadores de tipo de dados SQL ODBC e identificadores de tipo de dados SQL específica do driver. O tipo de dados SQL é especificado no campo SQL_DESC_CONCISE_TYPE de um descritor de implementação.  
+ Os tipos de dados SQL são definidos por cada DBMS de acordo com o padrão SQL-92. Para cada tipo de dados SQL especificado no padrão SQL-92, o ODBC define um identificador de tipo, que é um valor **#define** que é passado como um argumento em funções ODBC ou retornado nos metadados de um conjunto de resultados. Os únicos tipos de dados SQL-92 sem suporte pelo ODBC são bits (o tipo de SQL_BIT ODBC tem características diferentes), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE e NATIONAL_CHARACTER. Os drivers são responsáveis por mapear tipos de dados SQL específicos da fonte de dados para identificadores de tipo de dados SQL ODBC e identificadores de tipo de dados SQL específicos do driver. O tipo de dados SQL é especificado no campo SQL_DESC_CONCISE_TYPE de um descritor de implementação.  
   
- ODBC define os tipos de dados C e seus identificadores de tipo correspondentes do ODBC. Um aplicativo especifica o tipo de dados do buffer que receberá os dados do conjunto de resultados, passando o identificador de tipo C apropriado no C a *TargetType* argumento em uma chamada para **SQLBindCol** ou  **SQLGetData**. Ela especifica o tipo de C do buffer que contém um parâmetro de instrução, passando o identificador de tipo C apropriado na *ValueType* argumento em uma chamada para **SQLBindParameter**. O tipo de dados C é especificado no campo SQL_DESC_CONCISE_TYPE de um descritor de aplicativo.  
+ O ODBC define os tipos de dados C e seus identificadores de tipo ODBC correspondentes. Um aplicativo especifica o tipo de dados C do buffer que receberá dados do conjunto de resultados, passando o identificador do tipo C apropriado no argumento *TargetType* em uma chamada para **SQLBindCol** ou **SQLGetData**. Ele especifica o tipo C do buffer que contém um parâmetro de instrução passando o identificador do tipo C apropriado no argumento *ValueType* em uma chamada para **SQLBindParameter**. O tipo de dados C é especificado no campo SQL_DESC_CONCISE_TYPE de um descritor de aplicativo.  
   
 > [!NOTE]  
->  Não há nenhum tipo de dados C específicos do driver.  
+>  Não há nenhum tipo de dados C específico do driver.  
   
- Cada tipo de dados SQL corresponde a um tipo de dados ODBC C. Antes de retornar dados da fonte de dados, o driver converte-lo para o tipo de dados C especificado. Antes de enviar dados à fonte de dados, o driver o converte do tipo de dados C especificado.  
+ Cada tipo de dados SQL corresponde a um tipo de dados ODBC C. Antes de retornar dados da fonte de dados, o driver o converte para o tipo de dados C especificado. Antes de enviar dados para a fonte de dados, o driver o converte do tipo de dados C especificado.  
   
  Este apêndice contém os tópicos a seguir.  
   
--   [Usando identificadores de tipo de dados](../../../odbc/reference/appendixes/using-data-type-identifiers.md)  
+-   [Usar identificadores de tipo de dados](../../../odbc/reference/appendixes/using-data-type-identifiers.md)  
   
 -   [Tipos de dados SQL](../../../odbc/reference/appendixes/sql-data-types.md)  
   
@@ -46,7 +46,7 @@ ODBC define dois conjuntos de tipos de dados: Tipos de dados SQL e tipos de dado
   
 -   [Identificadores de tipo pseudo](../../../odbc/reference/appendixes/pseudo-type-identifiers.md)  
   
--   [Transferindo dados em seu formato binário](../../../odbc/reference/appendixes/transferring-data-in-its-binary-form.md)  
+-   [Transferir dados em seu formato binário](../../../odbc/reference/appendixes/transferring-data-in-its-binary-form.md)  
   
 -   [Diretrizes para tipos de dados numéricos e de intervalo](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
   
@@ -54,8 +54,8 @@ ODBC define dois conjuntos de tipos de dados: Tipos de dados SQL e tipos de dado
   
 -   [Tamanho da coluna, dígitos decimais, comprimento do octeto de transferência e tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)  
   
--   [Convertendo dados de SQL para tipos de dados do C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)  
+-   [Converter dados de SQL para tipos de dados do C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)  
   
--   [Convertendo dados de C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
+-   [Converter dados de C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
- Para obter uma explicação dos tipos de dados ODBC, consulte [tipos de dados em ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md). Para obter informações sobre tipos de dados SQL específico do driver, consulte a documentação do driver.
+ Para obter uma explicação dos tipos de dados ODBC, consulte [tipos de dados em ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md). Para obter informações sobre tipos de dados do SQL específicos do driver, consulte a documentação do driver.

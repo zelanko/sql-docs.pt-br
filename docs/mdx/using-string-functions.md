@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037989"
 ---
 # <a name="using-string-functions"></a>Usando as funções de cadeia de caracteres
@@ -20,7 +20,7 @@ ms.locfileid: "68037989"
 
   Você pode usar as funções de cadeia de caracteres em praticamente todos os objetos em Multidimensional Expressions (MDX). Em procedimentos armazenados, use as funções de cadeia de caracteres principalmente para converter o objeto em uma representação de cadeia de caracteres. Também é possível usar as funções de cadeia de caracteres para avaliar uma expressão de cadeia de caracteres sobre um objeto para retornar um valor.  
   
- As funções de cadeia de caracteres mais amplamente usados são **nome** e **Uniquename**. Respectivamente, estas funções retornam o nome e o nome exclusivo de um objeto. Elas são usadas principalmente ao depurar cálculos para identificar qual membro está sendo retornando por uma função.  
+ As funções de cadeia de caracteres usadas mais amplamente são **Name** e **UniqueName**. Respectivamente, estas funções retornam o nome e o nome exclusivo de um objeto. Elas são usadas principalmente ao depurar cálculos para identificar qual membro está sendo retornando por uma função.  
   
 ## <a name="examples"></a>Exemplos  
  As consultas de exemplo a seguir mostram como usar estas funções:  
@@ -47,7 +47,7 @@ ms.locfileid: "68037989"
   
  `FROM [Adventure Works]`  
   
- O **gerar** função pode ser usada para executar uma função de cadeia de caracteres em todos os membros de um conjunto e concatenar os resultados. Isto também pode ser útil ao depurar cálculos, pois permite visualizar o conteúdo de um conjunto. O exemplo a seguir mostra como usá-la desse modo:  
+ A função **Generate** pode ser usada para executar uma função de cadeia de caracteres em cada membro de um conjunto e concatenar os resultados. Isto também pode ser útil ao depurar cálculos, pois permite visualizar o conteúdo de um conjunto. O exemplo a seguir mostra como usá-la desse modo:  
   
  `WITH`  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68037989"
   
  `FROM [Adventure Works]`  
   
- Outro grupo de funções de cadeia de caracteres usadas com frequência são as que permitem converter uma cadeia de caracteres que contém o nome exclusivo de um objeto ou uma expressão que resolve o objeto no próprio objeto. A consulta de exemplo a seguir demonstra como o **StrToMember** e **StrToSet** funções fazem isso:  
+ Outro grupo de funções de cadeia de caracteres usadas com frequência são as que permitem converter uma cadeia de caracteres que contém o nome exclusivo de um objeto ou uma expressão que resolve o objeto no próprio objeto. A consulta de exemplo a seguir demonstra como as funções **StrToMember** e **StrToSet** fazem isso:  
   
  `SELECT`  
   
@@ -98,15 +98,15 @@ ms.locfileid: "68037989"
  `FROM [Adventure Works]`  
   
 > [!NOTE]  
->  O **StrToMember** e **StrToSet** funções devem ser usadas com cuidado. Elas podem gerar um desempenho de consulta insatisfatório se forem usadas em definições de cálculo.  
+>  As funções **StrToMember** e **StrToSet** devem ser usadas com cautela. Elas podem gerar um desempenho de consulta insatisfatório se forem usadas em definições de cálculo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerar &#40;MDX&#41;](../mdx/generate-mdx.md)   
- [Nome &#40;MDX&#41;](../mdx/name-mdx.md)   
- [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [Nome &#40;&#41;MDX](../mdx/name-mdx.md)   
+ [UniqueName&#41;MDX &#40;](../mdx/uniquename-mdx.md)   
  [Funções &#40;sintaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [Usando procedimentos armazenados &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
- [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
+ [StrToMember&#41;MDX &#40;](../mdx/strtomember-mdx.md)   
+ [StrToSet&#41;MDX &#40;](../mdx/strtoset-mdx.md)  
   
   

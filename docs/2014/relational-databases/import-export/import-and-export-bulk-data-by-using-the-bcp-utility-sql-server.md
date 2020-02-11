@@ -15,15 +15,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
 ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71708218"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importar e exportar dados em massa usando o utilitário bcp (SQL Server)
 
-Este tópico oferece uma visão geral de como usar o [utilitário bcp](../../tools/bcp-utility.md) para exportar dados de qualquer lugar para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], em que uma instrução SELECT atua, incluindo exibições particionadas.  
+Este tópico oferece uma visão geral de como usar o [utilitário bcp](../../tools/bcp-utility.md) para exportar dados de qualquer lugar para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , em que uma instrução SELECT atua, incluindo exibições particionadas.  
   
  O utilitário bcp (Bcp.exe) é uma ferramenta de linha de comandos que usa a API do BCP (Programa de cópia em massa). O utilitário bcp executa as seguintes tarefas:  
   
@@ -31,26 +31,26 @@ Este tópico oferece uma visão geral de como usar o [utilitário bcp](../../too
   
 -   Exporta dados em massa de uma consulta.  
   
--   Importa dados em massa de um arquivo de dados para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Importa dados em massa de um arquivo de dados para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Gera arquivos de formato.  
   
  O utilitário bcp é acessado pelo comando **bcp** . Caso não esteja usando um arquivo de formato preexistente, para usar o comando **bcp** para importar dados em massa, será necessário compreender o esquema da tabela e os tipos de dados de suas colunas.  
   
- O utilitário bcp pode exportar dados de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um arquivo de dados para uso em outros programas. O utilitário também pode importar dados de outro programa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], geralmente outro DBMS (sistema de gerenciamento de banco de dados). Os dados são exportados primeiro do programa de origem para um arquivo de dados e, depois, em uma operação separada, copiados do arquivo de dados para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ O utilitário bcp pode exportar dados de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um arquivo de dados para uso em outros programas. O utilitário também pode importar dados de outro programa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , geralmente outro DBMS (sistema de gerenciamento de banco de dados). Os dados são exportados primeiro do programa de origem para um arquivo de dados e, depois, em uma operação separada, copiados do arquivo de dados para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  O comando **bcp** oferece opções que você usa para especificar o tipo de dados do arquivo de dados e outras informações. Se essas opções não forem especificadas, o comando sugere formatar as informações, como o tipo de campos de dados em um arquivo de dados. O comando pergunta se você quer criar um arquivo de formato que contém suas respostas interativas. Se você quiser flexibilidade para operações futuras de importação ou exportação em massa, um arquivo de formato é sempre útil. Você pode especificar o arquivo de formato em comandos **bcp** posteriores para arquivos de dados equivalentes. Para obter mais informações, veja [Especificar formatos de dados para compatibilidade usando bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
 > [!NOTE]  
 >  O utilitário bcp é gravado usando a cópia em massa do ODBC  
   
- Para obter uma descrição da sintaxe do comando **bcp**, veja [Utilitário bcp](../../tools/bcp-utility.md).  
+ Para obter uma descrição da sintaxe do comando **bcp** , veja [Utilitário bcp](../../tools/bcp-utility.md).  
   
 ## <a name="examples"></a>Exemplos
 
  Para obter exemplos do **bcp**, veja:  
   
--   [bcp Utility](../../tools/bcp-utility.md)  
+-   [Utilitário bcp](../../tools/bcp-utility.md)  
   
 -   [Criar um arquivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -72,13 +72,13 @@ Este tópico oferece uma visão geral de como usar o [utilitário bcp](../../too
   
 -   [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
-[Insert &#40;Transact-SQL&#41; ](/sql/t-sql/statements/insert-transact-sql)
-[cláusula &#40;SELECT Transact-SQL&#41; ](/sql/t-sql/queries/select-clause-transact-sql)
-[utilitário bcp](../../tools/bcp-utility.md)   
-[&#40;Preparar para importar dados em massa&#41; SQL Server](prepare-to-bulk-import-data-sql-server.md)
-[BULK INSERT &#40;Transact-&#41; SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
-[importação e exportação em massa &#40;de&#41; dados SQL Server](bulk-import-and-export-of-data-sql-server.md)
-[OPENROWSET &#40;Transact&#41; -SQL](/sql/t-sql/functions/openrowset-transact-sql)
-[criar um &#40;arquivo&#41; de formato SQL Server](create-a-format-file-sql-server.md)
+[Inserir &#40;cláusula de seleção de&#41;](/sql/t-sql/statements/insert-transact-sql) 
+Transact-SQL [&#40;o Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
+ [utilitário bcp](../../tools/bcp-utility.md)   
+[Preparar para importação de dados em massa &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
+ [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
+ [importação e exportação em massa de dados &#40;](bulk-import-and-export-of-data-sql-server.md) 
+SQL SERVERT&#41;[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+ [criar um arquivo de formato &#40;](create-a-format-file-sql-server.md) SQL Server&#41;

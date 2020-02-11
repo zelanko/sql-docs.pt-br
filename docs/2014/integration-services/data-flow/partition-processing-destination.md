@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53ef09d19b62c0e6ce7742c41581d3cdefdfc374
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890556"
 ---
 # <a name="partition-processing-destination"></a>Destino de processamento de partições
-  O destino de Processamento de Partição carrega e processa uma partição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre partições, consulte [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
+  O destino de processamento de partições carrega e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processa uma partição. Para obter mais informações sobre partições, consulte [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
   
  O destino de Processamento de Partições inclui os seguintes recursos :  
   
@@ -48,11 +48,11 @@ ms.locfileid: "68890556"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Destino** de Processamento de Partições, clique em um dos seguintes tópicos:  
   
--   [Editor de Destino de Processamento de Partições &#40;Página Gerenciador de Conexões&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
+-   [Editor de destino de processamento de partições &#40;página Gerenciador de conexões&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
   
--   [Editor de Destino de Processamento de Partições &#40;Página Mapeamentos&#41;](../partition-processing-destination-editor-mappings-page.md)  
+-   [Editor de destino de processamento de partições &#40;página Mapeamentos&#41;](../partition-processing-destination-editor-mappings-page.md)  
   
--   [Editor de Destino de Processamento de Partições &#40;Página Avançado&#41;](../partition-processing-destination-editor-advanced-page.md)  
+-   [Editor de destino de processamento de partições &#40;página avançado&#41;](../partition-processing-destination-editor-advanced-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

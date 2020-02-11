@@ -15,13 +15,13 @@ ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e07bf71f0d622ad9095974cd7020001625edf1f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037711"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>Chamar SQLSetPos para inserir dados
-Quando um ODBC *2.x* aplicativo trabalhar com ODBC *3.x* driver chama **SQLSetPos** com um *operação* argumento de SQL_ADD, o Gerenciador de driver não é mapeado para essa chamada para **SQLBulkOperations**. Se um ODBC *3.x* driver deve funcionar com um aplicativo que chama **SQLSetPos** com SQL_ADD, o driver deve dar suporte a essa operação.  
+Quando um aplicativo ODBC *2. x* que trabalha com um driver ODBC *3. x* chama **SQLSetPos** com um argumento de *operação* de SQL_ADD, o Gerenciador de driver não mapeia essa chamada para **SQLBulkOperations**. Se um driver ODBC *3. x* funcionar com um aplicativo que chama **SQLSetPos** com SQL_ADD, o driver deverá dar suporte a essa operação.  
   
- Uma grande diferença no comportamento quando **SQLSetPos** é chamado com SQL_ADD ocorre quando ele é chamado no estado S6. Em ODBC *2.x*, o driver retornou S1010 quando **SQLSetPos** foi chamado com SQL_ADD no estado S6 (depois que o cursor foi posicionado com **SQLFetch**). Em ODBC *3.x*, **SQLBulkOperations** com um *operação* de SQL_ADD pode ser chamado no estado S6. Uma grande diferença no comportamento a segunda é que **SQLBulkOperations** com um *operação* de SQL_ADD pode ser chamado no estado S5, enquanto **SQLSetPos** com um  **Operação** de SQL_ADD não é possível. Para as transições de instrução que podem ocorrer para a mesma chamada em ODBC *3.x*, consulte [apêndice b: Tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+ Uma grande diferença no comportamento quando **SQLSetPos** é chamado com SQL_ADD ocorre quando é chamado no estado s6. No ODBC *2. x*, o driver retornou S1010 quando **SQLSetPos** foi chamado com SQL_ADD no estado S6 (depois que o cursor tiver sido posicionado com **SQLFetch**). No ODBC *3. x*, **SQLBulkOperations** com uma *operação* de SQL_ADD pode ser chamado no estado s6. Uma segunda grande diferença no comportamento é que **SQLBulkOperations** com uma *operação* de SQL_ADD pode ser chamado no estado S5, enquanto **SQLSetPos** com uma **operação** de SQL_ADD não pode. Para as transições de instrução que podem ocorrer para a mesma chamada no ODBC *3. x*, consulte o [Apêndice B: tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900162"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
@@ -61,8 +61,8 @@ ms.locfileid: "62900162"
   
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de Transformação Mesclagem](../../merge-join-transformation-editor.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Editor de transformação junção de mesclagem](../../merge-join-transformation-editor.md)   
  [Transformação Mesclar](merge-transformation.md)   
  [Transformação Unir Tudo](union-all-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  

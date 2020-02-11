@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d47c670088f088260435f9e046e0bbdbf1fb9e4a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637709"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Atualizar para o SQL Server 2014
@@ -51,15 +51,15 @@ ms.locfileid: "73637709"
   
 -   [Tópicos de informações práticas sobre atualização](../../../2014/sql-server/install/upgrade-how-to-topics.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Atualizar o Mecanismo de Banco de Dados](upgrade-database-engine.md)   
- [Atualizar o Analysis Services](upgrade-analysis-services.md)   
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Atualização do Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Atualizar Mecanismo de Banco de Dados](upgrade-database-engine.md)   
+ [Atualizar Analysis Services](upgrade-analysis-services.md)   
+ [Atualizar e migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Atualizar Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Atualizar bancos de dados replicados](../../database-engine/install-windows/upgrade-replicated-databases.md)   
- [Atualizar o Master Data Services](upgrade-master-data-services.md)   
+ [Atualizar Master Data Services](upgrade-master-data-services.md)   
  [SQL Server 2005 Analisador de Práticas Recomendadas](https://www.microsoft.com/download/details.aspx?id=23864)   
- [Analisador de Práticas Recomendadas do SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=15289)   
+ [SQL Server 2008 R2 Analisador de Práticas Recomendadas](https://www.microsoft.com/download/details.aspx?id=15289)   
  [Compatibilidade com versões anteriores](../../../2014/getting-started/backward-compatibility.md)  
   
   

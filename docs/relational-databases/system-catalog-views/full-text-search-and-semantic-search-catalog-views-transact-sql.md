@@ -1,5 +1,5 @@
 ---
-title: Exibições (Transact-SQL) do catálogo de pesquisa de texto completo e pesquisa semântica | Microsoft Docs
+title: Exibições do catálogo de pesquisa de texto completo e de semântica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 3c10554183501019f00c4f7877fabc102ee44108
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016561"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>Exibições de catálogo da pesquisa de texto completo e pesquisa semântica (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68016561"
  Contém uma linha para cada catálogo de texto completo.  
   
  [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)  
- Retorna uma linha para cada tipo de documento disponível para operações de indexação de texto completo. Cada linha representa o **IFilter** interface que está registrado na instância do SQL Server.  
+ Retorna uma linha para cada tipo de documento disponível para operações de indexação de texto completo. Cada linha representa a interface do **IFilter** que é registrada na instância do SQL Server.  
   
  [sys.fulltext_index_catalog_usages](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)  
  Retorna uma linha para cada catálogo de texto completo para referência de índice de texto completo.  
@@ -72,9 +72,9 @@ ms.locfileid: "68016561"
  [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)  
  Retorna uma linha para cada idioma cujo modelo de estatística está registrado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando um modelo de idioma está registrado, o idioma é habilitado para indexação semântica.  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+## <a name="see-also"></a>Consulte Também  
+ [Exibições do sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Pesquisa de texto completo e funções e exibições de gerenciamento dinâmico de pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [Exibições e funções de gerenciamento dinâmico de pesquisa de texto completo e de pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

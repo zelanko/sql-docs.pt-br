@@ -1,5 +1,5 @@
 ---
-title: Comando INDEX | Microsoft Docs
+title: Comando de índice | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61e55bec7a35009f0d83a43550a434e0966559b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019471"
 ---
 # <a name="index-command"></a>Comando INDEX
-Cria um arquivo de índice para exibir e acessar os registros da tabela em uma ordem lógica.  
+Cria um arquivo de índice para exibir e acessar os registros de tabela em uma ordem lógica.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,87 +36,87 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
 ## <a name="arguments"></a>Argumentos  
  *eExpression*  
- Especifica uma expressão de índice que pode incluir o nome de um campo ou campos da tabela atual. Uma chave de índice com base em expressão do índice é criada no arquivo de índice para cada registro na tabela. Do Visual FoxPro usa essas chaves para exibir e acessar os registros na tabela.  
+ Especifica uma expressão de índice que pode incluir o nome de um campo ou campos da tabela atual. Uma chave de índice baseada na expressão de índice é criada no arquivo de índice para cada registro na tabela. O Visual FoxPro usa essas chaves para exibir e acessar registros na tabela.  
   
 > [!NOTE]  
->  Embora não seja recomendado, *eExpression* também pode ser uma variável de memória, um elemento de matriz, ou um campo ou expressão de campo de uma tabela em outra área de trabalho. Campos de memorando não podem ser usados sozinho em expressões de arquivo de índice; eles devem ser combinados com outras expressões de caractere. Se você acessar um índice que contém uma variável ou um campo que não existe ou não pode ser localizado, o Visual FoxPro gera uma mensagem de erro.  
+>  Embora não seja recomendado, *eExpression* também pode ser uma variável de memória, um elemento de matriz ou uma expressão de campo ou campo de uma tabela em outra área de trabalho. Campos de memorando não podem ser usados sozinhas em expressões de arquivo de índice; Eles devem ser combinados com outras expressões de caractere. Se você acessar um índice que contém uma variável ou campo que não existe mais ou não pode ser localizado, o Visual FoxPro gerará uma mensagem de erro.  
   
- Se você tentar criar um índice com uma chave que varia em tamanho, a chave será preenchida com espaços. Chaves de índice de comprimento variável não são suportadas no Visual FoxPro.  
+ Se você tentar criar um índice com uma chave que varie de comprimento, a chave será preenchida com espaços. Não há suporte para chaves de índice de comprimento variável no Visual FoxPro.  
   
- É possível criar uma chave de índice com comprimento zero. Por exemplo, uma chave de índice zero comprimento é criada quando a expressão de índice é uma subcadeia de caracteres de um campo vazio de memorando. Uma chave de índice zero comprimento gera uma mensagem de erro. Quando o Visual FoxPro cria um índice, ele avalia a campos no primeiro registro na tabela. Se um campo está vazio, pode ser necessário inserir alguns dados temporários no campo no primeiro registro para impedir que uma chave de índice de comprimento 0.  
+ É possível criar uma chave de índice com comprimento zero. Por exemplo, uma chave de índice de comprimento zero é criada quando a expressão de índice é uma subcadeia de caracteres de um campo de memorando vazio. Uma chave de índice de comprimento zero gera uma mensagem de erro. Quando o Visual FoxPro cria um índice, ele avalia os campos no primeiro registro da tabela. Se um campo estiver vazio, talvez seja necessário inserir alguns dados temporários no campo no primeiro registro para evitar uma chave de índice de comprimento 0.  
   
  PARA *IDXFileName*  
- Cria um arquivo de índice. idx. O arquivo de índice é dada a extensão de padrão. idx.  
+ Cria um arquivo de índice. idx. O arquivo de índice recebe a extensão padrão. idx.  
   
- MARCA *TagName*[OF *CDXFileName*]  
- Cria um arquivo de índice composto. Um arquivo de índice composto é um arquivo de índice único que consiste em qualquer número de marcas separadas (entradas de índice). Cada marca é identificada por seu nome de marca exclusivo. Nomes de marca devem começar com uma letra ou um sublinhado e podem conter qualquer combinação de letras, dígitos ou sublinhados até 10. O número de marcas em um arquivo de índice composto é limitado apenas pela memória disponível e espaço em disco.  
+ MARCAR *TagName*[of *CDXFileName*]  
+ Cria um arquivo de índice composto. Um arquivo de índice composto é um único arquivo de índice que consiste em qualquer número de marcas separadas (entradas de índice). Cada marca é identificada por seu nome de marca exclusivo. Os nomes de marca devem começar com uma letra ou um sublinhado e podem consistir em qualquer combinação de até 10 letras, dígitos ou sublinhados. O número de marcas em um arquivo de índice composto é limitado apenas pela memória disponível e pelo espaço em disco.  
   
- Arquivos de índice composto de múltiplas entradas são sempre compactos. Não é necessário incluir COMPACT ao criar um arquivo de índice composto. Nomes de arquivos de índice composto recebem uma extensão. cdx.  
+ Arquivos de índice composto de várias entradas são sempre compactados. Não é necessário incluir o COMPACT ao criar um arquivo de índice composto. Os nomes dos arquivos de índice compostos recebem uma extensão. CDX.  
   
- Dois tipos de arquivos de índice composto podem ser criados: estruturais e nonstructural.  
+ Dois tipos de arquivos de índice compostos podem ser criados: estrutural e não estrutural.  
   
- **Arquivos de índice composto estrutural** você pode criar um arquivo de índice composto estrutural com marca *TagName* excluindo o opcional de *CDXFileName* cláusula. Um arquivo de índice composto estrutural sempre tem o mesmo nome que a tabela base e é aberto automaticamente quando a tabela é aberta.  
+ **Arquivos de índice composto estrutural** Você pode criar um arquivo de índice composto estrutural com a marca *TagName* , excluindo o opcional da cláusula *CDXFileName* . Um arquivo de índice composto estrutural sempre tem o mesmo nome base que a tabela e é aberto automaticamente quando a tabela é aberta.  
   
- **Arquivos de índice composto nonstructural** você pode criar um arquivo de índice composto nonstructural incluindo OF *CDXFileName* após a marca *TagName*. Ao contrário de um arquivo de índice composto estrutural, um arquivo de índice composto nonstructural deve ser aberto explicitamente com a cláusula de índice em uso.  
+ **Arquivos de índice composto não estrutural** Você pode criar um arquivo de índice composto não estrutural incluindo *CDXFileName* após a marca *TagName*. Ao contrário de um arquivo de índice composto estrutural, um arquivo de índice composto não estrutural deve ser aberto explicitamente com a cláusula INDEX em uso.  
   
- Se um arquivo de índice composto já foi criado e aberto, emitindo o índice com a marca *TagName* adiciona uma marca para o arquivo de índice composto.  
+ Se um arquivo de índice composto já tiver sido criado e aberto, o índice emissora com a marca *TagName* adicionará uma marca ao arquivo de índice composto.  
   
  PARA *lExpression*  
- Especifica uma condição na qual somente os registros que satisfazem a expressão de filtro *lExpression* estão disponíveis para exibição e acesso; as chaves de índice são criadas no arquivo de índice para apenas os registros que correspondem à expressão de filtro.  
+ Especifica uma condição na qual somente os registros que atendem à expressão de filtro *lExpression* estão disponíveis para exibição e acesso; as chaves de índice são criadas no arquivo de índice apenas para os registros que correspondem à expressão de filtro.  
   
- Tecnologia do Visual FoxPro Rushmore otimiza um índice... PARA *lExpression* comando se *lExpression* é uma expressão otimizável. Para obter melhor desempenho, use uma expressão otimizável na cláusula FOR.  
+ A tecnologia Rushmore do Visual FoxPro otimiza um índice... PARA o comando *lExpression* se *lExpression* for uma expressão otimizável. Para obter o melhor desempenho, use uma expressão otimizável na cláusula FOR.  
   
- COMPACTAR  
- Cria um arquivo. idx compact.  
+ COMPACTÁ  
+ Cria um arquivo Compact. idx.  
   
- EM ORDEM CRESCENTE  
- Especifica uma ordem crescente para o arquivo. cdx. Por padrão, as marcas. cdx são criadas em ordem crescente. (Você pode incluir CRESCENTE como um lembrete da ordem do arquivo de índice). Uma tabela pode ser indexada na ordem inversa, incluindo DECRESCENTE.  
+ CRESCENTE  
+ Especifica uma ordem crescente para o arquivo. CDX. Por padrão, as marcas. CDX são criadas em ordem crescente. (Você pode incluir em ordem crescente como um lembrete da ordem do arquivo de índice.) Uma tabela pode ser indexada em ordem inversa, incluindo decrescente.  
   
- EM ORDEM DECRESCENTE  
- Especifica uma ordem decrescente para o arquivo. cdx. Você não pode incluir DECRESCENTE durante a criação de arquivos de índice. idx.  
+ DECRESCENTE  
+ Especifica uma ordem decrescente para o arquivo. CDX. Não é possível incluir decrescente ao criar arquivos de índice. idx.  
   
  UNIQUE  
- Especifica que apenas o primeiro registro encontrado com um valor de chave de índice específico está incluído em um arquivo. idx ou marca. cdx. UNIQUE pode ser usado para impedir o acesso ou a exibição de registros duplicados. Todos os registros adicionados com chaves de índice duplicados são excluídos do arquivo de índice. Usando a opção exclusiva de índice é idêntico ao executar SET UNIQUE ON antes de emitir o índice ou a REINDEXAÇÃO.  
+ Especifica que somente o primeiro registro encontrado com um valor de chave de índice específico está incluído em um arquivo. idx ou em uma marca. CDX. EXCLUSIVO pode ser usado para impedir a exibição ou o acesso a registros duplicados. Todos os registros adicionados com chaves de índice duplicadas são excluídos do arquivo de índice. O uso da opção UNIQUE de INDEX é idêntico à execução de SET UNIQUE ON antes de emitir o índice ou reindexar.  
   
- Quando um índice exclusivo ou uma marca de índice está ativa e um registro duplicado é alterado de forma que as alterações de sua chave de índice, o índice ou a marca de índice é atualizada. No entanto, o próximo registro duplicado com a chave de índice original não é acessado ou exibido até que você reindexar o arquivo usando a REINDEXAÇÃO.  
+ Quando uma marca de índice ou índice exclusivo está ativa e um registro duplicado é alterado de uma maneira que altera sua chave de índice, a marca índice ou índice é atualizada. No entanto, o próximo registro duplicado com a chave de índice original não pode ser acessado ou exibido até que você reindexe o arquivo usando REINDEX.  
   
- CANDIDATO  
- Cria uma marca de índice estruturais do candidato. A palavra-chave de CANDIDATO pode ser incluída somente durante a criação de uma marca de índice estruturais; Caso contrário, o Visual FoxPro gera uma mensagem de erro.  
+ CANDIDATE  
+ Cria uma marca de índice estrutural candidato. A palavra-chave candidata pode ser incluída somente ao criar uma marca de índice estrutural; caso contrário, o Visual FoxPro gerará uma mensagem de erro.  
   
- Uma marca de índice do candidato impede que os valores duplicados no campo ou combinação de campos especificados na expressão do índice *eExpression*. O termo *release candidate* refere-se para o tipo de índice; porque os índices de candidato evitar valores duplicados, eles se qualifica como um candidato a"" para ser um índice primário.  
+ Uma marca de índice candidato impede valores duplicados no campo ou na combinação de campos especificados na expressão de índice *eExpression*. O termo *candidato* refere-se ao tipo de índice; como os índices candidatos impedem valores duplicados, eles se qualificam como um "candidato" para ser um índice primário.  
   
- Do Visual FoxPro gerará um erro se você criar uma marca de índice de candidato para um campo ou uma combinação de campos que já contenha valores duplicados.  
+ O Visual FoxPro gerará um erro se você criar uma marca de índice candidato para um campo ou uma combinação de campos que já contenham valores duplicados.  
   
- ADITIVO  
- Mantém abre qualquer arquivo de índice aberto anteriormente. Se você omitir a cláusula ADITIVA, quando você cria um arquivo de índice ou de arquivos para uma tabela com índice, todos os arquivos (exceto o índice composto estrutural) índice aberto anteriormente são fechados.  
+ CUMULATIVO  
+ O continua a abrir todos os arquivos de índice abertos anteriormente. Se você omitir a cláusula aditiva ao criar um arquivo de índice ou arquivos para uma tabela com índice, todos os arquivos de índice abertos anteriormente (exceto o índice composto estrutural) serão fechados.  
   
 ## <a name="remarks"></a>Comentários  
- Registros em uma tabela que tem um arquivo de índice são exibidos e acessados na ordem especificada pela expressão de índice. A ordem física dos registros na tabela não é alterada por um arquivo de índice.  
+ Os registros em uma tabela que tem um arquivo de índice são exibidos e acessados na ordem especificada pela expressão de índice. A ordem física dos registros na tabela não é alterada por um arquivo de índice.  
   
 ## <a name="index-types"></a>Tipos de índice  
- Do Visual FoxPro permite que você criar dois tipos de arquivos de índice:  
+ O Visual FoxPro permite criar dois tipos de arquivos de índice:  
   
--   Composta que contém várias entradas de índice, denominadas marcas de arquivos de índice. cdx  
+-   Arquivos de índice. cdx compostos que contêm várias entradas de índice chamadas marcas  
   
--   arquivos de índice. idx que contém uma entrada de índice  
+-   arquivos de índice. idx contendo uma entrada de índice  
   
  Você também pode criar um arquivo de índice composto estrutural, que é aberto automaticamente com a tabela.  
   
 > [!NOTE]  
->  Como arquivos de índice composto estruturais são abertos automaticamente quando a tabela é aberta, eles são o tipo de índice preferencial.  
+>  Como os arquivos de índice composto estrutural são abertos automaticamente quando a tabela é aberta, eles são o tipo de índice preferencial.  
   
- Inclua o CD para criar arquivos de índice. idx compact. Arquivos de índice composto são sempre compactos.  
+ Inclua COMPACT para criar arquivos de índice Compact. idx. Os arquivos de índice compostos são sempre compactados.  
   
-## <a name="index-order-and-updating"></a>Ordem de índice e a atualização  
- Somente um índice (o arquivo índice mestre) ou marcação (a marca mestre) controla a ordem na qual a tabela é exibida ou acessada. Alguns comandos (por exemplo, busca) usam o arquivo de índice mestre ou a marca para procurar registros. No entanto, todos os abertos. idx e arquivos de índice. cdx são atualizados conforme as alterações são feitas na tabela.  
+## <a name="index-order-and-updating"></a>Ordem de índice e atualização  
+ Somente um arquivo de índice (o arquivo de índice mestre) ou marca (a marca mestra) controla a ordem na qual a tabela é exibida ou acessada. Determinados comandos (SEEK, por exemplo) usam a marca ou o arquivo de índice mestre para pesquisar registros. No entanto, todos os arquivos de índice Open. idx e. CDX são atualizados conforme são feitas alterações na tabela.  
   
 ## <a name="user-defined-functions"></a>Funções definidas pelo usuário  
- Embora uma expressão de índice pode conter uma função definida pelo usuário, você não deve usar funções definidas pelo usuário em uma expressão de índice. Funções definidas pelo usuário em uma expressão de índice aumentam o tempo necessário para criar ou atualizar o índice. Além disso, as atualizações do índice não podem ocorrer quando uma função definida pelo usuário é usada para uma expressão de índice.  
+ Embora uma expressão de índice possa conter uma função definida pelo usuário, você não deve usar funções definidas pelo usuário em uma expressão de índice. As funções definidas pelo usuário em uma expressão de índice aumentam o tempo necessário para criar ou atualizar o índice. Além disso, as atualizações de índice podem não ocorrer quando uma função definida pelo usuário é usada para uma expressão de índice.  
   
- Se você usar uma função definida pelo usuário em uma expressão de índice, do Visual FoxPro deve ser capaz de localizar a função definida pelo usuário. Quando o Visual FoxPro cria um índice, a expressão de índice é salvo no arquivo de índice, mas apenas uma referência para a função definida pelo usuário está incluída na expressão do índice.  
+ Se você usar uma função definida pelo usuário em uma expressão de índice, o Visual FoxPro deverá ser capaz de localizar a função definida pelo usuário. Quando o Visual FoxPro cria um índice, a expressão de índice é salva no arquivo de índice, mas apenas uma referência à função definida pelo usuário é incluída na expressão de índice.  
   
-## <a name="see-also"></a>Consulte também  
- [ALTER TABLE – comando SQL](../../odbc/microsoft/alter-table-sql-command.md)   
- [Comando DELETE TAG](../../odbc/microsoft/delete-tag-command.md)   
- [Comando SET COLLATE](../../odbc/microsoft/set-collate-command.md)   
+## <a name="see-also"></a>Consulte Também  
+ [ALTER TABLE-comando SQL](../../odbc/microsoft/alter-table-sql-command.md)   
+ [Comando excluir marca](../../odbc/microsoft/delete-tag-command.md)   
+ [Definir comando COLLATE](../../odbc/microsoft/set-collate-command.md)   
  [Comando SET UNIQUE](../../odbc/microsoft/set-unique-command.md)
