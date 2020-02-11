@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0c727e6a6f981dd2862575bfb4943b104196080
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913744"
 ---
 # <a name="and-dmx"></a>AND (DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "67913744"
 Expression1 AND Expression2  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Expression1*  
  Expressão DMX (Data Mining Extensions) válida que retorna um valor numérico.  
   
@@ -47,9 +47,9 @@ Expression1 AND Expression2
 |FALSE|TRUE|FALSE|  
 |FALSE|FALSE|FALSE|  
   
-## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores lógicos &#40;DMX&#41;](../dmx/operators-logical.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de operador de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operadores lógicos &#40;&#41;DMX](../dmx/operators-logical.md)   
+ [Operadores &#40;&#41;DMX](../dmx/operators-dmx.md)  
   
   

@@ -17,20 +17,20 @@ ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68216372"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Implementar SQLGetDiagRec e SQLGetDiagField
-**SQLGetDiagRec** e **SQLGetDiagField** são implementadas por cada driver e o Gerenciador de Driver. O Gerenciador de Driver e cada driver mantenham registros de diagnóstico para cada ambiente, a conexão, a instrução e o identificador do descritor e liberem os registros somente quando a outra função seja chamada com que o identificador ou o identificador é liberado.  
+**SQLGetDiagRec** e **SQLGetDiagField** são implementados pelo Gerenciador de driver e por cada driver. O Gerenciador de driver e cada driver mantêm registros de diagnóstico para cada ambiente, conexão, instrução e identificador de descritor e liberam esses registros somente quando outra função é chamada com esse identificador ou o identificador é liberado.  
   
- Embora o Gerenciador de Driver e cada driver devem determinar o primeiro registro de status acordo com as classificações nas [sequência de registros de Status](../../../odbc/reference/develop-app/sequence-of-status-records.md), o Gerenciador de Driver determina a sequência de final de registros.  
+ Embora o Gerenciador de driver e cada driver devam determinar o primeiro registro de status de acordo com as classificações em [sequência de registros de status](../../../odbc/reference/develop-app/sequence-of-status-records.md), o Gerenciador de driver determina a sequência final de registros.  
   
- **SQLGetDiagRec** e **SQLGetDiagField** não publique os registros de diagnóstico sobre si mesmos.  
+ **SQLGetDiagRec** e **SQLGetDiagField** não postam registros de diagnóstico sobre si mesmos.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Regras de tratamento de diagnóstico](../../../odbc/reference/develop-app/diagnostic-handling-rules.md)  
   

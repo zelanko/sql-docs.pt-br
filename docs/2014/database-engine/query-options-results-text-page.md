@@ -1,5 +1,5 @@
 ---
-title: Resultados (página de texto) das opções de consulta | Microsoft Docs
+title: Resultados de opções de consulta (página de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088980"
 ---
 # <a name="query-options-results-text-page"></a>Resultados das opções de consulta (página de texto)
@@ -31,7 +31,7 @@ ms.locfileid: "66088980"
  **Incluir cabeçalhos de coluna no conjunto de resultados**  
  Desmarque esta caixa de seleção se não quiser cada coluna rotulada com um título de coluna.  
   
- **Rolar à medida que os resultados forem recebidos**  
+ **Rolar conforme os resultados forem recebidos**  
  Marque esta caixa de seleção para manter o foco de exibição nos registros retornados mais recentemente na parte inferior. Desmarque esta caixa de seleção para manter o foco de exibição nas primeiras linhas recebidas.  
   
  **Alinhar valores numéricos à direita**  
@@ -43,13 +43,13 @@ ms.locfileid: "66088980"
  **Exibir resultados em uma guia separada**  
  Marque essa caixa de seleção para exibir o conjunto de resultados em uma nova janela de documento, em vez de na parte inferior da janela de documentos de consulta.  
   
- **Alternar para a guia Resultados após a execução da consulta**  
+ **Alternar para a guia resultados após a execução da consulta**  
  Clique para definir automaticamente o foco da tela no conjunto de resultados.  
   
  **Número máximo de caracteres exibidos em cada coluna**  
  Esse valor padrão é 256. Aumente o valor para exibir conjuntos de resultados maiores sem truncar.  
   
- **Restaurar Padrões**  
+ **Redefinir para padrão**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
 ## <a name="saving-a-text-result-set-with-headers"></a>Salvar um conjunto de resultados de texto com cabeçalhos  

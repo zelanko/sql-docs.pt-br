@@ -1,5 +1,5 @@
 ---
-title: Desenvolvedor&#39;guia (replicação) | Microsoft Docs
+title: Guia do desenvolvedor&#39;s (replicação) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce595518fc33903a9438a9a702d19725fa605f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721928"
 ---
-# <a name="developer39s-guide-replication"></a>Desenvolvedor&#39;guia (replicação)
+# <a name="developer39s-guide-replication"></a>Guia do desenvolvedor&#39;s (replicação)
   A capacidade de configurar, manter e monitorar programaticamente uma topologia de replicação permite que você simplifique as tarefas de replicação repetidas e aprimore a experiência do usuário em seus aplicativos baseados em replicação. Ao programar a replicação, os seus usuários finais poderão obter funcionalidades de replicação personalizadas sem precisar conhecer os procedimentos armazenados de replicação e os executáveis do agente de replicação ou ter de usar a interface do usuário de replicação implementada por [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  A seguir, cenários nos quais os seus aplicativos poderiam se beneficiar do acesso programático a serviços de replicação:  
@@ -46,7 +46,7 @@ ms.locfileid: "62721928"
  [Conceitos de objetos de gerenciamento de replicação](replication-management-objects-concepts.md)  
  Explica os conceitos da utilização de RMO (Replication Management Objects). Esse é um assembly de código gerenciado que encapsula funcionalidades de replicação para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Conceitos dos executáveis do Agente de Replicação](replication-agent-executables-concepts.md)  
+ [Conceitos dos executáveis do Replication Agent](replication-agent-executables-concepts.md)  
  Descreve o uso dos arquivos executáveis do Replication Agent.  
 
   

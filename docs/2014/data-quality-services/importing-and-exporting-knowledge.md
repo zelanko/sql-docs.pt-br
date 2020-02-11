@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2cc9c9576a6ae2f70f2d54d48471339ec07d0e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480530"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importando e exportando conhecimento
@@ -40,8 +40,8 @@ ms.locfileid: "65480530"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Criar uma base de dados de conhecimento executando a descoberta da base de dados de conhecimento e gerenciando o conhecimento de modo interativo|[Criar uma base de dados de conhecimento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
-|Criar um domínio único e adicionar conhecimento ao domínio.|[Gerenciar um domínio](../../2014/data-quality-services/managing-a-domain.md)|  
-|Criar um domínio composto e adicionar conhecimento ao domínio.|[Gerenciar um domínio de composição](../../2014/data-quality-services/managing-a-composite-domain.md)|  
+|Criar uma base de dados de conhecimento executando a descoberta da base de dados de conhecimento e gerenciando o conhecimento de modo interativo|[Criando uma base de dados de conhecimento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|Criar um domínio único e adicionar conhecimento ao domínio.|[Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md)|  
+|Criar um domínio composto e adicionar conhecimento ao domínio.|[Gerenciando um domínio composto](../../2014/data-quality-services/managing-a-composite-domain.md)|  
   
   

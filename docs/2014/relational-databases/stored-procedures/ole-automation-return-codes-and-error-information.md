@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011265"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Informações sobre erros e códigos de retorno de automação OLE
-  Os procedimentos armazenados do sistema de automação OLE retornam um código de retorno `int` que é o HRESULT retornado pela operação de automação OLE subjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800*nnnnn*, mas quando retornado como um `int` valor em um código de retorno do procedimento armazenado, HRESULT tem o formato 214*nnnnnnn*.  
+  Os procedimentos armazenados do sistema de automação OLE retornam um código de retorno `int` que é o HRESULT retornado pela operação de automação OLE subjacente. O HRESULT de 0 indica sucesso. Um HRESULT diferente de zero é um código de erro OLE do formato hexadecimal 0x800*nnnnn*, mas quando retornado `int` como um valor em um código de retorno de procedimento armazenado, HRESULT tem a forma 214*nnnnnnn*.  
   
- Por exemplo, passar um nome de objeto inválido (SQLDMO. Xyzzy) para sp_OACreate faz com que o procedimento retornar um `int` HRESULT de 2147221005, que é 0x800401f3 em número hexadecimal.  
+ Por exemplo, passando um nome de objeto inválido (SQLDMO. Xyzzy) para sp_OACreate faz com que o procedimento retorne um `int` HRESULT de 2147221005, que é 0x800401f3 em hexadecimal.  
   
- Você pode usar `CONVERT(binary(4), @hresult)` para converter um HRESULT de `int` em um valor `binary`. Entretanto, o uso de `CONVERT(char(10), CONVERT(binary(4), @hresult))` resulta em uma cadeia ilegível porque cada byte de HRESULT é convertido em um único caractere ASCII. Você pode usar o procedimento de HexToChar armazenado de exemplo a seguir para converter um `int` HRESULT para um `char` valor que contém uma cadeia hexadecimal legível.  
+ Você pode usar `CONVERT(binary(4), @hresult)` para converter um HRESULT de `int` em um valor `binary`. Entretanto, o uso de `CONVERT(char(10), CONVERT(binary(4), @hresult))` resulta em uma cadeia ilegível porque cada byte de HRESULT é convertido em um único caractere ASCII. Você pode usar o seguinte procedimento armazenado HexToChar de exemplo para converter `int` um HRESULT em `char` um valor que contém uma cadeia de caracteres hexadecimal legível.  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,7 +76,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- Você pode usar o procedimento armazenado de amostra **sp_displayoaerrorinfo** para exibir informações de erro de automação OLE quando um dos procedimentos de Automação OLE retornar um código de retorno de HRESULT que não seja zero. Usos de procedimento armazenado de amostra `HexToChar`.  
+ Você pode usar o procedimento armazenado de amostra **sp_displayoaerrorinfo** para exibir informações de erro de automação OLE quando um dos procedimentos de Automação OLE retornar um código de retorno de HRESULT que não seja zero. Esse procedimento armazenado de exemplo `HexToChar`usa.  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  

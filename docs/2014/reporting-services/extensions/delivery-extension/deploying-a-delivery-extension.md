@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164417"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implantando uma extensão de entrega
@@ -26,14 +26,14 @@ ms.locfileid: "63164417"
   
  Se uma extensão de entrega for substituída ou atualizada, todas as assinaturas que a referenciam permanecerão válidas.  
   
- Depois de escrever e compilar sua extensão de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] em uma biblioteca do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você deve copiar a extensão para o diretório apropriado e adicionar uma entrada ao arquivo de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adequado para que o servidor de relatório possa localizá-lo.  
+ Depois de gravar e compilar sua extensão [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de entrega em uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] biblioteca, você deve copiar a extensão para o diretório apropriado e adicionar uma entrada ao arquivo de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuração apropriado para que o servidor de relatório possa localizá-lo.  
   
 ## <a name="configuration-file-extension-element"></a>Elemento de extensão do arquivo de configuração  
  As extensões de entrega que você implanta no servidor de relatório precisam ser inseridas como elementos `Extension` no arquivo de configuração. O arquivo de configuração para o servidor de relatório é RSReportServer.config.  
   
  A tabela a seguir descreve os atributos para o elemento `Extension` para extensões de entrega.  
   
-|attribute|Descrição|  
+|Atributo|DESCRIÇÃO|  
 |---------------|-----------------|  
 |`Name`|Um nome exclusivo para a extensão (por exemplo "Email do Servidor de Relatório" para a extensão de entrega de email ou "FileShare do Servidor de Relatório" para a extensão de entrega do compartilhamento de arquivo). O comprimento máximo do atributo `Name` é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento `Extension` de um arquivo de configuração. Se um nome duplicado estiver presente, o servidor de relatório retornará um erro.|  
 |`Type`|Uma lista separada por vírgulas que inclui o namespace totalmente qualificado junto com o nome do assembly.|  
@@ -46,12 +46,12 @@ ms.locfileid: "63164417"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>Para implantar um assembly de extensão de entrega para um servidor de relatório  
   
-1.  Copie o assembly do local de preparação para o diretório bin do servidor de relatório no qual você deseja usar a extensão de entrega. O local padrão do diretório bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \reporting.  
+1.  Copie o assembly do local de preparação para o diretório bin do servidor de relatório no qual você deseja usar a extensão de entrega. O local padrão do diretório bin do servidor de relatório é%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<InstanceName> \Reporting Services\ReportServer\bin.  
   
     > [!IMPORTANT]  
     >  Se você estiver tentando substituir um assembly de extensão de entrega existente, primeiro deverá parar o serviço Servidor de Relatório antes de copiar o assembly atualizado. Reinicie o seu serviço depois de terminar de copiar o assembly.  
   
-2.  Depois que o arquivo do assembly for copiado, abra o arquivo RSReportServer.config. O arquivo rsreportserver. config está localizado em %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \reporting directory. É necessário criar uma entrada no arquivo de configuração para o arquivo de assembly de extensão de entrega. Abra o arquivo de configuração com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou um editor de texto simples, como o Bloco de notas.  
+2.  Depois que o arquivo do assembly for copiado, abra o arquivo RSReportServer.config. O arquivo RSReportServer. config está localizado na SQL Server%ProgramFiles%\Microsoft \ MSRS10_50. \<InstanceName> diretório Services\ReportServer do \Reporting. É necessário criar uma entrada no arquivo de configuração para o arquivo de assembly de extensão de entrega. Você pode abrir o arquivo de configuração com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou um editor de texto simples, como o Bloco de notas.  
   
 3.  Localize o elemento `Delivery` no arquivo RSReportServer.config. Uma entrada para a sua extensão de entrega recém-criada deve ser feita no seguinte local:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63164417"
   
      O valor de `Name` é o nome exclusivo da extensão de entrega. O valor de `Type` é uma lista separada por vírgulas que inclui uma entrada para o namespace totalmente qualificado da sua classe que implementa a interface <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension>, seguida pelo nome do seu assembly (não incluindo a extensão de arquivo .dll). Por padrão, as extensões de entrega ficam visíveis. Para ocultar uma extensão de interfaces do usuário, como, por exemplo, o Gerenciador de Relatórios, adicione um atributo `Visible` ao elemento `Extension` e defina-o como `false`.  
   
-5.  Por fim, adicione um grupo de códigos ao seu assembly personalizado que concede permissão `FullTrust` para a sua extensão de entrega. Você pode fazer isso adicionando o grupo de códigos ao arquivo rssrvpolicy config localizado por padrão em %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \reporting. O grupo de códigos pode ter esta aparência:  
+5.  Por fim, adicione um grupo de códigos ao seu assembly personalizado que concede permissão `FullTrust` para a sua extensão de entrega. Você faz isso adicionando o grupo de códigos ao arquivo arquivo rssrvpolicy. config localizado por padrão em%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<InstanceName> \Reporting Services\ReportServer. O grupo de códigos pode ter esta aparência:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -93,9 +93,9 @@ ms.locfileid: "63164417"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-report-manager"></a>Para implantar um assembly de extensão de entrega no Gerenciador de Relatórios  
   
-1.  Copie o seu assembly do seu local de preparação para o diretório bin do Gerenciador de Relatórios. O local padrão da pasta bin do Gerenciador de relatórios é %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportManager\bin.  
+1.  Copie o seu assembly do seu local de preparação para o diretório bin do Gerenciador de Relatórios. O local padrão do diretório bin Report Manager é%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<InstanceName> \Reporting Services\ReportManager\bin.  
   
-2.  Depois que o arquivo do assembly for copiado, abra o arquivo RSReportServer.config. O arquivo rsreportserver. config está localizado em %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \reporting directory. É necessário criar uma entrada no arquivo de configuração para o arquivo de assembly de extensão de entrega. Você pode abrir o arquivo de configuração com o Visual Studio .NET ou um editor de texto simples, como o bloco de notas.  
+2.  Depois que o arquivo do assembly for copiado, abra o arquivo RSReportServer.config. O arquivo RSReportServer. config está localizado na SQL Server%ProgramFiles%\Microsoft \ MSRS10_50. \<InstanceName> diretório Services\ReportServer do \Reporting. É necessário criar uma entrada no arquivo de configuração para o arquivo de assembly de extensão de entrega. Você pode abrir o arquivo de configuração com o Visual Studio .NET ou com um editor de texto simples, como o Bloco de notas.  
   
 3.  Localize o elemento `DeliveryUI` no arquivo RSReportServer.config. Uma entrada para a sua extensão de entrega recém-criada deve ser feita no seguinte local:  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63164417"
     > [!IMPORTANT]  
     >  O valor do atributo `Name` deve ser idêntico para as entradas de arquivo de configuração do Servidor de Relatório e do Gerenciador de Relatórios. Se não forem idênticas, a configuração do seu servidor não será válida.  
   
-     Por fim, adicione um grupo de códigos ao seu assembly personalizado que concede permissão `FullTrust` para a sua extensão de entrega. Você pode fazer isso adicionando o grupo de códigos ao arquivo rsmgrpolicy. config localizado por padrão em C:\Program Files\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportManager. O grupo de códigos pode ter esta aparência:  
+     Por fim, adicione um grupo de códigos ao seu assembly personalizado que concede permissão `FullTrust` para a sua extensão de entrega. Você faz isso adicionando o grupo de códigos ao arquivo RSmgrpolicy. config localizado por padrão em C:\Arquivos de Programas\microsoft SQL Server \ MSRS10_50. \<InstanceName> \Reporting Services\ReportManager. O grupo de códigos pode ter esta aparência:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -135,10 +135,10 @@ ms.locfileid: "63164417"
   
      A associação da URL é somente uma das condições de associação que você pode escolher para a sua extensão de entrega. Para obter mais informações sobre a segurança de acesso do código no [!INCLUDE[ssRS](../../../includes/ssrs.md)], consulte [Desenvolvimento seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
   
-## <a name="verifying-the-deployment"></a>Verificando a implantação  
- Você pode verificar se sua extensão de entrega foi implantada com êxito no servidor de relatório usando o método <xref:ReportService2010.ReportingService2010.ListExtensions%2A> do serviço Web. Você também pode abrir o Gerenciador de Relatórios e verificar se a sua extensão foi incluída na lista de extensões de entrega disponíveis para uma assinatura. Para obter mais informações sobre o Gerenciador de relatórios e assinaturas, consulte [assinaturas e entrega &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
+## <a name="verifying-the-deployment"></a>Verificar a implantação  
+ Você pode verificar se sua extensão de entrega foi implantada com êxito no servidor de relatório usando o método <xref:ReportService2010.ReportingService2010.ListExtensions%2A> do serviço Web. Você também pode abrir o Gerenciador de Relatórios e verificar se a sua extensão foi incluída na lista de extensões de entrega disponíveis para uma assinatura. Para obter mais informações sobre Report Manager e assinaturas, consulte [assinaturas e entrega &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementando uma extensão de entrega](implementing-a-delivery-extension.md)   
  [Biblioteca de extensões do Reporting Services](../reporting-services-extension-library.md)  
   

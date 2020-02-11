@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 439f46ba0fa58253572d017057bb236aa1bf2d67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081324"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>Habilitar o Write-back de Dimensão (Dimensão) (Assistente de Business Intelligence)
@@ -26,13 +26,13 @@ ms.locfileid: "66081324"
 >  Essa página não será exibida se o Assistente de Business Intelligence tiver sido iniciado no Designer de Dimensão ou clicando com o botão direito do mouse em uma dimensão no Gerenciador de Soluções no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="options"></a>Opções  
- **Dimension**  
+ **Dimensão**  
  Selecione a dimensão para a qual o assistente habilitará o write-back.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Habilitar o write-back de dimensão](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
   
