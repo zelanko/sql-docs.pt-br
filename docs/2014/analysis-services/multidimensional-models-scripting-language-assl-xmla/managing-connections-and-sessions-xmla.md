@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62701995"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gerenciando conexões e sessões (XMLA)
-  *Statefulness* é uma condição durante o qual o servidor preserva a identidade e o contexto de um cliente entre chamadas de método. *Statelessness* é uma condição durante o qual o servidor não se lembra a identidade e o contexto de um cliente após a conclusão de uma chamada de método.  
+  A *monitoração* é uma condição durante a qual o servidor preserva a identidade e o contexto de um cliente entre chamadas de método. *Sem estado* é uma condição durante a qual o servidor não se lembra da identidade e do contexto de um cliente após a conclusão de uma chamada de método.  
   
- Para fornecer statefulness, o XML for Analysis (XMLA) dá suporte a *sessões* que permitem que uma série de instruções seja executada em conjunto. Um exemplo de uma dessas séries de instruções seria a criação de um membro calculado a ser usado em consultas subsequentes.  
+ Para fornecer estado, XML for Analysis (XMLA) dá suporte a *sessões* que permitem que uma série de instruções seja executada juntas. Um exemplo de uma dessas séries de instruções seria a criação de um membro calculado a ser usado em consultas subsequentes.  
   
  Em geral, as sessões em XMLA seguem o comportamento a seguir, descrito pela especificação do OLE DB 2.6:  
   
@@ -35,13 +35,13 @@ ms.locfileid: "62701995"
   
 -   Vários comandos podem ser executados no contexto de uma única sessão.  
   
--   Suporte a transações no contexto XMLA é por meio de comandos específicos do provedor enviados com o [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) método.  
+-   O suporte para transações no contexto XMLA é por meio de comandos específicos do provedor enviados com o método [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) .  
   
  O XMLA define uma forma de suportar sessões em um ambiente da Web em um modo similar à abordagem usada pelo protocolo DAV (Distributed Authoring and Versioning) para a implementação do bloqueio em um ambiente flexível. Esta implementação se compara ao DAV, já que o provedor pode fazer uma sessão expirar por vários motivos (por exemplo, um tempo limite ou um erro de conexão). Quando as sessões forem suportadas, os serviços Web deverão estar atentos e prontos para lidarem com conjuntos de comandos interrompidos que deverão ser reiniciados.  
   
  A especificação do protocolo SOAP do W3C (World Wide Web Consortium) recomenda a utilização de cabeçalhos SOAP para a criação de novos protocolos sobre mensagens SOAP. A tabela a seguir lista os elementos e os atributos de cabeçalho SOAP definidos pelo XMLA para iniciar, manter e fechar uma sessão.  
   
-|Cabeçalho SOAP|Descrição|  
+|Cabeçalho SOAP|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |BeginSession|Este cabeçalho solicita que o provedor crie uma sessão nova. O provedor deve responder criando uma sessão nova e retornando a ID de sessão como parte do cabeçalho Session na resposta SOAP.|  
 |SessionId|A área de valor contém a ID de sessão que deve ser usada em cada chamada de método para o resto da sessão. O provedor na resposta de SOAP envia esta marca e o cliente também deve enviar este atributo com cada elemento do cabeçalho Session.|  
@@ -72,7 +72,7 @@ ms.locfileid: "62701995"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  A mensagem de resposta SOAP do provedor inclui a ID de sessão na área de cabeçalho de retorno, usando a marca de cabeçalho XMLA \<SessionId >.  
+2.  A mensagem de resposta SOAP do provedor inclui a ID de sessão na área de cabeçalho de retorno, usando a marca \<de cabeçalho XMLA> SessionID.  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +93,7 @@ ms.locfileid: "62701995"
     </SOAP-ENV:Header>  
     ```  
   
-4.  Quando a sessão for concluída, o \<EndSession > marca será usada, que contém o valor de ID de sessão relacionado.  
+4.  Quando a sessão for concluída, a \<marca de> de EndSession será usada, contendo o valor de ID de sessão relacionado.  
   
     ```  
     <SOAP-ENV:Header>  
@@ -105,7 +105,7 @@ ms.locfileid: "62701995"
     </SOAP-ENV:Header>  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo com XMLA no Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

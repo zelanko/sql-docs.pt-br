@@ -23,16 +23,16 @@ ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129574"
 ---
 # <a name="replication-views-transact-sql"></a>Exibições de replicação (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Essas exibições contêm informações que são usadas pela replicação [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As exibições habilitam acesso facilitado aos dados no [tabelas do sistema de replicação](../../relational-databases/system-tables/replication-tables-transact-sql.md). As exibições são criadas em um banco de dados de usuário quando esse banco de dados está habilitado como banco de dados de publicação ou assinatura. Todos os objetos de replicação são removidos dos bancos de dados do usuário quando o banco de dados é removido de uma topologia de replicação. O método preferencial para acessar os metadados de replicação é usando [procedimentos armazenados de replicação](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
+  Essas exibições contêm informações que são usadas pela replicação [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no. As exibições permitem o acesso mais fácil aos dados nas [tabelas do sistema de replicação](../../relational-databases/system-tables/replication-tables-transact-sql.md). As exibições são criadas em um banco de dados de usuário quando esse banco de dados está habilitado como banco de dados de publicação ou assinatura. Todos os objetos de replicação são removidos dos bancos de dados do usuário quando o banco de dados é removido de uma topologia de replicação. O método preferencial para acessar metadados de replicação é usando [procedimentos armazenados de replicação](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  Exibições de sistema não devem ser alteradas diretamente por nenhum usuário.  
@@ -44,33 +44,33 @@ ms.locfileid: "68129574"
   
 |||  
 |-|-|  
-|[MSdatatype_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-views/msdatatype-mappings-transact-sql.md)|[sysdatatypemappings &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysdatatypemappings-transact-sql.md)|  
+|[&#41;&#40;Transact-SQL de MSdatatype_mappings](../../relational-databases/system-views/msdatatype-mappings-transact-sql.md)|[&#41;sysdatatypemappings &#40;Transact-SQL](../../relational-databases/system-views/sysdatatypemappings-transact-sql.md)|  
   
 ### <a name="replication-views-in-the-distribution-database"></a>Exibições de replicação no banco de dados de distribuição  
   
 |||  
 |-|-|  
-|[IHextendedArticleView &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihextendedarticleview-transact-sql.md)|[sysarticles &#40;exibição do sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)|  
-|[IHextendedSubscriptionView &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md)|[sysextendedarticlesview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysextendedarticlesview-transact-sql.md)|  
-|[IHsyscolumns &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihsyscolumns-transact-sql.md)|[syspublications &#40;Modo de Exibição do Sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)|  
-|[MSdistribution_status &#40;Transact-SQL&#41;](../../relational-databases/system-views/msdistribution-status-transact-sql.md)|[syssubscriptions &#40;Modo de Exibição do Sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)|  
-|[sysarticlecolumns &#40;System View&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)||  
+|[&#41;IHextendedArticleView &#40;Transact-SQL](../../relational-databases/system-views/ihextendedarticleview-transact-sql.md)|[sysarticles &#40;exibição do sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)|  
+|[&#41;IHextendedSubscriptionView &#40;Transact-SQL](../../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md)|[&#41;sysextendedarticlesview &#40;Transact-SQL](../../relational-databases/system-views/sysextendedarticlesview-transact-sql.md)|  
+|[&#41;IHsyscolumns &#40;Transact-SQL](../../relational-databases/system-views/ihsyscolumns-transact-sql.md)|[syspublications &#40;exibição do sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)|  
+|[&#41;&#40;Transact-SQL de MSdistribution_status](../../relational-databases/system-views/msdistribution-status-transact-sql.md)|[syssubscriptions &#40;exibição do sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)|  
+|[sysarticlecolumns &#40;exibição do sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)||  
   
 ### <a name="replication-views-in-the-publication-database"></a>Exibições de replicação no banco de dados de publicação  
   
 |||  
 |-|-|  
-|[sysmergeextendedarticlesview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
-|[systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
+|[&#41;sysmergeextendedarticlesview &#40;Transact-SQL](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[&#41;sysmergepartitioninfoview &#40;Transact-SQL](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
+|[&#41;systranschemas &#40;Transact-SQL](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
   
 ### <a name="replication-views-in-the-subscription-database"></a>Exibições de replicação no banco de dados de assinatura  
   
 |||  
 |-|-|  
-|[sysmergeextendedarticlesview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
-|[systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
+|[&#41;sysmergeextendedarticlesview &#40;Transact-SQL](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[&#41;sysmergepartitioninfoview &#40;Transact-SQL](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
+|[&#41;systranschemas &#40;Transact-SQL](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

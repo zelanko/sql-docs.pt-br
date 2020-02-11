@@ -1,5 +1,5 @@
 ---
-title: Usando cursores em bloco | Microsoft Docs
+title: Usando cursores de bloco | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135535"
 ---
 # <a name="using-block-cursors"></a>Usar cursores em bloco
-Suporte para cursores em bloco é incorporado ao ODBC 3. *x*. **SQLFetch** pode ser usado apenas para buscas de várias linhas quando chamado em ODBC 3. *x*; se o ODBC 2. *x* aplicativo chamará **SQLFetch**, ele será aberto somente um cursor de uma única linha, apenas de encaminhamento. Quando um ODBC 3. *x* aplicativo chamará **SQLFetch** em um ODBC 2. *x* driver, ele retorna uma única linha, a menos que o driver suporta **SQLExtendedFetch**. Para obter mais informações, consulte [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) no Apêndice g: Diretrizes de driver para compatibilidade com versões anteriores.  
+O suporte para cursores de bloco é incorporado ao ODBC 3. *x*. **SQLFetch** pode ser usado somente para buscas de LinhaMúltipla quando chamado no ODBC 3. *x*; se um ODBC 2. *x* Application chama **SQLFetch**, ele abrirá apenas um cursor de linha única e somente avanço. Quando um ODBC 3. *x* aplicativo chama **SQLFetch** em um ODBC 2. *x* , ele retorna uma única linha, a menos que o driver dê suporte a **SQLExtendedFetch**. Para obter mais informações, consulte [cursores de bloco, cursores roláveis e compatibilidade com versões anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) no apêndice G: diretrizes de driver para compatibilidade com versões anteriores.  
   
- Para usar cursores em bloco, o aplicativo define o tamanho do conjunto de linhas, associa a buffers de conjunto de linhas (conforme descrito na seção anterior), opcionalmente, define os atributos de instrução SQL_ATTR_ROWS_FETCHED_PTR e SQL_ATTR_ROW_STATUS_PTR e chamadas **SQLFetch**  ou **SQLFetchScroll** para buscar um bloco de linhas. O aplicativo pode alterar o tamanho do conjunto de linhas e vincular novos buffers rowset (chamando **SQLBindCol** ou especificando um deslocamento de bind), mesmo depois de linhas foram buscadas.  
+ Para usar cursores de bloco, o aplicativo define o tamanho do conjunto de linhas, associa os buffers de conjunto de linhas (conforme descrito na seção anterior), opcionalmente, define os atributos de instrução SQL_ATTR_ROWS_FETCHED_PTR e SQL_ATTR_ROW_STATUS_PTR e chama **SQLFetch** ou **SQLFetchScroll** para buscar um bloco de linhas. O aplicativo pode alterar o tamanho do conjunto de linhas e associar novos buffers de conjunto de linhas (chamando **SQLBindCol** ou especificando um deslocamento de ligação) mesmo depois que as linhas tiverem sido buscadas.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Tamanho do conjunto de linhas](../../../odbc/reference/develop-app/rowset-size.md)  
   
 -   [Número de linhas buscadas e status](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)  
   
--   [SQLGetData e cursores em bloco; curso de bloco](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
+-   [SQLGetData e cursores de bloco; bloco em curso](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473045"
 ---
 # <a name="post-download-instructions"></a>Instruções Pós-Download
@@ -35,13 +35,13 @@ ms.locfileid: "62473045"
  **Todos os servidores de destino**  
  Selecione essa opção para postar a instrução de download para todos os servidores de destino.  
   
- **Estes servidores de destino**  
+ **Esses servidores de destino**  
  Selecione essa opção para postar a instrução de download  para os servidores de destino selecionados.  
   
- **Select (selecionar) (selecionar)**  
+ **Não**  
  Especifique que o servidor de destino deve receber a instrução de download.  
   
- **Servidor de Destino**  
+ **Servidor de destino**  
  Exiba o nome do servidor de destino.  
   
  **Hora local**  
@@ -50,7 +50,7 @@ ms.locfileid: "62473045"
  **Intervalo de sondagem**  
  Exiba o intervalo de sondagem atual para o servidor de destino.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração automatizada em toda a empresa](automated-administration-across-an-enterprise.md)  
   
   

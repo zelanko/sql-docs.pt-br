@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Renomeando o elemento &lt;row&gt; | Microsoft Docs'
+title: 'Exemplo: renomeando o elemento &lt;row&gt; | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704909"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>Exemplo: Renomeando o elemento &lt;row&gt;
+# <a name="example-renaming-the-ltrowgt-element"></a>Exemplo: renomeando o elemento &lt;row&gt;
   Para cada linha no conjunto de resultados, o modo RAW gera um elemento `<row>`. Opcionalmente, é possível especificar outro nome para esse elemento especificando um argumento opcional para o modo RAW, conforme mostrado nesta consulta. A consulta retorna um elemento <`ProductModel`> para cada linha do conjunto de dados.  
   
 ## <a name="example"></a>Exemplo  
@@ -41,7 +41,7 @@ GO
 </ProductModel>   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usar modo RAW com FOR XML](use-raw-mode-with-for-xml.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Usar o modo RAW com FOR XML](use-raw-mode-with-for-xml.md)  
   
   

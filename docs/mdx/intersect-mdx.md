@@ -1,5 +1,5 @@
 ---
-title: Função Intersect (MDX) | Microsoft Docs
+title: Intersect (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f253dad526c509edff5c837b61ae2faae07d5758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105366"
 ---
 # <a name="intersect-mdx"></a>Função Intersect (MDX)
@@ -35,9 +35,9 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
 ## <a name="remarks"></a>Comentários  
- O **Intersect** função retorna a interseção de dois conjuntos. Por padrão, a função remove as duplicações antes de interseccionar os dois conjuntos. Os dois conjuntos devem ter a mesma dimensionalidade.  
+ A função **Intersect** retorna a interseção de dois conjuntos. Por padrão, a função remove as duplicações antes de interseccionar os dois conjuntos. Os dois conjuntos devem ter a mesma dimensionalidade.  
   
- Opcional **todos os** sinalizador preservará as duplicações. Se **todos os** for especificado, o **Intersect** função intersecciona fará elementos como de costume e também interseccionará cada duplicação do primeiro conjunto que tem uma duplicação correspondente no segundo conjunto. Os dois conjuntos devem ter a mesma dimensionalidade.  
+ O sinalizador **All** opcional retém duplicatas. Se **All** for especificado, a função **Intersect** interseccionará elementos não duplicados como de costume e também interseccionará cada duplicata no primeiro conjunto que tem uma duplicata correspondente no segundo conjunto. Os dois conjuntos devem ter a mesma dimensionalidade.  
   
 ## <a name="example"></a>Exemplo  
  A consulta a seguir retorna os anos de 2003 e 2004, os dois membros que aparecem em ambos os conjuntos especificados:  
@@ -72,7 +72,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
   
  `[Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

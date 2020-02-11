@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196432"
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
@@ -43,9 +43,9 @@ ms.locfileid: "68196432"
 5.  Crie o índice clusterizado exclusivo na exibição.  
   
 ###  <a name="Restrictions"></a> Opções SET necessárias para exibições indexadas  
- A avaliação da mesma expressão poderá produzir resultados diferentes no [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando houver diferentes opções SET ativas durante a execução da consulta. Por exemplo, depois que a opção SET CONCAT_NULL_YIELDS_NULL for definida como ON, a expressão **'** abc **'** + NULL retornará o valor NULL. Entretanto, depois que CONCAT_NULL_YIEDS_NULL for definido como OFF, a mesma expressão produzirá **'** abc **'** .  
+ A avaliação da mesma expressão poderá produzir resultados diferentes no [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando houver diferentes opções SET ativas durante a execução da consulta. Por exemplo, depois que a opção SET CONCAT_NULL_YIELDS_NULL for definida como ON, a expressão **'** abc **'** + NULL retornará o valor NULL. Entretanto, depois que CONCAT_NULL_YIEDS_NULL for definido como OFF, a mesma expressão produzirá **'** abc **'**.  
   
- Para verificar se as exibições podem ser mantidas corretamente e retornar resultados consistentes, as exibições indexadas requerem valores fixos para várias opções SET. As opções SET na tabela a seguir devem ser definidas para os valores mostrados na **RequiredValue** coluna sempre que ocorrerem as seguintes condições:  
+ Para verificar se as exibições podem ser mantidas corretamente e retornar resultados consistentes, as exibições indexadas requerem valores fixos para várias opções SET. As opções SET na tabela a seguir devem ser definidas para os valores mostrados na coluna **requiredvalue** sempre que as seguintes condições ocorrerem:  
   
 -   A exibição e os índices subsequentes são criados na exibição.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "68196432"
   
 -   A exibição indexada for usada pelo otimizador de consulta para produzir o plano de consulta.  
   
-    |opções SET|Valor Obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
+    |Opções Set|Valor obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+    |ANSI_NULLS|ATIVADO|ATIVADO|ATIVADO|OFF|  
+    |ANSI_PADDING|ATIVADO|ATIVADO|ATIVADO|OFF|  
+    |ANSI_WARNINGS*|ATIVADO|ATIVADO|ATIVADO|OFF|  
+    |ARITHABORT|ATIVADO|ATIVADO|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|ATIVADO|ATIVADO|ATIVADO|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+    |QUOTED_IDENTIFIER|ATIVADO|ATIVADO|ATIVADO|OFF|  
   
      *Definir ANSI_WARNINGS como ON define implicitamente ARITHABORT como ON.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68196432"
   
 -   Funções definidas pelo usuário referenciadas na exibição devem ser criadas usando a opção WITH SCHEMABINDING.  
   
--   Qualquer função definida pelo usuário referenciada na exibição deve ser referenciada por nomes de duas partes, _esquema_ **.** _função_.  
+-   Todas as funções definidas pelo usuário referenciadas na exibição devem ser referenciadas por nomes de duas partes, _esquema_**.** _função_.  
   
 -   A propriedade de acesso de dados de uma função definida pelo usuário deve ser NO SQL e a propriedade de acesso externa deve ser NO.  
   
@@ -115,8 +115,8 @@ ms.locfileid: "68196432"
     |-|-|-|  
     |COUNT|Funções ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET, AND OPENXML)|junções OUTER (LEFT, RIGHT ou FULL)|  
     |Tabela derivada (definida especificando uma instrução SELECT na cláusula FROM)|Autojunções|Especificando colunas usando SELECT \* ou SELECT *table_name*.*|  
-    |DISTINCT|STDEV, STDEVP, VAR, VARP ou AVG|CTE (expressão de tabela comum)|  
-    |`float`\*, `text`, `ntext`, `image`, `XML`, ou `filestream` colunas|Subconsulta|Cláusula OVER, que inclui funções de classificação ou de janela de agregação|  
+    |DISTINTO|STDEV, STDEVP, VAR, VARP ou AVG|CTE (expressão de tabela comum)|  
+    |`float`\*`XML` `filestream` colunas,,,, ou `text` `ntext` `image`|Subconsulta|Cláusula OVER, que inclui funções de classificação ou de janela de agregação|  
     |Predicados de texto completo (CONTAIN, FREETEXT).|Função SUM que referencia uma expressão que permite valor nulo|ORDER BY|  
     |Função de agregação CLR definida pelo usuário|INÍCIO|Operadores CUBE, ROLLUP ou GROUPING SETS|  
     |MIN, MAX|Operadores UNION, EXZip CodeT ou INTERSECT|TABLESAMPLE|  
@@ -124,7 +124,7 @@ ms.locfileid: "68196432"
     |Conjuntos de colunas esparsas|Funções embutidas ou com valor de tabela de várias instruções|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*A exibição indexada pode conter `float` colunas; no entanto, essas colunas não podem ser incluídas na chave de índice clusterizado.  
+     \*A exibição indexada pode `float` conter colunas; no entanto, essas colunas não podem ser incluídas na chave de índice clusterizado.  
   
 -   Se GROUP BY estiver presente, a definição VIEW deverá conter COUNT_BIG(*) e não deverá conter HAVING. Essas restrições GROUP BY são aplicáveis apenas à definição de exibição indexada. Uma consulta pode usar uma exibição indexada em seu plano de execução mesmo que não satisfaça essas restrições GROUP BY.  
   
@@ -210,14 +210,14 @@ ms.locfileid: "68196432"
   
  Para obter mais informações, veja [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
- [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
- [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
+ [DEFINIR ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
+ [DEFINIR CONCAT_NULL_YIELDS_NULL &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
+ [DEFINIR NUMERIC_ROUNDABORT &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
   

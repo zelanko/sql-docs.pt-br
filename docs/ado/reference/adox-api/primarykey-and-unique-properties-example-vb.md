@@ -1,5 +1,5 @@
 ---
-title: PrimaryKey e propriedades exclusivas (VB) | Microsoft Docs
+title: Exemplo de PrimaryKey e propriedades exclusivas (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43ee83f0c08e5ea686758c5fe913d0afc9be572d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965554"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>Exemplos das propriedades PrimaryKey e Unique (VB)
-Este exemplo demonstra a [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) e [Unique](../../../ado/reference/adox-api/unique-property-adox.md) as propriedades de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria uma nova tabela com duas colunas. O **PrimaryKey** e **Unique** propriedades são usadas para fazer uma coluna de chave primária para a qual os valores duplicados não são permitidos.  
+Este exemplo demonstra a [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) e as propriedades [exclusivas](../../../ado/reference/adox-api/unique-property-adox.md) de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria uma nova tabela com duas colunas. As propriedades **PrimaryKey** e **Unique** são usadas para tornar uma coluna a chave primária para a qual valores duplicados não são permitidos.  
   
 ```  
 ' BeginPrimaryKeyVB  
@@ -112,7 +112,7 @@ End Sub
 ' EndPrimaryKeyVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Propriedade PrimaryKey (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Propriedade Unique (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)

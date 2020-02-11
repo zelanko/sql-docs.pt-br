@@ -1,5 +1,5 @@
 ---
-title: fn_available_backups (Transact-SQL) | Microsoft Docs
+title: managed_backup. fn_available_backups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140666"
 ---
-# <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
+# <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma tabela de 0, uma ou mais linhas dos arquivos de backup disponíveis para o banco de dados especificado. Os arquivos de backup retornados são backups criados pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,17 +42,17 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
   
 ##  <a name="Arguments"></a> Argumentos  
  @database_name  
- O nome do banco de dados. O @database_name é NVARCHAR(512).  
+ O nome do banco de dados. O @database_name é nvarchar (512).  
   
 ## <a name="table-returned"></a>Tabela retornada  
  A tabela tem uma restrição clusterizada exclusiva em (database_guid, backup_start_date e first_lsn, backup_type).   
 Se um banco de dados for ignorado e, em seguida, recriado, os conjuntos de backup para todos os bancos de dados serão retornados. A saída é ordenada pelo database_guid, que identifica exclusivamente cada banco de dados.   
 Se houver lacunas no LSN, significando que há uma quebra na cadeia de logs, a tabela conterá uma linha especial para cada segmento ausente do LSN.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|A URL do arquivo de backup.|  
-|backup_type|NVARCHAR(6)|'DB' para o banco de dados de backup 'LOG' para o backup de log|  
+|backup_type|NVARCHAR (6)|' DB ' para backup de banco de dados ' LOG ' para backup de log|  
 |expiration_date|DATETIME|A data em que este arquivo deve ser excluído. Isso é definido com base na capacidade de recuperar o banco de dados para um ponto no tempo dentro do período de retenção especificado.|  
 |database_guid|UNIQUEIDENTIFIER|O valor de GUID para o banco de dados especificado.  A GUID identifica um banco de dados com exclusividade.|  
 |first_lsn|NUMERIC(25, 0)|Número de sequência de log do primeiro ou mais antigo registro de log no conjunto de backup. Pode ser NULL.|  
@@ -63,7 +63,7 @@ Se houver lacunas no LSN, significando que há uma quebra na cadeia de logs, a t
 |last_recovery_fork_id|UNIQUEIDENTIFIER|Número de identificação para a bifurcação de recuperação final.|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|ID da bifurcação de recuperação inicial. Para backups de dados, first_recovery_fork_guid é igual a last_recovery_fork_guid.|  
 |fork_point_lsn|NUMERIC(25, 0)|Se first_recovery_fork_id não for igual a last_recovery_fork_id, esse será o número de sequência de log do ponto de bifurcação. Caso contrário, esse valor será NULL.|  
-|availability_group_guid|UNIQUEIDENTIFIER|Se um banco de dados é um banco de dados Always On, esse é o GUID do grupo de disponibilidade. Caso contrário, esse valor é NULL.|  
+|availability_group_guid|UNIQUEIDENTIFIER|Se um banco de dados for um banco de dados Always On, esse será o GUID do grupo de disponibilidade. Caso contrário, esse valor será NULL.|  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito) ou 1 (falha).  
@@ -71,10 +71,10 @@ Se houver lacunas no LSN, significando que há uma quebra na cadeia de logs, a t
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
- Requer **selecionar** permissões nessa função.  
+ Requer permissões **Select** nessa função.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir lista todos os backups disponíveis feitos pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para o banco de dados 'MyDB'  
+ O exemplo a seguir lista todos os backups disponíveis de backup [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por meio do banco de dados ' MyDB '  
   
 ```  
 SELECT *   
@@ -82,8 +82,8 @@ FROM managed_backup.fn_available_backups ('MyDB')
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Backup gerenciado do SQL Server para o Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server Backup gerenciado para Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Restaurando de backups armazenados no Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   
   

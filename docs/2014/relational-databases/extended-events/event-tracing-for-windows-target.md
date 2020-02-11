@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519300"
 ---
 # <a name="event-tracing-for-windows-target"></a>destino do rastreamento de eventos do Windows
@@ -48,13 +48,13 @@ ms.locfileid: "62519300"
   
  A tabela a seguir descreve as opções disponíveis para configuração do destino de ETW.  
   
-|Opção|Valores permitidos|Descrição|  
+|Opção|Valores permitidos|DESCRIÇÃO|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O nome da sessão de Eventos Estendidos. Por padrão, este é XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O caminho para o arquivo de log da sessão de Eventos Estendidos. Por padrão, esse é % TEMP% \ XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Qualquer inteiro não atribuído. Esse valor é opcional.|O tamanho do arquivo de log, em megabytes (MB), para a sessão de Eventos Estendidos. O padrão é 20 MB.|  
 |default_etw_session_buffer_size_kb|Qualquer inteiro não atribuído. Esse valor é opcional.|O tamanho do buffer na memória, em kilobytes (KB), para a sessão de Eventos Estendidos. O padrão é 128 KB.|  
-|repetições|Qualquer inteiro não atribuído.|O número de vezes para tentar publicar novamente o evento no subsistema ETW antes de descartar o evento. O padrão é 0.|  
+|retries|Qualquer inteiro não atribuído.|O número de vezes para tentar publicar novamente o evento no subsistema ETW antes de descartar o evento. O padrão é 0.|  
   
  A configuração dessas definições precedentes é opcional. O destino ETW usa valores padrão para essas configurações.  
   
@@ -86,7 +86,7 @@ ADD TARGET package0.etw_classic_sync_target
   
  Para obter mais informações sobre um exemplo completo que mostra como usar o destino ETW, inclusive como exibir os dados, veja [Monitorar a atividade do sistema usando Eventos Estendidos](monitor-system-activity-using-extended-events.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Destinos de eventos estendidos do SQL Server](../../database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

@@ -10,10 +10,10 @@ ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8f26ea8c426f0bffb85f8c0e8a397ad6d7a835c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995830"
 ---
 # <a name="localdb_error_instance_configuration_corrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
@@ -23,10 +23,10 @@ ms.locfileid: "67995830"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|267|  
-|Origem do evento|Tempo de execução de banco de dados local do SQL Server 12.0|  
-|Componente|API do tempo de execução de banco de dados local|  
+|Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
+|Componente|API do runtime de banco de dados local|  
 |Texto da mensagem|A instância de Banco de Dados Local está corrompida. Consulte o log do Aplicativo do Windows para obter detalhes sobre o erro.|  
   
 ## <a name="explanation"></a>Explicação  

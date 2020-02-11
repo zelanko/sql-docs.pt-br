@@ -25,10 +25,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41775a529d34aa5ca457f92c9d26e327b74705ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721908"
 ---
 # <a name="replication-agents-overview"></a>Visão geral dos agentes de replicação.
@@ -58,7 +58,7 @@ ms.locfileid: "62721908"
 ## <a name="replication-maintenance-jobs"></a>Trabalhos de Manutenção de Replicação  
  A replicação possui diversos trabalhos de manutenção que executam manutenção programada e sob demanda. Para obter mais informações, consulte [Replication Agent Administration](replication-agent-administration.md) (Administração do agente de replicação).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar e interromper um agente de replicação &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Executar trabalhos de manutenção de replicação &#40;SQL Server Management Studio&#41;](../administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [Conceitos dos executáveis do Agente de Replicação](../concepts/replication-agent-executables-concepts.md)   

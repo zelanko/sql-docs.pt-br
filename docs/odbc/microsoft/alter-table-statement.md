@@ -14,14 +14,14 @@ ms.assetid: 9cfa6ea3-7e33-46c7-99fd-3c717fbcc4e6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e830dbf765f501ddf041f076ffb7b66348c4467
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138237"
 ---
 # <a name="alter-table-statement"></a>Instrução ALTER TABLE
-Quando o Microsoft Access, dBASE ou Paradoxdriver é usado, a instrução ALTER TABLE é compatível com add e drop cláusulas de definição de restrição de tabela. (As instruções ALTER TABLE não têm suporte para os drivers do Microsoft Excel ou texto.)  
+Quando o Microsoft Access, o dBASE ou o Paradoxdriver é usado, a instrução ALTER TABLE é suportada com cláusulas de definição de restrição Add e DROP TABLE. (Não há suporte para instruções ALTER TABLE para os drivers de texto ou do Microsoft Excel.)  
   
 > [!NOTE]  
->  Quando você usa o driver do Paradox sem implementar o mecanismo de banco de dados Borland, não há suporte para as instruções ALTER TABLE; somente leitura e acrescentar instruções são permitidas.
+>  Quando você usa o driver do Paradox sem implementar o Borland Mecanismo de Banco de Dados, não há suporte para instruções ALTER TABLE; somente instruções Read e Append são permitidas.

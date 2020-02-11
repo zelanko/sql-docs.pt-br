@@ -1,5 +1,5 @@
 ---
-title: Dados de parâmetro com valor de tabela de conversão e outros erros e avisos | Microsoft Docs
+title: Conversão de dados de parâmetro com valor de tabela e outros erros e avisos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 576e8e49411412264afc5828fe606a19cc3751f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468249"
 ---
 # <a name="table-valued-parameter-data-conversion-and-other-errors-and-warnings"></a>Conversão de dados de parâmetros com valor de tabela e outros erros e avisos
@@ -25,9 +25,9 @@ ms.locfileid: "62468249"
   
  Quando um erro ou aviso é detectado em uma coluna de parâmetro com valor de tabela, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client gerará um registro diagnóstico. A mensagem de erro conterá o número de parâmetro com valor de tabela, assim como o número da linha e o ordinal da coluna. Um aplicativo também pode usar os campos de diagnóstico SQL_DIAG_SS_TABLE_COLUMN_NUMBER e SQL_DIAG_SS_TABLE_ROW_NUMBER dentro dos registros de diagnóstico para determinar quais valores são associados a erros e avisos. Estes campos de diagnóstico estão disponíveis no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores.  
   
- Os componentes de mensagem e SQLSTATE dos registros de diagnóstico estarão em conformidade com o comportamento de ODBC existente em todos os níveis. Ou seja, exceto para o parâmetro, linha e informações de identificação de coluna, as mensagens de erro têm os mesmos valores para parâmetros com valor de tabela como fariam para parâmetros com valor tabela.  
+ Os componentes de mensagem e SQLSTATE dos registros de diagnóstico estarão em conformidade com o comportamento de ODBC existente em todos os níveis. Ou seja, exceto para as informações de identificação de parâmetro, linha e coluna, as mensagens de erro têm os mesmos valores para parâmetros com valor de tabela como seriam para parâmetros com valor não tabela.  
   
-## <a name="see-also"></a>Consulte também  
- [Parâmetros com valor de tabela &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Parâmetros com valor de tabela &#40;&#41;ODBC](table-valued-parameters-odbc.md)  
   
   

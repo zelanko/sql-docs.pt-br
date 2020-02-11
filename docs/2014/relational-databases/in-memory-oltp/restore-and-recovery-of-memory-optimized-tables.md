@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467240"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauração e recuperação de tabelas com otimização de memória
@@ -40,7 +40,7 @@ ms.locfileid: "62467240"
   
 -   Transmitindo os arquivos de dados.  Após a criação do filtro de mapa de delta, os arquivos de dados são lidos usando o número de threads que corresponde às CPUs lógicas existentes. Cada thread que lê o arquivo de dados lê as linhas de dados, verifica o mapa delta associado, e só insere a linha na tabela se essa linha não foi marcada como excluída. Esta parte da recuperação pode estar associada à CPU em alguns casos, conforme observado a seguir.  
   
- ![Tabelas com otimização de memória. ](../../database-engine/media/memory-optimized-tables.gif "Tabelas com otimização de memória.")  
+ ![Tabelas com otimização de memória.](../../database-engine/media/memory-optimized-tables.gif "Tabelas com otimização de memória.")  
   
  As tabelas com otimização de memória normalmente podem ser carregadas na memória na velocidade de E/S, mas, em alguns casos, o carregamento de linhas de dados será mais lento. Os casos específicos são:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62467240"
   
  Neste ponto, você pode criar o Pool de Recursos fazendo a associação do Banco de dados e, em seguida, usar RESTORE WITH RECOVERY para colocar o banco de dados restaurado online.  Assim que a associação estiver em vigor, antes de o banco de dados ser colocado online, o seu consumo de memória do OLTP na memória é contabilizado corretamente. Isso requer que o banco de dados seja restaurado apenas uma vez. O primeiro comando RESTORE é um comando informativo que lê apenas o cabeçalho do backup e o último comando simplesmente aciona a recuperação sem, de fato, restaurar qualquer bit.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Backup, restauração e recuperação de tabelas com otimização de memória](memory-optimized-tables.md)  
   
   

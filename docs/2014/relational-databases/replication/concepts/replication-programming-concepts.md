@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721799"
 ---
 # <a name="replication-programming-concepts"></a>Conceitos de programação de replicação
@@ -81,7 +81,7 @@ ms.locfileid: "62721799"
   
  Os tópicos a seguir oferecem informações sobre segurança:  
   
--   [Segurança de replicação do SQL Server](../security/view-and-modify-replication-security-settings.md)  
+-   [Segurança de Replicação do SQL Server](../security/view-and-modify-replication-security-settings.md)  
   
 -   [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62721799"
   
      Ambiente de desenvolvimento orientado a objeto que aproveita os benefícios da programação [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] e do CLR (common language runtime) .NET. O código gerenciado é o ambiente de programação indicado para o desenvolvimento de .NET e de aplicativos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As interfaces de replicação gerenciadas permitem a programação de administração de replicação de uma forma orientada a objeto sem que seja preciso conhecer o [!INCLUDE[tsql](../../../includes/tsql-md.md)], e também oferece algumas funcionalidades de retorno de chamada durante a execução de agentes de replicação não disponíveis em scripts. O código gerenciado é o melhor ambiente para o desenvolvimento de componentes e de aplicativos de interface do usuário reutilizáveis.  
   
--   **Script**  
+-   **Scripting**  
   
      Aplicativos simples que executam uma série de comandos, além de quaisquer procedimentos armazenados do sistema de replicação presentes em scripts ou comandos [!INCLUDE[tsql](../../../includes/tsql-md.md)] de arquivos em lotes. Embora você possa executar scripts em um ambiente gerenciado usando o provedor gerenciado em processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a mesma funcionalidade pode ser obtida com interfaces de replicação, que também oferecem funcionalidades de retorno de chamada. A geração de scripts é o melhor ambiente para a execução de tarefas que só serão executadas algumas vezes e onde as funcionalidades de retorno de chamada não serão necessárias, como na instalação de um servidor de replicação.  
   
@@ -108,8 +108,8 @@ ms.locfileid: "62721799"
 |[Conceitos de objetos de gerenciamento de replicação](replication-management-objects-concepts.md)|Código gerenciado|Administração, monitoramento e sincronização.|  
 |<xref:Microsoft.SqlServer.Replication>|Código gerenciado|Sincronização.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Código gerenciado|Criação de manipuladores de lógica de negócios para integrar lógica personalizada ao processo de sincronização de mesclagem.|  
-|[Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)|Script|Administração e monitoramento.|  
-|[Conceitos dos executáveis do Replication Agent](replication-agent-executables-concepts.md)|Script|Sincronização.|  
+|[Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)|Scripting|Administração e monitoramento.|  
+|[Conceitos dos executáveis do Replication Agent](replication-agent-executables-concepts.md)|Scripting|Sincronização.|  
   
 ## <a name="example"></a>Exemplo  
  No [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)], os dados precisam ser publicados para 200 representantes de vendas de todo o mundo. Os representantes de venda viajam com muita frequência e precisam usar laptops ou PDAs (personal digital assistants) para alterar dados de clientes e para adicionar novos pedidos. As alterações terão de ser sincronizadas com o Publicador quando o representante de vendas conectar o laptop à rede.  

@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638325"
 ---
 # <a name="stored-procedures"></a>Procedimentos armazenados
-  Um procedimento armazenado ([procedimentos armazenados &#40;mecanismo de banco de dados&#41;](../../stored-procedures/stored-procedures-database-engine.md)) é um objeto executável armazenado em um banco de dados. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a:  
+  Um procedimento armazenado ([procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](../../stored-procedures/stored-procedures-database-engine.md)) é um objeto executável armazenado em um banco de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]suportar  
   
 -   Procedimentos armazenados  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62638325"
   
 -   [Chamando um procedimento armazenado &#40;OLE DB&#41;](stored-procedures-calling.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  
   
   

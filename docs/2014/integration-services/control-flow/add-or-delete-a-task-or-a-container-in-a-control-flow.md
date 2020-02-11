@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f13db8a1e22c88c4433cd8928479a6ed1af540f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833121"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle
@@ -53,7 +53,7 @@ ms.locfileid: "62833121"
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
-2.  No Gerenciador de Soluções, clique duas vezes no pacote para abri-lo. Siga um destes procedimentos:  
+2.  No Gerenciador de Soluções, clique duas vezes no pacote para abri-lo. Realize um dos seguintes procedimentos:  
   
     -   Clique na guia **Fluxo de Controle** , clique com o botão direito do mouse na tarefa ou no contêiner a ser removido e clique em **Excluir**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62833121"
   
 3.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](integration-services-tasks.md)   
  [Contêineres do Integration Services](integration-services-containers.md)   
  [Fluxo de Controle](control-flow.md)  

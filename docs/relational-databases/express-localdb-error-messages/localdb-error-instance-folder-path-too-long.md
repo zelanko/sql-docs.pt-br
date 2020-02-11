@@ -10,10 +10,10 @@ ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3db8328576d69fe32cea28d3596c5f9b1658d7b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995817"
 ---
 # <a name="localdb_error_instance_folder_path_too_long"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
@@ -23,11 +23,11 @@ ms.locfileid: "67995817"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|260|  
-|Origem do evento|Tempo de execução de banco de dados local do SQL Server 12.0|  
-|Componente|API do tempo de execução de banco de dados local|  
-|Texto da mensagem|O comprimento do caminho completo da pasta da instância do Banco de Dados Local é maior que MAX_PATH. A instância deve ser armazenada na pasta: %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server Local DB\Instances\\< nome da instância\>.|  
+|Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
+|Componente|API do runtime de banco de dados local|  
+|Texto da mensagem|O comprimento do caminho completo da pasta da instância do Banco de Dados Local é maior que MAX_PATH. A instância deve ser armazenada na pasta:%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server local\\ DB\Instances<nome\>da instância.|  
   
 ## <a name="explanation"></a>Explicação  
  O caminho em que a instância deve estar armazenada não é maior que MAX_PATH.  

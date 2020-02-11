@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68185816"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Implantar diretivas agendadas em várias instâncias
@@ -28,37 +28,37 @@ ms.locfileid: "68185816"
   
  Você executará essas tarefas no computador em que concluiu as tarefas anteriores desta lição.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Esta tarefa tem os seguintes pré-requisitos:  
   
 -   Você deve ter concluído as tarefas anteriores desta lição.  
   
 -   As instâncias em que você implantará as diretivas agendadas deve estar executando o [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ou uma versão posterior. A automação requer que as diretivas sejam armazenadas localmente, o que não tem suporte em versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
--   Os servidores onde você deseja implantar as diretivas agendadas devem ser registrados em servidores registrados em qualquer um de **grupos de servidores locais** ou o **servidores de gerenciamento Central** nó. Para mais informações, consulte os seguintes tópicos:  
+-   Os servidores em que você deseja implantar as políticas agendadas devem ser registrados em servidores registrados no nó **grupos** de servidores locais ou **servidores de gerenciamento central** . Para obter mais informações, consulte estes tópicos:  
   
     -   [Criar ou editar um grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
-    -   [Registrar um servidor conectado &#40;SQL Server Management Studio&#41;](../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md).  
+    -   [Registre um servidor conectado &#40;SQL Server Management Studio&#41;](../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md).  
   
     -   [Criar um servidor de gerenciamento central e um grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
 ### <a name="to-export-the-scheduled-policies-as-xml-files"></a>Para exportar as diretivas agendadas como arquivos .xml  
   
-1.  No servidor em que você configurou políticas agendadas na tarefa anterior, expanda **Management**, expanda **gerenciamento de política**e, em seguida, clique em **políticas**.  
+1.  No servidor em que você configurou políticas agendadas na tarefa anterior, expanda **Gerenciamento**, **Gerenciamento de políticas**e, em seguida, clique em **políticas**.  
   
 2.  No menu **Exibir** , clique em **Detalhes do Pesquisador de Objetos**.  
   
-3.  No **detalhes do Pesquisador** painel, selecione todas as práticas recomendadas agendadas a políticas que você deseja implantar em outros servidores através de servidores registrados.  
+3.  No painel **detalhes** do pesquisador de objetos, selecione todas as políticas de práticas recomendadas agendadas que você deseja implantar em outros servidores por meio de servidores registrados.  
   
     > [!NOTE]  
-    >  Você pode clicar na **categoria** título para classificar as diretivas por categoria.  
+    >  Você pode clicar no título **categoria** para classificar as políticas por categoria.  
   
-4.  A seleção com o botão direito e, em seguida, clique em **exportar política**.  
+4.  Clique com o botão direito do mouse na seleção e clique em **Exportar política**.  
   
-5.  Se você selecionou várias diretivas para exportar, o **Procurar pasta** caixa de diálogo, selecione uma pasta de destino ou crie uma nova pasta. Nesta lição, crie uma nova pasta com o caminho **C:\Scheduled_BP_Policies**e, em seguida, clique em **Okey**.  
+5.  Se você tiver selecionado várias políticas para exportar, na caixa de diálogo **Procurar pasta** , selecione uma pasta de destino ou crie uma nova pasta. Nesta lição, crie uma nova pasta com o caminho **c:\ Scheduled_BP_Policies**e clique em **OK**.  
   
-     Se você selecionou apenas uma diretiva para exportar, o **Exportar diretiva** diálogo caixa, crie uma nova pasta com o caminho **C:\Scheduled_BP_Policies**, clique em **abrir**e, em seguida, clique em **Salvar**.  
+     Se você selecionou apenas uma política para exportar, na caixa de diálogo **Exportar política** , crie uma nova pasta com o caminho **c:\ Scheduled_BP_Policies**, clique em **abrir**e, em seguida, clique em **salvar**.  
   
      Os arquivos de diretivas .xml são criados no local da pasta.  
   
@@ -66,38 +66,38 @@ ms.locfileid: "68185816"
   
 1.  No menu **Exibir** , clique em **Servidores Registrados**.  
   
-2.  Expandir **mecanismo de banco de dados**, expanda o **Local Server Groups** ou **servidores centrais de gerenciamento**, clique com botão direito no nó que você deseja implantar as políticas e, em seguida, Clique em **importar diretivas**.  
+2.  Expanda **mecanismo de banco de dados**, expanda **grupos de servidores locais** ou **servidores de gerenciamento central**, clique com o botão direito do mouse no nó no qual você deseja implantar as políticas e clique em **importar políticas**.  
   
     > [!NOTE]  
-    >  Se o botão direito do mouse **grupos de servidores locais** ou o servidor de gerenciamento Central em si, as diretivas serão implantadas para todos os servidores gerenciados. Se você clicar com o botão direito do mouse em um grupo específico de servidores, as diretivas serão implantadas somente nos servidores desse grupo. Se você clicar com o botão direito do mouse em um servidor registrado específico, as políticas serão implantadas nesse servidor.  
+    >  Se você clicar com o botão direito do mouse em **grupos de servidores locais** ou no próprio servidor de gerenciamento central, as políticas serão implantadas em todos os servidores gerenciados. Se você clicar com o botão direito do mouse em um grupo específico de servidores, as diretivas serão implantadas somente nos servidores desse grupo. Se você clicar com o botão direito do mouse em um servidor registrado específico, as políticas serão implantadas nesse servidor.  
   
-3.  Lado **arquivos a importar**, clique no botão de reticências ( **...** ).  
+3.  Ao lado de **arquivos a serem importados**, clique no botão de reticências (**...**).  
   
-4.  No **Selecionar política** caixa de diálogo, navegue até o local da pasta onde você salvou as políticas agendadas. Neste exemplo, navegue até o local **C:\Scheduled_BP_Policies**.  
+4.  Na caixa de diálogo **selecionar política** , navegue até o local da pasta onde você salvou as políticas agendadas. Para este exemplo, navegue até o local **c:\ Scheduled_BP_Policies**.  
   
-5.  Selecione as políticas que você deseja importar para as instâncias de destino e, em seguida, clique em **aberto**.  
+5.  Selecione as políticas que você deseja importar para as instâncias de destino e clique em **abrir**.  
   
-6.  No **importação** na caixa de **estado da política** , selecione o estado da política desejada. Você poderá optar por preservar o estado da diretiva, habilitar ou desabilitar as diretivas na importação. Lembre-se de que as diretivas devem ser habilitadas para execução em um agendamento.  
+6.  Na caixa de diálogo **importar** , na lista **estado da política** , selecione o estado da política desejada. Você poderá optar por preservar o estado da diretiva, habilitar ou desabilitar as diretivas na importação. Lembre-se de que as diretivas devem ser habilitadas para execução em um agendamento.  
   
-7.  Clique em **Okey** para importar as políticas para todas as instâncias de destino.  
-  
-    > [!NOTE]  
-    >  Se houver erros, o **importação** caixa de diálogo não desaparecerá. Clique o **Log** página para examinar as mensagens. Clique em **Cancelar** para fechar a caixa de diálogo.  
-  
-8.  Para exibir as políticas de uma instância de destino, conecte-se à instância, abra o Pesquisador de objetos, expanda **Management**e, em seguida, expanda **diretivas**. Você deve ver as diretivas importadas na **políticas** nó. Se você clicar duas vezes em cada diretiva, poderá ver a agenda ou alterar as configurações.  
+7.  Clique em **OK** para importar as políticas para todas as instâncias de destino.  
   
     > [!NOTE]  
-    >  Para exibir os resultados da avaliação após a execução de uma diretiva agendada, abra o log Histórico da Diretiva na instância de destino. Para abrir o log, clique com botão direito **gerenciamento de política**e, em seguida, clique em **Exibir histórico**.  
+    >  Se houver erros, a caixa de diálogo **importar** não desaparecerá. Clique na página **log** para examinar as mensagens. Clique em **Cancelar** para fechar a caixa de diálogo.  
+  
+8.  Para exibir as políticas de uma instância de destino, conecte-se à instância do, abra o pesquisador de objetos, expanda **Gerenciamento**e expanda **políticas**. Você deve ver as políticas importadas no nó **políticas** . Se você clicar duas vezes em cada diretiva, poderá ver a agenda ou alterar as configurações.  
+  
+    > [!NOTE]  
+    >  Para exibir os resultados da avaliação após a execução de uma diretiva agendada, abra o log Histórico da Diretiva na instância de destino. Para abrir o log, clique com o botão direito do mouse em **Gerenciamento de políticas**e clique em **Exibir histórico**.  
   
 ## <a name="summary"></a>Resumo  
  Este tutorial mostrou como executar avaliações sob demanda e planejadas das diretivas de práticas recomendadas em uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="next"></a>Próximo  
- Este tutorial está concluído. Para retornar ao início, consulte [Tutorial: Avaliando práticas recomendadas usando o gerenciamento baseado em políticas](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
+ Este tutorial está concluído. Para retornar ao início, consulte [tutorial: avaliando práticas recomendadas usando o gerenciamento baseado em políticas](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
- Para ver uma lista dos [!INCLUDE[ssDE](../includes/ssde-md.md)] tutoriais, clique em [tutoriais do mecanismo de banco de dados](../relational-databases/database-engine-tutorials.md).  
+ Para ver uma lista de [!INCLUDE[ssDE](../includes/ssde-md.md)] tutoriais, clique [mecanismo de banco de dados tutoriais](../relational-databases/database-engine-tutorials.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

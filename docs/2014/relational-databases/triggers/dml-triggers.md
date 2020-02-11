@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196511"
 ---
 # <a name="dml-triggers"></a>Gatilhos DML
@@ -59,21 +59,21 @@ ms.locfileid: "68196511"
 |Aplicabilidade|Tabelas|Tabelas e exibições|  
 |Quantidade por tabela ou exibição|Múltiplas ações por ação de gatilho (UPDATE, DELETE e INSERT)|Uma ação por ação de gatilho (UPDATE, DELETE e INSERT)|  
 |Referências em cascata|Nenhuma restrição se aplica|Os gatilhos INSTEAD OF UPDATE e DELETE não são permitidos em tabelas que são destinos de restrições de integridade referencial em cascata.|  
-|Execução|Após:<br /><br /> Processamento da restrição<br />Ações referenciais declarativas<br />Criação de tabelas**inserted** e **deleted**<br />A ação de gatilho|Antes: Processamento da restrição<br /><br /> Em lugar de:  A ação de gatilho<br /><br /> Depois: criação de tabelas  **inserted** e **deleted**|  
+|Execução|Após:<br /><br /> Processamento da restrição<br />Ações referenciais declarativas<br />Criação de tabelas**inserted** e **deleted**<br />A ação de gatilho|Antes: processamento da restrição<br /><br /> Em vez de: a ação de gatilho<br /><br /> Depois: criação de tabelas  **inserted** e **deleted**|  
 |Ordem de execução|A primeira e a última execução podem ser especificadas|Não aplicável|  
-|`varchar(max)`, `nvarchar(max)`, e `varbinary(max)` a coluna referenciada na **inserido** e **excluído** tabelas|Allowed (permitido)|Allowed (permitido)|  
-|`text`, `ntext`, e `image` a coluna referenciada na **inserido** e **excluído** tabelas|Não permitido|Allowed (permitido)|  
+|`varchar(max)`referências `nvarchar(max)`de coluna `varbinary(max)` ,, e em tabelas **inseridas** e **excluídas**|Permitido|Permitido|  
+|`text`referências `ntext`de coluna `image` ,, e em tabelas **inseridas** e **excluídas**|Não permitido|Permitido|  
   
  Gatilhos CLR  
  Um gatilho CLR pode ser um gatilho AFTER ou INSTEAD OF. Um gatilho CLR também pode ser um gatilho DDL. Em vez de executar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , um gatilho CLR executa um ou mais métodos gravados em código gerenciado que são membros de um assembly criado no .NET Framework e carregado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tarefa|Tópico|  
 |----------|-----------|  
 |Descreve como criar um gatilho DML.|[Criar gatilhos DML](create-dml-triggers.md)|  
 |Descreve como criar um gatilho CLR.|[Criar gatilhos CLR](create-clr-triggers.md)|  
-|Descreve como criar um gatilho DML para tratar modificações de dados de linha única e de várias linhas.|[Crie gatilhos DML para tratar várias linhas de dados](create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
+|Descreve como criar um gatilho DML para tratar modificações de dados de linha única e de várias linhas.|[Criar gatilhos DML para manipular várias linhas de dados](create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
 |Descreve como aninhar gatilhos.|[Criar gatilhos aninhados](create-nested-triggers.md)|  
 |Descreve como especificar a ordem na qual são os gatilhos AFTER são disparados.|[Especificar o primeiro e o último gatilhos](specify-first-and-last-triggers.md)|  
 |Descreve como usar as tabelas especiais inseridas e excluídas no código de gatilho.|[Usar as tabelas inseridas e excluídas](use-the-inserted-and-deleted-tables.md)|  
@@ -82,7 +82,7 @@ ms.locfileid: "68196511"
 |Descreve como excluir ou desabilitar gatilhos DML.|[Excluir ou desabilitar gatilhos DML](delete-or-disable-dml-triggers.md)|  
 |Descreve como gerenciar a segurança do gatilho.|[Gerenciar a segurança dos gatilhos](manage-trigger-security.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   

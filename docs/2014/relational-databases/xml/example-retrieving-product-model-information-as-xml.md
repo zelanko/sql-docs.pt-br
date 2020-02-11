@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Recuperando informações de modelo do produto como XML | Microsoft Docs'
+title: 'Exemplo: recuperando informações de modelo de produto como XML | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704714"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>Exemplo: Recuperando informações de modelo de produto como XML
@@ -52,7 +52,7 @@ FOR XML RAW, ELEMENTS;
 GO  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <row>  
@@ -77,7 +77,7 @@ FOR XML RAW, TYPE ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usar modo RAW com FOR XML](use-raw-mode-with-for-xml.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Usar o modo RAW com FOR XML](use-raw-mode-with-for-xml.md)  
   
   

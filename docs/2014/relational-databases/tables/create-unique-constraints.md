@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77581cc6d8838e0cfed4bb7cc615f4d1f58de0d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761459"
 ---
 # <a name="create-unique-constraints"></a>Criar restrições exclusivas
@@ -55,7 +55,7 @@ ms.locfileid: "62761459"
   
 4.  Na grade, em **Geral**, clique em **Tipo** e selecione **Chave Exclusiva** na caixa de listagem suspensa à direita da propriedade.  
   
-5.  No menu **Arquivo** , clique em **Salvar**_table name_.  
+5.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

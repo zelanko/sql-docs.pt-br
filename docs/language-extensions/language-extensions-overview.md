@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658825"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>O que são Extensões de Linguagem do SQL Server?
@@ -35,7 +35,7 @@ As Extensões de Linguagem oferecem várias vantagens:
 + Velocidade. Os bancos de dados são otimizados para operações baseadas em conjunto. Inovações recentes em bancos de dados, como tabelas na memória, agilizam resumos e agregações e são um complemento perfeito para a ciência de dados.
 + Facilidade de implantação e integração. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é o ponto central de operações para muitas outras tarefas e aplicativos de gerenciamento de dados. Usando dados que residem no banco de dados, você garante que os dados usados pelo Java sejam consistentes e atualizados.
 
-## <a name="how-to-get-started"></a>Como começar a usar
+## <a name="how-to-get-started"></a>Como começar
 
 ### <a name="step-1-install-the-software"></a>Etapa 1: Instalar o software
 

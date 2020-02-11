@@ -1,5 +1,5 @@
 ---
-title: Conjunto de registros, propriedades SourceRecordset (RDS) | Microsoft Docs
+title: Conjunto de registros, Propriedades SourceRecordset (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +14,19 @@ ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0cca4735e65ce5d96d431fa455181de921e4474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963578"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Conjunto de registros, propriedades SourceRecordset (RDS)
-Indica o **Recordset** objeto retornado de um objeto comercial personalizado.  
+Indica o objeto **Recordset** retornado de um objeto comercial personalizado.  
   
- **Aplica-se a:** [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ **Aplica-se a:** [objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,28 +36,28 @@ DataControl.SourceRecordset = Recordset
 Recordset = DataControl.Recordset   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *DataControl*  
- Uma variável de objeto que representa um [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
+ Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- *Recordset*  
- Uma variável de objeto que representa um **Recordset** objeto.  
+ *Conjunto de registros*  
+ Uma variável de objeto que representa um objeto **Recordset** .  
   
 ## <a name="remarks"></a>Comentários  
- Você pode definir as **SourceRecordset** propriedade para um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) retornado de um objeto comercial personalizado.  
+ Você pode definir a propriedade **SourceRecordset** para um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) retornado de um objeto comercial personalizado.  
   
- Essas propriedades permitem que um aplicativo para controlar o processo de associação por meio de um processo personalizado. Eles recebem um conjunto de linhas encapsulado em um **conjunto de registros** para que você pode interagir diretamente com o **conjunto de registros**, executar ações como propriedades de configuração ou iterar por meio o **conjunto de registros** .  
+ Essas propriedades permitem que um aplicativo manipule o processo de associação por meio de um processo personalizado. Eles recebem um conjunto de linhas encapsulado em um **conjunto de registros** para que você possa interagir diretamente com o **conjunto de registros**, executando ações como definir propriedades ou Iterando por meio do conjunto de **registros**.  
   
- Você pode definir as **SourceRecordset** propriedade ou leitura a **Recordset** propriedade em tempo de execução no código de script.  
+ Você pode definir a propriedade **SourceRecordset** ou ler a propriedade **Recordset** em tempo de execução no código de script.  
   
- **SourceRecordset** é uma propriedade somente gravação, em contraste com o **Recordset** propriedade, que é uma propriedade somente leitura.  
+ **SourceRecordset** é uma propriedade somente gravação, em contraste com a propriedade **Recordset** , que é uma propriedade somente leitura.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Conjunto de registros e exemplo de propriedades SourceRecordset (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
- [Método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo das propriedades Recordset e SourceRecordset (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
+ [Método createrecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Método Query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

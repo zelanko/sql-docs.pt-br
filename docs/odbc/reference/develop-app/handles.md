@@ -1,5 +1,5 @@
 ---
-title: Lida com | Microsoft Docs
+title: Identificadores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139037"
 ---
 # <a name="handles"></a>Alças
-Os identificadores são opacos, 32 bits os valores que identificam um item em particular; no ODBC, este item pode ser um ambiente, a conexão, a instrução ou o descritor. Quando o aplicativo chama **SQLAllocHandle**, o Gerenciador de Driver ou driver cria um novo item do tipo especificado e retorna sua alça para o aplicativo. Posteriormente, o aplicativo usa o identificador para identificar o item ao chamar funções ODBC. O Gerenciador de Driver e o driver usam o identificador para localizar informações sobre o item.  
+Os identificadores são valores opacos de 32 bits que identificam um item específico; no ODBC, esse item pode ser um ambiente, uma conexão, uma instrução ou um descritor. Quando o aplicativo chama **SQLAllocHandle**, o Driver Manager ou driver cria um novo item do tipo especificado e retorna seu identificador para o aplicativo. Posteriormente, o aplicativo usa o identificador para identificar esse item ao chamar funções ODBC. O driver e o Gerenciador de driver usam o identificador para localizar informações sobre o item.  
   
- Por exemplo, o código a seguir usa dois identificadores de instrução (*hstmtOrder* e *hstmtLine*) para identificar as instruções no qual criar os conjuntos de resultados de vendas de vendas e pedidos de ordem os números de linha. Posteriormente, ele usa esses identificadores para identificar qual conjunto de resultados para buscar dados do.  
+ Por exemplo, o código a seguir usa dois identificadores de instrução (*hstmtOrder* e *hstmtLine*) para identificar as instruções nas quais criar conjuntos de resultados de ordens de venda e números de linha de ordem de venda. Posteriormente, ele usa esses identificadores para identificar o conjunto de resultados do qual buscar dados.  
   
 ```  
 SQLHSTMT      hstmtOrder, hstmtLine; // Statement handles.  
@@ -71,17 +71,17 @@ while ((rc = SQLFetch(hstmtOrder)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmtOrder);  
 ```  
   
- Os identificadores são significativos apenas para o componente ODBC que os criou; ou seja, apenas o Gerenciador de Driver pode interpretar os identificadores de Gerenciador de Driver e apenas um driver pode interpretar seus próprios identificadores.  
+ Os identificadores são significativos apenas para o componente ODBC que os criou; ou seja, somente o Gerenciador de driver pode interpretar identificadores do Gerenciador de driver e apenas um driver pode interpretar seus próprios identificadores.  
   
- Por exemplo, suponha que o driver no exemplo anterior, aloca uma estrutura para armazenar informações sobre uma instrução e retorna o ponteiro para essa estrutura como o identificador de instrução. Quando o aplicativo chama **SQLPrepare**, ele passa uma instrução SQL e o identificador da instrução é usado para números de linha de pedido de vendas. O driver envia a instrução SQL para a fonte de dados, que prepara e retorna um identificador de plano de acesso. O driver usa o identificador para localizar a estrutura na qual armazenar esse identificador.  
+ Por exemplo, suponha que o driver no exemplo anterior aloque uma estrutura para armazenar informações sobre uma instrução e retorna o ponteiro para essa estrutura como o identificador da instrução. Quando o aplicativo chama **SQLPrepare**, ele passa uma instrução SQL e o identificador da instrução usada para números de linha de ordem de venda. O driver envia a instrução SQL para a fonte de dados, que a prepara e retorna um identificador de plano de acesso. O driver usa o identificador para localizar a estrutura na qual armazenar esse identificador.  
   
- Posteriormente, quando o aplicativo chama **SQLExecute** para gerar o conjunto de resultados de números de linha para uma determinada ordem de venda, transmite o mesmo identificador. O driver usa o identificador para recuperar o identificador de plano de acesso da estrutura. Ele envia o identificador para a fonte de dados para informar a ele que planeja executar.  
+ Posteriormente, quando o aplicativo chama **SQLExecute** para gerar o conjunto de resultados de números de linha para uma ordem de venda específica, ele passa o mesmo identificador. O driver usa o identificador para recuperar o identificador de plano de acesso da estrutura. Ele envia o identificador para a fonte de dados para informar qual plano deve ser executado.  
   
- ODBC tem dois níveis de identificadores: Identificadores de Gerenciador de driver e identificadores de driver. O aplicativo usa identificadores de Gerenciador de Driver ao chamar funções ODBC, pois ele chama essas funções no Gerenciador de Driver. O Gerenciador de Driver usa esse identificador para localizar o identificador do driver correspondente e usa o identificador do driver ao chamar a função no driver. Para obter um exemplo de como o driver e o Gerenciador de Driver identificadores são usados, consulte [do Gerenciador de Driver de função no processo de Conexão](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
+ O ODBC tem dois níveis de identificadores: identificadores do Gerenciador de driver e identificadores de driver. O aplicativo usa identificadores do Gerenciador de driver ao chamar funções ODBC porque ele chama essas funções no Gerenciador de driver. O Gerenciador de driver usa esse identificador para localizar o identificador de driver correspondente e usa o identificador de driver ao chamar a função no driver. Para obter um exemplo de como os identificadores do driver e do Gerenciador de driver são usados, consulte [função do Gerenciador de driver no processo de conexão](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
   
- Que há dois níveis de identificadores é um artefato da arquitetura ODBC; Na maioria dos casos, não é relevante para o aplicativo ou o driver. Embora normalmente não há nenhum motivo para fazer isso, é possível para o aplicativo determinar as alças de driver, chamando **SQLGetInfo**.  
+ Que há dois níveis de identificadores é um artefato da arquitetura ODBC; na maioria dos casos, não é relevante para o aplicativo ou driver. Embora geralmente não haja motivo para isso, é possível que o aplicativo determine os identificadores de driver chamando **SQLGetInfo**.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Identificadores de ambiente](../../../odbc/reference/develop-app/environment-handles.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: (VBScript) de exemplo do método Cancel | Microsoft Docs
+title: Exemplo do método Cancel (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 764a99faf40450bfd550dfe3f96789e705e8624a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964723"
 ---
 # <a name="cancel-method-example-vbscript"></a>Exemplo do método Cancel (VBScript)
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O exemplo a seguir mostra como ler o [Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md) método em tempo de execução. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como CancelVBS.asp. Você pode exibir o resultado em qualquer navegador do cliente.  
+ O exemplo a seguir mostra como ler o método [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) em tempo de execução. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como CancelVBS. ASP. Você pode exibir o resultado em qualquer navegador cliente.  
   
 ```  
 <!-- BeginCancelVBS -->  
@@ -68,7 +68,7 @@ End Sub
 <!-- EndCancelVBS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)
 
 

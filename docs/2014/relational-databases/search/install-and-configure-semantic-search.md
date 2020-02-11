@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637915"
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar e configurar a pesquisa semântica
@@ -61,9 +61,9 @@ GO
   
     -   Localize o pacote do Windows Installer nomeado **SemanticLanguageDatabase.msi** na mídia de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Localize a versão de 32 ou 64 bits do pacote de instalador, dependendo do sistema de destino. O nome da pasta contêiner identifica a versão de 32 ou 64 bits do arquivo; o nome do arquivo é o mesmo para ambas as versões.  
   
-    -   Baixar o pacote do instalador da [Microsoft? SQL Server?? 2014 Estatísticas Semânticas de Idioma](https://go.microsoft.com/fwlink/?LinkID=296743) página no centro de download de [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
+    -   Baixar o pacote do instalador da [Microsoft? SQL Server?? 2014 Estatísticas Semânticas de Idioma](https://go.microsoft.com/fwlink/?LinkID=296743) página no centro [!INCLUDE[msCoName](../../../includes/msconame-md.md)] de download.  
   
-2.  Execute o pacote do Windows Installer **SemanticLanguageDatabase.msi** para extrair o banco de dados e o arquivo de log.  
+2.  Execute o pacote do Windows Installer **SemanticLanguageDatabase. msi** para extrair o banco de dados e o arquivo de log.  
   
      Se desejar, você pode alterar o diretório de destino. Por padrão, o instalador extrai os arquivos para uma pasta chamada **banco de dados de idioma semântico da Microsoft** na pasta arquivos de programas de 32 bits ou 64 bits. O arquivo MSI contém um arquivo de banco de dados compactado e um arquivo de log.  
   

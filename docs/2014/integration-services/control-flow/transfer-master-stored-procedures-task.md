@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829480"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tarefa Transferir Procedimentos Armazenados Mestres
@@ -64,7 +64,7 @@ ms.locfileid: "62829480"
   
  Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Editor da Tarefa Transferir Procedimentos Armazenados Mestres &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da tarefa Transferir procedimentos armazenados mestres &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor da Tarefa Transferir Procedimentos Armazenados Mestres &#40;Página Procedimentos Armazenados&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
@@ -81,8 +81,8 @@ ms.locfileid: "62829480"
   
 -   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Tarefa Transferir Objetos do SQL Server](transfer-sql-server-objects-task.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tarefa transferir objetos do SQL Server](transfer-sql-server-objects-task.md)   
  [Tarefas do Integration Services](integration-services-tasks.md)   
  [Fluxo de Controle](control-flow.md)  
   

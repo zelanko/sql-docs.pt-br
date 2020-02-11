@@ -18,10 +18,10 @@ ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9ce23fbc14501e07eaf116a1e0e7edb32c2f8abc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660697"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>Método SetStringValue (classe ClientNetworkProtocolProperty)
@@ -36,12 +36,12 @@ object.SetStringValue(StrValue)
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  A [classe ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representa um atributo do protocolo de rede usado pelo cliente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
 |*StrValue*|Um valor da cadeia de caracteres que especifica o novo valor da propriedade atual.|  
   
@@ -50,7 +50,7 @@ object.SetStringValue(StrValue)
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

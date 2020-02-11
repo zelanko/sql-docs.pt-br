@@ -1,5 +1,5 @@
 ---
-title: Indexa a coleção de propriedades, métodos e eventos | Microsoft Docs
+title: Propriedades, métodos e eventos da coleção Indexes | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,27 +13,27 @@ ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a26f602e5746f1dfc0556d16448514ae8df7215
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966021"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Propriedades, Métodos e Eventos da coleção Indexes
 ## <a name="properties"></a>Propriedades  
  [Propriedade Count](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [Propriedade item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propriedade Item](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [(Índices) do método append](../../../ado/reference/adox-api/append-method-adox-indexes.md)  
+ [Método Append (índices)](../../../ado/reference/adox-api/append-method-adox-indexes.md)  
   
- [Excluir método (coleções)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Método Delete (coleções)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   
- [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Método de atualização](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Events  
- nenhuma.  
+## <a name="events"></a>Eventos  
+ Nenhum.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleção Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

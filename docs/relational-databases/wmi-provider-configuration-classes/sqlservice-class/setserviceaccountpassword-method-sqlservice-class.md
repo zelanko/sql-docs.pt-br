@@ -18,10 +18,10 @@ ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: eb6a3649268455864148730ac4d4640a7dccc87f
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660920"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>Método SetServiceAccountPassword (classe SqlService)
@@ -36,10 +36,10 @@ object.SetServiceAccountPassword(AccountOldPassword , ServiceStartPassword)
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Um objeto da [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa o serviço.  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *AccountOldPassword*  
  Um valor da cadeia de caracteres que especifica a senha existente para a conta.  
   

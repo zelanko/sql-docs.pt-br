@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 76b5b09a07189db127c970e75dac2894fdbea1ae
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633440"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys. workload_management_workload_groups (Transact-SQL)
@@ -26,17 +26,17 @@ ms.locfileid: "73633440"
 
  Retorna detalhes para grupos de cargas de trabalho.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|
 |group_id|**int**|ID exclusivo do grupo de carga de trabalho. Não permite valor nulo.||
 |name|**sysname**|Nome do grupo de carga de trabalho. Deve ser exclusivo para a instância.  Não permite valor nulo.||
-|importance|**nvarchar(128)**|É a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados. Não permite valor nulo.|baixa, below_normal, normal (padrão), above_normal, alta||
+|importância|**nvarchar(128)**|É a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados. Não permite valor nulo.|baixa, below_normal, normal (padrão), above_normal, alta||
 |min_percentage_resource|**tinyint**|Quantidade garantida de recursos para solicitações no grupo de cargas de trabalho. Os recursos não são compartilhados com outros grupos de carga de trabalho. Não permite valor nulo.||
 |cap_percentage_resource|**tinyint**|Limite de alocação de porcentagem de recursos para solicitações no grupo de cargas de trabalho. Limita o número máximo de recursos alocados para o nível especificado. O intervalo permitido para o valor é de 1 a 100.||
 |request_min_resource_grant_percent|**decimal (5, 2)**|Especifica a quantidade mínima de recursos alocados a uma solicitação. O intervalo permitido para value é de 0,75 a 100.||
 |request_max_resource_grant_percent |**decimal (5, 2)**|Especifica a quantidade máxima de recursos alocados a uma solicitação.||
 |query_execution_timeout_sec|**int**|A quantidade de tempo de execução, em segundos, permitida antes que a consulta seja cancelada.  As consultas não podem ser canceladas depois que atingirem a fase de retorno da execução.  query_execution_timeout_sec não inclui o tempo gasto na fila.|
-|query_wait_timeout_sec|**int**|INTERNO||
+|query_wait_timeout_sec|**int**|INTERNAL||
 |create_time|**datetime**|Hora em que o grupo de cargas de trabalho foi criado. Não permite valor nulo.||
 modify_time|**datetime**|Hora em que o grupo de cargas de trabalho foi modificado pela última vez. Não permite valor nulo.||
 |&nbsp;||||

@@ -1,5 +1,5 @@
 ---
-title: 'Propriedades da Etapa de Trabalho: Nova etapa de trabalho (página geral) | Microsoft Docs'
+title: 'Propriedades da etapa de trabalho: nova etapa de trabalho (página Geral) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510950"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Propriedades da Etapa de Trabalho: Nova Etapa de Trabalho (página Geral)
-  Use esta página para exibir e alterar as propriedades de uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou para definir uma nova etapa de trabalho.  
+# <a name="job-step-properties-new-job-step-general-page"></a>Propriedades da etapa de trabalho: nova etapa de trabalho (página Geral)
+  Use esta página para exibir e alterar as propriedades de uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] etapa de trabalho do Agent ou para definir uma nova etapa de trabalho.  
   
  Para navegar até essa página, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, clique com o botão direito do mouse em **Trabalhos**, clique em **Novos Trabalhos**, selecione a página **Etapas** e clique em **Novo**. Você também pode navegar até essa página. Para isso, clique com o botão direito do mouse em um trabalho no Pesquisador de Objetos, clique em **Propriedades**, selecione a página **Etapas** e clique em **Novo**, **Inserir**ou **Editar**.  
   
@@ -44,16 +44,16 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
- **Copiar**  
+ **Copy**  
  Copie o texto selecionado para a Área de Transferência.  
   
  **Colar**  
  Cole o conteúdo da área de transferência.  
   
- **Analisar**  
+ **Passar**  
  Verifique a sintaxe do comando.  
   
 ## <a name="options-for-activex-script-job-steps"></a>Opções para etapas de trabalho ActiveX Script  
@@ -67,32 +67,32 @@ ms.locfileid: "62510950"
  **JScript**  
  Especifique JScript como a linguagem para a etapa de trabalho.  
   
- **Outro**  
+ **Outros**  
  Digite o nome da linguagem para etapas de trabalho escritas em outra linguagem de criação de scripts.  
   
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
- **Copiar**  
+ **Copy**  
  Copie o texto selecionado.  
   
  **Colar**  
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>Opções para etapas de trabalho do sistema operacional (CmdExec)  
- **Código de saída do processo de um comando bem sucedido**  
+ **Código de saída do processo de um comando bem-sucedido**  
  Digite o código de saída que o comando retorna para indicar sucesso.  
   
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
- **Copiar**  
+ **Copy**  
  Copie o texto selecionado.  
   
  **Colar**  
@@ -102,30 +102,30 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o script de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do script.  
   
- **Copiar**  
+ **Copy**  
  Copie o texto selecionado.  
   
  **Colar**  
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-distributor-job-steps"></a>Opções para etapas de trabalho do Distribuidor de Replicação  
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
- **Copiar**  
+ **Copy**  
  Copie o texto selecionado.  
   
  **Colar**  
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-merge-job-steps"></a>Opções para etapas de trabalho de Mesclagem de Replicação  
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
- **Copiar**  
+ **Copy**  
  Copie o texto selecionado.  
   
  **Colar**  
@@ -135,30 +135,30 @@ ms.locfileid: "62510950"
  **Backup de banco de dados**  
  O banco de dados a ser usado para a etapa de trabalho.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
- **Copiar**  
+ **Copy**  
  Copie o texto selecionado.  
   
  **Colar**  
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-snapshot-job-steps"></a>Opções para etapas de trabalho do instantâneo de replicação  
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
- **Copiar**  
+ **Copy**  
  Copie o texto selecionado.  
   
  **Colar**  
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-transaction-log-reader-job-steps"></a>Opções para etapas de trabalho do Leitor do Log de Transações da Replicação  
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
- **Copiar**  
+ **Copy**  
  Copie o texto selecionado.  
   
  **Colar**  
@@ -171,10 +171,10 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
- **Copiar**  
+ **Copy**  
  Copie o texto selecionado.  
   
  **Colar**  
@@ -184,16 +184,16 @@ ms.locfileid: "62510950"
  **Servidor**  
  Selecione o servidor onde a etapa de trabalho é executada.  
   
- **Banco de dados**  
+ **Backup de banco de dados**  
  O banco de dados a ser usado para a etapa de trabalho.  
   
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
- **Copiar**  
+ **Copy**  
  Copie o texto selecionado.  
   
  **Colar**  
@@ -209,21 +209,22 @@ ms.locfileid: "62510950"
   
 -   **SQL Server**  
   
--   **Sistema de arquivos**  
+-   **Sistema de Arquivos**  
   
 -   **Armazenamento de Pacotes SSIS**  
   
  **Servidor**  
  Digite o nome do servidor em que o pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] está armazenado. Essa opção só está disponível quando **SQL Server** ou **Repositório de Pacotes SSIS** está especificado para **Origem do Pacote**.  
   
- **Usar Autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Logons para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam a autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Usar Autenticação do SQL Server**  
+ **Usar autenticação SQL Server**  
  Logons para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se este método de autenticação for selecionado, digite o **Nome de usuário** e a **Senha**apropriados.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A autenticação é fornecida para fins de compatibilidade com versões anteriores. Para maior segurança, use a autenticação do Windows, se possível.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A autenticação é fornecida para fins de compatibilidade com versões anteriores. Para maior segurança, use a autenticação do Windows, se possível.  
   
  **Pacote**  
  Digite o local do pacote.  
@@ -243,10 +244,10 @@ ms.locfileid: "62510950"
  **Remover**  
  Remova um arquivo de configuração para o pacote.  
   
- **Mover para Cima**  
+ **Mover para cima**  
  Mova para cima o arquivo de configuração selecionado.  
   
- **Mover para Baixo**  
+ **Mover para baixo**  
  Mova para baixo o arquivo de configuração selecionado.  
   
 ### <a name="command-files-tab"></a>Guia Arquivos de Comando  
@@ -261,10 +262,10 @@ ms.locfileid: "62510950"
  **Remover**  
  Remova o arquivo de comando selecionado.  
   
- **Mover para Cima**  
+ **Mover para cima**  
  Mova para cima o arquivo de comando selecionado.  
   
- **Mover para Baixo**  
+ **Mover para baixo**  
  Mova para baixo o arquivo de comando selecionado.  
   
 ### <a name="data-sources-tab"></a>Guia Fontes de Dados  
@@ -276,22 +277,22 @@ ms.locfileid: "62510950"
  **Descrição**  
  Exiba a descrição da fonte de dados.  
   
- **Cadeia de Conexão**  
+ **Cadeia de conexão**  
  Exiba a cadeia de conexão para a fonte de dados.  
   
 ### <a name="execution-options-tab"></a>Guia Opções de Execução  
  Exiba ou altere as opções de execução para o pacote nesta guia.  
   
- **Falha de pacote com avisos de validação**  
+ **Falha no pacote em avisos de validação**  
  Selecione essa opção para que a execução do pacote falhe se ocorrerem avisos de validação.  
   
  **Validar pacote sem executar**  
  Selecione esta opção para que a etapa de trabalho valide, mas não execute, o pacote.  
   
- **Executáveis máximos simultâneos**  
+ **Máximo de executáveis simultâneos**  
  Número máximo de arquivos executáveis que podem ser executados ao mesmo tempo.  
   
- **Ativar pontos de verificação do pacote**  
+ **Habilitar pontos de verificação de pacote**  
  Selecione esta opção para que a etapa de trabalho use pontos de verificação do pacote.  
   
  **Arquivo de ponto de verificação**  
@@ -309,10 +310,10 @@ ms.locfileid: "62510950"
 ### <a name="logging-tab"></a>Guia Log  
  Exiba ou altere as opções de provedores de log para o pacote nesta guia.  
   
- **Provedor de Log**  
+ **Provedor de log**  
  Selecione o ClassID para o provedor de log.  
   
- **Cadeia de Caracteres de Configuração**  
+ **Cadeia de caracteres de configuração**  
  Digite a cadeia de caracteres de configuração para o provedor de log.  
   
  **Remover**  
@@ -324,7 +325,7 @@ ms.locfileid: "62510950"
  **Caminho da propriedade**  
  Exiba ou altere o caminho para a propriedade.  
   
- **Value**  
+ **Valor**  
  Exiba ou altere o valor para a propriedade.  
   
  **Remover**  
@@ -333,25 +334,25 @@ ms.locfileid: "62510950"
 ### <a name="verification-tab"></a>Guia Verificação  
  Selecione as opções de verificação para a etapa de trabalho nesta guia.  
   
- **Executar apenas pacotes assinados**  
+ **Executar somente pacotes assinados**  
  Execute apenas pacotes que tenham sido assinados. Quando esta opção está selecionada, a etapa de trabalho apresentará falha se o pacote não estiver assinado.  
   
- **Verificar construção de pacote**  
+ **Verificar compilação do pacote**  
  Execute apenas pacotes com um número de construção específico. Quando esta opção está selecionada, a etapa de trabalho apresentará falha se o pacote não tiver o número de construção especificado.  
   
- **Compilação**  
+ **Build**  
  Digite o número de construção do pacote.  
   
  **Verificar ID do pacote**  
  Execute apenas pacotes com um ID específico. Quando esta opção está selecionada, a etapa de trabalho apresentará falha se o pacote não tiver o ID especificado.  
   
- **ID do Pacote**  
+ **ID do pacote**  
  Digite o ID do pacote.  
   
  **Verificar ID da versão**  
  Execute apenas pacotes com uma ID de versão específica. Quando esta opção está selecionada, a etapa de trabalho apresentará falha se o pacote não tiver a ID da versão especificada.  
   
- **ID da Versão**  
+ **ID da versão**  
  Digite o ID da versão.  
   
 ### <a name="command-line-tab"></a>Guia Linha de Comando  
@@ -366,9 +367,9 @@ ms.locfileid: "62510950"
  **Linha de comando**  
  Digite as opções de linha de comando a usar para o pacote.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar etapas de trabalho](manage-job-steps.md)   
- [Trabalhos do SQL Server Agent para pacotes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
+ [SQL Server Agent trabalhos para pacotes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [Administração do agente de replicação](../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

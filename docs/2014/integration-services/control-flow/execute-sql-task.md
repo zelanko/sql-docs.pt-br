@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831764"
 ---
 # <a name="execute-sql-task"></a>Tarefa Executar SQL
@@ -44,9 +44,9 @@ ms.locfileid: "62831764"
   
 |Tipo de conexão|Gerenciador de conexões|  
 |---------------------|------------------------|  
-|EXCEL|[Gerenciador de Conexões do Excel](../connection-manager/excel-connection-manager.md)|  
-|OLE DB|[Gerenciador de conexões OLE DB](../connection-manager/ole-db-connection-manager.md)|  
-|ODBC|[Gerenciador de Conexões ODBC](../connection-manager/odbc-connection-manager.md)|  
+|EXCEL|[Gerenciador de conexões do Excel](../connection-manager/excel-connection-manager.md)|  
+|OLE DB|[gerenciador de conexões OLE DB](../connection-manager/ole-db-connection-manager.md)|  
+|ODBCODBC|[gerenciador de conexões ODBC](../connection-manager/odbc-connection-manager.md)|  
 |ADO|[Gerenciador de conexões ADO](../connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[Gerenciador de conexões ADO.NET](../connection-manager/ado-net-connection-manager.md)|  
 |SQLMOBILE|[Gerenciador de Conexões do SQL Server Compact Edition](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
@@ -56,7 +56,7 @@ ms.locfileid: "62831764"
   
  Se as instruções SQL estiverem armazenadas em um arquivo, a tarefa usará um gerenciador de conexões de arquivo para se conectar ao arquivo. Para obter mais informações, consulte [File Connection Manager](../connection-manager/file-connection-manager.md).  
   
- No Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , você pode usar a caixa de diálogo **Editor da Tarefa Executar SQL** para digitar instruções SQL ou usar o **Construtor de Consultas**, uma interface do usuário gráfica para criar consultas SQL. Para obter mais informações, consulte [Editor da Tarefa Executar SQL &#40;Página Geral&#41;](../execute-sql-task-editor-general-page.md) e [Construtor de Consultas](../query-builder.md).  
+ No Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , você pode usar a caixa de diálogo **Editor da Tarefa Executar SQL** para digitar instruções SQL ou usar o **Construtor de Consultas**, uma interface do usuário gráfica para criar consultas SQL. Para obter mais informações, consulte [Execute SQL Task Editor &#40;General Page&#41;](../execute-sql-task-editor-general-page.md) e [Construtor de Consultas](../query-builder.md).  
   
 > [!NOTE]  
 >  Instruções SQL válidas gravadas fora da tarefa Executar SQL talvez não sejam analisadas com êxito pela tarefa Executar SQL.  
@@ -104,7 +104,7 @@ ms.locfileid: "62831764"
 ### <a name="custom-log-entries"></a>Entradas personalizadas do log  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Executar SQL. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Fornece informações sobre as fases de execução da instrução SQL. As entradas de log são gravadas quando a tarefa adquire conexão com o banco de dados, quando a tarefa começa a preparar a instrução SQL e depois que a execução da instrução SQL é concluída. A entrada de log da fase de preparação inclui a instrução SQL usada pela tarefa.|  
   
@@ -127,11 +127,11 @@ ms.locfileid: "62831764"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [SQL Editor da tarefa executar &#40;página geral&#41;](../execute-sql-task-editor-general-page.md)  
+-   [Editor da tarefa Executar SQL &#40;página Geral&#41;](../execute-sql-task-editor-general-page.md)  
   
--   [SQL Editor da tarefa executar &#40;página de mapeamento de parâmetro&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
+-   [Editor da tarefa Executar SQL &#40;página mapeamento de parâmetro&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
--   [SQL Editor da tarefa executar &#40;página conjunto de resultados&#41;](../execute-sql-task-editor-result-set-page.md)  
+-   [Editor da tarefa Executar SQL &#40;página conjunto de resultados&#41;](../execute-sql-task-editor-result-set-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

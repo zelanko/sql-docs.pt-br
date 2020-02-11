@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473197"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Atribuir um trabalho a uma categoria de trabalho
-  Este tópico descreve como atribuir trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a categorias de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o SQL Server Management Objects.  
+  Este tópico descreve como atribuir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalhos do Agent a categorias de trabalho [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o [!INCLUDE[tsql](../../includes/tsql-md.md)] , ou SQL Server Management Objects.  
   
  As categorias de trabalho ajudam a organizar os trabalhos de modo a facilitar sua filtragem e agrupamento. Por exemplo, você pode organizar todos os seus trabalhos de backup de banco de dados na categoria Manutenção de Banco de Dados. É possível atribuir trabalhos a categorias de trabalho internas ou criar uma categoria de trabalho definida pelo usuário e atribuir trabalhos a ela.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "62473197"
   
 3.  Clique no sinal de adição para expandir a pasta **Trabalhos** .  
   
-4.  Clique com o botão direito do mouse no trabalho que deseja editar e selecionar **Propriedades**.  
+4.  Clique com o botão direito do mouse no trabalho que deseja editar e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Trabalho -** _job_name_ , na lista **Categoria** , selecione a categoria de trabalho a qual deseja atribuir o trabalho.  
+5.  Na caixa de diálogo **Propriedades do trabalho –**_job_name_ , na lista **categoria** , selecione a categoria de trabalho que você deseja atribuir ao trabalho.  
   
 6.  Clique em **OK**.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "62473197"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
+ Para obter mais informações, consulte [sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
   
   
-##  <a name="SMO"></a> Usando o SQL Server Management Objects  
+##  <a name="SMO"></a>Usando SQL Server Management Objects  
  **Para atribuir um trabalho a uma categoria de trabalho**  
   
  Use a classe `JobCategory` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell.  

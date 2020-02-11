@@ -1,5 +1,5 @@
 ---
-title: Criar os arquivos de Conexão de servidor (DB2ToSQL) | Microsoft Docs
+title: Criando os arquivos de conexão do servidor (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,14 +10,14 @@ ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 484b9e12d53d22160358d873ddb2a3dc60d0977e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989807"
 ---
-# <a name="creating-the-server-connection-files-db2tosql"></a>Criar os arquivos de Conexão de servidor (DB2ToSQL)
-Informações do servidor podem ser especificadas na seção de servidores do arquivo de script ou em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão de servidor é, `-c <serverconnectionfile>`. Se a mesma id de servidor estiver presente no arquivo de script e no arquivo de conexão do servidor, a definição de servidor no arquivo de script é considerada.  
+# <a name="creating-the-server-connection-files-db2tosql"></a>Criando os arquivos de conexão do servidor (DB2ToSQL)
+As informações do servidor podem ser especificadas na seção servidores do arquivo de script ou em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão `-c <serverconnectionfile>`do servidor é,. Se a mesma ID do servidor estiver presente no arquivo de script e no arquivo de conexão do servidor, a definição do servidor no arquivo de script será considerada.  
   
 **Exemplo: 1**  
   
@@ -74,8 +74,8 @@ Informações do servidor podem ser especificadas na seção de servidores do ar
 ```  
   
 ## <a name="next-step"></a>Próxima etapa  
-É a próxima etapa no operando o console [executar o Console do SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+A próxima etapa na operação do console é [executar o console do SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Executar o console do SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   
