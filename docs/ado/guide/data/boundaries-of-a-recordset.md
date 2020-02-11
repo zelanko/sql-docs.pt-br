@@ -1,5 +1,5 @@
 ---
-title: Os limites de um conjunto de registros | Microsoft Docs
+title: Limites de um conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,26 +15,26 @@ ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925918"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites de um conjunto de registros
-**Conjunto de registros** oferece suporte a **BOF** e **EOF** propriedades para delimitar o início e no final, respectivamente, do conjunto de dados. Você pode pensar **BOF** e **EOF** como "fantasmas" registros que são posicionados no início e no final do **conjunto de registros**. Contando **BOF** e **EOF**, em nosso exemplo **Recordset** agora ficaria assim:  
+O **conjunto de registros** dá suporte às propriedades **BOF** e **EOF** para delinear o início e o fim, respectivamente, do conjunto de linhas. Você pode considerar **BOF** e **EOF** como registros "fantasma" posicionados no início e no final do **conjunto de registros**. Contando **BOF** e **EOF**, nosso **conjunto de registros** de exemplo terá a seguinte aparência:  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
 |BOF|||  
-|7|Peras secas orgânico de tio Bob|30.0000|  
-|14|Bananas|23.2500|  
-|28|Rssle chucrute|45.6000|  
-|51|Maçãs Secas Manjimup|53.0000|  
-|74|Longlife Bananas|10.0000|  
+|7|Pêras secas-orgânicas do tio Bob|30, 0|  
+|14|Tofu|23,2500|  
+|28|Rssle chucrute|45,6000|  
+|51|Maçãs secas Manjimup|53, 0|  
+|74|Longlife Tofu|10, 0|  
 |EOF|||  
   
- Quando um cursor se move além do último registro, **EOF** é definido como **verdadeiro**; caso contrário, seu valor é **False**. Da mesma forma, quando o cursor é movido antes do primeiro registro, **BOF** é definido como **verdadeiro**; caso contrário, seu valor é **False**. Essas propriedades são comumente usadas ao enumerar os registros no conjunto de dados, conforme ilustrado no seguinte fragmento de código JScript.  
+ Quando um cursor passa para o último registro, **EOF** é definido como **true**; caso contrário, seu valor será **false**. Da mesma forma, quando o cursor se move antes do primeiro registro, **BOF** é definido como **true**; caso contrário, seu valor será **false**. Essas propriedades são comumente usadas para enumerar registros no conjunto de recursos, conforme ilustrado no fragmento de código do JScript a seguir.  
   
 ```  
 while (objRecordset.EOF != true)   
@@ -54,7 +54,7 @@ while (objRecordset.BOF != true)
 }  
 ```  
   
- Se os dois **BOF** e **EOF** são **verdadeiro**, o **Recordset** objeto está vazio. Ambas as propriedades serão **falsos** para um recém-aberta, vazio **Recordset** objeto. Você pode usar o **BOF** e **EOF** propriedades juntas para determinar se um **Recordset** objeto está vazio ou não, conforme mostrado no seguinte fragmento de código JScript.  
+ Se **BOF** e **EOF** forem **verdadeiros**, o objeto **Recordset** estará vazio. Ambas as propriedades serão **false** para um objeto **Recordset** aberto recentemente e não vazio. Você pode usar as propriedades **BOF** e **EOF** juntas para determinar se um objeto **Recordset** está vazio ou não, conforme mostrado no fragmento de código JScript a seguir.  
   
 ```  
 if (objRecordset.EOF == true && objRecordset.BOF == true)  
@@ -67,6 +67,6 @@ else
 }  
 ```  
   
- Esse esquema funciona para todos os tipos de cursor e é independente dos provedores subjacentes. Se você tentar determinar o par de um **conjunto de registros** objeto verificando se seu **RecordCount** valor da propriedade é zero (0) ou não, você deve tomar precauções para usar um cursor apropriado e o provedor que suporte ao retorno do número de registros no resultado.  
+ Esse esquema funciona para todos os tipos de cursor e é independente dos provedores subjacentes. Se você tentar determinar a desmarcação de um objeto **Recordset** verificando se o valor da propriedade **RecordCount** é zero (0) ou não, deverá tomar precauções para usar um cursor e um provedor apropriados que ofereçam suporte ao retorno do número de registros no resultado.  
   
- Se você excluir o último registro restante na **Recordset** do objeto, o cursor será deixado em um estado indeterminado. O **BOF** e **EOF** as propriedades podem permanecer **False** até que você tente reposicionar o registro atual, de acordo com o provedor. Para obter mais informações, consulte [registros de exclusão usando o método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+ Se você excluir o último registro restante no objeto **Recordset** , o cursor será deixado em um estado indeterminado. As propriedades **BOF** e **EOF** podem permanecer **falsas** até que você tente reposicionar o registro atual, dependendo do provedor. Para obter mais informações, consulte [excluindo registros usando o método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).

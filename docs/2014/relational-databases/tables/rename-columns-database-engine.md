@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211810"
 ---
 # <a name="rename-columns-database-engine"></a>Renomear colunas (Mecanismo de Banco de Dados)
@@ -64,7 +64,7 @@ ms.locfileid: "68211810"
   
 2.  Em **Nome da Coluna**, selecione o nome que você deseja alterar e digite um nome novo.  
   
-3.  No menu **Arquivo** , clique em **Salvar**_table name_.  
+3.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
   
 > [!NOTE]  
 >  Você também pode alterar o nome de uma coluna na guia **Propriedades da Coluna** . Selecione a coluna cujo nome você deseja alterar e digite um novo valor para **Nome**.  

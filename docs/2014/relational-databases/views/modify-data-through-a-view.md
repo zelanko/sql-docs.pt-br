@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211679"
 ---
 # <a name="modify-data-through-a-view"></a>Modificar dados por meio de uma exibição
@@ -32,7 +32,7 @@ ms.locfileid: "68211679"
   
      [Segurança](#Security)  
   
--   **Para modificar os dados de tabela por meio de uma exibição, usando:**  
+-   **Para modificar os dados da tabela por uma exibição usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

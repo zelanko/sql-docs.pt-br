@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83a381e36a31542d6ad39ed9d26864350004af5c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891145"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulação de dados MDX – SELECT
@@ -88,7 +88,7 @@ FROM
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Integer*  
+ *Valores*  
  Um inteiro entre 0 e 127.  
   
  *Cube_Name*  
@@ -116,7 +116,7 @@ FROM
   
  A opção NON VISUAL na instrução subselect lhe permite filtrar os membros enquanto mantém os totais verdadeiros, em vez dos totais filtrados. Isso lhe permite consultar as dez vendas principais (pessoas/produtos/regiões) e obter o total verdadeiro das vendas para todos os membros consultados, em vez do valor total das vendas para os dez principais retornados. Veja os exemplos abaixo para obter mais informações.  
   
- Os membros calculados podem ser \<incluídos na cláusula Selecionar eixo de consulta > sempre que a conexão foi aberta usando as subconsultas do parâmetro de cadeia de conexão *= 1*; consulte [as propriedades &#40;XMLA com suporte XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>para uso de parâmetro. Um exemplo é fornecido nos membros calculados em subseleções.  
+ Os membros calculados podem ser \<incluídos na cláusula Selecionar eixo de consulta> sempre que a conexão tiver sido aberta usando as *subconsultas*do parâmetro de cadeia de conexão = 1; consulte [Propriedades XMLA com suporte &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso de parâmetro. Um exemplo é fornecido nos membros calculados em subseleções.  
   
 ## <a name="autoexists"></a>autoexists  
  Quando dois ou mais atributos da dimensão são usados em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para assegurar que os membros desses atributos sejam devidamente confinados para atender aos critérios de todos os outros atributos. Por exemplo, vamos supor que você esteja trabalhando com atributos da dimensão Geografia. Se houver uma expressão que retorne todos os membros do atributo Cidade, e outra expressão que confine os membros do atributo País a todos os países na Europa, isso resultará no confinamento dos membros de Cidade apenas às cidades que pertencem a países na Europa. Essas característica do Analysis Services é denominada Autoexists e se aplica apenas aos atributos na mesma dimensão. Autoexists somente se aplica a atributos da mesma dimensão porque tenta impedir que os registros da dimensão excluídos em uma expressão do atributo sejam incluídos pelas outras expressões do atributo. Autoexists também pode ser entendido como a interseção resultante das diferentes expressões de atributo sobre os registros da dimensão. Consulte estes exemplos abaixo:  
@@ -161,17 +161,17 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2.47%**|  
-|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
-|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
-|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
-|**Road-150**|**$2,363,805.16**|**$0.00**|**0.00%**|  
-|**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3.89%**|  
+||**Valor das vendas do revendedor**|**Valor do desconto**|**Desconto de PCT**|  
+|**Mountain-200**|**$14356699.36**|**$19012.71**|**0,13%**|  
+|**Estrada-250**|**$9377457.68**|**$4032.47**|**0, 4%**|  
+|**Mountain-100**|**$8568958.27**|**$139393.27**|**1,63%**|  
+|**Estrada-650**|**$7442141.81**|**$39698.30**|**0,53%**|  
+|**Touring-1000**|**$6723794.29**|**$166144.17**|**2,47%**|  
+|**Estrada-550-W**|**$3668383.88**|**$1901.97**|**0, 5%**|  
+|**Estrada-350-W**|**$3665932.31**|**$20946.50**|**0,57%**|  
+|**Estrutura de Mountain Bike HL**|**$3365069.27**|**$174.11**|**0, 1%**|  
+|**Estrada-150**|**$2363805.16**|**$0**|**0, 0%**|  
+|**Touring-3000**|**$2046508.26**|**$79582.15**|**3,89%**|  
   
  O conjunto obtido com base nos produtos parece ser igual a Preferred10Products; assim, verificando o conjunto Preferred10Products:  
   
@@ -213,17 +213,17 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2.47%**|  
-|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
-|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
-|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
-|**Road-150**|**$2,363,805.16**|**$0.00**|**0.00%**|  
-|**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3.89%**|  
+||**Valor das vendas do revendedor**|**Valor do desconto**|**Desconto de PCT**|  
+|**Mountain-200**|**$14356699.36**|**$19012.71**|**0,13%**|  
+|**Estrada-250**|**$9377457.68**|**$4032.47**|**0, 4%**|  
+|**Mountain-100**|**$8568958.27**|**$139393.27**|**1,63%**|  
+|**Estrada-650**|**$7442141.81**|**$39698.30**|**0,53%**|  
+|**Touring-1000**|**$6723794.29**|**$166144.17**|**2,47%**|  
+|**Estrada-550-W**|**$3668383.88**|**$1901.97**|**0, 5%**|  
+|**Estrada-350-W**|**$3665932.31**|**$20946.50**|**0,57%**|  
+|**Estrutura de Mountain Bike HL**|**$3365069.27**|**$174.11**|**0, 1%**|  
+|**Estrada-150**|**$2363805.16**|**$0**|**0, 0%**|  
+|**Touring-3000**|**$2046508.26**|**$79582.15**|**3,89%**|  
   
  Nos exemplos anteriores, nós criamos dois conjuntos: um como uma expressão calculada e o outro como uma expressão constante. Esses exemplos ilustram as diferentes opções de Autoexists.  
   
@@ -247,17 +247,17 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
-|**Mountain-300**|**$1,907,249.38**|**$876.95**|**0.05%**|  
-|**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1.62%**|  
-|**Mountain-400-W**|**$592,450.05**|**$303.49**|**0.05%**|  
-|**LL Mountain Frame**|**$521,864.42**|**$252.41**|**0.05%**|  
-|**ML Mountain Frame-W**|**$482,953.16**|**$206.95**|**0,04%**|  
-|**ML Mountain Frame**|**$343,785.29**|**$161.82**|**0.05%**|  
-|**Women's Mountain Shorts**|**$260,304.09**|**$6,675.56**|**2.56%**|  
+||**Valor das vendas do revendedor**|**Valor do desconto**|**Desconto de PCT**|  
+|**Mountain-200**|**$14356699.36**|**$19012.71**|**0,13%**|  
+|**Mountain-100**|**$8568958.27**|**$139393.27**|**1,63%**|  
+|**Estrutura de Mountain Bike HL**|**$3365069.27**|**$174.11**|**0, 1%**|  
+|**Mountain-300**|**$1907249.38**|**$876.95**|**0, 5%**|  
+|**Mountain-500**|**$1067327.31**|**$17266.09**|**1,62%**|  
+|**Mountain-400-W**|**$592450.05**|**$303.49**|**0, 5%**|  
+|**Quadro de montanhas de LL**|**$521864.42**|**$252.41**|**0, 5%**|  
+|**Quadro de montanha ML-W**|**$482953.16**|**$206.95**|**0, 4%**|  
+|**Quadro de montanha ML**|**$343785.29**|**$161.82**|**0, 5%**|  
+|**Women's Mountain Shorts**|**$260304.09**|**$6675.56**|**2,56%**|  
   
  No conjunto de resultados anterior, havia sete itens novos na lista Top10SellingProducts e Mountain-200, Mountain-100 e HL Mountain Frame foram movidos para o início da lista. No conjunto de resultados anterior, esses três valores foram intercalados  
   
@@ -305,10 +305,10 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
+||**Valor das vendas do revendedor**|**Valor do desconto**|**Desconto de PCT**|  
+|**Mountain-200**|**$14356699.36**|**$19012.71**|**0,13%**|  
+|**Mountain-100**|**$8568958.27**|**$139393.27**|**1,63%**|  
+|**Estrutura de Mountain Bike HL**|**$3365069.27**|**$174.11**|**0, 1%**|  
   
  Nos resultados acima, a segmentação de dados dá um resultado que contém apenas os produtos de Preferred10Products que fazem parte do grupo [Mountain] em [Product].[Product Line]; conforme o esperado, porque Preferred10Products é uma expressão constante.  
   
@@ -334,15 +334,15 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
+||**Valor das vendas do revendedor**|**Valor do desconto**|**Desconto de PCT**|  
+|**Mountain-200**|**$14356699.36**|**$19012.71**|**0,13%**|  
+|**Mountain-100**|**$8568958.27**|**$139393.27**|**1,63%**|  
+|**Estrutura de Mountain Bike HL**|**$3365069.27**|**$174.11**|**0, 1%**|  
   
- O comportamento de autoexisteções pode ser modificado usando o parâmetro Autoexists = [1 | 2 | 3] na cadeia de conexão; consulte [Propriedades &#40;XMLA com suporte&#41; XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso de parâmetro.  
+ O comportamento de autoexisteções pode ser modificado usando o parâmetro Autoexists = [1 | 2 | 3] na cadeia de conexão; consulte [Propriedades XMLA com suporte &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso de parâmetro.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregados nos primeiros oito meses do ano civil 2003 que estão contidos `Date` na dimensão, do cubo **Adventure Works** .  
+ O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregados nos primeiros oito meses do ano civil 2003 que estão contidos na `Date` dimensão, do cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -377,11 +377,11 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**Todos os Produtos**|**Acessórios**|**Bikes**|**Roupas**|**Componentes**|  
-|**Todos os Revendedores**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
-|**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
-|**Revendedor de Valor Agregado**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
-|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
+||**Todos os produtos**|**Acessórios**|**Bicicletas**|**Vestuário**|**Componentes**|  
+|**Todos os revendedores**|**$80450596.98**|**$571297.93**|**$66302381.56**|**$1777840.84**|**$11799076.66**|  
+|**Loja de bicicletas Specialty**|**$6756166.18**|**$65125.48**|**$6080117.73**|**$252933.91**|**$357989.07**|  
+|**Revendedor de valor agregado**|**$34,967,517.33**|**$175002.81**|**$30892354.33**|**$592385.71**|**$3307774.48**|  
+|**Armazén**|**$38,726,913.48**|**$331169.64**|**$29329909.50**|**$932521.23**|**$8133313.11**|  
   
  Para produzir uma tabela com dados somente para os produtos Acessórios e Roupas, os revendedores Value Added Reseller e Warehouse, embora mantenham os totais gerias, poderiam ser escritos da seguinte forma com o uso de NON VISUAL:  
   
@@ -401,10 +401,10 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||**Todos os Produtos**|**Acessórios**|**Clothing**|  
-|**Todos os Revendedores**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
-|**Revendedor de Valor Agregado**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
-|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
+||**Todos os produtos**|**Acessórios**|**Vestuário**|  
+|**Todos os revendedores**|**$80450596.98**|**$571297.93**|**$1777840.84**|  
+|**Revendedor de valor agregado**|**$34,967,517.33**|**$175002.81**|**$592385.71**|  
+|**Armazén**|**$38,726,913.48**|**$331169.64**|**$932521.23**|  
   
  Para criar uma tabela que totalize visualmente as colunas, mas nos totais de linhas exiba o total verdadeiro de todos os itens em [Category], a seguinte consulta deve ser emitida:  
   
@@ -435,7 +435,7 @@ WHERE
   
  Quando comparados aos resultados anteriores, você poderá observar que a linha [Todos os Revendedores] agora soma os valores exibidos para [Revendedor de Valor Agregado] e [Warehouse], mas a coluna [Todos os Produtos] mostra o valor total para todos os produtos, inclusive aqueles não exibidos.  
   
- O exemplo a seguir demonstra como usar membros calculados em subseleções para filtrá-los. Para poder reproduzir esse exemplo, a conexão deve ser estabelecida usando as subconsultas do parâmetro da cadeia de conexão *= 1*.  
+ O exemplo a seguir demonstra como usar membros calculados em subseleções para filtrá-los. Para poder reproduzir esse exemplo, a conexão deve ser estabelecida usando as *subconsultas*do parâmetro da cadeia de conexão = 1.  
   
  `select Measures.allmembers on 0`  
   
@@ -460,12 +460,12 @@ WHERE
 |||||  
 |-|-|-|-|  
 |Reseller Sales Amount|Custo do produto total do revendedor|Lucro bruto do revendedor|Margem de lucro bruto do revendedor|  
-|$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
+|$80,450,596.98|$79980114.38|$470482.60|0,58%|  
   
-## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [MDX instruções &#40;de manipulação de dados MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Restringindo a consulta com a consulta e os eixos &#40;de segmentação MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conceitos principais em MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [Instruções de manipulação de dados MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Restringindo a consulta com eixos de consulta e de segmentação &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

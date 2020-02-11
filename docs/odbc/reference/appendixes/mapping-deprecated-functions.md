@@ -1,5 +1,5 @@
 ---
-title: Funções preteridas de mapeamento | Microsoft Docs
+title: Mapeando funções preteridas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990713"
 ---
 # <a name="mapping-deprecated-functions"></a>Funções preteridas de mapeamento
-Esta seção descreve as funções como preteridas são mapeados por ODBC *3.x* Gerenciador de Driver para garantir a compatibilidade com versões anteriores do ODBC *3.x* drivers que são usados com o ODBC *2.x* aplicativos. O Gerenciador de Driver realiza esse mapeamento independentemente da versão do aplicativo. Porque cada um dos ODBC *2.x* funções na lista a seguir é mapeado para o ODBC correspondente *3.x* funcionar quando chamado em um ODBC *3.x* driver, o ODBC *3.x* driver não precisa implementar o ODBC *2.x* funções.  
+Esta seção descreve como as funções preteridas são mapeadas pelo Gerenciador de driver ODBC *3. x* para garantir a compatibilidade com versões anteriores dos drivers ODBC *3. x* que são usados com aplicativos ODBC *2. x* . O Gerenciador de driver executa esse mapeamento independentemente da versão do aplicativo. Como cada uma das funções ODBC *2. x* na lista a seguir é mapeada para a função ODBC *3. x* correspondente quando chamada em um driver ODBC *3. x* , o driver ODBC *3. x* não precisa implementar as funções ODBC *2. x* .  
   
- O mapeamento da lista é disparado quando o driver ODBC *3.x* driver e o driver não oferece suporte para a função que está sendo mapeada.  
+ O mapeamento na lista é disparado quando o driver é um driver ODBC *3. x* e o driver não oferece suporte à função que está sendo mapeada.  
   
- A tabela a seguir lista as funcionalidades duplicadas tudo que foi introduzida no ODBC *3.x*.  
+ A tabela a seguir lista todas as funcionalidades duplicadas que foram introduzidas no ODBC *3. x*.  
   
-|ODBC *2.x* função|ODBC *3.x* função|  
+|Função ODBC *2. x*|Função ODBC *3. x*|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -41,7 +41,7 @@ Esta seção descreve as funções como preteridas são mapeados por ODBC *3.x* 
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt** com um *opção* de SQL_DROP|**SQLFreeHandle**|  
+|**SQLFreeStmt** com uma *opção* de SQL_DROP|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**|  
@@ -51,11 +51,11 @@ Esta seção descreve as funções como preteridas são mapeados por ODBC *3.x* 
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1], embora essa função não existia no ODBC *2.x*, trata-se nos padrões ISO e Open Group.  
+ [1] mesmo que essa função não exista no ODBC *2. x*, ela está no grupo aberto e nos padrões ISO.  
   
- [2] Essa é uma função de ODBC 1.0.  
+ [2] Esta é uma função ODBC 1,0.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Mapeamento SQLAllocConnect](../../../odbc/reference/appendixes/sqlallocconnect-mapping.md)  
   

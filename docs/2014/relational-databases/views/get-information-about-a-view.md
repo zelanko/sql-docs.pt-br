@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211645"
 ---
 # <a name="get-information-about-a-view"></a>Obter informações sobre uma exibição
@@ -63,7 +63,7 @@ ms.locfileid: "68211645"
   
      As propriedades a seguir aparecem na caixa de diálogo **Propriedades da Exibição** .  
   
-     **Banco de Dados**  
+     **Backup de banco de dados**  
      Nome do banco de dados que contém esta exibição.  
   
      **Servidor**  
@@ -75,7 +75,7 @@ ms.locfileid: "68211645"
      **Data da criação**  
      Exibe a data em que a exibição foi criada.  
   
-     **Name**  
+     **Nome**  
      Nome da exibição atual.  
   
      **Esquema**  

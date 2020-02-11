@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210713"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Práticas recomendadas para filtros de linha baseados em tempo
@@ -26,7 +26,7 @@ ms.locfileid: "68210713"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Com um filtro desse tipo, é normalmente presumido que duas coisas sempre ocorram quando o Merge Agent é executado: as linhas que satisfazem esse filtro são replicadas aos Assinantes; e linhas que não mais satisfazem esse filtro, são limpas nos Assinantes. (Para obter mais informações sobre a filtragem com `HOST_NAME()`, consulte [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) Entretanto, a replicação de mesclagem apenas replica e limpa os dados que foram alterados desde a última sincronização, independentemente de como você defina o filtro de linha para aqueles dados.  
+ Com um filtro desse tipo, é normalmente presumido que duas coisas sempre ocorram quando o Merge Agent é executado: as linhas que satisfazem esse filtro são replicadas aos Assinantes; e linhas que não mais satisfazem esse filtro, são limpas nos Assinantes. (Para obter mais informações sobre filtragem `HOST_NAME()`com o, consulte [filtros de linha com parâmetros](parameterized-filters-parameterized-row-filters.md).) No entanto, a replicação de mesclagem só Replica e limpa os dados que foram alterados desde a última sincronização, independentemente de como você define um filtro de linha para esses dados.  
   
  Para a replicação de mesclagem processar uma linha, os dados na linha devem satisfazer o filtro de linha e devem ter sido alterados desde a última sincronização. No caso da tabela **SalesOrderHeader** , é inserido **OrderDate** quando uma linha é inserida. As linhas são replicadas ao Assinante como esperado porque a inserção é uma alteração de dados. Entretanto, se houver linhas no Assinante que não mais satisfazem o filtro (são para pedidos anteriores a sete dias), elas não serão removidas do Assinante a menos que tenham sido atualizadas por algum outro motivo.  
   
@@ -60,7 +60,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Recepção|112|2006-10-04|1|  
-|2|Jantar|112|2006-10-10|0|  
+|2|Refeição|112|2006-10-10|0|  
 |3|Festa|112|2006-10-11|0|  
 |4|Casamento|112|2006-10-12|0|  
   
@@ -84,13 +84,13 @@ GO
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Recepção|112|2006-10-04|0|  
-|2|Jantar|112|2006-10-10|1|  
+|2|Refeição|112|2006-10-10|1|  
 |3|Festa|112|2006-10-11|1|  
 |4|Casamento|112|2006-10-12|1|  
   
  Os eventos para a próxima semana estão sinalizados agora como estando prontos para serem replicados. A próxima vez que o Merge Agent for executado para a assinatura que o coordenador de eventos 112 usa, as linhas 2,3 e 4 serão baixadas para o Assinante e a linha 1 será removida do Assinante.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [GETDATE &#40;Transact-SQL&#41;](/sql/t-sql/functions/getdate-transact-sql)   
  [Implementar trabalhos](../../../ssms/agent/implement-jobs.md)   
  [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)  

@@ -1,5 +1,5 @@
 ---
-title: Gramática de forma formal | Microsoft Docs
+title: Gramática forma formal | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,64 +14,64 @@ ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925343"
 ---
 # <a name="formal-shape-grammar"></a>Gramática de forma formal
-Esta é a gramática formal para a criação de qualquer comando de forma:  
+Essa é a gramática formal para a criação de qualquer comando de forma:  
   
--   Termos gramaticais necessários são cadeias de caracteres de texto delimitadas por colchetes angulares ("<>").  
+-   Os termos gramaticais necessários são cadeias de caracteres de texto delimitadas por colchetes angulares ("<>").  
   
--   Termos opcionais são delimitados por colchetes ("[]").  
+-   Os termos opcionais são delimitados por colchetes ("[]").  
   
--   Alternativas são indicadas por uma barra oblíqua ("&#124;").  
+-   As alternativas são indicadas por um virgule ("&#124;").  
   
--   Repetição alternativas são indicadas por um sinal de reticências (...").  
+-   As alternativas de repetição são indicadas por reticências ("...").  
   
--   *Alfa* indica uma cadeia de caracteres de letras em ordem alfabética.  
+-   *Alfa* indica uma cadeia de letras alfabéticas.  
   
--   *Dígito* indica uma cadeia de caracteres de números.  
+-   *Dígito* indica uma cadeia de números.  
   
--   *Dígito do Unicode* indica uma cadeia de caracteres de dígitos de unicode.  
+-   *Unicode-digit* indica uma cadeia de caracteres de dígitos Unicode.  
   
  Todos os outros termos são literais.  
   
 |Termo|Definição|  
 |----------|----------------|  
-|\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
-|\<table-exp>|{\<texto de comando do provedor >}&#124;<br /><br /> (\<comando shape >)&#124;<br /><br /> TABELA \<entre aspas-name >&#124;<br /><br /> \<quoted-name>|  
-|\<shape-action>|ACRESCENTAR \<lista de campos de um alias >&#124;<br /><br /> COMPUTAR \<lista de campos de um alias > [BY \<lista de campos >]|  
-|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
-|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
-|\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
-|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> Relacionar \<relação-cond-list >|  
-|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
-|\<relation-cond>|\<nome do campo > TO \<filho ref >|  
-|\<child-ref>|\<nome do campo >&#124;<br /><br /> PARÂMETRO \<ref param >|  
-|\<param-ref>|\<number>|  
-|\<field-list>|\<field-name> [, \<field-name>]|  
-|\<aggregate-exp>|Soma (\<nome qualificado de campo >)&#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
-|\<calculated-exp>|CALC(\<expression>)|  
-|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
-|\<alias>|\<quoted-name>|  
-|\<field-name>|\<quoted-name> [[AS] \<alias>]|  
-|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
-|\<qualified-name>|alias[.alias...]|  
-|\<name>|alfa [alfa &#124; dígitos &#124; _ &#124; # &#124; : &#124; ...]|  
-|\<number>|Dígito [dígito...]|  
-|\<new-exp>|NOVOS \<tipo de campo > [(\<número > [, \<número >])]|  
-|\<tipo de campo >|Um tipo de dados OLE DB ou ADO.|  
-|\<string>|caractere Unicode [unicode char...]|  
-|\<expression>|Um Visual Basic para a expressão de aplicativos cujos operandos são outras colunas não CALC na mesma linha.|  
+|\<> de comando de forma|FORMA [\<Table-exp> [[as] \<alias>]] [\<forma-ação>]|  
+|\<tabela-exp>|{\<provedor-> de texto de comandos} &#124;<br /><br /> (\<shape-> de comando) &#124;<br /><br /> > &#124; \<de nome entre aspas de tabela<br /><br /> \<> de nome entre aspas|  
+|\<> de ação de forma|ANEXAR \<lista de campos com alias> &#124;<br /><br /> COMPUTAÇÃO \<com alias de lista de campos> [por \<campo-lista>]|  
+|\<> de lista de campos com alias|\<com alias> de campo [, \<alias-Field... >]|  
+|\<> de campo com alias|\<campo-exp> [[AS] \<alias>]|  
+|\<campo-exp>|(\<> relation-exp) &#124;<br /><br /> \<> &#124; calculada de exp<br /><br /> \<> &#124; agregados de exp<br /><br /> \<> New-exp|  
+|<relation_exp>|\<tabela-exp> [[AS] \<alias>]<br /><br /> Relacionar \<relação-condicional-List>|  
+|\<relaciona-condicional-List>|\<relation-condicional> [, \<relation-condicional>...]|  
+|\<> relation-condicional|\<nome de campo> como \<Child-ref>|  
+|\<> de referência filho|\<nome do campo> &#124;<br /><br /> PARÂMETRO \<param-ref>|  
+|\<> param-ref|\<número>|  
+|\<> de lista de campos|\<Field-Name> [, \<Field-Name>]|  
+|\<> agregados de exp|SUM (\<Qualified-Field-Name>) &#124;<br /><br /> AVG (\<Qualified-Field-Name>) &#124;<br /><br /> MIN (\<Qualified-Field-Name>) &#124;<br /><br /> MAX (\<Qualified-Field-Name>) &#124;<br /><br /> COUNT (\<qualificado-alias> &#124; \<Qualified-Name>) &#124;<br /><br /> DESVPAD (\<Qualified-Field-Name>) &#124;<br /><br /> QUALQUER (\<Qualified-Field-Name>)|  
+|\<> calculada de exp|CALC (\<expressão>)|  
+|\<> de nome de campo qualificado|\<> de alias. [\<alias>...] \<nome do campo>|  
+|\<> de alias|\<> de nome entre aspas|  
+|\<nome do campo>|\<aspas-nome> [[AS] \<alias>]|  
+|\<> de nome entre aspas|"\<String>" &#124;<br /><br /> '\<String> ' &#124;<br /><br /> [\<String>] &#124;<br /><br /> \<nome>|  
+|\<> de nome qualificado|alias [. alias...]|  
+|\<nome>|Alfa [Alpha &#124; digit &#124; _ &#124; # &#124;: &#124;...]|  
+|\<número>|dígito [dígito...]|  
+|\<> New-exp|NOVO \<campo-tipo> [(\<número> [, \<número>])]|  
+|\<> de tipo de campo|Um tipo de dados OLE DB ou ADO.|  
+|\<Cadeia de caracteres>|Unicode-Char [Unicode-Char...]|  
+|\<> de expressão|Uma Visual Basic for Applications expressão cujos operandos são outras colunas não CALC na mesma linha.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acessando linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Visão geral de modelagem de dados](../../../ado/guide/data/data-shaping-overview.md)   
- [Provedores necessários para Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Cláusula APPEND de forma](../../../ado/guide/data/shape-append-clause.md)   
- [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Visão geral do data Shaping](../../../ado/guide/data/data-shaping-overview.md)   
+ [Provedores necessários para o Shaping de dados](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Cláusula de ANEXAção de forma](../../../ado/guide/data/shape-append-clause.md)   
+ [Comandos de forma em geral](../../../ado/guide/data/shape-commands-in-general.md)   
  [Cláusula COMPUTE de forma](../../../ado/guide/data/shape-compute-clause.md)   
  [Funções do Visual Basic for Applications](../../../ado/guide/data/visual-basic-for-applications-functions.md)

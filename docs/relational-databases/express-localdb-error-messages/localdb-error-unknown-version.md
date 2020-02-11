@@ -10,10 +10,10 @@ ms.assetid: f2a04023-ed42-4516-b59c-7a1b8a5395d4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cebad908d9177c7dd432c56f8dfa3c15c4e95f66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127017"
 ---
 # <a name="localdb_error_unknown_version"></a>LOCALDB_ERROR_UNKNOWN_VERSION
@@ -23,16 +23,16 @@ ms.locfileid: "68127017"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|269|  
-|Origem do evento|Tempo de execução de banco de dados local do SQL Server 12.0|  
-|Componente|API do tempo de execução de banco de dados local|  
+|Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
+|Componente|API do runtime de banco de dados local|  
 |Texto da mensagem|A versão especificada do Banco de Dados Local não está disponível neste computador.|  
   
 ## <a name="explanation"></a>Explicação  
  A versão especificada não está disponível.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Instale a versão solicitada do Tempo de Execução do Banco de Dados Local.  
+ Instale a versão solicitada do Runtime do Banco de Dados Local.  
   
   

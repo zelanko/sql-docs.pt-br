@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198420"
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
@@ -32,12 +32,13 @@ ms.locfileid: "68198420"
  Todas as edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferecem suporte a auditorias no nível do servidor. As auditorias no nível de banco de dados são limitadas às edições Enterprise, Developer e Evaluation. Para obter mais informações, consulte [Features Supported by the Editions of SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="sql-server-audit-components"></a>Componentes de auditoria do SQL Server  
- *Auditoria* é a combinação de vários elementos em um único pacote de um grupo específico de ações de servidor ou de banco de dados. Os componentes de auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são combinados para produzir uma saída conhecida como auditoria, da mesma forma como uma definição de relatório combinada com elementos gráficos e de dados produz um relatório.  
+ 
+  *Auditoria* é a combinação de vários elementos em um único pacote de um grupo específico de ações de servidor ou de banco de dados. Os componentes de auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são combinados para produzir uma saída conhecida como auditoria, da mesma forma como uma definição de relatório combinada com elementos gráficos e de dados produz um relatório.  
   
- A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa *Eventos Estendidos* para ajudar a criar uma auditoria. Para obter mais informações sobre Eventos Estendidos, consulte [Eventos Estendidos](../../extended-events/extended-events.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]a auditoria usa *eventos estendidos* para ajudar a criar uma auditoria. Para obter mais informações sobre Eventos Estendidos, consulte [Eventos Estendidos](../../extended-events/extended-events.md).  
   
 ### <a name="sql-server-audit"></a>Auditoria do SQL Server  
- O objeto *Auditoria do SQL Server* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ O objeto de *auditoria SQL Server* coleta uma única instância de ações no nível do servidor ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Ao definir uma auditoria, especifique o local de saída dos resultados. Esse é o destino da auditoria. A auditoria é criada em um estado *desabilitado* e não audita automaticamente nenhuma ação. Após a habilitação da auditoria, o destino da auditoria recebe dados da auditoria.  
   
@@ -51,7 +52,7 @@ ms.locfileid: "68198420"
 ### <a name="database-audit-specification"></a>Especificação da Auditoria do Banco de Dados  
  O objeto *Especificação da Auditoria do Banco de Dados* também pertence à auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . É possível criar uma especificação da auditoria do banco de Dados por banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por auditoria.  
   
- Uma especificação da auditoria do banco de dados coleciona ações de auditoria no nível do banco de dados geradas pelo recurso Eventos Estendidos. É possível adicionar grupos de ações de auditoria ou de eventos de auditoria a uma especificação da auditoria do banco de dados. *Eventos de auditoria* são ações atômicas que podem ser examinadas pelo mecanismo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . *Grupos de ação de auditoria* são grupos de ações predefinidos. Ambos estão no escopo do banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Essas ações são enviadas à auditoria, que por sua vez os registra no destino. Não inclua objetos do escopo de servidor, como as exibições do sistema, em uma especificação de auditoria de banco de dados do usuário.  
+ Uma especificação da auditoria do banco de dados coleciona ações de auditoria no nível do banco de dados geradas pelo recurso Eventos Estendidos. É possível adicionar grupos de ações de auditoria ou de eventos de auditoria a uma especificação da auditoria do banco de dados. *Eventos de auditoria* são as ações atômicas que podem ser auditadas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pelo mecanismo do. *Grupos de ações de auditoria* são grupos predefinidos de ações. Ambos estão no escopo do banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Essas ações são enviadas à auditoria, que por sua vez os registra no destino. Não inclua objetos do escopo de servidor, como as exibições do sistema, em uma especificação de auditoria de banco de dados do usuário.  
   
  Grupos de ação de auditoria no nível do banco de dados e ações de auditoria são descritos no tópico [Ações e grupos de ações de auditoria do SQL Server](sql-server-audit-action-groups-and-actions.md).  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68198420"
 > [!IMPORTANT]  
 >  Qualquer usuário autenticado pode fazer a leitura ou gravação no log de eventos de Aplicativo do Windows. O log de eventos de Aplicativo requer menos permissões que o log de eventos de Segurança do Windows e é menos seguro.  
   
- Gravar no log de Segurança do Windows exige que a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja adicionada à política **Gerar auditorias de segurança** . Por padrão, Sistema Local, Serviço Local e Serviço de Rede fazem parte dessa política. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). Além disso, é necessário habilitar a política de segurança **Auditar acesso ao objeto** para **Êxito** e **Falha**. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). Na [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou o Windows Server 2008, você pode definir mais granular **aplicativo gerado** diretiva da linha de comando usando o programa de política de auditoria (`AuditPol.exe)`. Para obter mais informações sobre as etapas para habilitar a gravação no log de Segurança do Windows, consulte [Gravar eventos de auditoria do SQL Server no log de segurança](write-sql-server-audit-events-to-the-security-log.md). Para obter mais informações sobre o programa Auditpol.exe, consulte o artigo 921469 [How to use Group Policy to configure detailed security auditing](https://support.microsoft.com/kb/921469/)da Base de Dados de Conhecimento. Os logs de eventos do Windows são globais ao sistema operacional Windows. Para obter mais informações sobre os logs de eventos do Windows, consulte [Event Viewer Overview](https://go.microsoft.com/fwlink/?LinkId=101455). Se você precisar de permissões mais exatas na auditoria, use o destino de arquivo binário.  
+ Gravar no log de Segurança do Windows exige que a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja adicionada à política **Gerar auditorias de segurança** . Por padrão, Sistema Local, Serviço Local e Serviço de Rede fazem parte dessa política. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). Além disso, é necessário habilitar a política de segurança **Auditar acesso ao objeto** para **Êxito** e **Falha**. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). No [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou no Windows Server 2008, você pode definir a política **gerada** mais detalhada do aplicativo na linha de comando usando o programa de política`AuditPol.exe)`de auditoria (. Para obter mais informações sobre as etapas para habilitar a gravação no log de Segurança do Windows, consulte [Gravar eventos de auditoria do SQL Server no log de segurança](write-sql-server-audit-events-to-the-security-log.md). Para obter mais informações sobre o programa Auditpol.exe, consulte o artigo 921469 [How to use Group Policy to configure detailed security auditing](https://support.microsoft.com/kb/921469/)da Base de Dados de Conhecimento. Os logs de eventos do Windows são globais ao sistema operacional Windows. Para obter mais informações sobre os logs de eventos do Windows, consulte [Event Viewer Overview](https://go.microsoft.com/fwlink/?LinkId=101455). Se você precisar de permissões mais exatas na auditoria, use o destino de arquivo binário.  
   
  Quando você está salvando informações de auditoria em um arquivo, para ajudar a impedir falsificação, você pode restringir o acesso ao local do arquivo das seguintes maneiras:  
   
@@ -119,14 +120,14 @@ ms.locfileid: "68198420"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Espelhamento de Banco de Dados e o SQL Server Audit  
  Um banco de dados com uma especificação de auditoria de banco de dados definida e que usa espelhamento de banco de dados incluirá a especificação de auditoria de banco de dados. Para funcionar corretamente na instância de SQL espelhada, é necessário configurar os seguintes itens:  
   
--   É necessário que o servidor espelho tenha uma auditoria com o mesmo GUID para habilitar a especificação de auditoria de banco de dados para gravar registros de auditoria. Isso pode ser configurado usando o comando CREATE AUDIT WITH GUID`=` *\<GUID da auditoria de servidor de origem*>.  
+-   É necessário que o servidor espelho tenha uma auditoria com o mesmo GUID para habilitar a especificação de auditoria de banco de dados para gravar registros de auditoria. Isso pode ser configurado usando o comando criar auditoria com GUID GUID`=`*\<do servidor de origem> de auditoria* .  
   
 -   Para destinos de arquivos binários, é necessário que a conta do serviço de servidor espelho tenha as permissões apropriadas onde a trilha de auditoria começou a ser gravada.  
   
 -   Para destinos de log de eventos do Windows, a política de segurança no computador em que se encontra o servidor espelho deve permitir o acesso de conta de serviço ao log de eventos de aplicativo ou de segurança.  
   
 ### <a name="auditing-administrators"></a>Administradores de auditoria  
- Os membros a `sysadmin` função de servidor fixa são identificados como o **dbo** usuário em cada banco de dados. Para auditar as ações dos administradores, audite as ações do usuário **dbo** .  
+ Os membros da `sysadmin` função de servidor fixa são identificados como o usuário **dbo** em cada banco de dados. Para auditar as ações dos administradores, audite as ações do usuário **dbo** .  
   
 ## <a name="creating-and-managing-audits-with-transact-sql"></a>Criando e gerenciando auditorias com o Transact-SQL  
  É possível usar instruções DDL, funções e exibições de gerenciamento dinâmico e exibições do catálogo para implementar todos os aspectos da Auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -136,16 +137,16 @@ ms.locfileid: "68198420"
   
 |||  
 |-|-|  
-|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREATE SERVER AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CREATE SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
-|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
-|[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
-|[CREATE DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
+|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CRIAR AUDITORIA DE SERVIDOR](/sql/t-sql/statements/create-server-audit-transact-sql)|  
+|[ESPECIFICAÇÃO DE AUDITORIA ALTER DATABASE](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CRIAR ESPECIFICAÇÃO DE AUDITORIA DE SERVIDOR](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
+|[ALTERAR AUDITORIA DO SERVIDOR](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[ESPECIFICAÇÃO DE AUDITORIA DROP DATABASE](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
+|[ALTERAR ESPECIFICAÇÃO DE AUDITORIA DE SERVIDOR](/sql/t-sql/statements/alter-server-audit-transact-sql)|[REMOVER AUDITORIA DO SERVIDOR](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
+|[CRIAR ESPECIFICAÇÃO DE AUDITORIA DE BANCO DE DADOS](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[ESPECIFICAÇÃO DE AUDITORIA DE SERVIDOR DROP](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
   
 ### <a name="dynamic-views-and-functions"></a>Exibições e funções dinâmicas  
  A tabela a seguir lista as exibições e funções dinâmicas que podem ser usadas na auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Exibições e funções dinâmicas|Descrição|  
+|Exibições e funções dinâmicas|DESCRIÇÃO|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)|Retorna uma linha para cada ação de auditoria que pode ser reportada no log de auditoria e para cada grupo de ação de auditoria que pode ser configurado como parte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit.|  
 |[sys.dm_server_audit_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)|Fornece informações sobre o estado atual da auditoria.|  
@@ -155,13 +156,13 @@ ms.locfileid: "68198420"
 ### <a name="catalog-views"></a>Exibições do catálogo  
  A tabela a seguir lista as exibições do catálogo que podem ser usadas para auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Exibições do catálogo|Descrição|  
+|Exibições do catálogo|DESCRIÇÃO|  
 |-------------------|-----------------|  
-|[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Contém informações sobre as especificações de auditoria do banco de dados de uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor.|  
+|[sys. database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Contém informações sobre as especificações de auditoria do banco de dados de uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor.|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|Contém informações sobre as especificações de auditoria de banco de dados em uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor para todos os bancos de dados.|  
 |[sys.server_audits](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)|Contém uma linha para cada auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor.|  
 |[sys.server_audit_specifications](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)|Contém informações sobre as especificações de auditoria do servidor em uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância do servidor.|  
-|[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Contém informações sobre os detalhes (ações) de especificação de auditoria de servidor em uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor.|  
+|[sys. server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Contém informações sobre os detalhes (ações) de especificação de auditoria de servidor em uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor.|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|Contém informações estendidas de repositórios sobre o tipo de auditoria de arquivo em uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , em uma instância do servidor.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -188,23 +189,23 @@ ms.locfileid: "68198420"
 > [!CAUTION]  
 >  Entidades na função sysadmin podem violar qualquer componente de auditoria e aqueles na função db_owner podem violar quaisquer especificações em um banco de dados. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valida esse logon que cria ou altera uma especificação de auditoria que tenha pelo menos a permissão ALTER ANY DATABASE AUDIT. No entanto, ela não faz nenhuma validação quando você anexa um banco de dados. Você deve considerar que todas as Especificações de Auditoria de Banco de Dados são seguras somente para as entidades nas funções sysadmin ou db_owner.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](create-a-server-audit-and-server-audit-specification.md)  
   
  [Criar uma especificação de auditoria de banco de dados e de servidor](create-a-server-audit-and-database-audit-specification.md)  
   
- [Exibir um log auditoria do SQL Server](view-a-sql-server-audit-log.md)  
+ [Exibir um log de auditoria SQL Server](view-a-sql-server-audit-log.md)  
   
  [Gravar eventos de auditoria do SQL Server no log de segurança](write-sql-server-audit-events-to-the-security-log.md)  
   
 ## <a name="topics-closely-related-to-auditing"></a>Tópicos estreitamente relacionados à auditoria  
- [Propriedades do Servidor &#40;Página Segurança&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
+ [Propriedades do servidor &#40;página segurança&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
  Explica como ativar a auditoria de logon para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os registros de auditoria são armazenados no log do aplicativo do Windows.  
   
- [Opção de configuração do servidor do modo de auditoria de c2](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
+ [Opção c2 audit mode de configuração de servidor](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  Explica o modo de auditoria de conformidade de segurança de C2 no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Categoria de evento de Auditoria de Segurança &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
+ [Categoria de evento de auditoria de segurança &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
  Explica os eventos de auditoria que podem ser usados no [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. Para saber mais, confira [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md).  
   
  [Rastreamento do SQL](../../sql-trace/sql-trace.md)  
@@ -213,11 +214,11 @@ ms.locfileid: "68198420"
  [Gatilhos DDL](../../triggers/ddl-triggers.md)  
  Explica como os gatilhos DDL (linguagem de definição de dados) podem ser usados para controlar alterações nos bancos de dados.  
   
- [Microsoft TechNet: SQL Server TechCenter: Proteção e Segurança do SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: segurança e proteção do SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fornece informações atualizadas sobre a segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Ações e grupos de ações de auditoria do SQL Server](sql-server-audit-action-groups-and-actions.md)   
- [Registros de auditoria do SQL Server](sql-server-audit-records.md)  
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server ações e grupos de ação de auditoria](sql-server-audit-action-groups-and-actions.md)   
+ [SQL Server registros de auditoria](sql-server-audit-records.md)  
   
   

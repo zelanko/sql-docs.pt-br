@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811047"
 ---
 # <a name="understanding-the-database-schemas"></a>Entendendo os esquemas de banco de dados
@@ -82,7 +82,7 @@ ms.locfileid: "68811047"
  O assistente gera uma tabela separada para manter os valores traduzidos para qualquer propriedade do grupo de medidas que precise de uma coluna de tradução. O assistente cria também uma coluna separada para cada um dos idiomas necessários.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversão do tipo de dados e comprimentos padrão  
- O assistente de geração de esquema ignora os tipos de dados em todos os casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exceto as colunas que usam o tipo de `wchar` dados. O tamanho de dados `wchar` converte-se diretamente no tipo de dados `nvarchar`. No entanto, se o comprimento especificado de uma coluna que usa o tamanho `wchar` for superior a 4000 bytes, o Assistente de Geração de Esquema produzirá um erro.  
+ O assistente de geração de esquema ignora os tipos de dados em todos os casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` exceto as colunas que usam o tipo de dados. O tamanho de dados `wchar` converte-se diretamente no tipo de dados `nvarchar`. No entanto, se o comprimento especificado de uma coluna que usa o tamanho `wchar` for superior a 4000 bytes, o Assistente de Geração de Esquema produzirá um erro.  
   
  Se um item de dados, como uma ligação para um atributo, não tiver um comprimento especificado, o comprimento padrão listado na tabela a seguir será usado na coluna.  
   
@@ -94,8 +94,8 @@ ms.locfileid: "68811047"
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>Consulte também  
- [Entendendo a geração com incremento](understanding-incremental-generation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Compreendendo a geração incremental](understanding-incremental-generation.md)   
  [Gerenciar alterações em exibições da fonte de dados e em fontes de dados](manage-changes-to-data-source-views-and-data-sources.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 189facb54de244ff220b41ec08c8b02faf5a2c27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139320"
 ---
 # <a name="-equal-to-mdx"></a>= (Igual a) (MDX)
@@ -21,7 +21,7 @@ ms.locfileid: "68139320"
   Realiza uma operação de comparação que determina se o valor de uma expressão MDX (Multidimensional Expressions) é igual ao valor de outra expressão MDX.  
   
 > [!NOTE]  
->  Para comparar objetos, use o [IS &#40;MDX&#41; ](../mdx/is-mdx.md) operador. Por exemplo, use o operador IS quando você estiver verificando se o membro atual em um eixo de consulta é um membro específico.  
+>  Para comparar objetos, use o operador [IS &#40;MDX&#41;](../mdx/is-mdx.md) . Por exemplo, use o operador IS quando você estiver verificando se o membro atual em um eixo de consulta é um membro específico.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,18 +30,18 @@ ms.locfileid: "68139320"
 MDX_Expression = MDX_Expression   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *MDX_Expression*  
  Uma expressão MDX válida.  
   
 ## <a name="return-value"></a>Valor retornado  
  Um valor booliano baseado nas seguintes condições:  
   
--   **True** se o valor do primeiro parâmetro for igual ao valor do segundo parâmetro.  
+-   **true** se o valor do primeiro parâmetro for igual ao valor do segundo parâmetro.  
   
--   **False** se o valor do primeiro parâmetro não for igual ao valor do segundo parâmetro.  
+-   **false** se o valor do primeiro parâmetro não for igual ao valor do segundo parâmetro.  
   
--   **True** se ambos os parâmetros forem nulos, ou um parâmetro for nulo e o outro parâmetro é 0.  
+-   **true** se ambos os parâmetros forem nulos ou se um parâmetro for NULL e o outro parâmetro for 0.  
   
 ## <a name="examples"></a>Exemplos  
  A consulta a seguir mostra exemplos destas condições:  
@@ -74,7 +74,7 @@ MDX_Expression = MDX_Expression
   
  `From [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

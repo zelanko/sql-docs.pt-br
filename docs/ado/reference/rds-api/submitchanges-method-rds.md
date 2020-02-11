@@ -14,17 +14,17 @@ ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 783ad55a2355759f7625d536272f5243cd1c61c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963285"
 ---
 # <a name="submitchanges-method-rds"></a>Método SubmitChanges (RDS)
-Envia as alterações de localmente em cache e atualizáveis pendentes [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) à fonte de dados especificado na [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propriedade ou o [URL](../../../ado/reference/rds-api/url-property-rds.md) propriedade.  
+Envia alterações pendentes do [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) armazenado em cache e atualizável localmente para a fonte de dados especificada na propriedade [Connect](../../../ado/reference/rds-api/connect-property-rds.md) ou a propriedade [URL](../../../ado/reference/rds-api/url-property-rds.md) .  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,37 +33,37 @@ Envia as alterações de localmente em cache e atualizáveis pendentes [conjunto
 DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *DataControl*  
- Uma variável de objeto que representa um [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
+ Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *DataFactory*  
- Uma variável de objeto que representa um [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto.  
+ Uma variável de objeto que representa um objeto [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) .  
   
  *Conexão*  
- Um **cadeia de caracteres** valor que representa a conexão criada com o **RDS. DataControl** do objeto [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propriedade.  
+ Um valor de **cadeia de caracteres** que representa a conexão criada com o **RDS. **Propriedade [Connect](../../../ado/reference/rds-api/connect-property-rds.md) do objeto DataControl.  
   
- *Recordset*  
- Uma variável de objeto que representa um **Recordset** objeto.  
+ *Conjunto de registros*  
+ Uma variável de objeto que representa um objeto **Recordset** .  
   
 ## <a name="remarks"></a>Comentários  
- O [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), e [SQL](../../../ado/reference/rds-api/sql-property.md) propriedades devem ser definidas antes de poder usar o **SubmitChanges** método com o  **RDS. DataControl** objeto.  
+ As propriedades [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md)e [SQL](../../../ado/reference/rds-api/sql-property.md) devem ser definidas antes que você possa usar o método **SubmitChanges** com o **RDS. Objeto DataControl** .  
   
- Se você chamar o [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) método depois de ter chamado **SubmitChanges** para a mesma **conjunto de registros** objeto, o **CancelUpdate** chamada falhará porque as alterações já foram confirmadas.  
+ Se você chamar o método [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) depois de ter chamado **SubmitChanges** para o mesmo objeto **Recordset** , a chamada **CancelUpdate** falhará porque as alterações já foram confirmadas.  
   
- Somente os registros alterados são enviados para modificação e todas as alterações bem sucedida ou falham de todas as alterações em conjunto.  
+ Somente os registros alterados são enviados para modificação e todas as alterações são bem sucedidas ou todas as alterações falham juntas.  
   
- Você pode usar **SubmitChanges** somente com o padrão **RDSServer.DataFactory** objeto. Objetos comerciais personalizados não é possível usar esse método.  
+ Você pode usar **SubmitChanges** somente com o objeto **RDSServer. datafactory** padrão. Os objetos comerciais personalizados não podem usar esse método.  
   
- Se o **URL** propriedade foi definida, **SubmitChanges** enviará as alterações para o local especificado pela URL.  
+ Se a propriedade de **URL** tiver sido definida, **SubmitChanges** enviará as alterações para o local especificado pela URL.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
   
 |||  
 |-|-|  
 |[Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo do método SubmitChanges (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [Botões de comando do catálogo de endereços](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Método CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   

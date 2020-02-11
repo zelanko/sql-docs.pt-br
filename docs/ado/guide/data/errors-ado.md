@@ -14,13 +14,13 @@ ms.assetid: 8ae6611b-3069-4155-b014-c0c9da37be39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8079c2f49fe64aa94ce061fc47a324087b92f0d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925448"
 ---
 # <a name="errors-ado"></a>Erros (ADO)
-Qualquer operação que envolva objetos ADO pode gerar um ou mais erros do provedor. Conforme cada erro ocorrer, um ou mais **erro** objetos são colocados na **erros** coleção dos **Conexão** objeto. Para obter detalhes sobre como lidar com avisos e erros em seu aplicativo ADO, consulte [tratamento de erro](../../../ado/guide/data/error-handling.md).  
+Qualquer operação que envolva objetos ADO pode gerar um ou mais erros de provedor. À medida que cada erro ocorre, um ou mais objetos de **erro** são colocados na coleção de **erros** do objeto de **conexão** . Para obter detalhes sobre como tratar avisos e erros em seu aplicativo ADO, consulte [tratamento de erros](../../../ado/guide/data/error-handling.md).  
   
- Erros de aplicativo podem ser gerados por um mecanismo separado. Por exemplo, no Visual Basic, o **Err** objeto conterá os erros de nível de aplicativo.
+ Erros de aplicativo podem ser gerados por um mecanismo separado. Por exemplo, em Visual Basic, o objeto **Err** conterá erros no nível do aplicativo.
