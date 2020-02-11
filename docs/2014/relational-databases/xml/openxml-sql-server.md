@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195619"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "68195619"
  Para escrever consultas em um documento XML usando OPENXML, você deve primeiro chamar `sp_xml_preparedocument`. Isso analisa o documento XML e retorna um identificador ao documento analisado pronto para consumo. O documento analisado é uma representação da árvore DOM (Document Object Model) de vários nós no documento XML. O identificador do documento é passado para OPENXML. Em seguida, o OPENXML fornece uma exibição do conjunto de linhas do documento, baseado nos parâmetros passados para ele.  
   
 > [!NOTE]  
->  `sp_xml_preparedocument` usa uma versão atualizada pelo SQL do analisador MSXML, Msxmlsql. Essa versão do analisador MSXML foi criada para oferecer suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permanecer para compatível com o MSXML versão 2.6.  
+>  `sp_xml_preparedocument`usa uma versão atualizada por SQL do analisador MSXML, Msxmlsql. dll. Essa versão do analisador MSXML foi criada para oferecer suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permanecer para compatível com o MSXML versão 2.6.  
   
  A representação interna de um documento XML deve ser removida da memória chamando o procedimento armazenado do sistema **sp_xml_removedocument** para liberar a memória.  
   
@@ -54,7 +54,8 @@ ms.locfileid: "68195619"
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra o uso do `OPENXML` em uma instrução `INSERT` e em uma instrução `SELECT` . O documento XML de exemplo contém elementos `<Customers>` e `<Orders>` .  
   
- Primeiro, o procedimento armazenado `sp_xml_preparedocument` analisa o documento XML. O documento analisado é uma representação em árvore dos nós (elementos, atributos, texto e comentários) no documento XML. `OPENXML` se refere, em seguida, a esse documento XML analisado e fornece uma exibição de conjunto de linhas de todo ou partes desse documento XML. Uma instrução `INSERT` que usa `OPENXML` pode inserir dados desse tipo de conjunto de linhas em uma tabela de banco de dados. Várias chamadas do `OPENXML` podem ser usadas para fornecer uma exibição do conjunto de linhas de várias partes do documento XML e processá-las, por exemplo, inserindo-as em diferentes tabelas. Esse processo também é referido como XML de fragmentação em tabelas.  
+ Primeiro, o procedimento armazenado `sp_xml_preparedocument` analisa o documento XML. O documento analisado é uma representação em árvore dos nós (elementos, atributos, texto e comentários) no documento XML. 
+  `OPENXML` se refere, em seguida, a esse documento XML analisado e fornece uma exibição de conjunto de linhas de todo ou partes desse documento XML. Uma instrução `INSERT` que usa `OPENXML` pode inserir dados desse tipo de conjunto de linhas em uma tabela de banco de dados. Várias chamadas do `OPENXML` podem ser usadas para fornecer uma exibição do conjunto de linhas de várias partes do documento XML e processá-las, por exemplo, inserindo-as em diferentes tabelas. Esse processo também é referido como XML de fragmentação em tabelas.  
   
  No exemplo a seguir, um documento XML é fragmentado de uma maneira que os elementos `<Customers>` são armazenados na tabela `Customers` e elementos `<Orders>` são armazenados na tabela `Orders` usando duas instruções `INSERT` . O exemplo também mostra uma instrução `SELECT` com `OPENXML` que recupera `CustomerID` e `OrderDate` do documento XML. A última etapa do processo é chamar `sp_xml_removedocument`. Isso é feito para liberar a memória alocada para conter a representação em árvore XML que foi criada durante a fase de análise.  
   
@@ -137,16 +138,16 @@ EXEC sp_xml_removedocument @docHandle;
   
  A tabela a seguir descreve a estrutura da tabela de borda.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**id**|**bigint**|É a ID exclusiva do nó do documento.<br /><br /> O elemento raiz tem um valor de ID igual a 0. Os valores negativos da ID são reservados.|  
-|**parentid**|**bigint**|Identifica o pai do nó. O pai identificado por esse ID necessariamente não é o elemento pai. No entanto isso depende do Tipo do Nó cujo o pai é identificado por esse ID. Por exemplo, se o nó for um nó de texto, seu pai poderá ser um nó de atributo.<br /><br /> Se o nó estiver no nível superior no documento XML, seu **ParentID** será NULL.|  
-|**tipo de nó**|**int**|Identifica o tipo de nó e é um inteiro que corresponde à numeração do tipo de nó DOM (Document Object Model) do XML.<br /><br /> Os seguintes são os valores que podem aparecer nessa coluna para indicar o tipo do nó:<br /><br /> **1** = Nó de elemento<br /><br /> **2** = Nó de atributo<br /><br /> **3** = Nó de texto<br /><br /> **4** = Nó de seção CDATA<br /><br /> **5** = Nó de referência de entidade<br /><br /> **6** = Nó de entidade<br /><br /> **7** = Nó de instrução de processamento<br /><br /> **8** = Nó de comentário<br /><br /> **9** = Nó de documento<br /><br /> **10** = Nó de tipo de documento<br /><br /> **11** = Nó de fragmento de documento<br /><br /> **12** = Nó de notação<br /><br /> Para obter mais informações, consulte o tópico "Propriedade nodeType" no SDK do MSXML (Microsoft XML.|  
-|**localname**|**nvarchar(max)**|Fornece o nome local do elemento ou do atributo. Será NULL se o objeto DOM não tiver um nome.|  
+|**sessão**|**bigint**|É a ID exclusiva do nó do documento.<br /><br /> O elemento raiz tem um valor de ID igual a 0. Os valores negativos da ID são reservados.|  
+|**parentID**|**bigint**|Identifica o pai do nó. O pai identificado por esse ID necessariamente não é o elemento pai. No entanto isso depende do Tipo do Nó cujo o pai é identificado por esse ID. Por exemplo, se o nó for um nó de texto, seu pai poderá ser um nó de atributo.<br /><br /> Se o nó estiver no nível superior no documento XML, seu **ParentID** será NULL.|  
+|**tipo de nó**|**int**|Identifica o tipo de nó e é um inteiro que corresponde à numeração do tipo de nó DOM (Document Object Model) do XML.<br /><br /> Os seguintes são os valores que podem aparecer nessa coluna para indicar o tipo do nó:<br /><br /> **1** = nó de elemento<br /><br /> **2** = nó de atributo<br /><br /> **3** = nó de texto<br /><br /> **4** = nó de seção CDATA<br /><br /> **5** = nó de referência de entidade<br /><br /> **6** = nó de entidade<br /><br /> **7** = nó de instrução de processamento<br /><br /> **8** = nó de comentário<br /><br /> **9** = nó do documento<br /><br /> **10** = nó de tipo de documento<br /><br /> **11** = nó de fragmento de documento<br /><br /> **12** = nó de notação<br /><br /> Para obter mais informações, consulte o tópico "Propriedade nodeType" no SDK do MSXML (Microsoft XML.|  
+|**LocalName**|**nvarchar(max)**|Fornece o nome local do elemento ou do atributo. Será NULL se o objeto DOM não tiver um nome.|  
 |**prefixo**|**nvarchar(max)**|É o prefixo do namespace do nome do nó.|  
-|**namespaceuri**|**nvarchar(max)**|É o URI do namespace do nó. Se o valor for NULL, nenhum namespace estará presente.|  
-|**datatype**|**nvarchar(max)**|É o tipo de dados real da linha de atributo ou de elemento e é normalmente NULL. O tipo de dados é deduzido do DTD embutido ou do esquema embutido.|  
-|**prev**|**bigint**|É a ID de XML do elemento irmão anterior. Será NULL se não houver nenhum irmão anterior direto.|  
+|**NamespaceURI**|**nvarchar(max)**|É o URI do namespace do nó. Se o valor for NULL, nenhum namespace estará presente.|  
+|**tipo de dados**|**nvarchar(max)**|É o tipo de dados real da linha de atributo ou de elemento e é normalmente NULL. O tipo de dados é deduzido do DTD embutido ou do esquema embutido.|  
+|**/s**|**bigint**|É a ID de XML do elemento irmão anterior. Será NULL se não houver nenhum irmão anterior direto.|  
 |**text**|**ntext**|Contém o valor do atributo ou o conteúdo do elemento em formulário de texto. Ou será NULL, se a entrada da tabela de borda não precisar de um valor.|  
   
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>Usando a cláusula WITH para especificar uma tabela existente  
@@ -170,9 +171,9 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Usando o parâmetro *ColPattern*  
   
-     *ColPattern*, uma expressão XPath , é especificada como parte de *SchemaDeclaration* na cláusula WITH. O mapeamento especificado em *ColPattern* substitui o mapeamento especificado pelo parâmetro *flags* .  
+     *ColPattern*, uma expressão XPath, é especificada como parte de *SCHEMADECLARATION* na cláusula WITH. O mapeamento especificado em *ColPattern* substitui o mapeamento especificado pelo parâmetro *flags* .  
   
-     *ColPattern* pode ser usado para especificar o tipo de mapeamento, como centrado em atributo ou centrado em elemento, que sobrescreve ou aprimora o mapeamento indicado por *flags*.  
+     *ColPattern* pode ser usado para especificar o tipo de mapeamento, como centrado em atributo ou centrado em elemento, que substitui ou aprimora o mapeamento padrão indicado pelos *sinalizadores*.  
   
      *ColPattern* é especificado nas seguintes circunstâncias:  
   
@@ -196,9 +197,9 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Para vários subelementos com o mesmo nome, o primeiro nó é retornado.  
   
-## <a name="see-also"></a>Consulte também  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_xml_preparedocument](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_xml_removedocument](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
  [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [Dados XML &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   

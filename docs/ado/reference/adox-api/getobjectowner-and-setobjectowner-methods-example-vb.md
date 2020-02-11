@@ -1,5 +1,5 @@
 ---
-title: GetObjectOwner e Setobjectowner (VB) métodos | Microsoft Docs
+title: Exemplo dos métodos GetObjectOwner e SetObjectOwner (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03850fdaef19ece963bb7b196ab14edccd290fde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966381"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>Exemplo dos métodos GetObjectOwner e SetObjectOwner (VB)
-Este exemplo demonstra a [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) e [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) métodos. Esse código supõe a existência do grupo Contabilidade (consulte a [grupos e usuários Append, ChangePassword métodos de exemplo (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) para ver como adicionar esse grupo para o sistema). O proprietário da tabela de categorias é definido como contabilidade.  
+Este exemplo demonstra os métodos [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) e [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) . Esse código pressupõe a existência da contabilidade do grupo (consulte o [exemplo de métodos groups and Users Append, ChangePassword Methods (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) para ver como adicionar esse grupo ao sistema). O proprietário da tabela Categorias é definido como contabilidade.  
   
 ```  
 ' BeginOwnersVB  
@@ -61,7 +61,7 @@ End Sub
 ' EndOwnersVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Método GetObjectOwner (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
  [Método SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)

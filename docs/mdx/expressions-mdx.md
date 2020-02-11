@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893594"
 ---
 # <a name="expressions-mdx"></a>Expressões (MDX)
@@ -32,7 +32,7 @@ ms.locfileid: "68893594"
  Uma função de valor escalar retorna um valor simples dentro do contexto de avaliação em MDX. Essa distinção é importante para compreender como o MDX resolve as funções de valores escalares, pois a maioria das expressões, instruções e scripts do MDX é avaliada não sobre o elemento de dados simples, mas de forma iterativa sobre um grupo de elementos de dados, como células ou membros. Entretanto, na ocasião em que a função de valor escalar é avaliada, a função normalmente está revisando um elemento de dados simples.  
   
  Identificador de objeto  
- O MDX é orientado por objeto devido à sua natureza de dados multidimensionais. Os identificadores de objeto são considerados expressões simples em DMX. Para obter mais informações sobre identificadores, consulte [ &#40;MDX&#41;de identificadores](../mdx/identifiers-mdx.md).  
+ O MDX é orientado por objeto devido à sua natureza de dados multidimensionais. Os identificadores de objeto são considerados expressões simples em DMX. Para obter mais informações sobre identificadores, consulte [identificadores &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
   
  Uma expressão complexa também pode ser criada a partir das combinações dessas entidades unidas por operadores.  
   
@@ -73,18 +73,18 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Usando expressões de cubo e subcubo](../mdx/using-cube-and-subcube-expressions.md)|Define as expressões de cubo e subcubo.|  
 |[Usando expressões de dimensão](../mdx/using-dimension-expressions.md)|Define as expressões de dimensão.|  
-|[Usando expressões de membro](../mdx/using-member-expressions.md)|Define as expressões de membro.|  
+|[Usando expressões de membros](../mdx/using-member-expressions.md)|Define as expressões de membro.|  
 |[Usando expressões de tupla](../mdx/using-tuple-expressions.md)|Define as expressões de tupla.|  
 |[Usando expressões de conjunto](../mdx/using-set-expressions.md)|Define as expressões fixas.|  
 |[Usando expressões escalares](../mdx/using-scalar-expressions.md)|Define as expressões de valor escalar.|  
 |[Trabalhando com valores vazios](../mdx/working-with-empty-values.md)|Descreve o que é um valor vazio e como tais valores são controlados.|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência de linguagem MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

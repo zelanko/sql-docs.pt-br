@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 38ac7a3f4c966f9496f5ff9a0855960da8a38fb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135878"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
@@ -32,10 +32,10 @@ Set_Expression.CurrentOrdinal
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
 ## <a name="remarks"></a>Comentários  
- Durante a iteração por meio de um conjunto, como com o [Filter (MDX)](../mdx/filter-mdx.md) ou [Generate (MDX)](../mdx/generate-mdx.md) funções, o **CurrentOrdinal** função retorna o número de iteração.  
+ Ao iterar por meio de um conjunto, como com as funções [Filter (MDX)](../mdx/filter-mdx.md) ou [Generate (MDX)](../mdx/generate-mdx.md) , a função **CurrentOrdinal** retorna o número de iteração.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo simples a seguir mostra como **CurrentOrdinal** pode ser usado com **gerar** para retornar uma cadeia de caracteres que contém o nome de cada item em um conjunto junto com sua posição no conjunto:  
+ O exemplo simples a seguir mostra como **CurrentOrdinal** pode ser usado com **Generate** para retornar uma cadeia de caracteres que contém o nome de cada item em um conjunto junto com sua posição no conjunto:  
   
  `WITH SET MySet AS [Customer].[Customer Geography].[Country].MEMBERS`  
   
@@ -47,7 +47,7 @@ Set_Expression.CurrentOrdinal
   
  `FROM [Adventure Works]`  
   
- O uso prático de CurrentOrdinal é limitado a cálculos muito complexos. O exemplo a seguir retorna o número de produtos no conjunto que são exclusivos, usando o **ordem** função para solicitar as tuplas não vazias antes de utilizar o **filtro** função. O **CurrentOrdinal** função é usada para comparar e eliminar associações.  
+ O uso prático de CurrentOrdinal é limitado a cálculos muito complexos. O exemplo a seguir retorna o número de produtos no conjunto que são exclusivos, usando a função **Order** para ordenar as tuplas não vazias antes de utilizar a função de **filtro** . A função **CurrentOrdinal** é usada para comparar e eliminar os vínculos.  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -81,7 +81,7 @@ SELECT {[Measures].[PrdTies]} ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e2c29e97a360b9e595b972643645e2e8d549c67
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892023"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
@@ -27,30 +27,30 @@ ms.locfileid: "68892023"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo do SharePoint|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modo do SharePoint|  
   
  **Neste tópico:**  
   
 -   [Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo nativo)](#bkmk_stored_credentials_data_source_native)  
   
--   [Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo SharePoint)](#bkmk_stored_credentials_data_source_sharepoint)  
+-   [Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo do SharePoint)](#bkmk_stored_credentials_data_source_sharepoint)  
   
 -   [Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo nativo)](#bkmk_stored_credentials_shared_data_source_native)  
   
--   [Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo SharePoint)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
+-   [Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo do SharePoint)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
-##  <a name="bkmk_top"></a> Requisitos da política de segurança para credenciais armazenadas  
- ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") é necessário que a conta usada para as credenciais armazenadas esteja configurada para uma das políticas de segurança a seguir no servidor de relatório. É recomendável escolher a política com o nível mínimo de permissões que você precisa para o ambiente.  
+##  <a name="bkmk_top"></a>Requisitos de política de segurança para credenciais armazenadas  
+ ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") É necessário que a conta usada para credenciais armazenadas esteja configurada para uma das políticas de segurança a seguir no servidor de relatório. É recomendável escolher a política com o nível mínimo de permissões que você precisa para o ambiente.  
   
-1.  **Permitir logon localmente**. Para obter mais informações, consulte [Permitir logon localmente](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
+1.  **Permitir logon local**. Para obter mais informações, consulte [Permitir logon localmente](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
-2.  **Fazer logon como um trabalho em lotes**. Para obter mais informações, consulte [Fazer logon como um trabalho em lotes](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
+2.  **Faça logon como um trabalho em lotes**. Para obter mais informações, consulte [Fazer logon como um trabalho em lotes](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
   
 3.  Para obter informações gerais sobre as políticas, consulte [Editar configurações de segurança em um objeto de política de grupo](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
   
-##  <a name="bkmk_stored_credentials_data_source_native"></a> Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo nativo)  
+##  <a name="bkmk_stored_credentials_data_source_native"></a>Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo nativo)  
   
-1.  No Gerenciador de Relatórios no modo nativo, navegue até a pasta que contém o relatório. Clique no menu de contexto do item ![menu de contexto no Gerenciador de Relatórios para itens do SSRS](../media/ssrs-report-manager-item-context-menu.png "menu de contexto no Gerenciador de Relatórios para itens do SSRS").  
+1.  No Gerenciador de Relatórios no modo nativo, navegue até a pasta que contém o relatório. Clique no menu de contexto do menu de contexto do item ![no Gerenciador de relatórios para itens do SSRS](../media/ssrs-report-manager-item-context-menu.png "menu de contexto no gerenciador de relatórios para itens ssrs").  
   
 2.  Clique em **Gerenciar** e clique em **Fontes de Dados**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68892023"
   
 4.  Na lista **Tipo de Fonte de Dados** , selecione a extensão de processamento de dados usada para processar os dados da fonte de dados.  
   
-5.  Em **Cadeia de Conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. O exemplo a seguir ilustra uma cadeia de conexão usada para conexão com o banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] :  
+5.  Em **Cadeia de Conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. O exemplo a seguir ilustra uma cadeia de conexão usada para se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] conectar ao banco de dados:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -74,19 +74,19 @@ ms.locfileid: "68892023"
   
 8.  Clique em **Aplicar**.  
   
-     ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Requisitos da política de segurança para credenciais armazenadas](#bkmk_top)  
+     ![Ícone de seta usado com](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [os requisitos de política de segurança de](#bkmk_top) link voltar ao início para credenciais armazenadas  
   
-##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo SharePoint)  
+##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a>Configurar credenciais armazenadas para uma fonte de dados específica do relatório (modo do SharePoint)  
   
-1.  Navegue para a biblioteca de documentos que contém o relatório e, em seguida, clique em Abrir Menu ![menu de contexto da biblioteca de documentos para itens do SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu de contexto da biblioteca de documentos para itens do SSRS").  
+1.  Navegue até a biblioteca de documentos que contém o relatório e clique no menu abrir ![menu de contexto da biblioteca de documentos para itens do SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu de contexto da biblioteca de documentos para itens ssrs").  
   
-2.  Clique no segundo Abrir Menu ![menu de contexto da biblioteca de documentos para itens do SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu de contexto da biblioteca de documentos para itens do SSRS") e, em seguida, clique em **Gerenciar Fontes de Dados**.  
+2.  Clique em segundo menu abrir ![menu de contexto da biblioteca de documentos para itens do SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu de contexto da biblioteca de documentos para itens ssrs") e clique em **gerenciar fontes de dados**.  
   
 3.  Clique no nome da fonte de dados **Personalizado** que deseja configurar com as credenciais armazenadas.  
   
 4.  Na lista **Tipo de Fonte de Dados** , selecione a extensão de processamento de dados usada para processar os dados da fonte de dados.  
   
-5.  Em **Cadeia de Conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. O exemplo a seguir ilustra uma cadeia de conexão usada para conexão com o banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] :  
+5.  Em **Cadeia de Conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. O exemplo a seguir ilustra uma cadeia de conexão usada para se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] conectar ao banco de dados:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -98,23 +98,24 @@ ms.locfileid: "68892023"
   
     -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<account\>. Em seguida, selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados.**  
   
-    -   Se o nome de usuário e a senha forem credenciais de banco de dados, não selecione **Usar como credenciais do Windows**. Se o servidor de banco de dados oferecer suporte à representação ou delegação, você poderá selecionar **Definir o contexto de execução para esta conta**.  
+    -   Se o nome de usuário e a senha forem credenciais de banco de dados, não selecione **Usar como credenciais do Windows**. Se o servidor de banco de dados oferecer suporte à representação ou delegação, você poderá selecionar **Definir contexto de execução para esta conta**.  
   
 8.  Clique em **OK**.  
   
-     ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Requisitos da política de segurança para credenciais armazenadas](#bkmk_top)  
+     ![Ícone de seta usado com](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [os requisitos de política de segurança de](#bkmk_top) link voltar ao início para credenciais armazenadas  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo nativo)  
+##  <a name="bkmk_stored_credentials_shared_data_source_native"></a>Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo nativo)  
   
-1.  No Gerenciador de Relatórios no modo nativo, navegue até o item da fonte de dados compartilhada. ![Ícone Fonte de dados compartilhada](../media/hlp-16datasource.png "Ícone Fonte de dados compartilhada")  
+1.  No Gerenciador de Relatórios no modo nativo, navegue até o item da fonte de dados compartilhada. ![Ícone de fonte de dados compartilhada](../media/hlp-16datasource.png "Ícone de fonte de dados compartilhada")  
   
-2.  Clique no menu de contexto ![menu de contexto no Gerenciador de Relatórios para itens do SSRS](../media/ssrs-report-manager-item-context-menu.png "menu de contexto no Gerenciador de Relatórios para itens do SSRS") e, em seguida, clique em **Gerenciar**.  
+2.  Clique no menu de contexto do menu de contexto ![no Gerenciador de relatórios para itens do SSRS](../media/ssrs-report-manager-item-context-menu.png "menu de contexto no gerenciador de relatórios para itens ssrs") e clique em **gerenciar**.  
   
-3.  Na lista **Tipo de Fonte de Dados** , especifique a extensão de processamento de dados usada para processar dados da fonte de dados.  
+3.  Na lista **tipo de fonte de dados** , especifique a extensão de processamento de dados usada para processar dados da fonte de dados.  
   
-4.  Em **Cadeia de Conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda não especificar credenciais na cadeia de conexão.  
+4.  Em **Cadeia de Conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda não especificar credenciais na cadeia de conexão.  
   
-     O exemplo a seguir ilustra uma cadeia de conexão usada para conexão com o banco de dados local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] :  
+     O exemplo a seguir ilustra uma cadeia de conexão usada para se conectar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] ao banco de dados local:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -128,21 +129,22 @@ ms.locfileid: "68892023"
   
 6.  Clique em **Aplicar**.  
   
-     ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Requisitos da política de segurança para credenciais armazenadas](#bkmk_top)  
+     ![Ícone de seta usado com](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [os requisitos de política de segurança de](#bkmk_top) link voltar ao início para credenciais armazenadas  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo SharePoint)  
+##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a>Configurar credenciais armazenadas para uma fonte de dados compartilhada (modo do SharePoint)  
   
-1.  Na biblioteca de documentos, navegue para o item de fonte de dados compartilhada. ![Ícone de fonte de dados compartilhada](../media/hlp-16datasource.png "Ícone de fonte de dados compartilhada")  
+1.  Na biblioteca de documentos, navegue até o item de fonte de dados compartilhada. ![Ícone de fonte de dados compartilhada](../media/hlp-16datasource.png "Ícone de fonte de dados compartilhada")  
   
-2.  Clique no menu de contexto ![menu de contexto da biblioteca de documentos para itens do SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu de contexto da biblioteca de documentos para itens do SSRS") e, em seguida, clique no segundo menu de contexto ![menu de contexto da biblioteca de documentos para itens do SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu de contexto da biblioteca de documentos para itens do SSRS").  
+2.  Clique no menu de contexto menu da ![biblioteca de documentos para itens do SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu de contexto da biblioteca de documentos para itens ssrs") e, em seguida, clique no menu de contexto da segunda ![biblioteca de documentos menu contextual para itens do SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu de contexto da biblioteca de documentos para itens ssrs").  
   
 3.  Clique em **Editar Definição da Fonte de Dados**.  
   
-4.  Na lista **Tipo de Fonte de Dados** , especifique a extensão de processamento de dados usada para processar dados da fonte de dados.  
+4.  Na lista **tipo de fonte de dados** , especifique a extensão de processamento de dados usada para processar dados da fonte de dados.  
   
-5.  Em **Cadeia de Conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda não especificar credenciais na cadeia de conexão.  
+5.  Em **Cadeia de Conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda não especificar credenciais na cadeia de conexão.  
   
-     O exemplo a seguir ilustra uma cadeia de conexão usada para conexão com o banco de dados local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] :  
+     O exemplo a seguir ilustra uma cadeia de conexão usada para se conectar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] ao banco de dados local:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -156,13 +158,13 @@ ms.locfileid: "68892023"
   
 7.  Clique em **OK**.  
   
-     ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Requisitos da política de segurança para credenciais armazenadas](#bkmk_top)  
+     ![Ícone de seta usado com](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [os requisitos de política de segurança de](#bkmk_top) link voltar ao início para credenciais armazenadas  
   
-## <a name="see-also"></a>Consulte também  
- [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../integration-services/connection-manager/data-sources.md)   
- [Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de Relatórios&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
- [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Página Propriedades de Fontes de Dados &#40;Gerenciador de Relatórios&#41;](../data-sources-properties-page-report-manager.md)   
- [Página Nova Fonte de Dados &#40;Gerenciador de Relatórios&#41;](../new-data-source-page-report-manager.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Especificar informações de credencial e de conexão para fontes de dados de relatório](../../integration-services/connection-manager/data-sources.md)   
+ [Configurar as propriedades da fonte de dados para um relatório &#40;Report Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
+ [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Página Propriedades das fontes de dados &#40;Report Manager&#41;](../data-sources-properties-page-report-manager.md)   
+ [Nova página de fonte de dados &#40;Report Manager&#41;](../new-data-source-page-report-manager.md)  
   
   

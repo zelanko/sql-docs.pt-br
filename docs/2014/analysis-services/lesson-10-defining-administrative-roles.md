@@ -1,5 +1,5 @@
 ---
-title: 'Lição 10: Definindo funções administrativas | Microsoft Docs'
+title: 'Lição 10: definindo funções administrativas | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98c6db6e3c7af6f66f4d7a1496bf955a65dd5bb1
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530868"
 ---
-# <a name="lesson-10-defining-administrative-roles"></a>Lição 10: Como definir funções administrativas
+# <a name="lesson-10-defining-administrative-roles"></a>Lição 10: Definindo funções administrativas
   Nesta lição, você aprenderá a definir funções de segurança para tarefas administrativas.  
   
 > [!NOTE]  
->  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
+>  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo que acompanham este tutorial.  
   
  Esta lição contém a seguinte tarefa:  
   
  [Concedendo permissões ao banco de dados do processo](lesson-10-granting-process-database-permissions.md)  
  Nesta tarefa, você definirá uma função de segurança que possui permissões para processar o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e, em seguida, testará essa função.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cenário do tutorial de Analysis Services](analysis-services-tutorial-scenario.md)   
- [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Modelagem multidimensional &#40;tutorial do Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

@@ -17,21 +17,21 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924542"
 ---
 # <a name="provider-errors"></a>Erros do provedor
-Quando ocorre um erro do provedor, um erro de tempo de execução de -2147467259 é retornado. Quando você recebe esse erro, verifique as **erros** coleção de ativo **Conexão** objeto, que irá conter um ou mais erros que descreve o que ocorreu.  
+Quando ocorre um erro de provedor, um erro de tempo de execução de-2147467259 é retornado. Ao receber esse erro, verifique a coleção de **erros** do objeto de **conexão** ativa, que conterá um ou mais erros que descrevem o que ocorreu.  
   
-## <a name="the-ado-errors-collection"></a>A coleção de erros ADO  
- Porque uma determinada operação ADO pode produzir vários erros de provedor, o ADO expõe uma coleção de objetos de erro por meio de **Conexão** objeto. Esta coleção não contém objetos se uma operação é concluído com êxito e contém um ou mais **erro** objetos se algo deu errado e o provedor gerado de um ou mais erros. Examine cada objeto de erro para determinar a causa exata do erro.  
+## <a name="the-ado-errors-collection"></a>A coleção de erros do ADO  
+ Como uma operação ADO específica pode produzir vários erros de provedor, o ADO expõe uma coleção de objetos de erro por meio do objeto de **conexão** . Essa coleção não contém objetos se uma operação for concluída com êxito e contiver um ou mais objetos de **erro** se algo tiver ficado errado e o provedor tiver gerado um ou mais erros. Examine cada objeto de erro para determinar a causa exata do erro.  
   
- Assim que terminar de tratamento de erros que ocorreram, você pode limpar a coleção, chamando o **limpar** método. É especialmente importante limpar explicitamente o **erros** coleção antes de chamar o **ressincronizar**, **UpdateBatch**, ou **CancelBatch**método em uma **conjunto de registros** objeto, o **abrir** método em um **Conexão** de objeto, ou definir o **filtro** propriedade em um **Recordset** objeto. Limpando explicitamente a coleção, você pode ter certeza de que qualquer **erro** objetos na coleção não provêm de uma operação anterior.  
+ Assim que terminar de lidar com quaisquer erros ocorridos, você poderá limpar a coleção chamando o método **Clear** . É especialmente importante limpar explicitamente a coleção de **erros** antes de chamar o método **Ressync**, **UpdateBatch**ou **CancelBatch** em um objeto **Recordset** , o método **Open** em um objeto **Connection** ou definir a propriedade **Filter** em um objeto **Recordset** . Limpando a coleção explicitamente, você pode ter certeza de que qualquer objeto de **erro** na coleção não será deixado de uma operação anterior.  
   
- Algumas operações podem gerar avisos além dos erros. Avisos também são representados por **erro** objetos na **erros** coleção. Quando um provedor adiciona um aviso na coleção, ele não gera um erro de tempo de execução. Verifique as **contagem** propriedade do **erros** coleção para determinar se um aviso foi produzido por uma operação específica. Se a contagem é um ou mais, uma **erro** objeto foi adicionado à coleção. Assim que você determinou que o **erros** coleção contém erros ou avisos, você pode iterar pela coleção e recuperar informações sobre cada **erro** objeto que ele contém. Pequeno exemplo de Visual Basic a seguir demonstra isso:  
+ Algumas operações podem gerar avisos além de erros. Os avisos também são representados por objetos de **erro** na coleção de **erros** . Quando um provedor adiciona um aviso à coleção, ele não gera um erro em tempo de execução. Verifique a propriedade **Count** da coleção de **erros** para determinar se um aviso foi produzido por uma determinada operação. Se a contagem for um ou maior, um objeto de **erro** será adicionado à coleção. Assim que você determinar que a coleção de **erros** contém erros ou avisos, você pode iterar pela coleção e recuperar informações sobre cada objeto de **erro** que ele contém. O exemplo de breve Visual Basic a seguir demonstra isso:  
   
 ```  
 ' BeginErrorHandlingVB02  
@@ -59,23 +59,23 @@ End Function
 ' EndErrorHandlingVB02  
 ```  
   
- A rotina de tratamento de erro inclui um **para cada** loop que examina cada objeto na **erros** coleção. Neste exemplo, ele acumula uma mensagem para exibição. Em um programa de trabalho, você deve escrever código para executar uma tarefa apropriada para cada erro, como fechar todos os arquivos abertos e desligar o programa de forma ordenada.  
+ A rotina de tratamento de erros inclui um loop **for each** que examina cada objeto na coleção de **erros** . Neste exemplo, ele acumula uma mensagem para exibição. Em um programa funcional, você escreveria código para executar uma tarefa apropriada para cada erro, como fechar todos os arquivos abertos e desligar o programa de maneira ordenada.  
   
 ## <a name="the-error-object"></a>O objeto de erro  
- Examinando uma **erro** objeto você pode determinar o erro e mais importante, o aplicativo ou o objeto causou o erro. O **erro** objeto tem as seguintes propriedades:  
+ Ao examinar um objeto de **erro** , você pode determinar qual erro ocorreu e, mais importante, qual aplicativo ou qual objeto causou o erro. O objeto de **erro** tem as seguintes propriedades:  
   
-|Nome da propriedade|Descrição|  
+|Nome da propriedade|DESCRIÇÃO|  
 |-------------------|-----------------|  
 |**Descrição**|Uma descrição de texto do erro que ocorreu.|  
-|**HelpContext, HelpFile**|Refere-se para o arquivo de Ajuda e o tópico da Ajuda que contém uma descrição do erro que ocorreu.|  
-|**NativeError**|O número de erro específico do provedor.|  
-|**número**|Um inteiro longo que representa o número (listados na **ErrorValueEnum**) do erro que ocorreu.|  
-|**Source**|Indica o nome do objeto ou aplicativo que gerou um erro.|  
+|**HelpContext, HelpFile**|Refere-se ao tópico da ajuda e ao arquivo de ajuda que contém uma descrição do erro que ocorreu.|  
+|**NativeError**|O número do erro específico do provedor.|  
+|**Automática**|Um inteiro longo que representa o número (listado no **ErrorValueEnum**) do erro que ocorreu.|  
+|**Origem**|Indica o nome do objeto ou aplicativo que gerou um erro.|  
 |**SQLState**|Um código de erro de cinco caracteres que o provedor retorna durante o processo de uma instrução SQL.|  
   
- O ADO **erro** objeto é muito semelhante ao padrão Visual Basic **Err** objeto. Suas propriedades descrevem o erro que ocorreu. Além do número do erro, você também receberá dois conjuntos relacionados de informações. O **NativeError** propriedade contém um número de erro específica do provedor que você está usando. No exemplo anterior, o provedor é o Microsoft OLE DB Provider para SQL Server, portanto **NativeError** conterá os erros específicos ao SQL Server. O **SQLState** propriedade tem um código de cinco letras que descreve um erro em uma instrução SQL.  
+ O objeto de **erro** ADO é muito semelhante ao objeto padrão Visual Basic **Err** . Suas propriedades descrevem o erro que ocorreu. Além do número do erro, você também recebe duas partes de informação relacionadas. A propriedade **NativeError** contém um número de erro específico para o provedor que você está usando. No exemplo anterior, o provedor é o provedor de OLE DB da Microsoft para SQL Server, portanto **NativeError** conterá erros específicos para SQL Server. A propriedade **SQLSTATE** tem um código de cinco letras que descreve um erro em uma instrução SQL.  
   
 ## <a name="event-related-errors"></a>Erros relacionados a eventos  
- O **erro** objeto também é usado quando ocorrem erros relacionados a eventos. Você pode determinar se ocorreu um erro no processo que disparou um evento de ADO, verificando o **erro** objeto passado como um parâmetro de evento.  
+ O objeto de **erro** também é usado quando ocorrem erros relacionados a eventos. Você pode determinar se ocorreu um erro no processo que gerou um evento ADO verificando o objeto de **erro** passado como um parâmetro de evento.  
   
- Se a operação que faz com que um evento seja concluída com êxito, o *adStatus* parâmetro do manipulador de eventos será definido como *adStatusOK*. Por outro lado, se a operação que gerou o evento foi bem-sucedida, o *adStatus* parâmetro for definido como *adStatusErrorsOccurred*. Nesse caso, o *pError* parâmetro conterá um **erro** objeto que descreve o erro.
+ Se a operação que causa um evento for concluída com êxito, o parâmetro *adStatus* do manipulador de eventos será definido como *adStatusOK*. Por outro lado, se a operação que gerou o evento não tiver sido bem-sucedida, o parâmetro *adStatus* será definido como *adStatusErrorsOccurred*. Nesse caso, o parâmetro *perror* conterá um objeto de **erro** que descreve o erro.

@@ -19,24 +19,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb490ab23d146dc8131c16e22b0d63f07b79d482
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68207044"
 ---
 # <a name="processing-results-odbc"></a>Processando resultados (ODBC)
   Depois que um aplicativo envia uma instrução SQL, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna qualquer dado resultante como um ou mais conjuntos de resultados. Um conjunto de resultados é um conjunto de linhas e colunas que correspondem aos critérios da consulta. As instruções SELECT, funções de catálogo e alguns procedimentos armazenados geram um conjunto de resultados disponibilizado para um aplicativo no formato tabular. Se a instrução SQL executada for um procedimento armazenado, um lote contendo vários comandos ou uma instrução SELECT contendo palavras-chave, haverá vários conjuntos de resultados a serem processados.  
   
- As funções de catálogo ODBC também podem recuperar dados. Por exemplo, [SQLColumns](../native-client-odbc-api/sqlcolumns.md) recupera dados de colunas na fonte de dados. Esses conjuntos de resultados podem conter zero ou mais linhas.  
+ As funções de catálogo ODBC também podem recuperar dados. Por exemplo, [SQLColumns](../native-client-odbc-api/sqlcolumns.md) recupera dados sobre colunas na fonte de dados. Esses conjuntos de resultados podem conter zero ou mais linhas.  
   
- Outras instruções SQL, como GRANT ou REVOKE, não retornam conjuntos de resultados. Para essas instruções, código de retorno de **SQLExecute** ou **SQLExecDirect** geralmente é a única indicação da instrução foi bem-sucedida.  
+ Outras instruções SQL, como GRANT ou REVOKE, não retornam conjuntos de resultados. Para essas instruções, o código de retorno de **SQLExecute** ou **SQLExecDirect** geralmente é a única indicação de que a instrução foi bem-sucedida.  
   
- Cada instrução INSERT, UPDATE e DELETE retorna um conjunto de resultados que contém apenas o número de linhas afetado pela modificação. Essa contagem é disponibilizada quando o aplicativo chama [SQLRowCount](../native-client-odbc-api/sqlrowcount.md). ODBC 3. *x* aplicativos devem chamar **SQLRowCount** recuperar o resultado definido ou [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) para cancelá-la. Quando um aplicativo executa um lote ou procedimento armazenado que contém várias instruções INSERT, UPDATE ou DELETE, o conjunto de resultados de cada instrução de modificação devem ser processado usando **SQLRowCount** ou cancelado usando **SQLMoreResults**. Essas contagens podem ser canceladas incluindo uma instrução SET NOCOUNT ON no lote ou no procedimento armazenado.  
+ Cada instrução INSERT, UPDATE e DELETE retorna um conjunto de resultados que contém apenas o número de linhas afetado pela modificação. Essa contagem é disponibilizada quando o aplicativo chama [SQLRowCount](../native-client-odbc-api/sqlrowcount.md). ODBC 3. os aplicativos *x* devem chamar **SQLRowCount** para recuperar o conjunto de resultados ou [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) para cancelá-lo. Quando um aplicativo executa um lote ou procedimento armazenado que contém várias instruções INSERT, UPDATE ou DELETE, o conjunto de resultados de cada instrução de modificação deve ser processado usando **SQLRowCount** ou cancelado usando **SQLMoreResults**. Essas contagens podem ser canceladas incluindo uma instrução SET NOCOUNT ON no lote ou no procedimento armazenado.  
   
- O Transact-SQL inclui a instrução SET NOCOUNT. Quando a opção NOCOUNT está ativada, o SQL Server não retorna as contagens de linhas afetadas por uma instrução e **SQLRowCount** retornará 0. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão do driver ODBC do Native Client apresenta um específicos do driver [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md) opção SQL_SOPT_SS_NOCOUNT_STATUS, para relatar se a opção NOCOUNT está ativada ou desativada. A qualquer momento **SQLRowCount** retornar 0, o aplicativo deverá testar SQL_SOPT_SS_NOCOUNT_STATUS. Se SQL_NC_ON for retornado, o valor de 0 de **SQLRowCount** só indica que o SQL Server não retornou uma contagem de linhas. Se SQL_NC_OFF for retornado, isso significa que NOCOUNT está desativado e o valor de 0 de **SQLRowCount** indica que a instrução não afetou nenhuma linha. Aplicativos não deverão exibir o valor de **SQLRowCount** quando SQL_SOPT_SS_NOCOUNT_STATUS for SQL_NC_OFF. Lotes ou procedimentos armazenados grandes podem conter várias instruções SET NOCOUNT, de forma que os programadores não podem supor que SQL_SOPT_SS_NOCOUNT_STATUS permaneça constante. A opção deve ser testada sempre que **SQLRowCount** retornará 0.  
+ O Transact-SQL inclui a instrução SET NOCOUNT. Quando a opção NOCOUNT é definida em, SQL Server não retorna as contagens das linhas afetadas por uma instrução e **SQLRowCount** retorna 0. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão do driver ODBC do Native Client introduz uma opção [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md) específica do driver, SQL_SOPT_SS_NOCOUNT_STATUS, para relatar se a opção NOCOUNT está ativada ou desativada. Sempre que **SQLRowCount** retorna 0, o aplicativo deve testar SQL_SOPT_SS_NOCOUNT_STATUS. Se SQL_NC_ON for retornado, o valor de 0 de **SQLRowCount** indicará apenas que SQL Server não retornou uma contagem de linhas. Se SQL_NC_OFF for retornado, significa que NOCOUNT está desativado e o valor de 0 de **SQLRowCount** indica que a instrução não afetou nenhuma linha. Os aplicativos não devem exibir o valor de **SQLRowCount** quando SQL_SOPT_SS_NOCOUNT_STATUS for SQL_NC_OFF. Lotes ou procedimentos armazenados grandes podem conter várias instruções SET NOCOUNT, de forma que os programadores não podem supor que SQL_SOPT_SS_NOCOUNT_STATUS permaneça constante. A opção deve ser testada cada vez que **SQLRowCount** retornar 0.  
   
- Várias outras instruções Transact-SQL retornam seus dados em mensagens e não em conjuntos de resultados. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client recebe essas mensagens, ele retornará SQL_SUCCESS_WITH_INFO para informar o aplicativo que as mensagens informativas estão disponíveis. O aplicativo pode, em seguida, chamar **SQLGetDiagRec** para recuperar essas mensagens. As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que funcionam deste modo são as seguintes:  
+ Várias outras instruções Transact-SQL retornam seus dados em mensagens e não em conjuntos de resultados. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client recebe essas mensagens, ele retorna SQL_SUCCESS_WITH_INFO para permitir que o aplicativo saiba que as mensagens informativas estão disponíveis. O aplicativo pode então chamar **SQLGetDiagRec** para recuperar essas mensagens. As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que funcionam deste modo são as seguintes:  
   
 -   DBCC  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68207044"
   
 -   RAISERROR  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client retorna SQL_ERROR em um RAISERROR com severidade de 11 ou superior. Se a severidade do RAISERROR for 19 ou superior, a conexão também será descartada.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client retorna SQL_ERROR em um RAISERROR com uma severidade de 11 ou superior. Se a severidade do RAISERROR for 19 ou superior, a conexão também será descartada.  
   
  Para processar os conjuntos de resultados a partir de uma instrução SQL, o aplicativo:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68207044"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Determinando as características de um conjunto de resultados &#40;ODBC&#41;](determining-the-characteristics-of-a-result-set-odbc.md)  
+-   [Determinando as características de um conjunto de resultados &#40;&#41;ODBC](determining-the-characteristics-of-a-result-set-odbc.md)  
   
 -   [Atribuindo armazenamento](assigning-storage.md)  
   
@@ -76,8 +76,8 @@ ms.locfileid: "68207044"
   
 -   [Tradução automática de dados de caracteres](autotranslation-of-character-data.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [Tópicos explicativos de resultados de processamento &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+ [Tópicos de instruções sobre o processamento de resultados &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
   

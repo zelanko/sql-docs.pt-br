@@ -1,5 +1,5 @@
 ---
-title: Criar e executar um comando simples | Microsoft Docs
+title: Criando e executando um comando simples | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,25 +14,25 @@ ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925733"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>Criar e executar um comando simples
-Um comando simples é aquele que não está parametrizado e não requer que nenhuma persistência. Há três maneiras de criar e executar um comando simples.  
+Um comando simples é aquele que não é parametrizado e não requer persistência. Há três maneiras de criar e executar um comando simples.  
   
--   Usando um **comando** objeto  
+-   Usando um objeto de **comando**  
   
--   Usando um **Conexão** objeto  
+-   Usando um objeto **Connection**  
   
--   Usando um **Recordset** objeto  
+-   Usando um objeto **Recordset**  
   
 ## <a name="using-a-command-object"></a>Usando um objeto de comando  
- Para criar um comando simples usando um **comando** do objeto, você deve atribuir a instrução para o **CommandText** propriedade de um **comando** do objeto e defina o valor apropriado para o **CommandType** propriedade. Executar o comando requer que uma conexão aberta é atribuído à **ActiveConnection** propriedade da **comando** objeto, seguido por uma chamada para o **Execute** método sobre o **comando** objeto.  
+ Para criar um comando simples usando um objeto **Command** , você deve atribuir a instrução à propriedade **CommandText** de um objeto **Command** e definir o valor apropriado para a propriedade **CommandType** . A execução do comando requer que uma conexão aberta seja atribuída à propriedade **ActiveConnection** do objeto **Command** , seguida por uma chamada para o método **Execute** no objeto **Command** .  
   
- O trecho de código a seguir mostra o método básico de como usar o **comando** objeto para executar um comando em uma fonte de dados. Este exemplo usa um comando de retorno de linha e retorna os resultados da execução do comando como um **Recordset** objeto.  
+ O trecho de código a seguir mostra o método básico de usar o objeto **Command** para executar um comando em uma fonte de dados. Este exemplo usa um comando de retorno de linha e retorna os resultados da execução do comando como um objeto **Recordset** .  
   
 ```  
     'BeginBasicCmd  
@@ -107,8 +107,8 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="using-a-recordset-object"></a>Usando um objeto de conjunto de registros  
- Você também pode criar um comando como uma cadeia de caracteres de texto e pas-o para o **aberto** método em um **conjunto de registros** do objeto, junto com o tipo de comando (adCmdText) para execução. O trecho de código a seguir demonstram isso.  
+## <a name="using-a-recordset-object"></a>Usando um objeto Recordset  
+ Você também pode criar um comando como uma cadeia de texto e o Pas it para o método **Open** em um objeto **Recordset** , junto com o tipo de comando (adCmdText), para execução. O trecho de código a seguir demonstra isso.  
   
 ```  
   
@@ -146,8 +146,8 @@ objRs.Close
 Set objRs = Nothing  
 ```  
   
-## <a name="using-a-connection-object"></a>Usando um objeto de Conexão  
- Você também pode executar um comando em um objeto de Conexão aberto. O exemplo de código anterior agora se torna isso:  
+## <a name="using-a-connection-object"></a>Usando um objeto Connection  
+ Você também pode executar um comando em um objeto de conexão aberta. O exemplo de código anterior agora se torna o seguinte:  
   
 ```  
 Const DS = "MySqlServer"  

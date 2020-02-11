@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212007"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Criar e testar uma função de classificação definida pelo usuário
@@ -177,7 +177,7 @@ ms.locfileid: "68212007"
   
     ```  
   
-3.  Obtenha os dados de tempo de execução atuais para os pools de recurso e os grupos de carga de trabalho usando a seguinte consulta.  
+3.  Obtenha os dados de runtime atuais para os pools de recurso e os grupos de carga de trabalho usando a seguinte consulta.  
   
     ```  
     SELECT * FROM sys.dm_resource_governor_resource_pools  
@@ -262,7 +262,7 @@ ms.locfileid: "68212007"
         > [!WARNING]  
         >  É altamente recomendável seguir essas práticas recomendadas. Se houver problemas que o impeçam de seguir as práticas recomendadas, sugerimos que você contate o Suporte da Microsoft para evitar proativamente qualquer problema futuro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](resource-governor.md)   
  [Habilitar Administrador de Recursos](enable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](resource-governor-resource-pool.md)   

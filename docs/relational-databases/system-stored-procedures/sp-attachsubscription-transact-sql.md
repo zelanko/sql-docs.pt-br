@@ -16,10 +16,10 @@ ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768967"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68768967"
 > [!IMPORTANT]  
 >  Esse recurso é preterido e será removido em uma versão futura. Esse recurso não deveria ser usado em novo trabalho de desenvolvimento. Para publicações de mesclagem, que são particionadas usando filtros com parâmetros, recomendamos o uso de novos recursos de instantâneos particionados, que simplificam a inicialização de um grande número de assinaturas. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Para publicações que não são particionadas, é possível inicializar uma inscrição com um backup. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="arguments"></a>Argumentos  
 `[ @dbname = ] 'dbname'`É a cadeia de caracteres que especifica o banco de dados de assinatura de destino por nome. *dbname* é **sysname**, sem padrão.  
   
-`[ @filename = ] 'filename'`É o nome e o local físico do MDF principal (arquivo de dados**mestre** ). *filename* é **nvarchar (260)** , sem padrão.  
+`[ @filename = ] 'filename'`É o nome e o local físico do MDF principal (arquivo de dados**mestre** ). *filename* é **nvarchar (260)**, sem padrão.  
   
 `[ @subscriber_security_mode = ] 'subscriber_security_mode'`É o modo de segurança do assinante a ser usado ao se conectar a um Assinante durante a sincronização. *subscriber_security_mode* é **int**, com um padrão de NULL.  
   
@@ -76,7 +76,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
   
 `[ @distributor_login = ] 'distributor_login'`É o logon do distribuidor a ser usado ao se conectar a um distribuidor durante a sincronização. *distributor_login* será necessário se *distributor_security_mode* for definido como **0**. *distributor_login* é **sysname**, com um padrão de NULL.  
   
-`[ @distributor_password = ] 'distributor_password'`É a senha do distribuidor. *distributor_password* será necessário se *distributor_security_mode* for definido como **0**. *distributor_password* é **sysname**, com um padrão de NULL. O valor de *distributor_password* deve ser inferior a 120 caracteres Unicode.  
+`[ @distributor_password = ] 'distributor_password'`É a senha do distribuidor. *distributor_password* será necessário se *distributor_security_mode* for definido como **0**. *distributor_password* é **sysname**, com um padrão de NULL. O valor de *distributor_password* deve ter menos de 120 caracteres Unicode.  
   
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
@@ -85,19 +85,19 @@ sp_attachsubscription [ @dbname = ] 'dbname'
   
 `[ @publisher_login = ] 'publisher_login'`É o logon a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_login* é **sysname**, com um padrão de NULL.  
   
-`[ @publisher_password = ] 'publisher_password'`É a senha usada ao conectar-se ao Publicador. *publisher_password* é **sysname**, com um padrão de NULL. O valor de *publisher_password* deve ser inferior a 120 caracteres Unicode.  
+`[ @publisher_password = ] 'publisher_password'`É a senha usada ao conectar-se ao Publicador. *publisher_password* é **sysname**, com um padrão de NULL. O valor de *publisher_password* deve ter menos de 120 caracteres Unicode.  
   
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @job_login = ] 'job_login'`É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)** , sem padrão. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
+`[ @job_login = ] 'job_login'`É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, sem padrão. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
   
-`[ @job_password = ] 'job_password'`É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, sem padrão. O valor de *job_password* deve ser inferior a 120 caracteres Unicode.  
+`[ @job_password = ] 'job_password'`É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, sem padrão. O valor de *job_password* deve ter menos de 120 caracteres Unicode.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @db_master_key_password = ] 'db_master_key_password'`É a senha de uma chave mestra de banco de dados definida pelo usuário. *db_master_key_password* é **nvarchar (524)** , com um valor padrão de NULL. Se *db_master_key_password* não for especificado, uma chave mestra de banco de dados existente será descartada e recriada.  
+`[ @db_master_key_password = ] 'db_master_key_password'`É a senha de uma chave mestra de banco de dados definida pelo usuário. *db_master_key_password* é **nvarchar (524)**, com um valor padrão de NULL. Se *db_master_key_password* não for especificado, uma chave mestra de banco de dados existente será descartada e recriada.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
@@ -106,14 +106,14 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_attachsubscription** é usado na replicação de instantâneo, na replicação transacional e na replicação de mesclagem.  
+ **sp_attachsubscription** é usado na replicação de instantâneos, na replicação transacional e na replicação de mesclagem.  
   
  Uma assinatura não poderá ser anexada à publicação se o período de retenção da publicação tiver expirado. Se uma assinatura com um período de retenção decorrido for especificada, ocorrerá um erro quando ela for anexada ou quando for sincronizada pela primeira vez. As publicações com um período de retenção de publicação de **0** (nunca expiram) são ignoradas.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_attachsubscription**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

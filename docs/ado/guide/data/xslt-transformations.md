@@ -13,19 +13,19 @@ ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923347"
 ---
 # <a name="xslt-transformations"></a>Transformações XSLT
-XSLT pode ser aplicada para o XML gerado para transformá-lo em outro formato. Noções básicas sobre o formato XML no ADO ajuda no desenvolvimento de modelos XSLT que podem transformá-lo em um formulário mais amigável.  
+O XSLT pode ser aplicado ao XML gerado para transformá-lo em outro formato. Entender o formato XML no ADO ajuda a desenvolver modelos XSLT que podem transformá-los em um formulário mais amigável.  
   
- Por exemplo, você sabe que cada linha do conjunto de registros é salvo como elemento z: linha dentro do elemento de dados do rs:. Da mesma forma, cada campo do conjunto de registros é salvo como um par atributo-valor para esse elemento.  
+ Por exemplo, você sabe que cada linha do conjunto de registros é salva como o elemento z:Row dentro do elemento RS: Data. Da mesma forma, cada campo do conjunto de registros é salvo como um par atributo-valor para esse elemento.  
   
 ## <a name="remarks"></a>Comentários  
- O script XSLT a seguir pode ser aplicado ao XML mostrado na seção anterior para transformá-lo em uma tabela HTML a ser exibido no navegador:  
+ O script XSLT a seguir pode ser aplicado ao XML mostrado na seção anterior para transformá-lo em uma tabela HTML a ser exibida no navegador:  
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
@@ -50,7 +50,7 @@ XSLT pode ser aplicada para o XML gerado para transformá-lo em outro formato. N
 </html>  
 ```  
   
- O XSLT converte o fluxo XML gerado pelo método ADO salvar em uma tabela HTML que exibe cada campo do conjunto de registros, juntamente com um cabeçalho de tabela. Linhas e cabeçalhos de tabela também são atribuídas diferentes fontes e cores.  
+ O XSLT converte o fluxo XML gerado pelo método ADO Save em uma tabela HTML que exibe cada campo do conjunto de registros junto com um título de tabela. As linhas e os cabeçalhos de tabela também recebem fontes e cores diferentes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

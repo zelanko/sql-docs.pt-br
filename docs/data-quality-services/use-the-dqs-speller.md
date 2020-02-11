@@ -10,10 +10,10 @@ ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 087d7c7636b456e9cba07eb16abdd135abb43c4e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257756"
 ---
 # <a name="use-the-dqs-speller"></a>Usar o verificador ortográfico DQS
@@ -30,14 +30,14 @@ ms.locfileid: "75257756"
   
  O verificador ortográfico só funciona em domínios únicos com um tipo de dados string. Todos os valores em um único domínio que são de um tipo de dados string são enviados ao verificador ortográfico para validação. O verificador ortográfico não funciona para um domínio composto e não funciona para domínios de tipos que não sejam string, valores mistos (como letras e números sem espaço), numerais romanos, caracteres únicos e valores que consistem apenas em letras maiúsculas.  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a>Pré-requisitos  
+###  <a name="Prerequisites"></a> Pré-requisitos  
  Para executar o verificador ortográfico, você deve ter uma base de dados de conhecimento e um domínio aberto na atividade Descoberta de Conhecimento ou Gerenciamento de Domínio; o verificador ortográfico deve estar habilitado para o domínio e na página onde você vai executá-lo; e a propriedade de idioma deve ser especificada para o domínio.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  É necessário ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para executar o verificador ortográfico.  
   
 ##  <a name="Enable"></a>Habilitar o verificador ortográfico  
