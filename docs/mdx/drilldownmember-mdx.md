@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: af2d52f176b67b27a29eafb662ca539ced53ebbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139099"
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (MDX)
@@ -43,17 +43,17 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
  Uma palavra-chave que indica comparação recursiva de conjuntos.  
   
  *Include_Calc_Members*  
- Uma palavra-chave para habilitar a ser incluído nos resultados da busca detalhada dos membros calculados.  
+ Uma palavra-chave para habilitar membros calculados a serem incluídos nos resultados de busca detalhada.  
   
 ## <a name="remarks"></a>Comentários  
- Essa função retorna um conjunto de membros filho que são ordenados por hierarquia e inclui membros especificados no primeiro conjunto que também estão presentes no segundo conjunto. Membros pai não serão buscados se o primeiro conjunto contiver o membro pai e um ou mais filhos. O primeiro conjunto pode ter qualquer dimensionalidade, mas o segundo deve conter um conjunto unidimensional. A ordem é preservada entre os membros originais no primeiro conjunto, a não ser que todos os membros filho incluídos no conjunto de resultados da função sejam imediatamente incluídos com seu membro pai. A função constrói o conjunto de resultados recuperando os filhos para cada membro no primeiro conjunto que também está presente no segundo conjunto. Se **RECURSIVA** for especificado, a função continua a comparar recursivamente os membros do resultado definidos em relação ao segundo conjunto, recuperando os filhos para cada membro no conjunto de resultados que também está presente no segundo conjunto até que não mais os membros do conjunto de resultados podem ser encontrados no segundo conjunto.  
+ Essa função retorna um conjunto de membros filho que são ordenados por hierarquia e inclui membros especificados no primeiro conjunto que também estão presentes no segundo conjunto. Membros pai não serão buscados se o primeiro conjunto contiver o membro pai e um ou mais filhos. O primeiro conjunto pode ter qualquer dimensionalidade, mas o segundo deve conter um conjunto unidimensional. A ordem é preservada entre os membros originais no primeiro conjunto, a não ser que todos os membros filho incluídos no conjunto de resultados da função sejam imediatamente incluídos com seu membro pai. A função constrói o conjunto de resultados recuperando os filhos para cada membro no primeiro conjunto que também está presente no segundo conjunto. Se **recursivo** for especificado, a função continuará comparando recursivamente os membros do conjunto de resultados em relação ao segundo conjunto, recuperando os filhos de cada membro no conjunto de resultados que também está presente no segundo conjunto até que não mais membros do conjunto de resultados possam ser encontrados no segundo conjunto.  
   
- Consultando a propriedade XMLA **MdpropMdxDrillFunctions** lhe permite verificar se o nível de suporte que o servidor fornece para as funções de detalhamento; consulte [propriedades XMLA com suporte &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)para obter detalhes.  
+ Consultar a propriedade XMLA **MdpropMdxDrillFunctions** permite que você verifique o nível de suporte que o servidor fornece para as funções de análise; consulte [Propriedades XMLA com suporte &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obter detalhes.  
   
  O primeiro conjunto pode conter tuplas em vez de membros. A busca detalhada de tupla é uma extensão de OLE DB e retorna um conjunto de tuplas em vez de membros.  
   
 > [!IMPORTANT]  
->  Um membro não será buscado se for seguido imediatamente por um dos seus filhos. A ordem dos membros do conjunto é importante para tanto o Drilldown * quanto Drillup\* famílias de funções.  
+>  Um membro não será buscado se for seguido imediatamente por um dos seus filhos. A ordem dos membros no conjunto é importante para as famílias de funções de busca\* detalhada * e Drillup.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir faz uma busca detalhada na Austrália, que é o membro do primeiro conjunto que também está presente no segundo conjunto.  
@@ -80,7 +80,7 @@ SELECT DrilldownMember
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

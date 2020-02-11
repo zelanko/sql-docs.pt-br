@@ -1,5 +1,5 @@
 ---
-title: Introdução ao SSMA para Access Console (AccessToSQL) | Microsoft Docs
+title: Introdução com o console do SSMA para Access (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,57 +10,57 @@ ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68222224"
 ---
-# <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introdução ao SSMA para Access Console (AccessToSQL)
-Esta seção descreve o procedimento para iniciar e começar a trabalhar com o aplicativo de console do Access. Também é listado, aqui, são as convenções usadas em uma janela de saída do Console do SSMA típica.  
+# <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introdução com o console do SSMA para Access (AccessToSQL)
+Esta seção descreve o procedimento para iniciar e começar a usar o aplicativo de console do Access. Também listados aqui, estão as convenções usadas em uma janela de saída típica do console do SSMA.  
   
-## <a name="launching-ssma-console"></a>Iniciando o Console do SSMA  
+## <a name="launching-ssma-console"></a>Iniciando o console do SSMA  
 Use as etapas a seguir para iniciar o aplicativo de console do SSMA:  
   
-1.  Vá para **inicie** e aponte para **todos os programas**.  
+1.  Vá para **Iniciar** e aponte para **todos os programas**.  
   
-2.  Clique o **SQL Server Migration Assistant para o Prompt de comando de acesso** atalho.  
+2.  Clique no atalho **Assistente de migração do SQL Server para acessar o prompt de comando** .  
   
-    Ele exibe o menu de uso do Console do SSMA e `(/? Help)`, para ajudá-lo a começar com o aplicativo de console.  
+    Ele exibe o menu uso do console do `(/? Help)`SSMA e, para ajudá-lo a começar a usar o aplicativo de console.  
   
-## <a name="procedure-for-using-the-ssma-console"></a>Procedimento para usar o Console do SSMA  
-Depois que o console é iniciado com êxito em seu sistema Windows, você pode usar as etapas a seguir para trabalhar nele:  
+## <a name="procedure-for-using-the-ssma-console"></a>Procedimento para usar o console do SSMA  
+Depois que o console do for iniciado com êxito no seu sistema Windows, você poderá usar as seguintes etapas para trabalhar nele:  
   
-1.  Configure o Console do SSMA através dos arquivos de script. Para obter mais informações sobre essa seção, consulte [criando arquivos de Script &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md).  
+1.  Configure o console do SSMA por meio dos arquivos de script. Para obter mais informações sobre esta seção, consulte [criando arquivos de Script &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md).  
   
-2.  [Criando arquivos de valor da variável &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
+2.  [Criando arquivos de valor de variável &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
-3.  [Criar os arquivos de Conexão de servidor &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+3.  [Criando os arquivos de conexão do servidor &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-4.  [Executar o Console do SSMA &#40;AccessToSQL&#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md) com base em suas necessidades de projeto  
+4.  [Executando o console do SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md) com base em suas necessidades de projeto  
   
 Recursos adicionais:  
   
-1.  [Especifique uma senha](managing-passwords-accesstosql.md) e exportar / importá-los em outros computadores da janela  
+1.  [Especificar uma senha](managing-passwords-accesstosql.md) e exportá-la/importá-la para outros computadores da janela  
   
-2.  [Gerar relatórios](generating-reports-accesstosql.md) exibir o xml detalhado relatórios para avaliação /conversion e migração de dados de saída. Relatórios de erro detalhadas também podem ser gerados para os comandos de atualização e a sincronização.  
+2.  [Gere relatórios](generating-reports-accesstosql.md) para exibir os relatórios de saída XML detalhados para avaliação/Conversion e migração de dados. Relatórios de erro detalhados também podem ser gerados para comandos de sincronização e atualização.  
   
-## <a name="ssma-console-output-conventions"></a>Convenções de saída de Console do SSMA  
-Após executar os comandos de script do SSMA e opções, o programa do console exibe os resultados e mensagens (informações de erro, etc.) para o usuário no console ou se for necessário, redireciona para um arquivo de saída xml. Cada tipo de mensagem na saída é representado por uma cor exclusiva. Por exemplo, a mensagem de texto cor branca indica comandos do arquivo de script; a cor verde representa um prompt para entrada do usuário e assim por diante.  
+## <a name="ssma-console-output-conventions"></a>Convenções de saída do console do SSMA  
+Após a execução dos comandos e opções do script do SSMA, o programa de console exibe os resultados e as mensagens (informações, erro, etc.) para o usuário no console do ou, se necessário, redireciona para um arquivo de saída XML. Cada tipo de mensagem na saída é representado por uma cor exclusiva. Por exemplo, a mensagem de texto na cor branca denota comandos de arquivo de script; a cor verde representa um prompt para entrada do usuário e assim por diante.  
   
-![A saída do Console SSMA](../../ssma/access/media/ssmaconsoleoutput.jpg "a saída do Console SSMA")  
+![Saída do Console SSMA](../../ssma/access/media/ssmaconsoleoutput.jpg "Saída do Console SSMA")  
   
-Interpretação de cor da saída do console na tabela a seguir:  
+Interpretação de cores da saída do console na tabela a seguir:  
   
-|Cor|Descrição|  
+|Color|DESCRIÇÃO|  
 |---------|---------------|  
 |Vermelho|Erro fatal durante a execução|  
-|Cinza|Carimbo de data e hora da mensagem para o usuário|  
-|Branco|Comandos do arquivo de script, o tipo de mensagem|  
+|Cinza|Carimbo de data e hora, mensagem para o usuário|  
+|Branco|Comandos de arquivo de script, tipo de mensagem|  
 |Amarelo|Aviso|  
-|Verde|Prompt para entrada do usuário|  
-|Ciano|Guia de início, término e o resultado de uma operação|  
+|Verde|Solicitar entrada do usuário|  
+|Cores|Início, término e resultado de uma operação|  
   
-## <a name="see-also"></a>Consulte também  
-[Instalando o Assistente de migração do SQL Server para Access](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Instalando o Assistente de Migração do SQL Server para acesso](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
   

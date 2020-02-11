@@ -18,22 +18,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831567"
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
   O contêiner Loop Foreach define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **Foreach** em linguagens de programação. Em um pacote, o looping é habilitado por um enumerador Foreach.  O contêiner Loop Foreach repete o fluxo de controle para cada membro de um enumerador especificado.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece os seguintes tipos de enumerador:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece os seguintes tipos de enumerador:  
   
 -   Enumerador Foreach ADO para enumerar linhas em tabelas. Por exemplo, você pode obter as linhas em um conjunto de registros ADO.  
   
      O destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do tipo de dados `Object`. Geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. A variável especificada para o enumerador Foreach ADO deve ser de tipo de dados Object. Para obter mais informações sobre o destino Recordeset, consulte [Use a Recordset Destination](../data-flow/recordset-destination.md).  
   
--   O Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach enumera informações de esquema sobre uma fonte de dados. Por exemplo, você pode enumerar e obter uma lista das tabelas do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   O Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach enumera informações de esquema sobre uma fonte de dados. Por exemplo, você pode enumerar e obter uma lista das tabelas no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados.  
   
 -   Enumerador de Arquivo Foreach para enumerar arquivos em uma pasta. O enumerador pode desviar subpastas. Por exemplo, você pode ler todos os arquivos que têm extensão de nome de arquivo * .log na pasta e respectivas subpastas do Windows.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "62831567"
   
 -   Enumerador de Blob do Azure Foreach para enumerar blobs em um contêiner de blob em um Armazenamento do Azure.  
   
--   Enumerador de arquivo do ADLS foreach para enumerar arquivos em um diretório do ADLS.
+-   Enumerador de arquivo ADLS foreach para enumerar arquivos em um diretório ADLS.
   
  O diagrama a seguir mostra um contêiner Loop Foreach que tem uma tarefa Sistema de Arquivos. O loop Foreach usa o enumerador de Arquivo Foreach e a tarefa Sistema de Arquivos é configurada para copiar um arquivo. Se a pasta que o enumerador especifica contiver quatro arquivos, o loop repetirá quatro vezes e copiará quatro arquivos.  
   
- ![Um contêiner de Loop Foreach que enumera uma pasta](../media/ssis-foreachloop.gif "Um contêiner de Loop Foreach que enumera uma pasta")  
+ ![Um contêiner Loop Foreach que enumera uma pasta](../media/ssis-foreachloop.gif "Um contêiner Loop Foreach que enumera uma pasta")  
   
- Você pode usar uma combinação de variáveis e expressões de propriedade para atualizar a propriedade do objeto de pacote com o valor de coleção do enumerador. Primeiro você mapeia o valor de coleção para uma variável definida pelo usuário e, depois, implementa uma expressão na propriedade que usa a variável. Por exemplo, o valor de coleção do enumerador de arquivo Foreach é mapeado para uma variável chamada `MyFile` e a variável é usada na expressão de propriedade para a propriedade Subject de uma tarefa enviar email. Quando o pacote é executado, a propriedade Subject é atualizada com o nome de um arquivo cada vez que o loop é repetido. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).  
+ Você pode usar uma combinação de variáveis e expressões de propriedade para atualizar a propriedade do objeto de pacote com o valor de coleção do enumerador. Primeiro você mapeia o valor de coleção para uma variável definida pelo usuário e, depois, implementa uma expressão na propriedade que usa a variável. Por exemplo, o valor da coleção do enumerador de arquivo foreach é mapeado para uma `MyFile` variável chamada e a variável é usada na expressão de propriedade da propriedade Subject de uma tarefa Enviar email. Quando o pacote é executado, a propriedade Subject é atualizada com o nome de um arquivo cada vez que o loop é repetido. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).  
   
  Variáveis mapeadas para o valor de coleção do enumerador também podem ser usadas em expressões e scripts.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "62831567"
 |Item Foreach|Defina os itens na coleção Itens Foreach, inclusive colunas e tipos de dados de coluna.|  
 |Nodelist Foreach|Especifique a origem do documento XML e configure a operação XPath.|  
 |SMO Foreach|Especifique a conexão com um banco de dados e os objetos SMO a serem enumerados.|  
-|Blob do Azure Foreach|Especifica o contêiner de BLOBs do Azure que contém blobs a serem enumerados.|  
-|Arquivo ADLS Foreach|Especifique o diretório do ADLS que contém os arquivos a serem enumerados, juntamente com alguns filtros.|
+|Blob do Azure Foreach|Especifique o contêiner de blob do Azure que contém os BLOBs a serem enumerados.|  
+|Arquivo ADLS Foreach|Especifique o diretório ADLS que contém os arquivos a serem enumerados, juntamente com alguns filtros.|
   
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Expressões de propriedade em contêineres Loop Foreach  
  É possível configurar pacotes para executar simultaneamente vários executáveis. Essa configuração deve ser usada com cautela quando o pacote incluir um contêiner Loop Foreach que implementa expressões de propriedade.  
@@ -101,7 +101,7 @@ ms.locfileid: "62831567"
 ## <a name="related-content"></a>Conteúdo relacionado  
  Entrada de blog, [SSIS For Each Node List Enumerator](https://go.microsoft.com/fwlink/?LinkId=220671), em bidn.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Controle](control-flow.md)   
  [Contêineres do Integration Services](integration-services-containers.md)  
   
