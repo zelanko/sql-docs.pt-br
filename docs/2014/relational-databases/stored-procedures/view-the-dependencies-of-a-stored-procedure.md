@@ -15,15 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856496"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Exibir as dependências de um procedimento armazenado
     
-##  <a name="Top"></a> Este tópico descreve como exibir dependências de procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] por meio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  
+  <a name="Top"></a> Este tópico descreve como exibir dependências de procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Antes de começar:**  [Segurança](#Security)  
   
@@ -43,7 +44,7 @@ ms.locfileid: "62856496"
  Exibição do catálogo de objetos: `sys.sql_expression_dependencies`  
  Requer permissão VIEW DEFINITION no banco de dados e permissão SELECT em sys.sql_expression_dependencies para o banco de dados. Por padrão, a permissão SELECT é concedida somente a membros da função de banco de dados fixa db_owner. Quando são concedidas permissões SELECT e VIEW DEFINITION a outro usuário, o usuário autorizado pode exibir todas as dependências no banco de dados.  
   
-##  <a name="Procedures"></a> Como exibir as dependências de um procedimento armazenado  
+##  <a name="Procedures"></a>Como exibir as dependências de um procedimento armazenado  
  Você pode usar uma das seguintes opções:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
@@ -51,7 +52,7 @@ ms.locfileid: "62856496"
 -   [Transact-SQL](#TsqlProcedure)  
   
 ###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- **Para exibir as dependências de um procedimento armazenado no Pesquisador de Objetos**  
+ **Para exibir as dependências de um procedimento no Pesquisador de objetos**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "62856496"
 6.  Clique em **OK**.  
   
 ###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
- **Para exibir as dependências de um procedimento no Editor de Consultas**  
+ **Para exibir as dependências de um procedimento no editor de consultas**  
   
  Função do sistema: `sys.dm_sql_referencing_entities`  
  Esta função é usada para exibir os objetos que dependem de um procedimento.  
@@ -181,10 +182,10 @@ ms.locfileid: "62856496"
     GO  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Renomear um procedimento armazenado](rename-a-stored-procedure.md)   
- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
+ [sys. dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
+ [sys. dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
   
   

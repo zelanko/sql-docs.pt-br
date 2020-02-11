@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88bceac4d712eb1010e4915e11267b7d2ee258a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101743"
 ---
 # <a name="secure-my-reports"></a>Proteger Meus Relatórios
@@ -34,7 +34,7 @@ ms.locfileid: "66101743"
   
  Uma atribuição de função de **Meus Relatórios** consiste nos seguintes elementos:  
   
--   A pasta Meus Relatórios do usuário, que está localizada na pasta Pastas dos Usuários\\*\<username>* \Meus Relatórios.  
+-   A pasta Meus Relatórios do usuário, que está localizada na pasta Pastas dos Usuários\\ *\<username>* \Meus Relatórios.  
   
 -   A conta de usuário, que é determinada quando a pasta Meus Relatórios é ativada. Uma pasta é ativada quando o usuário clica em uma pasta Meus Relatórios no Gerenciador de Relatórios ou publica um relatório em uma pasta Meus Relatórios a partir do Designer de Relatórios. Essa pasta também é ativada quando o usuário solicita propriedades no link Meus Relatórios.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66101743"
   
  Ao desabilitar Meus Relatórios, o link para uma pasta Meus Relatórios é removido do Gerenciador de Relatórios. A estrutura de pasta subjacente que dá suporte a Meus Relatórios (quer dizer, a pasta Pastas dos Usuários e as subpastas) ainda estará disponível e poderá ser acessada se o usuário souber o caminho da pasta. A remoção de tarefas da função **Meus Relatórios** assegura a negação do acesso.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Proteger relatórios e recursos](secure-reports-and-resources.md)   
  [Proteger pastas](secure-folders.md)   
  [Conceder permissões em um servidor de relatório no Modo Nativo](granting-permissions-on-a-native-mode-report-server.md)  

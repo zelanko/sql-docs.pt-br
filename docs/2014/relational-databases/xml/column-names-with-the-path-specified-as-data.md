@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe23dba019511137c9ad817ecdf87fae1938bbd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288795"
 ---
 # <a name="column-names-with-the-path-specified-as-data"></a>Nomes de colunas com o caminho especificado como data()
@@ -37,7 +37,7 @@ WHERE ProductModelID= 7
 FOR XML PATH('ProductModelData');  
 ```  
   
- O SELECT aninhado recupera uma lista de IDs de produtos. Ele especifica "data()" como o nome da coluna para IDs de produtos. Como o modo PATH especifica uma cadeia de caracteres vazia para o nome do elemento de linha, não há nenhum elemento de linha gerado. Em vez disso, os valores são retornados conforme são atribuídos a um atributo ProductIDs do elemento de linha <`ProductModelData`> do SELECT pai. Esse é o resultado:  
+ O SELECT aninhado recupera uma lista de IDs de produtos. Ele especifica "data()" como o nome da coluna para IDs de produtos. Como o modo PATH especifica uma cadeia de caracteres vazia para o nome do elemento de linha, não há nenhum elemento de linha gerado. Em vez disso, os valores são retornados conforme são atribuídos a um atributo ProductIDs do elemento de linha <`ProductModelData`> do SELECT pai. Este é o resultado:  
   
  `<ProductModelData ProductModelID="7"`  
   
@@ -45,7 +45,7 @@ FOR XML PATH('ProductModelData');
   
  `ProductIDs="885 887 888 889 890 891 892 893" />`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo PATH com FOR XML](use-path-mode-with-for-xml.md)  
   
   

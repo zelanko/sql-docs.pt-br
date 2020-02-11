@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282027"
 ---
 # <a name="show-the-object-explorer-details-page"></a>Exibir a página Detalhes do Pesquisador de Objetos
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode exibir um relatório para cada objeto selecionado no Pesquisador de Objetos. Esse relatório, denominado página Detalhes do Pesquisador de Objetos, é criado pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e aberto na janela de documentos.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]pode mostrar um relatório para cada objeto selecionado no Pesquisador de objetos. Esse relatório, denominado página Detalhes do Pesquisador de Objetos, é criado pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e aberto na janela de documentos.  
   
 ## <a name="showing-the-object-explorer-details-page"></a>Exibindo a página Detalhes do Pesquisador de Objetos  
   

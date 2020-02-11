@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102402"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>Carregar um arquivo ou relatório (Gerenciador de Relatórios)
@@ -42,16 +42,16 @@ ms.locfileid: "66102402"
   
 4.  Clique em **Procurar** para selecionar o arquivo a ser carregado. Você pode carregar um arquivo de definição de relatório, uma imagem, um documento ou qualquer arquivo que deseje disponibilizar no servidor de relatório.  
   
-5.  Digite um nome para o novo item. Um nome de item pode incluir espaços, mas não pode incluir os caracteres reservados: ; ? : \@ & = + , $ / * \< > |.  
+5.  Digite um nome para o novo item. Um nome de item pode incluir espaços, mas não pode incluir os caracteres reservados: ; ? : \@ & = +, $/* \< > |.  
   
 6.  Se desejar substituir um item existente pelo novo item, selecione **Substituir item, se existir**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../contents-page-report-manager.md)   
- [Página Carregar Arquivo &#40;Gerenciador de Relatórios&#41;](../upload-file-page-report-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Página de conteúdo &#40;Report Manager&#41;](../contents-page-report-manager.md)   
+ [&#40;Report Manager de carregamento da página de arquivos&#41;](../upload-file-page-report-manager.md)   
  [Carregar arquivos em uma pasta](../report-server/upload-files-to-a-folder.md)  
   
   

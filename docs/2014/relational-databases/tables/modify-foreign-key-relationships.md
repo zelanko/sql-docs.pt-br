@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196839"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relações de chave estrangeira
@@ -99,8 +99,8 @@ ms.locfileid: "68196839"
      **Categoria de identidade**  
      Expanda para mostrar os campos de propriedade para **Nome** e **Descrição**.  
   
-     **Name**  
-     Mostra o nome da relação. Quando uma nova relação é criada, é determinado um nome padrão com base na tabela na janela ativa em **Designer de Tabela**. O nome pode ser alterado a qualquer momento.  
+     **Nome**  
+     Mostra o nome da relação. Quando uma nova relação é criada, é determinado um nome padrão com base na tabela na janela ativa em **Designer de Tabela**. É possível alterar o nome a qualquer momento.  
   
      **Descrição**  
      Descreve a relação. Para redigir uma descrição mais detalhada, clique em **Descrição** e nas reticências **(...)** que aparecem à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
@@ -108,7 +108,7 @@ ms.locfileid: "68196839"
      **Categoria do Designer de Tabelas**  
      Expanda para mostrar informações por **Verificar Dados Existentes ao Criar ou Habilitar Novamente** e **Impor para Replicação**.  
   
-     **Enforce For Replication**  
+     **Impor para Replicação**  
      Indica se a restrição será imposta quando um agente de replicação realizar uma inserção, atualização ou exclusão na tabela.  
   
      **Impor Restrição de Chave Estrangeira**  
@@ -139,7 +139,7 @@ ms.locfileid: "68196839"
   
     -   **Definir Padrão** Define o valor como o valor padrão que é definido para a coluna se todas as colunas de chave estrangeira para a tabela têm padrões definidos.  
   
-4.  No menu **Arquivo** , clique em **Salvar**_table name_.  
+4.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para modificar uma chave estrangeira**  

@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637778"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Recursos do SQL Server descontinuados no SQL Server 2014
@@ -51,10 +51,10 @@ ms.locfileid: "73637778"
 |Configurações de substituição e recursos de componente|Como configurar|  
 |-------------------------------------------------|----------------------|  
 |Opções de protocolos, conexão e inicialização|Use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.|  
-|Recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)]|Use o Gerenciamento Baseado em Política, as configurações de propriedade no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou sp_Configure.|  
-|Recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Use as configurações de propriedade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|Propriedade de segurança [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Propriedade EnableIntegrated|Use as configurações de propriedade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-"agendar eventos e entrega de relatório" e "serviço Web e acesso HTTP"|Edite o arquivo de configuração RSReportServer.config.|  
+|[!INCLUDE[ssDE](../includes/ssde-md.md)]Features|Use o Gerenciamento Baseado em Política, as configurações de propriedade no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou sp_Configure.|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Features|Use as configurações de propriedade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Propriedade de segurança Propriedade EnableIntegrated|Use as configurações de propriedade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-"Agendar eventos e entrega de relatório" e "serviço Web e acesso HTTP"|Edite o arquivo de configuração RSReportServer.config.|  
 |Opções de linha de comando|Sem suporte nesta versão.|  
 |SOAP e pontos de extremidade do [!INCLUDE[ssSB](../includes/sssb-md.md)]|Use [CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)e [ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
   
@@ -78,7 +78,7 @@ ms.locfileid: "73637778"
   
  <sup>1</sup> Esses parâmetros são válidos somente para instalação.  
   
- <sup>2</sup> Iniciando [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], especifique/Action = EditionUpgrade para atualizar uma edição existente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para uma edição diferente a qualquer momento sem usar a mídia de instalação original. Para obter mais informações sobre a versão e as atualizações de edição com suporte, consulte [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup> A [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]partir de, especifique/Action = EditionUpgrade para atualizar uma edição existente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do para uma edição diferente, a qualquer momento, sem usar a mídia de instalação original. Para obter mais informações sobre a versão e as atualizações de edição com suporte, consulte [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Para obter mais informações, consulte [Install SQL Server 2014 from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) (Instalar o SQL Server 2014 do Prompt de Comando).  
   

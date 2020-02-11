@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 69c4a15108e682659cd95a20b4fc4ec5c41da007
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905901"
 ---
 # <a name="kpicurrenttimemember-mdx"></a>KPICurrentTimeMember (MDX)
@@ -34,7 +34,7 @@ KPICurrentTimeMember(KPI_Name)
 ## <a name="remarks"></a>Comentários  
  Um KPI pode ter um membro de hora diferente do membro padrão da dimensão Tempo.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

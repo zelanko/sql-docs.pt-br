@@ -1,5 +1,5 @@
 ---
-title: Append de procedimentos de exemplo do método (VB) | Microsoft Docs
+title: Exemplo do método de acréscimo de procedimentos (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8bacc5dc2d55fb335358ab9ca34248f8e322811a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965420"
 ---
 # <a name="procedures-append-method-example-vb"></a>Exemplo do método Append de procedimentos (VB)
-O código a seguir demonstra como usar um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto e o [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) coleção [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) método para criar um novo procedimento na fonte de dados subjacente.  
+O código a seguir demonstra como usar um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) e o método de [acréscimo](../../../ado/reference/adox-api/append-method-adox-procedures.md) de coleção [procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) para criar um novo procedimento na fonte de dados subjacente.  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -73,9 +73,9 @@ End Sub
 ' EndCreateProcedureVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Acrescentar o método (procedimentos do ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Método Append (procedimentos do ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

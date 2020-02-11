@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades do conjunto de dados, campos | Microsoft Docs
+title: Caixa de diálogo Propriedades do conjunto de, campos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 133d905958f0613d9b7ecf2d28c439c15a59eedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109402"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Campos
@@ -33,7 +33,7 @@ ms.locfileid: "66109402"
  **Nome do campo**  
  Digite um nome para o campo. O campo deve ser exclusivo no conjunto de dados. Para cada campo existente na consulta de conjunto de dados, o nome é populado previamente.  
   
- **Origem do campo**  
+ **Origem de Campo**  
  Insira um valor para o campo.  
   
  Para um campo calculado, a origem do campo deve ter o nome de um campo existente recuperado pela consulta do conjunto de dados ou uma expressão criada por você. Por exemplo, para criar um campo que represente 10 vezes o valor no campo de consulta Sales, use a expressão `=10 * Fields!Sales.Value`.  
@@ -43,9 +43,9 @@ ms.locfileid: "66109402"
  **Expressão (fx)**  
  Adicione ou altere uma expressão para o campo calculado. Esse botão só é exibido quando você clica em **Adicionar** e seleciona **Campo Calculado**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
   

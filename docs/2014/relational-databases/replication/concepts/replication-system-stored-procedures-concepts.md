@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721938"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
@@ -127,7 +127,7 @@ GO
  Uma vez criado, um script de replicação pode ser executado de uma das seguintes formas:  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Criando um arquivo de consulta SQL no SQL Server Management Studio  
- Um arquivo de script de replicação [!INCLUDE[tsql](../../../includes/tsql-md.md)] pode ser criado como um arquivo SQL Query em um projeto do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Após a gravação do script, pode ser feita uma conexão ao banco de dados para que esse arquivo de consulta e o script possam ser executados. Para obter mais informações sobre como criar [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts por meio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], consulte [consulta e editores de texto &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
+ Um arquivo de script de replicação [!INCLUDE[tsql](../../../includes/tsql-md.md)] pode ser criado como um arquivo SQL Query em um projeto do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Após a gravação do script, pode ser feita uma conexão ao banco de dados para que esse arquivo de consulta e o script possam ser executados. Para obter mais informações sobre como criar [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]o, consulte [editores de consulta e de texto &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
   
  Para usar um script que inclua variáveis de script, o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] deve ser executado em modo **sqlcmd**. Em modo **sqlcmd**, o Editor de Consultas aceita sintaxe adicional específica do **sqlcmd**, como `:setvar`, usado para um valor de uma variável. Para obter mais informações sobre o modo **sqlcmd**, consulte [Editar scripts SQLCMD com o Editor de Consultas](../../scripting/edit-sqlcmd-scripts-with-query-editor.md). No script a seguir, `:setvar` é usado para fornecer um valor para a variável `$(DistPubServer)`.  
   
@@ -159,7 +159,7 @@ SET @publisher = $(DistPubServer);
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
 ```  
   
- Neste exemplo, a opção `-E` indica que a Autenticação do Windows será usada na conexão ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando a Autenticação do Windows for usada, não haverá necessidade de armazenar um nome de usuário e uma senha no arquivo de script. O nome e o caminho do arquivo de script são especificados pela opção `-i` e o nome do arquivo de saída é especificado pela opção `-o` (a saída do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será gravada nesse arquivo em vez de no console quando essa opção for usada). O utilitário `sqlcmd` permite que você transmita variáveis de script para um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] em tempo de execução por meio da opção `-v`. Neste exemplo, `sqlcmd` substitui todas as instâncias de `$(DistPubServer)` do script pela valor `N'MyDistributorAndPublisher'` antes da execução.  
+ Neste exemplo, a opção `-E` indica que a Autenticação do Windows será usada na conexão ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando a Autenticação do Windows for usada, não haverá necessidade de armazenar um nome de usuário e uma senha no arquivo de script. O nome e o caminho do arquivo de script são especificados pela opção `-i` e o nome do arquivo de saída é especificado pela opção `-o` (a saída do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será gravada nesse arquivo em vez de no console quando essa opção for usada). O utilitário `sqlcmd` permite que você transmita variáveis de script para um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] em runtime por meio da opção `-v`. Neste exemplo, `sqlcmd` substitui todas as instâncias de `$(DistPubServer)` do script pela valor `N'MyDistributorAndPublisher'` antes da execução.  
   
 > [!NOTE]  
 >  A opção `-X` desabilita variáveis de script.  
@@ -222,7 +222,7 @@ REM -- The following must be supplied on one line.
   
 -   Sincronizando uma assinatura pull  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceitos de programação da replicação](replication-programming-concepts.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)   
  [Replicação de script](../scripting-replication.md)  

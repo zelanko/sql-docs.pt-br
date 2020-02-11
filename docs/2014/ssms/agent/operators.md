@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189024"
 ---
 # <a name="operators"></a>Operadores
@@ -47,7 +47,7 @@ ms.locfileid: "68189024"
  As informações de contato de um operador definem como ele é notificado. Os operadores podem ser notificados por email, pager ou através do comando **net send** :  
   
 > [!IMPORTANT]  
->  As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
+>  As opções pager e **net send** serão removidas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Agent em uma versão futura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
 -   **Notificação por email**  
   
@@ -73,14 +73,14 @@ ms.locfileid: "68189024"
   
          **Assunto:**  
   
-         **Cc**:  
+         **CC**:  
   
          **Para**:  
   
     > [!NOTE]  
     >  Se usar um sistema de pager alfanumérico, você poderá abreviar o texto enviado, excluindo o texto de erro da notificação por pager. Um exemplo de sistema de pager alfanumérico de baixa-capacidade é aquele limitado a 64 caracteres por página.  
   
--   **notificação net send**  
+-   **NET SendNotification**  
   
      Envia uma mensagem ao operador por meio do comando **net send** . Para **net send**, especifique o destinatário (computador ou usuário) de uma mensagem da rede.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68189024"
   
      São motivos de falha em alcançar operadores primários endereços de pager incorretos e operadores fora de serviço.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent não consegue acessar as tabelas do sistema no banco de dados **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O agente não pode acessar as tabelas do sistema no banco de dados **msdb** .  
   
      A tabela do sistema **sysnotifications** especifica as responsabilidades de operador para os alertas.  
   
@@ -113,15 +113,15 @@ ms.locfileid: "68189024"
   
 -   Para usar **net send**, o operador deve ter feito logon no computador especificado e este deve permitir mensagens do Windows Messenger.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
 |**Tarefas**|**Tópico**|  
-|Tarefas relacionadas à criação de um operador|[Criar um operador](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|Tarefas relacionadas à atribuição de alertas|[Atribuir alertas a um operador](assign-alerts-to-an-operator.md)<br /><br /> [Definir a resposta a um alerta &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Atribuir alertas a um operador](assign-alerts-to-an-operator.md)|  
+|Tarefas relacionadas à criação de um operador|[Criar um operador](create-an-operator.md)<br /><br /> [Designar um operador à prova de falhas](designate-a-fail-safe-operator.md)|  
+|Tarefas relacionadas à atribuição de alertas|[Atribuir alertas a um operador](assign-alerts-to-an-operator.md)<br /><br /> [Definir a resposta a um alerta &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [&#41;&#40;Transact-SQL de sp_add_notification](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Atribuir alertas a um operador](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

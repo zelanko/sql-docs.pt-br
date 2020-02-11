@@ -1,5 +1,5 @@
 ---
-title: Página itens dependentes (Gerenciador de relatórios) | Microsoft Docs
+title: Página itens dependentes (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109333"
 ---
 # <a name="dependent-items-page-report-manager"></a>Página Itens Dependentes (Gerenciador de Relatórios)
@@ -43,7 +43,7 @@ ms.locfileid: "66109333"
  **Delete (excluir)**  
  Clique para excluir o relatório ou o modelo do banco de dados do servidor de relatório. Antes de clicar em **Excluir**, marque a caixa de seleção ao lado de cada item que você deseja excluir.  
   
- **Migrar**  
+ **Mover**  
  Clique para realocar um relatório ou modelo dentro da hierarquia de pasta. Antes de clicar em **Mover**, marque a caixa de seleção próximo a cada item que você deseja mover. Isso abre a página Mover Itens, onde você pode navegar pelas pastas para selecionar um local novo.  
   
  **Editar**  
@@ -52,19 +52,19 @@ ms.locfileid: "66109333"
  **Tipo**  
  Exibe o ícone do tipo de item.  
   
- **Data da modificação**  
+ **Data da Modificação**  
  Exibe a data e hora em que o relatório ou modelo foram modificados pela última vez.  
   
  **Modificado por**  
  Mostra o nome do usuário que modificou por último as propriedades do item.  
   
- **Quando executado**  
+ **Quando Executado**  
  Para relatórios executados como instantâneos de execução de relatório, exibe a data e hora da última atualização do relatório.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Página de conteúdo &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

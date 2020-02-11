@@ -13,14 +13,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bccf908359fa0cb75a8ae0bcfe7a601ccbfd6618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483399"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Criar um administrador de modelo (Master Data Services)
-  Na [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um administrador de modelo quando desejar que um grupo ou usuário ter **atualização** permissão a todos os objetos em um ou mais modelos.  
+  No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um administrador de modelo quando desejar que um grupo ou usuário tenha a permissão **Atualizar** para todos os objetos em um ou mais modelos.  
   
 > [!TIP]  
 >  Para simplificar a administração, crie um grupo local ou do Windows e configure-o como um administrador de modelo. Isso lhe permitirá adicionar e remover usuários do grupo sem acessar o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "65483399"
   
 -   Você deve ter permissão para acessar a área funcional **Permissões de Usuário e Grupo** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model-administrator"></a>Para criar um administrador de modelo  
   
@@ -48,18 +48,18 @@ ms.locfileid: "65483399"
   
 7.  Clique no modelo ao qual você deseja atribuir permissão.  
   
-8.  No menu, selecione **atualização**.  
+8.  No menu, selecione **Atualizar**.  
   
 9. Conclua as etapas 7 e 8 para cada modelo do qual o grupo ou usuário deverá ser administrador.  
   
-10. Clique em **Salvar**.  
+10. Clique em **Save** (Salvar).  
   
 ## <a name="remarks"></a>Comentários  
- Não atribua qualquer outra permissão a objetos de modelo ou membros de hierarquia. Se você fizer isso, o usuário não é mais um administrador e não é possível exibir o modelo em qualquer área funcional diferente de **Explorer**.  
+ Não atribua qualquer outra permissão a objetos de modelo ou membros de hierarquia. Se você fizer isso, o usuário não será mais um administrador e não poderá exibir o modelo em nenhuma área funcional que não seja o **Explorer**.  
   
- Há uma exceção: se o usuário tiver **atualização** permissão atribuída a uma hierarquia **raiz** no **membros da hierarquia** guia, o usuário ainda é considerado um modelo como administrador.  
+ Há uma exceção: se o usuário tiver a permissão **Atualizar** atribuída a uma **raiz** de hierarquia na guia **membros da hierarquia** , o usuário ainda será considerado um administrador de modelo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md)   
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Atribuir permissões de membro de hierarquia &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

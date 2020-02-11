@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105526"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS)
@@ -57,9 +57,9 @@ ms.locfileid: "66105526"
   
 |Suportado na expressão|Agregações de ReportItems|Agregações de conjunto de dados (o escopo deve ser o nome do conjunto de dados)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Caixas de texto no corpo do relatório|Sim|Não |  
-|&PageNumber|Sim|Não |  
-|&TotalPages|Sim|Não |  
+|Caixas de texto no corpo do relatório|Sim|Não|  
+|&PageNumber|Sim|Não|  
+|&TotalPages|Sim|Não|  
 |Função de agregação|Sim. Por exemplo,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Sim. Por exemplo,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Coleção de campos para itens da página|Indiretamente. Por exemplo,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sim. Por exemplo,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Imagem vinculada a dados|Indiretamente. Por exemplo, `=ReportItems!TXT_Photo.Value`|Sim. Por exemplo,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
@@ -126,7 +126,7 @@ ms.locfileid: "66105526"
   
  Para obter mais informações, consulte [Exportar para Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Inserir uma imagem em um relatório &#40;Construtor de Relatórios e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   

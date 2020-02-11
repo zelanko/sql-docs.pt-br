@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882174"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Definir o período de validade da assinatura
@@ -50,7 +50,7 @@ ms.locfileid: "73882174"
     -   É possível especificar para que as assinaturas nunca expirem, mas recomendamos não usar este valor, pois os metadados não poderão ser limpos.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Defina o período de expiração da assinatura na página **Geral** da caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de publicação](view-and-modify-publication-properties.md).  
+ Defina o período de expiração da assinatura na página **Geral** da caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>Para definir o período de validade da assinatura  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73882174"
   
 2.  Caso devam vencer, especifique um período de tempo para o vencimento.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Você pode usar os procedimentos armazenados de replicação para definir este valor quando uma publicação é criada ou para modificar este valor posteriormente.  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para definir o período de validade de uma assinatura de um instantâneo ou publicação transacional  
@@ -97,8 +97,8 @@ ms.locfileid: "73882174"
   
 3.  (Opcional) No Editor, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique **retention_period_unit** em **\@property** e uma nova unidade para o período de validade da assinatura em **\@value**.  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos dos procedimentos armazenados no sistema de replicação](../concepts/replication-system-stored-procedures-concepts.md)   
- [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Desativação e expiração de assinatura](../subscription-expiration-and-deactivation.md)  
   
   

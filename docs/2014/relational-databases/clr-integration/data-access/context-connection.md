@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6334964a58e643ad373aa8fb0599f39bd3ba01c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919227"
 ---
 # <a name="context-connection"></a>Conexão de contexto
@@ -51,7 +51,7 @@ End Using
 ```  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Regular vs. Conexões de contexto](context-connections-vs-regular-connections.md)  
+ [Conexões de contexto e normais](context-connections-vs-regular-connections.md)  
  Descreve as diferenças entre conexões normais e de contexto.  
   
  [Restrições em conexões comuns e de contexto](context-connections-and-regular-connections-restrictions.md)  

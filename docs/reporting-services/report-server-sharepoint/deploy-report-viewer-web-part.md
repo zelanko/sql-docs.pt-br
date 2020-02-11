@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579984"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implantar a web part do Visualizador de Relatórios do SQL Server Reporting Services em um site do SharePoint
@@ -161,7 +161,7 @@ Há suporte para os seguintes idiomas com a web part:
 
 * Erro ao tentar atualizar o SharePoint se você configurou o modo integrado do SharePoint:
 
-    Não foi possível carregar o arquivo ou o assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' ou uma de suas dependências. O sistema não pôde localizar o arquivo especificado. 00000000-0000-0000-0000-000000000000
+    Não foi possível carregar o arquivo ou o assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' ou uma de suas dependências. O sistema não pode encontrar o arquivo especificado. 00000000-0000-0000-0000-000000000000
     
     Solução:
     1. Remover a web part do Visualizador de Relatórios
@@ -172,4 +172,4 @@ Há suporte para os seguintes idiomas com a web part:
 
 Após a implantação e ativação da web part do Visualizador de Relatórios, adicione a web part a uma página do SharePoint. Para obter mais informações, consulte [Adicionar uma web part do Visualizador de Relatórios a uma página do SharePoint](add-report-viewer-web-part-to-page.md).
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: Registrando objetos de negócios no cliente para uso com DCOM | Microsoft Docs
+title: Registrando objetos comerciais no cliente para uso com DCOM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,19 +13,19 @@ ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31af4a68ec830a5fd514173c831ce3863fef7443
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922356"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>Registrar objetos de negócios no cliente para uso com DCOM
-Objetos comerciais personalizados precisam garantir que o lado do cliente pode mapear seu nome de programa (ProgId) para um CLSID (identificador) que pode ser usado ao DCOM. Por esse motivo, o ProgID do objeto DCOM deve estar no registro do lado do cliente e mapear para a ID de classe do objeto comercial do lado do servidor. Para os outros protocolos com suporte (HTTP, HTTPS e em processo), isso não é necessário.  
+Os objetos comerciais personalizados precisam garantir que o lado do cliente possa mapear o nome do programa (ProgId) para um identificador (CLSID) que possa ser usado no DCOM. Por esse motivo, o ProgID do objeto DCOM deve estar no registro do lado do cliente e ser mapeado para a ID de classe do objeto comercial do lado do servidor. Para os outros protocolos com suporte (HTTP, HTTPS e em processo), isso não é necessário.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Por exemplo, se você expõe um objeto de negócios do lado do servidor chamado MyBObj com uma ID de classe específica, por exemplo, "{00112233-4455-6677-8899-00AABBCCDDEE}", certifique-se de que as entradas a seguir são adicionadas ao registro de cliente:  
+ Por exemplo, se você expor um objeto comercial do lado do servidor chamado MyBObj com uma ID de classe específica, por exemplo, "{00112233-4455-6677-8899-00AABBCCDDEE}", certifique-se de que as seguintes entradas sejam adicionadas ao registro do lado do cliente:  
   
 ```console
 [HKEY_CLASSES_ROOT]  

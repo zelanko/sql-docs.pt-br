@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060882"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Para configurar um contêiner Loop Foreach
@@ -85,7 +85,7 @@ ms.locfileid: "66060882"
   
 9. Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Contêiner do Loop Foreach](control-flow/foreach-loop-container.md)  
   
   

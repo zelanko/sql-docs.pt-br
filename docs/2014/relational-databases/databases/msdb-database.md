@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871691"
 ---
 # <a name="msdb-database"></a>Banco de dados msdb
-  O banco de dados **msdb** é usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para agendar alertas e trabalhos e por outros recursos, como o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[ssSB](../../includes/sssb-md.md)] e o Database Mail.  
+  O banco de dados **msdb** é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Agent para agendar alertas e trabalhos e outros recursos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] como e Database Mail.  
   
  Por exemplo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém automaticamente um histórico de backup e restauração online completo nas tabelas no **msdb**. Estas informações incluem o nome da parte que executou o backup, a hora do backup, e os dispositivos ou arquivos onde o backup é armazenado. O[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa essas informações para propor um plano de restauração de um banco de dados e aplicar qualquer backup de log de transações. Os eventos de backup de todos os bancos de dados são registrados, mesmo que tenham sido criados com aplicativos personalizados ou ferramentas de terceiros. Por exemplo, se você usar um aplicativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que chama objetos SMO (SQL Server Management Objects) para executar operações de backup, o evento será registrado nas tabelas do sistema **msdb** , no log de aplicativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ajudar a proteger as informações armazenadas no **msdb**, recomendamos que você considere a colocação do log de transações **msdb** no repositório tolerante a falhas.  
   
- Por padrão, **msdb** usa o modelo de recuperação simples. Se você usar as tabelas de [histórico de backup e restauração](../backup-restore/backup-history-and-header-information-sql-server.md), será recomendável utilizar o modelo de recuperação completa para **msdb**. Para obter mais informações, veja [Modelos de recuperação &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md). Observe que, quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado ou atualizado e sempre que Setup.exe é usado para recriar bancos de dados do sistema, o modelo de recuperação do **msdb** será definido automaticamente como simples.  
+ Por padrão, **msdb** usa o modelo de recuperação simples. Se você usar as tabelas de [histórico de backup e restauração](../backup-restore/backup-history-and-header-information-sql-server.md) , será recomendável utilizar o modelo de recuperação completa para **msdb**. Para obter mais informações, veja [Modelos de recuperação &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md). Observe que, quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado ou atualizado e sempre que Setup.exe é usado para recriar bancos de dados do sistema, o modelo de recuperação do **msdb** será definido automaticamente como simples.  
   
 > [!IMPORTANT]  
 >  Após qualquer operação que atualize **msdb**, como o backup ou a restauração de um banco de dados, será recomendável fazer backup do **msdb**. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
@@ -47,16 +47,16 @@ ms.locfileid: "62871691"
   
 |Opção de banco de dados|Valor padrão|Pode ser modificado|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Não|  
+|ALLOW_SNAPSHOT_ISOLATION|ATIVADO|Não|  
 |ANSI_NULL_DEFAULT|OFF|Sim|  
 |ANSI_NULLS|OFF|Sim|  
 |ANSI_PADDING|OFF|Sim|  
 |ANSI_WARNINGS|OFF|Sim|  
 |ARITHABORT|OFF|Sim|  
 |AUTO_CLOSE|OFF|Sim|  
-|AUTO_CREATE_STATISTICS|ON|Sim|  
+|AUTO_CREATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_SHRINK|OFF|Sim|  
-|AUTO_UPDATE_STATISTICS|ON|Sim|  
+|AUTO_UPDATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
 |CHANGE_TRACKING|OFF|Não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
@@ -64,21 +64,21 @@ ms.locfileid: "62871691"
 |CURSOR_DEFAULT|GLOBAL|Sim|  
 |Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Sim<br /><br /> Sim|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
-|DB_CHAINING|ON|Sim|  
+|DB_CHAINING|ATIVADO|Sim|  
 |ENCRYPTION|OFF|Não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM|Sim|  
-|PARAMETERIZATION|SIMPLE|Sim|  
+|PARAMETERIZATION|SIMPLES|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
 |READ_COMMITTED_SNAPSHOT|OFF|Não|  
-|RECOVERY|SIMPLE|Sim|  
+|RECOVERY|SIMPLES|Sim|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
 |Opções do Service Broker|ENABLE_BROKER|Sim|  
-|TRUSTWORTHY|ON|Sim|  
+|TRUSTWORTHY|ATIVADO|Sim|  
   
  Para obter uma descrição dessas opções de banco de dados, veja [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
  As operações a seguir não podem ser executadas no banco de dados **msdb** :  
   
 -   Alteração de ordenação. A ordenação padrão é a ordenação do servidor.  

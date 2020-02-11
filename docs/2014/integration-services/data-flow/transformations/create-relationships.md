@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770372"
 ---
 # <a name="create-relationships"></a>Criar Relações
@@ -31,7 +31,7 @@ ms.locfileid: "62770372"
  **Coluna de Entrada**  
  Selecione na lista de colunas de entrada disponíveis.  
   
- **Coluna de Pesquisa**  
+ **coluna de pesquisa**  
  Selecione na lista de colunas de pesquisa disponíveis.  
   
  **Tipo de Mapeamento**  
@@ -48,7 +48,7 @@ ms.locfileid: "62770372"
  **Alias de Saída de Similaridade**  
  Especifique o nome da nova coluna de saída que conterá as pontuações de similaridade da coluna selecionada. Se você deixar este valor vazio, a coluna de saída não será criada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../integration-services-error-and-message-reference.md)   
  [Editor de Transformação Pesquisa Difusa &#40;guia Colunas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Editor de Transformação Pesquisa &#40;Guia Colunas&#41;](../../lookup-transformation-editor-columns-page.md)   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dc7067432c46e1d03323ed2a32dab84ebdf72755
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705322"
 ---
 # <a name="export-a-policy-based-management-policy"></a>Exportar uma política do Gerenciamento Baseado em Políticas
@@ -55,6 +55,6 @@ ms.locfileid: "62705322"
   
 6.  Na caixa de diálogo **Exportar Política** , digite o caminho e o nome do arquivo na barra de endereços. Como alternativa, encontra o local apropriado para o arquivo no painel de navegação na caixa de diálogo e digite o nome do arquivo XML na caixa **Nome do Arquivo** .  
   
-7.  Ao concluir, clique em **Salvar**.  
+7.  Ao terminar, clique em **Salvar**.  
   
   

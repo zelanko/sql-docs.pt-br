@@ -1,5 +1,5 @@
 ---
-title: Opções (Editor de texto - texto sem formatação - guias página) | Microsoft Docs
+title: Opções (página Editor de texto – texto sem formatação – guias) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089858"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Text Editor - Plain Text - Tabs Page)
@@ -26,13 +26,13 @@ ms.locfileid: "66089858"
  As opções do Editor de Texto sem Formatação também podem ser definidas na caixa de diálogo **Todos os Idiomas - Geral** . Ao usar as caixas de diálogo **Todos os Idiomas** para definir diferentes opções para os outros editores do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como o DMX ou MDX, você deverá redefinir as opções do Editor de Texto sem Formatação usando essa caixa de diálogo.  
   
 ## <a name="indenting"></a>Recuo  
- **Nenhum**  
+ **Nenhuma**  
  Não recue a nova linha criada ao pressionar ENTER. O cursor é colocado na primeira coluna da nova linha.  
   
- **Bloco**  
+ **Impeça**  
  Recue a nova linha criada ao pressionar ENTER com a mesma distância de recuo que a da linha anterior.  
   
- **Smart**  
+ **Inteligente**  
  O editor de texto sem-formatação não oferece suporte para esse tipo de formatação.  
   
 ## <a name="tabs"></a>Tabulações  

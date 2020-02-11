@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761705"
 ---
 # <a name="fetching-rows"></a>Buscando linhas
@@ -66,7 +66,7 @@ ms.locfileid: "73761705"
   
 -   [Próxima posição de busca](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

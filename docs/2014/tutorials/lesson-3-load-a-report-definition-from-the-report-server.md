@@ -1,5 +1,5 @@
 ---
-title: 'Lição 3: Carregar uma definição de relatório do servidor de relatório | Microsoft Docs'
+title: 'Lição 3: carregar uma definição de relatório do servidor de relatório | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63042502"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lição 3: Carregar uma definição de relatório do Servidor de Relatório
@@ -22,7 +22,7 @@ ms.locfileid: "63042502"
   
 ### <a name="to-load-a-report-definition"></a>Para carregar uma definição de relatório  
   
-1.  Adicione um campo particular na parte superior a `ReportUpdater` classe (módulo se você estiver usando [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) para o `Report` classe. Este campo será usado para manter uma referência ao relatório carregado do servidor de relatório enquanto durar o aplicativo.  
+1.  Adicione um campo particular na parte superior da `ReportUpdater` classe (módulo se você estiver usando [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) para a `Report` classe. Este campo será usado para manter uma referência ao relatório carregado do servidor de relatório enquanto durar o aplicativo.  
   
     ```csharp  
     private Report _report;  
@@ -97,10 +97,10 @@ ms.locfileid: "63042502"
     ```  
   
 ## <a name="next-lesson"></a>Próxima lição  
- Na próxima lição, você escreverá código para atualizar a definição de relatório carregada do servidor de relatório. Confira [Lição 4: Atualizar a definição de relatório de modo programático](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ Na próxima lição, você escreverá código para atualizar a definição de relatório carregada do servidor de relatório. Consulte [lição 4: atualizar a definição de relatório programaticamente](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Atualizando relatórios usando classes geradas do esquema RDL &#40;tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Linguagem RDL &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

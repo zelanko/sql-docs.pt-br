@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8530a13af0e0ae6f1b769adcaa7cb6e9a3fbc0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106043"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Exibir números de página ou outras propriedades do relatório (Construtor de Relatórios e SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66106043"
   
 -   Tempo de execução  
   
--   Número de página  
+-   Número da página  
   
 -   Pasta Relatório  
   
@@ -32,9 +32,9 @@ ms.locfileid: "66106043"
   
 -   Total de páginas  
   
--   ID de usuário  
+-   Id de Usuário  
   
--   Idioma  
+-   Linguagem  
   
  Para um número de página, talvez você queira adicionar a palavra "Página" antes do número. Você também pode desejar mostrar o número total de páginas.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66106043"
   
 1.  Clique com o botão direito do mouse na caixa de texto que contém [&PageNumber] e clique em **Expressões**.  
   
-     A caixa de texto **Definir expressão para: Valor** contém a expressão =Globals!PageNumber.  
+     A caixa de texto **Definir Expressão para: Valor** contém a expressão =Globals!PageNumber.  
   
 2.  Coloque o cursor depois do sinal de = e digite `"Page " &`.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66106043"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 961a2a76f2a839ccc9fa8fb90027bec180d870d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106639"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Adicionar classificação interativa a uma tabela ou matriz (Construtor de Relatórios e SSRS)
@@ -30,18 +30,18 @@ ms.locfileid: "66106639"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="BackToTop"></a> Neste artigo  
- [Classificando linhas de detalhes para um tabela sem grupos](#SortingDetailRows)  
+##  <a name="BackToTop"></a>Neste artigo  
+ [Classificando linhas de detalhes de uma tabela sem grupos](#SortingDetailRows)  
   
- [Classificando um grupo de linhas pai de nível superior para um tabela ou matriz](#SortingTopLevelParent)  
+ [Classificando um grupo de linhas pai de nível superior para uma tabela ou matriz](#SortingTopLevelParent)  
   
  [Classificando grupos filho ou linhas de detalhes de um grupo](#SortingChildGroups)  
   
- [Classificando linhas com base em uma expressão de grupo complexa](#SortingMultipleRowGroups)  
+ [Classificando linhas com base em uma expressão de grupo complexo](#SortingMultipleRowGroups)  
   
  [Sincronizando a ordem de classificação para várias regiões de dados](#SynchronizingSortOrder)  
   
-##  <a name="SortingDetailRows"></a> Classificando linhas de detalhes para um tabela sem grupos  
+##  <a name="SortingDetailRows"></a>Classificando linhas de detalhes de uma tabela sem grupos  
  Adicione um botão de classificação interativa a um cabeçalho de coluna para permitir que um usuário clique no cabeçalho da coluna e classifique as linhas de detalhes em uma tabela pelo valor exibido naquela coluna.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>Para adicionar um botão de classificação interativa a um cabeçalho de coluna para classificar a tabela pelo valor  
@@ -62,9 +62,9 @@ ms.locfileid: "66106639"
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique nos botões de classificação interativa.  
   
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
+ ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [de volta ao início](#BackToTop)  
   
-##  <a name="SortingTopLevelParent"></a> Classificando um grupo de linhas pai de nível superior para um tabela ou matriz  
+##  <a name="SortingTopLevelParent"></a>Classificando um grupo de linhas pai de nível superior para uma tabela ou matriz  
  Adicione um botão de classificação interativa a um cabeçalho de coluna para permitir que um usuário clique no cabeçalho da coluna e classifique as linhas do grupo pai em uma tabela ou matriz pelo valor exibido naquela coluna. A ordem dos grupos filho permanece inalterada.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>Para adicionar um botão de classificação interativa a um cabeçalho de coluna para classificar grupos  
@@ -86,9 +86,9 @@ ms.locfileid: "66106639"
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique nos botões de classificação interativa.  
   
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
+ ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [de volta ao início](#BackToTop)  
   
-##  <a name="SortingChildGroups"></a> Classificando grupos filho ou linhas de detalhes de um grupo  
+##  <a name="SortingChildGroups"></a>Classificando grupos filho ou linhas de detalhes de um grupo  
  Adicione um botão de classificação interativa a uma linha de cabeçalho de grupo para permitir que os usuários classifiquem os valores de um grupo filho de um grupo pai ou classifiquem as linhas de detalhes do grupo filho interno.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>Para adicionar um botão de classificação interativa a uma caixa de texto em um cabeçalho de linha de grupo para classificar grupos filho ou linhas de detalhes  
@@ -101,17 +101,17 @@ ms.locfileid: "66106639"
   
 4.  Em **Escolher o que classificar**, clique em uma das seguintes opções:  
   
-    -   **Detalhes** Clique em **Detalhes** para classificar as linhas de detalhes. Na lista suspensa, selecione o campo pelo qual classificar. Para esta opção, você deve especificar o valor pelo qual classificar.  
+    -   **Detalhes** do Clique em **detalhes** para classificar as linhas de detalhes. Na lista suspensa, selecione o campo pelo qual classificar. Para esta opção, você deve especificar o valor pelo qual classificar.  
   
-    -   **Grupos** Clique em **Grupos** para classificar os valores do grupo filho. Para essa opção, a expressão **Classificar por** é preenchida automaticamente da expressão de grupo.  
+    -   **Grupos** do Clique em **grupos** para classificar os valores do grupo filho. Para essa opção, a expressão **Classificar por** é preenchida automaticamente da expressão de grupo.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique nos botões de classificação interativa.  
   
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
+ ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [de volta ao início](#BackToTop)  
   
-##  <a name="SortingMultipleRowGroups"></a> Classificando linhas com base em uma expressão de grupo complexa  
+##  <a name="SortingMultipleRowGroups"></a>Classificando linhas com base em uma expressão de grupo complexo  
  Adicione um botão de classificação interativa a um cabeçalho de coluna para permitir que um usuário clique no cabeçalho da coluna e classifique os grupos pai e filho combinados. Para obter esse efeito, é necessário alterar a expressão de grupo para que seja uma composição dos dois grupos. Por exemplo, suponha que uma matriz exibe totais de inventário de uma loja de itens agrupados por cor e tamanho. Para classificar as linhas com base na combinação de cor e tamanho, em vez de ter um grupo separado para cor e outro para tamanho, é possível definir um grupo com base na combinação de cor e tamanho. Para obter mais informações sobre como definir expressões de grupo, consulte [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
  No procedimento seguinte, condições especificam áreas da região de dados Tablix. Para obter mais informações, consulte [Áreas da região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).  
@@ -166,9 +166,9 @@ ms.locfileid: "66106639"
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique no botão de classificação interativa. A matriz é classificada pelos valores combinados da expressão de grupo, embora cada valor individual seja exibido em sua própria coluna.  
   
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
+ ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [de volta ao início](#BackToTop)  
   
-##  <a name="SynchronizingSortOrder"></a> Sincronizando a ordem de classificação para várias regiões de dados  
+##  <a name="SynchronizingSortOrder"></a>Sincronizando a ordem de classificação para várias regiões de dados  
  Adicione um botão de classificação interativa que permita que um usuário clique em um botão de classificação e classifique várias regiões de dados. Ao criar um botão de classificação interativa, é possível especificar se a classificação deve ser sincronizada para várias regiões de dados com base no mesmo conjunto de dados do relatório. Por exemplo, um relatório poder incluir uma matriz e um gráfico que exibem os dados graficamente. Quando um usuário altera a ordem de classificação das linhas na matriz, o gráfico exibe a mesma ordem de classificação automaticamente.  
   
  Para sincronizar a ordem de classificação, você deve usar expressões de classificação idênticas para as regiões de dados ou grupos a serem classificados e definir o escopo da classificação para que seja um ancestral mútuo das duas regiões de dados. O ancestral mútuo pode ser o conjunto de dados ao qual as duas regiões de dados estão vinculadas ou uma região contentora de dados dentro da qual as duas regiões de dados aparecem. Por exemplo, assuma que um relatório tem uma matriz e um gráfico que exibem dados do mesmo conjunto de dados e que estão contidos em uma lista. Para sincronizar a ação de classificação, você deve especificar a classificação interativa em uma coluna na matriz e definir o escopo para a lista. Quando o usuário classifica a matriz, o gráfico também é classificado.  
@@ -215,11 +215,11 @@ ms.locfileid: "66106639"
   
  Para verificar a ação de classificação, clique em **Executar** para visualizar o relatório e clique no botão de classificação interativa. A matriz é classificada pelos valores combinados da expressão de grupo, embora cada valor individual seja exibido em sua própria coluna.  
   
- ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
+ ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [de volta ao início](#BackToTop)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Classificação interativa &#40;Construtor de Relatórios e SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)   
+ [&#40;de classificação interativa Construtor de Relatórios e SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)   
  [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Explorando a flexibilidade de uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
   

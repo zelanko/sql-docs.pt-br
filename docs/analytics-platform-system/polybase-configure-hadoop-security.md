@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400651"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configuração e segurança do PolyBase para Hadoop
@@ -58,7 +58,7 @@ Para se conectar a um cluster Hadoop protegido por Kerberos usando MIT KDC, as s
    
 3. Copie os valores de configuração na propriedade de valor nos arquivos correspondentes no computador do SQL Server.  
    
-   |**#**|**Arquivo de configuração**|**Chave de configuração**|**Action**|  
+   |**#**|**Arquivo de configuração**|**Chave de configuração**|**Ação**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|Especifique o nome de host do KDC. Por exemplo: kerberos.your-realm.com.|  
    |2|core-site.xml|polybase.kerberos.realm|Especifique o realm do Kerberos. Por exemplo: YOUR-REALM.COM|  

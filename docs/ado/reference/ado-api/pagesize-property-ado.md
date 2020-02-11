@@ -16,28 +16,28 @@ ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1db01010fea79d2badaf81588296391d7e2149f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931763"
 ---
 # <a name="pagesize-property-ado"></a>Propriedade PageSize (ADO)
-Indica o número de registros constituem uma página na [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Indica quantos registros constituem uma página no conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
- Define ou retorna um **longo** valor que indica quantos registros estão em uma página. O padrão é **10**.  
+## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
+ Define ou retorna um valor **longo** que indica quantos registros estão em uma página. O padrão é **10**.  
   
 ## <a name="remarks"></a>Comentários  
- Use o **PageSize** propriedade para determinar quantos registros compõem uma página lógica dos dados. Estabelecer um tamanho de página permite que você use o [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) propriedade para mover para o primeiro registro de uma página específica. Isso é útil em cenários de servidor Web quando você deseja permitir que o usuário à página por meio de dados, exibindo um determinado número de registros por vez.  
+ Use a propriedade **PageSize** para determinar quantos registros compõem uma página lógica de dados. O estabelecimento de um tamanho de página permite que você use a propriedade [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) para mover para o primeiro registro de uma página específica. Isso é útil em cenários de servidor Web quando você deseja permitir que o usuário percorra dados, exibindo um determinado número de registros por vez.  
   
- Essa propriedade pode ser definida em qualquer momento, e seu valor será usado para calcular a localização do primeiro registro de uma página específica.  
+ Essa propriedade pode ser definida a qualquer momento e seu valor será usado para calcular o local do primeiro registro de uma página específica.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
- [AbsolutePage, PageCount, PageSize exemplo das propriedades e (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
- [AbsolutePage, PageCount, PageSize exemplo das propriedades e (VC + +)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo das propriedades AbsolutePage, PageCount e PageSize (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [Exemplo das propriedades AbsolutePage, PageCount e PageSize (VC + +)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [Propriedade AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [Propriedade PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790471"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parâmetros com valor de tabela (ODBC)
@@ -26,7 +26,7 @@ ms.locfileid: "73790471"
 
   O suporte de ODBC para parâmetros com valor de tabela permite que o aplicativo cliente envie dados com parâmetros para o servidor de forma mais eficiente, enviando várias linhas ao servidor com uma chamada.  
   
- Para obter informações sobre parâmetros com valor de tabela no servidor, consulte [usar parâmetros &#40;com valor de&#41;tabela mecanismo de banco de dados](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Para obter informações sobre parâmetros com valor de tabela no servidor, consulte [usar parâmetros com valor de tabela &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  No ODBC, há duas formas de enviar parâmetros com valor de tabela para o servidor:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73790471"
  [Usos de parâmetros ODBC com valor de tabela](../../relational-databases/native-client-odbc-table-valued-parameters/uses-of-odbc-table-valued-parameters.md)  
  Descreve os cenários principais de usuário para parâmetros com valor de tabela e ODBC.  
   
- [Tipo SQL ODBC para parâmetros com valor de tabela](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-sql-type-for-table-valued-parameters.md)  
+ [Tipo ODBC SQL para parâmetros com valor de tabela](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-sql-type-for-table-valued-parameters.md)  
  Descreve o tipo SQL_SS_TABLE. Esse é um novo tipo ODBC SQL que oferece suporte a parâmetros com valor de tabela.  
   
  [Campos do descritor de parâmetro com valor de tabela](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md)  
@@ -80,8 +80,8 @@ ms.locfileid: "73790471"
  [Exemplos de programação de parâmetros com valor de tabela (ODBC)](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
  Descreve como executar tarefas comuns.  
   
-## <a name="see-also"></a>Consulte também  
- [  &#40;SQL Server Native Client&#41; ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
- [Parâmetros &#40;com valor de tabela SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Os parâmetros com valor de tabela &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

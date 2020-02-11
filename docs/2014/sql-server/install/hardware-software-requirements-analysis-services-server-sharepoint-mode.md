@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 8f645ca9bdb6176505a6277af0f0482be5b62f09
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245609"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Requisitos de hardware e software para servidor do Analysis Services no modo do SharePoint (SQL Server 2014)
@@ -41,7 +41,7 @@ O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] oferece suporte 
 ##  <a name="bkmk_ssas__sharepoint_2013"></a>Analysis Services instalado no SharePoint 2013  
  Se você instalar o servidor do Analysis Services no modo do SharePoint em um servidor sozinho, os requisitos mínimos do sistema serão baseados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em vez de nos requisitos do SharePoint Server.  
   
- [Requisitos de hardware e software para a instalação do SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
  O [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint é melhor executado em servidores comerciais de nova geração que oferecem limites de RAM mais altos e maior capacidade de processamento. Grandes quantidades de RAM são usadas para armazenar dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na memória. A RAM dá suporte à capacidade de adaptação a alterações estruturais. Processadores adicionais dão suporte a exames de dados brutos não agregados de longa execução. Os dados supõem sua estrutura em um ambiente dinâmico, em resposta à análise de dados controlada pelo usuário iniciada diretamente de um cliente Excel ou interface front-end.  
   
@@ -58,7 +58,7 @@ O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] oferece suporte 
   
  Se você instalar o servidor do Analysis Services no modo do SharePoint em um servidor do farm do SharePoint, analise os requisitos mínimos do sistema para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e o SharePoint Server nos seguintes links:  
   
--   [Requisitos de hardware e software para a instalação do SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Requisitos de hardware e software para o SharePoint 2013](https://technet.microsoft.com/library/cc262485\(office.15\).aspx).  
   

@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245722"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Servidores de Destino (Guia do Status do Servidor de Destino)
   Use essa página para exibir o status dos servidores de destino para esse servidor mestre.  
   
 ## <a name="options"></a>Opções  
- **Servidor de Destino**  
+ **Servidor de destino**  
  Exiba o nome do servidor de destino.  
   
  **Hora local**  
@@ -38,22 +38,22 @@ ms.locfileid: "63245722"
  **Status**  
  Exiba o status do servidor de destino.  
   
- **Forçar Sondagem**  
+ **Forçar sondagem**  
  Clique nesse botão para forçar os servidores de destino selecionados a executar sondagem do servidor mestre.  
   
- **Forçar Remoção**  
+ **Forçar remoção**  
  Clique nesse botão para forçar os servidores de destino selecionados a remover o servidor mestre.  
   
- **Postar Instruções**  
+ **Postar instruções**  
  Poste instruções para os servidores de destino selecionados.  
   
- **Habilitar Atualização Automática**  
+ **Habilitar atualização automática**  
  Selecione essa opção para atualizar automaticamente a informações exibida.  
   
  **Atualizar a cada**  
  Especifique com que frequência as informações nessa página são atualizadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração automatizada em toda a empresa](automated-administration-across-an-enterprise.md)  
   
   

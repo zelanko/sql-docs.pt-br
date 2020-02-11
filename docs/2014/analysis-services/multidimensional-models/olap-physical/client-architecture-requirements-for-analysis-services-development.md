@@ -18,20 +18,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e91e1c7a1586c0b2aff3630bfd8a9a6cd60ef53c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889581"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Requisitos de arquitetura do cliente para o desenvolvimento do Analysis Services
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dásuporteauma[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] arquitetura de cliente fino. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mecanismo de cálculo é totalmente baseado em servidor, portanto, todas as consultas são resolvidas no servidor. Como resultado, apenas uma viagem de ida e volta entre o cliente e o servidor é necessária para cada consulta, resultando em um desempenho evolutivo à medida que as consultas aumentam em complexidade.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a uma arquitetura de cliente [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fino. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mecanismo de cálculo é totalmente baseado em servidor, portanto, todas as consultas são resolvidas no servidor. Como resultado, apenas uma viagem de ida e volta entre o cliente e o servidor é necessária para cada consulta, resultando em um desempenho evolutivo à medida que as consultas aumentam em complexidade.  
   
  O protocolo nativo para o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é XML for Analysis (XML/A). O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fornece diversas interfaces de acesso de dados para aplicativos cliente, mas todos os componentes comunicam-se com uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] usando XML for Analysis.  
   
  Diversos provedores diferentes são fornecidos com o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para oferecer suporte às diferentes linguagens de programação. Um provedor comunica-se com um servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], enviando e recebendo XML for Analysis em pacotes SOAP sobre TCP/IP e sobre HTTP por meio do ISS (Serviços de Informações da Internet). Uma conexão HTTP usa um objeto COM instanciado por IIS, chamado de bomba de dados, que age como um condutor de dados [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. A bomba de dados não examina os dados subjacentes contidos em um fluxo HTTP de qualquer maneira, nem de qualquer das estruturas de dados subjacentes disponíveis a nenhum código na biblioteca de dados.  
   
- ![Arquitetura de cliente lógico para Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-clientarch9.gif "Arquitetura de cliente lógico para Analysis Services")  
+ ![Arquitetura lógica de cliente para Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-clientarch9.gif "Arquitetura lógica de cliente para Analysis Services")  
   
  Os aplicativos cliente Win32 podem se conectar a um servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] usando DB OLE para interfaces OLAP ou o modelo de objeto Microsoft® ActiveX® Data Objects (ADO) para linguagens de automação COM (Component Object Model), como Microsoft Visual Basic®. Aplicativos codificados com linguagens .NET podem se conectar a um servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] por meio do ADOMD.NET.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "68889581"
 |Linguagens .NET|ADO MD.NET|  
 |Toda linguagem que ofereça suporte SOAP|XML for Analysis|  
   
- O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tem uma arquitetura Web com uma camada intermediária evolutiva completa para implantação por organizações grandes e pequenas. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fornece amplo suporte à camada intermediária para serviço Web. Os aplicativos ASP são compatíveis com OLE DB para OLAP e ADO MD, os aplicativos ASP.NET têm suporte do ADOMD.NET. A camada intermediária ilustrada na figura a seguir é evolutiva para vários usuários simultaneamente.  
+ O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tem uma arquitetura Web com uma camada intermediária evolutiva completa para implantação por organizações grandes e pequenas. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fornece amplo suporte à camada intermediária para serviço Web. Os aplicativos ASP têm suporte pelo DB OLE para OLAP e os aplicativos ADO MD, ASP.NET têm suporte pelo ADOMD.NET. A camada intermediária ilustrada na figura a seguir é evolutiva para vários usuários simultaneamente.  
   
- ![Diagrama lógico para arquitetura de camada intermediária](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-midtierarch9.gif "Diagrama lógico para arquitetura de camada intermediária")  
+ ![Diagrama lógico para arquitetura da camada intermediária](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-midtierarch9.gif "Diagrama lógico para arquitetura da camada intermediária")  
   
  Ambos os aplicativos cliente e de camada intermediária podem se comunicar diretamente com o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sem usar um provedor. Aplicativos cliente e de camada intermediária podem enviar XML for Analysis em pacotes SOAP sobre TCP/IP, HTTP ou HTTPS. O cliente pode ser codificado usando qualquer linguagem com suporte SOAP. Nesse caso, a comunicação é facilmente gerenciada pelo IIS (Serviços de Informações de Internet) usando HTTP, embora uma conexão direta com o servidor usando TCP/IP também possa ser codificada. Essa é a solução para o cliente mais fino possível no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68889581"
   
  **Canal** Reservado para comunicações com o Serviço de Sistema PowerPivot no farm do SharePoint.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Componentes do servidor de mecanismo OLAP](olap-engine-server-components.md)  
   
   

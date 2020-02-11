@@ -14,11 +14,11 @@ ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c8ea017c7b463a0287e6b6f4437549db667bd251
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889215"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Adicionar-remover tabelas (Analysis Services-dados multidimensionais)
@@ -35,9 +35,9 @@ ms.locfileid: "68889215"
  **Objetos disponíveis**  
  Exibe os objetos e seus tipos na fonte de dados que ainda não estão incluídos na exibição da fonte de dados.  
   
- Clique em **>>** para transferir todos os objetos listados em **Objetos disponíveis** para **Objetos incluídos** ou selecione um ou mais objetos e clique em **>** para transferir os objetos selecionados para **Objetos incluídos**.  
+ Clique **>>** para transferir todos os objetos listados em **objetos disponíveis** para **objetos incluídos**, ou selecione um ou mais objetos e **>** clique para transferir os objetos selecionados para **objetos incluídos**.  
   
- **Filtrar**  
+ **Filter**  
  Digite o filtro usado para restringir os objetos listados em **Objetos disponíveis** e clique no botão para filtrar os objetos listados.  
   
  **Mostrar objetos do sistema**  
@@ -46,13 +46,13 @@ ms.locfileid: "68889215"
  **Objetos incluídos**  
  Exibe os objetos e os tipos que já foram adicionados à exibição da fonte de dados.  
   
- Clique em **<<** para transferir todos os objetos listados em **Objetos incluídos** para **Objetos disponíveis** ou selecione um ou mais objetos e clique em **<** para transferir os objetos selecionados para **Objetos disponíveis**.  
+ Clique **<<** para transferir todos os objetos listados em **objetos incluídos** para os **objetos disponíveis**ou selecione um ou mais objetos e **<** clique para transferir os objetos selecionados para **objetos disponíveis**.  
   
  **Adicionar tabelas relacionadas**  
  Clique para adicionar todas as tabelas que estão relacionadas às tabelas selecionadas em **Objetos incluídos**.  
   
-## <a name="see-also"></a>Consulte também  
- [Analysis Services designers e caixas &#40;de diálogo de dados multidimensionais&#41;](https://docs.microsoft.com/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data)   
- [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados multidimensionais&#41;](https://docs.microsoft.com/analysis-services/data-source-view-designer-analysis-services-multidimensional-data)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [O designer de exibição da fonte de dados &#40;Analysis Services-dados multidimensionais&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

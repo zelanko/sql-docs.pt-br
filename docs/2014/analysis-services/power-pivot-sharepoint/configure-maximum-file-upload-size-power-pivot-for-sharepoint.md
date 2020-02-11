@@ -1,5 +1,5 @@
 ---
-title: Configurar o tamanho de carregamento máximo do arquivo (PowerPivot para SharePoint) | Microsoft Docs
+title: Configurar o tamanho máximo de upload de arquivo (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071817"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Configurar o tamanho máximo do carregamento de arquivo (PowerPivot para SharePoint)
@@ -57,7 +57,7 @@ ms.locfileid: "66071817"
   
 3.  Na faixa de opções de Aplicativos Web, clique na seta para baixo no botão de Configurações Gerais.  
   
-4.  Clique em **Configurações Gerais**.  
+4.  Clique em **configurações gerais**.  
   
 5.  Role para **Tamanho Máximo do Carregamento**.  
   

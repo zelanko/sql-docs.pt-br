@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f7f71e75d2afd12de9ff381bdc61b739eb192db
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782472"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Criando, alterando e removendo índices
@@ -25,7 +25,7 @@ ms.locfileid: "72782472"
  Você pode criar um índice em uma coluna de XML especificando a propriedade <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
 ## <a name="examples"></a>Exemplos  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic Smo no Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic Smo no Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Criando um índice não clusterizado composto no Visual Basic  
  Este exemplo de código demonstra como criar um índice composto e não clusterizado. Para um índice composto, adicione mais de uma coluna ao índice. Defina a propriedade <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> como `False` para um índice não clusterizado.  

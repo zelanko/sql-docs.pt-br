@@ -14,22 +14,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2e939e27263f52dc3a6ac607bc59cd8db6c1806
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250707"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, objeto CLR
-  O objeto **SQLServer:CLR** fornece contadores para monitorar a execução CLR (Common Language Runtime) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  O objeto **SqlServer: CLR** fornece contadores para monitorar a execução de Common Language Runtime (CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) no.  
   
  A tabela a seguir descreve os contadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **do** .  
   
-|Contadores CLR|Descrição|  
+|Contadores CLR|DESCRIÇÃO|  
 |------------------|-----------------|  
 |**Execução de CLR**|Tempo de execução total de CLR (microssegundos)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

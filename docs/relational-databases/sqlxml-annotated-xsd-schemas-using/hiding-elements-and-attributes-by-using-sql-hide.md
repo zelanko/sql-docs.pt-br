@@ -26,10 +26,10 @@ ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 670b11e86498116549c395c47364604e72b790a4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246856"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Ocultando elementos e atributos usando sql:hide
@@ -41,7 +41,7 @@ ms.locfileid: "75246856"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>R. Especificando sql:hide em um atributo  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>a. Especificando sql:hide em um atributo  
  O esquema XSD neste exemplo consiste em um ** \<elemento Person. Contact>** com os atributos **ContactID**, **FirstName**e **LastName** .  
   
  O ** \<elemento Person. Contact>** é do tipo complexo e, portanto, é mapeado para a tabela de mesmo nome (mapeamento padrão). Todos os atributos de ** \<pessoa. Contact>** elemento são de tipo simples e são mapeados para colunas com os mesmos nomes em Person. contacttable no banco de dados AdventureWorks. No esquema, a anotação **SQL: Hide** é especificada no atributo **ContactID** . Quando uma consulta XPath é especificada nesse esquema, o **ContactID** não é retornado no documento XML.  

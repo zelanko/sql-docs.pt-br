@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828143"
 ---
 # <a name="comparing-string-data"></a>comparando dados de cadeia de caracteres
@@ -63,11 +63,11 @@ ms.locfileid: "62828143"
  Também é possível especificar uma localidade para o gerenciamento de conexões de Arquivo Simples e um gerenciador de conexões de Vários Arquivos Simples.  
   
 ## <a name="setting-comparison-options"></a>Definindo opções de comparação  
- A localidade fornece as regras básicas para comparar dados de cadeia de caracteres. Por exemplo, a localidade especifica a posição de classificação de cada letra no alfabeto. No entanto, essas regras podem não ser suficientes para as comparações que algumas transformações realizam e o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece suporte a um conjunto de opções de comparação avançadas que vão além das regras de comparação de uma localidade. Estas opções de comparação são definidas no nível da coluna. Por exemplo, um das opções de comparação permite que você ignore caracteres de não espaçamento. O efeito dessa opção é ignorar diacríticos como o acento, o que torna "a" e "å" idênticos para fins de comparação.  
+ A localidade fornece as regras básicas para comparar dados de cadeia de caracteres. Por exemplo, a localidade especifica a posição de classificação de cada letra no alfabeto. No entanto, essas regras podem não ser suficientes para as comparações que algumas transformações realizam e o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece suporte a um conjunto de opções de comparação avançadas que vão além das regras de comparação de uma localidade. Estas opções de comparação são definidas no nível da coluna. Por exemplo, um das opções de comparação permite que você ignore caracteres de não espaçamento. O efeito dessa opção é ignorar sinais diacríticos, como o acento, que torna "a" e "å" idênticos para fins de comparação.  
   
  A seguinte tabela descreve as opções de comparação e um estilo de classificação.  
   
-|Opção de comparação|Descrição|  
+|Opção de comparação|DESCRIÇÃO|  
 |-----------------------|-----------------|  
 |Ignora maiúsculas e minúsculas|Especifica se a comparação faz distinção entre letras maiúsculas e minúsculas. Se esta opção for definida, a comparação de cadeia de caracteres ignorará a distinção entre letras maiúsculas e minúsculas. Por exemplo, "ABC" torna-se igual a "abc".|  
 |Ignora o tipo kana|Especifica se a comparação distingue os dois tipos de caracteres de kana japoneses: hiragana e katakana. Se esta opção for definida, a comparação de cadeia de caracteres ignorará o tipo de kana usado.|  
@@ -80,7 +80,7 @@ ms.locfileid: "62828143"
   
  O sinalizador de comparação **FullySensitive** é exibido na caixa de diálogo **Editor Avançado** para as transformações Agrupamento Difuso e Pesquisa Difusa. Selecionar o sinalizador de comparação **FullySensitive** significa que todas as opções de comparação se aplicam.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados do Integration Services](integration-services-data-types.md)   
  [Análise rápida](../fast-parse.md)   
  [Análise padrão](../standard-parse.md)  

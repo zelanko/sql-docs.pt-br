@@ -1,5 +1,5 @@
 ---
-title: Tutoriais (construtor de relatórios) | Microsoft Docs
+title: TUTORIAIS (Construtor de Relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107966"
 ---
 # <a name="tutorials-report-builder"></a>Tutoriais (Construtor de Relatórios)
   Use os seguintes tutoriais do Construtor de Relatórios para obter informações sobre como criar relatórios básicos.  
   
  [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](prerequisites-for-tutorials-report-builder.md)  
- Para usar estes tutoriais, você deve ter acesso somente leitura a um banco de dados [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e permissões para acessar um servidor de relatório do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] .  
+ Para usar estes tutoriais, você deve ter acesso somente leitura a um banco de dados [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e permissões para acessar um servidor de relatório do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
  Para obter ajuda para esses pré-requisitos, entre em contato com o administrador do servidor de relatório.  
   
  [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
  A maioria destes tutoriais usa fontes de dados inseridas. Se você tiver acesso a fontes de dados compartilhadas, será possível usá-las em seu lugar. Este tópico fornece as etapas para usar fontes de dados compartilhadas.  
   
- [Tutorial: Criar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
+ [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a criar seu primeiro relatório. Este tutorial mostra como trabalhar com o Construtor de Relatórios para criar uma conexão de fonte de dados, definir uma consulta simples, criar um layout para conter os dados, formatar o relatório e adicionar agrupamentos e totais.  
   
- [Tutorial: Criar um relatório de matriz &#40;Construtor de Relatórios&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
+ [Tutorial: Criando um relatório de matriz &#40;Construtor de Relatórios&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a adicionar e configurar uma matriz. Você irá usar o Assistente de Tabela ou Matriz para criar a fonte de dados de relatório, o conjunto de dados e o layout e, em seguida, aprimorar a matriz dentro da exibição **Design** do Construtor de Relatórios.  
   
- [Tutorial: Criar um relatório de forma livre &#40;Construtor de Relatórios&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
+ [Tutorial: Criando um relatório de forma livre &#40;Construtor de Relatórios&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a criar um relatório de formato livre do zero. Esse relatório é semelhante a um boletim informativo.  
   
  [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](tutorial-format-text-report-builder.md)  
@@ -52,24 +52,24 @@ ms.locfileid: "66107966"
  [Tutorial: Adicionar um minigráfico ao relatório &#40;Construtor de Relatórios&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a criar uma matriz e, em seguida, adicionar um conjunto de minigráficos a ela.  
   
- [Tutorial: Adicionar um KPI ao relatório &#40;Construtor de Relatórios&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+ [Tutorial: Adicionando um KPI ao relatório &#40;Construtor de Relatórios&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a adicionar um indicador chave de desempenho (KPI) a um relatório.  
   
- [Tutorial: Relatório de Mapa &#40;Construtor de Relatórios&#41;](tutorial-map-report-report-builder.md)  
+ [Tutorial: Relatório de mapa &#40;Construtor de Relatórios&#41;](tutorial-map-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a adicionar um mapa a um relatório.  
   
  [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a personalizar a aparência e o conteúdo de um relatório usando parâmetros.  
   
- [Tutorial: Criar relatórios principal e de detalhamento &#40;Construtor de Relatórios&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
+ [Tutorial: Criando relatórios principal e de detalhamento &#40;Construtor de Relatórios&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
  Siga as etapas deste tutorial para aprender como criar relatórios para um cenário de detalhamento baseado em um cubo do Analysis Services. Você criará o relatório principal e o habilitará para detalhamento e o relatório que o destino da ação de detalhamento.  
   
- [Tutorial: Apresentando expressões](tutorial-introducing-expressions.md)  
+ [Tutorial: Apresentação de expressões](tutorial-introducing-expressions.md)  
  Siga as etapas deste tutorial para aprender como usar expressões para concatenar, calcular e pesquisar valores de campo e mostrá-los em um relatório. Você também aprenderá como exibir condicionalmente diferentes imagens e estados de indicador usando expressões.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](report-builder/report-design-view-report-builder.md)   
- [Construtor de relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
- [Tutorial: Criar um relatório de gráfico rápido Offline &#40;construtor de relatórios&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
+ [Tutorial: criar um relatório de gráfico rápido offline &#40;Construtor de Relatórios&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

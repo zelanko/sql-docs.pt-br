@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e44e658d2aaf8be9a9e591f627f60798f6ba4121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105396"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>Gráficos de intervalos (Construtor de Relatórios e SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66105396"
   
  A ilustração a seguir mostra um gráfico de intervalos comum com três séries.  
   
- ![Gráfico de intervalos](../media/rs-rangechart.gif "Gráfico de intervalos")  
+ ![Gráficos de intervalos](../media/rs-rangechart.gif "Gráficos de intervalos")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "66105396"
   
 -   Os gráficos de Gantt podem ser criados usando um gráfico de intervalos de barras.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Formatar um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  

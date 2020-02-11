@@ -1,5 +1,5 @@
 ---
-title: Importar de uma fonte de dados relacional (SSAS Tabular) | Microsoft Docs
+title: Importar de uma fonte de dados relacional (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080529"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>Importar de uma fonte de dados relacional (SSAS tabular)
-  Você pode importar dados de uma variedade de bancos de dados relacionais usando o Assistente de Importação de Tabela. O assistente está disponível em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no menu **Modelo** . Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador. Para obter mais informações sobre os provedores e as fontes de dados com suporte, consulte [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
+  Você pode importar dados de uma variedade de bancos de dados relacionais usando o Assistente de Importação de Tabela. O assistente está disponível em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no menu **Modelo** . Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador. Para obter mais informações sobre os provedores e as fontes de dados com suporte, consulte [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
  O Assistente de Importação de Tabela dá suporte a importação de dados das seguintes fontes de dados:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66080529"
   
 -   OLE DB/ODBC  
   
- **Origens multidimensionais**  
+ **Fontes multidimensionais**  
   
 -   Cubo do Microsoft SQL Server Analysis Services  
   
@@ -58,8 +58,8 @@ ms.locfileid: "66080529"
   
 3.  Siga as etapas no Assistente de Importação de Tabela. Nas páginas subsequentes, você poderá selecionar tabelas específicas e exibições ou aplicar filtros usando a página **Selecionar Tabelas e Exibições** ou criando uma consulta SQL na página **Especificar uma Consulta SQL** .  
   
-## <a name="see-also"></a>Consulte também  
- [Importar dados &#40;SSAS de Tabela&#41;](import-data-ssas-tabular.md)   
- [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Importar dados &#40;SSAS de tabela&#41;](import-data-ssas-tabular.md)   
+ [Fontes de dados com suporte &#40;SSAS de tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
