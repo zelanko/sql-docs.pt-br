@@ -16,37 +16,37 @@ ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bef70bd72425e749865e31ecf162e719737dd272
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932842"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Especifica como um provedor deve executar um comando.  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
-|**adAsyncExecute**|0x10|Indica que o comando deve executar de forma assíncrona.<br /><br /> Esse valor não pode ser combinado com o [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valor **adCmdTableDirect**.|  
-|**adAsyncFetch**|0x20|Indica que o restante linhas após a quantidade inicial especificada do [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriedade deve ser recuperada de maneira assíncrona.|  
-|**adAsyncFetchNonBlocking**|0x40|Indica que o thread principal nunca for bloqueado durante a recuperação. Se a linha solicitada não foi recuperada, a linha atual se move automaticamente até o final do arquivo.<br /><br /> Se você abrir um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) de uma [Stream](../../../ado/reference/ado-api/stream-object-ado.md) que contém um persistentemente armazenado **conjunto de registros**, **adAsyncFetchNonBlocking** não terão um efeito; a operação será síncrona e bloqueio.<br /><br /> **adAsynchFetchNonBlocking** não tem nenhum efeito quando o [adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md) opção é usada para abrir o **conjunto de registros**.|  
-|**adExecuteNoRecords**|0x80|Indica que o texto do comando é um comando ou procedimento armazenado que não retorna linhas (por exemplo, um comando que insere apenas dados). Se todas as linhas são recuperadas, elas são descartadas e não retornadas.<br /><br /> **adExecuteNoRecords** só pode ser passado como um parâmetro opcional para o **comando** ou **Conexão executar** método.|  
-|**adExecuteStream**|0x400|Indica que os resultados de uma execução de comando devem ser retornados como um fluxo.<br /><br /> **adExecuteStream** só pode ser passado como um parâmetro opcional para o **Command Execute** método.|  
-|**adExecuteRecord**||Indica que o **CommandText** é um comando ou procedimento armazenado que retorna uma única linha que deve ser retornada como um **registro** objeto.|  
-|**adOptionUnspecified**|-1|Indica que o comando é especificado.|  
+|**adAsyncExecute**|0x10|Indica que o comando deve ser executado de forma assíncrona.<br /><br /> Esse valor não pode ser combinado com o valor de [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) **adCmdTableDirect**.|  
+|**adAsyncFetch**|0x20|Indica que as linhas restantes após a quantidade inicial especificada na propriedade [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) devem ser recuperadas de forma assíncrona.|  
+|**adAsyncFetchNonBlocking**|0x40|Indica que o thread principal nunca é bloqueado durante a recuperação. Se a linha solicitada não tiver sido recuperada, a linha atual será automaticamente movida para o final do arquivo.<br /><br /> Se você abrir um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) de um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) que contém um **conjunto de registros**armazenado persistentemente, o **adAsyncFetchNonBlocking** não terá efeito; a operação será síncrona e bloqueada.<br /><br /> **adAsynchFetchNonBlocking** não tem efeito quando a opção [adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md) é usada para abrir o **conjunto de registros**.|  
+|**adExecuteNoRecords**|0x80|Indica que o texto do comando é um comando ou procedimento armazenado que não retorna linhas (por exemplo, um comando que só insere dados). Se qualquer linha for recuperada, elas serão descartadas e não retornadas.<br /><br /> **adExecuteNoRecords** só pode ser passado como um parâmetro opcional para o método de **execução** de **comando** ou conexão.|  
+|**adExecuteStream**|0x400|Indica que os resultados de uma execução de comando devem ser retornados como um fluxo.<br /><br /> **adExecuteStream** só pode ser passado como um parâmetro opcional para o método **Execute Command** .|  
+|**adExecuteRecord**||Indica que **CommandText** é um comando ou procedimento armazenado que retorna uma única linha que deve ser retornada como um objeto de **registro** .|  
+|**adOptionUnspecified**|-1|Indica que o comando não está especificado.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Pacote: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
 |AdoEnums.ExecuteOption.ASYNCEXECUTE|  
 |AdoEnums.ExecuteOption.ASYNCFETCH|  
 |AdoEnums.ExecuteOption.ASYNCFETCHNONBLOCKING|  
-|AdoEnums.ExecuteOption.NORECORDS|  
-|AdoEnums.ExecuteOption.UNSPECIFIED|  
+|AdoEnums. ExecuteOption. nograves|  
+|AdoEnums. ExecuteOption. não especificado|  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
   
 |||  
 |-|-|  

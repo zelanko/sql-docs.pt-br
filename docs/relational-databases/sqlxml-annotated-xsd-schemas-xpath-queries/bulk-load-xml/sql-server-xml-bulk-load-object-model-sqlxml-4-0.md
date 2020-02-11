@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246706"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modelo de objeto de carregamento em massa de XML do SQL Server (SQLXML 4.0)
@@ -44,7 +44,7 @@ ms.locfileid: "75246706"
   O modelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de objeto de carregamento em massa do Microsoft XML consiste no objeto SQLXMLBulkLoad. Esse objeto suporta os métodos e propriedades a seguir.  
   
 ## <a name="methods"></a>Métodos  
- Executar  
+ Execute (executar)  
  Carrega em massa os dados usando o arquivo de esquema e o arquivo de dados (ou fluxo) que são fornecidos como parâmetros.  
   
 ## <a name="properties"></a>Propriedades  
@@ -59,7 +59,7 @@ ms.locfileid: "75246706"
  Quando a propriedade é definida como TRUE, o Carregamento em Massa de XML verifica as restrições para cada valor inserido (o que significa que uma violação de restrição resulta em erro).  
   
 > [!NOTE]  
->  Para deixar essa propriedade como falsa, você deve ter permissões **ALTER TABLE** nas tabelas de destino. Para obter mais informações, consulte [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Para deixar essa propriedade como falsa, você deve ter permissões **ALTER TABLE** nas tabelas de destino. Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  O valor padrão é FALSE. Quando ele é definido como FALSE, o Carregamento em Massa de XML ignora as restrições durante uma operação de inserção. Na implementação atual, você precisa definir as tabelas na ordem dos relacionamentos de chave primária e chave estrangeira no esquema de mapeamento. Isso quer dizer que uma tabela com uma chave primária precisa ser definida antes da tabela correspondente com a chave estrangeira, senão haverá falha no Carregamento em Massa de XML.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75246706"
  Quando definido como TRUE, os gatilhos serão acionados normalmente durante operações de inserção.  
   
 > [!NOTE]  
->  Para deixar essa propriedade como falsa, você deve ter permissões **ALTER TABLE** nas tabelas de destino. Para obter mais informações, consulte [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Para deixar essa propriedade como falsa, você deve ter permissões **ALTER TABLE** nas tabelas de destino. Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  Observe que, se a Propagação de ID estiver sendo feita, essa opção não se aplicará, e os gatilhos serão deixados ativados. Isso ocorre quando `KeepIdentity=False` e quando há um relacionamento definido em que o pai é um campo de identidade e o valor é atribuído ao filho enquanto ele é gerado.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "75246706"
  O valor dessa propriedade se aplica a todas as colunas envolvidas no carregamento em massa. O valor padrão é TRUE.  
   
 > [!NOTE]  
->  Para deixar essa propriedade como verdadeira, você deve ter permissões **ALTER TABLE** nas tabelas de destino. Caso contrário, será preciso defini-la com um valor de FALSE. Para obter mais informações, consulte [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Para deixar essa propriedade como verdadeira, você deve ter permissões **ALTER TABLE** nas tabelas de destino. Caso contrário, será preciso defini-la com um valor de FALSE. Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  KeepNulls  
  Especifica qual valor usar para uma coluna que está perdendo um elemento filho ou atributo correspondente no documento XML. Essa é uma propriedade booliana. Quando a propriedade é definida como TRUE, o Carregamento em Massa de XML atribui um valor nulo à coluna. Ele não atribui o eventual valor padrão da coluna conforme definido no servidor. O valor dessa propriedade se aplica a todas as colunas envolvidas no carregamento em massa.  

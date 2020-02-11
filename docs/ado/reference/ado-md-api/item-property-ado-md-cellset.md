@@ -1,5 +1,5 @@
 ---
-title: Item de propriedade (conjunto de células do ADO MD) | Microsoft Docs
+title: Propriedade Item (ADO MD células) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c7fbce544cac188db7ed3b3d40478aa63809405
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949620"
 ---
 # <a name="item-property-ado-md-cellset"></a>Propriedade Item (conjunto de células do ADO MD)
-Recupera uma célula de uma [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) usando suas coordenadas.  
+Recupera uma célula de um [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) usando suas coordenadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,9 +34,9 @@ Set
 Cell = Cellset.Item ( Positions)  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *Posições*  
- Um **VariantArray** de valores que especificam exclusivamente uma célula. *Posições* pode ser uma das seguintes opções:  
+ Um **VariantArray** de valores que especificam exclusivamente uma célula. As *posições* podem ser uma das seguintes:  
   
 -   Uma matriz de números de posição  
   
@@ -45,9 +45,9 @@ Cell = Cellset.Item ( Positions)
 -   A posição ordinal  
   
 ## <a name="remarks"></a>Comentários  
- Use o **Item** propriedade para retornar um [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md) do objeto dentro de um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto. Se o **Item** propriedade não é possível localizar a célula correspondente a *posições* argumento, um erro ocorre.  
+ Use a propriedade **Item** para retornar um objeto de [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md) dentro de um objeto [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) . Se a propriedade **Item** não puder localizar a célula correspondente ao argumento *Positions* , ocorrerá um erro.  
   
- O **Item** é a propriedade padrão para o **conjunto de células** objeto. Formas de sintaxe a seguir são intercambiáveis:  
+ A propriedade **Item** é a propriedade padrão para o objeto **células** . As seguintes formas de sintaxe são intercambiáveis:  
   
 ```  
   
@@ -55,18 +55,18 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O *posições* argumento especifica qual célula para retornar. Você pode especificar a célula por posição ordinal ou a posição de cada eixo. Ao especificar a célula pela posição de cada eixo, você pode especificar o valor numérico da posição ou os nomes dos membros para cada posição.  
+ O argumento *Positions* especifica qual célula retornar. Você pode especificar a célula pela posição ordinal ou pela posição ao longo de cada eixo. Ao especificar a célula por posição ao longo de cada eixo, você pode especificar o valor numérico da posição ou os nomes dos membros de cada posição.  
   
- A posição ordinal é um número que identifica exclusivamente uma célula dentro de **conjunto de células**. Conceitualmente, as células são numeradas em um **Cellset** como se o **conjunto de células** foram um *p*-matriz dimensional, onde *p* é o número de eixos. As células são tratadas em ordem linha-principal. Abaixo está a fórmula para calcular o número ordinal de uma célula:  
+ A posição ordinal é um número que identifica exclusivamente uma célula dentro do **células**. Conceitualmente, as células são numeradas em um **células** como se o **células** fosse uma matriz *p*-dimensional, em que *p* é o número de eixos. As células são tratadas em ordem linha-principal. Abaixo está a fórmula para calcular o número ordinal de uma célula:  
   
- Se os nomes de membro são passados como cadeias de caracteres **Item**, os membros devem ser listados em ordem crescente de identificadores de eixo numérico. Dentro de um eixo, os membros devem ser listados em ordem crescente de aninhamento de dimensão – ou seja, membro da dimensão mais externo vem em primeiro lugar, seguidas por membros das dimensões internas. Cada dimensão deve ser representado por uma cadeia de caracteres separada, e a lista de cadeias de caracteres do membro deve ser separada por vírgulas.  
+ Se os nomes dos membros forem passados como cadeias de caracteres para o **Item**, os membros deverão ser listados em ordem crescente dos identificadores do eixo numérico. Dentro de um eixo, os membros devem ser listados em ordem crescente de aninhamento de dimensão – ou seja, o membro da dimensão mais externa vem primeiro, seguido por membros de dimensões internas. Cada dimensão deve ser representada por uma cadeia de caracteres separada, e a lista de cadeias de caracteres de membro deve ser separada por vírgulas.  
   
 > [!NOTE]
->  Recuperar células pelo nome do membro não pode ter suporte pelo seu provedor de dados. Consulte a documentação do seu provedor para obter mais informações.  
+>  A recuperação de células por nome de membro pode não ser suportada pelo seu provedor de dados. Consulte a documentação do seu provedor para obter mais informações.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

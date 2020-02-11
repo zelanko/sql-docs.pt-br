@@ -32,10 +32,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb307599c48c72697f696e78eb7ed988dc03ca37
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252648"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Classes gerenciadas SQLXML – Objeto SqlXmlCommand
@@ -108,7 +108,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Identifica o tipo de comando. Esta propriedade será usada para especificar o tipo de comando que você quer executar. Os valores da tabela a seguir determinam o tipo do comando. Para obter um exemplo funcional, consulte [acessando a funcionalidade SQLXML no ambiente .net](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |SqlXmlCommandType. SQL|Executa um comando SQL (por exemplo, `SELECT * FROM Employees FOR XML AUTO`).|  
 |SqlXmlCommandType. XPath|Executa um comando XPath (por exemplo, `Employees[@EmployeeID=1]`).|  

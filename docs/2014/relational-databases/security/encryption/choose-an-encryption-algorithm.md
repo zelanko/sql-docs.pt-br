@@ -16,17 +16,16 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: d133a9ed99cc270c9a2f7826f231086e3eb141c3
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957250"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Escolher um algoritmo de criptografia
   A criptografia é um dos muitos recursos de proteção que estão disponíveis para o administrador que deseja oferecer segurança a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Os algoritmos de criptografia definem as transformações de dados que não podem ser facilmente revertidas por usuários não autorizados. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite que administradores e desenvolvedores escolham entre diversos algoritmos, incluindo DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 de 128 bits, DESX, AES de 128 bits, AES de 192 bits e AES de 256 bits.  
+ Os algoritmos de criptografia definem as transformações de dados que não podem ser facilmente revertidas por usuários não autorizados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite que administradores e desenvolvedores escolham entre diversos algoritmos, incluindo DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 de 128 bits, DESX, AES de 128 bits, AES de 192 bits e AES de 256 bits.  
   
  Nenhum algoritmo é ideal para todas as situações e informações sobre o benefício de cada um está além do escopo dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Porém, os seguintes princípios gerais se aplicam:  
   
@@ -51,7 +50,7 @@ ms.locfileid: "74957250"
   
  Para obter mais informações sobre os algoritmos de criptografia e sobre a tecnologia de criptografia, consulte [Conceitos de segurança de chave](https://go.microsoft.com/fwlink/?LinkId=62082) no Guia do desenvolvedor do .NET Framework do MSDN.  
   
- **Esclarecimento sobre algoritmos DES:**  
+ **Esclarecimento em relação aos algoritmos DES:**  
   
 -   O DESX foi nomeado incorretamente. As chaves simétricas criadas com ALGORITHM = DESX na verdade usam a cifra TRIPLE DES com uma chave de 192 bits. O algoritmo DESX não é fornecido. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -63,14 +62,14 @@ ms.locfileid: "74957250"
   
 |||  
 |-|-|  
-|Criptografando com o uso de uma chave simétrica.|[CRIAR chave simétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
-|Criptografando com o uso de uma chave assimétrica.|[CRIAR chave assimétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|Criptografando com o uso de um certificado.|[CRIAR certificado &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
-|Criptografando arquivos de banco de dados com o uso de criptografia transparente de dados.|[Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)|  
+|Criptografando com o uso de uma chave simétrica.|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|Criptografando com o uso de uma chave assimétrica.|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|Criptografando com o uso de um certificado.|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
+|Criptografando arquivos de banco de dados com o uso de criptografia transparente de dados.|[TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md)|  
 |Como criptografar uma coluna de uma tabela.|[Criptografar uma coluna de dados](encrypt-a-column-of-data.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server criptografia](sql-server-encryption.md)   
+ [Criptografia do SQL Server](sql-server-encryption.md)   
  [Hierarquia de criptografia](encryption-hierarchy.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557911"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>Anexar domínio ou domínio composto a dados de referência-DQS (Data Quality Services)
@@ -39,10 +39,10 @@ ms.locfileid: "75557911"
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-###  <a name="Prerequisites"></a>Pré-requisitos  
+###  <a name="Prerequisites"></a> Pré-requisitos  
  Você deve configurar o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para usar serviços de dados de referência. Consulte [Configurar o DQS para usar dados de referência](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
 #### <a name="permissions"></a>Permissões  
  Você deve ter a função dqs_kb_editor no banco de dados DQS_MAIN para mapear domínios para os dados de referência.  
@@ -93,6 +93,6 @@ ms.locfileid: "75557911"
   
 ## <a name="see-also"></a>Consulte Também  
  [Serviços de dados de referência no DQS](../data-quality-services/reference-data-services-in-dqs.md)   
- [Limpeza de dados](../data-quality-services/data-cleansing.md)  
+ [Data Cleansing](../data-quality-services/data-cleansing.md)  
   
   

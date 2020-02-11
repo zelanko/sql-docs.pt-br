@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 1ff075880833be8179697cb4047babee67cfe61e
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957220"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Criar chaves simétricas idênticas em dois servidores
@@ -32,26 +32,26 @@ ms.locfileid: "74957220"
   
 -   [Para criar chaves simétricas idênticas em dois servidores diferentes, usando Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a>Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Quando uma chave simétrica é criada, a chave simétrica deve ser criptografada usando pelo menos um dos seguintes: senha, certificado, chave simétrica, chave assimétrica ou provedor. A chave pode ter mais de uma criptografia de cada tipo. Em outras palavras, uma única chave simétrica pode ser criptografada com o uso de vários certificados, senhas, chaves simétricas e chaves assimétricas ao mesmo tempo.  
   
 -   Quando uma chave simétrica é criptografada com uma senha e não com a chave pública da chave mestre do banco de dados, o algoritmo de criptografia TRIPLE DES é usado. Por esse motivo, as chaves criadas com um algoritmo de criptografia forte, como AES, são protegidas por um algoritmo mais fraco.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  Requer permissão ALTER ANY SYMMETRIC KEY no banco de dados. Se AUTHORIZATION for especificada, será necessária a permissão IMPERSONATE no usuário de banco de dados ou a permissão ALTER na função de aplicativo. Se a criptografia for por certificado ou chave assimétrica, exigirá a permissão VIEW DEFINITION no certificado ou na chave assimétrica. Somente logons do Windows, logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e funções de aplicativo podem ter chaves simétricas. Grupos e funções não podem possuir chaves simétricas.  
   
-##  <a name="TsqlProcedure"></a>Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>Para criar chaves simétricas idênticas em dois servidores diferentes  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Na barra Padrão , clique em **Nova Consulta**.  
+2.  Na barra Padrão, clique em **Nova Consulta**.  
   
 3.  Crie a chave executando as instruções CREATE MASTER KEY, CREATE CERTIFICATE e CREATE SYMMETRIC KEY.  
   
@@ -99,18 +99,18 @@ ms.locfileid: "74957220"
     GO  
     ```  
   
- Para saber mais, consulte o seguinte:   
+ Para saber mais, consulte o seguinte:  
   
--   [CRIAR chave mestra &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [CRIAR certificado &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CRIAR chave simétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
 -   [ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)  
   
--   [DECRYPTBYKEY &#40;&#41;Transact-SQL](/sql/t-sql/functions/decryptbykey-transact-sql)  
+-   [DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)  
   
--   [ABRIR chave simétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
+-   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
   
   

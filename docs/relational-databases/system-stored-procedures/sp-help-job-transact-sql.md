@@ -18,10 +18,10 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75546558"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "75546558"
   Retorna informações sobre trabalhos usados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para executar atividades automatizadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,9 +61,9 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`O atributo de trabalho a ser exibido. *job_aspect* é **varchar (9)**, com um padrão de NULL, e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**OS**|Informações de aspecto do trabalho|  
+|**ALL**|Informações de aspecto do trabalho|  
 |**TRABALHO**|Informações do trabalho|  
 |**AGENDAMENTO**|Informações da agenda|  
 |**TAREFAS**|Informações de etapa do trabalho|  
@@ -81,10 +81,10 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`O status de execução para os trabalhos. o *status* é **int**, com um padrão de NULL, e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**0**|Retorna somente os trabalhos que não estão ociosos ou suspensos.|  
-|**uma**|Em execução.|  
+|**1**|Em execução.|  
 |**2**|Esperando por thread.|  
 |**Beta**|Entre repetições.|  
 |**quatro**|Ocioso.|  
@@ -105,108 +105,108 @@ sp_help_job { [ @job_id = ] job_id
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se nenhum argumento for especificado, **sp_help_job** retornará esse conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ID exclusiva do trabalho.|  
 |**originating_server**|**nvarchar (30)**|Nome do servidor do qual o trabalho originou.|  
-|**nomes**|**sysname**|Nome do trabalho.|  
+|**name**|**sysname**|Nome do trabalho.|  
 |**habilitado**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
 |**ndescrição**|**nvarchar(512)**|Descrição do trabalho.|  
-|**start_step_id**|**inteiro**|ID da etapa do trabalho em que a execução deve começar.|  
+|**start_step_id**|**int**|ID da etapa do trabalho em que a execução deve começar.|  
 |**Categorias**|**sysname**|Categoria do trabalho.|  
 |**proprietário**|**sysname**|Proprietário do trabalho.|  
-|**notify_level_eventlog**|**inteiro**|**Bitmask** que indica em quais circunstâncias um evento de notificação deve ser registrado no log de aplicativos do Microsoft Windows. Pode ser um destes valores:<br /><br /> **0** = nunca<br /><br /> **1** = quando um trabalho é executado com sucesso<br /><br /> **2** = quando o trabalho falha<br /><br /> **3** = sempre que o trabalho for concluído (independentemente do resultado do trabalho)|  
-|**notify_level_email**|**inteiro**|**Bitmask** que indica em quais circunstâncias um email de notificação deve ser enviado quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
-|**notify_level_netsend**|**inteiro**|**Bitmask** que indica em quais circunstâncias uma mensagem de rede deve ser enviada quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
-|**notify_level_page**|**inteiro**|**Bitmask** que indica em que circunstâncias uma página deve ser enviada quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
+|**notify_level_eventlog**|**int**|**Bitmask** que indica em quais circunstâncias um evento de notificação deve ser registrado no log de aplicativos do Microsoft Windows. Pode ser um destes valores:<br /><br /> **0** = nunca<br /><br /> **1** = quando um trabalho é executado com sucesso<br /><br /> **2** = quando o trabalho falha<br /><br /> **3** = sempre que o trabalho for concluído (independentemente do resultado do trabalho)|  
+|**notify_level_email**|**int**|**Bitmask** que indica em quais circunstâncias um email de notificação deve ser enviado quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
+|**notify_level_netsend**|**int**|**Bitmask** que indica em quais circunstâncias uma mensagem de rede deve ser enviada quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
+|**notify_level_page**|**int**|**Bitmask** que indica em que circunstâncias uma página deve ser enviada quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
 |**notify_email_operator**|**sysname**|Nome de email do operador a ser notificado.|  
 |**notify_netsend_operator**|**sysname**|Nome do computador ou usuário usado ao enviar mensagens de rede.|  
 |**notify_page_operator**|**sysname**|Nome do computador ou usuário usado ao enviar uma página.|  
-|**delete_level**|**inteiro**|**Bitmask** que indica em quais circunstâncias o trabalho deve ser excluído quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
-|**date_created**|**horário**|Data em que o trabalho foi criado.|  
-|**date_modified**|**horário**|Data em que o trabalho foi modificado pela última vez.|  
-|**version_number**|**inteiro**|Versão do trabalho (atualizada automaticamente sempre que o trabalho é modificado).|  
-|**last_run_date**|**inteiro**|Data da última execução do trabalho.|  
-|**last_run_time**|**inteiro**|Hora da última execução do trabalho.|  
-|**last_run_outcome**|**inteiro**|Resultado do trabalho na última vez em que foi executado:<br /><br /> **0** = falha<br /><br /> **1** = com êxito<br /><br /> **3** = cancelado<br /><br /> **5** = desconhecido|  
-|**next_run_date**|**inteiro**|Próxima data em que o trabalho foi agendado para ser executado.|  
-|**next_run_time**|**inteiro**|Próxima hora em que o trabalho foi agendado para ser executado.|  
-|**next_run_schedule_id**|**inteiro**|Número de identificação do próximo agendamento de execução.|  
-|**current_execution_status**|**inteiro**|Status de execução atual:<br /><br /> **1** = executando<br /><br /> **2** = aguardando o thread<br /><br /> **3** = entre repetições<br /><br /> **4** = ocioso<br /><br /> **5** = suspenso<br /><br /> **6** = obsoleto<br /><br /> **7** = PerformingCompletionActions|  
+|**delete_level**|**int**|**Bitmask** que indica em quais circunstâncias o trabalho deve ser excluído quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
+|**date_created**|**datetime**|Data em que o trabalho foi criado.|  
+|**date_modified**|**datetime**|Data em que o trabalho foi modificado pela última vez.|  
+|**version_number**|**int**|Versão do trabalho (atualizada automaticamente sempre que o trabalho é modificado).|  
+|**last_run_date**|**int**|Data da última execução do trabalho.|  
+|**last_run_time**|**int**|Hora da última execução do trabalho.|  
+|**last_run_outcome**|**int**|Resultado do trabalho na última vez em que foi executado:<br /><br /> **0** = falha<br /><br /> **1** = com êxito<br /><br /> **3** = cancelado<br /><br /> **5** = desconhecido|  
+|**next_run_date**|**int**|Próxima data em que o trabalho foi agendado para ser executado.|  
+|**next_run_time**|**int**|Próxima hora em que o trabalho foi agendado para ser executado.|  
+|**next_run_schedule_id**|**int**|Número de identificação do próximo agendamento de execução.|  
+|**current_execution_status**|**int**|Status de execução atual:<br /><br /> **1** = executando<br /><br /> **2** = aguardando o thread<br /><br /> **3** = entre repetições<br /><br /> **4** = ocioso<br /><br /> **5** = suspenso<br /><br /> **6** = obsoleto<br /><br /> **7** = PerformingCompletionActions|  
 |**current_execution_step**|**sysname**|Etapa de execução atual no trabalho.|  
-|**current_retry_attempt**|**inteiro**|Se o trabalho estiver em execução e a etapa foi repetida, esta é a tentativa de repetição atual.|  
-|**has_step**|**inteiro**|Número de etapas que o trabalho possui.|  
-|**has_schedule**|**inteiro**|Número de agendamentos que o trabalho possui.|  
-|**has_target**|**inteiro**|Número de servidores de destino que o trabalho possui.|  
-|**Escreva**|**inteiro**|Tipo do trabalho.<br /><br /> 1 = Trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
+|**current_retry_attempt**|**int**|Se o trabalho estiver em execução e a etapa foi repetida, esta é a tentativa de repetição atual.|  
+|**has_step**|**int**|Número de etapas que o trabalho possui.|  
+|**has_schedule**|**int**|Número de agendamentos que o trabalho possui.|  
+|**has_target**|**int**|Número de servidores de destino que o trabalho possui.|  
+|**tipo**|**int**|Tipo do trabalho.<br /><br /> 1 = Trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
   
  Se *job_id* ou *job_name* for especificado, **sp_help_job** retornará esses conjuntos de resultados adicionais para etapas de trabalho, agendas de trabalho e servidores de destino de trabalho.  
   
  Este é o conjunto de resultados para etapas de trabalho.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**step_id**|**inteiro**|Identificador exclusivo (para este trabalho) da etapa.|  
+|**step_id**|**int**|Identificador exclusivo (para este trabalho) da etapa.|  
 |**step_name**|**sysname**|Nome da etapa.|  
-|**subsistema**|**nvarchar (40)**|Subsistema no qual o comando de etapa será executado.|  
+|**subsistema**|**nvarchar(40)**|Subsistema no qual o comando de etapa será executado.|  
 |**linha**|**nvarchar (3200)**|Comando que será executado.|  
-|**flags**|**nvarchar (4000)**|**Bitmask** de valores que controlam o comportamento da etapa.|  
-|**cmdexec_success_code**|**inteiro**|Para uma etapa de **CmdExec** , esse é o código de saída do processo de um comando bem-sucedido.|  
-|**on_success_action**|**nvarchar (4000)**|O que fazer se a etapa tiver êxito:<br /><br /> **1** = encerrar com êxito.<br /><br /> **2** = encerrar com falha.<br /><br /> **3** = ir para a próxima etapa.<br /><br /> **4** = ir para a etapa.|  
-|**on_success_step_id**|**inteiro**|Se **on_success_action** for **4**, isso indicará a próxima etapa a ser executada.|  
-|**on_fail_action**|**nvarchar (4000)**|Ação a ser executada se a etapa falhar. Os valores são os mesmos para **on_success_action**.|  
-|**on_fail_step_id**|**inteiro**|Se **on_fail_action** for **4**, isso indicará a próxima etapa a ser executada.|  
+|**flags**|**nvarchar(4000)**|**Bitmask** de valores que controlam o comportamento da etapa.|  
+|**cmdexec_success_code**|**int**|Para uma etapa de **CmdExec** , esse é o código de saída do processo de um comando bem-sucedido.|  
+|**on_success_action**|**nvarchar(4000)**|O que fazer se a etapa tiver êxito:<br /><br /> **1** = encerrar com êxito.<br /><br /> **2** = encerrar com falha.<br /><br /> **3** = ir para a próxima etapa.<br /><br /> **4** = ir para a etapa.|  
+|**on_success_step_id**|**int**|Se **on_success_action** for **4**, isso indicará a próxima etapa a ser executada.|  
+|**on_fail_action**|**nvarchar(4000)**|Ação a ser executada se a etapa falhar. Os valores são os mesmos para **on_success_action**.|  
+|**on_fail_step_id**|**int**|Se **on_fail_action** for **4**, isso indicará a próxima etapa a ser executada.|  
 |**servidor**|**sysname**|Reservado.|  
 |**database_name**|**sysname**|Para uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)], este é o banco de dados no qual o comando será executado.|  
 |**database_user_name**|**sysname**|Para uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)], este é o contexto de usuário do banco de dados no qual o comando é executado.|  
-|**retry_attempts**|**inteiro**|Número máximo de vezes que o comando deve ser repetido (se for malsucedido) antes que a etapa seja considerada com falha.|  
-|**retry_interval**|**inteiro**|Intervalo (em minutos) entre quaisquer tentativas de repetição.|  
+|**retry_attempts**|**int**|Número máximo de vezes que o comando deve ser repetido (se for malsucedido) antes que a etapa seja considerada com falha.|  
+|**retry_interval**|**int**|Intervalo (em minutos) entre quaisquer tentativas de repetição.|  
 |**os_run_priority**|**varchar (4000)**|Reservado.|  
 |**output_file_name**|**varchar (200)**|Arquivo no qual a saída de comando deve ser[!INCLUDE[tsql](../../includes/tsql-md.md)] gravada (e somente etapas de **CmdExec** ).|  
-|**last_run_outcome**|**inteiro**|Resultado da etapa na última vez em que foi executada:<br /><br /> **0** = falha<br /><br /> **1** = com êxito<br /><br /> **3** = cancelado<br /><br /> **5** = desconhecido|  
-|**last_run_duration**|**inteiro**|Duração (em segundos) da etapa na última vez em que foi executada.|  
-|**last_run_retries**|**inteiro**|Número de vezes que o comando foi repetido da última vez em que a etapa foi executada.|  
-|**last_run_date**|**inteiro**|Data em que a execução da etapa foi iniciada pela última vez.|  
-|**last_run_time**|**inteiro**|Hora em que a execução da etapa foi iniciada pela última vez.|  
-|**proxy_id**|**inteiro**|Proxy da etapa do trabalho.|  
+|**last_run_outcome**|**int**|Resultado da etapa na última vez em que foi executada:<br /><br /> **0** = falha<br /><br /> **1** = com êxito<br /><br /> **3** = cancelado<br /><br /> **5** = desconhecido|  
+|**last_run_duration**|**int**|Duração (em segundos) da etapa na última vez em que foi executada.|  
+|**last_run_retries**|**int**|Número de vezes que o comando foi repetido da última vez em que a etapa foi executada.|  
+|**last_run_date**|**int**|Data em que a execução da etapa foi iniciada pela última vez.|  
+|**last_run_time**|**int**|Hora em que a execução da etapa foi iniciada pela última vez.|  
+|**proxy_id**|**int**|Proxy da etapa do trabalho.|  
   
  Este é o conjunto de resultados para agendas de trabalho.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**schedule_id**|**inteiro**|Identificador da agenda (exclusivo em todos os trabalhos).|  
+|**schedule_id**|**int**|Identificador da agenda (exclusivo em todos os trabalhos).|  
 |**schedule_name**|**sysname**|Nome da agenda (exclusivo somente para este trabalho).|  
-|**habilitado**|**inteiro**|Se a agenda está ativa (**1**) ou não (**0**).|  
-|**freq_type**|**inteiro**|Valor que indica quando o trabalho será executado:<br /><br /> **1** = uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, em relação ao **freq_interval**<br /><br /> **64** = executar quando o serviço **SQLSERVERAGENT** for iniciado.|  
-|**freq_interval**|**inteiro**|Dias em que o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**habilitado**|**int**|Se a agenda está ativa (**1**) ou não (**0**).|  
+|**freq_type**|**int**|Valor que indica quando o trabalho será executado:<br /><br /> **1** = uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, em relação ao **freq_interval**<br /><br /> **64** = executar quando o serviço **SQLSERVERAGENT** for iniciado.|  
+|**freq_interval**|**int**|Dias em que o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Inteiro**|Unidades para **freq_subday_interval**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_interval**|**inteiro**|Número de períodos de **freq_subday_type** a ocorrer entre cada execução do trabalho. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_relative_interval**|**inteiro**|A ocorrência do trabalho agendado do **freq_interval** em cada mês. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_recurrence_factor**|**inteiro**|Número de meses entre a execução agendada do trabalho.|  
-|**active_start_date**|**inteiro**|Data em que a execução do trabalho será iniciada.|  
-|**active_end_date**|**inteiro**|Data em que a execução do trabalho será finalizada.|  
-|**active_start_time**|**inteiro**|Tempo para iniciar a execução do trabalho em **active_start_date.**|  
-|**active_end_time**|**inteiro**|Tempo para concluir a execução do trabalho em **active_end_date**.|  
-|**date_created**|**horário**|Data em que a agenda foi criada.|  
-|**schedule_description**|**nvarchar (4000)**|Uma descrição em inglês da agenda (se solicitado).|  
-|**next_run_date**|**inteiro**|Próxima data em que a agenda fará com que o trabalho seja executado.|  
-|**next_run_time**|**inteiro**|Próxima hora em que a agenda fará com que o trabalho seja executado.|  
+|**freq_subday_interval**|**int**|Número de períodos de **freq_subday_type** a ocorrer entre cada execução do trabalho. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_relative_interval**|**int**|A ocorrência do trabalho agendado do **freq_interval** em cada mês. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_recurrence_factor**|**int**|Número de meses entre a execução agendada do trabalho.|  
+|**active_start_date**|**int**|Data em que a execução do trabalho será iniciada.|  
+|**active_end_date**|**int**|Data em que a execução do trabalho será finalizada.|  
+|**active_start_time**|**int**|Tempo para iniciar a execução do trabalho em **active_start_date.**|  
+|**active_end_time**|**int**|Tempo para concluir a execução do trabalho em **active_end_date**.|  
+|**date_created**|**datetime**|Data em que a agenda foi criada.|  
+|**schedule_description**|**nvarchar(4000)**|Uma descrição em inglês da agenda (se solicitado).|  
+|**next_run_date**|**int**|Próxima data em que a agenda fará com que o trabalho seja executado.|  
+|**next_run_time**|**int**|Próxima hora em que a agenda fará com que o trabalho seja executado.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador da agenda.|  
-|**job_count**|**inteiro**|Retorna o número de trabalhos que fazem referência a esta agenda.|  
+|**job_count**|**int**|Retorna o número de trabalhos que fazem referência a esta agenda.|  
   
  Este é o conjunto de resultados para servidores de destino de trabalho.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**inteiro**|Identificador do servidor de destino.|  
+|**server_id**|**int**|Identificador do servidor de destino.|  
 |**server_name**|**nvarchar (30)**|Nome do computador do servidor de destino.|  
-|**enlist_date**|**horário**|Data em que o servidor de destino foi inscrito no servidor mestre.|  
-|**last_poll_date**|**horário**|Data em que o servidor de destino fez a última sondagem no servidor mestre.|  
-|**last_run_date**|**inteiro**|Data em que a execução do trabalho foi iniciada pela última vez nesse servidor de destino.|  
-|**last_run_time**|**inteiro**|Hora em que a execução do trabalho foi iniciada pela última vez nesse servidor de destino.|  
-|**last_run_duration**|**inteiro**|Duração do trabalho na última vez em que foi executado neste servidor de destino.|  
+|**enlist_date**|**datetime**|Data em que o servidor de destino foi inscrito no servidor mestre.|  
+|**last_poll_date**|**datetime**|Data em que o servidor de destino fez a última sondagem no servidor mestre.|  
+|**last_run_date**|**int**|Data em que a execução do trabalho foi iniciada pela última vez nesse servidor de destino.|  
+|**last_run_time**|**int**|Hora em que a execução do trabalho foi iniciada pela última vez nesse servidor de destino.|  
+|**last_run_duration**|**int**|Duração do trabalho na última vez em que foi executado neste servidor de destino.|  
 |**last_run_outcome**|**tinyint**|Resultado do trabalho na última vez em que foi executado neste servidor:<br /><br /> **0** = falha<br /><br /> **1** = com êxito<br /><br /> **3** = cancelado<br /><br /> **5** = desconhecido|  
-|**last_outcome_message**|**nvarchar (1024)**|Mensagem de resultado do trabalho na última vez em que foi executado neste servidor de destino.|  
+|**last_outcome_message**|**nvarchar(1024)**|Mensagem de resultado do trabalho na última vez em que foi executado neste servidor de destino.|  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
@@ -223,7 +223,7 @@ sp_help_job { [ @job_id = ] job_id
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-list-information-for-all-jobs"></a>R. Listar informações de todos os trabalhos  
+### <a name="a-list-information-for-all-jobs"></a>a. Listar informações de todos os trabalhos  
  O exemplo a seguir executa o procedimento `sp_help_job` sem parâmetros para retornar as informações de todos os trabalhos atualmente definidos no banco de dados `msdb`.  
   
 ```  
@@ -266,6 +266,6 @@ GO
  [&#41;&#40;Transact-SQL de sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_delete_job](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_update_job](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

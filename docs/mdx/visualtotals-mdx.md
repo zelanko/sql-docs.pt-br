@@ -1,5 +1,5 @@
 ---
-title: Função VisualTotals (MDX) | Microsoft Docs
+title: VisualTotals (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125836"
 ---
 # <a name="visualtotals-mdx"></a>Função VisualTotals (MDX)
@@ -35,12 +35,12 @@ VisualTotals(Set_Expression[,Pattern])
  Uma expressão de cadeia de caracteres válida para o membro pai do conjunto, que contém um asterisco (*) como o caractere de substituição para o nome do pai.  
   
 ## <a name="remarks"></a>Comentários  
- A expressão de conjunto inserida pode especificar um conjunto que contém membros em qualquer nível de uma única dimensão, em geral, membros com uma relação ancestral-descendente. O **VisualTotals** função totalize os valores dos membros filho no conjunto especificado e ignora os membros filho que não estão no conjunto ao calcular o resultado total. Os totais são somados visualmente para conjuntos ordenados na ordem de hierarquia. Se a ordem de membros nos conjuntos quebrar a hierarquia, os resultados não serão totais visuais. Por exemplo, VisualTotals (EUA, WA, CA, Seattle) não retorna WA como Seattle, mas retorna os valores para WA, CA e Seattle e, em seguida, soma esses valores como o total visual para os EUA, contando as vendas de Seattle duas vezes.  
+ A expressão de conjunto inserida pode especificar um conjunto que contém membros em qualquer nível de uma única dimensão, em geral, membros com uma relação ancestral-descendente. A função **VisualTotals** totaliza os valores dos membros filho no conjunto especificado e ignora os membros filho que não estão no conjunto no cálculo dos totais de resultado. Os totais são somados visualmente para conjuntos ordenados na ordem de hierarquia. Se a ordem de membros nos conjuntos quebrar a hierarquia, os resultados não serão totais visuais. Por exemplo, VisualTotals (EUA, WA, CA, Seattle) não retorna WA como Seattle, mas retorna os valores para WA, CA e Seattle e, em seguida, soma esses valores como o total visual para os EUA, contando as vendas de Seattle duas vezes.  
   
 > [!NOTE]  
->  Aplicando o **VisualTotals** função para membros de dimensão que não estão relacionadas a uma medida ou estão sob a granularidade do grupo de medidas fará com que valores a serem substituídos por nulo.  
+>  Aplicar a função **VisualTotals** a membros de dimensão que não estão relacionados a uma medida ou que estão sob a granularidade do grupo de medidas fará com que os valores sejam substituídos por um valor nulo.  
   
- *Padrão de*, que é opcional, especifica o formato para o rótulo do total. *Padrão de* requer um asterisco (*) como o caractere de substituição para o membro pai e o restante do texto na cadeia de caracteres aparece no resultado concatenado com o nome do pai. Para exibir um asterisco literal, use dois asteriscos (\*\*).  
+ *Padrão*, que é opcional, especifica o formato do rótulo de totais. O *padrão* requer um asterisco (*), pois o caractere de substituição para o membro pai e o restante do texto na cadeia de caracteres aparecem no resultado concatenado com o nome pai. Para exibir um asterisco literal, use dois asteriscos (\*\*).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna o total visual do terceiro trimestre do ano civil de 2001 com base no único descendente especificado, o mês de julho.  
@@ -66,7 +66,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

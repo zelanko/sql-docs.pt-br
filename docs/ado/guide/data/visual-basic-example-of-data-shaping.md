@@ -1,5 +1,5 @@
 ---
-title: Formatação de dados de exemplo do Visual Basic | Microsoft Docs
+title: Visual Basic exemplo de formatação de dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,10 +15,10 @@ ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a21eda26bab7f5bc5d678c6763c803323ffcff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923503"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Exemplo de data shaping do Visual Basic
@@ -92,14 +92,14 @@ End Function
   
 #### <a name="try-it"></a>Experimente!  
   
-1.  Criar um projeto de aplicativo EXE padrão do Visual Basic  
+1.  Criar um Visual Basic projeto de aplicativo EXE Standard  
   
-2.  Selecione **componentes** da **projeto** menu do Visual Studio  
+2.  Selecionar **componentes** no menu **projeto** no Visual Studio  
   
-3.  Selecione "Microsoft hierárquica FlexGrid controle 6.0 (OLEDB)" das **componentes** janela pop-up e clique **salvar**.  
+3.  Selecione "Microsoft Hierarchical FlexGrid Control 6,0 (OLEDB)" na janela pop-up **componentes** e, em seguida, clique em **salvar**.  
   
-4.  Clique duas vezes no controle FlexGrid no painel de caixa de ferramentas do espaço de trabalho do Visual Basic. Altere o nome desta instância para MSHFLEXGRID.  
+4.  Clique duas vezes no controle FlexGrid no painel caixa de ferramentas no espaço de trabalho Visual Basic. Altere o nome dessa instância para MSHFLEXGRID.  
   
-5.  Copie o código anterior e cole-o na **código** página para substituir qualquer código existente.  
+5.  Copie o código anterior e cole-o na página de **código** para substituir qualquer código existente.  
   
-6.  Selecione **inicie** da **executar** menu para executar o aplicativo.
+6.  Selecione **Iniciar** no menu **executar** para executar o aplicativo.

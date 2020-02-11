@@ -14,10 +14,10 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88ce592ebbf5a1b44d55b1b3119ef96e713112bc
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74833023"
 ---
 # <a name="unicode-function-arguments"></a>Argumentos da função Unicode

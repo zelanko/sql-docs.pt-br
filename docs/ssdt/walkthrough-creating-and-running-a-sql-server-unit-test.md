@@ -1,23 +1,24 @@
 ---
-title: 'Passo a passo: Criar e executar um teste de unidade do SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Criar e executar um teste de unidade do SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141213"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242703"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Passo a passo: Criar e executar um teste de unidade do SQL Server
+
 Neste passo a passo, você criará um teste de unidade do SQL Server que verifica o comportamento de vários procedimentos armazenados. Os testes de unidade do SQL Server são criados para facilitar a identificação de falhas no código que podem resultar em comportamento incorreto do aplicativo. Você pode executar testes de unidade do SQL Server e teste de aplicativo como parte de um pacote automatizado de testes.  
   
 Neste passo a passo, você executará as seguintes tarefas:  
@@ -227,7 +228,7 @@ Para concluir esse passo a passo, você precisa se conectar a um servidor de ban
   
 1.  No menu **Arquivo** , aponte para **Novo**e clique em **Projeto**.  
   
-    A caixa de diálogo **Novo Projeto** será exibida.  
+    A caixa de diálogo **Novo Projeto** aparecerá.  
   
 2.  Em **Modelos Instalados**, selecione o nó **SQL Server** e selecione **Projeto de Banco de Dados do SQL Server**.  
   
@@ -981,7 +982,7 @@ Para criar e verificar um teste negativo, execute as seguintes tarefas:
   
     O teste é aprovado, o que significa que o procedimento apresentou falha quando deveria.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Em um projeto típico, você definirá testes de unidade adicionais para verificar se todos os objetos de banco de dados essenciais estão funcionando corretamente. Quando o conjunto de testes for concluído, você fará check-in dos testes para controle de versão a fim de compartilhá-los com a equipe.  
   
 Após estabelecer uma linha de base, você poderá criar e modificar objetos de banco de dados e, em seguida, criar testes associados para verificar se uma alteração afetará o comportamento esperado.  

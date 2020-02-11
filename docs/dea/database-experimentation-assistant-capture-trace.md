@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258529"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831541"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar um rastreamento no Assistente para Experimentos de Banco de Dados
 
@@ -133,7 +133,7 @@ Se você vir um erro ao executar uma captura de rastreamento, confirme se:
 
 - O nome do computador que executa o SQL Server é válido. Para confirmar, tente se conectar ao computador que executa o SQL Server usando o SQL Server Management Studio (SSMS).
 - A configuração do firewall não bloqueia conexões com o computador que executa o SQL Server.
-- O usuário tem as permissões listadas nas [perguntas frequentes sobre reprodução](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)de postagem no blog.
+- O usuário tem as permissões listadas nas [perguntas frequentes de reprodução](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - O nome do rastreamento não segue a Convenção de substituição padrão\_(captura 1). Em vez disso, tente rastrear nomes\_como captura 1a ou Capture1.
 
 A seguir estão alguns erros possíveis que você pode ver e soluções para solucioná-los:
@@ -147,6 +147,6 @@ A seguir estão alguns erros possíveis que você pode ver e soluções para sol
 
 Se você vir quaisquer outros erros rotulados como *código de erro SQL*, consulte [mecanismo de banco de dados erros](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) para obter descrições detalhadas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - Para saber como configurar as ferramentas de Distributed Replay no SQL Server antes de reproduzir um rastreamento capturado, consulte [configurar Distributed Replay para assistente para experimentos de banco de dados](database-experimentation-assistant-configure-replay.md).

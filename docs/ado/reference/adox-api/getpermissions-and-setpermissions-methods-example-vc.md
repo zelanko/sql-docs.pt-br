@@ -1,5 +1,5 @@
 ---
-title: GetPermissions e SetPermissions métodos (VC + +) | Microsoft Docs
+title: Exemplo dos métodos getPermissions e SetPermissions (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1b866e0671786552cfcf1fef70579eb2f83d19de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5b72a5c8fc99e8e2baccc01a17bb110b1aaa973
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966256"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76917832"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>Exemplo dos métodos GetPermissions e SetPermissions (VC++)
-Este exemplo demonstra a [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) métodos. O código a seguir fornece acesso completo à tabela de pedidos para o usuário administrador.  
+Este exemplo demonstra os métodos [getPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) . O código a seguir fornece acesso completo à tabela Orders para o usuário administrador.  
   
 ```  
 // BeginGrantPermissionCpp.cpp  
@@ -97,7 +97,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in GrantPermissionsX...."<< endl;  
+      cout << "Error occurred in GrantPermissionsX...."<< endl;  
    }  
    ::CoUninitialize();  
 }  

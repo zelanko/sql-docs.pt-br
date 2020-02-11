@@ -1,5 +1,5 @@
 ---
-title: Tratamento de erro em JScript | Microsoft Docs
+title: Tratamento de erros no JScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925178"
 ---
 # <a name="handling-errors-in-jscript"></a>Tratamento de erro em JScript
-Deve verificar o código do seu Microsoft® JScript® a **contagem** propriedade da **Conexão** do objeto **erros** coleção. Se o valor for maior que 0, iterar na coleção e os valores de impressão, como você faria em qualquer uma das outras linguagens.  
+O código do Microsoft® JScript® deve verificar a propriedade **Count** da coleção de **erros** do objeto de **conexão** . Se o valor for maior que 0, itere pela coleção e imprima os valores como faria em qualquer uma das outras linguagens.  
   
 ```  
 <!-- BeginErrorExampleJS -->  

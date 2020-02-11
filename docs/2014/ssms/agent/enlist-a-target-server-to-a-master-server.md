@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211391"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Inscrever um servidor de destino em um servidor mestre
@@ -32,7 +32,7 @@ ms.locfileid: "68211391"
   
  **Neste tópico**  
   
--   **Para inscrever um servidor de destino, usando:**  
+-   **Para inscrever um servidor de destino usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,9 +56,9 @@ ms.locfileid: "68211391"
   
 1.  Use o procedimento armazenado `sp_msx_enlist`.  Para obter mais informações, consulte [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a> Usando o SQL Server Management Objects (SMO)  
+##  <a name="PowerShellProcedure"></a>Usando o SQL Server Management Objects (SMO)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração automatizada em toda a empresa](automated-administration-across-an-enterprise.md)  
   
   

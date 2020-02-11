@@ -14,7 +14,7 @@
       href: ../integration-services/integration-services-developer-documentation.md
     - name: Compatibilidade com versões anteriores do Integration Services
       href: ../integration-services/integration-services-backward-compatibility.md
-- name: Guias de início rápido
+- name: Inícios rápidos
   items:
     - name: Implantar
       items:
@@ -78,6 +78,8 @@
   href: ../integration-services/integration-services-ssis-development-and-management-tools.md
 - name: Projetos e Soluções
   href: ../integration-services/integration-services-ssis-projects-and-solutions.md
+- name: DevOps do SSIS
+  href: ../integration-services/devops/ssis-devops-overview.md
 - name: Interface do usuário
   href: ../integration-services/integration-services-user-interface.md
   items:
@@ -93,7 +95,7 @@
       href: ../integration-services/ssis-toolbox.md
     - name: Página geral da opções dos Designers do Integration Services
       href: ../integration-services/general-page-of-integration-services-designers-options.md
-- name: Packages
+- name: Pacotes
   href: ../integration-services/integration-services-ssis-packages.md
   items:
     - name: Copiar pacotes nas Ferramentas de Dados do SQL Server
@@ -444,7 +446,7 @@
         - name: Destino do Fluxo de Dados
           href: ../integration-services/data-flow/data-streaming-destination.md
           items:
-            - name: 'Passo a passo: Publicar um pacote do SSIS como uma exibição SQL'
+            - name: 'Passo a passo: publicar um Pacote SSIS como um modo SQL'
               href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
         - name: Destino DataReader
           href: ../integration-services/data-flow/datareader-destination.md
@@ -454,7 +456,7 @@
         - name: Destino de processamento de dimensões
           href: ../integration-services/data-flow/dimension-processing-destination.md
           items:
-            - name: Propriedades Personalizadas de Destino de Processamento de Dimensões
+            - name: Propriedades personalizadas do destino Processamento de Dimensões
               href: ../integration-services/data-flow/dimension-processing-destination-custom-properies.md
         - name: Origem do Excel
           href: ../integration-services/data-flow/excel-source.md
@@ -572,7 +574,7 @@
               href: ../integration-services/data-flow/look-up-infoobject.md
             - name: Criar InfoSource
               href: ../integration-services/data-flow/create-infosource.md
-            - name: Criar InfoSource para os Dados da Transação
+            - name: Criar InfoSource para os dados da transação
               href: ../integration-services/data-flow/create-infosource-for-transaction-data.md
             - name: Criar InfoSource para Dados Mestres
               href: ../integration-services/data-flow/create-infosource-for-master-data.md
@@ -731,7 +733,7 @@
       href: ../integration-services/data-flow/extract-data-by-using-the-xml-source.md
     - name: Propriedades personalizadas da origem XML
       href: ../integration-services/data-flow/xml-source-custom-properties.md
-- name: Variáveis
+- name: variáveis
   href: ../integration-services/integration-services-ssis-variables.md
   items:
     - name: Janela Variáveis
@@ -925,13 +927,13 @@
       href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
     - name: Pacotes de balanceamento de carga em servidores remotos usando o SQL Server Agent
       href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
-- name: Escalar horizontalmente
+- name: Expansão
   items:
     - name: Visão geral
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: Introdução ao SSIS Scale Out em um único computador
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: 'Passo a passo: Configurar o Integration Services Scale Out'
+    - name: 'Passo a passo: configurar a Expansão do Integration Services'
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: Executar pacotes em Expansão
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -987,7 +989,7 @@
   href: ../integration-services/service/events-logged-by-the-integration-services-service.md
 - name: SSIS (Integration Services) em um cluster
   href: ../integration-services/service/integration-services-ssis-in-a-cluster.md
-- name: Packages
+- name: Pacotes
   items:
     - name: Visão geral
       href: ../integration-services/security/security-overview-integration-services.md
@@ -1119,7 +1121,7 @@
           href: ../integration-services/system-stored-procedures/catalog-create-execution-dump.md
         - name: catalog.create_folder
           href: ../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md
-    - name: DELETE
+    - name: Excluir
       items:
         - name: catalog.delete_customized_logging_level
           href: ../integration-services/system-stored-procedures/catalog-delete-customized-logging-level.md
@@ -1173,7 +1175,7 @@
       href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
     - name: catalog.revoke_permission
       href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
-    - name: Defina
+    - name: Definir
       items:
         - name: catalog.set_customized_logging_level_description
           href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
@@ -1205,7 +1207,7 @@
       href: ../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md
     - name: catalog.stop_operation
       href: ../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md
-    - name: Update
+    - name: Atualizar
       items:
         - name: catalog.update_logdb_info (Banco de Dados SSISDB)
           href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md
@@ -1460,17 +1462,28 @@
   href: ../integration-services/azure-feature-pack-for-integration-services-ssis.md
 - name: Suporte para Hadoop e HDFS no Integration Services (SSIS)
   href: ../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md
-- name: Microsoft Connectors para Oracle
+- name: Conector da Microsoft para o Oracle
   href: ../integration-services/data-flow/oracle-connector.md
   items:
     - name: Gerenciador de Conexões do Oracle
       href: ../integration-services/data-flow/oracle-connection-manager.md
-    - name: Origem do Oracle
+    - name: Oracle Source
       href: ../integration-services/data-flow/oracle-source.md
     - name: Destino Oracle
       href: ../integration-services/data-flow/oracle-destination.md
     - name: Suporte do tipo de dados
       href: ../integration-services/data-flow/oracle-data-type-support.md
+- name: Conector da Microsoft para o Teradata
+  href: ../integration-services/data-flow/Teradata-connector.md
+  items:
+    - name: Gerenciador de conexões do Teradata
+      href: ../integration-services/data-flow/Teradata-connection-manager.md
+    - name: Origem do Teradata
+      href: ../integration-services/data-flow/Teradata-source.md
+    - name: Destino do Teradata
+      href: ../integration-services/data-flow/Teradata-destination.md
+    - name: Suporte do tipo de dados
+      href: ../integration-services/data-flow/Teradata-data-type-support.md
 - name: Microsoft Connectors para Oracle e Teradata da Attunity
   href: ../integration-services/attunity-connectors.md
 - name: Assistente de Importação e Exportação do SQL Server
@@ -1547,19 +1560,19 @@
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
 - name: Carregar dados no SQL Data Warehouse
   href: ../integration-services/load-data-to-sql-data-warehouse.md
-- name: Change Data Capture
+- name: Captura de dados de alterações
   items:
     - name: Visão geral
       href: ../integration-services/change-data-capture/change-data-capture-ssis.md
     - name: Especificar um intervalo de dados de alteração
       href: ../integration-services/change-data-capture/specify-an-interval-of-change-data.md
-    - name: Determinar se os dados de alterações estão protos
+    - name: Determinar se os dados de alteração estão prontos
       href: ../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md
     - name: Preparar para consultar os dados de alterações
       href: ../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md
     - name: Criar a função para recuperar os dados de alteração
       href: ../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md
-    - name: Recuperar e compreender os dados de alterações
+    - name: Recuperar e compreender os dados de alteração
       href: ../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md
     - name: 'Processar inserções, atualizações e exclusões'
       href: ../integration-services/change-data-capture/process-inserts-updates-and-deletes.md
@@ -1636,7 +1649,7 @@
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
             - name: Como criar a instância de banco de dados de alteração do SQL Server
               href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
-            - name: Como gerenciar uma instância CDC
+            - name: How to Manage a CDC Instance
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
             - name: Como editar as propriedades de instância CDC
               href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
@@ -1679,7 +1692,7 @@
               href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
             - name: Criar e editar um Serviço Oracle CDC
               href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
-            - name: Gerenciar um Serviço Oracle CDC
+            - name: Manage an Oracle CDC Service
               href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
             - name: Preparar SQL Server para CDC
               href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
@@ -1717,7 +1730,7 @@
     - name: Criar um pacote
       href: ../integration-services/ssis-how-to-create-an-etl-package.md
       items:
-        - name: 'Lição 1: Criar um projeto e um pacote básico'
+        - name: 'Lição 1: criar um projeto e um pacote básico'
           href: ../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md
           items:
             - name: Lição 1-1 – criar um novo projeto do Integration Services
@@ -1738,7 +1751,7 @@
               href: ../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
             - name: Lição 1-9 – testar o pacote de tutoriais da Lição 1
               href: ../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md
-        - name: 'Lição 2: Adicionar looping'
+        - name: 'Lição 2: adicionar um loop'
           href: ../integration-services/lesson-2-adding-looping-with-ssis.md
           items:
             - name: Lição 2-1 – copiar o pacote da Lição 1
@@ -1749,7 +1762,7 @@
               href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
             - name: Lição 2-4 – testar o pacote de tutoriais da Lição 2
               href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
-        - name: 'Lição 3: Adicionar registro em log'
+        - name: 'Lição 3: adicionar registro em log'
           href: ../integration-services/lesson-3-add-logging-with-ssis.md
           items:
             - name: Lição 3-1 – copiar o pacote da Lição 2
@@ -1758,7 +1771,7 @@
               href: ../integration-services/lesson-3-2-adding-and-configuring-logging.md
             - name: Lição 3-3 – testar o pacote de tutoriais da Lição 3
               href: ../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md
-        - name: 'Lição 4: Adicionar redirecionamento de fluxo de erro'
+        - name: 'Lição 4: adicionar o redirecionamento de fluxo de erro'
           href: ../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md
           items:
             - name: Lição 4-1 – copiar o pacote da Lição 3
@@ -1771,7 +1784,7 @@
               href: ../integration-services/lesson-4-4-adding-a-flat-file-destination.md
             - name: Lição 4-5 – testar o pacote de tutoriais da Lição 4
               href: ../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md
-        - name: 'Lição 5: Adicionar configurações de pacote para o modelo de implantação de pacote'
+        - name: 'Lição 5: adicionar configurações de pacote para o modelo de implantação de pacote'
           href: ../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
           items:
             - name: Lição 5-1 – copiar o pacote da Lição 4
@@ -1782,7 +1795,7 @@
               href: ../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md
             - name: Lição 5-4 – testar o pacote de tutoriais da Lição 5
               href: ../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md
-        - name: 'Lição 6: Como usar parâmetros com o modelo de implantação de projeto'
+        - name: 'Lição 6: Usando parâmetros com o modelo de implantação de projeto'
           href: ../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
           items:
             - name: Lição 6-1 – copiar o pacote da Lição 5
@@ -1809,14 +1822,14 @@
               href: ../integration-services/lesson-1-4-adding-package-configurations.md
             - name: Lição 1-5 – testar os pacotes atualizados
               href: ../integration-services/lesson-1-5-testing-the-updated-packages.md
-        - name: 'Lição 2: Criar o pacote de implantação'
+        - name: 'Lição 2: criar o pacote de implantação'
           href: ../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md
           items:
             - name: Lição 2-1 – compilar o utilitário de implantação
               href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
             - name: Lição 2-2 – verificar o pacote de implantação
               href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-        - name: 'Lição 3: Instalar pacotes'
+        - name: 'Lição 3: instalar pacotes'
           href: ../integration-services/lesson-3-install-ssis-packages.md
           items:
             - name: Lição 3-1 – copiar o pacote de implantação

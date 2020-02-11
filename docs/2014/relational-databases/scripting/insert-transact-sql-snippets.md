@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40e1fea04c0f864d871c01e9087ca9d346475c18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242076"
 ---
 # <a name="insert-transact-sql-snippets"></a>Inserir snippets Transact-SQL
@@ -27,8 +27,7 @@ ms.locfileid: "75242076"
 ## <a name="inserting-snippets"></a>Inserindo snippets  
  Você pode usar o menu **Inserir Snippet** para abrir uma lista categorizada de snippets a serem selecionados.  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] Os snippets contêm pontos de substituição: texto que sugere a sintaxe pertinente àquele ponto. Por exemplo, o snippet CREATE TABLE tem pontos de substituição para elementos como o nome de tabela, nomes de coluna e tipos de dados de coluna. Após a inserção do snippet, você deve alterar o texto de substituição para formar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] válida. Para obter mais informações, veja [Concluir snippets Transact-SQL](complete-transact-sql-snippets.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Os snippets contêm pontos de substituição: texto que sugere a sintaxe pertinente àquele ponto. Por exemplo, o snippet CREATE TABLE tem pontos de substituição para elementos como o nome de tabela, nomes de coluna e tipos de dados de coluna. Após a inserção do snippet, você deve alterar o texto de substituição para formar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] válida. Para obter mais informações, veja [Concluir snippets Transact-SQL](complete-transact-sql-snippets.md).  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>Inserindo um snippet usando o menu de snippet de inserção  
   
@@ -45,6 +44,6 @@ ms.locfileid: "75242076"
 3.  Clique duas vezes em o snippet ou selecione o snippet do seletor de snippet e pressione TAB ou ENTER.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Inserir trechos Transact-SQL com surround](insert-surround-with-transact-sql-snippets.md)  
+ [Inserir snippets Transact-SQL com Surround](insert-surround-with-transact-sql-snippets.md)  
   
   

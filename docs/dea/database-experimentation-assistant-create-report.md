@@ -1,7 +1,7 @@
 ---
 title: Criar relatórios de análise
 description: Criar relatórios de análise no Assistente para Experimentos de Banco de Dados
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d3f057ffcfb1030b473b69f96b7204b3a975613
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74307970"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831866"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Criar relatórios de análise no Assistente para Experimentos de Banco de Dados (SQL Server)
 
@@ -25,29 +25,24 @@ Depois de reproduzir o rastreamento de origem nos dois servidores de destino, vo
 
 ## <a name="create-an-analysis-report"></a>Criar um relatório de análise
 
-Em DEA, selecione o ícone de menu. No menu expandido, selecione **relatórios de análise** ao lado do ícone lista de verificação.
+1. Em DEA, selecione o ícone de lista, especifique o nome do servidor e o tipo de autenticação, marque ou desmarque as caixas de seleção **criptografar conexão** e **certificado do servidor confiável** , conforme apropriado para seu cenário e, em seguida, selecione **conectar**.
 
-![Menu de análise](./media/database-experimentation-assistant-create-report/dea-create-reports-menu.png)
+   ![Conectar-se ao servidor com arquivos de rastreamento](./media/database-experimentation-assistant-create-report/dea-connect-to-server-with-trace-files.png)
 
-Em **relatórios de análise**, selecione **novo relatório de análise**.
+2. Na tela **relatórios de análise** , selecione **novo relatório de análise**.
 
-![Menu novo relatório de análise](./media/database-experimentation-assistant-create-report/dea-create-reports-new-report.png)
+   ![Criar novo relatório de análise](./media/database-experimentation-assistant-create-report/dea-create-an-analysis-report.png)
 
-Insira ou selecione as seguintes informações:
+3. Na tela **novo relatório de análise** , especifique um nome para o relatório, o local de armazenamento e o caminho para os arquivos de rastreamento 1 e destino 2 e, em seguida, selecione **Iniciar**.
 
-- **Nome do relatório**: Insira um nome para o relatório. O nome do relatório é usado para bancos de dados A e B. Exemplo: um*identificador exclusivo*do*nome* +  *do relatório (ou B)* + .
-- **Nome do servidor**: Insira o nome do computador do servidor que você deseja incluir nos bancos de dados de análise a, B e.
-- **Nome da instância do SQL Server**: Insira o nome da instância de SQL Server a ser usada para o relatório.
-- **Rastreamento do servidor de origem**: insira o SQL Server (2008 R2) primeiro arquivo de rastreamento (. trc).
-- **Rastreamento do servidor de destino**: insira o SQL Server de destino (2014) primeiro arquivo. trc.
+   ![Especificar detalhes do novo relatório de análise](./media/database-experimentation-assistant-create-report/dea-new-analysis-report-details.png)
 
-![Página novo relatório de análise](./media/database-experimentation-assistant-create-report/dea-create-reports-inputs.png)
+   Se as informações inseridas forem válidas, o relatório de análise será criado.
 
-## <a name="generate-a-report"></a>Gerar um relatório
+   ![Relatório de análise criado recentemente](./media/database-experimentation-assistant-create-report/dea-newly-created-analysis-report.png)
 
-Depois de inserir ou selecionar as informações necessárias na página **novo relatório de análise** , selecione **Iniciar** para começar a criar o relatório. Se as informações inseridas forem válidas, o relatório de análise será criado. Caso contrário, as caixas de texto com informações inválidas serão realçadas com vermelho. Certifique-se de inserir os valores corretos e, em seguida, selecione **Iniciar**.
-
-Um novo relatório de análise é gerado. O banco de dados de análise segue a análise do esquema de nomenclatura + +  *nome de relatório especificado pelo usuário**identificador exclusivo*.
+      > [!NOTE]
+      > Se qualquer uma das informações inseridas for inválida, as caixas de texto que contêm as informações incorretas serão realçadas em vermelho. Faça as correções necessárias e, em seguida, selecione **Iniciar** novamente.
 
 ## <a name="frequently-asked-questions-about-analysis-reports"></a>Perguntas frequentes sobre relatórios de análise
 
@@ -58,10 +53,6 @@ O DEA usa testes estatísticos para analisar sua carga de trabalho e determinar 
 **P: posso criar um novo relatório de análise enquanto outro relatório está sendo gerado?**
 
 Não.  Atualmente, apenas um relatório pode ser gerado por vez para evitar conflitos. No entanto, você pode executar mais de uma captura e reprodução ao mesmo tempo.
-
-**P: atualizei o DEA para a versão 2,0. Ainda posso exibir e usar meus relatórios antigos?**
-
-Sim. Para exibir relatórios gerados anteriormente, você deve atualizar o esquema do relatório. Para obter mais informações, consulte [DEA 2,0: atualizar o esquema de banco de dados para o relatório de análise no DEA](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-updating-db-schema-for-analysis-report-in-the-database-experimentation-assistant/).
 
 **P: posso gerar um relatório de análise usando o prompt de comando?**
 
@@ -105,8 +96,8 @@ Verifique o banco de dados no computador de análise que está executando SQL Se
 
 Se os dados não existirem, os dados poderão não ter sido copiados corretamente ou o banco de dado poderá estar corrompido. Se apenas alguns dados estiverem ausentes, os arquivos de rastreamento criados na captura ou reprodução poderão não ter capturado a carga de trabalho com precisão. Se os dados estiverem lá, verifique os arquivos de log em% temp\\% DEA para ver se algum erro foi registrado. Em seguida, tente gerar novamente o relatório de análise.
 
-Mais perguntas ou comentários? Envie comentários por meio da ferramenta DEA escolhendo o ícone de Smiley no canto inferior esquerdo. 
+Mais perguntas ou comentários? Envie comentários por meio da ferramenta DEA escolhendo o ícone de Smiley no canto inferior esquerdo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - Para saber como exibir o relatório de análise, consulte [exibir relatórios](database-experimentation-assistant-view-report.md).

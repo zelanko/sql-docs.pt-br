@@ -10,10 +10,10 @@ ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251740"
 ---
 # <a name="data-quality-client-application"></a>Aplicativo cliente Data Quality
@@ -31,18 +31,18 @@ ms.locfileid: "75251740"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como usar o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .|[Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md)|  
+|Descreve como usar o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .|[Executar o aplicativo do cliente do Data Quality](../data-quality-services/run-the-data-quality-client-application.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
 |Descrição do conteúdo|Tópico|  
 |-------------------------|-----------|  
-|Descreve como usar bases de dados de conhecimento e domínios no DQS.|[Bases de dados de conhecimento e domínios do DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Descreve como limpar dados no DQS.|[Limpeza de dados](../data-quality-services/data-cleansing.md)|  
+|Descreve como usar bases de dados de conhecimento e domínios no DQS.|[Bases de Dados de Conhecimento DQS e domínios](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
+|Descreve como limpar dados no DQS.|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
 |Descreve como fazer correspondências no DQS.|[Correspondência de dados](../data-quality-services/data-matching.md)|  
 |Descreve como administrar o DQS.|[administração do dqs](../data-quality-services/dqs-administration.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tela inicial do Data Quality Client](../data-quality-services/data-quality-client-home-screen.md)  
+ [Tela inicial do Cliente Data Quality](../data-quality-services/data-quality-client-home-screen.md)  
   
   

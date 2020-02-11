@@ -15,10 +15,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957090"
 ---
 # <a name="sql-server-encryption"></a>Criptografia do SQL Server
@@ -36,29 +36,29 @@ ms.locfileid: "74957090"
  [Escolher um algoritmo de criptografia](choose-an-encryption-algorithm.md)  
  Informações sobre como selecionar um algoritmo de criptografia eficaz.  
   
- [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)  
+ [TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md)  
  Informações gerais sobre como criptografar dados de forma transparente.  
   
- [SQL Server e chaves de criptografia de banco de dados &#40;Mecanismo de Banco de Dados&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
+ [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as chaves de criptografia incluem uma combinação de chaves públicas, privadas e assimétricas, usadas para proteger dados confidenciais. Esta seção explica como implementar e gerenciar chaves de criptografia.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Protegendo SQL Server](../securing-sql-server.md)  
+ [Protegendo o SQL Server](../securing-sql-server.md)  
  Visão geral de como ajudar a proteger a plataforma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e como trabalhar com usuários e objetos protegíveis.  
   
- [Funções criptográficas &#40;&#41;Transact-SQL](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
+ [Funções criptográficas &#40;Transact-SQL&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
  Informações sobre como implementar funções de criptografia.  
   
- [&#41;ENCRYPTBYPASSPHRASE &#40;Transact-SQL](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
+ [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
  Informações sobre como usar uma senha para criptografar dados.  
   
  [ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)  
  Informações sobre como usar uma chave simétrica para criptografar dados.  
   
- [&#41;ENCRYPTBYASYMKEY &#40;Transact-SQL](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
+ [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
  Informações sobre como usar uma chave assimétrica para criptografar dados.  
   
- [&#41;ENCRYPTBYCERT &#40;Transact-SQL](/sql/t-sql/functions/encryptbycert-transact-sql)  
+ [ENCRYPTBYCERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
  Informações sobre como usar um certificado para criptografar dados.  
   
 ## <a name="external-resources"></a>Recursos externos  
@@ -66,8 +66,8 @@ ms.locfileid: "74957090"
  Informações atuais sobre segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
- [SQL Server e chaves de criptografia de banco de dados &#40;Mecanismo de Banco de Dados&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
- [Fazer backup e restaurar Reporting Services chaves de criptografia](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [sys.key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
+ [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [Fazer backup e restaurar as chave de criptografia do Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

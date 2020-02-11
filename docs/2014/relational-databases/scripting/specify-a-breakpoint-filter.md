@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243219"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar um filtro de ponto de interrupção
   Um filtro de ponto de interrupção limita o ponto de interrupção para atuar somente em computadores, sistemas operacionais, processos e threads especificados. Filtros de ponto de interrupção são normalmente usados ao depurar aplicativos paralelos.  
   
-##  <a name="BKMK_ActionConsiderations"></a>Considerações de filtro  
+##  <a name="BKMK_ActionConsiderations"></a> Considerações sobre filtros  
  Filtros de ponto de interrupção não são normalmente usados com o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] porque os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] e os procedimentos armazenados não são aplicativos paralelos.  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>Para especificar um filtro de ponto de interrupção  
@@ -48,5 +48,5 @@ ms.locfileid: "75243219"
   
 ## <a name="see-also"></a>Consulte Também  
  [Especificar uma condição de ponto de interrupção](specify-a-breakpoint-condition.md)   
- [Especificar uma contagem de acesso](specify-a-hit-count.md)   
+ [Especificar uma contagem de ocorrências](specify-a-hit-count.md)   
  [Especificar uma ação de ponto de interrupção](specify-a-breakpoint-action.md)  

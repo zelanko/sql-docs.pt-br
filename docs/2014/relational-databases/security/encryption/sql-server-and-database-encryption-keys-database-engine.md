@@ -13,19 +13,19 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957120"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o usa chaves de criptografia para ajudar a proteger dados, credenciais e informações de conexão armazenadas em um banco de dado de servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]tem dois tipos de chaves: *simétrica* e *assimétrica*. As chaves simétricas usam a mesma senha para criptografar e descriptografar dados. As chaves assimétricas usam uma senha para criptografar dados (chamada chave *pública* ) e outra para descriptografar dados (chamada chave *privada* ).  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa chaves de criptografia para ajudar a proteger dados, credenciais e informações de conexão armazenados em um banco de dados de servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem dois tipos de chaves: *simétrica* e *asimétrica*. As chaves simétricas usam a mesma senha para criptografar e descriptografar dados. As chaves assimétricas usam uma senha para criptografar dados (chamada chave *pública* ) e outra para descriptografar dados (chamada chave *privada* ).  
   
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as chaves de criptografia incluem uma combinação de chaves públicas, privadas e assimétricas, usadas para proteger dados confidenciais. A chave simétrica é criada durante a inicialização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando você inicia pela primeira vez a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A chave é usada pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para criptografar dados confidenciais que são armazenados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As chaves públicas e privadas são criadas pelo sistema operacional e são usadas para proteger a chave simétrica. Um par de chaves pública e privada é criado para cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que armazena dados confidenciais em um banco de dados.  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>Aplicativos para o SQL Server e chaves de banco de dados  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]tem dois aplicativos principais para chaves: uma SMK ( *chave mestra de serviço* ) gerada em e para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uma instância do e uma *chave mestra de banco de dados* (DMK) usada para um banco de dados.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem dois aplicativos principais para chaves: uma *SMK (chave mestra de serviço)* gerada e para uma instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , e uma *DMK (chave mestra de banco de dados)* usada para um banco de dados.  
   
  A SMK é gerada automaticamente na primeira vez que a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é iniciada, e é usada para criptografar a senha, as credenciais e a chave mestra de banco de dados de um servidor vinculado. A SMK é criptografada com a chave do computador local usando a DPAPI (API de proteção de dados do Windows). A DPAPI usa uma chave derivada das credenciais do Windows da conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e das credenciais do computador. A chave mestra de serviço só pode ser descriptografada pela conta de serviço sob a qual foi criada ou por um principal que tenha acesso às credenciais da máquina.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "74957120"
  [Chave mestra de serviço](service-master-key.md)  
  Fornece uma breve explicação da chave mestra de serviço e suas práticas recomendadas.  
   
- [Gerenciamento extensível de chaves &#40;EKM&#41;](extensible-key-management-ekm.md)  
+ [Gerenciamento Extensível de Chaves &#40;EKM&#41;](extensible-key-management-ekm.md)  
  Explica como usar sistemas de gerenciamento de chaves de terceiros com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="related-tasks"></a>Related Tasks  
@@ -74,27 +74,27 @@ ms.locfileid: "74957120"
   
  [Criar uma chave mestra de banco de dados](create-a-database-master-key.md)  
   
- [Fazer backup de uma chave mestra de banco de dados](back-up-a-database-master-key.md)  
+ [Fazer backup da chave mestra de um banco de dados](back-up-a-database-master-key.md)  
   
  [Restaurar uma chave mestra de banco de dados](restore-a-database-master-key.md)  
   
  [Criar chaves simétricas idênticas em dois servidores](create-identical-symmetric-keys-on-two-servers.md)  
   
- [Gerenciamento extensível de chaves usando o Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
  [Habilitar TDE usando EKM](enable-tde-on-sql-server-using-ekm.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [CRIAR chave mestra &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-master-key-transact-sql)  
+ [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
  [Restaurar uma chave mestra de banco de dados](restore-a-database-master-key.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Fazer backup e restaurar Reporting Services chaves de criptografia](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Excluir e recriar chaves de criptografia &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Adicionar e remover chaves de criptografia para implantação em expansão &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
- [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)  
+ [Fazer backup e restaurar as chave de criptografia do Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Excluir e recriar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Adicionar e remover chaves de criptografia para implantação escalável &#40;Gerenciador de Configurações do SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md)  
   
   

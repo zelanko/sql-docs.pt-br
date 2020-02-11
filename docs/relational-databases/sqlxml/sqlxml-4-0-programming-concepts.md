@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff9785d18d46e9aaca26c768d1069c32d3d2e8b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242618"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Conceitos de programação do SQLXML 4.0
@@ -29,7 +29,7 @@ ms.locfileid: "75242618"
   
  Esta seção fornece informações sobre o SQLXML 4.0.  
   
- [O SQLXML não está instalado no SQL Server](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
+ [O SQLXML não é instalado no SQL Server](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
  Descreve como instalar o SQLXML 4.0.  
   
  [Novidades no SQLXML 4.0 SP1](../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)  
@@ -53,7 +53,7 @@ ms.locfileid: "75242618"
  [Usando consultas XPath no SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  Descreve como usar um subconjunto da linguagem XPath para consultar as exibições em XML criadas por um esquema XSD anotado, fornecendo exemplos.  
   
- [Usando Updategrams para modificar dados no SQLXML 4,0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Usando diagramas de atualização para modificar dados no SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Fornece informações sobre diagramas de atualização, que modificam os dados em um banco de dados trabalhando nas exibições XML fornecidas pelos esquemas XSD (ou XDR) anotados.  
   
  [Executando o carregamento em massa de dados XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
@@ -75,6 +75,6 @@ ms.locfileid: "75242618"
  Lista as questões a serem lembradas ao trabalhar com o SQLXML 4.0.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#40;de dados XML SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

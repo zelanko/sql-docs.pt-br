@@ -33,10 +33,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b846628a77f6e11f864679d51fd62fc783fb2c7b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258288"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT – GROUP BY – Transact-SQL
@@ -46,7 +46,7 @@ Uma cláusula da instrução SELECT que divide o resultado da consulta em grupos
   
 ## <a name="syntax"></a>Sintaxe  
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -355,15 +355,15 @@ A cláusula GROUP BY é compatível com todos os recursos de GROUP BY incluídos
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Agregações de DISTINCT|Não há suporte para WITH CUBE ou WITH ROLLUP.|Há suporte para WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE ou ROLLUP.|Igual ao nível de compatibilidade 100.|  
 |Função definida pelo usuário com nome CUBE ou ROLLUP na cláusula GROUP BY|A função definida pelo usuário **dbo.cube(** _arg1_ **,** _...argN_ **)** ou **dbo.rollup(** _arg1_ **,** ..._argN_ **)** na cláusula GROUP BY é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|A função definida pelo usuário **dbo.cube (** _arg1_ **,** ...argN **)** ou **dbo.rollup(** arg1 **,** _...argN_ **)** na cláusula GROUP BY não é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> A mensagem de erro a seguir será retornada: "Sintaxe incorreta próxima à palavra-chave 'cube'&#124;'rollup."<br /><br /> Para evitar esse problema, substitua `dbo.cube` por `[dbo].[cube]` ou `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> O exemplo a seguir é permitido: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|A função definida pelo usuário **dbo.cube (** _arg1_ **,** _...argN_) ou **dbo.rollup(** _arg1_ **,** _...argN_ **)** na cláusula GROUP BY é permitida<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|Sem suporte|Suportado|Suportado|  
-|CUBE|Sem suporte|Suportado|Sem suporte|  
-|ROLLUP|Sem suporte|Suportado|Sem suporte|  
-|Total geral, como GROUP BY ()|Sem suporte|Suportado|Suportado|  
-|Função GROUPING_ID|Sem suporte|Suportado|Suportado|  
-|função GROUPING|Suportado|Suportado|Suportado|  
-|WITH CUBE|Suportado|Suportado|Suportado|  
-|WITH ROLLUP|Suportado|Suportado|Suportado|  
-|Remoção de agrupamento "duplicado" WITH CUBE ou WITH ROLLUP|Suportado|Suportado|Suportado| 
+|GROUPING SETS|Sem suporte|Com suporte|Com suporte|  
+|CUBE|Sem suporte|Com suporte|Sem suporte|  
+|ROLLUP|Sem suporte|Com suporte|Sem suporte|  
+|Total geral, como GROUP BY ()|Sem suporte|Com suporte|Com suporte|  
+|Função GROUPING_ID|Sem suporte|Com suporte|Com suporte|  
+|função GROUPING|Com suporte|Com suporte|Com suporte|  
+|WITH CUBE|Com suporte|Com suporte|Com suporte|  
+|WITH ROLLUP|Com suporte|Com suporte|Com suporte|  
+|Remoção de agrupamento "duplicado" WITH CUBE ou WITH ROLLUP|Com suporte|Com suporte|Com suporte| 
  
   
 ## <a name="examples"></a>Exemplos  

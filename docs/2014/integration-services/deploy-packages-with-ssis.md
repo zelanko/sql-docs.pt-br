@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89db7def474b26ffd25da1495e3efaf0e1af43dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232690"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Tutorial SSIS: implantando pacotes
@@ -75,10 +75,10 @@ ms.locfileid: "75232690"
  **Tempo estimado para concluir este tutorial:** 2 horas  
   
 ## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial  
- [Lição 1: preparando-se para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
+ [Lição 1: Preparando-se para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  Nesta lição, você irá se preparar para implantar uma solução ETL criando um novo projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionando os pacotes e outros arquivos necessários ao projeto.  
   
- [Lição 2: criando o pacote de implantação](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [Lição 2: Criando o pacote de implantação](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  Nesta lição, você compilará um utilitário de implantação e verificará se o grupo de implantação inclui os arquivos necessários.  
   
  [Lição 3: Instalando pacotes](../integration-services/lesson-3-install-ssis-package.md)  

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228472"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensões do AdventureWorks para demonstrar OLTP na memória
@@ -39,9 +39,9 @@ ms.locfileid: "75228472"
   
 -   Instruções para executar [Medidas de desempenho usando a carga de trabalho de demonstração](#PerformanceMeasurementsusingtheDemoWorkload) – inclui instruções para instalar e executar ostress, uma ferramenta usada para direcionar a carga de trabalho, bem como executar a própria carga de trabalho de demonstração  
   
--   [Utilização de memória e espaço em disco no exemplo](#MemoryandDiskSpaceUtilizationintheSample)  
+-   [Utilização de memória e espaço em disco na amostra](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a>Pré-requisitos  
+##  <a name="Prerequisites"></a> Pré-requisitos  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-avaliação, Developer ou Enterprise Edition  
   
@@ -121,7 +121,7 @@ ms.locfileid: "75228472"
   
         4.  Clique no botão "executar" para executar o script  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a>Descrição das tabelas e procedimentos de exemplo  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> Descrição das tabelas e procedimentos de exemplo  
  O exemplo cria novas tabelas para produtos e pedidos de vendas, com base em tabelas existentes no AdventureWorks. O esquema das novas tabelas é semelhante às tabelas existentes, com algumas diferenças, conforme explicado a seguir.  
   
  As novas tabelas com otimização de memória têm o sufixo "_inmem". O exemplo também inclui as tabelas correspondentes que têm o sufixo "_ondisk" – essas tabelas podem ser usadas para fazer uma comparação um-para-um entre o desempenho de tabelas com otimização de memória e tabelas baseadas em disco em seu sistema.  
@@ -180,13 +180,13 @@ ms.locfileid: "75228472"
   
  Sales.SalesOrderHeader_inmem  
   
--   As *restrições padrão* têm suporte para tabelas com otimização de memória e a maioria das restrições padrão que migramos como estão. No entanto, a tabela Sales.SalesOrderHeader original contém duas restrições padrão que recuperam a data atual, pata as colunas OrderDate e ModifiedDate. Em uma carga de trabalho de processamento de pedidos com alta taxa de transferência e muita simultaneidade, qualquer recurso global pode se tornar um ponto de contenção. O tempo do sistema é um recurso bem global, e observamos que ele pode se tornar um gargalo quando você executa uma carga de trabalho de [!INCLUDE[hek_2](../includes/hek-2-md.md)] que insere pedidos de vendas, em particular se o tempo do sistema precisa ser recuperado para várias colunas no cabeçalho do pedido de vendas, bem como os detalhes do pedido de vendas. O problema é tratado neste exemplo através da recuperação do tempo do sistema apenas uma vez para cada pedido de vendas que é inserido, e o uso desse valor para as colunas de data e hora em SalesOrderHeader_inmem e em SalesOrderDetail_inmem, no procedimento armazenado Sales.usp_InsertSalesOrder_inmem.  
+-   *Restrições padrão* têm suporte para tabelas com otimização de memória, e migramos a maioria das restrições padrão como tal. No entanto, a tabela Sales.SalesOrderHeader original contém duas restrições padrão que recuperam a data atual, pata as colunas OrderDate e ModifiedDate. Em uma carga de trabalho de processamento de pedidos com alta taxa de transferência e muita simultaneidade, qualquer recurso global pode se tornar um ponto de contenção. O tempo do sistema é um recurso bem global, e observamos que ele pode se tornar um gargalo quando você executa uma carga de trabalho de [!INCLUDE[hek_2](../includes/hek-2-md.md)] que insere pedidos de vendas, em particular se o tempo do sistema precisa ser recuperado para várias colunas no cabeçalho do pedido de vendas, bem como os detalhes do pedido de vendas. O problema é tratado neste exemplo através da recuperação do tempo do sistema apenas uma vez para cada pedido de vendas que é inserido, e o uso desse valor para as colunas de data e hora em SalesOrderHeader_inmem e em SalesOrderDetail_inmem, no procedimento armazenado Sales.usp_InsertSalesOrder_inmem.  
   
 -   *UDTs de alias* – a tabela original usa dois tipos de dados de alias (UDTs) dbo. OrderNumber e dbo. AccountNumber, para as colunas PurchaseOrderNumber e AccountNumber, respectivamente. O[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] não dá suporte ao UDT de alias para tabelas com otimização de memória; portanto, as novas tabelas usam os tipos de dados do sistema nvarchar(25) e nvarchar(15), respectivamente.  
   
--   *Colunas que permitem valor nulo em chaves de índice* – na tabela original, a coluna vendedorid é anulável, enquanto nas novas tabelas a coluna não é anulável e tem uma restrição padrão com valor (-1). Isso ocorre porque os índices nas tabelas com otimização de memória não podem ter colunas anuláveis na chave do índice; -1 é um substituto de NULL nesse caso.  
+-   *Colunas que permitem valor nulo em chaves de índice* - na tabela original, a coluna SalesPersonID é anulável, enquanto em novas tabelas a coluna não é anulável e tem uma restrição padrão com valor (-1). Isso ocorre porque os índices nas tabelas com otimização de memória não podem ter colunas anuláveis na chave do índice; -1 é um substituto de NULL nesse caso.  
   
--   *Colunas computadas* -as colunas computadas SalesOrderNumber e TotalDue são omitidas, pois [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o não oferece suporte a colunas computadas em tabelas com otimização de memória. A nova exibição Sales.vSalesOrderHeader_extended_inmem reflete as colunas SalesOrderNumber e TotalDue. Por disso, você pode usar essa exibição se essas colunas são necessárias.  
+-   *Colunas computadas* - as colunas computadas SalesOrderNumber e TotalDue são omitidas, pois o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] não oferece suporte a colunas computadas em tabelas com otimização de memória. A nova exibição Sales.vSalesOrderHeader_extended_inmem reflete as colunas SalesOrderNumber e TotalDue. Por disso, você pode usar essa exibição se essas colunas são necessárias.  
   
 -   Não há suporte para *restrições Foreign Key* em tabelas com otimização de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]memória no. Além disso, SalesOrderHeader_inmem é uma tabela ativa na carga de trabalho de exemplo, e as restrições de chaves estrangeiras exigem processamento adicional para todas as operações DML, pois são necessárias pesquisas em todas as outras tabelas referenciadas nessas restrições. Consequentemente, a suposição é a de que o aplicativo garante a integridade referencial, e a integridade referencial não é validada quando linhas são inseridas. A integridade referencial dos dados nessa tabela pode ser verificada usando o procedimento armazenado dbo.usp_ValidateIntegrity, através do seguinte script:  
   
@@ -202,15 +202,15 @@ ms.locfileid: "75228472"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *ROWGUID* -a coluna rowguid é omitida. Apesar de uniqueidentifier ter suporte para tabelas com otimização de memória, a opção ROWGUIDCOL não tem suporte no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. As colunas desse tipo são geralmente usadas para a replicação de mesclagem ou para tabelas com colunas filestream. Este exemplo não inclui isso.  
+-   *Rowguid* - a coluna rowguid é omitida. Apesar de uniqueidentifier ter suporte para tabelas com otimização de memória, a opção ROWGUIDCOL não tem suporte no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. As colunas desse tipo são geralmente usadas para a replicação de mesclagem ou para tabelas com colunas filestream. Este exemplo não inclui isso.  
   
  Sales.SalesOrderDetail  
   
--   *Restrições padrão* – semelhantes a SalesOrderHeader, a restrição padrão que exige a data/hora do sistema não é migrada, em vez disso, o procedimento armazenado que insere ordens de venda cuida da inserção da data/hora atual do sistema na primeira inserção.  
+-   *Restrições padrão* – semelhante ao SalesOrderHeader, a restrição padrão que requer a data/hora do sistema não é migrada; o procedimento armazenado que insere os pedidos de vendas fica responsável por inserir a data/hora atual do sistema na primeira inserção.  
   
--   *Colunas computadas* -a coluna computada LineTotal não foi migrada porque não há suporte para colunas computadas com tabelas [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]com otimização de memória no. Para acessar essa coluna, use a exibição Sales.vSalesOrderDetail_extended_inmem.  
+-   *Colunas computadas* – a coluna computada LineTotal não foi migrada pois colunas computadas não são compatíveis com tabelas com otimização de memória no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Para acessar essa coluna, use a exibição Sales.vSalesOrderDetail_extended_inmem.  
   
--   *ROWGUID* -a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
+-   *Rowguid* - a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
   
 -   Para as restrições de *verificação* e *chave estrangeira* , consulte a descrição de SalesOrderHeader. O seguinte script pode ser usado para verificar o domínio e a integridade referencial dessa tabela:  
   
@@ -221,11 +221,11 @@ ms.locfileid: "75228472"
   
  Production.Product  
   
--   *UDTs de alias* -a tabela original usa o tipo de dados do dbo definido pelo usuário. Sinalizador, que é equivalente ao tipo de dados do sistema bit. A tabela migrada usa o tipo de dados bit.  
+-   *UDTs de alias* – a tabela original usa tipo de dados definidos pelo usuário dbo.Flag, que equivalem ao tipo de dados bit do sistema. A tabela migrada usa o tipo de dados bit.  
   
 -   *Agrupamento BIN2* – as colunas Name e ProductNumber são incluídas em chaves de índice e, portanto, devem ter agrupamentos [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]BIN2 no. Aqui, a suposição é a de que o aplicativo não se baseia em especificações de ordenação, como a não diferenciação de maiúsculas e minúsculas.  
   
--   *ROWGUID* -a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
+-   *Rowguid* - a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
   
 -   As restrições *Unique*, *check* e *Foreign Key* são contadas de duas maneiras: os procedimentos armazenados product. usp_InsertProduct_inmem e Product. usp_DeleteProduct_inmem podem ser usados para inserir e excluir produtos; esses procedimentos validam a integridade referencial e de domínio e falharão se a integridade for violada. Além disso, o seguinte script pode ser usado para validar o domínio e a integridade referencial como tal:  
   
@@ -245,7 +245,7 @@ ms.locfileid: "75228472"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *ROWGUID* -a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
+-   *Rowguid* - a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
   
  Sales.SpecialOfferProduct  
   
@@ -256,7 +256,7 @@ ms.locfileid: "75228472"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *ROWGUID* -a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
+-   *Rowguid* - a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
   
 #### <a name="considerations-for-indexes-on-memory-optimized-tables"></a>Considerações para índices em tabelas com otimização de memória  
  O índice de linha de base para tabelas com otimização de memória é o índice NONCLUSTERED, que dá suporte a pesquisas de ponto (busca de índice em predicado de igualdade), exames de intervalo (busca de índice em predicado de desigualdade), verificações de índice completo e exames ordenados. Além disso, os índices NONCLUSTERED dão suporte à pesquisa nas colunas principais da chave de índice. De fato, os índices NONCLUSTERED com otimização de memória dão suporte a todas as operações com o suporte de índices NONCLUSTERED baseados em disco, exceto apenas para verificações regressivas. Portanto, o uso de índices NONCLUSTERED é uma opção confiável para seus índices.  
@@ -309,48 +309,44 @@ ms.locfileid: "75228472"
   
     -   Parâmetro de saída:  
   
-        -   
-  @SalesOrderID int – a SalesOrderID do pedido de venda recém-inserido  
+        -   @SalesOrderID int – a SalesOrderID do pedido de venda recém-inserido  
   
     -   Parâmetros de entrada (obrigatório):  
   
-        -   @DueDatedatetime2  
+        -   @DueDate datetime2  
   
-        -   @CustomerIDinteiro  
+        -   @CustomerID int  
   
-        -   @BillToAddressIDinteiro  
+        -   @BillToAddressID [int]  
   
-        -   @ShipToAddressIDinteiro  
+        -   @ShipToAddressID [int]  
   
-        -   @ShipMethodIDinteiro  
+        -   @ShipMethodID [int]  
   
         -   
   @SalesOrderDetails Sales.SalesOrderDetailType_inmem – TVP que contém os itens de linha do pedido  
   
     -   Parâmetros de entrada (opcional):  
   
-        -   @Statustinyint  
+        -   @Status [tinyint]  
   
-        -   @OnlineOrderFlagparte  
+        -   @OnlineOrderFlag [bit]  
   
-        -   
-  @PurchaseOrderNumber [nvarchar](25\)  
+        -   @PurchaseOrderNumber [nvarchar](25\)  
   
-        -   
-  @AccountNumber [nvarchar](15\)  
+        -   @AccountNumber [nvarchar](15\)  
   
-        -   @SalesPersonIDinteiro  
+        -   @SalesPersonID [int]  
   
-        -   @TerritoryIDinteiro  
+        -   @TerritoryID [int]  
   
-        -   @CreditCardIDinteiro  
+        -   @CreditCardID [int]  
   
-        -   
-  @CreditCardApprovalCode [varchar](15\)  
+        -   @CreditCardApprovalCode [varchar](15\)  
   
-        -   @CurrencyRateIDinteiro  
+        -   @CurrencyRateID [int]  
   
-        -   @Commentnvarchar(128  
+        -   @Comment nvarchar(128)  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_inmem  
   
@@ -390,13 +386,13 @@ ms.locfileid: "75228472"
   
     -   Ele se baseia nos procedimentos auxiliares dbo.usp_GenerateCKCheck auxiliares, dbo.usp_GenerateFKCheck e dbo.GenerateUQCheck para gerar o T-SQL necessário para executar as verificações de integridade.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a>Medições de desempenho usando a carga de trabalho de demonstração  
+##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de desempenho usando a carga de trabalho de demonstração  
  Ostress é uma ferramenta de linha de comando que foi desenvolvida pela equipe de suporte do [!INCLUDE[msCoName](../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Essa ferramenta pode ser usada para executar consultas ou executar procedimentos armazenados em paralelo. Você pode configurar o número de threads para executar em paralelo determinada instrução T-SQL, e pode especificar quantas vezes a instrução deve ser executada neste thread; ostress girará os threads e executará a instrução em todos os threads em paralelo. Ao término da execução de todos os threads, ostress relatará quanto tempo levou para concluir a execução de todos os threads.  
   
 ### <a name="installing-ostress"></a>Instalando ostress  
  Ostress é instalada como parte dos utilitários de RML; não há instalação autônoma para ostress.  
   
- Etapas de instalação:  
+ Etapas da instalação:  
   
 1.  Baixe e execute o pacote de instalação x64 para os utilitários RML da seguinte página:[https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
@@ -541,7 +537,7 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
  Recomendamos uma redefinição após cada demonstração executada. Como essa carga de trabalho é somente de inserção, cada execução consumirá mais memória e, portanto, uma redefinição é necessária para evitar ficar sem memória. A quantidade de memória consumida após uma execução é discutida na seção [Utilização de memória após executar a carga de trabalho](#Memoryutilizationafterrunningtheworkload).  
   
-###  <a name="Troubleshootingslow-runningtests"></a>Solucionando problemas de testes de execução lenta  
+###  <a name="Troubleshootingslow-runningtests"></a> Solução de problemas em testes com execução lenta  
  Os resultados de testes variam de acordo com o hardware, e também com o nível de simultaneidade usado na execução do teste. Alguns itens a serem pesquisados se os resultados não forem os esperados:  
   
 -   Número de transações simultâneas: ao executar a carga de trabalho em um único thread, o ganho de desempenho com [!INCLUDE[hek_2](../includes/hek-2-md.md)] provavelmente será menor que 2X. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
@@ -550,14 +546,14 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
     -   Sintoma: se há alta utilização da CPU ao executar a carga de trabalho em tabelas baseadas em disco, isso significa não há muita contenção, apontando para uma falta de simultaneidade.  
   
--   Velocidade da unidade de log: se a unidade de log não consegue acompanhar o nível de transferência de transações no sistema, a carga de trabalho se torna um gargalo na E/S de log. Embora o log seja mais eficiente com [!INCLUDE[hek_2](../includes/hek-2-md.md)], se a E/S de log é um gargalo, o ganho de desempenho potencial é limitado.  
+-   Velocidade da unidade de log: se a unidade de log não consegue acompanhar o nível de taxa de transferência de transações no sistema, a carga de trabalho se torna um gargalo na E/S de log. Embora o log seja mais eficiente com [!INCLUDE[hek_2](../includes/hek-2-md.md)], se a E/S de log é um gargalo, o ganho de desempenho potencial é limitado.  
   
     -   Sintoma: caso quase 100% da CPU seja utilizada ou apresentar um pico de uso ao executar a carga de trabalho em tabelas com otimização de memória, talvez exista um gargalo de E/S de log. Isso pode ser confirmado abrindo o Monitor de Recursos e examinando o comprimento da fila para a unidade de log.  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a>Utilização de memória e espaço em disco no exemplo  
+##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Utilização de memória e espaço em disco na amostra  
  A seguir, descrevemos o que esperar em termos de utilização da memória e do espaço em disco para o banco de dados de exemplo. Também mostramos os resultados observados em um servidor de teste com 16 núcleos lógicos.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a>Utilização de memória para as tabelas com otimização de memória  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Utilização de memória para as tabelas com otimização de memória  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilização geral do banco de dados  
  A consulta a seguir pode ser usada para obter a utilização total de memória de [!INCLUDE[hek_2](../includes/hek-2-md.md)] no sistema.  
@@ -573,7 +569,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**Escreva**|**nomes**|**pages_MB**|  
+|**tipo**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|Padrão|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|Padrão|0|  
@@ -610,7 +606,7 @@ WHERE t.type='U'
   
  O que chama a atenção aqui é o tamanho da memória alocada para índices, comparado ao tamanho dos dados da tabela. Isso ocorre porque os índices de hash no exemplo são dimensionados previamente para um tamanho maior de dados. Observe que os índices de hash têm um tamanho fixo e, assim, seu tamanho não aumentará conforme o tamanho dos dados na tabela.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a>Utilização de memória após a execução da carga de trabalho  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> Utilização de memória após executar a carga de trabalho  
  Após a inserção de 10 milhões de pedidos de vendas, qualquer utilização de memória superior terá a seguinte aparência:  
   
 ```  
@@ -622,7 +618,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**Escreva**|**nomes**|**pages_MB**|  
+|**tipo**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|Padrão|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|Padrão|0|  
@@ -668,7 +664,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**Escreva**|**nomes**|**pages_MB**|  
+|**tipo**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|Padrão|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|Padrão|0|  
@@ -687,7 +683,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**Escreva**|**nomes**|**pages_MB**|  
+|**tipo**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|Padrão|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|Padrão|0|  
@@ -744,7 +740,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**contar**|**tamanho em disco em MB**|  
+|**state_desc**|**file_type_desc**|**contagem**|**tamanho em disco em MB**|  
 |PRECREATED|DATA|16|2.048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -790,7 +786,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**contar**|**tamanho em disco em MB**|  
+|**state_desc**|**file_type_desc**|**contagem**|**tamanho em disco em MB**|  
 |PRECREATED|DATA|16|2.048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -836,7 +832,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**contar**|**tamanho em disco em MB**|  
+|**state_desc**|**file_type_desc**|**contagem**|**tamanho em disco em MB**|  
 |PRECREATED|DATA|16|2.048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -869,7 +865,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**contar**|**tamanho em disco em MB**|  
+|**state_desc**|**file_type_desc**|**contagem**|**tamanho em disco em MB**|  
 |PRECREATED|DATA|16|2.048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
@@ -880,5 +876,5 @@ ORDER BY state, file_type
  Nesse caso, há dois pares de arquivos do ponto de verificação no estado "em construção", o que significa que vários pares de arquivos foram movidos para o estado "em construção", provavelmente devido ao nível alto de simultaneidade na carga de trabalho. Vários threads simultâneos exigiam um novo par de arquivos ao mesmo tempo e, portanto, moviam um par de "pré-criados" para "em construção".  
   
 ## <a name="see-also"></a>Consulte Também  
- [O OLTP na memória &#40;a otimização na memória&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP in-memory &#40;Otimização na memória&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

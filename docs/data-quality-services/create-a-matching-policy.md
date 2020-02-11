@@ -14,10 +14,10 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251782"
 ---
 # <a name="create-a-matching-policy"></a>Criar uma política de correspondência
@@ -28,14 +28,14 @@ ms.locfileid: "75251782"
   
  A criação de política de correspondência é executada em três estágios: um processo de mapeamento no qual você identifica a fonte de dados e mapeia os domínios para colunas, um processo de política de correspondência no qual você cria uma ou mais regras de correspondência e testa cada regra de correspondência separadamente e um processo de resultados de correspondência no qual você executa todas as regras de correspondência em conjunto e, caso fique satisfeito com elas, adiciona a política à base de dados de conhecimento. Cada um desses processos é executado em uma página separada do assistente da atividade Política de Correspondência, permitindo que você percorra páginas diferentes, para executar o processo novamente e fechar um processo de política de correspondência específico e depois retornar ao mesmo estágio do processo. Depois de testar todas as regras em conjunto, se desejar, você poderá retornar à página **Política de Correspondência** , ajustar uma regra individual, testá-la separadamente outra vez e retornar à página **Resultados de Correspondência** para executar todas as regras em conjunto mais uma vez. O DQS fornece estatísticas sobre a fonte de dados, as regras de correspondência e os resultados de correspondência que permitem a você tomar decisões conscientes sobre a política de correspondência, para que seja possível refiná-la.  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a>Pré-requisitos  
+###  <a name="Prerequisites"></a> Pré-requisitos  
  O Microsoft Excel deverá ser instalado no computador [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] se os dados de origem estiverem em um arquivo do Excel. Caso contrário, você não poderá selecionar o arquivo do Excel no estágio de mapeamento. Os arquivos criados pelo Microsoft Excel podem ter a extensão .xlsx, .xls ou .csv. Se a versão de 64 bits do Excel for usada, somente arquivos do Excel 2003 (.xls) terão suporte; não haverá suporte para os arquivos do Excel 2007 ou 2010 (.xlsx). Se você estiver usando a versão de 64 bits do Excel 2007 ou 2010, salve o arquivo como .xls ou .csv ou instale uma versão de 32 bits do Excel.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar uma política de correspondência.  
   
 ##  <a name="MatchingRules"></a>Como definir parâmetros de regra de correspondência  
@@ -62,7 +62,7 @@ ms.locfileid: "75251782"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Nova base de dados de conhecimento** para criar uma política de correspondência em uma nova base de dados de conhecimento. Insira um nome para a base de dados de conhecimento, insira uma descrição e defina **Criar base de dados de conhecimento de** conforme desejar. Clique na **Política de Correspondência** da atividade. Clique em **Próximo** para continuar.  
+2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Nova base de dados de conhecimento** para criar uma política de correspondência em uma nova base de dados de conhecimento. Insira um nome para a base de dados de conhecimento, insira uma descrição e defina **Criar base de dados de conhecimento de** conforme desejar. Clique na **Política de Correspondência** da atividade. Clique em **Avançar** para continuar.  
   
 3.  Clique em **Abrir base de dados de conhecimento** para criar ou modificar a política de correspondência em uma base de dados de conhecimento existente. Selecione a base de dados de conhecimento, selecione **Política de Correspondência**e clique em **Avançar**. Também é possível clicar em uma base de dados de conhecimento em **Base de Dados de Conhecimento Recente**. Se você abrir uma base de dados de conhecimento que foi fechada quando uma política de correspondência estava sendo trabalhada, prosseguirá para o estágio em que a atividade de política de correspondência foi fechada (conforme indicado pela coluna **Estado** da base de dados de conhecimento na tabela de base de dados de conhecimento ou no nome da base de dados de conhecimento em **Base de Dados de Conhecimento Recente**). Se você abrir uma base de dados de conhecimento que inclua uma política de correspondência e foi terminada, a página **Política de Correspondência** será exibida. Se você abrir uma base de dados de conhecimento que não inclua uma política de correspondência e foi terminada, a página **Mapeamento** será exibida.  
   

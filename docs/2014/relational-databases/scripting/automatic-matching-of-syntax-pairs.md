@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244796"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Correspondência automática de pares de sintaxe
@@ -36,9 +36,9 @@ ms.locfileid: "75244796"
 |Delimitador inicial|Delimitador de fechamento|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**Comece**|**COMPLETO**|  
-|**INICIAR TENTATIVA**|**TERMINAR TENTATIVA**|  
-|**INICIAR CAPTURA**|**ENCERRAR CATCH**|  
+|**BEGIN**|**END**|  
+|**BEGIN TRY**|**END TRY**|  
+|**BEGIN CATCH**|**END CATCH**|  
   
  A correspondência automática de delimitadores não reconhece os delimitadores de identificadores entre colchetes ([ObjectName]) ou identificadores entre aspas ("ObjectName"). A correspondência de pares não faz a correspondência dos delimitadores aspas simples de literais de cadeia de caracteres ('cadeia de caracteres') porque a codificação por cores já indica visualmente se a cadeia de caracteres foi delimitada ou não.  
   

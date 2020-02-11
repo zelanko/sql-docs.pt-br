@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: ef953aa369e831e47d38db403b982919bd4bd830
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: e0f81a49af551836881ca71b49ff6a15d22a9897
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056553"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76162617"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Práticas recomendadas para a execução de Assistente de Migração de Dados
+# <a name="best-practices-for-running-data-migration-assistant"></a>Práticas recomendadas para executar o Assistente de Migração de Dados
 Este artigo fornece algumas informações de práticas recomendadas para instalação, avaliação e migração.
 
 ## <a name="installation"></a>Instalação
 Não instale e execute o Assistente de Migração de Dados diretamente na máquina host SQL Server.
 
-## <a name="assessment"></a>Locação
+## <a name="assessment"></a>Avaliação
 - Execute avaliações em bancos de dados de produção fora do horário de pico.
 - Execute os **problemas de compatibilidade** e as novas avaliações de **recomendações de recursos** separadamente para reduzir a duração da avaliação.
 
 ## <a name="migration"></a>Migração
-- Migre um servidor fora dos horários de pico.
+- Migre um servidor fora do horário de pico.
 
 - Ao migrar um banco de dados, forneça um único local de compartilhamento acessível pelo servidor de origem e pelo servidor de destino e evite uma operação de cópia, se possível. Uma operação de cópia pode introduzir um atraso com base no tamanho do arquivo de backup. A operação de cópia também aumenta as chances de uma migração falhar devido a uma etapa extra. Quando um único local é fornecido, Assistente de Migração de Dados ignora a operação de cópia.
  
@@ -41,3 +41,5 @@ Não instale e execute o Assistente de Migração de Dados diretamente na máqui
 - Habilite a conexão criptografada ao conectar-se aos servidores de origem e de destino. O uso da criptografia SSL aumenta a segurança dos dados transmitidos pelas redes entre Assistente de Migração de Dados e a instância de SQL Server, o que é benéfico especialmente ao migrar logons do SQL. Se a criptografia SSL não for usada e a rede estiver comprometida por um invasor, os logons do SQL que estão sendo migrados poderão ser interceptados e/ou modificados imediatamente pelo invasor.
 
     No entanto, se todos os acessos envolverem uma configuração de intranet segura, a criptografia poderá não ser necessária. A habilitação da criptografia reduz o desempenho porque a sobrecarga extra é necessária para criptografar e descriptografar pacotes. Para obter mais informações, consulte [Criptografando conexões com SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    
+- Verifique se há restrições não confiáveis no banco de dados de origem e no de destino antes de migrá-los. Após a migração, analise o banco de dados de destino novamente para ver se alguma restrição se tornou não confiável como parte da movimentação de dados. Corrija as restrições não confiáveis conforme necessário. Deixar as restrições não confiáveis pode resultar em planos de execução insatisfatórios e pode afetar o desempenho.

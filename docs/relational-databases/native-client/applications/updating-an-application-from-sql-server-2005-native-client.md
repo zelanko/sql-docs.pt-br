@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2eddd2284ec77a1a4979389f964baeafb6932dc5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243809"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Atualizando um aplicativo no SQL Server 2005 Native Client
@@ -32,7 +32,7 @@ ms.locfileid: "75243809"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 fornecido com o [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 fornecido com o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] e o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
   
-|Comportamento alterado no SQL Server Native Client desde o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Descrição|  
+|Comportamento alterado no SQL Server Native Client desde o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|DESCRIÇÃO|  
 |------------------------------------------------------------------------------------|-----------------|  
 |O OLE DB preenche apenas até a escala definida.|Para conversões em que os dados convertidos são enviados para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servidor, o Native Client [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)](começando em) ativa os zeros à direita nos dados somente até o comprimento máximo dos valores de **DateTime** . O SQL Server Native Client 9.0 e preenchia até nove dígitos.|  
 |Validar DBTYPE_DBTIMESTAMP para ICommandWithParameter:: SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]O Native Client (a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]partir do) implementa o requisito de OLE DB para *bScale* em ICommandWithParameter:: SetParameterInfo para ser definido como a precisão de segundos fracionários para DBTYPE_DBTIMESTAMP.|  

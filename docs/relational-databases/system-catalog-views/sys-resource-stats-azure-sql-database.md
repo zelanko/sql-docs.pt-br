@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246907"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Banco de Dados SQL do Azure)
@@ -35,25 +35,25 @@ ms.locfileid: "75246907"
   
  A tabela a seguir descreve as colunas disponíveis em um servidor v12:  
   
-|Colunas|Tipo de Dados|Descrição|  
+|Colunas|Tipo de Dados|DESCRIÇÃO|  
 |----------------------------|---------------|-----------------|  
-|start_time|**horário**|Hora UTC indicando o início do intervalo de relatórios de cinco minutos.|  
-|end_time|**horário**|Hora UTC indicando o final do intervalo de relatórios de cinco minutos.|  
+|start_time|**datetime**|Hora UTC indicando o início do intervalo de relatórios de cinco minutos.|  
+|end_time|**datetime**|Hora UTC indicando o final do intervalo de relatórios de cinco minutos.|  
 |database_name|**nvarchar(128)**|Nome do banco de dados do usuário.|  
-|sku|**nvarchar(128)**|Camada de serviço do banco de dados. O valores possíveis são os seguintes:<br /><br /> Básico<br /><br /> Standard<br /><br /> Premium<br /><br />Uso Geral<br /><br />Comercialmente Crítico|  
-|storage_in_megabytes|**barra**|O tamanho máximo de armazenamento em megabytes para o período de tempo, incluindo dados do banco de dados, índices, procedimentos armazenados e metadados.|  
+|sku|**nvarchar(128)**|Camada de serviço do banco de dados. O valores possíveis são os seguintes:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />Uso Geral<br /><br />Comercialmente Crítico|  
+|storage_in_megabytes|**float**|O tamanho máximo de armazenamento em megabytes para o período de tempo, incluindo dados do banco de dados, índices, procedimentos armazenados e metadados.|  
 |avg_cpu_percent|**decimal (5, 2)**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
 |avg_data_io_percent|**decimal (5, 2)**|Utilização média de E/S em percentagem com base no limite da camada de serviço. Para bancos de dados de hiperescala, consulte [data e/s em estatísticas de utilização de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal (5, 2)**|Utilização média do recurso de gravação, em porcentagem, do limite da camada de serviço.|  
 |max_worker_percent|**decimal (5, 2)**|Máximo de trabalhos simultâneos (solicitações) em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> No momento, o máximo é calculado para o intervalo de cinco minutos com base nas amostras de 15 segundos de contagens de trabalho simultâneas.|  
 |max_session_percent|**decimal (5, 2)**|Máximo de sessões simultâneas em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> No momento, o máximo é calculado para o intervalo de cinco minutos com base nas amostras de 15 segundos de contagens de sessão simultâneas.|  
-|dtu_limit|**inteiro**|Configuração de DTU máxima do banco de dados atual para este banco de dados durante esse intervalo. |
+|dtu_limit|**int**|Configuração de DTU máxima do banco de dados atual para este banco de dados durante esse intervalo. |
 |xtp_storage_percent|**decimal (5, 2)**|Utilização de armazenamento para OLTP na memória em porcentagem do limite da camada de serviço (no final do intervalo de relatórios). Isso inclui a memória usada para o armazenamento dos seguintes objetos OLTP na memória: tabelas com otimização de memória, índices e variáveis de tabela. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retornará 0 se o OLTP na memória não for usado no banco de dados.|
 |avg_login_rate_percent|**decimal (5, 2)**|Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|
 |avg_instance_cpu_percent|**decimal (5, 2)**|Uso médio de CPU do banco de dados como uma porcentagem do processo do BD SQL.|
 |avg_instance_memory_percent|**decimal (5, 2)**|Uso médio de memória do banco de dados como uma porcentagem do processo do BD SQL.|
 |cpu_limit|**decimal (5, 2)**|Número de vCores para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em DTU, essa coluna é nula.|
-|allocated_storage_in_megabytes|**barra**|A quantidade de espaço de arquivo formatado em MB disponibilizada para armazenar dados de banco de dados. O espaço de arquivo formatado também é conhecido como espaço de dados alocado.  Para obter mais informações, consulte: [Gerenciamento de espaço de arquivo no banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|A quantidade de espaço de arquivo formatado em MB disponibilizada para armazenar dados de banco de dados. O espaço de arquivo formatado também é conhecido como espaço de dados alocado.  Para obter mais informações, consulte: [Gerenciamento de espaço de arquivo no banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Para obter mais contexto sobre esses limites e camadas de serviço, consulte as [camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)de tópicos.  

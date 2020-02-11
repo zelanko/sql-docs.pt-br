@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243173"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Usar sqlcmd com variáveis de script
@@ -115,7 +115,7 @@ ms.locfileid: "75243173"
 |SQLCMDCOLSEP|-s|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
-|SQLCMDERRORLEVEL|-m|R/W|"0"|  
+|SQLCMDERRORLEVEL|-M|R/W|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = ilimitado|  
 |SQLCMDEDITOR||R/W|"edit.com"|  
@@ -129,7 +129,7 @@ ms.locfileid: "75243173"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>R. Usando o comando setvar em um script  
+### <a name="a-using-the-setvar-command-in-a-script"></a>a. Usando o comando setvar em um script  
  Muitas opções do **sqlcmd** podem ser controladas em um script usando o comando **setvar** . No exemplo a seguir, o script `test.sql` é criado e nele a variável `SQLCMDLOGINTIMEOUT` é definida como `60` segundos e outra variável de script, `server`, é definida como `testserver`. O código a seguir está em `test.sql`.  
   
  `:setvar SQLCMDLOGINTIMEOUT 60`  

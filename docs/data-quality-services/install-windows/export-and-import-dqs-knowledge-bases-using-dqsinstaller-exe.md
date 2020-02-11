@@ -12,10 +12,10 @@ ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: ae87b9daebdef6b81c4d96abc253820cf7cb8228
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75558136"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
@@ -62,6 +62,6 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
  [Executar o DQSInstaller. exe para concluir a instalação do Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Instalar o Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Exportar uma base de dados de conhecimento para um arquivo. DQS](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
- [Importar uma base de dados de conhecimento de um arquivo. DQS](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
+ [Importar uma base de dados de conhecimento de um arquivo .dqs](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
   
   

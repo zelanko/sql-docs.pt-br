@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 17c1e63789e9c2069d8fdecd8bd62b64bf8a886d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244655"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>Criar um servidor de gerenciamento central e um grupo de servidores (SQL Server Management Studio)
@@ -35,16 +35,16 @@ ms.locfileid: "75244655"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  Duas funções no banco de dados msdb concedem acesso aos servidores de gerenciamento central. Somente os membros da função ServerGroupAdministratorRole podem administrar o servidor de gerenciamento central. A associação à função ServerGroupReaderRole é necessária para conectar a um servidor de gerenciamento central.  
   
  Como as conexões mantidas por um servidor de gerenciamento central são executadas no contexto do usuário com o uso da Autenticação do Windows, as permissões efetivas nos servidores registrados podem variar. Por exemplo, o usuário pode ser membro da função de servidor fixa sysadmin na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A, mas pode ter permissões limitadas na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B.  
   
-##  <a name="SSMSProcedure"></a>Usando SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Os procedimentos a seguir descrevem como executar as seguintes etapas.  
   
 1.  Crie um servidor central de gerenciamento.  
@@ -65,7 +65,7 @@ ms.locfileid: "75244655"
   
 6.  Clique em **Testar**para testar a conexão.  
   
-7.  Clique em **Salvar**. A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecerá na pasta **Servidores Centrais de Gerenciamento** .  
+7.  Clique em **Save** (Salvar). A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecerá na pasta **Servidores Centrais de Gerenciamento** .  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>Criar um novo grupo de servidores e adicionar servidores ao grupo  
   
@@ -82,6 +82,6 @@ ms.locfileid: "75244655"
 -   Depois de criar um servidor de gerenciamento central, um ou mais grupos de servidores e um ou mais servidores registrados, você poderá executar consultas simultâneas no grupo inteiro. Para obter mais informações sobre como executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nos servidores em um grupo de servidores ao mesmo tempo, consulte [Executar instruções em vários servidores simultaneamente &#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administrar vários servidores usando servidores de gerenciamento central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
+ [Administrar vários servidores usando os Servidores de Gerenciamento Centrais](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

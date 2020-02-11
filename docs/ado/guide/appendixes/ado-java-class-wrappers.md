@@ -13,14 +13,14 @@ ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927002"
 ---
 # <a name="ado-java-class-wrappers"></a>Wrappers de classe Java ADO
-Esse código declara uma instância do ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) wrapper de classe e a inicializa, tudo na mesma linha de código. Além disso, ele declara variáveis para cada um dos argumentos de [aberto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método, especialmente para [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) e [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (porque não dá suporte a Java enumerados tipos). Ele abre e fecha o **Recordset** objeto. Definir Rs1 como NULL simplesmente agenda essa variável para ser liberado quando o Java executa sua versão de intermitente e sistemática de objetos não utilizados.  
+Esse código declara uma instância do wrapper da classe ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e a inicializa, tudo na mesma linha de código. Além disso, ele declara variáveis para cada um dos argumentos no método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) , especialmente para [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) e [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (porque Java não dá suporte a tipos enumerados). Ele é aberto e fecha o objeto **Recordset** . A definição de RS1 como NULL simplesmente agenda essa variável para ser liberada quando o Java executa sua versão sistemática e intermitente de objetos não utilizados.  
   
 ```java
 public static void main( String args[])  
@@ -40,5 +40,5 @@ public static void main( String args[])
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usando o Microsoft SDK para Java](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)
+## <a name="see-also"></a>Consulte Também  
+ [Usar o Microsoft SDK para Java](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)

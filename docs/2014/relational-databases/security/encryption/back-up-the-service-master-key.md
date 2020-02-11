@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: c6e67b2eacfd428bc296596699ff65939789d1e8
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957270"
 ---
 # <a name="back-up-the-service-master-key"></a>Fazer backup da chave mestra de serviço
@@ -32,20 +32,20 @@ ms.locfileid: "74957270"
   
 -   [Para fazer backup da chave mestra de serviço](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a>Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A chave mestra deve estar aberta e, portanto, descriptografada antes de ser feito o back up. Se for criptografada com a chave mestra de serviço, a chave mestra não precisará ser aberta explicitamente; porém, se a chave mestra só for criptografada com uma senha, deverá ser aberta explicitamente.  
   
 -   Recomendamos que você faça o backup da chave mestra assim que ela for criada e armazene o backup em um local externo seguro.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  Exige a permissão CONTROL no banco de dados.  
   
-##  <a name="Procedure"></a>Usando o Transact-SQL  
+##  <a name="Procedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-back-up-the-service-master-key"></a>Para fazer backup da Chave mestra de serviço  
   
@@ -59,9 +59,9 @@ ms.locfileid: "74957270"
   
 5.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-6.  Na barra Padrão , clique em **Nova Consulta**.  
+6.  Na barra Padrão, clique em **Nova Consulta**.  
   
-7.  Copie e cole o exemplo a seguir na janela de consulta e clique em **executar**.  
+7.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
     -- Creates a backup of the "AdventureWorks2012" master key.  

@@ -1,27 +1,28 @@
 ---
-title: Criar um rastreamento (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/01/2016
+title: Criar um rastreamento
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb6a3f10f93d7bba147dca0cc9f7bbb879a82d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 08/01/2016
+ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930167"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307337"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Criar um rastreamento (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve como usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar um rastreamento.  
+
+Este tópico descreve como usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar um rastreamento.  
   
 ### <a name="to-create-a-trace"></a>Para criar um rastreamento  
   
@@ -29,7 +30,7 @@ ms.locfileid: "67930167"
   
      É exibida a caixa de diálogo **Propriedades do Rastreamento** .  
   
-    > **OBSERVAÇÃO:** a caixa de diálogo **Propriedades do Rastreamento** não será exibida, e o rastreamento será iniciado, se a opção **Iniciar rastreamento imediatamente após estabelecer a conexão** for selecionada. Para desabilitar essa configuração, no menu **Ferramentas**, clique em **Opções** e desmarque a caixa de seleção Iniciar rastreamento imediatamente depois de estabelecer a conexão.  
+    > **OBSERVAÇÃO:** A caixa de diálogo Propriedades do Rastreamento não aparecerá, e o rastreamento será iniciado, se **Iniciar rastreamento imediatamente após estabelecer a conexão** será selecionado. Para desabilitar essa configuração, no menu **Ferramentas**, clique em **Opções** e desmarque a caixa de seleção Iniciar rastreamento imediatamente depois de estabelecer a conexão.  
   
 2.  Na caixa **Nome do rastreamento** , digite um nome para o rastreamento.  
   

@@ -10,10 +10,10 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6d3c4f15dcb62e36918c81baa5f2bd40c38b7c6a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244144"
 ---
 # <a name="reference-data-services-in-dqs"></a>Serviços de Dados de Referência no DQS
@@ -71,8 +71,8 @@ ms.locfileid: "75244144"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como configurar o DQS para usar serviços de dados de referência do Marketplace ou provedores de dados online de terceiros diretos.|[Configurar o DQS para usar dados de referência](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
-|Descreve como mapear um domínio/domínio composto em uma base de dados de conhecimento para um serviço de dados de referência.|[Anexar domínio ou domínio composto a dados de referência](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|Descreve como configurar o DQS para usar serviços de dados de referência do Marketplace ou provedores de dados online de terceiros diretos.|[Configurar DQS para usar dados de referência](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|Descreve como mapear um domínio/domínio composto em uma base de dados de conhecimento para um serviço de dados de referência.|[Anexar domínio ou domínio composto para dados de referência](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |Descreve como limpar dados usando um serviço de dados de referência.|[Limpar dados usando dados de referência &#40;conhecimento de&#41; externo](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   

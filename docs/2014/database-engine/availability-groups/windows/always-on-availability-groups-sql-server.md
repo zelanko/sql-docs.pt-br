@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229007"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Grupos de Disponibilidade AlwaysOn (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "75229007"
  Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Os failovers não são provocados por problemas de banco de dados, como um banco de dados que se torna suspeito devido à perda de um arquivo de dados, à exclusão de um banco de dados ou à corrupção de um log de transações.  
   
   
-##  <a name="Benefits"></a>Benefícios  
+##  <a name="Benefits"></a> Benefícios  
  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornecem um conjunto diversificado de opções que melhoram a disponibilidade do banco de dados e habilitam o uso aprimorado de recursos. Os principais componentes são os seguintes:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75229007"
   
     -   Cmdlets do PowerShell. Para obter mais informações, consulte [visão geral dos cmdlets do PowerShell para grupos de disponibilidade Always on; SQL serve;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
-##  <a name="TermsAndDefinitions"></a>Termos e definições  
+##  <a name="TermsAndDefinitions"></a> Termos e definições  
  grupo de disponibilidade  
  Um contêiner para um conjunto de bancos de dados, *bancos de dados de disponibilidade*, que executam failover juntos.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "75229007"
   
 -   [Criptografia de banco de dados](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
--   [Instantâneos do banco de dados](database-snapshots-with-always-on-availability-groups-sql-server.md)  
+-   [Instantâneos de banco de dados](database-snapshots-with-always-on-availability-groups-sql-server.md)  
   
 -   [FILESTREAM](../../../relational-databases/blob/filestream-sql-server.md)  
   
@@ -134,40 +134,40 @@ ms.locfileid: "75229007"
   
 -   [Envio de logs](../../log-shipping/about-log-shipping-sql-server.md)  
   
--   [RBS (Remote BLOB Store)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
+-   [RBS (Armazenamento de Blob Remoto)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
 -   [Replicação](../../install-windows/install-sql-server-replication.md)  
   
--   [Service Broker](../../configure-windows/sql-server-service-broker.md)  
+-   [Agente de Serviço](../../configure-windows/sql-server-service-broker.md)  
   
 -   [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)  
   
--   [Serviços de Relatório](reporting-services-with-always-on-availability-groups-sql-server.md)  
+-   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
 >  Para obter informações sobre restrições e limitações para usar outros recursos [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]com o, consulte [Always on grupos de disponibilidade: interoperabilidade; SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a>Tarefas relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Introdução com grupos de disponibilidade Always On; SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>Conteúdo relacionado  
+##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   **Bloga**  
+-   **Blogs:**  
   
      [SQL Server Blogs da equipe do Always On: o blog oficial da equipe do SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs de engenheiros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
+     [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Explica**  
+-   **Vídeos:**  
   
-     [Microsoft SQL Server o codinome "Denali" Always On série, parte 1: apresentando a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server o codinome "Denali" Always On série, parte 2: criando uma solução de alta disponibilidade de missão crítica usando o AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **White papers**  
+-   **Whitepapers:**  
   
-     [Guia de soluções do Microsoft SQL Server Always On para alta disponibilidade e recuperação de desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   

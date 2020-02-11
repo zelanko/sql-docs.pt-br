@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 00ddaf35a859c0d95172e240537f825b3e9e8b1a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251805"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Remover um grupo de servidores (SQL Server Management Studio)
@@ -35,6 +35,6 @@ ms.locfileid: "75251805"
 2.  Na caixa de diálogo **Confirmação de Exclusão** , clique em **Sim**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Mover um servidor registrado ou um grupo de servidores registrados &#40;SQL Server Management Studio&#41;](move-a-registered-server-or-registered-server-group.md)  
+ [Mover um servidor registrado ou um grupo de Servidores Registrados &#40;SQL Server Management Studio&#41;](move-a-registered-server-or-registered-server-group.md)  
   
   

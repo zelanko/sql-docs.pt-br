@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228408"
 ---
 # <a name="installation-for-sql-server-2014"></a>Instalação para SQL Server 2014
@@ -72,7 +72,7 @@ ms.locfileid: "75228408"
  [Desinstalar o SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)  
  Descreve procedimentos para desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
- [SQL Server instalação do cluster de failover](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
+ [Instalação do cluster de failover do SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  Esta seção da documentação da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica como instalar e configurar o cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  [Install SQL Server 2014 BI Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
@@ -91,5 +91,5 @@ ms.locfileid: "75228408"
   
 ## <a name="see-also"></a>Consulte Também  
  [O que há de novo na instalação do SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
- [Requisitos de hardware e software para a instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

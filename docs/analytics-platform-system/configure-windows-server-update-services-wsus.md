@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2fef7b88514357deb6cf0a009d12272cc3cf79a2
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74401406"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761900"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar o Windows Server Update Services (WSUS) no Analytics Platform System
 Estas instruções orientam você pelas etapas para usar o assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para o Analytics Platform System. Você precisa configurar o WSUS antes de poder aplicar as atualizações de software ao dispositivo. O WSUS já está instalado na máquina virtual do VMM do dispositivo.  
@@ -83,7 +83,7 @@ Para configurar o WSUS, você precisa:
   
     #### <a name="to-update-by-using-microsoft-update"></a>Para atualizar usando Microsoft Update  
   
-    1.  Se você optar por sincronizar com Microsoft Update, não será necessário fazer nenhuma alteração na página **escolher servidor upstream** . Clique em **Avançar**.  
+    1.  Se você optar por sincronizar com Microsoft Update, não será necessário fazer nenhuma alteração na página **escolher servidor upstream** . Clique em **Próximo**.  
   
         ![Sincronização do Servidor Upstream WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -138,11 +138,14 @@ Para configurar o WSUS, você precisa:
 8.  Escolha produtos.  
   
     > [!NOTE]  
-    > Se você estiver usando um servidor upstream, talvez não seja possível escolher produtos. Se essa opção não estiver disponível, ignore esta etapa.  
+    > Se você estiver usando um servidor upstream, talvez não seja possível escolher produtos. Se essa opção não estiver disponível, ignore esta etapa.
+
+    > [!WARNING]  
+    > Exclua todas as atualizações do SQL Server 2016.
   
     Desmarque todas as atualizações selecionadas.  
   
-    Selecione **Windows Server 2012 R2**e **System Center 2012 R2-Virtual Machine Manager**e clique em **Avançar**.  
+    Selecione **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**e **System Center 2012 R2-Virtual Machine Manager**e clique em **Avançar**.  
   
 9. Escolha classificações.  
   

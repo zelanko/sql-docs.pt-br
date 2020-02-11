@@ -13,10 +13,10 @@ ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258517"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>Visão geral do processo de comparação de carga de trabalho
@@ -63,6 +63,6 @@ Considerações:
 - Se um ou mais componentes estiverem ausentes, uma página pré-requisitos com links para downloads será exibida quando você tentar gerar um novo relatório de análise (conexão com a Internet necessária).
 - Para exibir um relatório gerado em uma versão anterior da ferramenta, você deve primeiro atualizar o esquema.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - Para saber como produzir um arquivo de rastreamento com um log de eventos que ocorrem em um servidor, consulte o artigo [capturar um rastreamento em Assistente para experimentos de banco de dados](database-experimentation-assistant-capture-trace.md).

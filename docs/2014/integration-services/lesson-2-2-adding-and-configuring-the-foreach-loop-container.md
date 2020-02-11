@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232470"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Etapa 2: adicionando e configurando o contêiner Loop Foreach
@@ -89,7 +89,7 @@ ms.locfileid: "75232470"
 -   Arraste a tarefa extrair fluxo de dados de **dados de moeda de exemplo** para o contêiner Loop Foreach `Foreach File in Folder`agora renomeado.  
   
 ## <a name="next-lesson-task"></a>Próxima tarefa da lição  
- [Etapa 3: modificando o Gerenciador de conexões de arquivo simples](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [Etapa 3: Modificando o Gerenciador de Conexões de Arquivo Simples](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar um contêiner Loop Foreach](control-flow/foreach-loop-container.md)   

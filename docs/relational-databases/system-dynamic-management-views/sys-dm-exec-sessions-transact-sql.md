@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b5cdba7e82c0432cda81a6e1526e2e039e5676e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: f9c87a6900b8ee19e18efb76506d1bed5a645202
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983153"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516263"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "73983153"
   
  As exibições de gerenciamento dinâmico sys. dm_exec_connections, sys. dm_exec_sessions e sys. dm_exec_requests são mapeadas para a tabela do sistema [Sys. sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
   
-> **Observação:** Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **Sys. dm_pdw_nodes_exec_sessions**.  
+> **Observação:** Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_exec_sessions**.  
   
 |Nome da coluna|Tipo de dados|Descrição e informações específicas da versão|  
 |-----------------|---------------|-----------------|  
@@ -44,12 +44,12 @@ ms.locfileid: "73983153"
 |program_name|**nvarchar(128)**|Nome do programa cliente que iniciou a sessão. O valor é NULL para sessões internas. Permite valor nulo.|  
 |host_process_id|**int**|ID do processo do programa cliente que iniciou a sessão. O valor é NULL para sessões internas. Permite valor nulo.|  
 |client_version|**int**|Versão de protocolo TDS da interface usada pelo cliente para conexão com o servidor. O valor é NULL para sessões internas. Permite valor nulo.|  
-|client_interface_name|**nvarchar(32)**|Nome da biblioteca/driver que está sendo usado pelo cliente para se comunicar com o servidor. O valor é NULL para sessões internas. Permite valor nulo.|  
+|client_interface_name|**nvarchar (32)**|Nome da biblioteca/driver que está sendo usado pelo cliente para se comunicar com o servidor. O valor é NULL para sessões internas. Permite valor nulo.|  
 |security_id|**varbinary(85)**|Identificador de segurança do Microsoft Windows associado ao logon. Não permite valor nulo.|  
-|login_name|**nvarchar(128)**|Nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a sessão está sendo executada atualmente. Para o nome de logon original que criou a sessão, consulte original_login_name. Pode ser um nome de logon autenticado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um nome de usuário de domínio autenticado do Windows. Não permite valor nulo.|  
+|login_name|**nvarchar(128)**|Nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a sessão está sendo executada atualmente. Para o nome de logon original que criou a sessão, consulte original_login_name. Pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome de logon autenticado ou um nome de usuário de domínio autenticado do Windows. Não permite valor nulo.|  
 |nt_domain|**nvarchar(128)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Domínio de Windows do cliente se a sessão estiver usando Autenticação do Windows ou uma conexão confiável. Esse valor é NULL para sessões internas e usuários que não têm domínio. Permite valor nulo.|  
 |nt_user_name|**nvarchar(128)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Nome do usuário do Windows do cliente se a sessão estiver usando Autenticação do Windows ou uma conexão confiável. Esse valor é NULL para sessões internas e usuários que não têm domínio. Permite valor nulo.|  
-|status|**nvarchar(30)**|Status da sessão. Valores possíveis:<br /><br /> **Executando** -uma ou mais solicitações em execução no momento<br /><br /> Em **suspensão** -sem solicitações no momento<br /><br /> **Inativo** -a sessão foi redefinida devido ao pool de conexões e está agora em estado de pré-logon.<br /><br /> A sessão de **PreConnect** está no classificador de resource governor.<br /><br /> Não permite valor nulo.|  
+|status|**nvarchar (30)**|Status da sessão. Valores possíveis:<br /><br /> **Executando** -uma ou mais solicitações em execução no momento<br /><br /> Em **suspensão** -sem solicitações no momento<br /><br /> **Inativo** -a sessão foi redefinida devido ao pool de conexões e está agora em estado de pré-logon.<br /><br /> A sessão de **PreConnect** está no classificador de resource governor.<br /><br /> Não permite valor nulo.|  
 |context_info|**varbinary(128)**|Valor CONTEXT_INFO da sessão. As informações de contexto são definidas pelo usuário usando a instrução [set CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) . Permite valor nulo.|  
 |cpu_time|**int**|Tempo da CPU, em milissegundos, usado por essa sessão. Não permite valor nulo.|  
 |memory_usage|**int**|Número de páginas de 8 KB de memória usado por essa sessão. Não permite valor nulo.|  
@@ -63,8 +63,8 @@ ms.locfileid: "73983153"
 |logical_reads|**bigint**|Número de leituras lógicas executadas na sessão. Não permite valor nulo.|  
 |is_user_process|**bit**|0 se a sessão for uma sessão do sistema. Caso contrário, será 1. Não permite valor nulo.|  
 |text_size|**int**|Configuração de TEXTSIZE da sessão. Não permite valor nulo.|  
-|language|**nvarchar(128)**|Configuração de LANGUAGE da sessão. Permite valor nulo.|  
-|date_format|**nvarchar(3)**|Configuração de DATEFORMAT da sessão. Permite valor nulo.|  
+|Linguagem|**nvarchar(128)**|Configuração de LANGUAGE da sessão. Permite valor nulo.|  
+|date_format|**nvarchar (3)**|Configuração de DATEFORMAT da sessão. Permite valor nulo.|  
 |date_first|**smallint**|Configuração de DATEFIRST da sessão. Não permite valor nulo.|  
 |quoted_identifier|**bit**|Configuração de QUOTED_IDENTIFIER da sessão. Não permite valor nulo.|  
 |arithabort|**bit**|Configuração de ARITHABORT da sessão. Não permite valor nulo.|  
@@ -74,7 +74,7 @@ ms.locfileid: "73983153"
 |ansi_padding|**bit**|Configuração de ANSI_PADDING da sessão. Não permite valor nulo.|  
 |ansi_nulls|**bit**|Configuração de ANSI_NULLS da sessão. Não permite valor nulo.|  
 |concat_null_yields_null|**bit**|Configuração de CONCAT_NULL_YIELDS_NULL da sessão. Não permite valor nulo.|  
-|transaction_isolation_level|**smallint**|Nível de isolamento da transação da sessão.<br /><br /> 0 = Não Especificado<br /><br /> 1 = Leitura Não Confirmada<br /><br /> 2 = Leitura Confirmada<br /><br /> 3 = Repetível<br /><br /> 4 = Serializável<br /><br /> 5 = Instantâneo<br /><br /> Não permite valor nulo.|  
+|transaction_isolation_level|**smallint**|Nível de isolamento da transação da sessão.<br /><br /> 0 = Não Especificado<br /><br /> 1 = ReadUncommitted<br /><br /> 2 = Leitura Confirmada<br /><br /> 3 = RepeatableRead<br /><br /> 4 = Serializável<br /><br /> 5 = Instantâneo<br /><br /> Não permite valor nulo.|  
 |lock_timeout|**int**|Configuração de LOCK_TIMEOUT da sessão. O valor está em milissegundos. Não permite valor nulo.|  
 |deadlock_priority|**int**|Configuração de DEADLOCK_PRIORITY da sessão. Não permite valor nulo.|  
 |row_count|**bigint**|Número de linhas retornadas na sessão até este ponto. Não permite valor nulo.|  
@@ -88,16 +88,16 @@ ms.locfileid: "73983153"
 |database_id|**smallint**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> ID do banco de dados atual para cada sessão.|  
 |authenticating_database_id|**int**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> ID do banco de dados que está autenticando a entidade. Para Logons, o valor será 0. Para usuários de bancos de dados independentes, o valor será a ID do banco de dados independente.|  
 |open_transaction_count|**int**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Número de transações abertas por sessão.|  
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
 |page_server_reads|**bigint**|**Aplica-se a**: hiperescala do banco de dados SQL do Azure<br /><br /> Número de leituras de servidor de página executadas, por solicitações nesta sessão, durante esta sessão. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
 Todos podem ver suas próprias informações de sessão.  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Requer a permissão `VIEW SERVER STATE` no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] para ver todas as sessões no servidor.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Requer `VIEW DATABASE STATE` para ver todas as conexões com o banco de dados atual. `VIEW DATABASE STATE` não pode ser concedido no banco de dados `master`. 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Requer `VIEW SERVER STATE` a permissão [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] on para ver todas as sessões no servidor.  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Requer `VIEW DATABASE STATE` para ver todas as conexões com o banco de dados atual. `VIEW DATABASE STATE`Não pode ser concedido no `master` banco de dados. 
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando a opção de configuração de servidor **habilitada para conformidade de critérios comuns** estiver habilitada, as estatísticas de logon serão exibidas nas colunas a seguir.  
   
 -   last_successful_logon  
@@ -119,12 +119,12 @@ Todos podem ver suas próprias informações de sessão.
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Um para zero ou um para muitos|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Um para zero ou um para muitos|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|Um para zero ou um para muitos|  
-|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Um para zero ou um para muitos|  
-|sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|Um para um|  
+|sys.dm_exec_sessions|[Sys. dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Um para zero ou um para muitos|  
+|sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|Um-para-um|  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-finding-users-that-are-connected-to-the-server"></a>A. Localizando usuários conectados ao servidor  
+### <a name="a-finding-users-that-are-connected-to-the-server"></a>a. Localizando usuários conectados ao servidor  
  O exemplo a seguir localiza os usuários conectados ao servidor e retorna o número de sessões de cada usuário.  
   
 ```sql  
@@ -183,7 +183,7 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

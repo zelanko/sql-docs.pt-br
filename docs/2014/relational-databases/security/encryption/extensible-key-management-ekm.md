@@ -15,14 +15,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 7d4fb415f9fbb556240d626aa48453d6d69d8072
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957177"
 ---
 # <a name="extensible-key-management-ekm"></a>Gerenciamento extensível de chaves (EKM)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]fornece recursos de criptografia de dados juntamente com o EKM ( *gerenciamento extensível de chaves* ), usando o provedor de MSCAPI ( *API de criptografia da Microsoft* ) para criptografia e geração de chave. As chaves de criptografia de dados e a criptografia da chave são criadas em contêineres chaves e devem ser exportadas por um provedor antes de serem armazenadas no banco de dados. Essa abordagem habilita o gerenciamento de chave, que inclui uma hierarquia de chave de criptografia e backup da chave, para ser tratado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece funcionalidades de criptografia de dados com o *EKM* (Gerenciador Extensível de Chaves), usando o provedor *Microsoft Cryptographic API* (MSCAPI) para criptografia e geração de chave. As chaves de criptografia de dados e a criptografia da chave são criadas em contêineres chaves e devem ser exportadas por um provedor antes de serem armazenadas no banco de dados. Essa abordagem habilita o gerenciamento de chave, que inclui uma hierarquia de chave de criptografia e backup da chave, para ser tratado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Com a crescente demanda de conformidade reguladora e referente à privacidade dos dados, as organizações estão tirando vantagem da criptografia como meio de oferecer uma solução de "defesa aprofundada". Essa abordagem geralmente não é muito prática se usar só as ferramentas de gerenciamento de criptografia do banco de dados. Os fornecedores de hardware fornecem produtos que corrigem o gerenciamento de chave empresarial, usando o *HSM* (módulos de segurança do hardware). Os dispositivos HSM armazenam chaves de criptografia em módulos de software ou hardware. É uma solução mais segura porque as chaves de criptografia não estão com dados de criptografia.  
   
@@ -56,8 +56,7 @@ GO
  Para desabilitar o recurso, defina o valor para **0**. Para mais informações sobre como definir opções de servidor, veja [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
   
 ## <a name="how-to-use-ekm"></a>Como usar EKM  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Gerenciamento Extensível de Chaves permite que as chaves de criptografia protejam os arquivos de banco de dados a serem armazenados em um dispositivo pronto para uso, como um smartcard, dispositivo USB ou o módulo EKM/HSM. Isso também permite proteger os dados dos administradores de banco de dados (exceto dos membros do grupo sysadmin). Os dados podem ser criptografados com chaves de criptografia às quais somente o usuário do banco de dados tem acesso no módulo externo de EKM/HSM.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Gerenciamento Extensível de Chaves permite que as chaves de criptografia protejam os arquivos de banco de dados a serem armazenados em um dispositivo pronto para uso, como um smartcard, dispositivo USB ou o módulo EKM/HSM. Isso também permite proteger os dados dos administradores de banco de dados (exceto dos membros do grupo sysadmin). Com o uso de chaves de criptografia, é possível criptografar dados aos quais somente o usuário do banco de dados tem acesso no módulo externo de EKM/HSM.  
   
  O Gerenciador Extensível de Chaves também oferece os seguintes benefícios:  
   
@@ -104,16 +103,15 @@ GO
   
 |Função ou recurso|Referência|  
 |-------------------------|---------------|  
-|Criptografia de chave simétrica|[CRIAR chave simétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
-|Criptografia de chave assimétrica|[CRIAR chave assimétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|Criptografia de chave simétrica|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|Criptografia de chave assimétrica|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
 |EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
-|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY &#40;&#41;Transact-SQL](/sql/t-sql/functions/decryptbykey-transact-sql)|  
-|EncryptByAsmKey(key_guid, 'cleartext')|[&#41;ENCRYPTBYASYMKEY &#40;Transact-SQL](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
-|DecryptByAsmKey(ciphertext)|[&#41;DECRYPTBYASYMKEY &#40;Transact-SQL](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
+|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
+|EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
+|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
   
 #### <a name="database-keys-encryption-by-ekm-keys"></a>Criptografia das chaves do banco de dados pelas chaves EKM  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode usar as chaves EKM para criptografar outras chaves em um banco de dados. É possível criar e usar chaves simétricas e assimétricas em um dispositivo de EKM. Você pode criptografar chaves simétricas nativas (diferente de EKM) com chaves assimétricas do EKM.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode usar as chaves EKM para criptografar outras chaves em um banco de dados. É possível criar e usar chaves simétricas e assimétricas em um dispositivo de EKM. Você pode criptografar chaves simétricas nativas (diferente de EKM) com chaves assimétricas do EKM.  
   
  O exemplo a seguir cria uma chave simétrica de banco de dados e criptografa a chave, usando uma chave em um módulo EKM.  
   
@@ -132,42 +130,41 @@ DECRYPTION BY EKM_AKey1
 > [!NOTE]  
 >  Não é possível criptografar uma chave EKM com outra chave EKM.  
 >   
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não dá suporte para assinar módulos com chaves assimétricas geradas a partir do provedor EKM.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não dá suporte para assinar módulos com chaves assimétricas geradas a partir do provedor EKM.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Opção de configuração de servidor do provedor EKM habilitado](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [Opção de configuração de servidor EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
  [Habilitar TDE usando EKM](enable-tde-on-sql-server-using-ekm.md)  
   
- [Gerenciamento extensível de chaves usando o Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [CRIAR provedor CRIPTOGRÁFICO &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [Descartar provedor CRIPTOGRÁFICO &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
- [ALTERAR o provedor CRIPTOGRÁFICO &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
- [sys. cryptographic_providers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
- [sys. dm_cryptographic_provider_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
- [sys. dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
- [sys. dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
- [sys. dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
- [sys. Credentials &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
- [CRIAR CREDENCIAl &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
+ [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
+ [sys.cryptographic_providers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
+ [sys.dm_cryptographic_provider_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
+ [sys.dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
+ [sys.dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
+ [sys.dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
+ [sys.credentials &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
- [CRIAR chave assimétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [ALTERAR a chave assimétrica &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
- [Descartar chave assimétrica &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
- [CRIAR chave simétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
+ [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-symmetric-key-transact-sql)   
- [Descartar chave simétrica &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
- [ABRIR chave simétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
- [Fazer backup e restaurar Reporting Services chaves de criptografia](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Excluir e recriar chaves de criptografia &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Adicionar e remover chaves de criptografia para implantação em expansão &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
+ [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
+ [Fazer backup e restaurar as chave de criptografia do Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Excluir e recriar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Adicionar e remover chaves de criptografia para implantação escalável &#40;Gerenciador de Configurações do SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Fazer backup da chave mestra de serviço](service-master-key.md)   
  [Restaurar a chave mestra de serviço](restore-the-service-master-key.md)   
  [Criar uma chave mestra de banco de dados](create-a-database-master-key.md)   
- [Fazer backup de uma chave mestra de banco de dados](back-up-a-database-master-key.md)   
+ [Fazer backup da chave mestra de um banco de dados](back-up-a-database-master-key.md)   
  [Restaurar uma chave mestra de banco de dados](restore-a-database-master-key.md)   
  [Criar chaves simétricas idênticas em dois servidores](create-identical-symmetric-keys-on-two-servers.md)  
   

@@ -18,27 +18,27 @@ ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc41c630b8201651e933f5d6538e6887e7933c95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966506"
 ---
 # <a name="datemodified-property-adox"></a>Propriedade DateModified (ADOX)
 Indica a data em que o objeto foi modificado pela última vez.  
   
 ## <a name="return-values"></a>Valores de retorno  
- Retorna um **Variant** valor que especifica a data de modificação. O valor é null se **DateModified** não tem suporte pelo provedor.  
+ Retorna um valor **Variant** que especifica a data de modificação. O valor será NULL se **DateModified** não tiver suporte do provedor.  
   
 ## <a name="remarks"></a>Comentários  
- O **DateModified** propriedade é nula para objetos acrescentados recentemente. Depois de anexar um novo [modo de exibição](../../../ado/reference/adox-api/view-object-adox.md) ou [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md), você deve chamar o [atualizar](../../../ado/reference/ado-api/refresh-method-ado.md) o método da [exibições](../../../ado/reference/adox-api/views-collection-adox.md) ou [procedimentos ](../../../ado/reference/adox-api/procedures-collection-adox.md) coleção para obter valores para o **DateModified** propriedade.  
+ A propriedade **DateModified** é nula para objetos acrescentados recentemente. Depois de acrescentar uma nova [exibição](../../../ado/reference/adox-api/view-object-adox.md) ou [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md), você deve chamar o método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) da coleção [views](../../../ado/reference/adox-api/views-collection-adox.md) ou [procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) para obter valores para a propriedade **DateModified** .  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
   
 ||||  
 |-|-|-|  
 |[Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [DateCreated e DateModified (VB) propriedades](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo das propriedades DateCreated e DateModified (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [Propriedade DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)

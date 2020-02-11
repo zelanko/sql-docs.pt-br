@@ -1,5 +1,5 @@
 ---
-title: Mecanismo de banco de dados procedimentos armazenados (Transact-SQL) | Microsoft Docs
+title: Mecanismo de Banco de Dados procedimentos armazenados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2015
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 40548043b601d2a2309d9d5180f1200228f11bb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942413"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>Procedimentos armazenados do Mecanismo de Banco de Dados (Transact-SQL)
@@ -80,7 +80,7 @@ ms.locfileid: "67942413"
 |[sp_getapplock](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)|[sys.sp_xtp_checkpoint_force_garbage_collection](../../relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)|  
 |[sp_getbindtoken](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)|[sys.sp_xtp_unbind_db_resource_pool](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

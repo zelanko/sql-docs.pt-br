@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2808ff3bb6cfab084854a8d9cd7cf5511dfd0fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244497"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
@@ -57,7 +57,7 @@ ms.locfileid: "75244497"
 ##  <a name="DocumentProperties"></a>Propriedades do documento  
  O processador do Word grava os seguintes metadados no arquivo DOCX.  
   
-|Propriedades do Elemento de Relatório|Descrição|  
+|Propriedades do Elemento de Relatório|DESCRIÇÃO|  
 |-------------------------------|-----------------|  
 |Título do Relatório (título do relatório)|Title|  
 |Autor do Relatório|Autor|  
@@ -82,7 +82,7 @@ ms.locfileid: "75244497"
   
  Para evitar esse problema, use várias sequências de texto em vez de uma expressão complexa quando usar expressões em rodapés e cabeçalhos. As duas expressões a seguir são equivalentes. A primeira é uma expressão complexa, e a segunda usa sequências de texto. O renderizador de Word analisa somente a segunda expressão com êxito.  
   
-##  <a name="Interactivity"></a>Interatividade  
+##  <a name="Interactivity"></a> Interatividade  
  Alguns elementos interativos têm suporte no Word. A seguir, uma descrição dos comportamentos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar e Ocultar  
@@ -184,11 +184,11 @@ ms.locfileid: "75244497"
 ##  <a name="Differences"></a>Diferenças entre os renderizadores do Word e do Word 2003  
  Relatórios, renderizados usando renderizadores do Word ou Word 2003 tendem a ser visualmente indistinguíveis. Porém, você pode notar diferenças sutis entre os dois formatos do Word ou Word 2003.  
   
-##  <a name="DeviceInfo"></a>Configurações de informações do dispositivo  
+##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
  É possível alterar algumas configurações padrão para este processador, como omitir hiperlinks e links de detalhamento ou expandir todos os itens que podem ser alternados independentemente do estado original do item quando renderizado, mudando as configurações das informações do dispositivo. Para obter mais informações, consulte [Word Device Information Settings](../word-device-information-settings.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Paginação em Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   

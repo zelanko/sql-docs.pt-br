@@ -10,10 +10,10 @@ ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b718cd04b5c6133d931a9bea03de0a78ebc7a886
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258840"
 ---
 # <a name="building-a-knowledge-base"></a>Criando uma base de dados de conhecimento
@@ -31,7 +31,7 @@ ms.locfileid: "75258840"
 |Abrir uma base de dados de conhecimento existente para executar a descoberta da base de dados de conhecimento, o gerenciamento de domínio, ou adicionar uma política de correspondência.|[Abrir uma base de dados de conhecimento](../data-quality-services/open-a-knowledge-base.md)|  
 |Executar ações de gerenciamento em uma base de dados de conhecimento, inclusive abri-la, desbloqueá-la, descartar seu trabalho nela, renomeá-la, excluí-la ou exibir suas propriedades.|[Gerenciar uma base de dados de conhecimento](../data-quality-services/manage-a-knowledge-base.md)|  
 |Adicionar conhecimento a uma base de dados de conhecimento através de descoberta de conhecimento; gerenciamento de valor de domínio; adicionando uma política de comparação; importando um conhecimento, domínio ou valores; ou usando a base de dados de conhecimento padrão, Dados do DQS.|[Adicionando conhecimento a uma base de dados de conhecimento](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
-|Analisar um exemplo de dados para critérios de qualidade de dados.|[Executar descoberta da base de dados de conhecimento](../data-quality-services/perform-knowledge-discovery.md)|  
+|Analisar um exemplo de dados para critérios de qualidade de dados.|[Executar a descoberta da base de dados de conhecimento](../data-quality-services/perform-knowledge-discovery.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

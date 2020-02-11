@@ -16,18 +16,18 @@ ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cfb208880586d0bda6bfe6bf956bbb544b48e69a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949180"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
-Especifica o tipo de objeto a ser recuperado o [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) método.  
+Especifica o tipo de objeto a ser recuperado pelo método [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) .  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
-|**adObjectTypeDimension**|1|Um [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) objeto.|  
-|**adObjectTypeHierarchy**|2|Um [hierarquia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) objeto.|  
-|**adObjectTypeLevel**|3|Um [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto.|  
-|**adObjectTypeMember**|4|Um [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objeto.|
+|**adObjectTypeDimension**|1|Um objeto [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) .|  
+|**adObjectTypeHierarchy**|2|Um objeto [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) .|  
+|**adObjectTypeLevel**|3|Um objeto de [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) .|  
+|**adObjectTypeMember**|4|Um objeto de [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) .|

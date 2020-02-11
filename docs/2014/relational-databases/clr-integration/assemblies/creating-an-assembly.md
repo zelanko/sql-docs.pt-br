@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232302"
 ---
 # <a name="creating-an-assembly"></a>Criando um assembly
@@ -135,6 +135,6 @@ WITH PERMISSION_SET = UNSAFE;
  [Alterando um assembly](altering-an-assembly.md)   
  [Descartando um assembly](dropping-an-assembly.md)   
  [Segurança de acesso ao código de integração CLR](../security/clr-integration-code-access-security.md)   
- [Propriedade de banco de dados TRUSTWORTHY](../../security/trustworthy-database-property.md)   
+ [propriedade TRUSTWORTHY do banco de dados](../../security/trustworthy-database-property.md)   
  [Permitindo chamadores parcialmente confiáveis](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
   

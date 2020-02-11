@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75ab1892641fa3bf805d52c649a8526e256d14b7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228201"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Configurar o backup gerenciado do SQL Server para Azure para grupos de disponibilidade
@@ -72,8 +72,7 @@ ms.locfileid: "75228201"
   
 2.  **Criar uma credencial do SQL:** Crie uma credencial do SQL usando o nome da conta de armazenamento como a identidade e a chave de acesso de armazenamento como a senha.  
   
-3.  **Verifique se SQL Server Agent serviço foi iniciado e está em execução:** Inicie SQL Server Agent se ele não estiver em execução no momento. 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] requer que o SQL Server Agent esteja em execução na instância para executar operações de backup.  Talvez seja necessário definir o SQL Agent para ser executado automaticamente para garantir que as operações de backup ocorram regularmente.  
+3.  **Garantir que o serviço SQL Server Agent foi iniciado e está em execução:** Inicie o SQL Server Agent se ele não estiver em execução. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] requer que o SQL Server Agent esteja em execução na instância para executar operações de backup.  Talvez seja necessário definir o SQL Agent para ser executado automaticamente para garantir que as operações de backup ocorram regularmente.  
   
 4.  **Determinar o período de retenção:** Determine o período de retenção desejado para os arquivos de backup. O período de retenção é especificado em dias e pode variar de 1 a 30. O período de retenção determina o tempo de recuperação do banco de dados.  
   
@@ -115,8 +114,7 @@ ms.locfileid: "75228201"
   
     ```  
   
-     
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está habilitado no banco de dados que você especificou. Podem ser necessários até 15 minutos para que as operações de backup no banco de dados comecem a ser executadas. O backup ocorrerá na réplica de backup preferencial.  
+     [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está habilitado no banco de dados que você especificou. Podem ser necessários até 15 minutos para que as operações de backup no banco de dados comecem a ser executadas. O backup ocorrerá na réplica de backup preferencial.  
   
 8.  **Examinar a configuração padrão do evento estendido:**  Examine a configuração do evento estendido executando a seguinte instrução Transact-SQL na réplica que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está usando para agendar os backups do. Em geral, essa é a configuração da réplica de backup preferencial para um Grupo de Disponibilidade ao qual o banco de dados pertence.  
   
@@ -126,13 +124,13 @@ ms.locfileid: "75228201"
   
      Você verá que os eventos de canal Admin, Operacional e Analítico estão habilitados por padrão e não podem ser desabilitados. Isso deve ser suficiente para monitorar os eventos que requerem intervenção manual.  Você pode habilitar os eventos de depuração, mas esses canais incluem eventos informativos e de depuração que usa o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para detectar problemas e resolvê-los. Para obter mais informações, consulte [monitorar SQL Server Backup gerenciado no Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
-9. **Habilitar e configurar a notificação de status de integridade:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tem um procedimento armazenado que cria um trabalho do Agent para enviar notificações por email de erros ou avisos que podem exigir atenção.  Para receber essas notificações, você deve habilitar a execução do procedimento armazenado que cria um Trabalho do SQL Server Agent. As etapas a seguir descrevem o processo para habilitar e configurar notificações por email:  
+9. **Habilitar e configurar a notificação do status de integridade:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tem um procedimento armazenado que cria um trabalho de agente para enviar notificações por email sobre erros ou avisos que possam exigir atenção.  Para receber essas notificações, você deve habilitar a execução do procedimento armazenado que cria um Trabalho do SQL Server Agent. As etapas a seguir descrevem o processo para habilitar e configurar notificações por email:  
   
     1.  Configure o Database Mail se ele ainda não estiver habilitado na instância. Para obter mais informações, consulte [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
   
-    2.  Configure o SQL Server Agent Notification para usar o Database Mail. Para obter mais informações, consulte [Configurar o SQL Server Agent mail para usar Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
+    2.  Configure o SQL Server Agent Notification para usar o Database Mail. Para obter mais informações, consulte [Configurar o SQL Server Agent Mail para usar o Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Habilite notificações por email para receber erros e avisos de backup:** Na janela de consulta, execute as seguintes instruções Transact-SQL:  
+    3.  **Habilitar notificações por email para receber avisos e erros de backup:** Na janela de consulta, execute as seguintes instruções Transact-SQL:  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -145,7 +143,7 @@ ms.locfileid: "75228201"
   
 10. **Exibir arquivos de backup na conta de armazenamento do Azure:** Conecte-se à conta de armazenamento de SQL Server Management Studio ou Portal de Gerenciamento do Azure. Você verá um contêiner para a instância do SQL Server que hospeda o banco de dados que configurou para usar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Você também poderá consultar um banco de dados e um backup de log 15 minutos depois de habilitar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para o banco de dados.  
   
-11. **Monitore o status de integridade:**  Você pode monitorar por meio de notificações por email configuradas anteriormente ou monitorar ativamente os eventos registrados. Estes são alguns exemplos de instruções Transact-SQL usados para exibir os eventos:  
+11. **Monitorar o Status de Integridade:**  Realize o monitoramento por meio das notificações por email configuradas anteriormente ou monitore de forma ativa os eventos registrados em log. Estes são alguns exemplos de instruções Transact-SQL usados para exibir os eventos:  
   
     ```  
     --  view all admin events  

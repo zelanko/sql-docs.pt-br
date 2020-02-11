@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 69072514931e7e449893124a8f192043b2bf87d7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908337"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287118"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar agendas de sincronização
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "72908337"
   
 #### <a name="to-modify-a-synchronization-schedule-for-a-push-subscription-in-management-studio"></a>Para modificar uma agenda de sincronização para uma assinatura push no Management Studio  
   
-1.  Conecte-se ao Distribuidor no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e, em seguida, expanda o nó do servidor.  
+1.  Conecte-se ao Distribuidor no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e, em seguida, expanda o nó de servidor.  
   
 2.  Expanda a pasta **SQL Server Agent** e, em seguida, a pasta **Trabalhos** .  
   

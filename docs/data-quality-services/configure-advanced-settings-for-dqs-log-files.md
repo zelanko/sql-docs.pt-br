@@ -13,10 +13,10 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255609"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Definir configurações avançadas para arquivos de log do DQS
@@ -28,11 +28,11 @@ ms.locfileid: "75255609"
 > [!NOTE]  
 >  Essas atividades não podem ser executadas por meio do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], e destinam-se apenas a usuários avançados.  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
   
 -   A conta de usuário do Windows deve ser um membro da função de servidor fixa sysadmin na instância do SQL Server para modificar as configurações na tabela A_CONFIGURATION do banco de dados DQS_MAIN.  
   

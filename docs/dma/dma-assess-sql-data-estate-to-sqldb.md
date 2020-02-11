@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253507"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Avaliar a prontidão de um SQL Server banco de dados migrando para o Azure SQL usando o Assistente de Migração de Dados
@@ -179,8 +179,8 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
 
    ![Migrações para Azure – examinar bloqueadores de migração](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-* [Assistente de Migração de Dados (DMA)](../dma/dma-overview.md)
+* [AMD (Assistente de Migração de Dados)](../dma/dma-overview.md)
 * [Assistente de Migração de Dados: definições de configuração](../dma/dma-configurationsettings.md)
 * [Assistente de Migração de Dados: práticas recomendadas](../dma/dma-bestpractices.md)

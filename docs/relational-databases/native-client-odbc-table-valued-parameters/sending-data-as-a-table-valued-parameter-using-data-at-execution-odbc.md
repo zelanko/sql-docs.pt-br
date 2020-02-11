@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cea7295b67cd53844b29e876e8a0635de9cad46a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246370"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviando dados como um parâmetro com valor de tabela usando dados em execução (ODBC)
@@ -186,7 +186,7 @@ from @Items
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  Este exemplo mostra que você pode usar o streaming de linha, uma linha por chamada para SQLPutData, com ODBC TVP, semelhante a como você pode usar BCP. exe para carregar dados em um banco de dado.  
   
  Antes de compilar o exemplo, altere o nome do servidor na cadeia de conexão.  
@@ -374,7 +374,7 @@ EXIT:
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  Este exemplo mostra que você pode usar o streaming de linha, várias linhas por chamada para SQLPutData, com ODBC TVP, semelhante a como você pode usar BCP. exe para carregar dados em um banco de dado.  
   
  Antes de compilar o exemplo, altere o nome do servidor na cadeia de conexão.  

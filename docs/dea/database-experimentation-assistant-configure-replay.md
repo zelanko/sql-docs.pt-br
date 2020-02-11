@@ -2,7 +2,7 @@
 title: Configurar a reprodução para atualizações de SQL Server
 description: Configurar Distributed Replay para Assistente para Experimentos de Banco de Dados
 ms.custom: seo-lt-2019
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2ef570f531bcd37a2a5f7be1f3a900c4b8a4c112
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317733"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761530"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurar Distributed Replay para Assistente para Experimentos de Banco de Dados
 
@@ -48,10 +48,12 @@ Para configurar o serviço do controlador:
 3. Abra Services. msc e vá para o **SQL Server Distributed Replay** serviço do controlador.
 4. Clique com o botão direito do mouse no serviço e selecione **Propriedades**. Defina a conta de serviço como uma conta que seja comum para o controlador e os computadores cliente na rede.
 5. Selecione **OK** para fechar a janela **Propriedades** .
-6. Reinicie o **SQL Server Distributed Replay** serviço do controlador a partir de Services. msc. Você também pode executar os seguintes comandos na linha de comando para reiniciar o serviço:<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
+6. Reinicie o **SQL Server Distributed Replay** serviço do controlador a partir de Services. msc. Você também pode executar os seguintes comandos na linha de comando para reiniciar o serviço:
+
+   `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
-7. Para obter mais opções de configuração, consulte [configurar Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+
+Para obter mais opções de configuração, consulte [configurar Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
 ## <a name="configure-dcom"></a>Configurar DCOM
 
@@ -68,9 +70,10 @@ Essa configuração só é necessária no computador do controlador.
 9. Adicione o usuário que iniciará a reprodução. Conceda permissões de acesso local ao usuário. Se o usuário planeja acessar o serviço do controlador remotamente, conceda ao usuário permissões de acesso remoto.
 10. Selecione **OK** para confirmar as alterações e retornar à guia **segurança** .
 11. Selecione **OK** para confirmar as alterações.
-12. Reinicie o SQL Server Distributed Replay serviço do controlador a partir de Services. msc. Você também pode executar os seguintes comandos na linha de comando para reiniciar o serviço:<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
-   `NET START "SQL Server Distributed Replay Controller"`
+12. Reinicie o SQL Server Distributed Replay serviço do controlador a partir de Services. msc. Você também pode executar os seguintes comandos na linha de comando para reiniciar o serviço:
+
+    `NET STOP "SQL Server Distributed Replay Controller"`</br>
+    `NET START "SQL Server Distributed Replay Controller"`
 
 ## <a name="set-up-the-client-service"></a>Configurar o serviço do cliente
 
@@ -81,12 +84,16 @@ Antes de configurar o serviço do cliente, use as ferramentas de rede como ping 
 3. Clique com o botão direito do mouse no serviço e selecione **Propriedades**. Defina a conta de serviço para uma conta que seja comum tanto para os computadores do controlador quanto do cliente na rede.
 4. Selecione **OK** para fechar a janela **Propriedades** . Se você tiver ignorado a etapa do assistente do SQL Server Installer para configurar o cliente do Distributed Replay, você poderá configurá-lo por meio do arquivo de configuração. Em uma instalação típica, o arquivo de configuração está localizado em C:\Arquivos de programas (x86)\<\Microsoft\>SQL Server versão \Tools\DReplayClient\DReplayClient.config.
 5. Verifique se o arquivo DReplayClient. config contém o nome do computador do controlador como seu controlador para registro.
-6. Reinicie o SQL Server Distributed Replay serviço de cliente do Services. msc. Você também pode executar os seguintes comandos na linha de comando para reiniciar o serviço:<br/>
-    `NET STOP "SQL Server Distributed Replay Client"`<br/>
+6. Reinicie o SQL Server Distributed Replay serviço de cliente do Services. msc. Você também pode executar os seguintes comandos na linha de comando para reiniciar o serviço:
+
+    `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
-7. Os logs do controlador Distributed Replay estão localizados em C:\Arquivos de programas (x86\<)\>\Microsoft SQL Server versão \Tools\DReplayClient\Log. Os logs indicam se o cliente pode se registrar no controlador.
-8. Se a configuração for bem-sucedida, o log exibirá a mensagem "registrado com o controlador <\>nome do controlador".
-9. Para obter mais opções de configuração, consulte [configurar Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+
+    Os logs do controlador Distributed Replay estão localizados em C:\Arquivos de programas (x86\<)\>\Microsoft SQL Server versão \Tools\DReplayClient\Log. Os logs indicam se o cliente pode se registrar no controlador.
+
+    Se a configuração for bem-sucedida, o log exibirá a mensagem **registrada com o nome\>do controlador de <do controlador**.
+
+Para obter mais opções de configuração, consulte [configurar Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>Configurar ferramentas de administração de Distributed Replay
 
@@ -119,6 +126,6 @@ As etapas a seguir devem ser executadas para cada repetição:
 2. Forneça permissões para que o usuário da conta de serviço do cliente acesse os bancos de dados na instância do SQL Server. As permissões são necessárias para que as consultas sejam executadas na instância de SQL Server.
 3. Inicie a reprodução.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - Para saber como reproduzir um rastreamento capturado em um ambiente de teste atualizado, consulte [reproduzir um rastreamento no Assistente para experimentos de banco de dados](database-experimentation-assistant-replay-trace.md).

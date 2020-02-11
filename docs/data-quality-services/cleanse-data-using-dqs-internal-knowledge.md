@@ -15,10 +15,10 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 280149ccb0e94b1ca7bcca75616ec5353f41e62b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255687"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpar dados usando o conhecimento do DQS (interno)
@@ -31,7 +31,7 @@ ms.locfileid: "75255687"
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-###  <a name="Prerequisites"></a>Pré-requisitos  
+###  <a name="Prerequisites"></a> Pré-requisitos  
   
 -   Você deve ter especificado valores de limites apropriados para a atividade de limpeza. Para obter informações sobre como fazer isso, consulte [Para obter informações sobre como fazer isso, consulte](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
@@ -39,9 +39,9 @@ ms.locfileid: "75255687"
   
 -   O Microsoft Excel deverá ser instalado no computador [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] se os dados de origem a serem limpos estiverem em um arquivo do Excel. Caso contrário, você não poderá selecionar o arquivo do Excel no estágio de mapeamento. Os arquivos criados pelo Microsoft Excel podem ter a extensão .xlsx, .xls ou .csv. Se a versão de 64 bits do Excel for usada, somente arquivos do Excel 2003 (.xls) terão suporte; não haverá suporte para os arquivos do Excel 2007 ou 2010 (.xlsx). Se você estiver usando a versão de 64 bits do Excel 2007 ou 2010, salve o arquivo como .xls ou .csv ou instale uma versão de 32 bits do Excel.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_kb_operator no banco de dados DQS_MAIN para executar a limpeza de dados.  
   
 ##  <a name="Create"></a>Criar um projeto de qualidade de dados de limpeza  
@@ -105,7 +105,7 @@ ms.locfileid: "75255687"
   
  Com base no nível de confiança, os valores são exibidos nas cinco guias a seguir:  
   
-|Tab|Descrição|  
+|Tab|DESCRIÇÃO|  
 |---------|-----------------|  
 |**Sugere**|Exibe os valores de domínio para os quais o DQS encontrou os valores sugeridos que têm um nível de confiança superior ao valor de *limite de sugestão automática* , mas inferior ao valor do *limite de correção automática* .<br /><br /> Os valores sugeridos são exibidos na coluna **Corrigir para** em relação ao valor original. Você pode clicar no botão de opção na coluna **Aprovar** ou **Rejeitar** em relação a um valor na grade superior para aceitar ou rejeitar a sugestão para todas as instâncias do valor. Nesse caso, o valor aceito passa para a guia **Corrigido** e o valor rejeitado passa para a guia **Inválido** .|  
 |**Novo**|Exibe o domínio válido para o qual o DQS não tem informações suficientes e, portanto, não pode ser mapeado para nenhuma outra guia. Além disso, essa guia também contém valores que têm nível de confiança menor que o valor de *limite de sugestão automática* , mas alta o suficiente para ser marcado como válido.<br /><br /> Se você considerar o valor correto, clique no botão de opção na coluna **Aprovar** . Ou clique no botão de opção na coluna **Rejeitar** . O valor aceito passa para a guia **correto** e o valor rejeitado se move para a guia **inválida** . Você também pode digitar manualmente o valor correto como uma substituição para o valor original na coluna **corrigir para** em relação ao valor e, em seguida, clicar no botão de opção na coluna **aprovar** para aceitar a alteração. Nesse caso, o valor passa para a guia **Corrigido** .|  

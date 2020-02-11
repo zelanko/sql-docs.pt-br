@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244950"
 ---
 # <a name="color-coding-in-query-editors"></a>Codificação por cores no Editor de Consultas
@@ -34,7 +34,7 @@ ms.locfileid: "75244950"
 |Verde|Tabela, exibição ou função com valor de tabela do sistema. Além disso, esquemas do sistema, sys e INFORMATION_SCHEMA.|  
 |Azul|Palavra-chave|  
 |Azul-petróleo|Números de linha ou parâmetro de modelo|  
-|Castanho|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]procedimento armazenado|  
+|Castanho|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento armazenado|  
 |Cinza escuro|Operadores|  
   
 ## <a name="status-bar"></a>Barra de Status  

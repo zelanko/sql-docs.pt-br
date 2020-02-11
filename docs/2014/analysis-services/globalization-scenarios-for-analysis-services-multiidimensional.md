@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225392"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Cenários de globalização para Analysis Services Multidimensional
@@ -69,7 +69,7 @@ ms.locfileid: "75225392"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Linguagens e agrupamentos &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Especifique o idioma padrão e ordenação do Windows para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Suas escolhas afetam dados e metadados gerenciados pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[Conversões &#40;Analysis Services&#41;](translations-analysis-services.md)|Definir traduções para um banco de dados e objetos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contidos no banco de dados. Este tópico explica como o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] resolve solicitações de dados traduzidos e metadados de aplicativos clientes.|  

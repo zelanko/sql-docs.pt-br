@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 71864b1670d61448b48e3acdc89d9c2d231c782d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926945"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244414"
 ---
 # <a name="sql-server-help-and-feedback"></a>Ajuda e comentários do SQL Server
 
@@ -22,7 +22,7 @@ Este artigo explica diferentes maneiras de obter assistência com seu problema o
 
 ## <a name="contact-microsoft-support"></a>Contatar o Suporte da Microsoft
 
-Clientes com um plano de suporte podem [abrir um tíquete](https://support.microsoft.com/en-us/hub/4343728/support-for-business) com o suporte da Microsoft.  Examine as [opções de suporte para empresas](https://support.microsoft.com/en-us/help/4341255/support-for-business) para obter mais informações. 
+Clientes com um plano de suporte podem [abrir um tíquete](https://support.microsoft.com/hub/4343728/support-for-business) com o suporte da Microsoft.  Examine as [opções de suporte para empresas](https://support.microsoft.com/help/4341255/support-for-business) para obter mais informações. 
 
 Clientes sem um plano de suporte podem pedir ajuda à comunidade ou enviar um bug por meio do UserVoice em [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback).
 
@@ -50,7 +50,7 @@ Existem vários fóruns do MSDN que podem ajudá-lo com suas perguntas sobre o S
 
 Há algumas comunidades de que podem ajudá-lo com seus problemas relativos ao SQL Server. 
 
-- [Estouro de pilha](https://stackoverflow.com/questions/tagged/sql-server)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [Obtenha ajuda da comunidade com a hashtag #sqlhelp no Twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
@@ -63,7 +63,7 @@ Você pode enviar sugestões de melhoria, bem como enviar bugs para:
 - **Problemas do Azure Data Studio**: [GitHub do Azure Data Studio](https://github.com/microsoft/azuredatastudio/issues)
  
 
-###  <a name="sql-server-documentation"></a>Documentação do SQL Server
+###  <a name="sql-server-documentation"></a>documentação do SQL Server
 
 A melhor maneira de entrar em contato com a equipe de conteúdo do SQL Server é por meio dos Problemas do Git. Você encontrará uma opção para enviar um Problema do Git na parte inferior da maioria de nossas páginas: 
 

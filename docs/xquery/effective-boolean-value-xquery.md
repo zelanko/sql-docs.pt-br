@@ -18,10 +18,10 @@ ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929954"
 ---
 # <a name="effective-boolean-value-xquery"></a>Valor Booliano efetivo (XQuery)
@@ -37,15 +37,15 @@ ms.locfileid: "67929954"
   
 -   Expressões lógicas  
   
--   O [não funcionar](../xquery/functions-on-boolean-values-not-function.md)  
+-   A [função not](../xquery/functions-on-boolean-values-not-function.md)  
   
 -   A cláusula WHERE de uma expressão FLWOR  
   
 -   [Expressões condicionais](../xquery/conditional-expressions-xquery.md)  
   
--   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
+-   [Expressões quantificadas](../xquery/quantified-expressions-xquery.md)  
   
- A seguir é apresentado um exemplo de valor Booliano efetivo. Quando o **se** expressão é processada, o valor booliano efetivo da condição é determinado. Como `/a[1]` retorna uma sequência vazia, o valor Booliano efetivo é false. O resultado é retornado como XML com um nó de texto (false).  
+ A seguir é apresentado um exemplo de valor Booliano efetivo. Quando a expressão **If** é processada, o valor booliano efetivo da condição é determinado. Como `/a[1]` retorna uma sequência vazia, o valor Booliano efetivo é false. O resultado é retornado como XML com um nó de texto (false).  
   
 ```  
 value is false  
@@ -64,15 +64,15 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- Quando a consulta digitado **xml** colunas ou variáveis, você pode ter nós do tipo booliano. O **Data ()** nesse caso, retorna um valor booliano. Se a expressão de consulta retorna um valor Booliano true, o valor Booliano efetivo é true, como exibido no exemplo a seguir. O exemplo também ilustra o seguinte:  
+ Ao consultar colunas ou variáveis **XML** tipadas, você pode ter nós do tipo booliano. Os **dados ()** , nesse caso, retorna um valor booliano. Se a expressão de consulta retorna um valor Booliano true, o valor Booliano efetivo é true, como exibido no exemplo a seguir. O exemplo também ilustra o seguinte:  
   
--   Uma coleção de esquemas XML é criada. O elemento \<b > na coleção é do tipo booliano.  
+-   Uma coleção de esquemas XML é criada. O elemento \<b> na coleção é do tipo booliano.  
   
--   Tipado **xml** variável é criada e consultada.  
+-   Uma variável **XML** com tipo é criada e consultada.  
   
 -   A expressão `data(/b[1])` retorna um valor Booliano true. Portanto, o valor Booliano efetivo nesse caso, é true.  
   
--   A expressão `data(/b[2])` retorna um valor booliano false. Portanto, o valor Booliano efetivo nesse caso, é false.  
+-   A expressão `data(/b[2])` retorna um valor falso booliano. Portanto, o valor Booliano efetivo nesse caso, é false.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
@@ -88,8 +88,8 @@ SELECT @x.query('if (data(/b[2])) then "true" else "false"')
 go  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Fundamentos de XQuery](../xquery/xquery-basics.md)   
- [Iteração e instrução FLWOR &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Noções básicas do XQuery](../xquery/xquery-basics.md)   
+ [Instrução FLWOR e iteração &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   

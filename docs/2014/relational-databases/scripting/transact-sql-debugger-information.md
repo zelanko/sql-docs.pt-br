@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41d215d4d6e288b74e69e0ea8266c442a0726220
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243067"
 ---
 # <a name="transact-sql-debugger-information"></a>Informações do depurador Transact-SQL
@@ -96,13 +96,13 @@ ms.locfileid: "75243067"
  Em modo de depuração, as guias **Resultados** e **Mensagens** ainda ficam ativas no Editor de Consultas. A guia **Resultados** continua a exibir os conjuntos de resultados das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que são executados durante uma sessão de depuração. A guia **Mensagens** continua a exibir mensagens de sistema, como, por exemplo, *xx* Linhas Afetadas e a saída de instruções PRINT e RAISERROR.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Janela locais](transact-sql-debugger-locals-window.md)   
- [Janela de inspeção](transact-sql-debugger-watch-window.md)   
+ [Janela Locais](transact-sql-debugger-locals-window.md)   
+ [Janela de Observação](transact-sql-debugger-watch-window.md)   
  [Caixa de diálogo QuickWatch](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Janela pontos de interrupção](transact-sql-debugger-breakpoints-window.md)   
- [Janela pilha de chamadas](transact-sql-debugger-call-stack-window.md)   
- [Janela threads](transact-sql-debugger-threads-window.md)   
- [Janela de Saída](transact-sql-debugger-output-window.md)   
+ [Janela Pontos de Interrupção](transact-sql-debugger-breakpoints-window.md)   
+ [Janela Pilha de Chamadas](transact-sql-debugger-call-stack-window.md)   
+ [Janela Threads](transact-sql-debugger-threads-window.md)   
+ [Janela Saída](transact-sql-debugger-output-window.md)   
  [Depurador do Transact-SQL](transact-sql-debugger.md)  
   
   

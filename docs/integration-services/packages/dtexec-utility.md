@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b27fc68fc3c7685583248b39a7c27d4d33efa38c
-ms.sourcegitcommit: e0067f3687003e1b59a83619fdd19b666cf61e10
+ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74249737"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761850"
 ---
 # <a name="dtexec-utility"></a>Utilitário dtexec
 
@@ -107,7 +107,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Quando um pacote é executado, o **dtexec** pode retornar um código de saída. O código de saída é usado para popular a variável ERRORLEVEL, cujo valor pode, então, ser testado em instruções condicionais ou lógica de ramificação dentro de um arquivo em lote. A tabela a seguir lista os valores que o utilitário **dtexec** pode definir ao sair.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|O pacote foi executado com êxito.|  
 |1|Falha no pacote.|  
@@ -424,7 +424,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/SQ[L]** _package_path_: Carrega um pacote que é armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no banco de dados **msdb**. Os pacotes que estão armazenados no banco de dados **msdb** são implantados usando o modelo de implantação de pacote. Para executar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o modelo de implantação de projeto, use a opção **/ISServer** . Para obter mais informações sobre os modelos de implantação de pacote e projeto, consulte [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
   
-     O argumento *package_path* especifica o caminho e nome de arquivo do pacote a recuperar. Se forem incluídas pastas no caminho, elas terminarão com barras invertidas ("\\"). O valor *package_path* pode estar entre aspas. Se o caminho ou o nome do arquivo especificado no argumento *package_path* contiver um espaço, você deverá colocar o argumento *package_path* entre aspas.  
+-   O argumento *package_path* especifica o caminho e nome de arquivo do pacote a recuperar. Se forem incluídas pastas no caminho, elas terminarão com barras invertidas ("\\"). O valor *package_path* pode estar entre aspas. Se o caminho ou o nome do arquivo especificado no argumento *package_path* contiver um espaço, você deverá colocar o argumento *package_path* entre aspas.  
   
      Você pode usar as opções **/User**, **/Password**e **/Server** com a opção **/SQL** .  
   
@@ -434,7 +434,7 @@ dtexec /option [value] [/option [value]]...
   
     > **IMPORTANTE:** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-     Se a opção **/Server** for omitida, será assumida a instância local padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Se a opção **/Server** for omitida, será assumida a instância local padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      A opção **/SQL** não pode ser usada junto com a opção **/DTS** ou a opção **/File** . Se várias opções forem especificadas, o **dtexec** falhará.  
   

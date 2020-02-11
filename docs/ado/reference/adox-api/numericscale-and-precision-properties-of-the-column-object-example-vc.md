@@ -1,5 +1,5 @@
 ---
-title: Propriedades NumericScale e Precision do exemplo de coluna (VC + +) | Microsoft Docs
+title: NumericScale e propriedades de precisão do exemplo de coluna (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 828f4ed0336ef7994346af3ad673de2107bd3ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6dac85217a3f815511fa94e19a9adccc1f2ba1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965758"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918406"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Exemplo das propriedades NumericScale e Precision do objeto Column (VC++)
-Este exemplo demonstra a [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) e [Precision](../../../ado/reference/adox-api/precision-property-adox.md) propriedades do [coluna](../../../ado/reference/adox-api/column-object-adox.md) objeto. Esse código exibe seu valor para o **detalhes do pedido** tabela da *Northwind* banco de dados.  
+Este exemplo demonstra as propriedades [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) e [Precision](../../../ado/reference/adox-api/precision-property-adox.md) do objeto [Column](../../../ado/reference/adox-api/column-object-adox.md) . Esse código exibe seu valor para a tabela **detalhes do pedido** do banco de dados *Northwind* .  
   
 ```  
 // BeginNumericScalePrecCpp.cpp  
@@ -86,7 +86,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in NumericScalePrecX...." << endl;  
+      cout << "Error occurred in NumericScalePrecX...." << endl;  
    }  
    ::CoUninitialize();  
 }  

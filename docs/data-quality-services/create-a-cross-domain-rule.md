@@ -13,10 +13,10 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245470"
 ---
 # <a name="create-a-cross-domain-rule"></a>Criar uma regra de domínio cruzado
@@ -33,14 +33,14 @@ ms.locfileid: "75245470"
   
  As regras de domínio cruzado são levadas em consideração depois de todas as regras simples que afetam apenas um domínio único. Apenas se um valor estiver de acordo com as regras de domínio único (caso elas existam), a regra de domínio cruzado será aplicada. O domínio composto e os domínios únicos nos quais uma regra é executada devem ser definidos para que a regra possa ser executada.  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a>Pré-requisitos  
+###  <a name="Prerequisites"></a> Pré-requisitos  
  Para criar uma regra de domínio cruzado, você deve criar e abrir um domínio composto.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar uma regra de domínio cruzado.  
   
 ##  <a name="Create"></a>Criar regras entre domínios  

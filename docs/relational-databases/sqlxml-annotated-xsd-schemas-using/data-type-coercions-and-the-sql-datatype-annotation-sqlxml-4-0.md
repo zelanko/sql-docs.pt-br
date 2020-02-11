@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257475"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversões de tipo de dados e a anotação sql: DataType (SQLXML 4,0)
@@ -42,7 +42,7 @@ ms.locfileid: "75257475"
   
 |Tipo de dados XSD|Conversão do SQL Server|  
 |-------------------|---------------------------|  
-|Booliano|CONVERT(bit, COLUMN)|  
+|Boolean|CONVERT(bit, COLUMN)|  
 |Data|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
@@ -59,27 +59,27 @@ ms.locfileid: "75257475"
 |Tipo de dados do SQL Server|Tipo de dados XSD|  
 |--------------------------|-------------------|  
 |**bigint**|**Longas**|  
-|**binário**|**base64Binary**|  
-|**parte**|**Boolean**|  
-|**º**|**Strings**|  
-|**horário**|**Horário**|  
-|**vírgula**|**vírgula**|  
-|**barra**|**Clique**|  
+|**binary**|**base64Binary**|  
+|**bit**|**Boolean**|  
+|**char**|**Strings**|  
+|**datetime**|**Horário**|  
+|**decimal**|**decimal**|  
+|**float**|**double**|  
 |**imagem**|**base64Binary**|  
-|**inteiro**|**inteiro**|  
-|**money**|**vírgula**|  
+|**int**|**int**|  
+|**money**|**decimal**|  
 |**nchar**|**Strings**|  
 |**ntext**|**Strings**|  
 |**nvarchar**|**Strings**|  
-|**numeric**|**vírgula**|  
-|**foto**|**barra**|  
+|**numeric**|**decimal**|  
+|**real**|**float**|  
 |**smalldatetime**|**Horário**|  
 |**smallint**|**short**|  
-|**smallmoney**|**vírgula**|  
+|**smallmoney**|**decimal**|  
 |**sql_variant**|**Strings**|  
 |**sysname**|**Strings**|  
-|**texto**|**Strings**|  
-|**estampa**|**Horário**|  
+|**text**|**Strings**|  
+|**timestamp**|**Horário**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
 |**varchar**|**Strings**|  
@@ -99,7 +99,7 @@ ms.locfileid: "75257475"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-xsdtype"></a>R. Especificando xsd:type  
+### <a name="a-specifying-xsdtype"></a>a. Especificando xsd:type  
  Este exemplo mostra como um tipo de **Data** XSD que é especificado usando o atributo **xsd: Type** no esquema afeta o documento XML resultante. O esquema fornece uma exibição XML da tabela Sales.SalesOrderHeader no banco de dados AdventureWorks.  
   
 ```  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 328f3bc8106cd499326cfce79430fef7886cd9b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413558"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688203"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
@@ -72,9 +72,9 @@ ms.locfileid: "66413558"
   
  Isto ocorre porque o renderizador do Word analisa o relatório em busca de campos relacionados à paginação como **PageNumber** e **TotalPages** , e trata somente de referências simples, não chamadas para uma função. Neste caso, a expressão chama a função **ToString** . As duas expressões a seguir são equivalentes e ambas renderizam corretamente quando você visualiza o relatório no Construtor de Relatórios ou no Designer de Relatórios, ou quando renderiza o relatório publicado em um portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou em uma biblioteca do SharePoint. Porém, o renderizador do Word analisa somente a segunda expressão com êxito e renderiza os números de página corretos.  
   
--   **Expressão complexa:**  a expressão é `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Expressão complexa:**  A expressão é `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expressão com Sequências de texto:** Texto, **Vendas Comuns**e expressão,  `=Avg(Fields!YTDPurchase.Value, "Sales)`e texto, **Número de Página**e expressão `=Globals!PageNumber`  
+-   **Expressão com Execuções de Texto:** Texto, **Média de Vendas** e a expressão, `=Avg(Fields!YTDPurchase.Value, "Sales)`, e o texto, **Número da Página** e a expressão `=Globals!PageNumber`  
   
  Para evitar esse problema, use várias sequências de texto em vez de uma expressão complexa quando usar expressões em rodapés e cabeçalhos. As duas expressões a seguir são equivalentes. A primeira é uma expressão complexa, e a segunda usa sequências de texto. O renderizador de Word analisa somente a segunda expressão com êxito.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66413558"
 > [!IMPORTANT]  
 >  A extensão de renderização do [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) foi preterida. Para obter mais informações, consulte [Recursos preteridos no SQL Server Reporting Services no SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- O renderizador do Word é compatível com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 e com o Pacote de Compatibilidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel e PowerPoint instalado. Para obter mais informações, consulte [Pacote de Compatibilidade do Microsoft Office para Word, Excel e PowerPoint](https://www.microsoft.com/download/details.aspx?id=12439).  
+ O renderizador do Word é compatível com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 e com o Pacote de Compatibilidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel e PowerPoint instalado. Para obter mais informações, consulte [Pacote de Compatibilidade do Microsoft Office para Word, Excel e PowerPoint](https://www.microsoft.com/download/details.aspx?id=1285).
   
  A versão anterior da extensão de renderização do Word, compatível com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, é renomeada como Word 2003. Apenas a extensão de renderização do Word está disponível por padrão. Você deve atualizar os arquivos de configuração do Reporting Services para disponibilizar a extensão de renderização do Word 2003. O tipo de conteúdo dos arquivos gerados pelo renderizador do Word 2003 é **application/vnd.ms-word** e a extensão de nome de arquivo dos arquivos é .doc.  
   
@@ -197,4 +197,4 @@ ms.locfileid: "66413558"
 [Renderizando itens de relatório](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
 [Tabelas, matrizes e listas](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

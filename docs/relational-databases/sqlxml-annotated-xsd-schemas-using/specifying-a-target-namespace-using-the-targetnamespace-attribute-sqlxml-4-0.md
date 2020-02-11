@@ -21,10 +21,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 39469073a8affe82ee5231a71676d7046f712f9f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257362"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificando um namespace de destino usando o atributo targetNamespace (SQLXML 4.0)
@@ -36,7 +36,7 @@ ms.locfileid: "75257362"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-a-target-namespace"></a>R. Especificando um namespace de destino  
+### <a name="a-specifying-a-target-namespace"></a>a. Especificando um namespace de destino  
  O esquema XSD a seguir especifica um namespace de destino usando o atributo **xsd: targetNamespace** . O esquema também define os valores de atributo **elementFormDefault** e **attributeFormDefault** como **"unqualified"** (o valor padrão para esses atributos). Essa é uma declaração global e afeta todos os elementos locais (**\<Order>** no esquema) e atributos (**CustomerID**, **ContactName**e **OrderID** no esquema).  
   
 ```  

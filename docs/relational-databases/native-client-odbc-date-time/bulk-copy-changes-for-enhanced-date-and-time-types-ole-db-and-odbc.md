@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50d1eb4d7a6070572e674f5ee7f8794837e63aa1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225262"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Alterações de cópia em massa para tipos de data e hora aprimorados (OLE DB e ODBC)
@@ -72,7 +72,7 @@ ms.locfileid: "75225262"
   
 |Tipo de armazenamento de arquivo|Tamanho de armazenamento em bytes|  
 |-----------------------|---------------------------|  
-|Datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
 |date|3|  
 |time|6|  
@@ -110,7 +110,7 @@ ms.locfileid: "75225262"
   
  **OLE DB observação** As conversões a seguir são executadas pelo IBCPSession. O IRowsetFastLoad usa conversões OLE DB conforme definido em [conversões executadas do cliente para o servidor](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Observe que os valores datetime são arredondados para 1/300 de um segundo e os valores smalldatetime têm os segundos definidos como zero depois de concluídas as conversões de cliente descritas a seguir. O arredondamento de datetime se propaga para horas e minutos, mas não para a data.  
   
-|Para --><br /><br /> De|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
+|Para --><br /><br /> De|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Data|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Hora|N/D|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  

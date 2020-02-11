@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d82ab18ebf1a8b7771e6afd37dcd14ed58ed35c8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243017"
 ---
 # <a name="transact-sql-debugger"></a>Depurador do Transact-SQL
@@ -37,36 +37,35 @@ ms.locfileid: "75243017"
   
      Se você tiver certeza de que não há erros em um procedimento armazenado, poderá passar por ele. O procedimento é executado por completo, e os resultados são retornados ao código.  
   
-     Se você desejar depurar um procedimento armazenado ou uma função, poderá avançar no módulo. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] abre uma nova janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que é preenchida com o código de origem do módulo, coloca a janela no modo de depuração e pausa a execução na primeira instrução do módulo. Em seguida, você pode navegar pelo código do módulo, por exemplo, definindo pontos de interrupção ou percorrendo o código.  
+     Se você desejar depurar um procedimento armazenado ou uma função, poderá avançar no módulo. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] abre uma nova janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que é preenchida com o código de origem do módulo, coloca a janela no modo de depuração e pausa a execução na primeira instrução do módulo. Em seguida, você pode navegar pelo código do módulo, por exemplo, definindo pontos de interrupção ou percorrendo o código.  
   
  Para obter mais informações sobre como o depurador permite navegar pelo código, veja [Percorrer código Transact-SQL](step-through-transact-sql-code.md).  
   
 ## <a name="viewing-debugger-information"></a>Exibindo informações do depurador  
  Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as seguintes janelas do depurador para exibir o estado de execução atual:  
   
--   **Locais** e **inspecionar.** Essas janelas exibem expressões [!INCLUDE[tsql](../../includes/tsql-md.md)] alocadas no momento. Expressões são cláusulas [!INCLUDE[tsql](../../includes/tsql-md.md)] que são avaliadas como uma única expressão escalar. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] dá suporte à exibição de expressões que fazem referência a variáveis [!INCLUDE[tsql](../../includes/tsql-md.md)], parâmetros ou as funções internas que têm nomes que começam com @@. Essas janelas também exibem os valores de dados que estão atribuídos às expressões no momento.  
+-   **Locais** e **Inspecionar.** Essas janelas exibem expressões [!INCLUDE[tsql](../../includes/tsql-md.md)] alocadas no momento. Expressões são cláusulas [!INCLUDE[tsql](../../includes/tsql-md.md)] que são avaliadas como uma única expressão escalar. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] dá suporte à exibição de expressões que fazem referência a variáveis [!INCLUDE[tsql](../../includes/tsql-md.md)], parâmetros ou as funções internas que têm nomes que começam com @@. Essas janelas também exibem os valores de dados que estão atribuídos às expressões no momento.  
   
 -   **QuickWatch.** Essa janela exibe o valor de uma expressão [!INCLUDE[tsql](../../includes/tsql-md.md)] e permite salvar essa expressão em uma janela **Inspecionar** .  
   
--   **Interrupção.** Esta janela exibe os pontos de interrupção definidos no momento e permite gerenciá-los.  
+-   **Pontos de interrupção.** Esta janela exibe os pontos de interrupção definidos no momento e permite gerenciá-los.  
   
--   **Pilha de chamadas.** Esta janela exibe o local de execução atual. Fornece também informações sobre como a execução passou da janela Editor de Consultas original por meio de funções, procedimentos armazenados ou gatilhos para alcançar o local de execução atual.  
+-   **Pilha de Chamadas.** Esta janela exibe o local de execução atual. Fornece também informações sobre como a execução passou da janela Editor de Consultas original por meio de funções, procedimentos armazenados ou gatilhos para alcançar o local de execução atual.  
   
--   **Der.** Esta janela exibe várias mensagens e dados de programa, como, por exemplo, mensagens de sistema do depurador.  
+-   **Saída.** Esta janela exibe várias mensagens e dados de programa, como, por exemplo, mensagens de sistema do depurador.  
   
--   **Resultados** e **mensagens.** Essas guias da janela Editor de Consultas exibem os resultados de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas anteriormente.  
+-   **Resultados** e **Mensagens.** Essas guias da janela Editor de Consultas exibem os resultados de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas anteriormente.  
   
 ## <a name="transact-sql-debugger-tasks"></a>Tarefas do depurador Transact-SQL  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como configurar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] para a depuração remota.|[Configurar o depurador Transact-SQL](configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|Descreve como iniciar, interromper e controlar a operação do depurador.|[Executar o depurador Transact-SQL](transact-sql-debugger.md)|  
-|Descreve como usar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] para percorrer o código.|[Percorrer código Transact-SQL](step-through-transact-sql-code.md)|  
+|Descreve como configurar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] para a depuração remota.|[Configurar o Depurador Transact-SQL](configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|Descreve como iniciar, interromper e controlar a operação do depurador.|[Executar o depurador do Transact-SQL](transact-sql-debugger.md)|  
+|Descreve como usar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] para percorrer o código.|[Percorrer o código do Transact-SQL](step-through-transact-sql-code.md)|  
 |Descreve como usar o depurador para exibir dados [!INCLUDE[tsql](../../includes/tsql-md.md)] , como, por exemplo, parâmetros e variáveis e informações do sistema.|[Informações do depurador Transact-SQL](transact-sql-debugger-information.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editores de consulta e de texto &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
+ [Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

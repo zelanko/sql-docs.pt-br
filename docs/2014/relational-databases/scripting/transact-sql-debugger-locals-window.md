@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44aedf7d53b2a9ad91b37f5023c13d8e20097da1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243046"
 ---
 # <a name="locals-window"></a>Janela Locais
-  A janela **locais** exibe informações sobre as expressões locais no escopo atual do [!INCLUDE[tsql](../../includes/tsql-md.md)] depurador. O escopo é definido como o quadro atual da pilha de chamadas selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para exibir as expressões locais.  
+  A janela **Locais** exibe informações sobre as expressões locais no escopo atual do depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . O escopo é definido como o quadro atual da pilha de chamadas selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para exibir as expressões locais.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
- **Para acessar a janela locais**  
+ **Para acessar a janela Locais**  
   
 -   No menu **Depurar** , clique em **Janelas**e em **Locais**.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "75243046"
 -   Clique com o botão direito do mouse na expressão e selecione **Editar Valor**.  
   
 ## <a name="columns"></a>Colunas  
- **Nomes**  
+ **Nome**  
  É o nome da expressão local. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] lista variáveis, parâmetros e funções de sistema com nomes que iniciam com @@.  
   
  **Valor**  
@@ -42,13 +42,13 @@ ms.locfileid: "75243046"
   
  Um ícone de lupa em uma célula **Valor** indica que o visualizador de depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] está disponível. Na lista, você pode especificar **Visualizador de Texto**, **Visualizador de XML**ou **Visualizador de HTML**. Para iniciar um visualizador de depurador, clique no ícone de lupa. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] abre uma caixa de diálogo que exibe os dados em um formato apropriado para o tipo dos dados.  
   
- **Escreva**  
+ **Tipo**  
  Exibe o tipo de dados da expressão.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Depurador do Transact-SQL](transact-sql-debugger.md)   
  [Informações do depurador Transact-SQL](transact-sql-debugger-information.md)   
- [Janela de inspeção](transact-sql-debugger-watch-window.md)   
- [Janela pilha de chamadas](transact-sql-debugger-call-stack-window.md)   
+ [Janela de Observação](transact-sql-debugger-watch-window.md)   
+ [Janela Pilha de Chamadas](transact-sql-debugger-call-stack-window.md)   
  [Caixa de diálogo QuickWatch](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Expressões &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/expressions-transact-sql)  
+ [Expressões &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
