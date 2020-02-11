@@ -1,5 +1,5 @@
 ---
-title: Metadados (guia navegador, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Metadados (guia navegador, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077853"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadados (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -38,21 +38,21 @@ ms.locfileid: "66077853"
   
  Ao trabalhar com um modelo de tabela, a lista de funções inclui funções MDX e DAX. Caso contrário, a lista incluirá apenas MDX. Um modelo multidimensional não pode usar funções DAX diretamente, embora uma expressão DAX possa ser incluída como parte de uma definição de objeto.  
   
- Dica: As pastas que contêm funções DAX são listadas todas as letras maiusculas. Todas as outras pastas contêm MDX funções. Por exemplo, há duas pastas para funções estatísticas: **ESTATÍSTICA** contém as funções relacionadas DAX.  
+ Dica: as pastas que contêm funções DAX são listadas em letras maiúsculas. Todas as outras pastas contêm MDX funções. Por exemplo, há duas pastas para funções estatísticas: **STATISTICAL** contém as funções relacionadas DAX.  
   
 ## <a name="context-menu"></a>Menu de contexto  
  As seguintes opções estão disponíveis no menu de contexto exibido ao clicar com o botão direito do mouse em um elemento exibido no painel **Metadados** :  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Adicionar à consulta**|Clique para adicionar o objeto selecionado ao painel inferior da área de compilação da consulta.|  
-|**Adicionar ao filtro**|Clique para adicionar a dimensão, atributo, hierarquia ou nível selecionado à área do **Navegador**.<br /><br /> Observação: Essa opção estará habilitada apenas se uma dimensão, atributo, hierarquia ou nível estiver selecionado.|  
-|**Copiar**|Clique para adicionar o item selecionado à Área de Transferência.<br /><br /> Observação: Esta opção copia o nome totalmente qualificado do objeto.|  
+|**Adicionar ao Filtro**|Clique para adicionar a dimensão, atributo, hierarquia ou nível selecionado à área do **Navegador**.<br /><br /> Observação: esta opção será habilitada somente se uma dimensão, atributo, hierarquia ou nível for selecionado.|  
+|**Copy**|Clique para adicionar o item selecionado à Área de Transferência.<br /><br /> Observação: essa opção copia o nome totalmente qualificado do objeto.|  
   
-## <a name="see-also"></a>Consulte também  
- [Barra de ferramentas &#40;guia do navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Analisar no Excel &#40;guia do navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Consulta e filtro &#40;guia do navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Navegador &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Barra de ferramentas &#40;guia navegador, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analisar na guia navegador do Excel &#40;, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Consulta e filtro &#40;guia navegador, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Navegador &#40;designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   
