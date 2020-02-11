@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916842"
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
@@ -33,17 +33,17 @@ ms.locfileid: "62916842"
   
 -   As versões de linhas geradas por meio de transações de modificação de dados para recursos como: operações de índice on-line, vários conjuntos de resultados ativos (MARS) e gatilhos AFTER.  
   
- As operações em **tempdb** são registradas minimamente. Isso permite que transações sejam revertidas. **tempdb** é recriado cada vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, de modo que o sistema sempre começa com uma cópia limpa do banco de dados. As tabelas temporárias e procedimentos armazenados são descartados automaticamente ou desconectados e nenhuma conexão fica ativa quando o sistema é desligado. Portanto, nunca há nada em **tempdb** a ser gravado de uma sessão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra. As operações de backup e restauração não são permitidas em **tempdb**.  
+ As operações em **tempdb** são registradas minimamente. Isso permite que transações sejam revertidas. o **tempdb** é recriado sempre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, de modo que o sistema sempre comece com uma cópia limpa do banco de dados. As tabelas temporárias e procedimentos armazenados são descartados automaticamente ou desconectados e nenhuma conexão fica ativa quando o sistema é desligado. Portanto, nunca há nada em **tempdb** a ser salvo de uma sessão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra. As operações de backup e restauração não são permitidas em **tempdb**.  
   
 ## <a name="physical-properties-of-tempdb"></a>Propriedades físicas de tempdb  
  A tabela a seguir lista os valores iniciais de configuração dos dados **tempdb** e dos arquivos de log. Os tamanhos desses arquivos podem variar um pouco em diferentes edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Arquivo|Nome lógico|Nome físico|Aumento do arquivo|  
 |----------|------------------|-------------------|-----------------|  
-|Dados primários|tempdev|tempdb.mdf|Aumento automático de 10 por cento até que o disco está cheio|  
+|Dados primários|tempdev|tempdb.mdf|Crescimento automático em 10% até que o disco esteja cheio|  
 |Log|templog|templog.ldf|Aumento automático de 10 por cento até um máximo de 2 terabytes.|  
   
- O tamanho de **tempdb** pode afetar o desempenho de um sistema. Por exemplo, se o **tempdb** tamanho é muito pequeno, o processamento do sistema poderia ser muito ocupado com o crescimento automático do banco de dados para dar suporte a suas necessidades de carga de trabalho toda vez que você inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode evitar essa sobrecarga aumentando o tamanho de **tempdb**.  
+ O tamanho de **tempdb** pode afetar o desempenho de um sistema. Por exemplo, se o tamanho do **tempdb** for muito pequeno, o processamento do sistema poderá ser muito ocupado com o crescimento automático do banco de dados para dar suporte ao seu requisito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de carga de trabalho toda vez que você iniciar. Você pode evitar essa sobrecarga aumentando o tamanho de **tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Melhorias de desempenho em tempdb  
  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **tempdb** o desempenho é aprimorado dos seguintes modos:  
@@ -54,13 +54,13 @@ ms.locfileid: "62916842"
   
 -   A sobrecarga de logging para **tempdb** é reduzida. Isso reduz o consumo de largura de banda de E/S do disco no arquivo de log **tempdb** .  
   
--   O algoritmo para alocar páginas combinadas em **tempdb** é aprimorado.  
+-   O algoritmo para alocar páginas mistas em **tempdb** foi melhorado.  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>Movendo os arquivos de log e dados de tempdb  
- Para mover os dados e arquivos de log de **tempdb** , veja [Mover bancos de dados do sistema](system-databases.md).  
+ Para mover os dados do **tempdb** e os arquivos de log, consulte [mover bancos](system-databases.md)de dado do sistema.  
   
 ### <a name="database-options"></a>Opções de banco de dados  
- A tabela a seguir lista o valor padrão de cada opção de banco de dados no banco de dados **tempdb** e se a opção pode ser modificada. Para exibir as configurações atuais dessas opções, use a exibição de catálogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
+ A tabela a seguir lista o valor padrão para cada opção de banco de dados no banco de dados **tempdb** e se a opção pode ser modificada. Para exibir as configurações atuais dessas opções, use a exibição de catálogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
   
 |Opção de banco de dados|Valor padrão|Pode ser modificado|  
 |---------------------|-------------------|---------------------|  
@@ -71,9 +71,9 @@ ms.locfileid: "62916842"
 |ANSI_WARNINGS|OFF|Sim|  
 |ARITHABORT|OFF|Sim|  
 |AUTO_CLOSE|OFF|Não|  
-|AUTO_CREATE_STATISTICS|ON|Sim|  
+|AUTO_CREATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_SHRINK|OFF|Não|  
-|AUTO_UPDATE_STATISTICS|ON|Sim|  
+|AUTO_UPDATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
 |CHANGE_TRACKING|OFF|Não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
@@ -81,21 +81,21 @@ ms.locfileid: "62916842"
 |CURSOR_DEFAULT|GLOBAL|Sim|  
 |Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Não<br /><br /> Não|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
-|DB_CHAINING|ON|Não|  
+|DB_CHAINING|ATIVADO|Não|  
 |ENCRYPTION|OFF|Não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM para novas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE para atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sim|  
-|PARAMETERIZATION|SIMPLE|Sim|  
+|PARAMETERIZATION|SIMPLES|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
 |READ_COMMITTED_SNAPSHOT|OFF|Não|  
-|RECOVERY|SIMPLE|Não|  
+|RECOVERY|SIMPLES|Não|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
 |Opções do Service Broker|ENABLE_BROKER|Sim|  
 |TRUSTWORTHY|OFF|Não|  
   
  Para obter uma descrição dessas opções de banco de dados, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
  As seguintes operações não podem ser executadas no banco de dados **tempdb** :  
   
 -   Adição de grupos de arquivos  
@@ -104,7 +104,7 @@ ms.locfileid: "62916842"
   
 -   Alteração de ordenação. A ordenação padrão é a ordenação do servidor.  
   
--   Alteração do proprietário do banco de dados. **tempdb** pertence a **sa**.  
+-   Alteração do proprietário do banco de dados. **tempdb** pertence a **SA**.  
   
 -   Criação de um instantâneo do banco de dados  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62916842"
   
  [Mover arquivos de banco de dados](move-database-files.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhando com tempdb no SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

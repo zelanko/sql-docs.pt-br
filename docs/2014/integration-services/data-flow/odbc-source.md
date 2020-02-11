@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901101"
 ---
 # <a name="odbc-source"></a>Origem ODBC
@@ -30,14 +30,14 @@ ms.locfileid: "62901101"
   
  A origem usa um gerenciador de conexões ODBC que especifica o provedor a ser usado.  
   
- Uma origem ODBC inclui as colunas de saída dos dados de origem. Quando colunas de saída são mapeadas no destino ODBC para as colunas de destino, poderão ocorrer erros se nenhuma coluna de saída for mapeada para as colunas de destino. Colunas de tipos diferentes podem ser mapeadas, porém se os dados de saída não forem compatíveis com o destino, um erro ocorrerá em tempo de execução. Dependendo da configuração de comportamento do erro, o erro será ignorado, causará uma falha ou a linha será enviada à saída de erro.  
+ Uma origem ODBC inclui as colunas de saída dos dados de origem. Quando colunas de saída são mapeadas no destino ODBC para as colunas de destino, poderão ocorrer erros se nenhuma coluna de saída for mapeada para as colunas de destino. Colunas de tipos diferentes podem ser mapeadas, porém se os dados de saída não forem compatíveis com o destino, um erro ocorrerá em runtime. Dependendo da configuração de comportamento do erro, o erro será ignorado, causará uma falha ou a linha será enviada à saída de erro.  
   
  A origem ODBC tem uma saída regular e uma saída de erro.  
   
 ## <a name="error-handling"></a>Tratamento de erros  
  A origem ODBC tem uma saída de erro. A saída de erro de componente inclui as colunas de saída seguintes:  
   
--   **Código do Erro**: o número que corresponde ao erro atual. Consulte a documentação do banco de dados com suporte do ODBC que você está usando para obter uma lista de erros. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.  
+-   **Código de Erro**: o número que corresponde ao erro atual. Consulte a documentação do banco de dados com suporte do ODBC que você está usando para obter uma lista de erros. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.  
   
 -   **Coluna de Erro**: a coluna de origem que causa o erro (para erros de conversão).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62901101"
   
  Para obter mais informações sobre a propriedade **FetchMethod** , consulte [ODBC Source Custom Properties](odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Parallelism  
+## <a name="parallelism"></a>Paralelismo  
  Não há nenhuma limitação no número de componentes de origem ODBC que podem ser executados em paralelo na mesma tabela ou tabelas diferentes, na mesma máquina ou em máquinas diferentes (diferente de limites de sessão globais normais).  
   
  No entanto, as imitações do provedor ODBC sendo usado podem restringir o número de conexões simultâneas pelo provedor. Essas limitações restringem o número de instâncias paralelas com suporte possível para a fonte ODBC. O desenvolvedor SSIS deve estar consciente das limitações de qualquer provedor ODBC usado e considerá-las ao compilar pacotes SSIS.  
@@ -72,7 +72,7 @@ ms.locfileid: "62901101"
   
 -   [Editor de Fonte ODBC &#40;Página Gerenciador de Conexões&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [Editor de Fonte ODBC &#40;Página Colunas&#41;](../odbc-source-editor-columns-page.md)  
+-   [Editor de Origem ODBC &#40;Página Colunas&#41;](../odbc-source-editor-columns-page.md)  
   
 -   [Editor de Fonte ODBC &#40;Página Saída de Erro&#41;](../odbc-source-editor-error-output-page.md)  
   
@@ -88,12 +88,12 @@ ms.locfileid: "62901101"
   
 -   [Editor de Fonte ODBC &#40;Página Saída de Erro&#41;](../odbc-source-editor-error-output-page.md)  
   
--   [Editor de Fonte ODBC &#40;Página Colunas&#41;](../odbc-source-editor-columns-page.md)  
+-   [Editor de Origem ODBC &#40;Página Colunas&#41;](../odbc-source-editor-columns-page.md)  
   
 -   [Editor de Fonte ODBC &#40;Página Gerenciador de Conexões&#41;](../odbc-source-editor-connection-manager-page.md)  
   
 -   [Extrair dados por meio da origem ODBC](odbc-source.md)  
   
--   [ODBC Source Custom Properties](odbc-source-custom-properties.md)  
+-   [Propriedades personalizadas da origem ODBC](odbc-source-custom-properties.md)  
   
   

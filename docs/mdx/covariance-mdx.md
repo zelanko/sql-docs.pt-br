@@ -1,5 +1,5 @@
 ---
-title: Função Covariance (MDX) | Microsoft Docs
+title: Covariância (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ea3755fb103362b797735d74c9cbe67523aace59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047193"
 ---
 # <a name="covariance-mdx"></a>Função Covariance (MDX)
@@ -38,12 +38,12 @@ Covariance(Set_Expression,Numeric_Expression_y [ ,Numeric_Expression_x ] )
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número que representa valores do eixo x.  
   
 ## <a name="remarks"></a>Comentários  
- O **covariância** função avalia o conjunto especificado em relação a primeira expressão numérica, para obter os valores para o eixo y. Em seguida, a função avalia o conjunto especificado em relação à segunda expressão numérica, se especificada, para obter o conjunto de valores para o eixo x. O segundo expressionis numéricos se não for especificado, a função usa o contexto atual das células no conjunto especificado como valores para o eixo x.  
+ A função **Covariance** avalia o conjunto especificado em relação à primeira expressão numérica, para obter os valores para o eixo y. Em seguida, a função avalia o conjunto especificado em relação à segunda expressão numérica, se especificada, para obter o conjunto de valores para o eixo x. Se a segunda expressão numéricanão for especificada, a função utilizará o contexto atual das células no conjunto especificado como valores para o eixo x.  
   
- O **covariância** função usa a fórmula de população polarizada. Isso está em contraste com o [CovarianceN](../mdx/covariancen-mdx.md) função que usa a fórmula de população não polarizada (dividindo o número de pares x-y e subtraindo 1).  
+ A função **Covariance** usa a fórmula de população tendenciosa. Isso é diferente da função [covariant](../mdx/covariancen-mdx.md) que usa a fórmula de população não polarizada (dividindo o número de pares x-y e, em seguida, subtraindo 1).  
   
 > [!NOTE]  
->  O **covariância** função ignora células vazias ou células que contêm texto ou valores lógicos são ignorados. Porém, a função contém células com valores zero.  
+>  A função **Covariance** ignora células vazias ou células que contêm texto ou valores lógicos são ignorados. Porém, a função contém células com valores zero.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar a função de covariância:  
@@ -57,7 +57,7 @@ FROM
 [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

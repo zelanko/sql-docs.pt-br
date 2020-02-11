@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78b78021f32faed097a4faf29ea139dd85f429e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015638"
 ---
 # <a name="delete-a-stored-procedure"></a>Excluir um procedimento armazenado
@@ -90,7 +90,7 @@ ms.locfileid: "63015638"
   
 6.  Remova as referências ao procedimento de quaisquer objetos e scripts dependentes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um procedimento armazenado](create-a-stored-procedure.md)   
  [Modificar um procedimento armazenado](modify-a-stored-procedure.md)   
  [Renomear um procedimento armazenado](rename-a-stored-procedure.md)   

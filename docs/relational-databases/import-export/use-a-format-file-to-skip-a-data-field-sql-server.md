@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056326"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Usar um arquivo de formato para ignorar um campo de dados (SQL Server)
@@ -83,7 +83,7 @@ Consulte [Estrutura de arquivos de formato não XML](../../relational-databases/
 3) Modifique a ordem das colunas do servidor de `2` para `0` na segunda linha do arquivo de formato. 
 
 Compare as alterações feitas:  
-**Antes de**
+**Antes**
 ```
 13.0
 3
@@ -91,7 +91,7 @@ Compare as alterações feitas:
 2       SQLCHAR 0       25      ","      2     FirstName    SQL_Latin1_General_CP1_CI_AS
 3       SQLCHAR 0       30      "\r\n"   3     LastName     SQL_Latin1_General_CP1_CI_AS
 ```
-**After (após)**
+**Depois**
 ```
 13.0
 4
@@ -123,7 +123,7 @@ Consulte [Sintaxe de esquema para arquivos de formato XML](../../relational-data
 3) Aumente o valor de “COLUMN SOURCE” em 1 para `FirstName`e `LastName` para que eles reflitam o mapeamento revisado.
 
 Compare as alterações feitas:  
-**Antes de**
+**Antes**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -140,7 +140,7 @@ Compare as alterações feitas:
 </BCPFORMAT>
 ```
 
-**After (após)**
+**Depois**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -252,7 +252,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
   
 ## <a name="see-also"></a>Consulte Também  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Usar um arquivo de formato para ignorar uma coluna de tabela &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
