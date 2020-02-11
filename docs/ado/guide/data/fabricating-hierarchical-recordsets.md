@@ -1,5 +1,5 @@
 ---
-title: Fabricando conjuntos de registros hierárquicos | Microsoft Docs
+title: Conjuntos de registros hierárquicos fabricando | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925320"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabricar conjuntos de registros hierárquicos
-O exemplo a seguir mostra como fabricar um conjunto de registros hierárquico sem uma fonte de dados subjacente usando os dados de formatação a gramática para definir as colunas para o pai, filho e neto **conjuntos de registros**.  
+O exemplo a seguir mostra como malhar um conjunto de registros hierárquico sem uma fonte de dados subjacente usando a gramática de formatação de dados para definir colunas para conjuntos de **registros**pai, filho e neto.  
   
- Para fabricar hierárquico **conjunto de registros**, você deve especificar o [Microsoft Data Shaping Service para OLE DB (provedor de serviços do ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), e você pode especificar um valor nenhum no provedor de dados a parâmetro de cadeia de caracteres de conexão das [aberto](../../../ado/reference/ado-api/open-method-ado-connection.md) método da [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Para obter mais informações, consulte [provedores necessários para Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Para malhar um **conjunto de registros**hierárquico, você deve especificar o [serviço de modelagem de dados da Microsoft para OLE DB (provedor de serviços ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) e pode especificar um valor de provedor de dados de nenhum no parâmetro de cadeia de conexão do método [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) do objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) . Para obter mais informações, consulte [provedores necessários para o Shaping de dados](../../../ado/guide/data/required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -52,11 +52,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- Assim que o **Recordset** tiver sido gerados, ele pode ser preenchido, manipulado ou mantido em um arquivo.  
+ Assim que o **conjunto de registros** tiver sido criei, ele poderá ser populado, manipulado ou persistido em um arquivo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acessando linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
- [Provedores necessários para Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Cláusula APPEND de forma](../../../ado/guide/data/shape-append-clause.md)   
+ [Gramática forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Provedores necessários para o Shaping de dados](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Cláusula de ANEXAção de forma](../../../ado/guide/data/shape-append-clause.md)   
  [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)

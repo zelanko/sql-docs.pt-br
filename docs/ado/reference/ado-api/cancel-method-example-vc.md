@@ -1,5 +1,5 @@
 ---
-title: Exemplo do método (VC + +) Cancel | Microsoft Docs
+title: Exemplo do método Cancel (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88d211c825bd9d1c3aa0c76dc26778f18108ff07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920173"
 ---
 # <a name="cancel-method-example-vc"></a>Exemplo do método Cancel (VC++)
-Este exemplo usa o [Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md) método para cancelar um comando em execução em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto se a conexão está ocupado.  
+Este exemplo usa o método [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) para cancelar um comando em execução em um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) se a conexão estiver ocupada.  
   
 ```  
 // CancelMethodExample.cpp  
@@ -140,6 +140,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
