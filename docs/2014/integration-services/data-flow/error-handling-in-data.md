@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827137"
 ---
 # <a name="error-handling-in-data"></a>Tratamento de erros em dados
@@ -59,7 +59,7 @@ ms.locfileid: "62827137"
   
  Você pode configurar como fontes, transformações e destinos manipulam erros e truncamentos. A tabela a seguir descreve as opções.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |Falha no Componente|A tarefa Fluxo de Dados falha quando ocorre um erro ou um truncamento. Falha é a opção padrão para um erro e um truncamento.|  
 |Ignorar Falha|O erro ou truncamento é ignorado e a linha de dados é direcionada para a saída da transformação ou fonte.|  
@@ -74,7 +74,7 @@ ms.locfileid: "62827137"
   
 -   [Configurar uma saída de erro em um componente de fluxo de dados](../configure-an-error-output-in-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](data-flow.md)   
  [Transformar dados com transformações](transformations/transform-data-with-transformations.md)   
  [Conectar componentes com caminhos](../connect-components-with-paths.md)   
