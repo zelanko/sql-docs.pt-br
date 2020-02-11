@@ -17,10 +17,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e69d3d2d73a53f6bdd8a3fe7282c1e9ad65b5773
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095290"
 ---
 # <a name="upgrade-full-text-search"></a>Atualizar pesquisa de texto completo
@@ -46,7 +46,7 @@ ms.locfileid: "68095290"
 ##  <a name="FT_Upgrade_Options"></a> Opções de atualização de texto completo  
  Na atualização de uma instância de servidor para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a interface do usuário permite escolher uma das opções de atualização de texto completo a seguir.  
   
-**Importar**  
+**Importaçãoação**  
  Os catálogos de texto completo são importados. A importação costuma ser consideravelmente mais rápida do que a recompilação. Por exemplo, quando é usada apenas uma CPU, a importação é executada cerca de 10 vezes mais rápido do que a recompilação. No entanto, um catálogo de texto completo importado não usará os novos separadores de palavras instalados com a versão mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para garantir a consistência nos resultados da consulta, os catálogos de texto completo precisam ser recompilados.  
   
 > [!NOTE]  

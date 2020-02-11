@@ -13,19 +13,19 @@ ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc222c1c8669769060de4fc0a1390a9bf02e3f31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091690"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (Biblioteca de cursores)
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que usam esse recurso atualmente. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- Este tópico discute o uso do **SQLSetStmtAttr** função na biblioteca de cursor. Para obter informações gerais sobre **SQLSetStmtAttr**, consulte [função SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ Este tópico discute o uso da função **SQLSetStmtAttr** na biblioteca de cursores. Para obter informações gerais sobre **SQLSetStmtAttr**, consulte [SQLSetStmtAttr function](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
- A biblioteca de cursor suporta os seguintes atributos de instrução com **SQLSetStmtAttr**:  
+ A biblioteca de cursores dá suporte aos seguintes atributos de instrução com **SQLSetStmtAttr**:  
   
 |||  
 |-|-|  
@@ -35,16 +35,16 @@ ms.locfileid: "68091690"
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_SIMULATE_CURSOR|  
 |SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_USE_BOOKMARKS|  
   
- A biblioteca de cursores dá suporte a apenas os valores SQL_CURSOR_FORWARD_ONLY e SQL_CURSOR_STATIC do atributo SQL_ATTR_CURSOR_TYPE instrução.  
+ A biblioteca de cursores dá suporte apenas aos valores SQL_CURSOR_FORWARD_ONLY e SQL_CURSOR_STATIC do atributo de instrução SQL_ATTR_CURSOR_TYPE.  
   
- Cursores de somente avanço, a biblioteca de cursores dá suporte ao valor SQL_CONCUR_READ_ONLY do atributo de instrução SQL_ATTR_CONCURRENCY. Para Cursores estáticos, a biblioteca de cursores dá suporte aos valores de atributo de instrução SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY e SQL_CONCUR_VALUES.  
+ Para cursores somente de avanço, a biblioteca de cursores dá suporte ao valor SQL_CONCUR_READ_ONLY do atributo SQL_ATTR_CONCURRENCY Statement. Para cursores estáticos, a biblioteca de cursores dá suporte aos valores de SQL_CONCUR_READ_ONLY e SQL_CONCUR_VALUES do atributo de instrução SQL_ATTR_CONCURRENCY.  
   
- A biblioteca de cursores dá suporte a apenas o valor SQL_SC_NON_UNIQUE do atributo de instrução SQL_ATTR_SIMULATE_CURSOR.  
+ A biblioteca de cursores dá suporte apenas ao valor SQL_SC_NON_UNIQUE do atributo SQL_ATTR_SIMULATE_CURSOR Statement.  
   
- Embora a especificação de ODBC dá suporte a chamadas para **SQLSetStmtAttr** com os atributos SQL_ATTR_PARAM_BIND_TYPE ou SQL_ATTR_ROW_BIND_TYPE após **SQLFetch** ou **SQLFetchScroll**  tiver sido chamado, o cursor não biblioteca. Antes que ele pode alterar o tipo de associação na biblioteca de cursor, o aplicativo deve fechar o cursor. A biblioteca de cursores dá suporte à alteração de SQL_ATTR_ROW_BIND_OFFSET_PTR, SQL_ATTR_PARAM_BIND_OFFSET_PTR, SQL_ATTR_ROWS_FETCHED_PTR e atributos de instrução SQL_ATTR_PARAMS_PROCESSED_PTR quando um cursor é aberto.  
+ Embora a especificação ODBC dê suporte a chamadas para **SQLSetStmtAttr** com os atributos SQL_ATTR_PARAM_BIND_TYPE ou SQL_ATTR_ROW_BIND_TYPE após **SQLFetch** ou **SQLFetchScroll** ser chamado, a biblioteca de cursores não. Antes de poder alterar o tipo de associação na biblioteca de cursores, o aplicativo deve fechar o cursor. A biblioteca de cursores dá suporte à alteração dos atributos de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR, SQL_ATTR_PARAM_BIND_OFFSET_PTR, SQL_ATTR_ROWS_FETCHED_PTR e SQL_ATTR_PARAMS_PROCESSED_PTR quando um cursor é aberto.  
   
- Um aplicativo pode chamar **SQLSetStmtAttr** com um **atributo** de SQL_ATTR_ROW_ARRAY_SIZE para alterar o tamanho do conjunto de linhas, enquanto um cursor é aberto. O novo tamanho do conjunto de linhas entrarão em vigor na próxima vez que **SQLFetchScroll** ou **SQLFetch** é chamado.  
+ Um aplicativo pode chamar **SQLSetStmtAttr** com um **atributo** de SQL_ATTR_ROW_ARRAY_SIZE para alterar o tamanho do conjunto de linhas enquanto um cursor está aberto. O novo tamanho do conjunto de linhas entrará em vigor na próxima vez que **SQLFetchScroll** ou **SQLFetch** for chamado.  
   
- A biblioteca de cursores dá suporte à configuração do atributo de instrução SQL_ATTR_PARAM_BIND_OFFSET_PTR ou SQL_ATTR_ROW_BIND_OFFSET_PTR para habilitar os deslocamentos de associação. O deslocamento de associação não será usado para chamadas para **SQLFetch** quando a biblioteca de cursores é usada com um ODBC 2. *x* driver.  
+ A biblioteca de cursores dá suporte à definição do atributo de instrução SQL_ATTR_PARAM_BIND_OFFSET_PTR ou SQL_ATTR_ROW_BIND_OFFSET_PTR para habilitar deslocamentos de associação. O deslocamento de associação não será usado para chamadas para **SQLFetch** quando a biblioteca de cursores for usada com um ODBC 2. Driver *x* .  
   
- A biblioteca de cursores dá suporte à configuração do atributo de instrução de SQL_ATTR_USE_BOOKMARKS como SQL_UB_VARIABLE.
+ A biblioteca de cursores dá suporte à definição do atributo SQL_ATTR_USE_BOOKMARKS Statement como SQL_UB_VARIABLE.

@@ -16,13 +16,13 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124865"
 ---
-# <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
+# <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera as propriedades selecionadas de uma assinatura push de mesclagem. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
@@ -42,19 +42,19 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação a ser alterada. *publicação* está **sysname**, com um padrão NULL. A publicação já deve existir e ser adequada às regras para identificadores.  
+`[ @publication = ] 'publication'`É o nome da publicação a ser alterada. a *publicação* é **sysname**, com um padrão de NULL. A publicação já deve existir e ser adequada às regras para identificadores.  
   
-`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, com um padrão NULL.  
+`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, com um padrão de NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db*está **sysname**, com um padrão NULL.  
+`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db*é **sysname**, com um padrão de NULL.  
   
-`[ @property = ] 'property'` É a propriedade a ser alterada para a publicação determinada. *propriedade* está **sysname**, e pode ser um dos valores na tabela.  
+`[ @property = ] 'property'`É a propriedade a ser alterada para a publicação fornecida. a *Propriedade* é **sysname**e pode ser um dos valores na tabela.  
   
-`[ @value = ] 'value'` É o novo valor especificado *propriedade*. *valor* está **nvarchar (255)** , e pode ser um dos valores na tabela.  
+`[ @value = ] 'value'`É o novo valor para a *Propriedade*especificada. o *valor* é **nvarchar (255)** e pode ser um dos valores na tabela.  
   
-|Propriedade|Valor|Descrição|  
+|Propriedade|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
-|**description**||Descrição da assinatura de mesclagem.|  
+|**ndescrição**||Descrição da assinatura de mesclagem.|  
 |**priority**||É a prioridade da assinatura. A prioridade é usada pelo resolvedor padrão para escolher um vencedor quando são detectados conflitos.|  
 |**merge_job_login**||Logon para a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado.|  
 |**merge_job_password**||Senha para a conta do Windows na qual o agente é executado.|  
@@ -69,24 +69,24 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**sync_type**|**Automático**|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
 ||**None**|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas; tabelas de sistema e dados são sempre transferidos.|  
 |**use_interactive_resolver**|**true**|Permite resolver conflitos interativamente para todos os artigos que permitem resolução interativa.|  
-||**false**|Conflitos são resolvidos automaticamente usando um resolvedor padrão ou resolvedor personalizado.|  
+||**for**|Conflitos são resolvidos automaticamente usando um resolvedor padrão ou resolvedor personalizado.|  
 |NULL (padrão)|NULL (padrão)||  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_changemergesubscription** é usado em replicação de mesclagem.  
+ **sp_changemergesubscription** é usado na replicação de mesclagem.  
   
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_changemergesubscription**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_changemergesubscription**.  
   
-## <a name="see-also"></a>Consulte também  
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergesubscription](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

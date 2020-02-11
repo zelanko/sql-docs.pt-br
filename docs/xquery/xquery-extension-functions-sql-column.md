@@ -1,5 +1,5 @@
 ---
-title: 'SQL: Column Function (XQuery) | Microsoft Docs'
+title: 'SQL: função de coluna () (XQuery) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946017"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funções de Extensão XQuery – sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Conforme descrito no tópico [associando dados relacionais dentro do XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), você pode usar o **sql:column(()** funcionar quando você usa [métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md) para expor um valor relacional dentro do XQuery.  
+  Conforme descrito no tópico [associando dados relacionais dentro de XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), você pode usar a função **SQL: Column (()** ao usar [métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md) para expor um valor relacional dentro do XQuery.  
   
- Por exemplo, o [método Query () (tipo de dados XML)](../t-sql/xml/query-method-xml-data-type.md) é usado para especificar uma consulta em relação a uma instância XML que é armazenada em uma variável ou coluna da **xml** tipo. Às vezes, você também pode desejar que sua consulta use valores de outra coluna que não seja XML, para agrupar dados relacionais e XML. Para fazer isso, você deve usar o **SQL: Column** função.  
+ Por exemplo, o [método Query () (tipo de dados XML)](../t-sql/xml/query-method-xml-data-type.md) é usado para especificar uma consulta em uma instância XML que é armazenada em uma variável ou coluna do tipo **XML** . Às vezes, você também pode desejar que sua consulta use valores de outra coluna que não seja XML, para agrupar dados relacionais e XML. Para fazer isso, use a função **SQL: Column ()** .  
   
  O valor SQL será mapeado para um valor correspondente XQuery e seu tipo será um tipo base XQuery equivalente ao tipo de SQL correspondente.  
   
@@ -39,15 +39,15 @@ sql:column("columnName")
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Observe que essa referência a uma coluna especificada na **SQL: Column** função dentro de um XQuery refere-se a uma coluna na linha que está sendo processada.  
+ Observe que a referência a uma coluna especificada na função **SQL: Column ()** dentro de um XQuery refere-se a uma coluna na linha que está sendo processada.  
   
- Na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você só pode se referir a um **xml** instância no contexto da expressão de origem de um XML-DML insert instrução; caso contrário, você não pode se referir a colunas que são do tipo **xml** ou um CLR tipo definido pelo usuário.  
+ No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você só pode fazer referência a uma instância **XML** no contexto da expressão de origem de uma instrução XML-DML insert; caso contrário, você não pode fazer referência a colunas que são do tipo **XML** ou um tipo CLR definido pelo usuário.  
   
- O **SQL: Column** função não tem suporte em operações de junção. Em vez disso, pode ser usada a operação APPLY.  
+ Não há suporte para a função **SQL: Column ()** em operações de junção. Em vez disso, pode ser usada a operação APPLY.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-sqlcolumn-to-retrieve-the-relational-value-inside-xml"></a>A. Usando sql:column() para recuperar o valor relacional no XML  
+### <a name="a-using-sqlcolumn-to-retrieve-the-relational-value-inside-xml"></a>a. Usando sql:column() para recuperar o valor relacional no XML  
  Na construção de XML, o exemplo a seguir ilustra como você pode recuperar valores de uma coluna relacional não XML para associar dados relacionais e XML.  
   
  A consulta constrói XML que tenha a seguinte forma:  
@@ -59,11 +59,11 @@ sql:column("columnName")
   
  Observe o seguinte no XML construído:  
   
--   O **ProductID**, **ProductName**, e **ProductPrice** valores de atributo são obtidos com o **produto** tabela.  
+-   Os valores de atributo **ProductID**, **ProductName**e **ProductPrice** são obtidos da tabela **Product** .  
   
--   O **ProductModelID** o valor de atributo é recuperado do **ProductModel** tabela.  
+-   O valor do atributo **ProductModelID** é recuperado da tabela **ProductModel** .  
   
--   Para tornar a consulta mais interessante, o **ProductModelName** o valor de atributo é obtido do **CatalogDescription** coluna da **tipo de xml**. Como as informações do catálogo de modelo do produto XML não são armazenadas para todos os modelos de produtos, a instrução `if` será usada para recuperar o valor somente se ele existir.  
+-   Para tornar a consulta mais interessante, o valor do atributo **ProductModelName** é obtido da coluna **CatalogDescription** do **tipo XML**. Como as informações do catálogo de modelo do produto XML não são armazenadas para todos os modelos de produtos, a instrução `if` será usada para recuperar o valor somente se ele existir.  
   
     ```sql
     SELECT P.ProductID, CatalogDescription.query('  
@@ -90,9 +90,9 @@ sql:column("columnName")
   
 -   Como os valores são recuperados em duas tabelas diferentes, a cláusula FROM especifica duas tabelas. A condição na cláusula WHERE filtra o resultado e recupera apenas produtos cujos modelos de produto tenham descrições de catálogo.  
   
--   O **namespace** palavra-chave na [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define o prefixo de namespace XML, "pd", que é usado no corpo da consulta. Observe que os aliases de tabela, "P" e "PM", são definidos na cláusula FROM da própria consulta.  
+-   A palavra-chave **namespace** no [prólogo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define o prefixo do namespace XML, "PD", que é usado no corpo da consulta. Observe que os aliases de tabela, "P" e "PM", são definidos na cláusula FROM da própria consulta.  
   
--   O **SQL: Column** função é usada para colocar valores não XML dentro do XML.  
+-   A função **SQL: Column ()** é usada para trazer valores não XML dentro de XML.  
   
  Este é o resultado parcial:  
   
@@ -105,7 +105,7 @@ ProductID               Result
 ...  
 ```  
   
- A consulta a seguir constrói XML que contenha informações específicas do produto. Tais informações incluem ProductID, ProductName, ProductPrice e, se disponível, ProductModelName de todos os produtos que pertencem a um modelo de produto específico, ProductModelID=19. O XML é atribuído, em seguida, para o @x variável de **xml** tipo.  
+ A consulta a seguir constrói XML que contenha informações específicas do produto. Tais informações incluem ProductID, ProductName, ProductPrice e, se disponível, ProductModelName de todos os produtos que pertencem a um modelo de produto específico, ProductModelID=19. Em seguida, o XML é atribuído @x à variável do tipo **XML** .  
   
 ```sql
 declare @x xml  
@@ -129,8 +129,8 @@ And P.ProductModelID = 19
 select @x  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de extensão XQuery do SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+## <a name="see-also"></a>Consulte Também  
+ [Funções de extensão SQL Server XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Comparar XML digitado com XML não digitado](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Criar instâncias de dados XML](../relational-databases/xml/create-instances-of-xml-data.md)   

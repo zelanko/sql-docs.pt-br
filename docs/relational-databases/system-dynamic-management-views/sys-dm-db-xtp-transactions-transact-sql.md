@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cc5f12e50c1e7a7d639acdbf9a244406ce9366c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097931"
 ---
-# <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
+# <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Relata as transações ativas no mecanismo de banco de dados OLTP na memória.  
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
     
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |xtp_transaction_id|**bigint**|ID interna dessa transação no gerenciador de transações XTP.|  
 |transaction_id|**bigint**|A ID da transação. Junções com a ID da transação em outros DMVs relacionados, como sys.dm_tran_active_transactions.<br /><br /> 0 para transações somente XTP, como as transações iniciadas por procedimentos armazenados compilados nativamente.|  
@@ -44,7 +44,7 @@ ms.locfileid: "68097931"
 |state|**int**|O estado da transação:<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|A descrição do estado da transação.|  
 |result|**int**|O resultado dessa transação. Veja os valores possíveis a seguir:<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 = ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
-|result_desc|**nvarchar**|O resultado dessa transação. Veja os valores possíveis a seguir:<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> erro<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
+|result_desc|**nvarchar**|O resultado dessa transação. Veja os valores possíveis a seguir:<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|Somente para uso interno|  
 |is_speculative|**bit**|Somente para uso interno|  
 |is_prepared|**bit**|Somente para uso interno|  
@@ -65,19 +65,19 @@ ms.locfileid: "68097931"
 |scan_area|**int**|Somente para uso interno|  
 |scan_area_desc|**nvarchar**|Somente para uso interno|  
 |scan_location|**int**|Somente para uso interno.|  
-|dependent_1_address|**varbinary(8)**|Somente para uso interno|  
-|dependent_2_address|**varbinary(8)**|Somente para uso interno|  
-|dependent_3_address|**varbinary(8)**|Somente para uso interno|  
-|dependent_4_address|**varbinary(8)**|Somente para uso interno|  
-|dependent_5_address|**varbinary(8)**|Somente para uso interno|  
-|dependent_6_address|**varbinary(8)**|Somente para uso interno|  
-|dependent_7_address|**varbinary(8)**|Somente para uso interno|  
-|dependent_8_address|**varbinary(8)**|Somente para uso interno|  
+|dependent_1_address|**varbinary (8)**|Somente para uso interno|  
+|dependent_2_address|**varbinary (8)**|Somente para uso interno|  
+|dependent_3_address|**varbinary (8)**|Somente para uso interno|  
+|dependent_4_address|**varbinary (8)**|Somente para uso interno|  
+|dependent_5_address|**varbinary (8)**|Somente para uso interno|  
+|dependent_6_address|**varbinary (8)**|Somente para uso interno|  
+|dependent_7_address|**varbinary (8)**|Somente para uso interno|  
+|dependent_8_address|**varbinary (8)**|Somente para uso interno|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no servidor.  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de tabela com otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

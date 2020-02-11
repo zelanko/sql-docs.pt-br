@@ -18,43 +18,43 @@ ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096448"
 ---
 # <a name="dbase-data-types"></a>Tipos de dados do dBASE
-A tabela a seguir mostra como os tipos de dados do dBASE são mapeados para tipos de dados SQL ODBC. Observe que nem todos os tipos de dados ODBC SQL têm suporte.  
+A tabela a seguir mostra como os tipos de dados do dBASE são mapeados para tipos de dados ODBC do SQL. Observe que nem todos os tipos de dados SQL ODBC têm suporte.  
   
 |tipo de dados do dBASE|Tipo de dados ODBC|  
 |---------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATE|SQL_DATE|  
 |FLOAT [1]|SQL_DOUBLE|  
-|LÓGICA|SQL_BIT|  
-|MEMORANDO|SQL_LONGVARCHAR|  
-|NUMÉRICO (BCD)|SQL_DOUBLE|  
+|LÓGICO|SQL_BIT|  
+|CAMPOS|SQL_LONGVARCHAR|  
+|NUMERIC (BCD)|SQL_DOUBLE|  
 |OLEOBJECT [1]|SQL_LONGBINARY|  
   
- [1] válido somente para a versão 5 do dBASE. *x*  
+ [1] válido somente para o dBASE versão 5. *x*  
   
- Precisão em dBASE III permite números com backup para expoentes de dois dígitos e dBASE IV números com até expoentes de três dígitos. Como os números são armazenados como texto, eles são convertidos em números. Se o número a ser convertido não couber em um campo, podem ocorrer resultados inexplicáveis.  
+ A precisão no dBASE III permite números com expoentes de até dois dígitos e em números do dBASE IV com expoentes de até três dígitos. Como os números são armazenados como texto, eles são convertidos em números. Se o número a ser convertido não couber em um campo, poderão ocorrer resultados não explicados.  
   
- Embora dBASE permita uma precisão e uma escala a ser especificado com um tipo de dados numéricos, não há suporte pelo driver ODBC do dBASE. O driver do dBASE ODBC sempre retorna uma precisão de 15 e uma escala de 0 para um tipo de dados numéricos.  
+ Embora o dBASE permita que uma precisão e uma escala sejam especificadas com um tipo de dados numérico, não há suporte para ele no driver do dBASE do ODBC. O driver ODBC dBASE sempre retorna uma precisão de 15 e uma escala de 0 para um tipo de dados numérico.  
   
- Uma coluna criada com o tipo de dados numéricos usando os mapas de driver do dBASE ODBC para o tipo de dados ODBC SQL_DOUBLE. Portanto, os dados nesta coluna estão sujeitas a arredondamento. Esse comportamento não é o mesmo como que os dados numéricos do tipo no dBASE (tipo N), que é o Binary Coded Decimal (BCD).  
+ Uma coluna criada com o tipo de dados numeric usando o driver ODBC dBASE é mapeada para o tipo de dados SQL_DOUBLE ODBC. Portanto, os dados nesta coluna estão sujeitos ao arredondamento. Esse comportamento não é o mesmo que o tipo de dados NUMERIC no dBASE (tipo N), que é um formato binário codificado (BCD).  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** retorna tipos de dados de ODBC SQL. Todas as conversões no Apêndice D dos *referência do programador de ODBC* têm suporte para os tipos de dados SQL ODBC listados anteriormente neste tópico.  
+>  **SQLGetTypeInfo** retorna tipos de dados SQL ODBC. Todas as conversões no Apêndice D da *referência do programador de ODBC* têm suporte para os tipos de dados ODBC SQL listados anteriormente neste tópico.  
   
- A tabela a seguir mostra as limitações no dBASE, tipos de dados.  
+ A tabela a seguir mostra limitações em tipos de dados do dBASE.  
   
-|Tipo de dados|Descrição|  
+|Tipo de dados|DESCRIÇÃO|  
 |---------------|-----------------|  
-|CHAR|Criação de uma coluna CHAR igual a zero ou comprimento não especificado, na verdade, retorna uma coluna de bytes de 254.|  
-|Dados criptografados|O driver do dBASE não oferece suporte a tabelas do dBASE criptografado.|  
-|LÓGICA|O driver do dBASE não é possível criar um índice em uma coluna de lógica.|  
-|MEMORANDO|O comprimento máximo de uma coluna de memorando é 65.500 bytes.|  
+|CHAR|Na verdade, a criação de uma coluna CHAR com comprimento zero ou não especificado retorna uma coluna de 254 bytes.|  
+|Dados criptografados|O driver do dBASE não oferece suporte a tabelas criptografadas do dBASE.|  
+|LÓGICO|O driver do dBASE não pode criar um índice em uma coluna lógica.|  
+|CAMPOS|O comprimento máximo de uma coluna de memorando é de 65.500 bytes.|  
   
- Mais limitações nos tipos de dados podem ser encontradas na [limitações do tipo de dados](../../odbc/microsoft/data-type-limitations.md).
+ Mais limitações sobre tipos de dados podem ser encontradas em [limitações de tipo de dados](../../odbc/microsoft/data-type-limitations.md).

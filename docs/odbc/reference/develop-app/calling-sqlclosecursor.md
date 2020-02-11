@@ -1,5 +1,5 @@
 ---
-title: Chamar SQLCloseCursor | Microsoft Docs
+title: Chamando SQLCloseCursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 447a0892049317813fa9fe6986e6219922a11e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068689"
 ---
 # <a name="calling-sqlclosecursor"></a>Calling SQLCloseCursor
-Porque **SQLCloseCursor** é quase o mesmo que **SQLFreeStmt** com SQL_CLOSE, o Gerenciador de Driver não mapeie essa função. Funções de substituição são mapeadas para que o existente ODBC *2.x* aplicativos podem mover facilmente para ODBC *3.x* usando as novas funções. Uma movimentação desse tipo torna mais fácil para esses aplicativos começar a usar o novo ODBC *3.x* funcionalidade dentro do código condicional de uma maneira modular. **SQLCloseCursor** não representa nenhuma nova funcionalidade. Um aplicativo não receberá qualquer vantagem ao mudar para **SQLCloseCursor** partir **SQLFreeStmt** com SQL_CLOSE.
+Como **SQLCloseCursor** é quase o mesmo que **SQLFreeStmt** com SQL_CLOSE, o Gerenciador de driver não mapeia essa função. As funções de substituição são mapeadas para que os aplicativos ODBC *2. x* existentes possam mover facilmente para o ODBC *3. x* usando as novas funções. Essa movimentação torna mais fácil para esses aplicativos começar a usar a nova funcionalidade ODBC *3. x* dentro do código condicional de maneira modular. **SQLCloseCursor** não representa nenhuma nova funcionalidade. Um aplicativo não tem nenhuma vantagem ao migrar para **SQLCloseCursor** do **SQLFreeStmt** com SQL_CLOSE.

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a0332b200a74044dcd4e7d8d308923cc4b759738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097280"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
@@ -35,23 +35,23 @@ Hierarchy_Expression.UnknownMember
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
- *Expressão_Hierarquia*  
+ *Hierarchy_Expression*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
 ## <a name="remarks"></a>Comentários  
- Analysis Services cria um membro desconhecido para associar dados da tabela de fatos uma hierarquia quando a hierarquia não é conhecida. O membro desconhecido pode estar em um dos seguintes níveis:  
+ Analysis Services cria um membro desconhecido para associar os dados da tabela de fatos a uma hierarquia quando a hierarquia não é conhecida. O membro desconhecido pode estar em um dos seguintes níveis:  
   
 -   No nível superior para hierarquias de atributo que não são agregadas.  
   
--   No primeiro nível abaixo de **todos os** nível para hierarquias naturais.  
+-   No primeiro nível abaixo do nível **todos** para hierarquias naturais.  
   
 -   Em qualquer nível para hierarquias não naturais.  
   
- Se uma expressão de membro for especificada, o **UnknownMember** função retorna o filho do membro desconhecido do membro especificado. Se o membro especificado não existir, a função retornará nulo.  
+ Se uma expressão de membro for especificada, a função **UnknownMember** retornará o filho de membro desconhecido do membro especificado. Se o membro especificado não existir, a função retornará nulo.  
   
- Se uma expressão de hierarquia for especificada, o **UnknownMember** função retorna o membro desconhecido no nível superior, se houver um.  
+ Se uma expressão de hierarquia for especificada, a função **UnknownMember** retornará o membro desconhecido no nível superior, se houver.  
   
- Se o membro desconhecido não existir no nível ou membro, o **UnknownMember** função cria um membro nulo.  
+ Se o membro desconhecido não existir no nível ou membro, a função **UnknownMember** criará um membro nulo.  
   
 > [!NOTE]  
 >  Se o membro desconhecido não existir na hierarquia ou membro, um erro será gerado.  
@@ -79,7 +79,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

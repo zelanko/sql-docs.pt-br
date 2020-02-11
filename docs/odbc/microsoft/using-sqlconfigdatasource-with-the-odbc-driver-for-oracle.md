@@ -1,5 +1,5 @@
 ---
-title: Usando SQLConfigDatasource com o Driver ODBC para Oracle | Microsoft Docs
+title: Usando o SQLConfigDatasource com o driver ODBC para Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,43 +13,43 @@ ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa5f1ecf9f3100480081e3744fc7d280a4da282b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088032"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Usar SQLConfigDatasource com o driver ODBC para Oracle
 > [!IMPORTANT]  
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- A seguinte tabela lista válida **SQLConfigDatasource** configurações para o Microsoft ODBC Driver para o Oracle, versão 1.0 (Msorcl10.dll) e o Microsoft ODBC Driver para o Oracle, versão 2.0 (msorcl32. dll).  
+ A tabela a seguir lista as configurações de **SQLConfigDatasource** válidas para o Microsoft ODBC driver for Oracle, versão 1,0 (Msorcl10. dll) e o driver ODBC da Microsoft para Oracle, versão 2,0 (Msorcl32. dll).  
   
 > [!NOTE]  
->  O driver Msorcl10.dll (versão 1.0) dá suporte a todas as configurações, exceto **Server**. O driver msorcl32. dll (versão 2.0 e superior) dá suporte a todas as configurações.  
+>  O driver Msorcl10. dll (versão 1,0) dá suporte a todas as configurações, exceto **servidor**. O driver Msorcl32. dll (versão 2,0 e superior) dá suporte a todas as configurações.  
   
- Algumas configurações são ignoradas pelo driver, mas são aceitos pelo **SQLConfigDatasource**. Incluir essas configurações na cadeia de caracteres de conexão ODBC é a única maneira que serão aceitas no tempo de execução. Uma configuração ignorada não será armazenada no registro quando **SQLConfigDatasource** cria a fonte de dados.  
+ Algumas configurações são ignoradas pelo driver, mas são aceitas pelo **SQLConfigDatasource**. A inclusão dessas configurações na cadeia de conexão ODBC é a única maneira como elas serão aceitas em tempo de execução. Uma configuração ignorada não será armazenada no registro quando o **SQLConfigDatasource** criar a fonte de dados.  
   
- Na tabela a seguir *A/N* significa qualquer cadeia de caracteres alfanumérica válida até o comprimento máximo permitido. *max Len* (comprimento máximo) é o comprimento máximo permitido aceito pela configuração, incluindo o caractere terminador da cadeia de caracteres.  
+ Na tabela a seguir, a */N* significa qualquer cadeia de caracteres alfanumérica válida até o comprimento máximo permitido. *Len máx* . (comprimento máximo) é o comprimento máximo permitido da cadeia de caracteres aceita pela configuração, incluindo o caractere de terminador de cadeia de caracteres.  
   
-|Configuração|máx Len|Valor padrão|Valores válidos|Descrição|  
+|Configuração|Len máx.|Valor padrão|Valores válidos|DESCRIÇÃO|  
 |-------------|-------------|-------------------|------------------|-----------------|  
-|BufferSize|7|65535|1000|Até 65535 bytes de tamanho do buffer de busca mínimo|  
-|CatalogCap|2|1|0 ou 1|Se for 1, identificadores nonquoted será convertido em letras maiusculas no catálogo de funções.|  
-|ConnectString|128|""|A/N|Cadeia de conexão. Método necessário de especificar o nome do servidor com o driver Msorcl10.dll.|  
-|Descrição|256|""|A/N|Descrição.|  
+|BufferSize|7|65535|1000|Tamanho mínimo do buffer de busca de até 65535 bytes|  
+|CatalogCap|2|1|0 ou 1|Se 1, os identificadores sem aspas serão convertidos em letras maiúsculas nas funções de catálogo.|  
+|ConnectString|128|""|A/N|Cadeia de conexão. Método necessário para especificar o nome do servidor com o driver Msorcl10. dll.|  
+|DESCRIÇÃO|256|""|A/N|Descrição.|  
 |DSN|33|""|A/N|Nome da fonte de dados.|  
-|GuessTheColDef|4|0|A/N|Retorna um valor diferente de zero para colunas sem escala definido pelo Oracle.|  
-|NumberFloat|2|""|0 ou 1|Se for 0, FLOAT colunas são tratadas como SQL_FLOAT. Se for 1, FLOAT colunas são tratadas como SQL_DOUBLE.|  
+|GuessTheColDef|4|0|A/N|Retorna um valor diferente de zero para colunas sem a escala definida pela Oracle.|  
+|NumberFloat|2|""|0 ou 1|Se 0, as colunas FLOAT serão tratadas como SQL_FLOAT. Se 1, as colunas FLOAT serão tratadas como SQL_DOUBLE.|  
 |PWD|30|""|A/N|Senha.|  
-|RDOSupport|2|""|0 ou 1|Permite RDO chamar procedimentos do Oracle.|  
-|Comentários|2|0|0 ou 1|Inclua comentários em funções de catálogo.|  
-|RowLimit|4|""|0 a 99|Número máximo de linhas retornadas por uma instrução SELECT. Uma cadeia de caracteres de comprimento zero indica que nenhum limite é aplicado.|  
+|RDOSupport|2|""|0 ou 1|Permite que o RDO chame procedimentos Oracle.|  
+|Comentários|2|0|0 ou 1|Incluir comentários em funções de catálogo.|  
+|Limite de @|4|""|0 a 99|Número máximo de linhas retornadas por uma instrução SELECT. Uma cadeia de caracteres de comprimento zero indica que nenhum limite é aplicado.|  
 |Servidor|128|""|A/N|Nome do servidor Oracle.|  
-|SynonymColumns|2|1|0 ou 1|Inclua sinônimos em SQLColumns.|  
-|SystemTable|2|""|0 ou 1|Se for 0, as tabelas do sistema não serão exibidas. Se for 1, tabelas do sistema serão exibidas.|  
-|TranslationDLL|33|""|A/N|Nome. dll de conversão.|  
-|TranslationName|33|""|A/N|Nome de tradução.|  
-|TranslationOption|33|""|A/N|Opção de conversão.|  
-|TxnCap|2|""|A/N|Compatível com a transação. Se for 0, o driver informa que ele não oferece suporte a transações. Se for 1, o driver informa que é capaz de realizar transações.|  
+|SynonymColumns|2|1|0 ou 1|Incluir SINÔNIMOs em SQLColumns.|  
+|Sistema de|2|""|0 ou 1|Se 0, as tabelas do sistema não serão exibidas. Se 1, as tabelas do sistema serão exibidas.|  
+|TranslationDLL|33|""|A/N|Nome do translation. dll.|  
+|Conversão de|33|""|A/N|Nome da tradução.|  
+|TranslationOption|33|""|A/N|Opção de tradução.|  
+|TxnCap|2|""|A/N|Com capacidade de transação. Se for 0, o driver relatará que ele não oferece suporte a transações. Se for 1, o driver relatará que ele é capaz de executar transações.|  
 |UID|30|""|A/N|Nome de usuário.|

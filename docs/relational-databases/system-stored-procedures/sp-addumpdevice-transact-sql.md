@@ -19,20 +19,20 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117913"
 ---
-# <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
+# <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Adiciona um dispositivo de backup a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,27 +47,27 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @devtype = ] 'device_type'` É o tipo de dispositivo de backup. *device_type* está **varchar(20)** , sem padrão e pode ser um dos valores a seguir.  
+`[ @devtype = ] 'device_type'`É o tipo de dispositivo de backup. *device_type* é **varchar (20)**, sem padrão, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**disk**|Arquivo de disco rígido como dispositivo de backup.|  
-|**tape**|Qualquer dispositivo de fita com suporte no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Observação: O suporte a dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**disco**|Arquivo de disco rígido como dispositivo de backup.|  
+|**fita**|Qualquer dispositivo de fita com suporte no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Observação: o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
   
-`[ @logicalname = ] 'logical_name'` É o nome lógico do dispositivo de backup usado nas instruções BACKUP e restauração. *logical_name* está **sysname**, sem padrão, e não pode ser NULL.  
+`[ @logicalname = ] 'logical_name'`É o nome lógico do dispositivo de backup usado nas instruções de BACKUP e restauração. *logical_name* é **sysname**, sem padrão, e não pode ser nulo.  
   
-`[ @physicalname = ] 'physical_name'` É o nome físico do dispositivo de backup. Os nomes físicos devem seguir as regras para nomes de arquivo do sistema operacional ou convenções universais de nomenclatura de dispositivos de rede e devem incluir um caminho completo. *physical_name* está **nvarchar (260)** , sem nenhum padrão de valor e não pode ser NULL.  
+`[ @physicalname = ] 'physical_name'`É o nome físico do dispositivo de backup. Os nomes físicos devem seguir as regras para nomes de arquivo do sistema operacional ou convenções universais de nomenclatura de dispositivos de rede e devem incluir um caminho completo. *physical_name* é **nvarchar (260)**, sem valor padrão e não pode ser NULL.  
   
  Ao criar um dispositivo de backup em um local de rede remota, certifique-se de que o nome com o qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] foi iniciado tenha os recursos adequados de gravação no computador remoto.  
   
- Se você adicionar um dispositivo de fita, esse parâmetro deve ser o nome físico atribuído ao dispositivo de fita local pelo Windows; Por exemplo,  **\\ \\. \TAPE0** para o primeiro dispositivo de fita no computador. O dispositivo de fita deve ser anexado ao computador servidor; não pode ser usado remotamente. Inclua os nomes que contêm caracteres não alfanuméricos entre aspas.  
+ Se você adicionar um dispositivo de fita, esse parâmetro deverá ser o nome físico atribuído ao dispositivo de fita local pelo Windows; por exemplo, ** \\ \\.\tape0** para o primeiro dispositivo de fita no computador. O dispositivo de fita deve ser anexado ao computador servidor; não pode ser usado remotamente. Inclua os nomes que contêm caracteres não alfanuméricos entre aspas.  
   
 > [!NOTE]  
 >  Esse procedimento insere no nome físico especificado no catálogo. O procedimento não tenta acessar nem criar o dispositivo.  
   
-`[ @cntrltype = ] 'controller_type'` Obsoleto. Se especificado, esse parâmetro será ignorado. Há suporte apenas pela compatibilidade com versões anteriores. Novos usos de **sp_addumpdevice** devem omitir esse parâmetro.  
+`[ @cntrltype = ] 'controller_type'`Substituí. Se especificado, esse parâmetro será ignorado. Há suporte apenas pela compatibilidade com versões anteriores. Novos usos de **sp_addumpdevice** devem omitir esse parâmetro.  
   
-`[ @devstatus = ] 'device_status'` Obsoleto. Se especificado, esse parâmetro será ignorado. Há suporte apenas pela compatibilidade com versões anteriores. Novos usos de **sp_addumpdevice** devem omitir esse parâmetro.  
+`[ @devstatus = ] 'device_status'`Substituí. Se especificado, esse parâmetro será ignorado. Há suporte apenas pela compatibilidade com versões anteriores. Novos usos de **sp_addumpdevice** devem omitir esse parâmetro.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -76,7 +76,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- **sp_addumpdevice** adiciona um dispositivo de backup para o **sys. backup_devices** exibição do catálogo. O dispositivo pode ser referenciado logicamente em instruções BACKUP e RESTORE. **sp_addumpdevice** não realiza qualquer acesso ao dispositivo físico. O acesso ao dispositivo especificado ocorre apenas quando uma instrução BACKUP ou RESTORE é executada. A criação de um dispositivo de backup lógico pode simplificar as instruções BACKUP e RESTORE, em que a especificação do nome do dispositivo é uma alternativa que usa uma cláusula "TAPE = " ou "DISK = " para especificar o caminho do dispositivo.  
+ **sp_addumpdevice** adiciona um dispositivo de backup à exibição do catálogo **Sys. backup_devices** . O dispositivo pode ser referenciado logicamente em instruções BACKUP e RESTORE. **sp_addumpdevice** não realiza nenhum acesso ao dispositivo físico. O acesso ao dispositivo especificado ocorre apenas quando uma instrução BACKUP ou RESTORE é executada. A criação de um dispositivo de backup lógico pode simplificar as instruções BACKUP e RESTORE, em que a especificação do nome do dispositivo é uma alternativa que usa uma cláusula "TAPE = " ou "DISK = " para especificar o caminho do dispositivo.  
   
  Os problemas de propriedade e de permissões podem interferir no uso dos dispositivos de backup de disco ou de arquivos. Verifique se as permissões de arquivo adequadas foram fornecidas à conta do Windows em que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] foi iniciado.  
   
@@ -95,7 +95,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-adding-a-disk-dump-device"></a>A. Adicionando um dispositivo de despejo de disco  
+### <a name="a-adding-a-disk-dump-device"></a>a. Adicionando um dispositivo de despejo de disco  
  O exemplo a seguir adiciona um dispositivo de backup de disco denominado `mydiskdump`, com o nome físico `c:\dump\dump1.bak`.  
   
 ```  
@@ -138,7 +138,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Definir um dispositivo de backup lógico para um arquivo de disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

@@ -14,26 +14,26 @@ ms.assetid: 2604f492-587b-4a51-9876-59a7870b3ef2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 781a214d3ca059a442680c332d79aad48914976c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111217"
 ---
 # <a name="odbc-architecture"></a>Arquitetura ODBC
 A arquitetura ODBC tem quatro componentes:  
   
--   **Aplicativo** executa processamento e chamadas de funções ODBC para enviar instruções SQL e recuperar os resultados.  
+-   Do **aplicativo** Executa o processamento e chama as funções ODBC para enviar instruções SQL e recuperar resultados.  
   
--   **Gerenciador de driver** carrega e descarrega drivers em nome de um aplicativo. Função ODBC processos chama ou passa para um driver.  
+-   **Gerenciador de driver** Carrega e descarrega drivers em nome de um aplicativo. Processa chamadas de função ODBC ou as passa para um driver.  
   
--   **Driver** função processos ODBC chama, envia solicitações SQL para uma fonte de dados específico e retorna os resultados para o aplicativo. Se necessário, o driver modifica uma solicitação de aplicativo para que a solicitação está em conformidade com a sintaxe com suporte pelo DBMS associado.  
+-   Do **Driver** Processa chamadas de função ODBC, envia solicitações SQL para uma fonte de dados específica e retorna os resultados para o aplicativo. Se necessário, o driver modifica a solicitação de um aplicativo para que a solicitação esteja em conformidade com a sintaxe suportada pelo DBMS associado.  
   
--   **Fonte de dados** Consists dos dados que o usuário deseja acessar e seu sistema operacional associado, o DBMS, e a plataforma de rede (se houver) usado para acessar o DBMS.  
+-   **Fonte de dados** Consiste nos dados que o usuário deseja acessar e seu sistema operacional, DBMS e plataforma de rede associados (se houver) usados para acessar o DBMS.  
   
- Observe os seguintes pontos sobre a arquitetura do ODBC. Primeiro, vários drivers e fontes de dados podem existir, o que permite que o aplicativo acessar simultaneamente os dados de mais de uma fonte de dados. Em segundo lugar, a API do ODBC é usada em dois lugares: entre o aplicativo e o Gerenciador de Driver e entre o Gerenciador de Driver e cada driver. A interface entre o Gerenciador de Driver e os drivers às vezes é conhecida como o *interface de provedor de serviço* ou *SPI*. Para ODBC, o aplicativo de API (interface) e a interface de provedor de serviço (SPI) de programação são os mesmos; ou seja, o Gerenciador de Driver e cada driver tem a mesma interface para as mesmas funções.  
+ Observe os pontos a seguir sobre a arquitetura ODBC. Primeiro, vários drivers e fontes de dados podem existir, o que permite que o aplicativo acesse dados simultaneamente de mais de uma fonte de dados. Em segundo lugar, a API ODBC é usada em dois locais: entre o aplicativo e o Gerenciador de driver e entre o Gerenciador de driver e cada driver. A interface entre o Gerenciador de driver e os drivers, às vezes, é chamada de *interface do provedor de serviços* ou *SPI*. Para ODBC, a API (interface de programação de aplicativo) e a SPI (Service Provider interface) são as mesmas; ou seja, o Gerenciador de driver e cada driver têm a mesma interface para as mesmas funções.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Aplicativos](../../odbc/reference/applications.md)  
   

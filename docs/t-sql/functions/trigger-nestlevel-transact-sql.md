@@ -20,18 +20,18 @@ ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6215824f230001cb9d7add20d32c85780a65ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098810"
 ---
-# <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
+# <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o número de disparadores executados para a instrução que acionou o disparador. TRIGGER_NESTLEVEL é usado em disparadores DML e DDL para determinar o nível atual de aninhamento.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
  **'** *trigger_event_category* **'**  
  Especifica se deve ser aplicado TRIGGER_NESTLEVEL a disparadores DML ou DDL. Especifique **DML** para gatilhos DML. Especifique **DDL** para gatilhos DDL. Se *trigger_event_category* for especificado, *trigger_type* também deverá ser especificado. Observe que apenas **AFTER** pode ser especificado com **DDL**, porque gatilhos DDL apenas podem ser gatilhos AFTER.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando nenhum parâmetro for especificado, TRIGGER_NESTLEVEL retornará o número total de disparadores na pilha de chamada. Isto inclui ele próprio. Pode ocorrer omissão de parâmetros quando um disparador executar comandos que causem o acionamento de outro disparador ou criar uma sucessão de disparadores de acionamento.  
   
  Para retornar o número total de gatilhos na pilha de chamadas para um tipo de gatilho e uma categoria de evento específicos, especifique *object_id* = 0.  
@@ -61,7 +61,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-testing-the-nesting-level-of-a-specific-dml-trigger"></a>A. Testando o nível de aninhamento de um gatilho DML específico  
+### <a name="a-testing-the-nesting-level-of-a-specific-dml-trigger"></a>a. Testando o nível de aninhamento de um gatilho DML específico  
   
 ```  
 IF ( (SELECT TRIGGER_NESTLEVEL( OBJECT_ID('xyz') , 'AFTER' , 'DML' ) ) > 5 )  

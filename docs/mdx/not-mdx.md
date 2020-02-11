@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4031b887eb0a42580d6ae8debf6c9177ff67efc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088230"
 ---
 # <a name="not-mdx"></a>NOT (MDX)
@@ -27,22 +27,22 @@ ms.locfileid: "68088230"
 NOT Expression1  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Expression1*  
  Uma linguagem MDX válida que retorna um valor numérico.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor booliano que retorna **falsos** se o argumento for avaliado como **verdadeiro**; caso contrário, **verdadeiro**.  
+ Um valor booliano que retorna **false** se o argumento for avaliado como **true**; caso contrário, **true**.  
   
 ## <a name="remarks"></a>Comentários  
- O **não** operador trata a expressão como um valor booliano (zero, 0, como **falso**; caso contrário, **verdadeiro**) antes que o operador realize a negação lógica. A tabela a seguir ilustra como o **não** operador executa a negação lógica.  
+ O operador **not** trata a expressão como um valor booliano (zero, 0, como **false**; caso contrário, **true**) antes que o operador execute a negação lógica. A tabela a seguir ilustra como o operador **not** executa a negação lógica.  
   
 |*Expression1*|Valor retornado|  
 |-------------------|------------------|  
-|**true**|**false**|  
-|**false**|**true**|  
+|**true**|**for**|  
+|**for**|**true**|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_actions (Transact-SQL) | Microsoft Docs
+title: sys. dm_audit_actions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,37 +19,37 @@ ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936973"
 ---
-# <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
+# <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Retorna uma linha para cada ação de auditoria que pode ser reportada no log de auditoria e para cada grupo de ação de auditoria que pode ser configurado como parte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditoria, consulte [auditoria do SQL Server &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Retorna uma linha para cada ação de auditoria que pode ser reportada no log de auditoria e para cada grupo de ação de auditoria que pode ser configurado como parte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obter mais informações [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre auditoria, consulte [SQL Server audit &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**varchar(4)**|ID da ação de auditoria. Relacionados para o **action_id** valor gravado para cada registro de auditoria. Permite valor nulo. É NULL para grupos de auditoria.|  
-|**action_in_log**|**bit**|Indica se uma ação pode ser gravada em um log de auditoria. Os valores são da seguinte maneira:<br /><br /> 1 = Sim<br /><br /> 0 = Não|  
+|**action_id**|**varchar (4)**|ID da ação de auditoria. Relacionado ao valor de **action_id** gravados em cada registro de auditoria. Permite valor nulo. É NULL para grupos de auditoria.|  
+|**action_in_log**|**bit**|Indica se uma ação pode ser gravada em um log de auditoria. Os valores são:<br /><br /> 1 = Sim<br /><br /> 0 = Não|  
 |**name**|**sysname**|Nome da ação de auditoria ou do grupo de ações de auditoria. Não permite valor nulo.|  
-|**class_desc**|**nvarchar(120)**|O nome da classe do objeto ao qual a ação de auditoria aplica-se. Pode ser qualquer objeto do escopo Servidor, Banco de dados ou Esquema, mas não inclui objetos Esquema. Não permite valor nulo.|  
-|**parent_class_desc**|**nvarchar(120)**|Nome da classe pai do objeto descrito por class_desc. Será NULL se class_desc for Servidor.|  
-|**covering_parent_action_name**|**nvarchar(120)**|Nome da ação de auditoria ou do grupo de auditoria que contém a ação de auditoria descrita nesta linha. É usada para criar uma hierarquia de ações e ações abrangentes. Permite valor nulo.|  
-|**configuration_level**|**nvarchar(10)**|Indica que a ação ou o grupo de ações especificado nessa linha são configuráveis no nível do Grupo ou da Ação. Será NULL se a ação não for configurável.|  
-|**containing_group_name**|**nvarchar(120)**|O nome do grupo de auditoria que contém a ação especificada. Será NULL se o valor em name for um grupo.|  
+|**class_desc**|**nvarchar (120)**|O nome da classe do objeto ao qual a ação de auditoria aplica-se. Pode ser qualquer objeto do escopo Servidor, Banco de dados ou Esquema, mas não inclui objetos Esquema. Não permite valor nulo.|  
+|**parent_class_desc**|**nvarchar (120)**|Nome da classe pai do objeto descrito por class_desc. Será NULL se class_desc for Servidor.|  
+|**covering_parent_action_name**|**nvarchar (120)**|Nome da ação de auditoria ou do grupo de auditoria que contém a ação de auditoria descrita nesta linha. É usada para criar uma hierarquia de ações e ações abrangentes. Permite valor nulo.|  
+|**configuration_level**|**nvarchar (10)**|Indica que a ação ou o grupo de ações especificado nessa linha são configuráveis no nível do Grupo ou da Ação. Será NULL se a ação não for configurável.|  
+|**containing_group_name**|**nvarchar (120)**|O nome do grupo de auditoria que contém a ação especificada. Será NULL se o valor em name for um grupo.|  
   
 ## <a name="permissions"></a>Permissões  
- As entidades devem ter **selecionar** permissão. Por padrão, é concedida a Público.  
+ As entidades de segurança devem ter a permissão **Select** . Por padrão, é concedida a Público.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   

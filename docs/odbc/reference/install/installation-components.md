@@ -14,22 +14,22 @@ ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34d1b6d143f6f40d73e2feeb0b718f3c3b3248fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094131"
 ---
 # <a name="installation-components"></a>Componentes de instalação
 > [!NOTE]  
->  Começando com o Windows XP e Windows Server 2003, ODBC está incluído no sistema operacional Windows. Você deve instalar apenas explicitamente ODBC em versões anteriores do Windows.  
+>  A partir do Windows XP e do Windows Server 2003, o ODBC está incluído no sistema operacional Windows. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
   
- O processo de instalação é iniciado quando o usuário executa o programa de instalação. O programa de instalação funciona em conjunto com o *DLL do instalador* e uma *DLL de instalação do driver* para cada driver. O programa de instalação e a DLL do instalador usam argumentos de **SQLInstallDriverEx** e **SQLInstallTranslatorEx** funções para determinar quais arquivos deseja copiar ou excluir para cada componente. A ilustração a seguir mostra a relação entre esses componentes de instalação.  
+ O processo de instalação é iniciado quando o usuário executa o programa de instalação. O programa de instalação funciona em conjunto com a *dll do instalador* e uma DLL de instalação de *Driver* para cada driver. O programa de instalação e a DLL do instalador usam os argumentos nas funções **SQLInstallDriverEx** e **SQLInstallTranslatorEx** para determinar quais arquivos copiar ou excluir para cada componente. A ilustração a seguir mostra a relação entre esses componentes de instalação.  
   
  ![Relação entre componentes de instalação](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
 > [!IMPORTANT]
->  O arquivo Odbc.inf que foi usado no ODBC *2.x* para descrever os arquivos necessários para cada ODBC componente não é usada no ODBC *3.x*. Drivers que são fornecidos ODBC *3.x* componentes não é necessário criar um arquivo Odbc.inf. A remoção de **SQLInstallDriver** e **SQLInstallODBC**e a substituição do **SQLInstallTranslator**, ter processado Odbc.inf desnecessários. As informações do driver que costumavam ser nas seções a palavra-chave Driver Odbc.inf agora são fornecidas na *lpszDriver* argumento **SQLInstallDriverEx**. As informações de tradução que costumava ser no [ODBC tradutor] e seções de especificação de tradução de Odbc.inf agora é fornecido na *lpszTranslator* argumento de **SQLInstallTranslatorEx**. Essas alterações permitem que o instalador ODBC seja mais portátil entre plataformas.  
+>  O arquivo ODBC. inf que foi usado no ODBC *2. x* para descrever os arquivos exigidos por cada componente ODBC não é usado no ODBC *3. x*. Os drivers que enviam componentes ODBC *3. x* não precisam criar um arquivo ODBC. inf. A remoção de **SQLInstallDriver** e **SQLInstallODBC**, e a substituição de **SQLInstallTranslator**, fez com que o ODBC. inf fosse desnecessário. As informações de driver que costumava estar nas seções de palavra-chave do driver de ODBC. inf agora são fornecidas no argumento *lpszDriver* em **SQLInstallDriverEx**. As informações do tradutor que costumava estar no [conversor ODBC] e nas seções de especificação do tradutor de ODBC. inf agora são fornecidas no argumento *lpszTranslator* de **SQLInstallTranslatorEx**. Essas alterações permitem que o ODBC Installer seja mais portável entre plataformas.  
   
  Para obter mais informações sobre esses componentes, consulte os tópicos a seguir no final desta seção.  
   

@@ -11,19 +11,19 @@ ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 877dda7f387c8574c8ea2e91281b10b7563037b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100659"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>Funções ODBC e a biblioteca de cursores
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que usam esse recurso atualmente. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- Quando a biblioteca de cursores ODBC está habilitada para uma conexão, o Gerenciador de Driver chama funções na biblioteca de cursor, em vez de no driver. A biblioteca de cursores executa a função ou chama no driver especificado.  
+ Quando a biblioteca de cursores ODBC está habilitada para uma conexão, o Gerenciador de driver chama funções na biblioteca de cursores em vez de no driver. A biblioteca de cursores executa a função ou a chama no driver especificado.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Funções ODBC executadas pela biblioteca de cursores](../../../odbc/reference/appendixes/odbc-functions-executed-by-the-cursor-library.md)  
   

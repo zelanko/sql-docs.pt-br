@@ -1,5 +1,5 @@
 ---
-title: Carregando convertidos do banco de dados objetos no SQL Server (AccessToSQL) | Microsoft Docs
+title: Carregando objetos de banco de dados convertidos em SQL Server (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -30,115 +30,115 @@ ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7effaa973b7a39df6fc0b9385a5cfde4fdad18d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986316"
 ---
-# <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Carregando convertidos do banco de dados objetos no SQL Server (AccessToSQL)
-Depois de converter objetos de banco de dados de acesso à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure, você pode carregar os objetos de banco de dados resultante em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Você pode ter o SSMA criar os objetos, ou você pode gerar script dos objetos e executar os scripts por conta própria. Além disso, o SSMA permite atualizar os metadados de destino com o conteúdo real da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou banco de dados do SQL Azure.  
+# <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Carregando objetos de banco de dados convertidos em SQL Server (AccessToSQL)
+Depois de ter convertido objetos de banco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados do Access para o ou SQL Azure, você pode carregar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os objetos de banco de dados resultantes no ou SQL Azure. Você pode fazer com que o SSMA crie os objetos, ou pode criar o script dos objetos e executar os scripts por conta própria. Além disso, o SSMA permite que você atualize os metadados de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o conteúdo real do banco de dados ou SQL Azure.  
   
-## <a name="choosing-between-synchronization-and-scripts"></a>Escolhendo entre sincronização e Scripts  
-Se você deseja carregar os objetos de banco de dados convertido em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, sem modificações, você pode ter o SSMA criar ou recriar os objetos de banco de dados diretamente. Esse método é rápido e fácil, mas não permite a personalização do [!INCLUDE[tsql](../../includes/tsql-md.md)] código que define o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos do SQL Azure, diferentes procedimentos armazenados.  
+## <a name="choosing-between-synchronization-and-scripts"></a>Escolhendo entre a sincronização e os scripts  
+Se você quiser carregar os objetos de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertidos no ou SQL Azure sem modificação, poderá fazer com que o SSMA crie ou recrie os objetos de banco de dados diretamente. Esse método é rápido e fácil, mas não permite a [!INCLUDE[tsql](../../includes/tsql-md.md)] personalização do código que define os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos ou SQL Azure, além de procedimentos armazenados.  
   
-Se você quiser modificar o [!INCLUDE[tsql](../../includes/tsql-md.md)] que é usado para criar objetos, ou se você quiser mais controle sobre a criação de objetos, use o SSMA para criar scripts. Você pode, em seguida, modificar esses scripts, criar cada objeto individualmente e até mesmo usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para agendar a criação desses objetos.  
+Se você quiser modificar o que [!INCLUDE[tsql](../../includes/tsql-md.md)] é usado para criar objetos ou se quiser mais controle sobre a criação de objetos, use o SSMA para criar scripts. Em seguida, você pode modificar esses scripts, criar cada objeto individualmente e até [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mesmo usar o Agent para agendar a criação desses objetos.  
   
-## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Usando o SSMA para sincronizar objetos com o SQL Server  
-Usar o SSMA para criar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos de banco de dados do SQL Azure, selecione os objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o Gerenciador de metadados do SQL Azure e, em seguida, sincronizar os objetos com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, conforme mostrado no procedimento a seguir. Por padrão, se os objetos já existirem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure e se os metadados do SSMA tem algumas alterações locais ou atualizações para a definição desses objetos muito, o SSMA irá alterar as definições de objeto em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Você pode alterar o comportamento padrão, editando **configurações do projeto**.  
+## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Usando o SSMA para sincronizar objetos com SQL Server  
+Para usar o SSMA para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criar ou SQL Azure objetos de banco de dados, você [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleciona os objetos no ou SQL Azure o Gerenciador de metadados e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , em seguida, sincroniza os objetos com ou SQL Azure, conforme mostrado no procedimento a seguir. Por padrão, se os objetos já existirem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ou SQL Azure, e se os metadados do SSMA tiverem algumas alterações locais ou atualizações na definição desses objetos, o SSMA alterará as definições de objeto no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Você pode alterar o comportamento padrão editando **as configurações do projeto**.  
   
 > [!NOTE]  
-> Você pode selecionar existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos de banco de dados do SQL Azure que não foram convertidos de bancos de dados do Access. No entanto, o SSMA não recriar nem alterar esses objetos.  
+> Você pode selecionar objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de banco de dados existentes ou SQL Azure que não foram convertidos de bancos de dados do Access. No entanto, o SSMA não recriará nem alterará esses objetos.  
   
-**Para sincronizar objetos com o SQL Server ou SQL Azure**  
+**Para sincronizar objetos com SQL Server ou SQL Azure**  
   
-1.  Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o Gerenciador de metadados do SQL Azure, expanda a parte superior [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o nó do SQL Azure e, em seguida, expanda **bancos de dados**.  
+1.  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure Gerenciador de metadados, expanda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nó superior ou SQL Azure e, em seguida, expanda **bancos de dados**.  
   
 2.  Selecione os objetos a serem processados:  
   
     -   Para sincronizar um banco de dados completo, marque a caixa de seleção ao lado do nome do banco de dados.  
   
-    -   Para sincronizar ou omitir objetos individuais ou categorias de objetos, marque ou desmarque a caixa de seleção ao lado do objeto ou pasta.  
+    -   Para sincronizar ou omitir objetos individuais ou categorias de objetos, marque ou desmarque a caixa de seleção ao lado do objeto ou da pasta.  
   
-3.  Depois de selecionar os objetos a serem processados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o Gerenciador de metadados do SQL Azure, clique com botão direito **bancos de dados**e, em seguida, clique em **sincronizar com o banco de dados**.  
+3.  Depois de selecionar os objetos a serem processados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure o Gerenciador de metadados, clique com o botão direito do mouse em **bancos**de dados e clique em **sincronizar com o Database**.  
   
-    Você também pode sincronizar objetos individuais ou as categorias de objetos clicando com botão direito do objeto ou a pasta pai e, em seguida, clicando em **sincronizar com o banco de dados**.  
+    Você também pode sincronizar objetos individuais ou categorias de objetos clicando com o botão direito do mouse no objeto ou em sua pasta pai e clicando em **sincronizar com o banco de dados**.  
   
-    Depois disso, o SSMA exibirá os **sincronizar com o banco de dados** caixa de diálogo, onde você pode ver dois grupos de itens. No lado esquerdo, o SSMA mostra representados em uma árvore de objetos de banco de dados selecionado. No lado direito, você pode ver uma árvore que representa os mesmos objetos nos metadados do SSMA. Você pode expandir a árvore clicando-se à direita ou esquerda botão ' +'. A direção da sincronização é mostrada na coluna ação colocado entre as duas árvores.  
+    Depois disso, o SSMA exibirá a caixa de diálogo **sincronizar com o banco de dados** , onde você poderá ver dois grupos de itens. No lado esquerdo, o SSMA mostra os objetos de banco de dados selecionados representados em uma árvore. No lado direito, você pode ver uma árvore que representa os mesmos objetos em metadados do SSMA. Você pode expandir a árvore clicando no botão à direita ou à esquerda ' + '. A direção da sincronização é mostrada na coluna ação colocada entre as duas árvores.  
   
-    Um sinal de ação pode estar em três estados:  
+    Um sinal de ação pode estar em três Estados:  
   
-    -   Uma seta para a esquerda significa que o conteúdo de metadados será salvo no banco de dados (o padrão).  
+    -   Uma seta para a esquerda significa que o conteúdo dos metadados será salvo no banco de dados (o padrão).  
   
-    -   Uma seta para a direita significa que o conteúdo do banco de dados substituirão os metadados do SSMA.  
+    -   Uma seta para a direita significa que o conteúdo do banco de dados substituirá os metadados do SSMA.  
   
-    -   Um sinal cruzado significa que nenhuma ação será tomada.  
+    -   Um sinal cruzado significa que nenhuma ação será executada.  
   
-    Clique no sinal de ação para alterar o estado. Sincronização real será executada quando você clica **Okey** botão da **sincronizar com o banco de dados** caixa de diálogo.  
+    Clique no sinal de ação para alterar o estado. A sincronização real será executada quando você clicar no botão **OK** da caixa de diálogo **sincronizar com Banco de dados** .  
   
 ## <a name="scripting-objects"></a>Objetos de script  
-Se você quiser economizar [!INCLUDE[tsql](../../includes/tsql-md.md)] definições de objetos convertidos do banco de dados, ou se quiser alterar as definições de objeto e executar scripts por conta própria, você pode salvar definições de objeto para o banco de dados convertido [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  
+Se você quiser salvar [!INCLUDE[tsql](../../includes/tsql-md.md)] as definições dos objetos de banco de dados convertidos ou desejar alterar as definições de objeto e executar scripts por conta própria, poderá salvar as definições de objeto [!INCLUDE[tsql](../../includes/tsql-md.md)] de banco de dados convertido em scripts.  
   
 **Para salvar um ou mais objetos em um script**  
   
-1.  Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados, expanda o nó superior (o nome do servidor) e, em seguida, expanda **bancos de dados**.  
+1.  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados, expanda o nó superior (o nome do servidor) e, em seguida, expanda **bancos de dados**.  
   
-2.  Siga um ou mais destes procedimentos:  
+2.  Execute uma ou mais das seguintes opções:  
   
-    -   Para criar o script de um banco de dados completo, selecione a caixa de seleção ao lado do nome do banco de dados.  
+    -   Para gerar script de um banco de dados completo, marque a caixa de seleção ao lado do nome do banco de dados.  
   
-    -   Para executar scripts ou omitir exibições individuais, expanda o banco de dados, expanda **modos de exibição**e, em seguida, selecione ou desmarque a caixa de seleção ao lado do modo de exibição.  
+    -   Para gerar script ou omitir exibições individuais, expanda o banco de dados, expanda **exibições**e marque ou desmarque a caixa de seleção ao lado da exibição.  
   
-    -   Para executar scripts ou omitir tabelas individuais, expanda o banco de dados, expanda **tabelas**e, em seguida, selecione ou desmarque a caixa de seleção ao lado da tabela.  
+    -   Para criar um script ou omitir tabelas individuais, expanda o banco de dados, expanda **tabelas**e marque ou desmarque a caixa de seleção ao lado da tabela.  
   
-    -   Para executar scripts ou omitir índices individuais para uma tabela, expanda a tabela, expanda **índices**e, em seguida, selecione ou desmarque o índice.  
+    -   Para criar o script ou omitir índices individuais para uma tabela, expanda a tabela, expanda **índices**e selecione ou limpe o índice.  
   
-3.  Clique com botão direito **bancos de dados** e selecione **Salvar como Script**.  
+3.  Clique com o botão direito do mouse em **bancos de dados** e selecione **salvar como script**.  
   
-    Você também pode gerar o script de objetos individuais. Para criar o script de um objeto, independentemente de qual objetos selecionados, o objeto com o botão direito e selecione **Salvar como Script**.  
+    Você também pode criar scripts de objetos individuais. Para criar um script de um objeto, independentemente dos objetos selecionados, clique com o botão direito do mouse no objeto e selecione **salvar como script**.  
   
-4.  No **Salvar como** diálogo caixa, localize a pasta onde você deseja salvar o script, digite um nome de arquivo na **nome do arquivo** caixa e, em seguida, clique em **Okey**.  
+4.  Na caixa de diálogo **salvar como** , localize a pasta onde você deseja salvar o script, insira um nome de arquivo na caixa **nome do arquivo** e clique em **OK**.  
   
-    O SSMA acrescentará a extensão de nome de arquivo. SQL.  
+    O SSMA acrescentará a extensão de nome de arquivo. Sql.  
   
-### <a name="modifying-scripts"></a>Modificando Scripts  
-Depois de salvar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou definições de objeto do SQL Azure como um script, você pode usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para modificar o script.  
+### <a name="modifying-scripts"></a>Modificando scripts  
+Depois de salvar as definições [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de objeto do ou do SQL Azure como um script, você [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode usar o para modificar o script.  
   
 **Para modificar um script**  
   
-1.  Sobre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **arquivo** , aponte para **abra**e, em seguida, clique em **arquivo**.  
+1.  No menu [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Arquivo** , aponte para **Abrir**e clique em **Arquivo**.  
   
-2.  No **aberto** caixa de diálogo, localize e selecione o arquivo de script e, em seguida, clique em **Okey**.  
+2.  Na caixa de diálogo **abrir** , localize e selecione o arquivo de script e clique em **OK**.  
   
 3.  Edite o arquivo de script usando o editor de consultas.  
   
-    Para obter mais informações sobre o editor de consultas, consulte "Editor de comandos e recursos de conveniência" no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+    Para obter mais informações sobre o editor de consultas, consulte "comandos e recursos de conveniência [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do editor" nos manuais online do.  
   
-4.  Para salvar o script, no menu Arquivo, selecione **salvar**.  
+4.  Para salvar o script, no menu arquivo, selecione **salvar**.  
   
-### <a name="running-scripts"></a>Execução de Scripts  
-Você pode executar um script ou instruções individuais, em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+### <a name="running-scripts"></a>Executando scripts  
+Você pode executar um script, ou instruções individuais, no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **Para executar um script**  
   
-1.  Sobre o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **arquivo** , aponte para **abra** e, em seguida, clique em **arquivo**.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] No menu **arquivo** , aponte para **abrir** e clique em **arquivo**.  
   
-2.  No **aberto** caixa de diálogo, localize e selecione o arquivo de script e, em seguida, clique em **Okey**.  
+2.  Na caixa de diálogo **abrir** , localize e selecione o arquivo de script e clique em **OK**.  
   
-3.  Para executar o script completo, pressione a **F5** chave.  
+3.  Para executar o script completo, pressione a tecla **F5** .  
   
-4.  Para executar um conjunto de instruções, selecione as instruções na janela do editor de consulta e, em seguida, pressione a **F5** chave.  
+4.  Para executar um conjunto de instruções, selecione as instruções na janela do editor de consultas e pressione a tecla **F5** .  
   
-Para obter mais informações sobre como usar o editor de consultas para executar scripts, consulte " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta" no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+Para obter mais informações sobre como usar o editor de consultas para executar scripts, consulte [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] "consultar" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos manuais online do.  
   
-Você também pode executar scripts da linha de comando usando o **sqlcmd** utilitário e de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. Para obter mais informações sobre **sqlcmd**, consulte "utilitário sqlcmd" em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online. Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte "automatizar tarefas administrativas ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente)" em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+Você também pode executar scripts na linha de comando usando o utilitário **sqlcmd** e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para obter mais informações sobre o **sqlcmd**, consulte o "utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlcmd" nos manuais online do. Para obter mais informações [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre o Agent, consulte "automatizando tarefas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrativas (agente) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos manuais online do.  
   
-## <a name="securing-objects-in-sql-server"></a>Protegendo os objetos no SQL Server  
-Depois que você carregou os objetos de banco de dados convertido em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível conceder e negar permissões nesses objetos. É uma boa ideia fazer isso antes de migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações sobre como ajudar a proteger objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte "Considerações para bancos de dados e banco de dados de aplicativos de segurança" em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+## <a name="securing-objects-in-sql-server"></a>Protegendo objetos no SQL Server  
+Depois de carregar os objetos de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]convertidos no, você pode conceder e negar permissões nesses objetos. É uma boa ideia fazer isso antes de migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o. Para obter informações sobre como ajudar a proteger objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no, consulte "considerações de segurança para bancos de dados e aplicativos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados" nos manuais online do.  
   
 ## <a name="next-step"></a>Próxima etapa  
-É a próxima etapa no processo de migração [migrar dados para o SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
+A próxima etapa no processo de migração é [migrar dados para o SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
   
-## <a name="see-also"></a>Consulte também  
-[Migrando bancos de dados do Access para o SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

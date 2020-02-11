@@ -1,5 +1,5 @@
 ---
-title: sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs
+title: sys. database_audit_specification_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,39 +20,39 @@ ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4dcf9664adcdeba495b53f1a1392781df3fa60bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940275"
 ---
-# <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
+# <a name="sysdatabase_audit_specification_details-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contém informações sobre as especificações de auditoria de banco de dados em uma auditoria do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de servidor para todos os bancos de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Para obter uma lista de todos os audit_action_id e seus nomes, consultar [DM audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
+  Contém informações sobre as especificações de auditoria de banco de dados em uma auditoria do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de servidor para todos os bancos de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Para obter uma lista de todos os audit_action_id e seus nomes, consulte [Sys. dm_audit_actions &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|ID da especificação de auditoria.|  
 |**audit_action_id**|**int**|ID da ação de auditoria.|  
-|**audit_action_name**|**sysname**|Nome de ação de auditoria ou do grupo de ações de auditoria|  
-|**Class**|**int**|Identifica a classe de objeto que está sendo auditado.|  
-|**desc class_**|**Nvarchar(60)**|Descrição da classe de objeto que está sendo auditado:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
+|**audit_action_name**|**Sysname**|Nome de ação de auditoria ou do grupo de ações de auditoria|  
+|**Classes**|**int**|Identifica a classe de objeto que está sendo auditado.|  
+|**DESC class_**|**Nvarchar (60)**|Descrição da classe de objeto que está sendo auditado:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|ID principal do objeto que está sendo auditado, como uma ID de tabela de uma ação de Auditoria de Tabela.|  
-|**minor_id**|**Int**|ID secundária do objeto que está sendo auditado, interpretada de acordo com a classe, como a ID de coluna de uma ação de Auditoria de Tabela.|  
+|**minor_id**|**Inteiro**|ID secundária do objeto que está sendo auditado, interpretada de acordo com a classe, como a ID de coluna de uma ação de Auditoria de Tabela.|  
 |**audited_principal_id**|**int**|Entidade que está sendo examinada.|  
-|**audited_result**|**Nvarchar(60)**|Resultados da ação de auditoria:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
-|**is_group**|**Bit**|Mostra se o objeto é um grupo:<br /><br /> 0 – Não é um grupo<br /><br /> 1 – Grupo|  
+|**audited_result**|**Nvarchar (60)**|Resultados da ação de auditoria:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
+|**is_group**|**Parte**|Mostra se o objeto é um grupo:<br /><br /> 0 – Não é um grupo<br /><br /> 1 – Grupo|  
   
 ## <a name="permissions"></a>Permissões  
- Entidades de segurança com o **ALTER ANY DATABASE AUDIT** ou **VIEW DEFINITION** permissões, o **dbo** e membros do **db_owners** função de banco de dados fixa têm acesso a esta exibição do catálogo. Além disso, a entidade de segurança não deve ser negada **VIEW DEFINITION** permissão.  
+ As entidades com as permissões **ALTER ANY DATABASE AUDIT** ou **View definition** , a função **dbo** e os membros da função de banco de dados fixa **db_owners** têm acesso a essa exibição de catálogo. Além disso, o principal não deve ter a permissão **View definition** negada.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   

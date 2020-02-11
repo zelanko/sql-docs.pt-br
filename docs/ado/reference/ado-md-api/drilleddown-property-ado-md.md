@@ -17,25 +17,25 @@ ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1175d2a70c376e3da1e079e4a3eb93a39235758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938464"
 ---
 # <a name="drilleddown-property-ado-md"></a>Propriedade DrilledDown (ADO MD)
-Indica se filhos logo após o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) no eixo.  
+Indica se os filhos seguem imediatamente o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) no eixo.  
   
 ## <a name="return-values"></a>Valores de retorno  
- Retorna um **Boolean** valor e é somente leitura. **DrilledDown** retorna **verdadeiro** se não houver nenhum membro filho do membro atual no eixo. **DrilledDown** retorna **falso** se o membro atual tiver um ou mais membros filhos no eixo.  
+ Retorna um valor **booliano** e é somente leitura. **DrilledDown** retornará **true** se não houver membros filho do membro atual no eixo. **DrilledDown** retornará **false** se o membro atual tiver um ou mais membros filho no eixo.  
   
 ## <a name="remarks"></a>Comentários  
- Use o **DrilledDown** propriedade para determinar se há pelo menos um filho desse membro no eixo imediatamente após esse membro. Essa informação é útil ao exibir o membro.  
+ Use a propriedade **DrilledDown** para determinar se há pelo menos um filho deste membro no eixo imediatamente após este membro. Essas informações são úteis ao exibir o membro.  
   
- Essa propriedade só é compatível com [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos que pertencem a um [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto. Ocorre um erro quando essa propriedade é referenciada a partir **membro** objetos que pertencem a um [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto.  
+ Só há suporte para essa propriedade em objetos [Membros](../../../ado/reference/ado-md-api/member-object-ado-md.md) que pertencem a um objeto [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) . Um erro ocorre quando essa propriedade é referenciada de objetos de **membro** que pertencem a um objeto de [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade ParentSameAsPrev (ADO MD)](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)

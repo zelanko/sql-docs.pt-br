@@ -16,21 +16,21 @@ ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87c61baa93cb1dbca58bbe86ffc254a92d2b9d5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965241"
 ---
 # <a name="ruleenum"></a>RuleEnum
-Especifica a regra para seguir quando um [chave](../../../ado/reference/adox-api/key-object-adox.md) é excluído.  
+Especifica a regra a ser seguida quando uma [chave](../../../ado/reference/adox-api/key-object-adox.md) é excluída.  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Alterações em cascata.|  
 |**adRINone**|0|Padrão. Nenhuma ação é tomada.|  
-|**adRISetDefault**|3|Valor de chave estrangeira é definida como o padrão.|  
-|**adRISetNull**|2|Valor de chave estrangeira é definida como null.|  
+|**adRISetDefault**|3|O valor da chave estrangeira está definido como o padrão.|  
+|**adRISetNull**|2|O valor da chave estrangeira está definido como nulo.|  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Propriedade DeleteRule (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)

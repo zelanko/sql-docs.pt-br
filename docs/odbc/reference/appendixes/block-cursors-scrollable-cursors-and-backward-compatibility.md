@@ -1,5 +1,5 @@
 ---
-title: Cursores em bloco, cursores roláveis e compatibilidade com versões anteriores | Microsoft Docs
+title: Cursores de bloco, cursores roláveis e compatibilidade com versões anteriores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 433647481b2b73c22e00657c430d98177d3d4524
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125222"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Cursores em bloco, cursores roláveis e compatibilidade com versões anteriores
-A existência de ambos **SQLFetchScroll** e **SQLExtendedFetch** representa o limpar primeiro dividido entre o aplicativo de Interface de programação (API), que é o conjunto de funções ODBC a chamadas do aplicativo e o Service Provider Interface (SPI), que é o conjunto de funções implementa o driver. Essa divisão é necessário para que ODBC *3.x*, que usa **SQLFetchScroll**, bealigned com os padrões e também ser compatível com ODBC *2.x*, que usa **SQLExtendedFetch**.  
+A existência de **SQLFetchScroll** e **SQLExtendedFetch** representa a primeira divisão clara em ODBC entre a API (interface de programação de aplicativo), que é o conjunto de funções que o aplicativo chama e a SPI (interface do provedor de serviços), que é o conjunto de funções que o Driver implementa. Essa divisão é necessária para que o ODBC *3. x*, que usa **SQLFetchScroll**, se alinhe com os padrões e também seja compatível com ODBC *2. x*, que usa **SQLExtendedFetch**.  
   
- O ODBC *3.x* API, que é o conjunto de funções o aplicativo chama, inclui **SQLFetchScroll** e relacionados a atributos de instrução. O ODBC *3.x* SPI, que é o conjunto de funções o driver implementa, inclui **SQLFetchScroll**, **SQLExtendedFetch**e relacionados a atributos de instrução. Como o ODBC não impõe formalmente essa divisão entre a API e o SPI, é possível para ODBC *3.x* aplicativos chamem **SQLExtendedFetch** e relacionados a atributos de instrução. No entanto, não há nenhum motivo para ODBC *3.x* aplicativo para fazer isso. Para obter mais informações sobre as APIs e SPIs, consulte a introdução [arquitetura ODBC](../../../odbc/reference/odbc-architecture.md).  
+ A API ODBC *3. x* , que é o conjunto de funções que o aplicativo chama, inclui **SQLFetchScroll** e atributos de instrução relacionados. O SPI ODBC *3. x* , que é o conjunto de funções que o Driver implementa, inclui **SQLFetchScroll**, **SQLExtendedFetch**e atributos de instrução relacionados. Como o ODBC não impõe formalmente essa divisão entre a API e o SPI, é possível que os aplicativos ODBC *3. x* chamem **SQLExtendedFetch** e atributos de instrução relacionados. No entanto, não há motivo para o aplicativo ODBC *3. x* fazer isso. Para obter mais informações sobre APIs e SPIs, consulte a introdução à [arquitetura ODBC](../../../odbc/reference/odbc-architecture.md).  
   
- Para obter informações sobre quais funções e a instrução atributos ODBC *3.x* aplicativo deve usar com o bloco e cursores roláveis, consulte [cursores em bloco, cursores roláveis e compatibilidade com versões anteriores para ODBC 3. x Aplicativos](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
+ Para obter informações sobre quais funções e atributos de instrução um aplicativo ODBC *3. x* deve usar com cursores de bloqueio e rolagem, consulte [cursores de bloco, cursores roláveis e compatibilidade com versões anteriores para aplicativos ODBC 3. x](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [O que o Gerenciador de Driver faz](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)  
   
