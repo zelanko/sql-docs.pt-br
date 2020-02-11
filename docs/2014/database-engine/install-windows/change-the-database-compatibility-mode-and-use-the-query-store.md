@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779108"
 ---
 # <a name="migrate-query-plans"></a>Migrar planos de consulta
@@ -26,7 +26,7 @@ ms.locfileid: "62779108"
   
  Para criar guias de plano antes da atualização siga estas etapas:  
   
-1.  Registre o plano atual para cada consulta crítica usando o [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) procedimento armazenado e especificando o plano de consulta na dica de consulta USE PLAN.  
+1.  Registre o plano atual para cada consulta de missão crítica usando o procedimento armazenado [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) e especificando o plano de consulta na dica de consulta use Plan.  
   
 2.  Verifique se o guia de plano foi aplicado à consulta.  
   
@@ -41,16 +41,16 @@ ms.locfileid: "62779108"
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como registrar um plano anterior à atualização para uma consulta através da criação de um guia de plano.  
   
-### <a name="step-1-collect-the-plan"></a>Etapa 1: Coletar o plano  
+### <a name="step-1-collect-the-plan"></a>Etapa 1: Colete o plano  
  O plano de consulta registrado no guia de plano deve estar em formato XML. Planos de consulta em formato XML podem ser produzidos das seguintes formas:  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
--   Consultando a coluna query_plan dos [. DM exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) função de gerenciamento dinâmico.  
+-   Consultando a coluna query_plan da função de gerenciamento dinâmico [Sys. dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) .  
   
--   O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), e [Showplan XML para Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) classes de evento.  
+-   As [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] classes de evento [Showplan](../../relational-databases/event-classes/showplan-xml-event-class.md)XML, [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)e [Showplan XML for Query compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) .  
   
  O exemplo a seguir coleta o plano de consulta para a instrução `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` examinando exibições de gerenciamento dinâmico.  
   
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Etapa 2: Criar o guia de plano para impor o plano  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Etapa 2: Crie a guia de plano para forçar o plano  
  Usando o plano de consulta com formato XML (obtido através de qualquer um dos métodos anteriormente descritos) no guia de plano, copie e cole o plano de consulta como uma literal de cadeia de caracteres dentro da dica de consulta USE PLAN especificada na cláusula OPTION de sp_create_plan_guide.  
   
  No próprio plano XML, faça a saída das aspas (') que aparecem no plano com um segundo sinal de aspas antes de criar o guia de plano. Por exemplo, a saída de um plano que contenha `WHERE A.varchar = 'This is a string'` deve ser feita modificando-se o código para `WHERE A.varchar = ''This is a string''`.  
@@ -88,12 +88,12 @@ EXECUTE sp_create_plan_guide
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Etapa 3: Verifique se o guia de plano é aplicado à consulta  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Etapa 3: Verifique se o guia de plano foi aplicado à consulta.  
  Execute a consulta novamente e examine o plano de consulta produzido. Você deve verificar se o plano corresponde ao que você especificou no guia de plano.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [Dicas de consulta &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [Dicas de consulta &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-query)   
  [Guias de plano](../../relational-databases/performance/plan-guides.md)  
   
   

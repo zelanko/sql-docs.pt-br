@@ -1,5 +1,5 @@
 ---
-title: Função Upper-case (XQuery) | Microsoft Docs
+title: Função maiúscula (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004610"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funções em Valores da Cadeia de Caracteres – upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Esta função converte cada caractere em *$arg* em seu equivalente de letras maiusculas. No Microsoft Windows, a conversão binária de maiúsculas e minúsculas para pontos de código Unicode especifica como os caracteres são convertidos em letras maiúsculas. Esse padrão é diferente do mapeamento para o padrão de ponto de código padrão Unicode.  
+  Essa função converte cada caractere em *$ARG* em seu equivalente em maiúsculas. No Microsoft Windows, a conversão binária de maiúsculas e minúsculas para pontos de código Unicode especifica como os caracteres são convertidos em letras maiúsculas. Esse padrão é diferente do mapeamento para o padrão de ponto de código padrão Unicode.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,12 +42,12 @@ fn:upper-case($arg as xs:string?) as xs:string
 |*$arg*|O valor de cadeia de caracteres a ser convertido para letras maiúsculas.|  
   
 ## <a name="remarks"></a>Comentários  
- Se o valor de *$arg* está vazia, uma cadeia de caracteres de comprimento zero será retornada.  
+ Se o valor de *$ARG* estiver vazio, uma cadeia de caracteres de comprimento zero será retornada.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-changing-a-string-to-upper-case"></a>A. Alterando uma cadeia de caracteres para letras maiúsculas  
- O exemplo a seguir altera a cadeia de caracteres de entrada ' abcDEF! @4' para letras maiusculas.  
+### <a name="a-changing-a-string-to-upper-case"></a>a. Alterando uma cadeia de caracteres para letras maiúsculas  
+ O exemplo a seguir altera a cadeia de caracteres de entrada ' abcDEF! ' @4' em maiúsculas.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -118,7 +118,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>Consulte também  
- [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

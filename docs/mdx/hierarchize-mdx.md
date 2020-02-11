@@ -1,5 +1,5 @@
 ---
-title: Hierarquize (MDX) | Microsoft Docs
+title: Hierarquia (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105429"
 ---
 # <a name="hierarchize-mdx"></a>Hierarquize (MDX)
@@ -32,14 +32,14 @@ Hierarchize(Set_Expression [ , POST ] )
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
 ## <a name="remarks"></a>Comentários  
- O **Hierarchize** função organiza os membros do conjunto especificado em ordem hierárquica. A função sempre retém duplicatas.  
+ A função de **hierarquia** organiza os membros do conjunto especificado em ordem hierárquica. A função sempre retém duplicatas.  
   
--   Se **POST** não for especificado, a função classificará os membros em um nível na ordem natural. Sua ordem natural é a ordem padrão dos membros na hierarquia quando nenhuma outra condição de classificação for especificada. Os membros filho seguem imediatamente seus membros pai.  
+-   Se **post** não for especificado, a função classificará Membros em um nível em sua ordem natural. Sua ordem natural é a ordem padrão dos membros na hierarquia quando nenhuma outra condição de classificação for especificada. Os membros filho seguem imediatamente seus membros pai.  
   
--   Se **POST** for especificado, o **Hierarchize** função classifica os membros em um nível usando a ordem pós-natural. Em outras palavras, os membros filho precedem seus pais.  
+-   Se **post** for especificado, a função de **hierarquia** classificará os membros em um nível usando uma ordem de pós-compilação. Em outras palavras, os membros filho precedem seus pais.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir faz drill up do membro Canadá. O **Hierarchize** função é usada para organizar os membros do conjunto especificado em ordem hierárquica, que é necessário para o **DrillUpMember** função.  
+ O exemplo a seguir faz drill up do membro Canadá. A função de **hierarquia** é usada para organizar os membros do conjunto especificado na ordem hierárquica, o que é exigido pela função **DrillupMember** .  
   
 ```  
 SELECT DrillUpMember   
@@ -58,7 +58,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregado sobre os primeiros nove meses de 2003 contidos na `Date` dimensão, da **Adventure Works** cubo. O **PeriodsToDate** função define as tuplas no conjunto sobre o qual a função Aggregate opera. O **Hierarchize** função organiza os membros do conjunto especificado de membros da dimensão de produto na ordem hierárquica.  
+ O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregados nos primeiros nove meses de 2003 contidos na `Date` dimensão, do cubo **Adventure Works** . A função **PeriodsToDate** define as tuplas no conjunto sobre o qual a função de agregação Opera. A função de **hierarquia** organiza os membros do conjunto de membros especificado da dimensão Produto na ordem hierárquica.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -85,7 +85,7 @@ WHERE ([Geography].[State-Province].x,
    [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

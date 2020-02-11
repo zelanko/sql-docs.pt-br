@@ -1,5 +1,5 @@
 ---
-title: Drilldownleveltop=1=«conjunto (MDX) | Microsoft Docs
+title: DrilldownLevelTop (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 461c91d7261b42b5828e2c515a89e8203f40e357
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049268"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
@@ -32,7 +32,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Count*  
+ *Contar*  
  Uma expressão numérica válida que especifica o número de tuplas a ser retornado.  
   
  *Level_Expression*  
@@ -45,13 +45,13 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  Uma palavra-chave para adicionar membros calculados para resultados da busca detalhada.  
   
 ## <a name="remarks"></a>Comentários  
- Se uma expressão numérica for especificada, o **DrilldownLevelTop** função classificará, em ordem decrescente, os filhos de cada membro no conjunto especificado de acordo com o valor da expressão numérica, conforme avaliado sobre o conjunto de filho membros. Se não for especificada uma expressão numérica, a função classificará, em ordem decrescente, os filhos de cada membro no conjunto especificado de acordo com os valores das células representadas pelo conjunto de membros filho, conforme determinado pelo contexto da consulta.  
+ Se uma expressão numérica for especificada, a função **DrilldownLevelTop** classificará, em ordem decrescente, os filhos de cada membro no conjunto especificado de acordo com o valor da expressão numérica, conforme avaliado sobre o conjunto de membros filho. Se não for especificada uma expressão numérica, a função classificará, em ordem decrescente, os filhos de cada membro no conjunto especificado de acordo com os valores das células representadas pelo conjunto de membros filho, conforme determinado pelo contexto da consulta.  
   
- Depois da classificação, o **DrilldownLevelTop** função retorna um conjunto que contém os membros pai e o número de membros filho, especificados na *contagem,* com o valor mais alto.  
+ Após a classificação, a função **DrilldownLevelTop** retorna um conjunto que contém os membros pai e o número de membros filho, especificados em *contagem,* com o valor mais alto.  
   
- O **DrilldownLevelTop** função é semelhante ao [DrilldownLevel](../mdx/drilldownlevel-mdx.md) função, mas em vez de incluir todos os filhos de cada membro no nível especificado, o **DrilldownLevelTop** função retorna o número mais alto de membros filho.  
+ A função **DrilldownLevelTop** é semelhante à função [DrilldownLevel](../mdx/drilldownlevel-mdx.md) , mas em vez de incluir todos os filhos de cada membro no nível especificado, a função **DrilldownLevelTop** retorna o número mais alto de membros filho.  
   
- Consultando a propriedade XMLA MdpropMdxDrillFunctions permite verificar o nível de suporte que o servidor fornece para as funções de detalhamento; ver [propriedades XMLA com suporte &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obter detalhes.  
+ Consultar a propriedade XMLA MdpropMdxDrillFunctions permite que você verifique o nível de suporte que o servidor fornece para as funções de análise; consulte [Propriedades XMLA com suporte &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obter detalhes.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna os três filhos superiores do nível Categoria do Produto, com base na medida padrão. No cubo de exemplo do Adventure Works, os três filhos superiores de Acessórios são Bicicletário, Suporte para bicicleta e Garrafas e compartimentos. No Management Studio, na janela de consulta do MDX, você pode navegar para Produtos | Categorias de Produto | Membros | Todos os Produtos | Acessórios para exibir a lista completa. Você pode aumentar o argumento Contagem para retornar mais membros.  
@@ -65,7 +65,7 @@ SELECT DrilldownLevelTop
    FROM [Adventure Works]  
 ```  
   
- O exemplo a seguir ilustra o uso de **include_calc_members** sinalizador, usado para incluir membros calculados no nível de detalhamento. A medida [contagem dos pedidos do revendedor] está incluída na **DrilldownLevelTop** instrução para garantir que os valores retornados são classificados por essa medida.  
+ O exemplo a seguir ilustra o uso do sinalizador **include_calc_members** , usado para incluir membros calculados no nível de busca detalhada. A medida [contagem de pedidos do revendedor] é incluída na instrução **DrilldownLevelTop** para garantir que os valores de retorno sejam classificados por essa medida.  
   
 ```  
 WITH MEMBER   
@@ -82,8 +82,8 @@ DRILLDOWNLEVELTOP(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [DrilldownLevel&#41;MDX &#40;](../mdx/drilldownlevel-mdx.md)   
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

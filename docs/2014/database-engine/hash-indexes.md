@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779474"
 ---
 # <a name="hash-indexes"></a>Índices de hash
@@ -22,7 +22,7 @@ ms.locfileid: "62779474"
   
  Um índice de hash consiste em uma coleção de buckets organizados em uma matriz. Uma função de hash mapeia chaves de índice para buckets correspondentes no índice de hash. A figura a seguir mostra três chaves de índice mapeadas para três buckets diferentes no índice de hash. Para fins ilustrativos, o nome da função de hash é f(x).  
   
- ![Chaves de índice mapeadas para buckets diferentes. ](../../2014/database-engine/media/hekaton-tables-2.gif "Chaves de índice mapeadas para buckets diferentes.")  
+ ![Chaves de índice mapeadas para buckets diferentes.](../../2014/database-engine/media/hekaton-tables-2.gif "Chaves de índice mapeadas para buckets diferentes.")  
   
  A função de hash usada para índices de hash tem as seguintes características:  
   
@@ -40,13 +40,13 @@ ms.locfileid: "62779474"
   
  A estrutura de índice de hash na memória consiste em uma matriz de ponteiros de memória. Cada bucket é mapeado para um deslocamento nesta matriz. Cada bucket na matriz aponta para a primeira linha desse bucket de hash. Cada linha no bucket aponta para a próxima linha, resultando em uma cadeia de linhas para cada bucket de hash, conforme ilustrado na figura a seguir.  
   
- ![A estrutura de índice de hash em memória. ](../../2014/database-engine/media/hekaton-tables-3.gif "a estrutura de índice de hash em memória.")  
+ ![A estrutura de índice de hash em memória.](../../2014/database-engine/media/hekaton-tables-3.gif "A estrutura de índice de hash em memória.")  
   
  A figura tem três buckets com linhas. O segundo bucket na parte superior contém as três linhas vermelhas. O quarto bucket contém uma única linha azul. O bucket inferior contém as duas linhas verdes. Essas versões podem ser diferentes e estarem na mesma linha.  
   
- Para obter mais informações sobre índices para tabelas com otimização de memória, consulte [Diretrizes para usar índices em tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ Para obter mais informações sobre índices para tabelas com otimização de memória, consulte [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices em tabelas com otimização de memória](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   
