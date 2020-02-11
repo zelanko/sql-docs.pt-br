@@ -17,14 +17,14 @@ ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9db49905b6548e5cb21cca976683c8b387017d32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919129"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Método Delete (Coleção de campos ADO)
-Exclui um objeto a partir de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção.  
+Exclui um objeto da coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,17 +33,17 @@ Exclui um objeto a partir de [campos](../../../ado/reference/ado-api/fields-coll
 Fields.Delete Field  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Campo*  
- Um **Variant** que designa a [campo](../../../ado/reference/ado-api/field-object.md) objeto a ser excluído. Esse parâmetro pode ser o nome da **campo** objeto ou a posição ordinal do **campo** objeto propriamente dito.  
+ Uma **variante** que designa o objeto de [campo](../../../ado/reference/ado-api/field-object.md) a ser excluído. Esse parâmetro pode ser o nome do objeto de **campo** ou a posição ordinal do próprio objeto **Field** .  
   
 ## <a name="remarks"></a>Comentários  
- Chamar o **Fields.Delete** método em um aberto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) causa um erro de tempo de execução.  
+ Chamar o método **Fields. Delete** em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) aberto causa um erro em tempo de execução.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Excluir método (coleção de parâmetros ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
- [Excluir método (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Método Delete (coleção de parâmetros ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+ [Método Delete (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Método DeleteRecord (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

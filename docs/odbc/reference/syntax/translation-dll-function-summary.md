@@ -1,5 +1,5 @@
 ---
-title: Resumo de funções de DLL de conversão | Microsoft Docs
+title: Resumo da função de DLL de tradução | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c84528779cf39a08218bff9ba045f49db5f61f8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039358"
 ---
 # <a name="translation-dll-function-summary"></a>Resumo de funções de DLL da conversão
-A tabela a seguir descreve as funções de DLL de conversão. Para obter mais informações sobre a sintaxe e semântica para cada função, consulte [referência de função de DLL de conversão](../../../odbc/reference/syntax/translation-dll-api-reference.md).  
+A tabela a seguir descreve as funções de DLL de tradução. Para obter mais informações sobre a sintaxe e a semântica para cada função, consulte [referência da função DLL de tradução](../../../odbc/reference/syntax/translation-dll-api-reference.md).  
   
 |Tarefa|Nome da função|Finalidade|  
 |----------|-------------------|-------------|  
-|Conversão de dados|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Converte todos os dados que fluem da fonte de dados para o driver.|  
-||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Converte todos os dados que fluem do driver para a fonte de dados.|
+|Convertendo dados|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Traduz todos os dados que fluem da fonte de dados para o driver.|  
+||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Traduz todos os dados que fluem do driver para a fonte de dados.|

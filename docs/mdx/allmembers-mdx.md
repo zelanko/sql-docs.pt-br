@@ -1,5 +1,5 @@
 ---
-title: AllMembers=2==retorna (MDX) | Microsoft Docs
+title: Todos os membros (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017155"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
@@ -32,23 +32,23 @@ Level_Expression.AllMembers
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expressão_Hierarquia*  
+ *Hierarchy_Expression*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
  *Level_Expression*  
  Uma linguagem MDX válida que retorna um nível.  
   
 ## <a name="remarks"></a>Comentários  
- O **AllMembers** função retorna um conjunto que contém todos os membros, que inclui membros calculados, no nível ou hierarquia especificado. O **AllMembers** função retorna os membros calculados mesmo se a hierarquia ou nível especificado não contém nenhum membro visível.  
+ A função **Mymembers** retorna um conjunto que contém todos os membros, que inclui membros calculados, na hierarquia ou no nível especificado. A função **Mymembers** retorna os membros calculados mesmo se a hierarquia ou o nível especificado não contiver nenhum membro visível.  
   
 > [!IMPORTANT]  
 >  Quando uma dimensão contém apenas uma única hierarquia visível, a hierarquia pode ser mencionada pelo nome da dimensão ou pelo nome da hierarquia porque o nome da dimensão, nesse caso, é resolvido apenas na hierarquia visível. Por exemplo, `Measures.AllMembers` é uma expressão MDX válida porque é resolvida na única hierarquia da dimensão Measures.  
   
 > [!NOTE]  
->  O **AllMembers** função é semanticamente semelhante para o [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) função.  
+>  A função **Mymembers** é semanticamente semelhante à função [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) .  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna todos os membros na [`Date].[Calendar Year]` hierarquia de atributo no eixo da coluna, isso inclui os membros calculados e o conjunto de todos os filhos do `[Product].[Model Name]` hierarquia no eixo da linha de atributo a **Adventure Works** cubo.  
+ O exemplo a seguir retorna todos os membros na`Date].[Calendar Year]` [hierarquia de atributo no eixo de coluna, incluindo membros calculados e o conjunto de todos os filhos `[Product].[Model Name]` da hierarquia de atributo no eixo de linha do cubo **Adventure Works** .  
   
 ```  
 SELECT  
@@ -58,7 +58,7 @@ FROM
    [Adventure Works]  
 ```  
   
- O exemplo a seguir retorna todos os membros a **medidas** dimensão no eixo da coluna, isso inclui todos os membros calculados e o conjunto de todos os filhos do `[Product].[Model Name]` hierarquia no eixo de linhas de atributos da **Adventure Works** cubo.  
+ O exemplo a seguir retorna todos os membros da dimensão **medidas** no eixo de coluna, incluindo todos os membros calculados e o conjunto de todos os filhos `[Product].[Model Name]` da hierarquia de atributo no eixo de linha do cubo **Adventure Works** .  
   
 ```  
 SELECT  
@@ -68,9 +68,9 @@ FROM
     [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [AddCalculatedMembers&#41;MDX &#40;](../mdx/addcalculatedmembers-mdx.md)   
+ [&#41;de &#40;MDX de filhos](../mdx/children-mdx.md)   
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

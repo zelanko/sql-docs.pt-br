@@ -15,14 +15,14 @@ ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933369"
 ---
 # <a name="count-property-example-vb"></a>Exemplo da propriedade Count (VB)
-Este exemplo demonstra a [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade com duas coleções na ***funcionário*** banco de dados. A propriedade obtém o número de objetos em cada coleção e define o limite superior para loops que enumerá-las. Outra maneira de enumerá-las sem usar o **contagem** propriedade seria usar `For Each...Next` instruções.  
+Este exemplo demonstra a propriedade [Count](../../../ado/reference/ado-api/count-property-ado.md) com duas coleções no banco de dados ***Employee*** . A propriedade Obtém o número de objetos em cada coleção e define o limite superior para loops que enumeram essas coleções. Outra maneira de enumerar essas coleções sem usar a propriedade **Count** seria usar `For Each...Next` instruções.  
   
 ```  
 'BeginCountVB  
@@ -96,5 +96,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

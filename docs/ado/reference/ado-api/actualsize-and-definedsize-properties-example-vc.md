@@ -1,5 +1,5 @@
 ---
-title: Exemplo de ActualSize e propriedades DefinedSize (VC + +) | Microsoft Docs
+title: Exemplo das propriedades ActualSize e DefinedSize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921479"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>Exemplo de ActualSize e propriedades DefinedSize (VC + +)
-Este exemplo usa o [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propriedades para exibir o tamanho definido e o tamanho real de um campo.  
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>Exemplo das propriedades ActualSize e DefinedSize (VC + +)
+Este exemplo usa as propriedades [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) para exibir o tamanho definido e o tamanho real de um campo.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -128,24 +128,24 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **Nome do Store: Eric os livros de leitura**  
+ **Nome do repositório: Eric os livros de leitura**  
 **Tamanho definido: 40**  
 **Tamanho real: 19**  
-**Nome do Store: De Barnum**  
+**Nome do repositório: Barnum**  
 **Tamanho definido: 40**  
 **Tamanho real: 8**  
-**Nome do Store: Notícias e Brews**  
+**Nome do repositório: notícias & Brews**  
 **Tamanho definido: 40**  
 **Tamanho real: 12**  
-**Nome do Store: U Mat doc: Livros e qualidade lavanderia**  
+**Nome do repositório: doc-U-passe-me: Quality lavanderia and Books**  
 **Tamanho definido: 40**  
 **Tamanho real: 36**  
-**Nome do Store: Bookshop fricative**  
+**Nome do repositório: fricative Bookshop**  
 **Tamanho definido: 40**  
 **Tamanho real: 18**  
-**Nome do Store: Bookbeat**  
+**Nome do repositório: Bookbeat**  
 **Tamanho definido: 40**  
 **Tamanho real: 8**   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [Propriedade DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)

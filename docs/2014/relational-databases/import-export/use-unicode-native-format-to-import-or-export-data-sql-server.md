@@ -14,28 +14,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011572"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Usar o formato nativo Unicode para importar ou exportar dados (SQL Server)
-  O formato nativo Unicode é útil quando as informações devem ser copiadas de uma instalação [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a outra. O uso de formato nativo para dados do tipo não caractere economiza tempo, eliminando a conversão desnecessária de tipos de dados de e para o formato de caractere. O uso de formato de caractere Unicode para obter todos os dados de caractere impede a perda de qualquer caractere estendido durante a transferência de dados em massa entre servidores que usam páginas de código diferentes. Um arquivo de dados em formato nativo Unicode pode ser lido por qualquer método de importação em massa.  
+  O formato nativo Unicode é útil quando as informações devem ser copiadas de uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação para outra. O uso de formato nativo para dados do tipo não caractere economiza tempo, eliminando a conversão desnecessária de tipos de dados de e para o formato de caractere. O uso de formato de caractere Unicode para obter todos os dados de caractere impede a perda de qualquer caractere estendido durante a transferência de dados em massa entre servidores que usam páginas de código diferentes. Um arquivo de dados em formato nativo Unicode pode ser lido por qualquer método de importação em massa.  
   
  O formato nativo Unicode é recomendado para transferir em massa dados entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados com caracteres estendidos DBCS. Para obter dados do tipo não caractere, o formato nativo Unicode usa tipos de dados nativos (banco de dados). Para obter dados de caractere, como `char`, `nchar`, `varchar`, `nvarchar`, `text`, `varchar(max)`, `nvarchar(max)`e `ntext`, o formato nativo Unicode usa formato de dados de caractere Unicode.  
   
  Os dados `sql_variant` que são armazenados como um SQLVARIANT em um arquivo de dados do formato nativo Unicode operam da mesma maneira como em um arquivo de dados do formato nativo, exceto os valores `char` e `varchar` que são convertidos para `nchar` e `nvarchar`os quais dobram a quantidade de espaço de armazenamento exigido para as colunas afetadas. Os metadados originais são preservados e os valores são reconvertidos ao `char` original e ao tipo de dados `varchar` quando importados em massa em uma coluna de tabela.  
   
 ## <a name="command-options-for-unicode-native-format"></a>Opções de comando para formato nativo Unicode  
- Você pode importar dados de formato nativo Unicode para uma tabela usando **bcp**, BULK INSERT ou INSERT... SELECIONE \* DE OPENROWSET. Para um comando **bcp** ou uma instrução BULK INSERT, você pode especificar o formato de dados na linha de comando. Para uma instrução INSERT ... instrução SELECT * FROM OPENROWSET(BULK...); é necessário especificar o formato dos dados em um arquivo de formato.  
+ Você pode importar dados de formato nativo Unicode para uma tabela usando **bcp**, BULK INSERT ou INSERT... Selecione \* de OPENROWSET (bulk...). Para um comando **bcp** ou instrução BULK INSERT, você pode especificar o formato de dados na linha de comando. Para uma instrução INSERT... SELECT * FROM OPENROWSET(BULK...) , é necessário especificar o formato dos dados em um arquivo de formato.  
   
  O formato nativo Unicode é suportado pelas seguintes opções:  
   
-|Comando|Opção|Descrição|  
+|Comando|Opção|DESCRIÇÃO|  
 |-------------|------------|-----------------|  
-|**bcp**|**-N**|Faz com que o **bcp** utilitário para usar o formato nativo Unicode, que usa dados nativos (banco de dados) entre os tipos de dados de todos os não caractere e formato de dados de caractere Unicode para todos os caracteres (`char`, `nchar`, `varchar`, `nvarchar`, `text`, e `ntext`) dados.|  
-|BULK INSERT|DATAFILETYPE **='** widenative **'**|Usa o formato de caractere nativo Unicode na importação de dados em massa.|  
+|**BCP**|**-N**|Faz com que o utilitário **bcp** use o formato nativo Unicode, que usa tipos de dados nativos (banco de dado) para todos os dados não caracteres e formato de dados`char`de `nchar`caracteres `varchar`Unicode `nvarchar`para `text`todos os `ntext`dados de caractere (,,,, e).|  
+|BULK INSERT|DataFileType **= '** widenative **'**|Usa o formato de caractere nativo Unicode na importação de dados em massa.|  
   
  Para obter mais informações, consulte [Utilitário bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) ou [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
@@ -73,7 +73,7 @@ SELECT Col1,Col2,Col3 FROM myTestUniNativeData
 ### <a name="using-bcp-to-bulk-export-native-data"></a>Usando o bcp para exportar dados nativos em massa  
  Para exportar dados da tabela para o arquivo de dados, use **bcp** com a opção **out** e os seguintes qualificadores:  
   
-|Qualificadores|Descrição|  
+|Qualificadores|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**-N**|Especifica tipos de dados nativos.|  
 |**-T**|Especifica que o utilitário **bcp** se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conexão confiável usando segurança integrada. Se **-T** não for especificado, será necessário especificar **-U** e **-P** para que o logon tenha êxito.|  
@@ -111,8 +111,8 @@ GO
   
 -   [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Tipos de dados &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)  

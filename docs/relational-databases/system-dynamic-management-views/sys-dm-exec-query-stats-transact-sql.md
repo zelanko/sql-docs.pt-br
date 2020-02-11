@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a4fba10bd080c4b97cd38a7330611bed51f3d225
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982647"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
@@ -34,16 +34,16 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
   
 > [!NOTE]
 > - Os resultados de **Sys. dm_exec_query_stats** podem variar com cada execução, já que os dados refletem apenas as consultas concluídas e não os que ainda estão em andamento.
-> - Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **Sys. dm_pdw_nodes_exec_query_stats**.    
+> - Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_exec_query_stats**.    
 
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary(64)**  |É um token que identifica exclusivamente o lote ou o procedimento armazenado do qual a consulta faz parte.<br /><br /> **sql_handle**, junto com **statement_start_offset** e **statement_end_offset**, podem ser usados para recuperar o texto SQL da consulta chamando a função de gerenciamento dinâmico **Sys. dm_exec_sql_text** .|  
+|**sql_handle**|**varbinary (64)**  |É um token que identifica exclusivamente o lote ou o procedimento armazenado do qual a consulta faz parte.<br /><br /> **sql_handle**, junto com **statement_start_offset** e **statement_end_offset**, podem ser usados para recuperar o texto SQL da consulta chamando a função de gerenciamento dinâmico **Sys. dm_exec_sql_text** .|  
 |**statement_start_offset**|**int**|Indica, em bytes, começando com 0, a posição inicial da consulta que a linha descreve dentro do texto de seu lote ou objeto persistente.|  
-|**statement_end_offset**|**int**|Indica, em bytes, começando com 0, a posição final da consulta que a linha descreve dentro do texto de seu lote ou objeto persistente. Para versões anteriores à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], um valor de-1 indica o final do lote. Comentários à direita não são mais incluídos.|  
+|**statement_end_offset**|**int**|Indica, em bytes, começando com 0, a posição final da consulta que a linha descreve dentro do texto de seu lote ou objeto persistente. Para versões anteriores [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], um valor de-1 indica o final do lote. Comentários à direita não são mais incluídos.|  
 |**plan_generation_num**|**bigint**|Um número de sequência que pode ser usado para distinguir entre instâncias de planos após uma recompilação.|  
-|**plan_handle**|**varbinary(64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de planos ou está em execução no momento. Esse valor pode ser passado para a função de gerenciamento dinâmico [Sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) para obter o plano de consulta.<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
+|**plan_handle**|**varbinary (64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de planos ou está em execução no momento. Este valor pode ser transmitido à função de gerenciamento dinâmico [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) para a obtenção do plano de consulta.<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**creation_time**|**datetime**|Hora em que o plano foi compilado.|  
 |**last_execution_time**|**datetime**|Hora do início da execução do plano.|  
 |**execution_count**|**bigint**|Número de vezes que o plano foi executado desde sua última compilação.|  
@@ -63,7 +63,7 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
 |**last_logical_reads**|**bigint**|Número de leituras lógicas efetuadas na última vez em que o plano foi executado.<br /><br /> Sempre será 0 ao consultar uma tabela com otimização de memória.|  
 |**min_logical_reads**|**bigint**|Número mínimo de leituras lógicas que este plano efetuou durante uma única execução.<br /><br /> Sempre será 0 ao consultar uma tabela com otimização de memória.|  
 |**max_logical_reads**|**bigint**|Número máximo de leituras lógicas que este plano efetuou durante uma única execução.<br /><br /> Sempre será 0 ao consultar uma tabela com otimização de memória.|  
-|**total_clr_time**|**bigint**|Tempo, relatado em microssegundos (mas preciso somente em milissegundos), consumido dentro de objetos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) por execuções deste plano desde que ele foi compilado. Os objetos CLR podem ser procedimentos armazenados, funções, gatilhos, tipos e agregações.|  
+|**total_clr_time**|**bigint**|Tempo, relatado em microssegundos (mas preciso apenas em milissegundos), consumido [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dentro de objetos Common Language Runtime (CLR) por execuções deste plano desde que ele foi compilado. Os objetos CLR podem ser procedimentos armazenados, funções, gatilhos, tipos e agregações.|  
 |**last_clr_time**|**bigint**|Tempo, relatado em microssegundos (mas só preciso em milissegundos), consumido pela execução dentro de objetos CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] durante a última execução desse plano. Os objetos CLR podem ser procedimentos armazenados, funções, gatilhos, tipos e agregações.|  
 |**min_clr_time**|**bigint**|Tempo mínimo, relatado em microssegundos (mas preciso somente em milissegundos), que esse plano já consumiu dentro de objetos CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] durante uma única execução. Os objetos CLR podem ser procedimentos armazenados, funções, gatilhos, tipos e agregações.|  
 |**max_clr_time**|**bigint**|Tempo máximo, relatado em microssegundos (mas preciso somente em milissegundos), que esse plano já consumiu dentro de CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] durante uma única execução. Os objetos CLR podem ser procedimentos armazenados, funções, gatilhos, tipos e agregações.|  
@@ -71,13 +71,13 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
 |**last_elapsed_time**|**bigint**|Tempo decorrido, relatado em microssegundos (mas preciso somente em milissegundos), para a execução completa mais recente desse plano.|  
 |**min_elapsed_time**|**bigint**|Tempo decorrido mínimo, relatado em microssegundos (mas preciso somente em milissegundos), para qualquer execução concluída desse plano.|  
 |**max_elapsed_time**|**bigint**|Tempo decorrido máximo, relatado em microssegundos (mas preciso somente em milissegundos), para qualquer execução concluída desse plano.|  
-|**query_hash**|**Binary(8)**|Valor de hash binário calculado na consulta e usado para identificar consultas com lógica semelhante. Você pode usar o hash de consulta para determinar o recurso de agregação usado para consultas que são diferentes apenas nos valores literais.|  
-|**query_plan_hash**|**binary(8)**|Valor de hash binário calculado no plano de execução de consulta e usado para identificar planos de execução de consulta semelhantes. Você pode usar o hash de plano de consulta para localizar o custo cumulativo de consultas com planos de execução semelhantes.<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
+|**query_hash**|**Binário (8)**|Valor de hash binário calculado na consulta e usado para identificar consultas com lógica semelhante. Você pode usar o hash de consulta para determinar o recurso de agregação usado para consultas que são diferentes apenas nos valores literais.|  
+|**query_plan_hash**|**binário (8)**|Valor de hash binário calculado no plano de execução de consulta e usado para identificar planos de execução de consulta semelhantes. Você pode usar o hash de plano de consulta para localizar o custo cumulativo de consultas com planos de execução semelhantes.<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**total_rows**|**bigint**|O número total de linhas retornadas pela consulta. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**last_rows**|**bigint**|O número total de linhas retornadas pela última execução da consulta. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**min_rows**|**bigint**|Número mínimo de linhas já retornadas pela consulta durante uma execução. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**max_rows**|**bigint**|Número máximo de linhas já retornadas pela consulta durante uma execução. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
-|**statement_sql_handle**|**varbinary(64)**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> Populado com valores não nulos somente se Repositório de Consultas estiver ativado e coletando as estatísticas para essa consulta específica.|  
+|**statement_sql_handle**|**varbinary (64)**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> Populado com valores não nulos somente se Repositório de Consultas estiver ativado e coletando as estatísticas para essa consulta específica.|  
 |**statement_context_id**|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> Populado com valores não nulos somente se Repositório de Consultas estiver ativado e coletando as estatísticas para essa consulta específica.|  
 |**total_dop**|**bigint**|A soma total do grau de paralelismo que este plano usou desde que foi compilado. Será sempre 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
 |**last_dop**|**bigint**|O grau de paralelismo quando este plano foi executado pela última vez. Será sempre 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
@@ -103,19 +103,19 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
 |**last_used_threads**|**bigint**|O número de threads paralelos usados quando este plano foi executado pela última vez. Será sempre 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
 |**min_used_threads**|**bigint**|O número mínimo de threads paralelos usados que esse plano já usou durante uma execução. Será sempre 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
 |**max_used_threads**|**bigint**|O número máximo de threads paralelos usados que esse plano já usou durante uma execução. Será sempre 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
-|**total_columnstore_segment_reads**|**bigint**|A soma total de segmentos columnstore lidos pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**last_columnstore_segment_reads**|**bigint**|O número de segmentos columnstore lidos pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**min_columnstore_segment_reads**|**bigint**|O número mínimo de segmentos columnstore já lidos pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**max_columnstore_segment_reads**|**bigint**|O número máximo de segmentos columnstore já lidos pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**total_columnstore_segment_skips**|**bigint**|A soma total de segmentos columnstore ignorada pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**last_columnstore_segment_skips**|**bigint**|O número de segmentos columnstore ignorados pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**min_columnstore_segment_skips**|**bigint**|O número mínimo de segmentos columnstore já ignorados pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**max_columnstore_segment_skips**|**bigint**|O número máximo de segmentos columnstore já ignorados pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|
-|**total_spills**|**bigint**|O número total de páginas despejadas pela execução desta consulta desde sua compilação.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**last_spills**|**bigint**|O número de páginas despejadas na última vez em que a consulta foi executada.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**min_spills**|**bigint**|O número mínimo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**max_spills**|**bigint**|O número máximo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**total_columnstore_segment_reads**|**bigint**|A soma total de segmentos columnstore lidos pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|    
+|**last_columnstore_segment_reads**|**bigint**|O número de segmentos columnstore lidos pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|    
+|**min_columnstore_segment_reads**|**bigint**|O número mínimo de segmentos columnstore já lidos pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|    
+|**max_columnstore_segment_reads**|**bigint**|O número máximo de segmentos columnstore já lidos pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|    
+|**total_columnstore_segment_skips**|**bigint**|A soma total de segmentos columnstore ignorada pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|    
+|**last_columnstore_segment_skips**|**bigint**|O número de segmentos columnstore ignorados pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|    
+|**min_columnstore_segment_skips**|**bigint**|O número mínimo de segmentos columnstore já ignorados pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|    
+|**max_columnstore_segment_skips**|**bigint**|O número máximo de segmentos columnstore já ignorados pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|
+|**total_spills**|**bigint**|O número total de páginas despejadas pela execução desta consulta desde sua compilação.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|  
+|**last_spills**|**bigint**|O número de páginas despejadas na última vez em que a consulta foi executada.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|  
+|**min_spills**|**bigint**|O número mínimo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|  
+|**max_spills**|**bigint**|O número máximo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partir [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] do SP2 e do Cu3|  
+|**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|Número total de leituras de servidor de página remota executadas por execuções deste plano desde sua compilação.<br /><br /> **Aplica-se a:** Hiperescala do BD SQL do Azure |  
 |**last_page_server_reads**|**bigint**|Número de leituras de servidor de página remota executadas na última vez em que o plano foi executado.<br /><br /> **Aplica-se a:** Hiperescala do BD SQL do Azure |  
 |**min_page_server_reads**|**bigint**|O número mínimo de servidores de página remotos lê que esse plano já realizou durante uma única execução.<br /><br /> **Aplica-se a:** Hiperescala do BD SQL do Azure |  
@@ -125,16 +125,16 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
   
 ## <a name="permissions"></a>Permissões  
 
-No [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer a permissão `VIEW SERVER STATE`.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a permissão `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
    
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As estatísticas na exibição são atualizadas quando uma consulta é concluída.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-finding-the-top-n-queries"></a>A. Localizando as consultas TOP N  
- O exemplo a seguir retorna informações sobre as cinco principais consultas classificadas por tempo médio de CPU. Este exemplo agrega as consultas de acordo com o hash de consulta para que as consultas logicamente equivalentes sejam agrupadas pelo respectivo consumo de recursos cumulativo.  
+### <a name="a-finding-the-top-n-queries"></a>a. Localizando as consultas TOP N  
+ O exemplo a seguir retorna informações sobre as cinco principais consultas classificadas pelo tempo médio de CPU. Este exemplo agrega as consultas de acordo com o hash de consulta para que as consultas logicamente equivalentes sejam agrupadas pelo respectivo consumo de recursos cumulativo.  
   
 ```sql  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
@@ -174,11 +174,11 @@ ORDER BY qs.execution_count DESC;
 ```  
   
 ## <a name="see-also"></a>Confira também  
-[Execuções de gerenciamento dinâmico relacionadas à &#40;execução e funções&#41; de Transact-SQL](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
-[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
-[sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
-[sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+[sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 

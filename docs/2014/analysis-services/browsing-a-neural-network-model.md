@@ -1,5 +1,5 @@
 ---
-title: Procurando um modelo de rede Neural | Microsoft Docs
+title: Navegando em um modelo de rede neural | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4dcb323a309125695df6d3c483f8996d36fdfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088448"
 ---
 # <a name="browsing-a-neural-network-model"></a>Procurando um modelo de rede neural
   Quando você abre uma rede neural ou modelo de regressão logística usando **Procurar**, o modelo é exibido em um visualizador interativo, semelhante ao visualizador de modelo da rede neural no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O visualizador ajuda a explorar correlações e obter informações sobre os padrões no modelo e os dados subjacentes.  
   
-##  <a name="BKMK_Tabs"></a> Explorar o modelo  
+##  <a name="BKMK_Tabs"></a>Explorar o modelo  
  Os modelos que são baseados na Rede Neural ou os algoritmos de Regressão Logística da [!INCLUDE[msCoName](../includes/msconame-md.md)] são semelhantes porque analisam dados como um conjunto de conexões entre entradas e saídas conhecidas. O visualizador **Procurar** ajuda a explorar essas conexões, usando os seguintes controles:  
   
 -   [Variáveis](#BKMK_Variables)  
@@ -37,12 +37,12 @@ ms.locfileid: "66088448"
   
  Se quiser fazer experiências com esse visualizador, crie um modelo usando o assistente [Assistente de Classificação &#40;Suplementos de Mineração de Dados para Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) e use a opção **Avançado** para alterar o algoritmo para Regressão Logística da Microsoft na caixa de diálogo **Parâmetros do Algoritmo**.  
   
-###  <a name="BKMK_Variables"></a> Variáveis  
+###  <a name="BKMK_Variables"></a>As  
  O painel **Variáveis** exibe uma lista de variáveis de entrada pela ordem de seu efeito no modelo. Você usa os controles de **Entrada** e **Saída** para filtrar o modelo, afetando as variáveis que são exibidas, bem como sua ordem.  
   
  Usando esse visualizador, você poderá explorar os fatores que são muito importantes para determinar se um cliente mais provavelmente pertence à categoria Comprador de bicicleta ou não.  
   
- ![Testando o efeito no resultado de atributos selecionados](media/dm13-neuralnet-agebuyer1.gif "testando o efeito no resultado de atributos selecionados")  
+ ![Testando o efeito no resultado de atributos selecionados](media/dm13-neuralnet-agebuyer1.gif "Testando o efeito no resultado de atributos selecionados")  
   
 ##### <a name="explore-variables"></a>Explorar variáveis  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66088448"
   
      Para Renda, a coluna foi subdividida em agrupamentos como 78,4-154,06 (para o intervalo de renda mais alto).  
   
-     ![classificação para exibir como as variáveis foram compartimentadas](media/dm13-nn-bucketing-variables.gif "classificação para exibir como as variáveis foram compartimentadas")  
+     ![classificação para ver como as variáveis foram compartimentadas](media/dm13-nn-bucketing-variables.gif "classificação para ver como as variáveis foram compartimentadas")  
   
      Se você quiser agrupamentos diferentes, deverá usar a ferramenta [Rotular novamente &#40;Suplementos de Mineração de Dados do SQL Server&#41;](relabel-sql-server-data-mining-add-ins.md) ou funções do Excel, para criar novas categorias de renda antes de criar o modelo.  
   
@@ -72,24 +72,24 @@ ms.locfileid: "66088448"
   
      Uma dica de ferramenta é exibida que inclui uma pontuação de *importância*, um par de pontuações de *probabilidade* e um par de valores de *comparação*.  
   
-    -   A **importância** é calculada pelo conjunto de dados inteiro e identifica o atributo que, considerando todas as entradas, está mais correlacionado com o resultado de destino. O visualizador classifica os valores no gráfico pelas pontuações de importância.  
+    -   A **importância** é calculada em todo o conjunto de dados e identifica o atributo que, considerando todas as entradas, está mais correlacionado com o resultado de destino. O visualizador classifica os valores no gráfico pelas pontuações de importância.  
   
-    -   A **probabilidade** é calculada para cada conjunto de pares atributo-valor, para os resultados de destino em todo o conjunto de dados.  
+    -   A **probabilidade** é calculada para cada conjunto de pares atributo-valor, para os resultados de destino, em todo o conjunto de dados.  
   
-    -   A **comparação de precisão** informa a utilidade desse par atributo-valor específico para promover um resultado ou outro.  
+    -   A comparação de **precisão** informa o quão útil esse par de atributo-valor específico é para promover um resultado ou outro.  
   
-     Observação: A dica de ferramenta contém as mesmas informações independentemente de você posicionar o mouse sobre uma coluna ou a outra.  
+     Observação: a dica de ferramenta contém as mesmas informações independentemente de você posicionar o mouse sobre uma coluna ou sobre a outra.  
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="BKMK_Inputs"></a> Entradas  
+###  <a name="BKMK_Inputs"></a>Informações  
  O painel **Entradas** permite escolher um conjunto de entradas e aplicá-lo como um filtro para o modelo, o que permite ver o efeito dessas opções no resultado, com base nos dados de treinamento  
   
 ##### <a name="explore-inputs"></a>Explorar entradas  
   
 1.  Suponha que você queira definir como destino um grupo específico e ver os fatores que mais influenciam a compra nesse grupo.  
   
-     No **entrada** painel, clique no  **\<todos os >** célula sob **atributo**e selecione **idade**.  
+     No painel de **entrada** , clique na ** \<célula todos os>** em **atributo**e selecione **idade**.  
   
      Para **Valor**, selecione a categoria de idade mais nova.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66088448"
   
      Por exemplo, para o atributo de entrada, adicione **Sexo** e selecione **Feminino** como o valor.  
   
-     ![Testando o efeito no resultado de atributos selecionados](media/dm13-neuralnet-agebuyer2.gif "testando o efeito no resultado de atributos selecionados")  
+     ![Testando o efeito no resultado de atributos selecionados](media/dm13-neuralnet-agebuyer2.gif "Testando o efeito no resultado de atributos selecionados")  
   
      Observe como a lista de variáveis muda. Agora **Renda** é a variável que mais importante em prever o resultado do destino.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66088448"
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="BKMK_Outputs"></a> Saídas  
+###  <a name="BKMK_Outputs"></a>Produz  
  No painel **Saídas**, você poderá escolher o resultado no qual está interessado. As redes neurais permitem especificar quantas colunas de resultados você desejar, embora adicionar mais saídas adicione também mais complexidade do modelo e pode exigir um tempo maior de processamento.  
   
  Para comparar duas saídas, elas deverão ter sido designadas como colunas **Prever** ou **Prever apenas**.  
@@ -127,13 +127,13 @@ ms.locfileid: "66088448"
  [Voltar ao início](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>Mais sobre modelos de redes neurais  
- As informações no visualizador são recuperadas do servidor usando um procedimento armazenado específico para esse tipo de modelo: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
+ As informações no visualizador são recuperadas do servidor usando um procedimento armazenado específico para esse tipo de modelo: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores  
   
  Se você quiser criar um modelo com vários atributos previsíveis usando os suplementos, use as opções de modelagem **Avançadas**.  
   
  Para obter mais informações, consulte [Criar uma estrutura de mineração &#40;Suplementos de mineração de dados do SQL Server&#41;](create-mining-structure-sql-server-data-mining-add-ins.md) e [Adicionar modelo à estrutura &#40;Suplementos de Mineração de Dados para Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Procurando modelos no Excel &#40;suplementos de mineração de dados do SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Pesquisando modelos no Excel &#40;SQL Server suplementos de mineração de dados&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

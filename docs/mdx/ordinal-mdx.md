@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b22cc6d5a609f8e1f585ccc1229e0e1cd67e1796
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055643"
 ---
 # <a name="ordinal-mdx"></a>Ordinal (MDX)
@@ -32,7 +32,7 @@ Level_Expression.Ordinal
  Uma linguagem MDX válida que retorna um nível.  
   
 ## <a name="remarks"></a>Comentários  
- O **Ordinal** função frequentemente é usada em conjunto com o **IIF** e **CurrentMember** funções para exibir valores diferentes condicionalmente em diferentes níveis de hierarquia, com base na posição ordinal de cada célula específica no resultado da consulta. Por exemplo, você pode usar o **Ordinal** função para executar cálculos em determinados níveis e exibir um valor padrão de "N/d" em outros níveis.  
+ A função **ordinal** é frequentemente usada em conjunto com as funções **IIF** e **CurrentMember** para exibir condicionalmente valores diferentes em níveis de hierarquia diferentes, com base na posição ordinal de cada célula específica no resultado da consulta. Por exemplo, você pode usar a função **ordinal** para executar cálculos em determinados níveis e exibir um valor padrão de "N/a" em outros níveis.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna o número ordinal para o nível Trimestre Calendário na hierarquia Calendário.  
@@ -43,7 +43,7 @@ SELECT Measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

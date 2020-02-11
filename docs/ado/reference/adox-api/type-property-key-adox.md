@@ -1,5 +1,5 @@
 ---
-title: Tipo de propriedade (chave) (ADOX) | Microsoft Docs
+title: Propriedade Type (chave) (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,25 +20,25 @@ ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e72c93cf7f2126e26d5ed09d3cff246319e0495a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965040"
 ---
 # <a name="type-property-key-adox"></a>Propriedade Type (Key) (ADOX)
 Indica o tipo da chave.  
   
-## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
- Define ou retorna um **longo** valor que pode ser um dos [KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md) constantes. O valor padrão é **adKeyPrimary**.  
+## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
+ Define ou retorna um valor **longo** que pode ser uma das constantes [KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md) . O valor padrão é **adKeyPrimary**.  
   
 ## <a name="remarks"></a>Comentários  
- Essa propriedade é somente leitura no [chave](../../../ado/reference/adox-api/key-object-adox.md) já está anexados a uma coleção de objetos.  
+ Esta propriedade é somente leitura em objetos de [chave](../../../ado/reference/adox-api/key-object-adox.md) já anexados a uma coleção.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo das propriedades UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Propriedade Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo das propriedades método, tipo de chave, RelatedColumn, RELATEDTABLE e UpdateRule da tecla Append (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Propriedade Type (coluna) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Propriedade Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
