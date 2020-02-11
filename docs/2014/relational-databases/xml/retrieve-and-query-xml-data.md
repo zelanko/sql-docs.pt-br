@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241204"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperar e consultar dados XML
@@ -40,7 +40,7 @@ FROM T1
   
  O resultado é `<doc/>`.  
   
- A declaração XML, como `<?xml version='1.0'?>`, não é preservada ao armazenar dados XML em uma instância de tipo de dados `xml`. Isso ocorre por design. A declaração XML () e seus atributos (versão/encoding/stand-alone) são perdidos depois que dados são convertidos para o tipo `xml`. A declaração XML é tratada como uma diretiva para o analisador XML. Os dados XML são armazenados internamente como ucs-2. Todos os outros PIs na instância XML são preservados.  
+ A declaração XML, como `<?xml version='1.0'?>`, não é preservada ao armazenar dados XML em uma instância de tipo de dados `xml`. Isso ocorre por design. A declaração XML () e seus atributos (versão/codificação/autônoma) são perdidos depois que os dados são convertidos no `xml`tipo. A declaração XML é tratada como uma diretiva para o analisador XML. Os dados XML são armazenados internamente como ucs-2. Todos os outros PIs na instância XML são preservados.  
   
   
 ### <a name="order-of-attributes"></a>Ordem dos atributos  
@@ -87,22 +87,22 @@ GO
   
   
 ##  <a name="query"></a> A configuração solicitou opções de consulta  
- Ao consultar `xml` colunas ou variáveis usando o tipo `xml` métodos de tipo de dados, as opções a seguir devem ser definidos como mostrado.  
+ Ao consultar colunas `xml` de tipo ou variáveis usando `xml` métodos de tipo de dados, as opções a seguir devem ser definidas como mostrado.  
   
 |Opções SET|Valores necessários|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
-|NUMERIC_ROUNDABORT|DESATIVADO|  
-|QUOTED_IDENTIFIER|ON|  
+|ANSI_NULLS|ATIVADO|  
+|ANSI_PADDING|ATIVADO|  
+|ANSI_WARNINGS|ATIVADO|  
+|ARITHABORT|ATIVADO|  
+|CONCAT_NULL_YIELDS_NULL|ATIVADO|  
+|NUMERIC_ROUNDABORT|OFF|  
+|QUOTED_IDENTIFIER|ATIVADO|  
   
- Se as opções não estiverem definidas conforme mostrado, consultas e modificações em `xml` métodos de tipo de dados falhará.  
+ Se as opções não estiverem definidas como mostrado, as consultas e modificações `xml` nos métodos de tipo de dados falharão.  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar instâncias de dados XML](create-instances-of-xml-data.md)  
   
   

@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919630"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Comparações de lógica de três valores e nulidade
@@ -36,7 +36,7 @@ ms.locfileid: "62919630"
  O namespace `System.Data.SqlTypes` introduz um tipo `SqlBoolean` para representar essa lógica de 3 valores. Comparações entre qualquer `SqlTypes` retornam um tipo de valor `SqlBoolean`. O valor UNKNOWN é representado pelo valor nulo do tipo `SqlBoolean`. São fornecidas as propriedades `IsTrue`, `IsFalse`e `IsNull` para verificar o valor de um tipo `SqlBoolean`.  
   
 ## <a name="operations-functions-and-null-values"></a>Operações, funções e valores NULL  
- Todos os operadores aritméticos (+, -, \*, /, %), operadores bit a bit (~, &, e |), e a maioria das funções retornarão NULL se qualquer um dos operandos ou argumentos de `SqlTypes` são NULL. A propriedade `IsNull` sempre retorna um valor true ou false.  
+ Todos os operadores aritméticos (+, \*-,,/,%), operadores de bit (~, & e |) e a maioria das funções retornarão NULL se qualquer um dos operandos ou argumentos de `SqlTypes` forem nulos. A propriedade `IsNull` sempre retorna um valor true ou false.  
   
 ## <a name="precision"></a>Precisão  
  Tipos de dados decimais no CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] têm valores máximos diferentes em relação aos tipos de dados numéricos e decimais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Além disso, no CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], tipos de dados decimais supõem a precisão máxima. No CLR do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no entanto, `SqlDecimal` fornece a mesma precisão e escala máximas, além da mesma semântica do tipo de dados decimal do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "62919630"
 ## <a name="overflow-detection"></a>Detecção de estouro  
  No CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], a adição de dois números muito grandes pode não lançar uma exceção. Na verdade, caso nenhum operador de verificação tenha sido usado, o resultado retornado pode ser "delimitado" como um inteiro negativo. Em `System.Data.SqlTypes`, são lançadas exceções para todos os estouros e erros de estouro, além de erros de divisão por zero.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados do SQL Server no .NET Framework](sql-server-data-types-in-the-net-framework.md)  
   
   

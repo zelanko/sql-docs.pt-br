@@ -1,5 +1,5 @@
 ---
-title: IsSibling (MDX) | Microsoft Docs
+title: Isirmão (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 15c80cec67b0a40c8ac4c436a45a4551132858f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105355"
 ---
 # <a name="issibling-mdx"></a>IsSibling (MDX)
@@ -35,7 +35,7 @@ IsSibling(Member_Expression1, Member_Expression2)
  Uma linguagem MDX válida que retorna um membro.  
   
 ## <a name="remarks"></a>Comentários  
- O **IsSibling** retornos de função **verdadeiro** se o primeiro membro especificado for um irmão do segundo membro especificado. Caso contrário, a função retornará **falsos**.  
+ A função **isirmãos** retornará **true** se o primeiro membro especificado for um irmão do segundo membro especificado. Caso contrário, a função retornará **false**.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retornará TRUE se o membro atual da hierarquia Fiscal da dimensão Data for um irmão de julho de 2002:  
@@ -50,7 +50,7 @@ IsSibling(Member_Expression1, Member_Expression2)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

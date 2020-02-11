@@ -1,5 +1,5 @@
 ---
-title: Novo ou editar registro de servidor (guia Geral) (Reporting Services) | Microsoft Docs
+title: Novo ou editar registro de servidor (guia geral) (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62844262"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Novo registro ou editar registro de servidor (guia Geral) (Reporting Services)
@@ -26,7 +26,7 @@ ms.locfileid: "62844262"
   
 ## <a name="options"></a>Opções  
  **Tipo de servidor**  
- Quando um servidor dos Servidores Registrados é registrado, a caixa **Tipo de servidor** é somente leitura e corresponde ao tipo de servidor exibido no painel **Servidores Registrados** . Para registrar um tipo de servidor diferente, clique no servidor desejado na barra de ferramentas **Servidores Registrados** antes de começar a registrar um novo servidor.  
+ Quando um servidor é registrado a partir de servidores registrados, a caixa **tipo de servidor** é somente leitura e corresponde ao tipo de servidor exibido no painel **servidores registrados** . Para registrar um tipo de servidor diferente, clique no servidor desejado na barra de ferramentas **Servidores Registrados** antes de começar a registrar um novo servidor.  
   
  **Nome do servidor**  
  Especifique a instância do servidor de relatório para se conectar. No [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], você pode acessar um servidor de relatório por meio de seu nome de instância. Você pode ter uma instância de servidor de relatório para cada instância de SQL Server que instala. Se você estiver usando a instância padrão, digite o nome da instância do SQL Server. Caso esteja usando uma instância nomeada, especifique a instância nomeada para se conectar ao servidor de relatório no formato MSSQL$InstanceName.  
@@ -37,23 +37,23 @@ ms.locfileid: "62844262"
  **Modo de Autenticação do Windows (Autenticação do Windows)**  
  Conecte-se à instância de servidor de relatório usando as credenciais do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
- **Autenticação Básica**  
+ **Autenticação básica**  
  Conecte-se usando a **Autenticação Básica** se a instalação do Reporting Services estiver configurada para usar a Autenticação Básica.  
   
- **Autenticação de Formulários**  
+ **Autenticação de formulários**  
  Conecte-se usando a **Autenticação de Formulários** se a instalação do Reporting Services estiver configurada para usar uma extensão de autenticação personalizada.  
   
- **Nome do Usuário**  
+ **Nome de usuário**  
  Digite o nome de logon a ser usado na conexão. Essa opção estará disponível somente se você selecionou **Básica** ou **Autenticação de Formulários**.  
   
  **Senha**  
- Digite a senha para o nome de usuário. Essa opção só poderá ser editada se você selecionou **Básica** ou **Autenticação de Formulários**.  
+ Insira a senha para o nome de usuário. Essa opção só poderá ser editada se você selecionou **Básica** ou **Autenticação de Formulários**.  
   
  **Lembrar senha**  
  Armazene a senha que você digitou. Essa opção só estará disponível se você clicou em **Básico** ou **Autenticação de Formatos**.  
   
 > [!NOTE]  
->  Caso você tenha armazenado a senha e não queira mais fazê-lo, desmarque essa caixa de seleção e clique em **Salvar**.  
+>  Se você armazenou a senha e deseja parar de armazená-la, desmarque essa caixa de seleção e clique em **salvar**.  
   
  **Nome do servidor registrado**  
  O nome que você deseja exibir em Servidores Registrados. Esse nome não precisa corresponder ao nome na caixa **Nome do servidor** .  
@@ -61,7 +61,7 @@ ms.locfileid: "62844262"
  **Descrição do servidor registrado**  
  Digite uma descrição opcional do servidor.  
   
- **Teste**  
+ **Testar**  
  Clique para testar a conexão com o servidor selecionado em **Nome do servidor**.  
   
  **Salvar**  

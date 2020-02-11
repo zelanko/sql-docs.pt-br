@@ -1,5 +1,5 @@
 ---
-title: Modelo de árvore de navegação de uma decisão | Microsoft Docs
+title: Navegando em um modelo de árvores de decisão | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,48 +18,48 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064669"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Procurando um modelo de árvores de decisão
-  Quando você abre um modelo de classificação usando **navegue**, o modelo é exibido em um visualizador de árvore de decisão, semelhante do [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de árvores de decisão no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O visualizador exibe os resultados da classificação como um gráfico que foi criado para realçar os critérios que diferenciam um grupo de dados do outro. Você também pode analisar subconjuntos individuais da árvore e recuperar os dados subjacentes.  
+  Quando você abre um modelo de classificação usando **procurar**, o modelo é exibido em um visualizador de árvore de decisão interativa, [!INCLUDE[msCoName](../includes/msconame-md.md)] semelhante ao Visualizador de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]árvores de decisão no. O visualizador exibe os resultados da classificação como um gráfico que foi criado para realçar os critérios que diferenciam um grupo de dados do outro. Você também pode analisar subconjuntos individuais da árvore e recuperar os dados subjacentes.  
   
-##  <a name="bkmk_Top"></a> Explorar o modelo  
- Os modelos baseados no algoritmo Árvores de Decisão têm várias informações interessantes para explorar. O **procurar** janela inclui as guias e painéis para ajudá-lo a aprender os padrões e prever resultados usando o gráfico a seguir:  
+##  <a name="bkmk_Top"></a>Explorar o modelo  
+ Os modelos baseados no algoritmo Árvores de Decisão têm várias informações interessantes para explorar. A janela **procurar** inclui as seguintes guias e painéis para ajudá-lo a aprender os padrões e prever os resultados usando o grafo:  
   
--   [Árvore de Decisão](#BKMK_DecisionTree)  
+-   [Árvore de decisão](#BKMK_DecisionTree)  
   
--   [Rede de Dependências](#BKMK_DNetwork)  
+-   [Rede de dependências](#BKMK_DNetwork)  
   
  Para experimentar um modelo de árvores de decisão, você poderá usar os dados de exemplo na guia Dados de Treinamento (ou os Dados de Origem) da pasta de trabalho de dados de exemplo e criar um modelo de árvore de decisão usando Bike Buyer como o atributo previsível.  
   
-###  <a name="BKMK_DecisionTree"></a> Árvore de Decisão  
+###  <a name="BKMK_DecisionTree"></a>Árvore de decisão  
  Essa exibição pretende ajudá-lo a compreender e explorar os fatores que levam a um resultado.  
   
  O gráfico da árvore de decisão pode ser lido da esquerda para a direita da seguinte maneira:  
   
--   Os retângulos, que são denominados *nós*, contêm subconjuntos de dados. O rótulo no nó informa as características de definição desse subconjunto.  
+-   Os retângulos, que são chamados de *nós*, contêm subconjuntos dos dados. O rótulo no nó informa as características de definição desse subconjunto.  
   
--   O nó mais à esquerda, rotulado **todos os**, representa o conjunto de dados completo. Todos os nós subsequentes representam subconjuntos dos dados.  
+-   O nó mais à esquerda, rotulado como **todos**, representa o conjunto de dados completo. Todos os nós subsequentes representam subconjuntos dos dados.  
   
--   Uma árvore de decisão contém muitas *divide*, ou locais onde os dados divergem e em vários conjuntos baseados em atributos.  
+-   Uma árvore de decisão contém muitas *divisões*ou locais onde os dados divergem em vários conjuntos com base em atributos.  
   
      Por exemplo, a primeira divisão no modelo de exemplo divide o conjunto de dados em três grupos por idade.  
   
--   A divisão imediatamente após o **todos os** nó é mais importante, pois mostra a condição primária que divide esse conjunto de dados.  
+-   A divisão imediatamente após o nó **All** é mais importante porque mostra a condição principal que divide esse conjunto de DataSet.  
   
      Divisões adicionais ocorrem à direita. Portanto, ao analisar segmentos diferentes da árvore, você poderá saber quais atributos tinham mais influência sobre o comportamento de compra.  
   
- ![Gráfico de rede de dependência para um modelo de associação](media/dm13-dec-tree-split-definition.gif "grafo de rede de dependência para um modelo de associação")  
+ ![Gráfico da rede de dependências para um modelo de associação](media/dm13-dec-tree-split-definition.gif "Gráfico da rede de dependências para um modelo de associação")  
   
  Usando essas informações, você poderá concentrar uma campanha de marketing nos clientes que podem apenas precisar de incentivo para fazer uma compra.  
   
 ##### <a name="explore-the-decision-tree"></a>Explorar a árvore de decisão  
   
-1.  Clique o **todos os** nó e examine o **legenda de mineração**.  
+1.  Clique no nó **todos** e examine a legenda de **mineração**.  
   
      Ela exibe a contagem exata dos casos no conjunto de dados de treinamento, assim como uma análise dos resultados.  
   
@@ -67,60 +67,60 @@ ms.locfileid: "66064669"
   
 2.  Clique nos sinais de adição e subtração ao lado de cada nó para expandir ou recolher a árvore.  
   
-     Você também pode usar o **Mostrar nível** controle deslizante para expandir ou recolher a árvore.  
+     Você também pode usar o controle deslizante **Mostrar nível** para expandir ou reduzir a árvore.  
   
 3.  Observa que alguns nós são mais escuros do que outros?  
   
-     Por padrão, **população** é usado como a variável de sombreamento, o que significa que a intensidade da cor mostra os nós que têm mais suporte.  
+     Por padrão, a **população** é usada como a variável de sombreamento, o que significa que a intensidade da cor mostra quais nós têm o máximo de suporte.  
   
      Consequentemente, o nó mais à esquerda é o mais escuro, porque contém o conjunto de dados inteiro.  
   
-4.  Altere o valor de **plano de fundo** partir **todos os casos** para **Sim**.  
+4.  Altere o valor de **plano de fundo** de **todos os casos** para **Sim**.  
   
-     ![alteração gráfico da árvore de decisão para realçar compradores](media/dm13-dectreeshadedbuyer.gif "alterando o gráfico da árvore de decisão para realçar compradores")  
+     ![alterando o gráfico de árvore de decisão para realçar compradores](media/dm13-dectreeshadedbuyer.gif "alterando o gráfico de árvore de decisão para realçar compradores")  
   
 5.  Agora a intensidade da cor informa quantos clientes em cada nó compraram uma bicicleta, que é o comportamento no qual você está interessado.  
   
-     Observe as barras coloridas em cada nó. Este é um histograma que mostra a distribuição de resultados nesse subconjunto de dados. Por exemplo, a árvore de decisão do comprador de bicicleta de exemplo, a barra colorida mostra a proporção de clientes que compraram Bicicletas (valores Sim) versus aqueles que não compraram (nenhum valor). Para obter os valores exatos, você pode clicar no nó e exiba os **legenda de mineração**.  
+     Observe as barras coloridas em cada nó. Este é um histograma que mostra a distribuição de resultados nesse subconjunto de dados. Por exemplo, na árvore de decisão de comprador de bicicletas de amostra, a barra colorida mostra a proporção de clientes que compraram bicicletas (valores Sim) versus aqueles que não (nenhum valor). Para obter os valores exatos, você pode clicar no nó e exibir a **legenda de mineração**.  
   
 6.  Ao seguir o gráfico, você poderá ver como cada subconjunto de dados é decomposto em grupos menores, e quais os atributos são os mais úteis para prever um resultado.  
   
      Apenas examinar a intensidade do sombreamento, você poderá se concentrar em alguns grupos de interesse, e obter dados mais detalhados sobre eles para comparação. Por exemplo, esses grupos têm uma probabilidade consideravelmente mais alta de comprar bicicletas:  
   
-    -   Idade > = 32 e \< 53 and Renda anual > = 26000 e filhos = 0  
+    -   Age >= 32 e \< 53 e renda anual >= 26000 e filhos = 0  
   
          Total de casos: 1150  
   
-         Probabilidade do comprador de bicicleta: 18%  
+         Probabilidade do comprador de bicicletas: 18%  
   
-    -   Idade > = 32 e \< 53 and Renda anual > = 26000 e filhos não = 0 e estado civil = "Solteiro"  
+    -   Age >= 32 e \< 53 e receita anual >= 26000 e filhos não = 0 e estado civil = ' single '  
   
          Total de casos: 402  
   
-         Probabilidade do comprador de bicicleta: 16%  
+         Probabilidade do comprador de bicicletas: 16%  
   
-7.  Altere o valor de **plano de fundo** de **Sim** para **não** e veja como o gráfico muda.  
+7.  Altere o valor de **plano de fundo** de **Sim** para **não** e veja como o grafo é alterado.  
   
-     ![Gráfico de rede de dependência para um modelo de associação](media/dm13-dec-tree-background-no.gif "grafo de rede de dependência para um modelo de associação")  
+     ![Gráfico da rede de dependências para um modelo de associação](media/dm13-dec-tree-background-no.gif "Gráfico da rede de dependências para um modelo de associação")  
   
- **Dicas**  
+ **Sobre**  
   
 -   Se os dados puderem ser divididos em várias séries, um modelo diferente será criado para cada conjunto de dados que você quiser modelar.  
   
--   No modelo de dados de exemplo, há apenas um resultado previsível – comprador de bicicleta – mas suponha que você tenha informações sobre se o cliente comprou um plano de serviço e quisesse prever isso também. Nesse caso, você teria esses dados em uma coluna separada e incluiria dois atributos previsíveis no modelo.  
+-   No modelo de dados de exemplo, há apenas um comprador de bicicletas de resultado previsível, mas suponha que você tenha informações sobre se o cliente comprou um plano de serviço e queria prever isso também. Nesse caso, você teria esses dados em uma coluna separada e incluiria dois atributos previsíveis no modelo.  
   
-     Clique o **histograma** opção, no canto superior esquerdo do painel de árvore de decisão para alterar o número máximo de estados que podem aparecer nos histogramas na árvore. Isso será útil se o atributo previsível tiver muitos estados. Os estados aparecem em um histograma na ordem de popularidade da esquerda para a direita.  
+     Clique na opção **histograma** , no canto superior esquerdo do painel árvore de decisão, para alterar o número máximo de Estados que podem aparecer nos histogramas da árvore. Isso será útil se o atributo previsível tiver muitos estados. Os estados aparecem em um histograma na ordem de popularidade da esquerda para a direita.  
   
--   Você também pode usar as opções sobre o **árvore de decisão** guia para afetar como a árvore é exibida, zoom ou dimensionando o gráfico para se ajustar à janela.  
+-   Você também pode usar as opções na guia **árvore de decisão** para afetar a forma como a árvore é exibida, ampliando ou redimensionando o gráfico para se ajustar à janela.  
   
 -   Use a opção **Expansão Padrão** para definir o número padrão de níveis exibidos em todas as árvores no modelo.  
   
--   Selecione **Mostrar nome longo** para exibir o nome completo do atributo, inclusive a fonte de dados. Os nomes curtos e longos são iguais, a menos que seus casos sejam obtidos de uma fonte de dados diferente dos atributos para cada caso.  
+-   Selecione **Mostrar nome longo** para exibir o nome completo do atributo, incluindo a fonte de dados. Os nomes curtos e longos são iguais, a menos que seus casos sejam obtidos de uma fonte de dados diferente dos atributos para cada caso.  
   
  [Voltar ao início](#bkmk_Top)  
   
-###  <a name="BKMK_DNetwork"></a> Rede de Dependências  
- O **rede de dependências** modo de exibição exibe as conexões entre os atributos de entrada e os atributos previsíveis no modelo.  
+###  <a name="BKMK_DNetwork"></a>Rede de dependências  
+ A exibição **rede de dependências** exibe as conexões entre os atributos de entrada e os atributos previsíveis no modelo.  
   
 1.  Clique e arraste o controle deslizante à esquerda do visualizador  
   
@@ -128,32 +128,32 @@ ms.locfileid: "66064669"
   
 2.  Agora clique no nó Comprador de bicicleta.  
   
-     ![Exibição de rede de dependência para árvores de decisão](media/dm13-dectree-depnet.gif "exibição de rede de dependência para árvores de decisão")  
+     ![Exibição de rede de dependência para árvores de decisão](media/dm13-dectree-depnet.gif "Exibição de rede de dependência para árvores de decisão")  
   
      Quando você selecionar um nó, o visualizador destacará as dependências específicas ao nó. Nesse caso, o visualizador destacará cada nó que ajuda a prever o resultado.  
   
-3.  Se o visualizador contiver muitos nós, você pode procurar nós específicos usando o **localizar nó** botão. Clicar em **Localizar Nó** faz com que a caixa de diálogo **Localizar Nó** seja aberta, na qual você pode usar um filtro para pesquisar e selecionar nós específicos.  
+3.  Se o visualizador contiver muitos nós, você poderá pesquisar nós específicos usando o botão **Localizar nó** . Clicar em **Localizar Nó** faz com que a caixa de diálogo **Localizar Nó** seja aberta, na qual você pode usar um filtro para pesquisar e selecionar nós específicos.  
   
 4.  A legenda na parte inferior do visualizador vincula os nós de cores ao tipo de dependência no gráfico. Por exemplo, quando você seleciona um nó previsível, ele fica sombreado na cor turquesa e os nós que preveem o nó selecionado são sombreados em laranja.  
   
  [Voltar ao início](#bkmk_Top)  
   
 ### <a name="drill-through-to-underlying-data"></a>Detalhar os dados subjacentes  
- A capacidade de dar suporte a vários tipos de modelos *drill-through* do modelo para os dados de caso subjacentes. Isso pode ser muito útil se você quiser contatar os clientes em um segmento específico ou retirar os dados para executar uma análise mais detalhada.  
+ Vários tipos de modelos oferecem suporte à capacidade de *detalhamento* do modelo para os dados de caso subjacentes. Isso pode ser muito útil se você quiser contatar os clientes em um segmento específico ou retirar os dados para executar uma análise mais detalhada.  
   
 ##### <a name="get-case-data"></a>Obter dados de caso  
   
 1.  Clique com o botão direito do mouse no nó na árvore que contém os dados desejados e selecione uma destas opções:  
   
-    -   **Detalhar modelo**. Essa opção obtém os casos que pertencem ao nó selecionado e salva-os em uma tabela no Excel. Você obtém de volta apenas as colunas de dados que foram realmente usadas para criar o modelo.  
+    -   **Modelo de Drill-through**. Essa opção obtém os casos que pertencem ao nó selecionado e salva-os em uma tabela no Excel. Você obtém de volta apenas as colunas de dados que foram realmente usadas para criar o modelo.  
   
-    -   **Detalhar colunas da estrutura**. Essa opção obtém os casos que pertencem ao nó selecionado e salva-os em uma tabela no Excel. Você obtém todas as informações que estavam disponíveis no subjacente quando você criou, até mesmo de uma coluna de dados não foi usados no modelo. Por exemplo, você pode ter excluído o endereço e o código postal do cliente porque esses campos não são úteis na análise, mas deixou-os na estrutura.  
+    -   **Detalhar colunas de estrutura**. Essa opção obtém os casos que pertencem ao nó selecionado e salva-os em uma tabela no Excel. Você obtém todas as informações disponíveis nos dados subjacentes quando a criou, mesmo de uma coluna não foi usada no modelo. Por exemplo, você pode ter excluído o endereço e o código postal do cliente porque esses campos não são úteis na análise, mas deixou-os na estrutura.  
   
      Retorne para o Excel para exibir seus dados. O visualizador Procurar executa uma consulta, salva os dados em uma tabela em uma nova planilha e rotula os resultados.  
   
      ![os resultados de detalhamento são salvos no Excel](media/dm13-dectree-drillthroughresults.gif "os resultados de detalhamento são salvos no Excel")  
   
-## <a name="see-also"></a>Consulte também  
- [Procurando modelos no Excel &#40;suplementos de mineração de dados do SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Pesquisando modelos no Excel &#40;SQL Server suplementos de mineração de dados&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

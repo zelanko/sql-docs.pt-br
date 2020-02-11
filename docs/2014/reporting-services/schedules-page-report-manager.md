@@ -1,5 +1,5 @@
 ---
-title: Agenda a página (Gerenciador de relatórios) | Microsoft Docs
+title: Página agendas (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102323"
 ---
 # <a name="schedules-page-report-manager"></a>Página Agendas (Gerenciador de Relatórios)
@@ -43,25 +43,25 @@ ms.locfileid: "66102323"
  **Delete (excluir)**  
  Clique para remover uma agenda compartilhada.  
   
- **Pausar**  
+ **Temporariamente**  
  Clique para parar temporariamente a execução de uma agenda compartilhada. Quando uma agenda é pausada, isso impede que a assinatura e outros processos agendados sejam executados.  
   
- **Retomar**  
+ **Volte**  
  Clique para reiniciar uma agenda compartilhada. Processos interrompidos agendados para executar enquanto a agenda estava em pausa não são concluídos.  
   
  **Agenda**  
  Exibe as agendas compartilhadas atualmente definidas. Clique em uma agenda compartilhada para exibir ou editar informações de frequência.  
   
- **Criador**  
+ **Necessitam**  
  Exibe o nome do usuário que criou a agenda compartilhada.  
   
- **Última execução, próxima execução**  
+ **Última Execução, Próxima Execução**  
  Exibe quando a agenda compartilhada foi executada por último e quando será a próxima execução.  
   
  **Status**  
  Exibe se uma agenda compartilhada está em pausa ou ativa.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar, modificar e excluir agendas](subscriptions/create-modify-and-delete-schedules.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   

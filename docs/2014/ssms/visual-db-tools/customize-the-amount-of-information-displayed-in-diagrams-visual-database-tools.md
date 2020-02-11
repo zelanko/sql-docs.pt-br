@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270555"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personalizar o volume de informações exibidas em diagramas (Visual Database Tools)
@@ -31,11 +31,11 @@ ms.locfileid: "63270555"
   
 -   Nomes de coluna  
   
--   Chaves  
+-   simétricas  
   
 -   Apenas nome  
   
--   Personalizar  
+-   Personalizado  
   
 -   Modificar personalizado  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63270555"
   
 3.  Na caixa de diálogo **Seleção de Coluna** , escolha quais propriedades você quer mostrar quando **Personalizar** for escolhido no menu **Exibição de Tabela** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

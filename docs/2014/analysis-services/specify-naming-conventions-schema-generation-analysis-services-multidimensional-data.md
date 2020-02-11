@@ -1,5 +1,5 @@
 ---
-title: Especificar convenções de nomenclatura (Assistente de geração de esquema) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Especificar convenções de nomenclatura (Assistente de geração de esquema) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b767484af8266b03cf34ebfe4f625fee6c1ca97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068349"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Especificar Convenções de Nomenclatura (Assistente de Geração de Esquema) (Analysis Services - Dados Multidimensionais)
@@ -26,21 +26,21 @@ ms.locfileid: "66068349"
  **Opção**  
  Especifique as convenções de nomenclatura para uso do assistente. A tabela a seguir descreve as opções que podem ser especificadas.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
-|**Separador**|Especifica o caractere que separa palavras em um nome de objeto. Na coluna **Valor** , selecione **Sublinhado**, **Espaço**ou **Nenhum**. O padrão é **Sublinhado**.|  
-|**Prefixo de coluna de chave primária**|Especifica a cadeia de caracteres a ser usada como prefixo do nome de cada coluna de chave primária. O padrão é **PK**.|  
-|**Prefixo de coluna de chave estrangeira**|Especifica a cadeia de caracteres a ser usada como prefixo do nome de cada coluna de chave estrangeira. O padrão é **FK**.|  
-|**Sufixo de nome de atributo**|Especifica a cadeia de caracteres a ser acrescentada ao nome de cada coluna de atributo. O padrão é **Nome**.|  
+|**Caractere**|Especifica o caractere que separa palavras em um nome de objeto. Na coluna **Valor** , selecione **Sublinhado**, **Espaço**ou **Nenhum**. O padrão é **Sublinhado**.|  
+|**Prefixo da coluna de chave primária**|Especifica a cadeia de caracteres a ser usada como prefixo do nome de cada coluna de chave primária. O padrão é **PK**.|  
+|**Prefixo da coluna de chave estrangeira**|Especifica a cadeia de caracteres a ser usada como prefixo do nome de cada coluna de chave estrangeira. O padrão é **FK**.|  
+|**Sufixo do nome de atributo**|Especifica a cadeia de caracteres a ser acrescentada ao nome de cada coluna de atributo. O padrão é **nome**.|  
 |**Sufixo de acúmulo personalizado**|Especifica a cadeia de caracteres a ser acrescentada ao nome de cada coluna de acúmulo. O padrão é **CustomRollup**.|  
-|**Sufixo de propriedades de rollup personalizado**|Especifica a cadeia de caracteres a ser acrescentada ao nome de cada coluna de propriedade de acúmulo. O padrão é **CustomRollupProperties**.|  
+|**Sufixo de propriedades de acúmulo personalizado**|Especifica a cadeia de caracteres a ser acrescentada ao nome de cada coluna de propriedade de acúmulo. O padrão é **CustomRollupProperties**.|  
 |**Sufixo de operador unário**|Especifica a cadeia de caracteres a ser acrescentada ao nome de cada coluna de operador unário. O padrão é **UnaryOperator**.|  
   
- **Value**  
+ **Valor**  
  Especifique um valor para a opção especificada em **Opção** a ser usado quando o esquema for gerado.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de geração de esquema &#40;Analysis Services - dados multidimensionais&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de geração de esquema &#40;Analysis Services dados multidimensionais&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Analysis Services assistentes &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

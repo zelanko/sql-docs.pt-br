@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 65f9c926a75ae4d64e54d6f600aba2a70f0482cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63218102"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Método SetServiceAccount (classe SqlService)
@@ -40,28 +40,28 @@ ServiceStartName , ServiceStartPassword
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Um objeto da [classe SqlService](sqlservice-class.md) que representa o serviço.  
   
-#### <a name="parameters"></a>Parâmetros  
- *ServiceStartName*  
+#### <a name="parameters"></a>parâmetros  
+ *Instart*  
  Um valor da cadeia de caracteres que especifica o nome de conta com a qual o serviço é executado. Dependendo do tipo de serviço, o nome da conta pode estar no formulário de DomainName\Username. Quando for executado, o processo de serviço será registrado usando-se um dos dois formulários:  
   
 -   Se a conta pertencer ao domínio interno, \Username poderá ser especificado.  
   
--   Se NULL for especificado, o serviço será registrado como o **LocalSystem** conta.  
+-   Se NULL for especificado, o serviço será conectado como a conta **LocalSystem** .  
   
- Para drivers de nível de sistema ou núcleo *StartName* contém o nome de objeto do driver, \FileSystem\Rdr ou \Driver\Xns, que o sistema de e/s usa para carregar o driver de dispositivo. Se NULL for especificado, o driver será executado com o nome do objeto padrão criado pelo sistema de E/S com base no nome do serviço, por exemplo DWDOM\Admin.  
+ Para drivers de nível de kernel ou de sistema, o *StartName* contém o nome do objeto de driver, \FileSystem\Rdr ou \Driver\Xns, que o sistema de e/s usa para carregar o driver de dispositivo. Se NULL for especificado, o driver será executado com o nome do objeto padrão criado pelo sistema de E/S com base no nome do serviço, por exemplo DWDOM\Admin.  
   
  *ServiceStartPassword*  
- Um valor de cadeia de caracteres que especifica a senha para o nome da conta de *StartName* parâmetro. Especifique NULL se você não estiver alterando a senha. Especifique uma cadeia de caracteres vazia se o serviço não tiver nenhuma senha.  
+ Um valor de cadeia de caracteres que especifica a senha para o nome da conta no parâmetro *StartName* . Especifique NULL se você não estiver alterando a senha. Especifique uma cadeia de caracteres vazia se o serviço não tiver nenhuma senha.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor `uint32`, que é 0 se o serviço tiver sido modificado com êxito ou 1 se a solicitação não tiver suporte. Qualquer outro número indica um erro.  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

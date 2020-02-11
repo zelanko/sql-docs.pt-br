@@ -1,5 +1,5 @@
 ---
-title: BOF, EOF e exemplo de propriedades do indicador (VC + +) | Microsoft Docs
+title: Exemplo das propriedades BOF, EOF e Bookmark (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920362"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF e exemplo de propriedades do indicador (VC + +)
-A primeira função neste exemplo usa o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) as propriedades para exibir uma mensagem se um usuário tenta mover o cursor após o primeiro ou último registro de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa o [indicador](../../../ado/reference/ado-api/bookmark-property-ado.md) propriedade para permitir que o usuário sinalize um registro em um **Recordset** e retornar a ele mais tarde.  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>Exemplo das propriedades BOF, EOF e Bookmark (VC + +)
+A primeira função neste exemplo usa as propriedades [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) para exibir uma mensagem se um usuário tentar mover o primeiro ou o último registro de um conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa a propriedade [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) para permitir que o usuário sinalize um registro em um **conjunto de registros** e retorne a ele mais tarde.  
   
- A segunda função usa a propriedade Bookmark para colocar o **indicador** de todos os outros registros de uma **conjunto de registros** em uma matriz e, em seguida, o conjunto de registros usando a matriz de filtros.  
+ A segunda função usa a Propriedade Bookmark para posicionar o **indicador** de todos os outros registros de um **conjunto de registros** em uma matriz e, em seguida, filtra o conjunto de registros usando a matriz.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -205,7 +205,7 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [BOF, EOF propriedades (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Propriedades BOF, EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Propriedade Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

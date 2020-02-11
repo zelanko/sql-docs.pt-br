@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 90ecf9d2f9c677351a4c199414be25d753fe5346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479960"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Criar uma hierarquia derivada (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "65479960"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
@@ -37,11 +37,11 @@ ms.locfileid: "65479960"
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Sobre o **exibição de modelo** página, na barra de menus, aponte para **gerenciar** e clique em **hierarquias derivadas**.  
+2.  Na página **exibição de modelo** , na barra de menus, aponte para **gerenciar** e clique em **hierarquias derivadas**.  
   
 3.  Na página **Manutenção da Hierarquia Derivada** , na lista **Modelo** , selecione um modelo.  
   
-4.  Clique em **adicionar hierarquia derivada**.  
+4.  Clique em **Adicionar hierarquia derivada**.  
   
 5.  Na página **Adicionar Hierarquia Derivada** , na caixa **Nome da hierarquia derivada** , digite um nome para a hierarquia.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "65479960"
   
 6.  Clique em **Salvar hierarquia derivada**.  
   
-7.  No **Editar hierarquia derivada** página, o **entidades e hierarquias disponíveis** painel, clique em uma entidade ou hierarquia e arraste-o para o **níveis atuais** painel.  
+7.  Na página **Editar hierarquia derivada** , no painel **entidades e hierarquias disponíveis** , clique em uma entidade ou hierarquia e arraste-a para o painel **níveis atuais** .  
   
 8.  Continue a arrastar entidades ou hierarquias até que sua hierarquia esteja completa.  
   
 9. Clique em **Voltar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquias derivadas &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
  [Hierarquias derivadas com limites explícitos &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [Atributos baseados em domínio &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  

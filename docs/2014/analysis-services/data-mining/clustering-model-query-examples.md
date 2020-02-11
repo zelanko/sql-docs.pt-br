@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085716"
 ---
 # <a name="clustering-model-query-examples"></a>Exemplos de consulta de modelo de clustering
@@ -28,7 +28,7 @@ ms.locfileid: "66085716"
   
  **Consultas de conteúdo**  
   
- [Obtendo metadados do modelo usando DMX](#bkmk_Query1)  
+ [Obtendo metadados de modelo usando DMX](#bkmk_Query1)  
   
  [Recuperando metadados do modelo do conjunto de linhas de esquema](#bkmk_Query2)  
   
@@ -36,9 +36,9 @@ ms.locfileid: "66085716"
   
  [Retornando atributos para um cluster](#bkmk_Query4)  
   
- [Retornando um perfil de cluster por meio de procedimentos armazenados do sistema](#bkmk_Query5)  
+ [Retornando um perfil de cluster usando procedimentos armazenados do sistema](#bkmk_Query5)  
   
- [Localizando fatores de distinção para um cluster](#bkmk_Query6)  
+ [Localizando fatores de discriminador para um cluster](#bkmk_Query6)  
   
  [Retornando casos que pertencem a um cluster](#bkmk_Query7)  
   
@@ -50,12 +50,12 @@ ms.locfileid: "66085716"
   
  [Retornando todos os possíveis clusters com probabilidade e distância](#bkmk_Query10)  
   
-##  <a name="bkmk_top2"></a> Localizando informações sobre o modelo  
+##  <a name="bkmk_top2"></a>Localizando informações sobre o modelo  
  Todos os modelos de mineração expõem o conteúdo captado pelo algoritmo de acordo com um esquema padronizado, o conjunto de linhas do esquema do modelo de mineração. Você pode criar consultas para o conjunto de linhas de esquema de modelo de mineração usando instruções DMX. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você também pode consultar os conjuntos de linhas de esquema diretamente como tabelas do sistema.  
   
  [Retornar ao início](#bkmk_top2)  
   
-###  <a name="bkmk_Query1"></a> Consulta de exemplo 1: Obtendo metadados do modelo usando DMX  
+###  <a name="bkmk_Query1"></a>Exemplo de consulta 1: obtendo metadados de modelo usando DMX  
  A consulta a seguir retorna os metadados básicos do modelo de clustering, `TM_Clustering`, que você criou no Tutorial de mineração de dados básico. Os metadados disponíveis no nó pai de um modelo de clustering incluem o nome do modelo, o banco de dados onde o modelo é armazenado e o número de nós filho do modelo. Esta consulta usa uma consulta de conteúdo DMX para recuperar os metadados do nó pai do modelo:  
   
 ```  
@@ -68,13 +68,13 @@ WHERE NODE_TYPE = 1
 > [!NOTE]  
 >  É necessário colocar o nome na coluna, CHILDREN_CARDINALITY, entre colchetes para diferenciá-lo da palavra-chave reservada MDX do mesmo nome.  
   
- Resultados do exemplo:  
+ Exemplos de resultados:  
   
 |||  
 |-|-|  
 |MODEL_CATALOG|TM_Clustering|  
 |MODEL_NAME|Adventure Works DW|  
-|NODE_CAPTION|Cluster Model|  
+|NODE_CAPTION|Modelo de cluster|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
 |NODE_DESCRIPTION|Todos|  
@@ -83,7 +83,7 @@ WHERE NODE_TYPE = 1
   
  [Retornar ao início](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a> Consulta de exemplo 2: Recuperando metadados do modelo do conjunto de linhas de esquema  
+###  <a name="bkmk_Query2"></a>Exemplo de consulta 2: Recuperando metadados de modelo do conjunto de linhas de esquema  
  É possível consultar o conjunto de linhas de esquema de mineração de dados para encontrar as mesmas informações retornadas em uma consulta de conteúdo DMX. No entanto, o conjunto de linhas de esquema fornece algumas colunas adicionais. Essas colunas incluem os parâmetros usados quando o modelo foi criado, a data e a hora em que o modelo foi processado pela última vez e o proprietário do modelo.  
   
  O exemplo a seguir retorna a data em que o modelo foi criado, modificado e processado pela última vez, além dos parâmetros de cluster usados para criar o modelo e o tamanho do conjunto de treinamento. Essas informações podem ser úteis para documentar o modelo ou para determinar quais opções de clustering foram usadas para criar um modelo existente.  
@@ -94,7 +94,7 @@ from $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM_Clustering'  
 ```  
   
- Resultados do exemplo:  
+ Exemplos de resultados:  
   
 |||  
 |-|-|  
@@ -109,7 +109,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
 ## <a name="finding-information-about-clusters"></a>Localizando informações sobre clusters  
  As consultas de conteúdo mais úteis sobre modelos de clustering geralmente retornam o mesmo tipo de informação que você pode procurar por meio do **Visualizador de Cluster**. Isto inclui perfis de cluster, características de cluster e distinção de cluster. Esta seção fornece exemplos de consultas que recuperam essas informações.  
   
-###  <a name="bkmk_Query3"></a> Consulta de exemplo 3: Retornando um Cluster ou lista de Clusters  
+###  <a name="bkmk_Query3"></a>Exemplo de consulta 3: retornando um cluster ou lista de clusters  
  Como todos os clusters têm um tipo de nó 5, é possível recuperar facilmente uma lista de clusters consultando o conteúdo do modelo apenas para os nós desse tipo. Você também pode filtrar os nós que são retornados pela probabilidade ou pelo suporte, como mostra este exemplo.  
   
 ```  
@@ -118,7 +118,7 @@ FROM TM_Clustering.CONTENT
 WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000  
 ```  
   
- Resultados do exemplo:  
+ Exemplos de resultados:  
   
 |||  
 |-|-|  
@@ -135,7 +135,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
  [Retornar ao início](#bkmk_top2)  
   
-###  <a name="bkmk_Query4"></a> Consulta de exemplo 4: Retornando atributos para um cluster  
+###  <a name="bkmk_Query4"></a>Exemplo de consulta 4: retornando atributos para um cluster  
  Para cada cluster, o **Visualizador de Cluster** exibe um perfil que lista os atributos e seus valores. O visualizador também exibe um histograma que mostra a distribuição de valores para toda a população de casos do modelo. Se estiver procurando o modelo no visualizador, copie o histograma da Legenda de Mineração e cole-o no Excel ou em um documento do Word. Você também pode usar o painel Características do Cluster do visualizador para comparar graficamente os atributos de clusters diferentes.  
   
  No entanto, se for necessário obter valores para mais de um cluster de uma vez, é mais fácil consultar o modelo. Por exemplo, ao consultar o modelo, você pode perceber que os dois primeiros clusters diferem em um atributo, `Number Cars Owned`. Desse modo, você deve extrair os valores de cada cluster.  
@@ -158,7 +158,7 @@ WHERE NODE_TYPE = 5
 > [!NOTE]  
 >  A coluna da tabela aninhada, `PROBABILITY`, deve ficar entre colchetes porque ela também é o nome de uma palavra-chave MDX reservada.  
 >   
->  Resultados do exemplo:  
+>  Exemplos de resultados:  
   
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
@@ -167,17 +167,17 @@ WHERE NODE_TYPE = 5
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
-|001|Ausente|0|  
+|001|Missing|0|  
 |002|0|0.576980023|  
 |002|1|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1,60E-05|  
 |002|4|0|  
-|002|Ausente|0|  
+|002|Missing|0|  
   
  [Retornar ao início](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> Consulta de exemplo 5: Retornar um perfil de Cluster usando o sistema de procedimentos armazenados  
+###  <a name="bkmk_Query5"></a>Exemplo de consulta 5: retornar um perfil de cluster usando procedimentos armazenados do sistema  
  Para simplificar, em vez de gravar suas próprias consultas usando DMX, você também pode chamar os procedimentos armazenados de sistema que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa para trabalhar com clusters. O exemplo a seguir ilustra como é possível usar os procedimentos armazenados internos para retornar o perfil de um cluster com ID 002.  
   
 ```  
@@ -190,12 +190,12 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterPr
 CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCharacteristics('TM_Clustering", '009',0.0005  
 ```  
   
- Resultados do exemplo:  
+ Exemplos de resultados:  
   
 |Atributos|Valores|Frequência|Suporte|  
 |----------------|------------|---------------|-------------|  
 |Number Children at Home|0|0.999999829076798|899|  
-|Região|North America|0.999852875241508|899|  
+|Região|América do Norte|0.999852875241508|899|  
 |Total de Filhos|0|0.993860958572323|893|  
   
 > [!NOTE]  
@@ -203,7 +203,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  [Retornar ao início](#bkmk_top2)  
   
-###  <a name="bkmk_Query6"></a> Consulta de exemplo 6: Localizar fatores de distinção para um Cluster  
+###  <a name="bkmk_Query6"></a>Exemplo de consulta 6: localizar fatores de discriminação para um cluster  
  A guia **Distinção de Cluster** do **Visualizador de Cluster** permite que você compare com facilidade um cluster com outro ou um cluster com todos os casos restantes (o complemento do cluster).  
   
  No entanto, criar consultas para retornar essas informações pode ser complexo e talvez seja necessário algum processamento adicional no cliente para armazenar os resultados temporários e comparar os resultados de duas ou mais consultas. Para simplificar, você pode usar os procedimentos armazenados de sistema.  
@@ -214,13 +214,13 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
 CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDiscrimination('TM_Clustering','009','007',0.0005,true)  
 ```  
   
- Resultados do exemplo:  
+ Exemplos de resultados:  
   
 |Atributos|Valores|Pontuação|  
 |----------------|------------|-----------|  
-|Região|North America|100|  
+|Região|América do Norte|100|  
 |Ocupação em Inglês|Skilled Manual|94.9003803898654|  
-|Região|Europe|-72.5041051379789|  
+|Região|Europa|-72.5041051379789|  
 |Ocupação em Inglês|Manual|-69.6503163202722|  
   
  Estas são as mesmas informações apresentadas no gráfico do visualizador de **Distinção de Cluster** se você selecionar Cluster 9 na primeira lista suspensa e Cluster 7 na segunda lista suspensa. Para comparar o cluster 9 com seu complemento, use a cadeia de caracteres vazia no segundo parâmetro, como mostra o exemplo a seguir:  
@@ -234,7 +234,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  [Retornar ao início](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a> Consulta de exemplo 7: Retornando casos que pertencem a um cluster  
+###  <a name="bkmk_Query7"></a>Exemplo de consulta 7: retornando casos que pertencem a um cluster  
  Se o detalhamento estiver habilitado no modelo de mineração, você pode criar consultas que retornam informações detalhadas sobre os casos usados no modelo. Além disso, se o drillthrough tiver sido habilitado na estrutura de mineração, será possível incluir colunas da estrutura subjacente usando a função [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
   
  O exemplo a seguir retorna duas colunas que foram usadas no modelo (Idade e Região) e mais uma coluna (Nome) que não foi usada no modelo. A consulta só retorna casos que foram classificados no Cluster 1.  
@@ -252,11 +252,11 @@ WHERE IsInNode('001')
 ## <a name="making-predictions-using-the-model"></a>Fazendo predições com o modelo  
  Embora o clustering normalmente seja usado para descrever e entender dados, a implementação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] também permite que você faça previsões sobre associação do cluster e retorne probabilidades associadas à previsão. Esta seção fornece exemplos de como criar consultas de previsão em modelos de clustering. Você pode fazer previsões para vários casos, especificando uma fonte de dados tabular, ou fornecer novos valores de uma vez criando uma consulta singleton. Para deixar claros os exemplos, todas as consultas desta seção são singleton.  
   
- Para obter mais informações sobre como criar consultas de previsão usando DMX, consulte [Interfaces de consulta de mineração de dados](data-mining-query-tools.md).  
+ Para obter mais informações sobre como criar consultas de previsão usando DMX, consulte [interfaces de consulta de mineração de dados](data-mining-query-tools.md).  
   
  [Retornar ao início](#bkmk_top2)  
   
-###  <a name="bkmk_Query8"></a> Consulta de exemplo 8: Prevendo resultados de um modelo de clustering  
+###  <a name="bkmk_Query8"></a>Exemplo de consulta 8: prevendo resultados de um modelo de clustering  
  Se o modelo de clustering criado tiver um atributo previsível, use-o para fazer previsões sobre os resultados. No entanto, o modelo manipula o atributo previsível de modo diferente, dependendo da definição da coluna previsível com `Predict` ou `PredictOnly`. Se você definir o uso da coluna como `Predict`, os valores desse atributo serão adicionados ao modelo de clustering e aparecerão como atributos no modelo acabado. Porém, se você definir o uso da coluna como `PredictOnly`, os valores não serão usados para criar clusters. Em vez disso, quando o modo for concluído, o algoritmo de cluster criará novos valores para o atributo `PredictOnly` com base nos clusters aos quais cada caso pertence.  
   
  A consulta a seguir fornece um único caso novo para o modelo, onde as únicas informações sobre o caso são a idade e o sexo. A instrução SELECT especifica o par atributo/valor previsível de seu interesse e a função [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) informa a probabilidade de um caso com esses atributos ter o resultado planejado.  
@@ -299,7 +299,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- Resultados do exemplo:  
+ Exemplos de resultados:  
   
 |NormalizedValue|NonNormalizedValue|  
 |---------------------|------------------------|  
@@ -309,7 +309,7 @@ NATURAL PREDICTION JOIN
   
  [Retornar ao início](#bkmk_top2)  
   
-###  <a name="bkmk_Query9"></a> Consulta de exemplo 9: Determinando a associação do cluster  
+###  <a name="bkmk_Query9"></a>Exemplo de consulta 9: determinando a associação do cluster  
  Este exemplo usa a função [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) para retornar o cluster ao qual o novo caso provavelmente pertence e usa a função [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx) para retornar a probabilidade de associação nesse cluster.  
   
 ```  
@@ -322,17 +322,17 @@ NATURAL PREDICTION JOIN
   'S' AS [Marital Status]) AS t  
 ```  
   
- Resultados do exemplo:  
+ Exemplos de resultados:  
   
 |$CLUSTER|Expression|  
 |--------------|----------------|  
 |Cluster 2|0.397918596951617|  
   
- **Observação** por padrão, o `ClusterProbability` função retorna a probabilidade do cluster mais provável. No entanto, é possível especificar um cluster diferente usando a sintaxe `ClusterProbability('cluster name')`. Se você fizer isto, saiba que os resultados de cada função de previsão são independentes dos outros resultados. Portanto, a pontuação de probabilidade da segunda coluna pode fazer referência a um cluster diferente do nomeado na primeira coluna.  
+ **Observação** Por padrão, a `ClusterProbability` função retorna a probabilidade do cluster mais provável. No entanto, é possível especificar um cluster diferente usando a sintaxe `ClusterProbability('cluster name')`. Se você fizer isto, saiba que os resultados de cada função de previsão são independentes dos outros resultados. Portanto, a pontuação de probabilidade da segunda coluna pode fazer referência a um cluster diferente do nomeado na primeira coluna.  
   
  [Retornar ao início](#bkmk_top2)  
   
-###  <a name="bkmk_Query10"></a> Consulta de exemplo 10: Retornando todos os possíveis clusters com probabilidade e distância  
+###  <a name="bkmk_Query10"></a>Exemplo de consulta 10: retornando todos os possíveis clusters com probabilidade e distância  
  No exemplo anterior, a pontuação de probabilidade não foi muito alta. Para determinar se existe um cluster melhor, use a função [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx) junto com a função [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) para retornar uma tabela aninhada que inclui todos os clusters possíveis, junto à probabilidade de o novo caso pertencer a cada cluster. A palavra-chave FLATTENED é usada para alterar o conjunto de linhas hierárquico em uma tabela simples para facilitar a visualização.  
   
 ```  
@@ -360,7 +360,7 @@ NATURAL PREDICTION JOIN
   
  Por padrão, os resultados são classificados por probabilidade. Os resultados informam que, apesar da probabilidade ser baixa, o Cluster 2 ainda é o melhor para o novo ponto de dados.  
   
- **Observação** A coluna adicional, `$DISTANCE`, representa a distância do ponto de dados ao cluster. Por padrão, o algoritmo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering usa o cluster EM evolutivo, que atribui vários clusters a cada ponto de dados e classifica os possíveis clusters.  No entanto, se você criar o modelo de clustering usando o algoritmo K-means, somente um cluster poderá ser atribuído a cada ponto de dados e esta consulta retornará somente uma linha. É necessário entender essas diferenças para interpretar os resultados da função [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) . Para obter mais informações sobre as diferenças entre clustering EM e K-means, consulte [Referência técnica do algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md).  
+ **Observação** A coluna adicional, `$DISTANCE`, representa a distância do ponto de dados para o cluster. Por padrão, o algoritmo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering usa o cluster EM evolutivo, que atribui vários clusters a cada ponto de dados e classifica os possíveis clusters.  No entanto, se você criar o modelo de clustering usando o algoritmo K-means, somente um cluster poderá ser atribuído a cada ponto de dados e esta consulta retornará somente uma linha. É necessário entender essas diferenças para interpretar os resultados da função [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) . Para obter mais informações sobre as diferenças entre clustering EM e K-means, consulte [Referência técnica do algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md).  
   
  [Retornar ao início](#bkmk_top2)  
   
@@ -370,24 +370,24 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Função de previsão|Uso|  
-|[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|Retorna o cluster com maior probabilidade de conter o caso de entrada.|  
-|[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|Retorna a distância do caso de entrada do cluster especificado ou, caso nenhum cluster tenha sido especificado, a distância do caso de entrada do cluster mais provável.<br /><br /> Retorna a probabilidade de que o caso de entrada pertença ao cluster especificado.|  
-|[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|Retorna a probabilidade de que o caso de entrada pertença ao cluster especificado.|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Determina se um nó é um filho de outro nó no modelo.|  
-|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indica se o nó especificado contém o caso atual.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Retorna a probabilidade ponderada.|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Prevê associação de membro em um conjunto de dados associativo.|  
-|[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|Retorna a probabilidade de que um caso de entrada se ajuste ao modelo existente.|  
+|[&#41;de cluster &#40;DMX](/sql/dmx/cluster-dmx)|Retorna o cluster com maior probabilidade de conter o caso de entrada.|  
+|[&#41;&#40;DMX ClusterDistance](/sql/dmx/clusterdistance-dmx)|Retorna a distância do caso de entrada do cluster especificado ou, caso nenhum cluster tenha sido especificado, a distância do caso de entrada do cluster mais provável.<br /><br /> Retorna a probabilidade de que o caso de entrada pertença ao cluster especificado.|  
+|[&#41;&#40;DMX ClusterProbability](/sql/dmx/clusterprobability-dmx)|Retorna a probabilidade de que o caso de entrada pertença ao cluster especificado.|  
+|[&#40;DMX IsDescendant&#41;](/sql/dmx/isdescendant-dmx)|Determina se um nó é um filho de outro nó no modelo.|  
+|[&#41;&#40;DMX IsInNode](/sql/dmx/isinnode-dmx)|Indica se o nó especificado contém o caso atual.|  
+|[&#41;&#40;DMX PredictAdjustedProbability](/sql/dmx/predictadjustedprobability-dmx)|Retorna a probabilidade ponderada.|  
+|[&#41;&#40;DMX PredictAssociation](/sql/dmx/predictassociation-dmx)|Prevê associação de membro em um conjunto de dados associativo.|  
+|[&#41;&#40;DMX PredictCaseLikelihood](/sql/dmx/predictcaselikelihood-dmx)|Retorna a probabilidade de que um caso de entrada se ajuste ao modelo existente.|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Retorna uma tabela de valores relacionados ao valor previsto atual.|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Retorna Node_ID para cada caso.|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Retorna a probabilidade para o valor previsto.|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Retorna o desvio padrão previsto para a coluna especificada.|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Retorna o valor de suporte para um estado especificado.|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Retorna a variação de uma coluna especificada.|  
+|[&#41;&#40;DMX PredictNodeId](/sql/dmx/predictnodeid-dmx)|Retorna Node_ID para cada caso.|  
+|[&#41;&#40;DMX PredictProbability](/sql/dmx/predictprobability-dmx)|Retorna a probabilidade para o valor previsto.|  
+|[&#41;&#40;DMX PredictStdev](/sql/dmx/predictstdev-dmx)|Retorna o desvio padrão previsto para a coluna especificada.|  
+|[&#41;&#40;DMX PredictSupport](/sql/dmx/predictsupport-dmx)|Retorna o valor de suporte para um estado especificado.|  
+|[&#41;&#40;DMX PredictVariance](/sql/dmx/predictvariance-dmx)|Retorna a variação de uma coluna especificada.|  
   
  Para obter a sintaxe de funções específicas, consulte [Referência de função de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Consultas de mineração de dados](data-mining-queries.md)   
  [Referência técnica do algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)   
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)  

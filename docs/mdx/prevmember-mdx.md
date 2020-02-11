@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e5aa91ac2ab5b4056a693535c19a9e250a865dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020657"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
@@ -32,10 +32,10 @@ Member_Expression.PrevMember
  Uma linguagem MDX válida que retorna um membro.  
   
 ## <a name="remarks"></a>Comentários  
- O **PrevMember** função retorna o membro anterior no mesmo nível que o membro especificado.  
+ A função **PrevMember** retorna o membro anterior no mesmo nível do membro especificado.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra uma consulta simples que usa o **PrevMember** função para exibir o nome do membro imediatamente antes do membro atual no eixo de linhas:  
+ O exemplo a seguir mostra uma consulta simples que usa a função **PrevMember** para exibir o nome do membro imediatamente antes do membro atual no eixo de linhas:  
   
  `WITH MEMBER MEASURES.PREVMEMBERDEMO AS`  
   
@@ -47,7 +47,7 @@ Member_Expression.PrevMember
   
  `FROM [Adventure Works]`  
   
- O exemplo a seguir retorna a contagem dos revendedores cujas vendas caíram ao longo do período anterior, com base em valores de Estado do membro, selecionados pelo usuário, avaliados usando a função Aggregate. O **Hierarchize** e **DrillDownLevel** funções são usadas para retornar valores por queda de vendas para categorias de produto na dimensão produto. O **PrevMember** função é usada para comparar o período de tempo atual com o período de tempo anterior.  
+ O exemplo a seguir retorna a contagem dos revendedores cujas vendas caíram ao longo do período anterior, com base em valores de Estado do membro, selecionados pelo usuário, avaliados usando a função Aggregate. As funções de **hierarquia** e **DrilldownLevel** são usadas para retornar valores para recusar vendas para categorias de produtos na dimensão produto. A função **PrevMember** é usada para comparar o período de tempo atual com o período de tempo anterior.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -75,7 +75,7 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

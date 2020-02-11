@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082107"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Definir Novas Medidas (Assistente para Cubos)
@@ -40,22 +40,22 @@ ms.locfileid: "66082107"
   
  Para incluir todas as medidas do modelo no cubo, marque a caixa de seleção no cabeçalho.  
   
- **Nome da Medida**  
+ **Nome da medida**  
  Lista as medidas disponíveis no modelo.  
   
  Para renomear uma medida, clique nela e digite um novo nome.  
   
- **Grupo de Medidas**  
+ **Grupo de medidas**  
  Lista o grupo de medidas da medida.  
   
  Para alterar o grupo de medidas, clique no grupo de medidas e digite um novo grupo ou selecione um existente na lista.  
   
- **Tipo de Dados**  
+ **Tipo de dados**  
  Lista o tipo de dados da medida.  
   
  Para alterar o tipo de dados, clique no tipo de dados e selecione um tipo na lista.  
   
- **Agregação**  
+ **Aggregation**  
  Lista a agregação da medida.  
   
  Para alterar a agregação, clique na agregação e selecione um tipo de dados na lista.  
@@ -68,22 +68,22 @@ ms.locfileid: "66082107"
  **Adicionar novas medidas**  
  Exibe e permite que você defina medidas adicionais a serem incluídas no cubo.  
   
- **Nome da Medida**  
+ **Nome da medida**  
  Lista as novas medidas a serem incluídas no cubo.  
   
  Para adicionar uma nova medida, clique em **Adicionar nova medida**e digite o nome da nova medida.  
   
- **Grupo de Medidas**  
+ **Grupo de medidas**  
  Lista o grupo de medidas da medida.  
   
  Para alterar o grupo de medidas, clique no grupo de medidas e digite um novo grupo ou selecione um existente na lista.  
   
- **Tipo de Dados**  
+ **Tipo de dados**  
  Lista o tipo de dados da medida.  
   
  Para alterar o tipo de dados, clique no tipo de dados e selecione um tipo na lista.  
   
- **Agregação**  
+ **Aggregation**  
  Lista a agregação da medida.  
   
  Para alterar a agregação, clique na agregação e selecione um tipo de dados na lista.  
@@ -93,9 +93,9 @@ ms.locfileid: "66082107"
   
  Para remover uma medida nova do cubo, clique no botão **X** correspondente a essa medida.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de cubo](cube-wizard-f1-help.md)   
- [Objetos de cubo &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente para cubos](cube-wizard-f1-help.md)   
+ [Objetos de cubo &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubos em modelos multidimensionais](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

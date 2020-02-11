@@ -1,5 +1,5 @@
 ---
-title: Depuração de procedimentos armazenados | Microsoft Docs
+title: Depurando procedimentos armazenados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727742"
 ---
 # <a name="debugging-stored-procedures"></a>Depurando procedimentos armazenados
@@ -31,19 +31,19 @@ ms.locfileid: "62727742"
   
 3.  Use o Visual Studio para criar uma compilação para depuração de uma DLL de procedimentos armazenados.  
   
-4.  Implante a DLL no servidor. Para obter mais informações sobre como implantar a DLL para o servidor, consulte [Criando procedimentos armazenados](creating-stored-procedures.md).  
+4.  Implante a DLL no servidor. Para obter mais informações sobre como implantar a DLL no servidor, consulte [criando procedimentos armazenados](creating-stored-procedures.md).  
   
 5.  Você precisa de um aplicativo que chame o procedimento armazenado que deseja testar. Se ainda não houver um aplicativo pronto, use o Editor de Consultas MDX do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar uma consulta MDX para chamar o procedimento armazenado que será testado.  
   
 6.  No Visual Studio, anexe ao processo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (Msmdsrv.exe).  
   
-    1.  Dos **Debug** menu, escolha **anexar toProcess**.  
+    1.  No menu **depurar** , escolha **attatch toprocess**.  
   
-    2.  No **anexar toProcess** caixa de diálogo, selecione **Mostrar processos de todos os usuários**.  
+    2.  Na caixa de diálogo **attatch toprocess** , selecione **Mostrar processos de todos os usuários**.  
   
-    3.  No **processos disponíveis** listar, as **processo** coluna, clique em **Msmdsrv.exe**. Se houver mais que uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em execução no servidor, será necessário identificar o processo pelo ID da instância que você deseja usar.  
+    3.  Na lista **processos disponíveis** , na coluna **processo** , clique em **msmdsrv. exe**. Se houver mais que uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em execução no servidor, será necessário identificar o processo pelo ID da instância que você deseja usar.  
   
-    4.  No **anexar a** texto caixa, certifique-se de que o tipo de programa apropriado é selecionado. Para uma DLL CLR, clique em **selecionar**, em seguida, clique em **depurar esses tipos de código**, em seguida, clique em **gerenciado**, em seguida, clique em **Okey**. Para uma DLL de COM, clique em **selecionar**, em seguida, clique em **depurar esses tipos de código**, em seguida, clique em **nativo**, em seguida, clique em **Okey**.  
+    4.  Na caixa de texto **anexar a** , verifique se o tipo de programa apropriado está selecionado. Para uma DLL CLR, clique em **selecionar**, clique em **depurar esses tipos de código**, clique em **gerenciado**e em **OK**. Para uma DLL COM, clique em **selecionar**, clique em **depurar esses tipos de código**, clique em **nativo**e, em seguida, clique em **OK**.  
   
     5.  Clique em **anexar**.  
   
@@ -51,8 +51,8 @@ ms.locfileid: "62727742"
   
  Se houver problemas ao depurar uma biblioteca, certifique-se de que o arquivo do banco de dados do programa correspondente (arquivo PDB) foi copiado para o local de implantação no servidor. Se esse arquivo não foi copiado durante o registro ou a implantação, copie-o manualmente no mesmo local onde está a DLL. No caso de código nativo (DLL COM), o arquivo PDB reside no subdiretório \debug. Para código gerenciado (DLL CLR), reside no subdiretório \WINDEBUG.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciamento de Assemblies de modelo multidimensional](../multidimensional-models/multidimensional-model-assemblies-management.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciamento de assemblies de modelo multidimensional](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Definindo procedimentos armazenados](defining-stored-procedures.md)  
   
   

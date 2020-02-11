@@ -1,5 +1,5 @@
 ---
-title: Configurar pontos de verificação para reinicializar um pacote com falha | Microsoft Docs
+title: Configurar pontos de verificação para reiniciar um pacote com falha | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060766"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurar pontos de verificação para reinicializar um pacote com falha
@@ -34,7 +34,7 @@ ms.locfileid: "66060766"
   
 4.  Clique com o botão direito do mouse em qualquer lugar da tela de fundo da superfície de design do fluxo de controle e clique em **Propriedades**.  
   
-5.  Defina a propriedade SaveCheckpoints como `True`.  
+5.  Defina a Propriedade SaveCheckpoints como `True`.  
   
 6.  Digite o nome do arquivo de ponto de verificação na propriedade CheckpointFileName.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "66060766"
   
     -   Clique com o botão direito do mouse em uma tarefa ou contêiner e clique em **Propriedades**.  
   
-    -   Defina a propriedade FailPackageOnFailure como `True` para cada tarefa e contêiner selecionado.  
+    -   Defina a Propriedade FailPackageOnFailure como `True` para cada tarefa e contêiner selecionados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reiniciar pacotes por meio de pontos de verificação](packages/restart-packages-by-using-checkpoints.md)  
   
   

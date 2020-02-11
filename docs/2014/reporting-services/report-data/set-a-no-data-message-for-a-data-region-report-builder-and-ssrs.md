@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2660582b03a121a81976d6bbc12afc1213877c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107093"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Definir uma mensagem Nenhum Dado para uma região de dados (Construtor de Relatórios e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107093"
   
 1.  No modo Design, clique na região de dados de tabela, matriz ou lista ou no sub-relatório na superfície de design para selecioná-lo. O painel Propriedades exibe as propriedades do item selecionado.  
   
-2.  No painel Propriedades, digite o texto que você deseja exibir como uma mensagem em `NoRowsMessage` campo de propriedade.  
+2.  No painel Propriedades, digite o texto que você deseja exibir como uma mensagem no campo de `NoRowsMessage` propriedade.  
   
      Como alternativa, na lista suspensa, clique em **Expressão** para abrir a caixa de diálogo **Expressão** e criar uma expressão.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66107093"
   
 2.  No painel Propriedades, expanda o nó para `NoDataMessage`.  
   
-3.  Na **legenda**, digite o texto que você deseja exibir como uma mensagem em `NoDataMessage` campo de propriedade.  
+3.  Em **legenda**, digite o texto que você deseja exibir como uma mensagem no campo `NoDataMessage` de propriedade.  
   
      Como alternativa, na lista suspensa, clique em **Expressão** para abrir a caixa de diálogo **Expressão** e criar uma expressão.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66107093"
   
 1.  Na exibição Design, clique no sub-relatório na superfície do design para selecioná-lo. O painel Propriedades exibe as propriedades do item selecionado.  
   
-2.  No painel Propriedades, digite o texto que você deseja exibir como uma mensagem em `NoRowsMessage` campo de propriedade.  
+2.  No painel Propriedades, digite o texto que você deseja exibir como uma mensagem no campo de `NoRowsMessage` propriedade.  
   
      Como alternativa, na lista suspensa, clique em **Expressão** para abrir a caixa de diálogo **Expressão** e criar uma expressão.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66107093"
   
 1.  Na exibição Design, clique na escala de cores no mapa para selecioná-lo. O painel Propriedades exibe as propriedades do item selecionado.  
   
-2.  No painel Propriedades, em `NoDataText`, digite o texto que você deseja exibir como um rótulo para cores sem nenhum valor de dados.  
+2.  No painel Propriedades, em `NoDataText`, digite o texto que você deseja exibir como um rótulo para cores sem valor de dados.  
   
      Como alternativa, na lista suspensa, clique em **Expressão** para abrir a caixa de diálogo **Expressão** e criar uma expressão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sub-relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   

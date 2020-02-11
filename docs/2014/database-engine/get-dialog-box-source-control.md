@@ -1,5 +1,5 @@
 ---
-title: Obtém uma caixa de diálogo (controle de origem) | Microsoft Docs
+title: Caixa de diálogo obter (controle do código-fonte) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779003"
 ---
 # <a name="get-dialog-box-source-control"></a>Caixa de diálogo Obter (Controle de código fonte)
@@ -37,10 +37,10 @@ ms.locfileid: "62779003"
  **Colunas**  
  Identifica colunas a serem exibidas e a ordem na qual elas são exibidas.  
   
- **Modo de exibição simples**  
+ **Exibição Simples**  
  Exiba os arquivos que você está recuperando como listas simples na conexão de controle do código de origem.  
   
- **Hora da modificação**  
+ **Hora da Modificação**  
  Exibe a hora em que um item foi modificado pela última vez.  
   
  **Nome**  
@@ -49,13 +49,13 @@ ms.locfileid: "62779003"
  **Opções**  
  Exibe opções para obtenção de plug-ins específicos de segurança do código de origem, quando a seta à direita do botão é clicada.  
   
- **Sort**  
+ **Classificar**  
  Classifique a ordem das colunas exibidas.  
   
  **Exibição de árvore**  
  Exiba a hierarquia de pastas e arquivos dos itens que você está recuperando.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recuperar arquivos](../../2014/database-engine/retrieve-files.md)   
  [Controle do código-fonte do Gerenciador de Soluções](../../2014/database-engine/solution-explorer-source-control.md)  
   

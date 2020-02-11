@@ -15,14 +15,14 @@ ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28a16d531cceb7147c5d4971d662797cb57242e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918016"
 ---
 # <a name="nextrecordset-method-example-vb"></a>Exemplo do método NextRecordset (VB)
-Este exemplo usa o [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) método para exibir os dados em um conjunto de registros que usa uma instrução composta comando composta por três separado **selecione** instruções.  
+Este exemplo usa o método [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) para exibir os dados em um conjunto de registros que usa uma instrução de comando composta composta por três instruções **Select** separadas.  
   
 ```  
 'BeginNextRecordsetVB  
@@ -94,6 +94,6 @@ End Sub
 'EndNextRecordsetVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método NextRecordset (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

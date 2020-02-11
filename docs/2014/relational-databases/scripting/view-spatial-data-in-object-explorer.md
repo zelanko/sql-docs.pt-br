@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5ac09bdbc05f406d8d7925af1c9a45346913151
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242949"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>Exibir dados espaciais no Pesquisador de Objetos
-  A janela **resultados espaciais** no editor de consultas fornece ferramentas de mapeamento Visual para exibir resultados de dados espaciais, além dos dados exibidos em formato de grade na janela **resultados** . Para exibir dados espaciais na janela **Resultados Espaciais** , os resultados da consulta devem conter pelo menos uma coluna de dados espaciais com dados de geometria ou de geografia.  
+  A janela **Resultados espaciais** no Editor de Consultas fornece ferramentas de mapeamento visuais para exibir resultados de dados espaciais além dos dados exibidos em formato de grade na janela **Resultados** . Para exibir dados espaciais na janela **Resultados Espaciais** , os resultados da consulta devem conter pelo menos uma coluna de dados espaciais com dados de geometria ou de geografia.  
   
 ### <a name="to-view-spatial-data-in-the-spatial-results-window"></a>Para exibir dados espaciais na janela Resultados espaciais  
   
@@ -34,13 +34,13 @@ ms.locfileid: "75242949"
 4.  Selecione a projeção desejada para obter dados de geografia na lista **Selecionar projeção** . A projeção padrão é Cilíndrica equidistante. Outras projeções disponíveis são Mercator, Robinson ou Bonne.  
   
     > [!NOTE]  
-    >  **Selecionar projeção** não estará disponível se a coluna espacial contiver dados de geometria.  
+    >  **Selecionar projeção** não estará disponível se a coluna espacial contiver dados geométricos.  
   
 5.  Ajuste o controle deslizante **Zoom** para aumentar o tamanho visual dos elementos mapeados. Para formas de polígono, o rótulo é visível apenas quando a forma for grande o suficiente para manter o texto do rótulo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Janela resultados espaciais](spatial-results-window.md)   
- [&#40;SQL Server Management Studio do editor de consultas do Mecanismo de Banco de Dados&#41;](database-engine-query-editor-sql-server-management-studio.md)   
- [Editores de consulta e de texto &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [Janela Resultados Espaciais](spatial-results-window.md)   
+ [Editor de Consultas do Mecanismo de Banco de Dados &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

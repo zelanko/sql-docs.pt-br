@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3009eb9a341cb0881cdade4f927955d953c6fcfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105292"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>função Count (Construtor de Relatórios e SSRS)
@@ -30,15 +30,16 @@ ms.locfileid: "66105292"
 Count(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *Expressão*  
+#### <a name="parameters"></a>parâmetros  
+ *expressão*  
  (`Variant` ou `Binary`) A expressão na qual executar a agregação, por exemplo, `=Fields!FieldName.Value`.  
   
  *escopo*  
  (`String`) O nome de um conjunto de dados, grupo ou região de dados que contém os itens do relatório aos quais a função de agregação deve ser aplicada. Se *scope* não estiver especificado, será usado o escopo atual.  
   
  *recursivos*  
- (**Enumerated Type**) Opcional. `Simple` (padrão) ou `RdlRecursive`. Especifica se a agregação deve ser executada recursivamente.  
+ (**Enumerated Type**) Opcional. 
+  `Simple` (padrão) ou `RdlRecursive`. Especifica se a agregação deve ser executada recursivamente.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  Retorna um `Integer`.  
@@ -52,7 +53,7 @@ Count(expression, scope, recursive)
   
 -   *Scope* para agregações aninhadas não pode ser o nome de um conjunto de dados.  
   
--   *Expressão* não deve conter `First`, `Last`, `Previous`, ou `RunningValue` funções.  
+-   A *expressão* não deve `First`conter `Last`funções `Previous`,, `RunningValue` ou.  
   
 -   *Expression* não deve conter agregações aninhadas que especifiquem *recursive*.  
   
@@ -62,7 +63,7 @@ Count(expression, scope, recursive)
   
  Exemplo  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  O seguinte exemplo de código mostra uma expressão que calcula o número de valores não nulos de `Size` para o escopo padrão e para um escopo de grupo pai. A expressão é adicionada a uma célula em uma linha que pertence ao `GroupbySubcategory`do grupo filho. O grupo pai é `GroupbyCategory`. A expressão exibe os resultados de `GroupbySubcategory` (o escopo padrão) e de `GroupbyCategory` (o escopo do grupo pai).  
   
 > [!NOTE]  
@@ -75,7 +76,7 @@ Count(expression, scope, recursive)
 "Count (Category): " & Count(Fields!Size.Value,"GroupbyCategory")  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   

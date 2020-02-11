@@ -18,24 +18,24 @@ ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b285b5032c1ccde03ef8bd3f287d6b7f60eb0ffc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046174"
 ---
-# <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
+# <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Anexa um banco de dados que tem apenas um arquivo de dados para o servidor atual. **sp_attach_single_file_db** não pode ser usado com vários arquivos de dados.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] É recomendável que você use CREATE DATABASE *database_name* FOR ATTACH em vez disso. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). Não use este procedimento em um banco de dados replicado.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]É recomendável que você use criar *database_name* de banco de dados para anexar em vez disso. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). Não use este procedimento em um banco de dados replicado.  
   
 > [!IMPORTANT]  
 >  Não é recomendável anexar ou restaurar bancos de dados de origem desconhecida ou não confiável. Esses bancos de dados podem conter um código mal-intencionado que pode executar um código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado ou provocar erros modificando o esquema ou a estrutura física do banco de dados. Antes de usar um banco de dados de origem desconhecida ou não confiável, execute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados, em um servidor que não seja de produção. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,9 +46,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'` É o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *DBName* está **sysname**, com um padrão NULL.  
+`[ @dbname = ] 'dbname'`É o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *dbname* é **sysname**, com um padrão de NULL.  
   
-`[ @physname = ] 'physical_name'` É o nome físico, incluindo o caminho, do arquivo de banco de dados. *physical_name* está **nvarchar (260)** , com um padrão NULL.  
+`[ @physname = ] 'physical_name'`É o nome físico, incluindo o caminho, do arquivo de banco de dados. *physical_name* é **nvarchar (260)**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Este argumento mapeia para o parâmetro FILENAME da instrução CREATE DATABASE. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -62,9 +62,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- Use **sp_attach_single_file_db** somente em bancos de dados que tenham sido previamente desanexados do servidor usando um explícito **sp_detach_db** operação ou em bancos de dados copiados.  
+ Use **sp_attach_single_file_db** somente em bancos de dados que foram desanexados anteriormente do servidor usando uma operação **sp_detach_db** explícita ou em bancos de dados copiados.  
   
- **sp_attach_single_file_db** funciona somente em bancos de dados com um único arquivo de log. Quando **sp_attach_single_file_db** anexa o banco de dados para o servidor, ele cria um novo arquivo de log. Se o banco de dados for somente leitura, o arquivo de log será criado em seu local anterior.  
+ **sp_attach_single_file_db** funciona apenas em bancos de dados que têm um único arquivo de log. Quando **sp_attach_single_file_db** anexa o banco de dados ao servidor, ele cria um novo arquivo de log. Se o banco de dados for somente leitura, o arquivo de log será criado em seu local anterior.  
   
 > [!NOTE]  
 >  Um instantâneo do banco de dados não pode ser desanexado ou anexado.  
@@ -72,7 +72,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  Não use este procedimento em um banco de dados replicado.  
   
 ## <a name="permissions"></a>Permissões  
- Para obter informações sobre como as permissões são tratadas quando um banco de dados é anexado, consulte [criar banco de dados &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Para obter informações sobre como as permissões são tratadas quando um banco de dados é anexado, consulte [create database &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir desanexa [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e, então, anexa um arquivo de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] para o servidor atual.  
@@ -86,10 +86,10 @@ EXEC sp_attach_single_file_db @dbname = 'AdventureWorks2012',
 N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_Data.mdf';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpfile](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

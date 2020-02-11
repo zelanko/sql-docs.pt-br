@@ -25,16 +25,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241256"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisitos e limitações de uso de coleções de esquema XML no servidor
   A validação da linguagem XSD tem algumas limitações em relação a colunas SQL que usam o tipo de dados `xml`. A tabela a seguir fornece detalhes sobre essas limitações e diretrizes para modificação de seu esquema XSD para que ele possa funcionar com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os tópicos nesta seção fornecem informações adicionais sobre limitações específicas e diretrizes para trabalhar com elas.  
   
-|Item|Limitação|  
+|Item|Limitações|  
 |----------|----------------|  
 |**minOccurs** e **maxOccurs**|Os valores dos atributos **minOccurs** e **maxOccurs** devem ser ajustados em inteiros de 4 bytes. Os esquemas que não estiverem de acordo serão rejeitados pelo servidor.|  
 |**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita os esquemas que têm uma partícula **\<xsd:choice>** sem filhos, a menos que a partícula seja definida com um atributo **minOccurs** com valor zero.|  
@@ -47,7 +47,7 @@ ms.locfileid: "63241256"
 |Adicionando membros a um grupo de substituição existente|Não é possível adicionar membros a um grupo de substituições existente em uma coleção de esquema XML. Um grupo de substituição em um esquema XML é restrito no sentido de que o elemento principal e todos os seus elementos membros devem ser definidos na mesma instrução {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Formas canônicas e restrições de padrões|A representação canônica de um valor não pode violar a restrição de padrão de seu tipo. Para obter mais informações, consulte [Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md).|  
 |Aspectos de enumeração|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a esquemas XML com tipos que têm aspectos padrão ou enumerações que violam essas facetas.|  
-|Comprimento do aspecto|O **comprimento**, **minLength**, e **maxLength** facetas são armazenadas como um `long` tipo. Esse é um tipo de 32 bits. Portanto, o intervalo de valores aceitáveis para esses valores é 2<sup>^</sup>31.|  
+|Comprimento do aspecto|As facetas **Length**, **minLength**e **MaxLength** são armazenadas como um `long` tipo. Esse é um tipo de 32 bits. Portanto, o intervalo de valores aceitáveis para esses valores é<sup>^</sup>2 31.|  
 |Atributo ID|Cada componente de esquema XML pode ter um atributo de ID. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impõe exclusividade para as declarações **\<xsd:attribute>** do tipo **ID**, mas não armazena esses valores. O escopo para imposição de exclusividade é a instrução {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Tipo ID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a elementos de tipo **xs:ID**, **xs:IDREF**ou **xs:IDREFS**. Um esquema pode não declarar elementos desse tipo ou elementos derivados pela restrição ou extensão desse tipo.|  
 |Namespace local|O namespace local precisa ser especificado explicitamente para o elemento **\<xsd:any>** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita esquemas que usam uma cadeia de caracteres vazia ("") como um valor para o atributo de namespace. Em vez disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige o uso explícito de "##local" para indicar um elemento ou atributo não qualificado, como a instância do caractere curinga.|  
@@ -62,19 +62,19 @@ ms.locfileid: "63241256"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md)|Explica formas canônicas e restrições de padrões.|  
+|[Formas canônicas e restrições de padrões](canonical-forms-and-pattern-restrictions.md)|Explica formas canônicas e restrições de padrões.|  
 |[Componentes curinga e validação de conteúdo](wildcard-components-and-content-validation.md)|Descreve as limitações da utilização de caracteres curingas, a validação incerta e quaisquer Elementos anyType com coleções de esquema XML.|  
 |[O elemento &#60;xsd:redefine&#62; Element](the-xsd-redefine-element.md)|Explica a limitação da utilização do elemento \<xsd:redefine> e descreve uma solução alternativa.|  
-|[The xs:QName Type](the-xs-qname-type.md)|Descreve a limitação relativa ao tipo xs:QName.|  
+|[O tipo xs:QName](the-xs-qname-type.md)|Descreve a limitação relativa ao tipo xs:QName.|  
 |[Valores para declarações &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md)|Descreve as restrições aplicadas a declarações \<xsd:simpleType>.|  
-|[Enumeration Facets](enumeration-facets.md)|Descreve a limitação relativa a aspectos de enumeração.|  
-|[Mixed Type and Simple Content](mixed-type-and-simple-content.md)|Descreve a limitação de restringir um tipo misto a um conteúdo simples.|  
-|[Coleções de esquemas XML grandes e condições de memória insuficiente](large-xml-schema-collections-and-out-of-memory-conditions.md)|Fornece soluções para a condição de memória insuficiente que às vezes acontece com grandes coleções de esquema.|  
+|[Facetas de enumeração](enumeration-facets.md)|Descreve a limitação relativa a aspectos de enumeração.|  
+|[Tipo misto e conteúdo simples](mixed-type-and-simple-content.md)|Descreve a limitação de restringir um tipo misto a um conteúdo simples.|  
+|[Grandes coleções de esquemas XML e condições de memória insuficiente](large-xml-schema-collections-and-out-of-memory-conditions.md)|Fornece soluções para a condição de memória insuficiente que às vezes acontece com grandes coleções de esquema.|  
 |[Modelos de conteúdo não determinístico](non-deterministic-content-models.md)|Descreve as limitações relativas a modelos de conteúdo não determinístico.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados XML &#40;SQL Server&#41;](xml-data-sql-server.md)   
  [Comparar XML digitado com XML não digitado](compare-typed-xml-to-untyped-xml.md)   
  [Conceder permissões em uma coleção de esquemas XML](grant-permissions-on-an-xml-schema-collection.md)   

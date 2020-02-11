@@ -1,5 +1,5 @@
 ---
-title: Configurações de Site e recursos do Site (modo SharePoint) do Reporting Services | Microsoft Docs
+title: Reporting Services configurações de site e recursos de site (modo do SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,37 +11,39 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb2544db775987ff44e54b10163812ac53620a9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102795"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Configurações de Site e Recursos de Site do Reporting Services (Modo SharePoint)
+  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] O modo SharePoint tem vários recursos personalizados em nível de site e um recurso de site que podem ser gerenciados na página Configurações de Site do SharePoint. As configurações abrangem todo o site e afetam todos os aplicativos de serviço do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Você deve ter permissões de Gerenciador de Conteúdo e de Administrador de Sistema para exibir essa página.  
   
-|Configuração do site|Descrição|  
+|Configuração do site|DESCRIÇÃO|  
 |------------------|-----------------|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuração de site|Configurações de todo o site descritas neste tópico.|  
+|
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuração de site|Configurações de todo o site descritas neste tópico.|  
 |Gerenciar Alertas de Dados|Gerenciamento do recurso Alerta de Dados.|  
-|Sincronização de Arquivos do Servidor de Relatório|Um recurso em nível de site que é desativado por padrão.<br /><br /> Sincroniza arquivos do Servidor de Relatório (.rdl, .rsds, .smdl, .rsd, .rsc, .rdlx) de uma biblioteca de documentos do SharePoint com o servidor de relatório quando os arquivos são adicionados ou atualizados diretamente na biblioteca de documentos.<br /><br /> Para obter mais informações, consulte [Ativar o recurso de sincronização de arquivo do Servidor de Relatório na Administração Central do SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)|  
+|Sincronização de Arquivos do Servidor de Relatório|Um recurso em nível de site que é desativado por padrão.<br /><br /> Sincroniza arquivos do Servidor de Relatório (.rdl, .rsds, .smdl, .rsd, .rsc, .rdlx) de uma biblioteca de documentos do SharePoint com o servidor de relatório quando os arquivos são adicionados ou atualizados diretamente na biblioteca de documentos.<br /><br /> Para obter mais informações, consulte [ativar o recurso de sincronização de arquivos do servidor de relatório na administração central do SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)|  
   
 ## <a name="to-open-the-reporting-services-site-settings-page"></a>Para abrir a página Configurações de Site do Reporting Services  
   
-1.  Do site do SharePoint **ações do Site** menu, clique em **configurações de Site**.  
+1.  No menu **ações** do site do site do SharePoint, clique em **configurações do site**.  
   
 2.  Na seção **Reporting Services** , clique em **Configurações de Site do Reporting Services**.  
   
 ## <a name="options-for-reporting-services-site-settings"></a>Opções de Configurações de Site do Reporting Services  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
-|**Habilitar download do controle ActiveX RSClientPrint**|O controle exibe uma caixa de diálogo de impressão personalizada que fornece recursos de suporte comuns a outras caixas de diálogo de impressão, inclusive visualização de impressão, seleções de páginas para definir páginas e intervalos específicos, margens de páginas e orientação de página. Para saber mais sobre o controle, consulte [Usando o controle RSClientPrint em aplicativos personalizados](report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
-|**Habilitar erros remotos em modo local**|Mostrar ou ocultar mensagens de erro detalhadas em computadores remotos ao executar em modo local. Se você ver uma mensagem de erro semelhante à seguinte, pode ser útil habilitar erros remotos:<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  
+|**Habilitar o download do controle ActiveX RSClientPrint**|O controle exibe uma caixa de diálogo de impressão personalizada que fornece recursos de suporte comuns a outras caixas de diálogo de impressão, inclusive visualização de impressão, seleções de páginas para definir páginas e intervalos específicos, margens de páginas e orientação de página. Para saber mais sobre o controle, consulte [Usando o controle RSClientPrint em aplicativos personalizados](report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
+|**Habilitar erros remotos no modo local**|Mostrar ou ocultar mensagens de erro detalhadas em computadores remotos ao executar em modo local. Se você ver uma mensagem de erro semelhante à seguinte, pode ser útil habilitar erros remotos:<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  
 |**Habilitar metadados de acessibilidade para relatórios**|Ativar metadados de acessibilidade na saída HTML para relatórios|  
-|**Habilitar Dimensionamento de Visualização de Dados para Ajuste Exato em Relatórios**|Configurar o comportamento de ajuste de visualização de dados dentro de um tablix, para corrigir exatamente. Isso inclui gráfico, medidor e mapa. Quando desabilitado, o comportamento é de ajuste aproximado de visualizações de dados, o que pode deixar algum espaço em branco. Esta configuração se aplica somente à renderização na Web Part do visualizador de relatórios. Para gerenciar esse comportamento para a renderização do lado do servidor, é necessário modificar o arquivo **rsreportserver.config** . Para obter mais informações, consulte o seguinte:<br /><br /> [Arquivo de configuração RSReportServer](report-server/rsreportserver-config-configuration-file.md).<br /><br /> [Personalizar parâmetros de extensão de renderização em RSReportServer.config](customize-rendering-extension-parameters-in-rsreportserver-config.md).<br /><br /> [Configurações de informações do dispositivo HTML](html-device-information-settings.md).<br /><br /> Quando Exato é habilitado, o desempenho pode ser afetado porque o processamento para determinar o tamanho exato pode levar mais tempo que no ajuste aproximado.|  
+|**Habilitar a visualização de dados exata ajustar o dimensionamento de relatórios**|Configurar o comportamento de ajuste de visualização de dados dentro de um tablix, para corrigir exatamente. Isso inclui gráfico, medidor e mapa. Quando desabilitado, o comportamento é de ajuste aproximado de visualizações de dados, o que pode deixar algum espaço em branco. Esta configuração se aplica somente à renderização na Web Part do visualizador de relatórios. Para gerenciar esse comportamento para a renderização do lado do servidor, é necessário modificar o arquivo **rsreportserver.config** . Para saber mais, consulte o seguinte:<br /><br /> [Arquivo de configuração RSReportServer](report-server/rsreportserver-config-configuration-file.md).<br /><br /> [Personalize os parâmetros de extensão de renderização em RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md).<br /><br /> [Configurações de informações de dispositivo HTML](html-device-information-settings.md).<br /><br /> Quando Exato é habilitado, o desempenho pode ser afetado porque o processamento para determinar o tamanho exato pode levar mais tempo que no ajuste aproximado.|  
   
-## <a name="see-also"></a>Consulte também  
- [Manage a Reporting Services SharePoint Service Application](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciar um aplicativo de serviço do SharePoint Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
   

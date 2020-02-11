@@ -1,5 +1,5 @@
 ---
-title: Criar um cubo a partir de um modelo sem usar uma exibição da fonte de dados | Microsoft Docs
+title: Criar um cubo com base em um modelo sem usar uma exibição da fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076505"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Criar um Cubo de um modelo sem usar uma Exibição da Fonte de Dados
-  Selecione **Criar o cubo sem usar uma fonte de dados** na primeira página do Assistente para Cubos para criar um cubo sem usar uma exibição da fonte de dados. Posteriormente, o Assistente de Geração de Esquema pode ser usado para gerar o esquema relacional para a exibição da fonte de dados com base na estrutura do cubo e possivelmente outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre como gerar um esquema, consulte [Assistente de Geração de Esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
+  Selecione **Criar o cubo sem usar uma fonte de dados** na primeira página do Assistente para Cubos para criar um cubo sem usar uma exibição da fonte de dados. Posteriormente, o Assistente de Geração de Esquema pode ser usado para gerar o esquema relacional para a exibição da fonte de dados com base na estrutura do cubo e possivelmente outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações sobre como gerar um esquema, consulte [Assistente de Geração de Esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Selecionando o Método de Criação  
  No Assistente para Cubos, na página **Selecionar Método de Criação** , clique em **Criar o cubo sem usar uma fonte de dados**. Para criar o cubo usando um modelo de cubo existente, marque a caixa de seleção **Usar modelo de cubo** . . Se você não selecionar para usar um modelo, deverá definir as opções manualmente.  
   
- Os modelos de cubo contêm medidas predefinidas, grupos de medidas, dimensões, hierarquias e atributos. Se você selecionar um modelo, o assistente usará as definições de objeto nos modelos como a base para definir opções nas páginas seguintes. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é instalado com vários modelos para cubos padrão. O administrador do servidor também pode adicionar modelos de cubo ou de dimensão que são criados especificamente para obter os dados de sua organização.  
+ Os modelos de cubo contêm medidas predefinidas, grupos de medidas, dimensões, hierarquias e atributos. Se você selecionar um modelo, o assistente usará as definições de objeto nos modelos como a base para definir opções nas páginas seguintes. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é instalado com vários modelos para cubos padrão. O administrador do servidor também pode adicionar modelos de cubo ou de dimensão que são criados especificamente para obter os dados de sua organização.  
   
 ## <a name="selecting-dimensions"></a>Selecionando dimensões  
  Use a página **Selecionar Dimensões** do assistente para adicionar dimensões ao cubo. Esta página será exibida somente se já houver dimensões compartilhadas sem uma fonte de dados no projeto ou banco de dados. Ela não lista dimensões que têm uma fonte de dados.  
   
- Para adicionar dimensões existentes, selecione uma ou mais dimensões na lista **Dimensões compartilhadas** e clique no botão de seta para a direita (**>**) para movê-las para a lista **Dimensões do cubo** . Clique no botão da seta dupla (**>>**) para mover todas as dimensões na lista.  
+ Para adicionar dimensões existentes, selecione uma ou mais dimensões na lista **Dimensões compartilhadas** e clique no botão de seta para a direita (**>**) para movê-las para a lista **Dimensões do cubo** . Clique no botão de seta dupla**>>**() para mover todas as dimensões na lista.  
   
 ## <a name="defining-new-measures"></a>Definindo novas medidas  
  Use a página **Definir Novas Medidas** do assistente para especificar as medidas e os grupos de medidas no novo cubo. Os grupos de medidas que você especifica aqui corresponderão a tabelas de fato no esquema gerado. As medidas que você especifica aqui corresponderão a colunas não chave numéricas nas tabelas.  
@@ -39,27 +40,27 @@ ms.locfileid: "66076505"
   
  As grades **Selecionar medidas do modelo** e **Adicionar novas medidas** exibem valores nas colunas descritas na tabela a seguir. Você pode clicar em um valor em qualquer lista para alterá-lo.  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
-|**Nome da Medida**|Um valor nessa coluna define o nome de uma medida no cubo. Clique em um valor nessa coluna para digitar um nome. Clique em **Adicionar nova medida** nesta coluna para criar uma nova medida. Essa coluna define a propriedade `Name` no objeto de medida.|  
-|**Grupo de Medidas**|O nome do grupo de medidas que contém a medida. Clique nesse valor para escolher ou digitar um nome. Se você excluir todas as medidas que pertencem a um grupo de medidas específico, o grupo de medidas também será removido. Essa coluna define a propriedade `Name` para o objeto do grupo de medida.|  
-|**Tipo de Dados**|O tipo de dados para a medida. Clique nesse valor para alterar o tipo de dados. O padrão quando você cria uma medida é `Single`. Essa coluna define a propriedade `DataType` no objeto de medida.|  
-|**Agregação**|A agregação padrão para a medida. Clique nesta célula para especificar uma das agregações padrão para a medida (ou **Nenhum**). O padrão quando você cria uma medida é `Sum`. Essa coluna define a propriedade `AggregationFunction` no objeto de medida.|  
+|**Nome da medida**|Um valor nessa coluna define o nome de uma medida no cubo. Clique em um valor nessa coluna para digitar um nome. Clique em **Adicionar nova medida** nesta coluna para criar uma nova medida. Essa coluna define a propriedade `Name` no objeto de medida.|  
+|**Grupo de medidas**|O nome do grupo de medidas que contém a medida. Clique nesse valor para escolher ou digitar um nome. Se você excluir todas as medidas que pertencem a um grupo de medidas específico, o grupo de medidas também será removido. Essa coluna define a propriedade `Name` para o objeto do grupo de medida.|  
+|**Tipo de dados**|O tipo de dados para a medida. Clique nesse valor para alterar o tipo de dados. O padrão quando você cria uma medida é `Single`. Essa coluna define a propriedade `DataType` no objeto de medida.|  
+|**Aggregation**|A agregação padrão para a medida. Clique nesta célula para especificar uma das agregações padrão para a medida (ou **Nenhum**). O padrão quando você cria uma medida é `Sum`. Essa coluna define a propriedade `AggregationFunction` no objeto de medida.|  
   
 ## <a name="defining-new-dimensions"></a>Definindo novas dimensões  
  Use a página **Definir Novas Dimensões** do assistente para especificar as dimensões no novo cubo.  
   
  Se você usar um modelo para criar o cubo, as grades em **Selecionar dimensões de modelo** exibirão as dimensões no modelo. Você pode desmarcar a caixa de seleção ao lado de qualquer dimensão para removê-la do cubo. Desmarque a caixa de seleção na barra de título da grade para remover todas as dimensões listadas. Se você não usar um modelo, esta grade listará somente a dimensão de Tempo.  
   
- Você pode adicionar dimensões ao cubo na grade em **Adicionar novas dimensões**. Para adicionar uma dimensão, clique na célula de `Name` coluna que contém o texto **adicionar nova dimensão**e, em seguida, digite um nome para a dimensão. Para remover uma linha da lista, clique no ícone de excluir (**X**).  
+ Você pode adicionar dimensões ao cubo na grade em **Adicionar novas dimensões**. Para adicionar uma dimensão, clique na célula da `Name` coluna que contém o texto **Adicionar nova dimensão**e, em seguida, digite um nome para a dimensão. Para remover uma linha da lista, clique no ícone de excluir (**X**).  
   
  As grades **Selecionar dimensões do modelo** e **Adicionar novas dimensões** exibem valores nas colunas descritas na tabela a seguir. Você pode clicar em um valor em qualquer lista para alterá-lo.  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Tipo**|Exibe o tipo de dimensão para uma dimensão de modelo. Clique nesta célula para alterar o tipo de dimensão para uma dimensão. Essa coluna define a propriedade **Type** para o objeto de dimensão.|  
-|`Name`|Exibe o nome da dimensão. Clique nessa célula para digitar um nome diferente. Esse valor define o `Name` propriedade para o objeto de dimensão.|  
-|**SCD**|Especifica que esta é uma SCD (dimensão de alteração lenta). Marcar esta caixa de seleção adiciona os atributos Data de Início da SCD, ID Original da Data de Término e Status à dimensão. **SCD** será selecionado por padrão se você usar um modelo para criar o cubo e o assistente detectar estes quatro tipos de atributo em uma dimensão de modelo.|  
+|`Name`|Exibe o nome da dimensão. Clique nessa célula para digitar um nome diferente. Esse valor define a `Name` propriedade para o objeto de dimensão.|  
+|**SCD**|Especifica que esta é uma SCD (dimensão de alteração lenta). Marcar esta caixa de seleção adiciona os atributos Data de Início da SCD, ID Original da Data de Término e Status à dimensão. O **SCD** será selecionado por padrão se você usar um modelo para criar o cubo e o assistente detectar esses quatro tipos de atributo em uma dimensão de modelo.|  
 |**Atributos**|Exibe os atributos que devem ser criados para a dimensão. Cada nome de atributo na lista é precedido pelo nome de dimensão. Esta lista é somente leitura. Você pode editar os atributos usando o Designer de Dimensão depois de concluir o assistente.|  
   
 ## <a name="defining-time-periods"></a>Definindo períodos de tempo  
@@ -79,10 +80,10 @@ ms.locfileid: "66076505"
 ## <a name="specifying-additional-calendars"></a>Especificando calendários adicionais  
  Na página **Especificar Calendários Adicionais** do assistente, selecione os calendários nos quais as hierarquias na dimensão se baseiam. Você pode escolher um dos seguintes calendários.  
   
-|Calendário|Descrição|  
+|Calendário|DESCRIÇÃO|  
 |--------------|-----------------|  
 |Calendário fiscal|Um calendário fiscal de doze meses. Se você selecionar esse calendário, especifique o dia e o mês iniciais para o ano fiscal usado pela empresa.|  
-|Calendário de relatório (ou marketing)|Um calendário de relatório de doze meses que inclui dois meses de quatro semanas e um mês de cinco semanas em um padrão recorrente de três meses (trimestral). Se você selecionar esse calendário, especifique o dia e mês iniciais e o padrão de três meses de 4-4-5, 4-5 – 4 ou 5 – 4 – 4 semanas, sendo que cada dígito representa o número de semanas do mês.|  
+|Calendário de relatório (ou marketing)|Um calendário de relatório de doze meses que inclui dois meses de quatro semanas e um mês de cinco semanas em um padrão recorrente de três meses (trimestral). Se você selecionar este calendário, especifique o dia e o mês iniciais e o padrão de três meses de 4-4-5, 4-5-4 ou 5-4-4 semanas, em que cada dígito representa o número de semanas em um mês.|  
 |Calendário de produção|Um calendário que usa 13 períodos de quatro semanas, dividido em três trimestres de quatro períodos e um trimestre de cinco períodos. Se você selecionar esse calendário, especifique a semana (entre 1 e 4) e o mês iniciais para o ano de produção e o trimestre com períodos extras.|  
 |Calendário ISO 8601|O calendário padrão de representação de datas e hora da Organização Internacional de Padronização (ISO) (8601). Esse calendário possui um número integrante de semanas de 7 dias. Para evitar dividir uma semana, este calendário inicia um ano novo até vários dias antes ou depois de 1 de janeiro.|  
   

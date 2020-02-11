@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades do conjunto de dados, filtros (construtor de relatórios) | Microsoft Docs
+title: Caixa de diálogo Propriedades do conjunto de, filtros (Construtor de Relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109378"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Filtros (Construtor de Relatórios)
@@ -42,9 +42,9 @@ ms.locfileid: "66109378"
  Mova o filtro selecionado para baixo na lista.  
   
  **Expression**  
- Digite ou escolha a expressão à qual deseja aplicar um filtro. Clique no botão Expressão (**fx**) para editar a expressão.  
+ Digite ou escolha a expressão à qual deseja aplicar um filtro. Clique no botão expressão (**FX**) para editar a expressão.  
   
- **Data type**  
+ **Tipo de dados**  
  Escolha o tipo de dados para **Valor**. Sempre que possível, escolha um tipo de dados correspondente ao tipo de dados de **Expressão**.  
   
  Os valores em **Expressão** e **Valor** devem ser avaliados como o mesmo tipo de dados. Por exemplo, se a opção **Expressão** for definida como um campo que tem o tipo de dados System.Int32 e **Valor** como 7, na lista suspensa, escolha **Inteiro**.  
@@ -54,13 +54,13 @@ ms.locfileid: "66109378"
  **Operador**  
  Selecione o operador que será usado para comparar a expressão e o valor.  
   
- **Value**  
- Digite a expressão ou o valor a ser usado quando for avaliar a expressão especificada na caixa **Expressão** . Clique no botão Expressão (**fx**) para editar a expressão.  
+ **Valor**  
+ Digite a expressão ou o valor a ser usado quando for avaliar a expressão especificada na caixa **Expressão** . Clique no botão expressão (**FX**) para editar a expressão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Adicionar um filtro a um conjunto de dados &#40;relatórios e SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
+ [Adicionar um filtro a um conjunto de &#40;Construtor de Relatórios e SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

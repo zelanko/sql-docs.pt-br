@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807439"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Espelhamento e replicação de banco de dados (SQL Server)
@@ -71,9 +71,9 @@ ms.locfileid: "62807439"
   
 3.  Configure a distribuição para o espelho. Especifique o nome do espelho como Publicador e especifique o mesmo Distribuidor e a pasta de instantâneos usada pelo principal. Por exemplo, caso esteja configurando a replicação com procedimentos armazenados, execute [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) no Distribuidor e execute [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) no espelho. Para **sp_adddistpublisher**:  
   
-    -   Defina o valor do parâmetro **@publisher** para o nome de rede do espelho.  
+    -   Defina o valor do **@publisher** parâmetro para o nome de rede do espelho.  
   
-    -   Defina o valor do parâmetro **@working_directory** para a pasta de instantâneos usada pelo principal.  
+    -   Defina o valor do **@working_directory** parâmetro para a pasta de instantâneos usada pela entidade de segurança.  
   
 4.  Especifique o nome do espelho para o parâmetro do agente **– PublisherFailoverPartner**. Esse parâmetro de agente é exigido pelos seguintes agentes para identificar o espelho, após o failover:  
   
@@ -133,9 +133,9 @@ ms.locfileid: "62807439"
   
 -   Ao usar os procedimentos armazenados ou RMO (Replication Management Objects) para gerenciar a replicação no espelho, nos casos em que você especifica o nome do Publicador, especifique o nome da instância na qual o banco de dados foi habilitado para a replicação. Para determinar o nome apropriado, use a função [publishingservername](/sql/t-sql/functions/replication-functions-publishingservername).  
   
-     Quando um banco de dados de publicação é espelhado, os metadados de replicação armazenados no banco de dados espelhado são idênticos aos metadados armazenados no banco de dados principal. Portanto, para os bancos de dados de publicação habilitados para replicação no principal, o nome da instância do Publicador armazenado nas tabelas do sistema no espelho será o nome do principal, não do espelho. Isso afetará a configuração e a manutenção da replicação, em caso de failover do banco de dados de publicação no espelho. Por exemplo, se você configurar a replicação com procedimentos armazenados no espelho após o failover e desejar adicionar uma assinatura pull a um banco de dados de publicação habilitado no principal, será necessário especifique o nome do principal, em vez do nome do espelho para o parâmetro **@publisher** de **sp_addpullsubscription** ou **sp_addmergepullsubscription**.  
+     Quando um banco de dados de publicação é espelhado, os metadados de replicação armazenados no banco de dados espelhado são idênticos aos metadados armazenados no banco de dados principal. Portanto, para os bancos de dados de publicação habilitados para replicação no principal, o nome da instância do Publicador armazenado nas tabelas do sistema no espelho será o nome do principal, não do espelho. Isso afetará a configuração e a manutenção da replicação, em caso de failover do banco de dados de publicação no espelho. Por exemplo, se você estiver configurando a replicação com procedimentos armazenados no espelho após um failover e quiser adicionar uma assinatura pull a um banco de dados de publicação que foi habilitado no principal, você deverá especificar o nome da entidade de segurança em vez do **@publisher** nome do espelho para o parâmetro de **sp_addpullsubscription** ou **sp_addmergepullsubscription**.  
   
-     Ao habilitar um banco de dados de publicação no espelho, após o failover para o espelho, o nome da instância do Publicador, armazenado nas tabelas do sistema, será o nome do espelho; neste caso, você usará o nome do espelho para o parâmetro **@publisher** .  
+     Se você habilitar um banco de dados de publicação no espelho após o failover para o espelho, o nome da instância do Publicador armazenado em tabelas do sistema será o nome do espelho; Nesse caso, você usaria o nome do espelho para o **@publisher** parâmetro.  
   
     > [!NOTE]  
     >  Em alguns casos, como **sp_addpublication**, o parâmetro **@publisher** tem suporte apenas nos Publicadores não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; nesses casos, ele não é relevante para o espelhamento do banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -160,7 +160,7 @@ ms.locfileid: "62807439"
 |Modo de alto desempenho|Se o espelho estiver indisponível, o banco de dados principal estará em execução exposto (isto é, sem-espelho). Porém, o Log Reader Agent só replica as transações que estão intensificadas no espelho. Caso o serviço seja forçado e o servidor espelho assumir a função do principal, o Log Reader Agent funcionará no espelho e iniciará a seleção de novas transações.<br /><br /> Fique ciente de que a latência de replicação aumentará, se o espelho ficar atrás do principal.|  
 |Modo de segurança alta sem failover automático|Todas as transações confirmadas têm a garantia de serem intensificadas em disco, no servidor espelho. O Log Reader Agent só replica as transações que estão intensificadas no espelho. Se o espelho estiver indisponível, o principal proíbe qualquer atividade adicional no banco de dados; portanto, o Log Reader Agent não terá nenhuma transação a ser replicada.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Replicação e envio de logs &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   

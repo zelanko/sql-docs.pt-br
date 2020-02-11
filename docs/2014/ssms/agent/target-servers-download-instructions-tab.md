@@ -13,35 +13,35 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245338"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Servidores de Destino (guia Instruções de Download)
   Use esta página para exibir e atualizar as instruções de download de um ou mais servidores de destino.  
   
 ## <a name="options"></a>Opções  
- **Servidor de Destino**  
+ **Servidor de destino**  
  Selecione o servidor para o qual exibir ou modificar instruções.  
   
  **Trabalho**  
  Selecione o trabalho para o qual exibir ou modificar instruções.  
   
- **Servidor de Destino**  
+ **Servidor de destino**  
  Exiba o nome do servidor ao qual se aplicam as instruções de download.  
   
  **Operação**  
  Exiba a operação que a instrução de download executará.  
   
- **Nome do Objeto**  
+ **Object Name**  
  Exiba o nome do objeto que será afetado pela instrução de download.  
   
- **Data da Postagem**  
+ **Data de postagem**  
  Exiba a data e hora local em que a instrução foi postada.  
   
- **Data do Download**  
+ **Data de download**  
  Exiba a data e a hora locais em que o servidor de destino baixou a instrução. Se ocorreu um erro durante o download, ele será indicado.  
   
  **Status do download de instruções**  
@@ -50,10 +50,10 @@ ms.locfileid: "63245338"
  **Delete (excluir)**  
  Exclua a instrução de download selecionada.  
   
- **Liberada**  
+ **Limpar**  
  Limpe o status da instrução de download selecionada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração automatizada em toda a empresa](automated-administration-across-an-enterprise.md)  
   
   

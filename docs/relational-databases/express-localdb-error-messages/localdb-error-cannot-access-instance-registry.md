@@ -10,10 +10,10 @@ ms.assetid: f1458ca8-54dd-48c4-86ae-a8bbedbb7db3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a08ed3b0a138ae0fbe6a76abc31c7db27b4758ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996030"
 ---
 # <a name="localdb_error_cannot_access_instance_registry"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
@@ -23,10 +23,10 @@ ms.locfileid: "67996030"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|262|  
-|Origem do evento|Tempo de execução de banco de dados local do SQL Server 12.0|  
-|Componente|API do tempo de execução de banco de dados local|  
+|Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
+|Componente|API do runtime de banco de dados local|  
 |Texto da mensagem|Erro inesperado ao tentar acessar a configuração do registro da instância do Banco de Dados Local. Consulte o log do Aplicativo do Windows para obter detalhes sobre o erro.|  
   
 ## <a name="explanation"></a>Explicação  

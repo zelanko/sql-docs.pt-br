@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abaa60d696975616631aea210c32bfcea63f6767
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264727"
 ---
 # <a name="deploying-a-custom-assembly"></a>Implantando um assembly personalizado
-  Para implantar um assembly personalizado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], coloque o assembly nas pastas de aplicativo do Designer de Relatórios e do servidor de relatório. Por padrão, os assemblies personalizados recebem a permissão `Execution` no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para conceder privilégios aos assemblies personalizados além da permissão Executar, você precisará editar o arquivo de configuração rssrvpolicy.config do servidor de relatório e o arquivo de configuração rspreviewpolicy.config da janela de visualização do Designer de Relatórios. Como alternativa, você poderá instalar o seu assembly no GAC (cache de assembly global).  
+  Para implantar um assembly personalizado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], coloque o assembly nas pastas de aplicativo de Report Designer e o servidor de relatório. Por padrão, os assemblies personalizados recebem a permissão `Execution` no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para conceder privilégios aos assemblies personalizados além da permissão Executar, você precisará editar o arquivo de configuração rssrvpolicy.config do servidor de relatório e o arquivo de configuração rspreviewpolicy.config da janela de visualização do Designer de Relatórios. Como alternativa, você poderá instalar o seu assembly no GAC (cache de assembly global).  
   
 > [!NOTE]  
 >  Existem dois modos de visualização para o Designer de Relatórios: a guia Visualizar e a janela pop-up que é iniciada quando o projeto de relatório é inicializado no modo `DebugLocal`. A guia Visualizar executa todas as expressões de relatório usando o conjunto de permissões `FullTrust` e não aplica configurações de política de segurança. A janela pop-up de visualização foi desenvolvida para simular a funcionalidade do servidor de relatório e, portanto, tem um arquivo de configuração de política que você ou um administrador devem modificar para usar assemblies e extensões personalizadas no Designer de Relatórios. Essa visualização pop-up também bloqueia o assembly personalizado. Dessa forma, será preciso fechar a janela de visualização para modificar ou atualizar o seu código de assembly personalizado.  
@@ -61,7 +61,7 @@ ms.locfileid: "63264727"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usando assemblies personalizados com relatórios](using-custom-assemblies-with-reports.md)   
  [Trabalhando com assemblies e o cache de assembly global](https://go.microsoft.com/fwlink/?LinkId=63912)  
   

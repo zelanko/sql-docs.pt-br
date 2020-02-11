@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68888645"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>Criando uma exibição da fonte de dados (Tutorial de mineração de dados básico)
@@ -22,11 +22,11 @@ ms.locfileid: "68888645"
   
 ### <a name="to-create-a-data-source-view"></a>Para criar uma exibição da fonte de dados  
   
-1.  Em **Gerenciador de soluções**, clique com o botão direito do mouse em exibições da **fonte de dados**e selecione **nova exibição da fonte de dados**.  
+1.  Em **Gerenciador de soluções**, clique com o botão direito do mouse em **exibições da fonte de dados**e selecione **nova exibição da fonte de dados**.  
   
-2.  Na página **Bem-vindo ao Assistente de Exibição da Fonte de Dados** , clique em **Avançar**.  
+2.  Na página **Bem-vindo ao Assistente de Exibição da Fonte de Dados**, clique em **Próximo**.  
   
-3.  Na página **selecionar uma fonte de dados** , em **fontes de dados relacionais**, selecione a fonte de dados Adventure Works DW 2012 que você criou na última tarefa. Clique em **Avançar**.  
+3.  Na página **selecionar uma fonte de dados** , em **fontes de dados relacionais**, selecione a fonte de dados Adventure Works DW 2012 que você criou na última tarefa. Clique em **Próximo**.  
   
     > [!NOTE]  
     >  Se você quiser criar uma fonte de dados, clique com o botão direito do mouse em **fontes de dados** e clique em **nova fonte de dados** para iniciar o assistente de fonte de dados.  
@@ -37,19 +37,19 @@ ms.locfileid: "68888645"
   
     -   **vTargetMail (dbo)** -exibição de dados históricos sobre os compradores de bicicletas anteriores  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
 6.  Na página **concluindo o assistente** , por padrão, a exibição da fonte de dados é chamada Adventure Works DW 2012. Altere o nome para `Targeted Mailing`e clique em **concluir**.  
   
      A nova exibição da fonte de dados é aberta na guia **endereçamento direcionado. dsv [Design]** .  
   
 ## <a name="previous-task-in-lesson"></a>Tarefa anterior da lição  
- [Criando um tutorial de &#40;mineração de dados básico de fonte de dados&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Criando uma fonte de dados &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Criando um tutorial de mineração de &#40;dados básico de estrutura de endereçamento de destino&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Lição 2: criando uma estrutura de endereçamento direcionada &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Como definir uma exibição da fonte de dados &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
+## <a name="see-also"></a>Consulte Também  
+ [Definindo uma exibição da fonte de dados &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
   
   

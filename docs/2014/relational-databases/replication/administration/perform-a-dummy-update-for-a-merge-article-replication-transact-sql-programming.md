@@ -1,5 +1,5 @@
 ---
-title: Executar uma atualização fictícia para um artigo de mesclagem (programação Transact-SQL de replicação) | Microsoft Docs
+title: Executar uma atualização fictícia para um artigo de mesclagem (Programação Transact-SQL de replicação) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 691988cd229f9b0c9ab81f31713a2b2e46806bdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162001"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>Executar uma atualização fictícia para um artigo de mesclagem (Programação Transact-SQL de replicação)
@@ -29,7 +29,7 @@ ms.locfileid: "63162001"
   
 1.  Execute a operação (por exemplo, UPDATETEXT) em uma linha em uma tabela de mesclagem publicada que exija uma atualização fictícia.  
   
-2.  No servidor (Publicador ou Assinante) do banco de dados em que foi feita a alteração, execute [sp_mergedummyupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql). Especifique a tabela onde as alterações foram feitas para o **@source_object** para o identificador exclusivo da linha alterada para **@rowguid** .  
+2.  No servidor (Publicador ou Assinante) do banco de dados em que foi feita a alteração, execute [sp_mergedummyupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql). Especifique a tabela na qual a alteração foi feita **@source_object**e o identificador exclusivo da linha alterada para. **@rowguid**  
   
 3.  Sincronize a assinatura para replicar a linha alterada.  
   

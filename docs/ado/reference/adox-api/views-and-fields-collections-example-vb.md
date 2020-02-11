@@ -1,5 +1,5 @@
 ---
-title: Modos de exibição e campos de exemplo de coleções (VB) | Microsoft Docs
+title: Exemplo de coleções de exibições e campos (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16145ad1dd52a6ad535c9a51a64f410a85e12e18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964825"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Exemplo de coleções Views e Fields (VB)
-O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade e o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto para recuperar informações de campo para o modo de exibição.  
+O código a seguir demonstra como usar a propriedade [Command](../../../ado/reference/adox-api/command-property-adox.md) e o objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para recuperar informações de campo para a exibição.  
   
 ```  
 ' BeginViewFieldsVB  
@@ -77,9 +77,9 @@ End Sub
 ' EndViewFieldsVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Propriedade Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

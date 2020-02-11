@@ -18,31 +18,31 @@ ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b00a2e83839724c2b6e5193e2ca08d5c6d3eced9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106309"
 ---
-# <a name="msmergesubscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
+# <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_subscriptions** tabela contém uma linha para cada assinatura servida pelo Merge Agent no assinante. Esta tabela é armazenada no banco de dados de distribuição.  
+  A tabela de **MSmerge_subscriptions** contém uma linha para cada assinatura atendida pelo agente de mesclagem no Assinante. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**publisher_id**|**smallint**|A ID do publicador.|  
+|**publisher_id**|**smallint**|A ID do Publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador.|  
 |**publication_id**|**int**|A ID da publicação.|  
-|**subscriber_id**|**smallint**|A ID do assinante.|  
+|**subscriber_id**|**smallint**|A ID do Assinante.|  
 |**subscriber_db**|**sysname**|O nome do banco de dados de assinatura.|  
 |**subscription_type**|**int**|O tipo de assinatura:<br /><br /> 0 = Push.<br /><br /> 1 = Pull.<br /><br /> 2 = Anônimo.|  
 |**sync_type**|**tinyint**|O tipo de sincronização:<br /><br /> 1 = Automático.<br /><br /> 2 = Nenhuma sincronização.|  
 |**status**|**tinyint**|O status da assinatura.|  
 |**subscription_time**|**datetime**|A hora que a assinatura foi adicionada.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

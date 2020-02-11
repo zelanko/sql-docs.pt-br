@@ -1,5 +1,5 @@
 ---
-title: (Transact-SQL) de sp_backup_master_switch | Microsoft Docs
+title: managed_backup. sp_backup_master_switch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bb151279d1435c544de406e67384ce9ca1fdd11e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942061"
 ---
-# <a name="managedbackupspbackupmasterswitch-transact-sql"></a>(Transact-SQL) de sp_backup_master_switch
+# <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup. sp_backup_master_switch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Pausa ou retoma o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "67942061"
   
 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="Arguments"></a> Argumentos  
  @state  
- Defina o estado do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. O @state parâmetro é **BIT**. Quando definido como um valor 0, as operações serão pausadas; quando definido como um valor 1, a operação será retomada.  
+ Defina o estado do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. O @state parâmetro é **bit**. Quando definido como um valor 0, as operações serão pausadas; quando definido como um valor 1, a operação será retomada.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -79,7 +79,7 @@ Go
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Backup Gerenciado do SQL Server para o Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

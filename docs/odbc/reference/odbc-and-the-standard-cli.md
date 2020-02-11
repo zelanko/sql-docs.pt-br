@@ -1,5 +1,5 @@
 ---
-title: ODBC e a CLI padrão | Microsoft Docs
+title: ODBC e a CLI Standard | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,65 +17,65 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5222282bce2acf49cc6a144667ddd691528b3693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944843"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC e a CLI padrão
-ODBC alinha-se com as seguintes especificações e padrões que lidam com a Interface de nível de chamada (CLI). (Os recursos de ODBC são um subconjunto de cada um desses padrões.)  
+O ODBC alinha-se com as especificações e os padrões a seguir que lidam com a CLI (interface de nível de chamada). (Os recursos do ODBC são um superconjunto de cada um desses padrões.)  
   
--   A especificação do Open Group CAE "gerenciamento de dados: Interface de nível de chamada SQL (CLI)"  
+-   A especificação CAE do grupo aberto "Gerenciamento de Dados: interface de nível de chamada do SQL (CLI)"  
   
--   ISO/IEC 9075-Interface de nível de chamada 3:1995 (E) (SQL/CLI)  
+-   Interface de nível de chamada ISO/IEC 9075-3:1995 (E) (SQL/CLI)  
   
- Como resultado, esse alinhamento forem verdadeiras:  
+ Como resultado desse alinhamento, as seguintes opções são verdadeiras:  
   
--   Um aplicativo escrito com as especificações do Open Group e a CLI de ISO funcionará com ODBC *3.x* driver ou um driver compatível com os padrões quando ele é compilado com o ODBC *3.x* arquivos de cabeçalho e vinculado com ODBC *3.x* bibliotecas, e quando ele ganha acesso para o driver ODBC por meio do *3.x* Gerenciador de Driver.  
+-   Um aplicativo gravado nas especificações do grupo aberto e da CLI ISO funcionará com um driver ODBC *3. x* ou com um driver compatível com padrões quando for compilado com os arquivos de cabeçalho ODBC *3. x* e vinculado com bibliotecas ODBC *3. x* e quando ele obtiver acesso ao driver por meio do Gerenciador de driver ODBC *3. x* .  
   
--   Um driver escrito com as especificações do Open Group e a CLI de ISO funcionará com ODBC *3.x* aplicativo ou um aplicativo compatível com os padrões quando ele é compilado com o ODBC *3.x* arquivos de cabeçalho e vinculado com o ODBC *3.x* bibliotecas, e quando o aplicativo obtém acesso ao driver por meio de ODBC *3.x* Gerenciador de Driver. (Para obter mais informações, consulte [compatível com os padrões de aplicativos e Drivers](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   Um driver escrito nas especificações do grupo aberto e da CLI ISO funcionará com um aplicativo ODBC *3. x* ou com um aplicativo compatível com padrões quando for compilado com os arquivos de cabeçalho ODBC *3. x* e vinculado com bibliotecas ODBC *3. x* e quando o aplicativo obtiver acesso ao driver por meio do Gerenciador de driver ODBC *3. x* . (Para obter mais informações, consulte [aplicativos e drivers em conformidade com os padrões](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
- O nível de conformidade de interface Core abrange todos os recursos na CLI do ISO e todos os recursos os na CLI do grupo aberto. Recursos opcionais da CLI do grupo aberto aparecem em níveis mais altos de conformidade de interface. Porque todos os ODBC *3.x* drivers são necessários para dar suporte os recursos no nível de conformidade de interface de núcleo, as seguintes condições forem verdadeiras:  
+ O nível de conformidade da interface principal abrange todos os recursos na CLI ISO e todos os recursos não-Optional na CLI do grupo aberto. Os recursos opcionais da CLI do Open Group aparecem em níveis de conformidade de interface mais altos. Como todos os drivers ODBC *3. x* são necessários para dar suporte aos recursos no nível de conformidade da interface principal, os seguintes itens são verdadeiros:  
   
--   ODBC *3.x* driver dará suporte a todos os recursos usados por um aplicativo compatível com os padrões.  
+-   Um driver ODBC *3. x* dará suporte a todos os recursos usados por um aplicativo compatível com os padrões.  
   
--   ODBC *3.x* aplicativo usando apenas os recursos na CLI do ISO e os recursos da CLI do grupo aberto funcionará com qualquer driver compatível com os padrões.  
+-   Um aplicativo ODBC *3. x* que usa apenas os recursos na CLI ISO e os recursos não-informativos da CLI do grupo aberto funcionará com qualquer driver compatível com padrões.  
   
- Além das especificações de interface de nível de chamada contidas nos padrões ISO/IEC e abrir CLI de grupo, o ODBC implementa os seguintes recursos. (Alguns desses recursos existiam em versões do ODBC antes de ODBC *3.x*.)  
+ Além das especificações de interface de nível de chamada contidas nos padrões ISO/IEC e Open Group CLI, o ODBC implementa os seguintes recursos. (Alguns desses recursos existiam em versões do ODBC antes do ODBC *3. x*.)  
   
--   Multilinha buscas por uma única chamada de função  
+-   O LinhaMúltipla busca por uma única chamada de função  
   
--   Associando a uma matriz de parâmetros  
+-   Associação a uma matriz de parâmetros  
   
--   Suporte a indicadores como buscar por indicador, indicadores de comprimento variável e em massa de atualização e exclusão por operações de indicador em linhas não adjacentes  
+-   Suporte a indicadores, incluindo busca por indicador, indicadores de comprimento variável e atualização em massa e exclusão por operações de indicador em linhas descontínuas  
   
--   Associação por linha  
+-   Associação de linha  
   
 -   Deslocamentos de associação  
   
--   Suporte a lotes de instruções SQL, em um procedimento armazenado ou como uma sequência de instruções SQL executadas por meio **SQLExecute** ou **SQLExecDirect**  
+-   Suporte para lotes de instruções SQL, em um procedimento armazenado ou como uma sequência de instruções SQL executadas por meio de **SQLExecute** ou **SQLExecDirect**  
   
--   As contagens de linhas de cursor exato ou aproximado  
+-   Contagens de linhas de cursor exatas ou aproximadas  
   
--   Posicionado exclusões e atualizações em lote e operações de exclusão e atualização pela chamada de função (**SQLSetPos**)  
+-   Operações de atualização e exclusão posicionadas e atualizações em lote e exclusões por chamada de função (**SQLSetPos**)  
   
--   Funções de catálogo que extrair informações do esquema de informações sem a necessidade de dar suporte a modos de exibição de esquema de informações  
+-   Funções de catálogo que extraem informações do esquema de informações sem a necessidade de dar suporte a exibições de esquema de informações  
   
--   Sequências de escape para procedimentos armazenados, funções escalares, literais datetime, literais de intervalo e junções externas  
+-   Sequências de escape para junções externas, funções escalares, literais DateTime, literais de intervalo e procedimentos armazenados  
   
 -   Bibliotecas de tradução de página de código  
   
--   Relatórios de nível de conformidade ANSI um driver e o suporte do SQL  
+-   Relatórios de nível de conformidade ANSI de um driver e suporte a SQL  
   
--   Sob demanda a população automática do descritor de parâmetro de implementação  
+-   População automática sob demanda do descritor de parâmetro de implementação  
   
--   Diagnóstico aprimorado e matrizes de status de linha e de parâmetro  
+-   Diagnóstico aprimorado e matrizes de status de linha e parâmetro  
   
--   Data e hora, intervalo, decimal/numeric e tipos de buffer de aplicativo inteiro de 64 bits  
+-   DateTime, intervalo, numérico/decimal e tipos de buffer de aplicativo inteiros de 64 bits  
   
 -   Execução assíncrona  
   
--   Suporte de procedimento armazenado, incluindo sequências de escape, mecanismos de associação de parâmetro de saída e funções de catálogo  
+-   Suporte a procedimentos armazenados, incluindo sequências de escape, mecanismos de associação de parâmetro de saída e funções de catálogo  
   
--   Aprimoramentos de Conexão, incluindo suporte para atributos de conexão e navegação de atributo
+-   Aprimoramentos de conexão, incluindo suporte para atributos de conexão e navegação de atributo

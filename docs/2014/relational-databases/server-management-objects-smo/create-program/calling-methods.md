@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192164"
 ---
 # <a name="calling-methods"></a>Chamando métodos
-  Os métodos executam tarefas específicas relacionadas ao objeto, como emitir uma `Checkpoint` em um banco de dados ou solicitar uma lista enumerada de logons para a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Os métodos executam tarefas específicas relacionadas ao objeto, como emitir um `Checkpoint` em um banco de dados ou solicitar uma lista enumerada de logons para a instância [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]do.  
   
  Os métodos executam uma operação em um objeto. Podem assumir parâmetros e frequentemente têm um valor de retorno. O valor de retorno pode ser um tipo de dados simples, um objeto complexo ou uma estrutura que contém muitos membros.  
   
@@ -207,7 +207,7 @@ foreach ( r in d.Rows) {
 }   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

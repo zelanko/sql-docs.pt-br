@@ -13,21 +13,21 @@ ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72e24c8c68a8042cda83c6fa5e448fafcaed1607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925257"
 ---
 # <a name="getting-data"></a>Obtendo dados
-[Conceitos básicos do ADO](../../../ado/guide/data/ado-fundamentals.md)e o [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) exemplo introduzido em particular, as quatro principais operações envolvidas na criação de um aplicativo ADO: obtenção de dados, examinando os dados, edição de dados e atualização de dados. Esta seção discute a obtenção de dados em mais detalhes.  
+Os [conceitos básicos do ADO](../../../ado/guide/data/ado-fundamentals.md)e o exemplo [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) , em particular, introduziram as quatro operações principais envolvidas na criação de um aplicativo ADO: obtendo dados, examinando dados, editando dados e atualizando dados. Esta seção aborda a obtenção de dados com mais detalhes.  
   
- Em um nível básico, vários objetos do ADO contribuem para as operações de obtenção de dados. Primeiro você deve se conectar a uma fonte de dados usando ADO **Conexão** objeto. Em seguida, passar instruções para a fonte de dados usando ADO **comando** objeto. Por fim, você geralmente recebe dados no ADO **Recordset** objeto.  
+ Em um nível básico, vários objetos ADO contribuem para as operações de obtenção de dados. Primeiro, você deve se conectar a uma fonte de dados usando um objeto de **conexão** ADO. Em seguida, você passa instruções para a fonte de dados usando um objeto de **comando** ADO. Por fim, geralmente você recebe dados em um objeto **RECORDSET** ADO.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Conectando-se a fontes de dados](../../../ado/guide/data/connecting-to-data-sources.md)  
   
--   [Preparando e executando comandos](../../../ado/guide/data/preparing-and-executing-commands.md)  
+-   [Preparar e executar comandos](../../../ado/guide/data/preparing-and-executing-commands.md)  
   
--   [Recebendo resultados](../../../ado/guide/data/receiving-results.md)
+-   [Receber resultados](../../../ado/guide/data/receiving-results.md)

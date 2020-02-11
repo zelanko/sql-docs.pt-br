@@ -1,5 +1,5 @@
 ---
-title: Especificar destino (Assistente de geração de esquema) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Especificar destino (Assistente de geração de esquema) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068247"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>Especificar Destino (Assistente de Geração de Esquema) (Analysis Services – Dados Multidimensionais)
@@ -26,7 +26,7 @@ ms.locfileid: "66068247"
  **Criar uma nova exibição da fonte de dados**  
  Selecione para criar uma nova exibição da fonte de dados para conter o esquema relacional gerado pelo assistente.  
   
- **Nome de exibição da fonte de dados**  
+ **Nome da exibição da fonte de dados**  
  Digite o nome da nova exibição da fonte de dados.  
   
 > [!NOTE]  
@@ -38,16 +38,16 @@ ms.locfileid: "66068247"
 > [!NOTE]  
 >  Esta opção só estará habilitada se **Criar uma nova exibição da fonte de dados** estiver selecionada.  
   
- **Nova**  
+ **Novo**  
  Clique para exibir a caixa de diálogo Assistente para Fonte de Dados e definir uma nova fonte de dados a ser associada à nova exibição da fonte de dados.  
   
  Para obter mais informações, consulte [Ajuda F1 do Assistente de Fonte de Dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md).  
   
- **Use a exibição da fonte de dados existente**  
+ **Usar exibição da fonte de dados existente**  
  Selecione para escolher uma exibição de fonte de dados existente para conter o esquema relacional gerado pelo assistente.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de geração de esquema &#40;Analysis Services - dados multidimensionais&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de geração de esquema &#40;Analysis Services dados multidimensionais&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Analysis Services assistentes &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

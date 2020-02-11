@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 38181aca8a2946a9268f77560bdadcbc96e617bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059227"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Editor de Origem do Excel (página Saída de Erro)
@@ -50,11 +50,11 @@ ms.locfileid: "66059227"
  **Aplicar**  
  Aplique a opção de tratamento de erros às células selecionadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Origem do Excel &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Editor de Fonte do Excel &#40;Página Colunas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Editor de origem do Excel &#40;página do Gerenciador de conexões&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
+ [Editor de origem do Excel &#40;página colunas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Gerenciador de conexões do Excel](connection-manager/excel-connection-manager.md)   
- [Loop através de arquivos e tabelas do Excel por meio de um contêiner do Loop Foreach](control-flow/foreach-loop-container.md)  
+ [Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach](control-flow/foreach-loop-container.md)  
   
   

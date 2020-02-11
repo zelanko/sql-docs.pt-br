@@ -1,5 +1,5 @@
 ---
-title: Importar do PowerPivot (SSAS Tabular) | Microsoft Docs
+title: Importar do PowerPivot (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067022"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importar do PowerPivot (SSAS tabular)
@@ -28,26 +28,26 @@ ms.locfileid: "66067022"
 > [!NOTE]  
 >  Modelos tabulares não dão suporte a tabelas vinculadas. Ao importar de uma pasta de trabalho PowerPivot que contém uma tabela vinculada, os dados de tabela vinculada são tratados como dados copiados\colados e armazenados no arquivo Model.bim. Ao exibir as propriedades para uma tabela copiada\colada, a propriedade **Dados de Origem** é desabilitada e a caixa de diálogo **Propriedades da Tabela** no menu **Tabela** é desabilitada.  
 >   
->  Há um limite de 10.000 linhas que podem ser adicionadas aos dados inseridos no modelo. Se você importar um modelo do PowerPivot e o erro "os dados estavam truncados. As tabelas coladas não podem conter mais de 10.000 linhas"você deve revisar o modelo do PowerPivot movendo os dados inseridos para outra fonte de dados, como uma tabela no SQL Server e, em seguida, importe novamente.  
+>  Há um limite de 10.000 linhas que podem ser adicionadas aos dados inseridos no modelo. Se você importar um modelo do PowerPivot e ver o erro "os dados foram truncados. Tabelas coladas não podem conter mais de 10000 linhas "você deve revisar o modelo PowerPivot movendo os dados inseridos para outra fonte de dados, como uma tabela em SQL Server e, em seguida, importar novamente.  
   
  Há considerações especiais dependendo se o banco de dados de workspace está em uma instância do Analysis Services no mesmo computador (local) que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou está em uma instância remota do Analysis Services.  
   
- Se o banco de dados de workspace estiver em uma instância local do Analysis Services, você poderá importar os metadados e os dados da pasta de trabalho PowerPivot. Os metadados são copiados da pasta de trabalho e usados para criar o projeto de modelo tabular. Os dados, em seguida, são copiados da pasta de trabalho e armazenados no banco de dados de espaço de trabalho do projeto (com exceção de copiados/colados, que são armazenados no arquivo Model. BIM).  
+ Se o banco de dados de workspace estiver em uma instância local do Analysis Services, você poderá importar os metadados e os dados da pasta de trabalho PowerPivot. Os metadados são copiados da pasta de trabalho e usados para criar o projeto de modelo tabular. Em seguida, os dados são copiados da pasta de trabalho e armazenados no banco de dados de espaço de trabalho do projeto (com exceção de arquivos de cópia/colado, armazenados no arquivo Model. BIM).  
   
  Se o banco de dados de workspace estiver em uma instância remota do Analysis Services, você não poderá importar os dados da pasta de trabalho PowerPivot para Excel. Você ainda poderá importar os metadados da pasta de trabalho; porém, isto fará um script ser executado na instância remota do Analysis Services. Você só deve importar metadados de uma pasta de trabalho confiável do PowerPivot. Os dados devem ser importados de origens definidas nas conexões da fonte de dados. Os dados copiados/colados e de tabela vinculada na pasta de trabalho PowerPivot devem ser copiados e colados no projeto de modelo tabular.  
   
-#### <a name="to-create-a-new-tabular-model-project-from-a-powerpivot-for-excel-file"></a>Para criar um novo projeto de modelo tabular de um arquivo PowerPivot para Excel  
+#### <a name="to-create-a-new-tabular-model-project-from-a-powerpivot-for-excel-file"></a>Para criar um novo projeto de modelo de tabela a partir de um arquivo do PowerPivot para Excel  
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no menu **Arquivo** , clique em **Novo**e, em seguida, em **Projeto**.  
   
-2.  No **novo projeto** caixa de diálogo **modelos instalados**, clique em **Business Intelligence**e, em seguida, clique em **importar do PowerPivot**.  
+2.  Na caixa de diálogo **novo projeto** , em **modelos instalados**, clique em **Business Intelligence**e, em seguida, clique em **Importar do PowerPivot**.  
   
-3.  Em  **Nome**, digite um nome para o projeto e especifique um local e um nome para a solução e clique em **OK**.  
+3.  Em **nome**, digite um nome para o projeto e, em seguida, especifique um local e um nome para a solução e clique em **OK**.  
   
 4.  Na caixa de diálogo **Abrir** , selecione o arquivo do [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] que contém os metadados e dados modelo que você deseja importar e clique em **Abrir**.  
   
-## <a name="see-also"></a>Consulte também  
- [Banco de dados de workspace &#40;SSAS de Tabela&#41;](workspace-database-ssas-tabular.md)   
- [Copiar e colar dados &#40;SSAS Tabular&#41;](../copy-and-paste-data-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Banco de dados de espaço de trabalho &#40;SSAS de tabela&#41;](workspace-database-ssas-tabular.md)   
+ [Copiar e colar dados &#40;SSAS de tabela&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

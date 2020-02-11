@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 401a11a10f190cda8efeaffa04e1025ef7f4e681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105231"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration (MDX)
@@ -35,7 +35,7 @@ IsGeneration(Member_Expression, Generation_Number)
  Uma expressão numérica válida que especifica a geração contra a qual o membro especificado é avaliado.  
   
 ## <a name="remarks"></a>Comentários  
- O **IsGeneration** retornos de função **verdadeiro** se o membro especificado é o número de geração especificada. Caso contrário, a função retornará **falsos**. Além disso, se o membro especificado for avaliada como um membro vazio, o **IsGeneration** retornos de função **falso**.  
+ A função **IsGeneration** retornará **true** se o membro especificado estiver no número de geração especificado. Caso contrário, a função retornará **false**. Além disso, se o membro especificado for avaliado como um membro vazio, a função **IsGeneration** retornará **false**.  
   
  Com a finalidade de indexação de geração, os membros folha têm índice de geração 0. O índice de geração de membros não folha é determinado primeiro por obter o índice de geração mais alto a partir da união de todos os membros filho do membro especificado, adicionando 1 a esse índice. Devido à maneira como o índice de geração de membros não folha é determinado, um membro não folha específico pode pertencer a mais de uma geração.  
   
@@ -52,7 +52,7 @@ IsGeneration(Member_Expression, Generation_Number)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

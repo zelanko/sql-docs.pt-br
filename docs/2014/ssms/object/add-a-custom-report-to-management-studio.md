@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510373"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>adicionar um relatório personalizado ao Management Studio
@@ -59,7 +59,7 @@ ms.locfileid: "62510373"
   
 ### <a name="to-add-a-report-to-management-studio"></a>Para adicionar um relatório ao Management Studio  
   
--   No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um nó no Pesquisador de Objetos, aponte para **Relatórios**e clique em **Relatórios Personalizados**. Na caixa de diálogo **Abrir Arquivo** , localize a pasta de relatórios personalizados, selecione o arquivo **ConnectionsReport.rdl** e clique em **Abrir**.  
+-   No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um nó no Pesquisador de objetos, aponte para **relatórios**e clique em **relatórios personalizados**. Na caixa de diálogo **Abrir Arquivo** , localize a pasta de relatórios personalizados, selecione o arquivo **ConnectionsReport.rdl** e clique em **Abrir**.  
   
      Quando um novo relatório personalizado é aberto pela primeira vez de um nó do Pesquisador de Objetos, esse relatório é adicionado à lista dos relatórios usados mais recentemente, em **Relatórios Personalizados** no menu de atalho desse nó. Quando um relatório padrão é aberto pela primeira vez, ele também é exibido nessa lista, em **Relatórios Personalizados**. Se um relatório personalizado for excluído, na próxima vez que ele for selecionado, será exibido um prompt para excluir o item da lista de relatórios usados mais recentemente.  
   
@@ -67,10 +67,10 @@ ms.locfileid: "62510373"
   
     2.  Ajuste o número para **Exibir arquivos na lista dos usados recentemente**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Relatórios personalizados no Management Studio](custom-reports-in-management-studio.md)   
- [Usar relatórios personalizados com propriedades de nó do Gerenciador de objeto](use-custom-reports-with-object-explorer-node-properties.md)   
- [Cancelar Supressão da execução de relatório personalizado avisos](unsuppress-run-custom-report-warnings.md)   
+ [Usar relatórios personalizados com propriedades de nó do pesquisador de objetos](use-custom-reports-with-object-explorer-node-properties.md)   
+ [Cancelar supressão de executar avisos de relatório personalizado](unsuppress-run-custom-report-warnings.md)   
  [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

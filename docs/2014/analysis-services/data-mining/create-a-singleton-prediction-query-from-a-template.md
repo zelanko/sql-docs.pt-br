@@ -1,5 +1,5 @@
 ---
-title: Criar uma consulta de previsão Singleton de um modelo | Microsoft Docs
+title: Criar uma consulta de Previsão Singleton a partir de um modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085485"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Criar uma consulta de previsão singleton a partir de um modelo
-  Uma consulta singleton é útil quando você tem um modelo que você deseja usar para previsão, mas não deseja mapeá-la para um conjunto de dados de entrada externo ou fazer previsões em massa. Uma consulta singleton permite oferecer um valor ou valores ao modelo e ver instantaneamente o valor previsto.  
+  Uma consulta singleton é útil quando você tem um modelo que deseja usar para previsão, mas não deseja mapeá-la para um conjunto de dados de entrada externo ou fazer previsões em massa. Uma consulta singleton permite oferecer um valor ou valores ao modelo e ver instantaneamente o valor previsto.  
   
  Por exemplo, a consulta DMX a seguir representa uma consulta singleton no modelo de email de destino, TM_Decision_Tree.  
   
@@ -69,20 +69,20 @@ AS [t]
   
 5.  Na linha **modelo de mineração** , digite o nome do modelo de mineração da lista de modelos de mineração exibidos no **Explorador de Objetos**.  
   
-     Para o código de exemplo mostrado no início deste tópico, o **modelo de mineração** linha foi definida como o nome, `TM_Decision_Tree`.  
+     Para o código de exemplo mostrado no início deste tópico, a linha do **modelo de mineração** foi definida como o nome `TM_Decision_Tree`,.  
   
 6.  Na linha **valor** , digite o novo valor de dados para os quais você deseja fazer uma previsão.  
   
-     Para o código de exemplo mostrado no início deste tópico, o **valor** linha foi definida como `2` para prever o comportamento com base no número de crianças na casa de compra de bicicletas.  
+     Para o código de exemplo mostrado no início deste tópico, a linha de **valor** foi definida como `2` para prever o comportamento de compra de bicicletas com base no número de filhos em casa.  
   
 7.  Na linha **coluna** , digite o nome da coluna no modelo de mineração para o qual os novos dados devem ser mapeados.  
   
-     Para o código de exemplo mostrado no início deste tópico, o **coluna** linha foi definida como `Number Children at Home`.  
+     Para o código de exemplo mostrado no início deste tópico, a linha da **coluna** foi definida como `Number Children at Home`.  
   
     > [!NOTE]  
     >  Quando você usa a caixa de diálogo **Especificar Valores para Parâmetros de Modelo** , você não tem que adicionar colchetes ao redor do nome da coluna. Os colchetes serão adicionados automaticamente para você.  
   
-8.  Deixe o **alias de entrada** como `t`.  
+8.  Deixe o **alias** de entrada `t`como.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -92,7 +92,7 @@ AS [t]
   
 11. Clique em **Executar**.  
   
-## <a name="see-also"></a>Consulte também  
- [Criando previsões &#40;Tutorial básico de Data Mining&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criando previsões &#40;tutorial de mineração de dados básico&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

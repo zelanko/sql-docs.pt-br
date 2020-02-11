@@ -1,5 +1,5 @@
 ---
-title: Documentando modelos de mineração (Data Mining Add-ins para Excel) | Microsoft Docs
+title: Documentando modelos de mineração (suplementos de mineração de dados para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,30 +16,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081584"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Documentando modelos de mineração (Suplementos de Mineração de Dados para Excel)
-  ![Botão de modelo de documento, faixa de opções mineração de dados](media/dmc-docmodel.gif "botão de modelo de documento, faixa de opções mineração de dados")  
+  ![Botão Modelo de Documento, faixa de opções Mineração de Dados](media/dmc-docmodel.gif "Botão Modelo de Documento, faixa de opções Mineração de Dados")  
   
- O **modelo de documento** assistente cria um relatório que fornece informações úteis sobre os modelos de mineração que você criou. Ao documentar os modelos criados, você pode rastrear a origem dos dados usados para gerar um modelo, obter informações adicionais sobre a data de processamento do modelo e rastrear alterações de parâmetro que afetam os resultados do modelo.  
+ O assistente de **modelo de documento** cria um relatório que fornece informações úteis sobre os modelos de mineração que você criou. Ao documentar os modelos criados, você pode rastrear a origem dos dados usados para gerar um modelo, obter informações adicionais sobre a data de processamento do modelo e rastrear alterações de parâmetro que afetam os resultados do modelo.  
   
 ## <a name="using-the-document-model-wizard"></a>Usando o assistente de Modelo de Documento  
   
-1.  Clique o **mineração de dados** guia.  
+1.  Clique na guia **mineração de dados** .  
   
-2.  No **uso do modelo** , clique em **modelo de documento**.  
+2.  No grupo **uso do modelo** , clique em **modelo do documento**.  
   
-3.  No **Selecionar modelo** caixa de diálogo, selecione o modelo no qual a relatório e, em seguida, clique em **próxima**. Você deve executar o **modelo de documento** separadamente para cada modelo que você deseja documentar.  
+3.  Na caixa de diálogo **selecionar modelo** , selecione o modelo a ser relatado e clique em **Avançar**. Você deve executar o assistente de **modelo de documento** separadamente para cada modelo que você deseja documentar.  
   
-4.  No **selecionar detalhes da documentação** caixa de diálogo, escolha uma das duas opções: **Preencha informações** ou **informações de resumo**.  
+4.  Na caixa de diálogo **selecionar detalhes da documentação** , escolha uma das duas opções: informações **completas** ou **informações de resumo**.  
   
 5.  Clique em **Concluir**.  
   
-6.  O assistente cria automaticamente uma nova planilha que contém o relatório especificado, denominado **documentação do modelo**,  
+6.  O assistente cria automaticamente uma nova planilha que contém o relatório especificado, título **documentação do modelo**,  
   
 ## <a name="understanding-the-report"></a>Entendendo o relatório  
  Quando você cria um relatório que documenta um modelo de mineração de dados, pode criar um resumo, que contém informações básicas, como o nome e a descrição do modelo, ou um relatório completo, que contém detalhes sobre a estrutura subjacente e informações avançadas sobre o modelo de mineração.  
@@ -75,9 +75,9 @@ ms.locfileid: "66081584"
 ||Colunas discretas|Contagem de passagens<br /><br /> Contagem de falhas<br /><br /> Pontuação de log<br /><br /> Comparação de Precisão|  
   
 > [!NOTE]  
->  Você pode documentar qualquer tipo de modelo que tenha suporte do SQL Server Analysis Services. Portanto, a tabela lista alguns tipos de modelo que não podem ser criados com o uso das Ferramentas de Análise de Tabela ou com os assistentes no Cliente de Mineração de Dados. No entanto, você pode criar todos os tipos de modelo usando o **Editor de consulta de mineração de dados avançada**. Para obter mais informações, consulte [consulta &#40;SQL Server Data Mining Add-ins&#41;](query-sql-server-data-mining-add-ins.md).  
+>  Você pode documentar qualquer tipo de modelo que tenha suporte do SQL Server Analysis Services. Portanto, a tabela lista alguns tipos de modelo que não podem ser criados com o uso das Ferramentas de Análise de Tabela ou com os assistentes no Cliente de Mineração de Dados. No entanto, você pode criar todos os tipos de modelo usando o **Editor de consulta de mineração de dados avançado**. Para obter mais informações, consulte [consultas &#40;SQL Server suplementos de mineração de dados&#41;](query-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Implantando e dimensionando modelos de mineração &#40;Data Mining Add-ins para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Implantando e dimensionando modelos de mineração &#40;suplementos de mineração de dados para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15ef01785355baa21dc2516168d13fbd886abe27
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781359"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Tópicos de instruções sobre a execução de consultas (ODBC)
@@ -27,15 +27,15 @@ ms.locfileid: "73781359"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Usar uma instrução &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
+-   [Usar uma instrução &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
   
--   [Definir opções &#40;de cursor ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
+-   [Definir opções de cursor &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
   
--   [Executar uma instrução diretamente &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
+-   [Executar uma instrução diretamente &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
   
--   [Preparar e executar uma instrução &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
+-   [Preparar e executar uma instrução &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306223"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Caixa de diálogo Local (Visual Database Tools)
@@ -24,7 +24,7 @@ ms.locfileid: "63306223"
   
 -   Escolha **Novo** no menu **Arquivo** e selecione **Projeto**. Quando a caixa de diálogo **Novo Projeto** for exibida, escolha **Procurar**. A caixa de diálogo **Local** abre com o título **Local do Projeto**.  
   
- **Examinar**  
+ **Look in**  
  Localize a pasta que você quer dessa lista. As subpastas da pasta selecionada são exibidas.  
   
 ## <a name="my-places-bar"></a>Barra Meus Locais  
@@ -44,7 +44,7 @@ ms.locfileid: "63306223"
  **Abrir**  
  Retorna o caminho da pasta selecionada no campo **Nome da pasta** à caixa de diálogo de chamada.  
   
-## <a name="toolbar"></a>Barra de Ferramentas  
+## <a name="toolbar"></a>Barra de ferramentas  
  **Navegação Regressiva**  
  Retorna a pasta exibida recentemente, a unidade ou o local de Internet.  
   

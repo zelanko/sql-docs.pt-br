@@ -1,5 +1,5 @@
 ---
-title: Editor de transformação de pesquisa (página colunas) | Microsoft Docs
+title: Editor de transformação pesquisa (página colunas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057901"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>Editor da Transformação Pesquisa (página Colunas)
@@ -34,7 +34,7 @@ ms.locfileid: "66057901"
   
  Você também pode mapear as colunas de entrada para as colunas de pesquisa usando o teclado, destacando a coluna na tabela **Colunas de Entrada Disponíveis** , pressionando a tecla Aplicativo e clicando em **Editar Mapeamentos**.  
   
- **Colunas de Pesquisa Disponíveis**  
+ **Colunas de pesquisa disponíveis**  
  Exiba a lista de colunas de pesquisa. As colunas de pesquisa são as colunas na tabela de referência que permitem pesquisar os valores que correspondem às colunas de entrada.  
   
  Use uma operação arrastar e soltar para mapear as colunas de pesquisa disponíveis para as colunas de entrada.  
@@ -46,17 +46,17 @@ ms.locfileid: "66057901"
  **coluna de pesquisa**  
  Exiba as colunas de pesquisa selecionadas. As escolhas são refletidas nas caixas de seleção da tabela **Colunas de Pesquisa Disponíveis** .  
   
- **Operação de Pesquisa**  
+ **Operação de pesquisa**  
  Selecione uma operação de pesquisa da lista a ser executada na coluna de pesquisa.  
   
  **Alias de Saída**  
  Digite um alias para a saída de cada coluna de pesquisa. O padrão é o nome da coluna de pesquisa; entretanto, é possível selecionar qualquer nome descritivo exclusivo.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de Transformação Pesquisa &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de Transformação Pesquisa &#40;Página Conexão&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [Editor de Transformação Pesquisa &#40;Página Avançado&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Editor de Transformação Pesquisa &#40;Página Saída de Erro&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
- [Transformação Pesquisa Difusa](data-flow/transformations/fuzzy-lookup-transformation.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de transformação pesquisa &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de transformação pesquisa &#40;página conexão&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Editor de transformação pesquisa &#40;página avançado&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Editor de transformação pesquisa &#40;página saída de erro&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [transformação Pesquisa Difusa](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

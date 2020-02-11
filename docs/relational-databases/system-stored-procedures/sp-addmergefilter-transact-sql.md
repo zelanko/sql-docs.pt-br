@@ -16,18 +16,18 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769176"
 ---
-# <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
+# <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Adiciona um novo filtro de mesclagem para criar uma partição com base em uma junção com outra tabela. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,11 +51,11 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filtername = ] 'filtername'`É o nome do filtro. *FilterName* é um parâmetro obrigatório. *FilterName*é **sysname**, sem padrão.  
   
-`[ @join_articlename = ] 'join_articlename'`É o artigo pai para o qual o artigo filho, especificado pelo *artigo*, deve ser Unido usando a cláusula de junção especificada por *join_filterclause*, para determinar as linhas no artigo filho que atendem ao critério de filtro do filtro de mesclagem. *join_articlename* é **sysname**, sem padrão. O artigo deve estar na publicação fornecida pela *publicação*.  
+`[ @join_articlename = ] 'join_articlename'`É o artigo pai para o qual o artigo filho, especificado pelo *artigo*, deve ser Unido usando a cláusula de junção especificada por *join_filterclause*, a fim de determinar as linhas no artigo filho que atendem ao critério de filtro do filtro de mesclagem. *join_articlename* é **sysname**, sem padrão. O artigo deve estar na publicação fornecida pela *publicação*.  
   
-`[ @join_filterclause = ] join_filterclause`É a cláusula de junção que deve ser usada para ingressar no artigo filho especificado por *artigo*e artigo pai especificados por *join_article*, para determinar as linhas qualificando o filtro de mesclagem. *join_filterclause* é **nvarchar (1000)** .  
+`[ @join_filterclause = ] join_filterclause`É a cláusula de junção que deve ser usada para ingressar no artigo filho especificado pelo *artigo*e pelo artigo pai especificado por *join_article*, para determinar as linhas qualificando o filtro de mesclagem. *join_filterclause* é **nvarchar (1000)**.  
   
-`[ @join_unique_key = ] join_unique_key`Especifica se a junção entre o artigo do artigo *filho e o*artigo pai *join_article*é um-para-muitos, um-para-um, muitos para um ou muitos para muitos. *join_unique_key* é **int**, com um padrão de 0. **0** indica uma junção muitos para um ou muitos para muitos. **1** indica uma junção um-para-um ou um-para-muitos. Esse valor é **1** quando as colunas de junção formam uma chave exclusiva em *join_article*, ou se *join_filterclause* estiver entre uma chave estrangeira no *artigo* e uma chave primária em *join_article*.  
+`[ @join_unique_key = ] join_unique_key`Especifica se a junção entre o artigo *do artigo filho e o*artigo pai *join_article*é um-para-muitos, um-para-um, muitos para um ou muitos para muitos. *join_unique_key* é **int**, com um padrão de 0. **0** indica uma junção muitos para um ou muitos para muitos. **1** indica uma junção um-para-um ou um-para-muitos. Esse valor é **1** quando as colunas de junção formam uma chave exclusiva em *join_article*, ou se *join_filterclause* estiver entre uma chave estrangeira no *artigo* e uma chave primária em *join_article*.  
   
 > [!CAUTION]  
 >  Somente defina esse parâmetro como **1** se você tiver uma restrição na coluna de junção na tabela subjacente para o artigo pai que garante a exclusividade. Se *join_unique_key* for definido como **1** incorretamente, pode ocorrer não convergência de dados.  
@@ -74,11 +74,11 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`Especifica o tipo de filtro que está sendo adicionado. *filter_type* é **tinyint**e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**1**|Somente filtro de junção. Necessário para dar [!INCLUDE[ssEW](../../includes/ssew-md.md)] suporte a assinantes.|  
 |**2**|Somente relação de registro lógico.|  
-|**3**|Relação de filtro de junção e registro lógico.|  
+|**Beta**|Relação de filtro de junção e registro lógico.|  
   
  Para obter mais informações, consulte [Agrupar alterações a linhas relacionadas com registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
@@ -88,7 +88,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="remarks"></a>Comentários  
  **sp_addmergefilter** é usado na replicação de mesclagem.  
   
- **sp_addmergefilter** só pode ser usado com artigos de tabela. Artigos de exibição e exibição indexada não têm suporte.  
+ **sp_addmergefilter** só pode ser usada com artigos de tabela. Artigos de exibição e exibição indexada não têm suporte.  
   
  Esse procedimento também pode ser usado para adicionar uma relação lógica entre dois artigos que podem ou não ter um filtro de junção entre eles. *filter_type* é usado para especificar se o filtro de mesclagem que está sendo adicionado é um filtro de junção, uma relação lógica ou ambos.  
   
@@ -104,15 +104,15 @@ sp_addmergefilter [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addmergefilter](../../relational-databases/replication/codesnippet/tsql/sp-addmergefilter-transa_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_addmergefilter**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addmergefilter**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Definir e modificar um filtro de junção entre artigos de mesclagem](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
- [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergefilter](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergefilter](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpmergefilter](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

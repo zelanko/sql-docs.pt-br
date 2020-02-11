@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65092036"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -109,7 +109,7 @@ ms.locfileid: "65092036"
 ## <a name="related-content"></a>Conteúdo relacionado  
  Você pode localizar os livros brancos a seguir em estratégias e implementações úteis de tabelas e índices particionados.  
   
--   [Estratégias de tabelas e índices particionados usando o SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [Estratégias de tabela e índice particionadas usando o SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
 -   [Como implementar uma janela deslizante automática](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
@@ -117,6 +117,6 @@ ms.locfileid: "65092036"
   
 -   [Aperfeiçoamentos de processamento de consultas em tabelas e índices particionados](https://msdn.microsoft.com/library/ms345599.aspx)  
   
--   [10 principais práticas recomendadas para a criação de um Data Warehouse relacional em grande escala](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
+-   [As 10 melhores práticas recomendadas para a criação de um data warehouse relacional em grande escala](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162167"
 ---
 # <a name="how-online-index-operations-work"></a>Como funcionam as operações de índice online
@@ -36,7 +36,7 @@ ms.locfileid: "63162167"
   
      Os índices preexistentes estão disponíveis a usuários simultâneos para operações de seleção, inserção, atualização e exclusão. Isso inclui inserções em massa (aceitas mas não recomendadas) e atualizações implícitas por gatilhos e restrições de integridade referenciais. Todos os índices preexistentes estão disponíveis para consultas e pesquisas. Isso significa eles podem ser selecionados pelo otimizador de consulta e, se necessário, especificados pelas dicas de índice.  
   
--   **Target (destino)**  
+-   **Alvo**  
   
      O destino (ou destinos) é o novo índice (ou heap) ou um conjunto de novos índices sendo criados ou recompilados. As operações de inserção, atualização e exclusão do destino são aplicadas pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] no destino durante a operação de índice. Por exemplo, se a operação de índice online estiver recompilando um índice online, o destino será o índice clusterizado recompilado; o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não recompila índices não clusterizados quando um índice clusterizado é recompilado.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63162167"
   
  A ilustração a seguir mostra o processo para criar um índice clusterizado online inicial. O objeto de origem (o heap) não tem outros índices. As atividades de estrutura de origem e destino são mostradas para cada fase; as operações de seleção, inserção, atualização e exclusão de usuários simultâneos também são mostradas. As fases de preparação, compilação e finalização são indicadas junto com os modos de bloqueio usados em cada fase.  
   
- ![Atividades executadas durante a operação de índice online](../../database-engine/media/online-index.gif "Atividades executadas durante a operação de índice online")  
+ ![Atividades executadas durante a operação de indexação online](../../database-engine/media/online-index.gif "Atividades executadas durante a operação de indexação online")  
   
 ## <a name="source-structure-activities"></a>Atividades da estrutura de origem  
  A tabela a seguir lista as atividades envolvendo as estruturas de origem durante cada fase da operação de índice e a estratégia de bloqueio correspondente.  
@@ -59,10 +59,11 @@ ms.locfileid: "63162167"
 |Fase|Atividade de origem|Bloqueios de origem|  
 |-----------|---------------------|------------------|  
 |Preparação<br /><br /> Fase muito curta|Preparação dos metadados do sistema para criar uma nova estrutura de índice vazia.<br /><br /> Um instantâneo da tabela é definido. Ou seja, o controle de versão de linha é usado para fornecer uma consistência de leitura em nível de transação.<br /><br /> As operações de usuário simultâneas de gravação na origem são bloqueadas por um período muito curto.<br /><br /> Operações DLL não simultâneas são permitidas, exceto na criação de múltiplos índices não clusterizados.|S (Shared) na tabela *<br /><br /> IS (Intent Shared)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|Compilação<br /><br /> Fase principal|Os dados são digitalizados, classificados, mesclados e inseridos na origem em operações de carregamento em massa.<br /><br /> As operações de usuário simultâneas de exclusão, atualização, inserção e seleção são aplicadas aos índices preexistentes e a quaisquer outros novos índices sendo compilados.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Build<br /><br /> Fase principal|Os dados são digitalizados, classificados, mesclados e inseridos na origem em operações de carregamento em massa.<br /><br /> As operações de usuário simultâneas de exclusão, atualização, inserção e seleção são aplicadas aos índices preexistentes e a quaisquer outros novos índices sendo compilados.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Final<br /><br /> Fase muito curta|Todas as transações atualizadas não confirmadas devem ser concluídas antes do início desta fase. Dependendo do bloqueio adquirido, todas as novas transações de usuário de leitura ou gravação devem ser bloqueadas por um período muito curto até que essa fase seja completada.<br /><br /> Os metadados do sistema estão atualizados para substituir a origem pelo destino.<br /><br /> Se necessário, a origem será removida. Por exemplo, depois de recompilar e remover um índice clusterizado.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S na tabela se estiver criando um índice não clusterizado.\*<br /><br /> SCH-M (Schema Modification) se qualquer estrutura de origem (índice ou tabela) for removida.\*|  
   
- \* A operação de índice aguardará a conclusão de transações de atualização não confirmadas antes de adquirir o bloqueio S ou SCH-M na tabela.  
+ 
+  \* A operação de índice aguardará a conclusão de transações de atualização não confirmadas antes de adquirir o bloqueio S ou SCH-M na tabela.  
   
  ** O bloqueio de recurso INDEX_BUILD_INTERNAL_RESOURCE evita a execução de operações DDL (linguagem de definição de dados) simultâneas nas estruturas de origem e preexistentes enquanto a operação de índice está em andamento. Por exemplo, esse bloqueio evita a recompilação simultânea de dois índices na mesma tabela. Embora esse bloqueio de recurso esteja associado ao bloqueio Sch-M, ele não evita as instruções de manipulação de dados.  
   
@@ -74,8 +75,8 @@ ms.locfileid: "63162167"
 |Fase|Atividade de destino|Bloqueios de destino|  
 |-----------|---------------------|------------------|  
 |Preparação|Um novo índice é criado e definido como somente gravação.|IS|  
-|Compilação|Os dados são inseridos a partir da origem.<br /><br /> São aplicadas as modificações de usuário (inserções, atualizações, exclusões) aplicadas à origem.<br /><br /> Esta atividade é transparente ao usuário.|IS|  
-|Final|Os metadados do índice são atualizados.<br /><br /> O índice é definido para o status de leitura/gravação.|P<br /><br /> ou em<br /><br /> SCH-M|  
+|Build|Os dados são inseridos a partir da origem.<br /><br /> São aplicadas as modificações de usuário (inserções, atualizações, exclusões) aplicadas à origem.<br /><br /> Esta atividade é transparente ao usuário.|IS|  
+|Final|Os metadados do índice são atualizados.<br /><br /> O índice é definido para o status de leitura/gravação.|S<br /><br /> ou<br /><br /> SCH-M|  
   
  O destino não é acessado por instruções SELECT emitidas pelo usuário até que a operação de índice seja concluída.  
   

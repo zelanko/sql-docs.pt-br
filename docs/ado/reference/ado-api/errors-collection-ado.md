@@ -1,5 +1,5 @@
 ---
-title: Coleção Errors (ADO) | Microsoft Docs
+title: Coleta de erros (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,33 +18,33 @@ ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3c8f981d4dc40a4a6f618f3cca387379d51def9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932974"
 ---
 # <a name="errors-collection-ado"></a>Coleção Errors (ADO)
-Contém todos os [erro](../../../ado/reference/ado-api/error-object.md) objetos criados em resposta a uma única falha de provedor.  
+Contém todos os objetos de [erro](../../../ado/reference/ado-api/error-object.md) criados em resposta a uma falha relacionada a um único provedor.  
   
 ## <a name="remarks"></a>Comentários  
- Qualquer operação que envolva objetos ADO pode gerar um ou mais erros do provedor. Conforme cada erro ocorrer, um ou mais **erro** objetos podem ser colocados na **erros** coleção dos [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Quando outra operação ADO gera um erro, o **erros** coleção estiver desmarcada e o novo conjunto de **erro** objetos podem ser colocados no **erros** coleção.  
+ Qualquer operação que envolva objetos ADO pode gerar um ou mais erros de provedor. Como ocorre cada erro, um ou mais objetos de **erro** podem ser colocados na coleção de **erros** do objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) . Quando outra operação ADO gera um erro, a coleção de **erros** é desmarcada e o novo conjunto de objetos de **erro** pode ser colocado na coleção de **erros** .  
   
- Cada **erro** objeto representa um erro de provedor específico, não um erro do ADO. Erros ADO são expostos para o mecanismo de tratamento de exceções de tempo de execução. Por exemplo, no Microsoft Visual Basic, a ocorrência de um erro específico de ADO irá disparar uma [onError](../../../ado/reference/rds-api/onerror-event-rds.md) evento e aparece na **Err** objeto.  
+ Cada objeto de **erro** representa um erro de provedor específico, não um erro de ADO. Os erros do ADO são expostos ao mecanismo de tratamento de exceção de tempo de execução. Por exemplo, no Microsoft Visual Basic, a ocorrência de um erro específico do ADO irá disparar um evento [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) e aparecerá no objeto **Err** .  
   
- Operações de ADO que não geram um erro não têm nenhum efeito o **erros** coleção. Use o [desmarque](../../../ado/reference/ado-api/clear-method-ado.md) método limpar manualmente as **erros** coleção.  
+ As operações ADO que não geram um erro não têm nenhum efeito na coleção de **erros** . Use o método [Clear](../../../ado/reference/ado-api/clear-method-ado.md) para limpar manualmente a coleção de **erros** .  
   
- O conjunto de **erro** objetos na **erros** coleção descreve todos os erros que ocorreram em resposta a uma única instrução. Enumeração de erros específicos na **erros** coleção permite que suas rotinas de tratamento de erros determinar a causa e origem de um erro com mais precisão e tomar as medidas apropriadas para recuperar.  
+ O conjunto de objetos de **erro** na coleção de **erros** descreve todos os erros que ocorreram em resposta a uma única instrução. A enumeração dos erros específicos na coleção de **erros** permite que suas rotinas de tratamento de erros determinem mais precisamente a causa e a origem de um erro e tomem as medidas apropriadas para a recuperação.  
   
- Algumas propriedades e métodos retornam os avisos que aparecem como **erro** objetos na **erros** coleção, mas não interrompem a execução de um programa. Antes de chamar o [ressincronizar](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), ou [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) métodos em um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, o [abrir](../../../ado/reference/ado-api/open-method-ado-connection.md) método em um **Conexão** de objeto, ou definir a [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade em um **Recordset** de objeto, chame o **limpar**método de **erros** coleção. Dessa forma, você pode ler o [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade da **erros** avisos retornados de coleção para testar.  
+ Algumas propriedades e métodos retornam avisos que aparecem como objetos de **erro** na coleção de **erros** , mas não interrompem a execução de um programa. Antes de chamar os métodos [Ressync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)ou [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) em um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , o método [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) em um objeto **Connection** ou definir a propriedade [Filter](../../../ado/reference/ado-api/filter-property.md) em um objeto **Recordset** , chame o método **Clear** na coleção **Errors** . Dessa forma, você pode ler a propriedade [Count](../../../ado/reference/ado-api/count-property-ado.md) da coleção de **erros** para testar os avisos retornados.  
   
 > [!NOTE]
->  Consulte a **erro** tópico de objeto para obter uma explicação mais detalhada da maneira como uma única operação de ADO pode gerar vários erros.  
+>  Consulte o tópico objeto de **erro** para obter uma explicação mais detalhada do modo como uma única operação ADO pode gerar vários erros.  
   
  Esta seção contém o tópico a seguir.  
   
--   [Eventos, métodos e propriedades de coleção de erros](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
+-   [Propriedades, métodos e eventos da coleção de erros](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto Error](../../../ado/reference/ado-api/error-object.md)   
- [Apêndice a: provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+## <a name="see-also"></a>Consulte Também  
+ [Objeto de erro](../../../ado/reference/ado-api/error-object.md)   
+ [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

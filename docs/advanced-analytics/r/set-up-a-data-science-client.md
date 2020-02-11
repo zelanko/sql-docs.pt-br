@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 643de4d56692687b7c88b88c712fb1cc478eb0a1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0a31afef0924e4eda2b2eb9fbe5d27f7f4ab9f51
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727374"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200410"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurar um cliente de ciência de dados para desenvolvimento em R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ Quando você reabre o RStudio, o executável R do R Client (ou servidor autônom
 
 Se você ainda não tiver um IDE preferencial para R, recomendamos as **Ferramentas do R para Visual Studio**.
 
-+ [Baixar RTVS (Ferramentas do R para Visual Studio)](https://visualstudio.microsoft.com/vs/features/rtvs/)
++ [Baixar RTVS (Ferramentas do R para Visual Studio)](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)
 + [Instruções de instalação](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) – o RTVS está disponível em várias versões do Visual Studio.
 + [Introdução às Ferramentas do R para Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
 

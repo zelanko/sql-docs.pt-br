@@ -1,5 +1,5 @@
 ---
-title: Impacto sobre a caixa de diálogo de análise (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo análise de impacto (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080747"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Análise de Impacto (Analysis Services - Dados Multidimensionais)
@@ -35,10 +35,10 @@ ms.locfileid: "66080747"
  **Tipo**  
  Exibe o tipo do objeto dependente que pode precisar ser processado.  
   
- **Tipo de impacto**  
+ **Tipo de Impacto**  
  Exibe o efeito que o processamento dos objetos na caixa de diálogo **Processar** tem sobre o objeto dependente. A tabela a seguir lista os efeitos possíveis do processamento e indica se cada um deles resulta em um aviso ou erro.  
   
-|Impacto|Message|  
+|Impacto|Mensagem|  
 |------------|-------------|  
 |O objeto será limpo (não processado)|Aviso|  
 |O objeto será inválido|Erro|  
@@ -47,11 +47,11 @@ ms.locfileid: "66080747"
 |Os índices serão cancelados|Aviso|  
 |O objeto não filho será processado|Aviso|  
   
- **Objeto de processo**  
+ **Objeto de Processo**  
  Selecione os objetos dependentes que você quer processar com a operação de processamento. Objetos dependentes que não estão selecionados devem ser processados após a conclusão da operação de processamento. Caso contrário, eles não podem ser usados.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Processar caixa de diálogo &#40;Analysis Services - dados multidimensionais&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Caixa de diálogo processo &#40;Analysis Services de dados multidimensionais&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

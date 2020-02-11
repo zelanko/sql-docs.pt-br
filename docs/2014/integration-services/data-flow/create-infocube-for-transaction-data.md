@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 167e799c873d586b06300a7e9433324391968d32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827924"
 ---
 # <a name="create-infocube-for-transaction-data"></a>Criar InfoCube para os dados da transação
@@ -42,7 +42,7 @@ ms.locfileid: "62827924"
  **Descrição longa**  
  Digite uma descrição para o novo InfoCube.  
   
- **Salvar e ativar**  
+ **Salvar e Ativar**  
  Salvar e ativar o novo InfoCube.  
   
 ## <a name="infocube-transfer-structure-options"></a>Opções da estrutura de transferência do InfoCube  
@@ -60,7 +60,7 @@ ms.locfileid: "62827924"
  **Tipo**  
  Exibe o tipo do InfoObject associado à coluna de fluxo de dados. A tabela a seguir lista os valores possíveis do tipo.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |CHA|Características|  
 |UNI|Unidades|  
@@ -68,7 +68,7 @@ ms.locfileid: "62827924"
 |TIM|Características de hora|  
   
  **Iobject - Pesquisa**  
- Associar um InfoObject existente à coluna de fluxo de dados para a linha atual. Para fazer essa associação, clique em **Pesquisar**e use a caixa de diálogo **Pesquisar InfoObject** para selecionar o InfoObject existente. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up InfoObject](look-up-infoobject.md).  
+ Associar um InfoObject existente à coluna de fluxo de dados para a linha atual. Para fazer essa associação, clique em **Pesquisar** e use a caixa de diálogo **Pesquisar InfoObject** para selecionar o InfoObject existente. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up InfoObject](look-up-infoobject.md).  
   
  Depois de selecionar um InfoObject existente, o componente preenche as colunas **InfoObject** e **Tipo** com os valores selecionados.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62827924"
  **Iobject - Remover**  
  Remover a associação entre o InfoObject e a coluna de fluxo de dados para a linha atual. Para remover essa associação, clique em **Remover**.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

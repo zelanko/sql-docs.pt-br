@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055714"
 ---
 # <a name="or-mdx"></a>OR (MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "68055714"
 Expression1 OR Expression2   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  Expression1  
  Uma linguagem MDX válida que retorna um valor numérico.  
   
@@ -35,20 +35,20 @@ Expression1 OR Expression2
  Uma expressão MDX válida que retorna um valor numérico.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor booliano que retorna **verdadeira** se um ou ambos os argumentos forem avaliados como **verdadeiro**; caso contrário, **false**.  
+ Um valor booliano que retorna **true** se um ou ambos os argumentos forem avaliados como **true**; caso contrário, **false**.  
   
 ## <a name="remarks"></a>Comentários  
- O **ou** operador trata ambos os argumentos como valores boolianos (zero, 0, como **falso**; caso contrário, **verdadeiro**) antes que o operador realize a disjunção lógica. A tabela a seguir ilustra como o **ou** operador executa a disjunção lógica.  
+ O operador **or** trata os dois argumentos como valores Boolianos (zero, 0, como **false**; caso contrário, **true**) antes que o operador execute a disjunção lógica. A tabela a seguir ilustra como o operador **or** executa a disjunção lógica.  
   
 |*Expression1*|*Expression2*|Valor retornado|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
-|**true**|**false**|**true**|  
-|**false**|**true**|**true**|  
-|**false**|**false**|**false**|  
+|**true**|**for**|**true**|  
+|**for**|**true**|**true**|  
+|**for**|**for**|**for**|  
   
 ## <a name="example"></a>Exemplo  
- A consulta a seguir contém uma medida calculada que retorna a cadeia de caracteres "CASADO ou HOMEM" se o membro atual na hierarquia de Gênero da dimensão cliente for Masculino ou o membro atual na hierarquia Status matrimonial da dimensão cliente for casado; Caso contrário, ele retorna a cadeia de caracteres "Sem CASAMENTO ou FEMALE".  
+ A consulta a seguir contém uma medida calculada que retorna a cadeia de caracteres "casado ou masculino" se o membro atual na hierarquia de gênero da dimensão do cliente for masculino ou o membro atual na hierarquia de status civil da dimensão do cliente for casado; caso contrário, ele retorna a cadeia de caracteres "incasado ou feminino".  
   
 ```  
 WITH  
@@ -65,7 +65,7 @@ FROM [Adventure Works]
 WHERE(MEASURES.ORDEMO)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

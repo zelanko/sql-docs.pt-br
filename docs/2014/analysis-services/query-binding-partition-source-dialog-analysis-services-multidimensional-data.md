@@ -1,5 +1,5 @@
 ---
-title: Consulta (caixa de diálogo de origem de partição) de detalhes de associação (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Detalhes de associação de consulta (caixa de diálogo origem da partição) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 604a42cc0b3519f1034733e12f72dc1a7c969ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070571"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Detalhes de Associação de Consulta (caixa de diálogo Origem da Partição) (Analysis Services - Dados Multidimensionais)
@@ -32,10 +32,10 @@ ms.locfileid: "66070571"
 > [!IMPORTANT]  
 >  Ao especificar uma cláusula WHERE, um subconjunto de registros pode ser usado para esta partição. Isso é essencial para evitar duplicação de dados quando várias partições estiverem baseadas em uma única tabela de fatos. Para obter mais informações, consulte a [Partition Source Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Verificar**  
+ **Verificação**  
  Clique para verificar se a instrução em **Consulta** é uma instrução SQL válida.  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo fonte de partição &#40;Analysis Services - dados multidimensionais&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo origem da partição &#40;Analysis Services-dados multidimensionais&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

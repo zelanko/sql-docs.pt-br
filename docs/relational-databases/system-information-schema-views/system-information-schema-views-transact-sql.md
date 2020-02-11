@@ -19,10 +19,10 @@ ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670559"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Exibições do esquema de informações do sistema (Transact-SQL)
@@ -34,13 +34,14 @@ Uma exibição de esquema de informações é um dos vários métodos [!INCLUDE[
 > [!IMPORTANT]
 > Algumas alterações feitas nas exibições do esquema de informações quebram a compatibilidade com versões anteriores. Essas alterações são descritas nos tópicos das exibições específicas.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a uma convenção de nomenclatura de três partes quando você faz uma referência ao servidor atual. O padrão ISO também oferece suporte a uma convenção de nomenclatura de três partes. Entretanto, os nomes usados em ambas as convenções de nomenclatura são diferentes. As exibições de esquema de informações são definidas em um esquema especial chamado INFORMATION_SCHEMA. Esse esquema está contido em cada banco de dados. Cada exibição de esquema de informações contém metadados para todos os objetos de dados armazenados naquele banco de dados específico. A tabela a seguir mostra as relações entre os nomes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os nomes SQL padrão.
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a uma convenção de nomenclatura de três partes quando você faz uma referência ao servidor atual. O padrão ISO também oferece suporte a uma convenção de nomenclatura de três partes. Entretanto, os nomes usados em ambas as convenções de nomenclatura são diferentes. As exibições de esquema de informações são definidas em um esquema especial chamado INFORMATION_SCHEMA. Esse esquema está contido em cada banco de dados. Cada exibição de esquema de informações contém metadados para todos os objetos de dados armazenados naquele banco de dados específico. A tabela a seguir mostra as relações entre os nomes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os nomes SQL padrão.
 
 |Nome do SQL Server|Mapeia para seu nome SQL padrão equivalente|
 |---------------------|-----------------------------------------------|
-|banco de dados|Catálogo|
+|Banco de dados|Catálogo|
 |Esquema|Esquema|
-|Object|Object|
+|Objeto|Objeto|
 |tipo de dados definido pelo usuário|Domínio|
 
 Esta convenção de mapeamento de nome se aplica às seguintes exibições compatíveis com ISO [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -68,8 +69,8 @@ FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
-- [Exibições &#40;do sistema TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [Exibições do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)
 - [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
 - [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 

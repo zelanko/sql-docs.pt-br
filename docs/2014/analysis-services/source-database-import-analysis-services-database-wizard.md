@@ -1,5 +1,5 @@
 ---
-title: Banco de dados de origem (Assistente de banco de dados de importação Analysis Services) | Microsoft Docs
+title: Banco de dados de origem (Assistente de importação de Analysis Services banco de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7af29b6a9ea8decb6739052ed1cb06f62547b46f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068571"
 ---
 # <a name="source-database-import-analysis-services-database-wizard"></a>Banco de dados de origem (Assistente para Importação de Bancos de Dados do Analysis Services)
@@ -29,8 +29,8 @@ ms.locfileid: "66068571"
  **Backup de banco de dados**  
  Digite ou selecione o banco de dados do qual criar o projeto.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de banco de dados do importação Analysis Services](import-analysis-services-database-wizard-f1-help.md)   
- [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente para importar Analysis Services banco de dados](import-analysis-services-database-wizard-f1-help.md)   
+ [Analysis Services assistentes &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

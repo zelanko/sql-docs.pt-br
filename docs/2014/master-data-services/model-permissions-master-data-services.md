@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 733827ecace64ef86b54831f63fd8c2889203919
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478961"
 ---
 # <a name="model-permissions-master-data-services"></a>Permissões de modelo (Master Data Services)
@@ -26,15 +26,15 @@ ms.locfileid: "65478961"
 > [!NOTE]  
 >  Se um usuário for administrador de modelo, o modelo será exibido em todas as áreas funcionais da interface do usuário. Caso contrário, o modelo será exibido apenas na área funcional **Gerenciador** . Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
-|Permissão|Descrição|  
+|Permissão|DESCRIÇÃO|  
 |----------------|-----------------|  
-|**Somente leitura**|Na **Explorer**, o modelo é exibido, mas o usuário não é possível adicionar ou remover membros e não é possível atualizar valores de atributos, associações de hierarquia ou associações de coleção.|  
-|**Update (atualizar)**|Na **Explorer**, o modelo é exibido e o usuário pode adicionar e remover membros, pode atualizar valores de atributos, associações de hierarquia e associações de coleção.|  
+|**Somente leitura**|No **Explorer**, o modelo é exibido, mas o usuário não pode adicionar ou remover membros e não pode atualizar valores de atributo, associações de hierarquia ou associações de coleção.|  
+|**Cumulativo**|No **Explorer**, o modelo é exibido e o usuário pode adicionar e remover membros, pode atualizar valores de atributo, associações de hierarquia e associações de coleção.|  
 |**Deny**|O modelo não é exibido.|  
   
  Quando você atribui permissão a um modelo, o usuário obtém acesso a todas as versões do modelo. Não é possível atribuir permissão a uma versão individual.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Permissões de entidade &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: Stream de eventos, métodos e propriedades do objeto | Microsoft Docs
+title: Propriedades, métodos e eventos do objeto Stream | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,13 @@ ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930674"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto Stream
+# <a name="stream-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Stream
 ## <a name="properties"></a>Propriedades  
  [Propriedade charset](../../../ado/reference/ado-api/charset-property-ado.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67930674"
   
  [Método CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)  
   
- [Método flush](../../../ado/reference/ado-api/flush-method-ado.md)  
+ [Método Flush](../../../ado/reference/ado-api/flush-method-ado.md)  
   
  [Método LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
   
@@ -66,8 +66,8 @@ ms.locfileid: "67930674"
   
  [Método WriteText](../../../ado/reference/ado-api/writetext-method.md)  
   
-## <a name="events"></a>Events  
- nenhuma.  
+## <a name="events"></a>Eventos  
+ Nenhum.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

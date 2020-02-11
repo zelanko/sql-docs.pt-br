@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 773ceb4aedddd6a39df6487bd36b47b83f7fa9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63227038"
 ---
 # <a name="visual-database-tool-designers"></a>Designers do Visual Database Tool
@@ -86,9 +86,9 @@ ms.locfileid: "63227038"
 >   
 >  Essa versão do Visual Database Tools não dá suporte ao Microsoft SQL Server versão 7 e anteriores.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar diagramas de banco de dados &#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)   
- [Projetar tabelas &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Crie diagramas de banco de dados &#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)   
+ [Criar tabelas &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)   
  [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

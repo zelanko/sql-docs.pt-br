@@ -2,23 +2,34 @@
 title: O que há de novo no SSMA for Access (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 0c13fd9b2e8c389685fff14679bb18fd8b4d4525
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: 168fb9acca00ef6d58f540a635c2212d408cf3bd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834325"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516467"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>O que há de novo no SSMA for Access (AccessToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para acessar alterações em cada versão.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+Além de um conjunto direcionado de correções projetadas para melhorar a usabilidade e o desempenho, a versão do v 8.6 do SSMA para acesso foi aprimorada com a adição de uma configuração que permite aos usuários omitir as propriedades estendidas do SSMA no código convertido.
+
+Para aproveitar essa configuração, no SSMA para acesso, navegue até **ferramentas** > **configurações** > do projeto**conversão****geral** > e **, em seguida, atualize**o valor da configuração **omitir propriedades estendidas** para **Sim**.
+
+![Omitir a configuração de propriedades estendidas](../access/media/ssma-omit-extended-properties.png)
+
+> [!IMPORTANT]
+> Com o SSMA v 8.5 e posterior, o .NET 4.7.2 é um pré-requisito de instalação. Se precisar instalar essa versão, você poderá baixar o arquivo de tempo de execução [aqui](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -147,7 +158,7 @@ A versão v 7.1 do SSMA para Access contém as seguintes alterações:
 
 * SQL Server 2017 no Windows e Linux CTP1 agora é uma plataforma de destino com suporte para migração. Esse recurso está em visualização técnica e dá suporte à movimentação de esquema e dados para servidores SQL de destino.
 * O SSMA agora dá suporte a atualizações automáticas para baixar a versão mais recente do SSMA assim que estiver disponível.
-* Os binários instaláveis do SSMA agora são fornecidos por meio dos arquivos de pacote do Windows Installer (. msi).
+* Os binários instaláveis do SSMA agora são entregues por meio de arquivos de pacote Windows Installer (. msi).
 
 ## <a name="may-2016"></a>Maio de 2016
 

@@ -1,5 +1,5 @@
 ---
-title: Diretrizes para lógica de repetição para transações em tabelas com otimização de memória | Microsoft Docs
+title: Diretrizes para a lógica de repetição para transações em tabelas com otimização de memória | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779210"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Diretrizes para lógica de repetição das transações em tabelas com otimização de memória
@@ -71,7 +71,7 @@ ms.locfileid: "62779210"
   
 -   O aplicativo cliente tem uma lógica de repetição para outros códigos de erro, como 1205, que você pode estender.  
   
--   Os conflitos são raros, e é importante reduzir a latência completa usando a execução preparada. Para obter mais informações sobre como executar nativamente compilados diretamente a procedimentos armazenados, consulte [procedimentos armazenados compilados nativamente](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+-   Os conflitos são raros, e é importante reduzir a latência completa usando a execução preparada. Para obter mais informações sobre como executar procedimentos armazenados compilados nativamente diretamente, consulte [procedimentos armazenados compilados nativamente](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
  O exemplo a seguir mostra uma lógica de repetição em um procedimento armazenado interpretado [!INCLUDE[tsql](../includes/tsql-md.md)], que contém uma chamada para um procedimento armazenado compilado nativamente ou para uma transação entre contêineres.  
   
@@ -125,7 +125,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Noções básicas sobre transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Transações em tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  

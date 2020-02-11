@@ -1,5 +1,5 @@
 ---
-title: Especificando um destino Namespace usando o atributo targetNamespace (SQLXML 4.0) | Microsoft Docs
+title: Especificando um namespace de destino usando o atributo targetNamespace (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,22 +20,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013675"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificando um namespace de destino usando o atributo targetNamespace (SQLXML 4.0)
-  Ao escrever esquemas XSD, você pode usar o XSD **targetNamespace** atributo para especificar um namespace de destino. Este tópico descreve como XSD **targetNamespace**, **elementFormDefault**, e **attributeFormDefault** atributos funcionam, como eles afetam a instância XML que é gerado, e como são especificadas consultas XPath com namespaces.  
+  Ao escrever esquemas XSD, você pode usar o atributo de XSD **targetNamespace** para especificar um namespace de destino. Este tópico descreve como os atributos de **targetNamespace**, **elementFormDefault**e **attributeFormDefault** do xsd funcionam, como eles afetam a instância XML gerada e como as consultas XPath são especificadas com namespaces.  
   
- Você pode usar o **xsd: targetNamespace** atributo para colocar elementos e atributos do namespace padrão em um namespace diferente. Você também pode especificar se os elementos e atributos do esquema declarados localmente devem aparecer qualificados por um namespace, seja explicitamente, usando um prefixo, ou implicitamente, por padrão. Você pode usar o **elementFormDefault** e **attributeFormDefault** atributos no  **\<XSD >** elemento para especificar globalmente a qualificação de atributos e elementos locais ou você pode usar o **formulário** atributo para especificar atributos e elementos individuais separadamente.  
+ Você pode usar o atributo **xsd: targetNamespace** para posicionar elementos e atributos do namespace padrão em um namespace diferente. Você também pode especificar se os elementos e atributos do esquema declarados localmente devem aparecer qualificados por um namespace, seja explicitamente, usando um prefixo, ou implicitamente, por padrão. Você pode usar os atributos **elementFormDefault** e **attributeFormDefault** no elemento ** \<xsd: Schema>** para especificar globalmente a qualificação de elementos e atributos locais, ou você pode usar o atributo **Form** para especificar elementos e atributos individuais separadamente.  
   
 ## <a name="examples"></a>Exemplos  
- Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-a-target-namespace"></a>A. Especificando um namespace de destino  
- O seguinte esquema XSD Especifica um namespace de destino usando o **xsd: targetNamespace** atributo. O esquema também define o **elementFormDefault** e **attributeFormDefault** valores de atributo **"unqualified"** (o valor padrão para esses atributos). Essa é uma declaração global e afeta todos os elementos locais ( **\<ordem >** no esquema) e atributos (**CustomerID**, **ContactName**e  **OrderID** no esquema).  
+### <a name="a-specifying-a-target-namespace"></a>a. Especificando um namespace de destino  
+ O esquema XSD a seguir especifica um namespace de destino usando o atributo **xsd: targetNamespace** . O esquema também define os valores de atributo **elementFormDefault** e **attributeFormDefault** como **"unqualified"** (o valor padrão para esses atributos). Essa é uma declaração global e afeta todos os elementos locais (**\<Order>** no esquema) e atributos (**CustomerID**, **ContactName**e **OrderID** no esquema).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -75,9 +75,9 @@ ms.locfileid: "66013675"
   
  No esquema:  
   
--   O **CustomerType** e **OrderType** declarações de tipo são globais e, portanto, são incluídas no namespace de destino do esquema. Como resultado, quando esses tipos são referenciados na declaração de  **\<cliente >** elemento e seu  **\<Order >** elemento filho, um prefixo é especificado, que está associado o namespace de destino.  
+-   As declarações de tipo **CustomerType** e **ordertype** são globais e, portanto, são incluídas no namespace de destino do esquema. Como resultado, quando esses tipos são referenciados na declaração do elemento de ** \<>do cliente** e sua ** \<ordem>** elemento filho, é especificado um prefixo associado ao namespace de destino.  
   
--   O  **\<cliente >** elemento também está incluído no namespace de destino do esquema porque ele é um elemento global no esquema.  
+-   O ** \<elemento>do cliente** também está incluído no namespace de destino do esquema, pois ele é um elemento global no esquema.  
   
  Execute a consulta XPath a seguir no esquema:  
   
@@ -98,9 +98,9 @@ ms.locfileid: "66013675"
   </ROOT>  
 ```  
   
- Este documento de instância define o namespace ' urn: MyNamespace e associa um prefixo (y0) a ele. O prefixo é aplicado apenas à  **\<cliente >** elemento global. (O elemento é global porque é declarado como um filho do  **\<XSD >** elemento no esquema.)  
+ Este documento de instância define o namespace urn: MyNamespace e associa um prefixo (y0) a ele. O prefixo é aplicado somente ao elemento do ** \<cliente>** global. (O elemento é global porque está declarado como um filho do ** \<elemento xsd: Schema>** no esquema.)  
   
- O prefixo não é aplicado aos elementos locais e atributos porque o valor de **elementFormDefault** e **attributeFormDefault** atributos é definida como **"unqualified"** no esquema. Observe que o  **\<ordem >** elemento é local, porque sua declaração aparece como um filho do  **\<complexType >** elemento que define o  **\< CustomerType >** elemento. Da mesma forma, os atributos (**CustomerID**, **OrderID**, e **ContactName**) são locais, e não globais.  
+ O prefixo não é aplicado aos elementos e atributos locais porque o valor dos atributos **elementFormDefault** e **attributeFormDefault** está definido como **"unqualified"** no esquema. Observe que o ** \<elemento Order>** é local porque sua declaração aparece como um filho do elemento ** \<complexType>** que define o ** \<elemento CustomerType>** . Da mesma forma, os atributos (**CustomerID**, **OrderID**e **ContactName**) são locais, e não globais.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>Para criar um exemplo de funcionamento deste esquema  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66013675"
     </ROOT>  
     ```  
   
-     A consulta XPath no modelo retorna o  **\<cliente >** elemento para o cliente com uma CustomerID igual a 1. Observe que a consulta XPath especifica o prefixo de namespace para o elemento na consulta e não para o atributo. (Não são qualificados atributos locais, como especificado no esquema.)  
+     A consulta XPath no modelo retorna o ** \<** elemento de>do cliente para o cliente com um CustomerID de 1. Observe que a consulta XPath especifica o prefixo de namespace para o elemento na consulta e não para o atributo. (Não são qualificados atributos locais, como especificado no esquema.)  
   
      O caminho de diretório especificado para o esquema de mapeamento (targetNamespace.xml) é relativo ao diretório onde o modelo está salvo. Também é possível especificar um caminho absoluto, por exemplo:  
   
@@ -127,9 +127,9 @@ ms.locfileid: "66013675"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Se o esquema especifica **elementFormDefault** e **attributeFormDefault** atributos com o valor **"qualificado"** , o documento de instância terá todos os locais elementos e atributos qualificados. Você pode alterar o esquema anterior para incluir esses atributos na  **\<XSD >** elemento e executar o modelo novamente. Como os atributos agora são qualificados também na instância, a consulta XPath será alterada para incluir o prefixo de namespace.  
+ Se o esquema especificar os atributos **elementFormDefault** e **attributeFormDefault** com o valor **"qualified"**, o documento de instância terá todos os elementos e atributos locais qualificados. Você pode alterar o esquema anterior para incluir esses atributos no elemento ** \<xsd: Schema>** e executar o modelo novamente. Como os atributos agora são qualificados também na instância, a consulta XPath será alterada para incluir o prefixo de namespace.  
   
  Esta é a consulta XPath revisada:  
   

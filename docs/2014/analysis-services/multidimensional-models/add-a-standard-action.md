@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077461"
 ---
 # <a name="add-a-standard-action"></a>Adicionar uma ação padrão
@@ -47,19 +47,19 @@ ms.locfileid: "66077461"
   
     -   Na lista suspensa **Tipo** , selecione o tipo de ação que você quer criar. A tabela a seguir lista os tipos de ações disponíveis.  
   
-        |Tipo|Descrição|  
+        |Type|DESCRIÇÃO|  
         |----------|-----------------|  
         |Dataset|Recupera um conjunto de dados.|  
         |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
         |Conjunto de linhas|Recupera um conjunto de linhas.|  
-        |Instrução|Executa um comando OLE DB.|  
+        |de|Executa um comando OLE DB.|  
         |URL|Exibe uma página da Web em um navegador de Internet.|  
   
     -   Em **Expressão de ação**, crie uma expressão que define a ação. A expressão deve ser avaliada como uma cadeia de caracteres. Você pode digitar a expressão manualmente ou pode arrastar itens das guias **Metadados** e **Funções** .  
   
 3.  (Opcional.) Expanda **Propriedades Adicionais**e execute uma das etapas a seguir:  
   
-    -   Na lista suspensa **Invocação**, especifique como a ação é invocada. A tabela seguinte descreve as opções disponíveis para invocar uma ação.  
+    -   Na lista suspensa **Invocação** , especifique como a ação é invocada. A tabela seguinte descreve as opções disponíveis para invocar uma ação.  
   
         |Opção|Descrição|  
         |------------|-----------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "66077461"
         > [!NOTE]  
         >  As ações proprietárias não são retornadas para o servidor a menos que o aplicativo cliente restrinja explicitamente o conjunto de linhas de esquema para retornar somente ações que correspondam ao nome especificadas em **Aplicativo**.  
   
-    -   Na **conteúdo da ação**, se você estiver usando o tipo de URL, coloque o endereço de Internet entre aspas, por exemplo, "http://www.adventure-works.com".  
+    -   Em **conteúdo da ação**, se você estiver usando o tipo de URL, coloque o endereço da Internet entre aspas, porhttp://www.adventure-works.comexemplo, "".  
   
     -   Em **Descrição**, digite uma descrição para a ação.  
   

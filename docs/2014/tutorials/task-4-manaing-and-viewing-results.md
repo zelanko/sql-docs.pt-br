@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313650"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tarefa 4: Gerenciando e exibindo resultados
@@ -22,17 +22,17 @@ ms.locfileid: "72313650"
   
 1.  Selecione **contato** de domínio de email na lista de domínios.  
   
-2.  Alterne para a guia **inválido** no painel direito. Observe que dois endereços de email que estavam com caracteres ' s ausentes no final. Esses dois emails que foram considerados inválidos pela regra de domínio que exigem que todos os endereços de email terminem com **\@Adventure-Works.com** (com '). O DQS usa a regra de domínio enquanto faz a limpeza para determinar se um email é válido ou não. Essa guia exibe os valores de domínio que foram marcados como inválidos na base de dados de conhecimento ou que não estavam de acordo com uma regra de domínio. Nesse caso, esses valores não estavam em conformidade com a regra de domínio (Email Validation).  
+2.  Alterne para a guia **inválido** no painel direito. Observe que dois endereços de email que estavam com caracteres ' s ausentes no final. Esses dois emails que foram considerados inválidos pela regra de domínio que exigem que todos os endereços de email terminem com ** \@Adventure-Works.com** (com '). O DQS usa a regra de domínio enquanto faz a limpeza para determinar se um email é válido ou não. Essa guia exibe os valores de domínio que foram marcados como inválidos na base de dados de conhecimento ou que não estavam de acordo com uma regra de domínio. Nesse caso, esses valores não estavam em conformidade com a regra de domínio (Email Validation).  
   
-3.  Na coluna **corrigir para** , digite o endereço de email correto que termina com **\@Adventure-Works.com** (com ').  
+3.  Na coluna **corrigir para** , digite o endereço de email correto que termina com ** \@Adventure-Works.com** (com ').  
   
-     ![Correções de correções de regras de validação de email](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "da regra de validação de email")  
+     ![Regra de validação Correções de Email](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Regra de validação Correções de Email")  
   
 4.  Clique em **aprovar** para os dois registros para aprovar as duas alterações. Quando você aprova, os registros são movidos para a guia **corrigido** . Em vez de aprovar cada item separadamente, você pode aprovar todas as alterações ao mesmo tempo usando o botão de barra de ferramentas **aprovar todos os termos** .  
   
 5.  Alterne para a **nova** guia no painel direito. Os valores dessa guia são os valores para os quais o DQS ainda não tem informações suficientes na base de dados de conhecimento para determinar se eles estão corretos. Consequentemente, ele não pode modificar nem sugerir alterações para os valores de domínio.  
   
-6.  Examine os valores para confirmar se todos os emails terminam com **\@Adventure-Works.com** e clique em **aprovar todos os termos** na barra de ferramentas. Os valores aprovados dessa guia se movem para a guia **correta** .  
+6.  Examine os valores para confirmar se todos os emails terminam com ** \@Adventure-Works.com** e clique em **aprovar todos os termos** na barra de ferramentas. Os valores aprovados dessa guia se movem para a guia **correta** .  
   
 7.  Selecione o domínio **país** na lista de domínios.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72313650"
   
 9. Observe que os **EUA** foram corrigidos para **Estados Unidos** porque são sinônimos e **Estados Unidos** é o valor principal (preferencial).  
   
-     ![Correções com base em correções de sinônimos](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "com base em sinônimos")  
+     ![Correções com base em sinônimos](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "Correções com base em sinônimos")  
   
 10. Observe que o botão **aprovar** já está selecionado para esses valores corrigidos. Esse é o comportamento padrão para os valores corrigidos. Você pode rejeitar uma alteração e, ao fazer isso, o valor é movido para a guia **inválida** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72313650"
   
 12. Alterne para a guia **corrigido** no painel direito.  
   
-     ![Nomes do]fornecedor corrigidos nomes de(../../2014/tutorials/media/et-managingandviewingresults-03.jpg "fornecedores corrigidos")  
+     ![Nomes de fornecedores corrigidos](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "Nomes de fornecedores corrigidos")  
   
     1.  Observe que **a. Datum Corp.** é corrigida para a **a. Datum Corporation** e o **motivo** é definido como **relação baseada em termos. A. Datum Corporation** é um valor de domínio conhecido para o DQS, pois ele foi descoberto durante o processo de descoberta do conhecimento. Portanto, o DQS tem **100% de confiança** sobre essa correção.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72313650"
   
 21. Observe que o **estado** do registro que tem a **cidade** como **los Angeles** está definido como **CA** agora. Observe que, no campo **motivo** **, é corrigido pela regra "cidade-estado**da regra".  
   
-     Cidade ![-estado correção de condição](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "cidade – correção de regra de estado")  
+     ![Correção de Regra Cidade-Estado](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "Correção de Regra Cidade-Estado")  
   
 22. Observe que o botão de opção **aprovar** já está selecionado para este item na lista. Esse é o comportamento padrão para itens na guia **corrigido** .  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72313650"
   
 24. **Clique em aprovar todos os termos** no botão da barra de ferramentas e clique em **OK** na caixa de mensagem de **confirmação** .  
   
-     ![Botão da barra de ferramentas aprovar todos os termos](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "aprovar todos os termos botão da barra de ferramentas")  
+     ![Botão de barra de ferramentas Aprovar Todos os Termos](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "Botão de barra de ferramentas Aprovar Todos os Termos")  
   
 25. Clique em **Avançar** para alternar para a página **Exportar** .  
   

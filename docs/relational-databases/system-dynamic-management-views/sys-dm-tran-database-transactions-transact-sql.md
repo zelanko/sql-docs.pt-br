@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a01dc7df9a8269190ae1c1c3cf05de3adaecc662
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982309"
 ---
 # <a name="sysdm_tran_database_transactions-transact-sql"></a>sys.dm_tran_database_transactions (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982309"
 > [!NOTE]  
 >  Para chamar esse DMV de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **Sys. dm_pdw_nodes_tran_database_transactions**.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |transaction_id|**bigint**|ID da transação no nível da instância, e não no nível do banco de dados. Somente é exclusiva em todos os bancos de dados em uma instância, mas não em todas as instâncias de servidor.|  
 |database_id|**int**|ID do banco de dados associado à transação.|  
@@ -50,22 +50,22 @@ ms.locfileid: "73982309"
 |database_transaction_log_bytes_reserved|**bigint**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Número de bytes reservados para uso no log do banco de dados para a transação.|  
 |database_transaction_log_bytes_used_system|**int**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Número de bytes usados até o momento no log do banco de dados para as transações do sistema em nome da transação.|  
 |database_transaction_log_bytes_reserved_system|**int**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Número de bytes reservados para uso no log do banco de dados para as transações do sistema em nome da transação.|  
-|database_transaction_begin_lsn|**numeric(25,0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Número de sequência do log (LSN) do registro de início para a transação no log de banco de dados.|  
-|database_transaction_last_lsn|**numeric(25,0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> LSN do registro de log mais recente para a transação no log de banco de dados.|  
-|database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> LSN do ponto de salvamento mais recente para a transação no log de banco de dados.|  
-|database_transaction_commit_lsn|**numeric(25,0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> LSN do registro de log de confirmação para a transação no log de banco de dados.|  
-|database_transaction_last_rollback_lsn|**numeric(25,0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> LSN que foi revertido mais recentemente. Se nenhuma reversão tiver ocorrido, o valor será MaxLSN.|  
-|database_transaction_next_undo_lsn|**numeric(25,0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> LSN do próximo registro a ser desfeito.|  
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|database_transaction_begin_lsn|**numeric (25, 0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Número de sequência do log (LSN) do registro de início para a transação no log de banco de dados.|  
+|database_transaction_last_lsn|**numeric (25, 0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> LSN do registro de log mais recente para a transação no log de banco de dados.|  
+|database_transaction_most_recent_savepoint_lsn|**numeric (25, 0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> LSN do ponto de salvamento mais recente para a transação no log de banco de dados.|  
+|database_transaction_commit_lsn|**numeric (25, 0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> LSN do registro de log de confirmação para a transação no log de banco de dados.|  
+|database_transaction_last_rollback_lsn|**numeric (25, 0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> LSN que foi revertido mais recentemente. Se nenhuma reversão tiver ocorrido, o valor será MaxLSN.|  
+|database_transaction_next_undo_lsn|**numeric (25, 0)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> LSN do próximo registro a ser desfeito.|  
+|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões
 
-No [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer a permissão `VIEW SERVER STATE`.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a permissão `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
-## <a name="see-also"></a>Consulte também  
- [sys.dm_tran_active_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)   
- [sys.dm_tran_session_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys. dm_tran_active_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)   
+ [sys. dm_tran_session_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à transação &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

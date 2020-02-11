@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076283"
 ---
 # <a name="create-calculated-members"></a>Criar membros calculados
@@ -61,7 +61,7 @@ ms.locfileid: "66076283"
  Cadeia de formato  
  Especifica o formato dos valores das células com base no membro calculado. Essa propriedade aceita os mesmos valores como a propriedade `Display Format` para medidas. Para obter mais informações sobre formatos de exibição, consulte [Configurar Propriedades de Medida](configure-measure-properties.md).  
   
- Visível  
+ Visible  
  Determina se o membro calculado ficará visível ou oculto quando os metadados do cubo forem recuperados. Se ficar oculto, ainda poderá ser usado em expressões, instruções e scripts MDX, mas não será exibido como objeto selecionável nas interface de usuário clientes.  
   
  Comportamento não vazio  
@@ -80,7 +80,7 @@ ms.locfileid: "66076283"
   
 -   Se um membro calculado for criado na dimensão de medidas, poderá ser direcionado nessa dimensão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cálculos em modelos multidimensionais](calculations-in-multidimensional-models.md)  
   
   

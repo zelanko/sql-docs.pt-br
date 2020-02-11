@@ -18,18 +18,18 @@ ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68116637"
 ---
-# <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
+# <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Registra uma mensagem definida pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log e no Visualizador de eventos do Windows. xp_logevent pode ser usado para enviar um alerta sem enviar uma mensagem ao cliente.  
+  Registra uma mensagem definida pelo usuário no arquivo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de log e no Visualizador de eventos do Windows. xp_logevent pode ser usado para enviar um alerta sem enviar uma mensagem ao cliente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,11 +42,11 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  *error_number*  
  É um número de erro definido pelo usuário maior que 50.000. O valor máximo é 2147483647 (2^31 - 1).  
   
- **'** *mensagem* **'**  
+ **'** *Message* **'**  
  É uma cadeia de caracteres com no máximo 2048 caracteres.  
   
- **'** *severidade* **'**  
- É um dos três cadeias de caracteres: INFORMATIVO, aviso ou erro. *severidade* é opcional, com um padrão INFORMATIONAL.  
+ **'** *Severity* **'**  
+ É uma destas três cadeias de caracteres: INFORMATIONAL, WARNING ou ERROR. a *severidade* é opcional, com um padrão de informativo.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -57,7 +57,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  `The command(s) completed successfully.`  
   
 ## <a name="remarks"></a>Comentários  
- Quando você envia mensagens de [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos, disparadores, lotes e assim por diante, usem a instrução RAISERROR, em vez de xp_logevent. xp_logevent não chama um manipulador de mensagens de um cliente ou definir@ERROR. Para gravar mensagens em Visualizador de Eventos do Windows e no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute a instrução RAISERROR.  
+ Quando você envia mensagens de [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos, gatilhos, lotes e assim por diante, use a instrução RAISERROR em vez de xp_logevent. xp_logevent não chama um manipulador de mensagens de um cliente ou define @@ERROR. Para gravar mensagens em Visualizador de Eventos do Windows e no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute a instrução RAISERROR.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de banco de dados fixa db_owner no banco de dados master ou associação na função de servidor fixa sysadmin.  
@@ -76,7 +76,7 @@ USE master;
 EXEC xp_logevent 60000, @@MESSAGE, informational;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

@@ -14,10 +14,10 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251667"
 ---
 # <a name="dqs-administration"></a>administração do dqs
@@ -74,13 +74,13 @@ ms.locfileid: "75251667"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Descreve como monitorar atividades no DQS.|[Monitorar atividade do DQS](../data-quality-services/monitor-dqs-activities.md)|  
-|Descreve como definir configurações de dados de referência no DQS.|[Configurar o DQS para usar dados de referência](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|Descreve como definir configurações de dados de referência no DQS.|[Configurar DQS para usar dados de referência](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |Descreve como configurar valores de limites para atividades de limpeza e correspondência.|[Configurar valores de limite para limpeza e correspondência](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |Descreve como habilitar ou desabilitar as notificações no DQS.|[Habilitar ou desabilitar notificações de criação de perfil no DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
 |Descreve como configurar log do DQS com base no nível de severidade dos eventos.|[Configurar níveis de severidade para arquivos de log do DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |Descreve como definir configurações avançadas para log do DQS.|[Definir configurações avançadas para arquivos de log do DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
-|Descreve como fazer backup e restaurar bancos de dados do DQS.|[Fazendo backup e restaurando bancos de dados do DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
-|Descreve como desanexar e anexar bancos de dados DQS.|[Desanexando e anexando bancos de dados DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
+|Descreve como fazer backup e restaurar bancos de dados do DQS.|[Fazendo backup e restaurando banco de dados do DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
+|Descreve como desanexar e anexar bancos de dados DQS.|[Desanexando e anexando bancos de dados do DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Serviços de dados de referência no DQS](../data-quality-services/reference-data-services-in-dqs.md)   

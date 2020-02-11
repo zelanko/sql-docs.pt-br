@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd6cefd41ea223b91445042ff3cee9090074feeb
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783189"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
@@ -31,7 +31,7 @@ ms.locfileid: "72783189"
   
      [Segurança](#Security)  
   
--   **Para excluir um log de etapas de trabalho do SQL Server Agent usando:**  
+-   **Para excluir um log de etapa de trabalho SQL Server Agent, usando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72783189"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  Quando etapas de trabalho são excluídas seu log de saída é excluído automaticamente.  
   
 ###  <a name="Security"></a> Segurança  
@@ -59,7 +59,7 @@ ms.locfileid: "72783189"
   
 3.  Na caixa de diálogo **Propriedades do Trabalho** , exclua a etapa de trabalho selecionada.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Para excluir um log de etapas de trabalho do SQL Server Agent  
   
@@ -80,7 +80,7 @@ ms.locfileid: "72783189"
     GO  
     ```  
   
- Para obter mais informações, [consulte &#40;Transact-SQL&#41;sp_delete_jobsteplog](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
+ Para obter mais informações, consulte [sp_delete_jobsteplog &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
   
 ##  <a name="SMO"></a>Usando SQL Server Management Objects  
  Use os métodos `DeleteJobStepLogs` da classe `Job` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter mais informações, consulte[SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  

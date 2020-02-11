@@ -1,5 +1,5 @@
 ---
-title: Configurar um Firewall do Windows para acesso ao serviço SSIS | Microsoft Docs
+title: Configurar um firewall do Windows para acesso ao serviço SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,23 +19,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060848"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurar um Firewall do Windows para acesso ao serviço SSIS
     
 > [!IMPORTANT]  
->  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
+>  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]dá suporte ao serviço para compatibilidade com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
  O sistema windowsfirewall ajuda a impedir acesso não autorizado a recursos de computador por meio de uma conexão de rede. Para acessar o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] por meio desse firewall, você precisa configurar o firewall para habilitar o acesso.  
   
 > [!IMPORTANT]  
 >  Para gerenciar pacotes armazenados em um servidor remoto, você não precisa conectar-se à instância do serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] naquele servidor remoto. Em vez disso, edite o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de forma que o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exiba os pacotes armazenados no servidor remoto. Para obter mais informações, consulte [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
- O serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa o protocolo DCOM. Para obter mais informações sobre como o protocolo DCOM funciona através de firewalls, consulte o artigo "[Using Distributed COM with Firewalls](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)".  
+ O serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa o protocolo DCOM. Para obter mais informações sobre como o protocolo DCOM funciona por meio de firewalls, consulte o artigo "[usando com distribuído com firewalls](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)".  
   
  Há muitos sistemas de firewall disponíveis. Se estiver executando um firewall diferente do windowsfirewall, consulte a documentação de seu firewall para obter informações específicas sobre o sistema que você está usando.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66060848"
 5.  Na caixa de diálogo **Adicionar uma Porta** , digite **RPC (TCP/135)** ou outro nome descritivo na caixa **Nome**, digite **135** na caixa **Número da porta** e selecione o **TCP**.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] O serviço sempre usa a porta 135. Não é possível especificar uma porta diferente.  
+    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]o serviço sempre usa a porta 135. Não é possível especificar uma porta diferente.  
   
 6.  Na caixa de diálogo **Adicionar uma Porta** , opcionalmente, você pode clicar em **Alterar Escopo** para modificar o escopo padrão.  
   
@@ -87,8 +87,8 @@ ms.locfileid: "66060848"
     > [!NOTE]  
     >  Para configurar o Firewall do Windows, este procedimento usa o item **Firewall do Windows** no Painel de Controle. O item **Firewall do Windows** configura apenas o firewall do perfil do local de rede local. No entanto, também é possível configurar o Firewall do Windows por meio da ferramenta de linha de comando **netsh** ou do snap-in MMC (Console de Gerenciamento) da [!INCLUDE[msCoName](../includes/msconame-md.md)] denominado Firewall do Windows com Segurança Avançada. Para obter mais informações sobre como fazer isso, consulte [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando o Serviço Integration Services &#40;Serviço SSIS#41;](service/integration-services-service-ssis-service.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurando o serviço de Integration Services &#40;&#41;de serviços SSIS](service/integration-services-service-ssis-service.md)   
  [Serviço Integration Services &#40;Serviço SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

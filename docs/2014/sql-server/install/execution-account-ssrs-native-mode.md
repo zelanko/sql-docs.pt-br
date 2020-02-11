@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952541"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Conta de execução (modo nativo do SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "71952541"
   
 -   Quando o servidor de relatório se conecta a outro servidor para recuperar arquivos de imagem externos ou outros recursos que são referenciados em um relatório.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
   
  A configuração dessa conta é opcional, mas não configurá-la limita seu uso de imagens externas e conexões com algumas fontes de dados. Ao recuperar arquivos de imagem externos, o servidor de relatório verifica se uma conexão anônima pode ser feita. Se a conexão for protegida por senha, o servidor de relatório usa a conta de processamento autônomo de relatórios para conectar-se ao servidor remoto. Ao recuperar dados de um relatório, o servidor de relatório representa o usuário atual, solicita ao usuário que forneça credenciais, usa credenciais armazenadas ou usa a conta de processamento autônomo se a conexão da fonte de dados especificar **Nenhum** como o tipo de credencial. O servidor de relatório não permite que as credenciais de sua conta de serviço sejam delegadas ou representadas ao conectar-se a outros computadores, portanto ele deverá usar a conta de processamento autônomo se nenhuma outra credencial estiver disponível.  
   
@@ -37,24 +37,24 @@ ms.locfileid: "71952541"
 > [!NOTE]  
 >  Se você estiver utilizando o [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] com Advanced Services, deverá configurar esta conta somente se estiver referenciando imagens externas em um relatório e for exigida permissão para acessar o arquivo de imagem. O SQL Server Express não dá suporte a uma conexão de fonte de dados a um servidor remoto. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
- Para abrir esta página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selecione **Conta de Execução** no painel de navegação. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir esta página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selecione **Conta de Execução** no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opções  
  **Especificar uma conta de execução**  
  Selecione para especificar uma conta.  
   
- **Conta**  
- Insira uma conta de usuário de domínio do Windows. Use este formato: *\<domain>\\<user account\>* .  
+ **Considerar**  
+ Insira uma conta de usuário de domínio do Windows. Use este formato: * \<>\\ de domínio<conta\>de usuário*.  
   
  **Senha**  
  Digite a senha.  
   
  **Confirmar senha**  
- Redigite a senha.  
+ Digite a senha novamente.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda do modo&#41; nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Armazenar dados criptografados do servidor de relatório &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de Configurações do Reporting Services F1 tópicos de ajuda &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Armazene dados criptografados do servidor de relatório &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   
   

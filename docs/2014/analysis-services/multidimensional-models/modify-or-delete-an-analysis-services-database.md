@@ -1,5 +1,5 @@
 ---
-title: Modificar ou excluir um banco de dados do Analysis Services | Microsoft Docs
+title: Modificar ou excluir um banco de dados Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f806501ffbb52f3839fa343a05a8db57917533ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073691"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>Modificar ou excluir um banco de dados do Analysis Services
@@ -51,7 +51,7 @@ ms.locfileid: "66073691"
   
 4.  Na caixa de diálogo **Excluir Objeto** , clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Documentar e gerar scripts de um banco de dados do Analysis Services](document-and-script-an-analysis-services-database.md)  
   
   

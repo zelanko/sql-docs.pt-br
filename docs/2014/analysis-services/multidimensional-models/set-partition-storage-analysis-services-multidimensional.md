@@ -1,5 +1,5 @@
 ---
-title: Definir armazenamento de partição (Analysis Services - Multidimensional) | Microsoft Docs
+title: Definir armazenamento de partição (Analysis Services-multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,14 +26,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072985"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Definir armazenamento de partição (Analysis Services – Multidimensional)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece várias configurações de armazenamento padrão para modos de armazenamento e opções de cache. São configurações usadas normalmente para notificação de atualizações, latência e recriação de dados.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece várias configurações de armazenamento padrão para modos de armazenamento e opções de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cache. São configurações usadas normalmente para notificação de atualizações, latência e recriação de dados.  
   
  Você pode especificar o armazenamento da partição na guia Partições do cubo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou na página de propriedades da partição no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66072985"
   
 ## <a name="storage-settings-descriptions"></a>Descrição das configurações de armazenamento  
   
-|Configuração de armazenamento padrão|Descrição|  
+|Configuração de armazenamento padrão|DESCRIÇÃO|  
 |------------------------------|-----------------|  
 |ROLAP em tempo real|O OLAP é em tempo real. Os dados de detalhe e as agregações são armazenados em formato relacional. O servidor escuta as notificações quando os dados são alterados e todas as consultas refletem o estado atual dos dados (latência zero).<br /><br /> Essa configuração normalmente seria usada para uma fonte de dados com atualizações muito frequentes e contínuas, quando os dados mais recentes sempre são solicitados pelos usuários. Dependendo dos tipos de consulta gerados pelos aplicativos cliente, esse método fornece os tempos de resposta mais lentos.|  
 |HOLAP em tempo real|O OLAP é em tempo real. Os dados de detalhe são armazenados em um formato relacional, enquanto as agregações são armazenadas em um formato multidimensional. O servidor escuta as notificações quando os dados são alterados e atualiza as agregações OLAP multidimensionais (MOLAP) conforme necessário. Nenhum cache MOLAP é criado. Sempre que a fonte de dados é atualizada, o servidor passa para o OLAP relacional (ROLAP) em tempo real até que as agregações sejam atualizadas. Todas as consultas refletem o estado atual dos dados (latência zero).<br /><br /> Essa configuração normalmente seria usada para uma fonte de dados com atualizações frequentes e contínuas (mas não tão frequentes quanto o ROLAP em tempo real) e os usuários sempre solicitam os dados mais recentes. Esse método normalmente fornece um melhor desempenho geral do que o armazenamento ROLAP. Os usuários podem obter o desempenho MOLAP a partir dessa configuração se a fonte de dados permanecer silenciosa por um período longo o suficiente.|  
@@ -77,7 +77,7 @@ ms.locfileid: "66072985"
   
  Se a caixa de seleção **Aplicar configurações a dimensões** for marcada, as mesmas configurações de armazenamento serão aplicadas nas dimensões relacionadas ao grupo de medidas. Os valores de dimensão são, inicialmente, iguais aos valores de partição.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Partições em modelos multidimensionais](partitions-in-multidimensional-models.md)  
   
   

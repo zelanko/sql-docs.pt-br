@@ -1,5 +1,5 @@
 ---
-title: Fontes de dados (SSAS Tabular) | Microsoft Docs
+title: Fontes de dados (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94718b35efdcf31a0c9de19930cc765f7d9db5d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082326"
 ---
 # <a name="data-sources-ssas-tabular"></a>Fontes de Dados (SSAS tabular)
@@ -22,13 +22,13 @@ ms.locfileid: "66082326"
   
 ## <a name="related-topics-and-tasks"></a>Tópicos relacionados e tarefas  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Fontes de dados com suporte &#40;SSAS de Tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md)|Este tópico fornece informações sobre as fontes de dados diferentes de que você pode importar dados.|  
-|[Tipos de dados com suporte &#40;SSAS de Tabela&#41;](tabular-models/data-types-supported-ssas-tabular.md)|Este tópico fornece informações sobre os vários tipos de dados que têm suporte em um Modelo Tabular.|  
-|[Representação &#40;SSAS tabular&#41;](tabular-models/impersonation-ssas-tabular.md)|Este tópico fornece informações sobre representação, que fornece credenciais de logon que são usadas pelo Analysis Services ao conectar-se a uma fonte de dados para importar e atualizar dados.|  
-|[Importar dados &#40;SSAS de Tabela&#41;](import-data-ssas-tabular.md)|As tarefas nesta seção descrevem como importar dados de fontes de dados diferentes.|  
-|[Processar dados &#40;SSAS de Tabela&#41;](process-data-ssas-tabular.md)|As tarefas nesta seção descrevem como processar (atualizar) ou alterar dados que já foram importados em um modelo.|  
-|[Editar uma conexão de fonte de dados existente &#40;SSAS Tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)|Descreve como editar a conexão da fonte de dados que já foi criada e usada para importar dados de uma origem.|  
+|[Fontes de dados com suporte &#40;SSAS de tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md)|Este tópico fornece informações sobre as fontes de dados diferentes de que você pode importar dados.|  
+|[Tipos de dados com suporte &#40;SSAS de tabela&#41;](tabular-models/data-types-supported-ssas-tabular.md)|Este tópico fornece informações sobre os vários tipos de dados que têm suporte em um Modelo Tabular.|  
+|[Representação &#40;SSAS de tabela&#41;](tabular-models/impersonation-ssas-tabular.md)|Este tópico fornece informações sobre representação, que fornece credenciais de logon que são usadas pelo Analysis Services ao conectar-se a uma fonte de dados para importar e atualizar dados.|  
+|[Importar dados &#40;SSAS de tabela&#41;](import-data-ssas-tabular.md)|As tarefas nesta seção descrevem como importar dados de fontes de dados diferentes.|  
+|[Processar dados &#40;SSAS de tabela&#41;](process-data-ssas-tabular.md)|As tarefas nesta seção descrevem como processar (atualizar) ou alterar dados que já foram importados em um modelo.|  
+|[Editar uma conexão de fonte de dados existente &#40;SSAS tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)|Descreve como editar a conexão da fonte de dados que já foi criada e usada para importar dados de uma origem.|  
   
   

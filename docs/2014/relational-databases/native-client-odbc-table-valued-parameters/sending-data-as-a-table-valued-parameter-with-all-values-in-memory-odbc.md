@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205454"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Enviando dados como um parâmetro com valor de tabela com todos os valores na memória (ODBC)
-  Este tópico descreve como enviar dados a um procedimento armazenado como um parâmetro com valor de tabela quando todos os valores estão na memória. Para obter outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
+  Este tópico descreve como enviar dados a um procedimento armazenado como um parâmetro com valor de tabela quando todos os valores estão na memória. Para outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros com valor de tabela &#40;&#41;ODBC ](table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Pré-requisito  
  Esse procedimento supõe que o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] tenha sido executado no servidor:  
@@ -86,7 +86,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  O segundo estágio da associação de parâmetros é associar as colunas para o parâmetro com valor de tabela. O foco do parâmetro é definido primeiro para o ordinal do parâmetro com valor de tabela. Em seguida, colunas do valor de tabela são associadas usando SQLBindParameter da mesma forma como seriam se elas fossem parâmetros do procedimento armazenado, mas com ordinais de coluna para ParameterNumber. Se houvesse mais parâmetros com valor de tabela, nós definiríamos o foco para cada um deles sucessivamente e associaríamos suas colunas. Finalmente, o foco de parâmetro é redefinido para 0.  
+3.  O segundo estágio da associação de parâmetros é associar as colunas para o parâmetro com valor de tabela. O foco do parâmetro é definido primeiro para o ordinal do parâmetro com valor de tabela. Em seguida, as colunas do valor da tabela são associadas usando SQLBindParameter da mesma maneira como seriam se fossem parâmetros do procedimento armazenado, mas com ordinais de coluna para ParameterNumber. Se houvesse mais parâmetros com valor de tabela, nós definiríamos o foco para cada um deles sucessivamente e associaríamos suas colunas. Finalmente, o foco de parâmetro é redefinido para 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -102,7 +102,8 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  Popule os buffers de parâmetro. `cbTVP` é definido como o número de linhas a serem enviadas ao servidor.  
+4.  Popule os buffers de parâmetro. 
+  `cbTVP` é definido como o número de linhas a serem enviadas ao servidor.  
   
     ```  
     // Populate parameters.  
@@ -125,7 +126,7 @@ from @Items
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de programação de parâmetros com valor de tabela (ODBC)](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Defina as propriedades do serviço do Integration Services | Microsoft Docs
+title: Definir as propriedades do serviço de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055635"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>Definir as propriedades do serviço do Integration Services
     
 > [!IMPORTANT]  
->  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
+>  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]dá suporte ao serviço para compatibilidade com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
- O serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gerencia e monitora pacotes no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Quando você instala o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]pela primeira vez, o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é iniciado e o tipo de inicialização do serviço é definido como automático.  
+ O serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gerencia e monitora pacotes no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Quando você instala [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]o pela primeira [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vez, o serviço é iniciado e o tipo de inicialização do serviço é definido como automático.  
   
  Após a instalação do serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , você pode definir as propriedades do serviço usando o SQL Server Configuration Manager ou o snap-in MMC dos Serviços.  
   
- Para configurar outros recursos importantes do serviço, incluindo os locais onde armazena e gerencia pacotes, é necessário modificar o arquivo de configuração do serviço. Para obter mais informações, consulte [Configurando o serviço Integration Services &#40; Serviço SSIS&#41;](service/integration-services-service-ssis-service.md).  
+ Para configurar outros recursos importantes do serviço, incluindo os locais onde armazena e gerencia pacotes, é necessário modificar o arquivo de configuração do serviço. Para obter mais informações, consulte [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>Para definir propriedades do serviço do Integration Services usando o SQL Server Configuration Manager  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66055635"
   
 4.  Na caixa de diálogo **Propriedades do SQL Server Integration Services** , você pode fazer o seguinte:  
   
-    -   Clique na guia **Geral** . Para habilitar o serviço, selecione o tipo de inicialização automática ou manual. Para desabilitar o serviço, selecione Desabilitar na caixa **Tipo de inicialização** . A seleção de Desabilitar não interromperá o serviço se ele estiver em execução.  
+    -   Clique na guia **geral** . Para habilitar o serviço, selecione o tipo de inicialização manual ou automática. Para desabilitar o serviço, selecione Desabilitar na caixa **Tipo de inicialização** . A seleção de Desabilitar não interromperá o serviço se ele estiver em execução.  
   
          Se o serviço já estiver habilitado, você poderá clicar em **Parar** para interromper o serviço ou clicar em **Iniciar** para iniciar o serviço.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66055635"
   
 7.  No menu **Arquivo** , clique em **Sair** para fechar o snap-in **Serviços** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar o serviço Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)  
   
   

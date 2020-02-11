@@ -16,16 +16,16 @@ ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79aa4de5d722208195477f7ffef53cac6c61a2de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093017"
 ---
 # <a name="type-identifiers"></a>Identificadores de tipo
-Para descrever tipos de dados SQL e C, o ODBC define dois conjuntos de *identificadores de tipo*. Um identificador de tipo descreve o tipo de uma coluna de SQL ou um buffer de C. É um **#define** de valor e é geralmente passado como um argumento de função ou retornada nos metadados.  
+Para descrever os tipos de dados SQL e C, o ODBC define dois conjuntos de *identificadores de tipo*. Um identificador de tipo descreve o tipo de uma coluna SQL ou um buffer C. É um valor **#define** e geralmente é passado como um argumento de função ou retornado em metadados.  
   
- Por exemplo, a seguinte chamada para **SQLBindParameter** associa uma variável do tipo SQL_DATE_STRUCT a um parâmetro de data em uma instrução SQL. O identificador de tipo C SQL_C_TYPE_DATE Especifica o tipo dos *data* variável e o identificador de tipo SQL SQL_TYPE_DATE Especifica o tipo do parâmetro dinâmico.  
+ Por exemplo, a chamada a seguir para **SQLBindParameter** associa uma variável do tipo SQL_DATE_STRUCT a um parâmetro date em uma instrução SQL. O identificador do tipo C SQL_C_TYPE_DATE especifica o tipo da variável de *Data* e o identificador do tipo SQL SQL_TYPE_DATE especifica o tipo do parâmetro dinâmico.  
   
 ```  
 SQL_DATE_STRUCT Date;  

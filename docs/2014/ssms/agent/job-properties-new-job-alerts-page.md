@@ -1,5 +1,5 @@
 ---
-title: 'Propriedades do Trabalho: Novo trabalho (página alertas) | Microsoft Docs'
+title: 'Propriedades do trabalho: novo trabalho (página alertas) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189277"
 ---
-# <a name="job-properties-new-job-alerts-page"></a>Propriedades do Trabalho: Novo Trabalho (página Alertas)
-  Use essa página para exibir e organizar os alertas para um trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+# <a name="job-properties-new-job-alerts-page"></a>Propriedades do trabalho: novo trabalho (página Alertas)
+  Use esta página para exibir e organizar os alertas de um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do Agent.  
   
 ## <a name="options"></a>Opções  
  **Lista de alertas**  
@@ -32,10 +32,10 @@ ms.locfileid: "68189277"
  **Editar**  
  Modifica a definição de alerta selecionada.  
   
- **Removerr**  
+ **Remover**  
  Remove o alerta selecionado do trabalho e exclui o alerta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Alerts](alerts.md)   
  [Implementar trabalhos](implement-jobs.md)  
   

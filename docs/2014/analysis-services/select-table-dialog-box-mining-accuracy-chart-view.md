@@ -1,5 +1,5 @@
 ---
-title: Selecione a caixa de diálogo de tabela (exibição de gráfico de precisão de mineração) | Microsoft Docs
+title: Caixa de diálogo Selecionar Tabela (exibição de gráfico de precisão de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,25 +15,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069272"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>Caixa de diálogo Selecionar Tabela (Exibição do Gráfico de Precisão de Mineração)
   Use a caixa de diálogo **Selecionar Tabela** para selecionar uma tabela a ser utilizada no teste de precisão dos modelos de mineração que a estrutura de mineração selecionada contém.  
   
 ## <a name="options"></a>Opções  
- **Fonte de dados**  
+ **Fonte de Dados**  
  A fonte de dados que contém a tabela que você utilizará para testar os modelos de mineração. A lista inclui cada fonte de dados que é definida no atual projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- **Nome da tabela/exibição**  
+ **Nome da Tabela/Exibição**  
  Selecione uma tabela ou exibição que esteja disponível na fonte de dados atualmente selecionada.  
   
-## <a name="see-also"></a>Consulte também  
- [Designer do gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Teste e validação de tarefas e instruções &#40;mineração de dados&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Designer de gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Tarefas de teste e validação e instruções &#40;mineração de dados&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Teste e validação &#40;mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

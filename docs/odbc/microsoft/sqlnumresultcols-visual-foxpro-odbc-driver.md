@@ -1,5 +1,5 @@
 ---
-title: SQLNumResultCols (Driver ODBC do Visual FoxPro) | Microsoft Docs
+title: SQLNumResultCols (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: a83d826c-6908-4115-b6e6-4d0615ff1738
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bfd6dcec9295f6d0c0874b60c32e8a552b56c065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002272"
 ---
 # <a name="sqlnumresultcols-visual-foxpro-odbc-driver"></a>SQLNumResultCols (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas do driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte a: Completo  
+ Suporte: completo  
   
- Conformidade com a API ODBC: Nível de núcleo  
+ Conformidade da API ODBC: nível de núcleo  
   
  Retorna o número de colunas em um cursor de conjunto de resultados.  
   

@@ -1,5 +1,5 @@
 ---
-title: Barra de ferramentas (guia Designer de relação de atributo, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Barra de ferramentas (guia Designer de relação de atributo, designer de dimensão) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066233"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de ferramentas (guia Designer de Relação de Atributo, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
@@ -30,7 +30,7 @@ ms.locfileid: "66066233"
   
 -   Modificar o modo como o diagrama de relação de atributo é exibido.  
   
- **Para exibir a barra de ferramentas na guia relação de atributo**  
+ **Para exibir a barra de ferramentas na guia Relação de Atributo**  
   
 -   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no Gerenciador de Soluções, clique duas vezes em uma dimensão para abrir o Designer de Dimensão e clique na guia **Relação de Atributo** .  
   
@@ -38,34 +38,34 @@ ms.locfileid: "66066233"
  **Adicionar Business Intelligence**  
  Abre o **Assistente de Business Intelligence** e adiciona recursos de business intelligence. Para obter mais informações, consulte [Usar o Assistente de Business Intelligence para aprimorar dimensões](use-the-business-intelligence-wizard-to-enhance-dimensions.md).  
   
- **Processar**  
+ **Processo**  
  Processa o objeto.  
   
- **Nova relação de atributo**  
+ **Nova Relação de Atributo**  
  Abre a caixa de diálogo **Criar Relação de Atributo** , na qual é possível definir uma nova relação de atributo.  
   
  **Zoom**  
  Cicla a porcentagem de zoom ou exibe uma lista de opções de zoom disponíveis.  
   
- **Expandir todas as formas**  
+ **Expandir Todas as Formas**  
  Exibe os atributos agrupados que estão associados aos atributos de nível superior. Os atributos agrupados só são visíveis quando as formas no diagrama de relação de atributo estiverem expandidas.  
   
 > [!NOTE]  
 >  Se você clicar nesta opção, o Designer de Dimensão fará com que as formas do diagrama de relação de atributo retornem ao layout padrão usado pelo designer.  
   
- **Recolher todas as formas**  
+ **Recolher Todas as Formas**  
  Oculta os atributos agrupados que estão associados com os atributos de nível superior.  
   
 > [!NOTE]  
 >  Se você clicar nesta opção, o Designer de Dimensão fará com que as formas do diagrama de relação de atributo retornem ao layout padrão usado pelo designer.  
   
- **Organizar formas**  
+ **Organizar Formas**  
  Organiza as formas de acordo com o algoritmo de layout que o Designer de Dimensão utiliza.  
   
- **Organizar formas automaticamente**  
+ **Organizar Formas Automaticamente**  
  Organiza as formas automaticamente no diagrama de acordo com o algoritmo de layout que o Designer de Dimensão utiliza. Por padrão, **Organizar Formas Automaticamente** é habilitado.  
   
- **Mostrar exibições de lista**  
+ **Mostrar Exibições de Lista**  
  Exibe ou oculta as listas **Atributos** e **Relações de Atributo** . Estas listas aparecem em seus próprios painéis imediatamente abaixo do painel que contém o diagrama de relação de atributo.  
   
   

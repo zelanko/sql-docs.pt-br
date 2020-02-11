@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107443"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Compilar uma consulta no designer de consulta relacional (Construtor de Relatórios e SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66107443"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Um conjunto de dados se baseia em uma fonte de dados. O tipo de fonte de dados e o ambiente de criação determinam qual designer de consulta é aberto quando você define a consulta de conjunto de dados. Os recursos do designer de consulta variam de acordo com a fonte de dados subjacente. Para obter mais informações sobre as camadas de dados, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md) ou [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
+ Um conjunto de dados se baseia em uma fonte de dados. O tipo de fonte de dados e o ambiente de criação determinam qual designer de consulta é aberto quando você define a consulta de conjunto de dados. Os recursos do designer de consulta variam de acordo com a fonte de dados subjacente. Para obter mais informações sobre camadas de dados, consulte [conexões de dados, fontes de dados e cadeias de conexão em Construtor de relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md) ou [conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  É possível usar um designer de consulta para as seguintes tarefas:  
   
@@ -90,13 +90,13 @@ ms.locfileid: "66107443"
   
  A consulta é executada na fonte de dados e retorna dados de exemplo no painel de resultados Consulta.  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-datasets-ssrs.md)   
  [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
- [Designers de Consultas &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md)   
- [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Designers de consulta &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md)   
+ [Criar um conjunto de um DataSet compartilhado ou um conjunto de &#40;inserido Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../report-builder/report-design-view-report-builder.md)   
- [Modo de exibição de Design de conjunto de dados compartilhados &#40;Construtor de Relatórios&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
+ [Modo de exibição de design de conjunto de &#40;compartilhado Construtor de Relatórios&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
  [Designers de Consultas do Reporting Services](../reporting-services-query-designers.md)  
   
   

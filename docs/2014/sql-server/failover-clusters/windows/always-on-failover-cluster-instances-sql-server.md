@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520454"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instâncias do cluster de failover do AlwaysOn (SQL Server)
@@ -45,11 +45,11 @@ ms.locfileid: "62520454"
   
 -   [Elementos de uma instância de cluster de failover](#FCIelements)  
   
--   [Conceitos e tarefas de failover do SQL Server](#ConceptsAndTasks)  
+-   [Conceitos e tarefas de SQL Server failover](#ConceptsAndTasks)  
   
--   [Tópicos relacionados](#RelatedTopics)  
+-   [Tópicos Relacionados](#RelatedTopics)  
   
-##  <a name="Benefits"></a> Benefícios de uma instância de cluster de failover  
+##  <a name="Benefits"></a>Benefícios de uma instância de cluster de failover  
  Quando há falha de hardware ou de software de um servidor, os aplicativos ou clientes que conectam ao servidor enfrentam um tempo de inatividade. Quando uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é configurada para ser uma FCI (em vez de uma instância autônoma), a alta disponibilidade dessa instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é protegida pela presença de nós redundantes na FCI. Somente um dos nós na FCI tem o grupo de recursos do WSFC de cada vez. No caso de uma falha (problemas de hardware, falhas de sistema operacional, aplicativo ou falhas de serviço) ou de uma atualização planejada, a propriedade do grupo de recursos é movida para outro nó do WSFC. Este processo é transparente ao cliente ou aplicativo que se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e isso minimiza o tempo de inatividade pelo qual passa o aplicativo ou os clientes durante uma falha. Alguns dos principais benefícios que instâncias de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferecem:  
   
 -   Proteção em nível de instância por redundância  
@@ -76,7 +76,7 @@ ms.locfileid: "62520454"
 ##  <a name="Recommendations"></a> Recomendações  
  Em um ambiente de produção, é recomendável usar endereços IP estáticos juntamente com o endereço IP virtual de uma instância de cluster de failover.  Não é recomendável o uso do DHCP em um ambiente de produção. No caso de tempo de inatividade, se a concessão do IP DHCP expirar, será necessário tempo adicional para registrar novamente o endereço IP DHCP novo associado ao nome DNS.  
   
-##  <a name="Overview"></a> Visão geral da instância de cluster de failover  
+##  <a name="Overview"></a>Visão geral da instância de cluster de failover  
  Uma FCI é executada em um grupo de recursos do WSFC com um ou mais nós do WSFC. Quando a FCI é iniciada, um dos nós assume a propriedade do grupo de recursos e coloca sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] online. Os recursos de propriedade deste nó incluem:  
   
 -   Nome da rede  
@@ -85,11 +85,14 @@ ms.locfileid: "62520454"
   
 -   Discos compartilhados  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Serviço do Mecanismo de Banco de Dados  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Serviço do Mecanismo de Banco de Dados  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Services, se estiver instalado  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Services, se estiver instalado  
   
 -   Um recurso de compartilhamento de arquivos, se o recurso FILESTREAM estiver instalado  
   
@@ -105,7 +108,7 @@ ms.locfileid: "62520454"
   
 5.  As solicitações de conexão de aplicativo cliente são automaticamente direcionadas para o novo nó ativo usando o mesmo VNN (nome de rede virtual).  
   
- A FCI fica online contanto que seu cluster WSFC subjacente esteja com boa integridade de quorum (a maioria dos nós do quorum WSFC estão disponíveis como destinos de failover automáticos). Quando o cluster do WSFC perde seu quorum, devido a falha de hardware, software, rede ou configuração de quorum imprópria, o cluster do WSFC inteiro, junto com o FCI, é colocado offline. É necessário realizar uma intervenção manual neste cenário de failover não planejado para restabelecer o quorum nos nós disponíveis restantes para colocar o cluster do WSFC e da FCI online novamente. Para obter mais informações, consulte [Configuração de modos de quorum WSFC e votação (;SQL Server);](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+ A FCI fica online contanto que seu cluster WSFC subjacente esteja com boa integridade de quorum (a maioria dos nós do quorum WSFC estão disponíveis como destinos de failover automáticos). Quando o cluster do WSFC perde seu quorum, devido a falha de hardware, software, rede ou configuração de quorum imprópria, o cluster do WSFC inteiro, junto com o FCI, é colocado offline. É necessário realizar uma intervenção manual neste cenário de failover não planejado para restabelecer o quorum nos nós disponíveis restantes para colocar o cluster do WSFC e da FCI online novamente. Para obter mais informações, consulte [configuração de modos de quorum WSFC e votação (; SQL Server);](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 ### <a name="predictable-failover-time"></a>Hora de failover previsível  
  Dependendo de quando sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] executou uma operação de ponto de verificação pela última vez, pode haver uma quantidade significativa de páginas sujas no cache do buffer. Por consequência, os failovers duram o suficiente para gravar as páginas sujas restantes no disco, o que pode levar a um tempo de failover longo e imprevisível. A partir do [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], a FCI pode usar pontos de verificação indiretos para limitar a quantidade de páginas sujas mantidas no cache do buffer. Embora consuma recursos adicionais sob carga de trabalho normal, isto torna o failover mais previsível e também mais configurável. Isto é muito útil quando o acordo do nível de serviço em sua organização especifica o RTO (objetivo de tempo de recuperação) para sua solução de alta disponibilidade. Para obter mais informações sobre pontos de verificação indiretos, consulte [Indirect Checkpoints](../../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt).  
@@ -119,9 +122,9 @@ ms.locfileid: "62520454"
   
 -   O diagnóstico de componente detalhado também permite uma melhor solução de problemas de failovers automáticos retroativamente. As informações de diagnóstico são armazenadas em arquivos de log que são colocados com os logs de erros do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode carregá-los no Visualizador do Arquivo de Log para inspecionar os estados do componente que levam até a ocorrência de failover para determinar o que causa o failover.  
   
- Para obter mais informações, consulte [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md).  
+ Para obter mais informações, consulte [política de failover para instâncias de cluster de failover](failover-policy-for-failover-cluster-instances.md)  
   
-##  <a name="FCIelements"></a> Elementos de uma instância de cluster de failover  
+##  <a name="FCIelements"></a>Elementos de uma instância de cluster de failover  
  Uma FCI consiste em um conjunto de servidores físicos (nós) que contêm configuração de hardware semelhante e também configuração de software idêntica, que inclui versão de sistema operacional e nível de patch e versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , nível de patch, componentes e nome de instância. A configuração de software idêntica é necessária para assegurar que a FCI possa ser completamente funcional porque ocorre o failover entre os nós.  
   
  Grupo de recursos do WSFC  
@@ -139,21 +142,21 @@ ms.locfileid: "62520454"
  IP virtuais  
  No caso de uma FCI de várias sub-redes, um endereço IP virtual é atribuído a cada sub-rede na FCI. Durante um failover, o VNN no servidor DNS é atualizado para apontar para o endereço IP virtual para a respectiva sub-rede. Aplicativos e clientes podem então se conectar ao FCI usando o mesmo VNN depois de um failover de várias sub-redes.  
   
-##  <a name="ConceptsAndTasks"></a> Conceitos e tarefas de failover do SQL Server  
+##  <a name="ConceptsAndTasks"></a>Conceitos e tarefas de SQL Server failover  
   
 |Conceitos e tarefas|Tópico|  
 |------------------------|-----------|  
-|Descreve o mecanismo de detecção de falha e a política de failover flexível.|[Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)|  
+|Descreve o mecanismo de detecção de falha e a política de failover flexível.|[Política de failover para instâncias de cluster de failover](failover-policy-for-failover-cluster-instances.md)|  
 |Descreve os conceitos na administração e na manutenção da FCI.|[Administração e manutenção da instância de cluster de failover](failover-cluster-instance-administration-and-maintenance.md)|  
-|Descreve a configuração e os conceitos de várias sub-redes|[Clustering de várias sub-redes do SQL Server (; SQL Server);](sql-server-multi-subnet-clustering-sql-server.md)|  
+|Descreve a configuração e os conceitos de várias sub-redes|[Clustering de várias sub-redes SQL Server (; SQL Server);](sql-server-multi-subnet-clustering-sql-server.md)|  
   
-##  <a name="RelatedTopics"></a> Tópicos relacionados  
+##  <a name="RelatedTopics"></a>Tópicos relacionados  
   
 |**Descrições do tópico**|**Tópico**|  
 |----------------------------|---------------|  
-|Descreve como instalar uma nova FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Criar um novo Cluster de Failover do SQL Server (; Instalação);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Descreve como atualizar para um cluster de failover do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Atualizar um cluster de failover do SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Descreve conceitos de clustering de failover do Windows e fornece links para tarefas relativas ao clustering de failover do Windows.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Visão geral de Clusters de Failover](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Visão geral de Clusters de Failover](https://go.microsoft.com/fwlink/?LinkId=177879)|  
-|Descreve as distinções em conceitos entre nós em uma FCI e réplicas dentro de um grupo de disponibilidade e considerações para usar uma FCI para hospedar uma réplica para um grupo de disponibilidade.|[Clustering de failover e grupos de disponibilidade AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
+|Descreve como instalar uma nova FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Criar um novo cluster de failover de SQL Server (; Instalação);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
+|Descreve como atualizar para um cluster de failover do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Atualizar um cluster de failover SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)|  
+|Descreve conceitos de clustering de failover do Windows e fornece links para tarefas relativas ao clustering de failover do Windows.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Visão geral de clusters de failover](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]R2: [visão geral dos clusters de failover](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Descreve as distinções em conceitos entre nós em uma FCI e réplicas dentro de um grupo de disponibilidade e considerações para usar uma FCI para hospedar uma réplica para um grupo de disponibilidade.|[Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

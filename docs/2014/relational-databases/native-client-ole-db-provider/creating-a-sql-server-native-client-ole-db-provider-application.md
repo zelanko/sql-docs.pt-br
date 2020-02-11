@@ -1,5 +1,5 @@
 ---
-title: Criando um aplicativo de provedor do SQL Server Native Client OLE DB | Microsoft Docs
+title: Criando um aplicativo de provedor de OLE DB de SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209758"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Criando um aplicativo provedor OLE DB do SQL Server Native Client
-  Criando um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativo do provedor OLE DB do Native Client envolve estas etapas:  
+  A criação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um aplicativo de provedor de OLE DB de cliente nativo envolve estas etapas:  
   
 1.  Estabelecimento de uma conexão a uma fonte de dados.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63209758"
   
 -   [Usando a cláusula OUTPUT com OLE DB no SQL Server Native Client](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

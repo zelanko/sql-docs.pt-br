@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655477"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -41,7 +41,7 @@ ms.locfileid: "62655477"
   
  Se você criar uma publicação transacional com assinaturas atualizáveis no Assistente para Nova Publicação, tanto a atualização imediata quanto a enfileirada são habilitadas. Se você criar uma publicação com procedimentos armazenados, é possível habilitar uma ou ambas as opções. Ao criar uma assinatura para a publicação, você especifica o modo de atualização a ser usado. É possível então alternar entre modos de atualização se necessário. Para obter mais informações, consulte a seguinte seção "Alternando entre modos de atualização".  
   
- Para habilitar assinaturas atualizáveis para publicações transacionais, [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
+ Para habilitar assinaturas atualizáveis para publicações transacionais, [Habilitar atualização de assinaturas para publicações transacionais](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  Para criar assinaturas atualizáveis para publicações transacionais, consulte [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
@@ -108,9 +108,11 @@ ms.locfileid: "62655477"
   
 -   Para colunas de tipo de dados `SQL_VARIANT`: quando os dados são inseridos ou atualizados no Assinante, eles são mapeados da seguinte forma pelo Agente de Leitor de Fila ao serem copiados do Assinante para a fila:  
   
-    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` e `SMALLMONEY` são mapeados para `NUMERIC`.  
+    -   
+  `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` e `SMALLMONEY` são mapeados para `NUMERIC`.  
   
-    -   `BINARY` e `VARBINARY` são mapeados para os dados `VARBINARY`.  
+    -   
+  `BINARY` e `VARBINARY` são mapeados para os dados `VARBINARY`.  
   
 ### <a name="conflict-detection-and-resolution"></a>Detecção de conflito e resolução  
   
@@ -122,7 +124,7 @@ ms.locfileid: "62655477"
   
     -   Se conflitos são esperados: não se deve usar restrições de chave estrangeira no Publicador ou Assinante se usar resolução de conflito "Assinante vence"; não se deve usar restrições de chave estrangeira no Assinante se você usar resolução de conflito "Publicador vence".  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
  [Replicação Transacional](transactional-replication.md)   
  [Publicar dados e objetos de banco de dados](../publish/publish-data-and-database-objects.md)   

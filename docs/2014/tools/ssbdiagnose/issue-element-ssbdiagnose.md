@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63285766"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
@@ -40,9 +40,9 @@ ms.locfileid: "63285766"
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|attribute|Descrição|  
+|Atributo|DESCRIÇÃO|  
 |---------------|-----------------|  
-|`type`|Identifica qual categoria de problema o elemento Issue está reportando:<br /><br /> **"Diagnóstico"** reporta um problema de configuração encontrado durante a análise da configuração de um [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **"Problema"** reporta um problema que impediu o **ssbdiagnose** de concluir sua análise. Corrija o problema e execute o **ssbdiagnose**novamente.<br /><br /> **"Evento"** reporta um evento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] encontrado quando você executa uma verificação de **-RUNTIME** . Os eventos só serão reportados se **-SHOWEVENTS** for especificado.|  
+|`type`|Identifica qual categoria de problema o elemento Issue está reportando:<br /><br /> **"Diagnóstico"** Relata um problema de configuração encontrado ao analisar uma [!INCLUDE[ssSB](../../includes/sssb-md.md)] configuração.<br /><br /> **"Problema"** Relata um problema que impediu o **ssbdiagnose** de concluir sua análise. Corrija o problema e execute o **ssbdiagnose**novamente.<br /><br /> **"Evento"** Relata um [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] evento encontrado quando você executa uma verificação **de tempo de execução** . Os eventos só serão reportados se **-SHOWEVENTS** for especificado.|  
 |`code`|Identifica o número de erro da mensagem.|  
 |`server`|Identifica a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] na qual o problema foi encontrado. Se o problema estava em uma instância padrão, o atributo de servidor só terá o nome do computador. Se o problema estava em uma instância nomeada, o atributo de servidor estará no formato NomedoComputador\NomedaInstância.|  
 |`database`|Identifica o nome do banco de dados no qual o problema foi encontrado.|  
@@ -50,10 +50,11 @@ ms.locfileid: "63285766"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|`string`, tamanho é ilimitado.|  
-|**Value**|Retorna o texto da mensagem de erro.|  
+|**Comprimento e tipo de dados**|
+  `string`, tamanho é ilimitado.|  
+|**Valor**|Retorna o texto da mensagem de erro.|  
 |**Ocorrência**|Uma vez por erro reportado.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,7 +62,7 @@ ms.locfileid: "63285766"
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento DiagnosticInformation &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
-|**Elementos filho**|None|  
+|**Elementos filho**|Nenhum|  
   
 ## <a name="example"></a>Exemplo  
  Este elemento reporta um erro 1102 para um banco de dados que não tenha uma chave mestra e o erro foi encontrado durante a análise de uma configuração do [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
@@ -70,7 +71,7 @@ ms.locfileid: "63285766"
 <Issue type="Diagnosis" code="1102" server="TestComputer" database="TargetDB" object="TargetDB">The master key was not found</diagnostic>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Utilitário ssbdiagnose &#40;Service Broker&#41;](ssbdiagnose-utility-service-broker.md)  
   
   

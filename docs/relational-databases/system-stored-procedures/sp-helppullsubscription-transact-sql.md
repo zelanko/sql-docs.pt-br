@@ -16,10 +16,10 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771440"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68771440"
 
   Exibe informações sobre uma ou mais assinaturas no Assinante. Esse procedimento armazenado é executado no Assinante no banco de dados de assinatura.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,47 +40,47 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do servidor remoto. o Publicador é **sysname**, com um **%** padrão de, que retorna informações para todos os Publicadores.  
+`[ @publisher = ] 'publisher'`É o nome do servidor remoto. o *Publicador* é **sysname**, com um **%** padrão de, que retorna informações para todos os Publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de **%** , que retorna todos os bancos de dados do Publicador.  
+`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de **%**, que retorna todos os bancos de dados do Publicador.  
   
 `[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão **%** de, que retorna todas as publicações. Se esse parâmetro for igual a ALL, somente as assinaturas pull com independent_agent = **0** serão retornadas.  
   
-`[ @show_push = ] 'show_push'`É se todas as assinaturas push devem ser retornadas. *show_push*é **nvarchar (5)** , com um padrão de false, que não retorna assinaturas push.  
+`[ @show_push = ] 'show_push'`É se todas as assinaturas push devem ser retornadas. *show_push*é **nvarchar (5)**, com um padrão de false, que não retorna assinaturas push.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|Nome do Publicador.|  
-|**banco de dados Publicador**|**sysname**|Nome do banco de dados do Publicador.|  
+|**Publicador**|**sysname**|Nome do Publicador.|  
+|**publisher database**|**sysname**|Nome do banco de dados do Publicador.|  
 |**documento**|**sysname**|Nome da publicação.|  
 |**independent_agent**|**bit**|Indica se existe um Distribution Agent autônomo para essa publicação.|  
 |**tipo de assinatura**|**int**|O tipo de assinatura da publicação.|  
-|**Agente de distribuição**|**nvarchar(100)**|O Distribution Agent que trata a assinatura.|  
-|**Descrição da publicação**|**nvarchar(255)**|Descrição da publicação.|  
-|**hora da última atualização**|**date**|Hora em que as informações de assinatura foram atualizadas. Esta é uma cadeia de caracteres UNICODE de data ISO (114) + hora de ODBC (121). O formato é yyyymmdd hh:mi:sss.mmm onde 'yyyy' é ano, 'mm' é mês, 'dd' é dia, 'hh' é hora, 'mi' é minuto, 'sss' é segundo e 'mmm' é milissegundo.|  
-|**nome da assinatura**|**varchar(386)**|O nome da assinatura.|  
-|**último carimbo de data/hora da transação**|**varbinary(16)**|Carimbo de data e hora da última transação replicada.|  
-|**modo de atualização**|**tinyint**|O tipo de atualizações permitido.|  
-|**job_id do agente de distribuição**|**int**|A ID de trabalho do Distribution Agent.|  
+|**Agente de distribuição**|**nvarchar (100)**|O Distribution Agent que trata a assinatura.|  
+|**publication description**|**nvarchar (255)**|Descrição da publicação.|  
+|**last updating time**|**date**|Hora em que as informações de assinatura foram atualizadas. Esta é uma cadeia de caracteres UNICODE de data ISO (114) + hora de ODBC (121). O formato é yyyymmdd hh:mi:sss.mmm onde 'yyyy' é ano, 'mm' é mês, 'dd' é dia, 'hh' é hora, 'mi' é minuto, 'sss' é segundo e 'mmm' é milissegundo.|  
+|**nome da assinatura**|**varchar (386)**|Nome da assinatura.|  
+|**último carimbo de data/hora da transação**|**varbinary (16)**|Carimbo de data e hora da última transação replicada.|  
+|**update mode**|**tinyint**|O tipo de atualizações permitido.|  
+|**distribution agent job_id**|**int**|A ID de trabalho do Distribution Agent.|  
 |**enabled_for_synmgr**|**int**|Se a assinatura pode ou não ser sincronizada pelo Gerenciador de Sincronização da [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
-|**GUID da assinatura**|**binary(16)**|Identificador global para a versão da assinatura na publicação.|  
-|**subid**|**binary(16)**|Identificador global para uma assinatura anônima.|  
+|**subscription guid**|**Binary (16)**|Identificador global para a versão da assinatura na publicação.|  
+|**subid**|**Binary (16)**|Identificador global para uma assinatura anônima.|  
 |**immediate_sync**|**bit**|Se os arquivos de sincronização serão criados ou recriados em cada execução do Agente de Instantâneo.|  
 |**logon do Publicador**|**sysname**|ID do logon usado no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**senha do Publicador**|**nvarchar(524)**|A senha (criptografada) usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**security_mode do Publicador**|**int**|O modo de segurança implementado no Publicador.<br /><br /> **0**  =  autenticação[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticação do Windows<br /><br /> **2** = os gatilhos de sincronização usam uma entrada **sysservers** estática para fazer RPC (chamada de procedimento remoto) e o *Publicador* deve ser definido na tabela **sysservers** como um servidor remoto ou servidor vinculado.|  
+|**senha do Publicador**|**nvarchar (524)**|A senha (criptografada) usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**security_mode de publicador**|**int**|O modo de segurança implementado no Publicador.<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows<br /><br /> **2** = os gatilhos de sincronização usam uma entrada **sysservers** estática para fazer RPC (chamada de procedimento remoto) e o *Publicador* deve ser definido na tabela **sysservers** como um servidor remoto ou servidor vinculado.|  
 |**distribuidor**|**sysname**|Nome do Distribuidor.|  
 |**distributor_login**|**sysname**|A ID de logon usado no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**distributor_password**|**nvarchar(524)**|A senha (criptografada) usada no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**distributor_security_mode**|**int**|Modo de segurança implementado no distribuidor:<br /><br /> **0**  =  autenticação[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticação do Windows|  
+|**distributor_password**|**nvarchar (524)**|A senha (criptografada) usada no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**distributor_security_mode**|**int**|Modo de segurança implementado no distribuidor:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
 |**ftp_address**|**sysname**|Somente para compatibilidade com versões anteriores.|  
 |**ftp_port**|**int**|Somente para compatibilidade com versões anteriores.|  
 |**ftp_login**|**sysname**|Somente para compatibilidade com versões anteriores.|  
-|**ftp_password**|**nvarchar(524)**|Somente para compatibilidade com versões anteriores.|  
-|**alt_snapshot_folder**|**nvarchar(255)**|Local onde a pasta de instantâneo é armazenada se o local for diferente ou for uma adição ao local padrão.|  
-|**working_directory**|**nvarchar(255)**|Caminho completamente qualificado para o diretório onde os arquivos de instantâneo são transferidos usando o FTP (Protocolo de Transferência de Arquivo) quando essa opção é especificada.|  
+|**ftp_password**|**nvarchar (524)**|Somente para compatibilidade com versões anteriores.|  
+|**alt_snapshot_folder**|**nvarchar (255)**|Local onde a pasta de instantâneo é armazenada se o local for diferente ou for uma adição ao local padrão.|  
+|**working_directory**|**nvarchar (255)**|Caminho completamente qualificado para o diretório onde os arquivos de instantâneo são transferidos usando o FTP (Protocolo de Transferência de Arquivo) quando essa opção é especificada.|  
 |**use_ftp**|**bit**|A assinatura está assinando a Publicação pela Internet e as propriedades de endereçamento do FTP estão configuradas. Se **0**, a assinatura não está usando o FTP. Se **1**, a assinatura está usando FTP.|  
 |**publication_type**|**int**|Especifica o tipo de replicação da publicação:<br /><br /> **0** = replicação transacional<br /><br /> **1** = replicação de instantâneo<br /><br /> **2** = replicação de mesclagem|  
 |**dts_package_name**|**sysname**|Especifica o nome do pacote DTS (Data Transformation Services).|  
@@ -91,7 +91,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**last_sync_summary**|**sysname**|Descrição dos últimos resultados da sincronização.|  
 |**last_sync_time**|**datetime**|Hora em que as informações de assinatura foram atualizadas. Esta é uma cadeia de caracteres UNICODE de data ISO (114) + hora de ODBC (121). O formato é yyyymmdd hh:mi:sss.mmm onde 'yyyy' é ano, 'mm' é mês, 'dd' é dia, 'hh' é hora, 'mi' é minuto, 'sss' é segundo e 'mmm' é milissegundo.|  
 |**job_login**|**nvarchar(512)**|É a conta do Windows na qual o Distribution Agent é executado, que é retornado no formato *domínio*\\*nome de usuário*.|  
-|**job_password**|**sysname**|Por motivos de segurança, um valor de **\*\*"\*\*\*"é\*sempre retornado.\*\*\*\***|  
+|**job_password**|**sysname**|Por motivos de segurança, um valor de**\*\*\*\*\*\*\*\*\***"" é sempre retornado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -100,11 +100,11 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
  **sp_helppullsubscription** é usado em instantâneo e replicação transacional.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_helppullsubscription** .  
+ Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_helppullsubscription** .  
   
-## <a name="see-also"></a>Consulte também  
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droppullsubscription](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

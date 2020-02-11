@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a249f5536846507996da4a7478a32dbe68e4dcd
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811246"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
@@ -25,9 +25,9 @@ ms.locfileid: "68811246"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|14117|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
 |Texto da mensagem|'%s' não está configurado como um banco de dados de distribuição.|  
@@ -52,7 +52,7 @@ ms.locfileid: "68811246"
   
      10.193.17.129 inst1  
   
--   Desabilite a distribuição, registre a instância e restabeleça a distribuição. Se o valor de @@SERVERNAME não estiver correto para uma instância não clusterizada, siga estas etapas:  
+-   Desabilite a distribuição, registre a instância e restabeleça a distribuição. Se o valor @@SERVERNAME não estiver correto em uma instância não clusterizada, siga estas etapas:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -71,7 +71,7 @@ ms.locfileid: "68811246"
   
 2.  Desabilite a distribuição e habilite-a novamente. Para obter mais informações, consulte [Configure Distribution](configure-distribution.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de erros e eventos &#40;Replicação&#41;](errors-and-events-reference-replication.md)  
   
   

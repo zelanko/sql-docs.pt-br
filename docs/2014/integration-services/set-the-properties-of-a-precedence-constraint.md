@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055738"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Definir as propriedades de uma restrição de precedência
@@ -43,14 +43,14 @@ ms.locfileid: "66055738"
   
 5.  Na lista suspensa **Operação de avaliação** , selecione uma operação de avaliação.  
   
-6.  No `Value` lista suspensa, selecione o resultado da execução do executável de precedência.  
+6.  Na lista `Value` suspensa, selecione o resultado da execução do executável de precedência.  
   
-7.  Se a operação de avaliação usar uma expressão, nos `Expression` caixa, digite uma expressão e clique em **teste** para avaliar a expressão.  
+7.  Se a operação de avaliação usar uma expressão, na `Expression` caixa, digite uma expressão e clique em **testar** para avaliar a expressão.  
   
     > [!NOTE]  
     >  Nomes de variáveis diferenciam maiúsculas e minúsculas.  
   
-8.  Se várias tarefas ou contêineres são conectados ao executável restrito, selecione **e lógica** para especificar que os resultados da execução de todos os executáveis precedentes devem avaliar a `true`. Selecione **OR lógico** para especificar que apenas um resultado de execução deve ser avaliadas como `true`.  
+8.  Se várias tarefas ou contêineres estiverem conectados ao executável restrito, selecione **lógico e** para especificar que os resultados da execução de todos os executáveis anteriores devem ser avaliados como `true`. Selecione **lógico ou** para especificar que apenas um resultado de execução deve ser `true`avaliado como.  
   
 9. Clique em **OK** para fechar o **Editor de Restrição de Precedência**.  
   
@@ -62,16 +62,16 @@ ms.locfileid: "66055738"
   
 2.  No Gerenciador de Soluções, clique duas vezes no pacote para abri-lo.  
   
-3.  Clique na guia **Fluxo de Controle** . Na superfície de design da guia **Fluxo de Controle** , clique com o botão direito do mouse na restrição de precedência e clique em **Propriedades**. Na janela Propriedades, modifique os valores de propriedade.  
+3.  Clique na guia **fluxo de controle** . Na superfície de design da guia **fluxo de controle** , clique com o botão direito do mouse na restrição de precedência e clique em **Propriedades**. Na janela Propriedades, modifique os valores de propriedade.  
   
 4.  Na janela **Propriedades** , defina as seguintes propriedades de leitura/gravação de restrições de precedência:  
   
     |Propriedade de leitura/gravação|Ação de configuração|  
     |--------------------------|--------------------------|  
-    |Descrição|Forneça uma descrição.|  
-    |EvalOp|Selecione uma operação de avaliação. Se o `Expression`, **ExpressionAndConstant**, ou **ExpressionOrConstant** operação for selecionada, você pode especificar uma expressão.|  
+    |DESCRIÇÃO|Forneça uma descrição.|  
+    |EvalOp|Selecione uma operação de avaliação. Se a `Expression`operação, **ExpressionAndConstant**ou **ExpressionOrConstant** for selecionada, você poderá especificar uma expressão.|  
     |Expression|Se a operação de avaliação incluir uma expressão, forneça uma expressão. A expressão deve ser avaliada como um booliano. Para obter mais informações sobre a linguagem de expressão, consulte [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
-    |LogicalAnd|Definir `LogicalAnd` para especificar se a restrição de precedência é avaliada juntamente com outras restrições de precedência, quando vários executáveis precederem e estiverem vinculados ao executável restrito|  
+    |LogicalAnd|Defina `LogicalAnd` para especificar se a restrição de precedência é avaliada em conjunto com outras restrições de precedência, quando vários executáveis precedem e estão vinculados ao executável restrito|  
     |Nome|Atualize o nome da restrição de precedência.|  
     |ShowAnnotation|Especifique o tipo de anotação a ser usada. Selecione **Nunca** para desabilitar anotações, **AsNeeded** para habilitar a anotação sob demanda, **ConstraintName** para efetuar anotações automáticas usando o valor da propriedade Name, **ConstraintDescription** para efetuar anotações automaticamente usando o valor da propriedade Description e **ConstraintOptions** para efetuar anotações automáticas usando os valores das propriedades Value e Expression.|  
     |Valor|Se a operação de avaliação especificada na propriedade EvalOP incluir uma restrição, selecione o resultado de execução do executável de restrição.|  
@@ -80,10 +80,10 @@ ms.locfileid: "66055738"
   
 6.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restrições de precedência](control-flow/precedence-constraints.md)   
  [Como conectar tarefas e contêineres por meio de uma restrição de precedência padrão](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [Defina o valor de uma restrição de precedência usando o Menu de atalho](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [Definir o valor de uma restrição de precedência usando o menu de atalho](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [Usar uma expressão em uma restrição de precedência](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
   

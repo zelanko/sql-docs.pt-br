@@ -1,5 +1,5 @@
 ---
-title: Feeds de dados do PowerPivot | Microsoft Docs
+title: Feeds de dados PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3080996eca3395e8be3cab5e17eaea7305dbfa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071268"
 ---
 # <a name="powerpivot-data-feeds"></a>Feeds de dados PowerPivot
@@ -31,8 +31,8 @@ ms.locfileid: "66071268"
   
  [Excluir uma biblioteca de feeds de dados PowerPivot](delete-a-power-pivot-data-feed-library.md)  
   
- [Usar Feeds de dados &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)  
+ [Usar feeds de dados &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)  
   
- [Compartilhar Feeds de dados usando uma biblioteca de feeds de dados &#40;PowerPivot para SharePoint&#41;](share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
+ [Compartilhar feeds de dados usando uma biblioteca de feeds de dados &#40;PowerPivot para SharePoint&#41;](share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   

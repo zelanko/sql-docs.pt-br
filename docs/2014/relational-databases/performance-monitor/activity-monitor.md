@@ -13,19 +13,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249336"
 ---
 # <a name="activity-monitor"></a>Monitor de Atividade
   O Monitor de Atividade exibe informações sobre os processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e como esses processos afetam a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-activity-monitor"></a>Benefícios do Monitor de Atividade  
- Monitor de atividade é uma janela de documento com guias que tem os seguintes painéis expansíveis e recolhíveis: **Visão Geral**, **Tarefas do Usuário Ativo**, **Esperas de Recurso**, **E/S do Arquivo de Dados** e **Consultas Dispendiosas Recentes**. Quando qualquer painel é expandido, o Monitor de Atividade consulta a instância para obter informações. Quando um painel é recolhido, todas as atividades de consulta são interrompidas para esse painel. Também é possível expandir um ou mais painéis ao mesmo tempo para exibir diferentes tipos de atividades na instância.  
+ O monitor de atividade é uma janela de documento com guias que tem os seguintes painéis expansíveis e recolhíveis: **visão geral**, **tarefas de usuário ativas**, **esperas de recursos**, e **/s de arquivo de dados**e **consultas caras recentes**. Quando qualquer painel é expandido, o Monitor de Atividade consulta a instância para obter informações. Quando um painel é recolhido, todas as atividades de consulta são interrompidas para esse painel. Também é possível expandir um ou mais painéis ao mesmo tempo para exibir diferentes tipos de atividades na instância.  
   
- Para as colunas que estão incluídas na **tarefas do usuário ativo**, **esperas**, **e/s de arquivo de dados**, e **consultas caras recentes** painéis, você pode personalizar a exibição das seguintes maneiras:  
+ Para as colunas incluídas nas painéis tarefas do **usuário ativo**, **esperas de recursos**, e **/s de arquivo de dados**e **consultas caras recentes** , você pode personalizar a exibição das seguintes maneiras:  
   
 1.  Para reorganizar a ordem das colunas, clique no título da coluna e arraste-o para outro local na faixa de opções de título.  
   

@@ -18,27 +18,27 @@ ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dfbf23f0be369ae540dac33d33a3e3c1505d5ebe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076278"
 ---
 # <a name="processing-a-sql-statement"></a>Processar uma instrução SQL
-Antes de discutir as técnicas para usar o SQL por meio de programação, é necessário discutir como uma instrução SQL é processada. As etapas envolvidas são comuns a todas as três técnicas, embora cada técnica executa-los em momentos diferentes. A ilustração a seguir mostra as etapas envolvidas no processamento de uma instrução SQL, que são discutidos no restante desta seção.  
+Antes de discutir as técnicas para usar o SQL programaticamente, é necessário discutir como uma instrução SQL é processada. As etapas envolvidas são comuns a todas as três técnicas, embora cada técnica as execute em momentos diferentes. A ilustração a seguir mostra as etapas envolvidas no processamento de uma instrução SQL, que são discutidas em todo o restante desta seção.  
   
  ![Etapas para processar uma instrução SQL](../../odbc/reference/media/pr01.gif "pr01")  
   
- Para processar uma instrução SQL, um DBMS executa estas etapas:  
+ Para processar uma instrução SQL, um DBMS executa as cinco etapas a seguir:  
   
-1.  O DBMS primeiro analisa a instrução SQL. Ele divide a instrução em palavras individuais, chamadas de tokens, torna-se de que a instrução tem um verbo válido e cláusulas válidas e assim por diante. Erros de ortografia e erros de sintaxe podem ser detectados nesta etapa.  
+1.  O DBMS primeiro analisa a instrução SQL. Ele quebra a instrução em palavras individuais, chamadas tokens, verifica se a instrução tem um verbo válido e cláusulas válidas e assim por diante. Erros de sintaxe e grafias incorretas podem ser detectados nesta etapa.  
   
-2.  O DBMS valida a instrução. Ele verifica a instrução no catálogo do sistema. Todas as tabelas nomeadas na instrução existem no banco de dados? Todas as colunas existem e são os nomes de coluna ambíguo? O usuário tem os privilégios necessários para executar a instrução? Determinados erros semânticos podem ser detectados nesta etapa.  
+2.  O DBMS valida a instrução. Ele verifica a instrução em relação ao catálogo do sistema. Todas as tabelas nomeadas na instrução existem no banco de dados? Todas as colunas existem e os nomes de coluna não são ambíguos? O usuário tem os privilégios necessários para executar a instrução? Certos erros semânticos podem ser detectados nesta etapa.  
   
-3.  O DBMS gera um plano de acesso para a instrução. O plano de acesso é uma representação binária das etapas que são necessárias para executar a instrução; é o equivalente do DBMS do código executável.  
+3.  O DBMS gera um plano de acesso para a instrução. O plano de acesso é uma representação binária das etapas necessárias para executar a instrução; é o equivalente do DBMS do código executável.  
   
-4.  O DBMS otimiza o plano de acesso. Ele explora as várias maneiras de executar o plano de acesso. Um índice pode ser usado para acelerar uma pesquisa? Deve DBMS primeiro aplicar um critério de pesquisa a tabela A e, em seguida, associá-lo a tabela B, ou deve começar com a junção e usar o critério de pesquisa mais tarde? Uma pesquisa sequencial por meio de uma tabela pode ser evitada ou reduzida para um subconjunto da tabela? Depois de explorar as alternativas, o DBMS escolherá um deles.  
+4.  O DBMS otimiza o plano de acesso. Ele explora várias maneiras de realizar o plano de acesso. Um índice pode ser usado para acelerar uma pesquisa? Se o DBMS primeiro aplicar um critério de pesquisa à tabela A e, em seguida, associá-lo à tabela B, ou se ele começar com a junção e usar a condição de pesquisa depois disso? Uma pesquisa sequencial em uma tabela pode ser evitada ou reduzida a um subconjunto da tabela? Depois de explorar as alternativas, o DBMS escolhe uma delas.  
   
-5.  O DBMS executa a instrução, executando o plano de acesso.  
+5.  O DBMS executa a instrução executando o plano de acesso.  
   
- As etapas usadas para processar uma instrução SQL variam na quantidade de acesso de banco de dados que eles exigem e a quantidade de tempo que elas levam. Análise de uma instrução SQL não requer acesso ao banco de dados e pode ser feito muito rapidamente. Otimização, por outro lado, é um muito intensivo de CPU processar e requer acesso ao catálogo do sistema. Para uma consulta complexa, várias tabelas, o otimizador pode explorar milhares de diferentes maneiras de realizar a mesma consulta. No entanto, o custo da execução da consulta de maneira ineficiente geralmente é tão alto que o tempo gasto na otimização mais do que foi recuperado na velocidade de execução de consulta maior. Isso é ainda mais significativo se o mesmo plano otimizado de acesso pode ser usado repetidamente para realizar consultas repetitivas.
+ As etapas usadas para processar uma instrução SQL variam na quantidade de acesso ao banco de dados que precisam e na quantidade de tempo que demoram. A análise de uma instrução SQL não requer acesso ao banco de dados e pode ser feita muito rapidamente. A otimização, por outro lado, é um processo com uso intensivo de CPU e requer acesso ao catálogo do sistema. Para uma consulta multitabela complexa, o otimizador pode explorar milhares de diferentes maneiras de realizar a mesma consulta. No entanto, o custo da execução da consulta de forma ineficiente geralmente é tão alto que o tempo gasto na otimização é mais do que o que foi reobtido na velocidade de execução de consulta aumentada. Isso é ainda mais significativo se o mesmo plano de acesso otimizado puder ser usado repetidamente para executar consultas repetitivas.

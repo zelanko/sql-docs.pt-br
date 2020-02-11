@@ -1,5 +1,5 @@
 ---
-title: Executar casos de teste (OracleToSQL) | Microsoft Docs
+title: Executando casos de teste (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,77 +11,77 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266553"
 ---
 # <a name="running-test-cases-oracletosql"></a>Executar casos de teste (OracleToSQL)
-Quando o SSMA testador executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados são idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é determinado de acordo com as configurações de mapeamento de esquema para o projeto atual do SSMA.  
+Quando o SSMA Tester executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados forem idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre o Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é determinada de acordo com as configurações de mapeamento de esquema para o projeto do SSMA atual.  
   
-Um requisito necessário para um teste bem-sucedido é que todos os objetos do Oracle são convertidos e carregados no banco de dados de destino. Além disso, os dados da tabela devem ser migrados para que o conteúdo das tabelas nas duas plataformas sejam sincronizado.  
+Um requisito necessário para um teste bem-sucedido é que todos os objetos Oracle são convertidos e carregados no banco de dados de destino. Além disso, os dados da tabela devem ser migrados para que o conteúdo das tabelas em ambas as plataformas seja sincronizado.  
   
-## <a name="run-test-case"></a>Executar casos de teste  
+## <a name="run-test-case"></a>Executar caso de teste  
 Para executar o caso de teste preparado:  
   
-1.  Clique o **executar** botão.  
+1.  Clique no botão **Executar**.  
   
-2.  No **conectar-se ao Oracle** caixa de diálogo, insira as informações de conexão e, em seguida, clique em **Connect**.  
+2.  Na caixa de diálogo **conectar ao Oracle** , insira as informações de conexão e, em seguida, clique em **conectar**.  
   
-Quando o teste for concluído, o relatório de caso de teste é criado. Clique o **relatório** botão para exibir o [relatório de caso de teste](viewing-test-case-reports-oracletosql.md). O resultado do teste (relatório de casos de teste) é armazenado automaticamente na [repositório de resultados do teste](using-test-repositories-oracletosql.md) para uso posterior.  
+Quando o teste for concluído, o relatório de caso de teste será criado. Clique no botão **relatório** para exibir o [relatório de caso de teste](viewing-test-case-reports-oracletosql.md). O resultado do teste (relatório de caso de teste) é armazenado automaticamente no [repositório resultados de teste](using-test-repositories-oracletosql.md) para uso posterior.  
   
-## <a name="test-case-execution-steps"></a>Etapas de execução do caso de teste  
+## <a name="test-case-execution-steps"></a>Etapas de execução de caso de teste  
   
-### <a name="prerequisites"></a>Pré-requisitos  
-O SSMA testador verifica se todos os pré-requisitos foram atendidos para a execução de teste antes do início do teste. Se algumas condições não forem atendidas, uma mensagem de erro é exibida.  
+### <a name="prerequisites"></a>Prerequisites  
+O SSMA Tester verifica se todos os pré-requisitos foram atendidos para a execução de teste antes do início do teste. Se algumas condições não forem satisfeitas, uma mensagem de erro será exibida.  
   
 ### <a name="initialization"></a>Inicialização  
-Nesta etapa, o testador SSMA cria auxiliares objetos (tabelas, gatilhos e exibições) no esquema SSMATESTER_ORACLE do servidor Oracle. Eles permitem que o controle de alterações feitas nos objetos afetados escolhidos para verificação.  
+Nesta etapa, o SSMA Tester cria objetos auxiliares (tabelas, gatilhos e exibições) no esquema de SSMATESTER_ORACLE do servidor Oracle. Eles permitem o rastreamento de alterações feitas nos objetos afetados escolhidos para verificação.  
   
-Suponha que a tabela verificada é denominada USER_TABLE. Para essa tabela, os seguintes objetos auxiliares são criados no Oracle.  
-  
-||||  
-|-|-|-|  
-|Name|Tipo|Descrição|  
-|USER_TABLE$ Trg|gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
-|USER_TABLE$ AUD|table|Tabela onde as linhas excluídas e substituídas são salvos.|  
-|USER_TABLE$ AUDID|table|Tabela onde as linhas novas e alteradas são salvos.|  
-|USER_TABLE|exibição|Representação simplificada de modificações de tabela.|  
-|USER_TABLE$ NOVO|exibição|Representação simplificada de linhas inseridas e substituídas.|  
-|USER_TABLE$NEW_ID|exibição|Identificação de linhas inseridas e alteradas.|  
-|USER_TABLE$OLD|exibição|Representação simplificada de linhas excluídas e substituídas.|  
-  
-O seguinte objeto é criado no esquema da tabela verificado na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Suponha que a tabela verificada seja nomeada USER_TABLE. Para essa tabela, os seguintes objetos auxiliares são criados no Oracle.  
   
 ||||  
 |-|-|-|  
-|Name|Tipo|Descrição|  
-|USER_TABLE$ Trg|gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
+|Nome|Type|DESCRIÇÃO|  
+|USER_TABLE $ trg|gatilho|Disparar a auditoria das alterações na tabela verificada.|  
+|USER_TABLE $ AUD|tabela|Tabela na qual as linhas excluídas e substituídas são salvas.|  
+|USER_TABLE $ AUDID|tabela|Tabela na qual as linhas novas e alteradas são salvas.|  
+|USER_TABLE|exibição|Representação simplificada das modificações da tabela.|  
+|USER_TABLE $ NEW|exibição|Representação simplificada de linhas inseridas e substituídas.|  
+|USER_TABLE $ NEW_ID|exibição|Identificação de linhas inseridas e alteradas.|  
+|USER_TABLE $ OLD|exibição|Representação simplificada de linhas excluídas e substituídas.|  
   
-E os seguintes objetos são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no banco de dados ssmatesterdb.  
+O objeto a seguir é criado no esquema da tabela verificada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em.  
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Descrição|  
-|USER_TABLE$ Aud|table|Tabela onde as linhas excluídas e substituídas são salvos.|  
-|USER_TABLE$AudID|table|Tabela onde as linhas novas e alteradas são salvos.|  
-|USER_TABLE|exibição|Representação simplificada de modificações de tabela.|  
-|USER_TABLE$ novo|exibição|Representação simplificada de linhas inseridas e substituídas.|  
-|USER_TABLE$new_id|exibição|Identificação de linhas inseridas e alteradas.|  
-|USER_TABLE$ antigo|exibição|Representação simplificada de linhas excluídas e substituídas.|  
+|Nome|Type|DESCRIÇÃO|  
+|USER_TABLE $ trg|gatilho|Disparar a auditoria das alterações na tabela verificada.|  
   
-### <a name="test-object-calls"></a>Chamadas de objeto de teste  
-Nesta etapa, o SSMA testador invoca cada objeto selecionado para o teste, compara os resultados e mostra o relatório.  
+E os seguintes objetos são criados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no banco de dados ssmatesterdb.  
+  
+||||  
+|-|-|-|  
+|Nome|Type|DESCRIÇÃO|  
+|USER_TABLE $ AUD|tabela|Tabela na qual as linhas excluídas e substituídas são salvas.|  
+|USER_TABLE $ AudID|tabela|Tabela na qual as linhas novas e alteradas são salvas.|  
+|USER_TABLE|exibição|Representação simplificada das modificações da tabela.|  
+|USER_TABLE $ New|exibição|Representação simplificada de linhas inseridas e substituídas.|  
+|USER_TABLE $ new_id|exibição|Identificação de linhas inseridas e alteradas.|  
+|USER_TABLE $ Old|exibição|Representação simplificada de linhas excluídas e substituídas.|  
+  
+### <a name="test-object-calls"></a>Testar chamadas de objeto  
+Nesta etapa, o SSMA Tester invoca cada objeto selecionado para o teste, compara os resultados e mostra o relatório.  
   
 ### <a name="finalization"></a>Finalização  
-Durante a finalização SSMA testador limpa os objetos auxiliares criados na **inicialização** etapa.  
+Durante a finalização, o testador do SSMA limpa os objetos auxiliares criados na etapa de **inicialização** .  
   
 ## <a name="next-step"></a>Próxima etapa  
-[Exibir relatórios de caso de teste &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
+[Exibindo relatórios de caso de teste &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte também  
-[Selecionando e Configurando objetos a testar &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
-[Selecionar e configurar os objetos afetados pelo &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
-[Testar objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Selecionando e configurando objetos para testar &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[Selecionando e configurando objetos afetados &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[Testando objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

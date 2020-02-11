@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010959"
 ---
 # <a name="upgrade-full-text-search"></a>Atualizar pesquisa de texto completo
@@ -28,19 +28,19 @@ ms.locfileid: "66010959"
   
  Este tópico aborda os seguintes aspectos da atualização de pesquisa de texto completo:  
   
--   [Atualizando uma instância do servidor](#Upgrade_Server)  
+-   [Atualizando uma instância de servidor](#Upgrade_Server)  
   
 -   [Opções de atualização de texto completo](#FT_Upgrade_Options)  
   
--   [Opção de atualização de considerações sobre como escolher um texto completo](#Choosing_Upgade_Option)  
+-   [Considerações para escolher uma opção de atualização de texto completo](#Choosing_Upgade_Option)  
   
--   [Migrando índices de texto completo ao atualizar um banco de dados para o SQL Server 2014](#Upgrade_Db)  
+-   [Migrando índices de texto completo ao atualizar de um banco de dados para o SQL Server 2014](#Upgrade_Db)  
   
--   [Considerações sobre como restaurar um catálogo de texto completo de 2005 do servidor SQL para o SQL Server 2014](#Considerations_for_Restore)  
+-   [Considerações sobre como restaurar um catálogo de texto completo do SQL Server 2005 para o SQL Server 2014](#Considerations_for_Restore)  
   
--   [Anexando um banco de dados do SQL Server 2005 para SQL Server 2014](#Attaching_2005_ft_catalogs)  
+-   [Anexando um banco de dados do SQL Server 2005 ao SQL Server 2014](#Attaching_2005_ft_catalogs)  
   
-##  <a name="Upgrade_Server"></a> Atualizando uma instância do servidor  
+##  <a name="Upgrade_Server"></a>Atualizando uma instância de servidor  
  Em uma atualização no local, uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é configurada lado a lado com a versão antiga do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e os dados são migrados. Se a pesquisa de texto completo estava instalada na versão antiga do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , uma versão nova da pesquisa de texto completo será instalada automaticamente. A instalação lado a lado significa que cada um dos componentes a seguir existe no nível de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Separadores de palavras, lematizadores e filtros  
@@ -50,14 +50,15 @@ ms.locfileid: "66010959"
  Os hosts do daemon de filtro de texto completo são processos que carregam e orientam com segurança os componentes externos extensíveis usados para índice e consulta, como separadores de palavras, lematizadores e filtros, sem comprometer a integridade do Mecanismo de Texto Completo. Uma instância de servidor usa um processo multi-threaded para todos os filtros multi-threaded e um processo single-threaded para todos os filtros single-threaded.  
   
 > [!NOTE]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduziu uma conta de serviço para o serviço Iniciador FDHOST (MSSQLFDLauncher). Esse serviço propaga as informações da conta de serviço para os processos de host do daemon de filtro de uma dada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações sobre como configurar a conta de serviço, consulte [Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo](set-the-service-account-for-the-full-text-filter-daemon-launcher.md).  
+>  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduziu uma conta de serviço para o serviço Iniciador FDHOST (MSSQLFDLauncher). Esse serviço propaga as informações da conta de serviço para os processos de host do daemon de filtro de uma dada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações sobre como configurar a conta de serviço, consulte [Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo](set-the-service-account-for-the-full-text-filter-daemon-launcher.md).  
   
  No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], cada índice de texto completo reside em um catálogo de texto completo que pertence a um grupo de arquivos, tem um caminho físico e é tratado como um arquivo de banco de dados. No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores, um catálogo de texto completo é um objeto lógico ou virtual que contém um grupo de índices de texto completo. Por isso, um novo catálogo de texto completo não é tratado como um arquivo de banco de dados com um caminho físico. No entanto, durante a atualização de qualquer catálogo de texto completo que contém arquivos de dados, é criado um novo grupo de arquivos no mesmo disco. Isso mantém o antigo comportamento de E/S do disco após a atualização. Qualquer índice de texto completo desse catálogo será colocado no novo grupo de arquivos se existir o caminho raiz. Se o caminho do antigo catálogo de texto completo for inválido, a atualização manterá o índice de texto completo no mesmo grupo de arquivos que a tabela base ou, no caso de uma tabela particionada, no grupo de arquivos primário.  
   
 > [!NOTE]  
->  As instruções DDL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] do [!INCLUDE[tsql](../../includes/tsql-md.md)] que especificam catálogos de texto completo continuam a funcionar corretamente.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] As instruções DDL que especificam catálogos de texto completo continuam a funcionar corretamente.  
   
-##  <a name="FT_Upgrade_Options"></a> Opções de atualização de texto completo  
+##  <a name="FT_Upgrade_Options"></a>Opções de atualização de texto completo  
  Na atualização de uma instância de servidor para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a interface do usuário permite escolher uma das opções de atualização de texto completo a seguir.  
   
  Importar  
@@ -70,18 +71,19 @@ ms.locfileid: "66010959"
   
  Para obter informações sobre o impacto da importação do índice de texto completo, consulte "Considerações sobre como escolher uma opção de atualização de texto completo", mais adiante neste tópico.  
   
- Recompilar  
+ Recompilação  
  Os catálogos de texto completo são recompilados usando-se os separadores de palavras novos e aprimorados. A recompilação de índices pode demorar um pouco, e uma quantidade significativa de memória e CPU pode ser necessária após a atualização.  
   
  Redefinir  
  Os catálogos de texto completo são redefinidos. Quando atualizados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], os arquivos de catálogo de texto completo são removidos, mas os metadados dos catálogos e dos índices de texto completo são preservados. Depois de serem atualizados, todos os índices de texto completo são desabilitados para o controle de alteração e os rastreamentos não são iniciados automaticamente. O catálogo permanecerá vazio até você executar uma população completa manualmente, depois que a atualização for concluída.  
   
-##  <a name="Choosing_Upgade_Option"></a> Opção de atualização de considerações sobre como escolher um texto completo  
+##  <a name="Choosing_Upgade_Option"></a>Considerações para escolher uma opção de atualização de texto completo  
  Ao escolher a opção de atualização para sua atualização, considere o seguinte:  
   
 -   Você precisa de consistência nos resultados da consulta?  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala novos separadores de palavras para uso pela Pesquisa semântica e de texto completo. Os separadores de palavras são usados na indexação e na consulta. Se você não recriar os catálogos de texto completo, seus resultados da pesquisa poderão ser inconsistentes. Se você emitir uma consulta de texto completo que procura uma frase que é interrompida diferentemente pelo separador de palavras em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o separador de palavras atual, um documento ou linha contendo a frase talvez não seja recuperada. Isso ocorre porque as frases indexadas foram quebradas usando uma lógica diferente da usada pela consulta. A solução é preencher novamente (recompilar) os catálogos de texto completo com os novos separadores de palavras de forma que os comportamentos de tempo de indexação e de consulta sejam idênticos. Você pode escolher a opção Recriar para fazer isso ou executar a recompilação manualmente após escolher a opção Importar.  
+     
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala novos separadores de palavras para uso pela Pesquisa semântica e de texto completo. Os separadores de palavras são usados na indexação e na consulta. Se você não recriar os catálogos de texto completo, seus resultados da pesquisa poderão ser inconsistentes. Se você emitir uma consulta de texto completo que procura uma frase que é interrompida diferentemente pelo separador de palavras em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o separador de palavras atual, um documento ou linha contendo a frase talvez não seja recuperada. Isso ocorre porque as frases indexadas foram quebradas usando uma lógica diferente da usada pela consulta. A solução é preencher novamente (recompilar) os catálogos de texto completo com os novos separadores de palavras de forma que os comportamentos de tempo de indexação e de consulta sejam idênticos. Você pode escolher a opção Recriar para fazer isso ou executar a recompilação manualmente após escolher a opção Importar.  
   
 -   Algum índice de texto completo foi compilado em colunas de chave de texto completo integer?  
   
@@ -128,18 +130,19 @@ ms.locfileid: "66010959"
   
  Nos catálogos de texto completo importados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o catálogo de texto completo ainda é um arquivo de banco de dados em seu próprio grupo de arquivos. O processo de backup do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para catálogos de texto completo ainda é aplicável, a diferença é que o serviço MSFTESQL não existe no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre o processo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consulte [Backing Up and Restoring Full-Text Catalogs](https://go.microsoft.com/fwlink/?LinkId=209154) (Backup e restauração de catálogos de texto completo) nos Manuais Online do SQL Server 2005.  
   
-##  <a name="Upgrade_Db"></a> Migrando índices de texto completo ao atualizar um banco de dados [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- Os arquivos de banco de dados e catálogos de texto completo de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser atualizados para uma instância de servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] por meio de anexação, restauração ou do Assistente para Copiar Banco de Dados. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] os índices de texto completo, se houver algum, serão importados, redefinidos ou recompilados. A propriedade de servidor **upgrade_option** controla qual opção de atualização de texto completo é usada pela instância de servidor durante essas atualizações de banco de dados.  
+##  <a name="Upgrade_Db"></a>Migrando índices de texto completo ao atualizar um banco de dados para o[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ Os arquivos de banco de dados e catálogos de texto completo de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser atualizados para uma instância de servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] por meio de anexação, restauração ou do Assistente para Copiar Banco de Dados. 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] os índices de texto completo, se houver algum, serão importados, redefinidos ou recompilados. A propriedade de servidor **upgrade_option** controla qual opção de atualização de texto completo é usada pela instância de servidor durante essas atualizações de banco de dados.  
   
  Após anexar, restaurar ou copiar qualquer banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados se torna imediatamente disponível e, em seguida, é atualizado de forma automática. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como Importar, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados.  
   
  **Para alterar o comportamento de atualização de texto completo em uma instância de servidor**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: use a ação **upgrade\_option** do [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Usar a ação de **opção de atualização\_** do [serviço SP FULLTEXT\_\_](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use a **Opção de Atualização de Texto Completo** da caixa de diálogo **Propriedades do Servidor**. Para obter informações, consulte [Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor](manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**:** Use a **opção de atualização de texto completo** da caixa de diálogo **Propriedades do servidor** . Para obter informações, consulte [Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
-##  <a name="Considerations_for_Restore"></a> Considerações sobre a restauração de um Catálogo de texto completo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="Considerations_for_Restore"></a>Considerações sobre a restauração [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] de um catálogo de texto completo para[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Um método de atualização dos dados de texto completo de um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste em restaurar um backup completo do banco de dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Durante a importação de um catálogo de texto completo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , é possível fazer backup e restaurar o banco de dados e o arquivo de catálogo. O comportamento é o mesmo no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -150,15 +153,15 @@ ms.locfileid: "66010959"
   
  Para obter mais informações sobre como fazer o backup e a restauração de catálogos de texto completo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consulte [Fazer backup e restaurar índices e catálogos de texto completo](https://go.microsoft.com/fwlink/?LinkId=121052) e [Restauração por etapas e índices de texto completo](https://go.microsoft.com/fwlink/?LinkId=121053)nos Manuais Online do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- Quando o banco de dados for restaurado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], um novo arquivo de banco de dados será criado para o catálogo de texto completo. O nome padrão desse arquivo é ftrow_*catalog-name*.ndf. Por exemplo, se o *catalog-name* for `cat1`, o nome padrão do arquivo de banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] será `ftrow_cat1.ndf`. Porém, se o nome padrão já estiver sendo usado no diretório de destino, o novo arquivo de banco de dados será chamado `ftrow_`*catalog-name*`{`*GUID*`}.ndf`, em que *GUID* é o Identificador Global Exclusivo do novo arquivo.  
+ Quando o banco de dados for restaurado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], um novo arquivo de banco de dados será criado para o catálogo de texto completo. O nome padrão desse arquivo é ftrow_*catalog-name*.ndf. Por exemplo, se o *catalog-name* for `cat1`, o nome padrão do arquivo de banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] será `ftrow_cat1.ndf`. Mas se o nome padrão já estiver sendo usado no diretório de destino, o novo arquivo de banco de dados `ftrow_`será nomeado *Catalog-Name*`{`*GUID*`}.ndf`, em que *GUID* é o identificador global exclusivo do novo arquivo.  
   
  Depois que os catálogos foram importados, o **sys.database_files** e **sys.master_file**s são atualizadas para remover as entradas do catálogo e a coluna **path** em **sys.fulltext_catalogs** é definida como NULL.  
   
- **Para fazer o backup de um banco de dados**  
+ **Para fazer backup de um banco de dados**  
   
 -   [Backups de bancos de dados completos &#40;SQL Server&#41;](../backup-restore/full-database-backups-sql-server.md)  
   
--   [Backups de log de transações &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md) (apenas no modelo de recuperação completa)  
+-   [Backups de log de transações &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md) (somente modelo de recuperação completa)  
   
  **Para restaurar um backup de banco de dados**  
   
@@ -171,7 +174,7 @@ ms.locfileid: "66010959"
   
 -   O arquivo de banco de dados, `ftdb1.mdf`, é movido para `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  
   
--   O arquivo de log, `ftdb1_log.ldf`, é movido para um diretório de log da unidade do disco de log, *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`.  
+-   O arquivo de log `ftdb1_log.ldf`,, é movido para um diretório de log na unidade de disco de log, *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`.  
   
 -   Os arquivos de catálogo que correspondem ao catálogo `sysft_cat90` são movidos para `C:\temp`. Depois de importados, os índices de texto completo são colocados automaticamente em um arquivo de banco de dados (C:\ftrow_sysft_cat90.ndf), e o diretório C:\temp é excluído.  
   
@@ -182,7 +185,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a> Anexando um banco de dados SQL Server 2005 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="Attaching_2005_ft_catalogs"></a>Anexando um banco de dados SQL Server 2005 a[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores, um catálogo de texto completo é um conceito lógico que se refere a um grupo de índices de texto completo. O catálogo de texto completo é um objeto virtual que não pertence a nenhum grupo de arquivos. No entanto, quando você anexa um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que contém arquivos de catálogo de texto completo a uma instância de servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , os arquivos de catálogo são anexados de seus locais anteriores junto com os outros arquivos de banco de dados, assim como ocorre no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  O estado de cada catálogo de texto completo anexado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é o mesmo de quando o banco de dados foi desanexado do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Se uma população de índice de texto completo for suspensa pela operação de desanexação, ela será retomada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], e o índice de texto completo ficará disponível para pesquisa de texto completo.  
@@ -191,9 +194,9 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Para obter mais informações sobre desanexar e anexar um banco de dados, consulte [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql) e [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql).  
   
-## <a name="see-also"></a>Consulte também  
- [Iniciar a pesquisa de texto completo](get-started-with-full-text-search.md)   
- [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Introdução à pesquisa de texto completo](get-started-with-full-text-search.md)   
+ [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar e gerenciar filtros de pesquisa](configure-and-manage-filters-for-search.md)  
   
   

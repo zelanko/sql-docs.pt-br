@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921036"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "62921036"
   
     -   Log de transações  
   
-    -   Páginas de alocação: Páginas de alocação GAM (Map) global, Global alocação Map páginas SGAM (Shared) e páginas PFS Page Free Space ().  
+    -   Páginas de alocação: páginas GAM (Global Allocation Map), páginas SGAM (Shared Global Allocation Map) e páginas PFS (Page Free Space).  
   
     -   Página 0 de todos os arquivos de dados (a página de inicialização de arquivo)  
   
@@ -133,8 +133,8 @@ ms.locfileid: "62921036"
     |Cabeçalho|Valores|  
     |------------|------------|  
     |**Nome**|O nome do conjunto de backup.|  
-    |**Componente**|O componente de backup: **Banco de Dados**, **Arquivo** ou **\<em branco>** (para logs de transação).|  
-    |**Tipo**|O tipo de backup realizado: **Total**, **Diferencial** ou **Log de Transações**.|  
+    |**Componente**|O componente com backup: **Banco de Dados**, **Arquivo** ou **\<blank>** (para logs de transações).|  
+    |**Tipo**|Tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.|  
     |**Servidor**|O nome da instância [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executou a operação de backup.|  
     |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Posição**|A posição do conjunto de backup no volume.|  
@@ -145,7 +145,7 @@ ms.locfileid: "62921036"
     |**Data de Início**|A data e hora de início da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Data de Conclusão**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Tamanho**|O tamanho do conjunto de backup em bytes.|  
-    |**Nome do Usuário**|O nome do usuário que realizou a operação de backup.|  
+    |**Nome de usuário**|O nome do usuário que realizou a operação de backup.|  
     |**Validade**|A data e hora de validade do conjunto de backup.|  
   
      Clique em **Verificar** para verificar a integridade dos arquivos de backup necessários para executar a operação de restauração de página.  
@@ -217,7 +217,7 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400146"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>banco de dados tempdb em paralelo data warehouse
@@ -51,7 +51,7 @@ SQL Server PDW descarta as tabelas do **tempdb** quando:
 ## <a name="general-remarks"></a>Comentários gerais  
 SQL Server PDW executa as mesmas operações em tabelas temporárias e tabelas permanentes, a menos que explicitamente declarado de outra forma. Por exemplo, os dados em tabelas temporárias locais, assim como as tabelas permanentes, são distribuídos ou replicados em todos os nós de computação.  
   
-## <a name="LimitationsRestrictions"></a>Limitações e restrições  
+## <a name="LimitationsRestrictions"></a>Limitações e Restrições  
 Limitações e restrições no banco de dados SQL Server PDW**tempdb** . Você *não pode:*  
   
 -   Crie uma tabela temporária global que comece com # #.  
@@ -84,7 +84,7 @@ Qualquer usuário pode criar objetos temporários no tempdb. Os usuários podem 
   
 ## <a name="RelatedTasks"></a>Tarefas relacionadas  
   
-|Tarefas|Descrição|  
+|Tarefas|DESCRIÇÃO|  
 |---------|---------------|  
 |Crie uma tabela em **tempdb**.|Você pode criar uma tabela temporária de usuário com as instruções CREATE TABLE e CREATE TABLE como SELECT. Para obter mais informações, consulte [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) e [CREATE TABLE como SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Exiba uma lista de tabelas existentes no **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

@@ -1,5 +1,5 @@
 ---
-title: Função de referência da API de DLL do instalador | Microsoft Docs
+title: Função de referência da API DLL do instalador | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4478595fe34e81919a67c37a7f0a714329a5ea44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906209"
 ---
 # <a name="installer-dll-api-reference-function"></a>Função de referência de API de DLL do instalador
-Esta seção descreve a sintaxe das funções no instalador do API de DLL. O instalador do API de DLL consiste em 20 funções. Três dessas funções **SQLGetTranslator**, **SQLRemoveDSNFromIni**, e **SQLWriteDSNToIni**, são chamados apenas pela instalação DLLs. As outras funções são chamadas pelos programas de instalação e administração.  
+Esta seção descreve a sintaxe das funções na API da DLL do instalador. A API da DLL do instalador consiste em 20 funções. Três dessas funções, **SQLGetTranslator**, **SQLRemoveDSNFromIni**e **SQLWriteDSNToIni**, são chamadas somente por DLLs de instalação. As outras funções são chamadas pelos programas de instalação e administração.  
   
- Cada função é rotulada com a versão do ODBC na qual ele foi introduzido.  
+ Cada função é rotulada com a versão do ODBC na qual ela foi introduzida.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Função SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)  
   

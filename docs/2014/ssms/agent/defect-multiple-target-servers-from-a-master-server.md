@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0123027ac9aa87d616b52ac5cc26f36a20f7e1e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524010"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
@@ -43,9 +43,9 @@ ms.locfileid: "62524010"
   
     -   Clique em **Estes servidores de destino**e então clique na caixa **Selecionar** correspondente aos servidores de destino que devem ser removidos desse servidor mestre, para remover apenas alguns deles.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um ambiente multisservidor](create-a-multiserver-environment.md)   
  [Administração automatizada em toda a empresa](automated-administration-across-an-enterprise.md)   
- [Defect a Target Server from a Master Server](defect-a-target-server-from-a-master-server.md)  
+ [Remover um servidor de destino de um servidor mestre](defect-a-target-server-from-a-master-server.md)  
   
   

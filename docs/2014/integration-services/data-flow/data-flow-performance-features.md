@@ -24,13 +24,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637827"
 ---
-# <a name="data-flow-performance-features"></a>Data Flow Performance Features
+# <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
   Este tópico fornece sugestões sobre como projetar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas comuns de desempenho. Este tópico também provê informações sobre recursos e ferramentas que podem ser usados para diagnosticar o desempenho de pacotes.  
   
 ## <a name="configuring-the-data-flow"></a>Configurando o Fluxo de Dados  
@@ -90,7 +90,7 @@ ms.locfileid: "73637827"
 ## <a name="configuring-individual-data-flow-components"></a>Configurando componentes individuais de Fluxo de Dados  
  Para configurar componentes individuais de fluxo de dados para um melhor desempenho, existem algumas instruções gerais que podem ser consideradas. Também há instruções específicas para cada tipo de componente de fluxo de dados: origem, transformação e destino.  
   
-### <a name="general-guidelines"></a>Instruções gerais  
+### <a name="general-guidelines"></a>Diretrizes gerais  
  Independente do componente de fluxo de dados, existem duas instruções gerais que devem ser seguidas para melhorar o desempenho: otimizar consultas e evitar cadeias de caracteres desnecessárias.  
   
 #### <a name="optimize-queries"></a>Otimizar Consultas  
@@ -118,27 +118,27 @@ ms.locfileid: "73637827"
   
 ### <a name="sources"></a>Origens  
   
-#### <a name="ole-db-source"></a>Fonte OLE DB  
+#### <a name="ole-db-source"></a>Origem de OLE DB  
  Ao usar uma origem de OLE DB para recuperar os dados de uma exibição, selecione "Comando SQL" como o modo de acesso aos dados e insira uma instrução SELECT. Acessar os dados usando uma instrução SELECT faz com que a "Tabela ou Exibição" selecionada seja executada melhor no modo de acesso de dados.  
   
 ### <a name="transformations"></a>Transformações  
  Nesta seção, use as sugestões para melhorar o desempenho das transformações Agregação, Pesquisa Difusa, Agrupamento Difuso, Pesquisa, Mesclar Junção e Dimensão de Alteração Lenta.  
   
 #### <a name="aggregate-transformation"></a>Transformação Agregação  
- A transformação Agregação inclui as propriedades `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Essas propriedades melhoram o desempenho permitindo que transformação pré-aloque a quantidade de memória necessária para os dados armazenados em cache pela transformação. Se você souber o número exato ou aproximado de grupos que devem resultar de uma operação **Agrupar por** , defina as propriedades `Keys` e `KeysScale`, respectivamente. Se você souber o número exato ou aproximado de valores distintos que devem resultar de uma operação de **contagem distinta** , defina as propriedades `CountDistinctKeys` e `CountDistinctScale`, respectivamente.  
+ A transformação Agregação inclui as propriedades `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Essas propriedades melhoram o desempenho permitindo que transformação pré-aloque a quantidade de memória necessária para os dados armazenados em cache pela transformação. Se você souber o número exato ou aproximado de grupos que devem resultar de uma operação **Agrupar por** , defina as `Keys` Propriedades e `KeysScale` , respectivamente. Se você souber o número exato ou aproximado de valores distintos que devem resultar de uma operação de **contagem distinta** , defina `CountDistinctKeys` as `CountDistinctScale` Propriedades e, respectivamente.  
   
  Se tiver criado várias agregações em um fluxo de dados, considere a criação de várias agregações que usam uma transformação Agregação em vez de criar várias transformações. Esse procedimento melhora o desempenho quando uma agregação for um subconjunto de outra agregação porque a transformação pode otimizar o armazenamento interno e analisar os dados de entrada apenas uma vez. Por exemplo, se uma agregação usa uma cláusula GROUP BY e uma agregação AVG, combiná-las em uma transformação pode melhorar o desempenho. Entretanto, executar várias agregações dentro de uma transformação Agregação serializa as operações de agregação e pode não melhorar o desempenho quando várias agregações devem ser computadas de forma independente.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformações Pesquisa Difusa e Agrupamento Difuso  
  Para obter informações mais detalhadas sobre as transformações Pesquisa Difusa e Agrupamento Difuso, consulte a documentação [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(em inglês).  
   
-#### <a name="lookup-transformation"></a>Lookup Transformation  
+#### <a name="lookup-transformation"></a>transformação Pesquisa  
  Minimize o tamanho dos dados de referência na memória usando uma instrução SELECT que seja capaz de pesquisar somente as colunas necessárias. Esta é uma opção melhor do que selecionar uma tabela ou exibição inteira, que retorna uma quantidade grande de dados desnecessários.  
   
-#### <a name="merge-join-transformation"></a>Transformação Junção de Mesclagem  
+#### <a name="merge-join-transformation"></a>Merge Join Transformation  
  Não é mais preciso configurar o valor da propriedade `MaxBuffersPerInput`, pois a Microsoft fez alterações que reduzem o risco de a transformação Junção de Mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Transformação Dimensão de Alteração Lenta  
+#### <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta  
  O Assistente para Dimensão Alteração Lenta e a transformação Dimensão Alteração Lenta são ferramentas de uso geral que atendem às necessidades da maioria dos usuários. Entretanto, o fluxo de dados gerado pelo assistente não é otimizado para o desempenho.  
   
  Normalmente, os componentes mais lentos na transformação Dimensão Alteração Lenta são as transformações Comando de OLE DB que executam UPDATEs (atualizações) em apenas uma linha por vez. Portanto, a forma mais eficaz de melhorar o desempenho da transformação Dimensão Alteração Lenta é substituir as transformações Comando de OLE DB. Essas transformações podem ser substituídas por componentes de destino que salvam todas as linhas que serão atualizadas para uma tabela de preparação. Por isso, é possível adicionar uma tarefa Executar SQL que desenvolva uma única instrução UPDATE Transact-SQL com base no conjunto em todas as linhas ao mesmo tempo.  
@@ -148,14 +148,15 @@ ms.locfileid: "73637827"
 ### <a name="destinations"></a>Destinos  
  Para atingir um melhor desempenho com destinos, considere o uso de um destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e teste o desempenho do destino.  
   
-#### <a name="sql-server-destination"></a>Destino do SQL Server  
+#### <a name="sql-server-destination"></a>destino do SQL Server  
  Quando um pacote carregar dados para uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo computador, use um destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este destino é otimizado para carregamento em massa de alta velocidade.  
   
 #### <a name="testing-the-performance-of-destinations"></a>Testando o desempenho de destinos  
  Você pode achar que salvar os dados em destinos leva mais tempo que o esperado. Para identificar se a lentidão é causada por uma incapacidade do destino em processar dados rápido o suficiente, você pode substituir temporariamente o destino por uma transformação Contagem de Linhas. Se a taxa de transferência melhorar significativamente, é provável que o destino que está carregando os dados esteja causando a lentidão.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>Analisar as informações na guia Progresso  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece informações adicionais sobre o fluxo de controle e o fluxo de dados quando você executa um pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A guia **Progresso** lista as tarefas e os contêineres em ordem de execução e inclui horários de início e término, avisos e mensagens de erro para cada tarefa e contêiner, inclusive do próprio pacote. Ela também lista os componentes de fluxo de dados em ordem de execução e inclui informações sobre o progresso exibidas como um percentual completo, e o número de linhas processadas.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece informações adicionais sobre o fluxo de controle e o fluxo de dados quando você executa um pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A guia **Progresso** lista as tarefas e os contêineres em ordem de execução e inclui horários de início e término, avisos e mensagens de erro para cada tarefa e contêiner, inclusive do próprio pacote. Ela também lista os componentes de fluxo de dados em ordem de execução e inclui informações sobre o progresso exibidas como um percentual completo, e o número de linhas processadas.  
   
  Para habilitar ou desabilitar a exibição de mensagens na guia **Progresso** , marque ou desmarque a opção **Depurar Relatório do Progresso** no menu **SSIS** . Desabilitar o relatório do progresso pode ajudar a melhorar o desempenho durante a execução de um pacote complexo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
@@ -182,7 +183,7 @@ ms.locfileid: "73637827"
   
 -   Postagem do blog, [Solução de problemas de desempenho do pacote SSIS](https://go.microsoft.com/fwlink/?LinkId=238156), no blogs.msdn.com.  
   
- **Vídeos**  
+ **Explica**  
   
 -   Série de vídeos, [Design e ajuste para desempenho dos seus pacotes SSIS no Enterprise (Série de vídeo do SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
@@ -196,7 +197,7 @@ ms.locfileid: "73637827"
   
 -   Vídeo, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Ferramentas de solução de problemas de execução de pacote](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

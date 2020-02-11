@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e8e2d7ca2f6ad28e7e1bd072bdeb238199471ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480115"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Alterar o nome de uma regra de negócio (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "65480115"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -41,11 +41,11 @@ ms.locfileid: "65480115"
   
 4.  Na lista **Entidade** , selecione uma entidade.  
   
-5.  Dos **tipo de membro** , selecione um tipo de membro.  
+5.  Na lista **tipo de membro** , selecione um tipo de membro.  
   
 6.  Na lista **Atributo** , selecione um atributo ou deixe o valor padrão **Todos**.  
   
-7.  Na grade, na linha da regra de negócio, clique duas vezes o **nome** campo.  
+7.  Na grade, na linha da regra de negócio, clique duas vezes no campo **nome** .  
   
 8.  Digite um nome para a regra de negócios.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65480115"
   
 11. Na caixa de diálogo de confirmação, clique em **OK**. O status da regra mudará para **Ativo**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

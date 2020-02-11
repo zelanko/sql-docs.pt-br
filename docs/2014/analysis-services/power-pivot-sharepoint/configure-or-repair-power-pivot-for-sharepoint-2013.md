@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac41915ab4b94f1b074874228a14f5ab6363604c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229345"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>Configurar ou reparar o PowerPivot para SharePoint 2013 (Ferramenta de Configuração do PowerPivot)
@@ -58,12 +58,12 @@ ms.locfileid: "75229345"
   
  ![Ferramenta de Configuração do PowerPivot para SharePoint 2013](../media/ssas-powerpivot-configtool-4-sharepoint2013-mainpage-configure.gif "Ferramenta de Configuração do PowerPivot para SharePoint 2013")  
   
-||Descrição|  
+||DESCRIÇÃO|  
 |-|-----------------|  
-|**uma**|Janela Lista de tarefas.|  
+|**(1)**|Janela Lista de tarefas.|  
 |**2**|Ações individuais.|  
-|**Beta**|Os scripts do Windows PowerShell criados pela ferramenta de configuração.|  
-|**quatro**|Mensagens de log criadas quando você inicia a validação ou executa ações.|  
+|**(3)**|Os scripts do Windows PowerShell criados pela ferramenta de configuração.|  
+|**(4)**|Mensagens de log criadas quando você inicia a validação ou executa ações.|  
 |**05**|Descrição da página.|  
 |**152**|Parâmetros de entrada|  
 |**7**|O botão **Executar** é habilitado após a validação das ações.|  
@@ -108,7 +108,7 @@ ms.locfileid: "75229345"
   
  A tabela a seguir descreve os valores que são usados para configurar o servidor.  
   
-|Página|Valor de entrada|Origem|Descrição|  
+|Página|Valor de entrada|Fonte|DESCRIÇÃO|  
 |----------|-----------------|------------|-----------------|  
 |**Configurar ou reparar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o para SharePoint**|Conta padrão|Usuário atual|A conta padrão é uma conta de usuário de domínio do Windows usada para provisionar serviços compartilhados no farm. Ela é usada para provisionar o seguinte:<br />
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Padrão<br />Serviço de Repositório Seguro<br />Serviços do Excel<br />A identidade do pool de aplicativos Web<br />O administrador de conjunto de sites<br />A conta autônoma de atualização de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Por padrão, ele usa a conta de domínio do usuário atual. É recomendável substituir o valor padrão, a menos que você esteja configurando um servidor para fins de avaliação e de não produção. Posteriormente, é possível alterar as identidades do serviço, usando a Administração Central. Opcionalmente, na ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , especifique contas dedicadas para o seguinte:<br /><br /> Aplicativo Web, usando a página **criar aplicativo Web padrão** (supondo que a ferramenta esteja criando um aplicativo Web para o farm).<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]conta de atualização de dados autônoma, usando a página **criar conta autônoma para atualização de dados** nesta ferramenta.|  
@@ -193,7 +193,7 @@ ms.locfileid: "75229345"
  Você pode adicionar sites confiáveis nos Serviços do Excel para variar as permissões e os parâmetros de configuração em sites que fornecem pastas de trabalho do Excel e dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obter mais informações, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>Criar uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]  
- Depois de instalar os componentes do servidor em um farm, você poderá criar sua primeira pasta de trabalho do Excel 2013 que usa os dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inseridos e, em seguida, publicá-la em uma biblioteca do SharePoint. Opcionalmente, você pode carregar ou publicar uma pasta de trabalho de exemplo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para verificar o acesso a dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint. Para saber mais, consulte o seguinte:   
+ Depois de instalar os componentes do servidor em um farm, você poderá criar sua primeira pasta de trabalho do Excel 2013 que usa os dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inseridos e, em seguida, publicá-la em uma biblioteca do SharePoint. Opcionalmente, você pode carregar ou publicar uma pasta de trabalho de exemplo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para verificar o acesso a dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint. Para saber mais, consulte o seguinte:  
 
 -   [O que há de novo no PowerPivot no Excel 2013](https://www.microsoft.com/microsoft-365/blog/2012/12/13/introduction-to-powerpivot-in-excel-2013/).  
   

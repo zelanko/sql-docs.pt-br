@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783216"
 ---
-# <a name="defect-a-target-server-from-a-master-server"></a>Defect a Target Server from a Master Server
-  Este tópico descreve como remover um servidor de destino de um servidor mestre no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou SQL Server Management Objects (SMO). Execute este procedimento a partir do servidor de destino.  
+# <a name="defect-a-target-server-from-a-master-server"></a>Remover um servidor de destino de um servidor mestre
+  Este tópico descreve como remover um servidor de destino de um servidor mestre no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects (SMO). Execute este procedimento a partir do servidor de destino.  
   
  **Neste tópico**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72783216"
   
 3.  Clique em **Sim** para confirmar que deseja remover o servidor de destino de um servidor mestre.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>Para remover um servidor de destino de um servidor mestre  
   
@@ -71,12 +71,12 @@ ms.locfileid: "72783216"
 sp_msx_defect ;  
 ```  
   
- Para obter mais informações, [consulte &#40;SP_MSX_DEFECT Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
+ Para obter mais informações, consulte [sp_msx_defect &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a>Usando o SQL Server Management Objects (SMO)  
  Use a `MsxDefect Method`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um ambiente multisservidor](create-a-multiserver-environment.md)   
  [Administração automatizada em toda a empresa](automated-administration-across-an-enterprise.md)   
- [Remover vários servidores de destino de um servidor mestre](defect-multiple-target-servers-from-a-master-server.md)  
+ [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  

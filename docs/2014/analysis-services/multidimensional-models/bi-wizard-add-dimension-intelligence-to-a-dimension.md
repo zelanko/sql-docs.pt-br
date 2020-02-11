@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd5d6917544cca3506d37ec13e058f4bce9fe77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076918"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>Adicionar inteligência de dimensão a uma dimensão
@@ -34,13 +34,13 @@ ms.locfileid: "66076918"
 >  Se você selecionar **Conta** como dimensão, especificará a inteligência de conta para a dimensão. Para obter mais informações, consulte [Adicionar inteligência de conta a uma dimensão](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="specifying-dimension-attributes"></a>Especificando atributos de dimensão  
- Sobre o **definir inteligência de dimensão** página, na **tipo de dimensão** lista, a seleção feita define a dimensão `Type` propriedade. A configuração da propriedade `Type` fornece informações aos servidores e aplicativos cliente sobre os conteúdos de uma dimensão. Algumas configurações fornecem apenas orientação para aplicativos cliente; essas configurações são opcionais. Outras configurações, como para Contas ou Tempo, determinam comportamentos específicos e podem ser necessárias para implementar determinados aprimoramentos de business intelligence. Por exemplo, o SQL Server Management Studio usa o tipo de dimensão para identificar uma dimensão Moeda e definir as regras para conversão de moeda apropriadas. A configuração padrão de **Tipo de Dimensão** é **Regular**, o que não faz nenhuma suposição sobre o conteúdo da dimensão.  
+ Na página **Definir inteligência de dimensão** , na lista **tipo de dimensão** , a seleção que você faz define a propriedade `Type` da dimensão. A configuração da propriedade `Type` fornece informações aos servidores e aplicativos cliente sobre os conteúdos de uma dimensão. Algumas configurações fornecem apenas orientação para aplicativos cliente; essas configurações são opcionais. Outras configurações, como para Contas ou Tempo, determinam comportamentos específicos e podem ser necessárias para implementar determinados aprimoramentos de business intelligence. Por exemplo, o SQL Server Management Studio usa o tipo de dimensão para identificar uma dimensão Moeda e definir as regras para conversão de moeda apropriadas. A configuração padrão de **Tipo de Dimensão** é **Regular**, o que não faz nenhuma suposição sobre o conteúdo da dimensão.  
   
  Depois de selecionar o tipo de dimensão, em **Atributos da dimensão**, na coluna **Incluir** , marque a caixa de seleção ao lado de cada tipo de atributo padrão para o qual existe um atributo correspondente na dimensão. Por fim, na coluna **Atributo de Dimensão** , expanda a lista suspensa e selecione o atributo da dimensão correspondente ao tipo de atributo selecionado. Selecionar o atributo na lista configura a propriedade `Type` dos atributos.  
   
  Por exemplo, convém adicionar inteligência de dimensão a uma dimensão Contas. Em **Tipo de Dimensão**, selecione **Contas**. Em seguida, se a dimensão tiver os atributos **Tipo de Conta** e **Descrição da Conta** , na coluna **Incluir** , marque as caixas de seleção dos tipos de conta **Nome da Conta** e **Tipo de Conta** . Na coluna **Atributo de Dimensão** , associe esses tipos de conta aos atributos **Descrição da Conta** e **Tipo de Conta** , respectivamente, na dimensão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir cálculos de inteligência de tempo com o Assistente de Business Intelligence](define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   
