@@ -1,5 +1,5 @@
 ---
-title: Tipos de dados do SQL Server no .NET Framework | Microsoft Docs
+title: SQL Server tipos de dados no .NET Framework | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24b5c5d65ce7db8a26265c40185ce72d40df58ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009777"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Tipos de dados do SQL Server no .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O **SqlTypes** biblioteca é parte da biblioteca de classe base a [!INCLUDE[msCoName](../../includes/msconame-md.md)] do .NET Framework. Ela é projetada para fornecer tipos de dados com a mesma semântica e precisão presentes no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tópico descreve a nova semântica para os programadores do .NET Framework e apresenta os tipos implementados na **SqlTypes** namespace que está incluído na **System. Data** biblioteca.  
+  A biblioteca **SqlTypes** faz parte da biblioteca de classes base do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Ela é projetada para fornecer tipos de dados com a mesma semântica e precisão presentes no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tópico descreve a nova semântica para .NET Framework programadores e apresenta os tipos implementados no namespace **System. Data. SqlTypes** que está incluído na biblioteca **System. Data** .  
   
  A tabela a seguir lista os tópicos desta seção.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68009777"
  [Tipos de dados de integração CLR e ordenação](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  Descreve como são tratadas as ordenações com integração CLR.  
   
- [Manipulando objetos grandes &#40;LOB&#41; parâmetros no CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [Tratando parâmetros de&#41; de LOB &#40;de objeto grande no CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  Descreve como passar tipos LOB entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o CLR.  
   
  [Mapeando dados de parâmetro CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  

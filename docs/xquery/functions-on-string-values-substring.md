@@ -1,5 +1,5 @@
 ---
-title: Função (XQuery) substring | Microsoft Docs
+title: Função substring (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004644"
 ---
 # <a name="functions-on-string-values---substring"></a>Funções em Valores da Cadeia de Caracteres – substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna a parte do valor de *$sourceString*, começando na posição indicada pelo valor da *$startingLoc,* e continua para o número de caracteres indicado pelo valor de *$ comprimento*.  
+  Retorna parte do valor de *$sourceString*, começando na posição indicada pelo valor de *$startingLoc* e continua para o número de caracteres indicado pelo valor de *$Length*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,34 +44,34 @@ fn:substring($sourceString as xs:string?,
  Cadeia de caracteres de origem.  
   
  *$startingLoc*  
- Ponto de partida na cadeia de caracteres de origem do qual a subcadeia de caracteres é iniciada. Se esse valor for negativo ou 0, apenas aqueles caracteres em posições maiores que zero serão retornados. Se ele for maior que o tamanho de *$sourceString*, a cadeia de caracteres de comprimento zero será retornada.  
+ Ponto de partida na cadeia de caracteres de origem do qual a subcadeia de caracteres é iniciada. Se esse valor for negativo ou 0, apenas aqueles caracteres em posições maiores que zero serão retornados. Se for maior que o comprimento do *$sourceString*, a cadeia de caracteres de comprimento zero será retornada.  
   
  *$length*  
- [opcional] Número de caracteres a recuperar. Se não for especificado, ele retorna todos os caracteres do local especificado na *$startingLoc* até o fim da cadeia de caracteres.  
+ [opcional] Número de caracteres a recuperar. Se não for especificado, ele retornará todos os caracteres do local especificado em *$startingLoc* até o final da cadeia de caracteres.  
   
 ## <a name="remarks"></a>Comentários  
  A versão de três argumentos da função retorna os caracteres em `$sourceString` cuja posição `$p` obedece:  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
   
- O valor de *$length* pode ser maior que o número de caracteres no valor da *$sourceString* após a posição inicial. Nesse caso, a subcadeia retorna os caracteres até o final da *$sourceString*.  
+ O valor de *$Length* pode ser maior que o número de caracteres no valor de *$sourceString* após a posição inicial. Nesse caso, a subcadeia de caracteres retorna os caracteres até o final de *$sourceString*.  
   
  O primeiro caractere de uma cadeia de caracteres está situado na posição 1.  
   
- Se o valor de *$sourceString* é a sequência vazia, ela é tratada como a cadeia de caracteres de comprimento zero. Caso contrário, se qualquer um dos *$startingLoc* ou *$length* é a sequência vazia, a sequência vazia será retornada.  
+ Se o valor de *$sourceString* for a sequência vazia, ele será tratado como a cadeia de caracteres de comprimento zero. Caso contrário, se *$startingLoc* ou *$Length* for a sequência vazia, a sequência vazia será retornada.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados e, em alguns casos, o URI do namespace padrão para funções. Para obter mais informações, consulte a seção "XQuery funções têm consciência de substitutos" no tópico [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte também [nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados e, em alguns casos, o URI do namespace padrão para funções. Para obter mais informações, consulte a seção "as funções do XQuery são de reconhecimento de substitutos" no tópico [alterações significativas em mecanismo de banco de dados recursos no SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte também o [nível de compatibilidade de ALTER DATABASE &#40;&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [agrupamento e suporte a Unicode](../relational-databases/collations/collation-and-unicode-support.md)do Transact-SQL.  
   
 ## <a name="implementation-limitations"></a>Limitações de implementação  
- O SQL Server requer o *$startingLoc* e *$length parâmetros* seja do tipo xs: decimal em vez de xs: Double.  
+ SQL Server requer que os parâmetros *$startingLoc* e *$Length* sejam do tipo xs: decimal em vez de xs: Double.  
   
- O SQL Server permite *$startingLoc* e *$length* como a sequência vazia, porque a sequência vazia é um valor possível como resultado de erros dinâmicos sendo mapeados para ().  
+ SQL Server permite que *$startingLoc* e *$Length* sejam a sequência vazia, porque a sequência vazia é um valor possível como resultado de os erros dinâmicos serem mapeados para ().  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML armazenadas em várias **xml** colunas de tipo a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML **** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
   
-### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Usando uma função substring() XQuery para recuperar descrições resumidas parciais de modelos de produtos  
+### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>a. Usando uma função substring() XQuery para recuperar descrições resumidas parciais de modelos de produtos  
  A consulta recupera os primeiros 50 caracteres do texto que descreve o modelo de produto, o <`Summary`> elemento no documento.  
   
 ```  
@@ -85,9 +85,9 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  Observe o seguinte na consulta anterior:  
   
--   O **String ()** função retorna o valor de cadeia de caracteres da <`Summary`> elemento. Essa função é usada, porque o <`Summary`> elemento contém o texto e os subelementos (html que formata elementos), e porque você ignorará esses elementos e recuperará todo o texto.  
+-   A função **String ()** retorna o valor da cadeia de caracteres `Summary` do elemento<>. Essa função é usada, porque o elemento `Summary` <> contém o texto e os subelementos (elementos de formatação HTML) e, como você vai ignorar esses elementos e recuperar todo o texto.  
   
--   O **substring ()** função recupera os primeiros 50 caracteres do valor de cadeia de caracteres recuperado pelo **String ()** .  
+-   A função **substring ()** recupera os primeiros 50 caracteres do valor de cadeia de caracteres recuperado pela **cadeia de caracteres ()**.  
   
  Este é um resultado parcial:  
   
@@ -99,7 +99,7 @@ ProductModelID Result
 ...  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

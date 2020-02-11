@@ -21,27 +21,27 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 73ee5d7ac8bd512b69cc187f9860b9e7f2c38a78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001299"
 ---
-# <a name="sysallocationunits-transact-sql"></a>sys.allocation_units (Transact-SQL)
+# <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha para cada unidade de alocação no banco de dados.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|ID da unidade de alocação. É exclusivo em um banco de dados.|  
-|type|**tinyint**|Tipo de unidade de alocação:<br /><br /> 0 = Descartado<br /><br /> 1 = Dados em linha (todos os tipos de dados, exceto LOB)<br /><br /> 2 = dados de objeto grande (LOB) (**texto**, **ntext**, **imagem**, **xml**, tipos de valor grande e tipos CLR definidos pelo usuário)<br /><br /> 3 = Dados do estouro de linha|  
-|type_desc|**nvarchar(60)**|Descrição do tipo de unidade de alocação:<br /><br /> **DESCARTADO**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
+|type|**tinyint**|Tipo de unidade de alocação:<br /><br /> 0 = Descartado<br /><br /> 1 = Dados em linha (todos os tipos de dados, exceto LOB)<br /><br /> 2 = dados de objeto grande (LOB) (**Text**, **ntext**, **Image**, **XML**, tipos de valor grande e tipos CLR definidos pelo usuário)<br /><br /> 3 = Dados do estouro de linha|  
+|type_desc|**nvarchar (60)**|Descrição do tipo de unidade de alocação:<br /><br /> **PASSOU**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|ID do contêiner de armazenamento associado à unidade de alocação.<br /><br /> Se type = 1 ou 3, container_id = sys.partitions.hobt_id.<br /><br /> Se type for 2, container_id = sys.partitions.partition_id.<br /><br /> 0 = Unidade de alocação marcada para descarte diferido|  
 |data_space_id|**int**|ID do grupo de arquivos no qual reside a unidade de alocação.|  
 |total_pages|**bigint**|Número total de páginas alocadas ou reservadas pela unidade de alocação.|  
 |used_pages|**bigint**|Número total de páginas realmente em uso.|  
-|data_pages|**bigint**|Número de páginas usadas que têm:<br /><br /> Dados em linha<br /><br /> Dados LOB<br /><br /> Dados do estouro de linha<br /><br /> <br /><br /> Observe que o valor retornado exclui páginas de índice internas e páginas de gerenciamento de alocação.|  
+|data_pages|**bigint**|Número de páginas usadas que têm:<br /><br /> Dados em linha<br /><br /> Dados LOB<br /><br /> Dados do estouro de linha<br /><br /> <br /><br /> Observe que o valor retornado exclui páginas de índice interno e páginas de gerenciamento de alocação.|  
   
 > [!NOTE]  
 >  Quando você descarta ou reconstrói índices grandes, ou descarta ou trunca tabelas grandes, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] adia as desalocações de página atuais e seus bloqueios associados, até depois que a transação confirme. Operações de cancelamento adiadas não libertam espaço alocado imediatamente. Portanto os valores retornados por sys.allocation_units imediatamente após o descarte ou truncamento de um objeto grande podem não refletir o espaço em disco realmente disponível.  
@@ -49,8 +49,8 @@ ms.locfileid: "68001299"
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
- [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys. partitions &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

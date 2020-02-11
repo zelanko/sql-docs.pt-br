@@ -18,18 +18,18 @@ ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5aa9801d312e5f862cb6274659496aff10c774ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010502"
 ---
-# <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
+# <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Define configurações de Gerenciamento Baseado em Políticas, como, por exemplo, se o Gerenciamento Baseado em Políticas é habilitado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,9 +40,9 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` É o nome da configuração que você deseja configurar. *nome da* está **sysname**, é necessário e não pode ser nulo ou uma cadeia de caracteres vazia.  
+`[ @name = ] 'name'`É o nome da configuração que você deseja configurar. o *nome* é **sysname**, é necessário e não pode ser nulo ou uma cadeia de caracteres vazia.  
   
- *nome* pode ser qualquer um dos seguintes valores:  
+ o *nome* pode ser qualquer um dos seguintes valores:  
   
 -   'Enabled' - Determina se o Gerenciamento Baseado em Políticas é habilitado.  
   
@@ -50,17 +50,17 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - Especifica se o Gerenciamento Baseado em Políticas registra em log avaliações de política com êxito.  
   
-`[ @value = ] value` É o valor que está associado com o valor especificado para *nome*. *valor* está **sql_variant**e é necessária.  
+`[ @value = ] value`É o valor que está associado ao valor especificado para *Name*. o *valor* é **sql_variant**e é necessário.  
   
--   Se você especificar 'Enabled' para *nome*, você pode usar qualquer um dos seguintes valores:  
+-   Se você especificar ' Enabled ' para *Name*, poderá usar qualquer um dos seguintes valores:  
   
     -   0 = Desabilita o Gerenciamento Baseado em Políticas.  
   
     -   1 = Habilita o Gerenciamento Baseado em Políticas.  
   
--   Se você especificar 'HistoryRententionInDays' para *nome*, especifique o número de dias como um valor inteiro.  
+-   Se você especificar ' HistoryRententionInDays ' para *nome*, especifique o número de dias como um valor inteiro.  
   
--   Se você especificar 'LogOnSuccess' para *nome*, você pode usar qualquer um dos seguintes valores:  
+-   Se você especificar ' LogOnSuccess ' para o *nome*, poderá usar qualquer um dos seguintes valores:  
   
     -   0 = Registra em log somente as avaliações de política com falha.  
   
@@ -78,7 +78,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possível elevação de credenciais: Os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que podem afetar a operação da instância da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente a usuários que são confiáveis com o controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir habilita o Gerenciamento Baseado em Políticas.  
@@ -108,10 +108,10 @@ EXEC msdb.dbo.sp_syspolicy_configure @name = N'LogOnSuccess'
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados de gerenciamento baseado em políticas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_enabled &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_set_log_on_success &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Procedimentos armazenados do gerenciamento baseado em políticas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syspolicy_set_config_enabled](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syspolicy_set_config_history_retention](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syspolicy_set_log_on_success](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
   
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049451"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering de várias sub-redes do SQL Server (SQL Server)
@@ -28,28 +28,32 @@ ms.locfileid: "63049451"
   
  
   
-##  <a name="VisualElement"></a> Cluster de Failover de Várias Sub-redes do SQL Server (Dois Nós, Duas Sub-redes)  
+##  <a name="VisualElement"></a>SQL Server Cluster de failover de várias sub-redes (dois nós, duas sub-redes)  
  A ilustração a seguir representa um FCI (instância de cluster de failover) com dois nós e duas sub-redes no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- ![Arquitetura de várias sub-redes com MultiSubnetFailover](../../../database-engine/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Arquitetura de várias sub-redes com MultiSubnetFailover")  
+ ![Arquitetura de Várias Redes com MultiSubnetFailover](../../../database-engine/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Arquitetura de Várias Redes com MultiSubnetFailover")  
   
 
   
-##  <a name="Configurations"></a> Configurações da instância do cluster de failover de várias sub-redes  
+##  <a name="Configurations"></a>Configurações de instância de cluster de failover de várias sub-redes  
  A seguir estão alguns exemplos de FCIs do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que usam várias sub-redes:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 inclui Node1 e Node2. Node1 é conectado a Subnet1. Node2 é conectado a Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] A instalação considera essa configuração como um cluster de várias sub-redes e define a dependência do recurso de endereço IP como **OR**.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 inclui Node1 e Node2. Node1 é conectado a Subnet1. Node2 é conectado a Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]A instalação vê essa configuração como um cluster de várias sub-redes e define a dependência do recurso de endereço IP como **ou**.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 inclui Node1, Node2 e Node3. Node1 e Node2 são conectados a Subnet1. Node 3 é conectado a Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] A instalação considera essa configuração como um cluster de várias sub-redes e define a dependência do recurso de endereço IP como **OR**. Como Node1 e Node2 estão na mesma sub-rede, essa configuração fornece alta disponibilidade local adicional.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 inclui Node1, Node2 e Node3. Node1 e Node2 são conectados a Subnet1. Node 3 é conectado a Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]A instalação vê essa configuração como um cluster de várias sub-redes e define a dependência do recurso de endereço IP como **ou**. Como Node1 e Node2 estão na mesma sub-rede, essa configuração fornece alta disponibilidade local adicional.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 inclui Node1 e Node2. Node1 está em Subnet1. Node2 está em Subnet1 e Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] A instalação considera essa configuração como um cluster de várias sub-redes e define a dependência do recurso de endereço IP como **OR**.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 inclui Node1 e Node2. Node1 está em Subnet1. Node2 está em Subnet1 e Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]A instalação vê essa configuração como um cluster de várias sub-redes e define a dependência do recurso de endereço IP como **ou**.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 inclui Node1 e Node2. Node1 é conectado a Subnet1 e Subnet2. Node2 também é conectado a Subnet1 e Subnet2. A dependência de recurso de endereço IP é definida como **AND** pela Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 inclui Node1 e Node2. Node1 é conectado a Subnet1 e Subnet2. Node2 também é conectado a Subnet1 e Subnet2. A dependência de recurso de endereço IP é definida como **AND** pela Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     > [!NOTE]  
     >  Essa configuração não é considerada uma configuração de cluster de failover de várias sub-redes porque os nós clusterizados estão no mesmo conjunto de sub-redes.  
   
-##  <a name="ComponentsAndConcepts"></a> Considerações sobre o recurso de endereço IP  
+##  <a name="ComponentsAndConcepts"></a>Considerações sobre o recurso de endereço IP  
  Em uma configuração de cluster de failover de várias sub-redes, os endereços IP não pertencem a todos os nós no cluster de failover, e podem não estar todos online durante inicialização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], é possível definir a dependência de recurso de endereço IP como **OR**. Isso habilita o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para ficar online quando há pelo menos um endereço IP válido ao qual ele possa se associar.  
   
 > [!NOTE]  
@@ -66,7 +70,7 @@ ms.locfileid: "63049451"
   
  Quando um FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for instalada lado a lado com uma instância autônoma do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], procure evitar conflitos de número de porta TCP nos endereços IP. Conflitos normalmente ocorrem quando duas instâncias do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] são ambas configuradas para usar a porta TCP padrão (1433). Para evitar conflitos, configure uma instância para usar uma porta fixa não padrão. A configuração de uma porta fixa é normalmente mais fácil na instância autônoma. A configuração do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para usar portas diferentes impedirá um conflito inesperado do Endereço IP/porta TCP que bloqueie uma inicialização de instância quando um FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] falhar no nó em espera.  
   
-##  <a name="DNS"></a> Latência de recuperação de cliente durante failover  
+##  <a name="DNS"></a>Latência de recuperação do cliente durante o failover  
  Um FCI de várias sub-redes por padrão habilitam o recurso de cluster de RegisterAllProvidersIP para seu nome de rede. Em uma configuração de várias sub-redes, os endereços de IP online e offline do nome de rede serão registrados no servidor DNS. O aplicativo cliente em seguida recupera todos os endereços IP registrados do servidor DNS tenta se conectar aos endereços na ordem ou em paralelo. Isto significa que o tempo de recuperação de cliente em failovers de várias sub-redes já não dependem de latências de atualização de DNS. Por padrão, o cliente tenta os endereços IP na ordem. Quando o cliente usar o novo parâmetro opcional `MultiSubnetFailover=True` em sua cadeia de conexão, tentará os endereços IP simultaneamente e conectará ao primeiro servidor que responder. Isto pode ajudar a minimizar a latência de recuperação de cliente quando ocorrerem failovers. Para obter mais informações, consulte [conectividade de cliente AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) e [criar ou configurar um ouvinte de grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
  Com bibliotecas de cliente herdadas ou provedores de dados de terceiros, você não pode usar o parâmetro `MultiSubnetFailover` em sua cadeia de conexão. Para ajudar a assegurar que seu aplicativo cliente funcione de maneira ideal com FCI de várias sub-redes no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], tente ajustar o tempo limite de conexão na cadeia de conexão de cliente antes de 21 segundos para cada endereço IP adicional. Isto assegura que a tentativa de reconexão do cliente não excede o tempo limite antes de ser capaz de realizar um ciclo por todos os endereços IP em seu FCI de várias sub-redes.  
@@ -82,7 +86,7 @@ ms.locfileid: "63049451"
 |Instalando um cluster de failover do SQL Server|[Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Atualização in-loco de seu cluster de failover do SQL Server existente|[Atualizar uma instância de cluster de failover do SQL Server &#40;instalação&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Manutenção do seu cluster de failover existente do SQL Server|[Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Clustering de failover do Windows|[Práticas recomendadas do Microsoft Windows Cluster de Failover de multissite](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|  
+|Clustering de failover do Windows|[Práticas recomendadas de cluster de failover de vários sites do Microsoft Windows](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|  
 |Use o snap-in Gerenciamento de Cluster de Failover para exibir eventos e logs do WSFC|[Exibir eventos e logs de um cluster de failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
 |Use o Windows PowerShell para criar um arquivo de log para todos os nós (ou um nó específico) em um cluster de failover do WSFC|[Cluster de failover Get-ClusterLog do cmdlet](https://technet.microsoft.com/library/ee461045.aspx)|  
   

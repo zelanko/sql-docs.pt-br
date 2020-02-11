@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 90280725036f3d984b0d7b989e9a802dfec38746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63048621"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Propriedades do servidor de relatório (guia Avançado)
-  Este serviço é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se existirem propriedades personalizadas definidas, elas serão exibidas nessa guia, junto com seus valores.  
+  Esse serviço é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se existirem propriedades personalizadas definidas, elas serão exibidas nessa guia, junto com seus valores.  
   
 ## <a name="options"></a>Opções  
  **Relatório de Comentários do Cliente**  

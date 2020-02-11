@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071464"
 ---
 # <a name="migrating-triggers"></a>Migrando gatilhos
@@ -34,7 +34,7 @@ ms.locfileid: "63071464"
   
  Dependendo do evento de gatilho (FOR/AFTER ou INSTEAD OF), você pode incluir o conteúdo do gatilho no procedimento armazenado apropriado que executa INSERT, UPDATE ou DELETE nessa tabela. Por exemplo, ao migrar um gatilho AFTER INSERT, você pode modificar o procedimento armazenado que executa a operação de inserção, incluindo o conteúdo do gatilho após a instrução INSERT apropriada.  
   
- Você pode usar um procedimento armazenado interpretado ou um procedimento armazenado compilado de modo nativo. A maioria das construções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado interpretado podem ser executadas em uma tabela com otimização de memória. Entretanto, apenas um subconjunto de construções [!INCLUDE[tsql](../../includes/tsql-md.md)] tem suporte em procedimentos armazenados compilados de modo nativo. Para obter informações sobre o suporte ao [!INCLUDE[tsql](../../includes/tsql-md.md)] em tabelas com otimização de memória, consulte [Acessando tabelas com otimização de memória usando Transact-SQL interpretado](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Para obter informações sobre o suporte ao [!INCLUDE[tsql](../../includes/tsql-md.md)] em procedimentos armazenados compilados de modo nativo, consulte [Construções do Transact-SQL sem suporte pelo OLTP na memória](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ Você pode usar um procedimento armazenado interpretado ou um procedimento armazenado compilado de modo nativo. A maioria das construções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado interpretado podem ser executadas em uma tabela com otimização de memória. Entretanto, apenas um subconjunto de construções [!INCLUDE[tsql](../../includes/tsql-md.md)] tem suporte em procedimentos armazenados compilados de modo nativo. Para obter informações sobre o suporte ao [!INCLUDE[tsql](../../includes/tsql-md.md)] em tabelas com otimização de memória, consulte [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Para obter informações sobre o suporte ao [!INCLUDE[tsql](../../includes/tsql-md.md)] em procedimentos armazenados compilados de modo nativo, consulte [Transact-SQL Constructs Not Supported by In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
  Veja a seguir um exemplo simples de simulação do comportamento do gatilho DML em uma tabela com otimização de memória.  
   
@@ -154,7 +154,7 @@ END
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Migrando para OLTP na memória](migrating-to-in-memory-oltp.md)  
   
   

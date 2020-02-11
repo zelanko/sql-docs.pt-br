@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126230"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Usando acesso à URL em um aplicativo do Windows
@@ -31,7 +31,7 @@ ms.locfileid: "63126230"
 -   Use o controle <xref:System.Windows.Forms.WebBrowser> em um Windows Form para exibir um relatório.  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Iniciando o Internet Explorer a partir de um Windows Form  
- Você pode usar a classe <xref:System.Diagnostics.Process> para acessar um processo que esteja em execução em um computador. A classe <xref:System.Diagnostics.Process> é um constructo útil do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para iniciar, interromper, controlar e monitorar aplicativos. Para exibir um relatório específico no banco de dados do servidor de relatório, inicie o processo **IExplore**, passando a URL para o relatório. O exemplo de código a seguir pode ser usado para iniciar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer e para passar uma URL específica do relatório quando o usuário clicar em um botão de um Windows Form.  
+ Você pode usar a classe <xref:System.Diagnostics.Process> para acessar um processo que esteja em execução em um computador. A <xref:System.Diagnostics.Process> classe é uma construção [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] útil para iniciar, interromper, controlar e monitorar aplicativos. Para exibir um relatório específico no banco de dados do servidor de relatório, inicie o processo **IExplore**, passando a URL para o relatório. O exemplo de código a seguir pode ser usado para iniciar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer e para passar uma URL específica do relatório quando o usuário clicar em um botão de um Windows Form.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -87,7 +87,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>Para adicionar o controle WebBrowser ao seu Windows Form  
   
-1.  Crie um novo aplicativo do Windows no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Crie um novo aplicativo do Windows no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]no.  
   
 2.  Localize o controle <xref:System.Windows.Forms.WebBrowser> na caixa de diálogo **Caixa de Ferramentas**.  
   
@@ -113,11 +113,11 @@ string url = "http://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Integrando o Reporting Services em aplicativos](../application-integration/integrating-reporting-services-into-applications.md)   
- [Integrando o Reporting Services usando o acesso à URL](integrating-reporting-services-using-url-access.md)   
- [Integrando o Reporting Services usando o SOAP](integrating-reporting-services-using-soap.md)   
- [Integrando o Reporting Services usando os controles ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Integrando Reporting Services em aplicativos](../application-integration/integrating-reporting-services-into-applications.md)   
+ [Integrando Reporting Services usando o acesso à URL](integrating-reporting-services-using-url-access.md)   
+ [Integrando Reporting Services usando SOAP](integrating-reporting-services-using-soap.md)   
+ [Integrando Reporting Services usando os controles ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)   
  [Acesso à URL &#40;SSRS&#41;](../url-access-ssrs.md)  
   
   

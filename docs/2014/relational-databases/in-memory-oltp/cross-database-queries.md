@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8739a95f0676adfdbc890512aeb5246565bacdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071583"
 ---
 # <a name="cross-database-queries"></a>Consultas de bancos de dados
@@ -22,7 +22,7 @@ ms.locfileid: "63071583"
   
  Variáveis de tabela não são transacionais. Assim, as variáveis de tabela com otimização de memória podem ser usadas em consultas de bancos de dados e, portanto, podem facilitar a movimentação de dados de um banco de dados para tabelas com otimização de memória em outro. Você pode usar duas transações. Na primeira transação, insira os dados da tabela remota na variável. Na segunda transação, insira os dados na tabela com otimização de memória local da variável.  
   
- Por exemplo, para copiar a linha da tabela t1 no banco de dados db1 para a tabela t2 no db2, usando a variável @v1 do tipo dbo.tt1, você pode usar algo como:  
+ Por exemplo, para copiar a linha da tabela T1 no banco de dados db1 para a tabela T2 no DB2 @v1 , usando a variável do tipo dbo. TT1, você pode usar algo como:  
   
 ```sql  
 USE db2   
@@ -33,7 +33,7 @@ INSERT dbo.t2 SELECT * FROM @v1
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Migrando para OLTP na memória](migrating-to-in-memory-oltp.md)  
   
   

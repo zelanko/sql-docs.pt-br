@@ -14,20 +14,20 @@ ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87ad7b8b36c80d86e0c3ac0335dd6f348a30c7bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002246"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Construir instruções SQL interoperáveis
-Conforme mencionado nas seções anteriores, os aplicativos interoperáveis devem usar a gramática SQL ODBC. Além de usar esta gramática, no entanto, uma série de problemas adicionais enfrentada por aplicativos interoperáveis. Por exemplo, o que um aplicativo faz se desejar usar um recurso, como junções externas, que não é suportado por todas as fontes de dados?  
+Conforme mencionado nas seções anteriores, os aplicativos interoperáveis devem usar a gramática do SQL ODBC. No entanto, além de usar essa gramática, vários problemas adicionais são enfrentados por aplicativos interoperáveis. Por exemplo, o que um aplicativo faz se quiser usar um recurso, como junções externas, que não tem suporte de todas as fontes de dados?  
   
- Neste ponto, o criador do aplicativo deve tomar algumas decisões sobre quais recursos de idioma são necessários e opcionais. Na maioria dos casos, se um determinado driver não dá suporte a um recurso exigido pelo aplicativo, o aplicativo simplesmente se recusar a executar com esse driver. No entanto, se o recurso é opcional, o aplicativo pode contornar o recurso. Por exemplo, ele pode desabilitar essas partes da interface que permitem ao usuário usar o recurso.  
+ Neste ponto, o gravador de aplicativos deve tomar algumas decisões sobre quais recursos de idioma são necessários e quais são opcionais. Na maioria dos casos, se um driver específico não oferecer suporte a um recurso exigido pelo aplicativo, o aplicativo simplesmente se recusará a ser executado com esse driver. No entanto, se o recurso for opcional, o aplicativo poderá contornar o recurso. Por exemplo, ele pode desabilitar essas partes da interface que permitem ao usuário usar o recurso.  
   
- Para determinar quais recursos têm suporte, os aplicativos iniciam chamando **SQLGetInfo** com a opção SQL_SQL_CONFORMANCE. O nível de compatibilidade do SQL oferece ao aplicativo uma visão geral dos quais há suporte para SQL. Para refinar essa exibição, o aplicativo chama **SQLGetInfo** com qualquer uma das várias outras opções. Para obter uma lista completa dessas opções, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função. Por fim, **SQLGetTypeInfo** retorna informações sobre os tipos de dados com suporte pela fonte de dados. As seções a seguir listam uma série de fatores possíveis que aplicativos devem ter cuidado ao construir as instruções de SQL interoperáveis.  
+ Para determinar quais recursos têm suporte, os aplicativos começam chamando **SQLGetInfo** com a opção SQL_SQL_CONFORMANCE. O nível de conformidade do SQL fornece ao aplicativo uma visão ampla da qual há suporte para SQL. Para refinar essa exibição, o aplicativo chama **SQLGetInfo** com uma série de outras opções. Para obter uma lista completa dessas opções, consulte a descrição da função [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) . Por fim, **SQLGetTypeInfo** retorna informações sobre os tipos de dados com suporte pela fonte de dados. As seções a seguir listam vários dos possíveis fatores que os aplicativos devem observar ao construir instruções SQL interoperáveis.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Catálogo e o uso do esquema](../../../odbc/reference/develop-app/catalog-and-schema-usage.md)  
   

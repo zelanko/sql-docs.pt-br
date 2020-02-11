@@ -1,5 +1,5 @@
 ---
-title: 'Ferramenta de gerenciamento da linha de comando: SqlLocalDB.exe | Microsoft Docs'
+title: 'Ferramenta de gerenciamento de linha de comando: SqlLocalDB. exe | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 58ea983555fdcb4bb177813db88d40f4bcc59c0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128780"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>Ferramenta de gerenciamento da linha de comando: SqlLocalDB.exe
@@ -27,10 +27,10 @@ ms.locfileid: "63128780"
 ## <a name="sqllocaldb-options"></a>Opções de SqlLocalDB  
  O SqlLocalDB oferece suporte para as seguintes opções.  
   
-|Opção|O que ele faz|  
+|Opção|O que faz|  
 |------------|------------------|  
 |`-?`|Imprime o texto da Ajuda.|  
-|`create&#124;c "instance name" [version-number] [-s]`|Cria uma nova instância de LocalDB com um nome e uma versão especificados.<br /><br /> Se o parâmetro [version-number] for omitido, o valor padrão será a versão de compilação do SqlLocalDB.<br /><br /> \- s inicia a nova instância de LocalDB depois que ela é criada.|  
+|`create&#124;c "instance name" [version-number] [-s]`|Cria uma nova instância de LocalDB com um nome e uma versão especificados.<br /><br /> Se o parâmetro [version-number] for omitido, o valor padrão será a versão de compilação do SqlLocalDB.<br /><br /> - s inicia a nova instância de LocalDB depois que ela é criada.|  
 |`delete&#124;d "instance name"`|Excluir a instância de LocalDB com o nome especificado.|  
 |`start&#124;s "instance name"`|Inicia a instância de LocalDB com o nome especificado.|  
 |`stop&#124;p "instance name" [-i&#124;-k]`|Interrompe a instância de LocalDB com o nome especificado, depois que a execução das consultas atuais são concluídas.<br /><br /> -i solicita o desligamento da instância de LocalDB com a opção NOWAIT.<br /><br /> -k elimina o processo da instância de LocalDB sem contatá-la.|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017078"
 ---
 # <a name="arithmetic-operators"></a>Operadores aritméticos
@@ -22,12 +22,12 @@ ms.locfileid: "68017078"
   
  O MDX oferece suporte para os operadores aritméticos listados na tabela a seguir.  
   
-|Operador|Descrição|  
+|Operador|DESCRIÇÃO|  
 |--------------|-----------------|  
-|[+ (Somar)](../mdx/add-mdx.md)|Soma dois números.|  
-|[/ (dividir)](../mdx/divide-mdx-operator-reference.md)|Divide um número pelo outro.|  
+|[+ (Adicionar)](../mdx/add-mdx.md)|Soma dois números.|  
+|[/(Divisão)](../mdx/divide-mdx-operator-reference.md)|Divide um número pelo outro.|  
 |[* (Multiplicar)](../mdx/multiply-mdx.md)|Multiplica dois números.|  
-|[- (Subtrair)](../mdx/subtract-mdx.md)|Subtrai dois números.|  
+|[-(Subtrair)](../mdx/subtract-mdx.md)|Subtrai dois números.|  
 |^ (Potência)|Eleva um número pelo outro.|  
   
 > [!NOTE]  
@@ -38,12 +38,12 @@ ms.locfileid: "68017078"
   
 -   Quando houver mais de um operador aritmético em uma expressão, o MDX efetua a multiplicação e a divisão primeiramente, seguidas da subtração e da adição.  
   
--   Quando todos os operadores aritméticos em uma expressão tem o mesmo nível de precedência, a ordem de execução é esquerda para a direita.  
+-   Quando todos os operadores aritméticos em uma expressão têm o mesmo nível de precedência, a ordem de execução é da esquerda para a direita.  
   
 -   Expressões entre parênteses têm precedência sobre todas as outras operações.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
  [Operadores &#40;sintaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Instruções de geração de resultado e sem | Microsoft Docs
+title: Instruções de geração de resultados e de resultado livre | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55b2ff4d428f02b59883b675fde95531366f0b4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020605"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Instruções de geração de resultado e sem resultados
-Instruções SQL podem ser livremente divididas nas seguintes cinco categorias:  
+As instruções SQL podem ser divididas livremente nas cinco categorias a seguir:  
   
--   **Resultar de geração de conjunto de instruções** essas são instruções SQL que geram um conjunto de resultados. Por exemplo, uma **selecionar** instrução.  
+-   **Instruções de geração de conjunto de resultados** Essas são instruções SQL que geram um conjunto de resultados. Por exemplo, uma instrução **Select** .  
   
--   **Instruções de geração de contagem de linhas** essas são instruções SQL que geram uma contagem de linhas afetadas. Por exemplo, um **atualização** ou **excluir** instrução.  
+-   **Contagem de linhas – gerando instruções** Essas são instruções SQL que geram uma contagem de linhas afetadas. Por exemplo, uma instrução **Update** ou **delete** .  
   
--   **Data Definition Language (DDL) instruções** essas são instruções SQL que modificam a estrutura do banco de dados. Por exemplo, **CREATE TABLE** ou **DROP INDEX**.  
+-   **Instruções DDL (linguagem de definição de dados)** Essas são instruções SQL que modificam a estrutura do banco de dados. Por exemplo, **CREATE TABLE** ou **drop index**.  
   
--   **Alterando o contexto de instruções** essas são instruções SQL que alterar o contexto de um banco de dados. Por exemplo, o **uso** e **definir** instruções no SQL Server.  
+-   **Instruções de alteração de contexto** Essas são instruções SQL que alteram o contexto de um banco de dados. Por exemplo, as instruções **use** e **set** em SQL Server.  
   
--   **Instruções administrativas** essas são instruções SQL usadas para fins administrativos em um banco de dados. Por exemplo, **GRANT** e **REVOGAR**.  
+-   **Instruções administrativas** Essas são instruções SQL usadas para fins administrativos em um banco de dados. Por exemplo, **Grant** e **REVOKE**.  
   
- Instruções SQL em que as duas primeiras categorias são coletivamente conhecidas como *instruções de geração de resultado*. Instruções SQL em três categorias de segundo são coletivamente conhecidas como *livres de resultado instruções*. ODBC define a semântica de lotes que incluem as instruções de apenas gerar resultados. Essa semântica variar muito e, portanto, específico de fonte de dados. Por exemplo, o driver do SQL Server não oferece suporte a descartar um objeto e, em seguida, referindo-se a ou recriando o mesmo objeto no mesmo lote. Portanto, o termo *lote* como usado deste manual refere-se somente a lotes de geração de resultado de instruções.
+ As instruções SQL nas duas primeiras categorias são coletivamente conhecidas como *instruções de geração de resultados*. As instruções SQL nas últimas três categorias são coletivamente conhecidas como *instruções livres de resultado*. O ODBC define a semântica de lotes que incluem apenas instruções de geração de resultados. Essas semânticas variam muito e, portanto, são específicas da fonte de dados. Por exemplo, o driver SQL Server não oferece suporte a descartar um objeto e, em seguida, referir ou recriar o mesmo objeto no mesmo lote. Portanto, o termo *lote* como usado neste manual refere-se apenas a lotes de instruções que geram resultados.

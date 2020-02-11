@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004935"
 ---
-# <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
+# <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Retorna propriedades de estatísticas incrementais para o objeto de banco de dados especificado (tabela) no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual. O uso de `sys.dm_db_incremental_stats_properties` (que contém um número de partição) é semelhante ao `sys.dm_db_stats_properties` , que é usado para estatísticas não incrementais. 
   
-  Essa função foi introduzida no [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] Service Pack 2 e [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Service Pack 1.
+  Essa função foi introduzida [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] no Service Pack 2 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e no Service Pack 1.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID do objeto (tabela) para o qual as propriedades do objeto de estatísticas serão retornadas.|  
 |stats_id|**int**|ID do objeto de estatísticas. É exclusivo na tabela. Para obter mais informações, veja [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|
@@ -60,23 +60,25 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |modification_counter|**bigint**|Número total de modificações da coluna de estatísticas principal (a coluna em que o histograma é criado) desde que as últimas estatísticas de tempo foram atualizadas.<br /><br /> Essa coluna não mantém informações para tabelas com otimização de memória.|  
   
 ## <a name="Remarks"></a> Comentários  
- `sys.dm_db_incremental_stats_properties` retorna um conjunto de linhas vazio em qualquer uma das seguintes condições:  
+ 
+  `sys.dm_db_incremental_stats_properties` retorna um conjunto de linhas vazio em qualquer uma das seguintes condições:  
   
--   `stats_id` ou `object_id` é NULO.   
+-   
+  `object_id` ou `stats_id` é NULO.   
 -   O objeto especificado não foi encontrado ou não corresponde a uma tabela com estatísticas incrementais.  
 -   A ID de estatísticas especificada não corresponde às estatísticas existentes para a ID de objeto especificada.  
 -   O usuário atual não tem permissões para exibir o objeto de estatísticas.
  
  Esse comportamento permite o uso seguro de `sys.dm_db_incremental_stats_properties` quando aplicado a linhas em exibições como `sys.objects` e `sys.stats`. Esse método pode retornar propriedades para as estatísticas que correspondem a cada partição. Para ver as propriedades das estatísticas mescladas combinadas entre todas as partições, use sys.dm_db_stats_properties. 
 
-A data de atualização de estatísticas é armazenada no [objeto de blob de estatísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics), junto com o [histograma](../../relational-databases/statistics/statistics.md#histogram) e o [vetor de densidade](../../relational-databases/statistics/statistics.md#density), não nos metadados. Quando nenhum dado é lido para gerar dados de estatísticas, o blob de estatísticas não é criado, a data não estiver disponível e o *last_updated* coluna será NULL. Esse é o caso para estatísticas filtradas para as quais o predicado não retorna nenhuma linha ou para novas tabelas vazias.
+A data de atualização de estatísticas é armazenada no [objeto de blob de estatísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics), junto com o [histograma](../../relational-databases/statistics/statistics.md#histogram) e o [vetor de densidade](../../relational-databases/statistics/statistics.md#density), não nos metadados. Quando nenhum dado é lido para gerar dados de estatísticas, o blob de estatísticas não é criado, a data não está disponível e a coluna *Last_updated* é nula. Esse é o caso para estatísticas filtradas para as quais o predicado não retorna nenhuma linha ou para novas tabelas vazias.
 
 ## <a name="permissions"></a>Permissões  
  Requer que o usuário tenha permissões selecionadas em colunas de estatísticas, que ele possua a tabela ou que seja membro da função de servidor fixa `sysadmin`, da função de banco de dados fixa `db_owner` ou da função de banco de dados fixa `db_ddladmin`.  
   
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-simple-example"></a>A. Exemplo simples
+### <a name="a-simple-example"></a>a. Exemplo simples
 O exemplo a seguir retorna as estatísticas para a tabela `PartitionTable` descrita no tópico [Criar tabelas e índices particionados](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md).
 
 ```sql
@@ -85,10 +87,10 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 
 Para obter sugestões de uso adicionais, consulte  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md).
   
-## <a name="see-also"></a>Consulte também  
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SHOW_STATISTICS DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [sys. stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas ao objeto &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
- [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
+ [sys. dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 

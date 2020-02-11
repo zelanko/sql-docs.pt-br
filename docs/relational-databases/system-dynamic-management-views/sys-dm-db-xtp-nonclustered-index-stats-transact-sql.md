@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026791"
 ---
-# <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   sys.dm_db_xtp_nonclustered_index_stats inclui estatísticas sobre operações em índices não clusterizados em tabelas com otimização de memória. sys.dm_db_xtp_nonclustered_index_stats contém uma linha para cada índice não clusterizado em uma tabela com otimização de memória no banco de dados atual.  
@@ -38,9 +38,9 @@ ms.locfileid: "68026791"
   
  Um grande número de novas tentativas é indicativo de problemas de simultaneidade; chame o Suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Para obter mais informações sobre índices não clusterizados com otimização de memória, consulte [visão geral do SQL Server In-Memory OLTP Internals](https://t.co/T6zToWc6y6), página 17.  
+ Para obter mais informações sobre índices não clusterizados e com otimização de memória, [SQL Server consulte Visão geral dos elementos internos do OLTP em memória](https://t.co/T6zToWc6y6), página 17.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|A ID do objeto.|  
 |xtp_object_id|**bigint**|ID da tabela com otimização de memória.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68026791"
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no banco de dados atual.  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de tabela com otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

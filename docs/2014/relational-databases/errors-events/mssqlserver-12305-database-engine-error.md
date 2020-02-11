@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af3db33f0679f7fa988f8eb41f94313041d4b596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915834"
 ---
-# <a name="mssqlserver12305"></a>MSSQLSERVER_12305
+# <a name="mssqlserver_12305"></a>MSSQLSERVER_12305
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|12305|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|HK_UNSUPPORTED_TABLE_VAR|  
 |Texto da mensagem|Não há suporte para variáveis de tabela embutidas com '*construct*'.|  
@@ -35,7 +35,7 @@ ms.locfileid: "62915834"
 ## <a name="user-action"></a>Ação do usuário  
  Não use variáveis de tabela alinhadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OLTP in-memory &#40;Otimização na memória&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

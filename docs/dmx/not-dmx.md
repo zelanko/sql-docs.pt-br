@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b4a28c6be2c956636f303ccc561936f799c63b64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008256"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "68008256"
 NOT Expression1  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Expression1*  
  Expressão DMX válida que retorna um valor numérico.  
   
@@ -35,16 +35,16 @@ NOT Expression1
  Valor booliano que retorna FALSE se o argumento avaliar como TRUE; do contrário, FALSE.  
   
 ## <a name="remarks"></a>Comentários  
- O argumento é tratado como valor booliano (0 como FALSE; do contrário, TRUE) antes que o operador realize a negação lógica. Se *Expression1* for TRUE, o operador retornará FALSE. Se *Expression1* é FALSE, o operador retornará TRUE. A tabela a seguir ilustra como a conjunção lógica é executada.  
+ O argumento é tratado como valor booliano (0 como FALSE; do contrário, TRUE) antes que o operador realize a negação lógica. Se *expression1* for true, o operador retornará false. Se *expression1* for false, o operador retornará true. A tabela a seguir ilustra como a conjunção lógica é executada.  
   
 |Se a Expression1 for|O valor de retorno será|  
 |-----------------------|---------------------|  
 |TRUE|FALSE|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores lógicos &#40;DMX&#41;](../dmx/operators-logical.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de operador de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operadores lógicos &#40;&#41;DMX](../dmx/operators-logical.md)   
+ [Operadores &#40;&#41;DMX](../dmx/operators-dmx.md)  
   
   

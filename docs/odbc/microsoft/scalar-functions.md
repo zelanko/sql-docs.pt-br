@@ -16,14 +16,14 @@ ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85511a9997ccbae0ebe4838218d43bc997344085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997781"
 ---
 # <a name="scalar-functions"></a>Funções escalares
-Os Drivers de banco de dados de área de trabalho do Microsoft ODBC dão suporte as funções escalares a seguir:  
+Os drivers de banco de dados do Microsoft ODBC Desktop dão suporte às seguintes funções escalares:  
   
 ||||  
 |-|-|-|  
@@ -31,8 +31,8 @@ Os Drivers de banco de dados de área de trabalho do Microsoft ODBC dão suporte
 |CONVERT|LEFT|RTRIM|  
 |CURDATE|LENGTH|SUBSTRING|  
 |CURTIME|LOCATE|UCASE|  
-|DATABASE|LTRIM|Usuário|  
+|DATABASE|LTRIM|USER|  
 |DAYOFMONTH|MOD|YEAR|  
 |DAYOFWEEK|MONTH||  
   
- Para obter informações sobre os argumentos e valores de retorno de funções escalares, consulte o Apêndice F do *referência do programador de ODBC.*
+ Para obter informações sobre os argumentos e valores de retorno de funções escalares, consulte o Apêndice F da *referência do programador de ODBC.*

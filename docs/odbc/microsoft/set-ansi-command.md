@@ -1,5 +1,5 @@
 ---
-title: Comando SET ANSI | Microsoft Docs
+title: Definir comando ANSI | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d32e4dc27568b37f273ef654ebd45d26ca23e555
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997770"
 ---
 # <a name="set-ansi-command"></a>Comando SET ANSI
@@ -30,32 +30,32 @@ SET ANSI ON | OFF
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ON  
- (Padrão para o driver; o padrão para o Visual FoxPro é OFF). Preenche para que a cadeia de caracteres mais curta com os espaços em branco necessário torná-lo igual a mais cadeia de caracteres. As duas cadeias de caracteres serão então caractere comparado para caractere para seus comprimentos inteiros. Considere esta comparação:  
+ ATIVADO  
+ (O padrão para o driver; o padrão para o Visual FoxPro é desativado.) Preenche a cadeia de caracteres mais curta com os espaços em branco necessários para torná-lo igual ao comprimento da cadeia de caracteres mais longa. As duas cadeias de caracteres são então comparadas ao caractere para o caractere para seus comprimentos inteiros. Considere esta comparação:  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- O resultado será False (. F.) se SET ANSI estiver on, porque quando preenchidas, 'Tom' torna-se 'Tom' e as cadeias de caracteres 'Tom' e 'Tommy' não corresponde ao caractere por caractere.  
+ O resultado é false (. F.) se SET ANSI estiver on, porque quando preenchido, ' Tom ' se tornará ' Tom ' e as cadeias de caracteres ' Tom ' e ' Tommy ' não correspondem ao caractere para o caractere.  
   
- O = = operador usa esse método para comparações em comandos SQL do Visual FoxPro.  
+ O operador = = usa esse método para comparações em comandos SQL do Visual FoxPro.  
   
  OFF  
- Especifica que a cadeia de caracteres mais curta não ser preenchido com espaços em branco. As duas cadeias de caracteres são comparadas caractere por caractere até o final da cadeia de caracteres mais curta for atingido. Considere esta comparação:  
+ Especifica que a cadeia de caracteres menor não será preenchida com espaços em branco. As duas cadeias de caracteres são o caractere de comparação para o caractere até que o final da cadeia de caracteres mais curta seja atingido. Considere esta comparação:  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- O resultado será True (. T.) quando SET ANSI estiver desativado, porque a comparação para após 'Tom'.  
+ O resultado é true (. T.) quando SET ANSI é off, porque a comparação é interrompida após ' Tom '.  
   
 ## <a name="remarks"></a>Comentários  
- SET ANSI determina se a mais curta das duas cadeias de caracteres é preenchida com espaços em branco quando uma comparação de cadeia de caracteres SQL é feita. SET ANSI não tem efeito sobre o operador; = = Quando você usa o operador = =, a cadeia de caracteres mais curta sempre é preenchida com espaços em branco para a comparação.  
+ SET ANSI determina se a menor das duas cadeias de caracteres é preenchida com espaços em branco quando uma comparação de cadeia de caracteres SQL é feita. SET ANSI não tem nenhum efeito no operador = =; Quando você usa o operador = =, a cadeia de caracteres mais curta é sempre preenchida com espaços em branco para a comparação.  
   
-## <a name="string-order"></a>Ordem de cadeia de caracteres  
- Em comandos SQL, a ordem da esquerda para a direita das duas cadeias de caracteres em uma comparação é irrelevantswitching uma cadeia de caracteres de um lado do = ou = = operador para o outro não afeta o resultado da comparação.  
+## <a name="string-order"></a>Ordem da cadeia de caracteres  
+ Em comandos SQL, a ordem da esquerda para a direita das duas cadeias de caracteres em uma comparação é irrelevantswitching uma cadeia de caracteres de um lado do operador = ou = = para a outra não afeta o resultado da comparação.  
   
-## <a name="see-also"></a>Consulte também  
- [SELECT – comando SQL](../../odbc/microsoft/select-sql-command.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SELECT-comando SQL](../../odbc/microsoft/select-sql-command.md)   
  [Comando SET EXACT](../../odbc/microsoft/set-exact-command.md)

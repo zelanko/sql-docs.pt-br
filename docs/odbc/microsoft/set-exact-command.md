@@ -1,5 +1,5 @@
 ---
-title: Comando SET EXACT | Microsoft Docs
+title: Definir comando exato | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 686ecc89f44bac4b219b760e55160f451a15c503
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997731"
 ---
 # <a name="set-exact-command"></a>Comando SET EXACT
@@ -30,40 +30,40 @@ SET EXACT ON | OFF
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ON  
- Especifica que as expressões devem corresponder ao caractere ser equivalentes. Quaisquer espaços em branco nas expressões são ignorados para a comparação. Para comparação, a mais curta das duas expressões será preenchida à direita com espaços em branco para corresponder ao comprimento da expressão maior.  
+ ATIVADO  
+ Especifica que as expressões devem corresponder ao caractere para que o caractere seja equivalente. Quaisquer espaços em branco à direita nas expressões são ignorados para a comparação. Para a comparação, o menor das duas expressões é preenchido à direita com espaços em branco para corresponder ao comprimento da expressão mais longa.  
   
  OFF  
- (Padrão). Especifica que, para serem equivalentes, expressões devem corresponder ao caractere até o final da expressão no lado direito for atingido.  
+ (Padrão.) Especifica que, para ser equivalente, as expressões devem corresponder ao caractere para o caractere até que o final da expressão no lado direito seja atingido.  
   
 ## <a name="remarks"></a>Comentários  
- A configuração de SET EXACT não tem nenhum efeito se duas cadeias de caracteres têm o mesmo comprimento.  
+ A configuração definir exato não terá efeito se ambas as cadeias de caracteres tiverem o mesmo comprimento.  
   
 ## <a name="string-comparisons"></a>Comparações de cadeia de caracteres  
- Do Visual FoxPro tem dois operadores relacionais que testam a igualdade.  
+ O Visual FoxPro tem dois operadores relacionais que testam a igualdade.  
   
- O = operador executa uma comparação entre dois valores do mesmo tipo. Esse operador é adequado para comparar dados de caracteres, numérico, data e lógicos.  
+ O operador = executa uma comparação entre dois valores do mesmo tipo. Esse operador é adequado para comparar dados de caractere, numéricos, de data e lógicos.  
   
- No entanto, ao comparar expressões de caractere com o operador =, os resultados podem não ser exatamente o que você espera. Expressões de caracteres são comparadas caractere por caractere da esquerda para a direita até que uma das expressões não é igual ao outro, até o final da expressão no lado direito do = operador seja atingido (SET EXACT OFF), ou até que as extremidades de ambas as expressões são atingido (SET EXACT ON).  
+ No entanto, quando você compara expressões de caracteres com o operador =, os resultados podem não ser exatamente o esperado. As expressões de caracteres são um caractere de comparação de caractere da esquerda para a direita até que uma das expressões não seja igual à outra, até que o final da expressão no lado direito do operador = seja atingido (definido como desativado) ou até que as extremidades das duas expressões sejam atingido (definir exato em).  
   
- O = = operador pode ser usado quando uma comparação exata dos dados de caracteres é necessária. Se duas expressões de caracteres são comparadas com o operador = =, as expressões em ambos os lados do = = operador deve conter exatamente os mesmos caracteres, incluindo espaços em branco, a serem considerados iguais. A configuração de SET EXACT é ignorada quando as cadeias de caracteres são comparadas usando = =.  
+ O operador = = pode ser usado quando uma comparação exata de dados de caracteres é necessária. Se duas expressões de caracteres forem comparadas com o operador = =, as expressões em ambos os lados do operador = = deverão conter exatamente os mesmos caracteres, incluindo espaços em branco, a serem considerados iguais. A configuração definir exato é ignorada quando as cadeias de caracteres são comparadas usando = =.  
   
- A tabela a seguir mostra como a escolha do operador e a configuração de SET EXACT afetam as comparações. (Um sublinhado representa um espaço em branco.)  
+ A tabela a seguir mostra como a opção de operador e a configuração SET EXACT afetam as comparações. (Um sublinhado representa um espaço em branco.)  
   
-|Comparação|= EXATO DESATIVADO|= ON EXATO|= = EXATO como ON ou OFF|  
+|Comparação|= EXATO DESATIVADO|= EXACT EM|= = EXACT ON ou OFF|  
 |----------------|------------------|-----------------|--------------------------|  
-|"abc" = "abc"|Correspondência|Correspondência|Correspondência|  
-|"ab" = "abc"|Nenhuma correspondência|Nenhuma correspondência|Nenhuma correspondência|  
-|"abc" = "ab"|Correspondência|Nenhuma correspondência|Nenhuma correspondência|  
-|"abc" = "ab_"|Nenhuma correspondência|Nenhuma correspondência|Nenhuma correspondência|  
-|"ab" = "ab_"|Nenhuma correspondência|Correspondência|Nenhuma correspondência|  
-|"ab_" = "ab"|Correspondência|Correspondência|Nenhuma correspondência|  
-|"" = "ab"|Nenhuma correspondência|Nenhuma correspondência|Nenhuma correspondência|  
-|"ab" = ""|Correspondência|Nenhuma correspondência|Nenhuma correspondência|  
-|"__" = ""|Correspondência|Correspondência|Nenhuma correspondência|  
-|"" = "___"|Nenhuma correspondência|Correspondência|Nenhuma correspondência|  
-|TRIM("___") = ""|Correspondência|Correspondência|Correspondência|  
-|"" = TRIM("___")|Correspondência|Correspondência|Correspondência|  
+|"ABC" = "ABC"|Corresponde|Corresponde|Corresponde|  
+|"AB" = "ABC"|Sem correspondência|Sem correspondência|Sem correspondência|  
+|"ABC" = "AB"|Corresponde|Sem correspondência|Sem correspondência|  
+|"ABC" = "ab_"|Sem correspondência|Sem correspondência|Sem correspondência|  
+|"AB" = "ab_"|Sem correspondência|Corresponde|Sem correspondência|  
+|"ab_" = "AB"|Corresponde|Corresponde|Sem correspondência|  
+|"" = "AB"|Sem correspondência|Sem correspondência|Sem correspondência|  
+|"AB" = ""|Corresponde|Sem correspondência|Sem correspondência|  
+|"__" = ""|Corresponde|Corresponde|Sem correspondência|  
+|"" = "___"|Sem correspondência|Corresponde|Sem correspondência|  
+|TRIM ("___") = ""|Corresponde|Corresponde|Corresponde|  
+|"" = TRIM ("___")|Corresponde|Corresponde|Corresponde|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Comando SET ANSI](../../odbc/microsoft/set-ansi-command.md)

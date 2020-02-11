@@ -13,18 +13,18 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee8f9b9879a3533e8196bbc89f8ae0b0a132293a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036093"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>Função SQLCleanupConnectionPoolID
-**Conformidade com**  
- Versão introduzida: Conformidade com padrões 3.81 ODBC: ODBC  
+**Conformidade**  
+ Versão introduzida: conformidade de padrões do ODBC 3,81: ODBC  
   
  **Resumo**  
- **SQLCleanupConnectionPoolID** informa um driver que uma ID do pool foi atingida. Um pool de ID podem tempo limite sempre que todas as conexões em um pool associado com essa ID do pool estavam atingiu o tempo limite. Ver [Pooling no Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) para obter mais informações sobre o tempo limite da conexão.  
+ **SQLCleanupConnectionPoolID** informa um driver de que a ID do pool atingiu o tempo limite. Uma ID de pool pode expirar sempre que todas as conexões em um pool associado a essa ID de pool esgotaram o tempo limite. Consulte [pooling nos componentes de acesso a dados da Microsoft](https://msdn.microsoft.com/library/ms810829.aspx) para obter mais informações sobre o tempo limite de conexão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,29 +37,29 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
 ## <a name="arguments"></a>Argumentos  
  *EnvironmentHandle*  
- [Entrada] O identificador de ambiente do pool.  
+ Entrada O identificador de ambiente do pool.  
   
- *PoolID*  
- [Entrada] O pool associado à ID do pool foi atingido.  
+ *Poolid*  
+ Entrada O pool associado à ID do pool que atingiu o tempo limite.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- O Gerenciador de Driver não processará as informações de diagnóstico retornadas de **SQLCleanupConnectionPoolID**.  
+## <a name="diagnostics"></a>Diagnósticos  
+ O Gerenciador de driver não processará as informações de diagnóstico retornadas de **SQLCleanupConnectionPoolID**.  
   
  Um aplicativo não pode receber a mensagem de erro retornada pelo driver.  
   
 ## <a name="remarks"></a>Comentários  
- **SQLCleanupConnectionPoolID** pode ser chamado a qualquer momento, mas o Gerenciador de Driver garante que nenhum outro thread é chamando simultaneamente **SQLGetPoolID** e nenhum outro thread é chamando simultaneamente  **SQLRateConnection** e **SQLPoolConnect** com um token de informações de conexão atribuído com essa ID do pool. Portanto, o driver deve verificar que essa função é thread-safe.  
+ **SQLCleanupConnectionPoolID** pode ser chamado a qualquer momento, mas o Gerenciador de driver garante que nenhum outro thread esteja chamando **SQLGetPoolID** simultaneamente e nenhum outro thread esteja chamando simultaneamente **SQLRateConnection** e **SQLPoolConnect** com um token de informações de conexão atribuído com a ID do pool. Portanto, o driver deve verificar se essa função é thread-safe.  
   
- Um driver pode limpar todos os recursos associados com a ID do pool.  
+ Um driver pode limpar os recursos associados à ID do pool.  
   
- Aplicativos não devem chamar essa função diretamente. Um driver ODBC que dá suporte ao pool de conexão de reconhecimento de driver deve implementar essa função.  
+ Os aplicativos não devem chamar essa função diretamente. Um driver ODBC que dá suporte ao pool de conexões com reconhecimento de driver deve implementar essa função.  
   
- Inclua sqlspi.h para desenvolvimento de driver ODBC.  
+ Inclua sqlspi. h para o desenvolvimento de driver ODBC.  
   
-## <a name="see-also"></a>Consulte também  
- [Desenvolvendo um Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Pooling de Conexão de reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Desenvolvendo um driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
+ [Pooling de conexão com reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

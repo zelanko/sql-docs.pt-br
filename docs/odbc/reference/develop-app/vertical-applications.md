@@ -15,15 +15,15 @@ ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d0ed7a5f488765b56b2af0688ca14361590ab44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022111"
 ---
 # <a name="vertical-applications"></a>Aplicativos verticais
-Aplicativos verticais geralmente executam uma tarefa bem definida em relação a um único DBMS. Por exemplo, um aplicativo de entrada de pedidos rastreia os pedidos em uma empresa. O que esses tipos de aplicativos têm em comum é que o esquema de banco de dados geralmente é criado pelo desenvolvedor do aplicativo e, embora o aplicativo possa funcionar com um número de diferentes DBMSs, ele funciona com um DBMS único para um único cliente.  
+Normalmente, os aplicativos verticais executam uma tarefa bem definida em relação a um único DBMS. Por exemplo, um aplicativo de entrada de pedido rastreia os pedidos em uma empresa. O que esses tipos de aplicativos têm em comum é que o esquema de banco de dados geralmente é projetado pelo desenvolvedor do aplicativo e, enquanto o aplicativo pode funcionar com vários DBMSs diferentes, ele funciona com um único DBMS para um único cliente.  
   
- Como aplicativos verticais geralmente requerem certas funcionalidades, como cursores roláveis ou transações, eles raramente oferecem suporte a todos os DBMSs. Em vez disso, eles tendem a ser altamente interoperável entre um conjunto limitado de DBMSs. Normalmente, os desenvolvedores de aplicativos verticais escolhe dar suporte a esses DBMSs que representam uma grande parte do mercado e ignorar o restante. Eles ainda podem optar por dar suporte a drivers específicos para esses DBMSs reduzir seus testes e os custos de suporte do produto.  
+ Como os aplicativos verticais geralmente exigem determinada funcionalidade, como cursores roláveis ou transações, raramente dão suporte a todos os DBMSs. Em vez disso, eles tendem a ser altamente interoperáveis entre um conjunto limitado de DBMSs. Normalmente, os desenvolvedores de aplicativos verticais optam por oferecer suporte a esses DBMSs que representam uma grande fração do mercado e ignoram o restante. Eles podem até mesmo optar por dar suporte a drivers específicos para que esses DBMSs reduzam seus custos de teste e suporte a produtos.  
   
- Como aplicativos verticais podem dar suporte a um conjunto conhecido de DBMSs, às vezes contêm código específico do driver ou específicos de DBMS. No entanto, esse código melhor é mantido no mínimo, porque ela requer mais tempo para manter.
+ Como os aplicativos verticais podem dar suporte a um conjunto conhecido de DBMSs, às vezes eles contêm código específico de driver ou DBMS específico. No entanto, esse código é melhor mantido para um mínimo porque requer tempo extra para manter.

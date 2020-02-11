@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_gc_cycle_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_gc_cycle_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,34 +21,34 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026854"
 ---
-# <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Envia o estado atual das transações confirmadas que excluíram uma ou mais linhas. O thread inativo de coleta de lixo é ativado a cada minuto ou quando o número de transações DML confirmadas excede um limite interno desde o último ciclo de coleta de lixo. Como parte do ciclo de coleta de lixo, ele move as transações que foram confirmadas em uma ou mais filas associadas às gerações. As transações que geraram versões obsoletas são agrupadas em uma unidade de 16 transações em 16 gerações, da seguinte maneira:  
   
--   Geração 0: Isso armazena todas as transações confirmadas antes que a transação ativa mais antiga. As versões de linha geradas por essas transações são imediatamente disponibilizadas para coleta de lixo.  
+-   Geração 0: armazena todas as transações confirmadas antes da transação ativa mais antiga. As versões de linha geradas por essas transações são imediatamente disponibilizadas para coleta de lixo.  
   
--   Gerações 1 a 14: Armazena as transações com carimbo de hora maior que a transação ativa mais antiga. As versões de linha não podem ser coletadas como lixo. Cada geração pode reter até 16 transações. Pode existir um total de 224 (14 * 16) transações nessas gerações.  
+-   Gerações 1 a 14: armazena as transações com carimbo de data/hora posterior à transação ativa mais antiga. As versões de linha não podem ser coletadas como lixo. Cada geração pode reter até 16 transações. Pode existir um total de 224 (14 * 16) transações nessas gerações.  
   
--   Geração 15: As transações restantes com carimbo de hora maior que a transação ativa mais antiga vai para a geração 15. Similar à geração 0, não há limite de número de transações na geração 15.  
+-   Geração 15: as transações restantes com carimbo de data/hora posterior à transação ativa mais antiga vai para a geração 15. Similar à geração 0, não há limite de número de transações na geração 15.  
   
  Quando há pressão de memória, o thread de coleta de lixo atualiza agressivamente a dica de transação ativa mais antiga, o que força a coleta de lixo.  
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Nome da coluna|type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Um identificador de exclusividade para o ciclo de coleta de lixo.|  
 |ticks_at_cycle_start|**bigint**|Tiques no momento em que o ciclo foi iniciado.|  
 |ticks_at_cycle_end|**bigint**|Tiques no momento em que o ciclo foi encerrado.|  
-|base_generation|**bigint**|O valor base atual da geração no banco de dados. Isso representa o carimbo de data/hora da transação ativa mais antiga usado para identificar transações de coleta de lixo. A ID da transação ativa mais antiga é atualizada no incremento 16. Por exemplo, se você tiver ids de transação como 124, 125, 126... 139, o valor será 124. Quando você adicionar outra transação, por exemplo, 140, o valor será 140.|  
+|base_generation|**bigint**|O valor base atual da geração no banco de dados. Isso representa o carimbo de data/hora da transação ativa mais antiga usado para identificar transações de coleta de lixo. A ID da transação ativa mais antiga é atualizada no incremento 16. Por exemplo, se você tiver IDs de transação como 124, 125, 126... 139, o valor será 124. Quando você adicionar outra transação, por exemplo, 140, o valor será 140.|  
 |xacts_copied_to_local|**bigint**|O número de transações copiadas de pipeline da transação na matriz de geração de banco de dados.|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|Número de transações em cada geração.|  
   
@@ -91,7 +91,7 @@ cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_g
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de tabela com otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

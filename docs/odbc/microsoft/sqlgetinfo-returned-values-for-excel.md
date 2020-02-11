@@ -1,5 +1,5 @@
 ---
-title: Valores retornados SQLGetInfo para Excel | Microsoft Docs
+title: SQLGetInfo retornou valores para o Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c544668ebadab4a20b07f53fca9e1b501f6b1cf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003168"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>Valores retornados SQLGetInfo para Excel
-A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os valores correspondentes retornados pelo **SQLGetInfo**. Essas informações podem ser recuperadas, passando a linguagem listada C# defines **SQLGetInfo** na *fInfoType* argumento. Para obter mais informações sobre os valores retornados pelo **SQLGetInfo**, consulte o *referência do programador de ODBC*.  
+A tabela a seguir lista os #defines de linguagem C para o argumento *fInfoType* e os valores correspondentes retornados por **SQLGetInfo**. Essas informações podem ser recuperadas passando o #defines de linguagem C listado para **SQLGetInfo** no argumento *fInfoType* . Para obter mais informações sobre os valores retornados por **SQLGetInfo**, consulte a *referência do programador de ODBC*.  
   
 > [!NOTE]  
->  Em que **SQLGetInfo** retorna um bitmask de 32 bits, uma barra vertical (&#124;) representa um OR bit a bit.  
+>  Onde **SQLGetInfo** retorna um bitmask de 32 bits, uma barra vertical (&#124;) representa uma ou bit-a-bit.  
   
-|tipo de informação|Valor retornado|  
+|InfoType|Valor retornado|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Tudo pronto|  
+|SQL_AGGREGATE_FUNCTIONS|Todos os conjuntos|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -81,22 +81,22 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|O DSN do ini, ou "" se a palavra-chave DRIVER é usado em ini|  
+|SQL_DATA_SOURCE_NAME|O DSN do ODBC. ini ou "" se a palavra-chave do DRIVER for usada em ODBC. ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
-|SQL_DATABASE_NAME|Diretório de banco de dados atual|  
+|SQL_DATABASE_NAME|Diretório do banco de dados atual|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"EXCEL"|  
+|SQL_DBMS_NAME|Excel|  
 |SQL_DBMS_VER|Vários valores|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Manipulada pelo Gerenciador de Driver.|  
-|SQL_DRIVER_HENV|Manipulada pelo Gerenciador de Driver.|  
-|SQL_DRIVER_HLIB|Manipulada pelo Gerenciador de Driver.|  
-|SQL_DRIVER_HSTMT|Manipulada pelo Gerenciador de Driver.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|Manipulado pelo Gerenciador de driver.|  
+|SQL_DRIVER_HENV|Manipulado pelo Gerenciador de driver.|  
+|SQL_DRIVER_HLIB|Manipulado pelo Gerenciador de driver.|  
+|SQL_DRIVER_HSTMT|Manipulado pelo Gerenciador de driver.|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* Especifica a data de compilação)|  
+|SQL_DRIVER_VER|"4, 0.*nnnn*" (*nnnn* especifica a data de compilação)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 |SQL_GETDATA_EXTENSIONS|Vários valores|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (aspas simples de backup)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (aspas posteriores)|  
 |SQL_KEYWORDS|Vários valores|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -122,7 +122,7 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Ao usar o Driver do Microsoft Excel, uma instrução CREATE TABLE pode permitir que 256 colunas, mas o limite de 255 colunas ainda é válido e uma inserção na coluna 256 falhará.|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Ao usar o driver do Microsoft Excel, uma instrução CREATE TABLE pode permitir 256 colunas, mas o limite de 255 colunas ainda é válido e uma coluna INSERT INTO 256 falhará.|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  
@@ -141,9 +141,9 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Vários valores|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|CONFORMIDADE SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Do Gerenciador de Driver|  
+|SQL_ODBC_VER|Do Gerenciador de driver|  
 |SQL_OJ_CAPABILITIES|Vários valores|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Vários valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"EXCEL"|  
-|SQL_SPECIAL_CHARACTERS|"~\`\@#$%^&\*\_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SERVER_NAME|Excel|  
+|SQL_SPECIAL_CHARACTERS|"\`\@#$%^&~\*\_} {" ';:?/><,.! '-+=\\ [] &#124; "|  
 |SQL_STRING_FUNCTIONS|Vários valores|  
 |SQL_SUBQUERIES|Vários valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABELA"|  
+|SQL_TABLE_TERM|TABELA|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Vários valores|  

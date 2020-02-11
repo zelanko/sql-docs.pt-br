@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022185"
 ---
 # <a name="ibm-db2-subscribers"></a>Assinantes do IBM DB2
@@ -89,7 +89,8 @@ ms.locfileid: "63022185"
   
 -   Se você quer pré-criar tabelas no Assinante, em vez da replicação criá-las, use a opção somente suporte para replicação. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite nomes de tabela e nomes de coluna mais longos que DB2:  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite nomes de tabela e nomes de coluna mais longos que DB2:  
   
     -   Se o banco de dados da publicação incluir tabelas com nomes mais longos daqueles suportados na versão DB2 do Assinante, especifique um nome alternativo para a propriedade de artigo destination_table. Para mais informações sobre como configurar propriedades ao criar uma publicação, consulte [Criar uma publicação](../publish/create-a-publication.md) e [Definir um artigo](../publish/define-an-article.md).  
   
@@ -112,47 +113,47 @@ ms.locfileid: "63022185"
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
 |`decimal(32-38, 0-38)`|VARCHAR(41)|  
-|`float(53)`|Double|  
+|`float(53)`|DOUBLE|  
 |`float`|FLOAT|  
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  
 |`hierarchyid`|IMAGE|  
-|`image`|VARCHAR(0) PARA DADOS BIT<sup>1</sup>|  
+|`image`|VARCHAR (0) para dados de BIT<sup>1</sup>|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR(0)<sup>1</sup>|  
+|`ntext`|VARCHAR (0)<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
+|`nvarchar(max)`|VARCHAR (0)<sup>1</sup>|  
 |`real`|real|  
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
 |`sql_variant`|N/D|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR(0)<sup>1</sup>|  
+|`text`|VARCHAR (0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
 |`uniqueidentifier`|CHAR(38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|VARCHAR(0) PARA DADOS BIT<sup>1</sup>|  
-|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
-|`xml`|VARCHAR(0)<sup>1</sup>|  
+|`varbinary(max)`|VARCHAR (0) para dados de BIT<sup>1</sup>|  
+|`varchar(max)`|VARCHAR (0)<sup>1</sup>|  
+|`xml`|VARCHAR (0)<sup>1</sup>|  
   
- <sup>1</sup> consulte a próxima seção para obter mais informações sobre mapeamentos para VARCHAR(0).  
+ <sup>1</sup> consulte a próxima seção para obter mais informações sobre mapeamentos para varchar (0).  
   
 ### <a name="data-type-mapping-considerations"></a>Considerações sobre mapeamento de tipo de dados  
  Considere os seguintes problemas de mapeamento de tipo de dados ao replicar para Assinantes DB2:  
   
--   Ao mapear [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`, `varchar`, `binary` e `varbinary` para DB2 CHAR, VARCHAR, CHAR FOR BIT DATA e VARCHAR FOR BIT DATA, respectivamente, a replicação define o comprimento do tipo de dados DB2 para ser o mesmo que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo.  
+-   Ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`Mapear `varchar`, `binary` , `varbinary` e para DB2 CHAR, varchar, char para dados bit e VARCHAR para dados de bit, respectivamente, a replicação define o comprimento do tipo de dados DB2 como o mesmo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo.  
   
      Isto permite que a tabela gerada seja criada com êxito no Assinante, desde que a restrição de tamanho da página DB2 seja ampla o suficiente para acomodar o tamanho máximo da linha. Assegure-se de que o logon usado para acessar o banco de dados do DB2 tenha permissões para acessar espaços de tabela de tamanho suficiente para as tabelas que estão sendo replicadas para DB2.  
   
--   O DB2 pode suportar colunas VARCHAR de até 32 KB (kilobytes); portanto, é possível que algumas colunas grandes de objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possam ser mapeadas apropriadamente para colunas DB2 VARCHAR. Porém, o provedor OLE DB que a replicação usa para DB2 não suporta mapear objetos grandes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para objetos grandes DB2. Por esse motivo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`, `ntext`, e `nvarchar(max)` colunas são mapeadas para VARCHAR(0) nos scripts de criação gerados. O valor de comprimento de 0 deve ser alterado para um valor apropriado antes de aplicar o script ao Assinante. Se o comprimento de tipo de dado não for alterado, o DB2 gerará o erro 604 quando a criação de tabela for tentada no Assinante DB2 (o erro 604 indica que o atributo de precisão ou comprimento de um tipo de dado não é válido).  
+-   O DB2 pode suportar colunas VARCHAR de até 32 KB (kilobytes); portanto, é possível que algumas colunas grandes de objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possam ser mapeadas apropriadamente para colunas DB2 VARCHAR. Porém, o provedor OLE DB que a replicação usa para DB2 não suporta mapear objetos grandes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para objetos grandes DB2. Por esse motivo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text` `varchar(max)` `ntext`as colunas,, `nvarchar(max)` e são mapeadas para varchar (0) nos scripts de criação gerados. O valor de comprimento de 0 deve ser alterado para um valor apropriado antes de aplicar o script ao Assinante. Se o comprimento de tipo de dado não for alterado, o DB2 gerará o erro 604 quando a criação de tabela for tentada no Assinante DB2 (o erro 604 indica que o atributo de precisão ou comprimento de um tipo de dado não é válido).  
   
      Baseado sobre seu conhecimento da tabela de origem que você está replicando, determine se é apropriado mapear um objeto grande [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um item DB2 de comprimento variável e especifique um comprimento máximo apropriado em um script de criação personalizado. Para obter informações sobre especificar um script de criação personalizado, consulte a etapa 5 na seção "Configurando um Assinante de IBM DB2" neste tópico.  
   
@@ -161,11 +162,11 @@ ms.locfileid: "63022185"
   
      Se não houver mapeamento apropriado para uma coluna de objeto grande, considere usar filtragem de coluna no artigo para que a coluna não seja replicada. Para obter mais informações, consulte [Filter Published Data](../publish/filter-published-data.md) (Filtrar dados publicados).  
   
--   Ao replicar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` e `nvarchar` para DB2 CHAR e VARCHAR, a replicação usa o mesmo especificador de comprimento para o tipo DB2 do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo. Porém, o comprimento de tipo de dados pode ser muito pequeno para a tabela DB2 gerada.  
+-   Ao replicar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` e `nvarchar` para DB2 CHAR e varchar, a replicação usa o mesmo especificador de comprimento para o tipo DB2 como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o tipo. Porém, o comprimento de tipo de dados pode ser muito pequeno para a tabela DB2 gerada.  
   
-     Em alguns ambientes DB2, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` item de dados não está restrito a caracteres de byte único; o comprimento de um item CHAR ou VARCHAR deve levar isso em conta. Você deve levar também em conta o *mover para dentro* e *mover para fora* de caracteres se forem necessários. Se você estiver replicando tabelas com `nchar` e `nvarchar` colunas, talvez seja necessário especificar um comprimento máximo maior para o tipo de dados em um script de criação personalizado. Para obter informações sobre especificar um script de criação personalizado, consulte a etapa 5 na seção "Configurando um Assinante de IBM DB2" neste tópico.  
+     Em alguns ambientes DB2, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` item de dados não é restrito a caracteres de byte único; o comprimento de um item CHAR ou VARCHAR deve levar isso em conta. Você deve levar também em conta o *mover para dentro* e *mover para fora* de caracteres se forem necessários. Se você estiver replicando tabelas com `nchar` colunas `nvarchar` e, talvez seja necessário especificar um comprimento máximo maior para o tipo de dados em um script de criação personalizado. Para obter informações sobre especificar um script de criação personalizado, consulte a etapa 5 na seção "Configurando um Assinante de IBM DB2" neste tópico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
  [Assinar publicações](../subscribe-to-publications.md)  
   

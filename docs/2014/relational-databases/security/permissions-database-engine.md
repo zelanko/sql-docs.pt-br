@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128761"
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
@@ -32,7 +32,7 @@ ms.locfileid: "63128761"
   
 -   [Permissões relacionadas a protegíveis específicos](#_securables)  
   
--   [Permissões do SQL Server](#_permissions)  
+-   [SQL Server permissões](#_permissions)  
   
 -   [Algoritmo de verificação de permissão](#_algorithm)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "63128761"
      A permissão REFERENCES é necessária em um objeto para criar uma FUNCTION ou VIEW com a cláusula `WITH SCHEMABINDING` que faz referência àquele objeto.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de permissões do SQL Server  
- Para obter um gráfico com tamanho de um cartaz de todas as permissões do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em formato pdf, consulte [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
+ Para um gráfico de tamanho de pôster [!INCLUDE[ssDE](../../includes/ssde-md.md)] de todas as permissões no formato [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)PDF, consulte.  
   
 ##  <a name="_securables"></a> Permissões Aplicáveis a Protegíveis Específicos  
  A tabela a seguir lista classes principais de permissões e os tipos de protegíveis aos quais elas podem ser aplicadas.  
@@ -102,9 +102,9 @@ ms.locfileid: "63128761"
 |SELECT|Sinônimos<br /><br /> Tabelas e colunas<br /><br /> Funções com valor de tabela [!INCLUDE[tsql](../../includes/tsql-md.md)] , CLR (common language runtime) e colunas<br /><br /> Exibições e colunas|  
 |VIEW CHANGE TRACKING|Tabelas<br /><br /> Esquemas|  
 |UPDATE|Sinônimos<br /><br /> Tabelas e colunas<br /><br /> Exibições e colunas<br /><br /> Objetos de sequência|  
-|REFERENCES|Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelas e colunas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e colunas<br /><br /> Types<br /><br /> Exibições e colunas<br /><br /> Objetos de sequência|  
+|REFERENCES|Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelas e colunas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e colunas<br /><br /> Tipos<br /><br /> Exibições e colunas<br /><br /> Objetos de sequência|  
 |INSERT|Sinônimos<br /><br /> Tabelas e colunas<br /><br /> Exibições e colunas|  
-|DELETE|Sinônimos<br /><br /> Tabelas e colunas<br /><br /> Exibições e colunas|  
+|Delete (excluir)|Sinônimos<br /><br /> Tabelas e colunas<br /><br /> Exibições e colunas|  
 |Execute|Procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Sinônimos<br /><br /> Tipos CLR|  
 |RECEIVE|Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
 |VIEW DEFINITION|Grupos de disponibilidade<br /><br /> Procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Filas do[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Logons, usuários e funções<br /><br /> Sinônimos<br /><br /> Tabelas<br /><br /> Funções com valor de tabela ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Exibições<br /><br /> Objetos de sequência|  
@@ -116,7 +116,7 @@ ms.locfileid: "63128761"
 > [!CAUTION]  
 >  As permissões padrão concedidas aos objetos de sistema no momento da instalação são avaliadas cuidadosamente contra possíveis ameaças e não precisam ser alteradas como parte do sistema de proteção de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Qualquer alteração nas permissões nos objetos de sistema poderia limitar ou interromper a funcionalidade e potencialmente pode deixar a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um estado sem suporte.  
   
-##  <a name="_permissions"></a> SQL Server e permissões de banco de dados SQL  
+##  <a name="_permissions"></a>Permissões de banco de dados do SQL Server e do SQL  
  A tabela a seguir fornece uma lista completa de permissões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As permissões[!INCLUDE[ssSDS](../../includes/sssds-md.md)] estão disponíveis apenas para protegíveis base com suporte. Não é possível dar permissões no nível do servidor no [!INCLUDE[ssSDS](../../includes/sssds-md.md)], no entanto, permissões de banco de dados são disponibilizadas em alguns casos.  
   
 |Protegível base|Permissões granulares no protegível base|Código de tipo de permissão|Protegível que contém o protegível base|Permissão no protegível de contêiner que implica permissão granular no protegível base|  
@@ -157,7 +157,7 @@ ms.locfileid: "63128761"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Observação: Aplica-se apenas ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Observação: aplica-se [!INCLUDE[ssSDS](../../includes/sssds-md.md)]somente a.|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "63128761"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Observação: Aplica-se apenas ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Observação: aplica-se [!INCLUDE[ssSDS](../../includes/sssds-md.md)]somente a.|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -173,7 +173,7 @@ ms.locfileid: "63128761"
 |DATABASE|BACKUP DATABASE|BADB|SERVER|CONTROL SERVER|  
 |DATABASE|BACKUP LOG|BALO|SERVER|CONTROL SERVER|  
 |DATABASE|CHECKPOINT|CP|SERVER|CONTROL SERVER|  
-|DATABASE|CONNECT|CO|SERVER|CONTROL SERVER|  
+|DATABASE|CONECTAR|CO|SERVER|CONTROL SERVER|  
 |DATABASE|CONNECT REPLICATION|CORP|SERVER|CONTROL SERVER|  
 |DATABASE|CONTROL|CL|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE AGGREGATE|CRAG|SERVER|CONTROL SERVER|  
@@ -201,10 +201,10 @@ ms.locfileid: "63128761"
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
+|DATABASE|Delete (excluir)|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Execute|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Observação: Aplica-se apenas ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Usar ALTER ANY CONNECTION no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Observação: aplica-se [!INCLUDE[ssSDS](../../includes/sssds-md.md)]somente a. Usar ALTER ANY CONNECTION no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -214,7 +214,7 @@ ms.locfileid: "63128761"
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |ENDPOINT|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
-|ENDPOINT|CONNECT|CO|SERVER|CONTROL SERVER|  
+|ENDPOINT|CONECTAR|CO|SERVER|CONTROL SERVER|  
 |ENDPOINT|CONTROL|CL|SERVER|CONTROL SERVER|  
 |ENDPOINT|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
 |ENDPOINT|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
@@ -228,10 +228,10 @@ ms.locfileid: "63128761"
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|Logon|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|Logon|CONTROL|CL|SERVER|CONTROL SERVER|  
-|Logon|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|Logon|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
+|LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -239,7 +239,7 @@ ms.locfileid: "63128761"
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|DELETE|  
+|OBJECT|Delete (excluir)|DL|SCHEMA|Delete (excluir)|  
 |OBJECT|Execute|EX|SCHEMA|Execute|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -269,7 +269,7 @@ ms.locfileid: "63128761"
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|DELETE|DL|DATABASE|DELETE|  
+|SCHEMA|Delete (excluir)|DL|DATABASE|Delete (excluir)|  
 |SCHEMA|Execute|EX|DATABASE|Execute|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -331,10 +331,10 @@ ms.locfileid: "63128761"
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|Usuário|ALTER|AL|DATABASE|ALTER ANY USER|  
-|Usuário|CONTROL|CL|DATABASE|CONTROL|  
-|Usuário|IMPERSONATE|IM|DATABASE|CONTROL|  
-|Usuário|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|USER|ALTER|AL|DATABASE|ALTER ANY USER|  
+|USER|CONTROL|CL|DATABASE|CONTROL|  
+|USER|IMPERSONATE|IM|DATABASE|CONTROL|  
+|USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|Execute|EX|SCHEMA|Execute|  
@@ -399,7 +399,7 @@ ms.locfileid: "63128761"
 ##  <a name="_examples"></a> Exemplos  
  Os exemplos nesta seção mostram como recuperar informações sobre permissões.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Retornando a lista completa de permissões que podem ser concedidas  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>a. Retornando a lista completa de permissões que podem ser concedidas  
  A instrução a seguir retorna todas as permissões de [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a função `fn_builtin_permissions` . Para obter mais informações, veja [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
   
 ```  
@@ -432,7 +432,7 @@ SELECT * FROM sys.database_permissions
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
