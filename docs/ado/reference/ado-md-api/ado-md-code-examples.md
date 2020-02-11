@@ -1,5 +1,5 @@
 ---
-title: Exemplos de código do ADO MD | Microsoft Docs
+title: Exemplos de código de ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,26 +13,26 @@ ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9655281302eddb65e693da9a9516c1eecbbce1dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940065"
 ---
 # <a name="ado-md-code-examples"></a>Exemplos de código do ADO MD
-Use os exemplos de código a seguir para saber como usar os objetos, métodos e propriedades do ADO MD. Esses exemplos são um subconjunto dos aplicativos de exemplo instalado com o Microsoft SQL Server OLAP Services do SQL Server 7.0.  
+Use os exemplos de código a seguir para aprender a usar o ADO MD objetos, métodos e propriedades. Esses exemplos são um subconjunto dos aplicativos de exemplo instalados com Microsoft SQL Server serviços OLAP para SQL Server 7,0.  
   
- Esses exemplos usam o provedor OLE DB MSOLAP e executado em um host local do Microsoft SQL Server OLAP Services. No entanto, esses exemplos destinam-se para mostrar as técnicas de programação fundamentais do ADO MD e devem ser adaptados facilmente para outras fontes de dados ou os provedores.  
+ Esses exemplos usam o provedor de OLE DB MSOLAP e são executados em um host local de serviços OLAP Microsoft SQL Server. No entanto, esses exemplos destinam-se a mostrar técnicas fundamentais de programação de ADO MD e devem ser facilmente adaptados a outras fontes de dados ou provedores.  
   
 -   [Exemplos de código do ADO MD no Visual Basic](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic.md)  
   
 -   [Exemplos de código do ADO MD no Visual Basic, edição de script](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de API do ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [Coleções do ADO MD](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [Constantes enumeradas do ADO MD](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [Métodos do ADO MD](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [Modelo de objeto do ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [Objetos do ADO MD](../../../ado/reference/ado-md-api/ado-md-objects.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência de API de ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
+ [ADO MD coleções](../../../ado/reference/ado-md-api/ado-md-collections.md)   
+ [ADO MD constantes enumeradas](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
+ [Métodos de ADO MD](../../../ado/reference/ado-md-api/ado-md-methods.md)   
+ [Modelo de objeto ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+ [Objetos ADO MD](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [Propriedades do ADO MD](../../../ado/reference/ado-md-api/ado-md-properties.md)

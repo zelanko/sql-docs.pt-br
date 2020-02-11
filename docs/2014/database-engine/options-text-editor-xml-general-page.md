@@ -1,5 +1,5 @@
 ---
-title: Opções (página geral do Editor de texto – XML –) | Microsoft Docs
+title: Opções (página Editor de texto – XML – geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089196"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   Use essa caixa de diálogo para alterar o comportamento de edição geral do Editor de XML, que é usado para editar documentos XML. Para exibir essas configurações, clique em **Opções** , no menu **Ferramentas** , expanda a subpasta **XML** e clique em **Geral**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Definindo as opções em vários locais  
- As opções do Editor de XML também podem ser definidas na caixa de diálogo **Todos os Idiomas - Geral** . Ao usar as caixas de diálogo **Todos os Idiomas** para definir diferentes opções para os outros editores do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como o DMX ou MDX, você deverá redefinir as opções do Editor de XML usando essa caixa de diálogo.  
+ As opções do Editor de XML também podem ser definidas na caixa de diálogo **Todos os Idiomas - Geral** . Se você usar as caixas de diálogo **todos os idiomas** para definir opções diferentes para [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] os outros editores, como os editores DMX ou MDX, você deverá redefinir as opções do editor de XML usando essa caixa de diálogo.  
   
 ## <a name="statement-completion"></a>Conclusão de instrução  
  **Listar membros automaticamente**  
@@ -37,7 +37,7 @@ ms.locfileid: "66089196"
  **Habilitar espaço virtual**  
  Quando essa caixa de seleção está selecionada, são inseridos espaços no final de cada linha de código. Marque esta caixa de seleção para posicionar comentários em um ponto consistente próximo ao código.  
   
- **Quebra automática de linha**  
+ **Quebra automática de palavra**  
  Quando esta caixa de seleção estiver marcada, qualquer parte de uma linha que se estenda horizontalmente além da área do editor será automaticamente exibida na próxima linha. Selecionar essa caixa de seleção habilita a caixa de seleção **Exibir marcas visuais nas quebras automáticas de linha** .  
   
  **Mostrar glifos visuais para quebra automática de linha**  
@@ -46,7 +46,7 @@ ms.locfileid: "66089196"
 > [!NOTE]  
 >  Essas setas indicadoras não são adicionadas ao seu código e não aparecem na impressão. Eles são somente para referência.  
   
- **Aplicar comandos Recortar/copiar a linhas em branco quando não houver nenhuma seleção**  
+ **Aplicar comandos Recortar/Copiar a linhas em branco quando não houver seleção**  
  Esta caixa de seleção define o comportamento do editor quando você coloca o ponto de inserção em uma linha em branco, não seleciona nada e clica em **Copiar** ou **Recortar**.  
   
  Quando essa caixa de seleção está marcada, a linha em branco é copiada ou recortada. Se você clicar em **Colar**, uma nova linha em branco será inserida.  
@@ -62,7 +62,7 @@ ms.locfileid: "66089196"
 > [!NOTE]  
 >  Esses números de linha não são adicionados ao seu código e não aparecem na impressão. Eles são somente para referência.  
   
- **Habilitar navegação de URL com clique simples**  
+ **Habilitar navegação de URL com um só clique**  
  Quando esta caixa de seleção estiver marcada, o cursor mudará para um símbolo de mão de apontamento ao passar sobre uma URL no editor. Você pode clicar no URL para exibir a página indicada em seu navegador da Web.  
   
  **Barra de navegação**  

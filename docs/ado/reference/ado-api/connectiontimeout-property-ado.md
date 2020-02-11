@@ -16,27 +16,27 @@ ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03d3de2c4aabaf4ad8cbc45d9900b33883ff9a48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933461"
 ---
 # <a name="connectiontimeout-property-ado"></a>Propriedade ConnectionTimeout (ADO)
-Indica por quanto tempo a esperar ao estabelecer uma conexão antes de encerrar a tentativa e gerar um erro.  
+Indica por quanto tempo aguardar ao estabelecer uma conexão antes de encerrar a tentativa e gerar um erro.  
   
-## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
- Define ou retorna um **longo** valor que indica, em segundos, o tempo de espera para a conexão abrir. O padrão é 15.  
+## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
+ Define ou retorna um valor **longo** que indica, em segundos, o tempo de espera até que a conexão seja aberta. O padrão é 15.  
   
 ## <a name="remarks"></a>Comentários  
- Use o **ConnectionTimeout** propriedade em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) se os atrasos do uso de servidor de tráfego ou com uso intenso de rede Verifique necessário abandonar uma tentativa de conexão do objeto. Se o tempo desde o **ConnectionTimeout** decorre de configuração da propriedade antes da abertura da conexão, ocorrerá um erro e ADO cancela a tentativa. Se você definir a propriedade como zero, o ADO aguardará indefinidamente até que a conexão é aberta. Verifique se o provedor ao qual você está escrevendo código oferece suporte a **ConnectionTimeout** funcionalidade.  
+ Use a propriedade **connectionTimeout** em um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) se os atrasos do tráfego de rede ou o uso intenso do servidor fizerem com que seja necessário abandonar uma tentativa de conexão. Se o tempo da configuração da propriedade **connectionTimeout** expirar antes da abertura da conexão, ocorrerá um erro e o ADO cancelará a tentativa. Se você definir a propriedade como zero, o ADO aguardará indefinidamente até que a conexão seja aberta. Verifique se o provedor para o qual você está escrevendo código dá suporte à funcionalidade **connectionTimeout** .  
   
- O **ConnectionTimeout** propriedade é leitura/gravação quando a conexão é fechada e somente leitura quando ele é aberto.  
+ A propriedade **connectionTimeout** é de leitura/gravação quando a conexão é fechada e somente leitura quando é aberta.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
- [ConnectionString, ConnectionTimeout e exemplo de propriedades de estado (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString, ConnectionTimeout e exemplo de propriedades de estado (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo das propriedades ConnectionString, ConnectionTimeout e State (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Exemplo das propriedades ConnectionString, ConnectionTimeout e State (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [Propriedade CommandTimeout (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)

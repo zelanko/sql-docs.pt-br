@@ -15,14 +15,14 @@ ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ae1a96f2f5a72f354e376faa3e9e7370f9fcb92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932476"
 ---
 # <a name="getrows-method-example-jscript"></a>Exemplo do método GetRows (JScript)
-Este exemplo usa o [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar todas as linhas da *Custiomers* da tabela de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e preencher uma matriz com os dados resultantes. O **GetRows** método retornará a menos que o número desejado de linhas em dois casos: ambos if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) tiver sido atingido, ou se **GetRows** tentou recuperar um registro que foi excluído por outro usuário. A função retornará **falsos** somente se o segundo caso ocorre. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **GetRowsJS.asp**.  
+Este exemplo usa o método [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) para recuperar todas as linhas da tabela *Custiomers* de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e preencher uma matriz com os dados resultantes. O método **GetRows** retornará menos do que o número desejado de linhas em dois casos: se [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) tiver sido atingido ou se **GetRows** tentar recuperar um registro que foi excluído por outro usuário. A função retornará **false** somente se ocorrer o segundo caso. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **GetRowsJS. asp**.  
   
 ```  
 <!-- BeginGetRowsJS -->  
@@ -158,6 +158,6 @@ BODY {
 <!-- EndGetRowsJS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo do método GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Método GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

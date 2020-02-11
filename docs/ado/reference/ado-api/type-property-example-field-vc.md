@@ -1,5 +1,5 @@
 ---
-title: Digite um exemplo da propriedade (campo) (VC + +) | Microsoft Docs
+title: Exemplo da propriedade Type (campo) (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936652"
 ---
 # <a name="type-property-example-field-vc"></a>Exemplo da propriedade Type (Campo) (VC++)
-Este exemplo demonstra a [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade exibindo o nome da constante que corresponde ao valor da **tipo** propriedade de todos os as [campo](../../../ado/reference/ado-api/field-object.md) objetos no ***Funcionários*** tabela. A função FieldType é necessária executar este procedimento.  
+Este exemplo demonstra a propriedade [Type](../../../ado/reference/ado-api/type-property-ado.md) exibindo o nome da constante que corresponde ao valor da propriedade **Type** de todos os objetos [Field](../../../ado/reference/ado-api/field-object.md) na tabela ***Employees*** . A função FieldType é necessária para que este procedimento seja executado.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -153,23 +153,23 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Campos na tabela de funcionários:**  
- **Name: emp_id**  
+ **Campos na tabela Employee:**  
+ **Nome: emp_id**  
  **Tipo: adChar**  
  **Nome: fname**  
  **Tipo: adVarChar**  
- **Nome: minit**  
+ **Nome: mini**  
  **Tipo: adChar**  
  **Nome: lname**  
  **Tipo: adVarChar**  
  **Nome: job_id**  
  **Tipo: adSmallInt**  
- **Name: job_lvl**  
- **Type: adUnsignedTinyInt**  
+ **Nome: job_lvl**  
+ **Tipo: adUnsignedTinyInt**  
  **Nome: pub_id**  
  **Tipo: adChar**  
  **Nome: hire_date**  
  **Tipo: adDBTimeStamp**   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Propriedade Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

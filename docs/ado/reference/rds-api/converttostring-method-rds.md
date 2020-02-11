@@ -1,5 +1,5 @@
 ---
-title: Método ConvertToString (RDS) | Microsoft Docs
+title: Método ConvertTostring (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71e50c4f611342c8e06687c47ab1c45fb60974ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964573"
 ---
 # <a name="converttostring-method-rds"></a>Método ConvertToString (RDS)
-Converte um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para uma cadeia de caracteres MIME que representa os dados do conjunto de registros.  
+Converte um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) em uma cadeia de caracteres MIME que representa os dados do conjunto de registros.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,28 +33,28 @@ Converte um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 
 DataFactory.ConvertToString(Recordset)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *DataFactory*  
- Uma variável de objeto que representa um [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto.  
+ Uma variável de objeto que representa um objeto [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) .  
   
- *Recordset*  
- Uma variável de objeto que representa um **Recordset** objeto.  
+ *Conjunto de registros*  
+ Uma variável de objeto que representa um objeto **Recordset** .  
   
 ## <a name="remarks"></a>Comentários  
- Com arquivos. asp, use **ConvertToString** inserir os **conjunto de registros** em uma página HTML gerada no servidor para transportá-lo para um computador cliente.  
+ Com arquivos. asp, use **ConvertToString** para inserir o **conjunto de registros** em uma página HTML gerada no servidor para transportá-lo para um computador cliente.  
   
- **ConvertToString** carregado pela primeira vez o **Recordset** no serviço do Cursor tabelas e, em seguida, gera um fluxo no formato MIME.  
+ **ConvertToString** primeiro carrega o **conjunto de registros** nas tabelas de serviço de cursor e, em seguida, gera um fluxo no formato MIME.  
   
- No cliente, o serviço de dados remoto pode converter a cadeia de caracteres MIME em um plenamente **conjunto de registros**. Ele funciona bem para lidar com as linhas de menos de 400 dos dados com não mais do que a largura de 1024 bytes por linha. Você não deve usá-lo para o fluxo de dados BLOB e grandes conjuntos de resultados via HTTP. Nenhuma compactação durante a transmissão é executada a cadeia de caracteres muito grandes conjuntos de dados levará um tempo considerável para transportar via HTTP quando comparado com o formato de otimização de transmissão tablegram definidos e implantados pelo serviço de dados remoto como seu formato de protocolo de transporte nativo.  
+ No cliente, o Remote Data Service pode converter a cadeia de caracteres MIME de volta em um **conjunto de registros**totalmente funcional. Ele funciona bem para lidar com menos de 400 linhas de dados com, no máximo, 1024 bytes de largura por linha. Você não deve usá-lo para transmitir dados de BLOB e conjuntos de resultados grandes por HTTP. Nenhuma compactação de transmissão é executada na cadeia de caracteres, de modo que conjuntos de dados muito grandes demorarão um tempo considerável para transporte por HTTP quando comparado ao formato tablegram otimizado para fio definido e implantado pelo serviço de dados remoto como seu formato de protocolo de transporte nativo.  
   
 > [!NOTE]
->  Se você estiver usando o Active Server Pages para inserir a cadeia de caracteres MIME resultante em uma página HTML de cliente, lembre-se de que as versões anteriores à versão 2.0 do VBScript limitam o tamanho da cadeia de caracteres para 32 mil. Se esse limite for excedido, um erro será retornado. Mantenha o escopo da consulta relativamente pequeno ao usar a inserção de MIME por meio de arquivos. ASP. Para corrigir isso, baixe a versão mais recente do VBScript no site Microsoft Windows Script tecnologias.  
+>  Se você estiver usando Active Server páginas para inserir a cadeia de caracteres MIME resultante em uma página HTML do cliente, lembre-se de que versões do VBScript anteriores à versão 2,0 limitam o tamanho da cadeia de caracteres a 32K. Se esse limite for excedido, um erro será retornado. Mantenha o escopo da consulta relativamente pequeno ao usar a inserção de MIME por meio de arquivos. ASP. Para corrigir isso, baixe a versão mais recente do VBScript no site do Microsoft Windows Script Technologies.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo do método ConvertToString (VB)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo do método ConvertTostring (VB)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
  [Exemplo do método ConvertToString (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
 
 

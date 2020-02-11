@@ -14,18 +14,18 @@ ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 945ebced0703c109ac64c374e31d2e76b556e7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944832"
 ---
 # <a name="odbc-overview"></a>Visão geral do ODBC
-Conectividade de banco de dados aberto (ODBC) é uma interface de programação de aplicativo amplamente aceito (API) para acesso ao banco de dados. Ele se baseia nas especificações do Open Group e ISO/IEC Interface de nível de chamada (CLI) para APIs de banco de dados e usa a linguagem SQL (Structured Query) como sua linguagem de acesso do banco de dados.  
+ODBC (Open Database Connectivity) é uma API (interface de programação de aplicativo) amplamente aceita para acesso ao banco de dados. Ele se baseia nas especificações da CLI (interface de nível de chamada) de Open Group e ISO/IEC para APIs de banco de dados e usa linguagem SQL (SQL) como seu idioma de acesso ao banco de dados.  
   
- ODBC é projetada para máximo *interoperabilidade* -ou seja, a capacidade de um único aplicativo para acessar sistemas de gerenciamento de outro banco de dados (DBMSs) com o mesmo código-fonte. Aplicativos de banco de dados chamam funções na interface do ODBC, que são implementadas em módulos específicos de banco de dados chamados *drivers*. O uso de drivers isola os aplicativos de chamadas específicas do banco de dados da mesma maneira que drivers de impressora isolar programas de processamento de texto de comandos específicos da impressora. Porque os drivers são carregados em tempo de execução, um usuário só precisa adicionar um novo driver para acessar um DBMS novo; não é necessário recompilar ou vincular novamente o aplicativo.  
+ O ODBC foi projetado para uma *interoperabilidade* máxima, ou seja, a capacidade de um único aplicativo acessar diferentes DBMS (sistemas de gerenciamento de banco de dados) com o mesmo código-fonte. Os aplicativos de banco de dados chamam funções na interface ODBC, que são implementados em módulos específicos de banco de dados chamados *drivers*. O uso de drivers isola aplicativos de chamadas específicas de banco de dados da mesma forma que os drivers de impressora isolam os programas de processamento de texto dos comandos específicos da impressora. Como os drivers são carregados em tempo de execução, um usuário só precisa adicionar um novo driver para acessar um novo DBMS; Não é necessário recompilar ou vincular novamente o aplicativo.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Por que o ODBC foi criado?](../../odbc/reference/why-was-odbc-created.md)  
   

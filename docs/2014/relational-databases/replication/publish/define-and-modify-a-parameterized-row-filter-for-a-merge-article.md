@@ -19,16 +19,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212111"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem
   Este tópico descreve como definir e modificar um filtro de linha com parâmetros no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Ao criar artigos de tabela, você pode usar filtros de linha com parâmetros. Esses filtros usam uma cláusula [WHERE](/sql/t-sql/queries/where-transact-sql) para selecionar os dados apropriados para serem publicados. Em vez de especificar um valor literal na cláusula (como você faria com um filtro de linha estático), você especifica uma das seguintes funções do sistema ou ambas: [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) e [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql). Para obter mais informações, consulte [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md).  
+ Ao criar artigos de tabela, você pode usar filtros de linha com parâmetros. Esses filtros usam uma cláusula [WHERE](/sql/t-sql/queries/where-transact-sql) para selecionar os dados apropriados para serem publicados. Em vez de especificar um valor literal na cláusula (como você faria com um filtro de linha estático) você indica uma ou mais das seguintes funções do sistema: [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) e [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql). Para obter mais informações, consulte [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  
   
@@ -99,7 +99,7 @@ ms.locfileid: "68212111"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Para definir um filtro de linha com parâmetros para um artigo em uma publicação de mesclagem  
   
-1.  No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique **@publication** , um nome de artigo para **@article** , a tabela sendo publicada para **@source_object** , a cláusula WHERE que define o filtro com parâmetros como **@subset_filterclause** (não incluindo `WHERE`) e um dos valores a seguir para **@partition_options** , que descreve o tipo de particionamento que resultará do filtro de linha com parâmetros:  
+1.  No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique **@publication**, um nome para o artigo para **@article**, a tabela que está sendo **@source_object**publicada, a cláusula WHERE que define o filtro com parâmetros **@subset_filterclause** para (não `WHERE`incluindo) e um dos valores a seguir para **@partition_options**, que descreve o tipo de particionamento que resultará do filtro de linha com parâmetros:  
   
     -   **0** - A filtragem para o artigo ou é estática ou não gera um único subconjunto de dados para cada partição (uma partição “sobreposta”).  
   
@@ -111,9 +111,9 @@ ms.locfileid: "68212111"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Para alterar um filtro de linha com parâmetros para um artigo em uma publicação de mesclagem  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especificar **@publication** , **@article** , um valor de `subset_filterclause` para **@property** , a expressão que define o filtro com parâmetros para **@value** (não incluindo `WHERE`) e um valor de **1** para ambos **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
+1.  No Publicador do banco de dados de publicação, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique **@publication**, **@article**, um valor de `subset_filterclause` para **@property**, a expressão que define o filtro com parâmetros para **@value** (não incluindo `WHERE`) e um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
   
-2.  Se esta alteração resultar em um comportamento de particionamento diferente, execute então [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) novamente. Especificar **@publication** , **@article** , um valor de `partition_options` para **@property** e a opção de particionamento mais adequada para **@value** , que pode ser um dos seguintes:  
+2.  Se esta alteração resultar em um comportamento de particionamento diferente, execute então [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) novamente. Especifique **@publication**, **@article**, um valor de `partition_options` para **@property**e a opção de particionamento mais apropriada para **@value**o, que pode ser uma das seguintes:  
   
     -   **0** - A filtragem para o artigo ou é estática ou não gera um único subconjunto de dados para cada partição (uma partição “sobreposta”).  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68212111"
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir e modificar um filtro de junção entre artigos de mesclagem](define-and-modify-a-join-filter-between-merge-articles.md)   
  [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md)   
  [Join Filters](../merge/join-filters.md)   

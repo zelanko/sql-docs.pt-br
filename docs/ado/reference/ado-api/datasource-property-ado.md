@@ -16,21 +16,21 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd677e29631e53eeb71c43e8174baff553defc85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933244"
 ---
 # <a name="datasource-property-ado"></a>Propriedade DataSource (ADO)
-Indica um objeto que contém dados a ser representado como uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Indica um objeto que contém dados a serem representados como um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="remarks"></a>Comentários  
- Essa propriedade é usada para criar controles associados a dados com o ambiente de dados. O ambiente de dados mantém a chamada de coleções de dados (fontes de dados) que contém objetos (membros de dados) que serão representados como uma **Recordset** objeto.  
+ Essa propriedade é usada para criar controles ligados a dados com o ambiente de dados. O ambiente de dados mantém coleções de dados (fontes de dados) que contêm objetos nomeados (membros de dados) que serão representados como um objeto **Recordset** .  
   
- O [DataMember](../../../ado/reference/ado-api/datamember-property.md) e **DataSource** propriedades devem ser usadas em conjunto.  
+ As propriedades [DataMember](../../../ado/reference/ado-api/datamember-property.md) e **DataSource** devem ser usadas em conjunto.  
   
- O objeto referenciado deve implementar o **IDataSource** interface e deve conter um **IRowset** interface.  
+ O objeto referenciado deve implementar a interface **IDataSource** e deve conter uma interface **IRowset** .  
   
 ## <a name="usage"></a>Uso  
   
@@ -40,8 +40,8 @@ rs.DataMember = "Command"     'Name of the rowset to bind to.
 Set rs.DataSource = myDE      'Name of the object containing an IRowset.  
 ```  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade DataMember](../../../ado/reference/ado-api/datamember-property.md)

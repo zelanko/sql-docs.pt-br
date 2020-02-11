@@ -18,13 +18,13 @@ ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c8f2e34d15f7cca4443680b2d8b8a9fa2c7c6199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952314"
 ---
-# <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
+# <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Remove o servidor atual de operações multisservidor.  
@@ -32,7 +32,7 @@ ms.locfileid: "67952314"
 > [!CAUTION]  
 >  **sp_msx_defect** edita o registro. A edição manual do registro não é recomendada, pois alterações incorretas ou não apropriadas podem causar sérios problemas de configuração para o sistema. Portanto, apenas usuários experientes deveriam usar o programa Editor do Registro para editar o registro. Para obter mais informações, consulte a documentação do Microsoft Windows.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,9 +42,9 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @forced_defection = ] forced_defection` Especifica se deve ou não forçar a remoção ocorra se o Master SQLServerAgent foi perdido permanentemente devido a um irreversivelmente danificado **msdb** banco de dados, ou no **msdb** backup de banco de dados. *forced_defection*está **bit**, com um padrão de **0**, que indica que nenhuma remoção forçada deve ocorrer. Um valor de **1** força a remoção.  
+`[ @forced_defection = ] forced_defection`Especifica se a remoção deve ou não ser forçada se o SQLServerAgent mestre tiver sido permanentemente perdido devido a um banco de dados **msdb** corrompido irreversível ou nenhum backup de banco de dados **msdb** . *forced_defection*é **bit**, com um padrão de **0**, que indica que nenhuma remoção forçada deve ocorrer. Um valor de **1** força A remoção.  
   
- Depois de forçar uma remoção pela execução **sp_msx_defect**, um membro das **sysadmin** a função de servidor fixa no Master SQLServerAgent deve executar o comando a seguir para concluir a remoção:  
+ Depois de forçar uma remoção executando **sp_msx_defect**, um membro da função de servidor fixa **sysadmin** no SQLSERVERAGENT mestre deve executar o seguinte comando para concluir a remoção:  
   
 ```  
 EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defection =  0;  
@@ -57,13 +57,13 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- Quando **sp_msx_defect** for concluído corretamente, uma mensagem será retornada.  
+ Quando **sp_msx_defect** é concluído corretamente, uma mensagem é retornada.  
   
 ## <a name="permissions"></a>Permissões  
  Para executar este procedimento armazenado, o usuário deve ser um membro da função de servidor fixa **sysadmin** .  
   
-## <a name="see-also"></a>Consulte também  
- [sp_msx_enlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_msx_enlist](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

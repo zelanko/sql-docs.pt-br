@@ -1,5 +1,5 @@
 ---
-title: CursorType, LockType, EditMode exemplo das propriedades e (VC + +) | Microsoft Docs
+title: Exemplo das propriedades CursorType, LockType e EditMode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be094e6886cceb8e6f4e42e3b60f9e7355df7592
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933253"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType, LockType, EditMode exemplo das propriedades e (VC + +)
-Este exemplo demonstra a configuração de [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propriedades antes de abrir um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele também mostra o valor de [EditMode](../../../ado/reference/ado-api/editmode-property.md) propriedade sob várias condições. A função EditModeOutput é necessária executar este procedimento.  
+# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>Exemplo das propriedades CursorType, LockType e EditMode (VC + +)
+Este exemplo demonstra como definir as propriedades [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) antes de abrir um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele também mostra o valor da propriedade [EditMode](../../../ado/reference/ado-api/editmode-property.md) em várias condições. A função EditModeOutput é necessária para que este procedimento seja executado.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -155,13 +155,13 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-  **Depois de AddNew:**    
+  **Após AddNew:**   
  **EditMode = adEditAdd**  
-**Após a atualização:**    
+**Após a atualização:**   
  **EditMode = adEditNone**  
-**Depois de editar:**    
+**Após editar:**   
  **EditMode = adEditInProgress**   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [Propriedade EditMode](../../../ado/reference/ado-api/editmode-property.md)   
  [Propriedade LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   

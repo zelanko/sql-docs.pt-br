@@ -1,5 +1,5 @@
 ---
-title: Propriedades do objeto de procedimento, métodos e eventos | Microsoft Docs
+title: Propriedades, métodos e eventos do objeto Procedure | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9bec9c19f406586136ce4181805cf5d1c4333fcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965468"
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>Propriedades, Métodos e Eventos do objeto Procedure
@@ -30,10 +30,10 @@ ms.locfileid: "67965468"
  [Propriedade Name](../../../ado/reference/adox-api/name-property-adox.md)  
   
 ## <a name="methods"></a>Métodos  
- nenhuma.  
+ Nenhum.  
   
-## <a name="events"></a>Events  
- nenhuma.  
+## <a name="events"></a>Eventos  
+ Nenhum.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)

@@ -1,5 +1,5 @@
 ---
-title: Módulos e Prólogos (XQuery) | Microsoft Docs
+title: Módulos e Prologs (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 0f17b4a4-6234-41d4-a996-6db4e27bff7e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f7a2df8ea534622c4ff4c1695c7e44a7aea7611d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946583"
 ---
 # <a name="modules-and-prologs-xquery"></a>Módulos e prólogos (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [Prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) é uma série de declarações de namespace. Ao utilizar o declare namespace no prólogo, você pode especificar o prefixo da associação de namespace e usar o prefixo no corpo de consulta.  
+  O [XQuery prólogo](../xquery/modules-and-prologs-xquery-prolog.md) é uma série de declarações de namespace. Ao utilizar o declare namespace no prólogo, você pode especificar o prefixo da associação de namespace e usar o prefixo no corpo de consulta.  
   
 ## <a name="implementation-limitations"></a>Limitações de implementação  
  As seguintes especificações de XQuery não têm suporte nesta implementação:  
@@ -53,10 +53,10 @@ ms.locfileid: "67946583"
 -   Declaração de função (`declare function`)  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md)  
+ [Prólogo XQuery](../xquery/modules-and-prologs-xquery-prolog.md)  
  Descreve o prólogo do XQuery.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

@@ -14,26 +14,26 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4bf875b3afd21f6b8cb211c999401b0ecb80879
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987817"
 ---
 # <a name="outer-joins"></a>Junções externas
-ODBC dá suporte a SQL-92 deixada, sintaxe de junção externa completa e à direita. É a sequência de escape de junções externas  
+O ODBC dá suporte à sintaxe de junção externa do SQL-92 esquerda, direita e completa. A sequência de escape para junções externas é  
   
- **{oj** _outer-join_ **}**  
+ **{OJ** _externa-junção_**}**  
   
- em que *junção externa* é  
+ onde *a junção externa* é  
   
- *referência de tabela* {**esquerda &#124; direita &#124; completo} junção externa** {*referência de tabela* &#124; *junção externa*} **ON**  _critério de pesquisa_  
+ *tabela-referência* {**esquerda &#124; direita &#124; Full} junção externa** {*tabela-referência* &#124; *externa-junção*} **na** _condição de pesquisa_  
   
- *referência de tabela* Especifica um nome de tabela, e *critério de pesquisa* Especifica a condição de junção entre as *referências de tabela*.  
+ *tabela-referência* especifica um nome de tabela e a *condição de pesquisa* especifica a condição de junção entre as referências de *tabela*.  
   
- Uma solicitação de junção externa deve aparecer após o **FROM** palavra-chave e antes do **onde** cláusula (se houver). Para obter informações de sintaxe completa, consulte [Outer Join sequência de Escape](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) no Apêndice c: Gramática SQL.  
+ Uma solicitação de junção externa deve aparecer após a palavra-chave **from** e antes da cláusula **Where** (se houver). Para obter informações de sintaxe completas, consulte [sequência de escape de junção externa](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) no Apêndice C: gramática SQL.  
   
- Por exemplo, as seguintes instruções SQL criam o mesmo conjunto de resultados que lista todos os clientes e mostra que tem pedidos abertos. A primeira instrução usa a sintaxe de sequência de escape. A segunda instrução usa a sintaxe de nativa para Oracle e não é interoperável.  
+ Por exemplo, as instruções SQL a seguir criam o mesmo conjunto de resultados que lista todos os clientes e mostra o que tem pedidos abertos. A primeira instrução usa a sintaxe de sequência de escape. A segunda instrução usa a sintaxe nativa para Oracle e não é interoperável.  
   
 ```  
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status  
@@ -45,4 +45,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
    WHERE (Orders.Status='OPEN') AND (Customers.CustID= Orders.CustID(+))  
 ```  
   
- Para determinar os tipos de junções externas que dão suporte a uma fonte de dados e o driver, um aplicativo chama **SQLGetInfo** com o SQL_OJ_CAPABILITIES flag. Os tipos de junções externas que podem ter suporte estão à esquerda, à direita, completo ou junções externas; aninhadas junções externas no qual os nomes de coluna na **ON** cláusula não tem a mesma ordem que os nomes de tabela respectivo na **OUTER JOIN** cláusula; junções internas em conjunto com junções externas; e junções externas usando qualquer operador de comparação ODBC. Se o tipo de informação SQL_OJ_CAPABILITIES retornar 0, não há suporte para nenhuma cláusula de junção externa.
+ Para determinar os tipos de junções externas às quais uma fonte de dados e o driver dão suporte, um aplicativo chama **SQLGetInfo** com o sinalizador SQL_OJ_CAPABILITIES. Os tipos de junções externas que podem ter suporte são as junções esquerda, direita, completa ou externa aninhada; junções externas nas quais os nomes de coluna na cláusula **on** não têm a mesma ordem que seus respectivos nomes de tabela na cláusula de **junção externa** ; junções internas em conjunto com junções externas; e junções externas usando qualquer operador ODBC Comparison. Se o tipo de informação SQL_OJ_CAPABILITIES retorna 0, não há suporte para nenhuma cláusula de junção externa.

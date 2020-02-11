@@ -1,5 +1,5 @@
 ---
-title: Envio de logs de procedimentos armazenados (Transact-SQL) | Microsoft Docs
+title: Procedimentos armazenados de envio de logs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a081fd1d3cebb7d5d83362d2cf5af700f75da09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942179"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>Procedimentos armazenados de envio de logs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e versões posteriores suportam a seguinte sistema procedimentos armazenados que são usados para configurar, modificar e monitorar configurações de envio de log.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e versões posteriores dão suporte aos seguintes procedimentos armazenados do sistema que são usados para configurar, modificar e monitorar as configurações de envio de logs.  
   
 |||  
 |-|-|  
@@ -42,7 +42,7 @@ ms.locfileid: "67942179"
 |[sp_delete_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)|[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|  
 |[sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

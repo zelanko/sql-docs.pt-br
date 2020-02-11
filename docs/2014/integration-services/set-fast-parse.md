@@ -1,5 +1,5 @@
 ---
-title: Definir a análise rápida | Microsoft Docs
+title: Definir análise rápida | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d41b15325586733ab54a37f4c3f007ce0253eaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055822"
 ---
 # <a name="set-fast-parse"></a>Definir a análise rápida
@@ -28,7 +28,7 @@ ms.locfileid: "66055822"
   
 3.  No painel **Entradas e Saídas** , clique na coluna para a qual você quer ativar a análise rápida.  
   
-4.  Na janela Propriedades, expanda o **Custom Properties** nó e defina o `FastParse` propriedade `True`.  
+4.  No janela Propriedades, expanda o nó **Propriedades personalizadas** e defina a `FastParse` Propriedade como. `True`  
   
 5.  Clique em **OK**.  
   

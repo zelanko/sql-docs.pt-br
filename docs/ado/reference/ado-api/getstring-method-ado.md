@@ -17,14 +17,14 @@ ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932465"
 ---
 # <a name="getstring-method-ado"></a>Método GetString (ADO)
-Retorna o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) como uma cadeia de caracteres.  
+Retorna o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) como uma cadeia de caracteres.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,31 +34,31 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna o **conjunto de registros** como um valor de cadeia de caracteres **Variant** (BSTR).  
+ Retorna o **conjunto de registros** como uma **variante** com valor de cadeia de caracteres (BSTR).  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *StringFormat*  
- Um [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) valor que especifica como o **Recordset** devem ser convertidas em uma cadeia de caracteres. O *RowDelimiter*, *ColumnDelimiter*, e *NullExpr* parâmetros são usados somente com um *StringFormat* de  **adClipString**.  
+ Um valor [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) que especifica como o **conjunto de registros** deve ser convertido em uma cadeia de caracteres. Os parâmetros *madelimiter*, *ColumnDelimiter*e *NullExpr* são usados apenas com um *StringFormat* de **adClipString**.  
   
  *NumRows*  
- Opcional. O número de linhas a ser convertido na **conjunto de registros**. Se *NumRows* não for especificado, ou se ele for maior que o número total de linhas na **conjunto de registros**, em seguida, todas as linhas a **Recordset** são convertidos.  
+ Opcional. O número de linhas a serem convertidas no **conjunto de registros**. Se *numrows* não for especificado, ou se for maior que o número total de linhas no conjunto de **registros**, todas as linhas no conjunto de **registros** serão convertidas.  
   
  *ColumnDelimiter*  
- Opcional. Um delimitador usado entre colunas, se especificado, caso contrário, o caractere de tabulação.  
+ Opcional. Um delimitador usado entre colunas, se especificado, caso contrário, o caractere de TABULAção.  
   
  *RowDelimiter*  
- Opcional. Um delimitador usado entre linhas, se especificado, caso contrário, o caractere de retorno de CARRO.  
+ Opcional. Um delimitador usado entre linhas, se especificado, caso contrário, o caractere de retorno de carro.  
   
  *NullExpr*  
  Opcional. Uma expressão usada no lugar de um valor nulo, se especificado, caso contrário, a cadeia de caracteres vazia.  
   
 ## <a name="remarks"></a>Comentários  
- Dados de linha, mas nenhum dado de esquema, é salvo na cadeia de caracteres. Portanto, uma **Recordset** não pode ser reaberto usando essa cadeia de caracteres.  
+ Dados de linha, mas sem dados de esquema, são salvos na cadeia de caracteres. Portanto, um **conjunto de registros** não pode ser reaberto usando essa cadeia de caracteres.  
   
- Esse método é equivalente ao RDO **GetClipString** método.  
+ Esse método é equivalente ao método de **Hiperclipstring** RDO.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo do método GetString (VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)

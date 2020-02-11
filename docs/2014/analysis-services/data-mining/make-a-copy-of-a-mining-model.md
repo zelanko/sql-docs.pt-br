@@ -1,5 +1,5 @@
 ---
-title: Faça uma cópia de um modelo de mineração | Microsoft Docs
+title: Fazer uma cópia de um modelo de mineração | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084215"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Criar uma cópia de um modelo de mineração
@@ -47,18 +47,18 @@ ms.locfileid: "66084215"
   
 1.  Selecione o modelo de mineração.  
   
-2.  No **propriedades** janela, clique na caixa de texto para o **filtro** propriedade e clique em build **(...)**  botão.  
+2.  Na janela **Propriedades** , clique na caixa de texto da propriedade **filtro** e clique no botão compilar **(...)** .  
   
 3.  Altere as condições do filtro.  
   
      Para obter mais informações sobre como utilizar as caixas de diálogo do editor de filtro, consulte [Aplicar um filtro a um modelo de mineração](apply-a-filter-to-a-mining-model.md).  
   
-4.  No **propriedades** janela, no `AlgorithmParameters` caixa de texto, clique em **definir parâmetros de algoritmo**e altere os parâmetros de algoritmo, se desejado.  
+4.  Na janela **Propriedades** , na caixa de `AlgorithmParameters` texto, clique em **parâmetros setalgorithm**e altere os parâmetros do algoritmo, se desejado.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Filtros para modelos de mineração &#40;mineração de dados Analysis Services&#41;](mining-models-analysis-services-data-mining.md)   
  [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)   
  [Excluir um filtro de um modelo de mineração](delete-a-filter-from-a-mining-model.md)  
   

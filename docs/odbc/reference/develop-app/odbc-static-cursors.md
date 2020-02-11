@@ -14,17 +14,17 @@ ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bcb7c39d39492b91c0b62c5eff2229eb5f61df6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987831"
 ---
 # <a name="odbc-static-cursors"></a>Cursores estáticos ODBC
-Um cursor estático é um no qual o conjunto de resultados é exibido como estático. Ele geralmente não detectar alterações que foram feitas para a associação, pedido ou valores do conjunto de resultados depois que o cursor é aberto. Por exemplo, suponha que um cursor estático busca uma linha e o outro aplicativo, em seguida, atualiza a linha. Se o cursor estático refetches a linha, os que ele vê os valores são inalterados, apesar das alterações feitas por outro aplicativo.  
+Um cursor estático é aquele em que o conjunto de resultados parece ser estático. Geralmente, ele não detecta alterações que foram feitas na associação, na ordem ou nos valores do conjunto de resultados depois que o cursor é aberto. Por exemplo, suponha que um cursor estático busque uma linha e outro aplicativo, em seguida, atualize essa linha. Se o cursor estático rebuscar a linha, os valores que ela vê serão inalterados, apesar das alterações feitas pelo outro aplicativo.  
   
- Cursores estáticos podem detectar suas próprias atualizações, exclusões e inserções, embora eles não são necessários para fazer isso. Se um cursor estático particular detecta essas alterações é relatada com a opção SQL_STATIC_SENSITIVITY **SQLGetInfo**. Cursores estáticos detectam nunca outras atualizações, exclusões e inserções.  
+ Cursores estáticos podem detectar suas próprias atualizações, exclusões e inserções, embora não sejam obrigadas a fazer isso. Se um cursor estático específico detectar essas alterações é relatado por meio da opção SQL_STATIC_SENSITIVITY em **SQLGetInfo**. Cursores estáticos nunca detectam outras atualizações, exclusões e inserções.  
   
- A matriz de status de linha especificada pelo atributo de instrução SQL_ATTR_ROW_STATUS_PTR pode conter SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO ou SQL_ROW_ERROR para qualquer linha. Ele retorna SQL_ROW_UPDATED, SQL_ROW_DELETED ou SQL_ROW_ADDED para linhas atualizadas, excluídas ou inseridas pelo cursor, supondo que o cursor pode detectar essas alterações.  
+ A matriz de status de linha especificada pelo atributo de instrução SQL_ATTR_ROW_STATUS_PTR pode conter SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO ou SQL_ROW_ERROR para qualquer linha. Ele retorna SQL_ROW_UPDATED, SQL_ROW_DELETED ou SQL_ROW_ADDED para linhas atualizadas, excluídas ou inseridas pelo cursor, supondo que o cursor possa detectar essas alterações.  
   
- Cursores estáticos normalmente são implementados, bloqueando as linhas no conjunto de resultados ou fazendo uma cópia ou de instantâneo, do resultado definidos. Embora o bloqueio de linhas é relativamente fácil de fazer, ele tem a desvantagem de reduzir significativamente a simultaneidade. Fazer uma cópia permite maior simultaneidade e permite que o cursor para manter o controle de suas próprias atualizações, exclusões e insere modificando a cópia. No entanto, uma cópia é mais cara para fazer e podem divergir dos dados subjacentes, como esses dados são alterados por outras pessoas.
+ Cursores estáticos são normalmente implementados bloqueando as linhas no conjunto de resultados ou fazendo uma cópia, ou instantâneo, do conjunto de resultados. Embora as linhas de bloqueio sejam relativamente fáceis de fazer, ela tem a desvantagem de reduzir significativamente a simultaneidade. Fazer uma cópia permite uma simultaneidade maior e permite que o cursor Mantenha o controle de suas próprias atualizações, exclusões e inserções modificando a cópia. No entanto, uma cópia é mais cara para fazer e pode divergir dos dados subjacentes, pois esses dados são alterados por outras pessoas.

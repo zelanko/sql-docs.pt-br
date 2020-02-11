@@ -1,5 +1,5 @@
 ---
-title: Exemplos de código RDS | Microsoft Docs
+title: Exemplos de código do RDS | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,22 +13,22 @@ ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 07cf393fc46ca9cfe96cb116886f37ab8abd1b1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963703"
 ---
 # <a name="rds-code-examples"></a>Exemplos de código RDS
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Use os exemplos de código a seguir para saber como usar objetos RDS, métodos, propriedades e eventos.  
+ Use os exemplos de código a seguir para saber como usar os objetos, métodos, propriedades e eventos do RDS.  
   
- **Observação** cole o exemplo de código inteiro em seu editor de código. O exemplo pode não funcionar corretamente se exemplos parciais são usados ou se a formatação de parágrafo é perdida.  
+ **Observação** Cole todo o exemplo de código em seu editor de códigos. O exemplo pode não ser executado corretamente se forem usados exemplos parciais ou se a formatação do parágrafo for perdida.  
   
--   [Exemplos de código RDS no Microsoft Visual Basic](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
+-   [Exemplos de código de RDS no Microsoft Visual Basic](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
   
--   [Exemplos de código RDS no Microsoft Visual Basic Scripting Edition](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
+-   [Exemplos de código de RDS no Microsoft Visual Basic Scripting Edition](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
   
 -   [Exemplos de código RDS no Microsoft Visual C++](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  

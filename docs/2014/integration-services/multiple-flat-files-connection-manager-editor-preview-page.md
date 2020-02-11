@@ -1,5 +1,5 @@
 ---
-title: Vários arquivos simples Editor do Gerenciador de Conexão (página visualização) | Microsoft Docs
+title: Editor do Gerenciador de conexões de vários arquivos simples (página Visualização) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae113a84c55c17c3ba4827fb9368435200a6f190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057493"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Visualização)
@@ -33,16 +33,16 @@ ms.locfileid: "66057493"
  **Descrição**  
  Descreva a conexão. Como prática recomendável, descreva a conexão em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
   
- **Linhas de dados a ignorar**  
+ **Linhas de dados a serem ignoradas**  
  Especifique quantas linhas serão ignoradas no início do arquivo simples.  
   
  **Visualizar linhas**  
  Visualize os dados de exemplo do primeiro arquivo simples selecionado, dividido em colunas e linhas, usando as opções selecionadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
+ [Editor do Gerenciador de conexões de vários arquivos simples &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor do Gerenciador de conexões de vários arquivos simples &#40;página colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Editor do Gerenciador de conexões de vários arquivos simples &#40;página avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
   

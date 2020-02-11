@@ -1,5 +1,5 @@
 ---
-title: Opções (resultados do SQL Server – resultados da consulta para página de texto) | Microsoft Docs
+title: Opções (página resultados da consulta-SQL Server-resultados em texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090016"
 ---
-# <a name="options-query-results-sql-server-results-to-text-page"></a>Opções (resultados do SQL Server – resultados da consulta para página de texto)
-  Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de texto. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para alterar as opções das consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou clique com o botão direito do mouse na janela Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e selecione **Opções de Consulta**. Na caixa de diálogo **Opções de Consulta**, em **Resultados**, clique em **Texto**.  
+# <a name="options-query-results-sql-server-results-to-text-page"></a>Opções (página resultados da consulta-SQL Server-resultados em texto)
+  Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de texto. As alterações nessas opções são aplicadas somente a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] novas consultas. Para alterar as opções das consultas atuais, clique em **Opções de consulta** no menu **consulta** ou clique com o botão direito do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mouse na janela de consulta e selecione **Opções de consulta**. Na caixa de diálogo **Opções de Consulta**, em **Resultados**, clique em **Texto**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Formato de saída**  
@@ -35,7 +35,7 @@ ms.locfileid: "66090016"
  **Incluir a consulta no conjunto de resultados**  
  Marque essa caixa de seleção para incluir o texto da consulta que está sendo executada no painel resultados antes dos resultados da consulta.  
   
- **Rolar à medida que os resultados forem recebidos**  
+ **Rolar conforme os resultados forem recebidos**  
  Marque essa caixa de seleção para manter o foco de exibição nos registros retornados, mais recentemente, no final do conjunto de resultados. Desmarque esta caixa de seleção para manter o foco de exibição nas primeiras linhas recebidas.  
   
  **Alinhar valores numéricos à direita**  
@@ -47,13 +47,13 @@ ms.locfileid: "66090016"
  **Exibir resultados em uma guia separada**  
  Marque essa caixa de seleção para exibir o conjunto de resultados em uma nova janela de documento, em vez de na parte inferior da janela de documentos de consulta.  
   
- **Alternar para a guia Resultados após a execução da consulta**  
+ **Alternar para a guia resultados após a execução da consulta**  
  Marque essa caixa de seleção para definir o foco de tela automaticamente para o conjunto de resultados.  
   
  **Número máximo de caracteres exibidos em cada coluna**  
  Esse valor padrão é 256. Aumente o valor para exibir conjuntos de resultados maiores sem truncar. O valor máximo é 8.192.  
   
- **Restaurar Padrões**  
+ **Redefinir para padrão**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
   

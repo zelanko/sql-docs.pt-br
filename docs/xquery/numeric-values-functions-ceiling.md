@@ -1,5 +1,5 @@
 ---
-title: Função Ceiling (XQuery) | Microsoft Docs
+title: Função de teto (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946574"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funções de Valores Numéricos – ceiling 
@@ -39,19 +39,19 @@ fn:ceiling ( $arg as numeric?) as numeric?
  Número ao qual a função é aplicada.  
   
 ## <a name="remarks"></a>Comentários  
- Se o tipo de *$arg* é um dos tipos base numéricos três, **xs: float**, **xs: Double**, ou **xs: decimal**, o tipo de retorno é o mesmo que o *$arg* tipo.  
+ Se o tipo de *$ARG* for um dos três tipos de base numéricos, **xs: float**, **xs: Double**ou **xs: decimal**, o tipo de retorno será o mesmo que o tipo de *$ARG* .  
   
- Se o tipo de *$arg* é um tipo que é derivado de um dos tipos numéricos, o tipo de retorno é o tipo numérico básico.  
+ Se o tipo de *$ARG* for um tipo derivado de um dos tipos numéricos, o tipo de retorno será o tipo numérico base.  
   
- Se a entrada para as funções fn: Floor, FN: Ceiling ou FN: round for **XDT: untypedatomic**, ela será convertida implicitamente **xs: Double**.  
+ Se a entrada para as funções fn: Floor, fn: teto ou fn: round for **xdt: untypedAtomic**, ela será implicitamente convertida em **xs: Double**.  
   
  Qualquer outro tipo gera um erro estático.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>A. Usando a função ceiling() XQuery  
- Para o modelo de produto 7, essa consulta retorna uma lista de locais de centro de trabalho no processo de fabricação do modelo de produto. Para cada local de centro de trabalho, a consulta retorna a ID do local, as horas de trabalho e o tamanho de lote, se documentados. A consulta usa o **ceiling** função para retornar as horas de trabalho como valores do tipo **decimal**.  
+### <a name="a-using-the-ceiling-xquery-function"></a>a. Usando a função ceiling() XQuery  
+ Para o modelo de produto 7, essa consulta retorna uma lista de locais de centro de trabalho no processo de fabricação do modelo de produto. Para cada local de centro de trabalho, a consulta retorna a ID do local, as horas de trabalho e o tamanho de lote, se documentados. A consulta usa a função de **teto** para retornar as horas de trabalho como valores do tipo **decimal**.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -73,15 +73,15 @@ WHERE ProductModelID=7
   
 -   O prefixo do namespace AWMI significa Adventure Works Manufacturing Instructions. Esse prefixo se refere ao mesmo namespace usado no documento sendo examinado.  
   
--   **As instruções** é um **xml** coluna de tipo. Portanto, o [método Query () (tipo de dados XML)](../t-sql/xml/query-method-xml-data-type.md) é usado para especificar o XQuery. A instrução XQuery é especificada como o argumento para o método de consulta.  
+-   **Instruções** é uma coluna de tipo **XML** . Portanto, o [método Query () (tipo de dados XML)](../t-sql/xml/query-method-xml-data-type.md) é usado para especificar XQuery. A instrução XQuery é especificada como o argumento para o método de consulta.  
   
--   **para... retornar** é um constructo de loop. Na consulta, o **para** loop identifica uma lista de \<local > elementos. Para cada local de centro de trabalho, o **retornar** instrução na **para** loop descreve o XML a ser gerado:  
+-   **para... Return** é um constructo de loop. Na consulta, o loop **for** identifica uma lista de elementos \<de localização>. Para cada local do centro de trabalho, a instrução **Return** no loop **for** descreve o XML a ser gerado:  
   
-    -   Um \<local > elemento que tem os atributos LocationID e LaborHrs. A expressão correspondente dentro dos colchetes ({ }) recupera os valores exigidos do documento.  
+    -   Um \<elemento de> local que tem os atributos LocationID e LaborHrs. A expressão correspondente dentro dos colchetes ({ }) recupera os valores exigidos do documento.  
   
-    -   O {$i/@LotSize } expressão recupera o atributo LotSize do documento, se estiver presente.  
+    -   A expressão {i/@LotSize $} recupera o atributo de lotes do documento, se presente.  
   
-    -   Esse é o resultado:  
+    -   Este é o resultado:  
   
 ```  
 ProductModelID Result    
@@ -97,10 +97,10 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
   
--   O **Ceiling ()** função mapeia todos os valores inteiros para xs: decimal.  
+-   A função **teto ()** mapeia todos os valores inteiros para xs: decimal.  
   
-## <a name="see-also"></a>Consulte também  
- [Função Floor &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
- [Função Round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Função Floor &#40;&#41;XQuery](../xquery/numeric-values-functions-floor.md)   
+ [Função round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   
   

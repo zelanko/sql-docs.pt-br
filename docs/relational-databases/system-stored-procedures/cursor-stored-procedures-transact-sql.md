@@ -1,5 +1,5 @@
 ---
-title: Cursor procedimentos armazenados (Transact-SQL) | Microsoft Docs
+title: Procedimentos armazenados de cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f817408b30442d85566d094ccbf6491fe260925b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942432"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>procedimentos armazenados de cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporta os seguintes procedimentos armazenados do sistema que implementam a funcionalidade de variável de cursor.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o oferece suporte aos seguintes procedimentos armazenados do sistema que implementam a funcionalidade de variável de cursor.  
   
 |||  
 |-|-|  
@@ -38,7 +38,7 @@ ms.locfileid: "67942432"
 |[sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)|[sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)|  
 |[sp_cursoroption](../../relational-databases/system-stored-procedures/sp-cursoroption-transact-sql.md)||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

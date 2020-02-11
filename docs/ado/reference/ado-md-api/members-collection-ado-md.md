@@ -18,36 +18,36 @@ ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79394abee5b12bb10f34a34e882d2ac0562722fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949437"
 ---
 # <a name="members-collection-ado-md"></a>Coleção Members (ADO MD)
-Contém o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos de um nível ou uma posição ao longo do eixo.  
+Contém os objetos de [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) de um nível ou uma posição ao longo de um eixo.  
   
 ## <a name="remarks"></a>Comentários  
- Um **membros** coleção é usada para conter os seguintes tipos de membros:  
+ Uma coleção de **Membros** é usada para conter os seguintes tipos de membros:  
   
--   Os membros que constituem um nível em um cubo. Estão contidos na **membros** coleção de uma [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto. Por exemplo, usando a amostra do [visão geral de esquemas Multidimensional e de dados](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), os quatro membros do nível de países são EUA, Canadá, Reino Unido e Alemanha.  
+-   Os membros que compõem um nível em um cubo. Eles estão contidos na coleção **Members** de um objeto [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Por exemplo, usando o exemplo de [visão geral de esquemas e dados multidimensionais](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), os quatro membros do nível de países são Canadá, EUA, Reino Unido e Alemanha.  
   
--   Os membros que são filhos de um membro específico dentro de uma hierarquia. Esses membros são retornados pelo [filhos](../../../ado/reference/ado-md-api/children-property-ado-md.md) propriedade do pai **membro** objeto. Por exemplo, novamente usando o mesmo exemplo, dois filhos do membro Canadá são Leste do Canadá e Oeste do Canadá.  
+-   Os membros que são os filhos de um membro específico dentro de uma hierarquia. Esses membros são retornados pela propriedade [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) do objeto **membro** pai. Por exemplo, novamente usando o mesmo exemplo, os dois filhos do membro do Canadá são Canadá-Leste e Canadá-oeste.  
   
--   Os membros que definem uma posição específica ao longo do eixo de um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md). Usando o conjunto de células do [trabalhando com dados multidimensionais](../../../ado/guide/multidimensional/working-with-multidimensional-data.md) como exemplo, os dois membros da primeira posição no eixo x são Valentine e Seattle. Esses membros são contidos pelos **membros** coleção de uma [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto.  
+-   Os membros que definem uma posição específica ao longo de um eixo de um [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md). Usando o células do [trabalho com dados multidimensionais](../../../ado/guide/multidimensional/working-with-multidimensional-data.md) como um exemplo, os dois membros da primeira posição no eixo x são namorados e Seattle. Esses membros são contidos na coleção **Members** de um objeto [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
   
- **Membros** é uma coleção padrão de ADO. Com as propriedades e métodos de uma coleção, você pode fazer o seguinte:  
+ **Membros** é uma coleção padrão do ADO. Com as propriedades e métodos de uma coleção, você pode fazer o seguinte:  
   
--   Obter o número de objetos na coleção com o [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade.  
+-   Obtenha o número de objetos na coleção com a propriedade [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Retornar um objeto da coleção com o padrão [Item](../../../ado/reference/ado-api/item-property-ado.md) propriedade.  
+-   Retornar um objeto da coleção com a propriedade de [Item](../../../ado/reference/ado-api/item-property-ado.md) padrão.  
   
--   Atualizar os objetos na coleção do provedor com o [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) método.  
+-   Atualize os objetos na coleção do provedor com o método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
  Esta seção contém o tópico a seguir.  
   
 -   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo Members (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo de Membros (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

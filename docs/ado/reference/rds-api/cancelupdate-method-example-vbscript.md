@@ -15,17 +15,17 @@ ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b92db747267f250501b11200c870526fe79e713b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964601"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>Exemplo do método CancelUpdate (VBScript)
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Para testar este exemplo, recorte e cole este código entre o \<Body > e \</Body > marcas em uma HTML normal de documento e nomeie-o **CancelUpdateVBS.asp**. Script ASP identificará o seu servidor de internet. Você precisará editar o nome do servidor para refletir seu próprio programa de instalação. Basta altere o valor na cadeia de conexão do MyServer para o nome da sua instalação do SQL Server.  
+ Para testar este exemplo, recorte e cole esse código entre \<o corpo> \<e/Body> marcas em um documento HTML normal e nomeie-o **CancelUpdateVBS. asp**. O script ASP identificará seu servidor de Internet. Será necessário editar o nome do servidor para refletir sua própria configuração. Basta alterar o valor na cadeia de conexão de meuservidor para o nome de sua instalação do SQL Server.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  
@@ -117,7 +117,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)
 
 

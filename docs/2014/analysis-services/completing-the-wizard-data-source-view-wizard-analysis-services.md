@@ -1,5 +1,5 @@
 ---
-title: Concluindo o Assistente (Assistente de exibição de fonte de dados) (Analysis Services) | Microsoft Docs
+title: Concluindo o assistente (Assistente de exibição da fonte de dados) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5dce0aa56997537e4911b0607ca9fba392dd847
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087639"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>Concluindo o Assistente (Assistente de Exibição da Fonte de Dados) (Analysis Services)
@@ -29,7 +29,7 @@ ms.locfileid: "66087639"
  **Visualização**  
  Mostra as tabelas e exibições incluídas na exibição da fonte de dados. Clique em **Voltar** para fazer alterações.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de exibição de fonte de dados &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de exibição da fonte de dados &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)  
   
   

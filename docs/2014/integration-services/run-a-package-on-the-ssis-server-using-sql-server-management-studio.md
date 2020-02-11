@@ -1,5 +1,5 @@
 ---
-title: Executar um pacote no servidor SSIS usando o SQL Server Management Studio | Microsoft Docs
+title: Executar um pacote no servidor SSIS usando SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a598030000e5764cecc8ababa75ef2bdd8598ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056374"
 ---
 # <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>Executar um pacote no servidor SSIS usando o SQL Server Management Studio
@@ -30,7 +30,7 @@ ms.locfileid: "66056374"
   
 3.  Clique com o botão direito do mouse no nome do pacote e selecione **Executar**.  
   
-4.  Configure a execução de pacote usando as configurações nas guias **Parâmetros**, **Gerenciadores de Conexões**e **Avançado** na caixa de diálogo **Executar Pacote** .  
+4.  Configure a execução do pacote usando as configurações nas guias **parâmetros**, **gerenciadores de conexões**e **avançado** na caixa de diálogo **executar pacote** .  
   
 5.  Clique em **OK** para executar o pacote.  
   

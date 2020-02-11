@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083507"
 ---
 # <a name="mining-model-properties"></a>Propriedades do modelo de mineração
@@ -39,7 +39,7 @@ ms.locfileid: "66083507"
 ## <a name="properties-of-models"></a>Propriedades de modelos  
  A tabela a seguir descreve as propriedades que são específicas para modelos de mineração. Adicionalmente, há propriedades que você pode definir em colunas individuais na mineração  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**Algoritmo**|Define o tipo de algoritmo do modelo de mineração.|  
 |**AlgorithmParameters**|Define valores para os parâmetros dos algoritmos disponíveis para cada tipo de algoritmo.|  
@@ -50,17 +50,17 @@ ms.locfileid: "66083507"
 ## <a name="properties-of-model-columns"></a>Propriedades das colunas de modelo  
  Você pode definir as seguintes propriedades específicas da mineração de dados para cada coluna em um modelo de mineração. Você pode definir essas propriedades com um valor diferente em cada modelo de mineração em uma estrutura de mineração.  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**Descrição**|Descreve a finalidade da coluna de mineração.|  
 |**Nome**|Define o nome da coluna do modelo de mineração. Você pode digitar um novo nome, para fornecer um alias à coluna do modelo de mineração.|  
 |**ModelingFlags**|Define qualquer sinalizador específico de um algoritmo para a coluna.|  
-|**SourceColumnID**|Indica o nome da coluna de estrutura de mineração na qual a coluna de modelo é baseada.<br /><br /> Esta propriedade é somente leitura.|  
+|**SourceColumnID**|Indica o nome da coluna de estrutura de mineração na qual a coluna de modelo é baseada.<br /><br /> Essa propriedade é somente leitura.|  
 |**Usage**|Define como a coluna será usada pelo modelo de mineração.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Colunas do modelo de mineração](mining-model-columns.md)   
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
  [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)   
  [Alterar as propriedades de um modelo de mineração](change-the-properties-of-a-mining-model.md)   
  [Ferramentas de mineração de dados](data-mining-tools.md)   

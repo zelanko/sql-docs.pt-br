@@ -1,5 +1,5 @@
 ---
-title: Exibir eventos para o serviço Integration Services | Microsoft Docs
+title: Exibir eventos para o serviço de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054669"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Exibir eventos para o serviço do Integration Services
-  Há duas ferramentas nas quais você pode exibir eventos do serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
+  Há duas ferramentas nas quais você pode exibir eventos do serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  
   
 -   A caixa de diálogo **Visualizador do Arquivo de Log** em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. A caixa de diálogo **Visualizador do Arquivo de Log** inclui opções para exportar, filtrar e pesquisar o log. Para obter mais informações sobre as opções do **Visualizador do Arquivo de Log**, consulte [Ajuda F1 do Visualizador do Arquivo de Log](../relational-databases/logs/log-file-viewer-f1-help.md).  
   
@@ -62,8 +62,8 @@ ms.locfileid: "66054669"
   
 9. No menu **Arquivo** , clique em **Sair** para fechar a caixa de diálogo **Visualizador de Eventos** .  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciar o serviço Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciar o serviço de Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)   
  [Adicionar um log para contadores de desempenho de fluxo de dados](performance/performance-counters.md)  
   
   

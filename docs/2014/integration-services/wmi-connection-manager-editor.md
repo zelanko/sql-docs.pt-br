@@ -1,5 +1,5 @@
 ---
-title: Editor do Gerenciador de Conexão WMI | Microsoft Docs
+title: Editor do Gerenciador de conexões WMI | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054477"
 ---
 # <a name="wmi-connection-manager-editor"></a>Editor do Gerenciador de Conexões WMI
@@ -39,7 +39,7 @@ ms.locfileid: "66054477"
  **Namespace**  
  Especifique o namespace WMI.  
   
- **Usar a autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Selecione para usar Autenticação do Windows. Se usar Autenticação do Windows, não será preciso fornecer um nome de usuário nem senha para a conexão.  
   
  **Nome de usuário**  
@@ -51,7 +51,7 @@ ms.locfileid: "66054477"
  **Testar**  
  Teste as configurações do gerenciador de conexões.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Provedor WMI para conceitos de gerenciamento de configuração](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Provedor WMI para conceitos de eventos de servidor](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  

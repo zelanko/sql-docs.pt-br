@@ -14,23 +14,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 74fcbb6fb9e9f4fe3f2b50f5fb434cbae6491113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091477"
 ---
 # <a name="upgrade-how-to-topics"></a>Tópicos de informações práticas sobre atualização
   Os tópicos desta seção descrevem como atualizar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;programa de instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|O tópico de procedimento para atualizar uma instância autônoma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|[Atualize para o SQL Server 2014 usando o assistente de instalação &#40;a instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|O tópico de procedimento para atualizar uma instância autônoma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Atualizar uma instância de cluster de failover do SQL Server &#40;instalação&#41;](../failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|O tópico de procedimento para atualizar uma instância de um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|[Instalar o SQL Server 2014 do Prompt de Comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|Fornece sintaxe de exemplo para instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em um prompt de comando.|  
+|[Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|Fornece sintaxe de exemplo para instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em um prompt de comando.|  
   
-## <a name="see-also"></a>Consulte também  
- [Minimizar o tempo de inatividade para bancos de dados espelhados ao atualizar instâncias do servidor](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Minimizar o tempo de inatividade para bancos de dados espelhados ao atualizar instâncias de servidor](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)   
  [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Compatibilidade com versões anteriores](../../../2014/getting-started/backward-compatibility.md)  
   

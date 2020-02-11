@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de largura de coluna (SSAS) | Microsoft Docs
+title: Caixa de diálogo largura da coluna (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74dbfad1126f344c20179459feaf8932a03f6d0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087831"
 ---
 # <a name="column-width-dialog-box-ssas"></a>Caixa de diálogo Largura da Coluna (SSAS)
   A caixa de diálogo **Largura da Coluna** permite que você especifique a largura de uma coluna no designer de modelo. Para acessar essa caixa de diálogo, clique com o botão direito do mouse em uma coluna e clique em **Largura da Coluna**. Para que a coluna se ajuste automaticamente ao tamanho do conteúdo da coluna, clique duas vezes na linha de grade na borda direita da coluna.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Largura da coluna**  
+ **Largura da Coluna**  
  Digite o número de pixels da largura da coluna.  
   
   

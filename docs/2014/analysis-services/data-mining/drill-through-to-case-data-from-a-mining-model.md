@@ -1,5 +1,5 @@
 ---
-title: Detalhar dados do caso de um modelo de mineração | Microsoft Docs
+title: Detalhar os dados de caso de um modelo de mineração | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084607"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Detalhar dados do caso a partir do modelo de mineração
@@ -31,16 +31,16 @@ ms.locfileid: "66084607"
   
 |Nome do visualizador|Painel ou nome da guia|Selecionar nó|  
 |-----------------|----------------------|-----------------|  
-|**Visualizador de árvores da Microsoft**|Guia**Árvore de Decisão**|Clique em um nó de árvore.<br /><br /> **Observação** Evite usar o detalhamento no `All` nó, porque pode levar muito tempo para retornar os resultados.|  
-|**Visualizador de cluster da Microsoft**|**Diagrama de Cluster**|Clique em um nó de cluster.|  
-|**Visualizador de cluster da Microsoft**|**Perfis de Cluster**|Clique em qualquer parte da coluna de cluster.|  
-|**Visualizador de Associação da Microsoft**|Guia**Regras**|Clique em uma linha que contém um conjunto de regras.|  
-|**Visualizador de Associação da Microsoft**|Guia**Conjuntos de Itens**|Clique em uma linha que contém um conjunto de itens.|  
-|**Visualizador de Cluster de Sequência da Microsoft**|Guia**Regras**|Clique em uma linha que contém um conjunto de regras.|  
-|**Visualizador de Cluster de Sequência da Microsoft**|Guia**Conjuntos de Itens**|Clique em uma linha que contém um conjunto de itens.|  
+|**Visualizador de árvore da Microsoft**|Guia **árvore de decisão**|Clique em um nó de árvore.<br /><br /> **Observação** Evite usar o `All` detalhamento no nó, pois pode levar muito tempo para retornar resultados.|  
+|**Visualizador de cluster da Microsoft**|**Diagrama de cluster**|Clique em um nó de cluster.|  
+|**Visualizador de cluster da Microsoft**|**Perfis de cluster**|Clique em qualquer parte da coluna de cluster.|  
+|**Visualizador de associação da Microsoft**|Guia **regras**|Clique em uma linha que contém um conjunto de regras.|  
+|**Visualizador de associação da Microsoft**|Guia **conjuntos** de itens|Clique em uma linha que contém um conjunto de itens.|  
+|**Visualizador de clustering de sequência da Microsoft**|Guia **regras**|Clique em uma linha que contém um conjunto de regras.|  
+|**Visualizador de clustering de sequência da Microsoft**|Guia **conjuntos** de itens|Clique em uma linha que contém um conjunto de itens.|  
   
 > [!NOTE]  
->  Alguns modelos não podem usar detalhamento. A capacidade de usar detalhamento depende do algoritmo utilizado para criar o modelo. Para obter uma lista dos tipos de modelo de mineração que dão suporte ao drillthrough, consulte [Drillthrough Queries &#40;Data Mining&#41;](drillthrough-queries-data-mining.md).  
+>  Alguns modelos não podem usar detalhamento. A capacidade de usar detalhamento depende do algoritmo utilizado para criar o modelo. Para obter uma lista dos tipos de modelo de mineração que dão suporte ao drillthrough, consulte [Consultas de detalhamento &#40;Mineração de dados&#41;](drillthrough-queries-data-mining.md).  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>Para exibir dados de detalhamento de um modelo de mineração  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66084607"
   
 6.  Para copiar os dados para a Área de Transferência, clique com o botão direito do mouse na tabela e selecione **Copiar Tudo**.  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas de detalhamento &#40;Mineração de dados&#41;](drillthrough-queries-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Consultas de detalhamento &#40;mineração de dados&#41;](drillthrough-queries-data-mining.md)  
   
   

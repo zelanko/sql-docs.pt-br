@@ -1,5 +1,5 @@
 ---
-title: core.sp_purge_data (Transact-SQL) | Microsoft Docs
+title: Core. sp_purge_data (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942497"
 ---
-# <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
+# <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Remove dados do data warehouse de gerenciamento com base em uma política de retenção. Este procedimento é executado diariamente pelo trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent mdw_purge_data em relação ao data warehouse de gerenciamento associado à instância especificada. Você pode usar esse procedimento armazenado para executar uma remoção sob demanda de dados do data warehouse de gerenciamento.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,18 +47,18 @@ core.sp_purge_data
   
 ## <a name="arguments"></a>Argumentos  
  [@retention_days =] *retention_days*  
- O número de dias para reter dados nas tabelas do data warehouse de gerenciamento. Dados com um carimbo de hora anterior a *retention_days* é removido. *retention_days* está **smallint**, com um padrão NULL. Se especificado, o valor deverá ser positivo. Quando NULL, o valor na coluna valid_through no modo de exibição snapshots determina as linhas que estão qualificadas para remoção.  
+ O número de dias para reter dados nas tabelas do data warehouse de gerenciamento. Os dados com um carimbo de data/hora mais antigo que *retention_days* são removidos. *retention_days* é **smallint**, com um padrão de NULL. Se especificado, o valor deverá ser positivo. Quando NULL, o valor na coluna valid_through na exibição core. Snapshots determina as linhas qualificadas para remoção.  
   
- [@instance_name =] '*instance_name*'  
- O nome da instância do conjunto de coleta. *nome_da_instância* está **sysname**, com um padrão NULL.  
+ [@instance_name = ] '*instance_name*'  
+ O nome da instância do conjunto de coleta. *instance_name* é **sysname**, com um padrão de NULL.  
   
- *nome_da_instância* deve ser o nome totalmente qualificado da instância, que consiste o nome do computador e o nome da instância no formato *computername*\\*instancename*. Quando NULL, a instância padrão no servidor local será usada.  
+ *instance_name* deve ser o nome de instância totalmente qualificado, que consiste no nome do computador e no nome da instância no formato *ComputerName*\\*InstanceName*. Quando NULL, a instância padrão no servidor local será usada.  
   
- [@collection_set_uid =] '*collection_set_uid*'  
- O GUID do conjunto de coleta. *collection_set_uid* está **uniqueidentifier**, com um padrão NULL. Quando NULL, as linhas de qualificação de todos os conjuntos de coleta serão removidas. Para obter esse valor, consulte a exibição do catálogo syscollector_collection_sets.  
+ [@collection_set_uid = ] '*collection_set_uid*'  
+ O GUID do conjunto de coleta. *collection_set_uid* é **uniqueidentifier**, com um padrão de NULL. Quando NULL, as linhas de qualificação de todos os conjuntos de coleta serão removidas. Para obter esse valor, consulte a exibição do catálogo syscollector_collection_sets.  
   
- [@duration =] *duração*  
- O número máximo de minutos em que a operação de limpeza deve ser executada. *duração* está **smallint**, com um padrão NULL. Se especificado, o valor deve ser zero ou um inteiro positivo. Quando NULL, a operação será executada até que todas as linhas qualificadas sejam removidas ou que a operação seja interrompida manualmente.  
+ [@duration = ] *duração*  
+ O número máximo de minutos em que a operação de limpeza deve ser executada. a *duração* é **smallint**, com um padrão de NULL. Se especificado, o valor deve ser zero ou um inteiro positivo. Quando NULL, a operação será executada até que todas as linhas qualificadas sejam removidas ou que a operação seja interrompida manualmente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -66,16 +66,16 @@ core.sp_purge_data
 ## <a name="remarks"></a>Comentários  
  Este procedimento seleciona linhas na exibição core.snapshots que se qualificam para remoção com base em um período de retenção. Todas as linhas qualificadas para remoção são excluídas da tabela core.snapshots_internal. A exclusão das linhas precedentes dispara a ação de exclusão em cascata em todas as tabelas do data warehouse de gerenciamento. Isso é feito por meio da cláusula ON DELETE CASCADE definida para todas as tabelas que armazenam dados coletados.  
   
- Cada instantâneo e seus dados associados são excluídos dentro de uma transação explícita e confirmados. Portanto, se a operação de limpeza for interrompida manualmente ou se o valor especificado para @duration for excedido, o dados não confirmados permanecerão. Esses dados podem ser removidos na próxima execução do trabalho.  
+ Cada instantâneo e seus dados associados são excluídos dentro de uma transação explícita e confirmados. Portanto, se a operação de limpeza for interrompida manualmente ou se o valor @duration especificado para for excedido, somente os dados não confirmados permanecerão. Esses dados podem ser removidos na próxima execução do trabalho.  
   
  O procedimento deve ser executado no contexto do banco de dados do data warehouse de gerenciamento.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **mdw_admin** (com permissão EXECUTE) a função de banco de dados fixa.  
+ Requer associação na função de banco de dados fixa **mdw_admin** (com permissão de execução).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-running-sppurgedata-with-no-parameters"></a>A. Executando sp_purge_data sem nenhum parâmetro  
+### <a name="a-running-sp_purge_data-with-no-parameters"></a>a. Executando sp_purge_data sem nenhum parâmetro  
  O exemplo a seguir executa core.sp_purge_data sem especificar nenhum parâmetro. Portanto, o valor padrão de NULL é usado para todos os parâmetros com o comportamento associado.  
   
 ```  
@@ -85,7 +85,7 @@ GO
 ```  
   
 ### <a name="b-specifying-retention-and-duration-values"></a>B. Especificando valores de retenção e duração  
- O exemplo a seguir remove os dados com mais de sete dias do data warehouse de gerenciamento. Além disso, o @duration parâmetro for especificado, para que a operação seja executada mais do que 5 minutos.  
+ O exemplo a seguir remove os dados com mais de sete dias do data warehouse de gerenciamento. Além disso, o @duration parâmetro é especificado para que a operação seja executada em não mais de 5 minutos.  
   
 ```  
 USE <management_data_warehouse>;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. Especificando um nome de instância e um conjunto de coleta  
- O exemplo a seguir remove os dados do data warehouse de gerenciamento para um determinado conjunto de coleta na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porque @retention_days não for especificado, o valor na coluna valid_through no modo de exibição snapshots é usado para determinar as linhas no conjunto de coleta que estão qualificadas para remoção.  
+ O exemplo a seguir remove os dados do data warehouse de gerenciamento para um determinado conjunto de coleta na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como @retention_days não é especificado, o valor na coluna valid_through na exibição core. Snapshots é usado para determinar as linhas do conjunto de coleta que são elegíveis para remoção.  
   
 ```  
 USE <management_data_warehouse>;  
@@ -107,7 +107,7 @@ EXECUTE core.sp_purge_data @instance_name = @@SERVERNAME, @collection_set_uid = 
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

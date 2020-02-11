@@ -1,5 +1,5 @@
 ---
-title: Eixos de coleção (ADO MD) | Microsoft Docs
+title: Coleção Axes (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,33 +17,33 @@ ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c06faf6327d60be823ce9d99215655b5badf5e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947401"
 ---
 # <a name="axes-collection-ado-md"></a>Coleção Axes (ADO MD)
-Contém o [eixo](../../../ado/reference/ado-md-api/axis-object-ado-md.md) objetos que definem um conjunto de células.  
+Contém os objetos [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) que definem um células.  
   
 ## <a name="remarks"></a>Comentários  
- Um [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto contém uma **eixos** coleção. Uma vez a **Cellset** é aberto, essa coleção conterá pelo menos um **eixo**. Consulte a [eixo](../../../ado/reference/ado-md-api/axis-object-ado-md.md) objeto para obter uma explicação mais detalhada de como usar **eixo** objetos.  
+ Um objeto [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) contém uma coleção de **eixos** . Depois que o **células** for aberto, essa coleção conterá pelo menos um **eixo**. Consulte o objeto [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) para obter uma explicação mais detalhada de como usar objetos **Axis** .  
   
 > [!NOTE]
->  Eixo do filtro de uma **Cellset** não está contido na **eixos** coleção. Consulte a [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) propriedade para obter mais informações.  
+>  O eixo de filtro de um **células** não está contido na coleção de **eixos** . Consulte a propriedade [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) para obter mais informações.  
   
- **Eixos** é uma coleção padrão de ADO. Com as propriedades e métodos de uma coleção, você pode fazer o seguinte:  
+ **Eixos** é uma coleção ADO padrão. Com as propriedades e métodos de uma coleção, você pode fazer o seguinte:  
   
--   Obter o número de objetos na coleção com o [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade.  
+-   Obtenha o número de objetos na coleção com a propriedade [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Retornar um objeto da coleção com o padrão [Item](../../../ado/reference/ado-api/item-property-ado.md) propriedade.  
+-   Retornar um objeto da coleção com a propriedade de [Item](../../../ado/reference/ado-api/item-property-ado.md) padrão.  
   
--   Atualizar os objetos na coleção do provedor com o [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) método.  
+-   Atualize os objetos na coleção do provedor com o método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
  Esta seção contém o tópico a seguir.  
   
 -   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/axes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo de conjunto de células (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo de células (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Objeto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

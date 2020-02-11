@@ -20,23 +20,23 @@ ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37fd7f3f9cd69dd3702a19bd390ee6601a75dd44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965008"
 ---
 # <a name="updaterule-property-adox"></a>Propriedade UpdateRule (ADOX)
-Indica a ação executada quando um primário [chave](../../../ado/reference/adox-api/key-object-adox.md) é atualizado.  
+Indica a ação executada quando uma [chave](../../../ado/reference/adox-api/key-object-adox.md) primária é atualizada.  
   
-## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
- Define e retorna um **longo** valor que pode ser um dos [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) constantes. O valor padrão é **adRINone**.  
+## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
+ Define e retorna um valor **longo** que pode ser uma das constantes [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) . O valor padrão é **adRINone**.  
   
 ## <a name="remarks"></a>Comentários  
- Essa propriedade é somente leitura no [chave](../../../ado/reference/adox-api/key-object-adox.md) já foi acrescentados à coleção de objetos.  
+ Esta propriedade é somente leitura em objetos de [chave](../../../ado/reference/adox-api/key-object-adox.md) já anexados à coleção.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo das propriedades UpdateRule e RelatedTable, RelatedColumn, Key Type e do método Keys Append (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

@@ -14,17 +14,17 @@ ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 86ebb27ebdc5de5a045304afe45cd8653e491827
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963868"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
-Retorna um ponteiro para a interface solicitada em uma versão mais robustos do objeto.  
+Retorna um ponteiro para a interface solicitada em uma versão mais compatível do objeto.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,29 +33,29 @@ Retorna um ponteiro para a interface solicitada em uma versão mais robustos do 
 object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown** ppunkMoreFunctionalInterface) As HRESULT  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *riid*  
   
- [in] O identificador da interface que está sendo solicitado.  
+ no O identificador da interface que está sendo solicitada.  
   
  *punkNotSoFunctionalInterface*  
   
- [in] O objeto de origem com menor capacidade.  
+ no O objeto de fonte menos compatível.  
   
  *ppunkMoreFunctionalInterface*  
   
- [out] O endereço da variável de ponteiro que recebe o ponteiro de interface solicitado no *riid*. No retorno bem-sucedido, o *ppunkMoreFunctionalInterface* parâmetro contém o ponteiro de interface solicitada para o objeto. Se o objeto não dá suporte a interface especificada na *riid*, *ppunkMoreFunctionalInterface* é definido como NULL.  
+ fora O endereço da variável de ponteiro que recebe o ponteiro de interface solicitado em *riid*. Após o retorno bem-sucedido, o parâmetro *ppunkMoreFunctionalInterface* contém o ponteiro de interface solicitado para o objeto. Se o objeto não oferecer suporte à interface especificada em *riid*, *ppunkMoreFunctionalInterface* será definido como NULL.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor HRESULT que indica se a chamada para o **InvokeService** método foi bem-sucedida.  
+ Um valor HRESULT que indica se a chamada para o método **InvokeService** foi bem-sucedida.  
   
 ## <a name="remarks"></a>Comentários  
- A implementação do mecanismo de cursor RDS do **InvokeService** usa o conjunto de linhas de entrada (ou o objeto de vários resultados), preenche o mecanismo de cursor do conjunto de linhas de entrada e, em seguida, retorna um ponteiro em si mesmo.  
+ A implementação do mecanismo de cursor do RDS de **InvokeService** usa o conjunto de linhas de entrada (ou um objeto de resultados múltiplos), popula o mecanismo de cursor do conjunto de linhas de entrada e, em seguida, retorna um ponteiro para si mesmo.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Interface IRDSService (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos RDS](../../../ado/reference/rds-api/rds-methods.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de processamento de dimensões (página Gerenciador de Conexão) | Microsoft Docs
+title: Editor de destino de processamento de dimensões (página Gerenciador de conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059441"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>Editor de Destino de Processamento de Dimensões (página Gerenciador de Conexões)
@@ -30,7 +30,7 @@ ms.locfileid: "66059441"
  **Connection manager**  
  Selecione um gerenciador de conexões existente na lista ou clique em **Novo** para criar um novo gerenciador de conexões.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão usando a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** .  
   
  **Lista de dimensões disponíveis**  
@@ -39,15 +39,15 @@ ms.locfileid: "66059441"
  **Método de processamento**  
  Selecione o método de processamento a aplicar à dimensão selecionada na lista. O valor padrão desta opção é **Completo**.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Adicionar (incremental)**|Execute um processamento com incremento da dimensão.|  
-|**Completo**|Execute um processamento completo da dimensão.|  
-|**Update (atualizar)**|Execute um processamento de atualização da dimensão.|  
+|**Full**|Execute um processamento completo da dimensão.|  
+|**Cumulativo**|Execute um processamento de atualização da dimensão.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Destino de Processamento de Dimensões &#40;página Mapeamentos&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [Editor de Destino de Processamento de Dimensões &#40;Página Avançado&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [Editor de destino de processamento de dimensões &#40;página Mapeamentos&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
+ [Editor de destino de processamento de dimensões &#40;página avançado&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

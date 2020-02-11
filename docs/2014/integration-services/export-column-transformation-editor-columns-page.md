@@ -1,5 +1,5 @@
 ---
-title: Exportar Editor de transformação de coluna (página colunas) | Microsoft Docs
+title: Editor de transformação exportar coluna (página colunas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d5e37211471285e971ba29bc3419e759b0c7af7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059009"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Editor de Transformação Exportar Colunas (página Colunas)
@@ -27,23 +27,23 @@ ms.locfileid: "66059009"
  Para saber mais sobre a transformação Exportar Coluna, consulte [Export Column Transformation](data-flow/transformations/export-column-transformation.md).  
   
 ## <a name="options"></a>Opções  
- **Extrair Coluna**  
+ **Extrair coluna**  
  Selecione na lista de colunas de entrada que contêm dados de texto ou de imagem. Todas as linhas devem ter definições para **Extrair Coluna** e **Coluna de Caminho de Arquivos**.  
   
- **Coluna de Caminho de Arquivos**  
+ **Coluna de caminho de arquivo**  
  Selecione na lista de colunas de entrada que contêm caminhos e nomes de arquivo. Todas as linhas devem ter definições para **Extrair Coluna** e **Coluna de Caminho de Arquivos**.  
   
- **Permitir Acréscimo**  
+ **Permitir acréscimo**  
  Especifique se a transformação acrescenta dados a arquivos existentes. O padrão é `false`.  
   
- **Forçar Truncamento**  
+ **Forçar truncamento**  
  Especifique se a transformação exclui o conteúdo dos arquivos existentes antes de gravar dados. O padrão é `false`.  
   
- **Gravar BOM**  
+ **Escrever BOM**  
  Especifique se deve ser gravada uma BOM (marca de ordem de byte) no arquivo. Uma BOM só é gravada se os dados forem do tipo `DT_NTEXT`ou DT_WSTR e não estiverem anexados a um arquivo de dados existente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Exportar Editor de Transformação Colunas &#40;Página Saída de Erro&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [Editor de transformação exportar coluna &#40;página saída de erro&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

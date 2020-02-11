@@ -1,5 +1,5 @@
 ---
-title: Editor da tarefa de trabalhos (página trabalhos) transferir | Microsoft Docs
+title: Editor da tarefa Transferir trabalhos (página trabalhos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43066d036a23a063c218234b3a346bf89560994f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054985"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Editor da Tarefa Transferir Trabalhos (página Trabalhos)
@@ -29,22 +29,22 @@ ms.locfileid: "66054985"
   
 ## <a name="options"></a>Opções  
  **SourceConnection**  
- Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de origem.  
+ Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de origem.  
   
  **DestinationConnection**  
- Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de destino.  
+ Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de destino.  
   
  **TransferAllJobs**  
  Selecione se a tarefa deve copiar todas ou apenas os trabalhos de Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificados do servidor de origem para o servidor de destino.  
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Verdadeiro**|Copia todas as tarefas.|  
 |**Falso**|Copia apenas os trabalhos especificados.|  
   
- **JobsList**  
+ **Trabalhos**  
  Clique no botão Procurar **(...)** para selecionar os trabalhos a serem copiados. Pelo menos um trabalho deve ser selecionado.  
   
 > [!NOTE]  
@@ -57,7 +57,7 @@ ms.locfileid: "66054985"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**FailTask**|A tarefa irá falhar se já existirem trabalhos com o mesmo nome no servidor de destino.|  
 |**Overwrite**|A tarefa irá substituir trabalhos de mesmo nome no servidor de destino.|  
@@ -68,16 +68,16 @@ ms.locfileid: "66054985"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Verdadeiro**|Habilita trabalhos no servidor de destino.|  
 |**Falso**|Desabilita trabalhos no servidor de destino.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
  [Editor da Tarefa Transferir Trabalhos &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expressões](expressions/expressions-page.md)   
- [Gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
+ [gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
   
   

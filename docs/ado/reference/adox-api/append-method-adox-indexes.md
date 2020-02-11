@@ -1,5 +1,5 @@
 ---
-title: Método (índices do ADOX) append | Microsoft Docs
+title: Método Append (índices ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef30faf0fef05c4e86ffb4d2c21781592094c198
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967305"
 ---
 # <a name="append-method-adox-indexes"></a>Método Append (Índices do ADOX)
-Adiciona um novo [índice](../../../ado/reference/adox-api/index-object-adox.md) do objeto para o [índices](../../../ado/reference/adox-api/indexes-collection-adox.md) coleção.  
+Adiciona um novo objeto de [índice](../../../ado/reference/adox-api/index-object-adox.md) à coleção de [índices](../../../ado/reference/adox-api/indexes-collection-adox.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,27 +32,27 @@ Adiciona um novo [índice](../../../ado/reference/adox-api/index-object-adox.md)
 Indexes.Append Index [,Columns]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Index*  
- O **índice** objeto a ser acrescentado ou o nome do índice para criar e anexar.  
+ O objeto de **índice** a ser acrescentado ou o nome do índice a ser criado e acrescentado.  
   
  *Colunas*  
- Opcional. Um **Variant** valor que especifica os nomes de colunas a serem indexados. O *colunas* parâmetro corresponde do valor (es) da [nome](../../../ado/reference/adox-api/name-property-adox.md) propriedade de um [coluna](../../../ado/reference/adox-api/column-object-adox.md) ou mais objetos.  
+ Opcional. Um valor de **variante** que especifica os nomes das colunas a serem indexadas. O parâmetro *Columns* corresponde ao (s) valor (es) da propriedade [Name](../../../ado/reference/adox-api/name-property-adox.md) de um objeto ou objetos [Column](../../../ado/reference/adox-api/column-object-adox.md) .  
   
 ## <a name="remarks"></a>Comentários  
- O *colunas* parâmetro pode assumir o nome de uma coluna ou uma matriz de nomes de coluna.  
+ O parâmetro *Columns* pode ter o nome de uma coluna ou uma matriz de nomes de coluna.  
   
- Se o provedor não dá suporte a criação de índices, ocorrerá um erro.  
+ Ocorrerá um erro se o provedor não der suporte à criação de índices.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Coleção Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo (VB) do método Indexes Append](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
- [Acrescentar o método (colunas do ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Acrescentar o método (grupos do ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Acrescentar o método (chaves do ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Acrescentar o método (procedimentos do ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Acrescentar o método (tabelas do ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Acrescentar o método (usuários do ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo do método Indexes Append (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+ [Método Append (colunas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Método Append (grupos ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Método Append (chaves ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Método Append (procedimentos do ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Método Append (tabelas ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Método Append (usuários do ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Método Append (Exibições do ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

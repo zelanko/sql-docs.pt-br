@@ -16,34 +16,34 @@ ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf2b072acfda34ebdcafc1af82cd90c6be5d2537
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939967"
 ---
 # <a name="axis-object-ado-md"></a>Objeto Axis (ADO MD)
-Representa um posicional ou eixo do filtro de um conjunto de células que contêm membros selecionados de uma ou mais dimensões.  
+Representa um eixo de posição ou de filtro de um células, que contém os membros selecionados de uma ou mais dimensões.  
   
 ## <a name="remarks"></a>Comentários  
- Um **eixo** objeto pode ser contido por um [eixos](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) coleção, ou retornada pelo [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) propriedade de um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+ Um objeto de **eixo** pode ser contido por uma coleção de [eixos](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) ou retornado pela propriedade [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) de um [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
- Com as coleções e propriedades de um **eixo** do objeto, você pode fazer o seguinte:  
+ Com as coleções e propriedades de um objeto **Axis** , você pode fazer o seguinte:  
   
--   Identificar o **eixo** com o [nome](../../../ado/reference/ado-md-api/name-property-ado-md.md) propriedade.  
+-   Identifique o **eixo** com a propriedade [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) .  
   
--   Iterar em cada posição ao longo de um **eixo** usando o [posições](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) coleção.  
+-   Iterar em cada posição ao longo de um **eixo** usando a coleção [Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) .  
   
--   Obter o número de dimensões na **eixo** com o [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) propriedade.  
+-   Obtenha o número de dimensões no **eixo** com a propriedade [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) .  
   
--   Obter atributos específicos do provedor do **eixo** com o padrão ADO [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção.  
+-   Obtenha atributos específicos do provedor do **eixo** com a coleção de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) padrão do ADO.  
   
  Esta seção contém o tópico a seguir.  
   
 -   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo Axis (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo de eixo (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Coleção Axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Coleção Positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
  [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

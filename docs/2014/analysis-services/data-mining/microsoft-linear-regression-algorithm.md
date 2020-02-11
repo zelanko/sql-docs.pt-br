@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Regressão Linear da Microsoft | Microsoft Docs
+title: Algoritmo de regressão linear da Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df1b3616a85d93b4c5fa814ee759880077c03b8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084037"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Regressão Linear da Microsoft
@@ -27,7 +27,7 @@ ms.locfileid: "66084037"
   
  A relação assume a forma de uma equação para uma linha que melhor represente uma série de dados. Por exemplo, a linha no diagrama a seguir é a melhor representação linear possível dos dados.  
   
- ![Uma linha que modela um conjunto de dados](../media/linear-regression.gif "uma linha que modela um conjunto de dados")  
+ ![Uma linha que modela um conjunto de dados](../media/linear-regression.gif "Uma linha que modela um conjunto de dados")  
   
  Cada ponto de dados no diagrama tem um erro associado à sua distância da linha de regressão. Os coeficientes a e b na equação de regressão ajustam o ângulo e o local da linha de regressão. É possível obter a equação de regressão ajustando a e b até que a soma dos erros associados a todos os pontos atinja o menor número.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "66084037"
 ## <a name="data-required-for-linear-regression-models"></a>Dados requeridos para modelos de regressão linear  
  Ao preparar dados para usar em um modelo de regressão linear, você deve entender os requisitos para o algoritmo específico. Isso inclui a quantidade de dados necessária e a forma como os dados são usados. Os requisitos para este tipo de modelos são os seguintes:  
   
--   **Uma única coluna de chave** Cada modelo deve conter uma coluna de texto ou numérica que identifique unicamente cada registro. Não são permitidas chaves compostas.  
+-   **Uma única coluna de chave** Cada modelo deve conter uma coluna numérica ou de texto que identifique exclusivamente cada registro. Não são permitidas chaves compostas.  
   
--   **Uma coluna previsível** Requer, pelo menos, uma coluna previsível. Você pode incluir diversos atributos previsíveis em um modelo, mas eles devem ser tipos de dados numéricos contínuos. Não é possível usar um tipo de dados datetime como um atributo previsível, mesmo que o armazenamento nativo dos dados seja numérico.  
+-   **Uma coluna previsível** Requer pelo menos uma coluna previsível. Você pode incluir diversos atributos previsíveis em um modelo, mas eles devem ser tipos de dados numéricos contínuos. Não é possível usar um tipo de dados datetime como um atributo previsível, mesmo que o armazenamento nativo dos dados seja numérico.  
   
--   **Colunas de entrada** Colunas de entrada devem conter dados numéricos contínuos e devem ser atribuídas ao tipo de dados apropriado.  
+-   **Colunas de entrada** As colunas de entrada devem conter dados numéricos contínuos e receber o tipo de dados apropriado.  
   
  Para obter mais informações sobre esse algoritmo, consulte [Referência técnica do algoritmo Regressão Linear da Microsoft](microsoft-linear-regression-algorithm-technical-reference.md).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66084037"
   
  Se quiser obter mais detalhes sobre a equação, você também poderá exibir os coeficientes e outros detalhes usando o [Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
- No caso de um modelo de regressão linear, o conteúdo do modelo inclui metadados, a fórmula de regressão e as estatísticas sobre a distribuição de valores de entrada. Para obter mais informações, consulte [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
+ No caso de um modelo de regressão linear, o conteúdo do modelo inclui metadados, a fórmula de regressão e as estatísticas sobre a distribuição de valores de entrada. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Criando previsões  
  Depois que o modelo foi processado, os resultados são armazenados como um conjunto de estatísticas, juntamente com a fórmula de regressão linear que pode ser usada para computar tendências futuras. Para obter exemplos de consultas a serem usadas com um modelo de regressão linear, consulte [Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md).  
@@ -76,10 +76,10 @@ ms.locfileid: "66084037"
   
 -   Suporta o uso de modelos de mineração OLAP.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Referência técnica do algoritmo Regressão Linear da Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Referência técnica do algoritmo regressão linear da Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de regressão linear &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

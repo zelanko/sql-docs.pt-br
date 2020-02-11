@@ -1,5 +1,5 @@
 ---
-title: Prólogo do XQuery | Microsoft Docs
+title: Prólogo XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946604"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Módulos e prólogos – Prólogo XQuery
@@ -29,7 +29,7 @@ ms.locfileid: "67946604"
 
   Uma consulta XQuery é composta de prólogo e corpo. O prólogo do XQuery é uma série de declarações e definições que juntas criam o ambiente exigido para o processamento de consulta. No SQL Server, o prólogo do Xquery pode incluir declarações de namespace. O corpo do XQuery é constituído de uma sequência de expressões que especificam o resultado da consulta desejada.  
   
- Por exemplo, o XQuery a seguir é especificado na coluna Instructions da **xml** tipo que armazena instruções de fabricação como XML. A consulta recupera as instruções de produção para o local de centro de trabalho `10`. O `query()` método da **xml** tipo de dados é usado para especificar o XQuery.  
+ Por exemplo, o XQuery a seguir é especificado na coluna instruções do tipo **XML** que armazena as instruções de fabricação como XML. A consulta recupera as instruções de produção para o local de centro de trabalho `10`. O `query()` método do tipo de dados **XML** é usado para especificar o XQuery.  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -41,14 +41,15 @@ WHERE ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   O prólogo do XQuery inclui uma declaração de prefixo (AWMI) do namespace, `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
+-   O prólogo XQuery inclui uma declaração de prefixo de namespace (AWMI `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`),.  
   
 -   A palavra-chave `declare namespace` define um prefixo de namespace que depois é usado no corpo da consulta.  
   
--   `/AWMI:root/AWMI:Location[@LocationID="10"]` é o corpo da consulta.  
+-   
+  `/AWMI:root/AWMI:Location[@LocationID="10"]` é o corpo da consulta.  
   
 ## <a name="namespace-declarations"></a>Declarações de namespace  
- Uma declaração de namespace define um prefixo e o associa a um namespace URI, como mostrado na consulta a seguir. Na consulta, `CatalogDescription` é um **xml** coluna de tipo.  
+ Uma declaração de namespace define um prefixo e o associa a um namespace URI, como mostrado na consulta a seguir. Na consulta, `CatalogDescription` é uma coluna de tipo **XML** .  
   
  Ao especificar o XQuery nessa coluna, o prólogo da consulta especifica a declaração `declare namespace` para associar o prefixo `PD`, descrição de produto, ao namespace URI. Esse prefixo é então usado no corpo da consulta em vez do namespace URI. Os nós no XML resultante estão no namespace associado com o namespace URI.  
   
@@ -73,7 +74,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Para obter mais informações, consulte, [adicionar Namespaces a consultas com WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Para obter mais informações, consulte [Adicionar namespaces a consultas com with XMLnamespaces](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
 ### <a name="default-namespace-declaration"></a>Declarações de namespace padrão  
  Em vez de declarar um prefixo de namespace usando a declaração `declare namespace`, você pode usar a declaração `declare default element namespace` para associar um namespace padrão a nomes de elemento. Nesse caso, você não especifica nenhum prefixo.  
@@ -100,7 +101,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   

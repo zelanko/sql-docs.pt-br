@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs
+title: sys. dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e8fb59e9cfe636f6cab775fa2cb000c60ba08ad2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262608"
 ---
-# <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
+# <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna uma tabela virtual para os objetos que estão produzindo a maioria das versões no repositório de versão. **DM tran_top_version_generators** retorna os maiores 256 tamanhos de registros que são agrupados por agregados a **database_id** e **rowset_id**. **DM tran_top_version_generators** recupera dados consultando os **dm_tran_version_store** tabela virtual. **DM tran_top_version_generators** é uma exibição ineficiente para execução porque essa exibição consulta o repositório de versão e o armazenamento de versão pode ser muito grande. Recomendados que você use essa função para localizar os usuários que mais utilizam o armazenamento de versão.  
+  Retorna uma tabela virtual para os objetos que estão produzindo a maioria das versões no repositório de versão. **Sys. dm_tran_top_version_generators** retorna os principais tamanhos de registros agregados 256 que são agrupados pelo **database_id** e **rowset_id**. **Sys. dm_tran_top_version_generators** recupera dados consultando a tabela virtual **dm_tran_version_store** . **Sys. dm_tran_top_version_generators** é uma exibição ineficiente a ser executada porque essa exibição consulta o repositório de versão, e o repositório de versão pode ser muito grande. Recomendados que você use essa função para localizar os usuários que mais utilizam o armazenamento de versão.  
   
 > [!NOTE]  
->  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_tran_top_version_generators**.  
+>  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_tran_top_version_generators**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,20 +44,20 @@ sys.dm_tran_top_version_generators
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados.|  
 |**rowset_id**|**bigint**|ID do conjunto de linhas.|  
-|**aggregated_record_length_in_bytes**|**int**|Soma dos comprimentos de registro para cada **database_id** e **rowset_id pair** no repositório de versão.|  
-|**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**aggregated_record_length_in_bytes**|**int**|Soma dos tamanhos de registro para cada **database_id** e **rowset_id par** no repositório de versão.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões
 
-Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ## <a name="remarks"></a>Comentários  
- Porque **DM tran_top_version_generators** pode ter que ler muitas páginas enquanto examina o repositório de versão em execução **DM tran_top_version_generators** pode interferir com o sistema desempenho.  
+ Como **Sys. dm_tran_top_version_generators** pode ter que ler muitas páginas durante a verificação de todo o repositório de versão, a execução de **Sys. dm_tran_top_version_generators** pode interferir no desempenho do sistema.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa um cenário de teste no qual quatro transações simultâneas, cada uma identificada por um XSN (número de sequência de transação), estão sendo executadas em um banco de dados no qual as opções ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT estão definidas como ON. As seguintes transações estão sendo executadas:  
@@ -89,9 +89,9 @@ database_id rowset_id            aggregated_record_length_in_bytes
 9           72057594038386688    33  
 ```  
   
- A saída mostra que todas as versões são criadas por `database_id``9` e que as versões de geram a partir de duas tabelas.  
+ A saída mostra que todas as versões são criadas `database_id``9` pelo e que as versões geram de duas tabelas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à transação &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_active_catalogs (Transact-SQL) | Microsoft Docs
+title: sys. dm_fts_active_catalogs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -21,32 +21,32 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265975"
 ---
-# <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
+# <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna informações sobre os catálogos de texto completo que têm alguma atividade de população em andamento no servidor.  
   
 > [!NOTE]
->  As colunas a seguir serão removidas em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, status, status_description e worker_count. Evite usar essas colunas em novos projetos de desenvolvimento e planeje a modificação dos aplicativos que as utilizam atualmente.  
+>  As colunas a seguir serão removidas em uma versão [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]futura do: is_paused, previous_status, previous_status_description, row_count_in_thousands, status, status_description e worker_count. Evite usar essas colunas em novos projetos de desenvolvimento e planeje a modificação dos aplicativos que as utilizam atualmente.  
   
  
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados que contém o catálogo de texto completo ativo.|  
 |**catalog_id**|**int**|ID do catálogo de texto completo ativo.|  
-|**memory_address**|**varbinary(8)**|Endereço de buffers de memória alocado para a atividade de população relacionada a este catálogo de texto completo.|  
+|**memory_address**|**varbinary (8)**|Endereço de buffers de memória alocado para a atividade de população relacionada a este catálogo de texto completo.|  
 |**name**|**nvarchar(128)**|Nome do catálogo de texto completo ativo.|  
 |**is_paused**|**bit**|Indica se a população do catálogo de texto completo ativo está em pausa.|  
-|**status**|**int**|Estado atual do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
-|**status_description**|**nvarchar(120)**|Descrição do estado atual do catálogo de texto completo ativo.|  
+|**Estado**|**int**|Estado atual do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
+|**status_description**|**nvarchar (120)**|Descrição do estado atual do catálogo de texto completo ativo.|  
 |**previous_status**|**int**|Estado anterior do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
-|**previous_status_description**|**nvarchar(120)**|Descrição do estado anterior do catálogo de texto completo ativo.|  
+|**previous_status_description**|**nvarchar (120)**|Descrição do estado anterior do catálogo de texto completo ativo.|  
 |**worker_count**|**int**|Número de threads atualmente em execução neste catálogo de texto completo.|  
 |**active_fts_index_count**|**int**|Número de índices de texto completo que estão sendo populados.|  
 |**auto_population_count**|**int**|Número de tabelas com uma população automática em andamento para este catálogo de texto completo.|  
@@ -60,18 +60,18 @@ ms.locfileid: "68265975"
   
 ## <a name="permissions"></a>Permissões  
 
-Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
    
 ## <a name="physical-joins"></a>Junções físicas  
- ![Junções significativas dessa exibição de gerenciamento dinâmico](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "junções significativas dessa exibição de gerenciamento dinâmico")  
+ ![Junções significativas dessa exibição de gerenciamento dinâmico](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "Junções significativas dessa exibição de gerenciamento dinâmico")  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  
   
 |De|Para|Relação|  
 |----------|--------|------------------|  
-|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Um para um|  
-|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Um para um|  
+|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Um-para-um|  
+|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Um-para-um|  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna informações sobre os catálogos de texto completo ativos no banco de dados atual.  
@@ -91,8 +91,8 @@ AND catalog.database_id = (SELECT dbid FROM sys.sysdatabases WHERE name = DB_NAM
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  
- [Pesquisa de texto completo e funções e exibições de gerenciamento dinâmico de pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [Exibições e funções de gerenciamento dinâmico de pesquisa de texto completo e de pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

@@ -17,14 +17,14 @@ ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f3e5f5ae1c886f8d08d522fac19cee563efbb86c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932830"
 ---
 # <a name="fetchcomplete-event-ado"></a>Evento FetchComplete (ADO)
-O **FetchComplete** evento é chamado depois que todos os registros em uma operação assíncrona demorada foram recuperados para o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+O evento **FetchComplete** é chamado depois que todos os registros em uma operação assíncrona demorada tiverem sido recuperados no [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,21 +33,21 @@ O **FetchComplete** evento é chamado depois que todos os registros em uma opera
 FetchComplete pError, adStatus, pRecordset  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *pError*  
- Uma [erro](../../../ado/reference/ado-api/error-object.md) objeto. Ele descreve o erro ocorrido se o valor de **adStatus** é **adStatusErrorsOccurred**; caso contrário, ele não está definido.  
+ Um objeto de [erro](../../../ado/reference/ado-api/error-object.md) . Ele descreve o erro que ocorreu se o valor de **adStatus** for **adStatusErrorsOccurred**; caso contrário, ele não será definido.  
   
  *adStatus*  
- Uma [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de status. Quando esse evento é chamado, esse parâmetro é definido como **adStatusOK** se a operação que causou o evento foi bem-sucedida, ou para **adStatusErrorsOccurred** se a operação falhou.  
+ Um valor de status de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) . Quando esse evento for chamado, esse parâmetro será definido como **adStatusOK** se a operação que causou o êxito do evento ou **adStatusErrorsOccurred** se a operação falhou.  
   
- Antes de retorna a este evento, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
+ Antes desse evento retornar, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
   
- *pRecordset*  
- Um **Recordset** objeto. O objeto para o qual os registros foram recuperados.  
+ *precaboset*  
+ Um objeto **Recordset** . O objeto para o qual os registros foram recuperados.  
   
 ## <a name="remarks"></a>Comentários  
- Para usar **FetchComplete** com o Microsoft Visual Basic, Visual Basic 6.0 ou posterior é necessário.  
+ Para usar o **FetchComplete** com o Microsoft Visual Basic, é necessário ter o Visual Basic 6,0 ou posterior.  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo de modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo do modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)

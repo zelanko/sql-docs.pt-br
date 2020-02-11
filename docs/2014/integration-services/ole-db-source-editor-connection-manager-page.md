@@ -1,5 +1,5 @@
 ---
-title: Editor de origem OLE DB (página Gerenciador de Conexão) | Microsoft Docs
+title: Editor de origem de OLE DB (página Gerenciador de conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057052"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Editor de Origem OLE DB (página Gerenciador de Conexões)
@@ -30,7 +30,7 @@ ms.locfileid: "66057052"
 >  Para carregar dados de uma fonte de dados que usa o [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 ou uma versão anterior, use uma origem do Excel. Para obter mais informações, consulte [Editor de Fonte Excel &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md).  
   
 > [!NOTE]  
->  O `CommandTimeout` propriedade da origem OLE DB não está disponível na **Editor de origem OLE DB**, mas pode ser definida usando a **Editor Avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Propriedades personalizadas do OLE DB](data-flow/ole-db-custom-properties.md).  
+>  A `CommandTimeout` propriedade da fonte de OLE DB não está disponível no **Editor de fonte de OLE DB**, mas pode ser definida usando o **Editor avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Propriedades personalizadas do OLE DB](data-flow/ole-db-custom-properties.md).  
   
  Para saber mais sobre a origem de OLE DB, consulte [OLE DB Source](data-flow/ole-db-source.md).  
   
@@ -46,21 +46,21 @@ ms.locfileid: "66057052"
  **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
   
  **Modo de acesso aos dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |Tabela ou exibição|Recupere os dados de uma tabela ou exibição na fonte de dados OLE DB.|  
-|Nome da tabela ou variável do nome de exibição|Especifique a tabela ou nome de exibição em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Nome da tabela ou variável do nome de exibição|Especifique a tabela ou nome de exibição em uma variável.<br /><br /> **Informações relacionadas:** [usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Recupere os dados da fonte de dados OLE DB usando uma consulta SQL.|  
 |Comando SQL a partir da variável|Especifique o texto da consulta SQL em uma variável.|  
   
  **Visualização**  
- Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A**visualização** pode exibir até 200 linhas.  
+ Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A **Visualização** pode exibir até 200 linhas.  
   
 > [!NOTE]  
 >  Quando você visualiza os dados, as colunas com um tipo de dado CLR definido pelo usuário não contêm dados. Em vez disso, o valor \<valor muito grande para ser exibido> ou System.Byte[] é exibido. O primeiro é exibido quando a fonte de dados é acessada usando o provedor SQL OLE DB e o segundo, usando o provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
@@ -68,7 +68,7 @@ ms.locfileid: "66057052"
 ## <a name="data-access-mode-dynamic-options"></a>Opções dinâmicas de modo de acesso aos dados  
   
 ### <a name="data-access-mode--table-or-view"></a>Modo de acesso aos dados = Tabela ou exibição  
- **Nome da tabela ou da exibição**  
+ **Nome da tabela ou exibição**  
  Selecione o nome da tabela ou da exibição na lista de tabelas ou exibições disponíveis na fonte de dados.  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modo de acesso aos dados = Variável do nome da tabela ou do nome de exibição  
@@ -82,7 +82,7 @@ ms.locfileid: "66057052"
  **Parâmetros**  
  Se você inseriu uma consulta parametrizada usando ? como um espaço reservado para o parâmetro no texto da consulta, use a caixa de diálogo **Definir Parâmetros da Consulta** para mapear os parâmetros de entrada da consulta para as variáveis do pacote.  
   
- **Build query**  
+ **Compilar consulta**  
  Use a caixa de diálogo **Construtor de Consultas** para construir a consulta SQL visualmente.  
   
  **Procurar**  
@@ -95,11 +95,11 @@ ms.locfileid: "66057052"
  **Nome da variável**  
  Selecione a variável que contém o texto da consulta SQL.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Origem de OLE DB &#40;Página Colunas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [Editor de Origem OLE DB &#40;Página Saída de Erro&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [Extrair dados por meio da origem OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md)  
+ [Editor de fonte de OLE DB &#40;página colunas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Editor de origem OLE DB &#40;página saída de erro&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Extrair dados usando a fonte de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

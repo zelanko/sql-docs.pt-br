@@ -1,5 +1,5 @@
 ---
-title: sp_update_data_source (Transact-SQL) | Microsoft Docs
+title: Core. sp_update_data_source (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a840c749222cc7c01fa1b1ff5a27489e0e9d322a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942463"
 ---
-# <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
+# <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Atualiza uma linha existente ou insere uma nova linha na tabela core.source_info_internal do data warehouse de gerenciamento. Esse procedimento é chamado pelo componente de tempo de execução do coletor de dados sempre que um pacote de carregamento começa a carregar dados no data warehouse de gerenciamento.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,23 +46,23 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_uid =] '*collection_set_uid*'  
- O GUID do conjunto de coleta. *collection_set_uid* está **uniqueidentifier**, sem nenhum valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collection_sets no banco de dados msdb.  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
+ O GUID do conjunto de coleta. *collection_set_uid* é **uniqueidentifier**, sem valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collection_sets no banco de dados msdb.  
   
- [ @machine_name =] '*machine_name*'  
- O nome do servidor no qual o conjunto de coleta reside. *nome_do_computador* está **sysname** sem nenhum valor padrão.  
+ [ @machine_name = ] '*machine_name*'  
+ O nome do servidor no qual o conjunto de coleta reside. *machine_name* é **sysname** sem valor padrão.  
   
- [ @named_instance =] '*instância_nomeada*'  
- O nome da instância do conjunto de coleta. *instância_nomeada* está **sysname**, sem nenhum valor padrão.  
+ [ @named_instance = ] '*named_instance*'  
+ O nome da instância do conjunto de coleta. *named_instance* é **sysname**, sem valor padrão.  
   
 > [!NOTE]  
->  *instância_nomeada* deve ser o nome totalmente qualificado da instância, que consiste o nome do computador e o nome da instância no formato *computername*\\*instancename*.  
+>  *named_instance* deve ser o nome de instância totalmente qualificado, que consiste no nome do computador e no nome da instância no formato *ComputerName*\\*InstanceName*.  
   
- [ @days_until_expiration =] *days_until_expiration*  
- O número de dias restantes no período de retenção de dados do instantâneo. *days_until_expiration* está **smallint**.  
+ [ @days_until_expiration = ] *days_until_expiration*  
+ O número de dias restantes no período de retenção de dados do instantâneo. *days_until_expiration* é **smallint**.  
   
- [ @source_id =] *source_id*  
- O identificador exclusivo da origem da atualização. *source_id* está **int** e é retornada como OUTPUT.  
+ [ @source_id = ] *source_id*  
+ O identificador exclusivo da origem da atualização. *source_id* é **int** e é retornada como saída.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -75,7 +75,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 -   O valor de days_until_expiration foi alterado.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **mdw_writer** (com permissão EXECUTE) a função de banco de dados fixa.  
+ Requer associação na função de banco de dados fixa **mdw_writer** (com permissão de execução).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir atualiza a fonte de dados (nesse caso, o conjunto de coleta Uso do Disco), define o número de dias até a expiração e retorna o identificador da fonte. No exemplo, a instância padrão é usada.  
@@ -92,9 +92,9 @@ EXEC core.sp_update_data_source
 @source_id = @source_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Data warehouse de gerenciamento](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [data warehouse de gerenciamento](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Exemplo de Filter e RecordCount propriedades (VC + +) | Microsoft Docs
+title: Exemplo das propriedades Filter e RecordCount (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932664"
 ---
-# <a name="filter-and-recordcount-properties-example-vc"></a>Exemplo de Filter e RecordCount propriedades (VC + +)
-Este exemplo usa o [filtro](../../../ado/reference/ado-api/filter-property.md) para abrir uma nova [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base em uma condição específica aplicada a um existente **conjunto de registros**. Ele usa o [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) para mostrar o número de registros nos dois **conjuntos de registros**. A função FilterField é necessária executar este procedimento.  
+# <a name="filter-and-recordcount-properties-example-vc"></a>Exemplo das propriedades Filter e RecordCount (VC + +)
+Este exemplo usa a propriedade [Filter](../../../ado/reference/ado-api/filter-property.md) para abrir um novo [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base em uma condição especificada aplicada a um **conjunto de registros**existente. Ele usa a propriedade [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) para mostrar o número de registros nos dois **conjuntos de registros**. A função FilterField é necessária para que este procedimento seja executado.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -302,7 +302,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade de filtro](../../../ado/reference/ado-api/filter-property.md)   
  [Propriedade RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090694"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Assinar e verificar a política Nome Financeiro
@@ -22,9 +22,9 @@ ms.locfileid: "66090694"
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>Para assinar a categoria de políticas Finanças  
   
-1.  No Pesquisador de objetos, expanda **bancos de dados**, clique com botão direito `Finance`, aponte para **políticas**e, em seguida, clique em **categorias**.  
+1.  No Pesquisador de objetos, expanda **bancos de dados**, `Finance`clique com o botão direito do mouse, aponte para **políticas**e clique em **categorias**.  
   
-2.  Selecione o **inscrito** caixa de seleção para o `Finance` categoria.  
+2.  Marque a caixa de seleção **assinada** da `Finance` categoria.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -68,11 +68,11 @@ ms.locfileid: "66090694"
  Este tutorial mostrou como criar condições do Gerenciamento Baseado em Políticas, políticas e grupos de políticas e como aplicar filtros e verificar a compatibilidade de destinos de Gerenciamento Baseado em Políticas.  
   
 ## <a name="next"></a>Próximo  
- Este tutorial está concluído. Para retornar ao início, clique em [Tutorial: Administrando servidores com gerenciamento baseado em políticas](tutorial-administering-servers-by-using-policy-based-management.md).  
+ Este tutorial está concluído. Para retornar ao início, clique em [Tutorial: Administrando servidores com o Gerenciamento Baseado em Políticas](tutorial-administering-servers-by-using-policy-based-management.md).  
   
- Para obter uma lista de tutoriais, consulte [tutoriais para SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
+ Para obter uma lista de tutoriais, consulte os [tutoriais para SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](administer-servers-by-using-policy-based-management.md)  
   
   

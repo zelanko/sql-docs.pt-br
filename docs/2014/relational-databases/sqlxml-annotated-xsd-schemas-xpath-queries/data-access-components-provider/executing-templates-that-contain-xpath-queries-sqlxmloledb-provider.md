@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c4b5d51597f41b5355acd4995aaf7f988ed53a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013084"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Executando modelos que contêm consultas XPath (provedor SQLXMLOLEDB)
@@ -34,16 +34,16 @@ ms.locfileid: "66013084"
   
 -   Esquema de mapeamento  
   
- Neste aplicativo ADO de exemplo, um modelo XML que consiste em uma consulta XPath (raiz) é especificado no esquema de mapeamento XSD (MySchema. xml) que é descrito em [executar consultas de XPath &#40;provedor SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
+ Neste aplicativo ADO de exemplo, um modelo XML que consiste em uma consulta XPath (raiz) é especificado em relação ao esquema de mapeamento XSD (MySchema. xml) descrito em [executando consultas XPath &#40;provedor de SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).  
   
- A propriedade de esquema de mapeamento fornece o esquema de mapeamento XSD com relação à qual a consulta XPath é executada. A propriedade de caminho de Base fornece o caminho do arquivo para o esquema de mapeamento.  
+ A propriedade esquema de mapeamento fornece o esquema de mapeamento XSD no qual a consulta XPath é executada. A propriedade caminho base fornece o caminho do arquivo para o esquema de mapeamento.  
   
- A propriedade ClientSideXML é definida como True. Assim, o documento XML é gerado no cliente.  
+ A propriedade ClientSideXML é definida como true. Assim, o documento XML é gerado no cliente.  
   
  No aplicativo, uma consulta XPath é especificada diretamente. Portanto, o dialeto {5d531cb2-e6ed-11d2-b252-00c04f681b71} deve ser incluído.  
   
 > [!NOTE]  
->  No código, é necessário fornecer o nome da instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão. Além disso, este exemplo especifica o uso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para o provedor de dados que requer o software de cliente de rede adicionais a serem instalados. Para obter mais informações, consulte [requisitos de sistema do SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  No código, é necessário fornecer o nome da instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão. Além disso, este exemplo especifica o uso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente nativo (SQLNCLI11) para o provedor de dados que requer a instalação de um software cliente de rede adicional. Para obter mais informações, consulte [requisitos do sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

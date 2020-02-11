@@ -1,5 +1,5 @@
 ---
-title: Modos de exibição excluir exemplo de método (VB) | Microsoft Docs
+title: Exemplo do método Delete de views (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8077e22b2bdbd9fe55cca1ea7306443ee9d61ce7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964749"
 ---
 # <a name="views-delete-method-example-vb"></a>Exemplo do método Delete de exibições (VB)
-O código a seguir mostra como usar o [excluir](../../../ado/reference/adox-api/delete-method-adox-collections.md) método para excluir um modo de exibição do catálogo.  
+O código a seguir mostra como usar o método [delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) para excluir uma exibição do catálogo.  
   
 ```  
 ' BeginDeleteViewVB  
@@ -53,6 +53,6 @@ End Sub
 ' EndDeleteViewVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Excluir método (coleções do ADOX)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Método Delete (coleções do ADOX)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
  [Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

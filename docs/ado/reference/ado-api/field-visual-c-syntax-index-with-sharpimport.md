@@ -16,10 +16,10 @@ ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 587be8f0686cd7b2498080984d40e79c80bde898
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932693"
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>Campo (Visual C++ índice de sintaxe com #import)
@@ -79,5 +79,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)
+## <a name="see-also"></a>Consulte Também  
+ [Objeto Campo](../../../ado/reference/ado-api/field-object.md)

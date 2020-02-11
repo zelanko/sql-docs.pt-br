@@ -1,5 +1,5 @@
 ---
-title: Retornando a matriz de parâmetros de procedimentos armazenados | Microsoft Docs
+title: Retornando parâmetros de matriz de procedimentos armazenados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be89e4c9cc544048dada325c563ac1faa6cfd2d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987977"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>Retornar os parâmetros de matriz de procedimentos armazenados
 > [!IMPORTANT]  
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- Oracle 7.3, não há nenhuma maneira de acessar um tipo de registro de PL/SQL, exceto a partir de um programa de PL/SQL. Se uma função ou procedimento empacotado tem um argumento formal definido como um tipo de registro de PL/SQL, não é possível associar o argumento formal como um parâmetro. Use o tipo de tabela de PL/SQL no Microsoft ODBC Driver for Oracle para invocar os parâmetros da matriz de procedimentos que contém as sequências de escape corretos.  
+ No Oracle 7,3, não é possível acessar um tipo de registro PL/SQL, exceto por meio de um programa PL/SQL. Se um procedimento ou função empacotado tiver um argumento formal definido como um tipo de registro PL/SQL, não será possível associar esse argumento formal como um parâmetro. Use o tipo de tabela PL/SQL no Microsoft ODBC driver for Oracle para invocar parâmetros de matriz de procedimentos que contêm as sequências de escape corretas.  
   
  Para invocar o procedimento, use a seguinte sintaxe:  
   
@@ -35,13 +35,13 @@ ms.locfileid: "67987977"
 ```  
   
 > [!NOTE]  
->  O \<solicitado de registros de max > parâmetro deve ser maior que ou igual ao número de linhas presentes no conjunto de resultados. Caso contrário, o Oracle retornará um erro que é passado para o usuário pelo driver.  
+>  O \<parâmetro Max-Records-requested> deve ser maior ou igual ao número de linhas presentes no conjunto de resultados. Caso contrário, o Oracle retornará um erro que é passado para o usuário pelo driver.  
 >   
->  Registros de PL/SQL não podem ser usados como parâmetros de matriz. Cada parâmetro de matriz pode representar apenas uma coluna de uma tabela de banco de dados.  
+>  Os registros PL/SQL não podem ser usados como parâmetros de matriz. Cada parâmetro de matriz pode representar apenas uma coluna de uma tabela de banco de dados.  
   
  O exemplo a seguir define um pacote que contém dois procedimentos que retornam conjuntos de resultados diferentes e, em seguida, fornece duas maneiras de retornar conjuntos de resultados do pacote.  
   
-## <a name="package-definition"></a>Definição de pacote:  
+## <a name="package-definition"></a>Definição do pacote:  
   
 ```  
 CREATE OR REPLACE PACKAGE SimplePackage AS  
@@ -107,35 +107,35 @@ END SimplePackage;
   
 #### <a name="to-invoke-procedure-proc1"></a>Para invocar o procedimento PROC1  
   
-1.  Retorne todas as colunas em um único conjunto de resultados:  
+1.  Retornar todas as colunas em um único conjunto de resultados:  
   
     ```  
     {call SimplePackage.Proc1( {resultset  3, o_id , ao_course, ao_dept  } ) }  
     ```  
   
-2.  Retorne cada coluna como um único conjunto de resultados:  
+2.  Retornar cada coluna como um único conjunto de resultados:  
   
     ```  
     {call SimplePackage.Proc1( {resultset 3, o_id},  {resultset 3, ao_course}, {resultset 3, ao_dept} ) }  
     ```  
   
-     Isso retorna três conjuntos de resultados, uma para cada coluna.  
+     Isso retorna três conjuntos de resultados, um para cada coluna.  
   
 #### <a name="to-invoke-procedure-proc2"></a>Para invocar o procedimento PROC2  
   
-1.  Retorne todas as colunas em um único conjunto de resultados:  
+1.  Retornar todas as colunas em um único conjunto de resultados:  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset  5, ao_Arg2, ao_Arg3} ) }  
     ```  
   
-2.  Retorne cada coluna como um único conjunto de resultados:  
+2.  Retornar cada coluna como um único conjunto de resultados:  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset 5, ao_Arg2}, {resultset 5, ao_Arg3} ) }  
     ```  
   
- Certifique-se de que seus aplicativos buscar todos os conjuntos de resultados usando o [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API. Para obter mais informações, consulte o *referência do programador de ODBC*.  
+ Certifique-se de que seus aplicativos busquem todos os conjuntos de resultados usando a API [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) . Para obter mais informações, consulte a *referência do programador de ODBC*.  
   
 > [!NOTE]  
->  No Driver ODBC para Oracle da versão 2.0, as funções do Oracle que retornam matrizes de PL/SQL não podem ser usadas para retornar conjuntos de resultados.
+>  No driver ODBC para Oracle versão 2,0, as funções Oracle que retornam matrizes PL/SQL não podem ser usadas para retornar conjuntos de resultados.

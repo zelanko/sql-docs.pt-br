@@ -1,5 +1,5 @@
 ---
-title: Coletor de dados armazenados Procedures (Transact-SQL) | Microsoft Docs
+title: Procedimentos armazenados do coletor de dados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942408"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>Procedimentos armazenados de coletor de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server suporta os seguintes procedimentos armazenados do sistema que são usados para trabalhar com o coletor de dados e os seguintes componentes: conjuntos de coleta, itens de coleta e tipos de coleção.  
+  O SQL Server dá suporte aos seguintes procedimentos armazenados do sistema que são usados para trabalhar com o coletor de dados e os seguintes componentes: conjuntos de coleta, itens de coleta e tipos de coleção.  
   
 > [!IMPORTANT]  
 >  Diferentemente de procedimentos armazenados comuns, os procedimentos armazenados do coletor de dados usam estritamente parâmetros digitados e não oferecem suporte à conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
@@ -66,7 +66,7 @@ ms.locfileid: "67942408"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,20 +14,20 @@ ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0071746f2d65dd0c9c699beeacf404bf3dd7bb65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941921"
 ---
-# <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
+# <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Remove uma instância do SQL Server de um grupo de PolyBase da computação de escala horizontal. 
+  Remove uma instância de SQL Server de um grupo polybase para cálculo de expansão. 
  
- A instância do SQL Server deve ter o [guia do PolyBase](../../relational-databases/polybase/polybase-guide.md) recurso instalado.  O PolyBase permite a integração de fontes de dados não SQL Server, como o armazenamento de blob do Hadoop e do Azure. Consulte também [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
+ A instância de SQL Server deve ter o recurso de [Guia do polybase](../../relational-databases/polybase/polybase-guide.md) instalado.  O polybase permite a integração de fontes de dados não SQL Server, como o Hadoop e o armazenamento de BLOBs do Azure. Consulte também [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,17 +46,17 @@ sp_polybase_leave_group;
 ## <a name="remarks"></a>Comentários  
  Você só pode remover um nó de computação de um grupo.  
   
- Depois de executar o procedimento armazenado, reinicie o mecanismo de PolyBase e o serviço de movimentação de dados de PolyBase na máquina. Para verificar a executar a seguinte DMV no nó principal: **DM exec_compute_nodes**.  
+ Depois de executar o procedimento armazenado, reinicie o mecanismo do polybase e o serviço de Movimentação de Dados PolyBase no computador. Para verificar, execute o seguinte DMV no nó principal: **Sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo remove o computador atual de um grupo do PolyBase.  
+ O exemplo remove a máquina atual de um grupo do polybase.  
   
 ```sql  
 EXEC sp_polybase_leave_group ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Introdução ao polybase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

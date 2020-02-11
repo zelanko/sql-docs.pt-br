@@ -1,5 +1,5 @@
 ---
-title: Digite um exemplo da propriedade (propriedade) (VB) | Microsoft Docs
+title: Exemplo da propriedade Type (Propriedade) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8def5c7089be85c9b6eb7700a8a5bcdaeebe99e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937854"
 ---
 # <a name="type-property-example-property-vb"></a>Exemplo da propriedade Type (Propriedade) (VB)
-Este exemplo demonstra a [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade. Ele é um modelo de um utilitário para listar os nomes e tipos de uma coleção, como [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md), [campos](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  
+Este exemplo demonstra a propriedade [Type](../../../ado/reference/ado-api/type-property-ado.md) . É um modelo de um utilitário para listar os nomes e tipos de uma coleção, como [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md), [campos](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  
   
- Não precisamos abrir o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para acessar seus **propriedades** coleção; eles passam a existir quando o **Recordset** objeto é instanciado. No entanto, definir a [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade a ser **adUseClient** adiciona várias propriedades dinâmicas para o **conjunto de registros** do objeto **propriedades** coleção, fazendo o exemplo um pouco mais interessante. Para ilustração, podemos usar explicitamente o [Item](../../../ado/reference/ado-api/item-property-ado.md) propriedade para acessar cada [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto.  
+ Não precisamos abrir o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para acessar sua coleção **Properties** ; Eles entram em existência quando o objeto **Recordset** é instanciado. No entanto, definir a propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) como **adUseClient** adiciona várias propriedades dinâmicas à coleção de **Propriedades** do objeto **Recordset** , tornando o exemplo um pouco mais interessante. Para fins de ilustração, usamos explicitamente a propriedade [Item](../../../ado/reference/ado-api/item-property-ado.md) para acessar cada objeto de [Propriedade](../../../ado/reference/ado-api/property-object-ado.md) .  
   
 ```  
 'BeginTypePropertyVB  
@@ -147,6 +147,6 @@ End Sub
 'EndTypePropertyVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Propriedade Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

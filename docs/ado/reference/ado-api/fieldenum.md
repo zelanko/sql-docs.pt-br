@@ -16,19 +16,19 @@ ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5fe89d90510e95468e18b0d744ff566f69654320
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932687"
 ---
 # <a name="fieldenum"></a>FieldEnum
-Especifica os campos especiais referenciados em uma [registro](../../../ado/reference/ado-api/record-object-ado.md) do objeto [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção.  
+Especifica os campos especiais referenciados na coleção de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) de um objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) .  
   
 ## <a name="remarks"></a>Comentários  
- Essas constantes fornecem um "atalho" para acessar campos especiais associados a um **registro**. Recuperar o [campo](../../../ado/reference/ado-api/field-object.md) objeto o **campos** coleção e, em seguida, obter seu conteúdo com o **campo** do objeto [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade.  
+ Essas constantes fornecem um "atalho" para acessar campos especiais associados a um **registro**. Recupere o objeto [Field](../../../ado/reference/ado-api/field-object.md) da coleção **Fields** e, em seguida, obtenha seu conteúdo com a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) do objeto **Field** .  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
-|**adDefaultStream**|-1|Faz referência ao campo que contém o padrão [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto associado a um **registro**.|  
-|**adRecordURL**|-2|Faz referência ao campo que contém a cadeia de caracteres de URL absoluta para o atual **registro**.|
+|**adDefaultStream**|-1|Faz referência ao campo que contém o objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) padrão associado a um **registro**.|  
+|**adRecordURL**|-2|Faz referência ao campo que contém a cadeia de caracteres de URL absoluta para o **registro**atual.|

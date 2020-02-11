@@ -1,5 +1,5 @@
 ---
-title: Use os valores de variáveis e parâmetros em um pacote filho | Microsoft Docs
+title: Usar os valores de variáveis e parâmetros em um pacote filho | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054726"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Usar os valores de variáveis e parâmetros em um pacote filho
@@ -78,7 +78,7 @@ ms.locfileid: "66054726"
   
 4.  Na caixa de diálogo **Organizador de Configurações do Pacote** , selecione **Ativar configurações do pacote**e clique em **Adicionar**.  
   
-5.  Na página inicial do Assistente de Configuração de Pacotes, clique em **Avançar**.  
+5.  Na página inicial do assistente de configuração de pacotes, clique em **Avançar.**  
   
 6.  Na página Selecionar Tipo de Configuração, na lista **Tipo de configuração** , selecione **Variável do pacote pai** e siga um dos seguintes procedimentos:  
   
@@ -89,11 +89,11 @@ ms.locfileid: "66054726"
   
     -   Selecione **O local de configuração está armazenado em uma variável do ambiente** e, na lista **Variável de ambiente**, selecione a variável de ambiente que contém o nome da variável.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página Selecionar Propriedade de Destino, expanda o nó **Variável** e o nó **Propriedades** da variável a ser configurada e, em seguida, clique na propriedade que será definida pela configuração.  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 10. Na página Concluindo o Assistente, você pode modificar o nome padrão da configuração e revisar a informações de configuração (opcional).  
   
@@ -101,10 +101,10 @@ ms.locfileid: "66054726"
   
 12. Na caixa de diálogo **Organizador de Configurações do Pacote** , a caixa **Configuração** lista a nova configuração.  
   
-13. Clique em **Fechar**.  
+13. Clique em **fechar**  
   
-## <a name="see-also"></a>Consulte também  
- [Configurações do Pacote](../../2014/integration-services/package-configurations.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurações do pacote](../../2014/integration-services/package-configurations.md)   
  [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)  

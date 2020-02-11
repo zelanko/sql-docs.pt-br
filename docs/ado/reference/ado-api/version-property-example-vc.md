@@ -1,5 +1,5 @@
 ---
-title: Exemplo da propriedade Version (VC + +) | Microsoft Docs
+title: Exemplo da Propriedade Version (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,27 +15,27 @@ ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04000b62ea8d48b78d7673444003564ae0701193
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938692"
 ---
 # <a name="version-property-example-vc"></a>Exemplo da propriedade Version (VC++)
-Este exemplo usa o [versão](../../../ado/reference/ado-api/version-property-ado.md) propriedade de uma [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto para exibir a versão atual do ADO. Ele também usa várias propriedades dinâmicas para mostrar:  
+Este exemplo usa a propriedade [version](../../../ado/reference/ado-api/version-property-ado.md) de um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) para exibir a versão atual do ADO. Ele também usa várias propriedades dinâmicas para mostrar:  
   
--   Nome do DBMS atual e a versão.  
+-   Nome e versão atuais do DBMS.  
   
--   Versão do OLE DB.  
+-   Versão de OLE DB.  
   
--   Nome do provedor e a versão.  
+-   Nome e versão do provedor.  
   
 -   Versão do ODBC.  
   
--   Nome do driver ODBC e versão.  
+-   Nome e versão do driver ODBC.  
   
 > [!NOTE]
->  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, você deve especificar **Trusted_Connection = yes** ou **Integrated Security = SSPI** em vez de ID de usuário e senha informações na cadeia de conexão.  
+>  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, especifique **Trusted_Connection = Sim** ou **segurança integrada = SSPI** , em vez de ID de usuário e informações de senha na cadeia de conexão.  
   
 ```  
 // BeginVersionCpp.cpp  
@@ -134,6 +134,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Propriedade Version (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

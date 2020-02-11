@@ -1,5 +1,5 @@
 ---
-title: Importar dados (SSAS Tabular) | Microsoft Docs
+title: Importar dados (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080621"
 ---
 # <a name="import-data-ssas-tabular"></a>Importar dados (SSAS tabular)
@@ -25,10 +25,10 @@ ms.locfileid: "66080621"
   
  Usando o Assistente de Importação de Tabela, você pode importar dados das seguintes fontes de dados:  
   
-|**Fonte de dados**|**Descrição**|  
+|**Fonte de Dados**|**Descrição**|  
 |---------------------|---------------------|  
 |**Bancos de dados relacionais**|As fontes de dados relacionais incluem:<br /><br /> Microsoft SQL Server<br /><br /> Microsoft SQL Azure<br /><br /> Microsoft SQL Server Parallel Data Warehouse<br /><br /> Microsoft Access<br /><br /> Oracle<br /><br /> Teradata<br /><br /> Sybase<br /><br /> Informix<br /><br /> IBM DB2<br /><br /> OLEDB/ODBC|  
-|**Origens multidimensionais**|Cubo do Microsoft SQL Server Analysis Services|  
+|**Fontes multidimensionais**|Cubo do Microsoft SQL Server Analysis Services|  
 |**Feeds de dados**|Feeds de dados incluem:<br /><br /> Relatório do Microsoft Reporting Services<br /><br /> Conjunto de dados do Azure DataMarket<br /><br /> Feeds atom de um provedor público ou corporativo|  
 |**Arquivos de texto**|Arquivos de texto incluem:<br /><br /> Arquivos do Excel (.xlsx)<br /><br /> Arquivo de Texto (.txt)|  
   
@@ -36,12 +36,12 @@ ms.locfileid: "66080621"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Importar de uma fonte de dados relacionais &#40;Tabular do SSAS&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Descreve como importar dados de fontes de dados relacionais como um banco de dados Microsoft SQL Server, Oracle ou Teradata.|  
-|[Importar de uma fonte de dados multidimensionais &#40;Tabular do SSAS&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Descreve como importar dados de um cubo multidimensional do SQL Server Analysis Services.|  
-|[Importar de um Feed de dados &#40;Tabular do SSAS&#41;](import-from-a-data-feed-ssas-tabular.md)|Descreve como importar dados de um feed de dados como um relatório do Microsoft Reporting Services ou conjunto de dados Azure Data Market.|  
-|[Importar de um arquivo de texto &#40;Tabular do SSAS&#41;](import-from-a-text-file-ssas-tabular.md)|Descreve como importar dados de uma pasta de trabalho do Microsoft Excel ou arquivo de texto.|  
-|[Copiar e colar dados &#40;SSAS Tabular&#41;](copy-and-paste-data-ssas-tabular.md)|Descreve como acrescentar dados a uma tabela existente no designer modelo usando Colar e Colar Acréscimo.|  
+|[Importar de uma fonte de dados relacional &#40;SSAS de tabela&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Descreve como importar dados de fontes de dados relacionais como um banco de dados Microsoft SQL Server, Oracle ou Teradata.|  
+|[Importar de uma fonte de dados multidimensional &#40;SSAS de tabela&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Descreve como importar dados de um cubo multidimensional do SQL Server Analysis Services.|  
+|[Importar de um feed de dados &#40;SSAS de tabela&#41;](import-from-a-data-feed-ssas-tabular.md)|Descreve como importar dados de um feed de dados como um relatório do Microsoft Reporting Services ou conjunto de dados Azure Data Market.|  
+|[Importar de um arquivo de texto &#40;SSAS tabular&#41;](import-from-a-text-file-ssas-tabular.md)|Descreve como importar dados de uma pasta de trabalho do Microsoft Excel ou arquivo de texto.|  
+|[Copiar e colar dados &#40;SSAS de tabela&#41;](copy-and-paste-data-ssas-tabular.md)|Descreve como acrescentar dados a uma tabela existente no designer modelo usando Colar e Colar Acréscimo.|  
   
   

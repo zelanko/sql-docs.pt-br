@@ -17,14 +17,14 @@ ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 690c81a46c62c8844780e82b5c82a0ff7301105d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949761"
 ---
 # <a name="getschemaobject-method-ado-md"></a>Método GetSchemaObject (ADO MD)
-Recupera um objeto de esquema do ADO MD ([dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [hierarquia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md), ou [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md)) por seus [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md).  
+Recupera um objeto de esquema ADO MD ([dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [hierarquia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md)ou [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md)) por seu [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,18 +33,18 @@ Recupera um objeto de esquema do ADO MD ([dimensão](../../../ado/reference/ado-
 Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *ObjType*  
- Um [SchemaObjectTypeEnum](../../../ado/reference/ado-md-api/schemaobjecttypeenum.md) valor que especifica o tipo de objeto de esquema (dimensão, hierarquia, nível ou membro) para recuperar.  
+ Um valor [SchemaObjectTypeEnum](../../../ado/reference/ado-md-api/schemaobjecttypeenum.md) que especifica o tipo de objeto de esquema (dimensão, hierarquia, nível ou membro) a ser recuperado.  
   
  *UniqueName*  
- Um **cadeia de caracteres** especificando as **UniqueName** valor da propriedade de objeto a ser recuperado.  
+ Uma **cadeia de caracteres** que especifica o valor da propriedade **UniqueName** do objeto a ser recuperado.  
   
 ## <a name="remarks"></a>Comentários  
- **GetSchemaObject** recupera objetos usando seus nomes exclusivos, conforme especificado pelo **UniqueName** propriedade. Os nomes dos objetos pai não precisam ser conhecidos e pai coleções não precisam ser preenchidos para recuperar um objeto de esquema.  
+ **GetSchemaObject** recupera objetos usando seus nomes exclusivos, conforme especificado pela propriedade **UniqueName** . Os nomes dos objetos pai não precisam ser conhecidos e as coleções pai não precisam ser preenchidas para recuperar um objeto de esquema.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)
