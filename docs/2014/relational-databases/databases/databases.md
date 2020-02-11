@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154579"
 ---
 # <a name="databases"></a>Bancos de dados
@@ -42,7 +42,7 @@ ms.locfileid: "70154579"
 |-|-|  
 |[Bancos de dados do sistema](system-databases.md)|[Excluir arquivos de dados ou de log de um banco de dados](delete-data-or-log-files-from-a-database.md)|  
 |[Bancos de dados independentes](contained-databases.md)|[Exibir dados e informações de espaço de log para um banco de dados](display-data-and-log-space-information-for-a-database.md)|  
-|[SQL Server arquivos de dados no Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentar o tamanho de um banco de dados](increase-the-size-of-a-database.md)|  
+|[Arquivos de dados do SQL Server no Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentar o tamanho de um banco de dados](increase-the-size-of-a-database.md)|  
 |[Arquivos e grupos de arquivos do banco de dados](database-files-and-filegroups.md)|[Renomear um banco de dados](rename-a-database.md)|  
 |[Estados de banco de dados](database-states.md)|[Definir um banco de dados como modo de usuário único](set-a-database-to-single-user-mode.md)|  
 |[Estados de arquivo](file-states.md)|[Reduzir um banco de dados](shrink-a-database.md)|  

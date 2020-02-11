@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12304e532643e536981001da3886460848aec069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650207"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
@@ -28,7 +28,7 @@ ms.locfileid: "62650207"
   
      [Segurança](#Security)  
   
--   **Para remover etapas de um trabalho mestre do SQL Server Agent, usando:**  
+-   **Para remover etapas de um trabalho SQL Server Agent mestre, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62650207"
   
 4.  Clique com o botão direito do mouse no trabalho no qual você deseja excluir etapas e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Trabalho –** _job_name_, em **Selecionar uma página**, selecione **Etapas**.  
+5.  Na caixa de diálogo **Propriedades do trabalho –**_Job_name_ , em **selecionar uma página**, selecione **etapas**.  
   
 6.  Na **Lista de etapas de trabalho**, selecione a etapa de trabalho que você deseja excluir e clique em **Excluir**.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "62650207"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_delete_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql).  
+ Para obter mais informações, consulte [sp_delete_jobstep &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql).  
   
   
