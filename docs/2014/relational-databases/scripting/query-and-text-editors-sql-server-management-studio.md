@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243333"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de Consultas e de Texto (SQL Server Management Studio)
@@ -55,13 +55,13 @@ ms.locfileid: "75243333"
  **Numeração de linha**  
  Exibe os números de linhas à esquerda do texto ou código no Editor. Você pode navegar para números de linha específicos.  
   
- **Quebra automática de palavra**  
+ **Quebra automática de linha**  
  Exibe linhas longas de texto ou código como múltiplas linhas, permitindo que você veja todo o texto da linha. A quebra automática de linha não afeta o modo como o texto aparece quando é executado ou impresso. Ela é ativada na caixa de diálogo **Ferramentas**, **Opções** , na página Editor de Texto, Todos os Idiomas, Geral, ou em uma página específica do editor.  
   
 ## <a name="code-editor-components"></a>Componentes do Editor de Códigos  
  Os editores de códigos contêm estes recursos, além dos compartilhados com os editores XML e de texto:  
   
- **Da**  
+ **Resultados**  
  Esta janela é usada para exibir os resultados de uma consulta. A janela pode exibir os resultados na grade ou no texto, ou os resultados poderão ser redirecionados para um arquivo. As grades de resultados podem ser exibidas como janelas com guias.  
   
  **IntelliSense**  
@@ -70,7 +70,7 @@ ms.locfileid: "75243333"
  **Codificação por cores**  
  Exibe cores diferentes para cada tipo de elemento de sintaxe, o que melhora a legibilidade de instruções complexas.  
   
- **Estrutura de código**  
+ **Estruturação do código**  
  Exibe grupos de códigos com linhas de estruturação à esquerda do código. Os grupos de códigos podem ser recolhidos e expandidos para facilitar o exame do código.  
   
  **Modelos**  
@@ -107,7 +107,7 @@ ms.locfileid: "75243333"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como exibir e usar os recursos básicos do Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[&#40;SQL Server Management Studio do editor de consultas do Mecanismo de Banco de Dados&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
+|Descreve como exibir e usar os recursos básicos do Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Editor de Consultas do Mecanismo de Banco de Dados &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
 |Descreve como exibir e usar os recursos básicos do Editor de Consultas MDX.|[Editor de consultas MDX &#40;Analysis Services de dados multidimensionais&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
 |Descreve como exibir e usar os recursos básicos do Editor de Consultas DMX.|[Editor de consultas DMX &#40;Analysis Services de mineração de dados&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |Descreve como exibir e usar os recursos básicos do Editor XML/A.|[Editor de XML &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
@@ -115,18 +115,18 @@ ms.locfileid: "75243333"
 |Descreve os vários modos nos quais você pode abrir os editores no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Abra um editor &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
 |Descreve como gerenciar o modo de exibição, como quebra automática de linha, divisão de uma janela ou guias.|[Gerenciar o editor e o modo de exibição](manage-the-editor-and-view-mode.md)|  
 |Descreve como definir opções de formatação, como texto oculto ou recuo.|[Gerenciar formatação de código](manage-code-formatting.md)|  
-|Descreve como navegar pelo texto em uma janela do editor usando recursos como pesquisa incremental ou ir para.|[Código e texto de navegação](navigate-code-and-text.md)|  
-|Descreve como definir opções de codificação por cores para várias classes de sintaxe, o que facilitará a leitura de instruções complexas.|[Codificação por cores em editores de consulta](color-coding-in-query-editors.md)|  
-|Descreve como usar a estrutura de tópicos de código para ocultar partes dos scripts complexos nos quais você não está trabalhando no momento.|[Estrutura de código](code-outlining.md)|  
+|Descreve como navegar pelo texto em uma janela do editor usando recursos como pesquisa incremental ou ir para.|[Navegar no código e no texto](navigate-code-and-text.md)|  
+|Descreve como definir opções de codificação por cores para várias classes de sintaxe, o que facilitará a leitura de instruções complexas.|[Codificação por cores nos Editores de Consulta](color-coding-in-query-editors.md)|  
+|Descreve como usar a estrutura de tópicos de código para ocultar partes dos scripts complexos nos quais você não está trabalhando no momento.|[Estruturação do código](code-outlining.md)|  
 |Descreve como arrastar texto de um local em um script e soltá-lo em um novo local.|[Arrastar e soltar texto](drag-and-drop-text.md)|  
 |Descreve como realizar uma pesquisa global e fazer a substituição, como alterar nomes de coluna.|[Pesquisar e substituir](search-and-replace.md)|  
 |Descreve como definir indicadores para localizar partes importantes de código com mais facilidade.|[Gerenciar indicadores](../native-client-ole-db-rowsets/bookmarks.md)|  
 |Descreve como imprimir scripts ou resultados em uma janela ou grade.|[Imprimir código e resultados](print-code-and-results.md)|  
-|Descreve como usar os recursos do sqlcmd no Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Editar scripts SQLCMD com o editor de consultas](edit-sqlcmd-scripts-with-query-editor.md)|  
+|Descreve como usar os recursos do sqlcmd no Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Editar scripts SQLCMD com o Editor de Consultas](edit-sqlcmd-scripts-with-query-editor.md)|  
 |Descreve como usar recursos do IntelliSense como nomes de objeto de conclusão automática à medida que os digita ou garantir que pontos de interrupção sejam colocados em locais válidos.|[SQL Server Management Studio do IntelliSense &#40;&#41;](intellisense-sql-server-management-studio.md)|  
-|Descreve como usar os snippets de códigos no Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os snippets são modelos para instruções ou blocos geralmente usados, e podem ser personalizados ou estendidos para incluir snippets específicos de site.|[Trechos de código Transact-SQL](transact-sql-code-snippets.md)|  
+|Descreve como usar os snippets de códigos no Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os snippets são modelos para instruções ou blocos geralmente usados, e podem ser personalizados ou estendidos para incluir snippets específicos de site.|[Snippets de código Transact-SQL](transact-sql-code-snippets.md)|  
 |Descreve como usar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] para percorrer informações de depuração de código e exibição, como os valores em variáveis e parâmetros.|[Depurador do Transact-SQL](transact-sql-debugger.md)|  
 |Descreve como definir cores personalizadas para instâncias diferentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)]e fazer com que essas cores sejam definidas como o plano de fundo da barra de status nas janelas do Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barra de status &#40;Mecanismo de Banco de Dados Editor de consultas&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server Management Studio atalhos de teclado](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

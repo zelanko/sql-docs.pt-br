@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244940"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio)
@@ -56,31 +56,31 @@ ms.locfileid: "75244940"
  **Connect**  
  Abra a caixa de diálogo **Conectar ao Servidor** . Use esta caixa de diálogo para estabelecer uma conexão a um servidor.  
   
- **Desligar**  
+ **Desconectar**  
  Desconecta o Editor de Consultas do servidor.  
   
- **Alterar conexão**  
+ **Alterar Conexão**  
  Abra a caixa de diálogo **Conectar ao Servidor** . Use esta caixa de diálogo para estabelecer uma conexão a um servidor diferente.  
   
- **Nova consulta com a conexão atual**  
+ **Nova Consulta com Conexão Atual**  
  Abre uma nova janela do Editor de Consultas e usa as informações de conexão da janela atual do Editor de Consultas.  
   
- **Bancos de dados disponíveis**  
+ **Bancos de Dados Disponíveis**  
  Alteram a conexão com um banco de dados diferente do mesmo servidor.  
   
- **Executados**  
+ **Executar**  
  Executa o código selecionado ou, se nenhum código estiver selecionado, executa todo o código no Editor de Consultas.  
   
- **Verificação**  
+ **Depurar**  
  Habilita o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este depurador dá suporte a ações de depuração, como definir pontos de interrupção, detectar variáveis e depurar através de código.  
   
- **Cancelar execução de consulta**  
+ **Cancelar Consulta de Execução**  
  Envia uma solicitação de cancelamento ao servidor. Algumas consultas não podem ser canceladas imediatamente, mas precisam esperar por uma condição de cancelamento satisfatória. Quando transações são canceladas, podem ocorrer atrasos enquanto as transações são revertidas.  
   
- **Passar**  
+ **Analisar**  
  Verifica a sintaxe do código selecionado. Se nenhum código estiver selecionado, esta opção verificará a sintaxe de todo o código na janela Editor de Consultas.  
   
- **Exibir plano de execução estimado**  
+ **Exibir Plano de Execução Estimado**  
  Solicita um plano de execução de consulta do processador de consultas sem executar realmente a consulta e exibe o plano na janela **Plano de execução** . Esse plano usa estatísticas de índice como uma estimativa do número de linhas que se espera que retornem durante cada parte da execução da consulta. O plano de consulta real que é usado pode ser diferente do plano de execução estimado. Isso pode ocorrer se o número de linhas retornadas for consideravelmente diferente da estimativa e o processador de consultas alterar o plano para torná-lo mais eficiente.  
   
  **Opções de consulta**  
@@ -89,34 +89,34 @@ ms.locfileid: "75244940"
  **IntelliSense habilitado**  
  Especifica se a funcionalidade IntelliSense está disponível no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- **Incluir plano de execução real**  
+ **Incluir Plano de Execução Atual**  
  Executa a consulta e retorna os resultados da consulta e o plano de execução usado para a consulta. Estes aparecem como um plano de consulta gráfica na janela **Plano de Execução** .  
   
- **Incluir estatísticas do cliente**  
+ **Incluir Estatísticas do Cliente**  
  Inclui a janela **Estatísticas do Cliente** com estatísticas sobre a consulta e sobre os pacotes de rede, além do tempo decorrido da consulta.  
   
- **Resultados em texto**  
+ **Resultados em Texto**  
  Retorna os resultados da consulta como texto na janela **Resultados** .  
   
- **Resultados em grade**  
+ **Resultados em Grade**  
  Retorna os resultados da consulta como uma ou mais grades na janela **Resultados** .  
   
- **Resultados em arquivo**  
+ **Resultados em Arquivo**  
  Quando a consulta é executada, a caixa de diálogo **Salvar Resultados** é exibida. Em **Salvar em**, selecione a pasta na qual você deseja salvar o arquivo. Em **Nome do arquivo**, digite o nome do arquivo e clique em **Salvar** para salvar os resultados da consulta como um arquivo de **Relatório** com a extensão .rpt. Para opções avançadas, clique na seta para baixo no botão **Salvar** e clique em **Salvar com Codificação**.  
   
- **Seleção de comentário**  
+ **Comentário de seleção**  
  Transforma a linha atual em um comentário adicionando um operador de comentário (--) no começo da linha.  
   
- **Remover comentário da seleção**  
+ **Remover comentário de seleção**  
  Transforma a linha atual em uma instrução de fonte ativa ao remover um operador de comentário (--) do começo da linha.  
   
- **Diminuir recuo de linha**  
+ **Diminuir Recuo de Linha**  
  Move o texto da linha para a esquerda ao remover espaços em branco no começo da linha.  
   
- **Aumentar recuo de linha**  
+ **Aumentar Recuo de Linha**  
  Move o texto da linha para a direita ao adicionar espaços em branco no começo da linha.  
   
- **Especificar valores para parâmetros de modelo**  
+ **Especificar Valores para Parâmetros de Modelo**  
  Abre uma caixa de diálogo que você pode usar para especificar valores para parâmetros em procedimentos e funções armazenados.  
   
  Você também pode adicionar a barra de ferramentas Editor de Consultas selecionando o menu **Exibir** , **Barras de Ferramentas**e, em seguida, **Editor SQL**. Se você adicionar a barra de ferramentas do SQL Editor quando nenhuma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver aberta, todos os botões ficarão indisponíveis.  
@@ -124,7 +124,7 @@ ms.locfileid: "75244940"
 ## <a name="sql-editor-toolbar"></a>Barra de ferramentas do Editor SQL  
  Quando uma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está aberta, você também pode adicionar a barra de ferramentas Depurar selecionando o menu **Exibir** , **Barras de Ferramentas**e, em seguida, **Depurar**. Se você adicionar a barra de ferramentas Depurar quando nenhuma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver aberta, todos os botões ficarão indisponíveis.  
   
- **Continua**  
+ **Continuar**  
  Executa o código na janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] até encontrar um ponto de interrupção.  
   
  **Interromper Tudo**  
@@ -133,13 +133,13 @@ ms.locfileid: "75244940"
  **Parar depuração**  
  Retira a janela selecionada do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] do modo de depuração e restaura o modo de execução padrão.  
   
- **Mostrar próxima instrução**  
+ **Mostrar Próxima Instrução**  
  Move o cursor para a próxima instrução a ser executada.  
   
  **Intervir**  
  A próxima instrução é executada. Se a próxima instrução chamar um procedimento armazenado, uma função ou um gatilho Transact-SQL, o depurador exibirá uma nova janela do **Editor de Consultas** que contém o código do módulo. A janela está no modo de depuração e a execução pausa na primeira instrução do módulo. Você pode mover-se pelo módulo, por exemplo, definindo pontos de interrupção ou percorrendo o código.  
   
- **Depurar**  
+ **Contornar**  
  A próxima instrução é executada. Se a instrução chamar um procedimento armazenado, uma função ou um gatilho Transact-SQL, o módulo será executado até o fim, e os resultados serão retornados ao código de chamada. Se você tiver certeza de que não há erros no módulo, poderá passar por ele. A execução pausa na instrução que segue a chamada para o módulo.  
   
  **Sair**  
@@ -149,6 +149,6 @@ ms.locfileid: "75244940"
  Abre a janela **Ponto de Interrupção** ou a janela **Imediato** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server Management Studio atalhos de teclado](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

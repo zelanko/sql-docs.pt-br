@@ -10,10 +10,10 @@ ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 1fda81ac39233435dbcd0546e452878cc6767b33
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247146"
 ---
 # <a name="manage-a-knowledge-base"></a>Gerenciar uma base de dados de conhecimento
@@ -22,14 +22,14 @@ ms.locfileid: "75247146"
 
   Este tópico descreve como executar funções de gerenciamento em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você pode excluir uma base de dados de conhecimento, desbloqueá-la, descartar seu trabalho nela, renomeá-la e exibir suas propriedades.  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a>Pré-requisitos  
+###  <a name="Prerequisites"></a> Pré-requisitos  
  Para gerenciar uma base de dados de conhecimento, ela já deve ter sido criada e publicada (caso outra pessoa a tenha criado) ou fechada (se você a criou).  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para abrir uma base de dados de conhecimento.  
   
 ##  <a name="Manage"></a>Gerenciar uma base de dados de conhecimento  

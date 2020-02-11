@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767028"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar pacotes por meio de pontos de verificação
@@ -53,27 +53,27 @@ ms.locfileid: "62767028"
   
  A seguinte tabela lista as propriedades de pacote definidas para implementar pontos de verificação.  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |CheckpointFileName|Especifica o nome do arquivo de ponto de verificação.|  
 |CheckpointUsage|Especifica se pontos de verificação são usados.|  
 |SaveCheckpoints|Indica se o pacote salva os pontos de verificação. Esta propriedade deve ser definida como Verdadeiro para reinicializar um pacote a partir de um ponto de falha.|  
   
- Além disso, você deve definir a propriedade FailPackageOnFailure `true` para todos os contêineres no pacote que você deseja identificar como pontos de reinicialização.  
+ Além disso, você deve definir a Propriedade FailPackageOnFailure `true` como para todos os contêineres no pacote que você deseja identificar como pontos de reinicialização.  
   
  É possível usar a propriedade ForceExecutionResult para testar o uso de pontos de verificação em um pacote. Ao definir ForceExecutionResult de uma tarefa ou contêiner como Falha, você pode imitar uma falha em tempo real. Ao executar novamente o pacote, a tarefa e os contêineres que falharam serão executados de novo.  
   
 ### <a name="checkpoint-usage"></a>Uso do ponto de verificação  
  A propriedade CheckpointUsage pode ser definida com os seguintes valores:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |`Never`|Especifica que o arquivo de ponto de verificação não é usado e o pacote executa a partir do início do fluxo de trabalho do pacote.|  
 |`Always`|Especifica que o arquivo de ponto de verificação sempre é usado e que o pacote reinicia a partir do ponto da falha de execução anterior. Se o arquivo de ponto de verificação não for localizado, o pacote falhará.|  
 |`IfExists`|Especifica que o arquivo de ponto de verificação é usado, se existir. Se o arquivo de ponto de verificação existir, o pacote reiniciará a partir do ponto da falha de execução anterior; caso contrário, será executado desde o início do fluxo de trabalho do pacote.|  
   
 > [!NOTE]  
->  O **/CheckPointing na** opção de dtexec equivale a definir o `SaveCheckpoints` propriedade do pacote a ser `True`e o `CheckpointUsage` propriedade como Always. Para saber mais, veja [dtexec Utility](dtexec-utility.md).  
+>  A opção **/CheckPointing on on** de dtexec é equivalente a definir a `SaveCheckpoints` Propriedade do pacote como `True`e a `CheckpointUsage` Propriedade como Always. Para saber mais, veja [dtexec Utility](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Protegendo arquivos de ponto de verificação  
  A proteção em nível de pacote não inclui proteção a arquivos de ponto de verificação; você deve proteger esses arquivos separadamente. Dados de ponto de verificação podem ser armazenados somente no sistema arquivos e você deve usar uma ACL (lista de controle de acesso) do sistema operacional para proteger o local ou a pasta onde armazena o arquivo. É importante proteger os arquivos de ponto de verificação, pois eles contém informações sobre o estado do pacote, incluindo os valores atuais de variáveis. Por exemplo, uma variável pode conter um conjunto de registros com muitas linhas de dados particulares como números de telefone. Para obter mais informações, consulte [Acesso aos arquivos usados por pacotes](../access-to-files-used-by-packages.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "62767028"
   
 -   ARtigo de suporte, [Pontos de verificação do SSIS não são honrados para itens de contêiner Loop For ou Loop Foreach](https://go.microsoft.com/fwlink/?LinkId=241633), em support.microsoft.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

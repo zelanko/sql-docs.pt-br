@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: e1cd65cc97877ef7e59d44be40f53fc49f4a49ac
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257015"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>Conectar-se a um servidor registrado (SQL Server Management Studio)

@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9222253c884fdf3cfa52d283f250580a02a9f7ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62523752"
 ---
-# <a name="delete-a-sql-server-agent-proxy"></a>Excluir um proxy do SQL Server Agent
+# <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
   Este tópico descreve como excluir uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -32,7 +32,7 @@ ms.locfileid: "62523752"
   
      [Segurança](#Security)  
   
--   **Para excluir uma conta proxy do SQL Server Agent, usando:**  
+-   **Para excluir uma conta proxy SQL Server Agent, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,7 +46,8 @@ ms.locfileid: "62523752"
   
 -   Os proxies do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usam credenciais para armazenar informações sobre as contas de usuário do Windows. O usuário especificado na credencial deve ter a permissão "Fazer logon como trabalho em lotes" no computador que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent verifica o acesso a subsistemas de um proxy e fornece acesso ao proxy sempre que a etapa de trabalho é executada. Se o proxy já não tiver acesso ao subsistema, a etapa de trabalho falhará. Caso contrário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent representará o usuário especificado no proxy e executará a etapa de trabalho.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent verifica o acesso a subsistemas de um proxy e fornece acesso ao proxy sempre que a etapa de trabalho é executada. Se o proxy já não tiver acesso ao subsistema, a etapa de trabalho falhará. Caso contrário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent representará o usuário especificado no proxy e executará a etapa de trabalho.  
   
 -   Se o logon do usuário tiver acesso ao proxy ou se o usuário pertencer a alguma função com acesso ao proxy, ele poderá utilizá-lo em uma etapa de trabalho.  
   
@@ -92,6 +93,6 @@ ms.locfileid: "62523752"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_delete_proxy &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql).  
+ Para obter mais informações, consulte [sp_delete_proxy &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql).  
   
   

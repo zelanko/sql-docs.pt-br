@@ -21,10 +21,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e1cd65cce635c89cb7ece1b88851d5f4a9b7cb09
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257426"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Solicitando referências URL a dados BLOB usando sql:encode (SQLXML 4.0)
@@ -45,7 +45,7 @@ ms.locfileid: "75257426"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>R. Especificando sql:encode para obter uma referência URL aos dados BLOB  
+### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>a. Especificando sql:encode para obter uma referência URL aos dados BLOB  
  Neste exemplo, o esquema de mapeamento especifica **SQL: encode** no atributo **LargePhoto** para recuperar a referência de URI para uma foto de produto específica (em vez de recuperar os dados binários no formato codificado em base 64).  
   
 ```  

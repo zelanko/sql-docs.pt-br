@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012259"
 ---
 # <a name="accessing-the-soap-api"></a>Acessando a API SOAP
@@ -41,7 +41,7 @@ ms.locfileid: "63012259"
   
 -   O ponto de extremidade <xref:ReportExecution2005> permite que os desenvolvedores processem e renderizem relatórios programaticamente em um Servidor de Relatório. A WSDL para esse ponto de extremidade é acessada por meio de `ReportExecution2005.asmx?wsdl`.  
   
- A WSDL pode ser consumida por kits de desenvolvimento que dão suporte a SOAP e a serviços Web, como o SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ O WSDL pode ser consumido por kits de desenvolvimento que dão suporte a SOAP e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] a serviços Web, como o SDK.  
   
  O exemplo a seguir mostra o formato da URL para o arquivo WSDL de gerenciamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
@@ -51,15 +51,15 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
  A tabela a seguir descreve cada elemento da URL.  
   
-|Elemento da URL|Descrição|  
+|Elemento da URL|DESCRIÇÃO|  
 |-----------------|-----------------|  
-|*server*|O nome do servidor no qual o servidor de relatório é implantado.|  
-|*reportserver*|O nome da pasta que contém o serviço Web XML. Configurado durante a instalação.|  
-|*\<endpoint name>.asmx*|O nome do ponto de extremidade do serviço web.|  
+|*servidor*|O nome do servidor no qual o servidor de relatório é implantado.|  
+|*ReportServer*|O nome da pasta que contém o serviço Web XML. Configurado durante a instalação.|  
+|*\<nome do ponto de extremidade>. asmx*|O nome do ponto de extremidade do serviço web.|  
   
  Para saber mais sobre o formato WSDL, veja a especificação de WSDL feita pelo W3C (World Wide Web Consortium) em http://www.w3.org/TR/wsdl.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos usando o serviço Web e o .NET Framework](net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Serviço Web do Servidor de Relatório](report-server-web-service.md)  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638101"
 ---
 # <a name="drop-xml-indexes"></a>Descartar índices XML
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Exemplo: Criando um índice XML usando a opção de índice DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>Exemplo: Criando um índice XML usando a opção de índice DROP_EXISTING  
  No exemplo a seguir, um índice XML é criado em uma coluna (`XmlColx`). Em seguida, outro índice XML com o mesmo nome é criado em uma coluna diferente (`XmlColy`). Como a opção `DROP_EXISTING` está especificada, o índice XML existente em (`XmlColx)` ) é descartado e um novo índice XML em (`XmlColy`) é criado.  
   
 ```  
@@ -96,7 +96,7 @@ AND    si.object_id=object_id('T')
   
  Essa consulta retorna o nome da coluna na qual o índice XML especificado é criado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices XML &#40;SQL Server&#41;](xml-indexes-sql-server.md)  
   
   

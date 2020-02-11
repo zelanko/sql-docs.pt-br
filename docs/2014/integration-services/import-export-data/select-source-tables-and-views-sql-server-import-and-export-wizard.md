@@ -13,19 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892664"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selecionar tabelas de origem e exibições (Assistente de Importação e Exportação do SQL Server)
-  Use o **selecionar tabelas de origem e exibições** página para especificar as tabelas e exibições a serem copiados da fonte de dados para o destino.  
+  Use a página **selecionar tabelas e exibições de origem** para especificar as tabelas e exibições a serem copiadas da fonte de dados para o destino.  
   
 > [!NOTE]  
->  Não é necessário copiar todas as colunas em uma tabela ao selecionar a opção Cópia de Tabela. Depois de selecionar uma tabela de destino, clique em Editar mapeamentos para exibir o **mapeamentos de coluna** caixa de diálogo. Selecione  **\<ignorar >** no **destino** coluna do **mapeamentos de coluna** caixa de diálogo para colunas que você deseja ignorar.  
+>  Não é necessário copiar todas as colunas em uma tabela ao selecionar a opção Cópia de Tabela. Depois de selecionar uma tabela de destino, clique em editar mapeamentos para exibir a caixa de diálogo **mapeamentos de coluna** . Selecione ** \<ignorar>** na coluna **destino** da caixa de diálogo **mapeamentos de coluna** para as colunas que você deseja ignorar.  
   
- Para obter mais informações sobre este assistente, consulte [Assistente de Importação e Exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Para obter mais informações sobre este assistente, consulte [Assistente de Importação e Exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções de inicialização do assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o assistente de importação e exportação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  O objetivo do Assistente de Importação e Exportação do SQL Server é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -39,14 +39,14 @@ ms.locfileid: "62892664"
  Selecione uma tabela de destino da lista para cada tabela de origem.  
   
 > [!NOTE]  
->  Se o assistente for interrompido neste momento para a criação de uma tabela de destino no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou de qualquer outra ferramenta, a nova tabela não ficará visível imediatamente na lista de tabelas de destino disponíveis. Para atualizar a lista de tabelas de destino, volte duas páginas para o **escolher um destino** página, selecione novamente o banco de dados de destino e, em seguida, passo à frente novamente até a **selecionar tabelas de origem e exibições**.  
+>  Se o assistente for interrompido neste momento para a criação de uma tabela de destino no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou de qualquer outra ferramenta, a nova tabela não ficará visível imediatamente na lista de tabelas de destino disponíveis. Para atualizar a lista de tabelas de destino, volte duas páginas para a página **escolher um destino** , selecione novamente o banco de dados de destino e, em seguida, avance novamente para **selecionar tabelas e exibições de origem**.  
   
 ### <a name="other-options"></a>Outras opções  
  **Editar mapeamentos**  
- Use o **mapeamentos de coluna** caixa de diálogo para especificar colunas de destino para receber os dados de origem. Você pode copiar apenas um subconjunto de colunas selecionando \<ignorar > na **destino** coluna do **mapeamentos de coluna** caixa de diálogo para colunas que você deseja ignorar.  
+ Use a caixa de diálogo **mapeamentos de coluna** para especificar as colunas de destino para receber os dados de origem. Você pode copiar apenas um subconjunto de colunas selecionando \<ignorar> na coluna **destino** da caixa de diálogo **mapeamentos de coluna** para colunas que você deseja ignorar.  
   
  **Visualização**  
- Visualizar dados de origem na **visualizar dados** caixa de diálogo para verificá-lo antes de executar a importação ou exportação. O **visualizar dados** caixa de diálogo exibe até 200 linhas de dados.  
+ Visualize os dados de origem na caixa de diálogo **Visualizar dados** para verificá-los antes de executar a importação ou exportação. A caixa de diálogo **Visualizar dados** exibe até 200 linhas de dados.  
   
  Após visualizar os dados, é possível alterar as opções selecionadas para a origem e destino de dados. Para fazer essas alterações, na página **Selecionar Tabelas e Exibições de Origem**, clique em **Voltar** para retornar às páginas anteriores nas quais é possível alterar as seleções.  
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773729"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Usando índices columnstore clusterizados
@@ -24,22 +24,22 @@ ms.locfileid: "62773729"
   
  Para obter informações sobre índices columnstore clusterizados, consulte [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
-## <a name="contents"></a>Sumário  
+## <a name="contents"></a>Conteúdo  
   
--   [Criar um índice Columnstore clusterizado](#create)  
+-   [Criar um índice columnstore clusterizado](#create)  
   
--   [Descartar um índice Columnstore clusterizado](#drop)  
+-   [Descartar um índice columnstore clusterizado](#drop)  
   
--   [Carregar dados em um índice Columnstore clusterizado](#load)  
+-   [Carregar dados em um índice columnstore clusterizado](#load)  
   
--   [Alterar dados em um índice Columnstore clusterizado](#change)  
+-   [Alterar dados em um índice columnstore clusterizado](#change)  
   
--   [Recompilar um índice Columnstore clusterizado](#rebuild)  
+-   [Recriar um índice Columnstore clusterizado](#rebuild)  
   
--   [Reorganizar um índice Columnstore clusterizado](#reorganize)  
+-   [Reorganizar um índice columnstore clusterizado](#reorganize)  
   
-##  <a name="create"></a> Criar um índice Columnstore clusterizado  
- Para criar um índice columnstore clusterizado, primeiro crie uma tabela rowstore como um heap ou índice clusterizado e, em seguida, use o [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) instrução para converter a tabela em um cluster índice ColumnStore. Se você desejar que o índice columnstore clusterizado tenha o mesmo nome que o índice clusterizado, use a opção DROP_EXISTING.  
+##  <a name="create"></a>Criar um índice Columnstore clusterizado  
+ Para criar um índice columnstore clusterizado, primeiro crie uma tabela de repositório de armazenamento como um heap ou índice clusterizado e, em seguida, use a instrução [criar índice COLUMNSTORE clusterizado &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-columnstore-index-transact-sql) para converter a tabela em um índice columnstore clusterizado. Se você desejar que o índice columnstore clusterizado tenha o mesmo nome que o índice clusterizado, use a opção DROP_EXISTING.  
   
  Este exemplo cria uma tabela como um heap e, depois, converte-o em um índice columnstore clusterizado chamado o cci_Simple. Isso altera o armazenamento da tabela inteira, de rowstore a columnstore.  
   
@@ -54,13 +54,13 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_T1 ON T1;
 GO  
 ```  
   
- Para obter mais exemplos, consulte a seção de exemplos na [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
+ Para obter mais exemplos, consulte a seção exemplos em [criar índice COLUMNSTORE clusterizado &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
-##  <a name="drop"></a> Descartar um índice Columnstore clusterizado  
- Use o [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) instrução para descartar um índice columnstore clusterizado. Essa operação irá remover o índice e converter a tabela columnstore em um heap rowstore.  
+##  <a name="drop"></a>Remover um índice Columnstore clusterizado  
+ Use a instrução [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql) para descartar um índice columnstore clusterizado. Essa operação irá remover o índice e converter a tabela columnstore em um heap rowstore.  
   
-##  <a name="load"></a> Carregar dados em um índice Columnstore clusterizado  
- Você pode adicionar dados a um índice columnstore clusterizado existente usando qualquer um dos métodos de carregamento padrão.  Por exemplo, a carregamento em massa bcp ferramenta, Integration Services e INSERT... SELECT pode carregar todos os dados em um índice columnstore clusterizado.  
+##  <a name="load"></a>Carregar dados em um índice Columnstore clusterizado  
+ Você pode adicionar dados a um índice columnstore clusterizado existente usando qualquer um dos métodos de carregamento padrão.  Por exemplo, a ferramenta de carregamento em massa bcp, Integration Services e INSERT... SELECT pode carregar dados em um índice columnstore clusterizado.  
   
  Os índices columnstore clusterizados aproveitam o deltastore a fim de evitar a fragmentação de segmentos de colunas no columnstore.  
   
@@ -68,7 +68,7 @@ GO
  Para dados particionados, primeiro o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] atribui cada linha a uma partição e, depois, executa operações columnstore nos dados na partição. Cada partição tem seus próprios rowgroups e pelo menos um deltastore.  
   
 ### <a name="deltastore-loading-scenarios"></a>Cenários de carregamento de deltastore  
- As linhas são acumuladas no deltastore até que o número de linhas atinja o número máximo de linhas permitido para um rowgroup. Quando o deltastore contiver o número máximo de linhas por rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marcará o rowgroup como "CLOSED". Um processo em segundo plano, chamado "motor de tupla", localiza o rowgroup CLOSED e move para o columnstore, onde o rowgroup é compactado em segmentos de coluna e os segmentos de coluna são armazenados no columnstore.  
+ As linhas são acumuladas no deltastore até que o número de linhas atinja o número máximo de linhas permitido para um rowgroup. Quando deltastore contém o número máximo de linhas por rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o marca o rowgroup como "closed". Um processo em segundo plano, chamado de "movimentação de tupla", localiza o rowgroup fechado e passa para o columnstore, onde o rowgroup é compactado em segmentos de coluna e os segmentos de coluna são armazenados no columnstore.  
   
  Para cada índice columnstore clusterizado, podem existir vários deltastores.  
   
@@ -84,8 +84,8 @@ GO
 |-----------------------|-----------------------------------|----------------------------------|  
 |102.000|0|102.000|  
 |145.000|145.000<br /><br /> Tamanho do rowgroup: 145.000|0|  
-|1,048,577|1\.048.576<br /><br /> Tamanho do rowgroup: 1.048.576.|1|  
-|2,252,152|2,252,152<br /><br /> Tamanhos dos rowgroups: 1.048.576, 1.048.576, 155.000.|0|  
+|1,048,577|1.048.576<br /><br /> Tamanho do rowgroup: 1.048.576.|1|  
+|2,252,152|2,252,152<br /><br /> Tamanhos do rowgroup: 1.048.576, 1.048.576, 155.000.|0|  
   
  O exemplo a seguir mostra os resultados do carregamento de 1.048.577 linhas em uma partição. Os resultados mostram um rowgroup COMPRESSED no columnstore (como segmentos de coluna compactados) e 1 linha no deltastore.  
   
@@ -93,14 +93,14 @@ GO
 SELECT * FROM sys.column_store_row_groups  
 ```  
   
- ![Rowgroup e deltastore para uma carga em lote](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup e deltastore para uma carga em lote")  
+ ![Rowgroup e deltastore para um carregamento de lote](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup e deltastore para um carregamento de lote")  
   
 
   
-##  <a name="change"></a> Alterar dados em um índice Columnstore clusterizado  
+##  <a name="change"></a>Alterar dados em um índice Columnstore clusterizado  
  Os índices columnstore clusterizados oferecem suporte a operações DML de inserção, atualização e exclusão.  
   
- Use [INSERT &#40;Transact-SQL&#41; ](/sql/t-sql/statements/insert-transact-sql) para inserir uma linha. A linha será adicionada ao deltastore.  
+ Use [insert &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) para inserir uma linha. A linha será adicionada ao deltastore.  
   
  Use [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) para excluir uma linha.  
   
@@ -114,8 +114,8 @@ SELECT * FROM sys.column_store_row_groups
   
 -   Se a linha estiver no deltastore, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] atualizará a linha no deltastore.  
   
-##  <a name="rebuild"></a> Recompilar um índice Columnstore clusterizado  
- Use [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) ou [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) para executar uma recriação completa de um índice columnstore clusterizado existente. Além disso, você pode usar ALTER INDEX ... REBUILD para recompilar uma partição específica.  
+##  <a name="rebuild"></a>Recriar um índice Columnstore clusterizado  
+ Use [criar índice COLUMNSTORE clusterizado &#40;Transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) ou [ALTER INDEX &#40;&#41;do Transact-SQL](/sql/t-sql/statements/alter-index-transact-sql) para executar uma recompilação completa de um índice COLUMNSTORE clusterizado existente. Além disso, você pode usar ALTER INDEX... Recompilar para recompilar uma partição específica.  
   
 ### <a name="rebuild-process"></a>Processo de recriação  
  Para recompilar um índice columnstore clusterizado, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -145,8 +145,8 @@ SELECT * FROM sys.column_store_row_groups
   
      Isso garante que todos dados sejam armazenados no columnstore. Se vários carregamentos ocorrerem ao mesmo tempo, cada partição poderá acabar tendo vários deltastores. A recriação moverá todas as linhas do deltastore para o columnstore.  
   
-##  <a name="reorganize"></a> Reorganizar um índice Columnstore clusterizado  
- A reorganização de um índice columnstore clusterizado move todos os rowgroups CLOSED para o columnstore. Para executar uma reorganização, use [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)com a opção REORGANIZE.  
+##  <a name="reorganize"></a>Reorganizar um índice Columnstore clusterizado  
+ A reorganização de um índice columnstore clusterizado move todos os rowgroups CLOSED para o columnstore. Para executar uma reorganização, use [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)com a opção reorganizar.  
   
  A reorganização não é necessária para mover rowgroups CLOSED para o columnstore. O processo Tuple Mover acabará encontrando todos os rowgroups FECHADOS e os moverá. No entanto, o Tuple Mover tem thread único e não pode mover rowgroups com rapidez suficiente para a carga de trabalho.  
   

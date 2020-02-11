@@ -20,18 +20,17 @@ ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5f81904fd930e22857bfa51584c2eefda813e7e7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253540"
 ---
 # <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  Retorna o tipo de dados de um parâmetro de chamada de procedimento armazenado remoto.  
   
@@ -52,15 +51,15 @@ n
  *srvproc*  
  É um ponteiro para a estrutura SRV_PROC que identifica uma conexão de cliente específica (nesse caso, o identificador que recebeu a chamada do procedimento armazenado remoto). A estrutura contém informações que a biblioteca de APIs de procedimento armazenado estendido usa para gerenciar a comunicação e os dados entre o aplicativo e o cliente.  
   
- *p*  
+ *n*  
  Indica o número do parâmetro. O primeiro parâmetro é 1.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  Um valor de token para o tipo de dados do parâmetro. Para obter informações sobre tipos de dados, consulte [Tipos de dados &#40;API de Procedimento Armazenado Estendido&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md). Se não houver *n*-ésimo parâmetro nem procedimento armazenado remoto, o valor retornado será -1.  
   
  Essa função retornará os valores a seguir, se o parâmetro for um dos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tipos de dados.  
   
-|Novos tipos de dados|Retornar valor|  
+|Novos tipos de dados|Valor retornado|  
 |--------------------|------------------|  
 |**BITN**|SRVBIT|  
 |**BIGVARCHAR**|VARCHAR|  

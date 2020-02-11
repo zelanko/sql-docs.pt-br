@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774880"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Monitorar envio de logs (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "62774880"
   
  Você pode fazer consultas nestas tabelas para monitorar o status de uma sessão de envio de logs. Por exemplo, para saber sobre o status de envio de logs, verifique o status e o histórico dos trabalhos de backup, de cópia e restauração. Você pode exibir o histórico de envio de logs específico e detalhes de erros consultando as tabelas de monitoramento a seguir.  
   
-|Table|Descrição|  
+|Tabela|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|Armazena ID de trabalho de alerta.|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|Armazena detalhes de erros dos trabalhos de envio de logs. Você pode fazer consultas nesta tabela para ver os erros de uma sessão de agente. Como opção, você pode classificar os erros por data e hora em que cada um foi registrado. Cada erro é registrado como uma sequência de exceções e erros múltiplos (sequências) por sessão de agente.|  
@@ -49,7 +49,7 @@ ms.locfileid: "62774880"
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>Procedimentos Armazenados para Monitoramento de Envio de Logs  
  O monitoramento e as informações de histórico são armazenados em tabelas no **msdb**, que pode ser acessado com o uso dos procedimentos armazenados de envio de logs. Execute estes procedimentos armazenados nos servidores indicados na tabela a seguir.  
   
-|Procedimento armazenado|Descrição|Execute este procedimento em|  
+|Procedimento armazenado|DESCRIÇÃO|Execute este procedimento em|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)|Retorna registros de monitor para o banco de dados primário especificado da tabela **log_shipping_monitor_primary** .|Servidor monitor ou servidor primário|  
 |[sp_help_log_shipping_monitor_secondary](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql)|Retorna registros de monitor para o banco de dados secundário especificado da tabela **log_shipping_monitor_secondary** .|Servidor monitor ou servidor secundário|  
@@ -59,7 +59,7 @@ ms.locfileid: "62774880"
 |[sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql)|Recupera configurações de bancos de dados primários e exibe os valores das tabelas **log_shipping_secondary**, **log_shipping_secondary_databases** e **log_shipping_monitor_secondary** .|Servidor secundário|  
 |[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql)|Esse procedimento armazenado recupera a configurações de um banco de dados primário específico no servidor secundário.|Servidor secundário|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir o relatório de envio de logs &#40;SQL Server Management Studio&#41;](view-the-log-shipping-report-sql-server-management-studio.md)   
  [Tabelas e procedimentos armazenados de envio de logs](log-shipping-tables-and-stored-procedures.md)  
   

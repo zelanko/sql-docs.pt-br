@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 32ef669c238c52ec5e5e20804c896b4364c8bc85
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241348"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Importar informações de servidor registrado (SQL Server Management Studio)
@@ -39,8 +39,8 @@ ms.locfileid: "75241348"
   
 3.  Na caixa de diálogo **Importar Servidores Registrados** , selecione os arquivos de servidores registrados a serem importados e clique em **OK**.  
   
-     **Importar arquivo**  
-     Digite o nome do arquivo de importação na caixa de texto ou clique no botão Procurar (**...**) para localizar o arquivo de importação no computador cliente. Se você selecionar um arquivo existente, a informação de servidor registrado será anexada ao arquivo. O arquivo de importação só pode ser um arquivo de servidor registrado exportado anteriormente. Os arquivos de servidor registrado têm uma extensão .regsrvr.  
+     **Arquivo de importação**  
+     Digite o nome do arquivo de importação na caixa de texto ou clique no botão Procurar ( **...** ) para localizar o arquivo de importação no computador cliente. Se você selecionar um arquivo existente, a informação de servidor registrado será anexada ao arquivo. O arquivo de importação só pode ser um arquivo de servidor registrado exportado anteriormente. Os arquivos de servidor registrado têm uma extensão .regsrvr.  
   
      **Selecione o grupo de servidores para o qual importar**  
      Selecione o nó raiz ou um grupo de servidores específico para o qual serão importadas as entradas do servidor registrado no arquivo. Você pode importar todos os servidores registrados, servidores registrados em um grupo de servidores específico ou um único servidor registrado para o arquivo de exportação. A funcionalidade de importação é recursiva; por exemplo, se o grupo de servidores A contiver o grupo de servidores B e o grupo de servidores B contiver os grupos de servidores C e D, a importação do grupo de servidores A exportará todas as entradas em A, B, C e D.  

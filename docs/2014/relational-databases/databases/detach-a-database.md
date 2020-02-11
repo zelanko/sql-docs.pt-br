@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871951"
 ---
 # <a name="detach-a-database"></a>Desanexar um banco de dados
@@ -85,14 +85,14 @@ ms.locfileid: "62871951"
   
     -   Quando um banco de dados estiver envolvido com replicação, o **Status** será **Não pronto** e a coluna **Mensagem** exibirá **Banco de Dados replicado**.  
   
-    -   Quando um banco de dados tem uma ou mais conexões ativas, o **Status** é **não está pronto** e o **mensagem** coluna exibe _< number_of_active_connections >_**Ativa** , por exemplo: **1 Conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
+    -   Quando um banco de dados tiver uma ou mais conexões ativas, o **Status** será **Não está pronto** e a coluna **Mensagem** exibirá _<número_de_conexões_ativas>_ **Conexão(ões) ativa(s)** – por exemplo: **1 Conexão ativa**. Antes de desanexar o banco de dados, você deverá cancelar qualquer conexão ativa selecionando **Cancelar Conexões**.  
   
      Para obter mais informações sobre a mensagem, clique o texto com hiperlink para abrir o Monitor de atividades.  
   
 4.  Quando você estiver pronto para desanexar o banco de dados, clique em **OK**.  
   
 > [!NOTE]  
->  O banco de dados recém-desanexado permanecerá visível no nó **Bancos de Dados** do Pesquisador de Objetos até que a exibição seja atualizada. Você pode atualizar a exibição a qualquer momento: Clique no painel Pesquisador de objetos e, na barra de menus, selecione **modo de exibição** e, em seguida **atualizar**.  
+>  O banco de dados recém-desanexado permanecerá visível no nó **Bancos de Dados** do Pesquisador de Objetos até que a exibição seja atualizada. Você pode atualizar a exibição a qualquer momento: Clique no painel Pesquisador de Objetos e, na barra de menus, selecione **Exibir** e, depois, **Atualizar**.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62871951"
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   

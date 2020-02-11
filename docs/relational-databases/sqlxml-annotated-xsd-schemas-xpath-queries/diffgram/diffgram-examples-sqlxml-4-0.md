@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6fe05c49f44bc0e210687b63e0eb8878b479a07f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257259"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Exemplos de DiffGram (SQLXML 4.0)
@@ -74,7 +74,7 @@ ms.locfileid: "75257259"
   
      Salve este esquema como DiffGramSchema.xml na mesma pasta em que você salva outros arquivos usados nos exemplos.  
   
-## <a name="a-deleting-a-record-by-using-a-diffgram"></a>R. Excluindo um registro usando um DiffGram  
+## <a name="a-deleting-a-record-by-using-a-diffgram"></a>a. Excluindo um registro usando um DiffGram  
  O DiffGram, neste exemplo, exclui um registro de cliente (com CustomerID ALFKI) da tabela Cust e exclui o registro de pedido correspondente (cuja OrderID é 1) da tabela Ord.  
   
 ```  

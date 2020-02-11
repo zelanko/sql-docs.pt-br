@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e2fc735cd4834fcb6e59550604b831b5d8790fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768564"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Criando uma transformação síncrona com o componente Script
@@ -69,9 +69,9 @@ ms.locfileid: "62768564"
  Para obter mais informações sobre a página **Entradas e Saídas** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Entradas e Saídas&#41;](../script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Adicionando variáveis  
- Se você quiser usar variáveis existentes em seu script, você pode adicioná-las a `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade a **Script** página da **Editor de transformação scripts**.  
+ Se você quiser usar variáveis existentes em seu script, poderá adicioná-las nos campos de `ReadOnlyVariables` propriedade `ReadWriteVariables` e na página **script** do **Editor de transformação scripts**.  
   
- Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências ( **...** ) botão ao lado de `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade e, em seguida, selecionar as variáveis na **selecionar variáveis** caixa de diálogo.  
+ Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar várias variáveis clicando no botão de reticências (**...**) ao lado `ReadOnlyVariables` dos `ReadWriteVariables` campos de propriedade e e selecionando as variáveis na caixa de diálogo **Selecionar variáveis** .  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62768564"
 ### <a name="understanding-the-auto-generated-code"></a>Compreendendo o código gerado automaticamente  
  Quando você abre o VSTA IDE depois de criar e configurar um componente de transformação, a classe `ScriptMain` editável aparece no editor de códigos com um stub para o método `ProcessInputRow`. A classe `ScriptMain` é onde você escreverá seu código personalizado, e `ProcessInputRow` é o método mais importante em um componente de transformação.  
   
- Se você abrir o **Explorador de projeto** janela no VSTA, você pode ver que o componente Script também gerou somente leitura `BufferWrapper` e `ComponentWrapper` itens de projeto. A classe `ScriptMain` foi herdada da classe `UserComponent` no item de projeto `ComponentWrapper`.  
+ Se você abrir a janela **Explorador de projeto** no VSTA, poderá ver que o componente script também gerou itens de projeto e `BufferWrapper` `ComponentWrapper` somente leitura. A classe `ScriptMain` foi herdada da classe `UserComponent` no item de projeto `ComponentWrapper`.  
   
  Em tempo de execução, o mecanismo de fluxo de dados invoca o método `ProcessInput` na classe `UserComponent`, que substitui o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> da classe pai <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. O método `ProcessInput`, por sua vez, executa um loop nas linhas do buffer de entrada e chama o método `ProcessInputRow` uma vez para cada linha.  
   
@@ -136,7 +136,7 @@ else
  Estes exemplos demonstram o código personalizado que é necessário na classe `ScriptMain` para criar um componente de transformação síncrono.  
   
 > [!NOTE]  
->  Esses exemplos usam o **Person. address** na tabela a `AdventureWorks` banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e **nvarchar (30) Cidade**colunas de, pelo fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
+>  Esses exemplos usam a tabela **Person. Address** no banco `AdventureWorks` de dados de exemplo e passam sua primeira e quarta colunas, as colunas City **intAddressID** e **nvarchar (30)** , por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
   
 ### <a name="single-output-synchronous-transformation-example"></a>Exemplo de transformação síncrona de saída única  
  Este exemplo demonstra um componente de transformação síncrono com uma única saída. Essa transformação passa pela coluna **AddressID** e converte a coluna **City** em maiúsculas.  
@@ -145,7 +145,7 @@ else
   
 1.  Adicione um novo componente Script à superfície de designer Fluxo de Dados e configure-o como uma transformação.  
   
-2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados a partir o **Person. address** tabela da `AdventureWorks` banco de dados de exemplo que contém o **AddressID** e **Cidade** colunas.  
+2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados da tabela **Person. Address** do banco de `AdventureWorks` dados de exemplo que contém as colunas **AddressID** e **City** .  
   
 3.  Abra o **Editor de Transformação Scripts**. Na página **Colunas de Entrada**, selecione as colunas **AddressID** e **City**. Marque a coluna **City** como Leitura/Gravação.  
   
@@ -197,7 +197,7 @@ public class ScriptMain:
   
 1.  Adicione um novo componente Script à superfície de designer Fluxo de Dados e configure-o como uma transformação.  
   
-2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados a partir o **Person. address** tabela da `AdventureWorks` banco de dados de exemplo que contém pelo menos as **AddressID** e **Cidade** colunas.  
+2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados da tabela **Person. Address** do banco de `AdventureWorks` dados de exemplo que contém pelo menos as colunas **AddressID** e **City** .  
   
 3.  Abra o **Editor de Transformação Scripts**. Na página **Colunas de Entrada**, selecione as colunas **AddressID** e **City**. Marque a coluna **City** como Leitura/Gravação.  
   
@@ -258,9 +258,9 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 }  
 ```  
   
-|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Fique atualizado com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
- [Compreendendo as transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md) [criando uma transformação assíncrona com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [desenvolvendo um componente de transformação personalizado com síncrona Saídas](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Noções básicas sobre transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md) [criando uma transformação assíncrona com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [desenvolvendo um componente de transformação personalizado com saídas síncronas](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
   
   

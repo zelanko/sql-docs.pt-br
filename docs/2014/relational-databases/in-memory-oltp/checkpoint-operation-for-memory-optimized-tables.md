@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ddcdec0f624c1d6f70c57e593eaf9da66cbe0419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065524"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Operação de ponto de verificação para tabelas com otimização de memória
@@ -28,9 +28,9 @@ ms.locfileid: "63065524"
   
  Para tabelas baseadas em disco, um ponto de verificação automático é obtido com base na opção de configuração de intervalo de recuperação (para obter mais informações, consulte [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](../logs/change-the-target-recovery-time-of-a-database-sql-server.md)).  
   
- Para tabelas com otimização de memória, um ponto de verificação automático é obtido quando o arquivo de log de transação se torna maior que 512 MB desde o último ponto de verificação. 512 MB inclui registros de log de transação para tabelas baseadas em disco e com otimização de memória.  
+ Para tabelas com otimização de memória, um ponto de verificação automático é obtido quando o arquivo de log de transações se torna maior que 512 MB desde o último ponto de verificação. 512 MB inclui registros de log de transações para tabelas baseadas em disco e com otimização de memória.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando e gerenciando armazenamento para objetos com otimização de memória](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

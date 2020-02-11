@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c744d3f28bc27373f3dc9798ba591848d4b720e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769343"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (Expressão SSIS)
@@ -49,13 +49,13 @@ DATEADD(datepart, number, date)
   
 |datepart|Abreviações|  
 |--------------|-------------------|  
-|Year|aa, aaaa|  
+|Ano|aa, aaaa|  
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dia do ano|dy, y|  
-|Day|dd, d|  
-|Week|wk, ww|  
-|Dia de semana|dw, w|  
+|Dia|dd, d|  
+|Semana|wk, ww|  
+|Weekday|dw, w|  
 |Hora|Hh|  
 |Minuto|mi, n|  
 |Segundo|ss, s|  
@@ -90,7 +90,7 @@ DATEADD("day", 21, ModifiedDate)
 DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DATEDIFF &#40;Expressão do SSIS&#41;](datediff-ssis-expression.md)   
  [DATEPART &#40;Expressão do SSIS&#41;](datepart-ssis-expression.md)   
  [DAY &#40;Expressão do SSIS&#41;](day-ssis-expression.md)   

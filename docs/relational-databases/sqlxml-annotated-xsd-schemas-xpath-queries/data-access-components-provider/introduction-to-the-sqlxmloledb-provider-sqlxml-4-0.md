@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f94cf5002f0f587332df9ccc9a77e24010b8824
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246683"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introdução ao provedor SQLXMLOLEDB (SQLXML 4.0)
@@ -39,16 +39,16 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Propriedades específicas do provedor SQLXMLOLEDB  
  O provedor SQLXMLOLEDB expõe a seguinte propriedade de conexão específica do provedor:  
   
-|Conexão<br /><br /> propriedade|Padrão<br /><br /> (se houver)|Descrição|  
+|Conexão<br /><br /> propriedade|Padrão<br /><br /> (se houver)|DESCRIÇÃO|  
 |-----------------------------|----------------------------|-----------------|  
 |Provedor de Dados||Fornece o PROGID do provedor OLE DB através do qual o SQLXMLOLEDB executa os comandos. A partir do SQLXML 4.0 e do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], este provedor passou a fazer parte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, portanto, o valor dessa propriedade se restringe a "SQLNCLI11". Para obter mais informações, consulte [Programação do SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md).|  
   
  O provedor SQLXMLOLEDB expõe as seguintes propriedades de comando específicas do provedor:  
   
-|Comando<br /><br /> propriedade|Padrão<br /><br /> (se houver)|Descrição|  
+|Comando<br /><br /> propriedade|Padrão<br /><br /> (se houver)|DESCRIÇÃO|  
 |--------------------------|----------------------------|-----------------|  
 |Caminho base|""|Especifica o caminho do arquivo de base. O caminho do arquivo de base é usado para indicar o local dos arquivos de esquema de mapeamento ou XSL (Stylesheet Language) XML. O caminho do arquivo base também é usado para resolver os caminhos relativos de arquivos de esquema XSL ou de mapeamento que foram especificados nas propriedades do esquema XSL ou Mapping.<br /><br /> Para obter um exemplo em que essa propriedade é usada, consulte [executando consultas XPath &#40;provedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
-|ClientSideXML|False|Defina esta propriedade como True se quiser que o processo de conversão do conjunto de linhas em XML ocorra no cliente, e não no servidor. Isso é útil quando você deseja mover a carga de desempenho para a camada intermediária.<br /><br /> Para obter um exemplo em que essa propriedade é usada, consulte [executando consultas sql &#40;provedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) ou [executando modelos que contêm consultas SQL &#40;provedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
+|ClientSideXML|Falso|Defina esta propriedade como True se quiser que o processo de conversão do conjunto de linhas em XML ocorra no cliente, e não no servidor. Isso é útil quando você deseja mover a carga de desempenho para a camada intermediária.<br /><br /> Para obter um exemplo em que essa propriedade é usada, consulte [executando consultas sql &#40;provedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) ou [executando modelos que contêm consultas SQL &#40;provedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
 |Tipo de conteúdo||Retorna o tipo de conteúdo de saída. Esta é uma propriedade SOMENTE LEITURA.<br /><br /> Esta propriedade fornece informações ao navegador sobre o tipo de conteúdo (como TEXT/XML, TEXT/HTML, imagem/jpeg, e assim por diante). O valor dessa propriedade torna-se o campo **Content-Type** enviado ao navegador como parte do cabeçalho HTTP, que contém o tipo MIME (Multipurpose Internet Mail Extensions) do documento que está sendo enviado como o corpo.|  
 |Esquema de mapeamento|NULO|Se um aplicativo cliente executar uma consulta XPath em um esquema de mapeamento (XDR ou XSD), esta propriedade será usada para especificar o nome do esquema de mapeamento.<br /><br /> O caminho especificado pode ser relativo (xyz/abc/MySchema.xml) ou absoluto (C:\MyFolder\abc\MySchema.xml).<br /><br /> Se um caminho relativo for especificado, o caminho base especificado pela propriedade caminho base será usado para resolver o caminho relativo. Se nenhum caminho tiver sido especificado na propriedade caminho base, o caminho relativo será relativo ao diretório atual.<br /><br /> Ao especificar um valor para a propriedade esquema de mapeamento, você pode especificar um caminho de diretório local ou uma URL (https://...). Se você especificar uma URL, deverá configurar o WinHTTP para acessar servidores HTTP e HTTPS por meio de um servidor proxy. Para isso, use o utilitário Proxycfg.exe. Para obter mais informações, consulte "Usando o Utilitário de Configuração do WinHTTP Proxy" na Biblioteca MSDN.<br /><br /> Para obter um exemplo em que essa propriedade é usada, consulte [executando consultas XPath &#40;provedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |namespaces||Esta propriedade permite a execução de consultas XPath que usam namespaces. Para obter um exemplo em que essa propriedade é usada, consulte [executando consultas XPath com namespaces &#40;provedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md).|  
@@ -58,7 +58,7 @@ oTestCommand.Execute , , adExecuteStream
   
  A tabela a seguir contém descrições dos valores de propriedade de sinalizadores de fluxo de SS.  
   
-|Valor da propriedade|Descrição|  
+|Valor da propriedade|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|Não são aceitas URLs para esquemas de mapeamento ou XSL.|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|Um caminho especificado para um esquema de mapeamento ou para XSL deve ser relativo ao caminho de base do próprio modelo.|  

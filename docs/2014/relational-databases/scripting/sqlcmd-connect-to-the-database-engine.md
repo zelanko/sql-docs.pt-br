@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 94025942a6e06f4dfb7b0eeab43487e4a6308e4f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243258"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>Conectar-se ao Mecanismo de Banco de Dados com sqlcmd
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dá suporte à comunicação do cliente com o protocolo de rede TCP/IP (o padrão) e o protocolo de pipes nomeados. O protocolo de memória compartilhada também estará disponível se o cliente estiver se conectando a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mesmo computador. Há três métodos comuns de selecionar o protocolo. O protocolo usado pelo utilitário **sqlcmd** é determinado na seguinte ordem:  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à comunicação de cliente com o protocolo de rede TCP/IP (padrão) e o protocolo de pipes nomeados. O protocolo de memória compartilhada também estará disponível se o cliente estiver se conectando a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mesmo computador. Há três métodos comuns de selecionar o protocolo. O protocolo usado pelo utilitário **sqlcmd** é determinado na seguinte ordem:  
   
--   o **sqlcmd** usa o protocolo especificado como parte da cadeia de conexão, conforme descrito abaixo.  
+-   O**sqlcmd** usa o protocolo especificado como parte da cadeia de conexão, conforme a descrição abaixo.  
   
 -   Se nenhum protocolo for especificado como parte da cadeia de conexão, o **sqlcmd** usará o protocolo definido como parte do alias ao qual ele está se conectando. Para configurar **sqlcmd** para usar um protocolo de rede específico criando um alias, veja [Criar ou excluir um alias de servidor para ser usado por um cliente &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   

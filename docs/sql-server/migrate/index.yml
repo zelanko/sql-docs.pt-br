@@ -1,0 +1,103 @@
+### YamlMime:Landing
+title: Documentação de migração do SQL Server
+summary: Documentação técnica para ajudar você a migrar para o SQL Server local e na nuvem.
+metadata:
+  title: Documentação de migração do SQL Server
+  description: Escolha o caminho de migração do SQL Server que deseja.
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 12/09/2019
+  ms.reviewer: jtoland
+  ms.openlocfilehash: 4ca06be03cadd08c7f49561f7b8066c7883f33f3
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "75322359"
+landingContent:
+- title: Do SQL ao SQL Server
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: AMD (Assistente de Migração de Dados)
+      url: ../../dma/dma-overview.md
+    - text: Assistente para Experimentos de Banco de Dados
+      url: ../../dea/database-experimentation-assistant-overview.md
+  - linkListType: download
+    links:
+    - text: AMD (Assistente de Migração de Dados)
+      url: https://www.microsoft.com/download/details.aspx?id=53595
+    - text: Assistente para Experimentos de Banco de Dados
+      url: https://www.microsoft.com/download/details.aspx?id=54090
+- title: De não SQL para o SQL e o Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SSMA (Assistente de Migração do SQL Server)
+      url: ../../ssma/sql-server-migration-assistant.md
+  - linkListType: get-started
+    links:
+    - text: Do Oracle
+      url: ../../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
+    - text: Do Access
+      url: ../../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
+    - text: Do DB2
+      url: ../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
+    - text: Do mySQL
+      url: ../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
+    - text: Do Sybase
+      url: ../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
+- title: Do SQL para o Azure SQL
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Banco de Dados SQL do Azure
+      url: /azure/sql-database/sql-database-technical-overview
+    - text: Máquina virtual do Azure SQL Server
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+  - linkListType: deploy
+    links:
+    - text: DMS (Serviço de Migração de Banco de Dados)
+      url: /azure/dms/
+    - text: AMD (Assistente de Migração de Dados)
+      url: ../../dma/dma-overview.md
+  - linkListType: concept
+    links:
+    - text: Processo de migração mais amplo
+      url: /azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration
+- title: Recursos
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Central de migrações do SQL Server
+      url: https://azure.microsoft.com/migration/sql-server/
+    - text: Guia de Migração de Banco de Dados
+      url: https://datamigration.microsoft.com/
+    - text: Serviço de Migração do Azure
+      url: https://azure.microsoft.com/services/azure-migrate/
+    - text: Blog de migração de dados
+      url: https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/bg-p/MicrosoftDataMigration
+    - text: Modernizando o SQL Server (SQL PASS)
+      url: https://www.youtube.com/watch?v=5RPkuQHcxxs
+  - linkListType: download
+    links:
+    - text: MAP (Microsoft Assessment and Planning) Toolkit
+      url: https://www.microsoft.com/download/details.aspx?id=7826
+- title: Fim do suporte
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Visão geral
+      url: ../end-of-support/sql-server-end-of-life-overview.md
+    - text: SQL Server 2008 e R2
+      url: https://www.microsoft.com/cloud-platform/windows-sql-server-2008
+    - text: ESUs (Atualizações de Suporte Estendidas)
+      url: ../end-of-support/sql-server-extended-security-updates.md
+    - text: ESUs gratuitas com a VM do Azure
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support
+  - linkListType: download
+    links:
+    - text: Folha de dados de atualizações de segurança estendidas em PDF
+      url: http://download.microsoft.com/download/A/3/F/A3F0908A-0FD8-494C-82BC-E75F313F3FAD/Extended_Security_Updates_for_Windows_Server_2008_and_SQL_Server_2008_End_of_Service.pdf

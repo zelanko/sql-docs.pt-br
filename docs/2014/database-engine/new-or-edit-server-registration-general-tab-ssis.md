@@ -1,5 +1,5 @@
 ---
-title: Novo ou editar registro de servidor (guia Geral) (SSIS) | Microsoft Docs
+title: Novo ou editar registro de servidor (guia geral) (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774144"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Novo registro ou editar registro de servidor (guia Geral) (SSIS)
@@ -49,7 +49,7 @@ ms.locfileid: "62774144"
  **Descrição do servidor registrado**  
  Digite uma descrição opcional do servidor.  
   
- **Teste**  
+ **Testar**  
  Clique para testar a conexão com o servidor selecionado em **Nome do servidor**.  
   
  **Salvar**  

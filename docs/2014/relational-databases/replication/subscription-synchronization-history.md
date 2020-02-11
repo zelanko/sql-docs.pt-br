@@ -1,5 +1,5 @@
 ---
-title: Assinatura, histórico de sincronização (assinatura de mesclagem, SQL Server 2005 e versões posterior) | Microsoft Docs
+title: Assinatura, histórico de sincronização (assinatura de mesclagem, SQL Server 2005 e posterior) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629708"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>Assinatura, Histórico de Sincronização (assinatura de mesclagem, SQL Server 2005 e versões posteriores)
@@ -80,7 +80,7 @@ ms.locfileid: "62629708"
  **Insere**  
  O número de linhas inserido nesta fase da sessão selecionada.  
   
- **Updates**  
+ **Atualizações**  
  O número de linhas atualizado nesta fase da sessão selecionada.  
   
  **Deletes**  
@@ -95,7 +95,7 @@ ms.locfileid: "62629708"
  **Última mensagem da sessão selecionada**  
  Essa área de texto exibe a última mensagem na sessão selecionada. Se tiver ocorrido um erro, exibirá informações de erro detalhadas e o comando tentado no momento do erro. Também inclui links para conteúdo adicional relacionado ao erro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitorando a Replicação](monitoring-replication.md)   

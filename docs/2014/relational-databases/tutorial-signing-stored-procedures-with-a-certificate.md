@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Procedimentos armazenados com um certificado de assinatura | Microsoft Docs'
+title: 'Tutorial: assinando procedimentos armazenados com um certificado | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524089"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutorial: Assinando procedimentos armazenados com um certificado
@@ -48,7 +48,7 @@ ms.locfileid: "62524089"
  Cada bloco de código neste exemplo é explicado em linha. Para copiar o exemplo completo, consulte [Exemplo completo](#CompleteExample) no fim deste tutorial.  
   
 ## <a name="1-configure-the-environment"></a>1. Configure o ambiente  
- Para configurar o contexto inicial do exemplo, no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] abra uma nova consulta e execute o código a seguir para abrir o banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Esse código altera o contexto do banco de dados para `AdventureWorks2012` e cria um novo logon de servidor e conta de usuário de banco de dados (`TestCreditRatingUser`), usando uma senha.  
+ Para configurar o contexto inicial do exemplo, no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] abra uma nova consulta e execute o código a seguir para abrir o banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Esse código altera o contexto do banco de dados para `AdventureWorks2012` e cria um novo logon de servidor e conta de usuário de banco de dados (`TestCreditRatingUser`), usando uma senha.  
   
 ```  
 USE AdventureWorks2012;  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Criar e assinar um procedimento armazenado usando o certificado  
- Use o código a seguir para criar um procedimento armazenado que seleciona dados da tabela `Vendor` no esquema do banco de dados `Purchasing`, restringindo o acesso apenas a empresas que tenham 1 como classificação de crédito. Observe que a primeira seção do procedimento armazenado exibe o contexto da conta do usuário que executa o procedimento armazenado apenas para demonstração dos conceitos. Não é exigido atender os requisitos.  
+ Use o código a seguir para criar um procedimento armazenado que seleciona dados da tabela `Vendor` no esquema do banco de dados `Purchasing` , restringindo o acesso apenas a empresas que tenham 1 como classificação de crédito. Observe que a primeira seção do procedimento armazenado exibe o contexto da conta do usuário que executa o procedimento armazenado apenas para demonstração dos conceitos. Não é exigido atender os requisitos.  
   
 ```  
 CREATE PROCEDURE TestCreditRatingSP  
@@ -142,7 +142,7 @@ GO
  Para obter mais informações sobre como conceder permissões a objetos, consulte [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
 ## <a name="6-display-the-access-context"></a>6. Exibir o contexto de acesso  
- Para exibir os direitos associados ao acesso de procedimento armazenado, execute o código a seguir para conceder os direitos de execução do procedimento armazenado ao usuário `TestCreditRatingUser`.  
+ Para exibir os direitos associados ao acesso de procedimento armazenado, execute o código a seguir para conceder os direitos de execução do procedimento armazenado ao usuário `TestCreditRatingUser` .  
   
 ```  
 GRANT EXECUTE   
@@ -192,7 +192,7 @@ GO
   
  Para obter mais informações sobre a instrução REVERT, consulte [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql).  
   
-##  <a name="CompleteExample"></a> Exemplo completo  
+##  <a name="CompleteExample"></a>Exemplo completo  
  Esta seção exibe o código de exemplo completo.  
   
 ```  
@@ -288,7 +288,7 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

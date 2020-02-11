@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 2d5dcbaf6f478d3cb637c72ada8bee2bb2a088d2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244603"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Exportar informações de servidor registrado (SQL Server Management Studio)
@@ -42,15 +42,15 @@ ms.locfileid: "75244603"
   
 2.  Na caixa de diálogo **Exportar Servidores Registrados** , faça as seguintes seleções:  
   
-     **Grupo de servidores**  
+     **Grupo de servidor**  
      Especifique o grupo de servidor que será exportado. Exporte todos os servidores registrados, servidores registrados em um grupo de servidores específicos ou um único servidor registrado para o arquivo de exportação. A funcionalidade de exportação é recursiva; por exemplo, se o grupo de servidores A contiver o grupo de servidores B, e o grupo de servidores B contiver os grupos de servidores C e D, a exportação do grupo de servidores A exportará todas as entradas em A, B, C e D.  
   
      O grupo de servidores exibe somente os grupos da árvore atual de servidores registrados.  
   
-     **Exportar arquivo**  
-     Digite o nome do arquivo de exportação na caixa de texto ou use o botão Procurar (**...**) para localizar um arquivo de exportação no computador cliente. Se você selecionar um arquivo existente, a informação de servidor registrado será anexada ao arquivo. Use a extensão .regsrvr. Se você quiser que as informações do servidor registrado estejam disponíveis para outros usuários ou outro computador, você poderá salvar o arquivo na rede. Outros usuários podem acessar o arquivo e podem importar parte ou todas as informações do servidor registrado. Se você selecionar um arquivo existente como o arquivo de exportação, o conteúdo do arquivo será substituído pelas informações de registro do servidor.  
+     **Arquivo de exportação**  
+     Digite o nome do arquivo de exportação na caixa de texto ou use o botão Procurar ( **...** ) para localizar um arquivo de exportação no computador cliente. Se você selecionar um arquivo existente, a informação de servidor registrado será anexada ao arquivo. Use a extensão .regsrvr. Se você quiser que as informações do servidor registrado estejam disponíveis para outros usuários ou outro computador, você poderá salvar o arquivo na rede. Outros usuários podem acessar o arquivo e podem importar parte ou todas as informações do servidor registrado. Se você selecionar um arquivo existente como o arquivo de exportação, o conteúdo do arquivo será substituído pelas informações de registro do servidor.  
   
-     **Não incluir nomes de usuário e senhas no arquivo de exportação**  
+     **Não inclua nomes de usuário e senhas no arquivo de exportação**  
      Exclua nomes de usuário ao exportar o arquivo.  
   
     > [!IMPORTANT]  

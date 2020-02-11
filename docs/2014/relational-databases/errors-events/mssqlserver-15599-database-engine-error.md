@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e1e4988bea932b8279a1d5b754ef3d0271e3aa1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915516"
 ---
-# <a name="mssqlserver15599"></a>MSSQLSERVER_15599
+# <a name="mssqlserver_15599"></a>MSSQLSERVER_15599
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|15599|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SEC_LOCAL_TEMP_AUDIT_PERMISSIONS|  
 |Texto da mensagem|Auditoria e permissões não podem ser definidas em objetos temporários locais.|  

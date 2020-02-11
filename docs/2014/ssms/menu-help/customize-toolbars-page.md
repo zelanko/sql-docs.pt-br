@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470003"
 ---
 # <a name="customize-toolbars-page"></a>Personalizar (página Barras de Ferramentas)
@@ -29,10 +29,10 @@ ms.locfileid: "62470003"
 > [!NOTE]  
 >  A barra de menus não pode ser ocultada. Pode ser apenas redefinida.  
   
- **Nova**  
+ **Novo**  
  Exibe a caixa de diálogo **Nova Barra de Ferramentas** que permite que você crie e nomeie uma barra de ferramentas personalizada.  
   
- **Rename**  
+ **Renomear**  
  Exibe a caixa de diálogo **Renomear Barra de Ferramentas** que permite que você altere somente o nome de uma barra de ferramentas personalizada.  
   
  **Delete (excluir)**  

@@ -1,5 +1,5 @@
 ---
-title: Propriedades de dimensão de banco de dados | Microsoft Docs
+title: Propriedades da dimensão do banco de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728486"
 ---
 # <a name="database-dimension-properties"></a>Propriedades de dimensão do banco de dados
-  Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], as características de uma dimensão são definidas pelos metadados da dimensão, com base nas configurações de várias propriedades de dimensão e nos atributos ou hierarquias contidas pela dimensão. A tabela a seguir descreve as propriedades de dimensão no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], as características de uma dimensão são definidas pelos metadados da dimensão, com base nas configurações de várias propriedades de dimensão e nos atributos ou hierarquias contidos na dimensão. A tabela a seguir descreve as propriedades de dimensão no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |`AttributeAllMemberName`|Especifica o nome de todos os membros para atributos em uma dimensão.|  
 |`Collation`|Determina a ordenação usada pela dimensão.|  
@@ -49,12 +49,12 @@ ms.locfileid: "62728486"
 |`WriteEnabled`|Indica se write-backs de dimensão estão disponíveis (sujeito a permissões de segurança).|  
   
 > [!NOTE]  
->  Para obter mais informações sobre como definir valores para as propriedades ErrorConfiguration e UnknownMember quando trabalhar com valores nulos e outros problemas de integridade de dados, consulte [Handling Data Integrity Issues in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Para obter mais informações sobre como definir valores para as propriedades ErrorConfiguration e UnknownMember ao trabalhar com valores nulos e outros problemas de integridade de dados, consulte [tratamento de problemas de integridade de dados no Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributos](attributes-and-attribute-hierarchies.md)   
- [Hierarquias do usuário](user-hierarchies.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Atributos e hierarquias de atributo](attributes-and-attribute-hierarchies.md)   
+ [Hierarquias de usuário](user-hierarchies.md)   
  [Relações de dimensão](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensões &#40;Analysis Services de dados multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   
