@@ -18,14 +18,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014055"
 ---
 # <a name="spatial-data-sql-server"></a>Dados espaciais (SQL Server)
-  Os dados espaciais representam informações sobre o local físico e a forma de objetos geométricos. Esses objetos podem ser locais de pontos ou objetos mais complexos como países, estradas ou lagos.  
+  Os dados espaciais representam informações sobre a localização física e a forma dos objetos geométricos. Esses objetos podem ser localizações de pontos ou objetos mais complexos como países, estradas ou lagos.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a dois tipos de dados espaciais: `geometry` e `geography`.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66014055"
  [Criar, construir e consultar instâncias de geografia](create-construct-and-query-geography-instances.md)  
  Descreve os métodos que você pode usar com instâncias do tipo de dados de geografia.  
   
- [Consultar dados espaciais de vizinho mais próximo](query-spatial-data-for-nearest-neighbor.md)  
+ [Consultar vizinho mais próximo de dados espaciais](query-spatial-data-for-nearest-neighbor.md)  
  Descreve o padrão de consulta comum usado para localizar os objetos espaciais mais próximos a um objeto espacial específico.  
   
  [Criar, modificar e remover índices espaciais](create-modify-and-drop-spatial-indexes.md)  
@@ -63,7 +63,7 @@ ms.locfileid: "66014055"
   
 -   [CompoundCurve](compoundcurve.md)  
   
--   [Polígono](polygon.md)  
+-   [Polygon](polygon.md)  
   
 -   [CurvePolygon](curvepolygon.md)  
   

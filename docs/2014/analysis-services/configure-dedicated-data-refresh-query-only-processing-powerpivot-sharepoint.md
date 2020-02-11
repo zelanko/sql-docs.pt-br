@@ -1,5 +1,5 @@
 ---
-title: Configurar o processamento de somente consulta (PowerPivot para SharePoint) ou a atualização de dados dedicado | Microsoft Docs
+title: Configurar a atualização de dados dedicada ou o processamento somente de consulta (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087506"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurar o processamento dedicado de atualização de dados ou de somente consulta (PowerPivot para SharePoint)
   No modo integrado do SharePoint, uma instância do servidor do Analysis Services pode ser configurada para dar suporte a um tipo específico de solicitação de processamento, como processamento de atualização de dados ou de somente consulta. Por padrão, os dois tipos de solicitação de carregamento estão habilitados. Você pode desativar qualquer um dos tipos para criar um mecanismo de consulta ou servidor de atualização de dados dedicado.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 2010  
   
 > [!NOTE]  
 >  Nesta versão, não há parâmetros de configuração para limitar o uso de memória ou de CPU para trabalhos de atualização de dados ou consultas sob demanda. Uma instância do [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] usará todos os recursos disponíveis para executar os trabalhos de atualização de dados e consultas que está gerenciando.  
@@ -31,7 +31,7 @@ ms.locfileid: "66087506"
   
  [Alterar o número de trabalhos de atualização de dados que podem ser executados em paralelo](#change)  
   
-##  <a name="config"></a> Configurar um modo de processamento  
+##  <a name="config"></a>Configurar um modo de processamento  
   
 1.  Na Administração Central, em Configurações do Sistema, clique em **Gerenciar serviços no servidor**.  
   
@@ -43,25 +43,25 @@ ms.locfileid: "66087506"
   
 5.  Em Uso da Instância de Serviço, proceda de uma das seguintes maneiras:  
   
-    1.  Desmarque a caixa de seleção **habilitar carregamento de bancos de dados somente leitura** para desativar o processamento de consulta sob demanda que ocorre sempre que um usuário abre uma pasta de trabalho que contém dados PowerPivot.  
+    1.  Desmarque a caixa de seleção **habilitar o carregamento de bancos de dados somente leitura** para desativar o processamento de consulta sob demanda que ocorre sempre que um usuário abre uma pasta de trabalho que contém dados PowerPivot.  
   
-    2.  Desmarque a caixa de seleção **habilitar carregamento de bancos de dados para a atualização** para desativar a atualização de dados agendada.  
+    2.  Desmarque a caixa de seleção **habilitar o carregamento de bancos de dados para atualização** para desativar a atualização de data agendada.  
   
     > [!NOTE]  
     >  A desativação da atualização de dados não remove as opções de atualização de dados dos sites do SharePoint. Os usuários que possuem pastas de trabalho PowerPivot ainda podem criar agendas para atualização de dados, mas a atualização de dados não ocorrerá nesse servidor.  
   
 6.  Opcionalmente, para operações de atualização de dados, você pode alterar o número de trabalhos de atualização simultâneos. O aumento do número de trabalhos simultâneos será recomendado se o servidor for configurado apenas para atualização de dados ou se houver processadores adicionais no servidor. Você poderá reduzir o número de trabalhos simultâneos se desejar liberar recursos do sistema para mais consultas sob demanda.  
   
-7.  Salve as alterações. O servidor não validará suas entradas até que um evento de processamento ocorra. Se você inserir um número inválido para trabalhos simultâneos, o erro será detectado e registrado em log quando a próxima solicitação for processada.  
+7.  Salve suas alterações. O servidor não validará suas entradas até que um evento de processamento ocorra. Se você inserir um número inválido para trabalhos simultâneos, o erro será detectado e registrado em log quando a próxima solicitação for processada.  
   
-##  <a name="change"></a> Alterar o número de trabalhos de atualização de dados que podem ser executados em paralelo  
+##  <a name="change"></a>Alterar o número de trabalhos de atualização de dados que podem ser executados em paralelo  
  Um trabalho de atualização de dados é uma tarefa agendada que é adicionada a uma fila de processamento mantida e monitorada por um aplicativo de serviço PowerPivot. Um trabalho consiste em informações de agenda para uma ou mais fontes de dados em uma pasta de trabalho PowerPivot. Um trabalho separado é criado para cada agenda definida. Se um proprietário de pasta de trabalho definir uma agenda para todas as fontes de dados, apenas um trabalho será criado para toda a operação de atualização de dados. Se um proprietário de pasta de trabalho criar agendas individuais para fontes de dados externas, vários trabalhos serão criados e executados para concluir uma atualização de dados completa daquela pasta de trabalho.  
   
  Você poderá aumentar o número de trabalhos de atualização de dados que podem ser executados ao mesmo tempo se o sistema tiver a capacidade para dar suporte à carga adicional.  
   
-|Configuração|Valores válidos|Descrição|  
+|Configuração|Valores válidos|DESCRIÇÃO|  
 |-------------|------------------|-----------------|  
-|Valor padrão|Calculado com base na RAM.|O valor padrão é baseado na quantidade de memória disponível dividida por 4 gigabytes. O padrão é calculado por uma fórmula de maneira que as configurações possam ser ajustadas de acordo com as funcionalidades do sistema.<br /><br /> Observação: O divisor de 4 gigabytes foi selecionado com base no uso de RAM para uma amostragem grande de fontes de dados PowerPivot reais. Não se baseia na arquitetura física ou lógica do PowerPivot.|  
+|Valor padrão|Calculado com base na RAM.|O valor padrão é baseado na quantidade de memória disponível dividida por 4 gigabytes. O padrão é calculado por uma fórmula de maneira que as configurações possam ser ajustadas de acordo com as funcionalidades do sistema.<br /><br /> Observação: o divisor de 4 gigabytes foi selecionado com base no uso de RAM para uma grande amostragem de fontes de dados PowerPivot reais. Não se baseia na arquitetura física ou lógica do PowerPivot.|  
 |Valor máximo|Calculado com base no número de CPUs.|O número máximo de trabalhos simultâneos que podem ser especificados tem como base o número de processadores no computador. Por exemplo, em um computador quad core de 4 soquetes, o número máximo de trabalhos que podem ser executados simultaneamente é 16.|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>Aumentando o valor padrão para um valor mais alto  
@@ -82,7 +82,7 @@ ms.locfileid: "66087506"
   
  Cada trabalho de atualização de dados terá características diferentes de carga dependendo do número e do tamanho das fontes de dados que estão sendo atualizadas. As pastas de trabalho que têm uma única fonte de dados com um número menor de linhas têm uma carga de processamento muito mais leve do que uma pasta de trabalho que tem numerosas fontes de dados e conjuntos de linhas muito grandes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualização de dados PowerPivot com SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Conformidade de SQL-92 | Microsoft Docs
+title: Conformidade com SQL-92 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,32 +16,32 @@ ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5d8ed2818b466d16591be8b70478221d7ac84df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063375"
 ---
 # <a name="sql-92-compliance"></a>Conformidade com SQL-92
-Os Drivers de banco de dados de área de trabalho do ODBC e o mecanismo subjacente do Microsoft Jet não são compatíveis com o SQL-92. Eles oferecem suporte a muitos recursos que foram definidos em SQL-92. Não há suporte para alguns recursos com suporte no driver em SQL-92. Para obter mais informações, consulte o *guia do programador do Microsoft Jet banco de dados Engine*. A seguir está as principais diferenças entre os dois:  
+Os drivers de banco de dados da área de trabalho ODBC e o mecanismo do Microsoft Jet subjacente não são compatíveis com SQL-92. Eles dão suporte a muitos recursos que foram definidos no SQL-92. Alguns recursos com suporte no driver não têm suporte no SQL-92. Para obter mais informações, consulte o *Guia do programador do Microsoft Jet mecanismo de banco de dados*. A seguir estão as principais diferenças entre as duas:  
   
--   O SQL usado pelos Drivers de banco de dados da área de trabalho suporta expressões mais complexas que aqueles especificados pelo SQL-92.  
+-   O SQL usado pelos drivers de banco de dados de desktop dá suporte a expressões mais poderosas do que aquelas especificadas pelo SQL-92.  
   
--   Aplicam regras diferentes para o predicado BETWEEN.  
+-   Regras diferentes se aplicam ao predicado BETWEEN.  
   
--   O SQL usado pelos Drivers de banco de dados de área de trabalho e ANSI SQL dá suporte a palavras-chave diferentes.  
+-   O SQL usado pelos drivers de banco de dados da área de trabalho e ANSI SQL dá suporte a palavras-chave diferentes.  
   
- Não há suporte para os seguintes recursos do SQL-92 pelo SQL do Microsoft Jet:  
+ Os seguintes recursos do SQL-92 não têm suporte do Microsoft Jet SQL:  
   
--   Instruções de segurança, como GRANT e bloqueio.  
+-   Instruções de segurança, como GRANT e LOCK.  
   
 -   DISTINCT com referências de função de agregação.  
   
- Os recursos a seguir são aprimoramentos no SQL usado pelos Drivers de banco de dados da área de trabalho que não são especificados pelo SQL-92:  
+ Os recursos a seguir são aprimoramentos no SQL usado pelos drivers de banco de dados da área de trabalho que não são especificados pelo SQL-92:  
   
--   A instrução de TRANSFORMAÇÃO fornecendo suporte para consultas de tabela de referência cruzada.  
+-   A instrução TRANSFORM que fornece suporte para consultas de tabela de referência cruzada.  
   
--   Funções de agregação adicionais (**StDev** e **VarP**).  
+-   Funções de agregação adicionais (**DESVPAD** e **VARP**).  
   
 > [!NOTE]  
->  Os Drivers de banco de dados de área de trabalho dão suporte a sintaxe ANSI padrão para % (porcentagem) e _ (sublinhado), não * (asterisco) e? (ponto de interrogação).
+>  Os drivers de banco de dados de desktop dão suporte à sintaxe ANSI padrão para% (PERCENT) e _ (sublinhado), não * (asterisco) e? (ponto de interrogação).

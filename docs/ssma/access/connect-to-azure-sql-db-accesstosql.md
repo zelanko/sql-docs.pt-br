@@ -1,5 +1,5 @@
 ---
-title: Conectar-se ao banco de dados SQL do Azure (AccessToSQL) | Microsoft Docs
+title: Conectar-se ao BD SQL do Azure (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0b26ddaef1373544e0df2fd9186cdf56fdafd801
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68040634"
 ---
-# <a name="connect-to-azure-sql-db-accesstosql"></a>Conectar-se ao banco de dados SQL do Azure (AccessToSQL)
-Use a opção conectar à caixa de diálogo do SQL Azure para se conectar ao banco de dados do SQL Azure que você deseja migrar.  
+# <a name="connect-to-azure-sql-db-accesstosql"></a>Conectar-se ao BD SQL do Azure (AccessToSQL)
+Use a caixa de diálogo Conectar-se a SQL Azure para se conectar ao banco de dados do SQL Azure que você deseja migrar.  
   
-Para acessar essa caixa de diálogo sobre o **arquivo** menu, selecione **conectar-se ao SQL Azure**. Se você tiver se conectado anteriormente, o comando é **reconectar-se ao SQL Azure.**  
+Para acessar essa caixa de diálogo, no menu **arquivo** , selecione **conectar-se a SQL Azure**. Se você tiver se conectado anteriormente, o comando será **reconectado a SQL Azure.**  
   
 ## <a name="options"></a>Opções  
 **Nome do servidor**  
@@ -29,37 +29,37 @@ Selecione ou insira o nome do servidor para se conectar ao SQL Azure.
   
 **Backup de banco de dados**  
   
-Selecione, digite ou **procurar** o nome do banco de dados.  
+Selecione, insira ou **procure** o nome do banco de dados.  
   
 > [!IMPORTANT]  
-> O SSMA para Access não dá suporte a conexão ao banco de dados mestre no SQL Azure.  
+> O SSMA para Access não oferece suporte à conexão com o banco de dados mestre no SQL Azure.  
   
 **Nome de usuário**  
   
-Insira o nome de usuário que usará o SSMA para se conectar ao banco de dados do SQL Azure  
+Insira o nome de usuário que o SSMA usará para se conectar ao banco de dados de SQL Azure  
   
 **Senha**  
   
-Digite a senha para o nome de usuário.  
+Insira a senha para o nome de usuário.  
   
-**Encrypt**  
+**Criptografe**  
   
-O SSMA recomenda conexão criptografada para o SQL Azure.  
+O SSMA recomenda a conexão criptografada com SQL Azure.  
   
 ## <a name="create-azure-database"></a>Criar banco de dados do Azure  
-Para criar um novo banco de dados do azure, siga as etapas a seguir  
+Para criar um novo banco de dados do Azure, siga as etapas a seguir  
   
-1.  Clique no botão Procurar que está presente em conectar-se a caixa de diálogo do SQL Azure  
+1.  Clique no botão procurar que está presente na caixa de diálogo conectar a SQL Azure  
   
-2.  Se não houver nenhum banco de dados, dois itens de menu aparecem  
+2.  Se não houver bancos de dados, serão exibidos dois itens de menu  
   
-    1.  **(nenhum banco de dados encontrado)**  que é desabilitado e esmaecido sempre  
+    1.  **(nenhum banco de dados encontrado)** que está desabilitado e esmaecido o tempo todo  
   
-    2.  **Criar novo banco de dados** que está sempre habilitado, permitindo que o usuário criar um novo banco de dados do azure na conta do SQL Azure. Ao clicar neste item de menu, criar caixa de diálogo banco de dados do azure está presente com o nome do banco de dados e tamanho.  
+    2.  **Crie um novo banco de dados** que esteja sempre habilitado, permitindo que o usuário crie um novo banco de dados do azure em SQL Azure conta. Ao clicar nesse item de menu, a caixa de diálogo Criar banco de dados do Azure está presente com o nome e o tamanho do banco de dados.  
   
-3.  No momento da criação do banco de dados, esses dois parâmetros é dado como entrada.  
+3.  No momento da criação do banco de dados, esses dois parâmetros são fornecidos como entrada.  
   
     1.  **Nome do banco de dados:** Insira o nome do banco de dados.  
   
-    2.  **Tamanho do banco de dados:** Selecione o tamanho do banco de dados que você precisa criar na conta do SQL Azure.  
+    2.  **Tamanho do banco de dados:** Selecione o tamanho do banco de dados que você precisa criar na conta SQL Azure.  
   

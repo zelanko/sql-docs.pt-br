@@ -13,33 +13,33 @@ ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef68a36f64fbaf72f18af9fba6f2e2781422574c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925853"
 ---
 # <a name="command-object-overview"></a>Visão geral do objeto Command
-Com uma **comando** do objeto, você pode fazer o seguinte:  
+Com um objeto de **comando** , você pode fazer o seguinte:  
   
--   Define o texto executável do comando (por exemplo, uma instrução SQL ou um procedimento armazenado) usando o **CommandText** propriedade.  
+-   Defina o texto executável do comando (por exemplo, uma instrução SQL ou um procedimento armazenado) usando a propriedade **CommandText** .  
   
--   Definir argumentos de procedimento armazenado ou consultas parametrizadas usando **parâmetro** objetos e o **parâmetros** coleção.  
+-   Defina consultas parametrizadas ou argumentos de procedimento armazenado usando objetos de **parâmetro** e a coleção de **parâmetros** .  
   
--   Executar um comando e retornar um **conjunto de registros** do objeto, se apropriado, usando o **Execute** método.  
+-   Execute um comando e retorne um objeto **Recordset** , se apropriado, usando o método **Execute** .  
   
--   Especifique o tipo de comando usando o **CommandType** propriedade antes da execução para otimizar o desempenho.  
+-   Especifique o tipo de comando usando a propriedade **CommandType** antes da execução para otimizar o desempenho.  
   
--   Especificar informações específicas sobre o texto de comando usando o **dialeto** propriedade da **comando** objeto.  
+-   Especifique informações específicas sobre o texto do comando usando a propriedade **dialeto** do objeto **Command** .  
   
--   Controlar se o provedor salva uma versão preparada (ou compilada) do comando antes da execução, usando o **preparado** propriedade.  
+-   Controle se o provedor salva uma versão preparada (ou compilada) do comando antes da execução usando a propriedade **preparada** .  
   
--   Definir o número de segundos que um provedor irá aguardar por um comando seja executado usando o **CommandTimeout** propriedade.  
+-   Defina o número de segundos que um provedor aguardará até que um comando seja executado usando a propriedade **CommandTimeout** .  
   
--   Associar uma conexão aberta com um **comando** objeto definindo suas **ActiveConnection** propriedade.  
+-   Associe uma conexão aberta a um objeto de **comando** definindo sua propriedade **ActiveConnection** .  
   
--   Defina as **nome** propriedade para identificar o **comando** objeto como um método em associado **Conexão** objeto.  
+-   Defina a propriedade **Name** para identificar o objeto de **comando** como um método no objeto de **conexão** associado.  
   
--   Passar um **comando** do objeto para o **fonte** propriedade de um **conjunto de registros** para obter dados.  
+-   Passe um objeto de **comando** para a propriedade **Source** de um **conjunto de registros** a fim de obter dados.  
   
--   Passar uma **Stream** objeto que contém um comando (por exemplo, um comando XML) para um provedor que dá suporte a ele.
+-   Passe um objeto **Stream** contendo um comando (por exemplo, um comando XML) para um provedor que ofereça suporte a ele.

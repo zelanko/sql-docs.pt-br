@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Replicando dados com clientes móveis | Microsoft Docs'
+title: 'Tutorial: replicando dados com clientes móveis | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255411"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>Tutorial: Replicando dados com clientes móveis
@@ -26,7 +26,7 @@ ms.locfileid: "63255411"
  Neste tutorial você usará a replicação de mesclagem para publicar dados de um banco de dados central para um ou mais usuários móveis de forma que cada usuário obtenha um subconjunto dos dados filtrado exclusivamente. A primeira lição mostra como usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar uma publicação. Lições posteriores mostram como criar e sincronizar uma assinatura.  
   
 ## <a name="requirements"></a>Requisitos  
- Este tutorial é destinado a usuários que estão familiarizados com operações fundamentais de bancos de dados, mas que possuem pouca experiência com replicação. Antes de iniciar este tutorial, você deve concluir o [Tutorial: Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
+ Este tutorial é destinado a usuários que estão familiarizados com operações fundamentais de bancos de dados, mas que possuem pouca experiência com replicação. Antes de iniciar este tutorial, é necessário concluir o [Tutorial: Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
   
  Para que você possa usar esse tutorial, os seguintes componentes devem estar instalados no sistema:  
   
@@ -38,7 +38,8 @@ ms.locfileid: "63255411"
   
 -   Servidor de assinante (destino):  
   
-    -   Qualquer edição do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], exceto para [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
+    -   Qualquer edição do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], exceto para [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
+  [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
     > [!NOTE]  
     >  A replicação não é instalada por padrão no [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
@@ -52,11 +53,11 @@ ms.locfileid: "63255411"
   
 -   [Lição 1: Publicando dados usando replicação de mesclagem](lesson-1-publishing-data-using-merge-replication.md)  
   
--   [Lição 2: Criando uma assinatura para a publicação de mesclagem](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
+-   [Lição 2: criando uma assinatura para a publicação de mesclagem](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
   
  [Inicie o tutorial](merge/merge-replication.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos de programação de replicação](concepts/replication-programming-concepts.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conceitos de programação da replicação](concepts/replication-programming-concepts.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9beac713ec9a8b5a549602809d3612e4e29e67c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071950"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "68071950"
 ClusterProbability([<Node_Caption>])  
 ```  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  Essa função só pode ser usada se o modelo de mineração de dados subjacente oferecer suporte a clustering.  
   
 ## <a name="return-type"></a>Tipo de retorno  
@@ -40,9 +40,9 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Para obter mais informações sobre como usar essa sintaxe, consulte [SELECT FROM &#60;modelo&#62;. CONTEÚDO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). Para obter mais informações sobre o conjunto de linhas de esquema de conteúdo de modelo de mineração, consulte [conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
+ Para obter mais informações sobre como usar essa sintaxe, consulte [selecionar do modelo de &#60;&#62;.&#41;de conteúdo &#40;DMX ](../dmx/select-from-model-content-dmx.md). Para obter mais informações sobre o conjunto de linhas do esquema de conteúdo do modelo de mineração, consulte [DMSCHEMA_MINING_MODEL_CONTENT conjunto de linhas](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
- Se um \<legenda de nó > não for especificado, a função retorna a probabilidade de que os casos de entrada pertencem ao cluster mais provável. Use o **Cluster** função para retornar o cluster mais provável.  
+ Se uma \<legenda de nó> não for especificada, a função retornará a probabilidade de que os casos de entrada pertençam ao cluster mais provável. Use a função de **cluster** para retornar o cluster mais provável.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna a probabilidade de que caso especificado exista no cluster rotulado de Cluster 2.  
@@ -60,10 +60,10 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;de cluster &#40;DMX](../dmx/cluster-dmx.md)   
+ [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

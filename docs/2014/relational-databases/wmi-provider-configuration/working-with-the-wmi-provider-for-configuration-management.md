@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com o provedor WMI para gerenciamento de configuração | Microsoft Docs
+title: Trabalhando com o provedor WMI para o gerenciamento de configuração | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195771"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Trabalhando com o provedor WMI para o Gerenciamento de configuração
@@ -32,7 +32,7 @@ ms.locfileid: "68195771"
 ## <a name="binding"></a>Associação  
  O provedor WMI para gerenciamento de configuração é um modelo de objeto COM que dá suporte a associações iniciais e tardias. Com a associação tardia, você pode usar linguagens de script, como o VBScript, para manipular, de forma programada, os serviços, as configurações de rede e os aliases do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para obter mais informações sobre como programar as implementações do provedor de WMI usando linguagens de script, consulte a [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [site da Web](https://go.microsoft.com/fwlink/?linkid=15426).  
+ Para obter mais informações sobre como programar implementações de provedor WMI usando linguagens de script, consulte o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [site](https://go.microsoft.com/fwlink/?linkid=15426)do MSDN.  
   
 ## <a name="specifying-a-connection-string"></a>Especificando uma cadeia de caracteres de conexão  
  Os aplicativos direcionam o provedor WMI para gerenciamento de configuração para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectando a um namespace WMI definido pelo provedor. O serviço Windows WMI mapeia esse namespace para a DLL do provedor e o carrega na memória. Todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são representadas com um único namespace WMI. O namespace assume este padrão  
@@ -43,7 +43,7 @@ ms.locfileid: "68195771"
   
  onde `instance_name` assume `MSSQLSERVER` como padrão em uma instalação padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Observação:** Se você estiver se conectando através do Firewall do Windows, você precisará certificar-se de que seus computadores estejam configurados adequadamente. Consulte o artigo "Conectando através do Windows Firewall" na documentação da instrumentação de gerenciamento do Windows no [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [site da Web](https://go.microsoft.com/fwlink/?linkid=15426).  
+ **Observação:** Se você estiver se conectando por meio do firewall do Windows, precisará verificar se os computadores estão configurados corretamente. Consulte o artigo "conectando por meio do firewall do Windows" na [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentação do Instrumentação de gerenciamento do Windows no [site](https://go.microsoft.com/fwlink/?linkid=15426)do MSDN.  
   
 ## <a name="permissions-and-server-authentication"></a>Permissões e autenticação do servidor  
  Para acessar o provedor WMI para gerenciamento de configuração, o script de gerenciamento WMI do cliente deve estar sendo executado no contexto de um administrador no computador de destino. Você precisa ser membro do grupo local de administradores do Windows no computador que deseja gerenciar.  
@@ -54,7 +54,7 @@ ms.locfileid: "68195771"
   
  Os certificados de segurança são suportados pelo provedor WMI para gerenciamento de configuração. Para obter mais informações sobre certificados, consulte [hierarquia de criptografia](../security/encryption/encryption-hierarchy.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Configuration Manager](../sql-server-configuration-manager.md)  
   
   

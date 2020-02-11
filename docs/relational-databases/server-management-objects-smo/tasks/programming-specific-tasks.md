@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ba3ec14f7d94b493b5cc93e3b6b46f0565e38ab
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095206"
 ---
 # <a name="programming-specific-tasks"></a>Tarefas específicas de programação
@@ -31,7 +31,7 @@ ms.locfileid: "74095206"
 
   As tarefas específicas de programação que usam objetos SMO incluem assuntos complexos que apenas serão exigidos por programas com uma função específica, como backup, monitoramento de estatísticas, replicação, gerenciamento de objetos de instância e definição de opções de configuração.  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Usando servidores vinculados no SMO](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|Descreve como o SMO usa o objeto <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> para vincular servidores OLE-DB.|  
 |[Configurando o SQL Server no SMO](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|Descreve como exibir e modificar definições de configuração para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no SMO.|  
@@ -41,10 +41,10 @@ ms.locfileid: "74095206"
 |[Trabalhando com objetos de banco de dados](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|Descreve como criar classes de instância que representam objetos na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Gerenciando usuários, funções e logons](../../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)|Descreve como usar funções de segurança no SMO.|  
 |[Concedendo, revogando e negando permissões](../../../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md)|Descreve como usar o SMO para conceder, revogar e negar permissões a usuários ou membros de uma função.|  
-|[Usando a criptografia](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)|Descreve como proteger dados que usam criptografia no SMO.|  
+|[Usando criptografia](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)|Descreve como proteger dados que usam criptografia no SMO.|  
 |[Agendando tarefas administrativas automáticas no SQL Server Agent](../../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md)|Descreve como usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent para monitorar, relatar e agendar trabalhos no SMO.|  
 |[Fazendo backup e restaurando bancos de dados e logs de transações](../../../relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md)|Descreve como fazer backup e restaurar bancos de dados e logs de transações no SMO.|  
-|[Script](../../../relational-databases/server-management-objects-smo/tasks/scripting.md)|Descreve como criar script de objetos e descobrir dependências entre objetos no SMO.|  
+|[Scripting](../../../relational-databases/server-management-objects-smo/tasks/scripting.md)|Descreve como criar script de objetos e descobrir dependências entre objetos no SMO.|  
 |[Transferindo dados](../../../relational-databases/server-management-objects-smo/tasks/transferring-data.md)|Descreve como transferir dados no SMO.|  
 |[Usando o Database Mail](../../../relational-databases/server-management-objects-smo/tasks/using-database-mail.md)|Descreve como o SMO utiliza serviços de e-mail.|  
 |[Gerenciando o Service Broker](../../../relational-databases/server-management-objects-smo/tasks/managing-service-broker.md)|Descreve como configurar o Service Broker usando o SMO.|  

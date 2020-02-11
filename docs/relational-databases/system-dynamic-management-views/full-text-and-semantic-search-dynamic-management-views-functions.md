@@ -1,5 +1,5 @@
 ---
-title: Exibições de gerenciamento dinâmico de pesquisa de texto completo e semânticos - funções | Microsoft Docs
+title: Exibições de gerenciamento dinâmico de pesquisa semântica e de texto completo – funções | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ff24122c1a551d6da1ce4ad1ddbb7771e2183c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130766"
 ---
-# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Exibições de gerenciamento dinâmico de pesquisa de texto completo e semânticos - funções
+# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Exibições de gerenciamento dinâmico de pesquisa semântica e de texto completo – funções
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Esta seção contém as seguintes exibições e funções de gerenciamento dinâmico relacionadas à pesquisa de texto completo e pesquisa semântica.  
@@ -43,7 +43,7 @@ ms.locfileid: "68130766"
  Retorna todo o conteúdo relacionado a propriedade no índice de texto completo de uma determinada tabela. Isso inclui todos os dados pertencentes a qualquer propriedade registrada pela lista de propriedades de pesquisa associada àquele índice de texto completo.  
   
  sys.dm_fts_index_keywords_position_by_document  
- Retorna a posição das palavras-chave em um documento.  
+ Retorna a posição de palavras-chave em um documento.  
   
  [sys.dm_fts_index_population](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
  Retorna informações sobre as populações de índice de texto completo que estão em andamento.  
@@ -67,8 +67,8 @@ ms.locfileid: "68130766"
  [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
  Retorna uma linha de informações de status sobre a população do índice de similaridade de documento para cada índice de similaridade em cada tabela que tem um índice semântico associado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Exibições do sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

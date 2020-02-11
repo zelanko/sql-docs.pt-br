@@ -1,5 +1,5 @@
 ---
-title: Editor de destino ODBC (página mapeamentos) | Microsoft Docs
+title: Editor de destino ODBC (página Mapeamentos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057231"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Editor de Destino ODBC (página Mapeamentos)
@@ -38,7 +38,7 @@ ms.locfileid: "66057231"
 ### <a name="destination-column"></a>Coluna de Destino  
  Exiba todas as colunas de destino disponíveis, mapeadas e não mapeadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [Editor do Destino ODBC &#40;Página Saída de Erro&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   

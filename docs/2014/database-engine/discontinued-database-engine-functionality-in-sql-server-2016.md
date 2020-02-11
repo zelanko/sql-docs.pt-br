@@ -1,5 +1,5 @@
 ---
-title: Descontinuado a funcionalidade do mecanismo de banco de dados no SQL Server 2014 | Microsoft Docs
+title: Funcionalidade de Mecanismo de Banco de Dados descontinuada no SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -34,49 +34,51 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67463464"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)] que não estão mais disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## <a name="SQL14"></a> Recursos descontinuados no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a>Recursos descontinuados no[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  A tabela a seguir lista os recursos que foram removidos do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-|Category|Recurso descontinuado|Substituição|  
+|Categoria|Recurso descontinuado|Substituição|  
 |--------------|--------------------------|-----------------|  
 |Nível de Compatibilidade|Nível de compatibilidade 90|Os bancos de dados devem ser definidos com o nível de compatibilidade de pelo menos 100. Quando um banco com um nível de compatibilidade de menos de 100 é atualizado para o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], o nível de compatibilidade do banco de dados é definido como 100 durante a operação de atualização.|  
   
-## <a name="Denali"></a> Recursos descontinuados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a>Recursos descontinuados no[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  A tabela a seguir lista os recursos que foram removidos do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-|Category|Recurso descontinuado|Substituição|  
+|Categoria|Recurso descontinuado|Substituição|  
 |--------------|--------------------------|-----------------|  
-|Backup e restauração|**BACKUP {banco de dados &#124; LOG} WITH PASSWORD** e **BACKUP {banco de dados &#124; LOG} WITH MEDIAPASSWORD** são descontinuados. **RESTAURAR {banco de dados &#124; LOG} com [MEDIA] PASSWORD**continua sendo preterido.|None|  
-|Backup e restauração|**RESTAURAR {BANCO DE DADOS &AMP;#124; LOG}... WITH DBO_ONLY**|**RESTAURAR {BANCO DE DADOS &AMP;#124; LOG}...... COM RESTRICTED_USER**|  
+|Backup e restauração|**Backup {database &#124; log} com senha** e **BACKUP {DATABASE &#124; log} com MEDIAPASSWORD** foram descontinuados. **RESTORE {DATABASE &#124; log} com a senha do [Media]** continua a ser preterido.|Nenhum|  
+|Backup e restauração|**RESTAURAR {LOG &#124; DO BANCO DE DADOS}... COM DBO_ONLY**|**RESTAURAR {LOG &#124; DO BANCO DE DADOS}...... COM RESTRICTED_USER**|  
 |Nível de Compatibilidade|nível de compatibilidade 80|Os bancos de dados devem ser definidos com o nível de compatibilidade de pelo menos 90.|  
-|Opções de configuração|`sp_configure 'user instance timeout'` e `'user instances enabled'`|Use o recurso de banco de dados local. Para obter mais informações, consulte [utilitário SqlLocalDB](../tools/sqllocaldb-utility.md)|  
+|Opções de Configuração|`sp_configure 'user instance timeout'` e `'user instances enabled'`|Use o recurso de banco de dados local. Para obter mais informações, consulte [utilitário SqlLocalDB](../tools/sqllocaldb-utility.md)|  
 |Protocolos de conexão|O suporte para o protocolo VIA é descontinuado.|Em vez disso, use TCP.|  
 |Objetos de banco de dados|Cláusula `WITH APPEND` em gatilhos|Recrie o gatilho inteiro.|  
 |Opções de banco de dados|`sp_dboption`|`ALTER DATABASE`|  
-|Email|SQL Mail|Use o Database Mail. Para obter mais informações, consulte [Database Mail](../relational-databases/database-mail/database-mail.md) e [usar o Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
+|Email|SQL Mail|Use o Database Mail. Para obter mais informações, consulte [Database Mail](../relational-databases/database-mail/database-mail.md) e [usar Database Mail em vez do SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
 |Gerenciamento de memória|AWE (Address Windowing Extensions) de 32 bits e suporte de inclusão de memória a quente de 32 bits.|Use um sistema operacional de 64 bits.|  
 |Metadados|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |Programação|SQL-DMO (SQL Server Distributed Management Objects)|SQL Server Management Objects (SMO)|  
-|Dicas de consulta|Dica de `FASTFIRSTROW`|`OPTION (FAST` *n* `)`.|  
-|Servidores remotos|A capacidade de os usuários criarem novos servidores remotos usando `sp_addserver` foi descontinuada. `sp_addserver` com a opção 'local' permanece disponível. Os servidores remotos preservados durante a atualização ou criados pela replicação podem ser usados.|Substitua servidores remotos usando servidores vinculados.|  
+|Dicas de consulta|`FASTFIRSTROW`Hint|`OPTION (FAST`*n* `)`.|  
+|Servidores remotos|A capacidade de os usuários criarem novos servidores remotos usando `sp_addserver` foi descontinuada. 
+  `sp_addserver` com a opção 'local' permanece disponível. Os servidores remotos preservados durante a atualização ou criados pela replicação podem ser usados.|Substitua servidores remotos usando servidores vinculados.|  
 |Segurança|`sp_dropalias`|Substitua aliases por uma combinação de contas de usuário e funções de banco de dados. Use `sp_dropalias` para remover aliases em bancos de dados atualizados.|  
-|Segurança|O parâmetro de versão do **PWDCOMPARE** que representa um valor de um logon anterior ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 foi descontinuado.|None|  
-|Programação do Service Broker no SMO|O **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** classe não implementa o **Microsoft.SqlServer.Management.Smo.IObjectPermission** interface.||  
+|Segurança|O parâmetro de versão de **PWDCOMPARE** que representa um valor de um logon [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anterior a 2000 é descontinuado.|Nenhum|  
+|Programação do Service Broker no SMO|A classe **Microsoft. SqlServer. Management. Smo. Broker. BrokerPriority** não implementa mais a interface **Microsoft. SqlServer. Management. Smo. IObjectPermission** .||  
 |Opções Set|`SET DISABLE_DEF_CNST_CHK`|Nenhum.|  
 |Tabelas do sistema|sys.database_principal_aliases|Use funções em vez de aliases.|  
-|Transact-SQL|`RAISERROR` no formato `RAISERROR integer 'string'` foi descontinuado.|Reescreva a instrução usando atual **RAISERROR(...)**  sintaxe.|  
+|Transact-SQL|
+  `RAISERROR` no formato `RAISERROR integer 'string'` foi descontinuado.|Reescreva a instrução usando a sintaxe **RAISERROR (...)** atual.|  
 |sintaxe Transact-SQL|`COMPUTE / COMPUTE BY`|Use `ROLLUP`.|  
-|sintaxe Transact-SQL|Uso de **\* =** e **=&#42;**|Use a sintaxe de junção ANSI. Para obter mais informações, consulte [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
-|XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Substituído pelo evento database_file_size_change, database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
+|sintaxe Transact-SQL|Uso de ** \* ** e **=&#42;**|Use a sintaxe de junção ANSI. Para obter mais informações, consulte [from (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Substituído por database_file_size_change event, database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Alterações de XEvent adicionais**  
   
@@ -92,7 +94,7 @@ ms.locfileid: "67463464"
   
 -   Campos adicionados: target_kb, pages_kb  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

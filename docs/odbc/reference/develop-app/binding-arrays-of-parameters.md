@@ -1,5 +1,5 @@
 ---
-title: Matrizes de parâmetros de associação | Microsoft Docs
+title: Associando matrizes de parâmetros | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 597142d41ed8d3cff26891dfdcc89398543dab43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103817"
 ---
 # <a name="binding-arrays-of-parameters"></a>Associar matrizes de parâmetros
-Aplicativos que usam matrizes de parâmetros associar as matrizes aos parâmetros na instrução SQL. Há dois estilos de associação:  
+Os aplicativos que usam matrizes de parâmetros associam as matrizes aos parâmetros na instrução SQL. Há dois estilos de ligação:  
   
--   Associe uma matriz para cada parâmetro. Cada estrutura de dados (matriz) contém todos os dados para um único parâmetro. Isso é chamado *a associação por coluna* porque ela está associada a uma coluna de valores para um único parâmetro.  
+-   Associar uma matriz a cada parâmetro. Cada estrutura de dados (matriz) contém todos os dados para um único parâmetro. Isso é chamado de *Associação de coluna,* pois associa uma coluna de valores a um único parâmetro.  
   
--   Defina uma estrutura para armazenar os dados de parâmetro para todo um conjunto de parâmetros e associar uma matriz dessas estruturas. Cada estrutura de dados contém os dados para uma única instrução SQL. Isso é chamado *associação por linha* porque ela está associada a uma linha de parâmetros.  
+-   Defina uma estrutura para conter os dados de parâmetro para um conjunto inteiro de parâmetros e associe uma matriz dessas estruturas. Cada estrutura de dados contém os dados para uma única instrução SQL. Isso é chamado de *associação por linha,* pois associa uma linha de parâmetros.  
   
- Como quando o aplicativo associa únicas variáveis para parâmetros, ele chama **SQLBindParameter** para associar as matrizes de parâmetros. A única diferença é que os endereços passados são endereços de matriz, endereços de variável não único. O aplicativo define o atributo da instrução SQL_ATTR_PARAM_BIND_TYPE para especificar se ele está usando associações por coluna (o padrão) ou a associação por linha. Se deseja usar a coluna ou de linha de associação é principalmente uma questão de preferência de aplicativo. Dependendo de como o processador acessa a memória, a associação por linha pode ser mais rápida. No entanto, a diferença é a probabilidade de ser insignificante, exceto para um grande número de linhas de parâmetros.  
+ Como quando o aplicativo associa variáveis únicas a parâmetros, ele chama **SQLBindParameter** para associar matrizes a parâmetros. A única diferença é que os endereços passados são endereços de matriz, não endereços de variável única. O aplicativo define o atributo SQL_ATTR_PARAM_BIND_TYPE instrução para especificar se ele está usando a associação de coluna (padrão) ou de linha. A possibilidade de usar a associação de linha ou de coluna é basicamente uma questão de preferência de aplicativo. Dependendo de como o processador acessa a memória, a ligação de linha pode ser mais rápida. No entanto, a diferença provavelmente será insignificante, exceto por números muito grandes de linhas de parâmetros.  
   
 ## <a name="column-wise-binding"></a>Associação de coluna  
- Ao usar a associação, um aplicativo associar uma ou duas matrizes para cada parâmetro para o qual os dados são fornecidas. A primeira matriz contém os valores de dados e a segunda matriz armazena buffers de comprimento/indicador. Cada matriz contém elementos tantos quanto há valores para o parâmetro.  
+ Ao usar a associação de coluna, um aplicativo associa uma ou duas matrizes a cada parâmetro para o qual os dados serão fornecidos. A primeira matriz contém os valores de dados, e a segunda matriz contém buffers de comprimento/indicador. Cada matriz contém tantos elementos quantos forem valores para o parâmetro.  
   
- A associação é o padrão. O aplicativo também pode alterar de associação por linha para a associação, definindo o atributo de instrução SQL_ATTR_PARAM_BIND_TYPE. A ilustração a seguir mostra como a associação funciona.  
+ A associação de coluna é o padrão. O aplicativo também pode ser alterado de associação de linha para associação por coluna, definindo o atributo de instrução SQL_ATTR_PARAM_BIND_TYPE. A ilustração a seguir mostra como a associação por coluna funciona.  
   
- ![Mostra como coluna de&#45;wise associação funciona](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![Mostra como funciona a&#45;Associação inteligente de coluna](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
- Por exemplo, o código a seguir associa matrizes do elemento de 10 a parâmetros para as colunas de PartID, descrição e preço e executa uma instrução para inserir 10 linhas. Ele usa a associação por coluna.  
+ Por exemplo, o código a seguir associa matrizes de 10 elementos a parâmetros para as colunas partid, descrição e preço e executa uma instrução para inserir 10 linhas. Ele usa associação de coluna.  
   
 ```  
 #define DESC_LEN 51  
@@ -118,19 +118,19 @@ for (i = 0; i < ParamsProcessed; i++) {
 ```  
   
 ## <a name="row-wise-binding"></a>Associação de linha  
- Ao usar a associação por linha, um aplicativo define uma estrutura para cada conjunto de parâmetros. A estrutura contém um ou dois elementos para cada parâmetro. O primeiro elemento contém o valor do parâmetro e o segundo elemento contém o buffer de comprimento/indicador. O aplicativo, em seguida, aloca uma matriz dessas estruturas, que contém vários elementos quanto há valores para cada parâmetro.  
+ Ao usar a associação de linha, um aplicativo define uma estrutura para cada conjunto de parâmetros. A estrutura contém um ou dois elementos para cada parâmetro. O primeiro elemento contém o valor do parâmetro e o segundo elemento contém o buffer de comprimento/indicador. Em seguida, o aplicativo aloca uma matriz dessas estruturas, que contém tantos elementos quantos forem os valores para cada parâmetro.  
   
- O aplicativo declara o tamanho da estrutura para o driver com o atributo da instrução SQL_ATTR_PARAM_BIND_TYPE. O aplicativo associa os endereços dos parâmetros na primeira estrutura da matriz. Portanto, o driver pode calcular o endereço dos dados para uma determinada linha e coluna como  
+ O aplicativo declara o tamanho da estrutura para o driver com o atributo de instrução SQL_ATTR_PARAM_BIND_TYPE. O aplicativo associa os endereços dos parâmetros na primeira estrutura da matriz. Assim, o driver pode calcular o endereço dos dados de uma linha e coluna específica como  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset  
 ```  
   
- em que as linhas são numeradas de 1 para o tamanho do conjunto de parâmetros. O deslocamento, se definido, é o valor apontado pelo atributo de instrução SQL_ATTR_PARAM_BIND_OFFSET_PTR. A ilustração a seguir mostra como a associação funciona. Os parâmetros podem ser colocados na estrutura em qualquer ordem, mas são mostrados em ordem sequencial para maior clareza.  
+ em que as linhas são numeradas de 1 até o tamanho do conjunto de parâmetros. O deslocamento, se definido, é o valor apontado pelo atributo da instrução SQL_ATTR_PARAM_BIND_OFFSET_PTR. A ilustração a seguir mostra como funciona a associação de linha. Os parâmetros podem ser colocados na estrutura em qualquer ordem, mas são mostrados em ordem sequencial para fins de clareza.  
   
- ![Mostra como a linha&#45;wise associação funciona](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![Mostra como a linha&#45;Associação inteligente funciona](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
- O código a seguir cria uma estrutura com elementos para os valores a serem armazenados nas colunas PartID, descrição e preço. Em seguida, ele aloca uma matriz de elementos de 10 dessas estruturas e o associa a parâmetros para as colunas de PartID, descrição e preço, usando a associação por linha. Em seguida, ele executa uma instrução para inserir 10 linhas.  
+ O código a seguir cria uma estrutura com elementos para os valores a serem armazenados nas colunas partid, descrição e preço. Em seguida, ele aloca uma matriz de 10 elementos dessas estruturas e a associa aos parâmetros para as colunas partid, descrição e preço, usando a associação de linha. Em seguida, ele executa uma instrução para inserir 10 linhas.  
   
 ```  
 #define DESC_LEN 51  

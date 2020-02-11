@@ -15,14 +15,14 @@ ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932241"
 ---
 # <a name="maxrecords-property-example-vc"></a>Exemplo da propriedade MaxRecords (VC++)
-Este exemplo usa o [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) para abrir um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contém os títulos mais caros 10 no ***títulos*** tabela.  
+Este exemplo usa a propriedade [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) para abrir um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contém os 10 títulos mais caros na tabela de ***títulos*** .  
   
 ## <a name="example"></a>Exemplo  
   
@@ -165,17 +165,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Títulos de dez principais por preço:**  
-**Mas é amigável de usuário? ---22.95**  
-**Indivíduos Phobic e não com aversão ao computador: Comportamento variações---21,59**  
-**Onions, Leeks e Garlic: Culinária segredos de Mediterrâneo---20,95**  
-**Segredos do vale do silício---20,00**  
-**Guia do banco de dados de um executivo ocupado---19,99**  
-**Reta falar sobre computadores---19,99**  
-**Vale do silício Gastronomia trata---19,99**  
-**Deprivation prolongada de dados: Quatro estudos de caso---19,99**  
+ **Dez principais títulos por preço:**  
+**Mas é amigável para o usuário? ---22,95**  
+**Computadores phobic e não phobic: variações de comportamento---21,59**  
+**Onions, Leeks e garlic: segredos de culinária do Mediterrâneo---20,95**  
+**Segredos do vale do silício---20, 0**  
+**O guia de banco de dados do executivo ocupado---19,99**  
+**Fale direta sobre os computadores---19,99**  
+**O vale do silício gastronomic trata---19,99**  
+**Desprivilégios de dados prolongados: estudos de quatro casos---19,99**  
 **Sushi, qualquer pessoa? ---14,99**  
-**50 anos em s Pizza Palace Buckingham cozinhas---11.95**   
-## <a name="see-also"></a>Consulte também  
+**50 anos em Buckingham Palace cozinhas---11,95**   
+## <a name="see-also"></a>Consulte Também  
  [Propriedade MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -16,10 +16,10 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727799"
 ---
 # <a name="versions-master-data-services"></a>Versões (Master Data Services)
@@ -68,11 +68,11 @@ ms.locfileid: "73727799"
     > [!NOTE]  
     >  Uma configuração no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] determina se você pode ou não copiar todas as versões ou somente as confirmadas. Para criar versões simultâneas você deve configurar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para permitir que você copie todas as versões. Esta configuração também está disponível na tabela de Configurações do Sistema. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Alterar o nome de uma versão existente.|[Alterar o nome de uma versão &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|Alterar o nome de uma versão existente.|[Alterar um nome de versão &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
 |Bloquear uma versão para que apenas os administradores possam editar seus dados.|[Bloquear uma versão &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
 |Desbloquear uma versão para que os usuários possam editar seus dados.|[Desbloquear uma versão &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
 |Confirmar uma versão depois que os dados forem validados.|[Confirmar uma versão &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
@@ -81,13 +81,13 @@ ms.locfileid: "73727799"
 |Atribuir um sinalizador existente a uma versão.|[Atribuir um sinalizador a uma versão &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
 |Criar uma nova cópia de uma versão existente|[Copiar uma versão &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |Excluir uma versão existente.|[Excluir uma versão &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
-|Limpar membros excluídos de forma reversível de uma versão|[Limpar membros de versão &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
+|Limpar membros excluídos de forma reversível de uma versão|[Limpar membros da versão &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Inverter uma transação &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Inverter uma &#40;de transação Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
+-   [Master Data Services de notificações &#40;&#41;](../master-data-services/notifications-master-data-services.md)  
   
 -   [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   

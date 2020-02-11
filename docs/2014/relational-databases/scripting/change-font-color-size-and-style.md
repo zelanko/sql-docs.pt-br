@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa6753b0e49e898476f4138c5e445ea75918aa17
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244992"
 ---
 # <a name="change-font-color-size-and-style"></a>Alterar cor, tamanho e estilo da fonte
@@ -44,6 +44,6 @@ ms.locfileid: "75244992"
   
 ## <a name="see-also"></a>Consulte Também  
  [Imprimir código e resultados](print-code-and-results.md)   
- [Codificação por cores em editores de consulta](color-coding-in-query-editors.md)  
+ [Codificação por cores nos Editores de Consulta](color-coding-in-query-editors.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: e33f3809-0175-4d83-b1b7-b29d23238846
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 85de85cae9ee90e5a3a28b3a3b069ae76553237d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126983"
 ---
 # <a name="localdb_error_xevent_failed"></a>LOCALDB_ERROR_XEVENT_FAILED
@@ -23,16 +23,16 @@ ms.locfileid: "68126983"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|279|  
-|Origem do evento|Tempo de execução de banco de dados local do SQL Server 12.0|  
-|Componente|API do tempo de execução de banco de dados local|  
+|Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
+|Componente|API do runtime de banco de dados local|  
 |Texto da mensagem|Falha ao iniciar o mecanismo XEvent na API da Instância do Banco de Dados Local.|  
   
 ## <a name="explanation"></a>Explicação  
  Falha na inicialização do mecanismo XEvent.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Reinstale o Tempo de Execução do Banco de Dados Local e repita a operação.  
+ Reinstale o Runtime do Banco de Dados Local e repita a operação.  
   
   

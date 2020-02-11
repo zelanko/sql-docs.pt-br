@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199225"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinicializar uma assinatura
@@ -26,7 +26,7 @@ ms.locfileid: "68199225"
   
  **Neste tópico**  
   
--   **Para reinicializar uma assinatura, usando:**  
+-   **Para reinicializar uma assinatura usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -107,19 +107,19 @@ ms.locfileid: "68199225"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar uma assinatura pull para uma publicação transacional  
   
-1.  No Assinante, no banco de dados de assinatura, execute [sp_reinitpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql). Especifique **@publisher** , o **@publisher_db** , e **@publication** . Isso marca a assinatura para reinicialização na próxima vez que o Distribution Agent for executado.  
+1.  No Assinante, no banco de dados de assinatura, execute [sp_reinitpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql). Especifique **@publisher**, **@publisher_db**, e **@publication**. Isso marca a assinatura para reinicialização na próxima vez que o Distribution Agent for executado.  
   
 2.  (Opcional) Iniciar o Distribution Agent no Assinante para sincronizar a assinatura. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>Para reinicializar uma assinatura push para uma publicação transacional  
   
-1.  No Publicador, execute [sp_reinitsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql). Especifique **@publication** , o **@subscriber** , e **@destination_db** . Isso marca a assinatura para reinicialização na próxima vez que o Distribution Agent for executado.  
+1.  No Publicador, execute [sp_reinitsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql). Especifique **@publication**, **@subscriber**, e **@destination_db**. Isso marca a assinatura para reinicialização na próxima vez que o Distribution Agent for executado.  
   
 2.  (Opcional) Iniciar o Distribution Agent no Distributor para sincronizar a assinatura. Para obter mais informações, consulte [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Para reinicializar uma assinatura pull para uma publicação de mesclagem  
   
-1.  No Assinante, no banco de dados de assinatura, execute [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql). Especifique **@publisher** , o **@publisher_db** , e **@publication** . Para carregar alterações do assinante antes da reinicialização ocorra, especifique um valor de `true` para **@upload_first** . Isso marca a assinatura para reinicialização na próxima vez que o Merge Agent for executado.  
+1.  No Assinante, no banco de dados de assinatura, execute [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql). Especifique **@publisher**, **@publisher_db**, e **@publication**. Para carregar as alterações do assinante antes que a reinicialização ocorra, especifique `true` um **@upload_first**valor de para. Isso marca a assinatura para reinicialização na próxima vez que o Merge Agent for executado.  
   
     > [!IMPORTANT]  
     >  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
@@ -128,7 +128,7 @@ ms.locfileid: "68199225"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>Para reinicializar uma assinatura push para uma publicação de mesclagem.  
   
-1.  No Publicador, execute [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql). Especifique **@publication** , o **@subscriber** , e **@subscriber_db** . Para carregar alterações do assinante antes da reinicialização ocorra, especifique um valor de `true` para **@upload_first** . Isso marca a assinatura para reinicialização na próxima vez que o Distribution Agent for executado.  
+1.  No Publicador, execute [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql). Especifique **@publication**, **@subscriber**, e **@subscriber_db**. Para carregar as alterações do assinante antes que a reinicialização ocorra, especifique `true` um **@upload_first**valor de para. Isso marca a assinatura para reinicialização na próxima vez que o Distribution Agent for executado.  
   
     > [!IMPORTANT]  
     >  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
@@ -137,11 +137,11 @@ ms.locfileid: "68199225"
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>Para definir a política de reinicialização ao criar uma nova publicação de mesclagem  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), especificando um dos valores a seguir para **@automatic_reinitialization_policy** :  
+1.  No Publicador do banco de dados de publicação, execute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), especificando um dos valores a seguir para **@automatic_reinitialization_policy**:  
   
-    -   **1** - alterações são carregadas do Assinante antes que a assinatura seja reinicializada automaticamente, de acordo com a alteração feita na publicação.  
+    -   **1** -as alterações são carregadas do assinante antes que uma assinatura seja reinicializada automaticamente conforme exigido por uma alteração na publicação.  
   
-    -   **0** - alterações no Assinante são descartadas quando uma assinatura é reinicializada automaticamente, de acordo com a alteração feita na publicação.  
+    -   **0** -as alterações no Assinante são descartadas quando uma assinatura é reinicializada automaticamente conforme exigido por uma alteração na publicação.  
   
     > [!IMPORTANT]  
     >  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
@@ -150,11 +150,11 @@ ms.locfileid: "68199225"
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>Para alterar a política de reinicialização para uma publicação de mesclagem existente  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **automatic_reinitialization_policy** para **@property** e um dos seguintes valores para **@value** :  
+1.  No Publicador do banco de dados de publicação, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **automatic_reinitialization_policy** para **@property** e um dos seguintes valores para **@value**:  
   
-    -   **1** - alterações são carregadas do Assinante antes que a assinatura seja reinicializada automaticamente, de acordo com a alteração feita na publicação.  
+    -   **1** -as alterações são carregadas do assinante antes que uma assinatura seja reinicializada automaticamente conforme exigido por uma alteração na publicação.  
   
-    -   **0** - alterações no Assinante são descartadas quando uma assinatura é reinicializada automaticamente, de acordo com a alteração feita na publicação.  
+    -   **0** -as alterações no Assinante são descartadas quando uma assinatura é reinicializada automaticamente conforme exigido por uma alteração na publicação.  
   
     > [!IMPORTANT]  
     >  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
@@ -175,7 +175,7 @@ ms.locfileid: "68199225"
     > [!NOTE]  
     >  Se esse método retornar `false`, isso significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura pull não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A>. Esse método marca a assinatura para reinicialização.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> . Esse método marca a assinatura para reinicialização.  
   
 5.  Sincronize a assinatura pull. Para obter mais informações, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -190,7 +190,7 @@ ms.locfileid: "68199225"
     > [!NOTE]  
     >  Se esse método retornar `false`, isso significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura push não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A>. Esse método marca a assinatura para reinicialização.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Esse método marca a assinatura para reinicialização.  
   
 5.  Sincronize a assinatura push. Para obter mais informações, consulte [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68199225"
     > [!NOTE]  
     >  Se esse método retornar `false`, isso significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura pull não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A>. Passe o valor de `true` para carregar as alterações no Assinante antes da reinicialização ou um valor de `false` para reinicializar e perder as alterações pendentes no Assinante. Esse método marca a assinatura para reinicialização.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> . Passe o valor de `true` para carregar as alterações no Assinante antes da reinicialização ou um valor de `false` para reinicializar e perder as alterações pendentes no Assinante. Esse método marca a assinatura para reinicialização.  
   
     > [!NOTE]  
     >  As alterações não poderão ser carregadas se a assinatura estiver vencida. Para obter mais informações, consulte [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
@@ -223,7 +223,7 @@ ms.locfileid: "68199225"
     > [!NOTE]  
     >  Se esse método retornar `false`, isso significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura push não existe.  
   
-4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A>. Passe o valor de `true` para carregar as alterações no Assinante antes da reinicialização ou um valor de `false` para reinicializar e perder as alterações pendentes no Assinante. Esse método marca a assinatura para reinicialização.  
+4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Passe o valor de `true` para carregar as alterações no Assinante antes da reinicialização ou um valor de `false` para reinicializar e perder as alterações pendentes no Assinante. Esse método marca a assinatura para reinicialização.  
   
     > [!NOTE]  
     >  As alterações não poderão ser carregadas se a assinatura estiver vencida. Para obter mais informações, consulte [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
@@ -243,7 +243,7 @@ ms.locfileid: "68199225"
   
  [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reinicializar as assinaturas](reinitialize-subscriptions.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  

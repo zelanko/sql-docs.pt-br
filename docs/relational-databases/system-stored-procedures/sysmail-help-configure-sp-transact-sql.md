@@ -18,10 +18,10 @@ ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056159"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74056159"
 
   Exibe definições de configuração do Database Mail.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,25 +39,25 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @parameter_name = ] 'parameter_name'` o nome da definição de configuração a ser recuperada. Quando especificado, o valor da definição de configuração é retornado na **\@parameter_value** parâmetro de saída. Quando nenhum **\@parameter_name** é especificado, esse procedimento armazenado retorna um conjunto de resultados que contém todas as definições de configuração de Database Mail na instância.  
+`[ @parameter_name = ] 'parameter_name'`O nome da definição de configuração a ser recuperada. Quando especificado, o valor da definição de configuração é retornado no parâmetro ** \@** de saída parameter_value. Quando nenhum ** \@parameter_name** é especificado, esse procedimento armazenado retorna um conjunto de resultados que contém todas as definições de configuração de Database Mail na instância.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Quando nenhum **\@parameter_name** for especificado, o retornará um conjunto de resultados com as colunas a seguir.  
+ Quando nenhum ** \@parameter_name** for especificado, o retornará um conjunto de resultados com as colunas a seguir.  
   
 ||||  
 |-|-|-|  
-|Nome da coluna|Tipo de dados|Descrição|  
-|**paramname**|**nvarchar(256)**|O nome do parâmetro de configuração.|  
-|**paramvalue**|**nvarchar(256)**|O valor do parâmetro de configuração.|  
-|**description**|**nvarchar(256)**|A descrição do parâmetro de configuração.|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|**paramName**|**nvarchar(256)**|O nome do parâmetro de configuração.|  
+|**ParamValue**|**nvarchar(256)**|O valor do parâmetro de configuração.|  
+|**ndescrição**|**nvarchar(256)**|A descrição do parâmetro de configuração.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O procedimento armazenado **sysmail_help_configure_sp** lista as definições de configuração de Database Mail atuais para a instância do.  
   
- Quando um **parameter_name de\@** é especificado, mas nenhum parâmetro de saída é fornecido para **\@parameter_value**, esse procedimento armazenado não produz nenhuma saída.  
+ Quando um ** \@parameter_name** é especificado, mas nenhum parâmetro de saída é fornecido para ** \@parameter_value**, esse procedimento armazenado não produz nenhuma saída.  
   
  O procedimento armazenado **sysmail_help_configure_sp** está no banco de dados **msdb** e pertence ao esquema **dbo** . O procedimento deve ser chamado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
@@ -86,8 +86,8 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Database Mail procedimentos &#40;armazenados TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

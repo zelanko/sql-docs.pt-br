@@ -43,14 +43,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175732"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implantar um banco de dados do SQL Server em uma máquina virtual do Microsoft Azure
-  Use o assistente **para implantar um banco de dados SQL Server em uma VM do Azure** para implantar um banco de dados de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma VM (máquina virtual) do Azure. O assistente utiliza uma operação de backup completo de banco de dados, de modo que sempre copia o esquema de banco de dados completo e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
+  Use o assistente **para implantar um banco de dados SQL Server em uma VM do Azure** para implantar um banco de [!INCLUDE[ssDE](../../includes/ssde-md.md)] dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância do para em uma VM (máquina virtual) do Azure. O assistente utiliza uma operação de backup completo de banco de dados, de modo que sempre copia o esquema de banco de dados completo e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
   
  Você não pode usar o assistente para backups diferenciais porque o assistente não substituirá um banco de dados existente que tenha o mesmo nome. Para substituir um banco de dados existente na VM, você deverá primeiro remover o banco de dados existente ou alterar o nome dele. Se houver um conflito de nomeação entre o nome do banco de dados de uma operação de implantação em curso e um banco de dados existente na VM, o assistente sugerirá um nome de banco de dados anexado para que o banco de dados em curso permita que você conclua a operação.  
   
@@ -119,17 +119,17 @@ ms.locfileid: "70175732"
   
  Se houver um conflito de nomeação entre o nome do banco de dados de uma operação de implantação em curso e um banco de dados existente na VM, o assistente sugerirá um nome de banco de dados anexado para que o banco de dados em curso permita que você conclua a operação.  
   
-###  <a name="filestream"></a> Considerações para implantar um banco de dados habilitado para FILESTREAM em uma VM do Azure  
+###  <a name="filestream"></a>Considerações sobre a implantação de um banco de dados habilitado para FILESTREAM em uma VM do Azure  
  Observe as seguintes diretrizes e restrições ao implantar bancos de dados com BLOBS armazenados em objetos FILESTREAM:  
   
 -   O recurso de implantação não pode implantar um banco de dados habilitado para FILESTREAM em uma nova VM. Se FILESTREAM não estiver habilitado na VM antes da execução do assistente, a operação de restauração do banco de dados falhará e a operação do assistente não poderá ser concluída com êxito. Para implantar com êxito um banco de dados que usa FILESTREAM, habilite-o na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na VM do host antes de iniciar o assistente. Para obter mais informações, veja [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx).  
   
--   Se seu banco de dados utiliza OLTP na memória, você pode implantar o banco de dados na VM do Azure sem modificações no banco de dados. Para obter mais informações, consulte [OLTP na memória (otimização na memória)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
+-   Se seu banco de dados utiliza OLTP na memória, você pode implantar o banco de dados na VM do Azure sem modificações no banco de dados. Para obter mais informações, veja [OLTP in-memory (otimização na memória)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
-###  <a name="geography"></a> Considerações sobre a distribuição geográfica de recursos  
+###  <a name="geography"></a>Considerações sobre a distribuição geográfica de ativos  
  Observe que os seguintes recursos devem estar localizados na mesma região geográfica:  
   
--   Serviço de nuvem  
+-   Serviço de Nuvem  
   
 -   Local da VM  
   
@@ -137,14 +137,14 @@ ms.locfileid: "70175732"
   
  Se os recursos listados acima não forem colocalizados, o assistente não poderá ser concluído com êxito.  
   
-###  <a name="configuration_settings"></a> Parâmetros de configuração do assistente  
+###  <a name="configuration_settings"></a>Definições de configuração do assistente  
  Use os detalhes de configuração a seguir para modificar as configurações de uma implantação de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma VM do Azure.  
   
--   **Caminho padrão para o arquivo de configuração** - %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
+-   **Caminho padrão para o arquivo de configuração** -%LocalAppData%\sql SERVER\DEPLOY to to SQL em WA VM\DeploymentSettings.xml  
   
 -   **Estrutura do arquivo de configuração**  
   
-    -   \<DeploymentSettings>  
+    -   \<> DeploymentSettings  
   
         -   <OtherSettings  
   
@@ -152,7 +152,7 @@ ms.locfileid: "70175732"
   
             -   BackupPath="\\\\[server name]\\[volume]\\" \<!!-- O caminho usado para o último backup. Usado como o padrão no assistente. -->  
   
-            -   CleanupDisabled = false/> \<!--assistente não excluirá arquivos intermediários e objetos do Azure (VM, CS, SA). -->  
+            -   CleanupDisabled = false/> \<o assistente de!--não excluirá arquivos intermediários e objetos do Azure (VM, cs, SA). -->  
   
         -   <PublishProfile \<! -- As informações de perfil de publicação usadas pela última vez. -->  
   
@@ -164,7 +164,8 @@ ms.locfileid: "70175732"
   
             -   Publisher="" />  
   
-    -   \</DeploymentSettings>  
+    -   
+  \</DeploymentSettings>  
   
  **Valores do arquivo de configuração**  
   
@@ -187,20 +188,20 @@ ms.locfileid: "70175732"
   
  **Opções**  
   
--   **Não exibir esta página novamente.** - Clique nesta caixa de seleção para não exibir mais a página Introdução no futuro.  
+-   **Não mostrar esta página novamente.** - Clique nesta caixa de seleção para não exibir mais a página Introdução no futuro.  
   
--   **Avançar** - continua na página **Configurações de Origem** .  
+-   **Avançar** -prossegue para a página de **configurações de origem** .  
   
 -   **Cancelar** – cancela a operação e fecha o assistente.  
   
 -   **Ajuda** -inicia o tópico da ajuda do MSDN para o assistente.  
   
-##  <a name="Source_settings"></a> Configurações de origem  
+##  <a name="Source_settings"></a>Configurações de origem  
  Use esta página para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados que você deseja implantar na VM do Azure. Você também especificará um local temporário para os arquivos a serem salvos no computador local antes de serem transferidos para o Azure. Pode ser um local de rede compartilhado.  
   
  **Opções**  
   
--   Clique em **conectar...** e especifique os detalhes da conexão para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados a ser implantado.  
+-   Clique em **conectar...** e especifique os detalhes da conexão para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância do que hospeda o banco de dados a ser implantado.  
   
 -   Use a lista suspensa **Selecionar Banco de Dados** para especificar o banco de dados a ser implantado.  
   
@@ -219,7 +220,7 @@ ms.locfileid: "70175732"
   
 -   **Assinatura** – selecione, digite ou cole sua ID de assinatura do Azure que corresponda ao certificado de gerenciamento do repositório de certificados local ou de um perfil de publicação.  
   
-##  <a name="Deployment_settings"></a> Página de configurações de implantação  
+##  <a name="Deployment_settings"></a>Página Configurações de implantação  
  Use esta página para especificar o servidor de destino e fornecer detalhes sobre seu novo banco de dados.  
   
  **Opções**  
@@ -248,15 +249,15 @@ ms.locfileid: "70175732"
 ##  <a name="Results"></a> Página Resultados  
  Esta página reporta o êxito ou falha da operação de implantação, mostrando os resultados de cada ação. Todas as ações que encontrarem um erro terão uma indicação na coluna **Resultado** . Clique no link para exibir um relatório do erro para essa ação.  
   
- Clique em **Concluir** para fechar o assistente.  
+ Clique em **concluir** para fechar o assistente.  
   
-## <a name="see-also"></a>Consulte também  
- [Adaptador de Nuvem do SQL Server](../../database-engine/cloud-adapter-for-sql-server.md)   
- [Gerenciamento de ciclo de vida do banco de dados](../database-lifecycle-management.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Adaptador de Nuvem para SQL Server](../../database-engine/cloud-adapter-for-sql-server.md)   
+ [Gerenciamento do ciclo de vida do banco](../database-lifecycle-management.md)   
  [Exportar um aplicativo da camada de dados](../data-tier-applications/export-a-data-tier-application.md)   
  [Importar um arquivo BACPAC para criar um novo banco de dados de usuário](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
- [Backup e restauração de Banco de Dados SQL do Azure](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
+ [Backup e restauração do banco de dados SQL do Azure](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
  [Implantação de SQL Server em máquinas virtuais do Azure](https://msdn.microsoft.com/library/dn133141.aspx)   
- [Preparando-se para migrar para SQL Server em máquinas virtuais do Azure](https://msdn.microsoft.com/library/dn133142.aspx)  
+ [Preparando-se para migrar para o SQL Server em Máquinas Virtuais do Azure](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

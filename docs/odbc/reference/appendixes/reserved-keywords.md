@@ -14,19 +14,19 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057212"
 ---
 # <a name="reserved-keywords"></a>Palavras-chave reservadas
-As palavras seguintes são reservadas para uso em chamadas de função ODBC. Essas palavras não restringem a gramática SQL mínima; No entanto, para garantir a compatibilidade com drivers que dão suporte à gramática principal do SQL, aplicativos devem evitar usar qualquer uma dessas palavras-chave. O #**definir** valor SQL_ODBC_KEYWORDS contém uma lista separada por vírgulas dessas palavras-chave.  
+As palavras seguintes são reservadas para uso em chamadas de função ODBC. Essas palavras não restringem a gramática SQL mínima; no entanto, para garantir a compatibilidade com drivers que dão suporte à gramática SQL principal, os aplicativos devem evitar o uso de qualquer uma dessas palavras-chave. O valor de #**define** SQL_ODBC_KEYWORDS contém uma lista separada por vírgula dessas palavras-chave.  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
+|AÇÃO|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -38,37 +38,37 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |AS|LOCAL|  
 |ASC|LOWER|  
 |ASSERTION|MATCH|  
-|AT|MAX|  
-|AUTHORIZATION|MIN|  
+|AT|MÁX.|  
+|AUTHORIZATION|MÍN.|  
 |AVG|MINUTE|  
 |BEGIN|MODULE|  
 |BETWEEN|MONTH|  
 |BIT|NAMES|  
-|FUNÇÃO BIT_LENGTH|NATIONAL|  
+|BIT_LENGTH|NATIONAL|  
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
 |CASCADED|Não|  
 |CASE|Nenhuma|  
 |CAST|NOT|  
-|CATALOG|NULL|  
+|CATALOG|NULO|  
 |CHAR|NULLIF|  
 |CHAR_LENGTH|NUMERIC|  
 |CHARACTER|OCTET_LENGTH|  
 |CHARACTER_LENGTH|OF|  
-|CHECK|ON|  
+|CHECK|ATIVADO|  
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPÇÃO|  
 |COLLATION|OU|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
-|CONNECT|OUTPUT|  
-|CONNECTION|SOBREPOSIÇÕES|  
+|CONECTAR|OUTPUT|  
+|CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
+|RESTRIÇÕES|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|POSIÇÃO|  
+|CONVERT|PROPOSTAS|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
@@ -83,20 +83,20 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
 |DEC|REVOKE|  
-|Decimal|RIGHT|  
+|DECIMAL|RIGHT|  
 |DECLARE|ROLLBACK|  
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|Delete (excluir)|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|SIZE|  
+|DISTINTO|TAMANHO adequado|  
 |DOMAIN|SMALLINT|  
-|Double|SOME|  
+|DOUBLE|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  
@@ -119,17 +119,17 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |FOUND|TRANSACTION|  
 |FROM|TRANSLATE|  
 |FULL|TRANSLATION|  
-|OBTER|TRIM|  
+|GET|TRIM|  
 |GLOBAL|TRUE|  
 |GO|UNION|  
 |GOTO|UNIQUE|  
-|GRANT|UNKNOWN|  
+|GRANT|DESCONHECIDO|  
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|Usuário|  
+|IDENTIDADE|USER|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|VALUE|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
@@ -137,7 +137,7 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  
-|INSERT|com|  
+|INSERT|WITH|  
 |INT|WORK|  
 |INTEGER|WRITE|  
 |INTERSECT|YEAR|  

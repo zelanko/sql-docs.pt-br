@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 713e2e507fd98f6d3d87fe60e075e587725ddaf2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890343"
 ---
 # <a name="full-database-backups-sql-server"></a>Backups de bancos de dados completos (SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "68890343"
 >  À medida que um banco de dados aumenta, os backups completos de banco de dados levam mais tempo para serem concluídos e exigem mais espaço de armazenamento. Portanto, para um banco de dados grande, convém complementar um backup de banco de dados completo com uma série de *backups de bancos de dados diferenciais*. Para obter mais informações, veja [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
 > [!IMPORTANT]  
->  TRUSTWORTHY é definido como OFF em um backup de banco de dados. Para obter informações sobre como definir TRUSTWORTHY como ON, veja [Opções do ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+>  TRUSTWORTHY é definido como OFF em um backup de banco de dados. Para obter informações sobre como definir TRUSTWORTHY como ON, confira [Opções de ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  **Neste tópico:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68890343"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="DbBuRMs"></a> Backups de banco de dados no modelo de recuperação simples  
+##  <a name="DbBuRMs"></a>Backups de banco de dados no modelo de recuperação simples  
  No modelo de recuperação simples, depois de cada backup, o banco de dados fica sujeito à possível perda de trabalho na eventualidade de um desastre. A possibilidade de perda de trabalho aumenta a cada atualização até que o próximo backup seja feito, quando a possibilidade de perda de trabalho retorna a zero, tendo início um novo ciclo de exposição à perda de trabalho. A possibilidade de perda de trabalho aumenta com o passar do tempo entre os backups. A ilustração a seguir mostra a exposição à perda de trabalho de uma estratégia de backup que usa apenas backups de banco de dados completos.  
   
  ![Mostra a exposição da perda de trabalho entre backups de banco de dados](../../database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "Mostra a exposição da perda de trabalho entre backups de banco de dados")  
@@ -61,7 +61,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="DbBuRMf"></a> Backups de banco de dados no modelo de recuperação completa  
+##  <a name="DbBuRMf"></a>Backups de banco de dados no modelo de recuperação completa  
  Para bancos de dados que usam recuperação completa e recuperação bulk-logged, os backups de banco de dados são necessários, mas não são suficientes. Os backups de log de transações também são necessários. A ilustração a seguir mostra a estratégia de backup menos complexa possível no modelo de recuperação completa.  
   
  ![Séries de backups de bancos de dados e backups de log completos](../../database-engine/media/bnr-rmfull-1-fulldb-log-backups.gif "Séries de backups de bancos de dados e backups de log completos")  
@@ -85,7 +85,7 @@ BACKUP LOG AdventureWorks2012 TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012F
 GO  
 ```  
   
-##  <a name="RestoreDbBu"></a> Usar um backup de banco de dados completo para restaurar o banco de dados  
+##  <a name="RestoreDbBu"></a>Usar um backup de banco de dados completo para restaurar o banco de dados  
  É possível recriar todo o banco de dados de uma só vez, restaurando o banco de dados a partir de um backup completo de banco de dados para qualquer local. Uma parte suficiente do log de transações é incluída no backup para permitir que você recupere o banco de dados até o momento em que o backup foi concluído. O banco de dados restaurado equivale ao estado do banco de dados original quando o backup de banco de dados é concluído, desconsiderando transações não confirmadas. No modelo de recuperação completa, você deve restaurar todos os backups de log de transações subsequentes. Quando o banco de dados é recuperado, as transações não confirmadas são revertidas.  
   
  Para obter mais informações, veja [Restaurações completas de banco de dados &#40;Modelo de recuperação simples#41;](complete-database-restores-simple-recovery-model.md) ou [Restaurações completas de banco de dados &#40;Modelo de recuperação completa#41;](complete-database-restores-full-recovery-model.md).  
@@ -101,7 +101,7 @@ GO
   
  [Usar o Assistente de Plano de Manutenção](../maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer backup e restaurar bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Backup e restauração de bancos de dados do Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  

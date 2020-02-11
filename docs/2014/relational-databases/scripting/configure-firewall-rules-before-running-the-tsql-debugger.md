@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245185"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurar o Depurador Transact-SQL
@@ -164,6 +164,6 @@ ms.locfileid: "75245185"
  [Executar o depurador Transact-SQL](run-the-transact-sql-debugger.md)   
  [Percorrer código Transact-SQL](step-through-transact-sql-code.md)   
  [Informações do depurador Transact-SQL](transact-sql-debugger-information.md)   
- [&#40;SQL Server Management Studio do editor de consultas do Mecanismo de Banco de Dados&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Editor de Consultas do Mecanismo de Banco de Dados &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

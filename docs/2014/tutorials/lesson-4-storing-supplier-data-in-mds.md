@@ -1,5 +1,5 @@
 ---
-title: 'Lição 4: Armazenando dados do fornecedor no MDS | Microsoft Docs'
+title: 'Lição 4: armazenando dados do fornecedor no MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489714"
 ---
-# <a name="lesson-4-storing-supplier-data-in-mds"></a>Lição 4: Armazenar dados do fornecedor no MDS
+# <a name="lesson-4-storing-supplier-data-in-mds"></a>Lição 4: Armazenando dados do fornecedor no MDS
   O Master Data Services (MDS) é a solução do SQL Server para gerenciamento de dados mestre. O gerenciamento de dados mestre (DMD) descreve os esforços de uma organização para descobrir e definir listas não transacionais de dados.  
   
  Os modelos são o nível mais alto da organização no Master Data Services e organizam a estrutura dos dados mestre. A implementação do MDS pode ter um ou vários modelos, em que cada modelo agrupa dados similares. No geral, os dados mestres podem ser categorizados de uma das quatro maneiras: pessoas, local, coisas ou conceitos. Por exemplo, você pode criar um modelo Product para conter dados relativos aos produtos ou um modelo Customer para conter dados relativos aos clientes. Consulte [Modelos (Master Data Services)](https://msdn.microsoft.com/library/ee633746.aspx) para obter mais detalhes.  
   
- Um modelo pode conter uma ou mais entidades. Cada entidade tem atributos (colunas) e membros (linhas). Cada linha contém os dados mestre. Nesta lição, você criará um modelo Suppliers com duas entidades chamadas Supplier e State. A entidade Supplier terá os seguintes atributos: Código, nome, Contact First Name, Contact Last Name, entre em contato com o endereço de Email, a linha de endereço, cidade, estado, CEP e país. Consulte [Atributos (Master Data Services)](https://msdn.microsoft.com/library/ee633745.aspx) para obter mais detalhes sobre atributos em geral. Os atributos Code e Name correspondem às colunas SupplierID e Supplier Name no arquivo do Excel chamado Cleansed and Matched Suppliers.  
+ Um modelo pode conter uma ou mais entidades. Cada entidade tem atributos (colunas) e membros (linhas). Cada linha contém os dados mestre. Nesta lição, você criará um modelo Suppliers com duas entidades chamadas Supplier e State. A entidade Supplier terá os seguintes atributos: Code, Name, Contact First Name, Contact Last Name, Contact Email Address, Address Line, City, State, Zip e Country. Consulte [Atributos (Master Data Services)](https://msdn.microsoft.com/library/ee633745.aspx) para obter mais detalhes sobre atributos em geral. Os atributos Code e Name correspondem às colunas SupplierID e Supplier Name no arquivo do Excel chamado Cleansed and Matched Suppliers.  
   
  Um atributo baseado em domínio é um atributo com valores que são preenchidos por membros de outra entidade. Os atributos baseados em domínio impedem que os usuários insiram valores de atributos inválidos. Um valor de atributo só pode ser selecionado na lista suspensa preenchida por outra entidade. Neste tutorial, o atributo State da entidade Supplier é um atributo baseado em domínio com valores da entidade State. Você só pode alterar o valor do atributo State da entidade Supplier para um dos valores da entidade State. Consulte [Atributos com Base em Domínio](../master-data-services/domain-based-attributes-master-data-services.md) para obter mais detalhes.  
   
  Uma hierarquia derivada no MDS é resultado da relação de atributo baseado em domínio no modelo. Neste tutorial, você criará uma hierarquia derivada entre as entidades Supplier e State. Depois que você criar a hierarquia derivada, verá uma lista de estados no navegador do Master Data Manager. Ao clicar em um estado na lista, você verá os fornecedores desse estado no painel direito. Posteriormente, você criará uma hierarquia derivada com base nessa relação. Consulte [Hierarquias Derivadas](../master-data-services/derived-hierarchies-master-data-services.md) para obter mais detalhes.  
   
- Você criou uma base de dados de conhecimento no DQS, utilizou-a para limpar e fazer a correspondência dos dados e, por fim, armazenou os resultados no arquivo Cleansed and Matched Supplier Data.xls. Nesta lição, você carregará os dados limpos e correspondentes no MDS. O DQS contém apenas as informações sobre os dados (metadados), enquanto o MDS armazena os próprios dados (conjunto mestre). Por exemplo: O DQS pode ter conhecimento sobre vários fornecedores, mas MDS mantêm apenas os fornecedores utilizados por uma empresa.  
+ Você criou uma base de dados de conhecimento no DQS, utilizou-a para limpar e fazer a correspondência dos dados e, por fim, armazenou os resultados no arquivo Cleansed and Matched Supplier Data.xls. Nesta lição, você carregará os dados limpos e correspondentes no MDS. O DQS contém apenas as informações sobre os dados (metadados), enquanto o MDS armazena os próprios dados (conjunto mestre). Por exemplo: o DQS pode ter informações sobre vários fornecedores, mas o MDS mantêm apenas os fornecedores utilizados por uma empresa.  
   
  Nesta lição, você executará as seguintes tarefas:  
   
@@ -49,6 +49,6 @@ ms.locfileid: "65489714"
 8.  Crie e use uma hierarquia derivada através da relação de atributo baseado em domínio entre as entidades **Fornecedor** e **State** (o atributo State da entidade Supplier é do tipo entidade State) usando o **Master Data Manager**.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 1: Criando o modelo fornecedores modelo usando o Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [Tarefa 1: Criando o modelo Fornecedores modelo usando o Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

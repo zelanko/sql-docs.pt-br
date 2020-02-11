@@ -9,49 +9,13 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: 6d9e92db1b261899846fd0de3c28488717cc58e1
-  ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+  ms.openlocfilehash: 2a7c0d83963f82862c89c1262409fe600dcbd7d3
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73536230"
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "76831741"
 landingContent:
-- title: SQL Server
-  linkLists:
-  - linkListType: whats-new
-    links:
-    - text: SQL Server 2019
-      url: what-s-new-in-sql-server-ver15.md
-    - text: Azure Data Studio
-      url: ../azure-data-studio/what-is.md
-    - text: SQL Server no Linux
-      url: ../linux/sql-server-linux-overview.md
-  - linkListType: quickstart
-    links:
-    - text: Conexão e consulta (SSMS)
-      url: ../ssms/tutorials/connect-query-sql-server.md
-    - text: Conexão e consulta (Azure Data Studio)
-      url: ../azure-data-studio/quickstart-sql-server.md
-  - linkListType: download
-    links:
-    - text: SQL Server
-      url: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
-    - text: SQL Server Management Studio
-      url: ../ssms/download-sql-server-management-studio-ssms.md
-    - text: Azure Data Studio
-      url: ../azure-data-studio/download.md
-  - linkListType: reference
-    links:
-    - text: Transact-SQL
-      url: ../t-sql/language-reference.md
-    - text: SQL PowerShell
-      url: ../powershell/sql-server-powershell.md
-    - text: Bancos de dados de exemplo
-      url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
-    - text: Guias de recursos internos e de arquitetura
-      url: https://aka.ms/sqlserverguides
-    - text: Versões anteriores 2005-2014
-      url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
 - title: SQL no Azure
   linkLists:
   - linkListType: overview
@@ -66,36 +30,188 @@ landingContent:
       url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
     - text: SQL Server em uma VM do Linux
       url: ../linux/quickstart-install-connect-clouds.md
-- title: Administração
+    - text: Serviço de Migração de Banco de Dados do Azure
+      url: /azure/dms/dms-overview
+- title: Migração
   linkLists:
-  - linkListType: deploy
-    links:
-    - text: Instalar o SQL Server
-      url: https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server
-    - text: Atualizar o SQL Server
-      url: ../database-engine/install-windows/upgrade-sql-server.md
   - linkListType: overview
     links:
-    - text: Segurança
-      url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
-    - text: Monitorar e ajustar o desempenho
-      url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
-    - text: Banco de dados em memória
-      url: ..//relational-databases/in-memory-database.md
-    - text: Ajuste automático
-      url: ../relational-databases/automatic-tuning/automatic-tuning.md
-    - text: Processamento de consulta inteligente
-      url: https://aka.ms/IQP
-  - linkListType: concept
+    - text: Migração de conteúdo
+      url: migrate/index.yml
+    - text: Guia de migração de dados
+      url: https://datamigration.microsoft.com/
+    - text: Certificação de compatibilidade de banco de dados
+      url: https://aka.ms/dbcompat
+    - text: AMD (Assistente de Migração de Dados)
+      url: ../dma/dma-overview.md
+    - text: SSMA (Assistente de Migração do SQL Server)
+      url: ../ssma/sql-server-migration-assistant.md
+- title: SQL Server
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: SQL Server 2019
+      url: what-s-new-in-sql-server-ver15.md
+    - text: Clusters de Big Data do SQL Server
+      url: ../big-data-cluster/big-data-cluster-overview.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/what-is.md
+    - text: SQL Server no Linux
+      url: ../linux/sql-server-linux-overview.md
+  - linkListType: quickstart
+    links:
+    - text: Conexão e consulta (SSMS)
+      url: ../ssms/tutorials/connect-query-sql-server.md
+    - text: Conexão e consulta (Azure Data Studio)
+      url: ../azure-data-studio/quickstart-sql-server.md
+  - linkListType: download
+    links:
+    - text: SQL Server
+      url: https://www.microsoft.com/sql-server/sql-server-downloads
+    - text: SQL Server Management Studio
+      url: ../ssms/download-sql-server-management-studio-ssms.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/download.md
+  - linkListType: reference
+    links:
+    - text: Transact-SQL (T-SQL)
+      url: ../t-sql/language-reference.md
+    - text: Documentos do SQL Server 2014
+      url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
+    - text: Recursos educativos do SQL
+      url: ../sql-server/educational-sql-resources.yml
+    - text: Bancos de dados de exemplo
+      url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+    - text: Guias de recursos internos e de arquitetura
+      url: https://aka.ms/sqlserverguides
+    - text: Versões anteriores (2005 a 2012)
+      url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
+- title: Continuidade de negócios
+  linkLists:
+  - linkListType: overview
     links:
     - text: Backup e restauração
       url: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
     - text: Grupos de disponibilidade AlwaysOn
       url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
-    - text: Instâncias de cluster de failover
-      url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
-    - text: Replicação do SQL Server
+    - text: Instância do cluster de failover do Always On
+      url: failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
+    - text: Espelhamento de banco de dados
+      url: ../database-engine/database-mirroring/database-mirroring-sql-server.md
+    - text: Envio de logs
+      url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+    - text: Replicação
       url: ../relational-databases/replication/sql-server-replication.md
+- title: Segurança
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Avaliação de Vulnerabilidades SQL
+      url: ../relational-databases/security/sql-vulnerability-assessment.md
+    - text: Gerenciamento de acesso
+      url: ../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md
+    - text: Always Encrypted
+      url: ../relational-databases/security/encryption/always-encrypted-database-engine.md
+    - text: Auditoria
+      url: ../relational-databases/security/auditing/sql-server-audit-database-engine.md
+    - text: Enclaves
+      url: ../relational-databases/security/encryption/always-encrypted-enclaves.md
+    - text: Mascaramento de dados dinâmicos
+      url: ../relational-databases/security/dynamic-data-masking.md
+    - text: Criptografia de Dados Transparente (TDE)
+      url: ../relational-databases/security/encryption/transparent-data-encryption.md
+    - text: Segurança em nível de linha
+      url: ../relational-databases/security/row-level-security.md
+- title: Design de banco de dados
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Collation
+      url: ../relational-databases/collations/collation-and-unicode-support.md
+    - text: Bancos de dados
+      url: ../relational-databases/databases/databases.md
+    - text: Grafo
+      url: ../relational-databases/graphs/sql-graph-overview.md
+    - text: Índices
+      url: ../relational-databases/indexes/indexes.md
+    - text: Exibições
+      url: ../relational-databases/views/views.md
+    - text: Funções definidas pelo usuário
+      url: ../relational-databases/user-defined-functions/user-defined-functions.md
+    - text: Tabelas
+      url: ../relational-databases/tables/tables.md
+    - text: Procedimentos armazenados
+      url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
+- title: Gerenciar e monitorar
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Gerenciamento do log de transações
+      url: ../relational-databases/logs/the-transaction-log-sql-server.md
+    - text: Planos de manutenção
+      url: ../relational-databases/maintenance-plans/maintenance-plans.md
+    - text: SQL Server Agent
+      url: ../ssms/agent/sql-server-agent.md
+    - text: Controle de alterações
+      url: ../relational-databases/track-changes/track-data-changes-sql-server.md
+    - text: Compactação de dados
+      url: ../relational-databases/data-compression/data-compression.md
+    - text: Eventos estendidos
+      url: ../relational-databases/extended-events/extended-events.md
+    - text: SQLdiag
+      url: ../tools/sqldiag-utility.md
+    - text: SQL Profiler
+      url: ../tools/sql-server-profiler/sql-server-profiler.md
+- title: Ajustar
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Controle de Desempenho
+      url: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+    - text: Processamento de consulta inteligente
+      url: https://aka.ms/IQP
+    - text: Ajuste Automático
+      url: ../relational-databases/automatic-tuning/automatic-tuning.md
+    - text: Assistente de Ajuste do Banco de Dados
+      url: ../relational-databases/performance/database-engine-tuning-advisor.md
+    - text: OLTP na memória
+      url: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+  - linkListType: concept
+    links:
+    - text: Estimativa de cardinalidade
+      url: ../relational-databases/performance/cardinality-estimation-sql-server.md
+    - text: Estatísticas
+      url: ../relational-databases/statistics/statistics.md
+    - text: Índices
+      url: ../relational-databases/indexes/indexes.md
+- title: Consultar dados
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Transact-SQL (T-SQL)
+      url: ../t-sql/language-reference.md
+    - text: SQL PowerShell
+      url: ../powershell/sql-server-powershell.md
+    - text: Scripting
+      url: ../ssms/scripting/database-engine-scripting.md
+    - text: Junções
+      url: ../relational-databases/performance/joins.md
+    - text: Pesquisa de texto completo
+      url: ../relational-databases/search/full-text-search.md
+    - text: Sinônimos
+      url: ../relational-databases/synonyms/synonyms-database-engine.md
+- title: Big data aprendizado de máquina
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Clusters de Big Data do SQL Server
+      url: ../big-data-cluster/big-data-cluster-overview.md
+    - text: Sistema de plataforma de análise
+      url: https://www.microsoft.com/sql/analytics-platform-system/
+    - text: Machine Learning do SQL Server (R e Python)
+      url: https://docs.microsoft.com/sql/advanced-analytics/
+    - text: Virtualização de dados com Polybase
+      url: ../relational-databases/polybase/polybase-guide.md
 - title: Business Intelligence
   linkLists:
   - linkListType: overview
@@ -106,35 +222,5 @@ landingContent:
       url: /analysis-services/analysis-services-overview
     - text: SQL Server Integration Services (SSIS)
       url: ../integration-services/sql-server-integration-services.md
-    - text: Azure Data Factory
+    - text: Fábrica de dados do Azure
       url: https://docs.microsoft.com/azure/data-factory/
-- title: Migração
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Guia de migração de dados
-      url: https://datamigration.microsoft.com/
-    - text: Certificação de compatibilidade de banco de dados
-      url: https://aka.ms/dbcompat
-    - text: Serviço de Migração de Banco de Dados do Azure
-      url: https://docs.microsoft.com/azure/dms/dms-overview
-    - text: AMD (Assistente de Migração de Dados)
-      url: ../dma/dma-overview.md
-    - text: Assistente para Experimentos de Banco de Dados
-      url: ../dea/database-experimentation-assistant-overview.md
-    - text: SSMA (Assistente de Migração do SQL Server)
-      url: ../ssma/sql-server-migration-assistant.md
-- title: Big data aprendizado de máquina
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Clusters de Big Data do SQL Server
-      url: ../big-data-cluster/big-data-cluster-overview.md
-    - text: Sistema de plataforma de análise
-      url: https://www.microsoft.com/sql/analytics-platform-system/
-    - text: Aprendizado de máquina com SQL Server
-      url: https://docs.microsoft.com/sql/advanced-analytics/
-    - text: R Services
-      url: ../advanced-analytics/r/sql-server-r-services.md
-    - text: Virtualização de dados com Polybase
-      url: ../relational-databases/polybase/polybase-guide.md

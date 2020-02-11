@@ -16,13 +16,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101746"
 ---
-# <a name="role-definitions"></a>Definições de função
+# <a name="role-definitions"></a>Definições de Funções
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], uma *definição de**função* é uma coleção nomeada de tarefas que definem as operações disponíveis em um servidor de relatório. As definições de função fornecem as regras usadas pelo servidor de relatório para impor a segurança. Quando um usuário tenta executar uma tarefa, como publicar um relatório, o servidor de relatório verifica a atribuição de função de relatório do usuário para determinar se a tarefa está incluída em sua definição de função. Se a tarefa estiver incluída na definição de função, a solicitação será enviada.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>Usando funções para autorizar o acesso a um servidor de relatório  
@@ -32,7 +32,8 @@ ms.locfileid: "66101746"
  Definições de função são definições em nível de item ou de sistema. Uma *definição de função de nível de item* descreve as tarefas relacionadas aos itens armazenados e gerenciados em um servidor de relatório, como relatórios, pastas e modelos. Gerenciar relatórios, Exibir pastas e Gerenciar assinaturas individuais são exemplos de tarefas que você pode incluir nas definições de função de nível de item. Uma *definição de função de sistema* inclui tarefas que se aplicam ao site como um todo. Exibir as propriedades do servidor de relatório é um exemplo de uma tarefa que você pode incluir em uma função de sistema.  
   
 ## <a name="predefined-roles"></a>Funções predefinidas  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui funções predefinidas que correspondem a níveis diferentes de interação com o usuário. A seguinte lista contém as funções predefinidas que você pode usar:  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui funções predefinidas que correspondem a níveis diferentes de interação com o usuário. A seguinte lista contém as funções predefinidas que você pode usar:  
   
 -   Gerenciador de Conteúdo, Publicador, Navegador, Construtor de Relatórios e Meus Relatórios são definições de função de nível de item que você pode usar ao criar atribuições de função para acessar conteúdo de servidor de relatório.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "66101746"
   
  Uma função deve ter um nome exclusivo. Para ser válida, a definição de função deve conter pelo menos uma tarefa. Para obter mais informações, consulte [Tarefas e Permissões](tasks-and-permissions.md).  
   
- Para criar uma definição de função, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obter mais informações, consulte [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
+ Para criar uma definição de função, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]use. Para obter mais informações, consulte [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
   
  Após criar uma definição de função, você poderá usá-la selecionando-a em uma atribuição de função. Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md).  
   
@@ -54,12 +55,12 @@ ms.locfileid: "66101746"
   
  Você poderá excluir uma definição de função se já não estiver mais a utilizando. Não será possível excluir a definição de função selecionada para o recurso Meus Relatórios se esse recurso estiver habilitado. Antes de excluir a definição de função usada por Meus Relatórios, desabilite o recurso ou selecione outra definição de função para usar com ele.  
   
-## <a name="see-also"></a>Consulte também  
- [Tarefas e Permissões](tasks-and-permissions.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tarefas e permissões](tasks-and-permissions.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
  [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md)   
- [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](role-assignments-modify-or-delete.md)   
+ [Modifique ou exclua uma atribuição de função &#40;Report Manager&#41;](role-assignments-modify-or-delete.md)   
  [Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

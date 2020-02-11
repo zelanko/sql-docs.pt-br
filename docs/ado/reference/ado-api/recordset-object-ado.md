@@ -1,5 +1,5 @@
 ---
-title: O objeto de conjunto de registros (ADO) | Microsoft Docs
+title: Objeto Recordset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,68 +16,68 @@ ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931361"
 ---
 # <a name="recordset-object-ado"></a>Objeto Recordset (ADO)
-Representa todo o conjunto de registros de uma tabela base ou os resultados de um comando executado. A qualquer momento, o **Recordset** objeto se refere a um único registro dentro do conjunto de como o registro atual.  
+Representa o conjunto inteiro de registros de uma tabela base ou os resultados de um comando executado. A qualquer momento, o objeto **Recordset** refere-se apenas a um único registro dentro do conjunto como o registro atual.  
   
 ## <a name="remarks"></a>Comentários  
- Você usa **Recordset** objetos para manipular os dados de um provedor. Quando você usa ADO, você manipular os dados usando quase que totalmente **Recordset** objetos. Todos os **Recordset** objetos consistem em registros (linhas) e campos (colunas). Dependendo da funcionalidade com suporte pelo provedor, alguns **Recordset** métodos ou propriedades podem não estar disponíveis.  
+ Você usa objetos **Recordset** para manipular dados de um provedor. Ao usar o ADO, você manipula dados quase totalmente usando objetos **Recordset** . Todos os objetos **Recordset** consistem em registros (linhas) e campos (colunas). Dependendo da funcionalidade suportada pelo provedor, alguns métodos ou propriedades do **conjunto de registros** podem não estar disponíveis.  
   
- ADODB. Conjunto de registros é o ProgID que deve ser usado para criar uma **Recordset** objeto. Aplicativos existentes que fazem referência a objeto ADOR desatualizado. Conjunto de registros ProgID continuarão a funcionar sem recompilar, mas novos desenvolvimentos devem referenciar o objeto ADODB. Conjunto de registros.  
+ ActiveX. Recordset é o ProgID que deve ser usado para criar um objeto **Recordset** . Aplicativos existentes que fazem referência a ADOR desatualizadas. O ProgID do conjunto de registros continuará a funcionar sem recompilar, mas o novo desenvolvimento deve fazer referência a ADODB. Registros.  
   
- Há quatro tipos diferentes de cursor definidos no ADO:  
+ Há quatro tipos de cursor diferentes definidos no ADO:  
   
--   **Cursor dinâmico** permite que você exiba as adições, alterações e exclusões por outros usuários; permite que todos os tipos de movimentação por meio de **Recordset** que não depende de indicadores; e permite que os indicadores se o provedor oferece suporte -los.  
+-   **Cursor dinâmico** Permite exibir adições, alterações e exclusões por outros usuários; permite todos os tipos de movimento por meio do **conjunto de registros** que não depende de indicadores; e permitirá indicadores se o provedor oferecer suporte a eles.  
   
--   **Cursor keyset** Behaves como um cursor dinâmico, exceto que ele impede que você veja registros que outros usuários, adicionar e impede o acesso a registros que excluem outros usuários. As alterações de dados por outros usuários ainda estarão visíveis. Ele sempre dá suporte a indicadores e, portanto, permite que todos os tipos de movimentação por meio de **conjunto de registros**.  
+-   **Cursor** do conjunto de chaves Comporta-se como um cursor dinâmico, exceto que ele impede que você veja os registros que outros usuários adicionam e impede o acesso a registros que outros usuários excluem. As alterações de dados por outros usuários ainda estarão visíveis. Ele sempre dá suporte a indicadores e, portanto, permite todos os tipos de movimento por meio do **conjunto de registros**.  
   
--   **Cursor estático** fornece uma cópia estática de um conjunto de registros para que você possa usar para localizar dados ou gerar relatórios; sempre permite indicadores e, portanto, permite que todos os tipos de movimentação por meio de **conjunto de registros**. Adições, alterações ou exclusões por outros usuários não será visíveis. Isso é o único tipo de cursor permitido quando você abre um lado do cliente **Recordset** objeto.  
+-   **Cursor estático** Fornece uma cópia estática de um conjunto de registros para que você use para localizar dados ou gerar relatórios; sempre permite indicadores e, portanto, permite todos os tipos de movimento por meio do **conjunto de registros**. Adições, alterações ou exclusões por outros usuários não estarão visíveis. Esse é o único tipo de cursor permitido quando você abre um objeto **Recordset** do lado do cliente.  
   
--   **Cursor somente de avanço** permite que você apenas para rolar para frente por meio de **conjunto de registros**. Adições, alterações ou exclusões por outros usuários não será visíveis. Isso melhora o desempenho em situações em que você precisa fazer apenas uma única passagem por meio de um **conjunto de registros**.  
+-   **Cursor de somente avanço** Permite que você role para frente pelo **conjunto de registros**. Adições, alterações ou exclusões por outros usuários não estarão visíveis. Isso melhora o desempenho em situações em que você precisa fazer uma passagem única por um **conjunto de registros**.  
   
- Defina a [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) propriedade antes da abertura a **conjunto de registros** para escolher o tipo de cursor ou passar um *CursorType* argumento com o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)método. Alguns provedores não dão suporte a todos os tipos de cursor. Verifique a documentação do provedor. Se você não especificar um tipo de cursor, o ADO abre um cursor somente encaminhamento, por padrão.  
+ Defina a propriedade [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) antes de abrir o **conjunto de registros** para escolher o tipo de cursor ou passe um argumento *CursorType* com o método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) . Alguns provedores não dão suporte a todos os tipos de cursor. Verifique a documentação do provedor. Se você não especificar um tipo de cursor, o ADO abrirá um cursor de somente avanço por padrão.  
   
- Se o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) estiver definida como **adUseClient** para abrir um **conjunto de registros**, o **UnderlyingValue** propriedade [Campo](../../../ado/reference/ado-api/field-object.md) objetos não está disponível no retornado **Recordset** objeto. Quando usado com alguns provedores (como o Microsoft ODBC para OLE DB em conjunto com o Microsoft SQL Server), você pode criar **conjunto de registros** objetos independentemente definido anteriormente [Conexão](../../../ado/reference/ado-api/connection-object-ado.md)objeto, passando uma cadeia de caracteres de conexão com o **abra** método. ADO ainda cria uma [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto, mas ele não atribui o objeto a uma variável de objeto. No entanto, se você estiver abrindo vários **conjunto de registros** objetos sobre a mesma conexão, você deve criar explicitamente e abrir um **Conexão** objeto; este atribui o **Conexão**objeto para uma variável de objeto. Se você não usar essa variável de objeto ao abrir sua **conjunto de registros** objetos, ADO cria uma nova **Conexão** objeto para cada novo **Recordset**, mesmo se você passar o mesmo cadeia de caracteres de conexão.  
+ Se a propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) for definida como **adUseClient** para abrir um **conjunto de registros**, a propriedade **subdependvalue** em objetos de [campo](../../../ado/reference/ado-api/field-object.md) não estará disponível no objeto **Recordset** retornado. Quando usado com alguns provedores (como o provedor ODBC da Microsoft para OLE DB em conjunto com Microsoft SQL Server), você pode criar objetos **Recordset** independentemente de um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) definido anteriormente, passando uma cadeia de conexão com o método **Open** . O ADO ainda cria um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) , mas não atribui esse objeto a uma variável de objeto. No entanto, se você estiver abrindo vários objetos de **conjunto de registros** na mesma conexão, deverá criar e abrir explicitamente um objeto de **conexão** ; Isso atribui o objeto de **conexão** a uma variável de objeto. Se você não usar essa variável de objeto ao abrir seus objetos de **conjunto de registros** , o ADO criará um novo objeto de **conexão** para cada novo **conjunto de registros**, mesmo se você passar a mesma cadeia de conexão.  
   
- Você pode criar tantos **Recordset** objetos conforme necessário.  
+ Você pode criar quantos objetos de **conjunto de registros** forem necessários.  
   
- Quando você abre um **conjunto de registros**, o registro atual é posicionado no primeiro registro (se houver) e o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriedades são definidas como **False**. Se não houver nenhum registro, o **BOF** e **EOF** configurações de propriedade são **verdadeiro**.  
+ Quando você abre um **conjunto de registros**, o registro atual é posicionado no primeiro registro (se houver) e as propriedades [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) são definidas como **false**. Se não houver nenhum registro, as configurações de propriedade **BOF** e **EOF** serão **verdadeiras**.  
   
- Você pode usar o [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**, e **MovePrevious** métodos; o [mover](../../../ado/reference/ado-api/move-method-ado.md) método; e o [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), e [filtro](../../../ado/reference/ado-api/filter-property.md) propriedades para reposicionar o registro atual, supondo que o provedor oferece suporte a relevantes funcionalidade. Somente de avanço **conjunto de registros** objetos dão suporte apenas a [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) método. Quando você usa o **mover** métodos para visitar cada registro (ou enumerar os **conjunto de registros**), você pode usar o **BOF** e **EOF** propriedades para determinar se você tiver movido para fora o início ou término do **conjunto de registros**.  
+ Você pode usar os métodos [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**e **MovePrevious** ; o método [move](../../../ado/reference/ado-api/move-method-ado.md) ; e as propriedades [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)e [Filter](../../../ado/reference/ado-api/filter-property.md) para reposicionar o registro atual, supondo que o provedor dê suporte à funcionalidade relevante. Objetos **Recordset** somente de encaminhamento dão suporte apenas ao método [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) . Ao usar os métodos **move** para visitar cada registro (ou enumerar o **conjunto de registros**), você pode usar as propriedades **BOF** e **EOF** para determinar se você se moveu além do início ou do fim do **conjunto de registros**.  
   
- Antes de usar qualquer funcionalidade de um **conjunto de registros** do objeto, você deve chamar o **dá suporte a** método no objeto para verificar se a funcionalidade está disponível ou com suporte. Você não deve usar a funcionalidade quando o **dá suporte a** método retornará false. Por exemplo, você pode usar o **MovePrevious** método apenas se `Recordset.Supports(adMovePrevious)` retorna **True**. Caso contrário, você receberá um erro, pois o **Recordset** objeto fechado e a funcionalidade renderizado indisponível na instância. Se não há suporte para um recurso que você está interessado, **dá suporte a** retornará false também. Nesse caso, você deve evitar chamar o método ou propriedade correspondente a **Recordset** objeto.  
+ Antes de usar qualquer funcionalidade de um objeto de **conjunto de registros** , você deve chamar o método de **suporte** no objeto para verificar se a funcionalidade tem suporte ou está disponível. Você não deve usar a funcionalidade quando o método de **suporte** retornar false. Por exemplo, você pode usar o método **MovePrevious** somente se `Recordset.Supports(adMovePrevious)` retornar **true**. Caso contrário, você receberá um erro, pois o objeto **Recordset** pode ter sido fechado e a funcionalidade não foi processada na instância. Se não houver suporte para um recurso no qual você esteja interessado, o **suporte** retornará false também. Nesse caso, você deve evitar chamar a propriedade ou o método correspondente no objeto **Recordset** .  
   
- **Conjunto de registros** objetos podem dar suporte a dois tipos de atualização: imediatas e em lote. Em atualização imediata, todas as alterações de dados são gravadas imediatamente a fonte de dados depois de chamar o [atualização](../../../ado/reference/ado-api/update-method.md) método. Você também pode passar matrizes de valores como parâmetros com o [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) e **atualizar** métodos e atualizar simultaneamente vários campos em um registro.  
+ Os objetos **Recordset** podem dar suporte a dois tipos de atualização: imediata e em lote. Na atualização imediata, todas as alterações nos dados são gravadas imediatamente na fonte de dados subjacente depois que você chama o método [Update](../../../ado/reference/ado-api/update-method.md) . Você também pode passar matrizes de valores como parâmetros com os métodos [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) e **Update** e atualizar simultaneamente vários campos em um registro.  
   
- Se um provedor oferecer suporte a atualização em lotes, você pode ter o provedor de alterações em mais de um registro de cache e, em seguida, transmiti-las em uma única chamada ao banco de dados com o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método. Isso se aplica às alterações feitas com o **AddNew**, **atualização**, e [excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md) métodos. Depois de chamar o **UpdateBatch** método, você pode usar o [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriedade para verificar se há quaisquer conflitos de dados para resolvê-los.  
+ Se um provedor oferecer suporte à atualização em lotes, você poderá fazer com que o cache do provedor seja alterado para mais de um registro e, em seguida, transmiti-los em uma única chamada para o banco de dados com o método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Isso se aplica a alterações feitas com os métodos **AddNew**, **Update**e [delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) . Depois de chamar o método **UpdateBatch** , você pode usar a propriedade [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) para verificar se há conflitos de dados a fim de resolvê-los.  
   
 > [!NOTE]
->  Para executar uma consulta sem usar um [comando](../../../ado/reference/ado-api/command-object-ado.md) do objeto, passe uma cadeia de caracteres de consulta para o **abra** método de um **conjunto de registros** objeto. No entanto, uma **comando** objeto é necessário quando você deseja manter o texto do comando e executá-la novamente ou use parâmetros de consulta.  
+>  Para executar uma consulta sem usar um objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) , passe uma cadeia de caracteres de consulta para o método **Open** de um objeto **Recordset** . No entanto, um objeto de **comando** é necessário quando você deseja manter o texto do comando e executá-lo novamente, ou usar parâmetros de consulta.  
   
- O [modo](../../../ado/reference/ado-api/mode-property-ado.md) propriedade controla as permissões de acesso.  
+ A propriedade [Mode](../../../ado/reference/ado-api/mode-property-ado.md) governa as permissões de acesso.  
   
- O **campos** coleção é o membro padrão de **conjunto de registros** objeto. Como resultado, as duas instruções de código a seguir são equivalentes.  
+ A coleção **Fields** é o membro padrão do objeto **Recordset** . Como resultado, as duas instruções de código a seguir são equivalentes.  
   
 ```  
 Debug.Print objRs.Fields.Item(0)  ' Both statements print   
 Debug.Print objRs(0)              '  the Value of Item(0).  
 ```  
   
- Quando um **conjunto de registros** objeto é passado entre processos, somente os **conjunto de linhas** valores são marshaling e as propriedades da **Recordset** objeto são ignorados. Durante a Desempacotando, o **conjunto de linhas** seja descompactado em uma recém-criado **Recordset** objeto, que também define suas propriedades para os valores padrão.  
+ Quando um objeto **Recordset** é passado entre os processos, somente os valores do **conjunto de linhas** são marshalled e as propriedades do objeto **Recordset** são ignoradas. Durante o desempacotamento, o **conjunto de linhas** é desempacotado em um objeto **Recordset** recém-criado, que também define suas propriedades com os valores padrão.  
   
- O **Recordset** objeto é seguro para script.  
+ O objeto **Recordset** é seguro para scripts.  
   
  Esta seção contém o tópico a seguir.  
   
--   [Eventos, métodos e propriedades do objeto de conjunto de registros](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
+-   [Propriedades, métodos e eventos do objeto Recordset](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Coleção de propriedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Apêndice a: provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

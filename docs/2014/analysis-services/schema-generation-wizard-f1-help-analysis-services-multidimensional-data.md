@@ -1,5 +1,5 @@
 ---
-title: Geração de esquema ajuda de F1 do assistente (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Ajuda F1 do assistente de geração de esquema (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069952"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Ajuda F1 do Assistente de Geração de Esquema (Analysis Services – Dados Multidimensionais)
@@ -36,15 +36,15 @@ ms.locfileid: "66069952"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Especifique o destino &#40;Assistente de geração de esquema&#41; &#40;Analysis Services - dados multidimensionais&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Especifique o assistente de geração de esquema de &#40;de destino&#41; &#40;Analysis Services de dados multidimensionais&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
--   [Opções de esquema de banco de dados de área de assunto &#40;Assistente de geração de esquema&#41; &#40;Analysis Services - dados multidimensionais&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
+-   [Opções de esquema de banco de dados da área de assunto &#40;assistente de geração de esquema&#41; &#40;Analysis Services de dados multidimensionais&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
   
--   [Especificar convenções de nomenclatura &#40;Assistente de geração de esquema&#41; &#40;Analysis Services - dados multidimensionais&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
+-   [Especifique as convenções de nomenclatura &#40;assistente de geração de esquema&#41; &#40;Analysis Services de dados multidimensionais&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
   
--   [Concluindo o Assistente de &#40;Assistente de geração de esquema&#41; &#40;Analysis Services - dados multidimensionais&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Concluindo o assistente &#40;assistente de geração de esquema&#41; &#40;Analysis Services de dados multidimensionais&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services assistentes &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

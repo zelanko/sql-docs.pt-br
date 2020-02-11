@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5bd37ab434dbefbb01862f1004ca62e673df0453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63251026"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server Agent, objeto Jobs
@@ -25,7 +25,7 @@ ms.locfileid: "63251026"
   
  A tabela abaixo contém os contadores **SQLAgent:Jobs** .  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |**Trabalhos Ativos**|Este contador informa o número de trabalhos atualmente em execução.|  
 |**Trabalhos com falha**|Este contador informa o número de trabalhos que falharam.|  
@@ -36,14 +36,14 @@ ms.locfileid: "63251026"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Instância|Descrição|  
+|Instância|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**_Total**|Informações referentes a todos os trabalhos.|  
 |**Alertas**|Informações sobre trabalhos iniciados por alertas.|  
 |**Others**|Informações sobre trabalhos que não foram iniciados nem por alertas, nem por agendas. Normalmente, trata-se de trabalhos iniciados manualmente usando **sp_start_job**.|  
 |**Agendas**|Informações sobre trabalhos iniciados por agendas.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementar trabalhos](../../ssms/agent/implement-jobs.md)   
  [Usar objetos de desempenho](../../ssms/agent/use-performance-objects.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)  

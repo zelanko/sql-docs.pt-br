@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199456"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Fazer alterações de esquema em bancos de dados de publicação
-  A replicação oferece suporte para um amplo intervalo de alterações de esquema para objetos publicados. Ao fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Publicador do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a alteração é propagada por padrão a todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+  A replicação oferece suporte para um amplo intervalo de alterações de esquema para objetos publicados. Ao se fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Editor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], essa alteração será propagada por padrão para todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
   
@@ -81,7 +81,8 @@ ms.locfileid: "68199456"
   
 -   Leitura não confirmada não é um nível de isolamento com suporte ao fazer o DDL em uma tabela publicada.  
   
--   `SET CONTEXT_INFO` não deve ser usado para modificar o contexto de transações em que as alterações de esquema são executadas em objetos publicados.  
+-   
+  `SET CONTEXT_INFO` não deve ser usado para modificar o contexto de transações em que as alterações de esquema são executadas em objetos publicados.  
   
 #### <a name="adding-columns"></a>Adicionando colunas  
   
@@ -146,9 +147,10 @@ ms.locfileid: "68199456"
         |`hierarchyid`|Permitir alteração|Bloquear alteração|Bloquear alteração|  
         |`geography` e `geometry`|Permitir alteração|Permitir alteração<sup>1</sup>|Bloquear alteração|  
         |`filestream`|Permitir alteração|Bloquear alteração|Bloquear alteração|  
-        |`date`, `time`, `datetime2` e `datetimeoffset`|Permitir alteração|Permitir alteração<sup>1</sup>|Bloquear alteração|  
+        |
+  `date`, `time`, `datetime2`, e `datetimeoffset`|Permitir alteração|Permitir alteração<sup>1</sup>|Bloquear alteração|  
   
-         <sup>1</sup> assinantes do SQL Server Compact convertem estes tipos de dados no assinante.  
+         <sup>1</sup> os assinantes do SQL Server Compact convertem esses tipos de dados no Assinante.  
   
 -   Se um erro ocorrer ao ser aplicada uma alteração de esquema (como um erro resultante da adição de uma chave estrangeira que faz referência a uma tabela não disponível no Assinante), a sincronização falhará e a assinatura deverá ser reinicializada.  
   
@@ -156,7 +158,7 @@ ms.locfileid: "68199456"
   
 -   A replicação de mesclagem leva os procedimentos armazenados a ignorar alterações de esquema durante a solução de problemas. Para obter mais informações, consulte [sp_markpendingschemachange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql) e [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   

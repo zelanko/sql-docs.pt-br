@@ -10,10 +10,10 @@ ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: bb763d2212bd8dcb09b6088467e97aa702d15012
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251746"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Perfil de dados e notificações no DQS
@@ -66,7 +66,7 @@ ms.locfileid: "75251746"
   
  Para obter mais informações sobre as estatísticas específicas de criação de perfil relacionadas a uma atividade, consulte as seções sobre Criação de Perfil nos seguintes tópicos:  
   
--   [Executar descoberta da base de dados de conhecimento](../data-quality-services/perform-knowledge-discovery.md)  
+-   [Executar a descoberta da base de dados de conhecimento](../data-quality-services/perform-knowledge-discovery.md)  
   
 -   [Limpar dados usando o conhecimento de&#41; interno do DQS &#40;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "75251746"
   
  Para condições específicas associadas às notificações de uma atividade, consulte o seguinte:  
   
--   [Executar descoberta da base de dados de conhecimento](../data-quality-services/perform-knowledge-discovery.md)  
+-   [Executar a descoberta da base de dados de conhecimento](../data-quality-services/perform-knowledge-discovery.md)  
   
 -   [Limpar dados usando o conhecimento de&#41; interno do DQS &#40;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   

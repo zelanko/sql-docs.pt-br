@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3383dcd08ed5910d949608e521b3cd23f37aace8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790153"
 ---
 # <a name="sql-server-message-results"></a>Resultados da mensagem do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  As instruções de [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir não geram [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de linhas do provedor de OLE DB do cliente nativo ou uma contagem da linha afetada quando executadas:  
+  As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir não geram [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de linhas do provedor de OLE DB do cliente nativo ou uma contagem de linha afetada quando executadas:  
   
 -   PRINT  
   
@@ -37,13 +37,13 @@ ms.locfileid: "73790153"
   
 -   SET STATISTICS  
   
- Estas instruções retornam uma ou mais mensagens informativas ou fazem o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornar mensagens informativas em vez de resultados de contagens ou conjuntos de linhas. Após a execução bem-sucedida, o provedor de OLE DB de cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo retorna S_OK e as mensagens estão disponíveis para o consumidor do provedor de OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+ Estas instruções retornam uma ou mais mensagens informativas ou fazem o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornar mensagens informativas em vez de resultados de contagens ou conjuntos de linhas. Após a execução bem-sucedida, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo retorna S_OK e as mensagens estão disponíveis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o consumidor do provedor de OLE DB do cliente nativo.  
   
- O provedor de OLE DB de cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo retorna S_OK e tem uma ou mais mensagens informativas disponíveis após a execução de muitas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou a execução do consumidor de uma função de membro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo OLE DB do provedor.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retorna S_OK e tem uma ou mais mensagens informativas disponíveis após a [!INCLUDE[tsql](../../includes/tsql-md.md)] execução de muitas instruções ou a execução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do consumidor de uma função de membro do provedor de OLE DB de cliente nativo.  
   
- O consumidor do provedor de OLE DB de cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo que permite a especificação dinâmica do texto da consulta deve verificar as interfaces de erro após cada execução de função de membro, independentemente do valor do código de retorno, da presença ou da ausência de um **IRowset retornado** ou referência de interface **IMultipleResults** , ou uma contagem de linhas afetadas.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor do provedor de OLE DB de cliente nativo que permite a especificação dinâmica do texto da consulta deve verificar as interfaces de erro depois de cada execução de função de membro, independentemente do valor do código de retorno, da presença ou da ausência de uma referência de interface **IRowset** ou **IMultipleResults** retornada ou de uma contagem de linhas afetadas.  
   
-## <a name="see-also"></a>Consulte também  
- [Erros](../../relational-databases/native-client-ole-db-errors/errors.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

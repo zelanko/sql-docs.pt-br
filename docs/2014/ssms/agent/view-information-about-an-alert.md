@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211290"
 ---
 # <a name="view-information-about-an-alert"></a>Exibir informações sobre um alerta
-  Este tópico descreve como exibir infoumações sobre alertas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Este tópico descreve como exibir informações sobre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas de agente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
   
  **Neste tópico**  
   
@@ -59,13 +59,13 @@ ms.locfileid: "68211290"
   
      Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo _alert_name_**propriedades do alerta** , consulte:  
   
-    -   [Propriedades do novo alerta de alerta &#40;página geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Propriedades do alerta – novo alerta &#40;página Geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Propriedades do novo alerta de alerta &#40;página de resposta&#41;](alert-properties-new-alert-response-page.md)  
+    -   [Propriedades do alerta – página novo alerta &#40;resposta&#41;](alert-properties-new-alert-response-page.md)  
   
-    -   [Propriedades do alerta: Novo alerta &#40;página de opções&#41;](alert-properties-new-alert-options-page.md)  
+    -   [Propriedades do alerta: página novas opções de &#40;de alerta&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [Propriedades do alerta &#40;página Histórico&#41;](alert-properties-history-page.md)  
+    -   [Página Histórico de &#40;de propriedades de alerta&#41;](alert-properties-history-page.md)  
   
 5.  Quando terminar, clique em **OK**.  
   
@@ -89,6 +89,6 @@ ms.locfileid: "68211290"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_help_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql).  
+ Para obter mais informações, consulte [sp_help_alert &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql).  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071085"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
@@ -27,19 +27,19 @@ ms.locfileid: "68071085"
 Cluster()  
 ```  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  Essa função só pode ser usada se o modelo de mineração de dados subjacente oferecer suporte a clustering.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- O **Cluster** função não requer parâmetros.  
+ A função de **cluster** não requer parâmetros.  
   
- O **Cluster** função retorna um valor escalar de um nome de cluster. No entanto, se você usar essa função como um argumento de outra função, você deve considerá-la como um \<referência de coluna do cluster >.  
+ A função **cluster** retorna um valor escalar de um nome de cluster. No entanto, se você usar essa função como um argumento de outra função, deverá considerar como uma \<referência de coluna de cluster>.  
   
 ## <a name="remarks"></a>Comentários  
- **Cluster** também pode ser usado como um `<`referência de coluna de cluster`>` para um **PredictHistogram** função.  
+ O **cluster** também pode ser usado como `<`uma referência`>` de coluna de cluster para uma função **PredictHistogram** .  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa uma consulta de singleton com o [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) e funções para retornar a distância do caso individual de cada cluster do modelo de mineração de Clustering de TM do Cluster e o probabilidade de que o caso individual existirá em cada cluster.  
+ O exemplo a seguir usa uma consulta singleton com as funções de cluster e de [&#41;de PredictHistogram &#40;DMX](../dmx/predicthistogram-dmx.md) para retornar a distância do caso individual de cada cluster do modelo de mineração de clustering TM e a probabilidade de que o caso individual exista em cada cluster.  
   
 ```  
 SELECT  
@@ -54,10 +54,10 @@ FROM
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
- [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;DMX ClusterProbability](../dmx/clusterprobability-dmx.md)   
+ [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

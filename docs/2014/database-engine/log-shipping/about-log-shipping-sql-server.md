@@ -26,14 +26,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774541"
 ---
 # <a name="about-log-shipping-sql-server"></a>Sobre o envio de logs (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o envio automático de backups do log de transações de um *banco de dados primário* em uma instância do *servidor primário* para um ou mais *banco de dados secundário* em outras instâncias de *servidor secundário* . Os backups de logs de transação são aplicados individualmente aos bancos de dados secundários. Uma terceira instância de servidor opcional, conhecida como *servidor monitor*, registra o histórico e o status das operações de backup e restauração e, opcionalmente, emite alertas se essas operações não forem executadas como foram agendadas.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O envio de logs permite que você envie automaticamente os backups de log de transações de um *banco de dados primário* em uma instância de *servidor primário* para um ou mais bancos de dados *secundários* em instâncias de *servidor secundário* separadas. Os backups de logs de transação são aplicados individualmente aos bancos de dados secundários. Uma terceira instância de servidor opcional, conhecida como *servidor monitor*, registra o histórico e o status das operações de backup e restauração e, opcionalmente, emite alertas se essas operações não forem executadas como foram agendadas.  
   
  **Neste tópico:**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62774541"
   
 -   [Termos e definições](#TermsAndDefinitions)  
   
--   [Visão geral do envio de log](#ComponentsAndConcepts)  
+-   [Visão geral do envio de logs](#ComponentsAndConcepts)  
   
 -   [Interoperabilidade](#Interoperability)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62774541"
 > [!TIP]  
 >  Para cada alerta, você precisa especificar um número de alerta. Além disso, configure o alerta para notificar um operador quando um alerta for gerado.  
   
-##  <a name="ComponentsAndConcepts"></a> Visão geral do envio de log  
+##  <a name="ComponentsAndConcepts"></a>Visão geral do envio de logs  
  O envio de logs engloba três operações:  
   
 1.  Backup do log de transações da instância do servidor primário.  
@@ -123,23 +123,24 @@ ms.locfileid: "62774541"
   
  As instâncias de servidor primário e secundário enviam seus próprios históricos e status para a instância do servidor monitor.  
   
- ![Configuração mostrando trabalhos de backup, cópia e restauração](../media/ls-typical-configuration.gif "Configuration showing backup, copy, & restore jobs")  
+ ![Configuração mostrando trabalhos de backup, cópia & restauração](../media/ls-typical-configuration.gif "Configuração mostrando trabalhos de backup, cópia & restauração")  
   
-##  <a name="Interoperability"></a> Interoperabilidade  
+##  <a name="Interoperability"></a>Interoperabilidade  
  O envio de logs pode ser usado com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+-   [Pré-requisitos para migrar do envio de logs para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [Espelhamento de banco de dados e envio de logs &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
 -   [Replicação e envio de logs &#40;SQL Server&#41;](log-shipping-and-replication-sql-server.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e o espelhamento de banco de dados são mutuamente exclusivos. Um banco de dados que é configurado para um desses recursos não pode ser configurado para o outro.  
+>  
+  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e o espelhamento de banco de dados são mutuamente exclusivos. Um banco de dados que é configurado para um desses recursos não pode ser configurado para o outro.  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Atualizar o envio de logs para o SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [Atualizar o envio de logs para SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [Configurar o envio de logs &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)  
   
@@ -159,7 +160,7 @@ ms.locfileid: "62774541"
   
 -   [Gerenciamento de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

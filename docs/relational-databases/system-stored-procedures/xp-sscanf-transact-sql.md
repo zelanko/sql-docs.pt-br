@@ -18,18 +18,18 @@ ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e46fe3243f39f8783743bf11e08b6368d67116eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091897"
 ---
-# <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
+# <a name="xp_sscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lê dados da cadeia de caracteres para os locais de argumento especificados por cada argumento de formato.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,17 +39,17 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **string**  
+ **Strings**  
  É a cadeia de caracteres a partir da qual os valores de argumentos serão lidos.  
   
  OUTPUT  
- Quando especificado, põe o valor de *argumento* no parâmetro de saída.  
+ Quando especificado, coloca o valor do *argumento* no parâmetro de saída.  
   
- *format*  
- É uma cadeia de caracteres formatada semelhante a que tem suporte pela linguagem C **sscanf** função. Atualmente, é oferecido suporte apenas para o argumento de formato %s.  
+ *ao*  
+ É uma cadeia de caracteres formatada semelhante ao que é suportado pela função **sscanf** em linguagem C. Atualmente, é oferecido suporte apenas para o argumento de formato %s.  
   
- *argument*  
- É um **varchar** variável é definido como o valor correspondente *formato* argumento.  
+ *argumento*  
+ É uma variável **varchar** definida como o valor do argumento de *formato* correspondente.  
   
  *n*  
  É um espaço reservado que indica que no máximo 50 argumentos podem ser especificados.  
@@ -82,9 +82,9 @@ SELECT @filename, @message;
 products10.tmp        random  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_sprintf &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de xp_sprintf](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   
   

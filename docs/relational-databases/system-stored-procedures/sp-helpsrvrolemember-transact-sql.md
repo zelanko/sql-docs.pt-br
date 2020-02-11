@@ -18,18 +18,18 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010758"
 ---
-# <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
+# <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre os membros de uma função de servidor fixa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,11 +39,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @srvrolename = ] 'role'` É o nome de uma função de servidor fixa. *função* está **sysname**, com um padrão NULL. Se *função*não for especificado, o conjunto de resultados incluirá informações sobre todas as funções de servidor fixa.  
+`[ @srvrolename = ] 'role'`É o nome de uma função de servidor fixa. *role* é **sysname**, com um padrão de NULL. Se a *função*não for especificada, o conjunto de resultados incluirá informações sobre todas as funções de servidor fixas.  
   
- *função* pode ser qualquer um dos valores a seguir.  
+ a *função* pode ser qualquer um dos valores a seguir.  
   
-|Função de servidor fixa|Descrição|  
+|Função de servidor fixa|DESCRIÇÃO|  
 |-----------------------|-----------------|  
 |sysadmin|Administradores de sistema|  
 |securityadmin|Administradores de segurança|  
@@ -51,7 +51,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |setupadmin|Administradores de configuração|  
 |processadmin|Administradores de processo|  
 |diskadmin|Administradores de disco|  
-|dbcreator|Criadores de banco de dados|  
+|dbcreator|Criadores de Banco de Dados|  
 |bulkadmin|Pode executar instruções BULK INSERT|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -59,20 +59,20 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nome da função de servidor|  
-|MemberName|**sysname**|Nome de um membro da função|  
-|MemberSID|**varbinary(85)**|Identificador de segurança do nome do membro|  
+|MemberName|**sysname**|Nome de um membro de ServerRole|  
+|MemberSID|**varbinary(85)**|Identificador de segurança de MemberName|  
   
 ## <a name="remarks"></a>Comentários  
  Use sp_helprolemember para exibir os membros de uma função de banco de dados.  
   
- Todos os logons são membros do público. sp_helpsrvrolemember não reconhece a função pública porque, internamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não implementa pública como uma função.  
+ Todos os logons são membros de públicos. sp_helpsrvrolemember não reconhece a função pública porque, internamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não implementa o público como uma função.  
   
- Para adicionar ou membros removidos das funções de servidor, consulte [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Para adicionar ou remover membros de funções de servidor, consulte [ALTER Server ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- sp_helpsrvrolemember não leva a uma função de servidor definida pelo usuário como um argumento. Para determinar os membros de uma função de servidor definida pelo usuário, consulte os exemplos na [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrolemember não pega uma função de servidor definida pelo usuário como um argumento. Para determinar os membros de uma função de servidor definida pelo usuário, consulte os exemplos em [ALTER Server role &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função public.  
@@ -84,11 +84,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrolemember 'sysadmin';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_helprole](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helprolemember](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

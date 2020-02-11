@@ -11,121 +11,123 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69890831"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Agrupando membros de atributo automaticamente
-  Ao procurar um cubo, normalmente você dimensiona os membros de uma hierarquia de atributo pelos membros de outra hierarquia de atributo. Por exemplo, você pode agrupar as vendas do cliente por cidade, por produto adquirido ou por sexo. No entanto, com determinados tipos de atributos, é útil ter [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] criar automaticamente agrupamentos de membros de atributo com base na distribuição dos membros dentro de uma hierarquia de atributo. Por exemplo, você pode ter [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] criar grupos de valores de renda anuais para os clientes. Quando você fizer isso, os usuários que navegam na hierarquia de atributo verão os nomes e valores dos grupos em vez dos próprios membros. Isso limita o número de níveis que são apresentados aos usuários, o que pode ser mais útil para análise.  
+  Ao navegar em um cubo, você normalmente dimensiona os membros de uma hierarquia de atributo pelos membros de outra hierarquia de atributo. Por exemplo, você pode agrupar as vendas de cliente por cidade, produto comprado ou sexo. No entanto, com determinados tipos de atributos, é útil [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] criar automaticamente agrupamentos de membros de atributo com base na distribuição dos membros em uma hierarquia de atributo. Por exemplo, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode criar grupos de valores de renda anual para clientes. Ao fazer isso, os usuários que navegarem pela hierarquia de atributo verão o nome e os valores dos grupos em vez dos próprios membros. Isso limita o número de níveis que são apresentados aos usuários, o que pode ser mais útil para a análise.  
   
- A propriedade **DiscretizationMethod** determina se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria agrupamentos e determina o tipo de agrupamento que é executado. Por padrão, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não executa agrupamentos. Ao habilitar agrupamentos automáticos, você pode permitir que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determine automaticamente o melhor método de agrupamento com base na estrutura do atributo ou pode escolher um dos algoritmos de agrupamento na lista a seguir para especificar o método de agrupamento:  
+ A propriedade **DiscretizationMethod** determina se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria agrupamentos e determina o tipo de agrupamento feito. Por padrão, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não faz nenhum agrupamento. Ao habilitar agrupamentos automáticos, você pode permitir que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determine automaticamente o melhor método de agrupamento com base na estrutura do atributo ou ainda escolher um dos algoritmos de agrupamento da lista a seguir para especificar o método de agrupamento:  
   
  **EqualAreas**  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria intervalos de grupo para que a população total de membros de dimensão seja distribuída igualmente entre os grupos.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria intervalos de grupo de forma que a população total de membros da dimensão seja distribuída igualmente pelos grupos.  
   
  **Clusters**  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria grupos executando clustering unidimensional nos valores de entrada usando o método de clustering K-means com distribuições gaussianas. Essa opção só é válida para colunas numéricas.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria grupos executando clustering unidimensional nos valores de entrada usando o método de clustering K-means com distribuições gaussianas. Essa opção só é válida para colunas numéricas.  
   
- Depois de especificar um método de agrupamento, você deve especificar o número de grupos, usando a propriedade **DiscretizationBucketCount** . Para obter mais informações, consulte [Agrupar membros &#40;de&#41; atributo discretização](multidimensional-models/attribute-properties-group-attribute-members.md)  
+ Depois de especificar um método de agrupamento, você deve especificar o número de grupos usando a propriedade **DiscretizationBucketCount** . Para obter mais informações, consulte [Agrupar membros de atributo &#40;Discretização&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
- Nas tarefas deste tópico, você habilitará diferentes tipos de agrupamentos para o seguinte: os valores de renda anual na dimensão **cliente** ; o número de horas de licença de doença do funcionário na dimensão **funcionários** ; e o número de horas de férias do funcionário na dimensão **funcionários** . Em seguida, você processará e procurará o cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial para exibir o efeito dos grupos de membros. Por fim, você modificará as propriedades do grupo de membros para ver o efeito da alteração no tipo de agrupamento.  
+ Nas tarefas deste tópico, você habilitará tipos diferentes de agrupamentos para valores de renda anual na dimensão **Cliente** ; número de horas de dispensa médica dos funcionários na dimensão **Funcionários** ; e o número de horas de férias dos funcionários na dimensão **Funcionários** . Depois, você processará e navegará no cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para exibir o efeito dos grupos de membros. Finalmente, você modificará as propriedades do grupo de membros para ver o efeito da alteração no tipo de agrupamento.  
   
-## <a name="grouping-attribute-hierarchy-members-in-the-customer-dimension"></a>Agrupando membros de hierarquia de atributo na dimensão cliente  
+## <a name="grouping-attribute-hierarchy-members-in-the-customer-dimension"></a>Agrupando membros da hierarquia de atributo na dimensão Cliente  
   
-1.  Em Gerenciador de Soluções, clique duas vezes em **cliente** na pasta **dimensões** para abrir o designer de dimensão para a dimensão cliente.  
+1.  No Gerenciador de Soluções, clique duas vezes em **Cliente** na pasta **Dimensões** para abrir o Designer de Dimensão da dimensão Customer.  
   
-2.  No painel **exibição da fonte de dados** , clique com o botão direito do mouse na tabela **cliente** e clique em **explorar dados**.  
+2.  No painel **Exibição da Fonte de Dados** , clique com o botão direito do mouse na tabela **Cliente** e clique em **Explorar Dados**.  
   
-     Observe o intervalo de valores para a coluna **YearlyIncome** . Esses valores se tornam os membros da hierarquia de atributo **renda anual** , a menos que você habilite o agrupamento de membros.  
+     Observe o intervalo de valores da coluna **YearlyIncome** . Esses valores se tornam os membros da hierarquia de atributo **Renda Anual** , a menos que você habilite o agrupamento de membros.  
   
 3.  Feche a guia **Explorar Tabela Cliente** .  
   
-4.  No painel **atributos** , selecione **renda anual**.  
+4.  No painel **Atributos** , selecione **Renda Anual**.  
   
-5.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **Automatic** e altere o valor da propriedade **DiscretizationBucketCount** para `5`.  
+5.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **Automatic** e altere o valor para a propriedade **DiscretizationBucketCount** para `5`.  
   
-     A imagem a seguir mostra as propriedades modificadas para **renda anual**.  
+     A imagem a seguir mostra as propriedades modificadas para **Renda Anual**.  
   
-     ![Propriedades modificadas para renda anual](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Propriedades modificadas para renda anual")  
+     ![Propriedades modificadas para Renda Anual](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Propriedades modificadas para Renda Anual")  
   
-## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Agrupando membros de hierarquia de atributo na dimensão funcionário  
+## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Agrupando membros da hierarquia de atributo na dimensão Funcionário  
   
-1.  Alterne para o designer de dimensão da dimensão funcionário.  
+1.  Alterne para o Designer de Dimensão da dimensão Funcionário.  
   
-2.  No painel **exibição da fonte de dados** , clique com o botão direito do mouse na tabela **funcionário** e clique em **explorar dados**.  
+2.  No painel **Exibição da Fonte de Dados** , clique com o botão direito do mouse na tabela **Funcionário** e clique em **Explorar Dados**.  
   
-     Observe os valores para a coluna **SickLeaveHours** e a coluna **VacationHours** .  
+     Observe os valores das colunas **SickLeaveHours** e **VacationHours** .  
   
-3.  Feche a guia **explorar tabela de funcionários** .  
+3.  Feche a guia **Explorar Tabela Funcionário** .  
   
-4.  No painel **atributos** , selecione **horas de licença médica**.  
+4.  No painel **Atributos** , selecione **Horas de Dispensa Médica**.  
   
-5.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **clusters** e altere o valor da propriedade **DiscretizationBucketCount** para `5`.  
+5.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **clusters** e altere o valor para a propriedade **DiscretizationBucketCount** para `5`.  
   
-6.  No painel **atributos** , selecione **horas de férias**.  
+6.  No painel **Atributos** , selecione **Horas de Férias**.  
   
-7.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **áreas iguais** e altere o valor da propriedade **DiscretizationBucketCount** para `5`.  
+7.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **áreas iguais** e altere o valor para a propriedade **DiscretizationBucketCount** para `5`.  
   
-## <a name="browsing-the-modified-attribute-hierarchies"></a>Navegando pelas hierarquias de atributo modificadas  
+## <a name="browsing-the-modified-attribute-hierarchies"></a>Navegando nas hierarquias de atributo modificadas  
   
-1.  No menu **Compilar** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], clique em **implantar Analysis Services tutorial**.  
+1.  No menu **Compilar** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], clique em **Implantar Tutorial do Analysis Services**.  
   
-2.  Quando a implantação for concluída com êxito, mude para o designer de cubo para o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo de tutorial e, em seguida, clique em **reconectar** na guia **navegador** .  
+2.  Quando a implantação finalizar com êxito, alterne para o Designer de Cubo do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e, em seguida, clique em **Reconectar** na guia **Navegador** .  
   
 3.  Clique no ícone do Excel e clique em **Habilitar**.  
   
-4.  Arraste a medida **vendas pela Internet/valor das vendas** até a área valores da lista de campos da tabela dinâmica.  
+4.  Arraste a medida **Vendas pela Internet/Valor das Vendas** até a área Valores da Lista de Campos da Tabela Dinâmica.  
   
-5.  Na lista de campos, expanda a dimensão **produto** e arraste a hierarquia de usuário **linhas de modelo de produto** para a área rótulos de **linha** da lista de campos.  
+5.  Na lista de campos, expanda a dimensão **Produto** e arraste a hierarquia de usuário **Linhas de Modelo do Produto** para a área **Rótulos de Linhas** da lista de campos.  
   
-6.  Expanda a dimensão **cliente** na lista de campos, expanda a pasta de exibição **demográfica** e arraste a hierarquia de atributo **renda anual** para a área **Rótulos de coluna** .  
+6.  Expanda a dimensão **Cliente** na lista de campos, expanda a pasta de exibição **Demográfico** e, em seguida, arraste a hierarquia de atributo **Renda Anual** para a área **Rótulos de Coluna** .  
   
-     Os membros da hierarquia de atributo **renda anual** agora são agrupados em seis buckets, incluindo um Bucket de vendas para clientes cuja renda anual é desconhecida. Nem todos os buckets são exibidos.  
+     Agora, os membros da hierarquia de atributo **Renda Anual** estão agrupados em seis buckets, incluindo um bucket de vendas para clientes cuja renda anual é desconhecida. Nem todos os buckets são exibidos.  
   
-7.  Remova a hierarquia de atributo **renda anual** da área colunas e remova a medida **vendas pela Internet/valor das vendas** da área **valores** .  
+7.  Remova a hierarquia de atributo **Renda Anual** da área de colunas e a medida **Vendas pela Internet/Valor das Vendas** da área **Valores** .  
   
-8.  Adicione a medida **vendas do revendedor/valor das vendas** à área de dados.  
+8.  Adicione a medida **Vendas do Revendedor/Valor das Vendas** à área de dados.  
   
 9. Na lista de campos, expanda a dimensão **Funcionário** , expanda **Organização**e, em seguida, arraste **Horas de Dispensa Médica** para **Rótulos de Coluna**.  
   
-     Observe que todas as vendas são feitas por funcionários dentro de um dos dois grupos. Observe também que os funcionários com 32-42 de licenças de licença de doença fizeram muito mais vendas do que funcionários com 20-31 de horas de licença de doença.  
+     Observe que todas as vendas são feitas por funcionários dentro de um dos dois grupos. Observe também que os funcionários com 32 a 42 horas de dispensa médica fizeram um número significativamente maior de compras que os funcionários com 20 a 31 horas de dispensa médica.  
   
-     A imagem a seguir mostra as vendas dimensionadas por horas de licença de doença do funcionário.  
+     A imagem a seguir mostra as vendas dimensionadas pelas horas de dispensa médica dos funcionários:  
   
-     ![Vendas dimensionadas por horas de licença de doença do funcionário](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Vendas dimensionadas por horas de licença de doença do funcionário")  
+     ![Vendas dimensionadas pelas horas de dispensa médica dos funcionários](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Vendas dimensionadas pelas horas de dispensa médica dos funcionários")  
   
-10. Remova a hierarquia de atributo **horas de licença médica** da área coluna do painel **dados** .  
+10. Remova a hierarquia **Horas de Dispensa Médica** da área de coluna do painel **Dados** .  
   
-11. Adicione **horas de férias** à área de coluna do painel **dados** .  
+11. Adicione **Horas de Férias** à área de coluna do painel **Dados** .  
   
-     Observe que dois grupos aparecem, com base no método de agrupamento áreas iguais. Três outros grupos estão ocultos porque não contêm valores de dados.  
+     Observe que dois grupos são exibidos com base no método de agrupamento de áreas iguais. Os outros três outros grupos são ocultados, pois não contêm nenhum valor de dados.  
   
-## <a name="modifying-grouping-properties-and-reviewing-the-effect-of-the-changes"></a>Modificando Propriedades de agrupamento e revisando o efeito das alterações  
+## <a name="modifying-grouping-properties-and-reviewing-the-effect-of-the-changes"></a>Modificando as propriedades de agrupamento e revisando o efeito das alterações  
   
-1.  Alterne para o designer de dimensão da dimensão **funcionário** e, em seguida, selecione **horas de férias** no painel **atributos** .  
+1.  Alterne para o Designer de Dimensão da dimensão **Funcionário** e depois selecione **Horas de Férias** no painel **Atributos** .  
   
-2.  No janela Propriedades, altere o valor da propriedade **DiscretizationBucketCount** para **10.**  
+2.  Na janela Propriedades, altere o valor da propriedade **DiscretizationBucketCount** para **10.**  
   
-3.  No menu **Compilar** do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], clique em **implantar Analysis Services tutorial**.  
+3.  No menu **Compilar** do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], clique em **Implantar Tutorial do Analysis Services**.  
   
-4.  Quando a implantação for concluída com êxito, volte para o designer de cubo para o cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial.  
+4.  Quando a implantação for finalizada com êxito, volte para o Designer de Cubo do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-5.  Clique em **reconectar** na guia **navegador** , clique no ícone do Excel e, em seguida, reconstrua a tabela dinâmica para que você possa exibir o efeito da alteração para o método de agrupamento:  
+5.  Clique em **Reconectar** na guia **Navegador** , clique no ícone do Excel e, em seguida, reconstrua a Tabela Dinâmica para que você possa exibir o efeito da alteração do método de agrupamento:  
   
-    1.  Arraste vendas do revendedor/valor das vendas para valores  
+    1.  Arraste Vendas do Revendedor-Valor das Vendas para Valores  
   
-    2.  Arraste as horas de férias (na pasta de organização funcionários) para colunas  
+    2.  Arraste Horas de Férias (na pasta Organização de Funcionários) para Colunas  
   
-    3.  Arrastar linhas de modelo de produto para linhas  
+    3.  Arraste Linhas de Modelo de Produtos para Linhas  
   
      Observe que, agora, há três grupos de membros do atributo **Horas de Férias** que contêm valores de vendas para produtos. (Os outros sete grupos contêm membros sem dados de vendas.)  
   
-## <a name="next-task-in-lesson"></a>Próxima tarefa na lição  
- [Ocultando e desabilitando hierarquias de atributo](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
+ [Ocultando e desabilitando as hierarquias de atributo](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Agrupar Membros &#40;de atributo discretização&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Agrupar membros de atributo &#40;discretização&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

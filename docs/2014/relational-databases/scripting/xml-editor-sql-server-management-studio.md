@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242937"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
@@ -34,12 +34,12 @@ ms.locfileid: "75242937"
   
  O designer fornece as três exibições (ou modos) a seguir, para se trabalhar em arquivos XML, esquemas XML e conjuntos de dados:  
   
-|Visualizar|Descrição|Tipos de arquivos com suporte|  
+|Visualizar|DESCRIÇÃO|Tipos de arquivos com suporte|  
 |----------|-----------------|--------------------------|  
 |**Esquema**|Para criar visualmente e modificar esquemas XML e conjuntos de dados ADO.NET.|.xsd|  
 |**Dados**|Para modificar visualmente arquivos de dados XML em uma grade de dados estruturada.|.xml|  
 |**XML**|Para editar XML; o editor de fonte fornece codificação de cor e IntelliSense, incluindo Complete Word e List Members.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
-|**Plano**|Exibe planos de consulta xml criados, usando-se a opção SET SHOWPLAN_XML ON.|.showplan|  
+|**Plano de Execução**|Exibe planos de consulta xml criados, usando-se a opção SET SHOWPLAN_XML ON.|.showplan|  
   
 ## <a name="schema-view"></a>Exibição de esquema  
  A exibição de esquema fornece uma representação visual dos elementos, atributos, tipos e assim por diante, que compõem o conjunto de esquemas XML e ADO.NET.  
@@ -95,11 +95,10 @@ ms.locfileid: "75242937"
 -   Gerar um esquema XML a partir de um documento XML  
   
 ## <a name="xml-view"></a>Exibição XML  
- A exibição XML fornece um editor para edição de XML bruto e, ainda, codificação IntelliSense e de cores. A conclusão de instrução está disponível ao se trabalhar em arquivos .xsd e arquivos .xml que tenham um esquema associado. Digite \< para iniciar uma marca e será apresentada uma lista de elementos que são válidos nesse local. Depois de digitar o nome do elemento e pressionar SPACEBAR, você terá uma lista de atributos para os quais os elementos oferecem suporte.   
+ A exibição XML fornece um editor para edição de XML bruto e, ainda, codificação IntelliSense e de cores. A conclusão de instrução está disponível ao se trabalhar em arquivos .xsd e arquivos .xml que tenham um esquema associado. Digite \< para iniciar uma marca e será apresentada uma lista de elementos que são válidos nesse local. Depois de digitar o nome do elemento e pressionar SPACEBAR, você terá uma lista de atributos para os quais os elementos oferecem suporte.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense não estão disponíveis na barra de ferramentas. Quando estiver no Editor de XML, clique em **IntelliSense** no menu **Editar**para acessar as opções.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense não estão disponíveis na barra de ferramentas. Quando estiver no Editor de XML, clique em **IntelliSense** no menu **Editar**para acessar as opções.  
   
 ## <a name="showplan-view"></a>Exibição de SHOWPLAN  
  Planos de consulta podem ser salvos em formato XML quando forem criados usando-se a opção SET SHOWPLAN_XML ON. Clique duas vezes em um arquivo com a extensão .showplan para abrir o plano de consulta.  

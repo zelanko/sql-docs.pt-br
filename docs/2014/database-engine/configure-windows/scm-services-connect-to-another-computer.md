@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810344"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Conectar-se a um outro computador (SQL Server Configuration Manager)
@@ -45,7 +45,7 @@ ms.locfileid: "62810344"
   
 1.  No menu **Iniciar** , clique em **Executar**.  
   
-2.  No **abra** , digite `mmc -a` para abrir o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Console de gerenciamento no modo de autor.  
+2.  Na caixa **abrir** , digite `mmc -a` para abrir o [!INCLUDE[msCoName](../../includes/msconame-md.md)] console de gerenciamento no modo de autor.  
   
 3.  No menu **Arquivo** , clique em **Adicionar/Remover Snap-in**.  
   
@@ -59,20 +59,20 @@ ms.locfileid: "62810344"
   
 8.  Na janela **Adicionar/Remover Snap-in** , clique em **OK**.  
   
-9. Expanda **Gerenciamento de Computador (***\<nome do computador>***)** e **Serviços e Aplicativos**.  
+9. Expanda **Gerenciamento do computador (***\<nome do computador>***)** e **serviços e aplicativos**.  
   
 10. Clique com o botão direito do mouse no **SQL Server Configuration Manager**e clique em **Nova Janela daqui**.  
   
 11. No menu **Janela**, clique em **Raiz do Console** para retornar à primeira janela e exclui-la.  
   
-12. Sobre o **arquivo** menu, clique em **Salvar como**e salve o arquivo na pasta desejada, com um nome apropriado com o `.msc` extensão de arquivo. Feche o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
+12. No menu **arquivo** , clique em **salvar como**e salve o arquivo na pasta desejada, com um nome apropriado com a extensão de `.msc` arquivo. Feche o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   
 13. Para abrir o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager no computador de destino, clique duas vezes no arquivo. Se desejar, salve um link no arquivo na área de trabalho ou no menu **Iniciar** .  
   
 > [!CAUTION]  
 >  Ao usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager em um computador remoto, o nome do computador não é óbvio e é possível parar erroneamente ou configurar o computador errado. Na guia **Serviço** , marque a caixa **Nome do Host** para confirmar o nome do computador antes de modificar um serviço.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

@@ -12,10 +12,10 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251660"
 ---
 # <a name="domain-management-domain-list"></a>Gerenciamento de domínio: lista de domínios
@@ -27,8 +27,8 @@ ms.locfileid: "75251660"
 ## <a name="options"></a>Opções  
   
 ### <a name="domains-list"></a>Lista de domínios  
- **Controlador**  
- Esta lista mostra todos os domínios na base de dados de conhecimento. Operações que você executa nas páginas tabuladas no painel direito serão executadas no domínio que é selecionado na lista. Para obter mais informações, consulte .  
+ **Domínio**  
+ Esta lista mostra todos os domínios na base de dados de conhecimento. Operações que você executa nas páginas tabuladas no painel direito serão executadas no domínio que é selecionado na lista. Para obter mais informações, consulte  
   
  **Criar um domínio composto**  
  Crie um novo domínio composto na base de dados de conhecimento. Este comando exibirá a caixa de diálogo **Criar um domínio composto** . Para disponibilizar este comando, clique com o botão direito do mouse em um domínio ou clique no ícone acima da lista de domínios. Para obter mais informações, consulte [Criar um domínio composto](../data-quality-services/create-a-composite-domain.md).  

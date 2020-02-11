@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493982"
 ---
 # <a name="browsing-the-deployed-cube"></a>Navegando no cubo implantado
@@ -22,7 +22,7 @@ ms.locfileid: "69493982"
   
 ### <a name="to-browse-the-deployed-cube"></a>Para navegar no cubo implantado  
   
-1.  Para mudar para o Designer de Cubo no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], clique duas vezes no cubo **Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]** na pasta **Cubos** do Gerenciador de Soluções.  
+1.  Para alternar para o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ** designer de cubo no, clique duas vezes no cubo do tutorial na pasta **cubos** do Gerenciador de soluções.  
   
 2.  Abra a guia **Navegador** e clique no botão **Reconectar** da barra de ferramentas do designer.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "69493982"
   
      As vendas pela Internet por região e a linha de produto referentes ao mês de fevereiro de 2006 são exibidas, como mostra a imagem a seguir:  
   
-     ![Vendas pela Internet por região e linha de produto](../../2014/tutorials/media/l3-cube-browser-finish.gif "Vendas pela Internet por região e linha de produto")  
+     ![Vendas pela Internet por região e linha de produtos](../../2014/tutorials/media/l3-cube-browser-finish.gif "Vendas pela Internet por região e linha de produtos")  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 4: Definindo propriedades avançadas de atributo e dimensão](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Lição 4: Definindo propriedades de dimensão e atributo avançadas](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

@@ -16,40 +16,40 @@ ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931280"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-Especifica o [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) de um registro em relação a atualizações em lotes e outras operações em massa.  
+Especifica o [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) de um registro em relação às atualizações em lotes e outras operações em massa.  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
-|**adRecCanceled**|0x100|Indica que o registro não foi salva porque a operação foi cancelada.|  
-|**adRecCantRelease**|0x400|Indica que o novo registro não foi salva porque o registro existente foi bloqueado.|  
-|**adRecConcurrencyViolation**|0x800|Indica que o registro não foi salva porque a simultaneidade otimista estava em uso.|  
+|**adRecCanceled**|0x100|Indica que o registro não foi salvo porque a operação foi cancelada.|  
+|**adRecCantRelease**|0x400|Indica que o novo registro não foi salvo porque o registro existente foi bloqueado.|  
+|**adRecConcurrencyViolation**|0x800|Indica que o registro não foi salvo porque a simultaneidade otimista estava em uso.|  
 |**adRecDBDeleted**|0x40000|Indica que o registro já foi excluído da fonte de dados.|  
 |**adRecDeleted**|0x4|Indica que o registro foi excluído.|  
-|**adRecIntegrityViolation**|0x1000|Indica que o registro não foi salva porque o usuário violou as restrições de integridade.|  
-|**adRecInvalid**|0x10|Indica que o registro não foi salva porque seu indicador não é válido.|  
-|**adRecMaxChangesExceeded**|0x2000|Indica que o registro não foi salva porque havia muitos alterações pendentes.|  
+|**adRecIntegrityViolation**|0x1000|Indica que o registro não foi salvo porque o usuário violou as restrições de integridade.|  
+|**adRecInvalid**|0x10|Indica que o registro não foi salvo porque seu indicador é inválido.|  
+|**adRecMaxChangesExceeded**|0x2000|Indica que o registro não foi salvo porque havia muitas alterações pendentes.|  
 |**adRecModified**|0x2|Indica que o registro foi modificado.|  
-|**adRecMultipleChanges**|0x40|Indica que o registro não foi salva porque ela teria afetado vários registros.|  
+|**adRecMultipleChanges**|0x40|Indica que o registro não foi salvo porque teria afetado vários registros.|  
 |**adRecNew**|0x1|Indica que o registro é novo.|  
 |**adRecObjectOpen**|0x4000|Indica que o registro não foi salvo devido a um conflito com um objeto de armazenamento aberto.|  
 |**adRecOK**|0|Indica que o registro foi atualizado com êxito.|  
-|**adRecOutOfMemory**|0x8000|Indica que o registro não foi salva porque o computador está com memória insuficiente.|  
-|**adRecPendingChanges**|0x80|Indica que o registro não foi salva porque ela se refere a uma inserção pendente.|  
-|**adRecPermissionDenied**|0x10000|Indica que o registro não foi salva porque o usuário não tem permissões suficientes.|  
-|**adRecSchemaViolation**|0x20000|Indica que o registro não foi salva porque viola a estrutura do banco de dados subjacente.|  
-|**adRecUnmodified**|0x8|Indica se o registro não foi modificado.|  
+|**adRecOutOfMemory**|0x8000|Indica que o registro não foi salvo porque o computador ficou sem memória.|  
+|**adRecPendingChanges**|0x80|Indica que o registro não foi salvo porque se refere a uma inserção pendente.|  
+|**adRecPermissionDenied**|0x10000|Indica que o registro não foi salvo porque o usuário não tem permissões suficientes.|  
+|**adRecSchemaViolation**|0x20000|Indica que o registro não foi salvo porque viola a estrutura do banco de dados subjacente.|  
+|**adRecUnmodified**|0x8|Indica que o registro não foi modificado.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  AdoEnums.RecordStatus.  
   
- Pacote: **com.ms.wfc.data**  
+ Pacote: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
@@ -72,5 +72,5 @@ Especifica o [status](../../../ado/reference/ado-api/status-property-ado-records
 |AdoEnums.RecordStatus.SCHEMAVIOLATION|  
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Propriedade Status (Conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

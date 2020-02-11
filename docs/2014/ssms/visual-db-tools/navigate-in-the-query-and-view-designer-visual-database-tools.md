@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066254"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navegar no Designer de Consulta e Exibição (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63066254"
   
 ## <a name="any-pane"></a>Qualquer painel  
   
-|**Para**|**Pressione**|**Clique**|  
+|**Para**|**Pressione**|**Selecione**|  
 |------------|---------------|---------------|  
 |Mover entre os painéis do Designer de Consulta e Exibição|F6, SHIFT+F6|Em qualquer lugar no painel de destino|  
   
@@ -36,13 +36,13 @@ ms.locfileid: "63066254"
   
 ## <a name="diagram-pane"></a>Painel Diagrama  
   
-|**Para**|**Pressione**|**Clique**|  
+|**Para**|**Pressione**|**Selecione**|  
 |------------|---------------|---------------|  
 |Mover entre tabelas, outros objetos estruturados em tabelas (e para linhas de junção, se disponíveis)|TAB ou SHIFT+TAB|Na tabela, no objeto estruturado por tabela ou na linha de junção a ser movida|  
 |Mover entre as colunas de uma tabela ou objeto estruturado por tabela|Teclas de direção|Na coluna para a qual ir|  
 |Escolher a coluna de dados selecionada para saída|BARRA DE ESPAÇOS ou tecla +|Na caixa de seleção próxima ao nome da coluna|  
 |Remover a coluna de dados selecionada da saída da consulta|BARRA DE ESPAÇOS ou tecla -|Na caixa de seleção próxima ao nome da coluna|  
-|Remover a tabela selecionada, o objeto estruturado por tabela ou a linha de junção da consulta|DELETE|Clique com o botão direito do mouse e escolha **Remover**|  
+|Remover a tabela selecionada, o objeto estruturado por tabela ou a linha de junção da consulta|Delete (excluir)|Clique com o botão direito do mouse e escolha **Remover**|  
   
 > [!NOTE]  
 >  Se forem selecionados vários itens, pressionar esta tecla afetará todos os itens selecionados. Selecione vários itens mantendo a tecla CTRL pressionada enquanto clica neles.  
@@ -51,7 +51,7 @@ ms.locfileid: "63066254"
   
 ## <a name="criteria-pane"></a>Painel de Critérios  
   
-|Para|Pressione|Clique|  
+|Para|Pressione|Clique em |  
 |--------|-----------|-----------|  
 |Mover entre células|Teclas de direção, TAB ou SHIFT+TAB|Na célula de destino|  
 |Mover para a última linha em uma coluna selecionada|CTRL+SETA PARA BAIXO||  
@@ -59,15 +59,15 @@ ms.locfileid: "63066254"
 |Mover para a célula superior esquerda na parte visível da grade|CTRL+HOME||  
 |Mover para a célula inferior direita|CTRL+END||  
 |Mover em uma lista suspensa|SETA PARA CIMA ou SETA PARA BAIXO|No botão da célula|  
-|Selecionar uma coluna inteira de grade|CTRL+BARA DE ESPAÇOS|No cabeçalho da coluna|  
+|Selecionar uma coluna inteira de grade|CTRL+BARA DE ESPAÇOS|O cabeçalho da coluna|  
 |Alternar entre o modo de edição e o modo de seleção de célula|F2||  
-|Copiar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|CTRL+C||  
-|Cortar o texto selecionado em uma célula e colocá-lo na Área de Transferência (no modo de edição)|CTRL+X||  
-|Colar o texto da Área de Transferência (no modo de edição)|CTRL+V||  
+|Copiar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|Ctrl+C||  
+|Cortar o texto selecionado em uma célula e colocá-lo na Área de Transferência (no modo de edição)|Ctrl+X||  
+|Colar o texto da Área de Transferência (no modo de edição)|Ctrl+V||  
 |Alternar entre os modos de inserção e sobreposição ao editar uma célula|INS||  
 |Alternar a caixa de seleção na coluna Saída|BARRA DE ESPAÇOS|Na caixa de seleção|  
-|Desmarcar o conteúdo selecionado de uma célula|DELETE||  
-|Limpar todos os valores de uma coluna selecionada de grade|DELETE||  
+|Desmarcar o conteúdo selecionado de uma célula|Delete (excluir)||  
+|Limpar todos os valores de uma coluna selecionada de grade|Delete (excluir)||  
 |Inserir uma linha entre as linhas existentes|INS depois de selecionar uma linha de grade||  
 |Adicionar uma coluna Ou...|INS depois de selecionar qualquer coluna Ou...||  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63066254"
   
 ## <a name="results-pane"></a>Painel de Resultados  
   
-|**Para**|**Pressione**|**Clique**|  
+|**Para**|**Pressione**|**Selecione**|  
 |------------|---------------|---------------|  
 |Mover entre células|Teclas de direção, TAB ou SHIFT+TAB|Na célula de destino|  
 |Mover para a primeira ou para a última célula na fila atual|HOME ou END||  
@@ -97,21 +97,21 @@ ms.locfileid: "63066254"
 |Selecionar o último caractere em uma célula|SHIFT+END||  
 |Alternar entre o modo de edição e o modo de seleção de célula|F2||  
 |Alternar entre os modos de inserção e sobreposição ao editar uma célula|INS||  
-|Excluir uma linha da tabela|DELETE||  
+|Excluir uma linha da tabela|Delete (excluir)||  
 |Desfazer alterações na célula atual|ESC em célula alterada||  
 |Desfazer alterações na linha atual|ESC em qualquer célula não alterada||  
 |Inserir null em uma célula|CTRL+0||  
-|Copiar colunas ou linhas selecionadas para a Área de Transferência|CTRL+C||  
-|Copiar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|CTRL+C||  
-|Cortar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|CTRL+X||  
-|Colar o texto da Área de Transferência (no modo de edição)|CTRL+V||  
+|Copiar colunas ou linhas selecionadas para a Área de Transferência|Ctrl+C||  
+|Copiar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|Ctrl+C||  
+|Cortar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|Ctrl+X||  
+|Colar o texto da Área de Transferência (no modo de edição)|Ctrl+V||  
   
 > [!NOTE]  
 >  Se forem selecionados vários itens, pressionar esta tecla afetará todos os itens selecionados.  
   
  Para obter mais informações, consulte [Painel de Resultados &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

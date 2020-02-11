@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196672"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Restrições exclusivas e restrições de verificação
@@ -45,13 +45,13 @@ ms.locfileid: "68196672"
   
  Você pode aplicar várias restrições CHECK a uma única coluna. Você também pode aplicar uma única restrição CHECK a várias colunas criando-as ao nível de tabela. Por exemplo, uma restrição CHECK de várias colunas poderia ser usada para confirmar que qualquer linha com o valor de coluna **country_region** de **USA** também tenha um valor de dois caracteres na coluna **state** . Isto permite que várias condições sejam verificadas em um local.  
   
- Restrições CHECK são semelhantes a restrições FOREIGN KEY pelo fato de controlarem os valores colocados em uma coluna. A diferença está em como elas determinam quais valores são válidos: As restrições FOREIGN KEY obtêm uma lista de valores válidos de outra tabela, enquanto restrições CHECK determinam valores válidos de uma expressão lógica.  
+ Restrições CHECK são semelhantes a restrições FOREIGN KEY pelo fato de controlarem os valores colocados em uma coluna. A diferença está em como elas determinam quais valores são válidos: restrições FOREIGN KEY obtêm uma lista de valores válidos de uma outra tabela, enquanto que restrições CHECK determinam valores válidos de uma expressão lógica.  
   
 > [!CAUTION]  
 >  Restrições que incluem conversão de tipo de dados implícita ou explícita podem causar falhas em certas operações. Por exemplo, tais restrições definidas em tabelas que são fontes de opção de partição podem causar falha na operação ALTER TABLE...SWITCH. Evite a conversão de tipo de dados em definições de restrição.  
   
 ### <a name="limitations-of-check-constraints"></a>Limitações de restrições CHECK  
- As restrições CHECK rejeitam valores avaliados como FALSE. Porque valores nulos avaliam a UNKNOWN, a sua presença em expressões pode anular uma restrição. Por exemplo, suponha que você coloque uma restrição em uma `int` coluna **MyColumn** especificando que **MyColumn** pode conter apenas o valor 10 (**MyColumn = 10**). Se você inserir o valor NULL em **MyColumn**, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserirá NULL e não retornará um erro.  
+ As restrições CHECK rejeitam valores avaliados como FALSE. Porque valores nulos avaliam a UNKNOWN, a sua presença em expressões pode anular uma restrição. Por exemplo, suponha que você coloque uma restrição em `int` uma coluna **MyColumn** especificando que **MyColumn** pode conter apenas o valor 10 (**MyColumn = 10**). Se você inserir o valor NULL em **MyColumn**, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserirá NULL e não retornará um erro.  
   
  Uma restrição CHECK retorna TRUE quando a condição que está verificando não é FALSE para qualquer linha na tabela. Uma restrição CHECK funciona no nível de linha. Se a tabela acabou de ser criada e não tiver nenhuma linha, qualquer restrição CHECK nesta tabela é considerada válida. Esta situação pode produzir resultados inesperados, como no exemplo seguinte.  
   
@@ -87,7 +87,7 @@ DELETE CheckTbl WHERE col1 = 10;
 ##  <a name="Tasks"></a> Tarefas relacionadas  
   
 > [!NOTE]  
->  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema, usando a instrução Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
+>  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
   
 |Tarefa|Tópico|  
 |----------|-----------|  

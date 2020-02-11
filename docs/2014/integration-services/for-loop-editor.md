@@ -1,5 +1,5 @@
 ---
-title: Editor do Loop for | Microsoft Docs
+title: Editor de loop for | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058572"
 ---
 # <a name="for-loop-editor"></a>Editor do Loop For
@@ -43,7 +43,7 @@ ms.locfileid: "66058572"
  **Descrição**  
  Forneça uma descrição do contêiner do Loop For.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Página Expressões](expressions/expressions-page.md)   
  [Contêiner do Loop Foreach](control-flow/foreach-loop-container.md)   

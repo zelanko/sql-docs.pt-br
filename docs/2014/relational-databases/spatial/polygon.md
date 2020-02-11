@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 15a9ea69771699cf2b845d8018dfad1d1af511d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014077"
 ---
 # <a name="polygon"></a>Polygon
@@ -29,7 +29,7 @@ ms.locfileid: "66014077"
   
  A ilustração a seguir mostra exemplos de instâncias `Polygon`.  
   
- ![Exemplos de instâncias geométricas Polygon](../../database-engine/media/polygon.gif "Exemplos de instâncias geométricas Polygon")  
+ ![Exemplos de instâncias de polígono de geometria](../../database-engine/media/polygon.gif "Exemplos das instâncias geométricas Polygon")  
   
  Conforme mostrado na ilustração:  
   
@@ -64,7 +64,8 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Conforme mostrado por `@g4` e `@g5` uma instância aceita de `Polygon` talvez não seja uma instância válida de `Polygon`. `@g5` também mostra que uma instância do Polygon precisa conter apenas um anel com quatro pontos para ser aceita.  
+ Conforme mostrado por `@g4` e `@g5` uma instância aceita de `Polygon` talvez não seja uma instância válida de `Polygon`. 
+  `@g5` também mostra que uma instância do Polygon precisa conter apenas um anel com quatro pontos para ser aceita.  
   
  Os exemplos a seguir lançam uma `System.FormatException` porque as instâncias `Polygon` não são aceitas.  
   
@@ -73,7 +74,9 @@ DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
- `@g1` não é aceito porque a instância de `LineString` para o anel exterior não contém pontos suficientes. `@g2` não é aceito porque o ponto de início da instância `LineString` do anel exterior não é igual ao ponto de término. O exemplo a seguir tem um anel exterior aceitável, mas o anel interior não é aceitável. Isso também lança uma `System.FormatException`.  
+ 
+  `@g1` não é aceito porque a instância de `LineString` para o anel exterior não contém pontos suficientes. 
+  `@g2` não é aceito porque o ponto de início da instância `LineString` do anel exterior não é igual ao ponto de término. O exemplo a seguir tem um anel exterior aceitável, mas o anel interior não é aceitável. Isso também lança uma `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
@@ -91,7 +94,8 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g3` é válido porque os dois anéis interiores se tocam em um único ponto e não se cruzam. O exemplo a seguir mostra instâncias `Polygon` que não são válidas.  
+ 
+  `@g3` é válido porque os dois anéis interiores se tocam em um único ponto e não se cruzam. O exemplo a seguir mostra instâncias `Polygon` que não são válidas.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
@@ -103,7 +107,13 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` não é válido porque o anel interno toca o anel exterior em dois locais. `@g2` não é válido porque o segundo anel interno está no interior do primeiro anel interno. `@g3` não é válido porque os dois anéis internos tocam-se em vários pontos sucessivos. `@g4` não é válido porque os interiores dos dois anéis internos estão sobrepostos. `@g5` não é válido porque o anel exterior não é o primeiro anel. `@g6` não é válido porque o anel não tem três pontos distintos pelo menos.  
+ 
+  `@g1` não é válido porque o anel interno toca o anel exterior em dois locais. 
+  `@g2` não é válido porque o segundo anel interno está no interior do primeiro anel interno. 
+  `@g3` não é válido porque os dois anéis internos tocam-se em vários pontos sucessivos. 
+  `@g4` não é válido porque os interiores dos dois anéis internos estão sobrepostos. 
+  `@g5` não é válido porque o anel exterior não é o primeiro anel. 
+  `@g6` não é válido porque o anel não tem três pontos distintos pelo menos.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `geometry``Polygon` simples com um espaço e SRID 10.  
@@ -144,7 +154,7 @@ SELECT @g.ToString()
   
  A instância de geometry retornada acima é um `Point(1 3)`.  Se o `Polygon` fornecido for `POLYGON((1 3, 1 5, 1 3, 1 3))` , `MakeValid()` retornaria `LINESTRING(1 3, 1 5)`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [STArea &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
  [STExteriorRing &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
  [STNumInteriorRing &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   

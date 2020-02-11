@@ -16,10 +16,10 @@ ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1c27e432dc258b4d2b9d21bfe0ab28df8ee5b510
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946530"
 ---
 # <a name="numeric-values-functions---floor"></a>Funções de Valores Numéricos – floor
@@ -39,23 +39,23 @@ fn:floor ($arg as numeric?) as numeric?
  Número ao qual a função é aplicada.  
   
 ## <a name="remarks"></a>Comentários  
- Se o tipo de *$arg* é um dos tipos base numéricos três, **xs: float**, **xs: Double**, ou **xs: decimal**, o tipo de retorno é igual a *$arg* tipo. Se o tipo de *$arg* é um tipo que é derivado de um dos tipos numéricos, o tipo de retorno é o tipo numérico básico.  
+ Se o tipo de *$ARG* for um dos três tipos de base numéricos, **xs: float**, **xs: Double**ou **xs: decimal**, o tipo de retorno será o mesmo que o tipo de *$ARG* . Se o tipo de *$ARG* for um tipo derivado de um dos tipos numéricos, o tipo de retorno será o tipo numérico base.  
   
- Se for de entrada para as funções fn: Floor, FN: Ceiling ou FN: round **XDT: untypedatomic**, dados não digitados, ela será convertida implicitamente para **xs: Double**. Qualquer outro tipo gera um erro estático.  
+ Se a entrada nas funções fn: Floor, fn: teto ou fn: round for **xdt: untypedAtomic**, dados não tipados, ela será convertida implicitamente em **xs: Double**. Qualquer outro tipo gera um erro estático.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados de exemplo AdventureWorks.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados de exemplo AdventureWorks.  
   
- Você pode usar a amostra de funcionamento na [função ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) para o **Floor ()** função XQuery. Tudo o que você precisa fazer é substituir a **Ceiling ()** função na consulta com o **Floor ()** função.  
+ Você pode usar o exemplo de trabalho na [função de teto (XQuery)](../xquery/numeric-values-functions-ceiling.md) para a função de base do XQuery **()** . Tudo o que você precisa fazer é substituir a função de **teto ()** na consulta pela função **Floor ()** .  
   
 ## <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
   
--   O **Floor ()** função mapeia todos os valores inteiros para xs: decimal.  
+-   A função **Floor ()** mapeia todos os valores inteiros para xs: decimal.  
   
-## <a name="see-also"></a>Consulte também  
- [Função Ceiling &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
- [Função Round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)   
- [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Função de teto &#40;&#41;XQuery](../xquery/numeric-values-functions-ceiling.md)   
+ [Função round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)   
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

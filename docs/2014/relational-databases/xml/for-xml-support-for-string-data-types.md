@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77a061d9a4bc1b1e320cf8af01599cdc52e139f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205018"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>Suporte a FOR XML para tipos de dados de cadeia de caracteres
@@ -42,7 +42,7 @@ FOR XML AUTO;
 go  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
  <T c1="1" c2="Special character 0xD for carriage return   
@@ -60,7 +60,7 @@ after line feed" />
   
 -   O caractere de alimentação de linha na terceira linha tem a entidade definida como &#xA.  
   
-## <a name="see-also"></a>Consulte também  
- [Suporte a FOR XML para vários tipos de dados SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Suporte a FOR XML para vários tipos de dados de SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
   
   

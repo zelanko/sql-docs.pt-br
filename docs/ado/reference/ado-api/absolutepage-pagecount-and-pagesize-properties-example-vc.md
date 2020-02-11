@@ -1,5 +1,5 @@
 ---
-title: AbsolutePage, PageCount, PageSize exemplo das propriedades e (VC + +) | Microsoft Docs
+title: Exemplo das propriedades AbsolutePage, PageCount e PageSize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a14b6ad09d33fd3e856065919dff52da99911fa7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921842"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount, PageSize exemplo das propriedades e (VC + +)
-Este exemplo usa o [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), e [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propriedades para exibir nomes e datas a partir de contratar o ***funcionário*** tabela, cinco registros por vez.  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>Exemplo das propriedades AbsolutePage, PageCount e PageSize (VC + +)
+Este exemplo usa as propriedades [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)e [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) para exibir nomes e datas de contratação da tabela ***Employee*** , cinco registros de cada vez.  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
@@ -178,7 +178,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [Propriedade PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [Propriedade PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

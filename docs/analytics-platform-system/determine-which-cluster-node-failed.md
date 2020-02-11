@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 68ebdb7f17ddee311644e11c48eaa4b586beac74
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401203"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Determinar qual nó de cluster falhou para o Analytics Platform System
 Este tópico descreve como determinar o nome do nó do sistema de plataforma de análise (APS) que falhou depois que um failover de cluster ocorreu e um alerta de failover de cluster foi gerado. Como parte da solução de problemas de um failover de cluster, você deve determinar o nome do nó que falhou antes de entrar em contato com a Microsoft para ajudar a resolver o problema.  
   
-## <a name="Background"></a>Seguindo  
+## <a name="Background"></a>Segundo plano  
 Para alta disponibilidade no SQL Server PDW, o nó de controle e os nós de computação são configurados como componentes ativos ou passivos de clusters de failover do Windows. Quando um servidor ativo falha ao responder a solicitações críticas do sistema, o servidor passivo faz failover e executa as funções do servidor que falharam.  
   
 Após um failover de cluster, quando SQL Server PDW relatórios sobre o status do nó, o servidor passivo tem um status de failover. No entanto, não é óbvio qual servidor ou nó falhou, especialmente se o servidor que falhou ainda estiver online. Para solucionar problemas de falha do cluster, você deve determinar o nome do nó que passou por failover.  

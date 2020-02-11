@@ -1,5 +1,5 @@
 ---
-title: Especificando Node Test em uma etapa de expressão de caminho | Microsoft Docs
+title: Especificando o teste de nó em uma etapa de expressão de caminho | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946424"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Expressões de Caminho – Especificar Teste de Nó
@@ -31,9 +31,9 @@ ms.locfileid: "67946424"
   
 -   Um node test  
   
--   [Zero ou mais qualificadores de etapa (opcionais)](../xquery/path-expressions-specifying-predicates.md)  
+-   [Zero ou mais qualificadores de etapa (opcional)](../xquery/path-expressions-specifying-predicates.md)  
   
- Para obter mais informações, consulte [expressões de caminho &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
+ Para obter mais informações, consulte [expressões de caminho &#40;&#41;XQuery ](../xquery/path-expressions-xquery.md).  
   
  Um node test é uma condição e é o segundo componente da etapa de eixo em uma expressão de caminho. Todos os nós selecionados por uma etapa devem satisfazer essa condição. Para a expressão de caminho, `/child::ProductDescription`, o node test é `ProductDescription`. Essa etapa recupera somente os filhos do nó de elemento cujo nome é ProductDescription.  
   
@@ -69,9 +69,9 @@ child::ProductDescription
   
  A expressão de caminho, `/child::PD:ProductDescription/child::PD:Features/descendant::*,` tem três etapas. Tais etapas especificam os eixos filho e descendente. Em cada etapa, o nome de nó é especificado como o node test. O caractere curinga (`*`) na terceira etapa indica todos os nós do tipo de nó de principal para o eixo descendente. O tipo de nó principal do eixo determina o tipo de nó selecionado e os filtros de nome de nó que os nós selecionaram.  
   
- Como resultado, quando essa expressão é executada em documentos XML do catálogo de produtos na **ProductModel** tabela, ele recupera todos os filhos do nó de elemento da \<recursos > filho do nó de elemento a \< ProductDescription > elemento.  
+ Como resultado, quando essa expressão é executada em documentos XML do catálogo de produtos na tabela **ProductModel** , ela recupera todos os filhos do nó de elemento \<dos recursos> nó filho do elemento \<ProductDescription>.  
   
- A expressão de caminho, `/child::PD:ProductDescription/attribute::ProductModelID`, é composto de duas etapas. Ambas as etapas especificam um nome de nó como o node test. Além disso, a segunda etapa usa o eixo de atributo. Como resultado, cada etapa seleciona nós do tipo de nó principal de seu eixo com o nome especificado como o node test. Assim, a expressão retorna **ProductModelID** nó de atributo a \<ProductDescription > nó de elemento.  
+ A expressão de caminho `/child::PD:ProductDescription/attribute::ProductModelID`,, é composta de duas etapas. Ambas as etapas especificam um nome de nó como o node test. Além disso, a segunda etapa usa o eixo de atributo. Como resultado, cada etapa seleciona nós do tipo de nó principal de seu eixo com o nome especificado como o node test. Assim, a expressão retorna **** o nó de atributo ProductModelID \<do nó do elemento de> ProductDescription.  
   
  Ao especificar os nomes de nós para node tests, você também pode usar o caractere curinga (*) para especificar o nome local de um nó ou para seu prefixo de namespace, como mostrado no seguinte exemplo:  
   
@@ -92,12 +92,16 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>Tipo de nó como node test  
  Para consultar os tipos de nó que não sejam os nós de elemento, use um teste do tipo de nó. Como mostrado na tabela a seguir, há quatro testes do tipo de nó disponíveis.  
   
-|Tipo de nó|Retorna|Exemplo|  
+|Tipo de nó|Retornos|Exemplo|  
 |---------------|-------------|-------------|  
-|`comment()`|True para um nó de comentário.|`following::comment()` seleciona todos os nós de comentário exibidos depois do nó de contexto.|  
-|`node()`|True para um nó de qualquer tipo.|`preceding::node()` seleciona todos os nós de comentário exibidos antes do nó de contexto.|  
-|`processing-instruction()`|True para um nó de instrução de processamento.|`self::processing instruction()` seleciona todos os nós de instrução de processamento no nó de contexto.|  
-|`text()`|True para um nó de texto.|`child::text()` seleciona os nós de texto que são os filhos do nó de contexto.|  
+|`comment()`|True para um nó de comentário.|
+  `following::comment()` seleciona todos os nós de comentário exibidos depois do nó de contexto.|  
+|`node()`|True para um nó de qualquer tipo.|
+  `preceding::node()` seleciona todos os nós de comentário exibidos antes do nó de contexto.|  
+|`processing-instruction()`|True para um nó de instrução de processamento.|
+  `self::processing instruction()` seleciona todos os nós de instrução de processamento no nó de contexto.|  
+|`text()`|True para um nó de texto.|
+  `child::text()` seleciona os nós de texto que são os filhos do nó de contexto.|  
   
  Se o tipo de nó, como text() ou comment()..., for especificado como o node test, a etapa apenas retornará nós de tipo especificado, independentemente do tipo de nó principal do eixo. Por exemplo, a seguinte expressão de caminho retorna apenas os filhos de nó de comentário do nó de contexto:  
   
@@ -105,13 +109,13 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- Da mesma forma, `/child::ProductDescription/child::Features/child::comment()` filhos do nó de comentário recupera as \<recursos > filho do nó de elemento a \<ProductDescription > nó de elemento.  
+ Da mesma `/child::ProductDescription/child::Features/child::comment()` forma, o recupera os \<filhos do nó de comentário dos recursos> \<filho do nó do elemento ProductDescription> nó.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir comparam nome de nó e tipo de nó.  
   
-### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Resultados da especificação do nome de nó e do tipo de nó como node tests em uma expressão de caminho  
- No exemplo a seguir, um documento XML simples é atribuído a um **xml** variável de tipo. O documento é consultado usando expressões de caminho diferentes. Os resultados são comparados.  
+### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>a. Resultados da especificação do nome de nó e do tipo de nó como node tests em uma expressão de caminho  
+ No exemplo a seguir, um documento XML simples é atribuído a uma variável de tipo **XML** . O documento é consultado usando expressões de caminho diferentes. Os resultados são comparados.  
   
 ```  
 declare @x xml  
@@ -147,7 +151,7 @@ select @x.query('
   
  Essa expressão retorna o nó de elemento `<b>` e seus nós de elemento descendentes. Ao retornar os nós descendentes, o tipo de nó primário do eixo descendente ou independente, o tipo de nó de elemento, determina que tipo de nós são retornados.  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <b>text1  
@@ -169,7 +173,7 @@ select @x.query('
 /child::a/child::b/descendant::node()  
 ```  
   
- Porque `node()` é um tipo de nó, você receberá todos os nós do eixo descendente. Esse é o resultado:  
+ Como `node()` é um tipo de nó, você receberá todos os nós do eixo descendente. Este é o resultado:  
   
 ```  
 text1  
@@ -201,7 +205,7 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. Especificando um nome de nó no node test  
  O exemplo a seguir especifica um nome de nó como o node test em todas as expressões de caminho. Como resultado, todas as expressões retornam nós do tipo de nó principal do eixo que tem o nome de nó especificado no node test.  
   
- A consulta a seguir retorna o <`Warranty`> elemento do documento XML do catálogo de produtos armazenados no `Production.ProductModel` tabela:  
+ A expressão de consulta a seguir retorna `Warranty` o elemento <> do documento XML do catálogo de produtos `Production.ProductModel` armazenado na tabela:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -215,15 +219,15 @@ WHERE ProductModelID=19
   
  Observe o seguinte na consulta anterior:  
   
--   A palavra-chave `namespace` no prólogo do XQuery define um prefixo usado no corpo da consulta. Para obter mais informações sobre o prólogo do XQuery, consulte [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) .  
+-   A palavra-chave `namespace` no prólogo do XQuery define um prefixo usado no corpo da consulta. Para obter mais informações, sobre o prólogo do XQuery, consulte [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) .  
   
 -   Todas as três etapas na expressão de caminho especificam o eixo filho e um nome de nó como o node test.  
   
 -   A parte do qualificador de etapa opcional da etapa de eixo não é especificada nas etapas da expressão.  
   
- A consulta retorna o <`Warranty`> filhos do elemento de <`Features`> do filho do elemento a <`ProductDescription`> elemento.  
+ A consulta retorna o <`Warranty` elemento> filhos do <`Features` elemento> filho do `ProductDescription` elemento <>.  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <wm:Warranty xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
@@ -244,9 +248,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- O caractere curinga é especificado para o nome de nó. Assim, a consulta retorna o elemento todos os filhos do nó a <`Features`> filho do nó de elemento de <`ProductDescription`> nó de elemento.  
+ O caractere curinga é especificado para o nome de nó. Assim, a consulta retorna todos os filhos do nó do elemento do `Features` <> nó filho do nó do `ProductDescription` elemento <>.  
   
- A consulta a seguir é semelhante à consulta anterior, exceto que junto com o caractere curinga, é especificado um namespace. Como resultado, são retornados todos os filhos do nó de elemento nesse namespace. Observe que o <`Features`> elemento pode conter elementos de namespaces diferentes.  
+ A consulta a seguir é semelhante à consulta anterior, exceto que junto com o caractere curinga, é especificado um namespace. Como resultado, são retornados todos os filhos do nó de elemento nesse namespace. Observe que o elemento `Features` <> pode conter elementos de diferentes namespaces.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -270,7 +274,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Esta consulta retorna o <`Maintenance`> filhos do nó de elemento em todos os namespaces do documento XML do catálogo de produto.  
+ Essa consulta retorna as <`Maintenance` filhos do nó de elemento de> em todos os namespaces do documento XML do catálogo de produtos.  
   
 ### <a name="c-specifying-node-kind-in-the-node-test"></a>C. Especificando o tipo de nó no node test  
  O exemplo a seguir especifica um tipo de nó como o node test em todas as expressões de caminho. Como resultado, todas as expressões retornam nós do tipo especificado no node test.  
@@ -295,15 +299,15 @@ WHERE ProductModelID=19
   
 -   As primeiras duas etapas especificam um nome de nó como o node test, e a terceira etapa especifica um tipo de nó como o node test.  
   
--   A expressão retorna texto filhos do nó a <`Features`> do filho do elemento de <`ProductDescription`> nó de elemento.  
+-   A expressão retorna filhos do nó de texto do `Features` <> filho do elemento <`ProductDescription`> nó.  
   
- Apenas um nó de texto é retornado. Esse é o resultado:  
+ Apenas um nó de texto é retornado. Este é o resultado:  
   
 ```  
 These are the product highlights.   
 ```  
   
- A consulta a seguir retorna o comentário filhos do nó de <`ProductDescription`> elemento:  
+ A consulta a seguir retorna os filhos do nó de comentário `ProductDescription` do elemento <>:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -319,9 +323,9 @@ WHERE ProductModelID=19
   
 -   A segunda etapa especifica um tipo de nó como o node test.  
   
--   Como resultado, a expressão retorna o comentário filhos do nó de <`ProductDescription`> nós de elemento.  
+-   Como resultado, a expressão retorna os filhos do nó de comentário dos nós `ProductDescription` de elemento <>.  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <!-- add one or more of these elements... one for each specific product in this product model -->  
@@ -340,7 +344,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>   

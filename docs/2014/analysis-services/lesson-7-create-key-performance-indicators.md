@@ -1,5 +1,5 @@
 ---
-title: 'Lição 8: Criar indicadores chave de desempenho | Microsoft Docs'
+title: 'Lição 8: criar indicadores chave de desempenho | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078367"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lição 8: Criar indicadores chave de desempenho
-  Nesta lição, você criará KPIs (indicadores chave de desempenho). Os KPIs são usados para medir o desempenho de um valor, definido por uma medida *Base* , em relação a um valor de *Destino* , também definido por uma medida ou um valor absoluto. Nos aplicativos cliente de relatório, os KPIs podem proporcionar aos profissionais comerciais um modo rápido e fácil de entender um resumo de êxito comercial ou identificar tendências. Para obter mais informações, consulte [KPIs &#40;SSAS Tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
+  Nesta lição, você criará KPIs (indicadores chave de desempenho). Os KPIs são usados para medir o desempenho de um valor, definido por uma medida *base* , em relação a um valor de *destino* , também definido por uma medida ou por um valor absoluto. Em aplicativos cliente de relatório, KPIs podem fornecer aos profissionais de negócios uma maneira rápida e fácil de entender um resumo de sucesso nos negócios ou para identificar tendências. Para obter mais informações, consulte [KPIs &#40;SSAS Tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
   
- Tempo estimado para concluir esta lição: **15 minutos**  
+ Tempo estimado para conclusão desta lição: **15 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 7: Criar medidas](lesson-6-create-measures.md).  
+ Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 7: Criar medidas](lesson-6-create-measures.md).  
   
 ## <a name="create-key-performance-indicators"></a>Criar indicadores chave de desempenho  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66078367"
   
      Ao concluir a criação da fórmula, pressione ENTER.  
   
-     Esta medida servirá como medida Base para o KPI.  
+     Essa medida servirá como a medida Base para o KPI.  
   
 4.  Na grade de medida, clique com o botão direito do mouse na medida **Desempenho de Vendas pela Internet do Trimestre Atual** e clique em **Criar KPI**.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "66078367"
   
 5.  Na caixa de diálogo **Indicador Chave de Desempenho** , em **Definir Valor de Destino**, selecione a opção **Valor Absoluto** .  
   
-6.  No **valor absoluto** , digite `1.1`, e pressione ENTER.  
+6.  No campo **valor absoluto** , digite `1.1`e pressione Enter.  
   
-7.  Na **definir limites de Status**, no campo de controle deslizante esquerdo de (baixo), digite `1`e à direita (alto) no campo de controle deslizante, digite `1.07`.  
+7.  Em **definir limites de status**, no campo de controle deslizante à esquerda (baixo `1`), digite e, no campo de controle deslizante à direita `1.07`(alto), digite.  
   
 8.  Em **Selecionar Estilo de Ícone**, selecione o tipo de ícone losango (vermelho), triângulo (amarelo) e círculo (verde).  
   
@@ -74,11 +74,11 @@ ms.locfileid: "66078367"
   
 4.  Na caixa de diálogo **Indicador Chave de Desempenho** , em **Definir Valor de Destino**, selecione a opção **Valor Absoluto** .  
   
-5.  No **valor absoluto** , digite `1.25`.  
+5.  No campo **valor absoluto** , digite `1.25`.  
   
 6.  Em **Definir Limites de Status**, deslize o campo de controle deslizante à esquerda (baixo) até que ele exiba **0.8**e deslize o campo de controle deslizante à direita (alto) até que ele exiba **1.03**.  
   
-7.  Em **Selecionar Estilo de Ícone**, selecione o tipo de ícone losango (vermelho), triângulo (amarelo) e círculo (verde) e clique em **OK**.  
+7.  Em **Selecionar Estilo de Ícone**, selecione o tipo de ícone losango (vermelho), triângulo (amarelo), círculo (verde) e clique em **OK**.  
   
 ## <a name="next-step"></a>Próxima etapa  
  Para continuar este tutorial, vá para a próxima lição: [Lição 9: Criar perspectivas](lesson-8-create-perspectives.md).  

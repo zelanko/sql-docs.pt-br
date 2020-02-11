@@ -18,18 +18,18 @@ ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebee467890e26aa58171690f5fdabaef3607ee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084920"
 ---
-# <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
+# <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera o nome de uma categoria.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,26 +42,26 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'` A classe da categoria a ser atualizada. *classe*está **varchar(8)** , sem padrão e pode ser um destes valores.  
+`[ @class = ] 'class'`A classe da categoria a ser atualizada. a *classe*é **varchar (8)**, sem padrão, e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**ALERTA**|Atualiza uma categoria de alerta.|  
-|**JOB**|Atualiza uma categoria de trabalho.|  
+|**TRABALHO**|Atualiza uma categoria de trabalho.|  
 |**OPERADOR**|Atualiza uma categoria de operador.|  
   
-`[ @name = ] 'old_name'` O nome atual da categoria. *nome_antigo*está **sysname**, sem padrão.  
+`[ @name = ] 'old_name'`O nome atual da categoria. *old_name*é **sysname**, sem padrão.  
   
-`[ @new_name = ] 'new_name'` O novo nome para a categoria. *new_name*está **sysname**, sem padrão.  
+`[ @new_name = ] 'new_name'`O novo nome da categoria. *new_name*é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_update_category** deve ser executado a partir de **msdb** banco de dados.  
+ **sp_update_category** deve ser executado do banco de dados **msdb** .  
   
 ## <a name="permissions"></a>Permissões  
- Para executar esse procedimento armazenado, os usuários devem ter o **sysadmin** função de servidor fixa.  
+ Para executar esse procedimento armazenado, os usuários devem receber a função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir renomeia uma categoria de trabalho de `AdminJobs` para `Administrative Jobs`.  
@@ -77,10 +77,10 @@ EXEC dbo.sp_update_category
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_add_category](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_category](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_category](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de consulta nomeada (Analysis Services - dados multidimensionais) gerar | Microsoft Docs
+title: Caixa de diálogo gerar consulta nomeada (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 129e1df9463064baafa38fb860f415b9c01ab38b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080908"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Gerar Consulta Nomeada (Analysis Services - Dados Multidimensionais)
-  Use a caixa de diálogo **Gerar Consulta Nomeada** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma consulta nomeada baseada em uma série de gráfico, valor de série de gráfico ou filtro de gráfico selecionado no gráfico exibido na guia **Gráfico Dinâmico** da caixa de diálogo **Explorar Dados**. É possível exibir a caixa de diálogo **Gerar Consulta Nomeada** clicando em **Gerar consulta nomeada** na caixa de diálogo **Explorar Dados** .  
+  Use a caixa de diálogo **Gerar Consulta Nomeada** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma consulta nomeada baseada em uma série de gráfico, valor de série de gráfico ou filtro de gráfico selecionado no gráfico exibido na guia **Gráfico Dinâmico** da caixa de diálogo **Explorar Dados** . É possível exibir a caixa de diálogo **Gerar Consulta Nomeada** clicando em **Gerar consulta nomeada** na caixa de diálogo **Explorar Dados** .  
   
 ## <a name="options"></a>Opções  
  **Nome**  
@@ -34,7 +34,7 @@ ms.locfileid: "66080908"
  **Definição de consulta**  
  Exibe a definição da consulta nomeada gerada na série de gráfico, valor da série de gráfico ou filtro de gráfico selecionado em **Objeto do Gráfico Selecionado**.  
   
- **Objeto de gráfico selecionado**  
+ **Objeto do Gráfico Selecionado**  
  Selecione o objeto de gráfico no qual basear a definição da consulta nomeada.  
   
   

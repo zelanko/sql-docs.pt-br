@@ -20,10 +20,10 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 21a02107359b26c0dc30aa87acbf46c1ab1a172d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892848"
 ---
 # <a name="configdsn-function"></a>Função ConfigDSN
@@ -51,11 +51,11 @@ BOOL ConfigDSN(
  *fRequest*  
  Entrada Tipo de solicitação. O argumento *fRequest* deve conter um dos seguintes valores:  
   
- ODBC_ADD_DSN: Adicione uma nova fonte de dados.  
+ ODBC_ADD_DSN: adicionar uma nova fonte de dados.  
   
- ODBC_CONFIG_DSN: Configure (modifique) uma fonte de dados existente.  
+ ODBC_CONFIG_DSN: configurar (modificar) uma fonte de dados existente.  
   
- ODBC_REMOVE_DSN: Remover uma fonte de dados existente.  
+ ODBC_REMOVE_DSN: remover uma fonte de dados existente.  
   
  *lpszDriver*  
  Entrada Descrição do driver (geralmente o nome do DBMS associado) apresentado aos usuários em vez do nome do driver físico.  
@@ -63,13 +63,13 @@ BOOL ConfigDSN(
  *lpszAttributes*  
  Entrada Uma lista dupla de atributos terminada em nulo na forma de pares de palavra-chave-valor. Para obter mais informações, consulte "Comentários".  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  A função retornará TRUE se for bem-sucedida, FALSE se falhar.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **ConfigDSN** retorna false, um valor de  *\*pfErrorCode* associado é Postado no buffer de erros do instalador por uma chamada para **SQLPostInstallerError** e pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de  *\*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **ConfigDSN** retorna false, um valor de * \*pfErrorCode* associado é Postado no buffer de erros do instalador por uma chamada para **SQLPostInstallerError** e pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Descrição|  
+|*\*pfErrorCode*|Erro|DESCRIÇÃO|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O argumento *hwndParent* era inválido.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|Pares de palavra-chave-valor inválidos|O argumento *lpszAttributes* continha um erro de sintaxe.|  
@@ -81,7 +81,7 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>Comentários  
  O **ConfigDSN** recebe informações de conexão da dll do instalador como uma lista de atributos na forma de pares de palavras-chave/valor. Cada par é encerrado com um byte nulo e a lista inteira é encerrada com um byte nulo. (Ou seja, dois bytes nulos marcam o final da lista.) Os espaços não são permitidos em relação ao sinal de igual no par de palavra-chave-valor. O **ConfigDSN** pode aceitar palavras-chave que não são palavras-chave válidas para **SQLBrowseConnect** e **SQLDriverConnect**. O **ConfigDSN** não oferece necessariamente suporte a todas as palavras-chave que são palavras-chave válidas para **SQLBrowseConnect** e **SQLDriverConnect**. (O**ConfigDSN** não aceita a palavra-chave do **Driver** .) As palavras-chave usadas pela função **ConfigDSN** devem dar suporte a todas as opções necessárias para recriar a fonte de dados usando o recurso de configuração automática do instalador. Quando os valores de **ConfigDSN** e os valores de cadeia de conexão são os mesmos, as mesmas palavras-chave devem ser usadas.  
   
- Como em **SQLBrowseConnect** e **SQLDriverConnect**, as palavras-chave e seus valores não devem conter o **[]{}(),;? =\*! @** caracteres, e o valor da palavra-chave **DSN** não pode consistir apenas em espaços em branco. Devido à gramática do registro, as palavras-chave e os nomes de fonte de dados não podem\\conter o caractere de barra invertida ().  
+ Como em **SQLBrowseConnect** e **SQLDriverConnect**, as palavras-chave e seus valores não devem conter o **[]{}(),;? = \*! @** caracteres, e o valor da palavra-chave **DSN** não pode consistir apenas em espaços em branco. Devido à gramática do registro, as palavras-chave e os nomes de fonte de dados não podem\\conter o caractere de barra invertida ().  
   
  **ConfigDSN** deve chamar **SQLValidDSN** para verificar o comprimento do nome da fonte de dados e verificar se nenhum caractere inválido está incluído no nome. Se o nome da fonte de dados for maior que SQL_MAX_DSN_LENGTH ou incluir caracteres inválidos, **SQLValidDSN** retornará um erro e **ConfigDSN** retornará um erro. O comprimento do nome da fonte de dados também é verificado por **SQLWriteDSNToIni**.  
   

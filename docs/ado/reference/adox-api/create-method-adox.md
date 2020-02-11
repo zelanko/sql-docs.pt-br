@@ -17,10 +17,10 @@ ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aafcab3ad379dc25a2681a5d4f0d3f5e8d6eab5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966675"
 ---
 # <a name="create-method-adox"></a>Método Create (ADOX)
@@ -33,18 +33,18 @@ Cria um novo catálogo.
 Catalog.Create ConnectString  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *ConnectString*  
- Um **cadeia de caracteres** valor usado para se conectar à fonte de dados.  
+ Um valor de **cadeia de caracteres** usado para se conectar à fonte de dados.  
   
 ## <a name="remarks"></a>Comentários  
- O **Create** método cria e abre um novo arquivo [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) à fonte de dados especificado na *ConnectString*. Se for bem-sucedido, o novo **Conexão** objeto é atribuído para o [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriedade.  
+ O método **Create** cria e abre uma nova [conexão](../../../ado/reference/ado-api/connection-object-ado.md) ADO com a fonte de dados especificada em *ConnectString*. Se for bem-sucedido, o novo objeto de **conexão** será atribuído à propriedade [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) .  
   
- Se o provedor não dá suporte à criação de novos catálogos, ocorrerá um erro.  
+ Ocorrerá um erro se o provedor não oferecer suporte à criação de novos catálogos.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Criar o exemplo do método (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo do método Create (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
  [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

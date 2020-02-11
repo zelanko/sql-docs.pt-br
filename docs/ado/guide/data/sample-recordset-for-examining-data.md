@@ -1,5 +1,5 @@
 ---
-title: Para examinar dados de exemplo do conjunto de registros | Microsoft Docs
+title: Conjunto de registros de exemplo para examinar dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1882c5298d92e17a7ddaa165288fddfab7fdb02b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924303"
 ---
 # <a name="sample-recordset-for-examining-data"></a>Conjunto de registros de exemplo para examinar dados
-Primeiro, vamos examinar a **Recordset** objeto conforme retornados usando a seguinte consulta SQL, executada nos dados de exemplo Northwind base no Microsoft SQL Server.  
+Primeiro, vamos examinar o objeto **Recordset** como retornado usando a seguinte consulta SQL, executada em relação ao banco de dados de exemplo Northwind em Microsoft SQL Server.  
   
 ```  
 SELECT ProductID,ProductName,UnitPrice   
@@ -29,15 +29,15 @@ FROM Products
 WHERE CategoryID = 7    
 ```  
   
- O resultante **Recordset** objeto contém todos os o produzirá no banco de dados mostrados na tabela a seguir.  
+ O objeto **Recordset** resultante contém todas as produzidas no banco de dados mostradas na tabela a seguir.  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
-|7|Peras secas orgânico de tio Bob|30.0000|  
-|14|Bananas|23.2500|  
-|28|Rssle chucrute|45.6000|  
-|51|Maçãs Secas Manjimup|53.0000|  
-|74|Longlife Bananas|10.0000|  
+|7|Pêras secas-orgânicas do tio Bob|30, 0|  
+|14|Tofu|23,2500|  
+|28|Rssle chucrute|45,6000|  
+|51|Maçãs secas Manjimup|53, 0|  
+|74|Longlife Tofu|10, 0|  
   
  Se você estiver interessado em obter esses resultados por conta própria, experimente o seguinte exemplo de JScript:  
   

@@ -16,17 +16,17 @@ ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c10fcf4f0a57eef5e2f4f33d699c4ed7d4d350e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022077"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Função LocalDBGetInstanceInfo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Retorna informações sobre a instância de LocalDB do SQL Server Express especificada, como se existe ou não, a versão do LocalDB usada, se está sendo executada ou não, e assim por diante.  
   
- As informações são retornadas em uma **struct** denominado **LocalDBInstanceInfo**, que tem a seguinte definição.  
+ As informações são retornadas em um **struct** chamado **LocalDBInstanceInfo**, que tem a definição a seguir.  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -73,7 +73,7 @@ typedef struct _LocalDBInstanceInfo
   
 ```  
   
- **Arquivo de cabeçalho:** sqlncli.h  
+ **Arquivo de cabeçalho:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -85,7 +85,7 @@ HRESULT LocalDBGetInstanceInfo(
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *wszInstanceName*  
  [Entrada] O nome da instância.  
   
@@ -93,9 +93,9 @@ HRESULT LocalDBGetInstanceInfo(
  [Saída] O buffer para armazenar as informações sobre a instância de LocalDB.  
   
  *dwInstanceInfoSize*  
- [Entrada] Mantém o tamanho do *InstanceInfo* buffer.  
+ Entrada Mantém o tamanho do buffer *InstanceInfo* .  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  S_OK  
  A função foi bem-sucedida.  
   
@@ -127,11 +127,11 @@ HRESULT LocalDBGetInstanceInfo(
  Erro inesperado. Consulte o log de eventos para obter detalhes.  
   
 ## <a name="details"></a>Detalhes  
- A lógica por trás da introdução do **struct** argumento de tamanho (*lpInstanceInfoSize*) é permitir que a API retorne versões diferentes do **LocalDBInstanceInfostruct**, efetivamente habilitando compatibilidade com versões anteriores e posteriores.  
+ A lógica por trás da introdução do argumento de tamanho de **struct** (*lpInstanceInfoSize*) é permitir que a API retorne versões diferentes do **LocalDBInstanceInfostruct**, habilitando efetivamente a compatibilidade com versões posteriores e anteriores.  
   
- Se o **struct** argumento de tamanho (*lpInstanceInfoSize*) corresponde ao tamanho de uma versão conhecida do **LocalDBInstanceInfostruct**, essa versão do  **struct** é retornado. Caso contrário, LOCALDB_ERROR_INVALID_PARAMETER será retornado.  
+ Se o argumento de tamanho de **struct** (*lpInstanceInfoSize*) corresponder ao tamanho de uma versão conhecida do **LocalDBInstanceInfostruct**, essa versão do **struct** será retornada. Caso contrário, LOCALDB_ERROR_INVALID_PARAMETER será retornado.  
   
- Um exemplo típico **LocalDBGetInstanceInfo** uso da API tem esta aparência:  
+ Um exemplo típico de uso da API **LocalDBGetInstanceInfo** é semelhante ao seguinte:  
   
 ```  
 LocalDBInstanceInfo ii;  
@@ -141,7 +141,7 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
  Para obter uma amostra do código que usa a API LocalDB, consulte [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalho e informações de versão de LocalDB do SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

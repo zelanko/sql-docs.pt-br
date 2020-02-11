@@ -1,5 +1,5 @@
 ---
-title: Exemplo de código de biblioteca de cursor | Microsoft Docs
+title: Exemplo de código da biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019062"
 ---
 # <a name="cursor-library-code-example"></a>Exemplo de código de biblioteca de cursores
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que usam esse recurso atualmente. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- O exemplo a seguir usa a biblioteca de cursores para recuperar a ID de cada pedido, data de abertura e status da tabela ORDERS. Em seguida, ele exibe 20 linhas de dados. Se o usuário atualizar esses dados, o código atualiza os buffers de conjunto de linhas e executa uma instrução de atualização posicionada. Por fim, ele solicita que o usuário para a direção de rolagem e repete o processo.  
+ O exemplo a seguir usa a biblioteca de cursores para recuperar a ID de cada pedido, a data de abertura e o status da tabela ORDERs. Em seguida, ele exibe 20 linhas de dados. Se o usuário atualizar esses dados, o código atualizará os buffers do conjunto de linhas e executará uma instrução UPDATE posicionada. Por fim, ele solicita ao usuário a direção para rolar e repetir o processo.  
   
 ```  
 #define ROWS 20  

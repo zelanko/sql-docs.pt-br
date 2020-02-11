@@ -1,5 +1,5 @@
 ---
-title: Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória | Microsoft Docs
+title: Diretrizes para níveis de isolamento de transação com tabelas com otimização de memória | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779151"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória
@@ -56,7 +56,7 @@ ms.locfileid: "62779151"
   
  A garantia fornecida pelo nível de isolamento SNAPSHOT (o nível inferior de isolamento com suporte para tabelas com otimização de memória) inclui as garantias de READ COMMITTED. Cada instrução da transação lê a mesma versão consistente do banco de dados. Não somente todas as linhas são lidas pela transação confirmada no banco de dados, como também todas as operações de leitura veem o conjunto de alterações feito pelo mesmo conjunto de transações.  
   
- **Diretriz**: Se apenas a garantia de isolamento READ COMMITTED for necessária, use o isolamento SNAPSHOT com procedimentos armazenados compilados nativamente e para acessar tabelas com otimização de memória por meio de interpretado [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ **Diretriz**: se apenas a garantia de isolamento de leitura confirmada for necessária, use o isolamento de instantâneo com procedimentos armazenados compilados nativamente e para acessar [!INCLUDE[tsql](../includes/tsql-md.md)]tabelas com otimização de memória por meio de interpretado.  
   
  Para transações de confirmação automática, o nível de isolamento READ COMMITTED é mapeado implicitamente para SNAPSHOT nas tabelas com otimização de memória. Portanto, se a configuração de sessão TRANSACTION ISOLATION LEVEL for definida como READ COMMITTED, não será necessário especificar o nível de isolamento através de uma dica de tabela ao acessar tabelas com otimização de memória.  
   
@@ -91,7 +91,7 @@ COMMIT
   
      Alguns aplicativos podem assumir que os leitores sempre esperarão a confirmação dos gravadores, especialmente se houver alguma sincronização entre as duas transações na camada de aplicativos.  
   
-     **Diretriz:** Aplicativos não podem confiar no comportamento de bloqueio. Se um aplicativo precisar de sincronização entre transações simultâneas, tal lógica pode ser implementada na camada de aplicativo ou na camada de banco de dados, por meio [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
+     **Diretriz:** Os aplicativos não podem depender do comportamento de bloqueio. Se um aplicativo precisar de sincronização entre transações simultâneas, essa lógica poderá ser implementada na camada de aplicativo ou na camada de banco de dados, por meio de [sp_getapplock &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
   
 -   Em transações que usam o isolamento READ COMMITTED, cada instrução considera a versão mais recente das linhas no banco de dados. Portanto, as instruções subsequentes veem as alterações no estado do banco de dados.  
   
@@ -123,15 +123,15 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>Dicas de bloqueio de tabela  
- Dicas de bloqueio ([dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)), como HOLDLOCK e XLOCK podem ser usadas com tabelas baseadas em disco para ter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] levar mais bloqueios do que são necessários para o nível de isolamento especificado.  
+ Dicas de bloqueio ([dicas de tabela &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table)), como HOLDLOCK e xlock, podem ser usadas com tabelas baseadas em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disco para ter mais bloqueios do que o necessário para o nível de isolamento especificado.  
   
  As tabelas com otimização de memória não usam bloqueios. Os níveis de isolamento superiores, como REPEATABLE READ e SERIALIZABLE, podem ser usados para declarar as garantias desejadas.  
   
  Não há suporte para as dicas de bloqueio. Em vez disso, declare as garantias exigidas através dos níveis de isolamento de transação. (NOLOCK tem suporte porque o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não usa bloqueios em tabelas com otimização de memória. Observe que, em contraste com tabelas baseadas em disco, NOLOCK não implica o comportamento READ UNCOMMITTED para tabelas com otimização de memória.)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Noções básicas sobre transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Diretrizes para lógica de repetição das transações em tabelas com otimização de memória](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
+ [Diretrizes para a lógica de repetição para transações em tabelas com otimização de memória](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [Níveis de isolamento da transação](../../2014/database-engine/transaction-isolation-levels.md)  
   
   

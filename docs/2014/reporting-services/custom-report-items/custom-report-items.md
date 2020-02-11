@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264783"
 ---
 # <a name="custom-report-items"></a>Itens de Relatório Personalizados
@@ -44,13 +44,13 @@ ms.locfileid: "63264783"
  [Criar um componente de tempo de design de item de relatório personalizado](creating-a-custom-report-item-design-time-component.md)  
  Descreve como criar um componente de tempo de design de item de relatório personalizado.  
   
- [Como: implantar um Item de relatório personalizado](how-to-deploy-a-custom-report-item.md)  
+ [Como implantar um item de relatório personalizado](how-to-deploy-a-custom-report-item.md)  
  Descreve como implantar um item de relatório personalizado.  
   
  [Bibliotecas de classes de itens de relatório personalizados](custom-report-item-class-libraries.md)  
  Descreve as classes de infraestrutura de item de relatório personalizado e as classes wrapper gerenciadas do namespace `Microsoft.ReportDesigner`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência técnica &#40;SSRS&#41;](../technical-reference-ssrs.md)  
   
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074078"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Especificando o conteúdo de um eixo de consulta (MDX)
@@ -71,7 +71,7 @@ FROM [Adventure Works]
   
 ```  
   
- A palavra-chave NON EMPTY, usada antes da definição fixa, é um modo fácil de remover todas as tuplas vazias de um eixo. Por exemplo, nos exemplos que vimos até agora não há nenhum dado no cubo a partir de agosto de 2004 em diante. Para remover todas as linhas do conjunto de células que não têm dados em nenhuma coluna, basta adicionar NON EMPTY antes do conjunto na definição do eixo Rows, desta forma:  
+ A palavra-chave NON EMPTY, usada antes da definição fixa, é um modo fácil de remover todas as tuplas vazias de um eixo. Por exemplo, nos exemplos que vimos até agora, não há dados no cubo de agosto de 2004 em diante. Para remover todas as linhas do conjunto de células que não têm dados em nenhuma coluna, basta adicionar NON EMPTY antes do conjunto na definição do eixo Rows, desta forma:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -114,7 +114,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Especificando o conteúdo de um eixo da segmentação &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Especificando o conteúdo de um eixo de segmentação &#40;&#41;MDX](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

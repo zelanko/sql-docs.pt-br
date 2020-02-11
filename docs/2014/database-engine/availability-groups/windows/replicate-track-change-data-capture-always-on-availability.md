@@ -1,5 +1,5 @@
 ---
-title: A replicação, controle de alterações, Change Data Capture e grupos de disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
+title: Replicação, Controle de Alterações, captura de dados de alteração e Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814038"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicação, controle de alterações, Change Data Capture e grupos de disponibilidade AlwaysOn (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "62814038"
   
  
   
-##  <a name="Overview"></a> Visão geral da replicação em grupos de disponibilidade do AlwaysOn  
+##  <a name="Overview"></a>Visão geral da replicação no Grupos de Disponibilidade AlwaysOn  
   
 ###  <a name="PublisherRedirect"></a> Redirecionamento do publicador  
  Quando um banco de dados publicado reconhecer o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], o distribuidor que fornece ao agente acesso a esse banco de dados será configurado com as entradas de redirected_publishers. Essas entradas redirecionam o par de publicador/banco de dados configurado originalmente, usando um nome do ouvinte do grupo de disponibilidade para conectar-se ao publicador e ao banco de dados de publicação. Haverá falha no failover das conexões estabelecidas pelo nome do ouvinte do grupo de disponibilidade. Quando o agente de replicação for reiniciado depois do failover, a conexão será automaticamente redirecionada para o novo primário.  
@@ -39,7 +39,7 @@ ms.locfileid: "62814038"
 > [!NOTE]  
 >  Após o failover em uma replica secundária, o Replication Monitor não poderá ajustar o nome da instância de publicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e continuará exibindo informações de replicação abaixo do nome da instância primária original do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Depois do failover, um token de rastreamento não pode ser inserido usando o Replication Monitor; porém um token de rastreamento inserido no novo publicador usando [!INCLUDE[tsql](../../../includes/tsql-md.md)]é visível no Replication Monitor.  
   
-###  <a name="Changes"></a> Alterações gerais nos agentes de replicação para dar suporte a grupos de disponibilidade AlwaysOn  
+###  <a name="Changes"></a>Alterações gerais nos agentes de replicação para dar suporte ao Grupos de Disponibilidade AlwaysOn  
  Três agentes de replicação foram modificados para dar suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. O Leitor de Log, o Instantâneo e os Agentes de mesclagem foram modificados para consultar o banco de dados de distribuição para o publicador redirecionado e para usar o nome do ouvinte do grupo de disponibilidade retornado, se um publicador redirecionado tiver sido declarado, para conectar-se ao publicador de banco de dados.  
   
  Por padrão, quando os agentes consultam o distribuidor para determinar se o publicador original foi redirecionado, é verificada a adequação do destino atual ou o redirecionamento antes de retornar o host redirecionado ao agente. Este é o comportamento recomendado. No entanto, se a inicialização do agente ocorrer com muita frequência, a sobrecarga associada com o procedimento armazenado de validação poderá ser considerada muito cara. Uma nova opção de linha de comando, *BypassPublisherValidation*, foi adicionada aos agentes de Leitor de Log, Instantâneo e Mesclagem. Quando o comutador é usado, o publicador redirecionado é retornado imediatamente ao agente e a execução do procedimento armazenado de validação é ignorada.  
@@ -59,7 +59,7 @@ ms.locfileid: "62814038"
   
      O sinalizador de rastreamento 1448 permite que o leitor de log de replicação avance, mesmo se as réplicas secundárias assíncronas não tiverem confirmado a recepção de uma alteração. Mesmo com esse sinalizador de rastreamento habilitado, o leitor de log sempre aguardará as réplicas secundárias síncronas. O leitor de log não ultrapassará o reconhecimento mínimo das réplicas secundárias síncronas. Ele se aplica à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], e não apenas a um grupo de disponibilidade, um banco de dados de disponibilidade ou uma instância do leitor de log. Esse sinalizador de rastreamento entrará em vigor imediatamente, sem reinicialização. Ele pode ser ativado antecipadamente ou quando uma réplica secundária assíncrona apresentar falha.  
   
-###  <a name="StoredProcs"></a> Procedimentos armazenados que dão suporte a AlwaysOn  
+###  <a name="StoredProcs"></a>Procedimentos armazenados com suporte para AlwaysOn  
   
 -   **sp_redirect_publisher**  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62814038"
     ```  
   
     > [!NOTE]  
-    >  Você deve criar os trabalhos em todos os destinos de failover possíveis antes do failover e marcá-los como desabilitados até que a réplica de disponibilidade em um host se torne a nova réplica primária. Os trabalhos de CDC em execução no banco de dados primário antigo também devem ser desabilitados quando o banco de dados local se torna um banco de dados secundário. Para desabilitar e habilitar trabalhos, use a opção *@enabled* de [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Para obter mais informações sobre como criar trabalhos de CDC, consulte [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
+    >  Você deve criar os trabalhos em todos os destinos de failover possíveis antes do failover e marcá-los como desabilitados até que a réplica de disponibilidade em um host se torne a nova réplica primária. Os trabalhos de CDC em execução no banco de dados primário antigo também devem ser desabilitados quando o banco de dados local se torna um banco de dados secundário. Para desabilitar e habilitar trabalhos, use a *@enabled* opção de [Sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Para obter mais informações sobre como criar trabalhos de CDC, consulte [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
   
 -   **Adicionando funções de CDC a uma réplica de banco de dados primário AlwaysOn**  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62814038"
   
      O nome do ouvinte do grupo de disponibilidade ou o nome de nó explícito pode ser usado para localizar a réplica secundária. Se o nome do ouvinte do grupo de disponibilidade for usado, o acesso será direcionado a qualquer réplica secundária adequada.  
   
-     Quando `sp_addlinkedserver` é usado para criar um servidor vinculado para acessar o secundário, o *@datasrc* parâmetro é usado para o nome de ouvinte do grupo de disponibilidade ou o nome de servidor explícito e o *@provstr* parâmetro é usado para especificar intenção somente leitura.  
+     Quando `sp_addlinkedserver` é usado para criar um servidor vinculado para acessar o secundário, o *@datasrc* parâmetro é usado para o nome do ouvinte do grupo de disponibilidade ou o nome do *@provstr* servidor explícito, e o parâmetro é usado para especificar a intenção somente leitura.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -191,15 +191,15 @@ ms.locfileid: "62814038"
   
 -   Ao usar a replicação de mesclagem e o banco de dados de publicação estiver em um grupo de disponibilidade:  
   
-    -   Assinatura Push: O publicador e o distribuidor devem executar pelo menos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Assinatura push: o publicador e o distribuidor devem executar pelo menos o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Assinatura Pull: Os bancos de dados do publicador, distribuidor e assinante devem ter pelo menos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Isso ocorre porque o agente de mesclagem no assinante deve entender como um grupo de disponibilidade pode fazer failover para seu secundário.  
+    -   Assinatura pull: o publicador, o distribuidor e os bancos de dados do assinante devem estar pelo menos no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Isso ocorre porque o agente de mesclagem no assinante deve entender como um grupo de disponibilidade pode fazer failover para seu secundário.  
   
 -   Não há suporte à colocação do banco de dados de distribuição em um grupo de disponibilidade.  
   
--   As instâncias do Publicador satisfazem todos os pré-requisitos necessários para participar de um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+-   As instâncias do Publicador satisfazem todos os pré-requisitos necessários para participar de um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restrições  
  Combinações de replicação com suporte no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 |||||  
@@ -212,9 +212,9 @@ ms.locfileid: "62814038"
   
  <sup>1</sup> não inclui suporte para replicação transacional bidirecional e recíproca.  
   
- <sup>2</sup> Failover para o banco de dados de réplica é um procedimento manual. O failover automático não é fornecido.  
+ <sup>2</sup> o failover para o banco de dados de réplica é um procedimento manual. O failover automático não é fornecido.  
   
- <sup>3</sup> banco de dados para o distribuidor não tem suporte para uso com [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou o espelhamento de banco de dados.  
+ <sup>3</sup> o banco de dados do distribuidor não tem suporte [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para uso com o ou o espelhamento de banco de dados.  
   
 ### <a name="considerations"></a>Considerações  
   
@@ -233,7 +233,7 @@ ms.locfileid: "62814038"
   
 -   [Perguntas Frequentes sobre Administração de Replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **Alterar captura de dados**  
   
 -   [Habilitar e desabilitar a captura de dados de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   
@@ -241,7 +241,7 @@ ms.locfileid: "62814038"
   
 -   [Trabalhar com dados de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **Change tracking**  
+ **Controle de alterações**  
   
 -   [Habilitar e desabilitar o controle de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   
@@ -249,11 +249,11 @@ ms.locfileid: "62814038"
   
 -   [Trabalhar com o controle de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Assinantes de replicação e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
- [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Grupos de disponibilidade do AlwaysOn: Interoperabilidade (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [instâncias de Cluster de Failover do AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Assinantes de replicação e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
+ [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ Grupos de Disponibilidade AlwaysOn: [instâncias de cluster de failover (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) de [interoperabilidade (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) AlwaysOn   
  [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Sobre o controle de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Replicação do SQL Server](../../../relational-databases/replication/sql-server-replication.md)   

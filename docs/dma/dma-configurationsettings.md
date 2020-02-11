@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056537"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Definir configurações para Assistente de Migração de Dados
@@ -29,17 +29,17 @@ Você pode encontrar o arquivo DMA. exe. config para o aplicativo de área de tr
 
 - Aplicativo de desktop
 
-  % ProgramFiles%\\Assistente de Migração de Dados da Microsoft\\DMA. exe. config
+  % ProgramFiles\\%\\assistente de migração de dados da Microsoft DMA. exe. config
 
 - Utilitário de linha de comando
 
-  % ProgramFiles%\\Assistente de Migração de Dados da Microsoft\\dmacmd. exe. config 
+  % ProgramFiles\\%\\assistente de migração de dados da Microsoft dmacmd. exe. config 
 
 Lembre-se de salvar uma cópia do arquivo de configuração original antes de fazer qualquer modificação. Depois de fazer alterações, reinicie Assistente de Migração de Dados para que os novos valores de configuração entrem em vigor.
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Número de bancos de dados a serem avaliados em paralelo
 
-Assistente de Migração de Dados avalia vários bancos de dados em paralelo. Durante a avaliação Assistente de Migração de Dados extrai o dacpac (aplicativo da camada de dados) para entender o esquema de banco de dado. Essa operação poderá atingir o tempo limite se vários bancos de dados no mesmo servidor forem avaliados em paralelo. 
+Assistente de Migração de Dados avalia vários bancos de dados em paralelo. Durante a avaliação Assistente de Migração de Dados extrai o dacpac (aplicativo da camada de dados) para entender o esquema de banco de dado.Essa operação poderá atingir o tempo limite se vários bancos de dados no mesmo servidor forem avaliados em paralelo. 
 
 A partir do Assistente de Migração de Dados v 2.0, você pode controlar isso definindo o valor de configuração parallelDatabases. O valor padrão é 8.
 
@@ -82,19 +82,19 @@ A partir do Assistente de Migração de Dados v 2.0, se você tiver esse problem
 Durante a avaliação, Assistente de Migração de Dados extrai o dacpac (aplicativo da camada de dados) para entender o esquema de banco de dado. Essa operação pode falhar com tempos limite para bancos de dados muito grandes ou se o servidor estiver sob carga. A partir da migração de dados v 1.0, você pode modificar os seguintes valores de configuração para evitar erros. 
 
 > [!NOTE]
-> A entrada inteira de&gt; de &lt;dacfx é comentada por padrão. Remova os comentários e, em seguida, modifique o valor conforme necessário.
+> A entrada &lt;dacfx&gt; inteira é comentada por padrão. Remova os comentários e, em seguida, modifique o valor conforme necessário.
 
 - commandTimeout
 
-   Esse parâmetro define a Propriedade IDbCommand. CommandTimeout em *segundos*. (Padrão = 60)
+   Esse parâmetro define a Propriedade IDbCommand. CommandTimeout em *segundos*.(Padrão = 60)
 
 - databaseLockTimeout
 
-   Esse parâmetro é equivalente a [definir\_tempo limite de tempo limite\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) em *milissegundos*. (Padrão = 5000)
+   Esse parâmetro é equivalente a [definir o\_tempo limite\_de tempo](../t-sql/statements/set-lock-timeout-transact-sql.md) limite de bloqueio em *milissegundos*.(Padrão = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Esse parâmetro define o número de conexões do pool de conexão do SQL a ser usado. (Padrão = 8)
+  Esse parâmetro define o número de conexões do pool de conexão do SQL a ser usado.(Padrão = 8)
 
 ```
 <advisorGroup>

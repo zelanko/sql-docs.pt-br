@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036202"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover um índice existente para um grupo de arquivos diferente
@@ -63,7 +63,7 @@ ms.locfileid: "63036202"
   
 3.  Clique com o botão direito do mouse na tabela que contém o índice que você quer mover e selecione **Design**.  
   
-4.  No menu **Designer de Tabela** , clique em **Índices/Chaves**.  
+4.  No menu **Designer de tabela** , clique em **índices/chaves**.  
   
 5.  Selecione o índice a ser movido.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63036202"
   
 7.  Selecione **Nome do Esquema de Partição ou Grupo de Arquivos** e selecione da lista o grupo de arquivos ou esquema de partição para onde você deseja mover o índice.  
   
-8.  Clique em **Fechar**.  
+8.  Clique em **fechar**  
   
 9. No menu **Arquivo** , selecione **Salvar**_table_name_.  
   
@@ -101,10 +101,10 @@ ms.locfileid: "63036202"
   
  As informações a seguir estão disponíveis na página **Armazenamento** da caixa de diálogo **Propriedades do Índice –** _index_name_:  
   
- **Grupo de arquivos**  
+ **Arquivos**  
  Armazena o índice no grupo de arquivos especificado. A lista exibe apenas grupos de arquivos padrão (linha). A seleção de lista padrão é o grupo de arquivos PRIMARY do banco de dados.  
   
- **Grupos de Arquivos do Fluxo de Arquivos**  
+ **Grupo de arquivos FILESTREAM**  
  Especifica o grupo de arquivos para obter dados de FILESTREAM. Essa lista exibe apenas grupos de arquivos FILESTREAM. A seleção de lista padrão é o grupo de arquivos PRIMARY FILESTREAM.  
   
  **Esquema de partição**  
@@ -112,15 +112,15 @@ ms.locfileid: "63036202"
   
  A opção de esquema de partição fica indisponível se não houver nenhum esquema de partição no banco de dados.  
   
- **Esquema de Partição do Fluxo de Arquivos**  
+ **Esquema de partição FILESTREAM**  
  Especifica o esquema de partição para dados FILESTREAM. O esquema de partição deve ser simétrico com o esquema especificado na opção **Esquema de partição** .  
   
  Se a tabela não for particionada, o campo fica em branco.  
   
- **Parâmetro do Esquema de Partição**  
+ **Parâmetro de esquema de partição**  
  Exibe o nome da coluna que participa do esquema de partição.  
   
- **Coluna de tabela**  
+ **Coluna da tabela**  
  Selecione a tabela ou exiba para mapear para o esquema de partição.  
   
  **Tipo de dados da coluna**  
@@ -135,7 +135,7 @@ ms.locfileid: "63036202"
 > [!NOTE]  
 >  Esta opção não está disponível para índices XML ou se o índice for um índice clusterizadoF desabilitado.  
   
- **Definir grau máximo de paralelismo**  
+ **Definir o grau máximo de paralelismo**  
  Limita o número de processadores a serem usados durante execução do plano paralelo. O valor padrão, 0, usa o número real de CPUs disponíveis. A definição do valor como 1 elimina a geração em plano paralelo; a definição do valor como um número maior que 1 restringe o número máximo de processadores usados por uma única execução da consulta. Esta opção ficará disponível apenas se a caixa de diálogo estiver no estado **Recriar** ou **Recriar** .  
   
 > [!NOTE]  

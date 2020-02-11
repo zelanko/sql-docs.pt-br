@@ -1,5 +1,5 @@
 ---
-title: Instalando o Supervisor de atualização do Prompt de comando | Microsoft Docs
+title: Instalando o supervisor de atualização no prompt de comando | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094342"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Instalando o Supervisor de Atualização do prompt de comando
@@ -32,11 +32,11 @@ ms.locfileid: "66094342"
   
  A tabela a seguir mostra as opções mais comuns.  
   
-|Argumento|Descrição|  
+|Argumento|DESCRIÇÃO|  
 |--------------|-----------------|  
-|/q[n&#124;b&#124;r&#124;f]|Define nível de interface do usuário:<br /><br /> n = nenhuma interface do usuário<br /><br /> b = interface do usuário básica (apenas progresso, nenhum prompt)<br /><br /> r = interface do usuário reduzida (caixa de diálogo ao término da instalação)<br /><br /> f = interface do usuário completa|  
-|/L|Especifica as opções do arquivo de log. Para todas as mensagens de log *Nome_do_Arquivo_de_Log*, use **-L\*v**_Nome_do_Arquivo_de_Log_. Para registrar somente mensagens de erro, use `-Le` *Nome_do_Arquivo_de_Log*.|  
-|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|Especifica a instalação (ADDLOCAL), remoção (REMOVE) ou reinstalação (REINSTALL) do Supervisor de Atualização.|  
+|/q [n&#124;b&#124;r&#124;f]|Define nível de interface do usuário:<br /><br /> n = nenhuma interface do usuário<br /><br /> b = interface do usuário básica (apenas progresso, nenhum prompt)<br /><br /> r = interface do usuário reduzida (caixa de diálogo ao término da instalação)<br /><br /> f = interface do usuário completa|  
+|/L|Especifica as opções do arquivo de log. Para registrar todas as mensagens no *log_file_name*, use **-\*L v**_log_file_name_. Para registrar somente mensagens de erro, `-Le`use *log_file_name*.|  
+|ADDLOCAL = TODOS OS&#124; REMOVER = TODOS OS&#124;REINSTALAR = TODOS|Especifica a instalação (ADDLOCAL), remoção (REMOVE) ou reinstalação (REINSTALL) do Supervisor de Atualização.|  
 |UAINSTALLDIR=path|Instala o Supervisor de Atualização no local especificado pelo caminho.|  
   
 ## <a name="installation-examples"></a>Exemplos de instalação  
@@ -67,8 +67,8 @@ SQLUA.msi /qn REMOVE=ALL
 Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Instalando o Supervisor de atualização](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Instalando o supervisor de atualização](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [Pré-requisitos do Supervisor de Atualização](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   
   

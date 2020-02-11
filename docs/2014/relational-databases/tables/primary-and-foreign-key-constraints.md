@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196746"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restrições de chave primária e chave estrangeira
@@ -27,20 +27,20 @@ ms.locfileid: "68196746"
   
  Este tópico inclui as seções a seguir.  
   
- [Restrições PRIMARY KEY](../tables/primary-and-foreign-key-constraints.md#PKeys)  
+ [Restrições de chave primária](../tables/primary-and-foreign-key-constraints.md#PKeys)  
   
- [Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md#FKeys)  
+ [Restrições Foreign Key](../tables/primary-and-foreign-key-constraints.md#FKeys)  
   
  [Tarefas relacionadas](../tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> Restrições PRIMARY KEY  
+##  <a name="PKeys"></a>Restrições de chave primária  
  Geralmente, uma tabela tem uma coluna ou uma combinação de colunas que contém valores que identificam exclusivamente cada linha na tabela. Essa coluna, ou colunas, é chamada de chave primária (PK) da tabela e impõe a integridade da entidade da mesma. Como as restrições PRIMARY KEY garantem dados exclusivos, elas são frequentemente definidas em uma coluna de identidade.  
   
  Quando especificar uma restrição PRIMARY KEY para uma tabela, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] impõe a exclusividade dos dados criando automaticamente um índice exclusivo para as colunas de chave primária. Esse índice também permite um acesso rápido aos dados quando a chave primária é usada em consultas. Se uma restrição de chave primária for definida em mais de uma coluna, os valores poderão ser duplicados em uma coluna, mas cada combinação de valores de todas as colunas na definição da restrição de chave primária deve ser exclusiva.  
   
  Conforme mostrado na ilustração a seguir, as colunas **ProductID** e **VendorID** da tabela **Purchasing.ProductVendor** formam uma restrição de chave primária composta para essa tabela. Isso garante que cada linha da tabela **ProductVendor** tem uma combinação exclusiva de **ProductID** e **VendorID**. Isso impede a inserção de linhas duplicadas.  
   
- ![Restrição PRIMARY KEY de composição](../../database-engine/media/fund04.gif "Restrição PRIMARY KEY de composição")  
+ ![Restrição de PRIMARY KEY composta](../../database-engine/media/fund04.gif "Restrição de PRIMARY KEY composta")  
   
 -   Uma tabela pode conter apenas uma restrição PRIMARY KEY.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68196746"
   
 -   Se a chave primária for definida em uma coluna de tipo CLR definida pelo usuário, a implementação do tipo deverá oferecer suporte a uma ordenação binária.  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="FKeys"></a>Restrições Foreign Key  
  Uma chave estrangeira (FK) é uma coluna ou combinação de colunas usada para estabelecer e impor um link entre os dados de duas tabelas, a fim de controlar os dados que podem ser armazenados na tabela de chave estrangeira. Em uma referência de chave estrangeira, cria-se um link entre duas tabelas quando a coluna ou as colunas que contêm o valor de chave primária para uma tabela são referenciadas pela coluna ou colunas de outra tabela. Essa coluna torna-se uma chave estrangeira na segunda tabela.  
   
  Por exemplo, a tabela **Sales.SalesOrderHeader** tem um link de chave estrangeira para a tabela **Sales.SalesPerson** porque existe uma relação lógica entre os pedidos de vendas e os vendedores. A coluna **SalesPersonID** na tabela **SalesOrderHeader** corresponde à coluna de chave primária da tabela **SalesPerson** . A coluna **SalesPersonID** na tabela **SalesOrderHeader** é a chave estrangeira para a tabela **SalesPerson** . Criando essa relação de chave estrangeira, um valor para **SalesPersonID** não poderá ser inserido na tabela **SalesOrderHeader** se ela não existir na tabela **SalesPerson** .  

@@ -2,8 +2,7 @@
 title: Executar uma avaliação de migração SQL Server
 titleSuffix: Data Migration Assistant
 description: Saiba como usar Assistente de Migração de Dados para avaliar um SQL Server local antes de migrar para outro SQL Server ou para o banco de dados SQL do Azure
-ms.custom: seo-lt-2019
-ms.date: 12/10/2019
+ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8b01469536655fc351ecf742ed284f3f6c68f707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001901"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76037169"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realizar uma avaliação de migração do SQL Server com o Assistente de Migração de Dados
 
-As instruções passo a passo a seguir ajudam a executar sua primeira avaliação para migrar para SQL Server locais, SQL Server em execução em uma VM do Azure ou banco de dados SQL do Azure, usando Assistente de Migração de Dados.
+As instruções passo a passo a seguir ajudam a executar sua primeira avaliação para migrar para SQL Server locais, SQL Server em execução em uma VM do Azure ou banco de dados SQL do Azure usando Assistente de Migração de Dados.
 
    > [!NOTE]
    > O Assistente de Migração de Dados v 5.0 apresenta suporte para analisar a conectividade de banco de dados e consultas SQL inseridas no código do aplicativo. Para obter mais informações, consulte a postagem de blog [usando assistente de migração de dados para avaliar a camada de acesso a dados de um aplicativo](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
@@ -114,6 +114,9 @@ As instruções passo a passo a seguir ajudam a executar sua primeira avaliaçã
 
     ![Adicionar fontes e iniciar a avaliação](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> Você pode executar várias avaliações simultaneamente e exibir o estado das avaliações abrindo a página **Todas as Avaliações**.
+
 ## <a name="view-results"></a>Exibir resultados
 
 A duração da avaliação depende do número de bancos de dados adicionados e do tamanho do esquema de cada banco de dados. Os resultados são exibidos para cada banco de dados assim que estiverem disponíveis.
@@ -156,4 +159,6 @@ As diretrizes detalhadas passo a passo para avaliações de prontidão de destin
 
 Depois que todos os bancos de dados concluírem a avaliação, selecione **Exportar relatório** para exportar os resultados para um arquivo JSON ou um arquivo CSV. Em seguida, você pode analisar os dados por sua própria conveniência.
 
-Você pode executar várias avaliações simultaneamente e exibir o estado das avaliações abrindo a página **Todas as Avaliações**.
+## <a name="save-and-load-assessments"></a>Salvar e carregar avaliações
+
+Além de exportar os resultados de uma avaliação, você pode salvar detalhes de avaliação em um arquivo e carregar um arquivo de avaliação para revisão posterior.  Para obter mais informações, consulte o artigo [salvar e carregar avaliações com assistente de migração de dados](../dma/dma-save-load-assessments.md).

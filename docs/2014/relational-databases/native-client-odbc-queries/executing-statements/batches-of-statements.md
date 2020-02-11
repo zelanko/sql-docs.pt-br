@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206776"
 ---
 # <a name="batches-of-statements"></a>Lotes de instruções
-  Um lote de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções contém duas ou mais instruções, separadas por ponto e vírgula (;), criado em uma única cadeia de caracteres passada para **SQLExecDirect** ou [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Por exemplo:  
+  Um lote de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções contém duas ou mais instruções, separadas por um ponto-e-vírgula (;), criado em uma única cadeia de caracteres passada para a função **SQLExecDirect** ou [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Por exemplo:  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -33,18 +33,18 @@ SQLExecDirect(hstmt,
     SQL_NTS);  
 ```  
   
- Os lotes podem ser mais eficientes do que enviar instruções separadamente porque o tráfego de rede costuma ser reduzido. Use [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) para se posicionar quanto o próximo conjunto de resultados quando concluído com o conjunto de resultados atual.  
+ Os lotes podem ser mais eficientes do que enviar instruções separadamente porque o tráfego de rede costuma ser reduzido. Use [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) para ficar posicionado no próximo conjunto de resultados quando terminar com o conjunto de resultados atual.  
   
  Os lotes sempre podem ser usados quando os atributos de cursor ODBC são definidos como os padrões de um cursor de somente encaminhamento, somente leitura, com um tamanho do conjunto de linhas igual a 1.  
   
- Caso um lote seja executado durante o uso de cursores de servidor no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o cursor de servidor é convertido implicitamente em um conjunto de resultados padrão. **SQLExecDirect** ou **SQLExecute** retornar SQL_SUCCESS_WITH_INFO e uma chamada **SQLGetDiagRec** retorna:  
+ Caso um lote seja executado durante o uso de cursores de servidor no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o cursor de servidor é convertido implicitamente em um conjunto de resultados padrão. **SQLExecDirect** ou **SQLExecute** retornam SQL_SUCCESS_WITH_INFO e uma chamada para **SQLGetDiagRec** retorna:  
   
 ```  
 szSqlState = "01S02", pfNativeError = 0  
 szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type changed."  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Executar instruções &#40;ODBC&#41;](executing-statements-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Executando instruções &#40;&#41;ODBC](executing-statements-odbc.md)  
   
   

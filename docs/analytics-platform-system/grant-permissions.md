@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401157"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Conceder permissões T-SQL para data warehouse paralelos
@@ -245,8 +245,8 @@ GO
   
 Para criar logons de administrador, consulte [funções de servidor fixas](pdw-permissions.md#fixed-server-roles).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
-[CRIAR USUÁRIO](../t-sql/statements/create-user-transact-sql.md)  
-[CRIAR FUNÇÃO](../t-sql/statements/create-role-transact-sql.md)  
-[Carrega](load-overview.md)  
+[CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
+[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
+[Carregar](load-overview.md)  

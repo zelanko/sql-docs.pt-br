@@ -1,5 +1,5 @@
 ---
-title: Guia de rede de dependências (Visualizador do modelo de mineração) | Microsoft Docs
+title: Guia rede de dependências (Visualizador do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081935"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Guia Rede de Dependências (Visualizador do Modelo de Mineração)
@@ -31,7 +31,7 @@ ms.locfileid: "66081935"
  [Procurar um modelo usando o Visualizador de Regras de Associação da Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opções  
- **Atualizar conteúdo do Visualizador**  
+ **Atualizar conteúdo do visualizador**  
  Recarregue o modelo de mineração no visualizador.  
   
  **Modelo de mineração**  
@@ -43,13 +43,13 @@ ms.locfileid: "66081935"
  **Ampliar**  
  Amplie o diagrama para que você possa ver os atributos com mais detalhes.  
   
- **Reduza a imagem**  
+ **Reduzir**  
  Reduza o diagrama, para que você possa ver mais atributos e os links entre eles.  
   
- **Copiar exibição de gráfico**  
+ **Copiar Exibição do Gráfico**  
  Copie a seção visível do diagrama para a área de transferência.  
   
- **Copiar gráfico inteiro**  
+ **Copiar Todo o Gráfico**  
  Copie todo o diagrama na área de transferência.  
   
  **Links**  
@@ -63,9 +63,9 @@ ms.locfileid: "66081935"
   
  Uma regra geral para todos os tipos de modelos é que, quanto mais forte o link, mais forte a relação previsível entre os dois atributos.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining/data-mining-model-viewers.md)  
   
   

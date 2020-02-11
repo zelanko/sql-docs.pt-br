@@ -22,17 +22,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768403"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codificando e depurando a tarefa Script
   Depois de configurar a tarefa Script no **Editor da Tarefa Script**, você escreve seu código personalizado no ambiente de desenvolvimento da tarefa Script.  
   
 ## <a name="script-task-development-environment"></a>Ambiente de desenvolvimento da tarefa Script  
- A tarefa Script usa o VSTA ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications) como o ambiente de desenvolvimento do script propriamente dito.  
+ A tarefa Script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o VSTA (Tools for Applications) como o ambiente de desenvolvimento para o próprio script.  
   
  O código de Script é escrito em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Você especifica a linguagem de script configurando a propriedade **ScriptLanguage** no **Editor da Tarefa Script**. Caso prefira usar outra linguagem de programação, você pode desenvolver um assembly personalizado na linguagem de sua escolha e chamar sua funcionalidade a partir do código na tarefa Script.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "62768403"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Itens e classes de projeto no projeto da tarefa Script  
  Por padrão, o projeto da tarefa Script exibido na janela Explorador de Projeto VSTA contém um único item, `ScriptMain`. O item `ScriptMain`, por sua vez, contém uma única classe, também nomeada `ScriptMain`. Os elementos de código na classe variam de acordo com a linguagem de programação selecionada para a tarefa Script:  
   
--   Quando a tarefa de Script é configurada para o [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] linguagem de programação, o `ScriptMain` classe tem uma sub-rotina pública, `Main`. A sub-rotina `ScriptMain.Main` é o método que o tempo de execução chama quando você executa sua tarefa Script.  
+-   Quando a tarefa Script é configurada [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] para a linguagem de `ScriptMain` programação, a classe tem uma sub-rotina `Main`pública,. A sub-rotina `ScriptMain.Main` é o método que o runtime chama quando você executa sua tarefa Script.  
   
-     Por padrão, o único código na sub-rotina `Main` de um script novo é a linha `Dts.TaskResult = ScriptResults.Success`. Essa linha informa o tempo de execução em que a tarefa teve êxito em sua operação. O `Dts.TaskResult` propriedade é discutida [retornando resultados da tarefa Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     Por padrão, o único código na sub-rotina `Main` de um script novo é a linha `Dts.TaskResult = ScriptResults.Success`. Essa linha informa o runtime em que a tarefa teve êxito em sua operação. A `Dts.TaskResult` propriedade é discutida em [retornando resultados da tarefa Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
 -   Quando a tarefa Script é configurada para a linguagem de programação Visual C#, a classe `ScriptMain` tem um método público, `Main`. O método é chamado quando a tarefa Script é executada.  
   
-     Por padrão, o método `Main` inclui a linha `Dts.TaskResult = (int)ScriptResults.Success`. Essa linha informa o tempo de execução em que a tarefa teve êxito em sua operação.  
+     Por padrão, o método `Main` inclui a linha `Dts.TaskResult = (int)ScriptResults.Success`. Essa linha informa o runtime em que a tarefa teve êxito em sua operação.  
   
  O item `ScriptMain` pode conter classes que não sejam a classe `ScriptMain`. Classes só estão disponíveis à tarefa Script na qual elas residem.  
   
@@ -206,7 +206,7 @@ To open Help, press F1.
 >  Você pode exibir as referências do projeto no IDE VSTA no **Modo de Exibição de Classe** ou no **Explorador de Projeto**. É possível abrir qualquer uma dessas janelas no menu **Exibir**. Você pode adicionar uma referência nova no menu **Projeto**, de **Explorador de Projeto** ou de **Modo de Exibição de Classe**.  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>Interagindo com o pacote na tarefa Script  
- A tarefa Script usa o objeto global `Dts`, que é uma instância da classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> e de seus membros para interagir com o pacote que a contém e com o tempo de execução do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+ A tarefa Script usa o objeto global `Dts`, que é uma instância da classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> e de seus membros para interagir com o pacote que a contém e com o runtime do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
  A tabela a seguir lista os membros públicos principais da classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, que é exposta ao código da tarefa Script através do objeto global `Dts`. Os tópicos dessa seção apresentam uma discussão detalhada sobre o uso desses membros.  
   
@@ -214,7 +214,7 @@ To open Help, press F1.
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|Fornece acesso a gerenciadores de conexões definidos no pacote.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|Fornece uma interface de eventos para deixar a tarefa Script gerar erros, avisos e mensagens informativas.|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|Apresenta uma forma simples de retornar um único objeto ao tempo de execução (além do `TaskResult`) que também pode ser usado para a ramificação de fluxos de trabalho.|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|Apresenta uma forma simples de retornar um único objeto ao runtime (além do `TaskResult`) que também pode ser usado para a ramificação de fluxos de trabalho.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>|Registra informações tais como o progresso da tarefa e resultados para provedores de log habilitados.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>|Reporta o êxito ou falha da tarefa.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|Fornece a transação, caso exista, dentro da qual o contêiner da tarefa está em execução.|  
@@ -222,7 +222,7 @@ To open Help, press F1.
   
  A classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> também contém alguns membros públicos que você provavelmente não usará.  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|A propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> fornece acesso mais conveniente a variáveis. Embora você possa usar o <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>, chame explicitamente métodos para bloquear e desbloquear variáveis para leitura e gravação. A tarefa Script trata de semânticas de bloqueio quando você usa a propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.|  
   
@@ -245,10 +245,10 @@ To open Help, press F1.
   
 -   Entrada de blog, [Problemas de instalação e configuração de VSTA nas instalações de SSIS 2008 e R2](https://go.microsoft.com/fwlink/?LinkId=215661), em blogs.msdn.com.  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da [!INCLUDE[msCoName](../../../includes/msconame-md.md)], bem como as soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da [!INCLUDE[msCoName](../../../includes/msconame-md.md)], bem como as soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
- [Referenciar outros assemblies em soluções de script](../referencing-other-assemblies-in-scripting-solutions.md)   
- [Configurar a tarefa Script no Editor da Tarefa Script](configuring-the-script-task-in-the-script-task-editor.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Fazendo referência a outros assemblies em soluções de script](../referencing-other-assemblies-in-scripting-solutions.md)   
+ [Configurando a tarefa Script no Editor da Tarefa Script](configuring-the-script-task-in-the-script-task-editor.md)  
   
   

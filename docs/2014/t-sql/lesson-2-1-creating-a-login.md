@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211203"
 ---
 # <a name="creating-a-login"></a>criando um logon
@@ -26,7 +26,7 @@ ms.locfileid: "68211203"
   
 ### <a name="to-create-a-new-windows-account"></a>Para criar uma nova conta do Windows  
   
-1.  Clique em **inicie**, clique em **execute**, no **abrir** , digite `%SystemRoot%\system32\compmgmt.msc /s`e, em seguida, clique em **Okey** para abrir o programa de gerenciamento do computador.  
+1.  Clique em **Iniciar**, em **executar**, na caixa **abrir** , digite `%SystemRoot%\system32\compmgmt.msc /s`e clique em **OK** para abrir o programa de gerenciamento do computador.  
   
 2.  Em **Ferramentas do Sistema**, expanda **Usuários e Grupos Locais**, clique com o botão direito do mouse em **Usuários**e clique em **Novo Usuário**.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "68211203"
     >  Como `Mary` não é uma conta de domínio, esse nome de usuário só poderá ser autenticado nesse computador.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Conceder acesso a um banco de dados](lesson-2-2-granting-access-to-a-database.md)  
+ [concedendo acesso a um banco de dados](lesson-2-2-granting-access-to-a-database.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [Escolher um modo de autenticação](../relational-databases/security/choose-an-authentication-mode.md)  
   
