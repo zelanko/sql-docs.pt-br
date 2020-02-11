@@ -16,18 +16,18 @@ ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 01155b1fb294660c92bfa975bc04de8f748b730f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68137658"
 ---
-# <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
+# <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna as informações de partição para a publicação de mesclagem especificada. Esse procedimento armazenado é executado no Publicador, em qualquer banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,26 +39,26 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @suser_sname = ] 'suser_sname'` É o valor SUSER_SNAME usado para definir uma partição. *suser_sname* está **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde SUSER_SNAME resolve para o valor fornecido.  
-  
-> [!NOTE]  
->  Quando *suser_sname* for fornecido, *host_name* deve ser NULL  
-  
-`[ @host_name = ] 'host_name'` É o valor HOST_NAME usado para definir uma partição. *HOST_NAME* está **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde HOST_NAME resolve para o valor fornecido.  
+`[ @suser_sname = ] 'suser_sname'`É o valor SUSER_SNAME usado para definir uma partição. *SUSER_SNAME* é **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde SUSER_SNAME resolve para o valor fornecido.  
   
 > [!NOTE]  
->  Quando *suser_sname* for fornecido, *host_name* deve ser NULL  
+>  Quando *SUSER_SNAME* é fornecido, *HOST_NAME* deve ser nulo  
+  
+`[ @host_name = ] 'host_name'`É o valor HOST_NAME usado para definir uma partição. *HOST_NAME* é **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde HOST_NAME resolve para o valor fornecido.  
+  
+> [!NOTE]  
+>  Quando *SUSER_SNAME* é fornecido, *HOST_NAME* deve ser nulo  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**partition**|**int**|Identifica a partição do Assinante.|  
-|**host_name**|**sysname**|Valor usado ao criar a partição para uma assinatura filtrada pelo valor de [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função no assinante.|  
-|**suser_sname**|**sysname**|Valor usado ao criar a partição para uma assinatura filtrada pelo valor de [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) função no assinante.|  
-|**dynamic_snapshot_location**|**nvarchar(255)**|Local do instantâneo de dados filtrado para a partição do Assinante.|  
+|**particion**|**int**|Identifica a partição do Assinante.|  
+|**host_name**|**sysname**|Valor usado ao criar a partição para uma assinatura que é filtrada pelo valor da função [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) no Assinante.|  
+|**suser_sname**|**sysname**|Valor usado ao criar a partição para uma assinatura que é filtrada pelo valor da função [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) no Assinante.|  
+|**dynamic_snapshot_location**|**nvarchar (255)**|Local do instantâneo de dados filtrado para a partição do Assinante.|  
 |**date_refreshed**|**datetime**|Último data em que o trabalho de instantâneo foi executado para gerar o instantâneo de dados filtrado para a partição.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifica o trabalho que cria o instantâneo de dados filtrado para uma partição.|  
   
@@ -66,13 +66,13 @@ sp_helpmergepartition [ @publication= ] 'publication'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_helpmergepartition** é usado em replicação de mesclagem.  
+ **sp_helpmergepartition** é usado na replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa e a **db_owner** banco de dados fixa podem executar **sp_helpmergepartition**.  
+ Somente os membros da função de servidor fixa **sysadmin** e a função de banco de dados fixa **db_owner** podem executar **sp_helpmergepartition**.  
   
-## <a name="see-also"></a>Consulte também  
- [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [sp_dropmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_addmergepartition](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergepartition](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Editor da tarefa de processamento (página geral) do Analysis Services | Microsoft Docs
+title: Editor da tarefa de processamento de Analysis Services (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 183862eadad3661353228bbcde132b6cd8241501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061447"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Editor da Tarefa Processamento do Analysis Services (Página Geral)
@@ -36,9 +36,9 @@ ms.locfileid: "66061447"
  **Descrição**  
  Digite uma descrição da tarefa Processamento do Analysis Services.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Processamento do Analysis Services &#40;Página Analysis Services&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
+ [&#40;Analysis Services página do editor da tarefa processamento de Analysis Services&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
  [Tarefa Executar DDL do Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
   
   

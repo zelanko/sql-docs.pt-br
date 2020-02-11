@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0afebe3d8e974ac4920a6f75bf544a13027b360e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811004"
 ---
 # <a name="mssql_eng014114"></a>MSSQL_ENG014114
@@ -25,9 +25,9 @@ ms.locfileid: "68811004"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|14114|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
 |Texto da mensagem|'%s' não está configurado como um Distributor.|  
@@ -40,7 +40,7 @@ ms.locfileid: "68811004"
  Não haverá suporte para replicação se você tiver registrado qualquer uma das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo endereço IP ou FQDN (nome de domínio totalmente qualificado). Se você tinha qualquer das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrada pelo endereço IP ou FQDN no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quando configurou a replicação, esse erro pode ocorrer.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Se a mensagem de erro especificar uma instância em particular, configure o servidor como um Distribuidor. Para obter mais informações, consulte [Configurar distribuição](configure-distribution.md).  
+ Se a mensagem de erro especificar uma instância em particular, configure o servidor como um Distribuidor. Para obter mais informações, consulte [Configure Distribution](configure-distribution.md).  
   
  Se a mensagem não especificar uma instância em particular ('null'), certifique-se de que a instância do Distribuidor esteja registrada corretamente. Se o nome de rede do computador e o nome da instância do SQL Server forem diferentes:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68811004"
   
      10.193.17.129 inst1  
   
--   Desabilite a distribuição, registre a instância e restabeleça a distribuição. Se o valor de @@SERVERNAME não estiver correto para uma instância não clusterizada, siga estas etapas:  
+-   Desabilite a distribuição, registre a instância e restabeleça a distribuição. Se o valor @@SERVERNAME não estiver correto em uma instância não clusterizada, siga estas etapas:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -63,7 +63,7 @@ ms.locfileid: "68811004"
   
      Se o valor @@SERVERNAME não estiver correto em uma instância clusterizada, você deverá alterar o nome usando o Administrador de Cluster. Para obter mais informações, consulte [Instâncias do Cluster de Failover do AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de erros e eventos &#40;Replicação&#41;](errors-and-events-reference-replication.md)  
   
   

@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061596"
 ---
 # <a name="analysis-of-data-flow"></a>Análise do Fluxo de Dados
-  Você pode usar o [execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` para analisar o fluxo de dados de pacotes do banco de dados. Esta exibição exibe uma linha a cada vez que um componente de fluxo de dados envia dados a um componente downstream. As informações podem ser usadas para obter um entendimento mais profundo das linhas que são enviadas para cada componente.  
+  Você pode usar a exibição de banco de dados [Catalog. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` para analisar o fluxo de dado dos pacotes. Esta exibição exibe uma linha a cada vez que um componente de fluxo de dados envia dados a um componente downstream. As informações podem ser usadas para obter um entendimento mais profundo das linhas que são enviadas para cada componente.  
   
 > [!NOTE]  
 >  O nível de log deve ser definido para **Detalhado** para capturar as informações com a exibição de catalog.execution_data_statistics.  
@@ -36,13 +36,13 @@ order by source_component_name, destination_component_name
   
  O exemplo a seguir calcula o número de linhas por milissegundo enviadas por cada componente para uma execução específica. Os valores calculados são:  
   
--   **total_rows** – a soma de todas as linhas enviadas pelo componente  
+-   **total_rows** -a soma de todas as linhas enviadas pelo componente  
   
--   **wall_clock_time_ms** – o tempo de execução decorrido total, em milissegundos, para cada componente  
+-   **wall_clock_time_ms** -o tempo de execução total decorrido, em milissegundos, para cada componente  
   
--   **num_rows_per_millisecond** – o número de linhas por milissegundo enviadas por cada componente  
+-   **num_rows_per_millisecond** -o número de linhas por milissegundo enviado por cada componente  
   
- O `HAVING` cláusula é usada para impedir um erro de divisão por zero nos cálculos.  
+ A `HAVING` cláusula é usada para evitar um erro de divisão por zero nos cálculos.  
   
 ```  
 use SSISDB  
@@ -59,11 +59,11 @@ order by source_component_name desc
 ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Depurando fluxo de dados](troubleshooting/debugging-data-flow.md)  
+ [Depurar o fluxo de dados](troubleshooting/debugging-data-flow.md)  
   
  [Ferramentas de solução de problemas de execução de pacote](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados em fluxos de dados](data-flow/data-in-data-flows.md)  
   
   
