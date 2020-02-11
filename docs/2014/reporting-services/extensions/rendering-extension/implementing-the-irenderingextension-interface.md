@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68e965a523df8dadd03d77df8d3d522870f70a93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62987143"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementando a interface IRenderingExtension
@@ -49,7 +49,7 @@ ms.locfileid: "62987143"
 -   *createAndRegisterStream* é uma função de delegado a ser chamada para a obtenção de um fluxo no qual será feita a renderização.  
   
 ### <a name="deviceinfo-parameter"></a>Parâmetro deviceInfo  
- O parâmetro *deviceInfo* contém parâmetros de renderização e não parâmetros de relatório. Esses parâmetros de renderização são passados para a extensão de renderização. Os valores *deviceInfo* são convertidos em um objeto <xref:System.Collections.Specialized.NameValueCollection> pelo servidor de relatório. Os itens do parâmetro *deviceInfo* são tratados como valores que não diferenciam maiúsculas de minúsculas. Se a solicitação de renderização aconteceu como resultado de acesso à URL, os parâmetros da URL no formato `rc:key=value` são convertidos em pares de chave/valor no objeto de dicionário *deviceInfo*. O código de detecção do navegador também fornece os seguintes itens na *clientCapabilities* dicionário: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, tipo e AcceptLanguage. Qualquer par de nome/valor no parâmetro *deviceInfo* que não é compreendido pela extensão de renderização é ignorado. O exemplo de código a seguir mostra um método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> de exemplo que recupera ícones:  
+ O parâmetro *deviceInfo* contém parâmetros de renderização e não parâmetros de relatório. Esses parâmetros de renderização são passados para a extensão de renderização. Os valores *deviceInfo* são convertidos em um objeto <xref:System.Collections.Specialized.NameValueCollection> pelo servidor de relatório. Os itens do parâmetro *deviceInfo* são tratados como valores que não diferenciam maiúsculas de minúsculas. Se a solicitação de renderização aconteceu como resultado de acesso à URL, os parâmetros da URL no formato `rc:key=value` são convertidos em pares de chave/valor no objeto de dicionário *deviceInfo*. O código de detecção do navegador também fornece os seguintes itens no dicionário *clientCapabilities*: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type e AcceptLanguage. Qualquer par de nome/valor no parâmetro *deviceInfo* que não é compreendido pela extensão de renderização é ignorado. O exemplo de código a seguir mostra um método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> de exemplo que recupera ícones:  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  
@@ -74,7 +74,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
 ## <a name="getrenderingresource-method"></a>Método GetRenderingResource  
  O método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> recupera as informações sem executar toda renderização do relatório. Existem ocasiões em que o relatório necessita de informações que não exigem que o próprio relatório seja renderizado. Por exemplo, se você precisar do ícone associado à extensão de renderização, use o parâmetro *deviceInfo* que contém a marcação única **\<Icon>** . Nesses casos, você pode usar o método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementando uma extensão de renderização](implementing-a-rendering-extension.md)   
  [Visão geral das extensões de renderização](rendering-extensions-overview.md)  
   

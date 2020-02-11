@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212023"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Exibir e modificar propriedades de Publicador e Distribuidor
@@ -45,7 +45,7 @@ ms.locfileid: "68212023"
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Nas versões de Publicadores anteriores ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], um usuário na função de servidor fixa **sysadmin** pode registrar Assinantes na página **Assinantes** . A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], não é mais necessário registrar Assinantes explicitamente para replicação.  
+-   Nas versões de Publicadores anteriores ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], um usuário na função de servidor fixa **sysadmin** pode registrar Assinantes na página **Assinantes**. A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], não é mais necessário registrar Assinantes explicitamente para replicação.  
   
 ###  <a name="Security"></a> Segurança  
  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução.  
@@ -64,7 +64,7 @@ ms.locfileid: "68212023"
   
     -   Para exibir e modificar as propriedades do Publicador associado ao Distribuidor, clique no botão de propriedades ( **…** ) para o Publicador na página **Publicadores** da caixa de diálogo.  
   
-    -   Para acessar os perfis para os agentes de replicação, clique no botão **Padrões de Perfil** na página **Geral** da caixa de diálogo. Para obter mais informações, consulte [Replication Agent Profiles](agents/replication-agent-profiles.md).  
+    -   Para acessar os perfis para os agentes de replicação, clique no botão **Padrões de Perfil** na página **Geral** da caixa de diálogo. Para saber mais, confira [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
     -   Para alterar a senha da conta usada quando os procedimentos administrativos armazenados são executados no Publicador e para atualizar as informações no Distribuidor, digite uma senha nova nas caixas **Senha** e **Confirmar senha** na página **Publicadores** da caixa de diálogo. Para obter mais informações, consulte [Proteger o Distribuidor](security/secure-the-distributor.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68212023"
   
 2.  Clique com o botão direito do mouse na pasta **Replicação** e, em seguida, em **Propriedades do Publicador**.  
   
-3.  Exibir e modificar propriedades na **propriedades do publicador – \< Publisher >** caixa de diálogo.  
+3.  Exiba e modifique as propriedades na caixa de diálogo **Propriedades do Publicador – \< >do Publicador** .  
   
     -   Um usuário na função de servidor fixa **sysadmin** pode ativar bancos de dados para replicação na página **Bancos de Dados de Publicação** . Habilitando um banco de dados não publica esse banco de dados, mas permite que qualquer usuário na função de banco de dados fixa **db_owner** para aquele banco de dados crie uma ou mais publicações no banco de dados.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "68212023"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  (Opcional) Verificar a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> para verificar se o servidor conectado no momento é um Distribuidor.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68212023"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>. Especifique o nome da propriedade e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>. Especifique o nome da propriedade e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do servidor. Se este método retornar `false`, o banco de dados com o nome especificado não existirá no servidor.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "68212023"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Especifique a propriedade <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Especifique a propriedade <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  (Opcional) Para alterar propriedades, defina um novo valor para uma das propriedades <xref:Microsoft.SqlServer.Replication.DistributionPublisher> que podem ser definidas.  
   
@@ -164,13 +164,13 @@ ms.locfileid: "68212023"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
 3.  Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> para obter as propriedades do objeto.  
   
-5.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>. Passe o novo valor de senha para o parâmetro *password* .  
+5.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Passe o novo valor de senha para o parâmetro *password* .  
   
     > [!IMPORTANT]  
     >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
@@ -179,7 +179,7 @@ ms.locfileid: "68212023"
   
     1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-    2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
+    2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
     3.  Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 6a.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "68212023"
   
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Desabilitar a publicação e a distribuição](disable-publishing-and-distribution.md)   
  [Configurar Distribuição](configure-distribution.md)   

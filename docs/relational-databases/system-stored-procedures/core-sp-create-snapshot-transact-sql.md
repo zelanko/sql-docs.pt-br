@@ -1,5 +1,5 @@
 ---
-title: sp_create_snapshot (Transact-SQL) | Microsoft Docs
+title: Core. sp_create_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078226"
 ---
-# <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
+# <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Insere uma linha na exibição core.snapshots do data warehouse de gerenciamento. Esse procedimento é chamado sempre que um pacote de carregamento começa a carregar dados no data warehouse de gerenciamento.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,23 +47,23 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_uid =] '*collection_set_uid*'  
- O GUID do conjunto de coleta. *collection_set_uid* está **uniqueidentifier** sem nenhum valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collection_sets no banco de dados msdb.  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
+ O GUID do conjunto de coleta. *collection_set_uid* é **uniqueidentifier** sem valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collection_sets no banco de dados msdb.  
   
- [ @collector_type_uid =] '*collector_type_uid*'  
- O GUID de um tipo de coletor. *collector_type_uid* está **uniqueidentifier** sem nenhum valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collector_types no banco de dados msdb.  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
+ O GUID de um tipo de coletor. *collector_type_uid* é **uniqueidentifier** sem valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collector_types no banco de dados msdb.  
   
- [ @machine_name=] '*machine_name*'  
- O nome do servidor no qual o conjunto de coleta reside. *nome_do_computador* está **sysname**, sem nenhum valor padrão.  
+ [ @machine_name= ] '*machine_name*'  
+ O nome do servidor no qual o conjunto de coleta reside. *machine_name* é **sysname**, sem valor padrão.  
   
- [ @named_instance=] '*instância_nomeada*'  
- O nome da instância do conjunto de coleta. *instância_nomeada* está **sysname**, sem nenhum valor padrão.  
+ [ @named_instance= ] '*named_instance*'  
+ O nome da instância do conjunto de coleta. *named_instance* é **sysname**, sem valor padrão.  
   
- [ @log_id =] *log_id*  
- O identificador exclusivo que é mapeado para o log de eventos do conjunto de coleta que coletou os dados. *log_id* está **bigint** sem nenhum valor padrão. Para obter o valor de *log_id*, consulte a exibição syscollector_execution_log no banco de dados msdb.  
+ [ @log_id = ] *log_id*  
+ O identificador exclusivo que é mapeado para o log de eventos do conjunto de coleta que coletou os dados. *log_id* é **bigint** sem valor padrão. Para obter o valor de *log_id*, consulte a exibição dbo. syscollector_execution_log no banco de dados msdb.  
   
- [ @snapshot_id =] *snapshot_id*  
- O identificador exclusivo para uma linha que é inserido no modo de exibição snapshots. *snapshot_id* está **int** e é retornada como OUTPUT.  
+ [ @snapshot_id = ] *snapshot_id*  
+ O identificador exclusivo de uma linha que é inserida na exibição core. Snapshots. *snapshot_id* é **int** e é retornada como saída.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -80,7 +80,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  Se alguma das verificações acima falhar, o procedimento falhará e retornará um erro.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **mdw_writer** (com permissão EXECUTE) a função de banco de dados fixa.  
+ Requer associação na função de banco de dados fixa **mdw_writer** (com permissão de execução).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria um instantâneo do conjunto de coleta Uso do Disco, adiciona-o ao data warehouse de gerenciamento e retorna o identificador do instantâneo. No exemplo, a instância padrão é usada.  
@@ -97,9 +97,9 @@ EXEC core.sp_create_snapshot
     @snapshot_id = @snapshot_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Data warehouse de gerenciamento](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [data warehouse de gerenciamento](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

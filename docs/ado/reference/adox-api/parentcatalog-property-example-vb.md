@@ -15,14 +15,14 @@ ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f87a092d20fb15a23e21a7ef9f0094e40eedeb57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965597"
 ---
 # <a name="parentcatalog-property-example-vb"></a>Exemplo da propriedade ParentCatalog (VB)
-O código a seguir demonstra como usar o [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) propriedade para acessar uma propriedade específica do provedor antes do acréscimo de uma tabela em um catálogo. A propriedade é **AutoIncrement**, que cria um campo de incremento automático em um banco de dados Microsoft Jet.  
+O código a seguir demonstra como usar a propriedade [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) para acessar uma propriedade específica do provedor antes de acrescentar uma tabela a um catálogo. A propriedade é **AutoIncrement**, que cria um campo AutoIncrement em um banco de dados Microsoft Jet.  
   
 ```  
 ' BeginCreateAutoIncrColumnVB  
@@ -83,10 +83,10 @@ End Sub
 ' EndCreateAutoIncrColumnVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Acrescentar o método (colunas do ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Acrescentar o método (tabelas do ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Método Append (colunas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Método Append (tabelas ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Coleção Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Propriedade Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   

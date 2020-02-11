@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062216"
 ---
 # <a name="active-operations-dialog-box"></a>Caixa de diálogo Operações Ativas
@@ -27,7 +27,7 @@ ms.locfileid: "66062216"
   
  **O que você deseja fazer?**  
   
-1.  [Abrir a caixa de diálogo Operações Ativas](#open_dialog)  
+1.  [Abrir a caixa de diálogo operações ativas](#open_dialog)  
   
 2.  [Configurar as opções](#options)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66062216"
   
 ### <a name="options"></a>Opções  
  **Tipo**  
- Especifica o tipo de operação. A seguir estão os valores possíveis para o **tipo** campo e os valores correspondentes na coluna operations_type da Transact-SQL `catalog.operations` modo de exibição.  
+ Especifica o tipo de operação. A seguir estão os valores possíveis para o campo **Type** e os valores correspondentes na coluna operations_type da exibição TRANSACT-SQL `catalog.operations` .  
   
 |||  
 |-|-|  
@@ -56,7 +56,7 @@ ms.locfileid: "66062216"
 |Parar operação (parando uma validação ou execução|202|  
 |Validar projeto|300|  
 |Validar pacote|301|  
-|Configurar catálogo|1\.000|  
+|Configurar catálogo|1000|  
   
  **Parar**  
  Clique para parar uma operação em execução no momento.  

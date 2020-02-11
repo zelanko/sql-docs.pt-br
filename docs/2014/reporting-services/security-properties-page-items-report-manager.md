@@ -1,5 +1,5 @@
 ---
-title: Página de propriedades de segurança, itens (Gerenciador de relatórios) | Microsoft Docs
+title: Página Propriedades de segurança, itens (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102164"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Página Propriedades de Segurança, Itens (Gerenciador de Relatórios)
@@ -39,7 +39,7 @@ ms.locfileid: "66102164"
   
     -   Clique em **Gerenciar** para abrir a página Propriedades Gerais do item. Em seguida, selecione a guia **Segurança** .  
   
- **Editar Segurança de Item**  
+ **Editar segurança de item**  
  Clique para alterar a maneira como a segurança é definida para o item atual. Se você estiver editando segurança para uma pasta, suas alterações se aplicarão ao conteúdo da pasta atual e de quaisquer subpastas.  
   
  Esse botão não está disponível para a pasta Base.  
@@ -50,19 +50,19 @@ ms.locfileid: "66102164"
  Marque a caixa de seleção próximo ao grupo ou nome de usuário que você quer excluir e clique em **Excluir**. Você não pode excluir uma atribuição de função se ela for a única ou se for uma atribuição de função interna (por exemplo, "Built-in\Administrators") que define os parâmetros de segurança do servidor de relatório. A exclusão de uma atribuição de função não exclui uma conta de grupo ou usuário, nem as definições da função.  
   
  **Nova atribuição de função**  
- Clique para abrir a página Atribuição de Nova Função que é usada para criar atribuições de função adicionais para o item atual. Para obter mais informações, consulte [nova atribuição de função: Editar página de atribuição de função &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
+ Clique para abrir a página Atribuição de Nova Função que é usada para criar atribuições de função adicionais para o item atual. Para obter mais informações, consulte a [página atribuição de nova função: editar atribuição de função &#40;Report Manager&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
   
- **Reverter em segurança pai**  
+ **Reverter em Segurança Pai**  
  Clique para redefinir as configurações de segurança às da pasta pai imediata. Se a segurança não puder ser quebrada na hierarquia de pastas do servidor de relatórios, as configurações de segurança na pasta de alto nível, Base, serão usadas.  
   
- **Grupo ou usuário**  
+ **Grupo ou Usuário**  
  Lista os grupos e usuários que fazem parte de uma atribuição de função existente para o item atual. Atribuições de função existentes para a pasta atual são definidas para os grupos e usuários que aparecem nesta coluna. Você pode clicar em um grupo ou nome de usuário para exibir ou editar detalhes da atribuição de função.  
   
- **Roles**  
+ **Funções**  
  Lista uma ou mais definições de função que fazem parte de uma atribuição de função existente. Se várias funções forem atribuídas a um grupo ou conta de usuário, aquele grupo de usuários pode desempenhar todas as tarefas que pertencem àquelas funções. Para exibir as tarefas associadas a uma função, use o SQL Server Management Studio para exibir as tarefas de cada definição de função.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
  [funções predefinidas](security/role-definitions-predefined-roles.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Atribuições de função](security/role-assignments.md)   
