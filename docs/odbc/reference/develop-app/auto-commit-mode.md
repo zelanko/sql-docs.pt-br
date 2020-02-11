@@ -18,15 +18,15 @@ ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8a02d58309f123e6cc8b29d41188ba5bebb26f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909890"
 ---
 # <a name="auto-commit-mode"></a>Modo de confirmação automática
-*No modo de confirmação automática,* cada operação de banco de dados é uma transação é confirmada quando executada. Esse modo é adequado para muitas transações reais que consistem em uma única instrução SQL. Não é necessário delimitar ou especificar a conclusão dessas transações. Em bancos de dados sem suporte a transações, o modo de confirmação automática é o único modo com suporte. Nesses bancos de dados, as instruções são confirmadas quando eles são executados e não é possível revertê-los; eles são, portanto, sempre no modo de confirmação automática.  
+*No modo de confirmação automática,* cada operação de banco de dados é uma transação que é confirmada quando executada. Esse modo é adequado para muitas transações do mundo real que consistem em uma única instrução SQL. Não é necessário delimitar ou especificar a conclusão dessas transações. Em bancos de dados sem suporte a transações, o modo de confirmação automática é o único modo com suporte. Nesses bancos de dados, as instruções são confirmadas quando são executadas e não há nenhuma maneira de revertida-las; Portanto, eles estão sempre no modo de confirmação automática.  
   
- Se o DBMS subjacente não oferece suporte a transações de modo de confirmação automática, o driver poderá emulá-los ao confirmar manualmente cada instrução SQL, conforme ele é executado.  
+ Se o DBMS subjacente não oferecer suporte a transações do modo de confirmação automática, o driver poderá emular esses itens confirmando manualmente cada instrução SQL conforme ela for executada.  
   
- Se um lote de instruções SQL for executado no modo de confirmação automática, ele é específico da fonte de dados quando as instruções no lote são confirmadas. Eles podem ser confirmados conforme elas são executadas ou como um todo após todo o lote foi executado. Algumas fontes de dados podem oferecer suporte a ambos os comportamentos e podem fornecer uma maneira de selecionar um ou os outros. Em particular, se ocorrer um erro no meio do lote, ele é específico da fonte de dados se as instruções já executadas são confirmadas ou revertidas. Assim, aplicativos interoperáveis que usam lotes e exigem que eles deve ser confirmada ou revertida como um todo devem executar lotes apenas no modo de confirmação manual.
+ Se um lote de instruções SQL for executado no modo de confirmação automática, ele será específico da fonte de dados quando as instruções no lote forem confirmadas. Eles podem ser confirmados à medida que são executados ou como um todo após a execução do lote inteiro. Algumas fontes de dados podem dar suporte a esses dois comportamentos e podem fornecer uma maneira de selecionar um ou outros. Em particular, se ocorrer um erro no meio do lote, ele será específico da fonte de dados se as instruções já executadas forem confirmadas ou revertidas. Assim, aplicativos interoperáveis que usam lotes e exigem que eles sejam confirmados ou revertidos como um todo devem executar lotes somente no modo de confirmação manual.
