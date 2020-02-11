@@ -24,14 +24,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c73e75bbdf458b27d0f879a91e72ececc832b88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102489"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publicando relatórios em um servidor de relatórios
-  Depois que você criar e testar um relatório ou conjunto de relatórios, você pode usar os recursos internos de implantação no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para publicar os relatórios em um servidor de relatório. Você pode publicar relatórios individuais ou um projeto do Servidor de Relatório. A publicação de um projeto do Servidor de Relatório é a forma mais fácil de publicar vários relatórios. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa o termo *implante*, em vez termo *publicar*. Os dois termos significam o mesmo.  
+  Depois de criar e testar um relatório ou conjunto de relatórios, você pode usar os recursos de implantação internos no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para publicar os relatórios em um servidor de relatório. Você pode publicar relatórios individuais ou um projeto do Servidor de Relatório. A publicação de um projeto do Servidor de Relatório é a forma mais fácil de publicar vários relatórios. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]usa o termo *implantar*, em vez do termo *publicar*. Os dois termos significam o mesmo.  
   
  Antes de publicar um relatório, você deve ter permissão para fazer isso. A permissão é determinada por segurança baseada em função que é definida por seu administrador de servidor de relatório. As operações de publicação geralmente são concedidas pela função do Publicador.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66102489"
 ## <a name="project-configurations"></a>Configurações de projeto  
  Os relatórios são compilados antes de serem publicados para garantir que somente são publicadas definições de relatório válidas para o servidor de relatório. As configurações de projeto incluem propriedades para compilar relatórios, como a pasta na qual armazenar temporariamente os relatórios criados, e como tratar problemas de compilação. As configurações também têm propriedades que você usa para especificar o local e a versão do servidor de relatório, as pastas no servidor de relatório.  
   
- Por padrão, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fornece três configurações de projeto: DebugLocal, Debug e Release. A configuração padrão é DebugLocal. Você geralmente usa a configuração DebugLocal para exibir relatórios em uma janela de visualização local, a configuração Debug para publicar relatórios em um servidor de teste e a configuração Release para publicar relatórios em um servidor de produção. A lista suspensa Configurações da Solução na barra de ferramentas padrão mostra uma configuração ativa. Para usar uma configuração diferente, selecione da lista.  
+ Por padrão, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fornece três configurações de projeto: DebugLocal, Debug e Release. A configuração padrão é DebugLocal. Você geralmente usa a configuração DebugLocal para exibir relatórios em uma janela de visualização local, a configuração Debug para publicar relatórios em um servidor de teste e a configuração Release para publicar relatórios em um servidor de produção. A lista suspensa Configurações da Solução na barra de ferramentas padrão mostra uma configuração ativa. Para usar uma configuração diferente, selecione da lista.  
   
- Seu ambiente de relatório pode ter vários servidores de relatórios e versões diferentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalados. Você pode criar várias configurações e, em seguida, usar uma diferente dependendo do cenário de implantação. Para obter mais informações, consulte [implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) e [definir propriedades de implantação &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md).  
+ Seu ambiente de relatório pode ter vários servidores de relatórios e versões diferentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalados. Você pode criar várias configurações e, em seguida, usar uma diferente dependendo do cenário de implantação. Para obter mais informações, consulte [implantação e suporte de versão em SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) e [definir propriedades de implantação &#40;Reporting Services ](../tools/set-deployment-properties-reporting-services.md).  
   
 ## <a name="publishing-reports"></a>Publicando relatórios  
  Você pode publicar um único relatório ou um projeto do Servidor de Relatório que contêm vários relatórios. Para obter instruções sobre como publicar relatórios, consulte [publicar relatórios](../publish-reports.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "66102489"
 ### <a name="publishing-multiple-reports"></a>Publicando vários relatórios  
  Quando você publica um projeto de Servidor de Relatório, você publica todos os relatórios nesse projeto. Todos os relatórios são implantados usando a mesma configuração de projeto: no mesmo servidor de relatório, na mesma pasta no servidor, e assim por diante. Para publicar relatórios em servidores diferentes, publique-os um por um ou somente inclua os relatórios desejados no projeto do Servidor de Relatório. Uma solução pode incluir vários projetos do Servidor de Relatório. Usar vários projetos pode facilitar o gerenciamento da implantação de relatórios, porque você pode usar uma configuração diferente para implantar projetos diferentes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Caixa de diálogo Páginas de Propriedades do Projeto](../tools/project-property-pages-dialog-box.md)   
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Atualizar relatórios](../install-windows/upgrade-reports.md)  

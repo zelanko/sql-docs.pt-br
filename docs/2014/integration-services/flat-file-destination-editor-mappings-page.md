@@ -1,5 +1,5 @@
 ---
-title: Editor de destino (página mapeamentos) do arquivo simples | Microsoft Docs
+title: Editor de destino de arquivo simples (página Mapeamentos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058677"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Editor de Destino de Arquivo Simples (Página Mapeamentos)
@@ -34,13 +34,13 @@ ms.locfileid: "66058677"
  Exiba a lista de colunas de destino disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de destino disponíveis para colunas de entrada.  
   
  **Coluna de Entrada**  
- Exiba as colunas de entrada selecionadas anteriormente neste tópico. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**. Selecione **\<ignorar>** para excluir a coluna da saída.  
+ Exiba as colunas de entrada selecionadas anteriormente neste tópico. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**. Selecione ** \<ignorar>** para excluir a coluna da saída.  
   
  **Coluna de Destino**  
  Exiba cada coluna de destino disponível, seja ela mapeada ou não.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Destino de Arquivo Simples &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
+ [Editor de destino de arquivo simples &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   
