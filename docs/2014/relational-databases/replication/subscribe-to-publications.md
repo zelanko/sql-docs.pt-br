@@ -25,16 +25,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629690"
 ---
 # <a name="subscribe-to-publications"></a>Assinar publicações
   Uma assinatura é uma solicitação para se obter uma cópia dos dados e objetos do banco de dados em uma publicação. Uma assinatura define qual publicação será recebida, e onde e quando será recebida. Ao planejar assinaturas, considere onde o processamento de agente deverá acontecer. O tipo de assinatura selecionado controla onde o agente é executado. Com uma assinatura push, o Agente de Mesclagem ou o Agente de Distribuição são executados no Distribuidor, enquanto que, com uma assinatura pull, os agentes são executados nos Assinantes. Após a criação de uma assinatura, ela não pode ser alterada de um tipo para outro.  
   
-|Assinatura|Características|Use quando|  
+|Subscription|Características|Use quando|  
 |------------------|---------------------|--------------|  
 |Assinatura push|Em uma assinatura push, o Publicador propaga alterações para o Assinante sem solicitação do Assinante. As alterações podem ser empurradas para os Assinantes sob demanda continuamente ou com base em agendamento. O Agente de Distribuição ou o Agente de Mesclagem são executados no Distribuidor.|Os dados são sincronizados de forma contínua ou com base em uma agenda que recorre com frequência.<br /><br /> As publicações requerem movimentação de dados tempo quase real.<br /><br /> A sobrecarga do processador superior no Distribuidor não afeta o desempenho.<br /><br /> É usado com mais frequência com replicação transacional e de instantâneo.|  
 |Assinatura pull|Em uma assinatura pull, o Assinante solicita que alterações sejam feitas no Publicador. As assinaturas pull permitem que o usuário, no Assinante, determine quando as alterações de dados serão sincronizadas. O Agente de Distribuição ou o Agente de Mesclagem são executados no Assinante.|Em geral, os dados são sincronizados sob demanda ou com base em uma agenda, em vez de continuamente.<br /><br /> A publicação tem um grande número de Assinantes, e/ou demandaria muitos recursos para executar todos os agentes no Distribuidor.<br /><br /> Os assinantes são autônomos, desconectados, e/ou móveis. Os assinantes determinam quando as alterações são conectadas e sincronizadas.<br /><br /> Usado com mais frequência com replicação de mesclagem.|  
@@ -64,7 +64,7 @@ ms.locfileid: "62629690"
   
  **Para criar uma assinatura push**  
   
- [Create a Push Subscription](create-a-push-subscription.md)  
+ [Criar uma Assinatura Push](create-a-push-subscription.md)  
   
  **Para exibir ou modificar propriedades de assinatura push**  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62629690"
   
  [Excluir uma assinatura pull](delete-a-pull-subscription.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Proteger o Assinante](security/secure-the-subscriber.md)   
  [Desativação e expiração de assinatura](subscription-expiration-and-deactivation.md)  
   

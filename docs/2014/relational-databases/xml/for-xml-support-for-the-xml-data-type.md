@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205003"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Suporte a FOR XML para o tipo de dados xml
   Se uma consulta FOR XML especificar uma coluna de tipo `xml` na cláusula SELECT, os valores da coluna serão mapeados como elementos no XML retornado, independentemente da diretiva ELEMENTS estar especificada. Qualquer declaração XML na coluna de tipo `xml` não é serializada.  
   
- Por exemplo, a consulta a seguir recupera informações de contato do cliente, tais como o `BusinessEntityID`, `FirstName`, e `LastName` colunas e os números de telefone dos `AdditionalContactInfo` coluna de `xml` tipo.  
+ Por exemplo, a consulta a seguir recupera informações de contato do cliente `BusinessEntityID`, `FirstName`como as `LastName` colunas, e, e os números de `AdditionalContactInfo` telefone da `xml` coluna do tipo.  
   
 ```  
 USE AdventureWorks2012;  
@@ -203,7 +203,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Suporte a FOR XML para vários tipos de dados SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Suporte a FOR XML para vários tipos de dados de SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
   
   

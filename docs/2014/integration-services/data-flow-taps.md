@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059912"
 ---
 # <a name="data-flow-taps"></a>Toques de Fluxo de Dados
-  O [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduz um novo recurso que permite adicionar um toque de dados em um caminho de fluxo de dados de um pacote em tempo de execução e direcionar a saída do toque de dados para um arquivo externo. Para usar esse recurso, você deverá implantar seu projeto SSIS usando o modelo de implantação de projeto em um servidor SSIS. Depois que você implantar o pacote no servidor, precisará executar scripts T-SQL no banco de dados SSISDB para adicionar toques de dados antes de executar o pacote. Aqui está um cenário de exemplo:  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]apresenta um novo recurso que permite adicionar um toque de dados em um caminho de fluxo de dados de um pacote em tempo de execução e direcionar a saída do toque de dados para um arquivo externo. Para usar esse recurso, você deverá implantar seu projeto SSIS usando o modelo de implantação de projeto em um servidor SSIS. Depois que você implantar o pacote no servidor, precisará executar scripts T-SQL no banco de dados SSISDB para adicionar toques de dados antes de executar o pacote. Aqui está um cenário de exemplo:  
   
 1.  Crie uma instância de execução de um pacote usando o procedimento armazenado [catalog.create_execution &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database).  
   
@@ -77,10 +77,10 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  Habilitar o nível de log detalhado e adicionar toques de dados aumenta as operações de E/S executadas por sua solução de integração de dados. Consequentemente, recomendamos que você adicione toques de dados somente para fins de solução de problemas  
   
 ## <a name="video"></a>Vídeo  
- Esse [vídeo no TechNet](https://technet.microsoft.com/sqlserver/dn600163) demonstra como adicionar/usar toques de dados no catálogo SSISDB do SQL Server 2012 que ajudam a depurar pacotes programaticamente e capturar resultados parciais em tempo de execução. Ele também discute como listar/remover esses toques de dados e as práticas recomendadas para usar os toque de dados em pacotes SSIS.  
+ Esse [vídeo no TechNet](https://technet.microsoft.com/sqlserver/dn600163) demonstra como adicionar/usar toques de dados no catálogo SSISDB do SQL Server 2012 que ajudam a depurar pacotes programaticamente e capturar resultados parciais em runtime. Ele também discute como listar/remover esses toques de dados e as práticas recomendadas para usar os toque de dados em pacotes SSIS.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Depurando fluxo de dados](troubleshooting/debugging-data-flow.md)  
+ [Depurar o fluxo de dados](troubleshooting/debugging-data-flow.md)  
   
  [Ferramentas de solução de problemas de execução de pacote](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
