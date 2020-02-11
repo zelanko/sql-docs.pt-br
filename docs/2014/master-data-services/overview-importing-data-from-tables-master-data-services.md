@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7f5f5e7d6c4706dee09c90237c2363f6cbf46b02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479011"
 ---
 # <a name="data-import-master-data-services"></a>Importação de dados (Master Data Services)
   Depois de criar um modelo para seus dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode começar a adicionar dados e fazer alterações nos dados, no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   Você usa as tabelas de preparo do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , procedimentos armazenados e o Master Data Manager.  
   
- Você também pode usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]para adicionar dados ao repositório do MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados). Para obter mais informações, consulte [dados de publicação &#40;suplemento MDS para Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+ Você também pode usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], para adicionar dados ao repositório do MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dado). Para obter mais informações, consulte [Publishing Data &#40;Suplemento MDS para Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  Ao adicionar e atualizar dados, você pode realizar os procedimentos a seguir.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "65479011"
 ## <a name="staging-tables-and-stored-procedures"></a>Tabelas de preparo e procedimentos armazenados  
  O banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclui os seguintes tipos de tabelas de preparo que você pode preencher com seus dados.  
   
--   [Tabela de preparo de membros folha &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [Tabela de preparo de membro folha &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
 -   [Tabela de preparo de membros consolidados &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [Tabela de preparo de relações &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [Tabela de preparação de relações &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
  Para cada entidade no modelo, existe uma tabela de preparo. O nome da tabela indica a entidade correspondente e o tipo de entidade como membro folha. A imagem a seguir mostra as tabelas de preparo para as entidades de moeda, cliente e produto.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65479011"
   
  Para cada entidade no modelo, há três procedimentos armazenados que correspondem ao membro folha, membros consolidados e tabelas de preparo de relação.  A imagem a seguir mostra as tabelas de procedimentos de preparo armazenado para as entidades de moeda, cliente e produto.  
   
- ![Procedimentos armazenados de preparo no banco de dados do MDS](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "procedimentos armazenados de preparo no banco de dados do MDS")  
+ ![Preparando procedimentos armazenados no banco de dados do MDS](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "Preparando procedimentos armazenados no banco de dados do MDS")  
   
  Para obter mais informações sobre os procedimentos armazenados, consulte [Preparando um procedimento armazenado &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "65479011"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Validação &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [Master Data Services de &#40;de validação&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
 -   [Regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   

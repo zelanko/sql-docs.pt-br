@@ -1,5 +1,5 @@
 ---
-title: 'Atribuição de Nova Função: Editar página atribuição de função (Gerenciador de relatórios) | Microsoft Docs'
+title: 'Atribuição de nova função: página Editar atribuição de função (Report Manager) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108163"
 ---
-# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Atribuição de Nova Função: Editar página atribuição de função (Gerenciador de relatórios)
+# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Página Atribuição de Nova Função: Editar Atribuição de Função (Gerenciador de Relatórios)
   Use a página Atribuição de Nova Função ou Editar Atribuição de Função para conceder permissões a itens de servidor de relatório e operações. Cada usuário que solicita acesso a um servidor de relatórios deve ter uma atribuição de função que define o nível de acesso. Você pode criar atribuições de função no nó raiz ou em determinado relatório, modelo, pasta, recurso ou fonte de dados compartilhada. A segurança do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é imposta pelas atribuições de função que você aplica aos itens. Uma atribuição de função faz a correspondência entre um grupo ou usuário e uma definição de função, sendo que cada definição identifica as tarefas que os grupos ou usuários podem executar em um item específico.  
   
  As atribuições de função no nível de item podem ter um grande impacto. Embora elas possam ser associadas a um único relatório ou pasta, também podem ser definidas em um nível mais alto na hierarquia de pastas e podem ser herdadas por pastas e itens que estão na parte inferior da árvore. Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](security/grant-user-access-to-a-report-server.md).  
@@ -39,14 +39,14 @@ ms.locfileid: "66108163"
     >  Se um item atualmente herda a segurança de um item pai, clique em **Editar Segurança de Item** na barra de ferramentas para alterar as configurações de segurança.  
   
 ## <a name="options"></a>Opções  
- **Nome do grupo ou usuário**  
- Digite o nome de uma conta de grupo ou de usuário para a qual a atribuição de função está sendo criada. O nome do grupo ou usuário deve ser uma conta de domínio do Windows válida. Insira a conta neste formato: \<domínio >\\< conta\>.  
+ **Nome do Grupo ou do Usuário**  
+ Digite o nome de uma conta de grupo ou de usuário para a qual a atribuição de função está sendo criada. O nome do grupo ou usuário deve ser uma conta de domínio do Windows válida. Insira a conta neste formato: \<domínio>\\ conta\>de<.  
   
 > [!NOTE]  
 >  Esta caixa só está disponível na página Atribuição de Nova Função.  
   
  **Função**  
- Mostra todas as funções definidas no servidor de relatório que podem ser usadas para definir a segurança dos itens. Quando você cria ou altera uma atribuição de função para um relatório ou pasta, selecione uma ou mais funções até que o conjunto combinado de tarefas descreva as ações que o usuário deve ter permissão de executar. Para exibir o conjunto de tarefas a que cada função dá suporte, use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Você não pode exibir, criar, modificar ou excluir funções no Gerenciador de Relatórios. Para obter instruções, consulte [criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ Mostra todas as funções definidas no servidor de relatório que podem ser usadas para definir a segurança dos itens. Quando você cria ou altera uma atribuição de função para um relatório ou pasta, selecione uma ou mais funções até que o conjunto combinado de tarefas descreva as ações que o usuário deve ter permissão de executar. Para exibir o conjunto de tarefas que cada função dá suporte, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]use. Você não pode exibir, criar, modificar ou excluir funções no Gerenciador de Relatórios. Para obter instruções, consulte [criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
  **Descrição**  
  Exibe informações adicionais sobre a função. Para funções predefinidas como **Navegador** ou **Gerenciador de Conteúdo**, a descrição resume as tarefas para as quais cada função dá suporte.  
@@ -57,11 +57,11 @@ ms.locfileid: "66108163"
 > [!NOTE]  
 >  Este botão só está disponível na página Editar Atribuição de Função.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
  [Atribuições de função](security/role-assignments.md)   
  [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](security/grant-user-access-to-a-report-server.md)  
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162358"
 ---
 # <a name="create-unique-indexes"></a>Criar índices exclusivos
@@ -120,11 +120,11 @@ ms.locfileid: "63162358"
   
 11. Na grade, em **(Geral)** , selecione **É Exclusivo** e escolha **Sim** na lista.  
   
-12. Opcional: Na grade principal, sob **Designer de tabela**, selecione **ignorar chaves duplicadas** e, em seguida, escolha **Sim** na lista. Faça isso se você desejar ignorar as tentativas de adição de dados que criariam uma chave duplicada no índice exclusivo.  
+12. Opcional: na grade principal, em **Designer de Tabela**, selecione **Ignorar Chaves Duplicadas** e escolha **Sim** na lista. Faça isso se você desejar ignorar as tentativas de adição de dados que criariam uma chave duplicada no índice exclusivo.  
   
-13. Clique em **Fechar**.  
+13. Clique em **fechar**  
   
-14. No menu **Arquivo** , clique em **Salvar**_table_name_.  
+14. No menu **arquivo** , clique em **salvar**_table_name_.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Crie um índice exclusivo usando o Pesquisador de Objetos  
   
@@ -142,7 +142,7 @@ ms.locfileid: "63162358"
   
 7.  Em **Colunas de chave de índice**, clique em **Adicionar...** .  
   
-8.  Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
+8.  Na caixa de diálogo **selecionar colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
   
 9. Clique em **OK**.  
   

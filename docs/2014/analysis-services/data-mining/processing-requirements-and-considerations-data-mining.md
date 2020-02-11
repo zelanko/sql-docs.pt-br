@@ -1,5 +1,5 @@
 ---
-title: Processamento de requisitos e considerações (mineração de dados) | Microsoft Docs
+title: Requisitos e considerações de processamento (mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083126"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisitos e considerações de processamento (mineração de dados)
   Este tópico descreve algumas considerações técnicas para lembrar ao processar objetos de mineração de dados. Para obter uma explicação geral do que é processamento e como isso se aplica à mineração de dados, consulte [Processando objetos de Data Mining](processing-data-mining-objects.md).  
   
- [Consultas em repositório relacional](#bkmk_QueryReqs)  
+ [Consultas no repositório relacional](#bkmk_QueryReqs)  
   
  [Processando estruturas de mineração](#bkmk_ProcessStructures)  
   
- [Processando os modelos de mineração](#bkmk_ProcessModels)  
+ [Processando modelos de mineração](#bkmk_ProcessModels)  
   
-##  <a name="bkmk_QueryReqs"></a> Consultas no repositório relacional durante o processamento  
+##  <a name="bkmk_QueryReqs"></a>Consultas no repositório relacional durante o processamento  
  Para a mineração de dados, o processamento tem três fases: consultar a fonte de dados, determinar estatísticas brutas e usar a definição e o algoritmo do modelo para treinar o modelo de mineração.  
   
  O servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emite consultas para o banco de dados que fornece os dados brutos. Esse banco de dados pode ser uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou uma versão anterior do mecanismo de banco de dados do SQL Server. Quando você processa uma estrutura de mineração de dados, os dados da fonte são transferidos para a estrutura de mineração e mantidos no disco em um novo formato compactado. Nem todas as colunas da fonte de dados são processadas; apenas as colunas incluídas na estrutura de mineração, de acordo com as associações.  
@@ -39,18 +39,18 @@ ms.locfileid: "66083126"
   
  Quando você processa um modelo, ele não relê os dados da fonte de dados. Em vez disso, ele obtém o resumo dos dados da estrutura de mineração. Com o uso do cubo criado, junto com o cache do índice e os dados de caso em cache, o servidor cria threads independentes para treinar os modelos.  
   
- Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte ao processamento paralelo de modelo, consulte [recursos compatíveis com as edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+ Para obter mais informações sobre as edições [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do que dão suporte ao processamento de modelo paralelo, consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
-##  <a name="bkmk_ProcessStructures"></a> Processando estruturas de mineração  
+##  <a name="bkmk_ProcessStructures"></a>Processando estruturas de mineração  
  Uma estrutura de mineração pode ser processada junto com todos os modelos dependentes, ou separadamente. Processar uma estrutura de mineração separadamente de modelos pode ser útil quando é esperado que alguns modelos levem muito tempo para processar e você deseja adiar essa operação.  
   
  Para obter mais informações, consulte [Processar uma estrutura de mineração](process-a-mining-structure.md).  
   
- Se você estiver preocupado em conservar espaço no disco rígido, observe que a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retém caches de estrutura de mineração localmente. Ou seja, ela grava todos os dados de treinamento no seu disco rígido local. Se não quiser que seus dados sejam armazenados em cache, poderá alterar o padrão configurando a propriedade <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> na estrutura de mineração como `ClearAfterProcessing`. Isso destruirá o cache após o processamento dos modelos. No entanto, também desabilitará a análise na estrutura de mineração. Para obter mais informações, consulte [Consultas de detalhamento &#40;Mineração de dados&#41;](drillthrough-queries-data-mining.md).  
+ Se você estiver preocupado em conservar espaço no disco rígido, observe que a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retém caches de estrutura de mineração localmente. Ou seja, ela grava todos os dados de treinamento no seu disco rígido local. Se não quiser que seus dados sejam armazenados em cache, poderá alterar o padrão configurando a propriedade <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> na estrutura de mineração como `ClearAfterProcessing`. Isso destruirá o cache após o processamento dos modelos. No entanto, também desabilitará a análise na estrutura de mineração. Para obter mais informações, consulte [Drillthrough Queries &#40;Data Mining&#41;](drillthrough-queries-data-mining.md).  
   
  Além disso, se limpar o cache, não poderá usar o conjunto de testes de validação, se houver definido um, e a definição da partição do conjunto de testes será perdida. Para obter mais informações sobre como usar conjuntos de dados de controle, consulte [Conjuntos de dados de teste e treinamento](training-and-testing-data-sets.md).  
   
-##  <a name="bkmk_ProcessModels"></a> Processando os modelos de mineração  
+##  <a name="bkmk_ProcessModels"></a>Processando modelos de mineração  
  Você pode processar um modelo de mineração separadamente de sua estrutura de mineração associada ou pode processar todos os modelos que estão baseados na estrutura, junto com a estrutura.  
   
  Para obter mais informações, consulte [Processar um modelo de mineração](process-a-mining-model.md).  
@@ -62,13 +62,13 @@ ms.locfileid: "66083126"
   
  Os modelos de mineração também são processados nestes cenários:  
   
- **Implantação de um projeto**: Dependendo das configurações do projeto e o estado atual do projeto, os modelos de mineração no projeto são geralmente processados completamente quando o projeto é implantado.  
+ **Implantação de um projeto**: dependendo das configurações do projeto e do estado atual do projeto, os modelos de mineração no projeto geralmente são processados em total quando o projeto é implantado.  
   
  Ao iniciar a implantação, o processamento começa automaticamente, a menos que exista uma versão processada anteriormente no servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e não houve mudanças na estrutura. É possível implantar um projeto selecionando **Implantar solução** na lista suspensa ou pressionando a tecla F5. É possível  
   
  Para obter mais informações sobre como definir propriedades de implantação no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que controlam como os modelos de mineração são implantados, consulte [Implantação de soluções de Data Mining](deployment-of-data-mining-solutions.md).  
   
- **Movendo um modelo de mineração**: Quando você move um modelo de mineração usando o comando EXPORT, somente a definição do modelo é exportada, o que inclui o nome da estrutura de mineração que é esperado para fornecer dados para o modelo.  
+ **Movendo um modelo de mineração**: quando você move um modelo de mineração usando o comando exportar, somente a definição do modelo é exportada, o que inclui o nome da estrutura de mineração que deve fornecer dados ao modelo.  
   
  Reprocessando requisitos para os cenários a seguir usando os comandos EXPORT e IMPORT:  
   
@@ -86,9 +86,9 @@ ms.locfileid: "66083126"
   
  Para obter mais informações, consulte [Exportar e importar objetos de Data Mining](export-and-import-data-mining-objects.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
  [Processamento de objetos de modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

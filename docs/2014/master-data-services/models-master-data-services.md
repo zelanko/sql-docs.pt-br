@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482545"
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
@@ -44,7 +44,7 @@ ms.locfileid: "65482545"
   
  Esta imagem mostra as relações entre os objetos em um modelo.  
   
- ![Objetos em um modelo do Master Data Services](../../2014/master-data-services/media/mds-conc-model-circles.gif "Objetos em um modelo do Master Data Services")  
+ ![Objetos em um modelo de Master Data Services](../../2014/master-data-services/media/mds-conc-model-circles.gif "Objetos em um modelo de Master Data Services")  
   
 > [!NOTE]  
 >  As hierarquias derivadas também são objetos de modelo, mas elas não são mostradas na imagem. As hierarquias derivadas são derivadas de relações de atributos baseados em domínio que existem entre entidades. Consulte [Hierarquias derivadas &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md) para obter mais informações.  
@@ -56,7 +56,7 @@ ms.locfileid: "65482545"
 ## <a name="model-example"></a>Exemplo de modelo  
  No exemplo a seguir, os objetos no modelo Product agrupam logicamente os dados relativos aos produtos.  
   
- ![Exemplo de dados mestre do modelo de produto](../../2014/master-data-services/media/mds-conc-model.gif "Exemplo de dados mestre do modelo de produto")  
+ ![Exemplo de dados mestre de modelo de produto](../../2014/master-data-services/media/mds-conc-model.gif "Exemplo de dados mestre de modelo de produto")  
   
  Outros modelos comuns são:  
   

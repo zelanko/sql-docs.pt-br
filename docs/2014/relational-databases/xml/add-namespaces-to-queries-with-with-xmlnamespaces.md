@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbb7cbdda657ef59491cfbb2c1651b969d04428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287707"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Adicionar namespaces a consultas com WITH XMLNAMESPACES
@@ -45,7 +45,7 @@ WHERE  ProductID=316 or ProductID=317
 FOR XML RAW  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <row ProductID="316" Name="Blade" />  
@@ -192,7 +192,7 @@ go
   
  Os atributos @xml:lang usam o namespace de XML predefinido. Como o XML versão 1.0 não requer a declaração explícita da associação do namespace xml, o resultado não incluirá uma declaração explícita da associação de namespace.  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <Translation>  
@@ -242,7 +242,7 @@ Go
   
  Observe que uma declaração explícita no prólogo de XQuery substitui o prefixo de namespace e o namespace do elemento padrão definidos na cláusula WITH.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos de tipos de dados xml](/sql/t-sql/xml/xml-data-type-methods)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)   
  [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](/sql/t-sql/xml/with-xmlnamespaces)   

@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150711"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitorar e ajustar o desempenho
@@ -41,7 +41,7 @@ ms.locfileid: "63150711"
  A avaliação contínua do desempenho de banco de dados ajuda a minimizar tempos de resposta e a maximizar a taxa de transferência, permitindo alcançar desempenho ótimo. Tráfego de rede, E/S de disco e uso de CPU eficientes são fundamentais para um desempenho ótimo. É preciso analisar minuciosamente os requisitos de aplicativos, compreender a estrutura lógica e física dos dados, avaliar o uso de banco de dados e negociar compensações entre usos conflitantes, tais como a do processamento de transações online (OLTP) versus o apoio à decisão.  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>Benefícios de monitorar e ajustar bancos de dados para desempenho  
- O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o sistema operacional Microsoft Windows fornecem utilitários que lhe permitem visualizar a condição atual do banco de dados e rastrear o desempenho conforme as condições mudam. Há uma variedade de ferramentas e técnicas que podem ser usadas para monitorar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Compreender como monitorar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ajudá-lo a:  
+ O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o sistema operacional Microsoft Windows fornecem utilitários que lhe permitem visualizar a condição atual do banco de dados e rastrear o desempenho conforme as condições mudam. Há uma variedade de ferramentas e técnicas que podem ser usadas para monitorar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o. Compreender como monitorar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ajudá-lo a:  
   
 -   Determinar se o desempenho pode ser melhorado. Por exemplo, ao monitorar os tempos de resposta a consultas utilizadas com frequência, é possível determinar se são necessárias alterações na consulta ou nos índices das tabelas.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "63150711"
 |[Identificar afunilamentos](identify-bottlenecks.md)|Descreve como monitorar e acompanhar o desempenho de servidor para identificar gargalos.|  
 |[Monitoramento de desempenho e atividade de servidor](server-performance-and-activity-monitoring.md)|Descreve como usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as ferramentas de monitoramento de desempenho e atividades do Windows.|  
 |[Exibir e salvar planos de execução](display-and-save-execution-plans.md)|Descreve como exibir e salvar planos de execução em um arquivo em formato XML.|  
-|[Monitorando o desempenho com o repositório de consultas](monitoring-performance-by-using-the-query-store.md)|O Armazenamento de Consulta captura automaticamente um histórico das consultas, planos e estatísticas de tempo de execução e os mantém para sua análise.|  
+|[Monitorando o desempenho com o repositório de consultas](monitoring-performance-by-using-the-query-store.md)|O Armazenamento de Consulta captura automaticamente um histórico das consultas, planos e estatísticas de runtime e os mantém para sua análise.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração automatizada em toda a empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   

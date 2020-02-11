@@ -1,5 +1,5 @@
 ---
-title: Propriedades de publicador de replicação do SQL Server | Microsoft Docs
+title: Propriedades do Publicador Replicação do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261983"
 ---
-# <a name="sql-server-replication-publisher-properties"></a>Propriedades de publicador de replicação do SQL Server
-  Esta seção contém informações sobre as propriedades do publicador disponíveis no distribuidor e publicador. 
+# <a name="sql-server-replication-publisher-properties"></a>Propriedades do Publicador Replicação do SQL Server
+  Esta seção contém informações sobre as propriedades do Publicador disponíveis no distribuidor e no Publicador. 
 
 ## <a name="general"></a>Geral  
   A página **Geral** da caixa de diálogo **Propriedades do Publicador** exibe informações somente leitura no Distribuidor e no banco de dados de distribuição que o Publicador usa. Para alterar o Distribuidor ou o banco de dados de um Publicador:  
@@ -66,7 +66,7 @@ ms.locfileid: "63261983"
 
 ## <a name="subscribers"></a>Publicadores
 
-  A página **Publicadores** da caixa de diálogo **Propriedades do Publicador** é usada por Editores que executam versões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. A página permite habilitar Publicadores a receber dados de publicações neste Publicador. Permitir que um Assinante receba dados deste Publicador não cria assinaturas para publicações neste Publicador. Para criar uma assinatura, você deve usar o Assistente para Nova Assinatura.  
+  A página **Assinantes** da caixa de diálogo **Propriedades do Editor** é usada por Editores que executam versões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. A página permite habilitar Publicadores a receber dados de publicações neste Publicador. Permitir que um Assinante receba dados deste Publicador não cria assinaturas para publicações neste Publicador. Para criar uma assinatura, você deve usar o Assistente para Nova Assinatura.  
   
 ### <a name="options"></a>Opções  
  **Publicadores**  
@@ -75,7 +75,7 @@ ms.locfileid: "63261983"
  **Adicionar**  
  Clique em **Adicionar** para adicionar um Assinante e depois clique em **Adicionar Assinante SQL Server** ou **Adicionar Assinante não SQL Server**.  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de Publicador e Distribuidor](view-and-modify-distributor-and-publisher-properties.md)   
 
   

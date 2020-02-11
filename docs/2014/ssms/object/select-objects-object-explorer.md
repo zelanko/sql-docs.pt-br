@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08b27cdf4c3b50e1605a9e35f54eaebbdc2bb5bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63182898"
 ---
 # <a name="select-objects-object-explorer"></a>Selecionar objetos (Pesquisador de Objetos)
-  Use a caixa de diálogo **Selecionar Objetos** para adicionar um objeto a uma lista em outra caixa de diálogo. O título da caixa de diálogo e as opções disponíveis na caixa de diálogo dependem de como foram abertos. Aparecerão somente opções disponíveis; por exemplo, só estão disponíveis logons quando você está selecionando um proprietário para um objeto novo.  
+  Use a caixa de diálogo **selecionar objetos** para adicionar um objeto a uma lista em outra caixa de diálogo. O título da caixa de diálogo e as opções disponíveis na caixa de diálogo dependem de como foram abertos. Aparecerão somente opções disponíveis; por exemplo, só estão disponíveis logons quando você está selecionando um proprietário para um objeto novo.  
   
 ## <a name="options"></a>Opções  
- **Selecionar esses tipos de objeto**  
- Exibe uma lista dos tipos aos quais pertencem os objetos a ser selecionados. Os tipos incluem entidades de segurança e protegíveis no nível do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do banco de dados. Essa caixa é preenchida com as seleções feitas na caixa de diálogo **Selecionar Tipos de Objeto** , acessada do botão **Tipo de Objetos** .  
+ **Selecionar estes tipos de objeto**  
+ Exibe uma lista dos tipos aos quais pertencem os objetos a ser selecionados. Os tipos incluem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entidades de segurança e protegíveis de nível de banco de dados. Essa caixa é preenchida com as seleções feitas na caixa de diálogo **Selecionar Tipos de Objeto** , acessada do botão **Tipo de Objetos** .  
   
- **Digite os nomes de objeto a selecionar**  
+ **Insira os nomes de objeto a serem selecionados**  
  Digite uma lista separada por ponto-e-vírgula com os nomes dos objetos a ser selecionados. Os objetos a serem selecionados devem ser de um tipo listado na caixa **Selecionar esses tipos de objeto** . Os objetos podem ser selecionados de uma lista acessada clicando no botão **Procurar** .  
   
  **Tipos de objeto**  
  Exibe uma lista de tipos de objeto. Selecione um ou mais marcando a caixa de seleção que corresponde ao tipo.  
   
- **Verificar Nomes**  
+ **Verificar nomes**  
  Valida os nomes de objeto na caixa **Digitar os nomes de objeto a selecionar** . Se for listado um nome de objeto inválido, será mostrada a caixa de diálogo **Nome não Encontrado** . Com essa caixa de diálogo, o nome pode ser corrigido ou removido da lista de objetos a selecionar.  
   
  **Procurar**  

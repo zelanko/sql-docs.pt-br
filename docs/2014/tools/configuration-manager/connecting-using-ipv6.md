@@ -1,5 +1,5 @@
 ---
-title: Conectando-se usando IPv6 | Microsoft Docs
+title: Conectando usando IPv6 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db26351430c6b7e0737273b2107bea242c455a2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253777"
 ---
 # <a name="connecting-using-ipv6"></a>Conectando com o uso de IPv6
@@ -35,7 +35,7 @@ ms.locfileid: "63253777"
     > [!NOTE]  
     >  Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não estiver escutando no IPv4, a conexão IPv4 tentada deverá aguardar o período do tempo limite para que o endereço IPv6 seja tentado. Para evitar isso, conecte-se diretamente ao endereço IP IPv6 ou configure um alias no cliente com o endereço IPv6.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)  
   
   

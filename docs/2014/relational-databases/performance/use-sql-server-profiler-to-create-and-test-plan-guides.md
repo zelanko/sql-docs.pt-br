@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150485"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usar o SQL Server Profiler para criar e testar guias de plano
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Abra o arquivo de texto em lote no Bloco de Notas e copie o texto no buffer copiar e colar.  
   
-8.  Crie o guia de plano e cole o texto copiado dentro das aspas ( **''** ) especificadas para o argumento **@stmt** . Você deve escapar todas as aspas únicas no argumento **@stmt** , precedendo-as com outra aspa única. Tenha cuidado para não adicionar ou remover nenhum outro caractere quando você inserir essas aspas individuais. Por exemplo, a literal de data **'** 20000101 **'** deve ser delimitada como **20000101**" **.**  
+8.  Crie o guia de plano e cole o texto copiado dentro das aspas (**''**) especificadas para o argumento **@stmt** . Você deve escapar entre aspas simples no **@stmt** argumento, precedendo-as com outra aspa simples. Tenha cuidado para não adicionar ou remover nenhum outro caractere quando você inserir essas aspas individuais. Por exemplo, a literal de data **'** 20000101 **'** deve ser delimitada como **20000101**" **.**  
   
  Aqui está o guia de plano:  
   
@@ -96,7 +96,7 @@ EXEC sp_create_plan_guide
   
 5.  Se o guia de plano for do tipo OBJECT ou SQL, verifique se o evento **Plano de Execução XML** contém os atributos **PlanGuideDB** e **PlanGuideName** para o guia de plano que você espera que corresponda à consulta. Ou, no caso de um guia de plano de TEMPLATE, verifique se o evento **Plano de Execução XML** contém os atributos **TemplatePlanGuideDB** e **TemplatePlanGuideName** para o guia de plano esperada. Isto verifica se o guia de plano está funcionando. Esses atributos estão contidos no elemento do plano **\<StmtSimple>** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)  
   
   

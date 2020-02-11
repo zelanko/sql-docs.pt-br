@@ -14,33 +14,33 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482948"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Permissões de membro de hierarquia (Master Data Services)
   As permissões de membro de hierarquia são opcionais e devem ser usadas somente quando você desejar que um usuário tenha acesso limitado a membros específicos. Se você não atribuir permissões na guia **Membros da Hierarquia** , as permissões do usuário serão baseadas somente nas permissões atribuídas na guia **Modelos** .  
   
- As permissões de membros de hierarquia são atribuídas na interface do usuário do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na área funcional **Usuário e Permissões de Grupo** da guia **Membros da Hierarquia** . Estas permissões determinam quais membros um usuário pode acessar na área funcional do **Gerenciador** da interface do usuário.  
+ As permissões de membro de hierarquia são [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] atribuídas na interface do usuário, na área funcional **permissões de usuário e grupo** na guia **membros da hierarquia** . Essas permissões determinam quais membros um usuário pode acessar na área funcional do **Gerenciador** da interface do usuário.  
   
  Na guia **Membros da Hierarquia** , cada hierarquia é representada como uma estrutura de árvore. Quando você atribuir permissão para um nó na árvore, todos os filhos herdam essa permissão a menos que ela seja atribuída explicitamente a um nível inferior.  
   
 > [!NOTE]  
 >  Quando você atribuir permissão para um nó em uma hierarquia, todos os membros de todos os outros nós no mesmo nível ou superior serão recusados implicitamente.  
   
- No **Gerenciador**, as permissões de membro são aplicadas em todos lugares em que o membro é exibido. Por exemplo, um membro com **somente leitura** permissão é somente leitura em quaisquer entidades, hierarquias e coleções à qual ele pertence.  
+ No **Gerenciador**, as permissões de membro são aplicadas em todos lugares em que o membro é exibido. Por exemplo, um membro com permissão **somente leitura** é somente leitura em quaisquer entidades, hierarquias e coleções às quais ele pertence.  
   
  As permissões de membro de hierarquia aplicam-se à versão do modelo que recebe as permissões, e a qualquer cópia futura da versão. Elas não se aplicam a versões anteriores a que você está atribuindo.  
   
-|Permissão|Descrição|  
+|Permissão|DESCRIÇÃO|  
 |----------------|-----------------|  
-|**Somente leitura**|Os membros são exibidos, mas o usuário não pode alterá-los. O usuário também não pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.<br /><br /> Observação: Se você atribuir **somente leitura** permissão para **raiz**, os membros sob **raiz** são somente leitura; no entanto, em hierarquias explícitas e coleções, o usuário pode mover os membros **Raiz** e pode adicionar novos membros **raiz**.|  
-|**Update (atualizar)**|Os membros são exibidos e o usuário pode alterá-los. O usuário também pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.|  
+|**Somente leitura**|Os membros são exibidos, mas o usuário não pode alterá-los. O usuário também não pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.<br /><br /> Observação: se você atribuir permissão **somente leitura** à **raiz**, os membros em **raiz** serão somente leitura; no entanto, em hierarquias explícitas e coleções, o usuário pode mover membros para **raiz** e pode adicionar novos membros à **raiz**.|  
+|**Cumulativo**|Os membros são exibidos e o usuário pode alterá-los. O usuário também pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.|  
 |**Deny**|Os membros não são exibidos.|  
   
- Na guia **Membros da Hierarquia** , as permissões que você atribui não entram em vigor imediatamente. A frequência com que as permissões são aplicadas depende da **Configuração de intervalo de processamento da segurança de membro** na tabela de Configurações do Sistema no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . É possível aplicar permissões de membros imediatamente seguindo as etapas em [Immediately Apply Member Permissions &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md).  
+ Na guia **Membros da Hierarquia** , as permissões que você atribui não entram em vigor imediatamente. A frequência com que as permissões são aplicadas depende da **Configuração de intervalo de processamento da segurança de membro** na tabela de Configurações do Sistema no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . É possível aplicar permissões de membros imediatamente seguindo as etapas em [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md).  
   
 > [!NOTE]  
 >  Não é possível atribuir permissões de membro de hierarquia a hierarquias recursivas, hierarquias derivadas com delimitações explícitas e a hierarquias derivadas com níveis ocultos.  
@@ -51,15 +51,15 @@ ms.locfileid: "65482948"
 ### <a name="when-a-member-belongs-to-multiple-hierarchies"></a>Quando um membro pertence a várias hierarquias  
  Duas ou mais hierarquias podem conter o mesmo membro.  
   
--   Se for atribuído a um nó de hierarquia **atualização** permissão e outra receber **somente leitura**, então os membros no nó serão **somente leitura**.  
+-   Se uma permissão **Update** for atribuída a um nó de hierarquia e outra for atribuída **somente leitura**, os membros do nó serão **somente leitura**.  
   
--   Se for atribuído a um nó de hierarquia **atualização** ou **somente leitura** permissão e o outro nó receber **Deny**, em seguida, os membros no nó não são exibidos.  
+-   Se uma permissão **Update** ou **somente leitura** for atribuída a um nó de hierarquia e outro nó for atribuído **negado**, os membros do nó não serão exibidos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atribuir permissões de membro de hierarquia &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [Como as permissões são determinadas &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Membros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Hierarquias &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   
- [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
+ [Aplicar permissões de membro imediatamente &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
   
   

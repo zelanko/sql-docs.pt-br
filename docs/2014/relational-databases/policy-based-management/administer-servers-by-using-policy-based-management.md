@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157118"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
@@ -124,14 +124,14 @@ ms.locfileid: "63157118"
 |Descreve como as políticas do Gerenciamento Baseado em Políticas são armazenadas.|Armazenamento do Gerenciamento Baseado em Políticas|  
 |Descreve como configurar alertas para notificar os administradores de políticas sobre falhas.|[Configurar alertas para notificar os administradores sobre falhas de políticas](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)|  
 |Descreve como criar, exibir, modificar e excluir uma condição de Gerenciamento Baseado em Políticas.|[Criar uma nova condição de gerenciamento baseado em políticas](create-a-new-policy-based-management-condition.md)<br /><br /> [Excluir uma condição de gerenciamento baseado em políticas](delete-a-policy-based-management-condition.md)<br /><br /> [Exibir ou modificar as propriedades de uma condição de gerenciamento baseado em políticas](view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
-|Descreve como criar, exibir, modificar e excluir uma política do Gerenciamento Baseado em Políticas.|[Criar uma política do gerenciamento baseado em políticas](create-a-policy-based-management-policy.md)<br /><br /> [Excluir uma política do gerenciamento baseado em políticas](delete-a-policy-based-management-policy.md)<br /><br /> [Exibir ou modificar as propriedades de uma política de gerenciamento baseado em políticas](view-or-modify-the-properties-of-a-policy-based-management-policy.md)|  
-|Descreve como exportar e importar uma política do Gerenciamento Baseado em Políticas.|[Exportar uma política do gerenciamento baseado em políticas](export-a-policy-based-management-policy.md)<br /><br /> [Importar uma política de gerenciamento baseado em políticas](import-a-policy-based-management-policy.md)|  
-|Descreve como verificar se uma instância de servidor, banco de dados, objeto de servidor ou objeto de banco de dados obedece a uma política.|[Avaliar uma política do gerenciamento baseado em políticas de um objeto](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Avaliar uma política do gerenciamento baseado em políticas dessa política](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Avaliar uma política do gerenciamento baseado em políticas em um agendamento](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
+|Descreve como criar, exibir, modificar e excluir uma política do Gerenciamento Baseado em Políticas.|[Criar uma política do Gerenciamento Baseado em Políticas](create-a-policy-based-management-policy.md)<br /><br /> [Excluir uma política do Gerenciamento Baseado em Políticas](delete-a-policy-based-management-policy.md)<br /><br /> [Exibir ou modificar as propriedades de uma política de gerenciamento baseado em políticas](view-or-modify-the-properties-of-a-policy-based-management-policy.md)|  
+|Descreve como exportar e importar uma política do Gerenciamento Baseado em Políticas.|[Exportar uma política do gerenciamento baseado em políticas](export-a-policy-based-management-policy.md)<br /><br /> [Importar política de Gerenciamento Baseado em Políticas](import-a-policy-based-management-policy.md)|  
+|Descreve como verificar se uma instância de servidor, banco de dados, objeto de servidor ou objeto de banco de dados obedece a uma política.|[Avaliar uma política do gerenciamento baseado em políticas de um objeto](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Avaliar uma política do Gerenciamento Baseado em Políticas dessa política](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Avaliar uma política do Gerenciamento Baseado em Políticas em um agendamento](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |Descreve como exibir e copiar um estado de faceta de Gerenciamento Baseado em Políticas em um arquivo.|[Trabalhando com facetas do Gerenciamento Baseado em Políticas](working-with-policy-based-management-facets.md)|  
 |Fornece um conjunto de arquivos de políticas que você pode importar como políticas de práticas recomendadas e descreve como avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de bancos de dados.|[Monitorar e impor melhores práticas usando o gerenciamento baseado em políticas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
-|Fornece os tópicos da Ajuda F1 para o nó **PolicyManagement** do Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nó de gerenciamento de política &#40;Pesquisador de objetos&#41;](../../ssms/object/object-explorer.md)|  
+|Fornece os tópicos da Ajuda F1 para o nó **PolicyManagement** do Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nó de gerenciamento de política &#40;Pesquisador de Objetos&#41;](../../ssms/object/object-explorer.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de Gerenciamento Baseado em Políticas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

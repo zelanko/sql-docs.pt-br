@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187932"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuração de visibilidade de metadados
@@ -43,7 +43,7 @@ GO
   
 |||  
 |-|-|  
-|Exibições do catálogo|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures|  
+|Exibições do catálogo|[!INCLUDE[ssDE](../../includes/ssde-md.md)]**sp_help** procedimentos armazenados|  
 |Metadados com exposição de funções internas|Exibições do esquema de informações|  
 |Exibições de compatibilidade|Propriedades estendidas|  
   
@@ -51,7 +51,8 @@ GO
   
 |||  
 |-|-|  
-|Tabelas do sistema de envio de logs|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelas do sistema do Agent|  
+|Tabelas do sistema de envio de logs|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelas do sistema do Agent|  
 |Tabelas do sistema de plano de manutenção do banco de dados|Tabelas do sistema de backup|  
 |Tabelas do sistema de replicação|Replicação e procedimento armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **sp_help**|  
   
@@ -182,17 +183,17 @@ GO
 |**sys.partition_schemes**|**sys.data_spaces**|  
 |**sys.filegroups**|**sys.destination_data_spaces**|  
 |**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
-|**sys.schemas**|**sys.configurations**|  
+|**sys.partitions**|**sys. messages**|  
+|**sys. schemas**|**sys.configurations**|  
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
  [Cláusula EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [Exibições de compatibilidade &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
+ [Exibições de compatibilidade &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   
   

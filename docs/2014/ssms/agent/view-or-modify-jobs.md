@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87e5644329742712e112fd3df97f601838f7faea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245518"
 ---
 # <a name="view-or-modify-jobs"></a>Exibir ou modificar trabalhos
@@ -35,7 +35,7 @@ ms.locfileid: "63245518"
   
 -   Opções de resposta  
   
--   Agendamentos  
+-   Agendas  
   
 -   Etapas de trabalho  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63245518"
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
- Para obter mais informações, consulte [sp_purge_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql).  
+ Para obter mais informações, consulte [sp_purge_jobhistory &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql).  
   
  Os membros da função de servidor fixa **sysadmin** podem exibir a definição ou o histórico de qualquer trabalho, bem como modificá-los.  
   
@@ -66,7 +66,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |Descreve como definir limites de tamanho para logs de históricos de trabalhos do [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|[Resize the Job History Log](resize-the-job-history-log.md)|  
 |Descreve como alterar as propriedades de trabalhos do [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|[Modify a Job](modify-a-job.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [dbo.sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
+## <a name="see-also"></a>Consulte Também  
+ [dbo. no sysjobhistory &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
   
   

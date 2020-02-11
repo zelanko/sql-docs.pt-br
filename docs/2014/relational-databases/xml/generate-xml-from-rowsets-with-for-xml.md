@@ -13,20 +13,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204990"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Gerar XML de conjuntos de linhas com FOR XML
-  Você pode gerar uma `xml` instância de tipo de dados de um conjunto de linhas usando FOR XML com o novo **tipo** diretiva.  
+  Você pode gerar uma `xml` instância de tipo de dados por meio de um conjunto de linhas usando for XML com a nova diretiva de **tipo** .  
   
- O resultado pode ser atribuído a um `xml` coluna, variável ou parâmetro de tipo de dados. Além disso, o FOR XML pode ser aninhado para gerar qualquer estrutura hierárquica. Isso torna o FOR XML aninhado muito mais conveniente de escrever do que o FOR XML EXPLICIT, mas ele pode não executar tão bem para hierarquias profundas. O FOR XML também introduz um modo de PATH novo. Esse novo modo especifica o caminho na árvore XML onde o valor de uma coluna aparece.  
+ O resultado pode ser atribuído a uma `xml` coluna, variável ou parâmetro de tipo de dados. Além disso, o FOR XML pode ser aninhado para gerar qualquer estrutura hierárquica. Isso torna o FOR XML aninhado muito mais conveniente de escrever do que o FOR XML EXPLICIT, mas ele pode não executar tão bem para hierarquias profundas. O FOR XML também introduz um modo de PATH novo. Esse novo modo especifica o caminho na árvore XML onde o valor de uma coluna aparece.  
   
  A nova diretiva **FOR XML TYPE** pode ser usada para definir exibições XML de somente leitura sobre dados relacionais com sintaxe SQL. A exibição pode ser consultada com instruções SQL e XQuery inserido, conforme mostrado no exemplo a seguir. Também é possível fazer referência a essas exibições SQL em procedimentos armazenados.  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>Exemplo: Modo SQL que retorna o tipo de dados xml gerado  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>Exemplo: Exibição SQL que retorna tipo de dados xml gerado  
  A definição da exibição SQL a seguir cria uma exibição XML sobre uma coluna relacional, pk, e autores de livros recuperados de uma coluna XML:  
   
 ```  
@@ -36,7 +36,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- A exibição V contém uma única linha com uma única columnxmlVal de tipo XML`.` ele pode ser consultado como uma `xml` instância de tipo de dados. Por exemplo, a consulta a seguir retorna o autor cujo primeiro nome é "David":  
+ A exibição V contém uma única linha com um único columnxmlVal do tipo`.` XML que pode ser consultado como uma instância `xml` de tipo de dados regular. Por exemplo, a consulta a seguir retorna o autor cujo primeiro nome é "David":  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  
@@ -45,7 +45,7 @@ FROM   V
   
  As definições da exibição SQL são um pouco semelhantes a exibições XML que são criadas usando esquemas anotados. No entanto há diferenças importantes. A definição da exibição SQL é somente leitura e deve ser manipulada com XQuery inserido. As exibições XML são criadas usando esquema anotado. Além disso, a exibição SQL materializa o resultado XML antes de aplicar a expressão XQuery, enquanto as consultas XPath nas exibições XML avaliam consultas SQL nas tabelas subjacentes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
   
   

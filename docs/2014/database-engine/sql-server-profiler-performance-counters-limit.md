@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler – limite de contadores de desempenho | Microsoft Docs
+title: Limite de contadores de desempenho de SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e64c5cc39ed8634ef2ec74f8680c84f7b66b98f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088818"
 ---
 # <a name="sql-server-profiler---performance-counters-limit"></a>SQL Server Profiler – Limite de Contadores de Desempenho
@@ -34,7 +34,7 @@ ms.locfileid: "66088818"
   
      Para selecionar todos os contadores de um objeto de desempenho, marque a caixa adjacente ao objeto. Marcando o nó mais alto, que indica o computador, você seleciona todos os objetos e contadores de desempenho contidos no arquivo de log de desempenho.  
   
-## <a name="see-also"></a>Consulte também  
- [Correlacionar um rastreamento com dados do log de desempenho do Windows &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Correlacione um rastreamento com &#40;de dados de log de desempenho do Windows SQL Server Profiler&#41;](../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)  
   
   

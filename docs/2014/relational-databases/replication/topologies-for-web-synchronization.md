@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273543"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologias para sincronização da Web
-  Você pode escolher entre uma variedade de topologias de replicação a sincronização da Web no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os modos comuns para configurar a sincronização da Web incluem:  
+  Você pode escolher entre uma variedade de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] topologias de replicação da sincronização da Web. Os modos comuns para configurar a sincronização da Web incluem:  
   
 -   Servidor único  
   
@@ -56,8 +56,8 @@ ms.locfileid: "63273543"
   
  ![Sincronização da Web com republicação](media/web-sync05.gif "Sincronização da Web com republicação")  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar a Sincronização da Web](configure-web-synchronization.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurar sincronização da Web](configure-web-synchronization.md)   
  [Sincronização da Web para replicação de mesclagem](web-synchronization-for-merge-replication.md)  
   
   

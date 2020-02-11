@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193237"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Usar os métodos value() e nodes() com OPENXML
-  Você pode usar várias **Value ()** métodos em `xml` de tipo de dados em um **selecione** valores extraídos de cláusula para gerar um conjunto de linhas. O método **nodes()** produz uma referência interna para cada nó selecionado que pode ser usado para consulta adicional. A combinação dos métodos **nodes()** e **value()** pode ser mais eficiente para gerar o conjunto de linhas quando ele tem várias colunas e, talvez, quando as expressões de caminho usadas em sua geração são complexas.  
+  Você pode usar vários métodos **Value ()** no `xml` tipo de dados em uma cláusula **Select** para gerar um conjunto de linhas de valores extraídos. O método **nodes()** produz uma referência interna para cada nó selecionado que pode ser usado para consulta adicional. A combinação dos métodos **nodes()** e **value()** pode ser mais eficiente para gerar o conjunto de linhas quando ele tem várias colunas e, talvez, quando as expressões de caminho usadas em sua geração são complexas.  
   
- O **Nodes ()** método produz instâncias de um especial `xml` tipo de dados, cada qual com seu contexto definido como um nó selecionado diferente. Esse tipo de instância XML dá suporte aos métodos **query()** , **value()** , **nodes()** e **exist()** e pode ser usado em agregações **count(\*)** . Todos os outros usos provocam um erro.  
+ O método **Nodes ()** produz instâncias de um tipo `xml` de dados especial, cada um com seu contexto definido como um nó selecionado diferente. Esse tipo de instância XML dá suporte aos métodos **query()** , **value()** , **nodes()** e **exist()** e pode ser usado em agregações **count(\*)** . Todos os outros usos provocam um erro.  
   
 ## <a name="example-using-nodes"></a>Exemplo: Usando nodes()  
  Assuma que você deseja extrair os nomes e sobrenomes de autores e o nome não é "David". Além disso, você deseja extrair essas informações como um conjunto de linhas que contém duas colunas, FirstName e LastName. Usando os métodos **nodes()** e **value()** , isso pode ser feito da seguinte forma:  
@@ -73,7 +73,7 @@ DEALLOCATE name_cursor
   
  A combinação das funções **nodes()** e **value()** usa índices XML de maneira efetiva. Como resultado, essa combinação pode exibir mais escalabilidade que o **OpenXml**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OPENXML &#40;SQL Server&#41;](openxml-sql-server.md)  
   
   

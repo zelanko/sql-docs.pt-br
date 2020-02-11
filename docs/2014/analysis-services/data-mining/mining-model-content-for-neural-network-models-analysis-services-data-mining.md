@@ -1,5 +1,5 @@
 ---
-title: Mining Model Content para modelos de rede Neural (Analysis Services - mineração de dados) | Microsoft Docs
+title: Conteúdo do modelo de mineração para modelos de rede neural (Analysis Services – Mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083592"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
-  Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Rede Neural da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Rede Neural da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-neural-network-model"></a>Entendendo a estrutura de um modelo de rede neural  
  Cada modelo de rede neural tem um único nó pai que representa o modelo e seus metadados, além de um nó de estatísticas marginais (NODE_TYPE = 24) que fornece estatísticas descritivas sobre os atributos de entrada. O nó de estatísticas marginais é útil porque resume informações sobre entradas, para que não seja necessário consultar dados de nós individuais.  
@@ -39,7 +39,7 @@ ms.locfileid: "66083592"
   
 -   Nós sucessivos contêm uma *sub-rede* diferente (NODE_TYPE = 17). Cada sub-rede sempre contém uma camada oculta (NODE_TYPE = 19) e uma cama da de saída (NODE_TYPE = 20) para essa sub-rede.  
   
- ![estrutura do conteúdo do modelo para redes neurais](../media/modelcontentstructure-nn.gif "estrutura do conteúdo do modelo para redes neurais")  
+ ![estrutura de conteúdo do modelo para redes neurais](../media/modelcontentstructure-nn.gif "estrutura de conteúdo do modelo para redes neurais")  
   
  As informações na camada de entrada são objetivas: o nó superior de cada camada de entrada (NODE_TYPE = 18) atua como um organizador de uma coleção de nós de entrada (NODE_TYPE = 21). O conteúdo dos nós de entrada é descrito na tabela a seguir.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66083592"
  Para trabalhar com os dados e verificar como o modelo correlaciona entradas com saídas, use o **Visualizador de Rede Neural da Microsoft**. Ao usar esse visualizador personalizado, você pode filtrar os atributos de entrada e seus valores e visualizar graficamente como eles afetam as saídas. As dicas de ferramentas no visualizador mostram a probabilidade e a comparação de precisão associadas a cada par de valores de entrada e saída. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Rede Neural da Microsoft](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
 ## <a name="model-content-for-a-neural-network-model"></a>Conteúdo de um modelo de rede neural  
- Esta seção fornece detalhes e exemplos somente das colunas do conteúdo do modelo de mineração que são relevantes para redes neurais. Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como MODEL_CATALOG e MODEL_NAME que não são descritos aqui, ou explicações relacionadas à terminologia do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Esta seção fornece detalhes e exemplos somente das colunas do conteúdo do modelo de mineração que são relevantes para redes neurais. Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, como MODEL_CATALOG e MODEL_NAME que não são descritos aqui, ou explicações relacionadas à terminologia do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome do banco de dados no qual o modelo é armazenado.  
@@ -88,7 +88,7 @@ ms.locfileid: "66083592"
  NODE_TYPE  
  Um modelo de rede neural produz apenas os seguintes tipos de nó:  
   
-|ID do tipo de nó|Descrição|  
+|ID do tipo de nó|DESCRIÇÃO|  
 |------------------|-----------------|  
 |1|Modelo.|  
 |17|Nó do organizador para a sub-rede.|  
@@ -191,7 +191,7 @@ ms.locfileid: "66083592"
 ## <a name="remarks"></a>Comentários  
  O objetivo do treinamento de um modelo de rede neural é determinar os pesos associados a cada transição de uma entrada para um ponto médio, e de um ponto médio para um ponto de extremidade. Assim, a camada de entrada do modelo existe principalmente para armazenar os valores reais usados para criar o modelo. A camada oculta armazena os pesos que foram computados e fornece ponteiros para os atributos de entrada. A camada de saída armazena os valores previsíveis e também fornece ponteiros para os pontos médios na camada oculta.  
   
-##  <a name="bkmk_NodeIDs"></a> Usando nomes e IDs de nós  
+##  <a name="bkmk_NodeIDs"></a>Usando nomes e IDs de nós  
  A nomenclatura dos nós em um modelo de rede neural fornece mais informações sobre o tipo de nó, para tornar mais fácil relacionar a camada oculta à camada de entrada, e a camada de saída à camada oculta. A tabela a seguir mostra a convenção para as IDs atribuídas aos nós em cada camada.  
   
 |Tipo de nó|Convenção da ID de nó|  
@@ -210,7 +210,7 @@ ms.locfileid: "66083592"
   
  De modo semelhante, você pode determinar quais camadas ocultas estão relacionadas a um atributo de saída exibindo a tabela NODE_DISTRIBUTION no nó de saída (NODE_TYPE = 23). Cada linha da tabela NODE_DISTRIBUTION contém a ID de um nó da camada oculta, junto com o coeficiente relacionado.  
   
-##  <a name="bkmk_NodeDistTable"></a> Interpretando as informações na tabela NODE_DISTRIBUTION  
+##  <a name="bkmk_NodeDistTable"></a>Interpretando as informações na tabela NODE_DISTRIBUTION  
  A tabela NODE_DISTRIBUTION pode estar vazia em alguns nós. No entanto, para nós de entrada, nós da camada oculta e nós de saída, a tabela NODE_DISTRIBUTION armazena informações importantes e interessantes sobre o modelo. Para ajudá-lo a interpretar essas informações, a tabela NODE_DISTRIBUTION contém uma coluna VALUETYPE para cada linha que informa se o valor na coluna ATTRIBUTE_VALUE é Discreto (4), Diferenciado (5) ou Contínuo (3).  
   
 ### <a name="input-nodes"></a>Nós de entrada  
@@ -218,7 +218,7 @@ ms.locfileid: "66083592"
   
  **Atributo discreto:** O nó de entrada armazena apenas o nome do atributo e seu valor nas colunas ATTRIBUTE_NAME e ATTRIBUTE_VALUE. Por exemplo, se [Turno de Trabalho] for a coluna, um nó separado será criado para cada valor dessa coluna que foi usado no modelo, como AM e PM. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
   
- **Atributo numérico discreto:** O nó de entrada armazena o nome do atributo e o valor, que pode ser um intervalo ou um valor específico. Todos os valores são representados por expressões, como '77.4 - 87.4' ou ' < 64.0' para o valor de [Tempo por Emissão]. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
+ **Atributo numérico discretizado:** O nó de entrada armazena o nome do atributo e o valor, que pode ser um intervalo ou um valor específico. Todos os valores são representados por expressões, como '77.4 - 87.4' ou ' < 64.0' para o valor de [Tempo por Emissão]. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
   
  **Atributo contínuo:** O nó de entrada armazena o valor médio do atributo. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
   
@@ -230,15 +230,15 @@ ms.locfileid: "66083592"
   
  A tabela NODE_DISTRIBUTION tem as seguintes informações adicionais, dependendo do tipo de atributo:  
   
- **Atributo discreto:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm um coeficiente do nó como um todo e o valor atual do atributo.  
+ **Atributo discreto:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm um coeficiente para o nó como um todo e o valor atual do atributo.  
   
- **Atributo numérico discreto:** Idêntico aos atributos discretos, exceto que o valor do atributo é um intervalo de valores.  
+ **Atributo numérico discretizado:** Idêntico a atributos discretos, exceto pelo fato de que o valor do atributo é um intervalo de valores.  
   
- **Atributo contínuo:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm a média do atributo, o coeficiente do nó como um todo e a variação do coeficiente.  
+ **Atributo contínuo:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm a média do atributo, o coeficiente para o nó como um todo e a variação do coeficiente.  
   
-## <a name="see-also"></a>Consulte também  
- [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
- [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmo rede neural da Microsoft](microsoft-neural-network-algorithm.md)   
+ [Referência técnica do algoritmo rede neural da Microsoft](microsoft-neural-network-algorithm-technical-reference.md)   
  [Neural Network Model Query Examples](neural-network-model-query-examples.md)  
   
   

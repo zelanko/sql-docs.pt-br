@@ -1,5 +1,5 @@
 ---
-title: Projeto de Scripts no SQL Server Management Studio do Analysis Services | Microsoft Docs
+title: Projeto de scripts de Analysis Services no SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0bcc06655333dfef073757218d9a740c1dfb0dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080363"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>Projeto de scripts do Analysis Services no SQL Server Management Studio
@@ -29,7 +29,7 @@ ms.locfileid: "66080363"
   
  Siga estas etapas básicas para criar um projeto do Analysis Server Scripts no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
-1.  No menu Arquivo, aponte para **Novo**e clique em **Projeto**.  
+1.  No menu Arquivo , aponte para **Novo**e clique em **Projeto**.  
   
      Selecione o modelo de projeto **Scripts do Analysis Server** e especifique um nome e um local para o novo projeto.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66080363"
   
  A pasta de um projeto do Analysis Server Scripts pode conter os tipos de arquivo listados na tabela a seguir.  
   
-|Tipo de arquivo|Descrição|  
+|Tipo de arquivo|DESCRIÇÃO|  
 |---------------|-----------------|  
 |Arquivo de definição do projeto do Analysis Server Scripts (.ssmsasproj)|Contém metadados sobre as pastas mostradas no Gerenciador de Soluções, além de informações que indicam quais pastas devem exibir os arquivos incluídos no projeto.<br /><br /> O arquivo de definição do projeto também contém os metadados das conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contidas no projeto, além dos metadados que associam conexões aos arquivos de script incluídos no projeto.|  
 |Arquivo de script DMX (.dmx)|Contém um script DMX incluído no projeto.|  
@@ -54,13 +54,13 @@ ms.locfileid: "66080363"
 |Arquivo de script XMLA (.xmla)|Contém um script XMLA incluído no projeto.|  
   
 ## <a name="analysis-services-templates"></a>Modelos do Analysis Services  
- Ao adicionar novos scripts MDX, DMX ou XMLA a um projeto do Analysis Server Scripts, você tem a opção de usar o Explorador de Modelos para localizar os modelos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , uma coleção de scripts ou instruções predefinidos(as) que demonstram como executar a ação especificada. O Explorador de Modelos está disponível no menu **Exibir** e inclui modelos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Para obter mais informações, consulte [Usar modelos do Analysis Services no SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md).  
+ Ao adicionar novos scripts MDX, DMX ou XMLA a um projeto do Analysis Server Scripts, você tem a opção de usar o Explorador de Modelos para localizar os modelos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , uma coleção de scripts ou instruções predefinidos(as) que demonstram como executar a ação especificada. O Gerenciador de modelos está disponível no menu **Exibir** e inclui modelos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o, [!INCLUDE[ssEW](../../includes/ssew-md.md)]o e o. Para obter mais informações, consulte [Usar modelos do Analysis Services no SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Criação de modelos multidimensionais usando o SSDT &#40;SQL Server Data Tools&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Referência de expressões multidimensionais &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services Scripting Language &#40;ASSL&#41; referência](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Analysis Services Scripting Language &#40;ASSL&#41; referência](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
+## <a name="see-also"></a>Consulte Também  
+ [Criando modelos multidimensionais usando o SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Expressões multidimensionais &#40;referência de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Referência de&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Analysis Services linguagem de script &#40;referência de&#41; do ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services linguagem de script &#40;referência de&#41; do ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

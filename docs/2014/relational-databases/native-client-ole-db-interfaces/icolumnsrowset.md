@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c9a854a175abe570ae6357f89c6c3e75e2eff35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241213"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client acrescenta a coluna DBCOLUMN_BASETABLEINSTANCE a IColumnsRowset::GetColumnRowset. Essa coluna retorna DBTYPE_I2 e é reservada para uso pela Microsoft. As informações nessa coluna estão sujeitas à alteração em versões futuras.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Interfaces &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: BCPColumns (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPColumns (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7108760ebdb5e7e3e6367b801b07d4f8140a62d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238730"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
@@ -35,7 +35,7 @@ DBCOUNTITEMnColumns);
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Internamente, ele chama [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) para definir os valores padrão para dados de campo. Esses valores padrão são obtidos com as informações de coluna do SQL Server que o provedor recupera internamente quando o nome de tabela é especificado através de [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md).  
+ Internamente, ele chama [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) para definir os valores padrão para dados de campo. Esses valores padrão são obtidos nas informações de coluna do SQL Server que o provedor recupera internamente quando o nome da tabela é especificado por meio de [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md).  
   
 > [!NOTE]  
 >  Esse método só pode ser chamado depois que **BCPInit** foi chamado com um nome de arquivo válido.  
@@ -53,7 +53,7 @@ DBCOUNTITEMnColumns);
  O método foi bem-sucedido.  
   
  E_FAIL  
- Ocorreu um erro específico do provedor. Para obter informações detalhadas, use a interface [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
+ Ocorreu um erro específico do provedor; para obter informações detalhadas, use a interface [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
   
  E_UNEXPECTED  
  A chamada para o método era inesperada. Por exemplo, o método **BCPInit** não foi chamado antes da chamada desse método. Também ocorre quando esse método é chamado mais de uma vez para uma operação de cópia em massa.  
@@ -61,7 +61,7 @@ DBCOUNTITEMnColumns);
  E_OUTOFMEMORY  
  Erro de memória insuficiente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../native-client/features/performing-bulk-copy-operations.md)  
   

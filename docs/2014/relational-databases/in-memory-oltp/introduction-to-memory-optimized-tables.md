@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157841"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introdução às tabelas com otimização de memória
@@ -28,7 +28,7 @@ ms.locfileid: "63157841"
   
  A figura a seguir ilustra o controle de várias versões. A figura mostra uma tabela com três linhas, e cada linha tem versões diferentes.  
   
- ![Controle de várias versões.](../../database-engine/media/hekaton-tables-1.gif "Controle de várias versões.")  
+ ![Várias versões.](../../database-engine/media/hekaton-tables-1.gif "Vários controles de versão.")  
   
  A tabela tem três linhas: r1, r2 e r3. r1 tem três versões, r2 tem duas versões e r3 tem quatro versões. Observe que as versões diferentes da mesma linha não ocupam necessariamente locais de memória consecutivos. As versões de linha diferentes podem ser dispersas em toda a estrutura de dados da tabela.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "63157841"
   
 -   Por meio de procedimentos armazenados compilados nativamente.  
   
- As tabelas com otimização de memória podem ser acessadas com mais eficiência de procedimentos armazenados compilados nativamente ([Procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)). As tabelas com otimização de memória também podem ser acessadas com [!INCLUDE[tsql](../../../includes/tsql-md.md)]interpretado (tradicional). O termo [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado refere-se ao acesso a tabelas com otimização de memória sem um procedimento armazenado compilado nativamente. Alguns exemplos de acesso ao [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado incluem o acesso a uma tabela com otimização de memória de um gatilho DML ou de um lote [!INCLUDE[tsql](../../../includes/tsql-md.md)] ad hoc, exibição e função com valor de tabela.  
+ As tabelas com otimização de memória podem ser acessadas com mais eficiência por meio de procedimentos armazenados compilados de modo nativo ([Procedimentos armazenados compilados de modo nativo](natively-compiled-stored-procedures.md)). As tabelas com otimização de memória também podem ser acessadas com [!INCLUDE[tsql](../../../includes/tsql-md.md)]interpretado (tradicional). O termo [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado refere-se ao acesso a tabelas com otimização de memória sem um procedimento armazenado compilado nativamente. Alguns exemplos de acesso ao [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado incluem o acesso a uma tabela com otimização de memória de um gatilho DML ou de um lote [!INCLUDE[tsql](../../../includes/tsql-md.md)] ad hoc, exibição e função com valor de tabela.  
   
  A tabela a seguir resume o acesso ao [!INCLUDE[tsql](../../../includes/tsql-md.md)] nativo e interpretado de vários objetos.  
   
 |Recurso|Acesso através de um procedimento armazenado compilado nativamente|Acesso [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado|Acesso à CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Tabelas com otimização de memória|Sim|Sim|Não <sup>1</sup>|  
-|[Variáveis de tabela com otimização de memória](../../database-engine/memory-optimized-table-variables.md)|Sim|Sim|Não |  
+|[Variáveis de tabela com otimização de memória](../../database-engine/memory-optimized-table-variables.md)|Sim|Sim|Não|  
 |[Procedimentos armazenados compilados nativamente](https://msdn.microsoft.com/library/dn133184.aspx)|Você não pode usar a instrução EXECUTE para executar nenhum procedimento armazenado em um procedimento armazenado compilado nativamente.|Sim|Não <sup>1</sup>|  
   
- <sup>1</sup> não é possível acessar uma tabela com otimização de memória ou procedimento armazenado compilado nativamente da conexão de contexto (a conexão de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ao executar um módulo CLR). No entanto, é possível criar e abrir outra conexão, da qual você pode acessar tabelas com otimização de memória e procedimentos armazenados compilados nativamente. Para obter mais informações, consulte [vs Regular. Conexões de contexto](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
+ <sup>1</sup> você não pode acessar uma tabela com otimização de memória ou um procedimento armazenado compilado nativamente da conexão de contexto (a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conexão do ao executar um módulo CLR). No entanto, é possível criar e abrir outra conexão, da qual você pode acessar tabelas com otimização de memória e procedimentos armazenados compilados nativamente. Para obter mais informações, consulte [regular versus conexões de contexto](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
 ## <a name="performance-and-scalability"></a>Desempenho e escalabilidade  
  Os seguintes fatores afetarão os ganhos de desempenho que podem ser obtidos com o OLTP na memória:  
@@ -66,7 +66,7 @@ ms.locfileid: "63157841"
  Comunicação  
  Um aplicativo com muitas chamadas para procedimentos armazenados curtos pode ver um ganho de desempenho menor em comparação com um aplicativo com menos chamadas e mais funcionalidade implementada em cada procedimento armazenado.  
   
- Execução do [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]Chão  
  O OLTP na memória atinge o melhor desempenho usando procedimentos armazenados compilados nativamente do que usando procedimentos armazenados interpretados ou execução de consulta. Os procedimentos armazenados que executam outros procedimentos armazenados não podem ser compilados nativamente, mas pode ser vantajoso acessar tabelas com otimização de memória nesses procedimentos.  
   
  Varredura de intervalo x pesquisa de ponto  
@@ -84,7 +84,7 @@ ms.locfileid: "63157841"
 |Desempenho<br /><br /> Alto uso de recursos (CPU, E/S, rede ou memória).|CPU<br /> Os procedimentos armazenados compilados nativamente podem reduzir significativamente o uso da CPU, pois exigem muito menos instruções para executar uma instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] comparada com os procedimentos armazenados interpretados.<br /><br /> O OLTP na memória pode ajudar a reduzir o investimento de hardware em cargas de trabalho expandidas, pois um servidor pode potencialmente fornecer a taxa de transferência de cinco a dez servidores.<br /><br /> E/S<br /> Se você encontrar um gargalo de E/S, do processamento às páginas de dados ou índice, o OLTP na memória poderá reduzir esse gargalo. Além disso, o ponto de verificação de objetos OLTP na memória é contínuo e não resulta em aumentos repentinos nas operações de E/S. No entanto, se o conjunto de trabalho das tabelas críticas de desempenho não se ajustar na memória, o OLTP na memória não melhorará o desempenho, pois ele exige que os dados sejam residentes na memória. Se você encontrar um gargalo de E/S no log, o OLTP na memória poderá reduzi-lo, pois ele gera menos registros. Se uma ou mais tabelas com otimização de memória forem configuradas como tabelas não duráveis, você poderá eliminar o registro de dados.<br /><br /> Memória<br /> O OLTP na memória não oferece nenhum benefício de desempenho. Além disso, o OLTP na memória pode fazer mais pressão na memória, pois os objetos precisam ser residentes na memória.<br /><br /> Rede<br /> O OLTP na memória não oferece nenhum benefício de desempenho. Os dados precisam ser comunicados da camada de dados à camada de aplicativos.|  
 |Escalabilidade<br /><br /> A maioria dos problemas de colocação em escala nos aplicativos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é causada por problemas de simultaneidade, como contenção em bloqueios, travas e spinlocks.|Contenção de trava<br /> Um cenário típico é a contenção na última página de um índice na inserção de linhas simultaneamente na ordem de chave. Como o OLTP na memória não usa travas ao acessar dados, os problemas de escalabilidade relacionados a contenções de trava são totalmente removidos.<br /><br /> Contenção de spinlock<br /> Como o OLTP na memória não usa travas ao acessar dados, os problemas de escalabilidade relacionados a contenções de spinlock são totalmente removidos.<br /><br /> Contenção relacionada ao bloqueio<br /> Se seu aplicativo de banco de dados detectar problemas de bloqueio entre operações de leitura e gravação, o OLTP na memória removerá esses problemas, pois ele usa um novo formulário de controle de simultaneidade otimista para implementar todos os níveis de isolamento de transação. O OLTP na memória não usa TempDB para armazenar versões de linha.<br /><br /> Se o problema de colocação em escala for causado por um conflito entre duas operações de gravação, como duas transações simultâneas tentando atualizar a mesma linha, o OLTP na memória permitirá que uma transação tenha êxito e que a outra falhe. A transação com falha deve ser reenviada explícita ou implicitamente, repetindo a transação. Em ambos os casos, você precisa fazer alterações no aplicativo.<br /><br /> Se seu aplicativo apresentar conflitos frequentes entre duas operações de gravação, o valor do bloqueio otimista será diminuído. O aplicativo não é apropriado para o OLTP na memória. A maioria dos aplicativos OLTP não apresenta conflitos de gravação, a menos que o conflito seja induzido pelo escalonamento de bloqueios.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OLTP in-memory &#40;Otimização na memória&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

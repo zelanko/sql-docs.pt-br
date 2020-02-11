@@ -1,5 +1,5 @@
 ---
-title: Suporte para recursos do SQL Server | Microsoft Docs
+title: Recursos de SQL Server com suporte | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157235"
 ---
 # <a name="supported-sql-server-features"></a>Recursos do SQL Server com suporte
@@ -33,15 +33,15 @@ ms.locfileid: "63157235"
   
 -   Controle de simultaneidade otimista e várias versões. Para obter mais informações, consulte [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md).  
   
--   Backup e restauração de um banco de dados que contém grupo de arquivos de dados com otimização de memória. Para obter mais informações, consulte [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Backup e restauração de um banco de dados que contém grupo de arquivos de dados com otimização de memória. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 -   Exibições de catálogo, exibições de gerenciamento dinâmico e eventos estendidos para capacidade de suporte. Para obter mais informações, consulte [Exibições do sistema, procedimentos armazenados, tipos de espera e DMVs para OLTP na memória](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects. Para obter mais informações, consulte [Suporte ao SQL Server Management Objects para OLTP na memória](sql-server-management-objects-support-for-in-memory-oltp.md).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Objetos de gerenciamento. Para obter mais informações, consulte [Suporte ao SQL Server Management Objects para OLTP na memória](sql-server-management-objects-support-for-in-memory-oltp.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Suporte ao SQL Server Management Studio para OLTP na memória](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Visão geral do SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell. Para obter mais informações, consulte [Visão geral do SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
 -   Importar e exportar dados em massa usando o utilitário bcp. Para obter mais informações, consulte [Importar e exportar dados em massa usando o utilitário bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
@@ -59,15 +59,15 @@ ms.locfileid: "63157235"
   
 -   Service broker, com limitações. Não é possível acessar uma fila de um procedimento armazenado originalmente compilado. Não é possível acessar uma fila em um banco de dados remoto em uma transação que acessa tabelas com otimização de memória.  
   
--   Clustering de failover: Como parte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn oferecendo, instâncias de Cluster de Failover do AlwaysOn aproveitam a funcionalidade de Clustering de Failover do Windows Server (WSFC) para fornecer alta disponibilidade local por meio de redundância no cluster de failover de um nível de instância de servidor FCI (instância). Para obter mais informações, consulte [Instâncias do Cluster de Failover do AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Clustering de failover: como parte da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferta do AlwaysOn, as instâncias de cluster de failover do AlwaysOn aproveitam a funcionalidade WSFC (Windows Server failover clustering) para fornecer alta disponibilidade local por meio de redundância no nível de instância do servidor – uma FCI (instância de cluster de failover). Para obter mais informações, consulte [Instâncias do Cluster de Failover do AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Integração com AlwaysOn: o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece várias opções para a criação de alta disponibilidade de um servidor ou banco de dados, inclusive o AlwaysOn. Para obter mais informações, consulte [Soluções de alta disponibilidade &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   
--   Envio de logs: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Permite o envio enviar automaticamente os backups de log de transações do banco de dados primário em uma instância do servidor primário para um ou mais bancos de dados secundários em instâncias separadas de servidor secundário. Para obter mais informações, consulte [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
+-   Envio de logs: o envio de logs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o envio automático de backups do log de transações de um banco de dados primário em uma instância do servidor primário para um ou mais bancos de dados secundários em outras instâncias de servidor secundário. Para obter mais informações, consulte [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 -   A replicação transacional para tabelas com otimização de memória em assinantes tem suporte com algumas restrições. Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
--   Administrador de recursos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrador de recursos é um recurso que você pode usar para gerenciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumo de recursos do sistema e de carga de trabalho. O Administrador de Recursos permite que você especifique os limites de quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar. Para obter mais informações, consulte [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) e [Resource Governor](../resource-governor/resource-governor.md).  
+-   Administrador de Recursos: o Administrador de Recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um recurso que você pode usar para gerenciar a carga de trabalho e o consumo de recursos do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Administrador de Recursos permite que você especifique os limites na quantidade de CPU, E/S física e memória que solicitações recebidas de aplicativos podem usar. Para obter mais informações, consulte [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) e [Resource Governor](../resource-governor/resource-governor.md).  
   
 -   A OLTP na memória tem restrições nas páginas de código com suporte para colunas (var)char em tabelas com otimização de memória e ordenações com suporte usadas em índices e em procedimentos armazenados nativamente compilados. Para obter mais informações, consulte [Páginas de código de ordenações](../../database-engine/collations-and-code-pages.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "63157235"
 |Compactação de dados para tabelas com otimização de memória.|Você pode usar o recurso de compactação de dados para ajudar a compactar os dados dentro de um banco de dados e ajudar reduzir o tamanho do banco de dados. Para saber mais, veja [Data Compression](../data-compression/data-compression.md).|  
 |Particionamento de índices de HASH e tabelas com otimização de memória.|Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Para saber mais, confira [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).|  
 |TDE (Criptografia de Dados Transparente) no grupo de arquivo de dados com otimização de memória de um banco de dados.|A criptografia transparente de dados (TDE) executa criptografia de E/S em tempo real e a descriptografia de dados e arquivos de log. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../security/encryption/transparent-data-encryption.md).<br /><br /> A TDE pode ser habilitada em um banco de dados que tenha objetos OLTP na memória. Os registros de log do OLTP na memória serão criptografados se a TDE estiver habilitada. Os arquivos de ponto de verificação para tabelas duráveis não são criptografados, mesmo se a TDE estiver habilitada no banco de dados.|  
-|Replicação|As configurações de replicação diferentes de replicação transacional para tabelas com otimização de memória em assinantes são incompatíveis com tabelas ou exibições que referenciam tabelas com otimização de memória. Replicação com sync_mode = 'database snapshot' não é suportado se houver um grupo de arquivos com otimização de memória. Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../replication/replication-to-memory-optimized-table-subscribers.md).|  
+|Replicação|As configurações de replicação diferentes de replicação transacional para tabelas com otimização de memória em assinantes são incompatíveis com tabelas ou exibições que referenciam tabelas com otimização de memória. A replicação usando sync_mode = ' instantâneo do banco de dados ' não terá suporte se houver um grupo de arquivos com otimização de memória. Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../replication/replication-to-memory-optimized-table-subscribers.md).|  
 |MARS (Vários Conjuntos de Resultados Ativos)|O MARS (Vários Conjuntos de Resultados Ativos) não tem suporte com tabelas com otimização de memória. Esse erro também pode indicar uso de servidor vinculado. O servidor vinculado pode usar MARS. Os servidores vinculados não têm suporte com tabelas com otimização de memória. Conecte-se diretamente ao servidor e ao banco de dados que hospeda as tabelas com otimização de memória.|  
 |Espelhamento|O espelhamento de banco de dados é uma solução para aumentar a disponibilidade de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Recompilar log|A recompilação do log, tanto ao anexar quanto ao ALTERAR O BANCO DE DADOS, não tem suporte para bancos de dados com um grupo de arquivos MEMORY_OPTIMIZED_DATA.|  
@@ -91,7 +91,7 @@ ms.locfileid: "63157235"
 |controle de alterações|O controle de alterações pode ser habilitado em um banco de dados com objetos OLTP na memória. No entanto, as alterações em tabelas com otimização de memória não são rastreadas.|  
 |gatilhos DDL|Os gatilhos DDL no nível de servidor e de banco de dados não têm suporte com tabelas OLTP na memória e procedimentos armazenados compilados nativamente.|  
 |Change Data Capture (CDC)|O CDC não deve ser habilitado em um banco de dados que tenha objetos OLTP na memória, pois isso impede determinadas operações, como DROP.|  
-|Contenção do banco de dados|A contenção de banco de dados não é suportada em um banco de dados com procedimentos armazenados compilados nativamente e tabelas com otimização de memória. Para obter mais informações, consulte [Contained Databases](../databases/contained-databases.md).|  
+|Contenção do banco de dados|A contenção de banco de dados não é suportada em um banco de dados com procedimentos armazenados compilados nativamente e tabelas com otimização de memória. Para obter mais informações, consulte [bancos de dados independentes](../databases/contained-databases.md)|  
 |Conexões de contexto|Não é suportado o acesso a tabelas com otimização de memória usando a conexão de contexto nos procedimentos armazenados CLR.|  
 |Cursores|Cursores dinâmicos e de conjunto de chaves em consultas que acessam tabelas com otimização de memória. Essas consultas são degradadas para estáticas, tornando-se somente leitura.|  
 |TABLESTAMP|Não há suporte para TABLESTAMP. Veja [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql) para obter mais informações.|  
@@ -105,13 +105,13 @@ ms.locfileid: "63157235"
   
  Com algumas exceções, as transações entre bancos de dados não têm suporte. A tabela a seguir descreve os casos que têm suporte e as limitações correspondentes. (Veja também [Consultas de bancos de dados](cross-database-queries.md).)  
   
-|Bancos de dados|Allowed (permitido)|Descrição|  
+|Bancos de dados|Permitido|DESCRIÇÃO|  
 |---------------|-------------|-----------------|  
 |Bancos de dados de usuário, modelo e msdb|Não|Não há suporte para consultas e transações entre bancos de dados.<br /><br /> As consultas e transações que acessam tabelas com otimização de memória ou procedimentos armazenados compilados nativamente não podem acessar outros bancos de dados, com exceção dos bancos de dados do sistema mestre (acesso somente leitura) e tempdb.|  
 |Banco de dados de recursos e tempdb|Sim|Não há nenhuma limitação em transações entre bancos de dados que, salvo um banco de dados de usuário único, usam somente banco de dados de recursos e o tempdb.|  
 |master|somente leitura|As transações entre bancos de dados que tocam o OLTP na memória e o banco de dados mestre falharão na confirmação se incluírem gravações no banco de dados mestre. As transações entre bancos de dados que leem apenas no mestre e usam somente um banco de dados de usuário são permitidas.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Suporte ao SQL Server para OLTP na memória](sql-server-support-for-in-memory-oltp.md)  
   
   

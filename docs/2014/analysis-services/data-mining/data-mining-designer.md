@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085106"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
-  O Designer de Mineração de Dados é o ambiente primário para trabalhar com modelos de mineração no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você pode acessar o designer selecionando uma estrutura de mineração existente ou usando o Assistente de Mineração de Dados para criar uma nova estrutura e um novo modelo de mineração. É possível usar o Designer de Mineração de Dados para executar as seguintes tarefas:  
+  O designer de mineração de dados é o ambiente primário no qual você trabalha com [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]modelos de mineração no. Você pode acessar o designer selecionando uma estrutura de mineração existente ou usando o Assistente de Mineração de Dados para criar uma nova estrutura e um novo modelo de mineração. É possível usar o Designer de Mineração de Dados para executar as seguintes tarefas:  
   
 -   Modificar a estrutura de mineração e o modelo de mineração criados inicialmente pelo Assistente de Mineração de Dados.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66085106"
 ## <a name="mining-structure-tab"></a>Guia Estrutura de Mineração  
  Use a guia **Estrutura de Mineração** para adicionar colunas e modificar as propriedades de uma estrutura de mineração existente. As seguintes tarefas e tópicos fornecem mais informações sobre o trabalho com estruturas de mineração:  
   
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)  
+ [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)  
   
  [Tarefas e instruções da estrutura de mineração](mining-structure-tasks-and-how-tos.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66085106"
   
  Consulte os seguintes tópicos para obter mais informações sobre o trabalho com modelos de mineração:  
   
- [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
+ [Modelos de mineração &#40;Analysis Services de mineração de dados&#41;](mining-models-analysis-services-data-mining.md)  
   
  [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)  
   
@@ -68,9 +68,9 @@ ms.locfileid: "66085106"
   
  Consulte os seguintes tópicos para obter mais informações sobre o teste e a validação de modelos de mineração:  
   
- [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)  
   
- [Tarefas de teste e validação e instruções &#40;Mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tarefas de teste e validação e instruções &#40;mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>Guia Previsão do Modelo de Mineração  
  A guia **Previsão do Modelo de Mineração** inclui o Construtor de Consultas de Previsão, que pode ser usado para criar uma consulta de previsão de extensões DMX. A guia contém ferramentas para especificar modelos de mineração e tabelas de entrada, mapear as colunas no modelo de mineração para colunas na tabela de entrada, adicionar funções a uma consulta e especificar critérios para cada coluna.  
@@ -81,9 +81,9 @@ ms.locfileid: "66085106"
   
  [Consultas de mineração de dados](data-mining-queries.md)  
   
- [Tarefas e instruções de consulta de mineração de dados](data-mining-query-tasks-and-how-tos.md)  
+ [Tarefas e instruções de consulta de Data Mining](data-mining-query-tasks-and-how-tos.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Soluções de mineração de dados](data-mining-solutions.md)  
   
   

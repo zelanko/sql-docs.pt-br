@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232402"
 ---
 # <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML aninhadas
-  O `xml` tipo de dados e o [diretiva TYPE em consultas FOR XML](type-directive-in-for-xml-queries.md) permitem que o XML retornado por consultas FOR XML seja processado no servidor e no cliente.  
+  O `xml` tipo de dados e a [diretiva Type em consultas for XML](type-directive-in-for-xml-queries.md) habilitam o XML RETORNADO pelas consultas for XML a serem processadas no servidor, bem como no cliente.  
   
 ## <a name="processing-with-xml-type-variables"></a>Processando com variáveis de tipo xml  
  É possível atribuir o resultado da consulta FOR XML a uma variável de tipo `xml`, ou usar a XQuery para consultar o resultado e atribuir esse resultado a uma variável de tipo `xml` para processamento adicional.  
@@ -57,7 +57,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
   
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <myRoot>  
@@ -76,7 +76,7 @@ SELECT  (SELECT ProductModelID, Name
   
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
@@ -116,7 +116,7 @@ FOR XML AUTO, TYPE;
 ## <a name="examples"></a>Exemplos  
  Os tópicos a seguir fornecem exemplos de consultas FOR XML aninhadas.  
   
- [Consulta FOR XML comparada com consulta FOR XML aninhada](../xml/for-xml-query-compared-to-nested-for-xml-query.md)  
+ [Consulta XML FOR comparada com consulta XML FOR aninhada](../xml/for-xml-query-compared-to-nested-for-xml-query.md)  
  Compara uma consulta FOR XML de nível único com uma consulta FOR XML aninhada. Este exemplo inclui uma demonstração de como especificar XML centrado em atributo e centrado em elemento como o resultado da consulta.  
   
  [Gerar irmãos com uma consulta aninhada em modo AUTO](../xml/generate-siblings-with-a-nested-auto-mode-query.md)  

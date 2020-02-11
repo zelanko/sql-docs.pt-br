@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cd80e7d999314c549df4ebb5e51aa2a0ca2d3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63154817"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Agrupar linhas em resultados da consulta (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63154817"
   
  Por exemplo, pode ser necessário exibir o preço médio de um livro na tabela `titles` , mas classifique os resultados por editora. Para isso, agrupe a consulta por publicador (por exemplo, `pub_id`). A saída da consulta resultante poderá ter a seguinte aparência:  
   
- ![Resultados da consulta: preço médio agrupado por publicador](../../database-engine/media//dv3w9e1.gif "Resultados da consulta: preço médio agrupado por publicador")  
+ ![Resultados de consulta: preço médio agrupado por publicador](../../database-engine/media//dv3w9e1.gif "Resultados de consulta: preço médio agrupado por publicador")  
   
  Quando se agrupam dados, só é possível exibir dados resumidos ou agrupados, como:  
   
@@ -48,7 +48,7 @@ GROUP BY pub_id, type
   
  A saída resultante pode ter a seguinte aparência:  
   
- ![Resultados da consulta: preço agrupado por publicador e tipo](../../database-engine/media//dv3w9e2.gif "Resultados da consulta: preço agrupado por publicador e tipo")  
+ ![Resultados de consulta: preço agrupado por publicador e tipo](../../database-engine/media//dv3w9e2.gif "Resultados de consulta: preço agrupado por publicador e tipo")  
   
 ### <a name="to-group-rows"></a>Para agrupar linhas  
   
@@ -72,7 +72,7 @@ GROUP BY pub_id, type
   
      O Designer de Consulta e Exibição atribui automaticamente um alias de coluna à coluna que você está resumindo. Você pode substituir esse alias gerado automaticamente por outro que tenha mais significado. Para obter mais detalhes, veja [Criar aliases de coluna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
-     ![Adicionar um alias de coluna para o conjunto de resultados da consulta](../../database-engine/media//dv3w9e3.gif "Adicionar um alias de coluna para o conjunto de resultados da consulta")  
+     ![Adicionando um alias de coluna ao conjunto de resultados de consulta](../../database-engine/media//dv3w9e3.gif "Adicionando um alias de coluna ao conjunto de resultados de consulta")  
   
      A instrução correspondente no painel **SQL** pode ter esse formato:  
   
@@ -82,7 +82,7 @@ GROUP BY pub_id, type
     GROUP BY pub_id  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   
   

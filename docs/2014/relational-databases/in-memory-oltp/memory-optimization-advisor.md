@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157996"
 ---
 # <a name="memory-optimization-advisor"></a>Orientador de otimização da memória
-  A ferramenta de relatórios de desempenho de transação (consulte [Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informa sobre as tabelas em seu banco de dados que se beneficiarão se forem compatibilizadas para usar o OLTP na memória. Após identificar uma tabela que você gostaria de compatibilizar para usar o OLTP na memória, você poderá usar o orientador de otimização de memória para ajudá-lo a migrar a tabela de banco de dados baseada em disco para o OLTP na memória.  
+  A ferramenta de relatórios de desempenho de transação (consulte [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informa sobre as tabelas em seu banco de dados que se beneficiarão se forem compatibilizadas para usar o OLTP na memória. Após identificar uma tabela que você gostaria de compatibilizar para usar o OLTP na memória, você poderá usar o orientador de otimização de memória para ajudá-lo a migrar a tabela de banco de dados baseada em disco para o OLTP na memória.  
   
  Para começar, conecte-se à instância que contém a tabela de banco de dados baseada em disco. Você pode se conectar a uma instância do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . No entanto, se você desejar executar uma operação de migração com o orientador, deverá se conectar a uma instância do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] na qual a funcionalidade de OLTP na memória está habilitada. Para obter mais informações sobre os requisitos de OLTP na memória, consulte [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "63157996"
   
  Depois que o processo estiver concluído, atualize o **Pesquisador de Objetos** para ver a nova tabela com otimização de memória e a antiga tabela baseada em disco. Você pode manter a tabela antiga ou excluí-la de acordo com a conveniência.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Migrando para OLTP na memória](migrating-to-in-memory-oltp.md)  
   
   

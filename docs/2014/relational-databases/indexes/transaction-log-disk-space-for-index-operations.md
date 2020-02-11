@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 986f464752f631d55b994469b733a3374a1926a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161825"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Espaço em disco de log de transações para operações de índice
@@ -41,7 +41,7 @@ ms.locfileid: "63161825"
 4.  Não execute a operação de índice online em uma transação explícita. O log não será truncado até que a transação explícita termine.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Requisitos de espaço em disco para operações de índice DDL](disk-space-requirements-for-index-ddl-operations.md)  
+ [Requisitos de espaço em disco para operações de DDL de índice](disk-space-requirements-for-index-ddl-operations.md)  
   
  [Exemplo de espaço em disco de índice](index-disk-space-example.md)  
   

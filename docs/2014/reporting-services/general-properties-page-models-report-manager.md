@@ -1,5 +1,5 @@
 ---
-title: Página de propriedades gerais, modelos (Gerenciador de relatórios) | Microsoft Docs
+title: Página Propriedades gerais, modelos (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109108"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Página Propriedades Gerais, Modelos (Gerenciador de Relatórios)
@@ -37,13 +37,13 @@ ms.locfileid: "66109108"
  **Nome**  
  Especifica o nome do modelo. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os seguintes caracteres ao especificar um nome:  
   
- ; ? : \@ & = + , $ / * \< > | " /  
+ ; ? : \@ & = +, $/* \< > | " /  
   
  **Descrição**  
  Digite uma descrição do modelo. Essa descrição é exibida na página Conteúdo para usuários com permissão de acessar o modelo.  
   
  **Oculto na exibição de lista**  
- Marque esta caixa de seleção para ocultar o item quando a pasta for definida na exibição de lista. Exibição de lista é um modo de exibição do conteúdo da pasta que tem o suporte do Gerenciador de Relatórios. Você pode definir essa opção no [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para definir como esse item é exibido no Gerenciador de Relatórios. Para obter mais informações sobre modos de exibição no Gerenciador de relatórios, consulte [página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ Marque esta caixa de seleção para ocultar o item quando a pasta for definida na exibição de lista. Exibição de lista é um modo de exibição do conteúdo da pasta que tem o suporte do Gerenciador de Relatórios. Você pode definir essa opção no [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para definir como esse item é exibido no Gerenciador de Relatórios. Para obter mais informações sobre modos de exibição no Report Manager, consulte a [página de conteúdo &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Aplicar**  
  Clique para salvar as alterações.  
@@ -51,8 +51,8 @@ ms.locfileid: "66109108"
  **Delete (excluir)**  
  Clique para remover o modelo do banco de dados do servidor de relatório. A exclusão de um modelo não exclui a fonte de dados compartilhada dependente que fornece informações de conexão nem exclui relatórios que usam o modelo como uma fonte de dados. Porém, depois que o modelo é excluído, informa que o uso do modelo não será mais executado.  
   
- **Migrar**  
- Clique para realocar um modelo dentro da hierarquia de pasta do servidor de relatório. O clique nesse botão abre a página Mover Itens, na qual você pode navegar até um novo local de pasta. Para obter mais informações, consulte [página Mover itens &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ **Mover**  
+ Clique para realocar um modelo dentro da hierarquia de pasta do servidor de relatório. O clique nesse botão abre a página Mover Itens, na qual você pode navegar até um novo local de pasta. Para obter mais informações, consulte a [página mover itens &#40;Report Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Salvar**  
  Clique para salvar uma cópia somente leitura da definição do modelo. Dependendo das associações de arquivo definidas no computador, o arquivo abrirá no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou em um aplicativo diferente. Na maioria dos casos, o modelo abre como um arquivo XML.  
@@ -63,13 +63,13 @@ ms.locfileid: "66109108"
   
  Observe que, se você quiser abrir o modelo de relatório no Designer de Modelo, deverá salvar o modelo como um arquivo .smdl e, em seguida, adicionar esse arquivo a um projeto no Designer de Modelo.  
   
- **Substituir**  
+ **Substitua**  
  Clique para substituir a definição do modelo por outra de um arquivo .smdl localizado no sistema de arquivos. Se você atualizar uma definição de modelo, deverá redefinir as configurações de fonte de dados compartilhada depois que a atualização for concluída.  
   
- **Regenerar modelo**  
+ **Regenerar Modelo**  
  Clique para regenerar um modelo padrão que substitui a versão atual. Essa opção é exibida depois que o modelo é gerado. O modelo gerado é baseado na fonte de dados compartilhada. Ele não pode ser personalizado antes de ser gerado. Entretanto, depois que ele é gerado, você pode clicar em **Editar** para abrir a definição do modelo, salvá-la no sistema de arquivos e adicioná-la a um projeto no Designer de Modelo. Depois de refinar o modelo, você pode carregá-lo no servidor de relatório como um novo item ou clique em **Atualizar** nessa página para substituir o modelo gerado pela versão revisada no Designer de Modelo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Associar um relatório ou modelo a uma fonte de dados compartilhada &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Servidor de Relatório na ajuda F1 do Management Studio](tools/report-server-in-management-studio-f1-help.md)  
   

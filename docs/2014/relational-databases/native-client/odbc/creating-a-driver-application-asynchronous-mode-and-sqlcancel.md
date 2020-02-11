@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a4ec4e5d7575fdf5d915c8209999e1285fa79aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144317"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>Modo assíncrono e SQLCancel
@@ -45,9 +45,9 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Quando o aplicativo testa para concluir o comando, faz a mesma chamada de função com os mesmos parâmetros para o driver. Se o driver ainda não tiver recebido uma resposta do servidor, novamente retornará SQL_STILL_EXECUTING. O aplicativo deve testar o comando periodicamente até que o código de retorno seja diferente de SQL_STILL_EXECUTING. Quando o aplicativo obtiver algum outro código de retorno, até mesmo SQL_ERROR, ele poderá determinar que o comando foi concluído.  
   
- Às vezes um comando fica pendente por muito tempo. Se o aplicativo precisar cancelar o comando sem aguardar uma resposta, ele pode fazer isso chamando **SQLCancel** com a mesma instrução tratar do comando pendente. Esta é a única vez **SQLCancel** deve ser usado. Alguns programadores usam **SQLCancel** quando eles têm parte do processamento por um resultado definido e quiser cancelar o restante do conjunto de resultados. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) deve ser usado para cancelar o restante de um conjunto de resultados, não **SQLCancel**.  
+ Às vezes um comando fica pendente por muito tempo. Se o aplicativo precisar cancelar o comando sem esperar por uma resposta, ele poderá fazer isso chamando **SQLCancel** com o mesmo identificador de instrução que o comando pendente. Essa é a única vez que **SQLCancel** deve ser usado. Alguns programadores usam **SQLCancel** quando processavam partes por meio de um conjunto de resultados e desejam cancelar o restante do conjunto de resultados. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) devem ser usados para cancelar o restante de um conjunto de resultados pendentes, e não **SQLCancel**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando um aplicativo de driver ODBC do SQL Server Native Client](creating-a-driver-application.md)  
   
   

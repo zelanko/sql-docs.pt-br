@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144399"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Exibir conflitos de dados para publicações transacionais (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "63144399"
   
     -   Especificar um valor de retenção para o parâmetro @conflict_retention de [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql).  
   
-    -   Especifique um valor de `'conflict_retention'` para o @property parâmetro e uma valor de retenção para o @value parâmetro [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql).  
+    -   Especifique um valor de `'conflict_retention'` para o @property parâmetro e um valor de retenção para @value o parâmetro de [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql).  
   
 ### <a name="to-view-conflicts"></a>Para exibir conflitos  
   
@@ -56,14 +56,14 @@ ms.locfileid: "63144399"
   
     -   Selecione uma ou mais linhas na grade superior e, então, clique em **Remover**para remover as linhas da tabela de metadados de conflito.  
   
-    -   Clique no botão propriedades (**...**) para exibir mais informações sobre uma coluna envolvida em um conflito.  
+    -   Clique no botão propriedades ( **...** ) para exibir mais informações sobre uma coluna envolvida em um conflito.  
   
-    -   Selecione **Registrar os detalhes deste conflito** para registrar dados de conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e então clique em **Opções**. Insira um valor ou clique no botão procurar (**...**) e então navegue até o arquivo apropriado. Clique em **OK** para fechar a caixa de diálogo **Opções** .  
+    -   Selecione **Registrar os detalhes deste conflito** para registrar dados de conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e então clique em **Opções**. Insira um valor ou clique no botão procurar ( **...** ) e então navegue até o arquivo apropriado. Clique em **OK** para fechar a caixa de diálogo **Opções** .  
   
 6.  Feche o Visualizador de Conflitos de Replicação.  
   
-## <a name="see-also"></a>Consulte também  
- [Replicação transacional ponto a ponto](transactional/peer-to-peer-transactional-replication.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

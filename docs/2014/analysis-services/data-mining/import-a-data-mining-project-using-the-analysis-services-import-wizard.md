@@ -1,5 +1,5 @@
 ---
-title: Importar um projeto de mineração de dados usando o Assistente de importação do Analysis Services | Microsoft Docs
+title: Importar um projeto de mineração de dados usando o assistente de importação de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084364"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importar um projeto de mineração de dados usando o Assistente de Importação do Analysis Services
-  Este tópico descreve como criar um novo projeto de mineração de dados importando os metadados de projetos existentes de mineração de dados em outro servidor, usando o modelo **Projeto Importar do Servidor (Multidimensional ou Mineração de dados)** , no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  Este tópico descreve como criar um novo projeto de mineração de dados importando os metadados de projetos existentes de mineração de dados em outro servidor, usando o modelo **Projeto Importar do Servidor (Multidimensional ou Mineração de dados)**, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importar fontes de dados, estruturas de mineração de dados e modelos de mineração de projetos existentes de mineração de dados.  
- Quando você usa o modelo **Projeto Importar do Servidor (Multidimensional ou Mineração de dados)** , o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] cria um novo projeto de mineração de dados e copiar os metadados do projeto de mineração de dados especificado. O novo projeto contém as mesmas fontes de dados, exibições de fontes de dados, estruturas de mineração e modelos de mineração que o banco de dados do ssASnoversion do qual você importou. Porém, o projeto não pode ser usado até que você tenha atualizado determinadas propriedades e processado os objetos como descrito:  
+ Quando você usa o modelo, **importe do projeto do servidor (multidimensional e de mineração de dados)**, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] cria um novo projeto de data mining e, em seguida, copia os metadados do projeto de Data Mining especificado. O novo projeto contém as mesmas fontes de dados, exibições de fontes de dados, estruturas de mineração e modelos de mineração que o banco de dados do ssASnoversion do qual você importou. Porém, o projeto não pode ser usado até que você tenha atualizado determinadas propriedades e processado os objetos como descrito:  
   
--   Os dados em si não são copiados do servidor de origem para mineração de dados novo projeto somente que as definições de fontes de dados e exibições da fonte de dados são importadas. Portanto, depois de concluído o processo de importação e da criação dos objetos, você deve popular os objetos com os dados treinando as estruturas de mineração e os modelos dependentes. Você pode usar o comando **Processar Tudo** no Designer de Mineração de Dados para treinar os modelos e as estruturas.  
+-   Os dados em si não são copiados do servidor de origem para o novo projeto Data Mining-somente as definições das fontes de dados e das exibições da fonte de dados são importadas. Portanto, depois de concluído o processo de importação e da criação dos objetos, você deve popular os objetos com os dados treinando as estruturas de mineração e os modelos dependentes. Você pode usar o comando **Processar Tudo** no Designer de Mineração de Dados para treinar os modelos e as estruturas.  
   
 -   Se você estiver importando um projeto que foi criado em uma versão anterior do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a fonte de dados pode usar provedores que não estão instalados no servidor para o qual você está importando o projeto. Se você encontrar erros ao processar as estruturas de mineração importadas, clique com o botão direito do mouse em cada fonte de dados e selecione **Abrir Designer** para editar a cadeia de conexão e examinar as propriedades do provedor.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66084364"
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no menu **Arquivo** , clique em **Novo**e, em seguida, em **Projeto**.  
   
-2.  Na caixa de diálogo **Novo Projeto** , em **Modelos Instalados**, clique em **Business Intelligence**, **Analysis Services**e em **Importar do Servidor (Multidimensional/Mineração de Dados)** .  
+2.  Na caixa de diálogo **Novo Projeto** , em **Modelos Instalados**, clique em **Business Intelligence**, **Analysis Services**e em **Importar do Servidor (Multidimensional/Mineração de Dados)**.  
   
 3.  Para **Nome**, digite um nome para o projeto e especifique um local e um nome para a solução e clique em **OK**.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "66084364"
     > [!WARNING]  
     >  Você não pode especificar os objetos você quer importar; quando você escolhe um banco de dados existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , todos os objetos multidimensionais e de mineração de dados são importados.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 5.  A página **Concluindo o Assistente**exibe o andamento da operação de importação. Você não pode cancelar a operação ou alterar os objetos que estão sendo importados. Clique em **Concluir** quando tiver terminado.  
   
      O novo projeto é automaticamente aberto usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades de projeto &#40;SSAS de Tabela&#41;](../tabular-models/properties-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Propriedades do projeto &#40;SSAS tabular&#41;](../tabular-models/properties-ssas-tabular.md)  
   
   

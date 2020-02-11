@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 81e1081623b363cdcb9610c83301bd424cb3694d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191957"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>Propriedade ProtocolName (classe ClientNetworkProtocol)
-  Obtém o nome do protocolo de rede atual especificado pela [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
+  Obtém o nome do protocolo de rede atual especificado pelos [protocolos de cliente de configuração](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) que representa o protocolo de rede usado pelo cliente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ *objeto*  
+ Um objeto da [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) que representa o protocolo de rede usado [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pelo cliente.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
- Um valor de cadeia de caracteres que especifica o nome do cliente atual protocolo de rede referenciado pelo [método SetOrderValue (classe ClientNetworkProtocol)](https://technet.microsoft.com/library/ms179295.aspx).  
+ Um valor de cadeia de caracteres que especifica o nome do protocolo de rede do cliente atual referenciado pelo [Método SetOrderValue (classe ClientNetworkProtocol)](https://technet.microsoft.com/library/ms179295.aspx).  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do cliente e bibliotecas de rede](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurando protocolos de cliente de servidor e bibliotecas de rede](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

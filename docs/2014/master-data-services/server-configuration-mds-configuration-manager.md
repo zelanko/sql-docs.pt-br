@@ -1,5 +1,5 @@
 ---
-title: Página de configuração de servidor do Master Data Services (Configuration Manager) | Microsoft Docs
+title: Página de configuração do Master Data Services Server (Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478850"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Página Configuração do Servidor do Master Data Services (Gerenciador de Configuração)
@@ -24,9 +24,9 @@ ms.locfileid: "65478850"
   
 ## <a name="server-configuration"></a>Configuração do Servidor  
   
-|Nome do controle|Descrição|  
+|Nome do controle|DESCRIÇÃO|  
 |------------------|-----------------|  
 |**Windows PowerShell**|Exibe a versão do Windows PowerShell instalada no computador local. O Windows PowerShell versão 1.0 ou posterior é necessário para uso do Gerenciador de Configuração do Master Data Services.|  
-|**Serviços de Informações da Internet**|Exibe a versão do IIS (Serviços de Informações da Internet) que está instalada no computador local. O IIS versão 7.0 ou posterior é necessário para uso do Gerenciador de Configuração do Master Data Services.|  
+|**Serviços de Informação da Internet**|Exibe a versão do IIS (Serviços de Informações da Internet) que está instalada no computador local. O IIS versão 7.0 ou posterior é necessário para uso do Gerenciador de Configuração do Master Data Services.|  
   
   

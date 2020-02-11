@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo função de segurança (Analysis Services - dados multidimensionais) de duplicada do Analysis Services | Microsoft Docs
+title: Caixa de diálogo Analysis Services função de segurança duplicada (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081495"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Função de Segurança Duplicada do Analysis Services (Analysis Services - Dados Multidimensionais)
-  Use o **duplicados segurança função do Analysis Services - \<nome do banco de dados >- \<cópia do nome da função >** da caixa de diálogo [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] duplicar uma função existente em um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. É possível exibir a caixa de diálogo **Duplicar Função** clicando com o botão direito do mouse em uma função no Explorador de Objetos e selecionando **Duplicar**.  
+  Use a caixa de diálogo **Analysis Services duplicar função de \<segurança \<-nome do banco de dados>-copiar do nome da função>** no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para duplicar uma função existente em um banco de dados. É possível exibir a caixa de diálogo **Duplicar Função** clicando com o botão direito do mouse em uma função no Explorador de Objetos e selecionando **Duplicar**.  
   
 ## <a name="options"></a>Opções  
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Nome da nova função**|Digite o nome da nova função a ser criada com os mesmos membros e permissões que a função selecionada no Explorador de Objetos.|  
+|**Nome da Nova Função**|Digite o nome da nova função a ser criada com os mesmos membros e permissões que a função selecionada no Explorador de Objetos.|  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Funções de Segurança &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Funções de segurança &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

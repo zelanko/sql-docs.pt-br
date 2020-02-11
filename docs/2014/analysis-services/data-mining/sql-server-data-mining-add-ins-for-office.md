@@ -1,5 +1,5 @@
 ---
-title: SQL Server Data Mining Add-Ins para o Office | Microsoft Docs
+title: SQL Server suplementos de mineração de dados para Office | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082887"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Suplementos de Mineração de Dados do SQL Server para Office
+  
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suplementos de Mineração de Dados do para Office é um conjunto de ferramentas leve para análise preditiva que permite a você usar dados no Excel para criar modelos analíticos para previsão, recomendação ou exploração.  
   
  Os assistentes e as ferramentas de gerenciamento de dados nos suplementos fornecem instruções passo a passo para essas tarefas de mineração de dados comuns:  
   
--   **Organizar e limpar seus dados antes da modelagem.** Use dados armazenados no Excel ou em qualquer fonte de dados do Excel. Você pode criar e salvar conexões para reutilizar fontes de dados, repetir experimentos ou treinar modelos novamente.  
+-   **Organize e limpe seus dados antes de modelar.** Use dados armazenados no Excel ou em qualquer fonte de dados do Excel. Você pode criar e salvar conexões para reutilizar fontes de dados, repetir experimentos ou treinar modelos novamente.  
   
--   **Gere perfis, amostras e prepare.** Muitos mineradores de dados experientes indicam que 70 a 90% de um projeto de mineração de dados é gasto na preparação dos dados. Os suplementos podem tornar essa tarefa mais rápida, fornecendo visualizações no Excel e nos assistentes que ajudarão você com essas tarefas comuns:  
+-   **Perfil, exemplo e preparação.** Muitos mineradores de dados experientes indicam que 70 a 90% de um projeto de mineração de dados é gasto na preparação dos dados. Os suplementos podem tornar essa tarefa mais rápida, fornecendo visualizações no Excel e nos assistentes que ajudarão você com essas tarefas comuns:  
   
     -   Crie o perfil dos dados e entenda suas características e distribuição.  
   
@@ -42,11 +43,11 @@ ms.locfileid: "66082887"
   
      Usuários avançados podem criar consultas DMX personalizadas com o **Editor de Consulta Avançada**do tipo "arrastar e soltar", ou automatizar previsões usando o VBA do Excel.  
   
--   **Documente e gerencie.** Depois que você criou um conjunto de dados e criar alguns modelos, documente seu trabalho e suas ideias gerando um resumo estatístico dos parâmetros de modelo e de dados.  
+-   **Documentar e gerenciar.** Depois de criar um conjunto de dados e criar alguns modelos, documente seu trabalho e suas ideias gerando um resumo estatístico dos parâmetros de dados e modelo.  
   
--   **Explorar e visualizar.** Mineração de dados não é uma atividade que pode ser totalmente automatizada - você precisa explorar e compreender seus resultados para tomar uma ação significativa. Os suplementos ajudam você na exploração, fornecendo visualizadores interativos no Excel, modelos do Visio que permitem personalizar os diagramas e a capacidade de exportar gráficos e tabelas para o Excel para filtragem ou modificação adicionais.  
+-   **Explore e visualize.** A mineração de dados não é uma atividade que pode ser totalmente automatizada. você precisa explorar e entender os resultados para tomar uma medida significativa. Os suplementos ajudam você na exploração, fornecendo visualizadores interativos no Excel, modelos do Visio que permitem personalizar os diagramas e a capacidade de exportar gráficos e tabelas para o Excel para filtragem ou modificação adicionais.  
   
--   **Implante e integre.** Quando você criou um modelo útil, coloque-o em produção, usando as ferramentas de gerenciamento para exportar o modelo do seu servidor experimental para outra instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Implantar e integrar.** Quando você tiver criado um modelo útil, coloque seu modelo em produção usando as ferramentas de gerenciamento para exportar o modelo de seu servidor experimental para outra instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      Você também pode deixar o modelo no servidor onde o criou, mas atualize os dados de treinamento e execute previsões usando o Integration Services ou scripts DMX.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "66082887"
 ## <a name="getting-started"></a>Introdução  
  Consulte estes tópicos para obter informações sobre as ferramentas e se preparar:  
   
--   [Cliente de mineração de dados para Excel &#40;suplementos de mineração de dados do SQL Server&#41;](../data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+-   [O cliente de mineração de dados para Excel &#40;SQL Server suplementos de mineração de dados&#41;](../data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
 -   [Ferramentas de Análise de Tabela para Excel](../table-analysis-tools-for-excel.md)  
   
@@ -83,6 +84,6 @@ ms.locfileid: "66082887"
   
  Dependendo da edição do SQL Server Analysis Services ao você se conectará, alguns algoritmos avançados possivelmente não estarão disponíveis. Para obter informações, consulte [Recursos com suporte nas edições do SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   
- Para obter ajuda adicional com a instalação, consulte esta página no Centro de Download: [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
+ Para obter ajuda adicional com a instalação, consulte esta página no centro de download:[https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   
   

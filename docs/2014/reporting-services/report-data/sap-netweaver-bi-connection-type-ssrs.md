@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ccdd085b4beb757e0f16e973ad02c9e27a3dafb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107107"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo de conexão SAP NetWeaver BI (SSRS)
@@ -22,9 +22,9 @@ ms.locfileid: "66107107"
   
  Essa extensão de dados permite que você recupere dados multidimensionais de InfoCubes, MultiProviders (InfoCubes virtuais) e consultas habilitadas para a Web que sejam definidos em uma fonte de dados externa do [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] .  
   
- Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;construtor de relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Use as informações deste tópico para criar uma fonte de dados. Para obter instruções detalhadas, consulte [Adicionar e verificar uma &#40;de conexão de dados ou fonte de dados Construtor de relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="support"></a> Versões com suporte  
+##  <a name="support"></a>Versões com suporte  
  O provedor de dados foi desenvolvido para e testado com SAP BW 3.5 e 7.0.  
   
 -   Suporte para pacote de 20 para SAP BW 3.5 e 7.0  
@@ -33,11 +33,11 @@ ms.locfileid: "66107107"
   
 -   Pacote 20 de suporte de portas 6.40 do SAP  
   
--   Pacote de suporte de portais 7.0 11 do SAP  
+-   Portais SAP 7,0 pacote de suporte 11  
   
 -   SAP Duet 1.0  
   
-##  <a name="Connection"></a> Cadeia de Conexão  
+##  <a name="Connection"></a>Cadeia de conexão  
  Contate o administrador do banco de dados para obter informações sobre a conexão e as credenciais que devem ser usadas para se conectar à fonte de dados. O exemplo de cadeia de conexão a seguir especifica uma fonte de dados do [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] em um servidor usando uma porta 8000 e um XML do Analysis Services (XMLA) na Internet usando SOAP:  
   
 ```  
@@ -48,16 +48,16 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Credentials"></a> Credenciais  
+##  <a name="Credentials"></a>Fornecidas  
  As credenciais são necessárias para executar consultas, visualizar o relatório localmente e visualizá-lo no servidor de relatório.  
   
  Após a publicação do relatório, talvez seja necessário alterar as credenciais da fonte de dados para que, quando o relatório for executado no servidor de relatório, as permissões recuperadas sejam válidas.  
   
- Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) ou [especificar as credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md).  
+ Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de conexão em Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) ou [especificar credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md).  
   
   
   
-##  <a name="Query"></a> Consultas  
+##  <a name="Query"></a>Procura  
  É possível usar o designer de consultas gráfico no modo de Design ou de Consulta para criar uma consulta MDX. Para isso, localize as estruturas de dados subjacentes na fonte de dados. Durante a criação, você pode executar uma consulta interativamente usando o designer de consultas para ver os resultados. A consulta criada define os campos do conjunto de dados. Durante a execução, os dados reais são retornados da fonte de dados. Use o designer de consultas gráficas para executar as seguintes ações:  
   
 -   No modo de Design, arraste dimensões, membros, propriedades de membros e imagens chave da fonte de dados para um painel Dados a fim de criar uma consulta de linguagem MDX. Arraste os membros calculados do painel Membros Calculados até o painel Dados para definir campos adicionais para o conjunto de dados.  
@@ -70,7 +70,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Extended"></a> Propriedades de campo estendidas  
+##  <a name="Extended"></a>Propriedades de campo estendido  
  A fonte de dados do [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] dá suporte a propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais a `Value` e `IsMissing` definidas para um campo de conjunto de dados pela extensão de processamento de dados. As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns para várias fontes de dados. As propriedades personalizadas são exclusivas para cada fonte de dados.  
   
 ### <a name="working-with-field-properties"></a>Trabalhando com propriedades de campo  
@@ -85,13 +85,13 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Use uma das seguintes sintaxes para consultar as propriedades estendidas predefinidas em uma expressão:  
   
--   *Fields!FieldName.PropertyName*  
+-   *Campo! FieldName. PropertyName*  
   
--   *Fields!FieldName("PropertyName")*  
+-   *Campo! FieldName ("PropertyName")*  
   
  Use a sintaxe a seguir para consultar as propriedades estendidas personalizadas em uma expressão:  
   
--   *Fields!FieldName("PropertyName")*  
+-   *Campo! FieldName ("PropertyName")*  
   
   
   
@@ -108,7 +108,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |`Key`|`Object`|Retorna a chave para um nível.|  
 |`LevelNumber`|`Integer`|Para hierarquias pai-filho, retorna o nível ou o número de dimensões.|  
 |`ParentUniqueName`|`String`|Para hierarquias pai-filho, retorna um nome totalmente qualificado do nível pai.|  
-|`UniqueName`|`String`|Retorna o nome totalmente qualificado de um nível. Por exemplo, o `UniqueName` valor de um funcionário pode ser *[0D_Company]. [ 10D_Department]. [11]* .|  
+|`UniqueName`|`String`|Retorna o nome totalmente qualificado de um nível. Por exemplo, o `UniqueName` valor de um funcionário pode ser *[0D_Company]. [ 10D_Department]. [11]*.|  
   
  Para obter mais informações sobre como usar campos e propriedades de campo em uma expressão, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -124,18 +124,18 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="HowTo"></a> Tópicos de instruções  
  Esta seção contém instruções passo a passo para trabalhar com conexões de dados, fontes de dados e conjuntos de dados.  
   
- [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Adicionar e verificar uma conexão de dados ou uma fonte de dados &#40;Construtor de Relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [Criar um conjunto de um DataSet compartilhado ou um conjunto de &#40;inserido Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Adicionar um filtro a um conjunto de &#40;Construtor de Relatórios e SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
   
-##  <a name="Related"></a> Seções relacionadas  
+##  <a name="Related"></a>Seções relacionadas  
  Estas seções da documentação fornecem informações conceituais detalhadas sobre dados de relatório, bem como informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)  
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
  [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
@@ -147,12 +147,12 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.  
   
- [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Fontes de dados com suporte pelo Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
  Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.  
   
  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  

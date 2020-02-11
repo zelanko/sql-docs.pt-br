@@ -1,5 +1,5 @@
 ---
-title: Assinatura, comandos não distribuídos (assinatura transacional, SQL Server 2005 e versões posterior) | Microsoft Docs
+title: Assinatura, comandos não distribuídos (assinatura transacional, SQL Server 2005 e posterior) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a1f957c417c5c63766dfbffa923edd6935d1eb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151488"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription-sql-server-2005-and-later"></a>Assinatura, Comandos não Distribuídos (assinatura transacional, SQL Server 2005 e versões posteriores)
@@ -29,7 +29,7 @@ ms.locfileid: "63151488"
  **Tempo estimado para aplicar esses comandos com base em desempenhos passados**  
  A quantidade de tempo estimada para entrega de comandos ao Assinante. Se esse valor for maior do que a quantidade de tempo requerida para gerar e aplicar um instantâneo ao Assinante, considere reiniciar o Assinante. Para obter mais informações, consulte [Reinicializar as assinaturas](reinitialize-subscriptions.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Monitorar o desempenho com o Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)   
  [Monitorando a Replicação](monitoring-replication.md)  

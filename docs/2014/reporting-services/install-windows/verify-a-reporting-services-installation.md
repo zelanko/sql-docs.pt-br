@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108564"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verificar uma instalação do Reporting Services
@@ -32,9 +32,9 @@ ms.locfileid: "66108564"
   
 -   [Verificar a instalação do modo do SharePoint](#bkmk_sharepointmode)  
   
--   [Verificar uma instalação de modo nativo](#bkmk_nativemode)  
+-   [Verificar uma instalação do modo nativo](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a> Verificar a instalação do modo do SharePoint  
+##  <a name="bkmk_sharepointmode"></a>Verificar a instalação do modo do SharePoint  
   
 #### <a name="to-verify-the-reporting-services-service"></a>Para verificar o serviço Reporting Services  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66108564"
   
 2.  Verifique se o **Serviço SQL Server Reporting Services** está instalado e no estado **Executando** .  
   
-     Se você não vir o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na lista, verifique se o serviço está instalado. Para obter mais informações, consulte a seção "Instalar e iniciar o Reporting Services SharePoint Service" de [instalar o Reporting Services SharePoint Mode para SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+     Se você não vir o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na lista, verifique se o serviço está instalado. Para obter mais informações, consulte a seção "instalar e iniciar o Reporting Services o serviço do SharePoint" [em instalar Reporting Services modo do SharePoint para sharepoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 #### <a name="to-verify-the-service-application"></a>Para verificar o aplicativo de serviço  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66108564"
   
 #### <a name="to-verify-reporting-server-content-types"></a>Para verificar tipos de conteúdo do servidor de relatório  
   
-1.  Para verificar ou adicionar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tipos de conteúdo do servidor de relatório, consulte [adicionar tipos de conteúdo do relatório de servidor em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
+1.  Para verificar ou adicionar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tipos de conteúdo do servidor de relatório, consulte [adicionar tipos de conteúdo do servidor de relatório a uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 #### <a name="to-verify-you-can-launch-report-builder"></a>Para verificar se você pode iniciar o Construtor de Relatórios  
   
@@ -78,20 +78,20 @@ ms.locfileid: "66108564"
   
 #### <a name="reporting-services-samples"></a>Exemplos do Reporting Services  
   
-1.  Concluir um dos tutoriais do Reporting Services. Para obter mais informações, veja [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
+1.  Concluir um dos tutoriais do Reporting Services. Para obter mais informações, consulte [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
 2.  Baixe o banco de dados de exemplo do Adventure Works e os relatórios de exemplo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do CodePlex. Para obter mais informações, consulte os [Exemplos de relatórios do AdventureWorks](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
-##  <a name="bkmk_nativemode"></a> Verificar uma instalação no modo Nativo  
+##  <a name="bkmk_nativemode"></a>Verificar uma instalação do modo nativo  
  Quando você instala um servidor de relatório do modo Nativo usando a configuração padrão, a Instalação instala e implanta o servidor. Você pode verificar se a Instalação implantou o servidor de relatório executando alguns testes simples. Você deve ser um administrador local para executar essas etapas. Para permitir que outros usuários executem o teste, você deve configurar o acesso ao servidor de relatório para tais usuários.  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>Para verificar se o servidor de relatório está instalado e em execução  
   
 1.  Execute a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e se conecte à instância do servidor de relatório recém-instalada. A página URL do Serviço Web inclui um link para o serviço Web Servidor de Relatórios. Clique no link para verificar se você pode acessar o servidor. Se o banco de dados do servidor de relatório não estiver configurado, faça isso primeiro antes de clicar no link.  
   
-2.  Abra os aplicativos do console Serviços e verifique se o serviço Servidor de Relatório está em execução. Para exibir o status do serviço Servidor de Relatório, clique em **Iniciar**, aponte para **Painel de Controle**, clique duas vezes em **Ferramentas Administrativas**e clique duas vezes em **Serviços**. Quando a lista de serviços for exibida, role até **Servidor de Relatório (MSSQLSERVER)** . O status deve ser **Iniciado**.  
+2.  Abra os aplicativos do console Serviços e verifique se o serviço Servidor de Relatório está em execução. Para exibir o status do serviço Servidor de Relatório, clique em **Iniciar**, aponte para **Painel de Controle**, clique duas vezes em **Ferramentas Administrativas**e clique duas vezes em **Serviços**. Quando a lista de serviços for exibida, role até **Servidor de Relatório (MSSQLSERVER)**. O status deve ser **Iniciado**.  
   
-3.  Abra um navegador e digite a URL do servidor de relatório na barra de endereço. O endereço consiste no nome do servidor e no nome do diretório virtual especificados para o servidor de relatório durante a instalação. Por padrão, o diretório virtual do servidor de relatório é denominado **ReportServer**. Use a seguinte URL para verificar a instalação do servidor de relatório: http:// *\<computer name>* /ReportServer *\<_instance name>* . A URL será diferente se você tiver instalado o servidor de relatório como uma instância nomeada. Para obter mais informações sobre o formato de URL, veja [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md). Se você for um administrador local no Windows Vista ou Windows Server 2008, veja [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Abra um navegador e digite a URL do servidor de relatório na barra de endereço. O endereço consiste no nome do servidor e no nome do diretório virtual especificados para o servidor de relatório durante a instalação. Por padrão, o diretório virtual do servidor de relatório é denominado **ReportServer**. Você pode usar a seguinte URL para verificar a instalação do servidor de relatório: http://*\<nome do computador>*/reportserver*\<_instance nome>*. A URL será diferente se você tiver instalado o servidor de relatório como uma instância nomeada. Para obter mais informações sobre o formato de URL, consulte [Configurar as URLs do servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md). Se você é um administrador local no Windows Vista ou no Windows Server 2008, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 4.  Execute relatórios para testar as operações do servidor de relatório. Para esta etapa, você pode criar um relatório de exemplo de um tutorial. Para obter mais informações, consulte [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66108564"
   
 1.  Abra um navegador e digite a URL do Gerenciador de Relatórios na barra de endereço. O endereço consiste no nome do servidor e no nome do diretório virtual especificados para o Gerenciador de Relatórios durante a instalação ou na página URL do Gerenciador de Relatórios da ferramenta Configuração do Reporting Services. Por padrão, o diretório virtual do Gerenciador de Relatórios é **Reports**. Você pode usar a seguinte URL para verificar a instalação do Gerenciador de Relatórios:  
   
-     http:// *\<computer name>* /Reports *\<_instance name>* .  
+     http://*\<nome do computador>*/reports*\<_instance nome>*.  
   
 2.  Use o Gerenciador de Relatórios para criar uma nova pasta ou carregar um arquivo a fim de testar se as condições são devolvidas para o banco de dados do servidor de relatório. Se essas operações obtiverem êxito, a conexão estará funcional.  
   
@@ -107,12 +107,12 @@ ms.locfileid: "66108564"
   
 #### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Para verificar se o Designer de Relatórios está instalado e em execução  
   
-1.  Abra o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e crie um novo projeto com base em um tipo de projeto do Servidor de Relatório. Para obter mais informações sobre como usar o Assistente de Projeto do Servidor de Relatório, veja [Reporting Services no SSDT &#40;SQL Server Data Tools&#41;](../tools/reporting-services-in-sql-server-data-tools-ssdt.md) nos Manuais Online do SQL Server.  
+1.  Abra o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e crie um novo projeto com base em um tipo de projeto do Servidor de Relatório. Para obter mais informações sobre como usar o Assistente de Projeto do Servidor de Relatório, consulte [Reporting Services no SSDT &#40;SQL Server Data Tools&#41;](../tools/reporting-services-in-sql-server-data-tools-ssdt.md) nos Manuais Online do SQL Server.  
   
 2.  Se você tiver instalado exemplos de relatório, precisará abrir os arquivos de projeto do relatório de exemplo e publicar os relatórios em um servidor de relatório.  
   
-## <a name="see-also"></a>Consulte também  
- [Solucionar um problema da instalação do Reporting Services](troubleshoot-a-reporting-services-installation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Solucionar problemas de instalação de Reporting Services](troubleshoot-a-reporting-services-installation.md)   
  [Causa e resolução de erros do Reporting Services](../troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   

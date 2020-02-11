@@ -1,5 +1,5 @@
 ---
-title: Algoritmo rede Neural da Microsoft | Microsoft Docs
+title: Algoritmo rede neural da Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,14 +24,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083866"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo rede Neural combina cada estado possível do atributo de entrada com cada estado possível do atributo previsível e usa os dados de treinamento para calcular probabilidades. Posteriormente, essas probabilidades podem ser usadas para classificação ou regressão e também para a previsão de um resultado do atributo previsível com base nos atributos de entrada.  
+  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de rede neural combina cada Estado possível do atributo de entrada com cada Estado possível do atributo previsível e usa os dados de treinamento para calcular probabilidades. Posteriormente, essas probabilidades podem ser usadas para classificação ou regressão e também para a previsão de um resultado do atributo previsível com base nos atributos de entrada.  
   
  Um modelo de mineração desenvolvido com o algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] pode conter várias redes, dependendo do número de colunas usadas para a previsão de entrada ou usadas apenas para previsão. O número de redes que um modelo de mineração simples contém depende do número de estados que estão contidos nas colunas de entrada e as colunas previsíveis que o modelo de mineração usa.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66083866"
 ## <a name="how-the-algorithm-works"></a>Como o algoritmo funciona  
  O algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] cria uma rede que é composta por até três camadas de neurônios. Essas camadas são uma camada de entrada, uma camada opcional oculta e uma camada de saída.  
   
- **Camada de entrada:** Neurônios de entrada definem todos os valores de atributo de entrada para o modelo de mineração de dados e suas probabilidades.  
+ **Camada de entrada:** Os neurônios de entrada definem todos os valores de atributo de entrada para o modelo de Data Mining e suas probabilidades.  
   
- **Camada oculta:** Neurônios ocultos recebem entradas de neurônios de entrada e fornecem saídas para os neurônios de saída. A camada oculta é onde as várias probabilidades de entradas são ponderadas. Uma ponderação descreve a relevância ou importância de uma entrada específica para o neurônio oculto. Quanto maior a ponderação atribuída a uma entrada, mais importante será o valor daquela entrada. As ponderações podem ser negativas, o que significa que a entrada pode inibir, em vez de favorecer, um resultado específico.  
+ **Camada oculta:** Os neurônios ocultos recebem entradas de neurônios de entrada e fornecem saídas para neurônios de saída. A camada oculta é onde as várias probabilidades de entradas são ponderadas. Uma ponderação descreve a relevância ou importância de uma entrada específica para o neurônio oculto. Quanto maior a ponderação atribuída a uma entrada, mais importante será o valor daquela entrada. As ponderações podem ser negativas, o que significa que a entrada pode inibir, em vez de favorecer, um resultado específico.  
   
- **Camada de saída:** Os neurônios de saída representam valores de atributos previsíveis para o modelo de mineração de dados.  
+ **Camada de saída:** Os neurônios de saída representam valores de atributo previsíveis para o modelo de Data Mining.  
   
  Para obter uma explicação detalhada de como as camadas de entrada, oculta e de saída são criadas e pontuadas, consulte [Referência técnica do algoritmo Rede Neural da Microsoft](microsoft-neural-network-algorithm-technical-reference.md).  
   
@@ -88,9 +88,9 @@ ms.locfileid: "66083866"
   
 -   Não suporta a criação de dimensões de mineração de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência técnica do algoritmo Rede Neural da Microsoft](microsoft-neural-network-algorithm-technical-reference.md)   
- [Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência técnica do algoritmo rede neural da Microsoft](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services&#41;de mineração de dados](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de rede neural](neural-network-model-query-examples.md)   
  [Algoritmo Regressão Logística da Microsoft](microsoft-logistic-regression-algorithm.md)  
   

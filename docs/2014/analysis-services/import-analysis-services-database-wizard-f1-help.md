@@ -1,5 +1,5 @@
 ---
-title: Importar a Ajuda de F1 do Assistente de banco de dados do Analysis Services | Microsoft Docs
+title: Ajuda F1 do assistente para importar Analysis Services banco de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c38d70d73cfd80e15d8418f763f702e6a6eacf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080579"
 ---
 # <a name="import-analysis-services-database-wizard-f1-help"></a>Ajuda F1 do Assistente para Importação de Bancos de Dados do Analysis Services
-  Use o Assistente para Importação de Bancos de Dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 9.0 no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para gerar um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a partir de um banco de dados existente do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+  Use o assistente [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para importar banco de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] dados 9,0 no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para gerar um projeto [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a partir de um banco de dados existente.  
   
  O Assistente para Importação de Bancos de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 9.0 orienta você através das seguintes etapas:  
   

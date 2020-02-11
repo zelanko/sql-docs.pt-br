@@ -1,5 +1,5 @@
 ---
-title: (Guia partições, Designer de cubo) de grupos de medidas (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Grupos de medidas (guia partições, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077906"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Grupos de Medidas (guia Partições, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -26,12 +26,12 @@ ms.locfileid: "66077906"
  **Partições**  
  Exibe uma grade que contém a lista de partições que oferecem suporte ao grupo de medidas selecionado. A grade contém as seguintes colunas:  
   
- **(Ordinal)**  
+ **Numera**  
  Exibe a posição ordinal da partição dentro do grupo de medidas.  
   
  Clique para selecionar a linha inteira da partição.  
   
- **Nome da Partição**  
+ **Nome da partição**  
  Digite o nome da partição selecionada.  
   
  **Origem**  
@@ -39,13 +39,13 @@ ms.locfileid: "66077906"
   
  Clique no botão **...** para exibir a caixa de diálogo **Origem da Partição** e definir a origem para a partição selecionada.  
   
- **Agregação**  
+ **Aggregation**  
  Exibe o modo de agregação e o modo de armazenamento da partição. O modo de armazenamento é exibido primeiro: ROLAP (processamento analítico online relacional), MOLAP (processamento analítico online multidimensional) ou HOLAP (processamento analítico online híbrido). O modo de agregação é exibido como uma porcentagem da otimização solicitada, como uma medida de espaço solicitado ou usado ou como o número de agregações criadas. Clique no botão **...** para exibir o **Assistente de Design de Agregação** e definir o design de agregação para a partição especificada.  
   
  **Descrição**  
  Digite a descrição opcional da partição.  
   
- **Nova partição...**  
+ **Nova Partição...**  
  Clique para exibir o **Assistente para Partições** e criar uma nova partição no grupo de medidas selecionado.  
   
  **Configurações de armazenamento...**  
@@ -54,7 +54,7 @@ ms.locfileid: "66077906"
 > [!NOTE]  
 >  Esta opção será habilitada apenas se uma célula de uma partição estiver selecionada na grade **Partições** do grupo de medidas selecionado.  
   
- **Configurações de write-back...**  
+ **Configurações de Write-back...**  
  Clique para exibir a caixa de diálogo **Habilitar/Desabilitar Write-back** e especificar configurações de write-back para o grupo de medidas selecionado.  
   
 ## <a name="context-menu"></a>Menu de contexto  
@@ -64,14 +64,14 @@ ms.locfileid: "66077906"
 |------------|----------------|  
 |**Adicionar Business Intelligence**|Clique para exibir o **Assistente de Business Intelligence** e adicionar recursos de Business Intelligence ao cubo. Para obter mais informações sobre o **Assistente de Business Intelligence**, consulte [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md).|  
 |**Nova partição**|Clique para exibir o **Assistente para Partições** e criar uma nova partição no grupo de medidas selecionado.|  
-|**Renomear partição**|Selecione para renomear a partição selecionada.|  
-|**Delete (excluir)**|Clique para exibir a caixa de diálogo **Excluir Objetos** e excluir a ação selecionada.<br /><br /> Observação: Esta opção será desabilitada se uma partição de write-back for selecionada.|  
-|**Agregações de design**|Clique para exibir o **Assistente de Design de Agregação** e criar um design de agregação para a partição selecionada.<br /><br /> Observação: Esta opção será desabilitada se uma partição de write-back for selecionada.|  
+|**Renomear Partição**|Selecione para renomear a partição selecionada.|  
+|**Delete (excluir)**|Clique para exibir a caixa de diálogo **Excluir Objetos** e excluir a ação selecionada.<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
+|**Criar Agregações**|Clique para exibir o **Assistente de Design de Agregação** e criar um design de agregação para a partição selecionada.<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
 |**Configurações de armazenamento**|Clique para exibir a caixa de diálogo **Configurações de Armazenamento** e especificar o modo de armazenamento, o cache pró-ativo e configurações de notificação para a partição selecionada.|  
 |**Configurações de write-back**|Clique para exibir a caixa de diálogo **Habilitar/Desabilitar Write-back** e especificar configurações de write-back para o grupo de medidas que contém a partição selecionada.|  
-|**Otimização baseada no uso**|Clique para exibir o **Assistente de Otimização com Base no Uso** e criar um design de agregação baseado em padrões de uso existentes para a partição selecionada.<br /><br /> Observação: Esta opção será desabilitada se uma partição de write-back for selecionada.|  
-|**Processar**|Clique para exibir a caixa de diálogo **Processar** e processar a partição selecionada.|  
-|**Copiar**|Esta opção está desabilitada.|  
+|**Otimização baseada no uso**|Clique para exibir o **Assistente de Otimização com Base no Uso** e criar um design de agregação baseado em padrões de uso existentes para a partição selecionada.<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
+|**Processo**|Clique para exibir a caixa de diálogo **Processar** e processar a partição selecionada.|  
+|**Copy**|Esta opção está desabilitada.|  
 |**Colar**|Esta opção está desabilitada.|  
 |**Propriedades**|Selecione para exibir a janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] da partição selecionada.|  
   

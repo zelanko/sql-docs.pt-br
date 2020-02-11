@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 53fbe246db44b8aaa1dfda1e79d543f063919ede
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480806"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Perfil de dados e notificações no DQS
@@ -30,7 +30,7 @@ ms.locfileid: "65480806"
   
  A criação de perfil permite que você use o Data Quality Services não só para a descoberta da base de dados de conhecimento, limpeza e correspondência, como também como uma ferramenta de análise. Talvez você queira criar uma base de dados de conhecimento para análise e executar a descoberta da base de dados de conhecimento usando essa base para determinar, com base nas estatísticas de criação de perfil, se a base de dados de conhecimento atende suas necessidades de descoberta, limpeza e correspondência.  
   
-##  <a name="How"></a> Como a criação de perfil funciona  
+##  <a name="How"></a>Como a criação de perfil funciona  
  A criação de perfil não mede a qualidade da base de dados de conhecimento. Ela mede a qualidade dos dados de origem. A criação de perfil fornece estatísticas que indicam o efeito da operação específica que você está executando no gerenciamento de conhecimento ou em um projeto de qualidade de dados nos dados de origem. A criação de perfil está sempre no contexto da atividade específica que você está executando. Você pode clicar na guia de criação de perfil em uma tela para exibir os dados da criação de perfil sem sair do estágio da atividade que está executando. A tabela de criação de perfil é populada em tempo real, à medida que o processo é executado, permitindo que você avalie as tarefas de qualidade de dados enquanto as executa. É possível determinar se os dados de origem ficam melhores após a limpeza ou desduplicação e o quanto melhoram.  
   
  Todos os números de criação de perfil se referem ao número de vezes em que um valor aparece e, em muitos casos, o percentual do total, com a exceção de métricas de exclusividade. As métricas de exclusividade se referem ao número absoluto de valores, independentemente do número de vezes em que esses valores aparecem.  
@@ -47,7 +47,7 @@ ms.locfileid: "65480806"
   
  O DQS não fornece estatísticas de criação de perfil para a atividade Gerenciamento de Domínio.  
   
-##  <a name="Activity"></a> Dados de criação de perfil por atividade  
+##  <a name="Activity"></a>Criação de perfil de dados por atividade  
  A criação de perfil do DQS usa dimensões de qualidade de dados padrão para representar a qualidade dos dados: integridade (a extensão até a qual os dados estão presentes), precisão (a extensão até a qual os dados podem ser utilizados para seu uso pretendido) e exclusividade (a extensão até a qual valores diferentes representam entidades diferentes). Por padrão, valores NULL e vazios são considerados ausentes ou reduzem o percentual de integridade; no entanto, você também pode definir outros valores como equivalentes a NULL, caso em que eles também poderão ser considerados ausentes.  
   
  A criação de perfil fornece as estatísticas de que você precisa para avaliar seus processos, mas é necessário interpretá-las. Entenda o que a criação de perfil está informando a você examinando as estatísticas coluna por coluna.  
@@ -64,31 +64,31 @@ ms.locfileid: "65480806"
   
  Para obter mais informações sobre as estatísticas específicas de criação de perfil relacionadas a uma atividade, consulte as seções sobre Criação de Perfil nos seguintes tópicos:  
   
--   [Executar descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md)  
+-   [Executar a descoberta da base de dados de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md)  
   
--   [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Limpar dados usando o conhecimento de&#41; interno do DQS &#40;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Criar uma política de correspondência](../../2014/data-quality-services/create-a-matching-policy.md)  
   
 -   [Executar um projeto de correspondência](../../2014/data-quality-services/run-a-matching-project.md)  
   
-##  <a name="Monitoring"></a> Dados de criação de perfil no monitoramento da atividade  
+##  <a name="Monitoring"></a>Criação de perfil de dados no monitoramento de atividades  
  Informações de criação de perfil para as atividades Descoberta da Base de Dados de Conhecimento, Política de Correspondência, Correspondência e Limpeza estão disponíveis não só nas páginas de atividades no cliente Data Quality, como também no monitoramento da atividade. O monitoramento da atividade apresenta uma visão geral das atividades atuais e passadas. Além das propriedades e processos de atividades computacionais relacionados, você pode exibir as informações de criação de perfil geradas para cada atividade em um local. Selecione uma atividade na tabela de atividades para exibir os resultados da criação de perfil em uma tabela abaixo. Também é possível exportar os resultados da criação de perfil. Para obter mais informações, consulte [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
-##  <a name="Notifications"></a> Notificações  
+##  <a name="Notifications"></a>Notificações  
  Além de coletar e exibir estatísticas e métricas importantes por meio da criação de perfil, o DQS gerará notificações (se habilitado) para indicar quando talvez você queira executar uma ação com base nas estatísticas de criação de perfil exibidas. O DQS usa notificações para enfatizar fatos importantes sobre a fonte de dados e mostrar a efetividade da atividade atual relativa ao objetivo para o qual foi executado. As notificações fornecem dicas e recomendações que indicam uma condição e recomendam como você pode aprimorar uma atividade de descoberta da base de dados de conhecimento, limpeza de dados ou correspondência de dados.  
   
  Uma notificação do DQS é usada para gerar uma questão que pode ser interessante para você ou abordar um problema potencial. Se você vai agir ao receber a notificação dependerá se ela é relevante para os seus objetivos. Por exemplo, vamos supor que o DQS publique uma notificação quando a limpeza de dados não produzir valores corrigidos ou valores sugeridos quando a integridade e a exatidão forem 100%. Esta notificação indicaria que a atividade talvez não precise ser executada. Se você vai optar por executar a atividade, no entanto, essa é uma decisão sua.  
   
- Uma notificação é indicada por uma dica de ferramenta com um ponto de exclamação na guia **Criação de perfil** . As estatísticas associadas à notificação aparecem em vermelho para indicar a justificação estatística da notificação.  
+ Uma notificação é indicada por uma dica de ferramenta com um ponto de exclamação na guia **criação de perfil** . as estatísticas associadas à notificação são coloridas em vermelho para indicar a justificação estatística da notificação.  
   
  Você pode habilitar (o padrão) ou desabilitar as notificações na guia **Configurações Gerais** da seção **Administração** da página inicial Cliente Data Quality. Quando a notificação está desabilitada, as dicas de ferramenta não são exibidas e as estatísticas não aparecem em vermelho. Não há nenhum aprimoramento significativo no desempenho com a desabilitação de notificações. A criação de perfil ainda estará operacional se você desabilitar as notificações.  
   
  Para condições específicas associadas às notificações de uma atividade, consulte o seguinte:  
   
--   [Executar descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md)  
+-   [Executar a descoberta da base de dados de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md)  
   
--   [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Limpar dados usando o conhecimento de&#41; interno do DQS &#40;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Criar uma política de correspondência](../../2014/data-quality-services/create-a-matching-policy.md)  
   

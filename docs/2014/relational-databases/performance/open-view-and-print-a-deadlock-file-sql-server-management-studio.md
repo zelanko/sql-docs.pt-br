@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150688"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>Abrir, exibir e imprimir um arquivo de deadlock (SQL Server Management Studio)
@@ -33,7 +33,7 @@ ms.locfileid: "63150688"
   
 ### <a name="to-print-a-deadlock-file"></a>Para imprimir um arquivo de deadlock  
   
-1.  No menu **Arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aponte para **Abrir** e clique em **Arquivo**.  
+1.  No menu **arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aponte para **abrir** e clique em **arquivo**.  
   
 2.  Na caixa de diálogo **Abrir Arquivo** , selecione o tipo de arquivo .xdl na caixa **Arquivos do tipo** . Assim, você terá uma lista filtrada, contendo apenas arquivos de deadlock.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63150688"
   
 4.  No menu **Arquivo** , clique em **Imprimir.**  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Salvar gráficos de deadlock &#40;SQL Server Profiler&#41;](save-deadlock-graphs-sql-server-profiler.md)  
   
   

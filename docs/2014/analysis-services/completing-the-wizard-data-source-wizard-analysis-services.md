@@ -1,5 +1,5 @@
 ---
-title: Concluindo o Assistente (Assistente de fonte de dados) (Analysis Services) | Microsoft Docs
+title: Concluindo o assistente (Assistente de fonte de dados) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 489c0aaa7a25c10e024c63a11c2bf98fdf46917a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087664"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>Concluindo o Assistente (Assistente para Fonte de Dados) (Analysis Services)
@@ -29,9 +29,9 @@ ms.locfileid: "66087664"
  **Visualização**  
  Exibe a cadeia de conexão da fonte de dados. Clique em **Voltar** para fazer alterações nessas configurações.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
  [Fontes de dados em modelos multidimensionais](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Fontes de dados com suporte &#40;SSAS multidimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

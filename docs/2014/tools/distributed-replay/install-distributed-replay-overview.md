@@ -1,5 +1,5 @@
 ---
-title: Instalar o Distributed Replay | Microsoft Docs
+title: Instalar Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037e3c9c61b2c6648ec1194a766256d5e6cae5cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149340"
 ---
 # <a name="install-distributed-replay"></a>Instalar o Distributed Replay
@@ -22,10 +22,10 @@ ms.locfileid: "63149340"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Instalar o Distributed Replay &#40;programa de instalação&#41;](../../sql-server/install/install-distributed-replay-setup.md)|Tópico de procedimento para uma instalação típica do Distributed Replay usando o Assistente de Instalação.|  
-|[Instalar o Distributed Replay usando o prompt de comando](install-distributed-replay-overview.md)|Tópico de procedimento que fornece sintaxe de exemplo e parâmetros de instalação para Instalação autônoma.|  
+|[Instalar Distributed Replay &#40;instalação&#41;](../../sql-server/install/install-distributed-replay-setup.md)|Tópico de procedimento para uma instalação típica do Distributed Replay usando o Assistente de Instalação.|  
+|[Instalar o Distributed Replay a partir do prompt de comando](install-distributed-replay-overview.md)|Tópico de procedimento que fornece sintaxe de exemplo e parâmetros de instalação para Instalação autônoma.|  
 |[Instalar o Distributed Replay usando um arquivo de configuração](../../sql-server/install/install-distributed-replay-using-a-configuration-file.md)|Tópico de procedimentos que fornece a sintaxe de exemplo e parâmetros de instalação para a execução do Distributed Reply através de um arquivo de configuração.|  
 |[Concluir as etapas pós-instalação](complete-the-post-installation-steps.md)|Tópico de procedimentos para concluir uma instalação do Distributed Replay.|  
 |[Modificar as contas dos serviços controlador e cliente](modify-the-controller-and-client-services-accounts.md)|Tópico de procedimentos sobre como iniciar e interromper o controlador e serviços cliente do Distributed Replay, além de modificar as contas de serviço.|  

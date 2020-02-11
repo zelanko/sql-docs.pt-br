@@ -11,13 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aa4cd8349846a5c00f62f6cbf115b4cc3a1614ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480470"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Atualizar assemblies SQLCLR após atualizar o .NET Framework
+  
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] O DQS é uma coleção de rotinas SQLCR (SQL Common Language Runtime) que fazem referência aos assemblies do Microsoft .NET Framework 4. Quando você instala qualquer atualização do .NET Framework em seu computador que afete qualquer assembly do .NET Framework referenciado, isso leva a uma alteração na MVID (ID da Versão do Módulo) do assembly no GAC (Cache de Assembly Global). Isso causa uma incompatibilidade entre as MVIDs do assembly referenciado no GAC e o assembly no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Se a atualização do .NET Framework exigir que você reinicie o computador do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , os assemblies do SQLCLR afetados serão atualizados automaticamente para corrigir o problema de incompatibilidade do MVID ao reiniciar o computador do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Porém, para as atualizações do .NET Framework que não exigem que você reinicie seu computador do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , um erro ocorre devido à incompatibilidade nos MVIDs dos assemblies quando você tenta se conectar a um [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] usando um [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]:  
@@ -52,7 +53,7 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
 4.  As outras etapas são iguais às etapas 2 a 6 na seção [Executar o DQSInstaller.exe na tela Iniciar, no menu Iniciar ou no Windows Explorer](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer) em [Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Data Quality Services](install-data-quality-services.md)   
  [Atualize o esquema de bancos de dados DQS depois de instalar a atualização do SQL Server](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
   

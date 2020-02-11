@@ -1,5 +1,5 @@
 ---
-title: Guia diagrama (Visualizador do modelo de mineração) do cluster | Microsoft Docs
+title: Guia diagrama de cluster (Visualizador do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088012"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Guia Diagrama de Cluster (Visualizador do Modelo de Mineração)
   A guia **Diagrama de Cluster** fornece uma exibição gráfica de todos os clusters que o modelo de clustering contém.  
   
- **Para obter mais informações:** [Algoritmo Microsoft Clustering](data-mining/microsoft-clustering-algorithm.md), [procurar um modelo usando o Visualizador de Cluster da Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Para obter mais informações:** [algoritmo de clustering da Microsoft](data-mining/microsoft-clustering-algorithm.md), [procurar um modelo usando o Visualizador de cluster da Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Opções  
- **Atualizar conteúdo do Visualizador**  
+ **Atualizar conteúdo do visualizador**  
  Recarregue o modelo de mineração no visualizador.  
   
  **Modelo de mineração**  
@@ -37,30 +37,30 @@ ms.locfileid: "66088012"
  **Ampliar**  
  Amplie o diagrama para obter uma exibição detalhada dos clusters.  
   
- **Reduza a imagem**  
+ **Reduzir**  
  Reduza a imagem do diagrama, para ver mais clusters.  
   
- **Copiar exibição de gráfico**  
+ **Copiar Exibição do Gráfico**  
  Copie a seção visível do diagrama para a área de transferência.  
   
- **Copiar gráfico inteiro**  
+ **Copiar Todo o Gráfico**  
  Copie todo o diagrama na área de transferência.  
   
  **Dimensionar diagrama para ajustar à janela**  
  Reduza o diagrama até que o diagrama inteiro se ajuste na tela.  
   
- **Localizar nó**  
+ **Localizar Nó**  
  Abre a caixa de diálogo **Localizar Nó** . Este recurso é útil em modelos grandes, onde pode ser difícil localizar o atributo de interesse. Você pode inserir critérios de pesquisa na caixa de diálogo e a exibição dos clusters será filtrada para mostrar somente o cluster que contém a cadeia de pesquisa.  
   
  **Aprimorar Layout**  
  Reordene os clusters no diagrama para aprimorar o layout.  
   
- **Densidade**  
+ **Dens**  
  Use esta opção para alterar quais pares atributo-valor são exibidos no diagrama de cluster. Você usa a opção **Variável de Sombreamento** para selecionar um atributo e usa **Estado** para escolher um valor. O sombreamento no gráfico indica a densidade do par atributo-valor dentro do cluster.  
   
  Se **População** estiver selecionada, o diagrama mostrará a quantidade de suporte para cada cluster, ou seja, o número de casos já que nenhum atributo foi selecionado.  
   
- **Variável de sombreamento**  
+ **Variável de Sombreamento**  
  Selecione um atributo para representar no diagrama de cluster.  
   
  **Estado**  
@@ -69,9 +69,9 @@ ms.locfileid: "66088012"
  **Links**  
  Ajuste quantos links são mostrados entre clusters, movendo o controle deslizante para cima ou para baixo. Abaixar o controle deslizante deixa somente as associações mais fortes entre clusters.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining/data-mining-model-viewers.md)  
   
   

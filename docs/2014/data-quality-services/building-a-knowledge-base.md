@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 01d0b016f6b7e1ea3c83cd42f52facb56f825b77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481167"
 ---
 # <a name="building-a-knowledge-base"></a>Criando uma base de dados de conhecimento
@@ -28,15 +28,15 @@ ms.locfileid: "65481167"
 |Criar uma nova base de dados de conhecimento do zero, a partir de uma base de dados de conhecimento existente ou a partir de um arquivo de dados .dqs.|[Criar uma base de dados de conhecimento](../../2014/data-quality-services/create-a-knowledge-base.md)|  
 |Abrir uma base de dados de conhecimento existente para executar a descoberta da base de dados de conhecimento, o gerenciamento de domínio, ou adicionar uma política de correspondência.|[Abrir uma base de dados de conhecimento](../../2014/data-quality-services/open-a-knowledge-base.md)|  
 |Executar ações de gerenciamento em uma base de dados de conhecimento, inclusive abri-la, desbloqueá-la, descartar seu trabalho nela, renomeá-la, excluí-la ou exibir suas propriedades.|[Gerenciar uma base de dados de conhecimento](../../2014/data-quality-services/manage-a-knowledge-base.md)|  
-|Adicionar conhecimento a uma base de dados de conhecimento através de descoberta de conhecimento; gerenciamento de valor de domínio; adicionando uma política de comparação; importando um conhecimento, domínio ou valores; ou usando a base de dados de conhecimento padrão, Dados do DQS.|[Adicionar conhecimento a uma base de dados de conhecimento](../../2014/data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
-|Analisar um exemplo de dados para critérios de qualidade de dados.|[Executar descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md)|  
+|Adicionar conhecimento a uma base de dados de conhecimento através de descoberta de conhecimento; gerenciamento de valor de domínio; adicionando uma política de comparação; importando um conhecimento, domínio ou valores; ou usando a base de dados de conhecimento padrão, Dados do DQS.|[Adicionando conhecimento a uma base de dados de conhecimento](../../2014/data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
+|Analisar um exemplo de dados para critérios de qualidade de dados.|[Executar a descoberta da base de dados de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Importar ou exportar conhecimento para/de uma base de dados de conhecimento.|[Importar e exportar conhecimento](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
-|Criar um domínio único e adicionar conhecimento ao domínio.|[Gerenciar um domínio](../../2014/data-quality-services/managing-a-domain.md)|  
-|Criar um domínio composto e adicionar conhecimento ao domínio.|[Gerenciar um domínio de composição](../../2014/data-quality-services/managing-a-composite-domain.md)|  
+|Importar ou exportar conhecimento para/de uma base de dados de conhecimento.|[Importando e exportando conhecimento](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
+|Criar um domínio único e adicionar conhecimento ao domínio.|[Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md)|  
+|Criar um domínio composto e adicionar conhecimento ao domínio.|[Gerenciando um domínio composto](../../2014/data-quality-services/managing-a-composite-domain.md)|  
   
   

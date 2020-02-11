@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c77a06618cddddc06aae962c137433c4905cecb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282296"
 ---
 # <a name="security-extensions-overview"></a>Visão geral de extensões de segurança
@@ -61,8 +61,8 @@ ms.locfileid: "63282296"
   
 -   Você tem usuários e funções com definição personalizada e precisa fornecer um esquema de autorização compatível no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementando uma extensão de segurança](../security-extension/implementing-a-security-extension.md)   
- [Configurar o Gerenciador de Relatórios para passar cookies de autenticação personalizados](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
+ [Configurar o Gerenciador de Relatórios para transmitir cookies de autenticação personalizados](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
   
   

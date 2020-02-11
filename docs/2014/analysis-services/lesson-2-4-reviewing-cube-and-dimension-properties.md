@@ -1,5 +1,5 @@
 ---
-title: Revisando propriedades de dimensão e cubo | Microsoft Docs
+title: Revisando Propriedades de cubo e de dimensão | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078996"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Revisando as propriedades de dimensão e cubo
@@ -34,7 +34,7 @@ ms.locfileid: "66078996"
   
 4.  No painel **Dimensões** da guia **Estrutura do Cubo** , expanda **Cliente**e depois clique em **Editar Cliente** para abrir a dimensão no Designer de Dimensão.  
   
-     Designer de dimensão contém as seguintes guias: **Estrutura da dimensão**, **relações de atributo**, **traduções**, e **navegador**. Observe que o **estrutura da dimensão** guia inclui três painéis: **Atributos**, **hierarquias**, e **exibição da fonte de dados**. Os atributos da dimensão são exibidos no painel **Atributos** . Para obter mais informações, consulte [referência de propriedades de atributo de dimensão](multidimensional-models/dimension-attribute-properties-reference.md), [hierarquias definidas pelo usuário](multidimensional-models/user-defined-hierarchies-create.md).  
+     O Designer de Dimensão contém as seguintes guias: **Estrutura da Dimensão**, **Relações de Atributo**, **Traduções**e **Navegador**. Observe que a guia **Estrutura da Dimensão** inclui três painéis: **Atributos**, **Hierarquias**e **Exibição da Fonte de Dados**. Os atributos da dimensão são exibidos no painel **Atributos** . Para obter mais informações, consulte [referência de propriedades de atributo de dimensão](multidimensional-models/dimension-attribute-properties-reference.md), [criar hierarquias definidas pelo usuário](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Para mudar para o Designer de Cubo, clique com o botão direito do mouse no cubo do **Tutorial do Analysis Services** do nó **Cubos** do Gerenciador de Soluções e clique em **Designer de Exibição**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66078996"
   
 7.  Clique na guia **Partições** .  
   
-     O Assistente para Cubos define uma partição única para o cubo, usando o modo de armazenamento MOLAP (processamento analítico online multidimensional) sem agregações. Com o MOLAP, todos os dados de nível folha e todas as agregações são armazenadas dentro do cubo para obter desempenho máximo. As agregações são resumos pré-calculados de dados que melhoram o tempo de resposta de consultas, pois têm respostas antes que as perguntas sejam feitas. Você pode definir partições adicionais, configurações de armazenamento e configurações write-back na guia **Partições** . Para obter mais informações, consulte [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md) e [Agregações e designs de agregação](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+     O Assistente para Cubos define uma partição única para o cubo, usando o modo de armazenamento MOLAP (processamento analítico online multidimensional) sem agregações. Com o MOLAP, todos os dados de nível folha e todas as agregações são armazenadas dentro do cubo para obter desempenho máximo. As agregações são resumos pré-calculados de dados que melhoram o tempo de resposta de consultas, pois têm respostas antes que as perguntas sejam feitas. Você pode definir partições adicionais, configurações de armazenamento e configurações de write-back na guia **partições** . Para obter mais informações, consulte [partições &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md), [agregações e designs de agregação](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 8.  Clique na guia **Navegador** .  
   
@@ -52,14 +52,14 @@ ms.locfileid: "66078996"
   
 9. No Gerenciador de Soluções, clique com o botão direito do mouse no **Tutorial do Analysis Services** do nó **Cubos** e clique em **Exibir Código**. Talvez você precise esperar um pouco.  
   
-     O código XML do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é exibido na guia **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.cube [XML]** . Esse é o código real usado para criar o cubo em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] durante a implantação. Para obter mais informações, consulte [Exibir o XML de um projeto do Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
+     O código XML para o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo do tutorial é exibido na guia ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial. Cube [XML]** . Esse é o código real usado para criar o cubo em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] durante a implantação. Para obter mais informações, consulte [Exibir o XML de um projeto do Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
   
 10. Feche a guia do código XML.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Implantando um projeto do Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procurar dados de dimensão no Designer de Dimensão](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aeb073b7e44060c0382d3d641aa196b93fbb402d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150580"
 ---
 # <a name="start-system-monitor-windows"></a>Iniciar o Monitor do Sistema (Windows)
@@ -28,7 +28,7 @@ ms.locfileid: "63150580"
   
 1.  No menu **Iniciar** , aponte para **Executar**, digite **perfmon** na caixa de diálogo Executar e clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Executar o Monitor do Sistema](../performance-monitor/run-system-monitor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Propriedades (guia Geral) do arquivo de rastreamento | Microsoft Docs
+title: Propriedades do arquivo de rastreamento (guia geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089604"
 ---
 # <a name="trace-file-properties-general-tab"></a>Propriedades do Arquivo de Rastreamento (guia Geral)
@@ -36,7 +36,7 @@ ms.locfileid: "66089604"
  **Tipo de provedor de rastreamento**  
  Mostra o tipo de servidor que forneceu o rastreamento.  
   
- **version**  
+ **Versão**  
  Exibe a versão do servidor que forneceu o rastreamento.  
   
  **Tamanho do arquivo (KB)**  
@@ -48,7 +48,7 @@ ms.locfileid: "66089604"
  **Modificado**  
  A data e hora em que o arquivo de rastreamento foi modificado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Abrir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Modelos e permissões do SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  

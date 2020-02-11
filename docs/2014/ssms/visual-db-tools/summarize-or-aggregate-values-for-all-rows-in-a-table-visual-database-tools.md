@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204614"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Resumir ou agregar valores para todas as linhas em uma tabela (Visual Database Tools)
-  Usando uma função de agregação, você pode criar um resumo para obter todos os valores em uma tabela. Por exemplo, é possível criar uma consulta, como a seguinte, para exibir o preço total de todos os livros da tabela `titles`:  
+  Usando uma função de agregação, você pode criar um resumo para obter todos os valores em uma tabela. Por exemplo, é possível criar uma consulta, como a seguinte, para exibir o preço total de todos os livros da tabela `titles` :  
   
 ```  
 SELECT SUM(price)  
 FROM titles  
 ```  
   
- Você pode criar várias agregações na mesma consulta usando funções de agregação com mais de uma coluna. Por exemplo, é possível criar uma consulta que calcule o total da coluna `price` e a média da coluna `discount`.  
+ Você pode criar várias agregações na mesma consulta usando funções de agregação com mais de uma coluna. Por exemplo, é possível criar uma consulta que calcule o total da coluna `price` e a média da coluna `discount` .  
   
- Você também pode agregar a mesma coluna de modos diferentes (como totalizar, contar e calcular a média) na mesma consulta. Por exemplo, a consulta seguinte calcula a média e resume a coluna `price` da tabela `titles`:  
+ Você também pode agregar a mesma coluna de modos diferentes (como totalizar, contar e calcular a média) na mesma consulta. Por exemplo, a consulta seguinte calcula a média e resume a coluna `price` da tabela `titles` :  
   
 ```  
 SELECT AVG(price), SUM(price)  
@@ -57,7 +57,7 @@ FROM titles
   
      O Designer de Consulta e Exibição atribui automaticamente um alias de coluna à coluna que você está resumindo. Você pode substituir este alias por um mais significativo. Para obter detalhes, veja [Criar aliases de coluna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
-4.  Na coluna de grade **Agrupar por**, selecione a função de agregação apropriada, como: **Soma**, **Média**, **Mín**, **Máx** e **Contagem**. Se você quiser agregar somente linhas exclusivas no conjunto de resultados, escolha uma função de agregação com as opções DISTINCT, como **Min Distinct**. Não escolha **Agrupar por**, **Expressão**nem **Onde**, porque essas opções não se aplicam quando você agrega todas as linhas.  
+4.  Na coluna de grade **Agrupar por**, selecione a função de agregação apropriada, como: **Soma**, **Média**, **Mín**, **Máx** e **Contar**. Se você quiser agregar somente linhas exclusivas no conjunto de resultados, escolha uma função de agregação com as opções DISTINCT, como **Min Distinct**. Não escolha **Agrupar por**, **Expressão**nem **Onde**, porque essas opções não se aplicam quando você agrega todas as linhas.  
   
      O Designer de Consulta e Exibição substitui o nome de coluna da instrução no [Painel SQL](sql-pane-visual-database-tools.md) com a função de agregação que você especificar. Por exemplo, a instrução SQL poderia se parecer com:  
   
@@ -77,8 +77,8 @@ FROM titles
 > [!NOTE]  
 >  O Designer de Consulta e Exibição mantém funções de agregação como parte da instrução SQL no painel SQL até que você desative o modo Agrupar por. Portanto, se você modificar sua consulta alterando o tipo, as tabelas ou os objetos com valor de tabela presentes no painel Diagrama, a consulta resultante poderá incluir funções de agregação inválidas.  
   
-## <a name="see-also"></a>Consulte também  
- [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Classificar e agrupar resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Resumir resultados da consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

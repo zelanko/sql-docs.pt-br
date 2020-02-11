@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a28f2401f11f20f8891dbe71537ce2240a570ed8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158251"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Coleta de lixo de OLTP na memória
@@ -42,7 +42,7 @@ ms.locfileid: "63158251"
   
  Após a confirmação de uma transação de usuário, ele identifica todos os itens enfileirados associados ao agendador que ele executou e libera a memória. Se a fila de coleta de lixo no agendador estiver vazia, ele procurará uma fila não vazia no nó NUMA atual. Se houver baixa atividade transacional e pressão de memória, o thread principal da coleta de lixo poderá acessar linhas da coleta de lixo de qualquer fila. Se não houver atividade transacional (por exemplo) após a exclusão de um grande número de linhas e não houver pressão de memória, as linhas excluídas não passarão por coleta de lixo até a atividade transacional ser retomada ou haver pressão de memória.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciando memória para OLTP na memória](../../database-engine/managing-memory-for-in-memory-oltp.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciando memória para OLTP in-memory](../../database-engine/managing-memory-for-in-memory-oltp.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Carregar dados do MDS no Excel | Microsoft Docs
+title: Carregar dados do MDS para o Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbe1188773d0770ff345cd54ea47e03a3c05555f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482710"
 ---
 # <a name="load-data-from-mds-into-excel"></a>Carregar dados do MDS no Excel
-  No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], você deve carregar os dados do repositório do MDS para trabalhar com eles.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]No, você deve carregar dados do repositório do MDS para trabalhar com ele.  
   
- Se você deseja filtrar o conjunto de dados antes do carregamento, consulte [filtrar dados antes de carregar &#40;suplemento MDS para Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) em vez disso.  
+ Se você quiser filtrar o conjunto de dados antes de carregá-lo, confira [filtro antes de carregar &#40;Suplemento MDS para Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) em vez disso.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
@@ -41,17 +41,17 @@ ms.locfileid: "65482710"
   
     > [!NOTE]  
     >  -   Somente os primeiros um milhão de membros serão carregados no Excel. Para filtrar a lista antes de carregar na faixa de opções, no grupo **Conectar e Carregar** , clique em **Filtrar**.  
-    > -   Nas colunas que são listas restritas (atributos baseados em domínio), os primeiros 25.000 valores serão carregados. Você pode alterar este número na propriedade MaximumDbaEntitySize no arquivo excelusersettings.config localizado no computador no qual o Excel está instalado. Esse arquivo está localizado em C:\Users\\< usuário\>\AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices\\.  
+    > -   Nas colunas que são listas restritas (atributos baseados em domínio), os primeiros 25.000 valores serão carregados. Você pode alterar este número na propriedade MaximumDbaEntitySize no arquivo excelusersettings.config localizado no computador no qual o Excel está instalado. Esse arquivo está localizado em C:\Users\\<usuário\>\AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices\\.  
   
     > [!NOTE]  
     >  Quando você carrega dados delimitados por texto usando o Suplemento para Microsoft Excel com o Excel de 32 bits, e as configurações para as propriedades **Cell Count to Load** e **Cell Count to Publish** são configuradas para o máximo de 1000, ocorrerá um erro de memória insuficiente. Você deve usar o Excel de 64 bits para usar as configurações máximas para **Contagem de Células para Carregamento** e **Contagem de Células para Publicação**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Publicar dados do Excel no MDS &#40;suplemento do MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+ [Publicar dados do Excel para o MDS &#40;Suplemento MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Carregamento de dados &#40;suplemento do MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [Caixa de diálogo Filtrar &#40;Suplemento MDS para Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
- [Publicação de dados &#40;suplemento do MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Carregando dados &#40;Suplemento MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+ [Caixa de diálogo de filtro &#40;Suplemento MDS para Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
+ [Publicando dados &#40;Suplemento MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

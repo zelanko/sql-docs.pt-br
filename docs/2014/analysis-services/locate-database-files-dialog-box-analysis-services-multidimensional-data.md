@@ -1,5 +1,5 @@
 ---
-title: Localize a caixa de diálogo de arquivos do banco de dados (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Localizar arquivos de banco de dados (Analysis Services-Data multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078025"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Localizar Arquivos de Banco de Dados (Analysis Services - Dados Multidimensionais)
@@ -24,7 +24,7 @@ ms.locfileid: "66078025"
   
 -   Clicando em **Procurar** na página **Geral** da caixa de diálogo **Restaurar Banco de Dados** .  
   
--   Clicando no botão de reticências ( **...** ) na coluna **Arquivo de backup** da grade da opção **Restaurar partições de backup** na página **Partições** da caixa de diálogo **Restaurar Banco de Dados** .  
+-   Clicando no botão de reticências (**...**) na coluna **Arquivo de backup** da grade da opção **Restaurar partições de backup** na página **Partições** da caixa de diálogo **Restaurar Banco de Dados** .  
   
 ## <a name="options"></a>Opções  
  **Selecione a pasta**  
@@ -36,9 +36,9 @@ ms.locfileid: "66078025"
  **Nome do arquivo**  
  Digite para modificar o arquivo selecionado em **Selecionar a pasta**ou para selecionar um arquivo não listado em **Selecionar a pasta**.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Geral &#40;restaurar a caixa de diálogo banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Partições &#40;restaurar a caixa de diálogo banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Geral &#40;caixa de diálogo Restaurar Banco de dados&#41; &#40;Analysis Services –&#41;multidimensional](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Caixa de diálogo partições &#40;Restore Database&#41; &#40;Analysis Services-dados multidimensionais&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

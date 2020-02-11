@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63239052"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Usando o controle ReportViewer do WinForms
@@ -24,9 +24,9 @@ ms.locfileid: "63239052"
   
 ###### <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Para adicionar o controle ReportViewer a um aplicativo do Windows  
   
-1.  Crie um novo aplicativo do Windows usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Crie um novo aplicativo do Windows usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]ou o.  
   
-     \- Ou –  
+     \-Or  
   
      Abra um projeto existente do aplicativo do Windows e adicione um novo formulário.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "63239052"
   
  Depois que o controle for adicionado ao formulário, a marcação inteligente **Tarefas do ReportViewer** será exibida e solicitará a seleção de um relatório.  
   
- Se o relatório que você deseja exibir tiver sido implantado em um servidor de relatório, selecione a opção **\<Server Report>** na lista suspensa **Escolher Relatório**. Após o  **\<relatório do servidor >** opção estiver selecionada, serão exibidas duas propriedades adicionais: **Url do servidor de relatório** e **caminho do relatório**. A **URL do Servidor de Relatório** é o endereço para o servidor de relatório e o **Caminho do Relatório** é o caminho completo para o relatório a ser renderizado.  
+ Se o relatório que você deseja exibir tiver sido implantado em um servidor de relatório, selecione a ** \<opção relatório do servidor>** na lista suspensa **escolher relatório** . Depois que a opção ** \<>do relatório do servidor** for selecionada, duas propriedades adicionais serão exibidas: **URL do servidor de relatório** e caminho do **relatório**. A **URL do Servidor de Relatório** é o endereço para o servidor de relatório e o **Caminho do Relatório** é o caminho completo para o relatório a ser renderizado.  
   
- ![Selecionar servidor de relatório](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Selecionar servidor de relatório")  
+ ![Selecionar relatório do servidor](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Selecionar relatório do servidor")  
   
  Se o relatório que você deseja exibir for um relatório no modo local, selecione a opção **Criar um novo relatório** para iniciar o designer de relatórios ou selecione um relatório que já faz parte do projeto existente.  
   
@@ -158,18 +158,18 @@ End Class
   
      O arquivo Sales Order Detail.rdl agora deve fazer parte do projeto.  
   
-     ![Relatório Detalhes da Ordem de Venda](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "Relatório Detalhes da Ordem de Venda")  
+     ![Relatório Detalhes do Pedido de Vendas](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "Relatório Detalhes do Pedido de Vendas")  
   
 5.  Clique com o botão direito do mouse no arquivo Sales Order Detail.rdl no Gerenciador de Soluções e selecione **Renomear**. Renomeie o relatório como **Sales Order Detail.rdlc** pressione a ENTER.  
   
-     Se o Gerenciador de Soluções não estiver visível, abra-o no menu **Exibir** selecionando **Gerenciador de Soluções**.  
+     Se Gerenciador de Soluções não estiver visível, você poderá abri-lo no menu **Exibir** selecionando **Gerenciador de soluções**.  
   
     > [!NOTE]  
     >  A renomeação da extensão de arquivo de rdl para rdlc permitirá editar o relatório usando o designer de relatórios do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
   
 6.  Depois que o relatório for renomeado, selecione o arquivo e localize a janela Propriedades. Altere a propriedade **Copiar para Diretório de Saída** para **Copiar se Mais Recente**.  
   
-     ![Definindo a configuração Copiar para Saída](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Definindo a configuração Copiar para Saída")  
+     ![Configurando a definição Copiar para Saída](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Configurando a definição Copiar para Saída")  
   
      Se a janela **Propriedades** não estiver visível, abra-a no menu **Exibir** selecionando **Janela Propriedades**.  
   
@@ -501,7 +501,7 @@ Public Class Form1
 End Class  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Integrando o Reporting Services usando os controles ReportViewer](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   

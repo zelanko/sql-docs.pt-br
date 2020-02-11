@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c5ded9f42da267cfd137f0adfd4465d965d9a06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188567"
 ---
 # <a name="cursor-behaviors"></a>Comportamentos de cursor
@@ -39,15 +39,15 @@ ms.locfileid: "63188567"
 |SQL_NONSCROLLABLE e SQL_INSENSITIVE|Conjunto de resultados padrão (somente avanço, somente leitura)|  
 |SQL_NONSCROLLABLE e SQL_UNSPECIFIED|Conjunto de resultados padrão (somente avanço, somente leitura)|  
   
- Simultaneidade otimista baseada em versão exige uma **carimbo de hora** coluna na tabela subjacente. Se o controle de simultaneidade otimista baseada em versão for solicitado em uma tabela que não tem um **carimbo de hora** coluna, a servidor usa com base em valores a simultaneidade otimista.  
+ A simultaneidade otimista baseada em versão requer uma coluna **timestamp** na tabela subjacente. Se o controle de simultaneidade otimista baseado em versão for solicitado em uma tabela que não tem uma coluna **timestamp** , o servidor usará a simultaneidade otimista com base em valores.  
   
 ## <a name="scrollability"></a>Rolagem  
- Quando SQL_ATTR_CURSOR_SCROLLABLE é definido como SQL_SCROLLABLE, o cursor dá suporte a todos os valores diferentes para o *FetchOrientation* parâmetro do [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md). Quando SQL_ATTR_CURSOR_SCROLLABLE é definido como SQL_NONSCROLLABLE, o cursor dá suporte apenas a um *FetchOrientation* valor SQL_FETCH_NEXT.  
+ Quando SQL_ATTR_CURSOR_SCROLLABLE é definido como SQL_SCROLLABLE, o cursor dá suporte a todos os valores diferentes para o parâmetro *FetchOrientation* de [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md). Quando SQL_ATTR_CURSOR_SCROLLABLE é definido como SQL_NONSCROLLABLE, o cursor só dá suporte a um valor de *FetchOrientation* de SQL_FETCH_NEXT.  
   
 ## <a name="sensitivity"></a>Sensibilidade  
  Quando SQL_ATTR_CURSOR_SENSITIVITY é definido como SQL_SENSITIVE, o cursor reflete as modificações de dados feitas pelo usuário atual ou confirmadas por outros usuários. Quando SQL_ATTR_CURSOR_SENSITIVITY é definido como SQL_INSENSITIVE, o cursor não reflete as modificações de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Uso de cursores &#40;ODBC&#41;](using-cursors-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Usando cursores &#40;ODBC&#41;](using-cursors-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cursores XTP | Microsoft Docs
+title: Cursores de XTP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b591aa8e89200ca863b1e8196c383c506401fc3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151060"
 ---
 # <a name="xtp-cursors"></a>Cursores de XTP
   O objeto de desempenho Cursores de XTP contém os contadores relacionados aos cursores do mecanismo de XTP interno. Os cursores são os blocos de construção de baixo nível que o mecanismo de XTP usa para processar consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] . Como tal, você normalmente não tem controle direto sobre eles.  
   
- Esta tabela descreve os **cursores XTP** contadores.  
+ Esta tabela descreve os contadores de **cursores de XTP** .  
   
-|Contador|Descrição|  
+|Contador|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Exclusões de cursor/s**|O número de exclusões de cursor (em média), por segundo.|  
 |**Inserções de Cursor/s**|O número de inserções de cursor (em média), por segundo.|  
@@ -37,7 +37,7 @@ ms.locfileid: "63151060"
 |**Linhas tocadas/s**|O número de linhas tocadas por cursores (em média), por segundo.|  
 |**Linhas excluídas por tentativa tocadas/s**|O número de linhas expirando tocadas por cursores (em média), por segundo. Uma linha está expirando quando a transação que a excluiu ainda está ativa (ou seja, ainda não foi confirmada nem anulada).|  
   
-## <a name="see-also"></a>Consulte também  
- [XTP &#40;OLTP in-memory&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#40;de OLTP na memória&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)  
   
   

@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260747"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Configurações da extensão de entrega do Reporting Services
@@ -56,15 +56,15 @@ ms.locfileid: "63260747"
   
 |Configuração|Valor|  
 |-------------|-----------|  
-|**FILENAME**|O nome do arquivo salvo no disco.|  
+|**NOME do arquivo**|O nome do arquivo salvo no disco.|  
 |**FILEEXTN**|Indica se será preciso incluir uma extensão de arquivo para o relatório renderizado. O valor é `true` ou `false`.|  
-|**PATH**|O caminho de pasta ou o caminho do compartilhamento de arquivo UNC nos quais salvar o relatório.|  
+|**Multi-Path**|O caminho de pasta ou o caminho do compartilhamento de arquivo UNC nos quais salvar o relatório.|  
 |**RENDER_FORMAT**|O formato do relatório salvo no disco.|  
-|**USERNAME**|O nome de usuário exigido para o acesso ao recurso de rede ou disco.|  
-|**PASSWORD**|A senha exigida para o acesso ao recurso de rede ou disco.|  
+|**USU**|O nome de usuário exigido para o acesso ao recurso de rede ou disco.|  
+|**LA**|A senha exigida para o acesso ao recurso de rede ou disco.|  
 |**WRITEMODE**|O modo de gravação a ser usado durante o acesso ao disco. Os valores válidos são `None`, `Overwrite` e `AutoIncrement`.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência técnica &#40;SSRS&#41;](../../technical-reference-ssrs.md)   
  [Compilar aplicativos usando o Serviço Web e o .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
   

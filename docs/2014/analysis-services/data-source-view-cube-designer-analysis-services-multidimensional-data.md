@@ -1,5 +1,5 @@
 ---
-title: Modo de exibição (guia estrutura do cubo, Designer de cubo) da fonte de dados (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Exibição da fonte de dados (guia estrutura do cubo, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082525"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Exibição da Fonte de Dados (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Exibição da Fonte de Dados** para exibir tabelas e colunas da exibição da fonte de dados associada ao cubo selecionado. Esse painel é usado para criar grupos de medidas e medidas, arrastando colunas do painel **Exibição da Fonte de Dados** para o painel **Medidas** .  
   
 ## <a name="options"></a>Opções  
- **Exibição da fonte de dados**  
+ **Exibição da Fonte de Dados**  
  Exibe a exibição da fonte de dados associada ao cubo selecionado.  
   
- **(Mover ponto de Vista)**  
+ **(Mover ponto de vista)**  
  Clique no canto inferior direito do painel, entre as barras de rolagem, para selecionar uma área do painel **Exibição da Fonte de Dados** para exibição.  
   
 ## <a name="diagram-context-menu"></a>Menu de Contexto de Diagrama  
@@ -35,22 +35,22 @@ ms.locfileid: "66082525"
  **Mostrar tabelas**  
  Exibe a caixa de diálogo **Mostrar Tabelas**. Para obter mais informações sobre a caixa de diálogo **Mostrar Tabela**, consulte [Caixa de diálogo Mostrar Tabela &#40;Analysis Services – Dados Multidimensionais&#41;](show-table-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Mostrar todas as tabelas**  
+ **Mostrar Todas as Tabelas**  
  Exibe no painel todas as tabelas incluídas na exibição da fonte de dados associada ao cubo.  
   
- **Mostrar somente tabelas usadas**  
+ **Mostrar Somente Tabelas Usadas**  
  Exibe no painel somente as tabelas usadas pelo cubo na exibição da fonte de dados associada ao cubo.  
   
  **Mostrar nomes amigáveis**  
  Seleciona mostrar nomes amigáveis dos objetos no painel.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Seleciona todos os objetos no painel.  
   
  **Localizar Tabela**  
  Exibe a caixa de diálogo **Localizar Tabela**. Para obter mais informações sobre a caixa de diálogo **Localizar Tabela**, consulte [Caixa de diálogo Localizar Tabela &#40;Analysis Services – Dados Multidimensionais&#41;](find-table-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Organizar tabelas**  
+ **Organizar Tabelas**  
  Organiza os objetos no painel de acordo com o layout especificado selecionando **Alternar para Layout Diagonal** ou **Alternar para Layout Retangular**.  
   
  **Alternar para Layout Diagonal**  
@@ -59,27 +59,27 @@ ms.locfileid: "66082525"
 > [!NOTE]  
 >  Esta opção será exibida somente se a opção **Alternar para Layout Retangular** estiver selecionada.  
   
- **Alternar para Layout retangular**  
+ **Alternar para Layout Retangular**  
  Selecione para organizar objetos em um padrão retangular.  
   
 > [!NOTE]  
 >  Esta opção será exibida somente se a opção **Alternar para Layout Diagonal** estiver selecionada.  
   
- **Editar exibição da fonte de dados**  
+ **Editar Exibição da Fonte de Dados**  
  Exibe o Designer da Exibição da Fonte de Dados associada ao objeto. Para obter mais informações sobre o Designer de Exibição da Fonte de Dados, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
- **Mostrar exibição de fonte de dados em**  
+ **Mostrar Exibição da Fonte de Dados em**  
  Selecione uma das seguintes opções para ativar/desativar a exibição do painel **Exibição da Fonte de Dados** nos seguintes modos:  
   
 -   Diagrama  
   
      Exibe um diagrama das tabelas e colunas associadas ao cubo atual.  
   
--   trEE  
+-   Árvore  
   
      Exibe uma exibição de árvore contendo as tabelas e colunas associadas ao cubo atual.  
   
- **Copiar diagrama de**  
+ **Copiar Diagrama de**  
  Selecione um dos diagramas incluídos na exibição da fonte de dados associada ao cubo para exibi-lo no painel **Exibição da Fonte de Dados** .  
   
  **Zoom**  
@@ -91,19 +91,19 @@ ms.locfileid: "66082525"
 ## <a name="table-context-menu"></a>Menu de Contexto da Tabela  
  As seguintes opções estão disponíveis no menu de contexto exibido quando você clica com o botão direito do mouse no nome de uma tabela ou exibição no painel **Exibição da Fonte de Dados** :  
   
- **Mostrar tabelas relacionadas**  
+ **Mostrar Tabelas Relacionadas**  
  Exibe no painel as tabelas relacionadas à tabela selecionada na exibição da fonte de dados.  
   
- **Ocultar tabela**  
+ **Ocultar Tabela**  
  Remove a tabela do painel.  
   
  **Explorar Dados**  
  Exibe a caixa de diálogo **Explorar Dados** da tabela selecionada.  
   
- **Editar exibição da fonte de dados**  
+ **Editar Exibição da Fonte de Dados**  
  Exibe o Designer de Exibição da Fonte de Dados da exibição da fonte de dados que contém a tabela selecionada. Para obter mais informações sobre o Designer de Exibição da Fonte de Dados, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
- **Novo grupo de medidas da tabela**  
+ **Novo Grupo de Medidas da Tabela**  
  Define um novo grupo de medidas no painel **Medidas** baseado na tabela selecionada.  
   
 > [!NOTE]  
@@ -115,13 +115,13 @@ ms.locfileid: "66082525"
 ## <a name="column-context-menu"></a>Menu de Contexto da Coluna  
  As seguintes opções estão disponíveis no menu de contexto exibido quando você clica com o botão direito do mouse no nome de uma coluna em uma tabela ou exibição no painel **Exibição da Fonte de Dados** :  
   
- **Nova medida da coluna**  
+ **Nova Medida da Coluna**  
  Define uma nova medida no painel **Medidas** baseado na coluna selecionada.  
   
  **Explorar Dados**  
  Exiba a caixa de diálogo **Explorar Dados** da tabela que contém a coluna selecionada.  
   
- **Editar exibição da fonte de dados**  
+ **Editar Exibição da Fonte de Dados**  
  Exibe o Designer de Exibição da Fonte de Dados da exibição da fonte de dados que contém a coluna selecionada. Para obter mais informações sobre o Designer de Exibição da Fonte de Dados, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propriedades**  
@@ -130,16 +130,16 @@ ms.locfileid: "66082525"
 ## <a name="relationship-context-menu"></a>Menu de Contexto da Relação  
  As seguintes opções estão disponíveis no menu de contexto exibido quando você clica com o botão direito do mouse em uma relação no painel **Exibição da Fonte de Dados** :  
   
- **Editar exibição da fonte de dados**  
+ **Editar Exibição da Fonte de Dados**  
  Exibe o Designer de Exibição da Fonte de Dados que contém a relação selecionada. Para obter mais informações sobre o Designer de Exibição da Fonte de Dados, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propriedades**  
  Exibe a janela **Propriedades** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] da relação selecionada.  
   
-## <a name="see-also"></a>Consulte também  
- [Barra de ferramentas &#40;guia estrutura do cubo, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Medidas &#40;guia estrutura do cubo, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Dimensões &#40;guia estrutura do cubo, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Estrutura do cubo &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Barra de ferramentas &#40;guia estrutura do cubo, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Medidas &#40;guia estrutura do cubo, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Dimensões &#40;guia estrutura do cubo, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Estrutura de cubo &#40;designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

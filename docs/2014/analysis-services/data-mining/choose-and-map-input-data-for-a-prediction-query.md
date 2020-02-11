@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085844"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Escolher e mapear dados de entrada para uma consulta de previsão
@@ -28,7 +28,7 @@ ms.locfileid: "66085844"
 > [!WARNING]  
 >  Não é possível adicionar colunas novas ou mapear colunas que estão em uma exibição de fonte de dados diferente. A exibição da fonte de dados selecionada deve conter todas as colunas que você precisa para a consulta de previsão.  
   
- Após identificar as tabelas que contêm os dados a serem usados em previsões, mapeie as colunas nos dados externos para as colunas do modelo de mineração. Por exemplo, se seu modelo prever o comportamento de compra do cliente com base em demografia e em respostas de pesquisa, seus dados de entrada deverão conter informações que geralmente correspondem ao que está no modelo. Você não precisa ter dados correspondentes para cada coluna única, mas quanto maior for o número de colunas com correspondência, melhor. Se você tentar mapear colunas com tipos de dados diferentes, poderá obter um erro. Nesse caso, você pode definir um cálculo nomeado na exibição da fonte de dados para converter os novos dados de coluna no tipo de dados solicitado pelo modelo. Para obter mais informações, consulte [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+ Após identificar as tabelas que contêm os dados a serem usados em previsões, mapeie as colunas nos dados externos para as colunas do modelo de mineração. Por exemplo, se seu modelo prever o comportamento de compra do cliente com base em demografia e em respostas de pesquisa, seus dados de entrada deverão conter informações que geralmente correspondem ao que está no modelo. Você não precisa ter dados correspondentes para cada coluna única, mas quanto maior for o número de colunas com correspondência, melhor. Se você tentar mapear colunas com tipos de dados diferentes, poderá obter um erro. Nesse caso, você pode definir um cálculo nomeado na exibição da fonte de dados para converter os novos dados de coluna no tipo de dados solicitado pelo modelo. Para obter mais informações, consulte [definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
  Quando você escolher os dados a serem usados para previsão, talvez algumas colunas na fonte de dados selecionada sejam mapeadas automaticamente para as colunas de modelo de mineração, com base na semelhança de nome e no tipo de dados correspondente. Você pode usar a caixa de diálogo **Modificar Mapeamento** na **Previsão de Modelo de Mineração** para alterar as colunas que são mapeadas, excluir mapeamentos impróprios ou criar novos mapeamentos para colunas existentes. A superfície de design **Previsão de Modelo de Mineração** também dá suporte ao recurso de edição do tipo “arrastar e soltar” de conexões.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66085844"
   
      Se já existir uma relação, as colunas no modelo de mineração serão mapeados automaticamente para as colunas que possuem o mesmo nome na tabela de entrada. É possível modificar a relação entre a tabela aninhada e a tabela de casos clicando em **Modificar Junção**, que abre a caixa de diálogo **Criar Relação** .  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas de previsão &#40;Mineração de dados&#41;](prediction-queries-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Consultas de previsão &#40;mineração de dados&#41;](prediction-queries-data-mining.md)  
   
   

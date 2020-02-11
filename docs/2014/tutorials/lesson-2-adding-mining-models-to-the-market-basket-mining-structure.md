@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Adicionando modelos de mineração à estrutura de mineração de Market Basket | Microsoft Docs'
+title: 'Lição 2: adicionando modelos de mineração à estrutura de mineração da cesta de mercado | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204724"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lição 2: Como adicionar modelos de mineração à estrutura de mineração do Market Basket
-  Nesta lição, você adicionará dois modelos de mineração à estrutura de mineração da cesta de mercado que você criou na [lição 1: Criando a estrutura de mineração do Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estes modelos de mineração permitirão criar previsões.  
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração do Market Basket
+  Nesta lição, você adicionará dois modelos de mineração à estrutura de mineração de cesta de mercado criada na [lição 1: criando a estrutura de mineração de cesta de compras](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estes modelos de mineração permitirão criar previsões.  
   
- Para prever os tipos de produtos que os clientes tendem a comprar ao mesmo tempo, você criará dois modelos de mineração usando o [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) e dois valores diferentes para o *MINIMUM_PROBABILTY* parâmetro.  
+ Para prever os tipos de produtos que os clientes tendem a comprar ao mesmo tempo, você criará dois modelos de mineração usando o [algoritmo de associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) e dois valores diferentes para o parâmetro *MINIMUM_PROBABILTY* .  
   
- *MINIMUM_PROBABILTY* é um [!INCLUDE[msCoName](../includes/msconame-md.md)] parâmetro de algoritmo de associação que ajuda a determinar o número de regras que um modelo de mineração conterá especificando a probabilidade mínima que uma regra deve ter. Por exemplo, definindo-se esse valor como 0,4, uma regra é especificada, a qual só poderá ser gerada se a combinação de produtos que a regra descreve tiver, pelo menos, 40% de probabilidade de ocorrência.  
+ *MINIMUM_PROBABILTY* é um [!INCLUDE[msCoName](../includes/msconame-md.md)] parâmetro de algoritmo de associação que ajuda a determinar o número de regras que um modelo de mineração conterá, especificando a probabilidade mínima que uma regra deve ter. Por exemplo, definindo-se esse valor como 0,4, uma regra é especificada, a qual só poderá ser gerada se a combinação de produtos que a regra descreve tiver, pelo menos, 40% de probabilidade de ocorrência.  
   
- Você poderá ver o efeito de alterar o *MINIMUM_PROBABILTY* parâmetro em uma lição posterior.  
+ Você exibirá o efeito de alterar o parâmetro *MINIMUM_PROBABILTY* em uma lição posterior.  
   
 ## <a name="alter-mining-structure-statement"></a>Instrução ALTER MINING STRUCTURE  
- Para adicionar um modelo de mineração que contém uma tabela aninhada a uma estrutura de mineração, você deve usar o [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instrução. O código na instrução pode ser dividido nas seguintes partes:  
+ Para adicionar um modelo de mineração que contém uma tabela aninhada a uma estrutura de mineração, use a instrução [ALTER MINING structure &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) . O código na instrução pode ser dividido nas seguintes partes:  
   
 -   Identificando a estrutura de mineração  
   
@@ -67,7 +67,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- Para obter informações sobre como nomear um objeto em extensões DMX (Data Mining), consulte [identificadores &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Para obter informações sobre como nomear um objeto em DMX (extensões de mineração de dados), consulte [identificadores &#40;&#41;DMX ](/sql/dmx/identifiers-dmx).  
   
  As linhas seguintes do código definem as colunas da estrutura de mineração que será usada pelo modelo de mineração:  
   
@@ -78,7 +78,7 @@ ADD MINING MODEL [<mining model name>]
   
  Você só pode usar colunas que já existam na estrutura de mineração.  
   
- A primeira coluna na lista de colunas do modelo de mineração deve ser a coluna de chave na estrutura de mineração. No entanto, não é necessário digitar `KEY` após a coluna de chave para especificar o uso. Isso é porque você já definiu a coluna como uma chave quando criou a estrutura de mineração.  
+ A primeira coluna na lista de colunas do modelo de mineração deve ser a coluna de chave na estrutura de mineração. No entanto, você não precisa digitar `KEY` após a coluna de chave para especificar o uso. Isso é porque você já definiu a coluna como uma chave quando criou a estrutura de mineração.  
   
  As linhas restantes especificam o uso das colunas no novo modelo de mineração. Você pode especificar que uma coluna no modelo de mineração será utilizada para previsão usando a seguinte sintaxe:  
   
@@ -101,12 +101,12 @@ ADD MINING MODEL [<mining model name>]
   
 -   Adicione um modelo de mineração de associação à estrutura, usando uma probabilidade modificada  
   
-## <a name="adding-an-association-mining-model-to-the-structure-using-the-default-minimumprobability"></a>Acrescentando um Modelo de Mineração de Associação à estrutura usando MINIMUM_PROBABILITY padrão  
- A primeira tarefa é adicionar um novo modelo de mineração à estrutura de mineração da cesta de mercado, com base nas [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de associação usando o valor padrão para *MINIMUM_PROBABILITY*.  
+## <a name="adding-an-association-mining-model-to-the-structure-using-the-default-minimum_probability"></a>Acrescentando um Modelo de Mineração de Associação à estrutura usando MINIMUM_PROBABILITY padrão  
+ A primeira tarefa é adicionar um novo modelo de mineração à estrutura de mineração de cesta de mercado com [!INCLUDE[msCoName](../includes/msconame-md.md)] base no algoritmo de associação usando o valor padrão para *MINIMUM_PROBABILITY*.  
   
 #### <a name="to-add-an-association-mining-model"></a>Para adicionar um modelo de mineração de Associação  
   
-1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+1.  No Pesquisador de **objetos**, clique com o botão [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]direito do mouse na instância do, aponte para **nova consulta**e clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   
@@ -189,18 +189,18 @@ ADD MINING MODEL [<mining model name>]
     Using Microsoft_Association_Rules  
     ```  
   
-7.  Sobre o **arquivo** menu, clique em **salvar DMXQuery1.dmx como**.  
+7.  No menu **arquivo** , clique em **salvar DMXQuery1. DMX como**.  
   
-8.  No **Salvar como** caixa de diálogo, navegue até a pasta apropriada e nomeie o arquivo `Default_Association_Model.dmx`.  
+8.  Na caixa de diálogo **salvar como** , navegue até a pasta apropriada e nomeie o arquivo `Default_Association_Model.dmx`.  
   
-9. Na barra de ferramentas, clique o **Execute** botão.  
+9. Na barra de ferramentas, clique no botão **executar** .  
   
-## <a name="adding-an-association-mining-model-to-the-structure-changing-the-default-minimumprobability"></a>Acrescentando um Modelo de Mineração de Associação à estrutura alterando MINIMUM_PROBABILITY padrão  
+## <a name="adding-an-association-mining-model-to-the-structure-changing-the-default-minimum_probability"></a>Acrescentando um Modelo de Mineração de Associação à estrutura alterando MINIMUM_PROBABILITY padrão  
  A próxima tarefa é adicionar um novo modelo de mineração à estrutura de mineração da cesta de compras, com base no algoritmo Associação da [!INCLUDE[msCoName](../includes/msconame-md.md)] e alterar o valor padrão de MINIMUM_PROBABILITY para 0,01. A alteração do parâmetro fará com que o algoritmo de Associação [!INCLUDE[msCoName](../includes/msconame-md.md)] crie mais regras.  
   
 #### <a name="to-add-an-association-mining-model"></a>Para adicionar um modelo de mineração de Associação  
   
-1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+1.  No Pesquisador de **objetos**, clique com o botão [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]direito do mouse na instância do, aponte para **nova consulta**e clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   
@@ -276,15 +276,15 @@ ADD MINING MODEL [<mining model name>]
     USING Microsoft_Association_Rules (Minimum_Probability = 0.1)  
     ```  
   
-7.  Sobre o **arquivo** menu, clique em **salvar DMXQuery1.dmx como**.  
+7.  No menu **arquivo** , clique em **salvar DMXQuery1. DMX como**.  
   
-8.  No **Salvar como** caixa de diálogo, navegue até a pasta apropriada e nomeie o arquivo `Modified Association_Model.dmx`.  
+8.  Na caixa de diálogo **salvar como** , navegue até a pasta apropriada e nomeie o arquivo `Modified Association_Model.dmx`.  
   
-9. Na barra de ferramentas, clique o **Execute** botão.  
+9. Na barra de ferramentas, clique no botão **executar** .  
   
  Nesta próxima lição você processará a estrutura de mineração da cesta básica junto com seus modelos de mineração associados.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 3: Processando a estrutura de mineração da cesta de compras](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Lição 3: Processando a estrutura de mineração do Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

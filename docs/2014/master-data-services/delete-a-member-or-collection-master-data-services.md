@@ -17,14 +17,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479710"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Excluir um membro ou uma coleção (Master Data Services)
-  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], exclua um membro ou coleção quando não precisar mais dele. Se você quiser excluir membros em massa, use o processo de preparo. Para obter mais informações, consulte [desativar ou excluir membros por meio do processo de preparo &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
+  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], exclua um membro ou coleção quando não precisar mais dele. Se você quiser excluir membros em massa, use o processo de preparo. Para obter mais informações, consulte [desativar ou excluir membros usando o processo de preparo &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
   
 > [!NOTE]  
 >  Você não poderá excluir um membro se ele for usado como um valor de atributo baseado em domínio de outro membro.  
@@ -34,13 +34,13 @@ ms.locfileid: "65479710"
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  
   
--   Para membros, você deve ter um mínimo de **atualização** permissão para o objeto de modelo de folha que você está excluindo um membro.  
+-   Para membros, você deve ter, no mínimo, a permissão **Atualizar** para o objeto de modelo folha do qual você está excluindo um membro.  
   
 -   Para coleções, você deve ter, no mínimo, a permissão de **Atualizar** para o objeto da coleção de folhas que você está excluindo.  
   
 ### <a name="to-delete-a-member-or-collection"></a>Para excluir um membro ou uma coleção  
   
-1.  Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
+1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
   
 2.  Na lista **Versão** , selecione uma versão.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65479710"
   
 7.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [Membros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Coleções &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  

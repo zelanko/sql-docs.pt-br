@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482667"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>Arquivos de consulta de atalho (suplemento MDS para Excel)
@@ -37,7 +37,7 @@ ms.locfileid: "65482667"
   
  Ao abrir um arquivo de consulta de atalho com esse aplicativo, você será solicitado tornar a conexão "segura", que o significa que você confia no conteúdo dessa localização. Sempre que você marca uma conexão como segura, ela é adicionada a uma lista. Se desejar apagar essa lista, abra a caixa de diálogo **Configurações** e, na seção **Servidores Adicionados à Lista Segura** , clique em **Desmarcar Tudo**.  
   
- O local padrão para o aplicativo é *unidade*: \Program Files\Microsoft SQL Server\120\Master Data Services\Excel Add-in\microsoft.masterdataservices.queryopener.exe.  
+ O local padrão para o aplicativo é *drive*: \Program Files\Microsoft SQL Server\120\Master data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe.  
   
  Há duas maneiras de abrir arquivos de consulta de atalho: você pode importá-los ou clicar duas vezes neles para abri-los automaticamente.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "65482667"
   
 -   [Suplemento do Master Data Services para Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Segurança &#40;Master Data Services&#41;](../security-master-data-services.md)  
+-   [Master Data Services de &#40;de segurança&#41;](../security-master-data-services.md)  
   
   

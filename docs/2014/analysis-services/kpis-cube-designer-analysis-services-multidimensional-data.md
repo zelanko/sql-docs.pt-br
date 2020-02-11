@@ -1,5 +1,5 @@
 ---
-title: KPIs (Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: KPIs (Designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079432"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPIs (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -37,15 +37,15 @@ ms.locfileid: "66079432"
   
 |Painel|Definição|  
 |----------|----------------|  
-|**Barra de Ferramentas**|Use a barra de ferramentas das exibições de formulário e de navegador para executar operações comuns nessa guia. Para obter mais informações sobre esse painel, consulte [Barra de Ferramentas &#40;guia KPIs, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Organizador de KPIS**|Use o painel **Organizador de KPIs** da exibição de formulário para exibir os KPIs contidos pelo cubo em um formato ordenado. Para obter mais informações sobre esse painel, consulte [Organizador de KPIs &#40;guia KPIs, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Ferramentas de cálculo**|Use o painel **Ferramentas de Cálculo** da exibição de formulário para exibir metadados, funções e ferramentas disponíveis para o cubo. Para obter mais informações sobre esse painel, consulte [Ferramentas de Cálculo &#40;guia KPIs, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Editor de formulário KPI**|Use o painel Editor de Formulário de KPI da exibição de formulário para editar KPIs contidos pelo cubo. Para obter mais informações sobre esse painel, consulte [Editor de Formulário de KPI &#40;guia KPIs, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barra de ferramentas**|Use a barra de ferramentas na exibição de formulário e no modo de exibição de navegador para executar operações comuns nessa guia. Para obter mais informações sobre esse painel, consulte a [barra de ferramentas &#40;guia KPIs, designer de cubo&#41; &#40;Analysis Services-&#41;de dados multidimensionais ](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Organizador de KPIs**|Use o painel **Organizador de KPIs** da exibição de formulário para exibir os KPIs contidos pelo cubo em um formato ordenado. Para obter mais informações sobre esse painel, consulte [Organizador de KPIs &#40;guia KPIs, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Ferramentas de Cálculo**|Use o painel **Ferramentas de Cálculo** da exibição de formulário para exibir metadados, funções e ferramentas disponíveis para o cubo. Para obter mais informações sobre esse painel, consulte [Ferramentas de Cálculo &#40;guia KPIs, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Editor de Formulário de KPI**|Use o painel Editor de Formulário de KPI da exibição de formulário para editar KPIs contidos pelo cubo. Para obter mais informações sobre esse painel, consulte [Editor de Formulário de KPI &#40;guia KPIs, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Navegador KPI**|Use o painel Navegador KPI da exibição de navegador para exibir os resultados dos KPIs contidos pelo cubo. Para obter mais informações sobre esse painel, consulte [Navegador KPI &#40;guia KPIs, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Indicadores chave de desempenho &#40;KPIs&#41; em modelos multidimensionais](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
- [Conceitos básicos do script MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+ [Conceitos básicos de script MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

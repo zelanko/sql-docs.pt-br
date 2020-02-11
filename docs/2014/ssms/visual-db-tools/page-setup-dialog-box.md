@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195025"
 ---
 # <a name="page-setup-dialog-box"></a>Caixa de diálogo Configurar Página
@@ -40,7 +40,7 @@ ms.locfileid: "63195025"
  Left (à esquerda)  
  Define a distância entre a borda esquerda da página e a borda esquerda das linhas sem-recuo alinhadas à esquerda.  
   
- Right (à direita)  
+ Right  
  Define a distância entre a borda direita da página e a borda direita das linhas sem-recuo alinhadas à direita.  
   
  TOP  
@@ -49,7 +49,7 @@ ms.locfileid: "63195025"
  Inferior  
  Define a distância entre a parte inferior da página e a parte inferior da última linha na página.  
   
-## <a name="other"></a>Outro  
+## <a name="other"></a>Outros  
  **Visualização**  
  O quadro de visualização exibe os efeitos das configurações selecionadas.  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183024"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, objeto de estatísticas do pool de recursos
@@ -25,7 +25,7 @@ ms.locfileid: "63183024"
   
  Cada pool de recursos ativo cria uma instância do objeto de desempenho SQLServer:Estatísticas de Pool de Recursos que tem o mesmo nome de instância do pool de recursos do Administrador de Recursos. A tabela a seguir descreve os contadores suportados nesta instância.  
   
-|Nome do contador|Descrição|  
+|Nome do contador|DESCRIÇÃO|  
 |------------------|-----------------|  
 |% de uso de CPU|O uso da largura de banda da CPU por todas as solicitações em todos os grupos de cargas de trabalho pertencentes a este pool. Essa é a medida relativa ao computador e normalizada para todas as CPUs no sistema. Esse valor mudará à medida que a quantidade de CPU disponível para o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for alterada. Ele não é normalizado de acordo com o que é recebido pelo processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |% de meta de uso de CPU|O valor de meta da % de uso da CPU para o pool de recursos com base nas definições de configuração do pool de recursos e na carga do sistema.|  
@@ -43,14 +43,14 @@ ms.locfileid: "63183024"
 |Meta de memória (KB)|A meta de quantidade, em kilobytes (KB), de memória que o pool de recursos está tentando obter com base nas configurações do pool de recursos e no estado do servidor.|  
 |E/S de leitura do disco/s|Número de operações de leitura do disco no último segundo.|  
 |Leitura E/S de disco limitada/s|Número de operações de leitura limitadas no último segundo.|  
-|Leitura do disco/s|Número de bytes lidos do disco no último segundo.|  
+|Bytes Lidos no Disco/s |Número de bytes lidos do disco no último segundo.|  
 |Média de E/S de leitura de disco (ms)|Tempo médio, em milissegundos, de uma operação de leitura do disco.|  
 |E/S de gravação em disco/s|Número de operações de gravação no disco no último segundo.|  
 |Gravação E/S de disco limitada/s|Número de operações de gravação limitadas no último segundo.|  
-|Gravação em disco bytes/s|Número de bytes gravados no disco no último segundo.|  
+| Bytes Gravados no Disco/s|Número de bytes gravados no disco no último segundo.|  
 |Média de E/S de gravação em disco (ms)|Tempo médio, em milissegundos, de uma operação de gravação no disco.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, objeto de estatísticas de grupo de cargas de trabalho](sql-server-workload-group-stats-object.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  

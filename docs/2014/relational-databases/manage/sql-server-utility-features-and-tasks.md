@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190431"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Recursos e tarefas do Utilitário do SQL Server
@@ -41,7 +41,7 @@ ms.locfileid: "63190431"
 |||  
 |-|-|  
 |**Descrição**|**Tópico**|  
-|Descreve considerações para configurar um servidor para executar conjuntos de coleta do utilitário e não utilitário na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considerações sobre a execução de Conjuntos de Coleta do Utilitário e não Utilitário na mesma instância do SQL Server](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
+|Descreve considerações para configurar um servidor para executar conjuntos de coleta do utilitário e não utilitário na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considerações sobre a execução de Conjuntos de Coleta do Utilitário e que não são do Utilitário na mesma instância do SQL Server](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |Descreve como criar um ponto de controle do utilitário do SQL Server.|[Criar um ponto de controle do Utilitário do SQL Server &#40;Utilitário do SQL Server&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Descreve como se conectar a um utilitário do SQL Server.|[Conectar a um Utilitário do SQL Server](connect-to-a-sql-server-utility.md)|  
 |Descreve como associar uma instância do SQL Server com um Ponto de Controle de Utilitário.|[Inscrever uma instância do SQL Server &#40;Utilitário do SQL Server&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md)|  

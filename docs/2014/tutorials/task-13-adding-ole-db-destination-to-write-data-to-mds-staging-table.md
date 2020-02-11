@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 13: Adicionando o destino do OLE DB para gravar dados em tabela de preparo do MDS | Microsoft Docs'
+title: 'Tarefa 13: adicionando OLE DB destino para gravar dados na tabela de preparo do MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,44 +11,44 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65476994"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tarefa 13: Adicionar o destino OLE DB para gravar dados na tabela de preparo do MDS
-  Agora que você adicionou **ImportType** e **BatchTag** valores para todos os registros, você está pronto para enviá-los pelo MDS para preparação. Nesta tarefa, você deve usar o destino OLE DB para gravar os dados na **supplier_leaf** tabela de preparo.  
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tarefa 13: Adicionando o destino OLE DB para gravar dados na tabela de preparo do MDS
+  Agora que você adicionou valores **importType** e **BatchTag** a todos os registros, você está pronto para enviá-los para o MDS para preparo. Nesta tarefa, você usa o destino OLE DB para gravar os dados em **STG. supplier_Leaf** tabela de preparo.  
   
-1.  Arraste **destino OLE DB** de **outros destinos** seção o **caixa de ferramentas do SSIS** para o **de fluxo de dados** guia e solte-o sob  **Adicionar colunas exigidas pelo MDS**.  
+1.  Arraste **OLE DB destino** de **outros destinos** seção na **caixa de ferramentas do SSIS** para a guia fluxo de **dados** e solte-o em **adicionar colunas exigidas pelo MDS**.  
   
-2.  Clique com botão direito **destino OLE DB** na **fluxo de dados** guia e, em seguida, clique em **Renomear**. Tipo de **gravar dados do fornecedor para a tabela de preparo do MDS** e pressione **ENTER**.  
+2.  Clique com o botão direito do mouse **OLE DB destino** na guia **fluxo de dados** e clique em **renomear**. Digite **gravar dados do fornecedor na tabela de preparo do MDS** e pressione **Enter**.  
   
-3.  Conectar-se a **adicionar colunas exigidas pelo MDS** à **gravar dados do fornecedor para a tabela de preparo do MDS** usando o conector azul.  
+3.  Conecte as **colunas de adição exigidas pelo MDS** para **gravar dados de fornecedor na tabela de preparo do MDS** usando o conector azul.  
   
-4.  Clique duas vezes em **gravar dados do fornecedor para a tabela de preparo do MDS** na **fluxo de dados** guia.  
+4.  Clique duas vezes em **gravar dados do fornecedor na tabela de preparo do MDS** na guia fluxo de **dados** .  
   
-5.  No **Editor de destino do OLE DB** diálogo caixa, certifique-se de que **(local). MDS** (ou **localhost. MDS**) é selecionado para o **Gerenciador de Conexão do OLE DB** campo.  
+5.  Na caixa de diálogo **Editor de destino OLE DB** , verifique se **(local). MDS** (ou **localhost. MDS**) está selecionado para o campo **OLE DB Gerenciador de conexões** .  
   
-6.  Selecione **STG. Supplier_Leaf** tabela da lista de **nome da tabela ou exibição**.  
+6.  Selecione **STG. Supplier_Leaf** tabela na lista de **nome da tabela ou exibição**.  
   
-     ![Editor de destino de OLEDB](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-01.jpg "Editor de destino de OLE DB")  
+     ![Editor de Destino de OLEDB](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-01.jpg "Editor de Destino de OLEDB")  
   
-7.  Alterne para o **mapeamentos** página clicando **mapeamento** no menu à esquerda.  
+7.  Alterne para a página **mapeamentos** clicando em **mapeamento** no menu à esquerda.  
   
-8.  Mapa **entrada** e **destino** colunas, conforme mostrado na tabela a seguir.  
+8.  Mapeie as colunas de **entrada** e de **destino** , conforme mostrado na tabela a seguir.  
   
-     ![Editor de destino OLEDB - mapeamentos](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-02.jpg "Editor de destino OLEDB - mapeamentos")  
+     ![Editor de Destino OLEDB - Mapeamentos](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-02.jpg "Editor de Destino OLEDB - Mapeamentos")  
   
-9. Confirme que você está usando **_Output** colunas de entrada, não a **_Status** ou **_Source** colunas. **Saída** colunas contêm os valores de saída da limpeza DQS.  
+9. Confirme se você está usando colunas **_Output** para colunas de entrada, não as colunas **_Status** ou **_Source** . **_Output** colunas contêm os valores de saída da limpeza DQS.  
   
-10. Clique em **Okey** para fechar o **Editor de destino do OLE DB** caixa de diálogo.  
+10. Clique em **OK** para fechar a caixa de diálogo **OLE DB editor de destino** .  
   
 11. O fluxo de dados deve ter a aparência da imagem a seguir.  
   
-     ![Concluir o fluxo de dados](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "concluir o fluxo de dados")  
+     ![Fluxo de dados concluído](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "Fluxo de dados concluído")  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 14: Adicionar tarefa Executar SQL ao fluxo de controle para executar o procedimento armazenado para MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+ [Tarefa 14: Adicionando a tarefa Executar SQL ao fluxo de controle para executar o procedimento armazenado para MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

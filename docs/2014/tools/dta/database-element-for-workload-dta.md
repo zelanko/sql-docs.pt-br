@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63185408"
 ---
 # <a name="database-element-for-workload-dta"></a>Elemento de banco de dados para carga de trabalho (DTA)
@@ -36,7 +36,7 @@ ms.locfileid: "63185408"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
@@ -53,9 +53,9 @@ ms.locfileid: "63185408"
  Esse elemento tem o nome **DatabaseDetailsTypecomplexType** no Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. Não confunda este elemento do `Database` com aquele cujo pai raiz é o elemento `Configuration`. (Consulte [Elemento Database para Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md).)  
   
 ## <a name="example"></a>Exemplo  
- Para obter um exemplo de uso deste `Database` elemento, consulte o exemplo de código na [elemento de carga de trabalho &#40;DTA&#41;](workload-element-dta.md).  
+ Para obter um exemplo de uso `Database` desse elemento, consulte o exemplo de código no [elemento de carga de trabalho &#40;DTA&#41;](workload-element-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

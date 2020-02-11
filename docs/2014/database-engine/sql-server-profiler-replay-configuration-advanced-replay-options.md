@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - configuração de repetição (opções de repetição avançadas) | Microsoft Docs
+title: SQL Server Profiler-configuração de reprodução (opções de reprodução avançadas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0bf91032c1514037c754fd489ac266cf68063fa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089727"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>SQL Server Profiler - configuração de repetição (Opções de Repetição Avançadas)
@@ -33,7 +33,7 @@ ms.locfileid: "66089727"
  **Repetir somente um SPID**  
  Repete apenas a atividade no arquivo de rastreamento de origem que está relacionado ao SPID selecionado.  
   
- **SPID para repetir**  
+ **SPID a reproduzir**  
  Especifica o SPID para repetir.  
   
  **Limitar repetição por data e hora**  
@@ -57,9 +57,9 @@ ms.locfileid: "66089727"
  **Intervalo de espera do monitor de processos bloqueados (s)**  
  Configura a frequência com que o monitor de processos bloqueados procura processos bloqueados ou em bloqueio.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reproduzir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproduzir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
- [Reproduzir rastreamentos](../tools/sql-server-profiler/replay-traces.md)  
+ [Repetir rastreamentos](../tools/sql-server-profiler/replay-traces.md)  
   
   

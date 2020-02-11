@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241312"
 ---
 # <a name="load-xml-data"></a>Carregar dados XML
@@ -43,7 +43,7 @@ FROM    (SELECT *
  AS xCol) AS R(xCol)  
 ```  
   
-## <a name="text-encoding"></a>Codificação de texto  
+## <a name="text-encoding"></a>Codificação de Texto  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena dados XML em Unicode (UTF-16). Os dados XML recuperados do servidor são fornecidos em codificação UTF-16. Para obter uma codificação diferente, você precisa executar a conversão necessária nos dados recuperados. Às vezes, os dados XML podem estar em uma codificação diferente. Nesse caso, você precisará ter cuidado durante o carregamento dos dados. Por exemplo:  
   
 -   Se o texto XML estiver em Unicode (UCS-2, UTF-16), você poderá atribuí-lo a uma coluna, variável ou parâmetro XML sem nenhum problema.  
@@ -81,7 +81,7 @@ INSERT INTO T VALUES (N'...')
 CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados XML &#40;SQL Server&#41;](xml-data-sql-server.md)  
   
   

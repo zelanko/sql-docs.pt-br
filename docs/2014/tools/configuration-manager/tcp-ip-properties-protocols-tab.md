@@ -1,5 +1,5 @@
 ---
-title: TCP - propriedades de IP (guia Protocolos) | Microsoft Docs
+title: Propriedades TCP-IP (guia protocolos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150454"
 ---
-# <a name="tcp---ip-properties-protocols-tab"></a>TCP - propriedades de IP (guia Protocolos)
+# <a name="tcp---ip-properties-protocols-tab"></a>Propriedades TCP-IP (guia protocolos)
   Use a caixa de diálogo **Propriedades do TCP/IP** para configurar as opções do protocolo TCP/IP. Clique em **TCP/IP** no painel esquerdo, para mostrar configurações individuais de endereço IP no painel de detalhes.  
   
  O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser reiniciado para que as alterações entrem em vigor.  
@@ -37,7 +37,7 @@ ms.locfileid: "63150454"
  **No Delay**  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não implementa alterações nesta propriedade.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolhendo um protocolo de rede](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Criando uma cadeia de conexão válida usando TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   

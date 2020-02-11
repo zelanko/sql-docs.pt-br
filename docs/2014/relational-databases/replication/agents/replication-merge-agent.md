@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63216007"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
@@ -109,17 +109,17 @@ ms.locfileid: "63216007"
  **-?**  
  Imprime todos os parâmetros disponíveis.  
   
- **-Publisher** _server_name_[ **\\** _instance_name_]  
- É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-** _Server_name_do Publicador [**\\**_instance_name_]  
+ É o nome do Publicador. Especifique *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor.  
   
  **-PublisherDB** _publisher_database_  
  É o nome do banco de dados Publicador.  
   
- **-Publication** _publication_  
+ **-Publicação de publicação** __  
  É o nome da publicação. Esse parâmetro só é válido se a publicação estiver definida para ter sempre um instantâneo disponível para assinaturas novas ou reiniciadas.  
   
- **-Subscriber** _server_name_[ **\\** _instance_name_]  
- É o nome do Assinante. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-** _Server_name_do assinante [**\\**_instance_name_]  
+ É o nome do Assinante. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor.  
   
  **-SubscriberDB** _subscriber_database_  
  É o nome do banco de dados do Assinante.  
@@ -127,17 +127,17 @@ ms.locfileid: "63216007"
  **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  É o caminho para a pasta que contém o instantâneo inicial para uma assinatura.  
   
- **-Continuous**  
+ **-Contínuo**  
  Especifica se o agente tenta sondar transações replicadas continuamente. Se especificado, o agente sondará as transações replicadas da origem em intervalos de sondagem, mesmo que não haja transações pendentes.  
   
  **-DestThreads** _number_of_destination_threads_  
  Especifica o número de threads de destino que o Merge Agent usa para aplicar alterações ao destino. O destino é o Publicador durante o carregamento e o Assinante durante o download. O padrão é 4.  
   
- **-DefinitionFile** _def_path_and_file_name_  
+ **-Definitionfile** _def_path_and_file_name_  
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de prompt de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar valores de argumentos que contêm caracteres arbitrários.  
   
- **-Distributor** _server_name_[ **\\** _instance_name_]  
- É o nome do Distribuidor. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Para distribuição (push) do Distribuidor, o nome assumirá o padrão do nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador local.  
+ **-** _Server_name_do distribuidor**\\**[_instance_name_]  
+ É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor. Para distribuição (push) do Distribuidor, o nome assumirá o padrão do nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador local.  
   
  **-DistributorLogin** _distributor_login_  
  É o nome de logon do Distribuidor.  
@@ -146,7 +146,7 @@ ms.locfileid: "63216007"
  É a senha do Distribuidor.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- Especifica o modo de segurança do Distribuidor. Um valor de **0** indica Modo (padrão) de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um valor de **1** indica Modo de Autenticação do Windows.  
+ Especifica o modo de segurança do Distribuidor. Um valor de **0** indica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o modo de autenticação (padrão) e um valor de **1** indica o modo de autenticação do Windows.  
   
  **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
  É o número de gerações a ser processado em um único lote durante o download de alterações do Publicador para o Assinante. Uma geração está definida como um grupo lógico de alterações por artigo. O padrão para um vínculo de comunicação confiável é 100. O padrão para um vínculo de comunicação não confiável é 10.  
@@ -163,7 +163,7 @@ ms.locfileid: "63216007"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL (Secure Sockets Layer) usada pelo Merge Agent ao fazer conexões.  
   
-|Valor EncryptionLevel|Descrição|  
+|Valor EncryptionLevel|DESCRIÇÃO|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -172,15 +172,16 @@ ms.locfileid: "63216007"
  > [!NOTE]  
  >  É definido um certificado SSL válido com um nome de domínio totalmente qualificado do SQL Server. Para que o agente seja conectado com êxito ao definir -EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro 'Alias Name' deve ser o nome do servidor e o parâmetro 'Server' deve ser definido como o nome totalmente qualificado do SQL Server.
   
- Para obter mais informações, consulte [segurança de replicação do SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Para obter mais informações, consulte [replicação do SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
- **-ExchangeType** [ **1**| **2**| **3**]  
+ **-Intercâmbiotype** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Para restringir o carregamento, use o `@subscriber_upload_options` de `sp_addmergearticle`.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Para restringir o carregamento, use o `@subscriber_upload_options` de `sp_addmergearticle`.  
   
  Especifica o tipo de troca de dados durante a sincronização, que pode ser um dos seguintes:  
   
-|Valor ExchangeType|Descrição|  
+|Valor ExchangeType|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |**1**|O agente deve carregar alterações de dados do Assinante para o Publicador.|  
 |**2**|O agente deve baixar alterações de dados do Publicador para o Assinante.|  
@@ -196,10 +197,10 @@ ms.locfileid: "63216007"
  **-FileTransferType** [**0**|**1**]  
  Especifica o tipo de transferência de arquivo. Um valor **0** indica UNC (convenção de nomenclatura universal) e um valor **1** indica FTP (File Transfer Protocol).  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
+ **-ForceConvergenceLevel** [**0**|**1**|**2** (**assinante**| do **Publicador**| **)]**  
  Especifica o nível de convergência que o Merge Agent deve usar e pode ser um dos seguintes:  
   
-|Valor ForceConvergenceLevel|Descrição|  
+|Valor ForceConvergenceLevel|DESCRIÇÃO|  
 |---------------------------------|-----------------|  
 |**0** (padrão)|Padrão. Executa uma mesclagem padrão sem convergência adicional.|  
 |**1**|Impõe convergência para todas as gerações.|  
@@ -220,14 +221,14 @@ ms.locfileid: "63216007"
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  Especifica a quantidade de histórico registrada durante uma operação de mesclagem. Você pode minimizar o efeito de registro de histórico no desempenho selecionando **1**.  
   
-|Valor HistoryVerboseLevel|Descrição|  
+|Valor HistoryVerboseLevel|DESCRIÇÃO|  
 |-------------------------------|-----------------|  
 |**0**|Registre a mensagem de status de agente final, detalhes finais da sessão e qualquer erro.|  
 |**1**|Registre detalhes incrementais da sessão em cada status da sessão, incluindo porcentagem concluída, além da mensagem de status final do agente, detalhes finais da sessão e qualquer erro.|  
 |**2**|Padrão. Registre detalhes incrementais da sessão em cada status da sessão e detalhes da sessão no nível do artigo, incluindo porcentagem concluída, além da mensagem de status final do agente, detalhes finais da sessão e qualquer erro. Mensagens de status de agente também são registradas.|  
-|**3**|O mesmo que **-HistoryVerboseLevel** = **2**, exceto que mais mensagens de progresso de agente são registradas.|  
+|**Beta**|O mesmo que **-HistoryVerboseLevel** = **2**, exceto que mais mensagens de progresso do agente são registradas.|  
   
- **-Hostname** _host_name_  
+ **-Hostname** _HOST_NAME_  
  É o nome de rede do computador local. O padrão é o nome do computador local.  
   
  **-InteractiveResolution** [**0**|**1**]  
@@ -242,7 +243,7 @@ ms.locfileid: "63216007"
  **-InternetProxyLogin**  *internet_proxy_login*  
  Especifica o nome de logon usado ao conectar a um servidor proxy, definido em *internet_proxy_server*, que requer autenticação.  
   
- **-InternetProxyPassword** *internet_proxy_password*  
+ **-InternetProxyPassword**  *internet_proxy_password*  
  Especifica a senha usado ao conectar a um servidor proxy, definido em *internet_proxy_server*, que requer autenticação.  
   
  **-InternetProxyServer**  *internet_proxy_server*  
@@ -280,7 +281,7 @@ ms.locfileid: "63216007"
  **-MetadataRetentionCleanup** [**0**|**1**]  
  Especifica se os metadados são removidos de [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql), [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql), [MSmerge_past_partition_mappings](/sql/relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql)e [MSmerge_current_partition_mappings](/sql/relational-databases/system-tables/msmerge-current-partition-mappings) com base no período de retenção da publicação. O padrão é **1**, indicando que deve ocorrer limpeza total. Um valor de **0** indica que não deve ocorrer limpeza total automaticamente.  
   
- **-Output** _output_path_and_file_name_  
+ **-Saída** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
@@ -289,16 +290,16 @@ ms.locfileid: "63216007"
  **-ParallelUploadDownload** [**0**|**1**]  
  Especifica se o Merge Agent deve processar em paralelo as alterações carregadas para o Publicador e as baixadas no Assinante, que são úteis em ambientes de grandes volumes com alta largura de banda de rede. Se **ParallelUploadDownload** for **1**, o processamento paralelo será habilitado.  
   
- **-PacketSize**  
+ **-Pacotes**  
  É o tamanho do pacote, em bytes. O padrão é 4096 (bytes).  
   
  **-PollingInterval** _polling_interval_  
  É a frequência, em segundos, de consulta no Publicador ou no Assinante por alterações de dados. O padrão é 60 segundos.  
   
- **-ProfileName** _profile_name_  
+ **-Profilename** _profile_name_  
  Especifica um perfil de agente a ser usado para parâmetros de agente. Se **ProfileName** for NULL, o perfil de agente será desabilitado. Se **ProfileName** não for especificado, o perfil padrão de tipo de agente será usado. Para obter mais informações, consulte [Perfis do agente de replicação](replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  Especifica a instância de parceiro de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa de uma sessão de espelhamento de banco de dados com o banco de dados de publicação. Para obter mais informações, consulte [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** _publisher_login_  
@@ -310,14 +311,14 @@ ms.locfileid: "63216007"
  **-PublisherSecurityMode** [**0**|**1**]  
  Especifica o modo de segurança do Publicador. Um valor de **0** indica Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (padrão), e um valor de **1** indica Modo de Autenticação do Windows.  
   
- **-QueryTimeOut** _tempo_limite_da_consulta_em_segundos_  
+ **-QueryTimeOut** _query_time_out_seconds_  
  É o número de segundos antes que a consulta expire. O padrão é 300 segundos. O Merge Agent também usa o valor de `QueryTimeout` para determinar o tempo de espera para a geração de um instantâneo particionado, quando seu valor é maior do que 1800.  
   
  **-SrcThreads** _number_of_source_threads_  
  Especifica o número de threads de origem que o Merge Agent usa para enumerar alterações da origem. A origem é o Publicador durante o carregamento e o Assinante durante o download. O padrão é **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- É o número máximo de segundos que o Merge Agent aguarda quando o número de processos de mesclagem simultâneos em execução está no limite definido pela propriedade **@max_concurrent_merge** de **sp_addmergepublication**. Se o número máximo de segundos for alcançado e o Merge Agent ainda estiver esperando, será fechado. Um valor de 0 significa que o agente espera indefinidamente, embora possa ser cancelado.  
+ É o número máximo de segundos que o Agente de Mesclagem aguarda quando o número de processos de mesclagem simultâneos em execução está no limite definido pela **@max_concurrent_merge** propriedade de **sp_addmergepublication**. Se o número máximo de segundos for alcançado e o Merge Agent ainda estiver esperando, será fechado. Um valor de 0 significa que o agente espera indefinidamente, embora possa ser cancelado.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  É o caminho para o banco de dados Jet (arquivo .mdb) se **SubscriberType** for **2** (permite uma conexão com o banco de dados Jet sem o DSN (Nome da Fonte de Dados) ODBC).  
@@ -325,12 +326,12 @@ ms.locfileid: "63216007"
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  Especifica se existe um banco de dados do Assinante.  
   
-|Valor SubscriberDBAddOption|Descrição|  
+|Valor SubscriberDBAddOption|DESCRIÇÃO|  
 |---------------------------------|-----------------|  
 |**0**|Use o banco de dados existente (padrão).|  
 |**1**|Crie um banco de dados de Assinante novo, vazio.|  
 |**2**|Crie um novo banco de dados e anexe-o ao arquivo especificado.|  
-|**3**|Crie um novo banco de dados, anexe o banco de dados e habilite todas as assinaturas que possam existir no arquivo.|  
+|**Beta**|Crie um novo banco de dados, anexe o banco de dados e habilite todas as assinaturas que possam existir no arquivo.|  
   
 > [!NOTE]  
 >  Quando você usa os valores **2** e **3**, o caminho do banco de dados para o Assinante deve ser especificado na opção **SubscriberDatabasePath** .  
@@ -347,13 +348,13 @@ ms.locfileid: "63216007"
  **-SubscriberConflictClean** [ **0**| **1**]  
  Se as tabelas de conflitos são limpas no Assinante durante o processo de sincronização, onde um valor de **1** indica que as tabelas de conflitos são limpas no Assinante. Esse parâmetro só é usado para assinaturas de publicações com log de conflitos descentralizado.  
   
- **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
+ **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| ************ 6 7| 8]|   
  Especifica o tipo de conexão de Assinante usado pelo Merge Agent. Somente o valor padrão de **0** tem suporte para esse parâmetro.  
   
  **-SubscriptionType**[ **0**| **1**| **2**]  
  Especifica o tipo de assinatura para distribuição. Um valor **0** indica uma assinatura push (padrão), um valor **1** indica uma assinatura pull e um valor **2** indica uma assinatura anônima.  
   
- **-SyncToAlternate** [ **0|1**]  
+ **-SyncToAlternate** [ **0 | 1**]  
  Especifica se o Merge Agent está sincronizando entre um Assinante e um Publicador alternativo. Um valor de **1** indica que é um Publicador alternativo. O padrão é **0**.  
   
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
@@ -368,15 +369,15 @@ ms.locfileid: "63216007"
  **-UseInprocLoader**  
  Aprimora o desempenho do instantâneo inicial fazendo com que o Merge Agent use o comando BULK INSERT ao aplicar arquivos de instantâneo no Assinante. Esse parâmetro é preterido porque não é compatível com o tipo de dados de XML. Se você não estiver replicando dados XML, esse parâmetro poderá ser usado. Esse parâmetro não pode ser usado com instantâneos de modo de caractere. Se você usar esse parâmetro, a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Assinante deverá ter permissões de leitura no diretório onde os arquivos de dados .bcp de instantâneo estão localizados. Quando esse parâmetro não é usado, o driver ODBC carregado pelo agente lê a partir dos arquivos, portanto o contexto de segurança da conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não é usado.  
   
- **-Validate** [**0**|**1**|**2**|**3**]  
+ **-Validar** [**0**|**1**|**2**|**3**]  
  Especifica se a validação deve ser feita no final da mensagem de mesclagem e, se for, o tipo de validação. O valor **3** é o valor recomendado.  
   
-|Valor de validação|Descrição|  
+|Valor de validação|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |**0** (padrão)|Nenhuma validação.|  
 |**1**|Validação só de número de linhas.|  
 |**2**|Validação de número de linhas e soma de verificação.|  
-|**3**|Validação de número de linhas e soma de verificação binária.|  
+|**Beta**|Validação de número de linhas e soma de verificação binária.|  
   
 > [!NOTE]  
 >  A validação com o uso de soma de verificação binária ou soma de verificação pode reportar incorretamente uma falha se os tipos de dados forem diferentes no Assinante e no Publicador. Para obter mais informações, consulte a seção "Considerações para validação de dados" em [Validar dados replicados](../validate-data-at-the-subscriber.md).  
@@ -393,7 +394,7 @@ ms.locfileid: "63216007"
   
  O histórico do agente de mesclagem para a sessão atual não é removido durante a execução em modo contínuo. Um agente de longa execução pode resultar em um grande número de entradas nas tabelas de histórico de mesclagem, o que pode afetar o desempenho. Para resolver esse problema, alterne para o modo agendado, ou continue a usar o modo contínuo, mas crie um trabalho dedicado para reiniciar periodicamente o agente de mesclagem, ou reduza o detalhamento em nível de histórico para reduzir o número de linhas e, assim, reduzir o impacto sobre o desempenho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](replication-agent-administration.md)  
   
   

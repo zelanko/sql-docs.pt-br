@@ -11,23 +11,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63145475"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conexão ao mecanismo de banco de dados
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
   Quando você instala o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], as ferramentas instaladas dependem da edição e de suas opções de instalação. Esta lição analisa as principais ferramentas e mostra como conectar e executar uma função básica (autorizar mais usuários).  
   
   
   
-##  <a name="tools"></a> Ferramentas para introdução  
+##  <a name="tools"></a>Ferramentas para Introdução  
  O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] transporta com uma variedade de ferramentas. Este tópico descreve as primeiras ferramentas das que você precisará e o ajuda a selecionar a ferramenta certa para o trabalho. Todas as ferramentas podem ser acessadas no menu **Iniciar** . Algumas ferramentas, como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], não são instaladas por padrão. Você deve selecionar as ferramentas como parte dos componentes de cliente durante a instalação. Para obter uma descrição completa das ferramentas descritas abaixo, pesquise-as nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contém somente um subconjunto das ferramentas.  
   
 ### <a name="basic-tools"></a>Ferramentas básicas  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] é a ferramenta principal para administrar o [!INCLUDE[ssDE](../includes/ssde-md.md)] e gravar o código [!INCLUDE[tsql](../includes/tsql-md.md)]. Fica hospedado no shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Ele não é incluído no [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , mas está disponível como um download separado do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] é a ferramenta principal para administrar o [!INCLUDE[ssDE](../includes/ssde-md.md)] e gravar o código [!INCLUDE[tsql](../includes/tsql-md.md)]. Fica hospedado no shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Ele não é incluído no [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , mas está disponível como um download separado do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é instalado com [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e as ferramentas de cliente. Ela permite que você habilite protocolos de servidor, configure opções de protocolo como portas de TCP, configure serviços de servidor para iniciar automaticamente e configure computadores de cliente para conectar de sua maneira preferida. Esta ferramenta configura os mais avançados elementos de conectividade mas não habilita recursos.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "63145475"
   
 -   No menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
-##  <a name="connect"></a> Conectar-se com o Management Studio  
+##  <a name="connect"></a>Conectando com Management Studio  
  É fácil de se conectar ao [!INCLUDE[ssDE](../includes/ssde-md.md)] a partir de ferramentas que estão sendo executadas no mesmo computador se você souber o nome da instância e estiver se conectando como um membro do grupo de Administradores no computador. Os procedimentos seguintes devem ser executados no mesmo computador que hospeda o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Para determinar o nome da instância do Mecanismo de Banco de Dados.  
@@ -72,11 +73,11 @@ ms.locfileid: "63145475"
   
 2.  Selecione **Mecanismo de Banco de Dados**.  
   
-3.  Na caixa **Nome do servidor** , digite o nome da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para uma instância nomeada do SQL Server, o nome do servidor é *<nome_do_computador>***\\***<nome_da_instância>,* por exemplo, **ACCTG_SRVR\SQLEXPRESS**.  
+3.  Na caixa **Nome do servidor** , digite o nome da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para uma instância nomeada do SQL Server, o nome do servidor é o *<computer_name ***\\***><* instance_name>, como **ACCTG_SRVR \SQLEXPRESS**.  
   
 4.  Clique em **Conectar**.  
   
-##  <a name="additional"></a> Autorizando conexões adicionais  
+##  <a name="additional"></a>Autorizando conexões adicionais  
  Agora que você se conectou ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como um administrador, uma de suas primeiras tarefas é autorizar que outros usuários se conectem. Você faz isso criando um logon e autorizando esse logon para acessar um banco de dados como um usuário. Logons podem ser de autenticação do Windows, que usam credenciais do Windows ou logons de autenticação do SQL Server, que armazenam informações de autenticação no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e são independentes de suas credenciais do Windows. Use a autenticação do Windows sempre que possível.  
   
 ##### <a name="create-a-windows-authentication-login"></a>Crie um logon de autenticação do Windows  
@@ -85,7 +86,7 @@ ms.locfileid: "63145475"
   
      A caixa de diálogo **Logon – Novo** é exibida.  
   
-2.  No **gerais** página, o **nome de logon** , digite um logon do Windows no formato  *\<domínio >\\< login\>* .  
+2.  Na página **geral** , na caixa **nome de logon** , digite um logon do Windows no formato * \<domínio \\><logon\>*.  
   
 3.  Na caixa **Banco de dados padrão** , selecione [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , caso esteja disponível. Caso contrário, selecione **mestre**.  
   

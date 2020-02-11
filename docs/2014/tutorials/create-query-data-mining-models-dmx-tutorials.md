@@ -1,5 +1,5 @@
 ---
-title: 'Como criar e consultar modelos de mineração de dados com DMX: Tutoriais (Analysis Services - mineração de dados) | Microsoft Docs'
+title: 'Criando e consultando modelos de mineração de dados com DMX: Tutoriais (Analysis Services-Mineração de dados) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63180537"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Como criar e consultar modelos de mineração de dados com DMX: Tutoriais (Analysis Services - mineração de dados)
-  Depois de criar uma solução de mineração de dados usando [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode criar consultas em relação as modelos de mineração de dados para prever tendências, recuperar padrões nos dados e medir a precisão dos modelos de mineração.  
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Criando e consultando modelos de mineração de dados com DMX: Tutoriais (Analysis Services – Mineração de dados)
+  Depois de criar uma solução de Data Mining usando [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]o, você pode criar consultas em relação aos modelos de Data Mining para prever tendências, recuperar padrões nos dados e medir a precisão dos modelos de mineração.  
   
- Os tutoriais passo a passo na lista a seguir ajudam a aprender como compilar e executar consultas de mineração de dados usando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para que você possa obter o máximo de seus dados.  
+ Os tutoriais passo a passo na lista a seguir ajudarão você a aprender a criar e executar Data Mining consultas usando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o para que você possa obter o máximo de seus dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -39,9 +39,9 @@ ms.locfileid: "63180537"
      Este tutorial cria um modelo de previsão para ilustrar o uso da instrução CREATE MODEL (DMX). Você adiciona modelos relacionados e personaliza o comportamento de cada um ao alterar os parâmetros do algoritmo MTS. Por fim, cria previsões e as atualiza com novos dados. A capacidade de atualizar uma série temporal ao fazer previsões foi adicionada no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ## <a name="reference"></a>Referência  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Referência de&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
   
@@ -49,13 +49,13 @@ ms.locfileid: "63180537"
   
      Este tutorial introduz conceitos básicos, por exemplo, como criar um projeto e como criar estruturas e modelos de mineração.  
   
--   [Tutorial de mineração de dados intermediário &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+-   [Tutorial de mineração de dados intermediário &#40;Analysis Services de mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
      Este tutorial contém algumas lições independentes, cada uma introduzindo um tipo de modelo diferente. Cada lição orienta você pelo processo de criação de um modelo, de exploração do modelo e de personalização do modelo e de criação de consultas de previsão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Soluções de mineração de dados](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [Ferramentas de mineração de dados](../../2014/analysis-services/data-mining/data-mining-tools.md)   
- [Projetos de Mineração de dados](../../2014/analysis-services/data-mining/data-mining-projects.md)  
+ [Projetos de mineração de dados](../../2014/analysis-services/data-mining/data-mining-projects.md)  
   
   

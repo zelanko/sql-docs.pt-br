@@ -1,5 +1,5 @@
 ---
-title: Protocolos de cliente – propriedades IP (guia protocolo) e TCP | Microsoft Docs
+title: Protocolos de cliente – propriedades TCP e IP (guia Protocolo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253789"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocolos de Cliente – Propriedades de TCP e IP (guia Protocolo)
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, use a guia **Protocolo** na caixa de diálogo **Propriedades de TCP/IP** para exibir ou especificar as opções a seguir. Para se conectar a uma porta diferente, digite o número da porta na caixa **Pipe Padrão** . Para obter mais informações sobre cadeias de conexão, consulte [Criando uma cadeia de conexão válida usando TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
   
 ## <a name="options"></a>Opções  
- **Pipe Padrão**  
+ **Porta padrão**  
  Especifica a porta que a biblioteca de rede TCP/IP usará para tentar se conectar à instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor padrão da porta é 1433.  
   
  Ao conectar a uma instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)], o cliente usa esse valor. Se uma instância padrão tiver sido configurada para escutar em uma porta diferente, altere esse valor para esse número de porta.  
@@ -37,12 +37,12 @@ ms.locfileid: "63253789"
  **Keep Alive**  
  Este parâmetro (em milissegundos) controla a frequência das tentativas do TCP de verificar se uma conexão ociosa ainda está intacta enviando um pacote **KEEPALIVE** . O padrão é 30.000 milissegundos.  
   
- **Intervalo de Atividade**  
+ **Intervalo de Keep Alive**  
  Este parâmetro (em milissegundos) determina o intervalo que separa novas transmissões de **KEEPALIVE** até que uma resposta seja recebida. O padrão é 1.000 milissegundos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolhendo um protocolo de rede](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [Novo Alias &#40;Guia Alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [Propriedades &#60;Alias&#62; &#40;Guia Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [Novo alias &#40;guia alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
+ [Propriedades de&#62; de alias do&#60;&#40;guia alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

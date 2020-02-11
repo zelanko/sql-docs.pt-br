@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e0d2245dbba51d69d6dd31fd91044d3efd5b07b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192030"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>Propriedade NumberOfProps (classe ClientNetworkProtocol)
-  Obtém o número de propriedades do cliente de protocolo de rede especificado o [método SetOrderValue (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md).  
+  Obtém o número de propriedades do protocolo de rede do cliente especificado pelo [Método SetOrderValue (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Um objeto da [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) que representa o protocolo de rede usado pelo cliente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

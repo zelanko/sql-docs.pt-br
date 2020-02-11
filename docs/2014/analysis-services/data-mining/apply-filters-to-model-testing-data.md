@@ -1,5 +1,5 @@
 ---
-title: Aplicar filtros de modelo de dados de teste | Microsoft Docs
+title: Aplicar filtros aos dados de teste de modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086145"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a dados de testes de modelo
   Quando você especifica uma fonte de dados externa a ser usada para testar um modelo, pode opcionalmente aplicar um filtro para restringir os dados de entrada. Por exemplo, talvez queira testar o modelo especificamente para previsões sobre clientes com determinada faixa de renda.  
   
- Por exemplo, o cenário de email direcionado do AdventureWorks, você pode criar uma expressão de filtro como esta em ProspectiveBuyer, que é a tabela que contém os dados de teste, e restringir casos de teste por faixa de renda:  
+ Por exemplo, no cenário de endereçamento de destino AdventureWorks, você pode criar uma expressão de filtro como a seguinte em ProspectiveBuyer, que é a tabela que contém os dados de teste e restringir os casos de teste por intervalo de renda:  
   
  `[YearlyIncome] = '50000'`  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66086145"
   
 3.  Na guia **Seleção de Entrada** , em **Selecionar conjunto de dados a ser usado para Gráfico de Precisão**, selecione a opção **Especificar um conjunto de dados diferente**.  
   
-4.  Clique no botão Procurar **(...)** para abrir uma caixa de diálogo e escolha o conjunto de dados externo.  
+4.  Clique no botão procurar **(...)** para abrir uma caixa de diálogo e escolha o conjunto de dados externos.  
   
 5.  Escolha a tabela de caso e adicione uma tabela aninhada, caso necessário. Mapeie colunas no modelo para colunas no conjunto de dados externo, caso necessário. Feche a caixa de diálogo **Especificar Mapeamento de Coluna** para salvar a definição de tabela de origem.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "66086145"
   
 8.  Use **Operador**e as colunas **Valor** para definir como a coluna é filtrada.  
   
-     **Nota** Digite os valores sem usar aspa.  
+     **Observação** Digite valores sem usar aspas.  
   
 9. Clique na caixa de texto **E/Ou** e selecione um operador lógico para definir como combinar várias condições.  
   
-10. Opcionalmente, clique no botão Procurar **(...)** à direita do **valor** caixa de texto para abrir o **filtro** caixa de diálogo caixa e defina as condições na tabela aninhada ou nas colunas da tabela de casos individual.  
+10. Opcionalmente, clique no botão procurar **(...)** à direita da caixa de texto **valor** para abrir a caixa de diálogo **Filtrar** e definir condições na tabela aninhada ou nas colunas da tabela de casos individuais.  
   
 11. Verifique se as condições de filtro atendidas estão corretas exibindo o texto no painel **Expressão** .  
   
@@ -89,9 +89,9 @@ ms.locfileid: "66086145"
   
      A condição de filtro é aplicada à fonte de dados quando você cria o gráfico de precisão.  
   
-## <a name="see-also"></a>Consulte também  
- [Escolher e mapear dados de testes modelo](choose-and-map-model-testing-data.md)   
- [Usando dados de uma tabela aninhada como entrada para um gráfico de precisão](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Escolher e mapear dados de teste de modelo](choose-and-map-model-testing-data.md)   
+ [Usando dados de tabela aninhada como uma entrada para um gráfico de precisão](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Escolher um tipo de gráfico de precisão e definir opções de gráfico](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

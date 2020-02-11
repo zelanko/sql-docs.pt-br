@@ -1,5 +1,5 @@
 ---
-title: Metodologias de autenticação com suporte no Analysis Services | Microsoft Docs
+title: Metodologias de autenticação com suporte pelo Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080338"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologias de autenticação com suporte no Analysis Services
@@ -34,7 +34,7 @@ ms.locfileid: "66080338"
   
  Para obter mais informações sobre os fluxos de autenticação do BI e do Analysis Services, consulte [Autenticação do Microsoft BI e delegação de identidade](https://go.microsoft.com/fwlink/?LinkID=286576).  
   
-##  <a name="bkmk_auth"></a> Noções básicas sobre alternativas de autenticação  
+##  <a name="bkmk_auth"></a>Noções básicas sobre suas alternativas de autenticação  
  A conexão a um banco de dados do Analysis Services requer uma identidade de usuário ou grupo do Windows e as permissões associadas. A identidade pode ser um logon com finalidade geral usado por todos que precisam exibir um relatório, mas um cenário mais provável inclui a identidade de usuários individuais.  
   
  Em geral, um modelo tabular ou multidimensional terá diferentes níveis de acesso a dados, por objeto ou dentro dos próprios dados, dependendo de quem está fazendo a solicitação. Para atender a esse requisito, você pode usar autenticação NTLM, Kerberos, EffectiveUserName ou Básica. Todas essas técnicas oferecem um método para passar diferentes identidades de usuário com cada conexão. Entretanto, a maioria dessas opções está sujeita à limitação de um salto único. Somente o Kerberos com delegação permite que a identidade do usuário original flua por várias conexões de computadores até um repositório de dados de back-end em um servidor remoto.  
@@ -45,7 +45,7 @@ ms.locfileid: "66080338"
   
  Em soluções multicamadas, a restrição de um salto único do NLTM pode ser importante. A identidade do usuário que faz a solicitação pode ser representada em exatamente um servidor remoto, mas não vai além. Se a operação atual que está sendo realizada exigir serviços executados em vários computadores, você deverá configurar a delegação restrita Kerberos para reutilizar o token de segurança em servidores back-end. Como alternativa, você poderá reutilizar credenciais armazenadas ou a autenticação Básica para passar novas informações de identidade em uma conexão de salto único.  
   
- **Autenticação Kerberos e delegação restrita Kerberos**  
+ **Autenticação Kerberos e delegação restrita de Kerberos**  
   
  A autenticação Kerberos é a base da segurança integrada do Windows em domínios do Active Directory. Assim como o NTLM, a representação com Kerberos é limitada a um único salto, a menos que você habilite a delegação.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66080338"
   
  Para obter mais informações sobre o uso do EffectiveUserName no SharePoint, consulte [Usar o EffectiveUserName do Analysis Services no SharePoint Server 2010](https://go.microsoft.com/fwlink/?LinkId=311905).  
   
- **Autenticação Básica e usuário anônimo**  
+ **Autenticação básica e usuário anônimo**  
   
  A autenticação Básica oferece ainda uma quarta alternativa de conexão com um servidor back-end como um usuário específico. Usando a autenticação Básica, o nome de usuário e a senha do Windows são passados na cadeia de conexão, introduzindo requisitos adicionais de criptografia durante a transmissão para garantir que informações confidenciais sejam protegidas enquanto você está em trânsito. Uma importante vantagem de usar a autenticação Básica é que a solicitação de autenticação pode atravessar limites de domínios.  
   
@@ -72,17 +72,17 @@ ms.locfileid: "66080338"
   
  As autenticações Básica e Anônima estão disponíveis apenas quando você configura o Analysis Services para acesso HTTP usando o IIS e o arquivo msmdpump.dll para estabelecer a conexão. Para obter mais informações, consulte [Configurar o acesso HTTP ao Analysis Services no IIS &#40;(Serviços de Informações da Internet)&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- **Stored Credentials**  
+ **Credenciais armazenadas**  
   
  A maioria dos serviços de aplicativos de camada intermediária inclui a funcionalidade de armazenamento de um nome de usuário e uma senha usados mais tarde para recuperar dados de um repositório de dados de versão anterior, como o Analysis Services ou o mecanismo relacional do SQL Server. Com isso, as credenciais armazenadas fornecem uma quinta alternativa de recuperação de dados. As limitações desse método incluem sobrecarga de manutenção associada a manter nomes de usuários e senhas atualizados, e o uso de uma única identidade na conexão. Se sua solução exigir a identidade do chamador original, as credenciais armazenadas não serão uma alternativa viável.  
   
  Para obter mais informações sobre credenciais armazenadas, consulte [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) e [Usar os Serviços do Excel com Serviços de Repositório Seguro no SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkID=309869).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usando a representação com segurança de transporte](https://go.microsoft.com/fwlink/?LinkId=311727)   
- [Configurar o acesso HTTP ao Analysis Services no IIS &#40;(Serviços de Informações da Internet)&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
- [Configurar a delegação restrita do Analysis Services para Kerberos)](configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [Registro de SPN de uma instância do Analysis Services](spn-registration-for-an-analysis-services-instance.md)   
+ [Configurar o acesso HTTP para Analysis Services em Serviços de Informações da Internet &#40;IIS&#41; 8,0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+ [Configurar Analysis Services para delegação restrita de Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)   
+ [Registro de SPN para uma instância de Analysis Services](spn-registration-for-an-analysis-services-instance.md)   
  [Conectar ao Analysis Services](connect-to-analysis-services.md)  
   
   

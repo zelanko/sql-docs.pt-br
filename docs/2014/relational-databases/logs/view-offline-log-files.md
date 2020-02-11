@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144592"
 ---
 # <a name="view-offline-log-files"></a>Exibir arquivos de log offline
@@ -52,7 +52,7 @@ ms.locfileid: "63144592"
   
 -   Permissão de leitura para a pasta que contém os arquivos de logs de erros. Por padrão, os arquivos de logs de erros estão localizados no caminho a seguir (em que \<*Drive>* representa a unidade na qual você instalou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<Unidade >: \Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName > \mssql\log.**  
+     **\<Unidade>: \Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName> \MSSQL\LOG**  
   
  Para verificar as configurações de segurança do namespace WMI, você pode usar o snap-in Controle WMI.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "63144592"
   
 1.  Abra o snap-in Controle WMI. Para fazer isto, execute um destes procedimentos, dependendo do sistema operacional:  
   
-    -   Clique em **iniciar**, digite `wmimgmt.msc` no **Iniciar pesquisa** caixa e, em seguida, pressione ENTER.  
+    -   Clique em **Iniciar**, digite `wmimgmt.msc` na caixa **Iniciar Pesquisa** e pressione ENTER.  
   
-    -   Clique em **inicie**, clique em **execute**, tipo `wmimgmt.msc`, e pressione ENTER.  
+    -   Clique em **Iniciar**, **executar**, digite `wmimgmt.msc`e pressione Enter.  
   
 2.  Por padrão, o snap-in Controle WMI gerencia o computador local.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63144592"
   
     3.  Insira o novo nome do computador remoto e clique em **OK**.  
   
-3.  Clique com o botão direito do mouse em **Controle WMI (Local)** ou **Controle WMI (***RemoteComputerName***)** e clique em **Propriedades**.  
+3.  Clique com o botão direito do mouse em **controle WMI (local)** ou **controle WMI (***RemoteComputerName***)** e clique em **Propriedades**.  
   
 4.  Na caixa de diálogo **Propriedades do Controle WMI** , clique na guia **Segurança** .  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63144592"
   
 3.  Na árvore de console, localize a instância na qual você deseja exibir os arquivos offline.  
   
-4.  Siga um destes procedimentos:  
+4.  Realize um dos seguintes procedimentos:  
   
     -   Se a instância estiver em **Grupos de servidores Locais**, expanda **Grupos de servidores Locais**, expanda o grupo de servidores (se a instância for um membro de um grupo), clique com o botão direito do mouse na instância e clique em **Exibir o Log do SQL Server**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63144592"
     > [!NOTE]  
     >  Se os arquivos de log levarem muito tempo para carregar, você poderá clicar em **Parar** na barra de ferramentas do Visualizador do Arquivo de Log.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visualizador do Arquivo de Log](log-file-viewer.md)  
   
   

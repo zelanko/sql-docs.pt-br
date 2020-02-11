@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151206"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -63,10 +63,10 @@ ms.locfileid: "63151206"
  Interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados  
  Uma interface fácil de usar na qual você pode especificar a carga de trabalho e selecionar várias opções de ajuste.  
   
- Utilitário**dta**  
+ **DTA** Utilitários  
  A versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
   
- carga de trabalho  
+ workload  
  Um arquivo de script, um arquivo de rastreamento ou uma tabela de rastreamento Transact-SQL que contém uma carga de trabalho representativa para os bancos de dados a serem ajustados. Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode especificar o cache de planos como carga de trabalho.  
   
  Arquivo de entrada XML  
@@ -106,7 +106,7 @@ ms.locfileid: "63151206"
   
 -   Especifique só as estruturas de design de banco de dados físico que você quer que o Orientador de Otimização do Mecanismo de Banco de Dados analise. O Orientador de Otimização do Mecanismo de Banco de Dados fornece muitas opções, mas só especifica as que são necessárias.  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Dependência em Procedimento armazenado estendido xp_msver  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>Dependência em Procedimento armazenado estendido xp_msver  
  O Orientador de Otimização do Mecanismo de Banco de Dados depende do procedimento armazenado estendido **xp_msver** para fornecer a funcionalidade completa. Esse procedimento armazenado estendido é ativado por padrão. O Orientador de Otimização do Mecanismo de Banco de Dados usa esse procedimento armazenado estendido para buscar o número de processadores e a memória disponível no computador onde o banco de dados que está sendo ajustado está localizado. Se o **xp_msver** não estiver disponível, o Orientador de Otimização do Mecanismo de Banco de Dados assumirá as características de hardware do computador no qual o Orientador de Otimização do Mecanismo de Banco de Dados está sendo executado. Se as características de hardware do computador onde o Orientador de Otimização do Mecanismo de Banco de Dados está sendo executado não estiverem disponíveis, supõe-se um processador e 1024 megabytes (MBs) de memória.  
   
  Essa dependência afeta as recomendações de particionamento porque o número de partições recomendado depende destes dois valores (número de processadores e memória disponível). A dependência também afeta os resultados de ajustes quando você usar um servidor de teste para ajustar o servidor de produção. Nesse cenário,o Orientador de Otimização do Mecanismo de Banco de Dados usa o **xp_msver** para buscar propriedades de hardware do servidor de produção. Após ajustar a carga de trabalho no servidor de teste, o Orientador de Otimização do Mecanismo de Banco de Dados usa estas propriedades de hardware para gerar uma recomendação. Para obter mais informações, veja [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  

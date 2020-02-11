@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254456"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Navegar no Designer de Diagrama de Banco de Dados (Visual Database Tools)
@@ -29,15 +29,15 @@ ms.locfileid: "63254456"
 |Acessar o menu Diagrama de Banco de Dados|ALT+M|  
 |Mover entre tabelas e relações, se houver|TAB ou SHIFT+TAB|  
 |Mover entre as colunas de uma tabela|Teclas de direção|  
-|Remover a tabela selecionada do diagrama|DELETE|  
+|Remover a tabela selecionada do diagrama|Delete (excluir)|  
 |Eliminar uma tabela ou relação do banco de dados|SHIFT+DELETE|  
 |Mover tabelas pela superfície do diagrama|CTRL+ UP ARROW ou CTRL+DOWN ARROW|  
 |Rolar para a direita/esquerda e para cima/baixo|PAGE UP/DOWN para vertical, CTL+PAGE UP/DOWN para horizontal|  
 |Redimensionar tabelas e anotações|SHIFT + teclas de direção|  
-|Alterar a quantidade de informações apresentadas em uma tabela|CTRL+T|  
+|Alterar a quantidade de informações apresentadas em uma tabela|Ctrl+T|  
 |Zoom|CTRL+ PLUS KEY ou MINUS KEY|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar diagramas de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

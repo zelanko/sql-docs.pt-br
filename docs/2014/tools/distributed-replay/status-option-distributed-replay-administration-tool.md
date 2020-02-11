@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e06144f35ab2db8f124dddff74fb836b6d9c4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150361"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opção de status (ferramenta de administração do Distributed Replay)
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração do Distributed Replay, `DReplay.exe`, é uma ferramenta de linha de comando que você pode usar para se comunicar com o distributed replay controller. Este tópico descreve a opção de linha de comando **status** e a sintaxe correspondente.  
+  A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração de `DReplay.exe`Distributed Replay,, é uma ferramenta de linha de comando que você pode usar para se comunicar com o Distributed Replay Controller. Este tópico descreve a opção de linha de comando **status** e a sintaxe correspondente.  
   
  A opção **status** consulta o controlador e exibe o status atual.  
   
- ![Ícone de link do tópico](../../database-engine/media/topic-link.gif "Ícone de link do tópico") Para obter mais informações sobre as convenções de sintaxe usadas com a sintaxe da ferramenta de administração, confira [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
+ ![Ícone de link do tópico](../../database-engine/media/topic-link.gif "Ícone de link do tópico") Para obter mais informações sobre as convenções de sintaxe usadas com a sintaxe da ferramenta de administração, consulte [convenções de sintaxe Transact-sql &#40;Transact-sql&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,8 +31,8 @@ ms.locfileid: "63150361"
 dreplay status [-mcontroller] [-fstatus_interval]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- **-m** *controller*  
+#### <a name="parameters"></a>parâmetros  
+ **-m** *controlador*  
  Especifica o nome do computador do controlador. Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.  
   
  Se o parâmetro **-m** não for especificado, será usado o computador local.  
@@ -54,7 +54,7 @@ dreplay status -m localhost -f 60
   
  Para saber mais, confira [Distributed Replay Security](distributed-replay-security.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
   

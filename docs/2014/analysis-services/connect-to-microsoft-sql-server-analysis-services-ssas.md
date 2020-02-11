@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087025"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Conectar ao Microsoft SQL Server Analysis Services (SSAS)
@@ -31,7 +31,7 @@ ms.locfileid: "66087025"
  **Nome de conexão amigável**  
  Digite um nome exclusivo para esta conexão de fonte de dados. Esse é um campo obrigatório.  
   
- **Nome do servidor ou arquivo**  
+ **Nome do Servidor ou Arquivo**  
  Insira um dos seguintes:  
   
 -   Digite o nome ou o endereço IP do servidor do SQL Server Analysis Services ao qual se conectar.  
@@ -40,14 +40,14 @@ ms.locfileid: "66087025"
   
 -   Digite a URL de uma pasta de trabalho do PowerPivot publicada no SharePoint.  
   
- **Usar Autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Especifique se a Autenticação do Windows será usada para conectar a um servidor do SQL Server Analysis Services.  
   
  O modo de Autenticação do Windows permite que um usuário se conecte por meio de uma conta de usuário do Windows. Sempre que for possível, use a Autenticação do Windows.  
   
  Quando a Autenticação do Windows é usada, as credenciais do usuário atual são usadas na visualização e filtragem de dados na janela Propriedades de Tabela e no Assistente de Importação. Essas credenciais não são usadas para importar ou atualizar dados; em vez disso, utiliza-se as credenciais do Windows especificadas na página Informações sobre Representação.  
   
- **Usar Autenticação do SQL Server**  
+ **Usar autenticação SQL Server**  
  Especifique se a Autenticação do SQL Server será usada para conectar a um servidor do SQL Server Analysis Services.  
   
  Com a Autenticação do SQL Server, o próprio SQL Server executa a autenticação verificando se foi configurada uma conta de logon do SQL Server e se a senha especificada corresponde a uma senha registrada anteriormente.  

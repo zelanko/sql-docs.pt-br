@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80f13a2818810c71703fb5cccb82a1066361c3c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63154647"
 ---
 # <a name="open-an-existing-solution"></a>Abrir uma solução existente
@@ -29,8 +29,8 @@ ms.locfileid: "63154647"
   
 2.  Na caixa de diálogo **Abrir Projeto** , navegue até a solução desejada, clique na solução e clique em **Abrir**.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de soluções](solution-explorer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de Soluções](solution-explorer.md)   
  [Criar uma nova solução](create-a-new-solution.md)  
   
   

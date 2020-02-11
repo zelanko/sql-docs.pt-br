@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f4f835876eef8f0740b1a90dc48e33e0518cfd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183628"
 ---
 # <a name="jobs-node-sql-server-agent-f1-help"></a>Nó Trabalhos (Ajuda de F1 do SQL Server Agent)
-  Esta seção contém a ajuda de F1 para o nó **Trabalhos** do Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Esta seção contém a ajuda F1 para o nó **trabalhos** do pesquisador de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]objetos no.  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082375"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>Fontes de dados de objetos existentes (Assistente para Fonte de Dados) (Analysis Services)
@@ -30,14 +30,14 @@ ms.locfileid: "66082375"
  Selecione a fonte de dados na qual basear a nova fonte de dados na lista de fontes de dados que é agrupada por projeto.  
   
  **Criar uma fonte de dados com base em um projeto do Analysis Services**  
- Selecione para criar uma nova fonte de dados que faça referência a outro projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] na solução atual. A nova fonte de dados adquire configurações das propriedades `TargetServer` e `TargetDatabase` do projeto selecionado. Quando um projeto que usa a nova fonte de dados é criado, atualizado ou implantado, a nova fonte de dados adquire as configurações da origem de dados especificada quando essa opção é selecionada.  
+ Selecione para criar uma nova fonte de dados que faça [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] referência a outro projeto na solução atual. A nova fonte de dados adquire configurações das propriedades `TargetServer` e `TargetDatabase` do projeto selecionado. Quando um projeto que usa a nova fonte de dados é criado, atualizado ou implantado, a nova fonte de dados adquire as configurações da origem de dados especificada quando essa opção é selecionada.  
   
- **Projeto**  
+ **Project**  
  Selecione o projeto que você quer referenciar na nova fonte de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
  [Fontes de dados em modelos multidimensionais](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Fontes de dados com suporte &#40;SSAS multidimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

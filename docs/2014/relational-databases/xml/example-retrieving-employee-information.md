@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Recuperando informações de funcionários | Microsoft Docs'
+title: 'Exemplo: recuperando informações de funcionários | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287835"
 ---
 # <a name="example-retrieving-employee-information"></a>Exemplo: Recuperando informações de funcionários
@@ -99,7 +99,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
- O primeiro `SELECT` especifica nomes para as colunas no conjunto de linhas resultante. Esses nomes formam dois grupos de colunas. O grupo que tem o valor da `Tag` `1` no nome da coluna identifica `Employee` como um elemento e `EmpID` como o atributo. O outro grupo de colunas tem o valor da `Tag` `2` na coluna e identifica <`Name`> como o elemento e `FName` e `LName` como os atributos.  
+ O primeiro `SELECT` especifica nomes para as colunas no conjunto de linhas resultante. Esses nomes formam dois grupos de colunas. O grupo que tem o valor da `Tag``1` no nome da coluna identifica `Employee` como um elemento e `EmpID` como o atributo. O outro grupo de colunas tem o valor da `Tag``2` na coluna e identifica <`Name`> como o elemento e `FName` e `LName` como os atributos.  
   
  Esta tabela mostra o conjunto de linhas parcial gerado pela consulta:  
   
@@ -123,13 +123,13 @@ FOR XML EXPLICIT;
   
  É assim que as linhas na tabela universal são processadas para produzir a árvore XML resultante:  
   
- A primeira linha identifica o valor 1 da `Tag` `1`. Portanto, o grupo de colunas que tem o valor da `Tag` `1` é identificado, `Employee!1!EmpID`. Essa coluna identifica `Employee` como o nome do elemento. Em seguida, é criado um elemento <`Employee`> que tem os atributos `EmpID`. Os valores das colunas correspondentes são atribuídos a esses atributos.  
+ A primeira linha identifica o valor 1 da `Tag``1`. Portanto, o grupo de colunas que tem o valor da `Tag``1` é identificado, `Employee!1!EmpID`. Essa coluna identifica `Employee` como o nome do elemento. Em seguida, é criado um elemento <`Employee`> que tem os atributos `EmpID`. Os valores das colunas correspondentes são atribuídos a esses atributos.  
   
- A segunda linha tem o valor da `Tag` `2`. Portanto, o grupo de colunas que tem o valor da `Tag` `2` no nome da coluna, `Name!2!FName`, `Name!2!LName`, é identificado. Esses nomes de colunas identificam `Name` como o nome do elemento. É criado um elemento <`Name`> que tem os atributos `FName` e `LName`. Em seguida, os valores das colunas correspondentes são atribuídos a esses atributos. Essa linha identifica `1` como `Parent`. Esse elemento filho é adicionado ao elemento <`Employee`> anterior.  
+ A segunda linha tem o valor da `Tag``2`. Portanto, o grupo de colunas que tem o valor da `Tag``2` no nome da coluna, `Name!2!FName`, `Name!2!LName`, é identificado. Esses nomes de colunas identificam `Name` como o nome do elemento. É criado um elemento <`Name`> que tem os atributos `FName` e `LName`. Em seguida, os valores das colunas correspondentes são atribuídos a esses atributos. Essa linha identifica `1` como `Parent`. Esse elemento filho é adicionado ao elemento <`Employee`> anterior.  
   
  Esse processo é repetido para o restante das linhas do conjunto de linhas. Observe a importância de ordenar as linhas na tabela universal de forma que FOR XML EXPLICIT possa processar o conjunto de linhas em ordem e gerar o XML desejado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo EXPLICIT com FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

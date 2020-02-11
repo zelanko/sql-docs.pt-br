@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 15a48d24af5b8781f1ffe8af9a8cca434699f76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106715"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Adicionar e modificar uma linha (Construtor de Relatórios e SSRS)
@@ -34,9 +34,9 @@ ms.locfileid: "66106715"
 3.  Para alterar as propriedades da linha, selecione a linha na superfície de design e edite as propriedades na seção **Borda** da guia **Página Inicial** .  
   
     > [!NOTE]  
-    >  Se você definir o estilo de linha como **duplas** e a largura da linha é 1 1/2 pt ou mais estreita, a linha talvez não pareça dupla quando você executa o relatório no construtor de relatórios, Designer de relatórios ou Gerenciador de relatórios. Ela parecerá dupla quando você exportar o relatório para outros formatos, como Microsoft Word e Acrobat PDF.  
+    >  Se você definir o estilo de linha como **duplo** e a largura da linha for de 1 1/2 pt ou mais estreita, a linha poderá não aparecer dupla quando você executar o relatório em Construtor de Relatórios, Report Designer ou Report Manager. Ela parecerá dupla quando você exportar o relatório para outros formatos, como Microsoft Word e Acrobat PDF.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

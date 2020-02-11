@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50e62a9232690deb368096723f428118e9de7aa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151149"
 ---
 # <a name="xtp-storage"></a>Armazenamento de XTP
@@ -22,7 +22,7 @@ ms.locfileid: "63151149"
   
  Esta tabela descreve os contadores de **Armazenamento de XTP** .  
   
-|Contador|Descrição|  
+|Contador|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Pontos de verificação fechados**|Contagem de pontos de verificação fechados feita pelo agente online.|  
 |**Pontos de verificação concluídos**|Contagem de pontos de verificação processados pelo thread de ponto de verificação offline.|  
@@ -33,7 +33,7 @@ ms.locfileid: "63151149"
 |**Mesclagens instaladas**|O número de mesclagens instaladas com êxito.|  
 |**Total de arquivos mesclados**|O número total de arquivos de origem mesclados. Esta contagem pode ser usada para localizar o número médio de arquivos de origem na mesclagem.|  
   
-## <a name="see-also"></a>Consulte também  
- [XTP &#40;OLTP in-memory&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#40;de OLTP na memória&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)  
   
   

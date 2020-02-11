@@ -1,5 +1,5 @@
 ---
-title: Criar o perfil de dados de desempenho do Driver (ODBC) | Microsoft Docs
+title: Dados de desempenho do driver de perfil (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,35 +13,35 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200308"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>Analisar dados de desempenho de driver (ODBC)
-  Este exemplo mostra as opções específicas do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar estatísticas de desempenho. O exemplo cria um arquivo: odbcperf exemplo mostra tanto a criação de um arquivo de log de dados de desempenho e a exibição de dados de desempenho diretamente da estrutura de dados SQLPERF (a estrutura SQLPERF é definida em Odbcss.). Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
+  Este exemplo mostra as opções específicas do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar estatísticas de desempenho. O exemplo cria um arquivo: odbcperf.log. Esse exemplo mostra tanto a criação de um arquivo de log de dados de desempenho quanto a exibição dos dados de desempenho diretamente da estrutura de dados SQLPERF (a estrutura SQLPERF é definida em Odbcss.h.). Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>Para registrar dados de desempenho de driver usando o Administrador ODBC  
   
-1.  Na **painel de controle**, clique duas vezes em **ferramentas administrativas** e, em seguida, clique duas vezes em **fontes de dados (ODBC)** . Como alternativa, você pode invocar odbcad32.exe.  
+1.  No **painel de controle**, clique duas vezes em **Ferramentas administrativas** e, em seguida, clique duas vezes em **fontes de dados (ODBC)**. Como alternativa, você pode invocar odbcad32.exe.  
   
-2.  Clique o **DSN de usuário**, **DSN de sistema**, ou **DSN de arquivo** guia.  
+2.  Clique na guia **DSN do usuário**, DSN do **sistema**ou DSN de **arquivo** .  
   
 3.  Clique na fonte de dados para a qual você registrará o desempenho.  
   
-4.  Clique em **configurar**.  
+4.  Clique em **Configurar**.  
   
-5.  No Assistente do Microsoft SQL Server configurar o DSN, navegue até a página com **estatísticas do driver ODBC do Log para o arquivo de log**.  
+5.  No Microsoft SQL Server configurar o assistente de DSN, navegue até a página com **log ODBC Driver Statistics para o arquivo de log**.  
   
-6.  Selecione **estatísticas do driver ODBC do Log para o arquivo de log**. Na caixa, coloque o nome do arquivo em que as estatísticas deveriam ser registradas. Opcionalmente, clique em **procurar** para procurar o sistema de arquivos para o log de estatísticas.  
+6.  Selecione **registrar estatísticas do driver ODBC para o arquivo de log**. Na caixa, coloque o nome do arquivo em que as estatísticas deveriam ser registradas. Opcionalmente, clique em **procurar** para procurar o log de estatísticas no sistema de arquivos.  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Para registrar os dados de desempenho de driver por programação  
   
-1.  Chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_DATA_LOG e o nome de arquivo e caminho completo do arquivo de log de dados de desempenho. Por exemplo:  
+1.  Chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_DATA_LOG e o caminho completo e o nome de arquivo do arquivo de log de dados de desempenho. Por exemplo:  
   
     ```  
     "C:\\Odbcperf.log"  
@@ -49,7 +49,7 @@ ms.locfileid: "63200308"
   
 2.  Chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_DATA e SQL_PERF_START para iniciar o log de dados de desempenho.  
   
-3.  Opcionalmente, chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_LOG_NOW e NULL para gravar um registro delimitado por tabulação dos dados de desempenho para o arquivo de log de dados de desempenho. Isso pode ser feito várias vezes enquanto o aplicativo é executado.  
+3.  Opcionalmente, chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_LOG_NOW e NULL para gravar um registro delimitado por tabulação de dados de desempenho no arquivo de log de dados de desempenho. Isso pode ser feito várias vezes enquanto o aplicativo é executado.  
   
 4.  Chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_DATA e SQL_PERF_STOP para interromper o log de dados de desempenho.  
   
@@ -57,12 +57,12 @@ ms.locfileid: "63200308"
   
 1.  Chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_DATA e SQL_PERF_START para iniciar a criação de perfil de dados de desempenho.  
   
-2.  Chame [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) com SQL_COPT_SS_PERF_DATA e o endereço de um ponteiro para uma estrutura SQLPERF. A primeira chamada define o ponteiro como o endereço de uma estrutura SQLPERF válida que contém os dados de desempenho atuais. O driver não atualiza os dados continuamente na estrutura de desempenho. O aplicativo deve repetir a chamada para [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) sempre que precisa atualizar a estrutura com dados de desempenho mais atuais.  
+2.  Chame [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) com SQL_COPT_SS_PERF_DATA e o endereço de um ponteiro para uma estrutura SQLPERF. A primeira chamada define o ponteiro como o endereço de uma estrutura SQLPERF válida que contém os dados de desempenho atuais. O driver não atualiza os dados continuamente na estrutura de desempenho. O aplicativo deve repetir a chamada para [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) sempre que precisar atualizar a estrutura com dados de desempenho mais atuais.  
   
 3.  Chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_DATA e SQL_PERF_STOP para interromper o log de dados de desempenho.  
   
 ## <a name="example"></a>Exemplo  
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks do [Microsoft SQL Server exemplos e projetos da comunidade](https://go.microsoft.com/fwlink/?LinkID=85384) Home Page.) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
@@ -237,8 +237,8 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Os tópicos de instruções de desempenho de Driver ODBC de criação de perfil &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções de desempenho do driver ODBC de criação de perfil &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)   
  [Criando perfil de desempenho do driver ODBC](../native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

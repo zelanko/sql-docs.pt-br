@@ -14,17 +14,17 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: edf6d73edb8c4409f82302c2cdf013f18037e4bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478528"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>Validar membros específicos em relação a regras de negócio (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], aplique regras de negócio seletivamente quando desejar atualizar ou validar subconjuntos de membros com base em regras de negócio.  
   
 > [!NOTE]  
->  Se você deseja aplicar regras de negócio a todos os membros em uma versão de um modelo, consulte [Validate a Version against Business Rules &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md).  
+>  Se você deseja aplicar regras de negócio a todos os membros em uma versão de um modelo, consulte [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md).  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
@@ -45,8 +45,8 @@ ms.locfileid: "65478528"
   
 5.  Clique em **Aplicar regras de negócio**. As regras de negócio são aplicadas apenas aos membros exibidos na grade.  
   
-## <a name="see-also"></a>Consulte também  
- [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Validar uma versão em relação às regras de negócio &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   
  [Regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

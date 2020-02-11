@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35bed6e63aa352986e1072bfad1b5ddf836845e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268497"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Permissões e Visual Database Tools (Visual Database Tools)
@@ -24,7 +24,7 @@ ms.locfileid: "63268497"
   
  Se as permissões de banco de dados permitem que você visualize, mas não modifique a estrutura de banco de dados, use scripts de alteração sem transmiti-los para o banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ambientes multiusuários &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

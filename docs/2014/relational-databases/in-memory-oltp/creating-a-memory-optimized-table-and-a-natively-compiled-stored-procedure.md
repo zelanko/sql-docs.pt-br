@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157979"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Criando uma tabela com otimização de memória e um procedimento armazenado compilado nativamente
@@ -26,7 +26,7 @@ ms.locfileid: "63157979"
   
 -   Criar índices e tabelas com otimização de memória. Para obter mais informações, consulte [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
   
--   Usando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado, carregue os dados na tabela com otimização de memória e atualize as estatísticas antes de criar os procedimentos armazenados compilados. Para obter mais informações, consulte [Statistics for Memory-Optimized Tables](memory-optimized-tables.md).  
+-   Usando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado, carregue os dados na tabela com otimização de memória e atualize as estatísticas antes de criar os procedimentos armazenados compilados. Para obter mais informações, consulte [Estatísticas para tabelas com otimização de memória](memory-optimized-tables.md).  
   
 -   Criar procedimentos armazenados compilados nativamente para acessar dados em tabelas com otimização de memória. Para obter mais informações, consulte [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
@@ -232,7 +232,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de código OLTP na memória](in-memory-oltp-code-samples.md)   
  [Migrando colunas computadas](migrating-computed-columns.md)   
  [Implementando IDENTITY em uma tabela otimizada em memória](implementing-identity-in-a-memory-optimized-table.md)  

@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c55292aff126d1955c438c9417ce0651cc6afc94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162240"
 ---
 # <a name="log-reader-agent-security"></a>Segurança do Log Reader Agent
-  A caixa de diálogo **Segurança do Log Reader Agent** permite especificar:  
+  A caixa de diálogo **agente de leitor de log segurança** permite que você especifique:  
   
--   A conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o Log Reader Agent é executado no Distribuidor. A conta do Windows é também referida como *conta do processo*, porque o processo do agente é executado nessa conta.  
+-   A conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o Log Reader Agent é executado no Distribuidor. A conta do Windows também é conhecida como a *conta de processo*, porque o processo do agente é executado nessa conta.  
   
--   O contexto no qual o Log Reader Agent faz conexões com o Editor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A conexão pode ser feita representando a conta do Windows ou no contexto de uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada por você.  
+-   O contexto no qual o agente de leitor de log faz conexões com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. A conexão pode ser feita representando a conta do Windows ou no contexto de uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada por você.  
   
     > [!NOTE]  
     >  O Log Reader Agent fará conexões com o Publicador mesmo que o Publicador e o Distribuidor estejam no mesmo computador. O Log Reader Agent também faz conexões com o Distribuidor; essas conexões sempre são feitas representando a conta do Windows na qual o agente é executado.  
@@ -36,13 +36,13 @@ ms.locfileid: "63162240"
  Todas as contas devem ser válidas, com a senha correta especificada para cada conta. Contas e senhas não são validadas até que um agente seja executado.  
   
 ## <a name="options"></a>Opções  
- **Conta do processo**  
+ **Conta de processo**  
  Insira uma conta do Windows na qual o Log Reader Agent é executado no Distribuidor. A conta do Windows especificada deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** no banco de dados de distribuição.  
   
- **Senha** e **Confirmar Senha**  
+ **Senha** e **Confirmar senha**  
  Insira a senha para a conta do Windows.  
   
- **Conectar ao Publicador**  
+ **Conectar-se ao Publicador**  
  Selecione se o Log Reader Agent deverá fazer conexões com o Publicador e o Distribuidor representando a conta especificada na caixa de texto **Conta de processo** ou usando uma conta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se você optar por usar uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , insira um logon e uma senha [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.locfileid: "63162240"
   
  A conta do Windows ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para conexão com o Assinante deve ser, no mínimo, um membro da função de banco de dados fixa **db_owner** no banco de dados de publicação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar logons e senhas na replicação](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modelo de segurança do agente de replicação](security/replication-agent-security-model.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)   

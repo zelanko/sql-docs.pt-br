@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184312"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Criar junções externas (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "63184312"
   
 1.  Crie a junção, automática ou manualmente. Para obter detalhes, consulte [Unir tabelas automaticamente &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) ou [Unir tabelas manualmente &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md).  
   
-2.  Selecione a linha de junção no painel de diagrama e, em seguida, do **Designer de consulta** menu, escolha **selecionar todas as linhas da \<tablename >** , selecionando o comando que inclui a tabela cujo extra linhas que você deseja incluir.  
+2.  Selecione a linha de junção no painel Diagrama e, em seguida, no menu **Designer de consultas** , escolha **selecionar todas \<as linhas de TableName>**, selecionando o comando que inclui a tabela cujas linhas extras você deseja incluir.  
   
     -   Escolha a primeira tabela para criar uma junção externa esquerda.  
   
@@ -57,7 +57,7 @@ FROM employee LEFT OUTER JOIN jobs
 WHERE (jobs.job_id IS NULL)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Consultar com junções &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [Caixa de diálogo Unir &#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a3dfc7b81bf6f6a3ef0b9b74a2d1a78f3e3e1db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200113"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronização da Web para replicação de mesclagem.
@@ -29,7 +29,7 @@ ms.locfileid: "63200113"
   
 -   Sincronizando dados de usuários móveis pela Internet.  
   
--   Sincronizando dados entre bancos de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por um firewall de empresa.  
+-   Sincronização de dados entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dado em um firewall corporativo.  
   
  Por exemplo, um representante de vendas ambulante pode usar a sincronização da Web. A empresa, [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], tem representantes de vendas que viajam a várias lojas e fornecedores ao longo das suas regiões. Em viagens longas os representantes ficam em hotéis e precisam de uma forma conveniente para carregar os dados de vendas e baixar as atualizações de produtos no final de cada dia.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63200113"
   
  O[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou uma versão posterior é requerida para todos os computadores que participam de sincronização da Web.  
   
-### <a name="synchronization-process"></a>Processo de sincronização  
+### <a name="synchronization-process"></a>Processo de Sincronização  
  As etapas seguintes acontecem durante a sincronização:  
   
 1.  O Merge Agent é iniciado no Assinante. O agente faz o seguinte:  
@@ -80,8 +80,8 @@ ms.locfileid: "63200113"
   
 3.  O Merge Agent no Assinante oferece suporte à resposta HTTPS e aplica as alterações de download ao banco de dados da assinatura.  
   
-## <a name="see-also"></a>Consulte também  
- [Configure Web Synchronization](configure-web-synchronization.md)   
- [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar sincronização da Web](configure-web-synchronization.md)   
+ [Topologias para sincronização da Web](topologies-for-web-synchronization.md)  
   
   

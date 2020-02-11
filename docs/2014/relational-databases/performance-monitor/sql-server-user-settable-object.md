@@ -14,29 +14,29 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ac802569356979f3a01da4c204a80272c2be43a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151090"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, objeto User Settable
-  O objeto **User Settable** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar instâncias de contador personalizadas. Use instâncias de contador personalizadas para monitorar aspectos do servidor que escapam aos contadores existentes, como componentes exclusivos de seu banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pedidos de clientes registrados em log ou o estoque de produtos).  
+  O objeto **User settable** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que você crie instâncias de contador personalizadas. Use instâncias de contador personalizadas para monitorar aspectos do servidor que escapam aos contadores existentes, como componentes exclusivos de seu banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pedidos de clientes registrados em log ou o estoque de produtos).  
   
- O objeto **Definível pelo Usuário** contém 10 instâncias do contador de consulta: **Contador de usuário 1** a **Contador do usuário 10**. Esses contadores são mapeados para os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **sp_user_counter1** a **sp_user_counter10**. À medida que esses procedimentos armazenados são executados por aplicativos do usuário, os valores definidos por eles são exibidos no Monitor do Sistema. Um contador pode monitorar qualquer valor inteiro individual (por exemplo, um procedimento armazenado que conta quantos pedidos de um produto em particular ocorreram em um dia).  
+ O objeto **User Settable** contém 10 instâncias do contador de consultas: de **Contador do usuário 1** a **Contador do usuário 10**. Esses contadores são mapeados para os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **sp_user_counter1** a **sp_user_counter10**. À medida que esses procedimentos armazenados são executados por aplicativos do usuário, os valores definidos por eles são exibidos no Monitor do Sistema. Um contador pode monitorar qualquer valor inteiro individual (por exemplo, um procedimento armazenado que conta quantos pedidos de um produto em particular ocorreram em um dia).  
   
 > [!NOTE]  
 >  Os procedimentos armazenados de contadores do usuário não são sondados automaticamente pelo Monitor do Sistema. Eles devem ser executados explicitamente por um aplicativo de usuário para obter os valores de contador a serem atualizados. Use um gatilho para atualizar o valor do contador automaticamente. Por exemplo, para criar um contador que monitore o número de linhas em uma tabela, crie um gatilho INSERT e DELETE na tabela que executa a seguinte instrução: `SELECT COUNT(*) FROM table`. Sempre que o gatilho for acionado devido à ocorrência de operação INSERT ou DELETE na tabela, o contador do Monitor do Sistema será atualizado automaticamente.  
   
  Essa tabela descreve o objeto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** .  
   
-|Contadores do SQL Server definíveis pelo usuário|Descrição|  
+|Contadores do SQL Server definíveis pelo usuário|DESCRIÇÃO|  
 |---------------------------------------|-----------------|  
 |**Consulta**|O objeto **User Settable** contém o contador da consulta. Os usuários configuram os **Contadores do usuário** dentro do objeto de consulta.|  
   
  Essa tabela descreve as **instâncias** do contador de **Consultas** .  
   
-|Instâncias do contador de consultas|Descrição|  
+|Instâncias do contador de consultas|DESCRIÇÃO|  
 |-----------------------------|-----------------|  
 |**Contador do usuário 1**|Definido usando **sp_user_counter1**.|  
 |**Contador do usuário 2**|Definido usando **sp_user_counter2**.|  
@@ -61,15 +61,15 @@ AS
 GO  
 ```  
   
- A função @[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna o número de conexões ou tentativas de conexão desde o início de uma instância de @CONNECTIONS. Esse valor é passado ao procedimento armazenado **sp_user_counter1** como parâmetro.  
+ A função @@CONNECTIONS retorna o número de conexões ou tentativas de conexão desde o início de uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse valor é passado ao procedimento armazenado **sp_user_counter1** como parâmetro.  
   
 > [!IMPORTANT]  
 >  Torne as consultas definidas nos procedimentos armazenados de contador do usuário o mais simples possível. Consultas que consomem muita memória e realizam operações substanciais de classificação ou hash ou grandes quantidades de E/S são de execução dispendiosa e podem influir no desempenho.  
   
 ## <a name="permissions"></a>Permissões  
- **sp_user_counter** está disponível para todos os usuários, mas pode ser restringido para qualquer contador de consultas.  
+ **sp_user_counter** está disponível para todos os usuários, mas pode ser restringido para qualquer contador de consulta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

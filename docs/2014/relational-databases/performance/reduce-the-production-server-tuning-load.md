@@ -19,19 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f59763b63f4e73687620482a2c1e739fe21fb6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150720"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reduzir a carga de ajuste do servidor de produção
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] O Orientador de Otimização usa o otimizador de consulta para analisar uma carga de trabalho e fazer recomendações de ajuste. Executar essa análise no servidor de produção aumenta a carga do servidor e pode prejudicar o desempenho do servidor durante a sessão de ajuste. É possível diminuir o impacto na carga do servidor durante uma sessão de ajuste usando um servidor de teste além do servidor de produção.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]O Orientador de otimização depende do otimizador de consulta para analisar uma carga de trabalho e fazer recomendações de ajuste. Executar essa análise no servidor de produção aumenta a carga do servidor e pode prejudicar o desempenho do servidor durante a sessão de ajuste. É possível diminuir o impacto na carga do servidor durante uma sessão de ajuste usando um servidor de teste além do servidor de produção.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Como o Orientador de Otimização de Mecanismo de Banco de Dados usa um servidor de teste  
  O modo tradicional de uso de um servidor de teste é copiar todos os dados de seu servidor de produção no servidor de teste, ajustar o servidor de teste e depois implementar a recomendação no seu servidor de produção. Esse processo elimina o impacto de desempenho em seu servidor de produção, mas, mesmo assim, não é a melhor solução. Por exemplo, copiar grandes volumes de dados da produção no servidor de teste pode consumir tempo e recursos significativos. Além disso, o hardware do servidor de teste raramente é tão eficiente quanto o hardware implantado nos servidores de produção. O processo de ajuste depende do otimizador de consulta, e as recomendações geradas são, em parte, baseadas no hardware subjacente. Se o hardware dos servidores de teste e de produção não for idêntico, a qualidade da recomendação do Orientador de Otimização do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] será menor.  
   
- Para evitar problemas desse tipo, o Orientador de Otimização do Mecanismo do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ajusta um banco de dados em um servidor de produção descarregando a maioria da carga de ajuste em um servidor de teste. Ele faz isso usando as informações de configuração de hardware do servidor de produção, sem, de fato, copiar os dados do servidor de produção no servidor de teste. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] não copia dados reais do servidor de produção para o servidor de teste. Ele apenas copia os metadados e as estatísticas necessárias.  
+ Para evitar problemas desse tipo, o Orientador de Otimização do Mecanismo do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ajusta um banco de dados em um servidor de produção descarregando a maioria da carga de ajuste em um servidor de teste. Ele faz isso usando as informações de configuração de hardware do servidor de produção, sem, de fato, copiar os dados do servidor de produção no servidor de teste. 
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] não copia dados reais do servidor de produção para o servidor de teste. Ele apenas copia os metadados e as estatísticas necessárias.  
   
  As etapas seguintes esboçam o processo para ajustar um banco de dados de produção em um servidor de teste:  
   
@@ -45,11 +46,14 @@ ms.locfileid: "63150720"
   
      Durante o processo de ajuste, o Orientador de Otimização do Mecanismo do Banco de Dados cria um banco de dados shell no servidor de teste. Para criar esse banco de dados shell e ajustá-lo, o Orientador de Otimização do Mecanismo do Banco de Dados faz chamadas ao servidor de produção para o seguinte:  
   
-    1.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] O Orientador de Otimização importa metadados do banco de dados de produção para o banco de dados shell do servidor de teste. Esses metadados incluem tabelas vazias, índices, exibições, procedimentos armazenados, disparadores, e assim por diante. Isso possibilita a execução de consultas de carga de trabalho no banco de dados shell do servidor de teste.  
+    1.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] O Orientador de Otimização importa metadados do banco de dados de produção para o banco de dados shell do servidor de teste. Esses metadados incluem tabelas vazias, índices, exibições, procedimentos armazenados, disparadores, e assim por diante. Isso possibilita a execução de consultas de carga de trabalho no banco de dados shell do servidor de teste.  
   
-    2.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] O Orientador de Otimização importa estatísticas do servidor de produção para que o otimizador de consulta possa otimizar as consultas com precisão no servidor de teste.  
+    2.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] O Orientador de Otimização importa estatísticas do servidor de produção para que o otimizador de consulta possa otimizar as consultas com precisão no servidor de teste.  
   
-    3.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] O Orientador de Otimização importa parâmetros de hardware que especificam o número de processadores e a memória disponível do servidor de produção para fornecer ao otimizador de consulta as informações necessárias para gerar um plano de consulta.  
+    3.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] O Orientador de Otimização importa parâmetros de hardware que especificam o número de processadores e a memória disponível do servidor de produção para fornecer ao otimizador de consulta as informações necessárias para gerar um plano de consulta.  
   
 3.  Depois que o Orientador de Otimização do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] termina de ajustar o banco de dados shell do servidor de teste, ele gera uma recomendação de ajuste.  
   
@@ -57,7 +61,7 @@ ms.locfileid: "63150720"
   
  A ilustração a seguir mostra o servidor de teste e o cenário do servidor de produção:  
   
- ![Uso do servidor de teste do Orientador de Otimização do Mecanismo de Banco de Dados](../../database-engine/media/testsvr.gif "Uso do servidor de teste do Orientador de Otimização do Mecanismo de Banco de Dados")  
+ ![Uso do servidor de teste Orientador de Otimização do Mecanismo de Banco de Dados](../../database-engine/media/testsvr.gif "Uso do servidor de teste Orientador de Otimização do Mecanismo de Banco de Dados")  
   
 > [!NOTE]  
 >  O recurso de ajuste do servidor de teste não é suportado na interface gráfica de usuário do Orientador de Otimização do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] .  
@@ -92,8 +96,8 @@ ms.locfileid: "63150720"
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Considerações para usar servidores de teste](considerations-for-using-test-servers.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Considerações sobre o uso de servidores de teste](considerations-for-using-test-servers.md)   
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](database-engine-tuning-advisor.md)  
   
   

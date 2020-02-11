@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268670"
 ---
 # <a name="replication-security-best-practices"></a>Práticas recomendadas em relação à segurança de replicação
@@ -33,7 +33,7 @@ ms.locfileid: "63268670"
   
     -   [Trabalhar com perfis do Agente de Replicação](../agents/replication-agent-profiles.md)  
   
-    -   [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [Exibir e modificar parâmetros do prompt de comando de agentes de replicação &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Conceitos dos executáveis do Replication Agent](../concepts/replication-agent-executables-concepts.md)  
   
@@ -67,12 +67,12 @@ ms.locfileid: "63268670"
   
     -   Quando for necessária a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , normalmente o acesso ao compartilhamento de instantâneo UNC não estará disponível (por exemplo, o acesso poderá ser bloqueado por um firewall). Neste caso, você pode transferir o instantâneo aos Assinantes por FTP (File Transfer Protocol). Para obter mais informações, consulte [Transferir instantâneos pelo FTP](../transfer-snapshots-through-ftp.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replicação na Internet](../replication-over-the-internet.md)   
  [Proteger o Assinante](secure-the-subscriber.md)   
  [Proteger o Distribuidor](secure-the-distributor.md)   
  [Proteger o Publicador](secure-the-publisher.md)   
- [Segurança de replicação do SQL Server](view-and-modify-replication-security-settings.md)  
+ [Segurança de Replicação do SQL Server](view-and-modify-replication-security-settings.md)  
   
   

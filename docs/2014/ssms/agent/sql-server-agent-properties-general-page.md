@@ -13,26 +13,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245776"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>Propriedades do SQL Server Agent (página Geral)
-  Use esta página para exibir e modificar as propriedades gerais do serviço do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Use esta página para exibir e modificar as propriedades gerais do serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Agent.  
   
 ## <a name="options"></a>Opções  
  **Estado do serviço**  
  Exibe o estado atual do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- **Reiniciar automaticamente o SQL Server se ele parar inesperadamente**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent reiniciará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parar inesperadamente.  
+ **Reinicialização automática SQL Server se parar inesperadamente**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent reiniciará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parar inesperadamente.  
   
- **Reiniciar automaticamente o SQL Server Agent se ele parar inesperadamente**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reiniciará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent parar inesperadamente.  
+ **Reinicialização automática SQL Server Agent se parar inesperadamente**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reiniciará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent parar inesperadamente.  
   
- **Filename**  
+ **Nome do arquivo**  
  Especifica o nome do arquivo para o log de erros.  
   
  **...**  
@@ -47,8 +49,8 @@ ms.locfileid: "63245776"
  **Destinatário do net send**  
  Digite o nome de um operador para receber a notificação net send das mensagens que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent gravar no arquivo de log.  
   
-## <a name="see-also"></a>Consulte também  
- [Operadores](operators.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Operações](operators.md)   
  [Log de erros do SQL Server Agent](sql-server-agent-error-log.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Como fazer: Implantar uma extensão de processamento de dados para um servidor de relatório | Microsoft Docs'
+title: Como implantar uma extensão de processamento de dados para um Servidor de Relatório | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164071"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Como fazer: Para implantar uma extensão de processamento de dados para um Servidor de Relatórios
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Como implantar uma extensão de processamento de dados para um Servidor de Relatórios
   Servidores de relatórios usam extensões de processamento de dados por recuperar e processar dados em relatórios renderizados. Você deve implantar o seu assembly de extensão de processamento de dados para um servidor de relatório como um assembly privado. Também será preciso criar uma entrada no arquivo de configuração do servidor de relatório, RSReportServer.config.  
   
 ## <a name="procedures"></a>Procedimentos  
@@ -30,7 +30,7 @@ ms.locfileid: "63164071"
 1.  Copie o assembly do local de preparo para o diretório bin do servidor de relatório no qual você deseja usar a extensão de processamento de dados. O local padrão do diretório bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
-    >  Esta etapa impedirá uma atualização para uma instância mais nova do SQL Server. Para obter mais informações, consulte [Upgrade and Migrate Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md).  
+    >  Esta etapa impedirá uma atualização para uma instância mais nova do SQL Server. Para obter mais informações, consulte [atualizar e migrar Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md).  
   
 2.  Depois que o arquivo do assembly for copiado, abra o arquivo RSReportServer.config. O arquivo RSReportServer.config está localizado no diretório ReportServer. Você precisa criar uma entrada no arquivo de configuração para o seu arquivo de assembly de extensão de processamento de dados. Abra o arquivo de configuração com o Visual Studio ou com um editor de texto simples, como o Bloco de notas.  
   
@@ -67,12 +67,12 @@ ms.locfileid: "63164071"
     </CodeGroup>  
     ```  
   
- A associação da URL é somente uma das condições de associação que você pode escolher para a sua extensão de processamento de dados. Para obter mais informações sobre a segurança de acesso do código no [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consulte [Desenvolvimento seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
+ A associação da URL é somente uma das condições de associação que você pode escolher para a sua extensão de processamento de dados. Para obter mais informações sobre a segurança de [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]acesso do código no, consulte [&#40;de desenvolvimento seguro Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
   
-## <a name="verifying-the-deployment"></a>Verificando a implantação  
+## <a name="verifying-the-deployment"></a>Verificar a implantação  
  Você pode verificar se sua extensão de processamento de dados foi implantada com êxito no servidor de relatório usando o método <xref:ReportService2010.ReportingService2010.ListExtensions%2A> do serviço Web. Você também pode abrir o Gerenciador de Relatórios e verificar se a sua extensão foi incluída na lista de fontes de dados disponíveis. Para obter mais informações sobre o Gerenciador de Relatórios e fontes de dados, consulte [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implantando uma extensão de processamento de dados](deploying-a-data-processing-extension.md)   
  [Extensões do Reporting Services](../reporting-services-extensions.md)   
  [Implementando uma extensão de processamento de dados](implementing-a-data-processing-extension.md)   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6fb2888ba5cba2d3ab2701d934f83dc55cf362ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077435"
 ---
 # <a name="bind-an-attribute-to-a-key-column"></a>Associar um atributo a uma coluna de chave
@@ -35,6 +35,6 @@ ms.locfileid: "66077435"
 4.  Digite o novo nome.  
   
     > [!NOTE]  
-    >  Você também pode definir as `Name` propriedade de um atributo selecionado na **propriedades** janela de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+    >  Você também pode definir a `Name` propriedade de um atributo selecionado na janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
   

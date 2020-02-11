@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3aad6f25496384026e2550862b5babaf95bfd39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106472"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Permitir que uma caixa de texto seja ampliada ou reduzida (Construtor de Relatórios e SSRS)
@@ -27,13 +27,13 @@ ms.locfileid: "66106472"
   
 1.  Clique com o botão direito do mouse na caixa de texto e clique em **Propriedades da Caixa de Texto**.  
   
-2.  Clique na guia **Geral** .  
+2.  Clique na guia **Geral**.  
   
     -   Para permitir a expansão vertical da caixa de texto com base no seu conteúdo, selecione **Permitir aumento da altura**.  
   
     -   Para permitir a redução da caixa de texto com base no seu conteúdo, selecione **Permitir diminuição da altura**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

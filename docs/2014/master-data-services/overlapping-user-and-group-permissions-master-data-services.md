@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478881"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Sobrepondo permissões de usuário e grupo (Serviços de Dados Mestre)
@@ -30,11 +30,11 @@ ms.locfileid: "65478881"
   
  Se um usuário for um membro de vários grupos, e esses grupos tiverem acesso ao Master Data Manager, as seguinte regras se aplicarão:  
   
--   **Negar** substitui todas as outras permissões.  
+-   **Deny** substitui todas as outras permissões.  
   
--   **Atualização** substituições **somente leitura**.  
+-   A **atualização** substitui **somente leitura**.  
   
- Essas regras se aplicam às guias **Modelos** e **Membros da Hierarquia** . As permissões são resolvidas para cada guia e, em seguida, combinadas. Para obter mais informações, consulte [How Permissions Are Determined &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md).  
+ Essas regras se aplicam às guias **Modelos** e **Membros da Hierarquia** . As permissões são resolvidas para cada guia e, em seguida, combinadas. Para obter mais informações, consulte [Como as permissões são determinadas &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md).  
   
 > [!NOTE]  
 >  Você pode visualizar a resolução do usuário e do grupo sobrepondo permissões na interface do usuário. As guias **Modelos** e **Membros da Hierarquia** têm uma lista suspensa na qual é possível escolher **Efetivo** para exibir as permissões efetivas.  
@@ -44,26 +44,26 @@ ms.locfileid: "65478881"
   
  O usuário pertence ao Grupo 1 e ao Grupo 2.  
   
- O usuário tem **somente leitura** permissão para a entidade produto.  
+ O usuário tem permissão **somente leitura** para a entidade produto.  
   
  O Grupo 1 tem permissão **Atualizar** para a entidade Produto.  
   
- Grupo 2 tem **somente leitura** permissão para a entidade produto.  
+ O grupo 2 tem permissão **somente leitura** para a entidade produto.  
   
- Resultado: A permissão efetiva do usuário é **Atualizar** na entidade Product.  
+ Resultado: a permissão efetiva do usuário é **Atualizar** para a entidade Produto.  
   
 ## <a name="example-2"></a>Exemplo 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
   
  O usuário pertence ao Grupo 1 e ao Grupo 2.  
   
- O usuário tem **somente leitura** permissão para a entidade produto.  
+ O usuário tem permissão **somente leitura** para a entidade produto.  
   
  O Grupo 1 tem permissão **Atualizar** para a entidade Produto.  
   
  O Grupo 2 tem permissão **Negar** para a entidade Produto.  
   
- Resultado: A permissão efetiva do usuário é **Negar** na entidade Product.  
+ Resultado: a permissão efetiva do usuário é **Negar** para a entidade Produto.  
   
 ## <a name="example-3"></a>Exemplo 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -72,13 +72,13 @@ ms.locfileid: "65478881"
   
  O usuário permissão **Atualizar** para um grupo de membros em um nó de hierarquia.  
   
- Grupo 1 tem **somente leitura** permissão a um grupo de membros em um nó de hierarquia.  
+ O grupo 1 tem permissão **somente leitura** para um grupo de membros em um nó de hierarquia.  
   
- Grupo 2 tem **somente leitura** permissão a um grupo de membros em um nó de hierarquia.  
+ O grupo 2 tem permissão **somente leitura** para um grupo de membros em um nó de hierarquia.  
   
- Resultado: A permissão efetiva do usuário é **Atualizar** nos membros.  
+ Resultado: a permissão efetiva do usuário é **Atualizar** para os membros.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como as permissões são determinadas &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
  [Sobrepondo permissões de modelo e membro &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   

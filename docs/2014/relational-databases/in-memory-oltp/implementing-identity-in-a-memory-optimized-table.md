@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157822"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Implementando IDENTITY em uma tabela otimizada em memória
@@ -51,7 +51,7 @@ insert into T1 values (@c1, 'test', getdate())
   
  Após executar a inserção várias vezes, você verá valores válidos que aumentam de forma monotônica na coluna [c1]. Esse conjunto de resultados é gerado usando a verificação de tabela e o índice de hash sem `ORDER BY` para que as linhas não sejam ordenadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Migrando para OLTP na memória](migrating-to-in-memory-oltp.md)  
   
   

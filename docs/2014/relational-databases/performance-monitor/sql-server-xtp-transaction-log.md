@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f49c43eeaf6f5b799d60f500c303227f94452503
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151015"
 ---
 # <a name="xtp-transaction-log"></a>Log de Transações de XTP
@@ -22,12 +22,12 @@ ms.locfileid: "63151015"
   
  Esta tabela descreve os contadores **Log de transações de XTP** .  
   
-|Contador|Descrição|  
+|Contador|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Bytes de logs gravados/s**|O número de bytes gravados no log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo mecanismo de XTP (em média), por segundo.|  
 |**Registros de logs gravados/s**|O número de registros gravados no log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo mecanismo de XTP (em média), por segundo.|  
   
-## <a name="see-also"></a>Consulte também  
- [XTP &#40;OLTP in-memory&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#40;de OLTP na memória&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)  
   
   

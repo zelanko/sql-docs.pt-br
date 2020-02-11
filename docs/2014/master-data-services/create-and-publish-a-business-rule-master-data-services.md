@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2b52be0b8c76333b069c018415ff698f13f824ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479892"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Criar e publicar uma regra de negócio (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65479892"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -50,14 +50,14 @@ ms.locfileid: "65479892"
   
 9. No painel **Componentes** , expanda o nó **Condições** .  
   
-10. Clique em uma condição e arraste-o para o **IF** do painel **condições** rótulo.  
+10. Clique em uma condição e arraste-a para o rótulo de **condições** do painel de **If** .  
   
     > [!TIP]  
-    >  Você pode excluir itens da regra de negócio clicando com botão direito e escolhendo **excluir**.  
+    >  Você pode excluir itens de sua regra de negócio clicando com o botão direito do mouse e escolhendo **excluir**.  
   
-11. No **atributos** painel, clique em um atributo e arraste-o para o **Editar condição** do painel **Selecionar atributo** rótulo.  
+11. No painel **atributos** , clique em um atributo e arraste-o para o rótulo de **atributo selecionar** do painel de **condição de edição** .  
   
-12. No **Editar condição** painel, preencha os campos necessários.  
+12. No painel **Editar condição** , preencha todos os campos obrigatórios.  
   
 13. No painel **Editar Condição** , clique em **Salvar item**.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "65479892"
   
 -   Aplique regras de negócio a dados seguindo um destes procedimentos:  
   
-    -   [Validar membros específicos em relação a regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Validar membros específicos em relação às regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Validar uma versão em relação às regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Alterar o nome de uma regra de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Adicionar várias condições a uma regra de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287477"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Gerar um esquema XSD embutido
@@ -94,7 +94,7 @@ WHERE BusinessEntityID = 1
 FOR XML AUTO, ELEMENTS  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
  `<Person>`  
   
@@ -114,7 +114,7 @@ AND     SalesOrderHeader.SalesOrderID=5001
 FOR XML AUTO, ELEMENTS, XMLSCHEMA  
 ```  
   
- Como a consulta especifica a diretiva ELEMENTS, o XML resultante é centrado em elemento. A consulta também especifica a diretiva XMLSCHEMA. Portanto, um esquema XSD embutido é retornado. Esse é o resultado:  
+ Como a consulta especifica a diretiva ELEMENTS, o XML resultante é centrado em elemento. A consulta também especifica a diretiva XMLSCHEMA. Portanto, um esquema XSD embutido é retornado. Este é o resultado:  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -464,7 +464,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
 -   Como Col2 e Col3 podem ser NULL, a declaração do elemento <`Col`> especifica minOccurs como 0 e maxOccurs como 2.  
   
--   Como os dois elementos <`Col`> são irmãos, há uma declaração de elemento no esquema. Além disso, como os dois elementos também são de tipos diferentes, embora ambos sejam de tipos simples, o tipo do elemento no esquema é `xsd:anySimpleType`. No resultado, cada tipo de instância é identificado pelo atributo `xsi:type`.  
+-   Como os dois elementos <`Col`> são irmãos, há uma declaração de elemento no esquema. Além disso, como os dois elementos também são de tipos diferentes, embora ambos sejam de tipos simples, o tipo do elemento no esquema é `xsd:anySimpleType`. No resultado, cada tipo de instância é identificado pelo atributo `xsi:type` .  
   
 -   No resultado, cada instância do elemento <`Col`> faz referência ao seu tipo de instância usando o atributo `xsi:type`.  
   

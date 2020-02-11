@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162459"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices em colunas computadas
@@ -36,11 +36,11 @@ ms.locfileid: "63162459"
   
 -   Requisitos de opção SET  
   
- **Ownership Requirements**  
+ **Requisitos de propriedade**  
   
  Todas as referências de função na coluna computada devem ter o mesmo proprietário da tabela.  
   
- **Determinism Requirements**  
+ **Requisitos de determinantes**  
   
 > [!IMPORTANT]  
 >  Expressões são determinísticas se elas sempre retornarem o mesmo resultado para um conjunto de entradas especificado. A propriedade **IsDeterministic** da função [COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql) relata se um *computed_column_expression* é determinístico.  
@@ -64,7 +64,7 @@ ms.locfileid: "63162459"
 >   
 >  Quando o nível da configuração da compatibilidade de banco de dados é 90, você não pode criar índices em colunas computadas que contêm essas expressões. Porém, a existência de colunas computadas com essas expressões de um banco de dados atualizado é sustentável. Se você usar colunas computadas indexadas que contêm conversões implícitas de cadeia de caracteres para datas; para evitar possível corrupção de índice, verifique se as configurações LANGUAGE e DATEFORMAT estão consistentes em seus bancos de dados e aplicativos.  
   
- **Precision Requirements**  
+ **Requisitos de precisão**  
   
  A *computed_column_expression* deve ser precisa. Uma *computed_column_expression* é precisa quando uma ou mais das seguintes opções é verdadeira:  
   
@@ -86,15 +86,15 @@ ms.locfileid: "63162459"
   
  A propriedade **IsPrecise** da função COLUMNPROPERTY relata se uma *computed_column_expression* é precisa.  
   
- **Data Type Requirements**  
+ **Requisitos de tipo de dados**  
   
--   O *computed_column_expression* definido para a coluna computada não pode ser avaliada como o `text`, `ntext`, ou `image` tipos de dados.  
+-   A *computed_column_expression* definida para a coluna computada não pode ser `text`avaliada como os tipos de dados, `ntext`ou `image` .  
   
 -   Colunas computadas derivadas de `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, e tipos de dados `xml` podem ser indexados contanto que o tipo de dados de coluna computada seja permitido como coluna de índice chave.  
   
 -   Colunas computadas derivadas de `image`, `ntext`, e tipos de dados `text` podem ser colunas não chave (inclusas) em um índice não clusterizado contanto que o tipo de dados da coluna computada seja permitida como coluna de índice não chave.  
   
- **SET Option Requirements**  
+ **DEFINIR requisitos de opção**  
   
 -   A opção de nível de conexão ANSI_NULLS deve ser definida como ON quando a instrução CREATE TABLE ou ALTER TABLE que define a coluna computada é executada. A função [OBJECTPROPERTY](/sql/t-sql/functions/objectpropertyex-transact-sql) relata se a opção está ativa pela propriedade **IsAnsiNullsOn** .  
   
@@ -117,7 +117,7 @@ ms.locfileid: "63162459"
      A definição de ANSI_WARNINGS como ON definirá ARITHABORT implicitamente como ON quando o nível de compatibilidade do banco de dados estiver definido como 90 ou mais.  
   
 ##  <a name="BKMK_persisted"></a> Criando índices em colunas computadas persistentes  
- Você pode criar um índice em uma coluna computada que está definida com uma expressão determinística, mas imprecisa, se a coluna for marcada como PERSISTED na instrução CREATE TABLE ou ALTER TABLE. Isso significa que o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] usa esses valores persistentes quando ele cria um índice na coluna, e quando o índice é referenciado em uma consulta. Essa opção permite que você crie um índice em uma coluna computada quando [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], é determinística e precisa.  
+ Você pode criar um índice em uma coluna computada que está definida com uma expressão determinística, mas imprecisa, se a coluna for marcada como PERSISTED na instrução CREATE TABLE ou ALTER TABLE. Isso significa que o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] usa esses valores persistentes ao criar um índice na coluna e quando o índice é referenciado em uma consulta. Essa opção permite que você crie um índice em uma coluna computada [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]quando, é determinístico e preciso.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

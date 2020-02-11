@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 10: Adicionando a transformação grupo difuso para identificar duplicatas | Microsoft Docs'
+title: 'Tarefa 10: adicionando a transformação de grupo difuso para identificar duplicatas | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,50 +11,50 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481248"
 ---
-# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Tarefa 10: Adicionar a Transformação Grupo Difuso para identificar duplicatas
-  Nesta tarefa, você adiciona uma Transformação Grupo Difuso ao fluxo de dados. A transformação Grupo Difuso pode ajudar a identificar duplicatas nos dados de origem. Ver [transformação agrupamento difuso](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) para obter mais detalhes.  
+# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Tarefa 10: Adicionando a Transformação Grupo Difuso para identificar duplicatas
+  Nesta tarefa, você adiciona uma Transformação Grupo Difuso ao fluxo de dados. A transformação Grupo Difuso pode ajudar a identificar duplicatas nos dados de origem. Consulte [transformação Agrupamento Difuso](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) para obter mais detalhes.  
   
-1.  Arrastar e soltar **grupo difuso** transformar em **outras transformações** sobre o **caixa de ferramentas do SSIS** para o **de fluxo de dados** guia em  **Combinar registros corretos e corrigidos**.  
+1.  Arraste e solte a transformação de **grupo difuso** em **outras transformações** na **caixa de ferramentas do SSIS** para a guia **fluxo de dados** em **combinar registros corretos e corrigidos**.  
   
-2.  Clique com botão direito **grupo difuso** transformar na **fluxo de dados** guia e, em seguida, clique em **Renomear**. Tipo de **agrupar fornecedores com IDs correspondentes** e pressione **ENTER**.  
+2.  Clique com o botão direito do mouse em transformação de **grupo difuso** na guia **fluxo de dados** e clique em **renomear**. Digite **Agrupar fornecedores com IDs correspondentes** e pressione **Enter**.  
   
-3.  Conectar-se **combinar registros corretos e corrigidos** à **agrupar fornecedores com IDs correspondentes** usando o conector azul.  
+3.  Conectar **Combine registros corretos e corrigidos** para **Agrupar fornecedores com IDs correspondentes** usando o conector azul.  
   
-     ![Conexão ao grupo fornecedores com IDs correspondentes](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-01.jpg "Conexão ao grupo fornecedores com IDs correspondentes")  
+     ![Conexão ao grupo Fornecedores com IDs correspondentes](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-01.jpg "Conexão ao grupo Fornecedores com IDs correspondentes")  
   
-4.  Clique duas vezes em **agrupar fornecedores com IDs correspondentes**.  
+4.  Clique duas vezes em **Agrupar fornecedores com IDs correspondentes**.  
   
-5.  No **Editor de transformação grupo difuso**, clique em **New** lado **Gerenciador de Conexão do OLE DB na lista suspensa** para iniciar **configurar OLE DB Conexão Gerenciador de** caixa de diálogo.  
+5.  No **Editor de transformação grupo difuso**, clique em **novo** ao lado de **OLE DB lista suspensa Gerenciador de conexões** para iniciar a caixa de diálogo **Configurar OLE DB Gerenciador de conexões** .  
   
-6.  Na caixa de diálogo, clique em **New** para inicializar **Gerenciador de Conexão** caixa de diálogo.  
+6.  Na caixa de diálogo, clique em **novo** para iniciar a caixa de diálogo **Gerenciador de conexões** .  
   
-7.  Tipo de **(local)** ou **período** (.) para o nome do servidor.  
+7.  Digite **(local)** ou **ponto** (.) para o nome do servidor.  
   
-8.  Selecione **MDS** para **selecione ou insira um nome de banco de dados** campo. Você usará o banco de dados do MDS como o armazenamento temporário para o **transformação grupo difuso**. O **agrupamento difuso** transformação requer uma conexão a uma instância do SQL Server para criar as tabelas temporárias do SQL Server que o algoritmo de transformação necessita para fazer seu trabalho. Você pode criar um banco de dados ou usar outro banco de dados existente para essa finalidade.  
+8.  Selecione **MDS** para **selecionar ou insira um campo nome do banco de dados** . Você usará o banco de dados do MDS como o armazenamento temporário para a **transformação do grupo difuso**. A transformação **Agrupamento Difuso** requer uma conexão com uma instância do SQL Server para criar as tabelas de SQL Server temporárias que o algoritmo de transformação requer para realizar seu trabalho. Você pode criar um banco de dados ou usar outro banco de dados existente para essa finalidade.  
   
-9. Clique em **Testar Conexão** para testar a conexão e clique em **Okey** na caixa de mensagem.  
+9. Clique em **testar conexão** para testar a conexão e clique em **OK** na caixa de mensagem.  
   
-10. No **Gerenciador de Conexão** caixa de diálogo, clique em **Okey**.  
+10. Na caixa de diálogo **Gerenciador de conexões** , clique em **OK**.  
   
-11. Selecione **(local). MDS** (ou **localhost. MDS**) do **lista de conexões de dados** e clique em **Okey**.  
+11. Selecione **(local). MDS** (ou **localhost. MDS**) na **lista de conexões de dados** e clique em **OK**.  
   
-12. No **Editor de transformação agrupamento difuso**, confirme se **(local). MDS** ou **localhost. MDS** está selecionado para o **Gerenciador de Conexão do OLE DB**.  
+12. No **Editor de transformação Agrupamento Difuso**, confirme se **(local). MDS** ou **localhost. O MDS** é selecionado para o **Gerenciador de conexões OLE DB**.  
   
-13. Alterne para o **colunas** guia.  
+13. Alterne para a guia **colunas** .  
   
 14. Selecione (caixa de seleção) **SupplierID_Output** na lista de **colunas de entrada disponíveis**. Para configurar a transformação, selecione as colunas de entrada a serem usadas ao identificar duplicatas. Para manter a simplicidade, use apenas SupplierID nesta etapa.  
   
-     ![Editor de transformação agrupamento difuso](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-02.jpg "Editor de transformação agrupamento difuso")  
+     ![Editor de Transformação Agrupamento Difuso](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-02.jpg "Editor de Transformação Agrupamento Difuso")  
   
-15. Clique em **Okey** para fechar o **Editor de transformação grupo difuso**.  
+15. Clique em **OK** para fechar o **Editor de transformação grupo difuso**.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 11: Adicionando a transformação divisão condicional para filtrar duplicatas](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+ [Tarefa 11: Adicionando a Transformação Divisão Condicional para filtrar duplicatas](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   
