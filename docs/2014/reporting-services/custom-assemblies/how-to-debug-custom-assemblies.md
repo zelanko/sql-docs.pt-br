@@ -1,5 +1,5 @@
 ---
-title: 'Como fazer: Depurar Assemblies personalizados | Microsoft Docs'
+title: Como depurar assemblies personalizados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265059"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Como fazer: Depurar assemblies personalizados
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece várias ferramentas de depuração que podem ajudar você a analisar o código de assembly personalizado e localizar erros nele. A melhor ferramenta a ser usada dependerá do que você estiver tentando realizar. Este exemplo usa o [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
+# <a name="how-to-debug-custom-assemblies"></a>Como depurar assemblies personalizados
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece várias ferramentas de depuração que podem ajudá-lo a analisar seu código de assembly personalizado e localizar erros nele. A melhor ferramenta a ser usada dependerá do que você estiver tentando realizar. Este exemplo usa o [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
   
  A maneira recomendada de projetar, desenvolver e testar assemblies personalizados para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é criar uma solução que contenha os seus relatórios de teste e o seu assembly personalizado.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63265059"
   
 9. Clique na guia **Criar** se você estiver em um projeto C# ou na guia **Compilar** se estiver em um projeto do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-10. Na página **Criar**/**Compilar**, insira o caminho para a pasta do Designer de Relatórios. Por padrão, o caminho é C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE, que você deverá inserir na caixa de texto **Caminho de Saída**. Isso compilará e implantará uma versão atualizada do seu assembly personalizado diretamente no Designer de Relatórios antes da execução do seu relatório.  
+10. Na página**Compilar** compilação, insira o caminho para a pasta Report Designer. ****/ Por padrão, o caminho é C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE, que você deverá inserir na caixa de texto **Caminho de Saída**. Isso compilará e implantará uma versão atualizada do seu assembly personalizado diretamente no Designer de Relatórios antes da execução do seu relatório.  
   
 11. Depois que você criar o seu relatório e desenvolver o seu assembly personalizado, defina os pontos de interrupção em seu código de assembly personalizado.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "63265059"
   
 9. Percorra seu código usando a tecla F11. Para obter mais informações sobre como depurar usando o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], consulte a documentação do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar assemblies personalizados com relatórios](using-custom-assemblies-with-reports.md)  
   
   

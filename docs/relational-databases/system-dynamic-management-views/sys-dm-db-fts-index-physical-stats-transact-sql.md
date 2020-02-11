@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_fts_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_fts_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4394483cd17510c998126a70c12f4d669c9282aa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264495"
 ---
-# <a name="sysdmdbftsindexphysicalstats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
+# <a name="sysdm_db_fts_index_physical_stats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada índice de texto completo ou semântico em cada tabela que tenha um índice de texto completo ou semântico associado.  
@@ -35,7 +35,7 @@ ms.locfileid: "68264495"
 ||||  
 |-|-|-|  
 |**Nome da coluna**|**Tipo**|**Descrição**|  
-|**object_id**|int|ID do objeto da tabela que contém o índice.|  
+|**object_id**|INT|ID do objeto da tabela que contém o índice.|  
 |**fulltext_index_page_count**|**bigint**|Tamanho lógico da extração em número de páginas de índice.|  
 |**keyphrase_index_page_count**|**bigint**|Tamanho lógico da extração em número de páginas de índice.|  
 |**similarity_index_page_count**|**bigint**|Tamanho lógico da extração em número de páginas de índice.|  
@@ -52,8 +52,8 @@ ms.locfileid: "68264495"
   
 ## <a name="permissions"></a>Permissões
 
-Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra como consultar o tamanho lógico de cada índice de texto completo ou semântico em cada tabela que tenha um índice de texto completo ou semântico associado:  
@@ -63,7 +63,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar e monitorar a pesquisa semântica](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

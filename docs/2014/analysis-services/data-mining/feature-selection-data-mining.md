@@ -1,5 +1,5 @@
 ---
-title: Seleção (mineração de dados) de recursos | Microsoft Docs
+title: Seleção de recursos (mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084422"
 ---
 # <a name="feature-selection-data-mining"></a>Seleção de recursos (mineração de dados)
-  *Seleção de recursos* é um termo geralmente usado em mineração de dados para descrever as ferramentas e técnicas disponíveis para reduzir entradas a um tamanho gerenciável para processamento e análise. Seleção de recursos implica não só *redução de cardinalidade*, o que significa impor um corte arbitrário ou predefinido no número de atributos que podem ser considerados ao criar um modelo, mas também a escolha de atributos, que significa que que o analista ou a ferramenta de modelagem ativamente seleciona ou descarta atributos com base em sua utilidade para análise.  
+  A *seleção de recursos* é um termo normalmente usado em Data Mining para descrever as ferramentas e as técnicas disponíveis para reduzir as entradas para um tamanho gerenciável para processamento e análise. A seleção de recursos implica não apenas *redução de cardinalidade*, o que significa a imposição de um corte arbitrário ou predefinido no número de atributos que podem ser considerados ao criar um modelo, mas também à escolha de atributos, o que significa que o analista ou a ferramenta de modelagem seleciona ou descarta os atributos de forma ativa com base em sua utilidade para análise.  
   
  A capacidade para aplicar seleção de recursos é crítica para análise efetiva, porque os conjuntos de dados frequentemente contêm muito mais informações do que é necessário para criar o modelo. Por exemplo, um conjunto de dados pode conter 500 colunas que descrevem as características de clientes, mas se os dados em algumas das colunas forem muito esparsos, você ganharia um benefício muito pequeno por acrescentá-los ao modelo. Se você mantiver colunas desnecessárias quando criar o modelo, precisará de mais CPU e memória durante o processo de treinamento e de mais espaço de armazenamento para o modelo completo.  
   
@@ -62,14 +62,14 @@ ms.locfileid: "66084422"
   
  A pontuação de *interesse* é usada para classificar e ordenar atributos em colunas que contêm dados numéricos contínuos não binários.  
   
- A*entropia de Shannon* e duas pontuações *Bayesiana* estão disponíveis para colunas que contêm dados discretos e diferenciados. No entanto, se o modelo contiver colunas contínuas, a pontuação de interesse será usada para avaliar todas as colunas de entrada para garantir a consistência.  
+ A *entropia de Shannon* e duas pontuações de *Bayesiana* estão disponíveis para colunas que contêm dados discretos e discretizado. No entanto, se o modelo contiver colunas contínuas, a pontuação de interesse será usada para avaliar todas as colunas de entrada para garantir a consistência.  
   
  A seção a seguir descreve cada método de seleção de recursos.  
   
 #### <a name="interestingness-score"></a>Pontuação de interesse  
- Um recurso será interessante se ele transmitir alguma informação útil. Como a definição do que é útil varia dependendo do cenário, a indústria de mineração de dados desenvolveu várias formas de medir *interesse*. Por exemplo, *novidade* pode ser interessante na detecção de exceções, mas a capacidade de diferenciar itens intimamente relacionados, ou *peso Discriminatório*, seria mais interessante para classificação.  
+ Um recurso será interessante se ele transmitir alguma informação útil. Como a definição do que é útil varia dependendo do cenário, a Data Mining setor desenvolveu várias maneiras de medir a *curiosaidade*. Por exemplo, *novidade* pode ser interessante na detecção de exceção, mas a capacidade de discriminar várias entre itens relacionados ou o *peso de discriminamento*pode ser mais interessante para classificação.  
   
- A medida de interesse usada no SQL Server Analysis Services está *baseado em entropia*, o que significa que os atributos com distribuições aleatórias têm maior entropia e menor ganho de informações; portanto, esses atributos são menos interessante. A entropia de qualquer atributo em particular é comparada à entropia de todos os outros atributos, como segue:  
+ A medida de interesse usada em SQL Server Analysis Services é *baseada em entropia*, o que significa que os atributos com distribuições aleatórias têm maior entropia e menor lucro de informações; Portanto, esses atributos são menos interessantes. A entropia de qualquer atributo em particular é comparada à entropia de todos os outros atributos, como segue:  
   
  Interestingness(Attribute) = - (m - Entropy(Attribute)) * (m - Entropy(Attribute))  
   
@@ -105,30 +105,30 @@ ms.locfileid: "66084422"
   
 |Algoritmo|Método de análise|Comentários|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Microsoft Naïve Bayes aceita somente atributos discretos ou diferenciados; portanto, não pode usar a pontuação de interesse.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Naive Bayes Algorithm Technical Reference](microsoft-naive-bayes-algorithm-technical-reference.md).|  
-|Árvores de decisão|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método de seleção de recursos padrão ou o método que você especificou quando criou o modelo.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Decision Trees Algorithm Technical Reference](microsoft-decision-trees-algorithm-technical-reference.md).|  
-|Rede neural|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Redes Neurais da Microsoft pode usar ambos os métodos Bayesiano e baseado em entropia, desde que os dados contenham colunas contínuas.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md).|  
-|Regressão logística|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Embora o algoritmo de Regressão Logística da Microsoft se baseie no algoritmo Rede Neural da Microsoft, você não pode personalizar modelos de regressão logística para controlar o comportamento de seleção de recursos; portanto, a seleção de recursos sempre usa o método mais apropriado para o atributo por padrão.<br /><br /> Se todos os atributos forem discretos ou diferenciados, o padrão será BDEU.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md).|  
+|Naive Bayes|entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Microsoft Naïve Bayes aceita somente atributos discretos ou diferenciados; portanto, não pode usar a pontuação de interesse.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Naive Bayes Algorithm Technical Reference](microsoft-naive-bayes-algorithm-technical-reference.md).|  
+|Árvores de decisão|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método de seleção de recursos padrão ou o método que você especificou quando criou o modelo.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Decision Trees Algorithm Technical Reference](microsoft-decision-trees-algorithm-technical-reference.md).|  
+|Rede neural|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Redes Neurais da Microsoft pode usar ambos os métodos Bayesiano e baseado em entropia, desde que os dados contenham colunas contínuas.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md).|  
+|Regressão logística|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Embora o algoritmo de Regressão Logística da Microsoft se baseie no algoritmo Rede Neural da Microsoft, você não pode personalizar modelos de regressão logística para controlar o comportamento de seleção de recursos; portanto, a seleção de recursos sempre usa o método mais apropriado para o atributo por padrão.<br /><br /> Se todos os atributos forem discretos ou diferenciados, o padrão será BDEU.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md).|  
 |Clustering|Pontuação de interesse|O algoritmo Microsoft Clustering pode usar dados discretos ou diferenciados. No entanto, como a pontuação de cada atributo é calculada como uma distância e representada como um número contínuo, a pontuação de interesse deve ser usada.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md).|  
 |Regressão linear|Pontuação de interesse|O algoritmo de Regressão Linear da Microsoft pode usar somente a pontuação de interesse, pois suporta apenas colunas contínuas.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Linear Regression Algorithm Technical Reference](microsoft-linear-regression-algorithm-technical-reference.md).|  
-|Regras de associação<br /><br /> Clustering de sequências|Não usado|A seleção de recursos não é invocada com esses algoritmos.<br /><br /> No entanto, você poderá controlar o comportamento do algoritmo e reduzir o tamanho dos dados de entrada se necessário, configurando o valor dos parâmetros MINIMUM_SUPPORT e MINIMUM_PROBABILIITY.<br /><br /> Para obter mais informações, consulte [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) e [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md).|  
+|Regras da associação<br /><br /> Clustering de sequências|Não usado|A seleção de recursos não é invocada com esses algoritmos.<br /><br /> No entanto, você poderá controlar o comportamento do algoritmo e reduzir o tamanho dos dados de entrada se necessário, configurando o valor dos parâmetros MINIMUM_SUPPORT e MINIMUM_PROBABILIITY.<br /><br /> Para obter mais informações, consulte [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) e [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md).|  
 |Série temporal|Não usado|A seleção de recursos não se aplica a modelos de série temporal.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).|  
   
 ## <a name="feature-selection-parameters"></a>Parâmetros de seleção de recursos  
  Nos algoritmos que suportam a seleção de recursos, é possível controlar quando a seleção de recursos é ativada usando os parâmetros a seguir. Cada algoritmo tem um valor padrão para o número de entradas permitidas, mas você pode substituir esse padrão e especificar o número de atributos. Esta seção lista os parâmetros que são fornecidos para gerenciar a seleção de recursos.  
   
-#### <a name="maximuminputattributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
+#### <a name="maximum_input_attributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
  Se o modelo tiver mais colunas do que o número especificado no parâmetro *MAXIMUM_INPUT_ATTRIBUTES* , o algoritmo ignorará as colunas calculadas como não interessantes.  
   
-#### <a name="maximumoutputattributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
+#### <a name="maximum_output_attributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
  Da mesma forma, se o modelo tiver mais colunas previsíveis do que o número especificado no parâmetro *MAXIMUM_OUTPUT_ATTRIBUTES* , o algoritmo ignorará as colunas calculadas como não interessantes.  
   
-#### <a name="maximumstates"></a>MAXIMUM_STATES  
+#### <a name="maximum_states"></a>MAXIMUM_STATES  
  Se um modelo tiver mais casos que os especificado no parâmetro *MAXIMUM_STATES* , os estados menos populares serão agrupados para tratados como ausentes. Se qualquer um desses parâmetros for definido como 0, a seleção de recursos será desativada, o que afeta o tempo de processamento e o desempenho.  
   
  Além destes métodos para seleção de recursos, você pode melhorar a capacidade de o algoritmo identificar ou promover atributos significativos definindo *sinalizadores de modelagem* no modelo ou definindo *sinalizadores de distribuição* na estrutura. Para obter mais informações sobre esses conceitos, consulte [Sinalizadores de modelagem &#40;Data Mining&#41;](modeling-flags-data-mining.md) e [Distribuições de colunas &#40;Data Mining&#41;](column-distributions-data-mining.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Personalizar os modelos de mineração e a estrutura](customize-mining-models-and-structure.md)  
   
   
