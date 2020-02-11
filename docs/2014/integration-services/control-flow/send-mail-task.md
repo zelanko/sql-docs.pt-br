@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830390"
 ---
 # <a name="send-mail-task"></a>Tarefa Enviar Email
@@ -69,9 +69,9 @@ ms.locfileid: "62830390"
   
  Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Editor da Tarefa Enviar Email &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da tarefa Enviar email &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da Tarefa Enviar Email &#40;Página Email&#41;](../send-mail-task-editor-mail-page.md)  
+-   [Editor da tarefa Enviar email &#40;página de email&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62830390"
   
 -   Artigo técnico sobre [Como enviar email com notificação de entrega em C#](https://go.microsoft.com/fwlink/?LinkId=237625)no site shareourideas.com  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](integration-services-tasks.md)   
  [Fluxo de Controle](control-flow.md)  
   

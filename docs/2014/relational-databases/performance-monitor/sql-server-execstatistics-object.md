@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a09c2a57b76974758626a1847d5f0df3f8b7f55c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250597"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server, objeto ExecStatistics
@@ -25,7 +25,7 @@ ms.locfileid: "63250597"
   
  Esta tabela descreve os contadores **Exec Statistics** do SQL Server.  
   
-|Contadores Exec Statistics do SQL Server|Descrição|  
+|Contadores Exec Statistics do SQL Server|DESCRIÇÃO|  
 |-----------------------------------------|-----------------|  
 |**Consulta Distribuída**|Estatísticas referentes à execução de consultas distribuídas.|  
 |**Chamadas DTC**|Estatísticas referentes à execução de chamadas DTC.|  
@@ -34,14 +34,14 @@ ms.locfileid: "63250597"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Item|Descrição|  
+|Item|DESCRIÇÃO|  
 |----------|-----------------|  
 |**Tempo médio de execução (ms)**|Tempo médio de execução do tipo de execução selecionado.|  
 |**Tempo de execução cumulativo (ms) por segundo**|Tempo de execução agregado, por segundo, do tipo de execução selecionado.|  
 |**Execuções em andamento**|Número de execuções em andamento do tipo de execução selecionado.|  
 |**Execuções iniciadas por segundo**|Número de execuções iniciadas por segundo, do tipo de execução selecionado.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   
