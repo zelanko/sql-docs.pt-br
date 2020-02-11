@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679497"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropriedades no OPENXML
@@ -37,7 +37,7 @@ ms.locfileid: "62679497"
 > [!NOTE]  
 >  Não é possível fazer referência a essas metapropriedades em qualquer navegação XPath.  
   
-|Atributo de metapropriedade|Descrição|  
+|Atributo de metapropriedade|DESCRIÇÃO|  
 |----------------------------|-----------------|  
 |**\@mp:id**|Fornece um identificador de todo o documento gerado pelo sistema do nó DOM. Desde que o documento não seja reanalisado, essa ID faz referência ao mesmo nó XML.<br /><br /> Uma ID de XML de **0** indica que o elemento é um elemento raiz. A ID de XML de seu pai é NULL.|  
 |**\@mp:localname**|Armazena a parte local do nome do nó. Ele é usado com um URI de namespace e de prefixo para nomear nós de elementos ou atributos.|  
@@ -48,7 +48,7 @@ ms.locfileid: "62679497"
   
  Essa tabela mostra as propriedades pai adicionais que são fornecidas e que permitem recuperar informações sobre a hierarquia.  
   
-|Atributo de metapropriedade pai|Descrição|  
+|Atributo de metapropriedade pai|DESCRIÇÃO|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|Corresponde a **../\@mp:id**|  
 |**\@mp:parentlocalname**|Corresponde a **../\@mp:localname**|  
@@ -58,7 +58,7 @@ ms.locfileid: "62679497"
 ## <a name="examples"></a>Exemplos  
  Os exemplos seguintes ilustram como o OPENXML é usado para criar exibições de conjunto de linhas diferentes.  
   
-### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. Mapeando colunas do conjunto de linhas OPENXML para as metapropriedades  
+### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>a. Mapeando colunas do conjunto de linhas OPENXML para as metapropriedades  
  Este exemplo usa OPENXML para criar uma exibição do conjunto de linhas do documento XML de exemplo. Especificamente, ele mostra como os vários atributos de metapropriedade podem ser mapeados para colunas do conjunto de linhas em uma instrução OPENXML usando o parâmetro *ColPattern* .  
   
  A instrução OPENXML ilustra o seguinte:  
@@ -102,7 +102,7 @@ FROM OPENXML (@idoc, '/root/Customer/Order', 9)
 EXEC sp_xml_removedocument @idoc  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 id   oid         date                amount    parentIDNo  parentLocalName    
@@ -211,7 +211,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML &#40;SQL Server&#41;](../xml/openxml-sql-server.md)  
   

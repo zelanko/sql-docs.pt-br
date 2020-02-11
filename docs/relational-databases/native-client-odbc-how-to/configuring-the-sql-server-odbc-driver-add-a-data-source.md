@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 784c08ea9a251587d156de9f2d209308c6fda5e7
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781693"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>Configurar o Driver ODBC do SQL Server – Adicionar uma fonte de dados
@@ -29,7 +29,7 @@ ms.locfileid: "73781693"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>Para adicionar uma fonte de dados usando o Administrador ODBC  
   
-1.  No **painel de controle**, acesse **Ferramentas administrativas** e, em seguida, **fontes de dados ODBC (64 bits)** ou **fontes de dados ODBC (32 bits)** . Como alternativa, você pode invocar odbcad32.exe.  
+1.  No **painel de controle**, acesse **Ferramentas administrativas** e, em seguida, **fontes de dados ODBC (64 bits)** ou **fontes de dados ODBC (32 bits)**. Como alternativa, você pode invocar odbcad32.exe.  
   
 2.  Clique na **guia DSN do usuário**, DSN do **sistema**ou **DSN de arquivo** e, em seguida, clique em **Adicionar**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73781693"
   
 1.  Chame [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) com um parâmetro SAVEFILE = file_name na cadeia de conexão. Se a conexão for bem-sucedida, o driver ODBC criará uma fonte de dados de arquivo com os parâmetros de conexão no local apontado pelo parâmetro SAVEFILE.  
   
-## <a name="see-also"></a>Consulte também  
-[Excluir uma fonte &#40;de dados ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
+## <a name="see-also"></a>Consulte Também  
+[Excluir uma fonte de dados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
   
   

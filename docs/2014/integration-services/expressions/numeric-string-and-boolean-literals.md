@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897460"
 ---
 # <a name="literals-ssis"></a>Literais (SSIS)
@@ -34,7 +34,7 @@ ms.locfileid: "62897460"
   
  A tabela a seguir lista sufixos para literais numéricos.  
   
-|Sufixo|Descrição|  
+|Sufixo|DESCRIÇÃO|  
 |------------|-----------------|  
 |L ou l|Um longo literal numérico.|  
 |U ou u|Um literal numérico não assinado.|  
@@ -42,7 +42,7 @@ ms.locfileid: "62897460"
   
  A tabela a seguir lista elementos de expressão numérica e suas expressões regulares.  
   
-|Elemento Expression|Expressão regular|Descrição|  
+|Elemento Expression|Expressão regular|DESCRIÇÃO|  
 |------------------------|------------------------|-----------------|  
 |Dígitos expressos como D.|[0-9]|Qualquer dígito.|  
 |Notação científica expressa como E.|[Ee][+-]?{D}+|Letras maiúsculas ou minúsculas e, opcionalmente + ou -, e um ou mais dígitos como definido em D.|  
@@ -52,7 +52,7 @@ ms.locfileid: "62897460"
   
  A tabela a seguir descreve literais numéricos válidos que usam a linguagem de expressão regular.  
   
-|Expressão regular|Descrição|  
+|Expressão regular|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |{D}+{IS}|Um literal numérico integral com pelo menos um dígito (D) e, opcionalmente, o sufixo longo e/ou não assinado (IS).  Exemplos: 457, 785u, 986L e 7945ul.|  
 |{D}+{E}{FS}|Um literal numérico não integral com pelo menos um dígito (D), notação científica, e o sufixo flutuante ou longo.  Exemplos: 4E8l, 13e-2f e 5E+L.|  
@@ -76,7 +76,7 @@ ms.locfileid: "62897460"
   
     |Sufixo|Tipo de resultado|  
     |------------|-----------------|  
-    |None|DT_I4|  
+    |Nenhum|DT_I4|  
     |U|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  
@@ -97,12 +97,12 @@ ms.locfileid: "62897460"
   
  As cadeias de caracteres podem incluir outros caracteres que requerem uma sequência de escape. A tabela a seguir lista sequências de escape para literais de cadeia de caracteres.  
   
-|Sequência de escape|Descrição|  
+|Sequência de escape|DESCRIÇÃO|  
 |---------------------|-----------------|  
 |\a|Alerta|  
 |\b|Backspace|  
 |\f|Avanço de formulário|  
-|\n|Linha nova|  
+|\n|Nova linha|  
 |\r|Retorno de carro|  
 |\t|Guia horizontal|  
 |\v|Guia vertical|  

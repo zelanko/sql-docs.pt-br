@@ -40,10 +40,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68418877"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
@@ -60,8 +60,8 @@ ms.locfileid: "68418877"
 ###  <a name="Security"></a> Segurança  
  Para configurar o Database Mail, é necessário ser membro da função de servidor fixa **sysadmin** . Para enviar Database Mail, é necessário ser membro da função de banco de dados **DatabaseMailUserRole** no banco de dados **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Usando o assistente para configuração do Database Mail  
- **Para configurar o Database Mail usando um assistente**  
+##  <a name="SSMSProcedure"></a>Usando o assistente de configuração do Database Mail  
+ **Para configurar Database Mail usando um assistente**  
   
 1.  No Pesquisador de Objetos, expanda o nó da instância desejada para configurar o Database Mail.  
   
@@ -75,30 +75,30 @@ ms.locfileid: "68418877"
   
   
   
-###  <a name="Welcome"></a> Página de boas-vindas  
+###  <a name="Welcome"></a>Página inicial  
  Esta página descreve as etapas de configuração do Database Mail.  
   
- **Não mostrar esta página novamente** – marque essa opção para não exibir novamente esta página de boas-vindas.  
+ **Não mostrar esta página novamente** -Marque esta página para ignorar a exibição deste botão de boas-vindas no futuro.  
   
- **Avançar** – Segue para a página **Selecionar uma tarefa de configuração** .  
+ **Avançar** -prossegue para a página **selecionar uma tarefa de configuração** .  
   
- **Cancelar** – termina o assistente sem configurar o Database Mail  
+ **Cancelar** – encerra o assistente sem configurar Database Mail  
   
  
   
-###  <a name="ConfigTask"></a> Selecionar Tarefa de Configuração  
+###  <a name="ConfigTask"></a>Selecionar tarefa de configuração  
  Use a página **Selecionar Tarefa de Configuração** para indicar qual tarefa você concluirá sempre que usar o assistente. Se você mudar de ideia antes de concluir o assistente, use o botão **Voltar** para voltar para essa página e selecionar outra tarefa.  
   
 > [!NOTE]  
->  Se o Database Mail não tiver sido habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim**equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure** .  
+>  Se o Database Mail não foi habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim**equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure** .  
   
- **Instalar Database Mail executando as seguintes tarefas**  
+ **Configurar Database Mail executando as seguintes tarefas**  
  Execute todas as tarefas exigidas para instalar o Database Mail pela primeira vez. Essa opção inclui todas as outras três opções.  
   
- **Gerenciar contas e perfis do Database Mail**  
+ **Gerenciar contas e perfis de Database Mail**  
  Crie novas contas e perfis do Database Mail ou exiba, altere ou exclua contas e perfis existentes do Database Mail.  
   
- **Gerenciar segurança do perfil**  
+ **Gerenciar a segurança do perfil**  
  Configure quais usuários têm acesso a perfis do Database Mail.  
   
  **Exibir ou alterar parâmetros do sistema**  
@@ -106,7 +106,7 @@ ms.locfileid: "68418877"
   
 
   
-###  <a name="NewAccount"></a> Página Nova Conta  
+###  <a name="NewAccount"></a>Página nova conta  
  Use esta página para criar uma nova conta do Database Mail. Uma conta do Database Mail contém informações para enviar email a um servidor SMTP.  
   
  Uma conta do Database Mail contém as informações que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa para enviar mensagens de email a um servidor SMTP. Cada conta contém informações de um servidor de email.  
@@ -122,25 +122,25 @@ ms.locfileid: "68418877"
  **Endereço de email**  
  Digite o nome do endereço de email da conta. Este é o endereço de email da conta que o enviou. Por exemplo, uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode enviar emails do endereço SqlAgent@Adventure-Works.com.  
   
- **Nome para exibição**  
+ **Nome de exibição**  
  Digite o nome que será exibido nas mensagens de email enviadas por essa conta. O nome para exibição é opcional. Este é o nome exibido em mensagens enviadas desta conta. Por exemplo, uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode exibir o nome “SQL Server Agent Automated Mailer” em mensagens de email.  
   
  **Email de resposta**  
  Digite o endereço de email que será usado em respostas a mensagens de email enviadas por esta conta. O email de resposta é opcional. Por exemplo, respostas a uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ir para o administrador de banco de dados, danw@Adventure-Works.com.  
   
  **Nome do servidor**  
- Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Normalmente, isso está em um formato semelhante `smtp.`a *< your_company >* `.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
+ Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Normalmente, isso está em um formato semelhante `smtp.` a *<your_company>* `.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
   
  **Número da porta**  
  Digite o número da porta do servidor SMTP para a conta. A maioria dos servidores SMTP usa a porta 25.  
   
- **Esse servidor requer uma conexão segura (SSL)**  
+ **Este servidor requer uma conexão segura (SSL)**  
  Criptografa a comunicação usando o Protocolo SSL.  
   
- **Autenticação do Windows usando as credenciais do serviço Mecanismo de Banco de Dados**  
+ **Autenticação do Windows usando credenciais do serviço Mecanismo de Banco de Dados**  
  A conexão é feita com o servidor SMTP usando as credenciais configuradas para o serviço do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
- **Autenticação Básica**  
+ **Autenticação básica**  
  Especifique o nome do usuário e a senha exibidos pelo servidor SMTP.  
   
  **Nome de usuário**  
@@ -157,26 +157,26 @@ ms.locfileid: "68418877"
   
  
   
-###  <a name="ExistingAccount"></a> Página Gerenciar Conta Existente  
+###  <a name="ExistingAccount"></a>Página Gerenciar conta existente  
  Use esta página para gerenciar uma conta de Database Mail existente.  
   
  **Nome da conta**  
  Selecione a conta a exibir, atualizar ou excluir.  
   
- **Excluir**  
+ **Delete (excluir)**  
  Excluir a conta selecionada. Você deve remover esta conta de perfis associados, ou excluir esses perfis, antes de excluir a conta selecionada.  
   
  **Descrição**  
  Exiba ou atualize a descrição da conta. A descrição é opcional.  
   
  **Endereço de email**  
- Exiba ou atualize o nome do endereço de email da conta. Este é o endereço de email da conta que o enviou. Por exemplo, uma conta do Microsoft SQL Server Agent pode enviar email do endereço **SqlAgent@Adventure-Works.com** .  
+ Exiba ou atualize o nome do endereço de email da conta. Este é o endereço de email da conta que o enviou. Por exemplo, uma conta do agente de Microsoft SQL Server pode enviar email do endereço **SqlAgent@Adventure-Works.com**.  
   
- **Nome para exibição**  
+ **Nome de exibição**  
  Exiba ou atualize o nome a ser exibido em mensagens de email enviadas desta conta. O nome para exibição é opcional. Este é o nome exibido em mensagens enviadas desta conta. Por exemplo, uma conta do SQL Server Agent pode exibir o nome **SQL Server Agent Automated Mailer** em mensagens de email.  
   
  **Email de resposta**  
- Exiba ou atualize o endereço de email que será usado em respostas a mensagens de email enviadas desta conta. O email de resposta é opcional. Por exemplo, respostas a uma conta do SQL Server Agent podem ir para o administrador de banco de dados, **danw@Adventure-Works.com** .  
+ Exiba ou atualize o endereço de email que será usado em respostas a mensagens de email enviadas desta conta. O email de resposta é opcional. Por exemplo, as respostas a uma conta do SQL Server Agent podem ir para o administrador do **danw@Adventure-Works.com**banco de dados,.  
   
  **Nome do servidor**  
  Exibe ou atualiza o nome do servidor SMTP que a conta usa para enviar email. Geralmente, está em um formato semelhante a **smtp.<your_company>.com**. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
@@ -184,13 +184,13 @@ ms.locfileid: "68418877"
  **Número da porta**  
  Exiba ou atualize o número da porta do servidor SMTP desta conta. A maioria dos servidores SMTP usa a porta 25.  
   
- **Esse servidor requer uma conexão segura (SSL)**  
+ **Este servidor requer uma conexão segura (SSL)**  
  Criptografa a comunicação usando o Protocolo SSL.  
   
- **Autenticação do Windows usando as credenciais do serviço Mecanismo de Banco de Dados**  
+ **Autenticação do Windows usando credenciais do serviço Mecanismo de Banco de Dados**  
  A conexão é feita com o servidor SMTP usando as credenciais configuradas para o serviço do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
- **Autenticação Básica**  
+ **Autenticação básica**  
  Especifique o nome do usuário e a senha exibidos pelo servidor SMTP.  
   
  **Nome de usuário**  
@@ -207,10 +207,10 @@ ms.locfileid: "68418877"
   
 
   
-###  <a name="NewProfile"></a> Página Novo Perfil  
+###  <a name="NewProfile"></a>Página novo perfil  
  Use essa página para criar um perfil do Database Mail. Um perfil do Database Mail é uma coleção de contas do Database Mail. Os perfis melhoram a confiabilidade nos casos em que um servidor de email não pode ser acessado, oferecendo contas alternativas do Database Mail. É necessário pelo menos uma conta do Database Mail. Para obter mais informações sobre como definir a prioridade das contas do Database Mail no perfil, veja [Criar um perfil do Database Mail](create-a-database-mail-profile.md).  
   
- Use os botões **Mover para Cima** e **Mover para Baixo** para alterar a ordem na qual as contas do Database Mail são usadas. Essa ordem é determinada por um valor chamado número de sequência. **Mover para Cima** diminui o número de sequência e **Mover para Baixo** aumenta o número de sequência. O número de sequência determina a ordem na qual o Database Mail usa as contas no perfil. Para uma nova mensagem de email, o Database Mail inicia com a conta que tem o número de sequência mais baixo. Se essa conta falhar, o Database Mail usará a conta com o próximo número de sequência mais alto, e assim por diante, até que o Database Mail envie a mensagem com êxito ou a conta com o número de sequência mais alto falhe. Se a conta com o número de sequência mais alto falhar, o Database Mail pausará as tentativas de envio de email pelo tempo configurado no parâmetro **AccountRetryDelay** no Database Mail e iniciará o processo de tentar enviar o email novamente, começando pelo número de sequência mais baixo. Use o parâmetro **AccountRetryAttempts** do Database Mail para configurar o número de vezes em que o processo de email externo tenta enviar a mensagem de email usando cada conta no perfil especificado. Você pode configurar os parâmetros **AccountRetryDelay** e **AccountRetryAttempts** na página **Configurar Parâmetros do Sistema** do Assistente para Configuração do Database Mail.  
+ Use os botões **Mover para Cima** e **Mover para Baixo** para alterar a ordem na qual as contas do Database Mail são usadas. Essa ordem é determinada por um valor chamado número de sequência. **Mover para cima** reduz o número de sequência e **mover para baixo** aumenta o número de sequência. O número de sequência determina a ordem na qual o Database Mail usa as contas no perfil. Para uma nova mensagem de email, o Database Mail inicia com a conta que tem o número de sequência mais baixo. Se essa conta falhar, o Database Mail usará a conta com o próximo número de sequência mais alto, e assim por diante, até que o Database Mail envie a mensagem com êxito ou a conta com o número de sequência mais alto falhe. Se a conta com o número de sequência mais alto falhar, o Database Mail pausará as tentativas de envio de email pelo tempo configurado no parâmetro **AccountRetryDelay** no Database Mail e iniciará o processo de tentar enviar o email novamente, começando pelo número de sequência mais baixo. Use o parâmetro **AccountRetryAttempts** do Database Mail para configurar o número de vezes em que o processo de email externo tenta enviar a mensagem de email usando cada conta no perfil especificado. Você pode configurar os parâmetros **AccountRetryDelay** e **AccountRetryAttempts** na página **Configurar Parâmetros do Sistema** do Assistente para Configuração do Database Mail.  
   
  **Nome do perfil**  
  Digite o nome para o novo perfil. O perfil é criado com esse nome. Não use o nome de um perfil existente.  
@@ -224,26 +224,26 @@ ms.locfileid: "68418877"
  **Adicionar**  
  Adiciona uma conta ao perfil.  
   
- **Removerr**  
+ **Remover**  
  Remove a conta selecionada do perfil.  
   
- **Mover para Cima**  
+ **Mover para cima**  
  Aumente a prioridade da conta selecionada.  
   
- **Mover para Baixo**  
+ **Mover para baixo**  
  Diminua a prioridade da conta selecionada.  
   
 
   
-###  <a name="ExistingProfile"></a> Página Gerenciar Perfil Existente  
+###  <a name="ExistingProfile"></a>Página Gerenciar perfil existente  
  Use esta página para gerenciar um perfil existente no Database Mail. Um perfil do Database Mail é uma coleção de contas do Database Mail. Os perfis melhoram a confiabilidade nos casos em que um servidor de email não pode ser acessado, oferecendo contas alternativas do Database Mail. É necessário pelo menos uma conta do Database Mail. Para obter mais informações sobre como definir a prioridade das contas do Database Mail no perfil, veja [Criar um perfil do Database Mail](create-a-database-mail-profile.md).  
   
- Use os botões **Mover para Cima** e **Mover para Baixo** para alterar a ordem na qual as contas do Database Mail são usadas. Essa ordem é determinada por um valor chamado número de sequência. **Mover para Cima** diminui o número de sequência e **Mover para Baixo** aumenta o número de sequência. O número de sequência determina a ordem na qual o Database Mail usa as contas no perfil. Para uma nova mensagem de email, o Database Mail inicia com a conta que tem o número de sequência mais baixo. Se essa conta falhar, o Database Mail usará a conta com o próximo número de sequência mais alto, e assim por diante, até que o Database Mail envie a mensagem com êxito ou a conta com o número de sequência mais alto falhe. Se a conta com o número de sequência mais alto falhar, o Database Mail pausará as tentativas de envio de email pelo tempo configurado no parâmetro **AccountRetryDelay** no Database Mail e iniciará o processo de tentar enviar o email novamente, começando pelo número de sequência mais baixo. Use o parâmetro **AccountRetryAttempts** do Database Mail para configurar o número de vezes em que o processo de email externo tenta enviar a mensagem de email usando cada conta no perfil especificado. Você pode configurar os parâmetros **AccountRetryDelay** e **AccountRetryAttempts** na página **Configurar Parâmetros do Sistema** do Assistente para Configuração do Database Mail.  
+ Use os botões **Mover para Cima** e **Mover para Baixo** para alterar a ordem na qual as contas do Database Mail são usadas. Essa ordem é determinada por um valor chamado número de sequência. **Mover para cima** reduz o número de sequência e **mover para baixo** aumenta o número de sequência. O número de sequência determina a ordem na qual o Database Mail usa as contas no perfil. Para uma nova mensagem de email, o Database Mail inicia com a conta que tem o número de sequência mais baixo. Se essa conta falhar, o Database Mail usará a conta com o próximo número de sequência mais alto, e assim por diante, até que o Database Mail envie a mensagem com êxito ou a conta com o número de sequência mais alto falhe. Se a conta com o número de sequência mais alto falhar, o Database Mail pausará as tentativas de envio de email pelo tempo configurado no parâmetro **AccountRetryDelay** no Database Mail e iniciará o processo de tentar enviar o email novamente, começando pelo número de sequência mais baixo. Use o parâmetro **AccountRetryAttempts** do Database Mail para configurar o número de vezes em que o processo de email externo tenta enviar a mensagem de email usando cada conta no perfil especificado. Você pode configurar os parâmetros **AccountRetryDelay** e **AccountRetryAttempts** na página **Configurar Parâmetros do Sistema** do Assistente para Configuração do Database Mail.  
   
  **Nome do perfil**  
  Selecione o nome do perfil a gerenciar.  
   
- **Excluir**  
+ **Delete (excluir)**  
  Exclui o perfil selecionado. Você será solicitado a selecionar **Sim** para excluir o perfil selecionado e para optar por falhar em todas as mensagens não enviadas ou a selecionar **Não** para excluir o perfil selecionado apenas se não houver mensagens não enviadas.  
   
  **Descrição**  
@@ -255,13 +255,13 @@ ms.locfileid: "68418877"
  **Adicionar**  
  Adiciona uma conta ao perfil.  
   
- **Removerr**  
+ **Remover**  
  Remove a conta selecionada do perfil.  
   
- **Mover para Cima**  
+ **Mover para cima**  
  Aumenta a prioridade de failover da conta selecionada.  
   
- **Mover para Baixo**  
+ **Mover para baixo**  
  Diminui a prioridade de failover da conta selecionada.  
   
  **Prioridade**  
@@ -270,12 +270,12 @@ ms.locfileid: "68418877"
  **Nome da conta**  
  Exibe o nome da conta.  
   
- **E-mail Address**  
+ **Endereço de email**  
  Exibe o endereço de email da conta.  
   
 
   
-###  <a name="AddAccount"></a> Add Account to Profile Page  
+###  <a name="AddAccount"></a>Página Adicionar conta ao perfil  
  Use esta página para escolher a conta a ser adicionada ao perfil. Escolha uma conta existente na caixa **Nome da conta** ou clique em **Nova Conta**.  
   
  **Nome da conta**  
@@ -287,42 +287,42 @@ ms.locfileid: "68418877"
  **Nome do servidor**  
  Visualize o nome do servidor de email da conta selecionada. Você não pode alterar o nome do servidor nesta página. Para alterar o nome do servidor dessa conta, volte para a página principal do assistente e selecione a opção **Gerenciar contas e perfis do Database Mail** .  
   
- **Nova Conta**  
+ **Nova conta**  
  Crie uma conta nova.  
   
 
   
-###  <a name="AccountsProfiles"></a> Página Gerenciar Contas e Perfis  
+###  <a name="AccountsProfiles"></a>Página Gerenciar contas e perfis  
  Use esta página para escolher uma tarefa para gerenciar um perfil ou conta.  
   
- **Criar uma conta nova**  
+ **Criar uma nova conta**  
  Crie uma conta nova.  
   
- **Visualizar, alterar ou excluir uma conta existente**  
+ **Exibir, alterar ou excluir uma conta existente**  
  Gerencie ou exclua uma conta existente.  
   
  **Criar um novo perfil**  
  Crie um novo perfil.  
   
- **Exibir, alterar ou excluir um perfil existente. Também é possível gerenciar contas associadas ao perfil.**  
+ **Exibir, alterar ou excluir um perfil existente. Você também pode gerenciar contas associadas ao perfil.**  
  Atualize ou exclua um perfil existente. Essa opção também permite gerenciar contas associadas ao perfil.  
   
 
   
-###  <a name="ProfileSecurityPublic"></a> Gerenciar Segurança do Perfil, guia Público  
+###  <a name="ProfileSecurityPublic"></a>Gerenciar a segurança do perfil, guia público  
  Use essa página para configurar um perfil público.  
   
  Perfis são públicos ou privados. Um perfil privado é acessível somente para usuários ou funções específicas. Um perfil público permite a qualquer usuário ou função com acesso ao banco de dados do host de email (**msdb**) enviar um email usando esse perfil.  
   
  Um perfil pode ser um perfil padrão. Nesse caso, usuários ou funções podem enviar e-mails por meio do perfil sem especificá-lo explicitamente. Se o usuário ou função que envia a mensagem de e-mail tiver um perfil privado padrão, o Database Mail irá utilizá-lo. Se o usuário ou função não tiver nenhum perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb** . Se não houver nenhum perfil privado padrão para o usuário ou função e nenhum perfil público padrão para o banco de dados, **sp_send_dbmail** retornará um erro. Somente um perfil pode ser marcado como o perfil padrão.  
   
- **Público**  
+ **Publicada**  
  Selecione essa opção para tornar público o perfil especificado.  
   
- **Profile Name**  
+ **Nome do Perfil**  
  Exibe o nome do perfil.  
   
- **Perfil Padrão**  
+ **Perfil padrão**  
  Selecione essa opção para transformar o perfil especificado em perfil padrão.  
   
  **Mostrar somente os perfis públicos existentes**  
@@ -330,7 +330,7 @@ ms.locfileid: "68418877"
   
 
   
-###  <a name="ProfileSecurityPrivate"></a> Gerenciar Segurança do Perfil, guia Particular  
+###  <a name="ProfileSecurityPrivate"></a>Gerenciar segurança de perfil, guia particular  
  Use essa página para configurar um perfil privado.  
   
  Perfis são públicos ou privados. Um perfil privado é acessível somente para usuários ou funções específicas. Um perfil público permite a qualquer usuário ou função com acesso ao banco de dados do host de email (**msdb**) enviar um email usando esse perfil.  
@@ -340,36 +340,36 @@ ms.locfileid: "68418877"
  **Nome de usuário**  
  Selecione o nome de um usuário ou função no banco de dados **msdb** .  
   
- **Acesso**  
+ **Access**  
  Selecione se o usuário ou função tem acesso ao perfil especificado.  
   
  **Nome do perfil**  
  Exibir nome do perfil.  
   
- **É Perfil Padrão**  
+ **É perfil padrão**  
  Selecione se o perfil é o perfil padrão para o usuário ou função. Cada usuário ou função pode ter apenas um perfil de padrão.  
   
- **Mostrar somente os perfis particulares existentes deste usuário**  
+ **Mostrar somente os perfis particulares existentes para este usuário**  
  Selecione essa opção para exibir apenas perfis aos quais o usuário ou função especificados já tenham acesso.  
   
 
   
-###  <a name="SystemParameters"></a> Configurar Parâmetros do Sistema  
+###  <a name="SystemParameters"></a>Configurar parâmetros do sistema  
  Use esta página para especificar parâmetros de sistema do Database Mail. Exibe os parâmetros de sistema e o valor atual de cada parâmetro. Selecione um parâmetro para exibir uma breve descrição no painel de informações.  
   
- **Tentativas de Repetição de Conta**  
+ **Tentativas de repetição de conta**  
  O número de vezes que o processo de email externo tenta enviar a mensagem de email usando cada conta no perfil especificado.  
   
- **Atraso na Repetição de Conta (segundos)**  
+ **Atraso de repetição de conta (segundos)**  
  O tempo, em segundos em que o processo de email externo espera, depois de tentar enviar uma mensagem usando todas as contas no perfil, antes de tentar todas as contas novamente.  
   
- **Tamanho Máximo do Arquivo (Bytes)**  
+ **Tamanho máximo do arquivo (bytes)**  
  O tamanho máximo de um anexo, em bytes.  
   
- **Extensões de Arquivo de Anexo Proibidas**  
- Uma lista separada por vírgula de extensões que não podem ser enviadas como um anexo a uma mensagem de email. Clique no botão Procurar ( **...** ) para adicionar outras extensões.  
+ **Extensões de arquivo de anexo proibidas**  
+ Uma lista separada por vírgula de extensões que não podem ser enviadas como um anexo a uma mensagem de email. Clique no botão Procurar (**...**) para adicionar outras extensões.  
   
- **Tempo Mínimo de Vida do Executável do Database Mail (segundos)**  
+ **Tempo de vida mínimo do Database Mail executável (segundos)**  
  O período mínimo de tempo, em segundos, que o processo de email externo permanece ativo. O processo permanece ativo enquanto houver emails na fila do Database Mail. Esse parâmetro especifica o tempo que o processo permanece ativo se não houver nenhuma mensagem a processar.  
   
  **Nível de log**  
@@ -383,20 +383,20 @@ ms.locfileid: "68418877"
   
  O valor padrão é Estendido.  
   
- **Redefinir Tudo**  
+ **Redefinir tudo**  
  Selecione esta opção para restaurar os valores da página aos valores padrão originais.  
   
 
   
-###  <a name="CompleteWizard"></a> Página Concluir o Assistente  
+###  <a name="CompleteWizard"></a>Concluir a página do assistente  
  Use essa página para ver as ações que o **Assistente para Configuração do Database Mail** executará. Nenhuma alteração é feita até que você conclua o assistente.  
   
 
   
-###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Use a página **Enviar Email de Teste de** _<instance_name>_ para enviar uma mensagem de email usando o perfil especificado do Database Mail. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
+###  <a name="TestEmail"></a>Enviar página de email de teste  
+ Use a página **Enviar email de teste de** _<instance_name>_ para enviar uma mensagem de email usando o perfil de Database Mail especificado. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
   
- **Perfil do Database Mail**  
+ **Perfil de Database Mail**  
  Selecione um perfil da lista do Database Mail. Esse é um campo obrigatório. Se nenhum perfil for mostrado, não há nenhum perfil ou você não tem permissão para um perfil. Use o **Assistente para Configuração do Database Mail** para criar e configurar perfis. Se nenhum perfil for listado, use o Assistente para Configuração do Database Mail para criar um perfil para seu uso.  
   
  **Para**  
@@ -405,12 +405,12 @@ ms.locfileid: "68418877"
  **Assunto**  
  A linha de assunto para o email de teste. Altere o assunto padrão para identificar melhor seu email para solucionar problemas.  
   
- **Corpo**  
+ **Conteúdo**  
  O corpo do email de teste. Altere o assunto padrão para identificar melhor seu email para solucionar problemas.  
   
  A caixa de diálogo **Email de Teste do Database Mail** confirma que o Database Mail tentou enviar a mensagem de teste e fornece a **mailitem_id** para a mensagem de teste de email. Confirme com o destinatário para determinar se o email foi recebido. Geralmente, o email é recebido dentro de poucos minutos, mas o email pode ser atrasado por um desempenho lento da rede, por uma lista de pendências de mensagens no servidor de email ou caso o servidor esteja temporariamente indisponível. Use **mailitem_id** para solucionar problemas.  
   
- **Enviar email**  
+ **Email enviado**  
  A **mailitem_id** da mensagem de teste de email.  
   
  **Solucionar problemas**  
@@ -418,8 +418,8 @@ ms.locfileid: "68418877"
   
 
   
-##  <a name="Template"></a> Usando modelos  
- **Para criar um script de configuração do Database Mail**  
+##  <a name="Template"></a>Usando modelos  
+ **Para criar um script de configuração de Database Mail**  
   
 1.  No menu **Exibir** , selecione **Explorador de Modelos**.  
   

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efdea595034f91497befdc7f7b12adacef8d73ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109549"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizar parâmetros de extensão de renderização em RSReportServer.config
@@ -128,15 +128,15 @@ ms.locfileid: "66109549"
 </Render>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivo de configuração RSReportServer](report-server/rsreportserver-config-configuration-file.md)   
  [Arquivo de configuração RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)   
- [Configurações das informações do dispositivo CSV](csv-device-information-settings.md)   
+ [Configurações de informações de dispositivo CSV](csv-device-information-settings.md)   
  [Configurações de informações de dispositivo Excel](excel-device-information-settings.md)   
  [Configurações de informações de dispositivo HTML](html-device-information-settings.md)   
  [Configurações de informações de dispositivo de imagem](image-device-information-settings.md)   
  [Configurações de informações de dispositivo MHTML](mhtml-device-information-settings.md)   
- [Configurações de informações do dispositivo PDF](pdf-device-information-settings.md)   
+ [Configurações de informações de dispositivo PDF](pdf-device-information-settings.md)   
  [Configurações de informações do dispositivo XML](xml-device-information-settings.md)  
   
   

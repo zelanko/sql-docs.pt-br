@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126120"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrando o Reporting Services por meio do acesso à URL
@@ -32,11 +32,11 @@ ms.locfileid: "63126120"
  [Usando o acesso à URL em um aplicativo Web](integrating-reporting-services-using-url-access-web-application.md)  
  Descreve como usar o acesso de URL para integrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um ambiente de Web.  
   
- [Usando o acesso à URL em um aplicativo do Windows](integrating-reporting-services-using-url-access-windows-application.md)  
+ [Usando acesso à URL em um aplicativo do Windows](integrating-reporting-services-using-url-access-windows-application.md)  
  Descreve como usar o acesso de URL para integrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um ambiente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32.  
   
-## <a name="see-also"></a>Consulte também  
- [Integrando o Reporting Services em aplicativos](../application-integration/integrating-reporting-services-into-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Integrando Reporting Services em aplicativos](../application-integration/integrating-reporting-services-into-applications.md)   
  [Acesso à URL &#40;SSRS&#41;](../url-access-ssrs.md)  
   
   

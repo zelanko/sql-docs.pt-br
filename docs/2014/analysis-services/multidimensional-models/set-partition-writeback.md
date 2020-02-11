@@ -1,5 +1,5 @@
 ---
-title: Definir o write-back de partição | Microsoft Docs
+title: Definir write-back de partição | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072901"
 ---
 # <a name="set-partition-writeback"></a>Definir o write-back de partições
@@ -53,15 +53,15 @@ ms.locfileid: "66072901"
  É possível converter os dados da tabela de write-back em uma partição. Este procedimento faz com que a tabela de write-back se transforme na nova tabela de fatos da partição.  
   
 > [!CAUTION]  
->  O uso incorreto de partições pode resultar em dados de cubo imprecisos. Para obter mais informações, consulte [Criar e gerenciar uma partição local #40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md).  
+>  O uso incorreto de partições pode resultar em dados de cubo imprecisos. Para obter mais informações, consulte [Criar e gerenciar uma partição local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md).  
   
  A conversão da tabela de dados de write-back em uma partição também desabilita a gravação da partição. Todas as políticas de leitura/gravação irrestrita e as permissões de leitura/gravação das células da partição são desabilitadas e os usuários finais não poderão alterar os dados de cubo exibidos. Os usuários finais com políticas de leitura/gravação irrestrita ou permissões de leitura/gravação desabilitadas ainda poderão procurar o cubo. As permissões de leitura e de contingente de leitura não são afetadas.  
   
- Para converter os dados de write-back em uma partição, use a caixa de diálogo **Converter em Partição**, que pode ser acessada ao clicar com o botão direito do mouse na tabela de write-back de uma partição habilitada para gravação no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Especifique um nome para a partição e se deseja projetar a agregação para a partição posteriormente ou no momento da criação. Para criar a agregação no mesmo momento em que a partição é escolhida, é necessário copiar o design de agregação de uma partição existente. Esta é, mas não necessariamente, a partição de write-back atual. Também é possível processar a partição durante sua criação.  
+ Para converter os dados de write-back em uma partição, use a caixa de diálogo **Converter em Partição** , que pode ser acessada ao clicar com o botão direito do mouse na tabela de write-back de uma partição habilitada para gravação no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Especifique um nome para a partição e se deseja projetar a agregação para a partição posteriormente ou no momento da criação. Para criar a agregação no mesmo momento em que a partição é escolhida, é necessário copiar o design de agregação de uma partição existente. Esta é, mas não necessariamente, a partição de write-back atual. Também é possível processar a partição durante sua criação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Partições habilitadas para gravação](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Habilitando o write-back em um cubo OLAP no nível da célula no Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Habilitando e protegendo a entrada de dados com o write-back do Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Habilitando write-back para um cubo OLAP no nível de célula no Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Habilitando e protegendo a entrada de dados com write-back Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

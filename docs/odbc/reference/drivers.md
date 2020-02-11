@@ -15,20 +15,20 @@ ms.assetid: d6795d92-877e-44e1-b7d5-2ff2fd3989bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6460410488186c94713d859bf2912f2844ca2736
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915437"
 ---
 # <a name="drivers"></a>Drivers
-*Drivers* são bibliotecas que implementam as funções na API do ODBC. Cada um é específica para um determinado DBMS; Por exemplo, um driver para Oracle não pode acessar diretamente os dados em um DBMS Informix. Drivers de exponham as capacidades dos DBMSs subjacentes; eles não são necessários para implementar recursos não suportados pelo DBMS. Por exemplo, se o DBMS subjacente não oferece suporte a junções externas, então nenhum deles deve ser o driver. A única grande exceção a isso é que os drivers para os que não possuem mecanismos de banco de dados autônomo, como Xbase, devem implementar um mecanismo de banco de dados que oferece suporte a pelo menos uma quantidade mínima de SQL.  
+*Drivers* são bibliotecas que implementam as funções na API ODBC. Cada um é específico para um DBMS específico; por exemplo, um driver para Oracle não pode acessar dados diretamente em um DBMS do Informix. Os drivers expõem os recursos dos DBMSs subjacentes; Eles não são necessários para implementar recursos não suportados pelo DBMS. Por exemplo, se o DBMS subjacente não oferecer suporte a junções externas, nenhum deverá ser o driver. A única exceção importante para isso é que os drivers para DBMSs que não têm mecanismos de banco de dados autônomos, como Xbase, devem implementar um mecanismo de banco de dados que, pelo menos, dá suporte a uma quantidade mínima de SQL.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Tarefas de driver](../../odbc/reference/driver-tasks.md)  
   
 -   [Arquitetura do driver](../../odbc/reference/driver-architecture.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Drivers ODBC fornecidos pela Microsoft](../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)

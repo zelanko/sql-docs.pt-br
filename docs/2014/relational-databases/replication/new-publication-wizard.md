@@ -44,10 +44,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022575"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
@@ -79,7 +79,7 @@ ms.locfileid: "63022575"
   
 -   [Snapshot Agent &#40;New Publication Wizard&#41; [Agente de instantâneo (Assistente para nova publicação)]](snapshot-agent-new-publication-wizard.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](publish/create-a-publication.md)   
  [Publicar dados e objetos de banco de dados](publish/publish-data-and-database-objects.md)   
 

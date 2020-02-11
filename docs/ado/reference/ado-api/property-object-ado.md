@@ -16,41 +16,41 @@ ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43bfa816a9ca8a93cdc1188a98e54d3e0d9111b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917549"
 ---
 # <a name="property-object-ado"></a>Objeto Property (ADO)
 Representa uma característica dinâmica de um objeto ADO que é definido pelo provedor.  
   
 ## <a name="remarks"></a>Comentários  
- Objetos do ADO têm dois tipos de propriedades: interna e dinâmicos.  
+ Os objetos ADO têm dois tipos de propriedades: interno e dinâmico.  
   
- Propriedades internas são as propriedades implementadas no ADO e fica imediatamente disponíveis para qualquer novo objeto, usando o `MyObject.Property` sintaxe. Eles não aparecem como **propriedade** objetos em um objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção, portanto, embora você possa alterar seus valores, você não pode modificar suas características.  
+ As propriedades internas são aquelas implementadas no ADO e imediatamente disponibilizadas para qualquer novo objeto, usando a `MyObject.Property` sintaxe. Eles não aparecem como objetos de **Propriedade** na coleção de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) de um objeto, portanto, embora você possa alterar seus valores, não é possível modificar suas características.  
   
- Propriedades dinâmicas são definidas pelo provedor de dados subjacente e aparecem na **propriedades** coleção do objeto ADO apropriado. Por exemplo, uma propriedade específica do provedor pode indicar se um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto dá suporte a transações ou atualizando. Essas propriedades adicionais serão exibido como **propriedade** objetos em que **conjunto de registros** do objeto **propriedades** coleção. Propriedades dinâmicas podem ser referenciadas apenas por meio da coleção, usando o `MyObject.Properties(0)` ou `MyObject.Properties("Name")` sintaxe.  
+ As propriedades dinâmicas são definidas pelo provedor de dados subjacente e aparecem na coleção de **Propriedades** do objeto ADO apropriado. Por exemplo, uma propriedade específica para o provedor pode indicar se um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dá suporte a transações ou atualizações. Essas propriedades adicionais serão exibidas como objetos de **Propriedade** na coleção de **Propriedades** do objeto **Recordset** . As propriedades dinâmicas podem ser referenciadas somente por meio da `MyObject.Properties(0)` coleção `MyObject.Properties("Name")` , usando a sintaxe ou.  
   
- Você não pode excluir um desses tipos de propriedade.  
+ Não é possível excluir qualquer tipo de propriedade.  
   
- Dinâmico **propriedade** objeto tem quatro propriedades internas de seu próprio:  
+ Um objeto de **Propriedade** dinâmica tem quatro propriedades internas próprias:  
   
--   O [nome](../../../ado/reference/ado-api/name-property-ado.md) propriedade é uma cadeia de caracteres que identifica a propriedade.  
+-   A propriedade [Name](../../../ado/reference/ado-api/name-property-ado.md) é uma cadeia de caracteres que identifica a propriedade.  
   
--   O [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade é um inteiro que especifica o tipo de dados de propriedade.  
+-   A propriedade [Type](../../../ado/reference/ado-api/type-property-ado.md) é um inteiro que especifica o tipo de dados Property.  
   
--   O [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade é uma variante que contém a configuração da propriedade. **Valor** é a propriedade padrão para um **propriedade** objeto.  
+-   A propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) é uma variante que contém a configuração de propriedade. **Valor** é a propriedade padrão para um objeto de **Propriedade** .  
   
--   O [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propriedade é um valor longo que indica as características da propriedade específica do provedor.  
+-   A propriedade [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) é um valor longo que indica as características da propriedade específica para o provedor.  
   
  Esta seção contém o tópico a seguir.  
   
--   [Eventos, métodos e propriedades do objeto property](../../../ado/reference/ado-api/property-object-properties-methods-and-events.md)  
+-   [Propriedades, métodos e eventos do objeto Property](../../../ado/reference/ado-api/property-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
- [Coleção de propriedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

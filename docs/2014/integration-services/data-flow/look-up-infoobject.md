@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771102"
 ---
 # <a name="look-up-infoobject"></a>Pesquisar InfoObject
@@ -78,13 +78,13 @@ ms.locfileid: "62771102"
   
  Quando a lista de InfoObjects disponível é exibida, selecione o InfoObject que você quer e o destino preencherá as opções associadas com os valores necessários.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar InfoCube para os Dados da Transação](create-infocube-for-transaction-data.md)   
  [Criar InfoSource](create-infosource.md)   
- [Criar InfoSource para os Dados da Transação](create-infosource-for-transaction-data.md)   
+ [Criar InfoSource para os dados da transação](create-infosource-for-transaction-data.md)   
  [Criar InfoSource para dados mestre](create-infosource-for-master-data.md)   
- [Criar Novo InfoObject](create-new-infoobject.md)   
+ [Criar novo InfoObject](create-new-infoobject.md)   
  [Editor de Destino SAP BW &#40;Página Gerenciador de Conexões&#41;](sap-bw-destination-editor-connection-manager-page.md)   
- [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ajuda F1 do Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

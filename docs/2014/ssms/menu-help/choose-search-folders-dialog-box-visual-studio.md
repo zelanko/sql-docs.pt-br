@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678928"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Caixa de diálogo Escolher Pastas de Pesquisa (Visual Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "62678928"
  **Aplicar**  
  Salve o conjunto de pastas de pesquisa presente na lista **Pastas selecionadas** como um conjunto de pastas nomeado. Esse conjunto de pastas poderá, então, ser escolhido no campo **Examinar** , em todas as guias da janela **Localizar e Substituir** . Deixa aberta a caixa de diálogo Escolher Pastas de Pesquisa.  
   
- **Excluir**  
+ **Delete (excluir)**  
  Remova o conjunto de pastas selecionado do campo **Conjunto de pastas** e do campo **Examinar** , em todas as guias da janela **Localizar e Substituir** .  
   
  **Pastas disponíveis**  
@@ -40,7 +40,7 @@ ms.locfileid: "62678928"
  **Lista de pastas**  
  Lista as unidades e pastas disponíveis dentro do volume selecionado na lista suspensa **Pastas disponíveis** . Clique duas vezes para expandir qualquer unidade ou pasta listada. Selecione uma pasta ou mantenha pressionada as teclas SHIFT ou CONTROL, para selecionar várias pastas. Clique em **Adicionar (>)** para incluir pastas selecionadas na lista **Pastas selecionadas** .  
   
- **Parent**  
+ **Pai**  
  Mova a seleção na **Lista de pastas** para um nível acima na hierarquia de pastas.  
   
  **Adicionar (>)**  

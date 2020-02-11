@@ -1,5 +1,5 @@
 ---
-title: Tarefas de driver | Microsoft Docs
+title: Tarefas do driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915465"
 ---
 # <a name="driver-tasks"></a>Tarefas de driver
-As tarefas específicas realizadas por drivers incluem:  
+Tarefas específicas executadas por drivers incluem:  
   
--   Conexão e desconexão da fonte de dados.  
+-   Conectando-se e desconectando-se da fonte de dados.  
   
--   Verificando se há erros de função não verificados pelo Gerenciador de Driver.  
+-   Verificando se há erros de função não verificados pelo Gerenciador de driver.  
   
 -   Iniciando transações; Isso é transparente para o aplicativo.  
   
--   Enviando instruções SQL para a fonte de dados para execução. O driver deve modificar ODBC SQL para SQL específicos de DBMS; Isso geralmente é limitado a substituição de cláusulas de escape definidas pelo ODBC com o SQL específicas do DBMS.  
+-   Enviando instruções SQL para a fonte de dados para execução. O driver deve modificar o ODBC SQL para SQL específico do DBMS; Isso geralmente é limitado à substituição de cláusulas de escape definidas pelo ODBC por SQL específico do DBMS.  
   
--   Enviar dados e recuperação de dados da fonte de dados, incluindo a conversão de tipos de dados conforme especificado pelo aplicativo.  
+-   Enviando dados para e recuperando dados da fonte de dados, incluindo a conversão de tipos de dados conforme especificado pelo aplicativo.  
   
--   Mapeamento de erros específicos de DBMS para SQLSTATEs do ODBC.
+-   Mapeamento de erros específicos do DBMS para o ODBC sqlstates.

@@ -1,5 +1,5 @@
 ---
-title: Classificar o exemplo da propriedade (VB) | Microsoft Docs
+title: Exemplo da Propriedade Sort (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931028"
 ---
 # <a name="sort-property-example-vb"></a>Exemplo da propriedade Sort (VB)
-Este exemplo usa o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [classificação](../../../ado/reference/ado-api/sort-property.md) propriedade para reordenar as linhas de um **conjunto de registros** deriva o ***autores*** tabela de o ***Pubs*** banco de dados. Uma rotina de utilitário secundário imprime cada linha.  
+Este exemplo usa a propriedade [Sort](../../../ado/reference/ado-api/sort-property.md) do objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para reordenar as linhas de um **conjunto de registros** derivado da tabela ***autores*** do banco de dados ***pubs*** . Uma rotina de utilitário secundário imprime cada linha.  
   
 ```  
 'BeginSortVB  
@@ -103,12 +103,12 @@ End Sub
 'EndSortVB  
 ```  
   
- Isso é a rotina de utilitário secundário que imprime o título especificado e o conteúdo do especificado **conjunto de registros**.  
+ Essa é a rotina do utilitário secundário que imprime o título fornecido e o conteúdo do **conjunto de registros**especificado.  
   
 ```  
 Attribute VB_Name = "Sort"  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propriedade Sort](../../../ado/reference/ado-api/sort-property.md)

@@ -1,5 +1,5 @@
 ---
-title: Páginas de código do servidor e dados Unicode | Microsoft Docs
+title: Dados Unicode e páginas de código do servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,33 +15,33 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b7c992f8b33e2eb96b0e6ea7eec1f58beaf8aefd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62511821"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Páginas de código do servidor e dados Unicode
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  A API de procedimento armazenado estendido é habilitada para dados Unicode; porém, não é habilitada para metadados Unicode. O diretiva Unicode #define não tem nenhum efeito sobre a API de procedimento armazenado estendido.  
   
- Pressupõe-se que todos os metadados retornados pela API de procedimento armazenado estendido ou fornecidos para ela pelo seu aplicativo de procedimento armazenado estendido estejam na página de código multibyte do servidor. A página de código padrão de um aplicativo de servidor de API de procedimento armazenado estendido é a página de código ANSI do computador no qual o aplicativo é executado, que pode ser obtido chamando **srv_pfield** com o parâmetro de campo definido como SRV _ SPROC_CODEPAGE.  
+ Pressupõe-se que todos os metadados retornados pela API de procedimento armazenado estendido ou fornecidos para ela pelo seu aplicativo de procedimento armazenado estendido estejam na página de código multibyte do servidor. A página de código padrão de um aplicativo de servidor de API de procedimento armazenado estendido é a página de código ANSI do computador no qual o aplicativo está sendo executado, que pode ser obtido chamando **srv_pfield** com o parâmetro de campo definido como SRV_SPROC_CODEPAGE.  
   
  Se seu aplicativo de API de procedimento armazenado estendido for compatível com Unicode, você deverá converter os nomes das colunas de metadados Unicode, as mensagens de erro e assim por diante em dados multibyte antes de passar esses dados para a API de procedimento armazenado estendido.  
   
 ## <a name="example"></a>Exemplo  
  O procedimento armazenado estendido a seguir fornece um exemplo de conversões de Unicode. Observe que:  
   
--   Dados da coluna são passados como dados Unicode **srv_describe** porque a coluna é descrita para ser SRVNVARCHAR.  
+-   Os dados da coluna são passados como dados Unicode para **srv_describe** porque a coluna está descrita como SRVNVARCHAR.  
   
--   Metadados de nome de coluna é passado para **srv_describe** como dados multibyte.  
+-   Os metadados de nome de coluna são passados para **srv_describe** como dados multibyte.  
   
-     Chamadas de procedimento de armazenado estendido **srv_pfield** com o parâmetro de campo definido como SRV_SPROC_CODEPAGE para obter a página de código multibyte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     O procedimento armazenado estendido chama **srv_pfield** com o parâmetro Field definido como SRV_SPROC_CODEPAGE para obter a página de código [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]multibyte de.  
   
--   Mensagens de erro são passadas para **srv_sendmsg** como dados multibyte.  
+-   As mensagens de erro são passadas para **srv_sendmsg** como dados multibyte.  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  
@@ -149,7 +149,7 @@ ms.locfileid: "62511821"
   
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [srv_wsendmsg &#40;API de procedimento armazenado estendido&#41;](../extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

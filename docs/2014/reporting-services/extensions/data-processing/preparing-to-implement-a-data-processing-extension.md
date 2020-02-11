@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3343823399b0500e0a329e160e5545d4dd372a54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165021"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Preparando para implementar uma extensão de processamento de dados
-  Antes de implementar a extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], você deve definir as interfaces a serem implementadas. Talvez você deseje fornecer implementações específicas à extensão de todo o conjunto de interfaces ou simplesmente pode desejar concentrar a implementação em um subconjunto, como as interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>, nas quais os clientes poderão interagir principalmente com um conjunto de resultados como um objeto **DataReader** e usarão a extensão de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs.md)] como uma ponte entre o conjunto de resultados e a fonte de dados.  
+  Antes de implementar sua [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensão de processamento de dados, você deve definir as interfaces a serem implementadas. Talvez você deseje fornecer implementações específicas à extensão de todo o conjunto de interfaces ou simplesmente pode desejar concentrar a implementação em um subconjunto, como as interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>, nas quais os clientes poderão interagir principalmente com um conjunto de resultados como um objeto **DataReader** e usarão a extensão de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs.md)] como uma ponte entre o conjunto de resultados e a fonte de dados.  
   
  Você pode implementar extensões de processamento de dados em um de dois modos:  
   
--   As classes de extensão de processamento de dados podem implementar as interfaces de provedor de dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] e, opcionalmente, as interfaces de extensão de processamento de dados estendidas fornecidas pelo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+-   Suas classes de extensão de processamento de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] podem implementar interfaces de provedor de dados e, opcionalmente, as interfaces [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]de extensão de processamento de dados estendidas fornecidas pelo.  
   
 -   As suas classes de extensão de processamento de dados podem implementar as interfaces de extensão de processamento de dados fornecidas pelo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e, opcionalmente, as interfaces de extensão de processamento de dados estendidas.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63165021"
 ## <a name="available-extension-interfaces"></a>Interfaces de extensão disponíveis  
  A tabela a seguir descreve as interfaces disponíveis e se implementação é obrigatória ou opcional.  
   
-|Interface|Descrição|Implementação|  
+|Interface|DESCRIÇÃO|Implementação|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|Representa uma sessão exclusiva com uma fonte de dados. No caso de um sistema de banco de dados cliente/servidor, a sessão pode ser equivalente a uma conexão de rede com o servidor.|Obrigatório|  
 |IDbConnectionExtension|Representa propriedades de conexão adicionais que podem ser implementadas através de extensões de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs.md)] relativas a segurança e a autenticação.|Opcional|  
@@ -80,7 +80,7 @@ ms.locfileid: "63165021"
   
  As interfaces de extensão de processamento de dados são idênticas a um subconjunto das interfaces de provedor de dados, métodos e propriedades do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sempre que possível. Para obter mais informações sobre a implementação de um provedor de dados completo do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consulte "Implementando um provedor de dados .NET Framework" na sua documentação do SDK (Software Development Kit) do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões do Reporting Services](../reporting-services-extensions.md)   
  [Implementando uma extensão de processamento de dados](implementing-a-data-processing-extension.md)   
  [Biblioteca de extensões do Reporting Services](../reporting-services-extension-library.md)  

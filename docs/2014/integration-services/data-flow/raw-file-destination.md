@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770850"
 ---
 # <a name="raw-file-destination"></a>Destino do Arquivo Bruto
@@ -53,7 +53,7 @@ ms.locfileid: "62770850"
   
  A tabela seguinte descreve as opções disponíveis para a propriedade WriteOption.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |Acrescentar|Acrescenta dados a um arquivo existente. Os metadados dos dados adicionados devem corresponder ao formato do arquivo.|  
 |Criar sempre|Sempre cria um arquivo novo.|  
@@ -113,7 +113,7 @@ ms.locfileid: "62770850"
   
 1.  Defina a propriedade WriteOption como **CreateOnce** ou **CreateAlways**e execute uma iteração do loop. O arquivo é criado. Isto assegura que os metadados de dados acrescentados e o arquivo correspondam.  
   
-2.  Redefinir a propriedade WriteOption como **Append** e defina a propriedade ValidateExternalMetadata como `False`.  
+2.  Redefina a propriedade WriteOption como **Append** e defina a propriedade ValidateExternalMetadata `False`como.  
   
  Se você usar a opção **TruncateAppend** em vez da opção **Append** , truncará filas que foram adicionadas a qualquer iteração anterior e então acrescentará novas filas. Usar a opção **TruncateAppend** também requer que os dados correspondam ao formato do arquivo.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62770850"
 ## <a name="related-content"></a>Conteúdo relacionado  
  Entrada de blog, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)(Arquivos brutos são incríveis), em sqlservercentral.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Origem do arquivo bruto](raw-file-source.md)   
  [Fluxo de Dados](data-flow.md)  
   

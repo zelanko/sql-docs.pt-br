@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688915"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estratégias para fazer backup e restaurar a replicação de mesclagem
@@ -30,7 +30,7 @@ ms.locfileid: "62688915"
 -   O banco de dados de assinatura em cada Assinante.    
 -   Os bancos de dados de sistema **mestre** e **msdb** no Publicador, Distribuidor e todos os Assinantes. Esses bancos de dados devem ter, cada um, seus backups realizados em simultâneo com o banco de dados de replicação relevante. Por exemplo, faça o backup dos bancos de dados **mestre** e **msdb** no Publicador ao mesmo tempo em que executa o backup do banco de dados de publicação. Se o banco de dados de publicação for restaurado, assegure-se de que os bancos de dados **mestre** e **msdb** são consistentes com o banco de dados de publicação, em termos de configuração de replicação e ajustes.  
   
- Se você executar backups de log regulares, qualquer alteração relacionada à replicação deverá ser capturada nos backups de log. Se você não executar backups de log, um backup deverá ser executado sempre que uma configuração relevante à replicação for alterada. Para obter mais informações, consulte [Ações comuns que requerem um backup atualizado](common-actions-requiring-an-updated-backup.md).  
+ Se você executar backups de log regulares, qualquer alteração relacionada à replicação deverá ser capturada nos backups de log. Se você não executar backups de log, um backup deverá ser executado sempre que uma configuração relevante à replicação for alterada. Para obter mais informações, consulte [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md).  
   
  Escolha uma das abordagens descritas abaixo, para fazer o backup e a restauração do banco de dados de publicação, e, então, siga as recomendações relacionadas abaixo, para o banco de dados de publicação e para os bancos de dados de assinaturas.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "62688915"
   
 -   Se a publicação não for filtrada, você deverá conseguir atualizar o banco de dados de publicação com uma sincronização com o Assinante mais atualizado.  
   
--   Se a publicação for filtrada, talvez você possa atualizar o banco de dados de publicação. Considere uma tabela particionada, de modo que cada assinatura receba os dados do cliente somente de uma região: Norte, Leste, Sul e Oeste. Se existir pelo menos um Assinante para cada partição de dados, a sincronização com um Assinante para cada partição deverá atualizar o banco de dados de publicação. Entretanto, se por exemplo, os dados da partição oeste, não foram replicados para nenhum Assinante, então esses dados no Publicador não poderão ser atualizados.  
+-   Se a publicação for filtrada, talvez você possa atualizar o banco de dados de publicação. Considere uma tabela particionada, de modo que cada assinatura receba os dados de clientes somente de uma região: norte, leste, sul e oeste. Se existir pelo menos um Assinante para cada partição de dados, a sincronização com um Assinante para cada partição deverá atualizar o banco de dados de publicação. Entretanto, se por exemplo, os dados da partição oeste, não foram replicados para nenhum Assinante, então esses dados no Publicador não poderão ser atualizados.  
   
 > [!IMPORTANT]  
 >  Sincronizar um banco de dados de publicação com um banco de dados de assinatura pode resultar em tabelas publicadas restauradas a um point-in-time, que é mais recente que o point-in-time de outras tabelas não publicadas, que foram restaurados a partir do backup.  
   
- Se você sincronizar com um Assinante que está executando uma versão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], então a assinatura não poderá ser anônima; deverá ser uma assinatura de cliente ou de servidor (chamadas de assinaturas locais e assinaturas globais nas versões anteriores).  
+ Se você fizer a sincronização com um Assinante que esteja executando uma versão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], a assinatura não poderá ser anônima; ela precisará ser a assinatura de um cliente ou de um servidor (conhecidas como assinaturas locais e assinaturas globais nas versões anteriores).  
   
  Para sincronizar uma assinatura, consulte [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
@@ -65,9 +65,9 @@ ms.locfileid: "62688915"
   
  Se você escolher essa opção, gere um instantâneo novo para entregar aos Assinantes reinicializados, imediatamente depois de restaurar seu banco de dados de publicação.  
   
- Para reinicializar uma assinatura, consulte [Reinicializar uma assinatura](../reinitialize-a-subscription.md).  
+ Para reinicializar uma assinatura, consulte [Reinitialize a Subscription](../reinitialize-a-subscription.md).  
   
- Para criar e aplicar um instantâneo, consulte [Criar e aplicar o instantâneo inicial](../create-and-apply-the-initial-snapshot.md) e [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Para criar e aplicar um instantâneo, consulte [Create e Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md) e [Create a Snapshot for a Merge Publication with Parameterized Filters](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Fazendo backup e restaurando o banco de dados de distribuição  
  Com a replicação de mesclagem, deve ser realizado regularmente o backup do banco de dados de distribuição, e, pode ser restaurado sem nenhuma consideração especial, contanto que o backup usado não seja anterior ao menor período de retenção de todas as publicações que usam o Distribuidor. Por exemplo, se houver três publicações com períodos de retenção de 10, 20, e 30 dias, respectivamente, o backup usado para restaurar o banco de dados não deve ter mais de 10 dias. O banco de dados de distribuição tem uma função limitada na replicação de mesclagem: não armazena nenhum dos dados usados no controle de alterações e não fornece o armazenamento temporário das mudanças de replicação de mesclagem a serem encaminhadas aos bancos de dados de assinatura (como faz na replicação transacional).  
@@ -83,12 +83,12 @@ ms.locfileid: "62688915"
   
  Para definir o período de retenção da publicação, consulte [Definir o período de expiração para assinaturas](../publish/set-the-expiration-period-for-subscriptions.md).  
   
- Para sincronizar uma assinatura, consulte [Sincronizar uma assinatura push](../synchronize-a-push-subscription.md) e [Sincronizar uma assinatura pull](../synchronize-a-pull-subscription.md).  
+ Para sincronizar uma assinatura, consulte [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Fazendo backup e restaurando um banco de dados de republicação  
  Quando um banco de dados assina os dados de um Publicador e, por sua vez, publica os mesmos dados em outros bancos de dados de assinatura, isso é chamado de banco de dados de republicação. Ao restaurar um banco de dados de republicação, siga as diretrizes descritas em "Fazendo backup e restaurando um banco de dados de publicação" e "Fazendo backup e restaurando um banco de dados de assinatura" neste tópico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Fazer backup e restaurar bancos de dados replicados](back-up-and-restore-replicated-databases.md)  
   
