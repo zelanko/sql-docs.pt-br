@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de Design de agregação (Analysis Services - dados multidimensionais) atribuir | Microsoft Docs
+title: Caixa de diálogo Atribuir Design de agregação (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11ee89e8849155f905e3908e491184f78a8f08b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062227"
 ---
 # <a name="assign-aggregation-design-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Atribuir Design de Agregação (Analysis Services - Dados Multidimensionais)
@@ -27,10 +27,10 @@ ms.locfileid: "66062227"
 |Termo|Definição|  
 |----------|----------------|  
 |**Designs de agregação**|Selecione um design de agregação para atribuir a uma ou mais partições de destino.|  
-|**Partições de destino**|Selecione as partições às quais deseja atribuir o design de agregação. A grade seguinte é usada para especificar partições de destino:<br /><br /> \<caixa de seleção >: Marque ou desmarque a caixa de seleção no cabeçalho da coluna para incluir ou excluir todas as partições listadas como partições de destino. Marque ou desmarque uma caixa de seleção próxima a uma partição para incluir ou excluir essa partição como uma partição de destino.<br /><br /> **Partição**: Exibe o nome da partição.<br /><br /> **Origem**: Exibe a tabela ou consulta de origem da partição.<br /><br /> **Design de Agregação**: Exibe o nome do design de agregação existente para a partição.|  
+|**Partições de destino**|Selecione as partições às quais deseja atribuir o design de agregação. A grade seguinte é usada para especificar partições de destino:<br /><br /> \<> caixa de seleção: marque ou desmarque a caixa de seleção no cabeçalho da coluna para incluir ou excluir todas as partições listadas como partições de destino. Marque ou desmarque uma caixa de seleção próxima a uma partição para incluir ou excluir essa partição como uma partição de destino.<br /><br /> **Partição**: exibe o nome da partição.<br /><br /> **Origem**: exibe a tabela de origem ou a consulta para a partição.<br /><br /> **Design de agregação**: exibe o nome do design de agregação existente para a partição.|  
 |**Ocultar partições com designs de agregação**|Selecione para mostrar só as partições que não têm designs de agregação atribuídos a elas.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Agregações e designs de agregação](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

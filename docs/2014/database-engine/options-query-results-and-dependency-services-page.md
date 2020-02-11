@@ -1,5 +1,5 @@
 ---
-title: Opções (página de serviços de dependência e os resultados da consulta) | Microsoft Docs
+title: Opções (página resultados da consulta e serviços de dependência) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,31 +13,31 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481200"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Opções (página Resultados da consulta e Serviços de Dependência)
-  Use esta página para especificar o servidor a ser conectado para Serviços de Dependência. Os Serviços de Dependência permitem extrair informações sobre dependências entre objetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazenados em diferentes servidores. Exibir dependências de objeto usando o **dependências de objeto** da caixa de diálogo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+  Use esta página para especificar o servidor a ser conectado para Serviços de Dependência. Os Serviços de Dependência permitem extrair informações sobre dependências entre objetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazenados em diferentes servidores. Você exibe dependências de objeto usando a caixa de diálogo **dependências de objeto** no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
  **O que você deseja fazer?**  
   
-1.  [Abrir a caixa de diálogo Opções (página de serviços de dependência/resultados de consulta)](#open_dialog)  
+1.  [Abrir a caixa de diálogo de opções (página de resultados da consulta/Serviços de Dependência)](#open_dialog)  
   
 2.  [Configurar as opções](#options)  
   
-##  <a name="open_dialog"></a> Abrir a caixa de diálogo Opções (página de serviços de dependência/resultados de consulta)  
+##  <a name="open_dialog"></a>Abrir a caixa de diálogo Opções (página resultados da consulta/serviços de dependência)  
   
-1.  Na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], clique em **opções** sobre o **ferramentas** menu.  
+1.  No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], clique em **Opções** no menu **ferramentas** .  
   
 2.  Expanda **Resultados da Consulta** e clique em **Serviços de Dependência**.  
   
 ##  <a name="options"></a> Configurar as opções  
   
 ### <a name="options"></a>Opções  
- **Servidor de serviços de dependência**  
+ **Servidor dos Serviços de Dependência**  
  Especifique o servidor em que os Serviços de Dependência estão instalados.  
   
  **Autenticação**  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873027"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implantar um banco de dados usando um DAC
@@ -85,31 +85,31 @@ ms.locfileid: "62873027"
   
 -   **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página de Introdução no futuro.  
   
--   **Avançar** - Continua na página **Configurações de Implantação** .  
+-   **Avançar** -prossegue para a página de **configurações de implantação** .  
   
 -   **Cancelar** – cancela a operação e fecha o Assistente.  
   
-##  <a name="Deployment_settings"></a> Página de configurações de implantação  
+##  <a name="Deployment_settings"></a>Página Configurações de implantação  
  Use esta página para especificar o servidor de destino e fornecer detalhes sobre seu novo banco de dados.  
   
  **Host local:**  
   
--   **Conexão do servidor** – Especifique os detalhes da conexão de servidor e clique em **Conectar** para verificar a conexão.  
+-   **Conexão do servidor** – especifique os detalhes de conexão do servidor e clique em **conectar** para verificar a conexão.  
   
--   **Nome do novo banco de dados** – Especifique um nome para o novo banco de dados.  
+-   **Nome do novo banco de dados** – especifique um nome para o novo banco de dados.  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]configurações do banco de dados:**  
   
--   **Edição do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** – Selecione a edição do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no menu suspenso.  
+-   edição – selecione a edição do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no menu suspenso. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
   
--   **Tamanho máximo do banco de dados** – Selecione o tamanho máximo do banco de dados no menu suspenso.  
+-   **Tamanho máximo do banco de dados** – selecione o tamanho máximo do banco de dados no menu suspenso.  
   
  **Outras configurações:**  
   
 -   Especifique um diretório local para o arquivo temporário, que é o arquivo morto BACPAC. Observe que o arquivo será criado no local especificado e permanecerá lá depois que a operação for concluída.  
   
 ##  <a name="Summary"></a> Página de Resumo  
- Use esta página para analisar a origem especificada e as configurações de destino para a operação. Para concluir a operação de implantação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de implantação e sair do Assistente, clique em **Cancelar**.  
+ Use esta página para analisar a origem especificada e as configurações de destino para a operação. Para concluir a operação de implantação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de implantação e sair do assistente, clique em **Cancelar**.  
   
 ##  <a name="Progress"></a> Página Progresso  
  Esta página exibe a barra de progresso que indica o status da operação. Para exibir o status detalhado, clique na opção **Exibir detalhes** .  
@@ -120,7 +120,7 @@ ms.locfileid: "62873027"
  Clique em **Concluir** para fechar o Assistente.  
   
 ## <a name="using-a-net-framework-application"></a>Usando um aplicativo .NET Framework  
- **Para implantar um banco de dados usando os métodos DacStoreExport() e Import() em um aplicativo .Net Framework.**  
+ **Para implantar um banco de dados usando os métodos métodos dacstoreexport () e Import () em um aplicativo do .NET Framework.**  
   
  Para exibir um exemplo de código, baixe o aplicativo de exemplo do DAC em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
@@ -136,8 +136,8 @@ ms.locfileid: "62873027"
   
 6.  Use o método `Import` do tipo `Microsoft.SqlServer.Management.Dac.DacStore` para importar o BACPAC. Especifique o arquivo BACPAC criado pela exportação.  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de dados](data-tier-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Exportar um aplicativo da camada de dados](export-a-data-tier-application.md)   
  [Importar um arquivo BACPAC para criar um novo banco de dados de usuário](import-a-bacpac-file-to-create-a-new-user-database.md)  
   

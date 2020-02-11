@@ -1,5 +1,5 @@
 ---
-title: Criando uma cadeia de Conexão válida usando Pipes nomeados | Microsoft Docs
+title: Criando uma cadeia de conexão válida usando pipes nomeados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,29 +17,29 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065544"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Criando uma cadeia de conexão válida usando pipes nomeados
-  A menos que alteradas pelo usuário, quando a instância padrão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta no protocolo de pipes nomeados, ele usa `\\.\pipe\sql\query` como o nome do pipe. O ponto indica que o computador é local, `pipe` indica que a conexão é um pipe nomeado e `sql\query` é o nome do pipe. Para conectar ao pipe padrão, o alias deve ter `\\<computer_name>\pipe\sql\query` como nome do pipe. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiver sido configurado para escutar em um pipe diferente, o nome do pipe deverá usar esse pipe. Por exemplo, se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver usando `\\.\pipe\unit\app` como o pipe, o alias deverá usar `\\<computer_name>\pipe\unit\app` como o nome do pipe.  
+  A menos que seja alterado pelo usuário, quando a instância [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] padrão do escuta no protocolo de pipes nomeados `\\.\pipe\sql\query` , ela é usada como o nome do pipe. O ponto indica que o computador é local, `pipe` indica que a conexão é um pipe nomeado e `sql\query` é o nome do pipe. Para conectar ao pipe padrão, o alias deve ter `\\<computer_name>\pipe\sql\query` como nome do pipe. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiver sido configurado para escutar em um pipe diferente, o nome do pipe deverá usar esse pipe. Por exemplo, se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver usando `\\.\pipe\unit\app` como o pipe, o alias deverá usar `\\<computer_name>\pipe\unit\app` como o nome do pipe.  
   
  Para criar um nome de pipe válido, deve você:  
   
 -   Especificar um **Nome de Alias**.  
   
--   Selecione **Pipes nomeados** como o **protocolo**.  
+-   Selecione **pipes nomeados** como o **protocolo**.  
   
--   Insira o **nome do Pipe**. Como alternativa, você pode deixar **nome do Pipe** em branco e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager completará o nome de pipe adequado após você especificar o **protocolo** e **Server**  
+-   Insira o **nome do pipe**. Como alternativa, você pode deixar o **nome** do pipe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em branco e Configuration Manager concluirá o nome do pipe apropriado depois de especificar o **protocolo** e o **servidor**  
   
--   Especifique um **Server**. Para uma instância nomeada, você pode fornecer um nome de servidor e um nome de instância.  
+-   Especifique um **servidor**. Para uma instância nomeada, você pode fornecer um nome de servidor e um nome de instância.  
   
- No momento da conexão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente Native Client lê o servidor, protocolo e nome do pipe, os valores do registro para o nome de alias especificado e cria um nome de pipe no formato `np:\\<computer_name>\pipe\<pipename>` ou `np:\\<IPAddress>\pipe\<pipename>`. Para uma instância nomeada, o nome do pipe padrão é `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`.  
+ No momento da conexão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente cliente nativo lê os valores de servidor, protocolo e nome de pipe do registro para o nome de alias especificado e cria um nome de pipe no formato `np:\\<computer_name>\pipe\<pipename>` ou. `np:\\<IPAddress>\pipe\<pipename>` Para uma instância nomeada, o nome do pipe padrão `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`é.  
   
 > [!NOTE]  
->  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Firewall do Windows fecha a porta 445 por padrão. Como o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comunica pela porta 445, você deverá reabri-la se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para escutar conexões de entrada usando pipes nomeados. Para obter informações sobre como configurar um firewall, consulte "como: Configurar um Firewall para acesso ao SQL Server"em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online ou revisar a documentação do firewall.  
+>  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Firewall do Windows fecha a porta 445 por padrão. Como o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comunica pela porta 445, você deverá reabri-la se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para escutar conexões de entrada usando pipes nomeados. Para obter informações sobre como configurar um firewall, consulte "Como configurar um firewall para acessar o SQL Server" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou verifique a documentação do firewall.  
   
 ## <a name="connecting-to-the-local-server"></a>Conectando-se ao servidor local  
  Ao conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executado no mesmo computador que o cliente, você pode usar `(local)` como o nome do servidor. O uso de `(local)` não é incentivado, pois leva a ambiguidade; no entanto, ele pode ser útil quando se sabe que o cliente está sendo executado no computador pretendido. Por exemplo, ao criar um aplicativo para usuários móveis desconectados, como uma força de vendas, em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será executado em computadores laptop e armazenará dados de projeto, um cliente conectado a (local) sempre se conectaria ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executado no laptop. A palavra `localhost` ou um ponto (.) pode ser usado no lugar de `(local)`.  
@@ -116,9 +116,9 @@ Server             .
 ```  
   
 > [!NOTE]  
->  Para especificar o protocolo de rede como uma **sqlcmd** parâmetro, consulte "como: Conectar-se ao mecanismo de banco de dados usando sqlcmd.exe"em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+>  Para especificar o protocolo de rede como um parâmetro **sqlcmd** , consulte "como conectar-se ao mecanismo de banco de dados usando sqlcmd. exe" nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online do.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando uma cadeia de conexão válida usando o protocolo de memória compartilhada](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [Criando uma cadeia de conexão válida usando TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Escolhendo um protocolo de rede](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  

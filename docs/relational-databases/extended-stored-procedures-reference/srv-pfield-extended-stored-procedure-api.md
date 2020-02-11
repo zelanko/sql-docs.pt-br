@@ -20,17 +20,17 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8cb43ad9128160dfbd8e943ec3db02930eb3ac53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68131576"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  Retorna informações sobre uma conexão de banco de dados.  
   
@@ -54,10 +54,10 @@ len
  *srvproc*  
  Ponteiro que identifica uma conexão de banco de dados.  
   
- *field*  
+ *campo*  
  Especifica dados na conexão que será retornada.  
   
-|Valor|Retorna|  
+|Valor|Retornos|  
 |-----------|-------------|  
 |SRV_APPLNAME|O nome dó aplicativo fornecido pelo cliente quando estabeleceu a conexão.|  
 |SRV_BCPFLAG|Um sinalizador que será TRUE se o cliente estiver se preparando para uma operação de cópia em massa; caso contrário, será FALSE.|  
@@ -79,10 +79,10 @@ len
 |SRV_USER|O nome do usuário da conexão.|  
 |||  
   
- *len*  
+ *Len*  
  É um ponteiro para uma variável **int** que contém o tamanho do valor de *field* retornado. Se *len* for NULL, o tamanho da cadeia de caracteres não será retornado.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  Um ponteiro para uma cadeia de caracteres terminada por caractere nulo que contém o valor atual do campo especificado na estrutura SRV_PROC. Se o campo for vazio, um ponteiro válido para uma cadeia de caracteres vazia será retornado e *len* conterá 0. Se o campo for desconhecido, NULL será retornado e *len* conterá o valor -1.  
   
 > [!IMPORTANT]  

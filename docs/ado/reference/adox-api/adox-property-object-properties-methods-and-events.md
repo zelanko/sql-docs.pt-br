@@ -1,5 +1,5 @@
 ---
-title: Propriedades do objeto Property ADOX, métodos e eventos | Microsoft Docs
+title: Propriedades, métodos e eventos do objeto de propriedade ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ebf2fdef9d526cf2ca991a4b123f8e20db358497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930353"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>Propriedades, Métodos e Eventos do objeto Property ADOX
@@ -30,10 +30,10 @@ ms.locfileid: "67930353"
  [Propriedade Value (ADO)](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- nenhuma.  
+ Nenhum.  
   
-## <a name="events"></a>Events  
- nenhuma.  
+## <a name="events"></a>Eventos  
+ Nenhum.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Property (ADOX)](../../../ado/reference/adox-api/property-object-adox.md)

@@ -18,19 +18,19 @@ ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 595f8adb46602109751b1912feed99ae4702fb55
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68702840"
 ---
-# <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
+# <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna uma lista de permissões de tabela (como INSERT, DELETE, UPDATE, SELECT, REFERENCES) para a tabela ou tabelas especificadas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,14 +44,14 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @table_name= ] '*table_name*'  
- É a tabela usada para retornar informações do catálogo. *table_name* é **nvarchar (** 384 **)** , sem padrão. Há suporte para a correspondência do padrão curinga.  
+ É a tabela usada para retornar informações do catálogo. *table_name* é **nvarchar (** 384 **)**, sem padrão. Há suporte para a correspondência do padrão curinga.  
   
- [ @table_owner= ] '*table_owner*'  
- É o proprietário da tabela usado para retornar as informações do catálogo. *TABLE_OWNER*é **nvarchar (** 384 **)** , com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o proprietário não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
+ [ @table_owner= ] '*TABLE_OWNER*'  
+ É o proprietário da tabela usado para retornar as informações do catálogo. *TABLE_OWNER*é **nvarchar (** 384 **)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o proprietário não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
   
  Se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se o *proprietário* não for especificado e o usuário atual não possuir uma tabela com o *nome*especificado, esse procedimento procurará uma tabela com o *table_name* especificado de Propriedade do proprietário do banco de dados. Caso exista, as colunas dessa tabela serão retornadas.  
   
- [ @table_qualifier= ] '*table_qualifier*'  
+ [ @table_qualifier= ] '*TABLE_QUALIFIER*'  
  É o nome do qualificador da tabela. *TABLE_QUALIFIER* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*Qualifier.Owner.Name*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
  [ @fUsePattern= ] '*fUsePattern*'  
@@ -62,7 +62,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|Nome do qualificador de tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Esse campo pode ser NULL.|  
 |TABLE_OWNER|**sysname**|Nome do proprietário da tabela. Esse campo sempre retorna um valor.|  
@@ -88,8 +88,8 @@ EXEC sp_table_privileges
    @table_name = 'Contact%';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos &#40;armazenados de catálogo TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Procedimentos armazenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

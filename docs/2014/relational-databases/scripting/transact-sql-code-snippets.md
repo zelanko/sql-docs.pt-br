@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbd2b5d690303521d11fcd0f4888b4dc611406e8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243116"
 ---
 # <a name="transact-sql-code-snippets"></a>Snippets de código Transact-SQL
@@ -24,12 +24,12 @@ ms.locfileid: "75243116"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como inserir um snippet existente, como CREATE TABLE ou SELECT.|[Inserir trechos Transact-SQL](insert-transact-sql-snippets.md)|  
-|Descreve como incluir um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um bloco BEGIN, IF ou WHILE.|[Inserir trechos Transact-SQL com surround](insert-surround-with-transact-sql-snippets.md)|  
-|Descreve como concluir a compilação de um bloco ou uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] completa após a inserção de um snippet de código.|[Concluir trechos de código Transact-SQL](complete-transact-sql-snippets.md)|  
-|Descreve como compilar seus próprios snippets personalizados e adicioná-los ao conjunto de snippets do SQL Server.|[Adicionar trechos Transact-SQL](add-transact-sql-snippets.md)|  
+|Descreve como inserir um snippet existente, como CREATE TABLE ou SELECT.|[Inserir snippets Transact-SQL](insert-transact-sql-snippets.md)|  
+|Descreve como incluir um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um bloco BEGIN, IF ou WHILE.|[Inserir snippets Transact-SQL com Surround](insert-surround-with-transact-sql-snippets.md)|  
+|Descreve como concluir a compilação de um bloco ou uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] completa após a inserção de um snippet de código.|[Concluir snippets Transact-SQL](complete-transact-sql-snippets.md)|  
+|Descreve como compilar seus próprios snippets personalizados e adicioná-los ao conjunto de snippets do SQL Server.|[Adicionar snippets do Transact-SQL](add-transact-sql-snippets.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editores de consulta e de texto &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
+ [Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

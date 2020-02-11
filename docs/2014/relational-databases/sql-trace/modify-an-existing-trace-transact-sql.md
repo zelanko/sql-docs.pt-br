@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135615"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modificar um rastreamento existente (Transact-SQL)
@@ -29,27 +29,27 @@ ms.locfileid: "63135615"
   
 2.  Para modificar eventos de rastreamento, execute **sp_trace_setevent** especificando as alterações pelos parâmetros. Listado em ordem, os parâmetros são:  
   
-    -   **@traceid** (ID do rastreamento)  
+    -   **@traceid**(ID do rastreamento)  
   
-    -   **@eventid** (ID do evento)  
+    -   **@eventid**(ID do evento)  
   
-    -   **@columnid** (ID da coluna)  
+    -   **@columnid**(ID da coluna)  
   
-    -   **@on** (ON)  
+    -   **@on**NO  
   
-     Quando você modificar o parâmetro **@on** , lembre-se da interação dele com o parâmetro **@columnid** :  
+     Ao modificar o **@on** parâmetro, tenha em mente sua interação com o **@columnid** parâmetro:  
   
-    |ON|ID da coluna|Resultado|  
+    |ATIVADO|ID da coluna|Result|  
     |--------|---------------|------------|  
-    |ON (**1**)|NULL|O evento é ativado. Todas as colunas são limpas.|  
+    |ON (**1**)|NULO|O evento é ativado. Todas as colunas são limpas.|  
     ||NOT NULL|A coluna é ativada para o evento especificado.|  
-    |OFF (**0**)|NULL|Evento é desativado. Todas as colunas são limpas.|  
+    |OFF (**0**)|NULO|Evento é desativado. Todas as colunas são limpas.|  
     ||NOT NULL|A coluna é desativada para o evento especificado.|  
   
 > [!IMPORTANT]
 >  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (<strong>sp_trace_*xx*</strong>) são estritamente tipados e não são compatíveis com a conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)   

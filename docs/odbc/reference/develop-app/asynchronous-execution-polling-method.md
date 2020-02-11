@@ -13,29 +13,29 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97fe8af6f02e9797bc14578edda09c420f8f94e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077056"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Execução assíncrona (Método de Sondagem)
-Antes do ODBC 3.8 e o SDK do Windows 7, operações assíncronas eram permitidas apenas em funções de instrução. Para obter mais informações, consulte o **execução de operações de instrução assincronamente**, mais adiante neste tópico.  
+Antes do ODBC 3,8 e do SDK do Windows 7, as operações assíncronas eram permitidas apenas em funções de instrução. Para obter mais informações, consulte a seção **executando operações de forma assíncrona**, mais adiante neste tópico.  
   
- No Windows 7 SDK o ODBC 3.8 introduziu a execução assíncrona em operações relacionadas à conexão. Para obter mais informações, consulte o **execução de operações de Conexão assíncrona** seção, mais adiante neste tópico.  
+ O ODBC 3,8 no SDK do Windows 7 introduziu a execução assíncrona em operações relacionadas à conexão. Para obter mais informações, consulte a seção **executando operações de conexão assíncronas** , mais adiante neste tópico.  
   
- No SDK do Windows 7, para as operações de conexão, ou instrução assíncrona um aplicativo determinado que a operação assíncrona foi concluída usando o método de sondagem. A partir do SDK do Windows 8, você pode determinar que uma operação assíncrona foi concluída usando o método de notificação. Para obter mais informações, consulte [execução assíncrona (método de notificação)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
+ No SDK do Windows 7, para instruções assíncronas ou operações de conexão, um aplicativo determinou que a operação assíncrona foi concluída usando o método de sondagem. A partir do SDK do Windows 8, você pode determinar que uma operação assíncrona seja concluída usando o método de notificação. Para obter mais informações, consulte [execução assíncrona (método de notificação)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
   
- Por padrão, drivers executam funções ODBC de forma síncrona; ou seja, o aplicativo chama uma função e o driver retorna o controle para o aplicativo até que termine a execução da função. No entanto, algumas funções podem ser executadas de forma assíncrona; ou seja, o aplicativo chama a função e o driver, após o processamento mínimo, retorna o controle para o aplicativo. O aplicativo pode chamar outras funções enquanto a primeira função ainda está em execução.  
+ Por padrão, os drivers executam funções ODBC de forma síncrona; ou seja, o aplicativo chama uma função e o driver não retorna o controle para o aplicativo até que a execução da função seja concluída. No entanto, algumas funções podem ser executadas de forma assíncrona; ou seja, o aplicativo chama a função, e o driver, após o processamento mínimo, retorna o controle para o aplicativo. O aplicativo pode então chamar outras funções enquanto a primeira função ainda está em execução.  
   
- Execução assíncrona tem suporte para a maioria das funções que são executadas em grande parte na fonte de dados, como as funções para estabelecer conexões, preparar e executar instruções SQL, recuperar metadados, buscar dados e confirmar as transações. Ele é mais útil quando a tarefa que está sendo executada na fonte de dados leva muito tempo, como um processo de logon ou uma consulta complexa em relação a um banco de dados grande.  
+ A execução assíncrona tem suporte para a maioria das funções que são amplamente executadas na fonte de dados, como as funções para estabelecer conexões, preparar e executar instruções SQL, recuperar metadados, buscar dados e confirmar transações. Ele é mais útil quando a tarefa que está sendo executada na fonte de dados leva muito tempo, como um processo de logon ou uma consulta complexa em relação a um banco de dados grande.  
   
- Quando o aplicativo executa uma função com uma instrução ou a conexão que está habilitado para processamento assíncrono, o driver executa uma quantidade mínima de processamento (como argumentos para erros de verificação), entrega o processamento para a fonte de dados e retorna o controle para o aplicativo com o código de retorno de SQL_STILL_EXECUTING. O aplicativo, em seguida, executa outras tarefas. Para determinar quando a função assíncrona for concluída, o aplicativo sonda o driver em intervalos regulares, chamando a função com os mesmos argumentos que ele usado originalmente. Se a função ainda está em execução, ele retornará SQL_STILL_EXECUTING; Se a execução foi concluída, ela retornará o código que poderia ter retornado tivesse ela executada de forma síncrona, como SQL_SUCCESS, SQL_ERROR ou SQL_NEED_DATA.  
+ Quando o aplicativo executa uma função com uma instrução ou conexão que está habilitada para processamento assíncrono, o driver executa uma quantidade mínima de processamento (como a verificação de argumentos de erros), o processamento de mãos para a fonte de dados e retorna controle para o aplicativo com o SQL_STILL_EXECUTING código de retorno. Em seguida, o aplicativo executa outras tarefas. Para determinar quando a função assíncrona foi concluída, o aplicativo sonda o driver em intervalos regulares chamando a função com os mesmos argumentos usados originalmente. Se a função ainda estiver em execução, ela retornará SQL_STILL_EXECUTING; Se ele tiver terminado de ser executado, ele retornará o código que ele teria retornado, como SQL_SUCCESS, SQL_ERROR ou SQL_NEED_DATA.  
   
- Se uma função é executada de forma síncrona ou assíncrona é um driver específico. Por exemplo, suponha que os metadados do conjunto de resultados é armazenado em cache no driver. Nesse caso, ele usa muito pouco tempo para executar **SQLDescribeCol** e o driver deve simplesmente executar a função em vez de artificialmente atrasar a execução. Por outro lado, se o driver precisa recuperar os metadados da fonte de dados, ele deve retornar o controle ao aplicativo enquanto ele está fazendo isso. Portanto, o aplicativo deve ser capaz de lidar com um código de retorno diferente de SQL_STILL_EXECUTING quando ele primeiro executa uma função de forma assíncrona.  
+ Se uma função é executada de forma síncrona ou assíncrona, é específica do driver. Por exemplo, suponha que os metadados do conjunto de resultados sejam armazenados em cache no driver. Nesse caso, leva muito pouco tempo para executar **SQLDescribeCol** e o driver deve simplesmente executar a função em vez de atrasar artificialmente a execução. Por outro lado, se o driver precisar recuperar os metadados da fonte de dados, ele deverá retornar o controle ao aplicativo enquanto estiver fazendo isso. Portanto, o aplicativo deve ser capaz de lidar com um código de retorno diferente de SQL_STILL_EXECUTING quando ele executa pela primeira vez uma função de forma assíncrona.  
   
-## <a name="executing-statement-operations-asynchronously"></a>Executar operações de instrução de forma assíncrona  
- As seguintes funções de declaração operam em uma fonte de dados e podem executar de forma assíncrona:  
+## <a name="executing-statement-operations-asynchronously"></a>Executando operações de instrução de forma assíncrona  
+ As funções de instrução a seguir operam em uma fonte de dados e podem ser executadas de forma assíncrona:  
   
 ||||  
 |-|-|-|  
@@ -49,15 +49,15 @@ Antes do ODBC 3.8 e o SDK do Windows 7, operações assíncronas eram permitidas
 |[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|[SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
 |[SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|[SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
   
- Execução de instrução assíncrono é controlada por instrução ou uma base por conexão, dependendo da fonte de dados. Ou seja, o aplicativo não especifica que uma função específica deve ser executado de forma assíncrona, mas que qualquer função executada em uma determinada instrução é executado de forma assíncrona. Para localizar out há suporte para a qual deles, um aplicativo chama [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) com uma opção de SQL_ASYNC_MODE. SQL_AM_CONNECTION será retornado se houver suporte para a execução assíncrona de nível de conexão (para um identificador de instrução); SQL_AM_STATEMENT se há suporte para a execução assíncrona de nível de instrução.  
+ A execução da instrução assíncrona é controlada em uma base por instrução ou por conexão, dependendo da fonte de dados. Ou seja, o aplicativo especifica que uma função específica deve ser executada de forma assíncrona, mas que qualquer função executada em uma determinada instrução seja executada de forma assíncrona. Para descobrir qual deles tem suporte, um aplicativo chama [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) com uma opção de SQL_ASYNC_MODE. SQL_AM_CONNECTION será retornado se a execução assíncrona no nível de conexão (para um identificador de instrução) for suportada; SQL_AM_STATEMENT se houver suporte para a execução assíncrona em nível de instrução.  
   
- Para especificar que as funções executadas com uma instrução específica devem ser executadas de forma assíncrona, o aplicativo chama **SQLSetStmtAttr** o SQL_ATTR_ASYNC_ENABLE de atributo e o define como SQL_ASYNC_ENABLE_ON. Se há suporte para processamento assíncrono de nível de conexão, o atributo da instrução SQL_ATTR_ASYNC_ENABLE é somente leitura e seu valor é o mesmo que o atributo de conexão da conexão no qual a instrução foi alocada. Ele é específica do driver, se o valor do atributo de instrução é definido durante o tempo de alocação de instrução ou posterior. Tentar defini-la retornará SQL_ERROR e SQLSTATE HYC00 (recurso opcional não implementado).  
+ Para especificar que as funções executadas com uma determinada instrução sejam executadas de forma assíncrona, o aplicativo chama **SQLSetStmtAttr** com o atributo SQL_ATTR_ASYNC_ENABLE e o define como SQL_ASYNC_ENABLE_ON. Se houver suporte para o processamento assíncrono em nível de conexão, o atributo de instrução SQL_ATTR_ASYNC_ENABLE será somente leitura e seu valor será o mesmo que o atributo de conexão da conexão na qual a instrução foi alocada. Ele é específico do driver, quer o valor do atributo Statement seja definido no momento da alocação da instrução ou posterior. A tentativa de defini-lo retornará SQL_ERROR e SQLSTATE HYC00 (recurso opcional não implementado).  
   
- Para especificar que as funções executadas com uma conexão específica devem ser executadas de forma assíncrona, o aplicativo chama **SQLSetConnectAttr** o SQL_ATTR_ASYNC_ENABLE de atributo e o define como SQL_ASYNC_ENABLE_ON. Todos os identificadores de instrução futuras alocados na conexão serão habilitados para a execução assíncrona; ele é definido pelo driver se os identificadores de instrução existente serão habilitados por esta ação. Se SQL_ATTR_ASYNC_ENABLE for definido como SQL_ASYNC_ENABLE_OFF, todas as instruções sobre a conexão estiver no modo síncrono. Um erro será retornado se a execução assíncrona estiver habilitada, enquanto houver uma instrução ativa sobre a conexão.  
+ Para especificar que as funções executadas com uma conexão específica sejam executadas de forma assíncrona, o aplicativo chama **SQLSetConnectAttr** com o atributo SQL_ATTR_ASYNC_ENABLE e o define como SQL_ASYNC_ENABLE_ON. Todos os identificadores de instrução futuros alocados na conexão serão habilitados para execução assíncrona; Ele é definido por driver se os identificadores de instrução existentes serão habilitados por essa ação. Se SQL_ATTR_ASYNC_ENABLE for definido como SQL_ASYNC_ENABLE_OFF, todas as instruções na conexão estarão no modo síncrono. Um erro será retornado se a execução assíncrona estiver habilitada enquanto houver uma instrução ativa na conexão.  
   
- Para determinar o número máximo de instruções simultâneas ativas no modo assíncrono e o driver pode dar suporte a uma determinada conexão, o aplicativo chama **SQLGetInfo** com a opção SQL_MAX_ASYNC_CONCURRENT_STATEMENTS.  
+ Para determinar o número máximo de instruções simultâneas ativas no modo assíncrono ao qual o driver pode dar suporte em uma determinada conexão, o aplicativo chama **SQLGetInfo** com a opção SQL_MAX_ASYNC_CONCURRENT_STATEMENTS.  
   
- O código a seguir demonstra como funciona o modelo de sondagem:  
+ O código a seguir demonstra como o modelo de sondagem funciona:  
   
 ```  
 SQLHSTMT  hstmt1;  
@@ -75,7 +75,7 @@ while ((rc=SQLExecDirect(hstmt1,"SELECT * FROM Orders",SQL_NTS))==SQL_STILL_EXEC
 // When the statement has finished executing, retrieve the results.  
 ```  
   
- Enquanto uma função está em execução de forma assíncrona, o aplicativo pode chamar funções em quaisquer outras instruções. O aplicativo também pode chamar funções em qualquer conexão, exceto aquele associado à instrução assíncrona. Mas o aplicativo só pode chamar a função original e as funções a seguir (com o identificador de instrução ou sua conexão associada, o identificador de ambiente), após uma operação de instrução retornará SQL_STILL_EXECUTING:  
+ Embora uma função esteja sendo executada de forma assíncrona, o aplicativo pode chamar funções em quaisquer outras instruções. O aplicativo também pode chamar funções em qualquer conexão, exceto aquela associada à instrução assíncrona. Mas o aplicativo só pode chamar a função original e as funções a seguir (com o identificador de instrução ou sua conexão associada, identificador de ambiente), depois que uma operação de instrução retorna SQL_STILL_EXECUTING:  
   
 -   [SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)  
   
@@ -101,7 +101,7 @@ while ((rc=SQLExecDirect(hstmt1,"SELECT * FROM Orders",SQL_NTS))==SQL_STILL_EXEC
   
 -   [SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)  
   
- Se o aplicativo chamar qualquer outra função com a instrução assíncrona ou com a conexão associada a essa instrução, a função retornará SQLSTATE HY010 (função de erro de sequência), por exemplo.  
+ Se o aplicativo chamar qualquer outra função com a instrução assíncrona ou com a conexão associada a essa instrução, a função retornará SQLSTATE HY010 (erro de sequência de função), por exemplo.  
   
 ```  
 SQLHDBC       hdbc1, hdbc2;  
@@ -134,26 +134,26 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- Quando um aplicativo chama uma função para determinar se ele ainda está em execução assincronamente, ele deve usar o identificador de instrução original. Isso ocorre porque a execução assíncrona é rastreada em uma base por instrução. O aplicativo também deve fornecer valores válidos para os outros argumentos - os argumentos originais serão fazer - para cancelar a verificação no Gerenciador de Driver de erro. No entanto, depois que o driver verifica o identificador de instrução e determina que a instrução está em execução assíncrona, ele ignora todos os outros argumentos.  
+ Quando um aplicativo chama uma função para determinar se ele ainda está sendo executado de forma assíncrona, ele deve usar o identificador de instrução original. Isso ocorre porque a execução assíncrona é controlada por instrução. O aplicativo também deve fornecer valores válidos para os outros argumentos: os argumentos originais farão-para obter uma verificação de erro anterior no Gerenciador de driver. No entanto, depois que o driver verifica o identificador de instrução e determina que a instrução está sendo executada de forma assíncrona, ela ignora todos os outros argumentos.  
   
- Enquanto uma função está em execução assíncrona - ou seja, depois que ele tiver retornado SQL_STILL_EXECUTING e antes de retornar um código diferente – o aplicativo poderá cancelá-lo chamando **SQLCancel** ou **SQLCancelHandle** com o mesmo identificador de instrução. Isso não é garantido para cancelar a execução da função. Por exemplo, a função talvez já terminou. Além disso, o código retornado pelo **SQLCancel** ou **SQLCancelHandle** indica somente se a tentativa de cancelar a função foi bem-sucedida, não se ele realmente cancelados a função. Para determinar se a função foi cancelada, o aplicativo chama a função novamente. Se a função foi cancelada, ela retornará SQL_ERROR e SQLSTATE HY008 (operação cancelada). Se a função não tiver sido cancelada, ele retorna outro código, como SQL_SUCCESS, SQL_STILL_EXECUTING ou SQL_ERROR com SQLSTATE um diferente.  
+ Embora uma função esteja sendo executada de forma assíncrona, ou seja, após ela ter retornado SQL_STILL_EXECUTING e antes de retornar um código diferente, o aplicativo pode cancelá-lo chamando **SQLCancel** ou **SQLCancelHandle** com o mesmo identificador de instrução. Isso não é garantido para cancelar a execução da função. Por exemplo, a função pode já ter sido concluída. Além disso, o código retornado por **SQLCancel** ou **SQLCancelHandle** apenas indica se a tentativa de cancelar a função foi bem-sucedida, não se ela realmente cancelou a função. Para determinar se a função foi cancelada, o aplicativo chama a função novamente. Se a função foi cancelada, ela retorna SQL_ERROR e SQLSTATE HY008 (operação cancelada). Se a função não tiver sido cancelada, ela retornará outro código, como SQL_SUCCESS, SQL_STILL_EXECUTING ou SQL_ERROR com um SQLSTATE diferente.  
   
- Para desabilitar a execução assíncrona de uma instrução específica quando o driver dá suporte ao processamento assíncrono de nível de instrução, o aplicativo chama **SQLSetStmtAttr** o SQL_ATTR_ASYNC_ENABLE de atributo e o configura para SQL _ ASYNC_ENABLE_OFF. Se o driver dá suporte ao processamento assíncrono de nível de conexão, o aplicativo chama **SQLSetConnectAttr** para definir SQL_ATTR_ASYNC_ENABLE como SQL_ASYNC_ENABLE_OFF, que desabilita a execução assíncrona de todas as instruções sobre o conexão.  
+ Para desabilitar a execução assíncrona de uma instrução específica quando o driver dá suporte ao processamento assíncrono em nível de instrução, o aplicativo chama **SQLSetStmtAttr** com o atributo SQL_ATTR_ASYNC_ENABLE e o define como SQL_ASYNC_ENABLE_OFF. Se o driver oferecer suporte ao processamento assíncrono em nível de conexão, o aplicativo chamará **SQLSetConnectAttr** para definir SQL_ATTR_ASYNC_ENABLE como SQL_ASYNC_ENABLE_OFF, o que desabilita a execução assíncrona de todas as instruções na conexão.  
   
- O aplicativo deve processar os registros de diagnóstico no loop de repetição da função original. Se **SQLGetDiagField** ou **SQLGetDiagRec** é chamado quando uma função assíncrona está em execução, ele retornará a lista atual de registros de diagnóstico. Cada vez que a chamada de função original é repetida, ele limpa registros de diagnóstico anteriores.  
+ O aplicativo deve processar registros de diagnóstico no loop repetido da função original. Se **SQLGetDiagField** ou **SQLGetDiagRec** for chamado quando uma função assíncrona estiver em execução, ele retornará a lista atual de registros de diagnóstico. Cada vez que a chamada de função original é repetida, ela limpa os registros de diagnóstico anteriores.  
   
-## <a name="executing-connection-operations-asynchronously"></a>Executando operações de Conexão de forma assíncrona  
- Antes do ODBC 3.8, execução assíncrona foi permitida para operações relacionadas à instrução, como preparar, executar e buscar, bem como para operações de metadados de catálogo. A partir do ODBC 3.8, execução assíncrona também é possível que operações relacionadas à conexão, tal como se conectar, desconectar, commit e rollback.  
+## <a name="executing-connection-operations-asynchronously"></a>Executando operações de conexão de forma assíncrona  
+ Antes do ODBC 3,8, a execução assíncrona foi permitida para operações relacionadas à instrução, como preparar, executar e buscar, bem como para operações de metadados de catálogo. A partir do ODBC 3,8, a execução assíncrona também é possível para operações relacionadas à conexão, como conectar, desconectar, confirmar e reverter.  
   
- Para obter mais informações sobre o ODBC 3.8, consulte [o que há de novo no ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
+ Para obter mais informações sobre o ODBC 3,8, consulte [What ' s New in odbc 3,8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
   
- Executar operações de conexão de forma assíncrona é útil nos seguintes cenários:  
+ A execução de operações de conexão assincronamente é útil nos seguintes cenários:  
   
--   Quando um pequeno número de segmentos gerencia um grande número de dispositivos com as taxas de dados muito alta. Para maximizar a escalabilidade e capacidade de resposta é desejável para todas as operações ser assíncrona.  
+-   Quando um pequeno número de threads gerencia um grande número de dispositivos com taxas de dados muito altas. Para maximizar a capacidade de resposta e a escalabilidade, é desejável que todas as operações sejam assíncronas.  
   
--   Quando você quiser se sobrepor a operações de banco de dados em várias conexões para reduzir o tempo de transferência decorrido.  
+-   Quando você quiser sobrepor as operações de banco de dados em várias conexões para reduzir os tempos de transferência decorridos.  
   
--   Chamadas ODBC assíncronas eficientes e a capacidade de cancelar operações de conexão habilita um aplicativo permitir que o usuário cancele qualquer operação lenta sem ter de esperar tempos limites.  
+-   Chamadas ODBC assíncronas eficientes e a capacidade de cancelar operações de conexão permitem que um aplicativo permita que o usuário cancele qualquer operação lenta sem precisar aguardar os tempos limite.  
   
  As funções a seguir, que operam em identificadores de conexão, agora podem ser executadas de forma assíncrona:  
   
@@ -162,15 +162,15 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 |[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
 |[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
- Para determinar se um driver dá suporte a operações assíncronas dessas funções, um aplicativo chama **SQLGetInfo** com SQL_ASYNC_DBC_FUNCTIONS. SQL_ASYNC_DBC_CAPABLE será retornado se há suporte para operações assíncronas. SQL_ASYNC_DBC_NOT_CAPABLE será retornado se não há suporte para operações assíncronas.  
+ Para determinar se um driver dá suporte a operações assíncronas nessas funções, um aplicativo chama **SQLGetInfo** com SQL_ASYNC_DBC_FUNCTIONS. SQL_ASYNC_DBC_CAPABLE será retornado se houver suporte para operações assíncronas. SQL_ASYNC_DBC_NOT_CAPABLE será retornado se não houver suporte para operações assíncronas.  
   
- Para especificar que as funções executadas com uma conexão específica devem ser executadas de forma assíncrona, o aplicativo chama **SQLSetConnectAttr** e define o atributo SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE como SQL_ASYNC_DBC_ENABLE ON. Definir um atributo de conexão antes de estabelecer uma conexão sempre executa de forma síncrona. Além disso, a operação de definir a conexão atributo SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE com **SQLSetConnectAttr** sempre executa de forma síncrona.  
+ Para especificar que as funções executadas com uma conexão específica sejam executadas de forma assíncrona, o aplicativo chama **SQLSetConnectAttr** e define o atributo SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE como SQL_ASYNC_DBC_ENABLE_ON. Definir um atributo de conexão antes de estabelecer uma conexão sempre é executado de forma síncrona. Além disso, a operação de configuração do atributo de conexão SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE com **SQLSetConnectAttr** sempre é executada de forma síncrona.  
   
- Um aplicativo pode permitir que a operação assíncrona antes de fazer uma conexão. Porque o Gerenciador de Driver não pode determinar qual driver a ser usado antes de fazer uma conexão, o Gerenciador de Driver sempre retornará com êxito no **SQLSetConnectAttr**. No entanto, ele poderá falhar ao se conectar se o driver ODBC não dá suporte a operações assíncronas.  
+ Um aplicativo pode habilitar a operação assíncrona antes de fazer uma conexão. Como o Gerenciador de driver não pode determinar qual driver usar antes de fazer uma conexão, o Gerenciador de driver sempre retornará êxito em **SQLSetConnectAttr**. No entanto, ele poderá falhar ao se conectar se o driver ODBC não oferecer suporte a operações assíncronas.  
   
- Em geral, pode haver no máximo um função de execução de forma assíncrona associado com um identificador de conexão específica ou identificador de instrução. No entanto, um identificador de conexão pode ter mais de um identificador de instrução associado. Se não houver nenhuma operação assíncrona em execução no identificador de conexão, um identificador de instrução associado pode executar uma operação assíncrona. Da mesma forma, você pode ter uma operação assíncrona em um identificador de conexão se não houver nenhuma operação assíncrona em andamento em qualquer identificador de instrução associado. Uma tentativa de executar uma operação assíncrona usando um identificador que está executando uma operação assíncrona retornará HY010, "Erro de sequência de função".  
+ Em geral, pode haver no máximo uma função de execução assíncrona associada a um identificador de conexão ou identificador de instrução específico. No entanto, um identificador de conexão pode ter mais de um identificador de instrução associado. Se não houver nenhuma operação assíncrona em execução no identificador de conexão, um identificador de instrução associado poderá executar uma operação assíncrona. Da mesma forma, você pode ter uma operação assíncrona em um identificador de conexão se não houver operações assíncronas em andamento em qualquer identificador de instrução associado. Uma tentativa de executar uma operação assíncrona usando um identificador que está executando uma operação assíncrona, no momento, retornará HY010, "erro de sequência de função".  
   
- Se uma operação de conexão retornará SQL_STILL_EXECUTING, um aplicativo só pode chamar a função original e as funções a seguir para esse identificador de conexão:  
+ Se uma operação de conexão retornar SQL_STILL_EXECUTING, um aplicativo só poderá chamar a função original e as seguintes funções para esse identificador de conexão:  
   
 -   **SQLCancelHandle** (no identificador de conexão)  
   
@@ -178,9 +178,9 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 -   **SQLGetDiagRec**  
   
--   **Falha de SQLAllocHandle** (alocando ENV/DBC)  
+-   **SQLAllocHandle** (alocando env/DBC)  
   
--   **SQLAllocHandleStd** (alocando ENV/DBC)  
+-   **SQLAllocHandleStd** (alocando env/DBC)  
   
 -   **SQLGetEnvAttr**  
   
@@ -194,24 +194,24 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 -   **SQLGetFunctions**  
   
- O aplicativo deve processar os registros de diagnóstico no loop de repetição da função original. Se SQLGetDiagField ou SQLGetDiagRec é chamado quando uma função assíncrona está em execução, ele retornará a lista atual de registros de diagnóstico. Cada vez que a chamada de função original é repetida, ele limpa registros de diagnóstico anteriores.  
+ O aplicativo deve processar registros de diagnóstico no loop repetido da função original. Se SQLGetDiagField ou SQLGetDiagRec for chamado quando uma função assíncrona estiver em execução, ele retornará a lista atual de registros de diagnóstico. Cada vez que a chamada de função original é repetida, ela limpa os registros de diagnóstico anteriores.  
   
- Se uma conexão está sendo aberto ou fechado de forma assíncrona, a operação é concluída quando o aplicativo recebe SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO na chamada de função original.  
+ Se uma conexão estiver sendo aberta ou fechada de forma assíncrona, a operação será concluída quando o aplicativo receber SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO na chamada de função original.  
   
- Uma nova função foi adicionada ao ODBC 3.8 **SQLCancelHandle**. Essa função cancela as funções de seis conexão (**SQLBrowseConnect**, **SQLConnect**, **SQLDisconnect**, **SQLDriverConnect**, **SQLEndTran**, e **SQLSetConnectAttr**). Um aplicativo deve chamar **SQLGetFunctions** para determinar se o driver suporta **SQLCancelHandle**. Assim como acontece com **SQLCancel**, se **SQLCancelHandle** retornar com sucesso, isso não significa que a operação foi cancelada. Um aplicativo deve chamar a função original novamente para determinar se a operação foi cancelada. **SQLCancelHandle** lhe permite cancelar operações assíncronas em identificadores de instrução ou identificadores de conexão. Usando o **SQLCancelHandle** para cancelar uma operação em uma instrução de identificador é o mesmo que chamar **SQLCancel**.  
+ Uma nova função foi adicionada ao ODBC 3,8, **SQLCancelHandle**. Essa função cancela as seis funções de conexão (**SQLBrowseConnect**, **SQLConnect**, **SQLDisconnect**, **SQLDriverConnect**, **SQLEndTran**e **SQLSetConnectAttr**). Um aplicativo deve chamar **SQLGetFunctions** para determinar se o driver dá suporte a **SQLCancelHandle**. Assim como com **SQLCancel**, se **SQLCancelHandle** retornar Success, isso não significa que a operação foi cancelada. Um aplicativo deve chamar a função original novamente para determinar se a operação foi cancelada. **SQLCancelHandle** permite cancelar operações assíncronas em identificadores de conexão ou identificadores de instrução. O uso de **SQLCancelHandle** para cancelar uma operação em um identificador de instrução é o mesmo que chamar **SQLCancel**.  
   
- Não é necessário dar suporte a ambos **SQLCancelHandle** e operações de conexão assíncrona ao mesmo tempo. Um driver pode dar suporte a operações assíncronas de conexão, mas não **SQLCancelHandle**, ou vice-versa.  
+ Não é necessário dar suporte a operações de conexão assíncronas e **SQLCancelHandle** ao mesmo tempo. Um driver pode dar suporte A operações de conexão assíncronas, mas não **SQLCancelHandle**, nem vice-versa.  
   
- Operações de conexão assíncrona e **SQLCancelHandle** também pode ser usado por ODBC 3. x e os aplicativos ODBC 2. x com um driver ODBC 3.8 e o Gerenciador de Driver do ODBC 3.8. Para obter informações sobre como habilitar um aplicativo mais antigo usar novos recursos na versão mais recente do ODBC, consulte [matriz de compatibilidade](../../../odbc/reference/develop-app/compatibility-matrix.md).  
+ As operações de conexão assíncrona e **SQLCancelHandle** também podem ser usadas por aplicativos ODBC 3. x e ODBC 2. x com um driver ODBC 3,8 e o Gerenciador de driver ODBC 3,8. Para obter informações sobre como habilitar um aplicativo mais antigo para usar novos recursos na versão mais recente do ODBC, consulte [matriz de compatibilidade](../../../odbc/reference/develop-app/compatibility-matrix.md).  
   
 ### <a name="connection-pooling"></a>Pool de conexões  
- Sempre que o pool de conexão estiver habilitado, somente minimamente há suporte para operações assíncronas para estabelecer uma conexão (com **SQLConnect** e **SQLDriverConnect**) e fechando uma conexão com **SQLDisconnect**. Mas um aplicativo ainda deve ser capaz de lidar com o valor de retorno SQL_STILL_EXECUTING **SQLConnect**, **SQLDriverConnect**, e **SQLDisconnect**.  
+ Sempre que o pool de conexões é habilitado, as operações assíncronas são apenas mínimas suportadas para estabelecer uma conexão (com **SQLConnect** e **SQLDriverConnect**) e fechar uma conexão com **SQLDisconnect**. Mas um aplicativo ainda deve ser capaz de lidar com o valor de retorno de SQL_STILL_EXECUTING de **SQLConnect**, **SQLDriverConnect**e **SQLDisconnect**.  
   
- Quando o pooling de conexão está habilitado, **SQLEndTran** e **SQLSetConnectAttr** têm suporte para operações assíncronas.  
+ Quando o pool de conexões está habilitado, **SQLEndTran** e **SQLSetConnectAttr** têm suporte para operações assíncronas.  
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  O exemplo a seguir mostra como usar **SQLSetConnectAttr** para habilitar a execução assíncrona para funções relacionadas à conexão.  
   
 ### <a name="code"></a>Código  
@@ -265,8 +265,8 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Descrição  
- Este exemplo mostra operações de confirmação assíncrona. Operações de reversão também podem ser feitas dessa maneira.  
+### <a name="description"></a>DESCRIÇÃO  
+ Este exemplo mostra operações de confirmação assíncronas. As operações de reversão também podem ser feitas dessa maneira.  
   
 ### <a name="code"></a>Código  
   
@@ -294,5 +294,5 @@ BOOL AsyncCommit ()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Executando instruções ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)
+## <a name="see-also"></a>Consulte Também  
+ [Executar instruções (ODBC)](../../../odbc/reference/develop-app/executing-statements-odbc.md)

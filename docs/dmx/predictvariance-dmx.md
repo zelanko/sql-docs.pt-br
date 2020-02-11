@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83bcd95d6eb946d15884d57550b826bc7379fb64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041687"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
@@ -27,11 +27,11 @@ ms.locfileid: "68041687"
 PredictVariance(<scalar column reference>)  
 ```  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  Uma coluna escalar.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- Um valor escalar do tipo especificado pelo  *\<referência de coluna escalar >* .  
+ Um valor escalar do tipo especificado pela * \<referência de coluna escalar>*.  
   
 ## <a name="remarks"></a>Comentários  
  Se a referência de coluna for discreta, **PredictVariance** retornará 0 porque a variação não pode ser calculada a partir de valores discretos.  
@@ -53,9 +53,9 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

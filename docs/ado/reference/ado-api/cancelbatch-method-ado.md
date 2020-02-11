@@ -17,14 +17,14 @@ ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1c6a9f57d30b47641b9280e25a97336c28b0496
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920167"
 ---
 # <a name="cancelbatch-method-ado"></a>Método CancelBatch (ADO)
-Cancela uma atualização em lotes pendentes.  
+Cancela uma atualização de lote pendente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,25 +33,25 @@ Cancela uma atualização em lotes pendentes.
 recordset.CancelBatchAffectRecords  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *AffectRecords*  
- Opcional. Uma [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valor que indica quantos registros o **CancelBatch** método afetará.  
+ Opcional. Um valor [AffectEnum](../../../ado/reference/ado-api/affectenum.md) que indica quantos registros o método **CancelBatch** afetará.  
   
 ## <a name="remarks"></a>Comentários  
- Use o **CancelBatch** método Cancelar todas as atualizações pendentes em um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) no modo de atualização em lotes. Se o **conjunto de registros** está no modo de atualização imediata, chamando **CancelBatch** sem **adAffectCurrent** gera um erro.  
+ Use o método **CancelBatch** para cancelar todas as atualizações pendentes em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) no modo de atualização do lote. Se o **conjunto de registros** estiver no modo de atualização imediata, chamar **CancelBatch** sem **adAffectCurrent** gerará um erro.  
   
- Se você estiver editando o registro atual ou se estiver adicionando um novo registro, quando você chama **CancelBatch**, ADO primeiro chama o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método cancelar qualquer armazenado em cache as alterações. Depois disso, todas as alterações pendentes a **Recordset** são canceladas.  
+ Se você estiver editando o registro atual ou estiver adicionando um novo registro ao chamar **CancelBatch**, o ADO primeiro chama o método [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) para cancelar as alterações em cache. Depois disso, todas as alterações pendentes no **conjunto de registros** serão canceladas.  
   
- O registro atual pode ser indeterminável após um **CancelBatch** chamar, especialmente se você estava no processo de adicionar um novo registro. Por esse motivo, é recomendável definir a posição do registro atual em um local conhecido na **conjunto de registros** depois que o **CancelBatch** chamar. Por exemplo, chamar o [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) método.  
+ O registro atual pode ser interminável após uma chamada **CancelBatch** , especialmente se você estivesse no processo de adicionar um novo registro. Por esse motivo, é prudente definir a posição do registro atual como um local conhecido no conjunto de **registros** após a chamada **CancelBatch** . Por exemplo, chame o método [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
   
- Se a tentativa de cancelar as atualizações pendentes falhar devido a um conflito com os dados subjacentes (por exemplo, se um registro tiver sido excluído por outro usuário), o provedor retornará avisos para o [erros](../../../ado/reference/ado-api/errors-collection-ado.md) coleção, mas não para execução do programa. Um erro de tempo de execução ocorre somente se houver conflitos em todos os registros solicitados. Use o [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade (**adFilterAffectedRecords**) e o [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriedade para localizar registros com conflitos.  
+ Se a tentativa de cancelar as atualizações pendentes falhar devido a um conflito com os dados subjacentes (por exemplo, se um registro tiver sido excluído por outro usuário), o provedor retornará avisos para a coleção de [erros](../../../ado/reference/ado-api/errors-collection-ado.md) , mas não interromperá a execução do programa. Um erro de tempo de execução ocorrerá somente se houver conflitos em todos os registros solicitados. Use a propriedade [Filter](../../../ado/reference/ado-api/filter-property.md) (**adFilterAffectedRecords**) e a propriedade [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) para localizar registros com conflitos.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo de UpdateBatch e CancelBatch exemplo dos métodos (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
- [Exemplo de UpdateBatch e CancelBatch exemplo dos métodos (VC + +)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo dos métodos UpdateBatch e CancelBatch (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
+ [Exemplo dos métodos UpdateBatch e CancelBatch (VC + +)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [Método Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Método Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [Método CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   

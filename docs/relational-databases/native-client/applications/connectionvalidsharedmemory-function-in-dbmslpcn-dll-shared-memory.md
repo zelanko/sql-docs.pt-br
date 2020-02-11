@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9c64fe0020ca6c406cadd5b5b71ade1641919a81
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244197"
 ---
 # <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>Função ConnectionValidSharedMemory na memória compartilhada dbmslpcn.dll
@@ -28,14 +28,14 @@ ms.locfileid: "75244197"
 BOOL ConnectionValidSharedMemory(char * szServerName);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *szServerName*  
   
 -   Tipo: **Char\* **  
   
 -   O nome do SQL Server.  
   
-## <a name="return-value"></a>Retornar valor  
+## <a name="return-value"></a>Valor retornado  
  Tipo: **bool**  
   
  Retornará 0 se não for válido; caso contrário, retorna zero.  

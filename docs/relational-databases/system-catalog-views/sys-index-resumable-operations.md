@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73980300"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73980300"
 **Sys. index_resumable_operations** é uma exibição do sistema que monitora e verifica o status de execução atual para recompilação ou criação de índice retomável.  
 **Aplica-se a**: SQL Server (2017 e mais recente) e banco de dados SQL do Azure
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto ao qual este índice pertence (não permite valor nulo).|  
 |**index_id**|**int**|ID do índice (não permite valor nulo). **index_id** é exclusivo somente dentro do objeto.|
@@ -40,8 +40,8 @@ ms.locfileid: "73980300"
 |**sql_text**|**nvarchar(max)**|Texto da instrução T-SQL DDL|
 |**last_max_dop**|**smallint**|Última MAX_DOP usado (padrão = 0)|
 |**partition_number**|**int**|Número da partição dentro do índice ou heap de propriedade. Para tabelas e índices não particionados ou, caso todas as partições estejam sendo recriadas, o valor dessa coluna é NULL.|
-|**state**|**tinyint**|Estado operacional do índice retomável:<br /><br />0 = em execução<br /><br />1 = pausar|
-|**state_desc**|**nvarchar(60)**|Descrição do estado operacional do índice retomável (em execução ou em pausa)|  
+|**status**|**tinyint**|Estado operacional do índice retomável:<br /><br />0 = em execução<br /><br />1 = pausar|
+|**state_desc**|**nvarchar (60)**|Descrição do estado operacional do índice retomável (em execução ou em pausa)|  
 |**start_time**|**datetime**|Hora de início da operação de índice (não permite valor nulo)|
 |**last_pause_time**|**DataTime**| Tempo da última pausa da operação de índice (anulável). NULL se a operação estiver em execução e nunca for pausada.|
 |**total_execution_time**|**int**|Tempo de execução total de tempo de início em minutos (não permite valor nulo)|
@@ -50,7 +50,7 @@ ms.locfileid: "73980300"
 
 ## <a name="permissions"></a>Permissões
 
-[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="example"></a>Exemplo
 
@@ -60,7 +60,7 @@ ms.locfileid: "73980300"
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)

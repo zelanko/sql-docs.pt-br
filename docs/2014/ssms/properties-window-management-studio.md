@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823783"
 ---
 # <a name="properties-window-management-studio"></a>Janela de Propriedades (Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "62823783"
   
 ## <a name="options"></a>Opções  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Nome do objeto**|Relaciona o objeto ou os objetos atuais selecionados. Somente objetos do editor ou designer ativo ficam visíveis.|  
 |**Categorizado**|Relaciona todas as propriedades e os valores de propriedade do objeto selecionado, por categoria. Você pode recolher uma categoria para reduzir o número de propriedades visíveis. Ao expandir ou recolher uma categoria, você vê um sinal de mais (+) ou de menos (-) à esquerda do nome da categoria. As categorias são listadas em ordem alfabética.|  
@@ -37,7 +37,7 @@ ms.locfileid: "62823783"
 |**Propriedades**|Exibe as propriedades de um objeto.|  
 |**Painel de descrição**|O painel de descrição é exibido na parte inferior da janela Propriedades e mostra o tipo de propriedade e uma descrição curta da propriedade. Você pode ativar e desativar a descrição da propriedade usando o comando **Descrição** no menu de atalho.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elementos gerais da interface do usuário](general-user-interface-elements.md)  
   
   

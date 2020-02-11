@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811227"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instâncias do mecanismo de banco de dados (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62811227"
 |Descreve como executar tarefas de configuração de rede de cliente como configurar protocolos de cliente e criar ou excluir um Alias de Servidor.|[Configuração de rede de cliente](client-network-configuration.md)|  
 |Descreve os editores [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que podem ser usados para criar, depurar e executar scripts tais como scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Também descreve como codificar scripts do Windows PowerShell para trabalhar com componentes do SQL Server.|[Geração de scripts do mecanismo de banco de dados](../../relational-databases/scripting/database-engine-scripting.md)|  
 |Descreve como usar planos de manutenção para especificar um fluxo de trabalho de tarefas de administração comum para uma instância. Fluxos de trabalho incluem tarefas como backup de bancos de dados e atualização de estatísticas para melhorar o desempenho.|[Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
-|Descreve como usar o administrador de recursos para gerenciar o consumo de recursos e cargas de trabalho, especificando limites para a quantidade de CPU e memória que solicitações de aplicativo podem usar.|[Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)|  
+|Descreve como usar o administrador de recursos para gerenciar o consumo de recursos e cargas de trabalho, especificando limites para a quantidade de CPU e memória que solicitações de aplicativo podem usar.|[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)|  
 |Descreve como aplicativos de banco de dados podem usar o email do banco de dados para enviar mensagens de email do [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Database Mail](../../relational-databases/database-mail/database-mail.md)|  
 |Descreve como usar eventos estendidos para capturar dados de desempenho para criar linhas de base de desempenho ou diagnosticar problemas de desempenho. Eventos estendidos são um sistema leve e altamente escalonável de coleta de dados de desempenho.|[Eventos estendidos](../../relational-databases/extended-events/extended-events.md)|  
 |Descreve como usar o Rastreamento do SQL para criar um sistema personalizado para capturar e registrar eventos no [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)|  
@@ -51,7 +51,7 @@ ms.locfileid: "62811227"
 |Descreve os recursos do Service Broker para mensagens e enfileiramento de aplicativos e fornece ponteiros à documentação do Service Broker.|[Service Broker](sql-server-service-broker.md)|  
 |Descreve como a extensão do pool de buffers pode ser usada para fornecer integração consistente de armazenamento de acesso aleatório (unidades de estado sólido) não volátil com o pool de buffers do Mecanismo de Banco de Dados para melhor significativamente a taxa de transferência de E/S.|[Arquivo de extensão do pool de buffers](buffer-pool-extension.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicativo sqlservr](../../tools/sqlservr-application.md)   
  [Recursos de banco de dados](../../relational-databases/database-features.md)   
  [Recursos entre instâncias do Mecanismo de Banco de Dados](../database-engine-cross-instance-features.md)  

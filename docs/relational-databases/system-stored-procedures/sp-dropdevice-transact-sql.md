@@ -19,18 +19,18 @@ ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 998794fd2e5fe5521587ebbb2a88c61c80cff39e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927822"
 ---
-# <a name="spdropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
+# <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Remove um dispositivo de banco de dados ou o dispositivo de backup de uma instância das [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)], excluindo a entrada de **sysdevices**.  
+  Remove um dispositivo de banco de dados ou um dispositivo de backup [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)]de uma instância do, excluindo a entrada de **Master. dbo. sysdevices**.  
    
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,9 +41,9 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @logicalname = ] 'device'` É o nome lógico do dispositivo de banco de dados ou do dispositivo de backup, conforme listado em **master.dbo.sysdevices.name**. *dispositivo* está **sysname**, sem padrão.  
+`[ @logicalname = ] 'device'`É o nome lógico do dispositivo de banco de dados ou dispositivo de backup, conforme listado em **Master.dbo.sysdevices.Name**. o *dispositivo* é **sysname**, sem padrão.  
   
-`[ @delfile = ] 'delfile'` Especifica se o arquivo de dispositivo de backup físico deve ser excluído. *delfile* está **varchar(7)** . Se for especificado como **DELFILE**, o arquivo de disco de dispositivo de backup físico é excluído.  
+`[ @delfile = ] 'delfile'`Especifica se o arquivo do dispositivo de backup físico deve ser excluído. *parâmetro delfile* é **varchar (7)**. Se especificado como **parâmetro delfile**, o arquivo de disco do dispositivo de backup físico será excluído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -52,7 +52,7 @@ sp_dropdevice [ @logicalname = ] 'device'
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- **sp_dropdevice** não pode ser usado dentro de uma transação.  
+ **sp_dropdevice** não pode ser usada dentro de uma transação.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de servidor fixa **diskadmin** .  
@@ -66,10 +66,10 @@ EXEC sp_dropdevice 'tapedump1';
   
 ## <a name="see-also"></a>Confira também  
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [Excluir um dispositivo de Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
+ [Excluir um dispositivo de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
- [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdevice-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpdb](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpdevice](../../relational-databases/system-stored-procedures/sp-helpdevice-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

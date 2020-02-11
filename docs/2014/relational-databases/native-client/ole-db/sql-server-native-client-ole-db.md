@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033549"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
@@ -30,7 +30,7 @@ ms.locfileid: "63033549"
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornece suporte de OLE DB a aplicativos que se conectam ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client é um provedor compatível com 2.0 de versão do OLE DB.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo é um provedor compatível com OLE DB versão 2,0.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -50,29 +50,29 @@ ms.locfileid: "63033549"
   
 -   [Tipos de dados &#40;OLE DB&#41;](../../native-client-ole-db-data-types/data-types-ole-db.md)  
   
--   [Suporte ao conjunto de linhas de esquema &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+-   [Suporte a conjunto de linhas de esquema &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
 -   [Parâmetros com valor de tabela &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
 -   [Melhorias de data e hora &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
--   [Tipos CLR grandes definidos pelo usuário &#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
+-   [Tipos de CLR grandes definidos pelo usuário &#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
   
 -   [Suporte a FILESTREAM &#40;OLE DB&#41;](filestream-support-ole-db.md)  
   
--   [Transactions](../../native-client-ole-db-transactions/transactions.md)  
+-   [Transações](../../native-client-ole-db-transactions/transactions.md)  
   
--   [Erros](../../native-client-ole-db-errors/errors.md)  
+-   [Errors](../../native-client-ole-db-errors/errors.md)  
   
 -   [SPNs &#40;Nomes da Entidade de Serviço&#41; em conexões de cliente &#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [Suporte a colunas esparsas &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
+-   [As colunas esparsas dão suporte a &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
   
--   [SQL Server Native Client &#40;OLE DB&#41; referência](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+-   [SQL Server Native Client &#40;OLE DB referência de&#41;](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
 -   [Tópicos de instruções do OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Programação do SQL Server Native Client](../sql-server-native-client-programming.md)  
   
   

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242063"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Tutoriais para SQL Server 2014
@@ -41,12 +41,12 @@ ms.locfileid: "75242063"
 ## <a name="in-this-section"></a>Nesta seção  
  Os tutoriais estão disponíveis para essas tecnologias do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] .  
   
-|Tecnologia|Descrição|  
+|Tecnologia|DESCRIÇÃO|  
 |----------------|-----------------|  
 |[Tutoriais de Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Saiba como desenvolver e implantar modelos de tabela ou multidimensionais do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Saiba também como usar ferramentas como o PowerPivot para analisar os dados nos modelos.|  
-|[Reporting Services tutoriais &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprender a criar relatórios e assinaturas básicos.|  
-|[Tutoriais de Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a criar e implantar pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
-|[Tutoriais de Mecanismo de Banco de Dados](../relational-databases/database-engine-tutorials.md)|Saiba como conectar-se a uma instância do mecanismo de banco de dados e, em seguida compilar e executar instruções Transact-SQL.|  
+|[Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprender a criar relatórios e assinaturas básicos.|  
+|[Tutoriais do Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a criar e implantar pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
+|[Tutoriais do Mecanismo de Banco de Dados](../relational-databases/database-engine-tutorials.md)|Saiba como conectar-se a uma instância do mecanismo de banco de dados e, em seguida compilar e executar instruções Transact-SQL.|  
 |[Tutoriais de replicação](../relational-databases/replication/replication-tutorials.md)|Saiba como configurar e executar topologias de replicação usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[Tutoriais de gerenciamento de informações empresariais](../../2014/tutorials/enterprise-information-management-tutorials.md)|Saiba como gerenciar as informações em uma empresa usando tecnologias do Microsoft EIM.|  
+|[Tutoriais de Gerenciamento de Informações da Empresa](../../2014/tutorials/enterprise-information-management-tutorials.md)|Saiba como gerenciar as informações em uma empresa usando tecnologias do Microsoft EIM.|  
   

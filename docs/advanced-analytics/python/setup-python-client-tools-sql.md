@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727524"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurar um cliente de ciência de dados para desenvolvimento em Python nos Serviços de Machine Learning do SQL Server
@@ -258,7 +258,7 @@ A captura de tela a seguir mostra a entrada e a saída de gráfico de dispersão
 
 Já que os desenvolvedores muitas vezes trabalham com várias versões do Python, a instalação não adiciona o Python ao seu PATH. Para usar o executável do Python e as bibliotecas instaladas juntamente com a instalação principal, vincule o IDE a **Python.exe** no caminho que também fornece **revoscalepy** e **microsoftml**. 
 
-### <a name="command-line"></a>Linha de Comando
+### <a name="command-line"></a>Linha de comando
 
 Quando você executa **Python.exe** de C:\Program Files\Microsoft\PyForMLS (ou qualquer localização especificada para a instalação da biblioteca de clientes do Python), você tem acesso à distribuição completa do Anaconda e aos módulos do Microsoft Python, **revoscalepy** e **microsoftml**.
 

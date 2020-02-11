@@ -1,5 +1,5 @@
 ---
-title: Classificado colunas (mineração de dados) | Microsoft Docs
+title: Colunas classificadas (mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085692"
 ---
 # <a name="classified-columns-data-mining"></a>Colunas classificadas [mineração de dados]
@@ -40,10 +40,10 @@ ms.locfileid: "66085692"
   
  A lista a seguir descreve os tipos de conteúdo para os quais o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte para colunas classificadas.  
   
- **PROBABILITY**  
+ **PROBABILIDADE**  
  O valor na coluna é a probabilidade do valor associado e é um número entre 0 e 1.  
   
- **VARIANCE**  
+ **VARIA**  
  O valor na coluna é a variância do valor associado.  
   
  **STDEV**  
@@ -58,9 +58,9 @@ ms.locfileid: "66085692"
  **SUPPORT**  
  O valor na coluna é o peso ou o fator de replicação do caso do valor associado.  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de conteúdo &#40;Data Mining&#41;](content-types-data-mining.md)   
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tipos de dados &#40;Mineração de dados&#41;](data-types-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tipos de conteúdo &#40;mineração de dados&#41;](content-types-data-mining.md)   
+ [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Tipos de dados &#40;mineração de dados&#41;](data-types-data-mining.md)  
   
   

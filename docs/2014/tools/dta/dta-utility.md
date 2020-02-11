@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670684"
 ---
 # <a name="dta-utility"></a>utilitário dta
@@ -77,8 +77,8 @@ ms.locfileid: "62670684"
  **-?**  
  Exibe informações de uso.  
   
- **-A** _time_for_tuning_in_minutes_  
- Especifica o prazo de ajuste em minutos. O**dta** usa a quantidade especificada de tempo para ajustar a carga de trabalho e gerar um script com as mudanças de design físico recomendadas. Por padrão, o **dta** assume um tempo de ajuste de 8 horas. Especificar 0 permite um tempo de ajuste ilimitado. O**dta** pode terminar o ajuste da carga de trabalho inteira antes que o prazo expire. No entanto, para garantir que a carga de trabalho inteira seja ajustada, é aconselhável que você especifique um tempo de ajuste ilimitado (-A 0).  
+ **-Um** _time_for_tuning_in_minutes_  
+ Especifica o prazo de ajuste em minutos. o **DTA** usa a quantidade de tempo especificada para ajustar a carga de trabalho e gerar um script com as alterações de design físico recomendadas. Por padrão, o **dta** assume um tempo de ajuste de 8 horas. Especificar 0 permite um tempo de ajuste ilimitado. o **DTA** pode terminar de ajustar toda a carga de trabalho antes que o limite de tempo expire. No entanto, para garantir que a carga de trabalho inteira seja ajustada, é aconselhável que você especifique um tempo de ajuste ilimitado (-A 0).  
   
  **-a**  
  Ajusta a carga de trabalho e aplica a recomendação sem uma solicitação.  
@@ -96,7 +96,7 @@ ms.locfileid: "62670684"
  Especifica o número máximo de colunas nos índices proposto por **dta** . O valor máximo é 1024. Por padrão, esse argumento é definido como 16.  
   
  **-c** _max_key_columns_in_index_  
- Especifica o número máximo de colunas principais nos índices proposto por **dta** . O valor padrão é 16, o valor máximo permitido. O**dta** também considera a criação de índices com colunas incluídas. Os índices recomendados com colunas incluídas podem exceder o número de colunas especificado neste argumento.  
+ Especifica o número máximo de colunas principais nos índices proposto por **dta** . O valor padrão é 16, o valor máximo permitido. o **DTA** também considera a criação de índices com colunas incluídas. Os índices recomendados com colunas incluídas podem exceder o número de colunas especificado neste argumento.  
   
  **-D** _database_name_  
  Especifica o nome de cada banco de dados que será ajustado. O primeiro banco de dados é o banco de dados padrão. É possível especificar bancos de dados múltiplos separando os nomes do banco de dados com vírgulas, por exemplo:  
@@ -134,7 +134,7 @@ dta -d AdventureWorks2012 ...
   
  Se forem especificados vários nomes de banco de dados, **dta** retornará um erro. O argumento **-d** é opcional.  
   
- Se você estiver usando um arquivo de entrada XML, você pode especificar o primeiro banco de dados ao qual **dta** conecta-se usando o `DatabaseToConnect` elemento que está localizado sob o `TuningOptions` elemento. Para obter mais informações, consulte [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Se você estiver usando um arquivo de entrada XML, poderá especificar o primeiro banco de dados ao qual o **DTA** se `DatabaseToConnect` conecta usando o elemento que está `TuningOptions` localizado sob o elemento. Para obter mais informações, consulte [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  Se você estiver ajustando apenas um banco de dados, o argumento **-d** fornecerá uma funcionalidade que é semelhante ao argumento **-d** no utilitário **sqlcmd** , mas não executará a instrução USE *database_name* . Para saber mais, confira [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -148,9 +148,9 @@ dta -d AdventureWorks2012 ...
   
 |Parâmetro|Valor padrão|  
 |---------------|-------------------|  
-|*database_name*|*nome_do_banco_de_dados* especificado com a opção **-D**|  
+|*database_name*|*database_name* especificado com a opção **-D**|  
 |*owner_name*|**dbo**<br /><br /> Observação: *owner_name* deve ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e retornará um erro.|  
-|*table_name*|None|  
+|*table_name*|Nenhum|  
   
  Se um arquivo for usado, especifique .xml como sua extensão. Por exemplo, TuningLog.xml.  
   
@@ -161,22 +161,22 @@ dta -d AdventureWorks2012 ...
  Permite que **dta** substitua um arquivo de saída existente. Se um arquivo de saída com o mesmo nome já existir e **-F** não for especificado, **dta**retornará um erro. Você pode usar **-F** com **-of**, **-or**ou **-ox**.  
   
  **-fa** _physical_design_structures_to_add_  
- Especifica que tipos de estruturas de design físico **dta** deve incluir na recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento. Quando nenhum valor for especificado, **dta** usa o padrão **-fa**`IDX`.  
+ Especifica que tipos de estruturas de design físico **dta** deve incluir na recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento. Quando nenhum valor é especificado, o **DTA** usa o padrão **-FA**`IDX`.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |IDX_IV|Índices e exibições indexadas.|  
 |IDX|Somente índices.|  
 |IV|Somente exibições indexadas.|  
 |NCL_IDX|Somente índices não clusterizados|  
   
- **-fi**  
+ **-Fi**  
  Especifica que os índices filtrados serão considerados em novas recomendações. Para saber mais, confira [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **-fk** _keep_existing_option_  
  Especifica quais estruturas de design físico **dta** deve reter ao gerar sua recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Nenhuma|Nenhuma estrutura existente|  
 |ALL|Todas as estruturas existentes|  
@@ -187,13 +187,13 @@ dta -d AdventureWorks2012 ...
  **-fp** _partitioning_strategy_  
  Especifica se as novas estruturas de design físico (índices e exibições indexadas) propostas por **dta** devem ser particionadas e como particioná-las. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Nenhuma|Nenhum particionamento|  
 |FULL|Particionamento completo (escolha para melhorar o desempenho).|  
 |ALIGNED|Somente particionamento alinhado (escolha para melhorar a capacidade de gerenciamento)|  
   
- ALIGNED significa que, na recomendação gerada por **dta** , todo índice proposto é particionado exatamente do mesmo modo que a tabela subjacente para a qual o índice foi definido. Índices não clusterizados em uma exibição indexada são alinhados com a exibição indexada. Só um valor pode ser especificado para esse argumento. O padrão é **-fp**`NONE`.  
+ ALIGNED significa que, na recomendação gerada por **dta** , todo índice proposto é particionado exatamente do mesmo modo que a tabela subjacente para a qual o índice foi definido. Índices não clusterizados em uma exibição indexada são alinhados com a exibição indexada. Só um valor pode ser especificado para esse argumento. O padrão é **-FP**`NONE`.  
   
  **-fx** _drop_only_mode_  
  Especifica que **dta** só considera a remoção das estruturas de design físico existentes. Nenhuma estrutura de design físico nova é considerada. Quando esta opção é especificada, o **dta** avalia a utilidade de estruturas de design físico existentes e recomenda descartar as estruturas raramente usadas. Este argumento não leva nenhum valor. Não pode ser usado com os argumentos **-fa**, **-fp**ou **-fk ALL**  
@@ -207,17 +207,17 @@ dta -d AdventureWorks2012 ...
  **-ipf**  
  Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para todos os bancos de dados são analisados. Esse valor pode ser alterado usando a opção **-n**.  
   
- **-if** _workload_file_  
+ **-se** _workload_file_  
  Especifica o caminho e o nome do arquivo de carga de trabalho a ser usado como entrada para ajuste. O arquivo deve estar em um destes formatos: .trc (arquivo de rastreamento do SQL Server Profiler), .sql (arquivo de SQL) ou .log (arquivo de rastreamento do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Um arquivo de carga de trabalho ou uma tabela de carga de trabalho deve ser especificada.  
   
- **-it** _workload_trace_table_name_  
- Especifica o nome de uma tabela que contém o rastreamento de carga de trabalho para ajuste. O nome é especificado no formato: [*database_name*] **.** [*owner_name*] **.** _table_name_.  
+ **-** _workload_trace_table_name_  
+ Especifica o nome de uma tabela que contém o rastreamento de carga de trabalho para ajuste. O nome é especificado no formato: [*database_name*]**.**[*owner_name*]**.**_table_name_.  
   
  A tabela a seguir mostra os valores padrão de cada um:  
   
 |Parâmetro|Valor padrão|  
 |---------------|-------------------|  
-|*database_name*|*nome_do_banco_de_dados* especificado com a opção **-D**.|  
+|*database_name*|*database_name* especificado com **a opção-D** .|  
 |*owner_name*|**dbo**.|  
 |*table_name*|Nenhum.|  
   
@@ -233,10 +233,10 @@ dta -d AdventureWorks2012 ...
  **-N** _online_option_  
  Especifica se são criadas estruturas de design físico online. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |OFF|Nenhuma estrutura de design físico recomendada pode ser criada online.|  
-|ON|Todas as estruturas de design físico recomendadas podem ser criadas online.|  
+|ATIVADO|Todas as estruturas de design físico recomendadas podem ser criadas online.|  
 |MIXED|O Orientador de Otimização do Mecanismo de Banco de Dados tenta recomendar estruturas de design físico que podem ser criadas online quando possível.|  
   
  Se forem criados índices online, ONLINE = ON será anexado à definição de objeto.  
@@ -250,12 +250,12 @@ dta -n number_of_events -A 0
   
  Nessecaso, é importante especificar um tempo de ajuste ilimitado (`-A 0`). Caso contrário, o Orientador de Otimização do Mecanismo de Banco de Dados assume, por padrão, um tempo de ajuste de 8 horas.  
   
- **-of** _output_script_file_name_  
+ **-de** _output_script_file_name_  
  Especifica que **dta** grava a recomendação como um script [!INCLUDE[tsql](../../includes/tsql-md.md)] no nome de arquivo e destino especificados.  
   
  Você pode usar **-F** com essa opção. Verifique se o nome de arquivo é exclusivo, especialmente se você também estiver usando **-or** e **-ox**.  
   
- **-or** _output_xml_report_file_name_  
+ **-ou** _output_xml_report_file_name_  
  Especifica que **dta** grava a recomendação em um relatório de saída em XML. Se um nome de arquivo for fornecido, as recomendações serão gravadas nesse destino. Caso contrário, o **dta** usa o nome de sessão para gerar o nome de arquivo e grava-o no diretório atual.  
   
  Você pode usar **-F** com essa opção. Verifique se o nome de arquivo é exclusivo, especialmente se você também estiver usando **-of** e **-ox**.  
@@ -265,7 +265,7 @@ dta -n number_of_events -A 0
   
  Você pode usar **-F** com essa opção. Verifique se o nome de arquivo é exclusivo, especialmente se você também estiver usando **-of** e **-or**.  
   
- **-P** _password_  
+ **-P** _senha_  
  Especifica a senha para a ID de logon. Se essa opção não for usada, o **dta** solicitará a senha.  
   
  **-q**  
@@ -310,20 +310,20 @@ dta -n number_of_events -A 0
   
  Este é o formato de arquivo para *table_list_file*:  
   
- *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
+ *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
   
- *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
+ *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
   
- *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
+ *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
   
- Esse argumento é uma alternativa à inserção de uma lista de tabela no prompt de comando ( **-Tl**). Não use um arquivo de lista de tabela ( **-Tf**) se você estiver usando **-Tl**. Se ambos os argumentos forem usados, o **dta** falhará e retornará um erro.  
+ Esse argumento é uma alternativa à inserção de uma lista de tabela no prompt de comando (**-Tl**). Não use um arquivo de lista de tabela (**-Tf**) se você estiver usando **-Tl**. Se ambos os argumentos forem usados, o **dta** falhará e retornará um erro.  
   
  Se os argumentos **-Tf** e **-Tl** forem omitidos, todas as tabelas de usuário nos bancos de dados especificados serão consideradas para o ajuste.  
   
  **-Tl** _table_list_  
  Especifica ao prompt de comando uma lista de tabelas a serem ajustadas. Coloque vírgulas entre os nomes de tabela para separá-los. Se apenas um banco de dados for especificado com o argumento **-D** , os nomes de tabela não precisarão ser qualificados com um nome de banco de dados. Caso contrário, o nome totalmente qualificado no formato: *database_name.schema_name.table_name* será obrigatório para cada tabela.  
   
- Esse argumento é uma alternativa ao uso de um arquivo de lista de tabela ( **-Tf**). Se **-Tl** e **-Tf** forem usados, **dta** falhará e retornará um erro.  
+ Esse argumento é uma alternativa ao uso de um arquivo de lista de tabela (**-Tf**). Se **-Tl** e **-Tf** forem usados, **dta** falhará e retornará um erro.  
   
  **-U** _login_id_  
  Especifica a ID de logon usada para conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -338,15 +338,15 @@ dta -n number_of_events -A 0
  Pressione CTRL+C uma vez para parar a sessão de ajuste e gerar recomendações com base na análise do **dta** concluída até este ponto. Você será solicitado a indicar se deseja ou não gerar recomendações. Pressione CTRL+C novamente para parar a sessão de ajuste sem gerar recomendações.  
   
 ## <a name="examples"></a>Exemplos  
- **A. Ajustar uma carga de trabalho que inclui índices e exibições indexadas em sua recomendação**  
+ **A. Ajuste uma carga de trabalho que inclui índices e exibições indexadas em sua recomendação**  
   
- Esse exemplo usa uma conexão segura (`-E`) para se conectar ao banco de dados **tpcd1G** no MyServer para analisar uma carga de trabalho e criar recomendações. Grava a saída em um arquivo de script nomeado script.sql. Se o script.sql já existir, **dta** substituirá o arquivo porque o argumento `-F` foi especificado. A sessão de ajuste é executada por um tempo ilimitado para garantir uma análise completa da carga de trabalho (`-A 0`). A recomendação deve fornecer uma melhoria mínima de 5% (`-m 5`). **dta** deve incluir índices e exibições indexadas em sua recomendação final (`-fa IDX_IV`).  
+ Esse exemplo usa uma conexão segura (`-E`) para se conectar ao banco de dados **tpcd1G** no MyServer para analisar uma carga de trabalho e criar recomendações. Grava a saída em um arquivo de script nomeado script.sql. Se o script.sql já existir, **dta** substituirá o arquivo porque o argumento `-F` foi especificado. A sessão de ajuste é executada por um tempo ilimitado para garantir uma análise completa da carga de trabalho (`-A 0`). A recomendação deve fornecer uma melhoria mínima de 5% (`-m 5`). o **DTA** deve incluir índices e exibições indexadas em sua`-fa IDX_IV`recomendação final ().  
   
 ```  
 dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
- **B. Limitar o uso do disco**  
+ **B. Limita o uso de disco**  
   
  Esse exemplo limita o tamanho de banco de dados total, que inclui os dados brutos e os índices adicionais, a 3 gigabytes (GB) (`-B 3000`) e direciona a saída para d:\result_dir\script1.sql. Ele é executado por no máximo 1 hora (`-A 60`).  
   
@@ -354,7 +354,7 @@ dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX
 dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
- **C. Limitar o número de consultas ajustadas**  
+ **C. Limita o número de consultas de ajuste**  
   
  Esse exemplo limita o número de consultas lidas do arquivo orders_wkld.sql a um máximo de 10 (`-n 10`) e é executado por 15 minutos (`-A 15`), o que ocorrer primeiro. Para garantir que todas as 10 consultas sejam ajustadas, especifique um tempo de ajuste ilimitado com `-A 0`. Se o tempo for importante, determine um prazo apropriado, especificando o número de minutos que estão disponíveis para ajuste com o argumento `-A` , como mostrado neste exemplo.  
   
@@ -362,7 +362,7 @@ dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60
 dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
- **D. Ajustar tabelas específicas listadas em um arquivo**  
+ **D. Ajusta tabelas específicas listadas em um arquivo**  
   
  Este exemplo demonstra o uso de *table_list_file* (o argumento **-Tf** ). O conteúdo do arquivo table_list.txt é:  
   
@@ -388,8 +388,8 @@ AdventureWorks2012.Production.Product  2000000
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../command-prompt-utility-reference-database-engine.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência do utilitário de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../command-prompt-utility-reference-database-engine.md)   
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

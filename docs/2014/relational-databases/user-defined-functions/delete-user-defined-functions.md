@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196457"
 ---
 # <a name="delete-user-defined-functions"></a>Excluir funções definidas pelo usuário
@@ -68,7 +68,7 @@ ms.locfileid: "68196457"
 5.  Na caixa de diálogo **Excluir Objeto** , clique em **OK**.  
   
     > [!IMPORTANT]  
-    >  Clique em **Mostrar Dependências** na caixa de diálogo **Excluir Objeto** para abrir a caixa de diálogo _function_name_**Dependências** . Isso mostrará todos os objetos que dependem da função e todos os objetos dos quais a função depende.  
+    >  Clique em **Mostrar dependências** na caixa de diálogo **excluir objeto** para abrir a caixa de diálogo _function_name_**dependências** . Isso mostrará todos os objetos que dependem da função e todos os objetos dos quais a função depende.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

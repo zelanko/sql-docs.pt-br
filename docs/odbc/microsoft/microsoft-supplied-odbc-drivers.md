@@ -15,18 +15,18 @@ ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6afb061e07b3d01395031b4ce00fe315364ef382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045007"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Drivers ODBC fornecidos pela Microsoft
-*Drivers* são bibliotecas que implementam as funções na API do ODBC. Cada driver é específico para um sistema de gerenciamento de determinado banco de dados (DBMS). Na maioria dos casos, os drivers de exponham os recursos do DBMS subjacente; eles não são necessários para implementar recursos não suportados pelo DBMS. Drivers executam tarefas específicas e podem ser classificados em duas categorias: baseados em DBMS e arquivos. Para obter mais informações sobre drivers e arquitetura do driver, consulte [Drivers](../../odbc/reference/drivers.md).  
+*Drivers* são bibliotecas que implementam as funções na API ODBC. Cada driver é específico para um determinado sistema de gerenciamento de banco de dados (DBMS). Na maioria dos casos, os drivers expõem os recursos do DBMS subjacente; Eles não são necessários para implementar recursos não suportados pelo DBMS. Os drivers executam tarefas específicas e podem ser classificados em duas categorias: baseadas em arquivo e DBMS. Para obter mais informações sobre drivers e arquitetura de driver, consulte [drivers](../../odbc/reference/drivers.md).  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
--   [Usando aplicativos de 16 e 32 bits com drivers de 32 bits](../../odbc/microsoft/using-16-bit-and-32-bit-applications-with-32-bit-drivers.md)  
+-   [Using 16-Bit and 32-Bit Applications with 32-Bit Drivers](../../odbc/microsoft/using-16-bit-and-32-bit-applications-with-32-bit-drivers.md)  
   
 -   [Drivers de banco de dados de área de trabalho do Microsoft ODBC](../../odbc/microsoft/microsoft-odbc-desktop-database-drivers.md)  
   

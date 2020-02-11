@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811540"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurar o Mecanismo de Banco de Dados para escuta em várias portas TCP
@@ -82,7 +82,7 @@ ms.locfileid: "62811540"
   
 4.  Clique com o botão direito do mouse em **IPAll**e clique em **Propriedades**.  
   
-5.  Na caixa **Porta TCP** , digite as portas nas quais deseja que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] efetue a escura, separadas por vírgulas. Em nosso exemplo, se a porta padrão 1433 estiver listada, digite `,1500` para que a caixa leia `1433,1500`e, em seguida, clique em **Okey**.  
+5.  Na caixa **Porta TCP** , digite as portas nas quais deseja que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] efetue a escura, separadas por vírgulas. Em nosso exemplo, se a porta padrão 1433 estiver listada, `,1500` digite para a caixa `1433,1500`ler e clique em **OK**.  
   
     > [!NOTE]  
     >  Se você não estiver habilitando a porta em todos os endereços IP, configure a porta adicional na caixa de propriedades para apenas o endereço desejado. Em seguida, no painel de console, clique com o botão direito do mouse em **TCP/IP**, clique em **Propriedades**e, na caixa **Escutar Tudo** , selecione **Não**.  
@@ -101,7 +101,7 @@ ms.locfileid: "62811540"
     sqlcmd -SACCT,1500  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
  [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   

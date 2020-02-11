@@ -19,16 +19,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265377"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Declarando permissões em assemblies personalizados
   Por padrão, o código de assembly personalizado é executado com o conjunto de permissões limitado **Execução**. Em alguns casos, talvez você queira implementar um assembly personalizado que crie chamadas seguras para proteger recursos em seu sistema de segurança (como um arquivo ou o Registro). Para realizar isso, faça o seguinte:  
   
-1.  Identifique as permissões exatas das quais o seu código precisa para fazer a chamada segura. Se esse método fizer parte de uma biblioteca do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], essas informações deverão ser incluídas na documentação do método.  
+1.  Identifique as permissões exatas das quais o seu código precisa para fazer a chamada segura. Se esse método fizer parte de uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] biblioteca, essas informações deverão ser incluídas na documentação do método.  
   
 2.  Modifique os arquivos de configuração de política de servidor de relatório para conceder as permissões exigidas ao assembly personalizado. Para obter mais informações sobre os arquivos de configuração da política de segurança, consulte [Usando arquivos da política de segurança do Reporting Services](../extensions/secure-development/using-reporting-services-security-policy-files.md).  
   
@@ -89,7 +89,7 @@ try
   
  Para obter mais informações, consulte "Segurança do .NET Framework" no Guia do desenvolvedor do .NET Framework.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar assemblies personalizados com relatórios](using-custom-assemblies-with-reports.md)  
   
   

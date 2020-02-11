@@ -1,5 +1,5 @@
 ---
-title: Persistente de objetos de fonte de dados | Microsoft Docs
+title: Objetos de fonte de dados persistentes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231445"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos persistidos da fonte de dados
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client dá suporte a objetos de fonte de dados persistentes com o **IPersistFile** interface.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte a objetos de fonte de dados persistentes com a interface **IPersistFile** .  
   
 ## <a name="examples"></a>Exemplos  
- **A. Persistir inicialização de fonte de dados:**  
+ **A. Inicialização de fonte de dados persistente:**  
   
  Este exemplo mostra uma função que persiste as propriedades de inicialização de uma fonte de dados definindo um servidor, um banco de dados e o uso do Modo de Autenticação do Windows para conexão. O nome do servidor e o nome do banco de dados são recebidos nos parâmetros *pLocation* e *pDatasource* da função.  
   
@@ -137,7 +137,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Usar a inicialização de fonte de dados persistida:**  
+ **B. Uso de inicialização de fonte de dados persistida:**  
   
  Este exemplo usa um objeto de fonte de dados persistido com propriedades de inicialização adicionais que fornecem um logon e uma senha do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -227,7 +227,7 @@ HRESULT InitFromPersistedDS
   
  O método **IPersistFile::Save** pode ser chamado antes ou depois de chamar **IDBInitialize::Initialize**. A chamada do método após um retorno bem-sucedido de **IDBInitialize::Initialize** garante que uma especificação de fonte de dados válida seja persistida.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objetos de fonte de dados &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

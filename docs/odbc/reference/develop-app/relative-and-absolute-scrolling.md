@@ -16,31 +16,31 @@ ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e2034a3922dcd3db77113e08a6c48fe7ac39457f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138056"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Rolagem relativa e absoluta
-A maioria das opções de rolagem na **SQLFetchScroll** posicionar o cursor em relação à posição atual ou para uma posição absoluta. **SQLFetchScroll** dá suporte à busca o próximo, anterior, primeiros e últimos conjuntos de linhas, como bem como relativo de busca (buscar o conjunto de linhas *n* linhas desde o início do conjunto de linhas atual) e da busca absoluta (busca a partir do conjunto de linhas na linha *n*). Se *n* é negativo em uma busca absoluta, as linhas são contadas do final do conjunto de resultados. Portanto, uma busca absoluta da linha -1 significa buscar o conjunto de linhas que começa com a última linha no conjunto de resultados.  
+A maioria das opções de rolagem em **SQLFetchScroll** posiciona o cursor em relação à posição atual ou a uma posição absoluta. O **SQLFetchScroll** dá suporte à busca do próximo conjunto de linhas anterior, antes, primeiro e último, bem como à busca relativa (busque o conjunto de linha *n* linhas desde o início do conjunto de linhas atual) e a busca absoluta (busque o conjunto de linhas começando na linha *n*). Se *n* for negativo em uma busca absoluta, as linhas serão contadas a partir do final do conjunto de resultados. Portanto, uma busca absoluta da linha-1 significa buscar o conjunto de linhas que começa com a última linha no conjunto de resultados.  
   
- Cursores dinâmicos detectam linhas inseridos e excluídos do conjunto de resultados, portanto, não há nenhuma maneira fácil para cursores dinâmicos recuperar a linha em um determinado número diferente de leitura desde o início do conjunto de resultados, que pode ser lenta. Além disso, busca absoluta não é muito útil para cursores dinâmicos como números de linha alteram como as linhas são inseridas e excluídas; Portanto, sucessivamente, buscar o mesmo número de linha pode gerar linhas diferentes.  
+ Cursores dinâmicos detectam linhas inseridas e excluídas do conjunto de resultados, portanto, não há uma maneira fácil para cursores dinâmicos recuperarem a linha em um número específico além de ler desde o início do conjunto de resultados, o que provavelmente será lento. Além disso, a busca absoluta não é muito útil em cursores dinâmicos porque os números de linha mudam conforme as linhas são inseridas e excluídas; Portanto, buscar sucessivamente o mesmo número de linha pode produzir linhas diferentes.  
   
- Aplicativos que usam **SQLFetchScroll** somente para o seu bloco funcionalidades de cursor, como relatórios, provavelmente passarão pelo conjunto de resultados uma vez, usando apenas a opção para buscar o próximo conjunto de linhas. Aplicativos baseados em tela, por outro lado, podem tirar proveito de todos os recursos do **SQLFetchScroll**. Se o aplicativo define o tamanho do conjunto de linhas para o número de linhas exibidas na tela e associa os buffers de tela ao conjunto de resultados, ele poderá converter operações da barra de rolagem diretamente em chamadas para **SQLFetchScroll**.  
+ Os aplicativos que usam **SQLFetchScroll** apenas para seus recursos de cursor de bloco, como relatórios, provavelmente passarão pelo conjunto de resultados uma única vez, usando apenas a opção para buscar o próximo conjunto de linhas. Os aplicativos baseados em tela, por outro lado, podem tirar proveito de todos os recursos do **SQLFetchScroll**. Se o aplicativo definir o tamanho do conjunto de linhas como o número de linhas exibidas na tela e associar os buffers de tela ao conjunto de resultados, ele poderá converter as operações da barra de rolagem diretamente em chamadas para **SQLFetchScroll**.  
   
 |Operação de barra de rolagem|Opção de rolagem SQLFetchScroll|  
 |--------------------------|-------------------------------------|  
 |Uma página acima|SQL_FETCH_PRIOR|  
-|Página para baixo|SQL_FETCH_NEXT|  
-|Uma linha acima|SQL_FETCH_RELATIVE com *FetchOffset* igual a -1|  
+|Page Down|SQL_FETCH_NEXT|  
+|Uma linha acima|SQL_FETCH_RELATIVE com *FetchOffset* igual a-1|  
 |Uma linha abaixo|SQL_FETCH_RELATIVE com *FetchOffset* igual a 1|  
 |Caixa de rolagem na parte superior|SQL_FETCH_FIRST|  
 |Caixa de rolagem na parte inferior|SQL_FETCH_LAST|  
 |Posição aleatória da caixa de rolagem|SQL_FETCH_ABSOLUTE|  
   
- Esses aplicativos também precisam posicionar a caixa de rolagem após uma operação de rolagem, o que exige que o número de linha atual e o número de linhas. Para o número de linha atual, aplicativos podem tanto manter controle do número da linha atual ou chamar **SQLGetStmtAttr** com o atributo SQL_ATTR_ROW_NUMBER para recuperá-la.  
+ Esses aplicativos também precisam posicionar a caixa de rolagem após uma operação de rolagem, que requer o número de linha atual e o número de linhas. Para o número da linha atual, os aplicativos podem manter o controle do número da linha atual ou chamar **SQLGetStmtAttr** com o atributo SQL_ATTR_ROW_NUMBER para recuperá-lo.  
   
- O número de linhas no cursor, que é o tamanho do resultado definido, está disponível como o campo SQL_DIAG_CURSOR_ROW_COUNT do cabeçalho de diagnóstico. O valor nesse campo é definido apenas depois **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResult** foi chamado. Essa contagem pode ser uma contagem aproximada ou uma contagem exata, dependendo dos recursos do driver. O suporte do driver pode ser determinado chamando **SQLGetInfo** com os tipos de informações de atributos de cursor e verificando se o bit SQL_CA2_CRC_APPROXIMATE ou SQL_CA2_CRC_EXACT é retornado para o tipo de cursor.  
+ O número de linhas no cursor, que é o tamanho do conjunto de resultados, está disponível como o SQL_DIAG_CURSOR_ROW_COUNT campo do cabeçalho de diagnóstico. O valor nesse campo é definido somente após **SQLExecute**, **SQLExecDirect**ou **SQLMoreResult** ser chamado. Essa contagem pode ser uma contagem aproximada ou uma contagem exata, dependendo dos recursos do driver. O suporte do driver pode ser determinado chamando **SQLGetInfo** com os tipos de informações de atributos de cursor e verificando se o SQL_CA2_CRC_APPROXIMATE ou SQL_CA2_CRC_EXACT bit é retornado para o tipo de cursor.  
   
- Um cursor dinâmico nunca é compatível com uma contagem de linhas exata. Para outros tipos de cursores, o driver pode suportar o contagens de linhas exato ou aproximado, mas não ambos. Se o driver dá suporte a exata nem aproximado contagens de linhas para um tipo de cursor específico, o campo SQL_DIAG_CURSOR_ROW_COUNT contém o número de linhas que foram buscadas até o momento. Independentemente do que o driver dá suporte, **SQLFetchScroll** com um *operação* de SQL_FETCH_LAST fará com que o campo SQL_DIAG_CURSOR_ROW_COUNT conter a contagem exata de linhas.
+ Uma contagem exata de linhas nunca é suportada para um cursor dinâmico. Para outros tipos de cursores, o driver pode dar suporte a contagens de linhas exatas ou aproximadas, mas não ambos. Se o driver não oferecer suporte a contagens de linhas exatas ou aproximadas para um tipo de cursor específico, o campo SQL_DIAG_CURSOR_ROW_COUNT conterá o número de linhas que foram buscadas até o momento. Independentemente do que o driver dá suporte, **SQLFetchScroll** com uma *operação* de SQL_FETCH_LAST fará com que o campo SQL_DIAG_CURSOR_ROW_COUNT contenha a contagem de linhas exata.

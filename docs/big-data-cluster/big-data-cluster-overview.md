@@ -5,22 +5,37 @@ description: Saiba mais sobre os Clusters de Big Data do SQL Server que são exe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706662"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720928"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 No [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] em diante, os [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] permitem implantar clusters escalonáveis de contêineres do SQL Server, do Spark e do HDFS em execução no Kubernetes. Esses componentes são executados lado a lado para permitir que você leia, grave e processe Big Data do Transact-SQL ou do Spark, permitindo combinar e analisar facilmente seus dados relacionais de alto valor com Big Data de alto volume.
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] apresenta os Clusters de Big Data do SQL Server.
+
+Use Clusters de Big Data do SQL Server para:
+
+- [Implantar clusters escalonáveis](../big-data-cluster/deploy-get-started.md) de contêineres do SQL Server, do Spark e do HDFS em execução no Kubernetes. 
+- Ler, gravar e processar Big Data do Transact-SQL ou do Spark.
+- Combine e analise facilmente dados relacionais de valor elevado com Big Data de volume grande.
+- Consultar fontes de dados externas.
+- Armazenar Big Data no HDFS gerenciado por SQL Server.
+- Consultar dados de várias fontes de dados externas por meio do cluster.
+- Usar os dados para IA, aprendizado de máquina e outras tarefas de análise.
+- [Implantar e executar aplicativos](../big-data-cluster/concept-application-deployment.md) em [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- Virtualizar dados com o [PolyBase](../relational-databases/polybase/polybase-guide.md). Consulte dados de SQL Server externos, Oracle, Teradata, MongoDB e fontes de dados ODBC com tabelas externas.
+- Forneça alta disponibilidade para a instância mestra do SQL Server e todos os bancos de dados usando a tecnologia de grupo de disponibilidade Always On.
 
 Para obter mais informações sobre os novos recursos e problemas conhecidos da versão mais recente, confira as [notas sobre a versão](release-notes-big-data-cluster.md).
 
@@ -84,7 +99,7 @@ Nos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)
 
 O diagrama a seguir mostra os componentes de um cluster de Big Data para o SQL Server.
 
-![Visão geral de arquitetura](media/big-data-cluster-overview/architecture-diagram-overview.png)
+![Visão geral da arquitetura](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
 ### <a id="controlplane"></a> Controlador
 

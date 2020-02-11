@@ -1,5 +1,5 @@
 ---
-title: Catálogo de banco de dados OLAP WideWorldImporters - SQL | Microsoft Docs
+title: Catálogo de banco de dados OLAP do WideWorldImporters – SQL | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -11,25 +11,25 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104295"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catálogo de banco de dados WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
-Explicações sobre os esquemas, tabelas e procedimentos armazenados no banco de dados WideWorldImportersDW. 
+Explicações para os esquemas, tabelas e procedimentos armazenados no banco de dados WideWorldImportersDW. 
 
-O banco de dados WideWorldImportersDW é usado para processamento analítico e de data warehouse. Os dados transacionais sobre vendas e compras são gerados no banco de dados de WideWorldImporters e carregados no banco de dados WideWorldImportersDW usando um **processo de ETL diário**.
+O banco de dados WideWorldImportersDW é usado para processamento de data warehouse e analítico. Os dados transacionais sobre vendas e compras são gerados no banco de WideWorldImporters e carregados no banco de dados WideWorldImportersDW usando um **processo de ETL diário**.
 
-Os dados em WideWorldImportersDW espelha, portanto, os dados de WideWorldImporters, mas as tabelas são organizadas de maneira diferente. Embora o WideWorldImporters tenha um esquema normalizado tradicional, WideWorldImportersDW usa o [esquema em estrela](https://wikipedia.org/wiki/Star_schema) abordagem para seu design de tabela. Além das tabelas de fatos e dimensão, o banco de dados inclui um número de tabelas de preparo que são usados no processo de ETL.
+Os dados em WideWorldImportersDW, portanto, espelham os dados em WideWorldImporters, mas as tabelas são organizadas de forma diferente. Embora o WideWorldImporters tenha um esquema normalizado tradicional, o WideWorldImportersDW usa a abordagem de [esquema em estrela](https://wikipedia.org/wiki/Star_schema) para seu design de tabela. Além das tabelas de fatos e de dimensões, o banco de dados inclui uma série de tabelas de preparo que são usadas no processo de ETL.
 
 ## <a name="schemas"></a>Esquemas
 
 Os diferentes tipos de tabelas são organizados em três esquemas.
 
-|Esquema|Descrição|
+|Esquema|DESCRIÇÃO|
 |-----------------------------|---------------------|
 |Dimensão|Tabelas de dimensões.|
 |Fato|Tabelas de fatos.|  
@@ -37,18 +37,18 @@ Os diferentes tipos de tabelas são organizados em três esquemas.
 
 ## <a name="tables"></a>Tabelas
 
-As tabelas de dimensões e fatos são listadas abaixo. As tabelas no esquema de integração são usadas apenas para o processo de ETL e não estão listadas.
+As tabelas de dimensões e fatos são listadas abaixo. As tabelas no esquema de integração são usadas apenas para o processo ETL e não são listadas.
 
 ### <a name="dimension-tables"></a>Tabelas de dimensões
 
-WideWorldImportersDW tem as seguintes tabelas de dimensões. A descrição inclui a relação com as tabelas de origem no banco de dados de WideWorldImporters.
+WideWorldImportersDW tem as tabelas de dimensão a seguir. A descrição inclui a relação com as tabelas de origem no banco de dados WideWorldImporters.
 
 |Tabela|Tabelas de origem|
 |-----------------------------|---------------------|
-|Cidade|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
+|City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Cliente|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|Date|Nova tabela com informações sobre as datas, incluindo o ano fiscal (com base em 1º de novembro Iniciar para o ano fiscal).|
-|Employee|`Application.People`.|
+|Data|Nova tabela com informações sobre datas, incluindo ano financeiro (com base em 1º de novembro de início para o ano financeiro).|
+|Funcionário|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Fornecedor|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
 |PaymentMethod|`Application.PaymentMethods`.|
@@ -56,42 +56,42 @@ WideWorldImportersDW tem as seguintes tabelas de dimensões. A descrição inclu
 
 ### <a name="fact-tables"></a>Tabelas de fatos
 
-WideWorldImportersDW tem as seguintes tabelas de fatos. A descrição inclui a relação com as tabelas de origem no banco de dados de WideWorldImporters, bem como as classes de consultas de análise/relatórios com que cada tabela de fatos é normalmente usada.
+WideWorldImportersDW tem as seguintes tabelas de fatos. A descrição inclui a relação com as tabelas de origem no banco de dados WideWorldImporters, bem como as classes de consultas de análise/relatórios em que cada tabela de fatos é normalmente usada com o.
 
-|Tabela|Tabelas de origem|Exemplo de análise|
+|Tabela|Tabelas de origem|Análise de exemplo|
 |-----------------------------|---------------------|---------------------|
-|Order|`Sales.Orders` e `Sales.OrderLines`|Produtividade de seletor/packer, as pessoas de vendas e no tempo para separar as ordens. Além disso, baixo estoque situações que levam a fazer pedidos.|
-|Venda|`Sales.Invoices` e `Sales.InvoiceLines`|Datas de vendas, datas de entrega, lucratividade ao longo do tempo, lucratividade por vendedor.|
-|Compra|`Purchasing.PurchaseOrderLines`|Prazos de entrega real de esperado vs|
-|Transaction|`Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`|Medindo o problema datas vs finalização datas e quantidades.|
-|Movimentação|`Warehouse.StockTransactions`|Movimentações ao longo do tempo.|
-|Ações|`Warehouse.StockItemHoldings`|Níveis de estoque disponível e o valor.|
+|Order|`Sales.Orders` e `Sales.OrderLines`|Vendedores, o seletor/produtividade do empacotador e no tempo para selecionar pedidos. Além disso, situações de ações baixas levando a pedidos pendentes.|
+|Venda|`Sales.Invoices` e `Sales.InvoiceLines`|Datas de vendas, datas de entrega, rentabilidade ao longo do tempo, rentabilidade por vendedor.|
+|Purchase|`Purchasing.PurchaseOrderLines`|Tempos de Lead reais esperados versus|
+|Transação|`Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`|Medindo datas de problemas vs. datas de finalização e valores.|
+|Migração|`Warehouse.StockTransactions`|Movimentações ao longo do tempo.|
+|Retenção de estoque|`Warehouse.StockItemHoldings`|Valores e níveis de estoque disponíveis.|
 
 ## <a name="stored-procedures"></a>Procedimentos armazenados
 
 Os procedimentos armazenados são usados principalmente para o processo de ETL e para fins de configuração.
 
-Qualquer extensão de exemplo é incentivado a usar o `Reports` esquema de relatórios do Reporting Services e o `PowerBI` esquema para acesso ao Power BI.
+Todas as extensões do exemplo são incentivadas a usar `Reports` o esquema para Reporting Services relatórios e o `PowerBI` esquema para acesso do Power bi.
 
 ### <a name="application-schema"></a>Esquema do aplicativo
 
-Esses procedimentos são usados para configurar a amostra. Eles são usados para aplicar os recursos do enterprise edition para a versão standard edition do exemplo, adicione o PolyBase e propagar novamente o ETL.
+Esses procedimentos são usados para configurar o exemplo. Eles são usados para aplicar os recursos do Enterprise Edition à versão Standard Edition do exemplo, adicionar polybase e refazer a propagação do ETL.
 
 |Procedimento|Finalidade|
 |-----------------------------|---------------------|
-|Configuration_ApplyPartitionedColumnstoreIndexing|Aplica-se a índices de particionamento e o columnstore para tabelas de fatos.|
-|Configuration_ConfigureForEnterpriseEdition|Aplica-se de particionamento, columnstore na memória e indexação.|
-|Configuration_EnableInMemory|Substitui as tabelas de preparo de integração com as tabelas com otimização de memória SCHEMA_ONLY para melhorar o desempenho de ETL.|
-|Configuration_ApplyPolyBase|Configura uma fonte de dados externa, formato de arquivo e tabela.|
-|Configuration_PopulateLargeSaleTable|Aplica as alterações do enterprise edition e, em seguida, preenche uma quantidade maior de dados para o ano de 2012 como histórico adicional.|
-|Configuration_ReseedETL|Remove os dados existentes e reinicia as sementes ETL. Isso permite a repopulação do banco de dados OLAP para corresponder as linhas atualizadas no banco de dados OLTP.|
+|Configuration_ApplyPartitionedColumnstoreIndexing|Aplica índices de particionamento e columnstore para tabelas de fatos.|
+|Configuration_ConfigureForEnterpriseEdition|Aplica particionamento, indexação columnstore e na memória.|
+|Configuration_EnableInMemory|Substitui as tabelas de preparo de integração por SCHEMA_ONLY tabelas com otimização de memória para melhorar o desempenho de ETL.|
+|Configuration_ApplyPolyBase|Configura uma fonte de dados externa, um formato de arquivo e uma tabela.|
+|Configuration_PopulateLargeSaleTable|Aplica as alterações do Enterprise Edition e, em seguida, popula uma quantidade maior de dados para o ano civil de 2012 como histórico adicional.|
+|Configuration_ReseedETL|Remove os dados existentes e reinicia as sementes de ETL. Isso permite repopular o banco de dados OLAP para corresponder as linhas atualizadas no banco de dados OLTP.|
 
 ### <a name="integration-schema"></a>Esquema de integração
 
-Os procedimentos usados no processo de ETL se enquadram nestas categorias:
-- Procedimentos auxiliares para o pacote ETL - Get * todos os procedimentos.
-- Os procedimentos usados pelo pacote de ETL para a migração de dados preparados nas tabelas de DW - todos os procedimentos de migração de *.
-- `PopulateDateDimensionForYear` -Usa um ano e garante que todas as datas do ano são preenchidas no `Dimension.Date` tabela.
+Os procedimentos usados no processo ETL se enquadram nessas categorias:
+- Procedimentos auxiliares para o pacote ETL – todos os procedimentos Get *.
+- Procedimentos usados pelo pacote ETL para migrar dados de preparo para as tabelas DW – todos os procedimentos Migrate *.
+- `PopulateDateDimensionForYear`– Leva um ano e garante que todas as datas desse ano sejam preenchidas na `Dimension.Date` tabela.
 
 ### <a name="sequences-schema"></a>Esquema de sequências
 
@@ -100,4 +100,4 @@ Procedimentos para configurar as sequências no banco de dados.
 |Procedimento|Finalidade|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Chama o procedimento `ReseedSequenceBeyondTableValue` para todas as sequências.|
-|ReseedSequenceBeyondTableValue|Usada para reposicionar o próximo valor de sequência além do valor em qualquer tabela que usa a mesma sequência. (Como um `DBCC CHECKIDENT` para equivalente de colunas de identidade para sequências, mas em potencialmente várias tabelas.)|
+|ReseedSequenceBeyondTableValue|Usado para reposicionar o próximo valor de sequência além do valor em qualquer tabela que usa a mesma sequência. (Como uma `DBCC CHECKIDENT` coluna for Identity equivalente para Sequences, mas em potencialmente várias tabelas.)|

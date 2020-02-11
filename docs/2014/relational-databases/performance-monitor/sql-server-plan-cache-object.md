@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210810"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, objeto Cache de planos
@@ -25,27 +25,28 @@ ms.locfileid: "68210810"
   
  Esta tabela descreve os contadores **SQLServer:Plan Cache**.  
   
-|Contadores SQL Server Plan Cache|Descrição|  
+|Contadores SQL Server Plan Cache|DESCRIÇÃO|  
 |------------------------------------|-----------------|  
 |**Taxa de Acertos do Cache**|Taxa entre acertos e pesquisas do cache.|  
-|**Contagens de Objeto do Cache**|Número de objetos do cache no cache.|  
-|**Páginas do Cache**|Número de páginas de 8 quilobytes (KB) usado por objetos do cache.|  
-|**Objetos do cache em uso**|Número de objetos do cache em uso.|  
+|**Contagens de objetos de cache**|Número de objetos do cache no cache.|  
+|**Páginas de cache**|Número de páginas de 8 quilobytes (KB) usado por objetos do cache.|  
+|**Objetos de cache em uso**|Número de objetos do cache em uso.|  
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Instância do Cache de Plano|Descrição|  
+|Instância do Cache de Plano|DESCRIÇÃO|  
 |-------------------------|-----------------|  
 |**_Total**|Informações para todos os tipos de instâncias do cache.|  
-|**Planos Sql**|Os planos de consulta produzidos de uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, inclusive consultas parametrizadas automaticamente ou de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas usando **sp_prepare** ou **sp_cursorprepare**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenará em cache os planos para instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc para reutilização posterior se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] idêntica for executada mais tarde. Consultas parametrizadas pelo usuário (mesmo se não preparadas explicitamente) também são monitoradas como Planos SQL Preparados.|  
-|**Planos de Objeto**|Planos de consulta gerados ao criar um procedimento armazenado, função ou gatilho.|  
-|**Associar árvores**|Árvores normalizadas para exibições, regras, colunas computadas e restrições de verificação.|  
+|**Planos SQL**|Os planos de consulta produzidos de uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, inclusive consultas parametrizadas automaticamente ou de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas usando **sp_prepare** ou **sp_cursorprepare**. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenará em cache os planos para instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc para reutilização posterior se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] idêntica for executada mais tarde. Consultas parametrizadas pelo usuário (mesmo se não preparadas explicitamente) também são monitoradas como Planos SQL Preparados.|  
+|**Planos de objeto**|Planos de consulta gerados ao criar um procedimento armazenado, função ou gatilho.|  
+|**Árvores associadas**|Árvores normalizadas para exibições, regras, colunas computadas e restrições de verificação.|  
 |**Procedimentos armazenados estendidos**|Informações do catalogo para procedimentos armazenados estendidos.|  
-|**Tabelas temporárias & variáveis da tabela**|Informações do cache relacionadas a tabelas temporárias e tabelas variáveis.|  
+|**Tabelas temporárias & variáveis de tabela**|Informações do cache relacionadas a tabelas temporárias e tabelas variáveis.|  
   
-## <a name="see-also"></a>Consulte também  
- [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [SQL Server, objeto Buffer Manager](sql-server-buffer-manager-object.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Opções de configuração de servidor de memória do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+ [SQL Server, objeto Gerenciador de buffer](sql-server-buffer-manager-object.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

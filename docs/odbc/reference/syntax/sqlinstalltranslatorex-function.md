@@ -20,20 +20,20 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43acc6708b5df71893c2c6b7658ca99bfb73f616
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018998"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>Função SQLInstallTranslatorEx
-**Conformidade com**  
- Versão introduzida: ODBC 3.0  
+**Conformidade**  
+ Versão introduzida: ODBC 3,0  
   
  **Resumo**  
- **SQLInstallTranslatorEx** adiciona informações sobre um conversor para a seção Odbcinst. ini, as informações do sistema (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. INI\ODBC tradutores chave do registro).  
+ O **SQLInstallTranslatorEx** adiciona informações sobre um tradutor à seção Odbcinst. ini das informações do sistema (HKEY_LOCAL_MACHINE \software\odbc\odbcinst. Chave do registro de tradutores INI\ODBC).  
   
- A funcionalidade do **SQLInstallTranslatorEx** também podem ser acessados com [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ A funcionalidade do **SQLInstallTranslatorEx** também pode ser acessada com [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,71 +51,71 @@ BOOL SQLInstallTranslatorEx(
   
 ## <a name="arguments"></a>Argumentos  
  *lpszTranslator*  
- [Entrada] Isso deve conter uma lista duplamente terminada em nulo de pares de palavra-chave-valor que descreve o tradutor. Para obter mais informações sobre a sintaxe de par de valor de palavra-chave, consulte [subchaves de especificação do conversor](../../../odbc/reference/install/translator-specification-subkeys.md).  
+ Entrada Isso deve conter uma lista dupla de pares de palavras-chave com terminação nula que descreve o tradutor. Para obter mais informações sobre a sintaxe do par de valor de palavra-chave, consulte [subchaves de especificação do tradutor](../../../odbc/reference/install/translator-specification-subkeys.md).  
   
- O **tradutor** e **instalação** palavras-chave devem ser incluídas na *lpszTranslator* cadeia de caracteres. A tradução DLL está listado com o **tradutor** palavra-chave e a configuração de conversor DLL está listado com o **instalação** palavra-chave. Cada par é encerrada com um byte nulo e a lista inteira é encerrada com um byte nulo. (Ou seja, dois bytes NULL marcam o final da lista.) O formato do *lpszTranslator* é da seguinte maneira:  
+ O **Tradutor** e as palavras-chave de **instalação** devem ser incluídos na cadeia de caracteres *lpszTranslator* . A DLL de tradução é listada com a palavra-chave **Translator** e a DLL de instalação do tradutor é listada com a palavra-chave **Setup** . Cada par é encerrado com um byte nulo e a lista inteira é encerrada com um byte nulo. (Ou seja, dois bytes nulos marcam o final da lista.) O formato de *lpszTranslator* é o seguinte:  
   
- \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
+ \0Translator =*Translator-dll-filename*\ 0 [instalação =*instalação-dll-nome-* do-arquivo \ 0] \ 0  
   
  *lpszPathIn*  
- [Entrada] Caminho completo do qual o conversor deve ser instalado ou um ponteiro nulo. Se *lpszPath* for um ponteiro nulo, os tradutores serão instalados no diretório do sistema.  
+ Entrada Caminho completo de onde o tradutor deve ser instalado ou um ponteiro nulo. Se *lpszPath* for um ponteiro nulo, os tradutores serão instalados no diretório do sistema.  
   
  *lpszPathOut*  
- [Saída] O caminho do diretório de destino no qual o conversor deve ser instalado. Se o conversor nunca tiver sido instalado, *lpszPathOut* é o mesmo que *lpszPathIn*. Se houver uma instalação anterior, o conversor *lpszPathOut* é o caminho da instalação anterior.  
+ Der O caminho do diretório de destino onde o tradutor deve ser instalado. Se o tradutor nunca tiver sido instalado, *lpszPathOut* será o mesmo que *lpszPathIn*. Se existir uma instalação anterior do tradutor, *lpszPathOut* será o caminho da instalação anterior.  
   
  *cbPathOutMax*  
- [Entrada] Comprimento de *lpszPathOut.*  
+ Entrada Comprimento de *lpszPathOut.*  
   
  *pcbPathOut*  
- [Saída] Número total de bytes disponíveis para retornar na *lpszPathOut*. Se o número de bytes disponíveis para retornar for maior que ou igual a *cbPathOutMax*, o caminho de saída na *lpszPathOut* será truncado com *pcbPathOutMax* menos o caractere de finalização null. O *pcbPathOut* argumento pode ser um ponteiro nulo.  
+ Der Número total de bytes disponíveis para retornar em *lpszPathOut*. Se o número de bytes disponíveis para retornar for maior ou igual a *cbPathOutMax*, o caminho de saída em *lpszPathOut* será truncado para *pcbPathOutMax* menos o caractere de terminação nula. O argumento *pcbPathOut* pode ser um ponteiro nulo.  
   
  *fRequest*  
- [Entrada] Tipo de solicitação. *Frequentes* deve conter um dos seguintes valores:  
+ Entrada Tipo de solicitação. *fRequest* deve conter um dos seguintes valores:  
   
- ODBC_INSTALL_INQUIRY: Pesquisa sobre onde um tradutor pode ser instalado.  
+ ODBC_INSTALL_INQUIRY: consulte sobre onde um tradutor pode ser instalado.  
   
- ODBC_INSTALL_COMPLETE: Conclua a solicitação de instalação.  
+ ODBC_INSTALL_COMPLETE: conclua a solicitação de instalação.  
   
  *lpdwUsageCount*  
- [Saída] A contagem de utilização do tradutor depois que essa função foi chamada.  
+ Der A contagem de uso do tradutor depois que essa função foi chamada.  
   
- Aplicativos não devem definir a contagem de uso. ODBC manterá essa contagem.  
+ Os aplicativos não devem definir a contagem de uso. O ODBC manterá essa contagem.  
   
-## <a name="returns"></a>Retorna  
- A função retorna TRUE se for bem-sucedida, FALSO se ele falhar.  
+## <a name="returns"></a>Retornos  
+ A função retornará TRUE se for bem-sucedida, FALSE se falhar.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLInstallTranslatorEx** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLInstallTranslatorEx** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Descrição|  
+|*\*pfErrorCode*|Erro|DESCRIÇÃO|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Comprimento de buffer inválido|O *lpszPathOut* argumento não era grande o suficiente para conter o caminho de saída. O buffer contém o caminho truncado.<br /><br /> O *cbPathOutMax* argumento era 0 e o *frequentes* argumento era ODBC_INSTALL_COMPLETE.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo de solicitação inválido|O *frequentes* argumento não era um dos seguintes:<br /><br /> ODBC_INSTALL_INQUIRY ODBC_INSTALL_COMPLETE|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|Pares de valor de palavra-chave inválido|O *lpszTranslator* argumento continha um erro de sintaxe.|  
-|ODBC_ERROR_INVALID_PATH|Caminho de instalação inválido|O *lpszPathIn* argumento continha um caminho inválido.|  
-|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Sequência de parâmetro inválido|O *lpszTranslator* argumento não contém uma lista de pares de palavra-chave-valor.|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|Não foi possível incrementar ou decrementar a contagem de utilização de componente do registro|O instalador não conseguiu incrementar a contagem de utilização do tradutor.|  
+|ODBC_ERROR_GENERAL_ERR|Erro geral do instalador|Ocorreu um erro para o qual não havia nenhum erro do instalador específico.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Comprimento de buffer inválido|O argumento *lpszPathOut* não era grande o suficiente para conter o caminho de saída. O buffer contém o caminho truncado.<br /><br /> O argumento *cbPathOutMax* era 0 e o argumento *fRequest* foi ODBC_INSTALL_COMPLETE.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo de solicitação inválido|O argumento *fRequest* não era um dos seguintes:<br /><br /> ODBC_INSTALL_INQUIRY ODBC_INSTALL_COMPLETE|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|Pares de palavra-chave-valor inválidos|O argumento *lpszTranslator* continha um erro de sintaxe.|  
+|ODBC_ERROR_INVALID_PATH|Caminho de instalação inválido|O argumento *lpszPathIn* continha um caminho inválido.|  
+|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Sequência de parâmetros inválida|O argumento *lpszTranslator* não continha uma lista de pares de palavra-chave-valor.|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|Não foi possível incrementar ou decrementar a contagem de uso de componentes do registro|O instalador não pôde incrementar a contagem de uso do tradutor.|  
   
 ## <a name="comments"></a>Comentários  
- **SQLInstallTranslatorEx** fornece um mecanismo para instalar apenas o tradutor. Essa função não copia, na verdade, todos os arquivos. O programa de chamada é responsável por copiar os arquivos de tradução.  
+ O **SQLInstallTranslatorEx** fornece um mecanismo para instalar apenas o tradutor. Na verdade, essa função não copia nenhum arquivo. O programa de chamada é responsável por copiar os arquivos do tradutor.  
   
- **SQLInstallTranslatorEx** incrementa a contagem de utilização de componente para o conversor instalado em 1. Se já existe uma versão do tradutor, mas a contagem de utilização de componente para o conversor não existir, o novo valor de contagem de uso do componente é definido como 2.  
+ **SQLInstallTranslatorEx** incrementa a contagem de uso do componente para o tradutor instalado em 1. Se já existir uma versão do tradutor, mas a contagem de uso do componente para o tradutor não existir, o novo valor de contagem de uso do componente será definido como 2.  
   
- O programa de instalação do aplicativo é responsável por fisicamente copiando o arquivo de tradução e manter a contagem de utilização do arquivo. Se o arquivo de tradução não tiver sido instalado anteriormente, o programa de instalação do aplicativo deve copiar o arquivo ou arquivos e criar o arquivo ou arquivos de contagem de uso. Se o arquivo tiver sido instalado anteriormente, o programa de instalação simplesmente incrementa a contagem de uso de arquivos.  
+ O programa de instalação do aplicativo é responsável por copiar fisicamente o arquivo do tradutor e manter a contagem de uso do arquivo. Se o arquivo do tradutor não tiver sido instalado anteriormente, o programa de instalação do aplicativo deverá copiar o arquivo ou os arquivos e criar a contagem de uso de arquivo ou arquivos. Se o arquivo tiver sido instalado anteriormente, o programa de instalação simplesmente incrementará a contagem de uso do arquivo.  
   
- Se uma versão mais antiga do tradutor foi instalada anteriormente pelo aplicativo, o conversor deve ser desinstalado e reinstalado, para que a contagem de uso do componente conversor é válida. **SQLRemoveTranslator** deve ser chamado para diminuir a contagem de uso do componente e então **SQLInstallTranslatorEx** deve ser chamado para incrementar a contagem de uso do componente. O programa de instalação do aplicativo deve substituir o arquivo antigo ou arquivos com o novo arquivo. A contagem de uso de arquivos permanecerão os mesmos e outros aplicativos que usaram o arquivo de versão mais antigo agora usará a versão mais recente.  
+ Se uma versão mais antiga do tradutor tiver sido instalada anteriormente pelo aplicativo, o tradutor deverá ser desinstalado e reinstalado, para que a contagem de uso do componente do tradutor seja válida. **SQLRemoveTranslator** deve ser chamado para diminuir a contagem de uso do componente e, em seguida, **SQLInstallTranslatorEx** deve ser chamado para incrementar a contagem de uso do componente. O programa de instalação do aplicativo deve substituir o arquivo ou arquivos antigos pelo novo arquivo. A contagem de uso do arquivo permanecerá a mesma, e outros aplicativos que usaram o arquivo de versão mais antiga agora usarão a versão mais recente.  
   
- O comprimento do caminho em *lpszPathOut* na **SQLInstallTranslatorEx** permite que um processo de duas fases de instalação, para que um aplicativo possa determinar quais *cbPathOutMax* deve ser chamando **SQLInstallTranslatorEx** com um *frequentes* do modo ODBC_INSTALL_INQUIRY. Isso retornará o número total de bytes disponíveis na *pcbPathOut* buffer. **SQLInstallTranslatorEx** , em seguida, pode ser chamado com um *frequentes* de ODBC_INSTALL_COMPLETE e o *cbPathOutMax* argumento definido como o valor no *pcbPathOut* buffer, mais o caractere nulo de terminação.  
+ O comprimento do caminho em *lpszPathOut* no **SQLInstallTranslatorEx** permite um processo de instalação de duas fases, portanto, um aplicativo pode determinar qual *cbPathOutMax* deve ser chamando **SQLInstallTranslatorEx** com um *fRequest* no modo de ODBC_INSTALL_INQUIRY. Isso retornará o número total de bytes disponíveis no buffer *pcbPathOut* . **SQLInstallTranslatorEx** pode ser chamado com um *fRequest* de ODBC_INSTALL_COMPLETE e o argumento *cbPathOutMax* definido como o valor no buffer *pcbPathOut* , mais o caractere de terminação nula.  
   
- Se você optar por não usar o modelo de duas fases para **SQLInstallTranslatorEx**, você deve definir *cbPathOutMax*, que define o tamanho do armazenamento para o caminho do diretório de destino, para o valor MAX_PATH, como definida em stdlib. h, para evitar truncamento.  
+ Se você optar por não usar o modelo de duas fases para **SQLInstallTranslatorEx**, deverá definir *cbPathOutMax*, que define o tamanho do armazenamento para o caminho do diretório de destino, para o valor _MAX_PATH, conforme definido em STDLIB. h, para evitar truncamento.  
   
- Quando *frequentes* é ODBC_INSTALL_COMPLETE, **SQLInstallTranslatorEx** não permite *lpszPathOut* NULL (ou *cbPathOutMax* deve ser 0). Se *frequentes* é ODBC_INSTALL_COMPLETE, FALSO é retornado quando o número de bytes disponíveis para retornar é maior que ou igual a *cbPathOutMax*, com o resultado que o truncamento ocorre.  
+ Quando *fRequest* é ODBC_INSTALL_COMPLETE, **SQLInstallTranslatorEx** não permite que *LpszPathOut* seja nulo (ou *cbPathOutMax* como 0). Se *fRequest* for ODBC_INSTALL_COMPLETE, false será retornado quando o número de bytes disponíveis para retornar for maior ou igual a *cbPathOutMax*, com o resultado de que o truncamento ocorre.  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
 |Retornando uma opção de conversão padrão|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
-|Selecionando os tradutores|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
-|Removendo os tradutores|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
+|Selecionando tradutores|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
+|Removendo tradutores|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|

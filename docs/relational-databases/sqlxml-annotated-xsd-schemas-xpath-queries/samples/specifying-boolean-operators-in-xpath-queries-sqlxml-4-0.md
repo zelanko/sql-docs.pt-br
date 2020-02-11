@@ -18,10 +18,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 00a53f9d1b04d0f96e854a9e85c1588aa33e60fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252577"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores boolianos em consultas XPath (SQLXML 4.0)
@@ -30,7 +30,7 @@ ms.locfileid: "75252577"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-specify-the-or-boolean-operator"></a>R. Especificar o operador booliano OR  
+### <a name="a-specify-the-or-boolean-operator"></a>a. Especificar o operador booliano OR  
  Essa consulta XPath retorna o ** \<** elemento de>do cliente filho do nó de contexto com o valor do atributo **CustomerID** de 13 ou 31:  
   
 ```  

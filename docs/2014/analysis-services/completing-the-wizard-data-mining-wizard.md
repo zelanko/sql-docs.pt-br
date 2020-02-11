@@ -1,5 +1,5 @@
 ---
-title: Concluindo o Assistente (Assistente de mineração de dados) | Microsoft Docs
+title: Concluindo o assistente (Assistente de mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087709"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Concluindo o assistente (Assistente de Mineração de Dados)
@@ -27,7 +27,7 @@ ms.locfileid: "66087709"
 > [!NOTE]  
 >  Essa página é alterada de acordo com a seleção da opção **De banco de dados relacional ou data warehouse existente** ou **De cubo existente** na página **Selecionar o Método de Definição** do assistente.  
   
- **Para obter mais informações:** [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Designer de mineração de dados](data-mining/data-mining-designer.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Assistente de mineração de dados &#40;Analysis Services de mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Designer de mineração de dados](data-mining/data-mining-designer.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Nome da estrutura de mineração**  
@@ -36,7 +36,7 @@ ms.locfileid: "66087709"
  **Nome do modelo de mineração**  
  Digite o nome do modelo de mineração definido pelo **Assistente de Mineração de Dados**.  
   
- **Permitir detalhamento**  
+ **Permitir Detalhamento**  
  Selecione para oferecer suporte a capacidades de detalhamento no modelo de mineração novo, se tiver criado um.  
   
 > [!NOTE]  
@@ -59,9 +59,9 @@ ms.locfileid: "66087709"
 > [!NOTE]  
 >  Essa opção ficará disponível se você selecionar a opção **De cubo existente** na página **Selecionar o Método de Definição** e tiver selecionado **Criar Dimensão de Modelo de Mineração** na página atual do assistente.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Selecionar exibição da fonte de dados &#40;Assistente de mineração de dados&#41;](select-data-source-view-data-mining-wizard.md)   
- [Especificar os dados de treinamento &#40;Assistente de mineração de dados&#41;](specify-the-training-data-data-mining-wizard.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de mineração de dados &#40;Analysis Services Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Selecione exibição da fonte de dados &#40;assistente de mineração de dados&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Especifique os dados de treinamento &#40;assistente de mineração de dados&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

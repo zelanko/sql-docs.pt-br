@@ -1,5 +1,5 @@
 ---
-title: Tópicos de instruções sobre SMO | Microsoft Docs
+title: Tópicos de instruções do SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b100c23c1600a9c5fe4af9a39e16f8bd861656f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781930"
 ---
 # <a name="smo-how-to-topics"></a>Tópicos de instruções sobre SMO
@@ -23,7 +23,7 @@ ms.locfileid: "62781930"
  [Criar um projeto SMO do Visual Basic no Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
  Descreve como configurar o ambiente de programação do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET para criar um aplicativo de console de SMO usando [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
- [Criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
+ [Criar um projeto do Visual C&#35; SMO no Visual Studio .NET](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
  Descreve como configurar o ambiente de programação do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET para criar um aplicativo de console de SMO usando o Visual C#.  
   
   

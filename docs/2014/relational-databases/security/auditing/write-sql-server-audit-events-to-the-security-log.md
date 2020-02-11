@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211979"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Gravar eventos de auditoria do SQL Server no log de segurança
@@ -47,9 +47,9 @@ ms.locfileid: "68211979"
   
      [Segurança](#Security)  
   
--   **Para gravar eventos de auditoria do SQL Server no log de segurança:**  
+-   **Para gravar SQL Server eventos de auditoria no log de segurança:**  
   
-     [Definir a configuração de acesso ao objeto de auditoria no Windows usando auditpol](#auditpolAccess)  
+     [Definir a configuração de acesso ao objeto de auditoria no Windows usando Auditpol](#auditpolAccess)  
   
      [Definir a configuração de acesso ao objeto de auditoria no Windows usando secpol](#secpolAccess)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68211979"
   
 7.  Feche a ferramenta Política de Segurança.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md)  
   
   

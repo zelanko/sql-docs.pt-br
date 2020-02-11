@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2412bfb8bcd3cacc2db2702879353b92e328b09a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727390"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>O que é Machine Learning Server ou Microsoft R Server autônomo no SQL Server?
@@ -32,7 +32,7 @@ O SQL Server 2016 inclui apenas o R. O SQL Server 2017 oferece suporte às lingu
 
 | Componente | Descrição |
 |-----------|-------------|
-| Pacotes do R | O [**RevoScaleR**](ref-r-revoscaler.md) é a biblioteca principal para R escalonável com funções para transformação, visualização, análise e manipulação de dados.  <br/>O [**MicrosoftML**](ref-r-microsoftml.md) adiciona algoritmos de aprendizado de máquina para criar modelos personalizados para análise de texto, análise de imagem e análise de sentimentos. <br/>O [**sqlRUtils**](ref-r-sqlrutils.md) fornece funções auxiliares para colocar scripts de R em um procedimento armazenado do T-SQL, registrando esse procedimento armazenado em um banco de dados e executando o procedimento armazenado em um ambiente de desenvolvimento de R.<br/>O [**mrsdeploy**](operationalization-with-mrsdeploy.md) oferece implantação de serviço Web (somente no SQL Server 2017). <br/>O [**olapR**](ref-r-olapr.md) é para especificar consultas MDX em R.|
+| Pacotes R | O [**RevoScaleR**](ref-r-revoscaler.md) é a biblioteca principal para R escalonável com funções para transformação, visualização, análise e manipulação de dados.  <br/>O [**MicrosoftML**](ref-r-microsoftml.md) adiciona algoritmos de aprendizado de máquina para criar modelos personalizados para análise de texto, análise de imagem e análise de sentimentos. <br/>O [**sqlRUtils**](ref-r-sqlrutils.md) fornece funções auxiliares para colocar scripts de R em um procedimento armazenado do T-SQL, registrando esse procedimento armazenado em um banco de dados e executando o procedimento armazenado em um ambiente de desenvolvimento de R.<br/>O [**mrsdeploy**](operationalization-with-mrsdeploy.md) oferece implantação de serviço Web (somente no SQL Server 2017). <br/>O [**olapR**](ref-r-olapr.md) é para especificar consultas MDX em R.|
 | MRO (Microsoft R Open) | O [**MRO**](https://mran.microsoft.com/open) é a distribuição de software livre de R da Microsoft. O pacote e o interpretador estão incluídos. Sempre use a versão do MRO agrupada na instalação. |
 | Ferramentas do R | Os prompts de comando e as janelas do console do R são ferramentas padrão em uma distribuição do R. Encontre-os em \Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64. |
 | Scripts e exemplos de R |  Os pacotes do R e do RevoScaleR de software livre incluem conjuntos de dados internos para que você possa criar e executar scripts usando dados pré-instalados. Procure por eles em \Program Files\Microsoft SQL Server\140\R_SERVER\library\datasets e \library\RevoScaleR. |
@@ -50,7 +50,7 @@ Como um servidor independente dissociado do SQL Server, o ambiente do R e do Pyt
 
 Como um suplemento para SQL Server, um servidor autônomo também será útil como um ambiente de desenvolvimento avançado se você precisar de computação local e remota. Os pacotes do R e do Python em um servidor autônomo são os mesmos fornecidos com uma instalação do mecanismo de banco de dados, permitindo portabilidade de código e [alternância de contexto de computação](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
 
-## <a name="how-to-get-started"></a>Como começar a usar
+## <a name="how-to-get-started"></a>Como começar
 
 Inicie a instalação, anexe os binários à sua ferramenta de desenvolvimento favorita e escreva seu primeiro script.
 

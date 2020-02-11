@@ -1,5 +1,5 @@
 ---
-title: Tabelas do SQL Server Agent (Transact-SQL) | Microsoft Docs
+title: Tabelas de SQL Server Agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130588"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>Tabelas do SQL Server Agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Os tópicos desta seção descrevem as tabelas do sistema que armazenam informações usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Todas as tabelas estão no esquema dbo do banco de dados msdb.  
+  Os tópicos desta seção descrevem as tabelas do sistema que armazenam informações usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Todas as tabelas estão no esquema dbo no banco de dados msdb.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [dbo.sysalerts](../../relational-databases/system-tables/dbo-sysalerts-transact-sql.md)  

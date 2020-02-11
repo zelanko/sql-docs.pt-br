@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd614cc08e22b936c0f5f5468ded70d2adb9726f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663201"
 ---
 # <a name="cursors-event-category"></a>Categoria de evento Cursors
@@ -28,7 +28,7 @@ ms.locfileid: "62663201"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento CursorClose](cursorclose-event-class.md)|Descreve eventos de fechamento de cursor que ocorrem em cursores de interface de programação de aplicativo (API).|  
 |[Classe de evento CursorExecute](cursorexecute-event-class.md)|Descreve eventos de execução de cursor que ocorrem em cursores de API.|  
@@ -38,7 +38,7 @@ ms.locfileid: "62663201"
 |[Classe de evento CursorRecompile](cursorrecompile-event-class.md)|Descreve eventos de recompilação de cursor que ocorrem em cursores de API.|  
 |[Classe de evento CursorUnprepare](cursorunprepare-event-class.md)|Descreve eventos de despreparação de cursor que ocorrem em cursores de API.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)  
   
   

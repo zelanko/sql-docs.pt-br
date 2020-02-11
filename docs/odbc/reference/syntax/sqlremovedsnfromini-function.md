@@ -20,18 +20,18 @@ ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cc83a8cafffc9b5d1166df76d91ce4c63f0b858
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68024535"
 ---
 # <a name="sqlremovedsnfromini-function"></a>Função SQLRemoveDSNFromIni
-**Conformidade com**  
- Versão introduzida: ODBC 1.0  
+**Conformidade**  
+ Versão introduzida: ODBC 1,0  
   
  **Resumo**  
- **SQLRemoveDSNFromIni** remove uma fonte de dados de informações do sistema.  
+ **SQLRemoveDSNFromIni** remove uma fonte de dados das informações do sistema.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,31 +43,31 @@ BOOL SQLRemoveDSNFromIni(
   
 ## <a name="arguments"></a>Argumentos  
  *lpszDSN*  
- [Entrada] Nome da fonte de dados a ser removido.  
+ Entrada Nome da fonte de dados a ser removida.  
   
-## <a name="returns"></a>Retorna  
- A função retornará TRUE se ele remove a fonte de dados ou a fonte de dados não estava no arquivo ODBC ini. Retornará FALSE se ele falhar ao remover a fonte de dados.  
+## <a name="returns"></a>Retornos  
+ A função retornará TRUE se remover a fonte de dados ou a fonte de dados não estiver no arquivo ODBC. ini. Ele retornará FALSE se falhar ao remover a fonte de dados.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLRemoveDSNFromIni** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLRemoveDSNFromIni** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Descrição|  
+|*\*pfErrorCode*|Erro|DESCRIÇÃO|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
-|ODBC_ERROR_INVALID_DSN|DSN inválido|O *lpszDSN* argumento era inválido.|  
-|ODBC_ERROR_REQUEST_FAILED|Falha na solicitação|O instalador não foi possível remover as informações DSN do registro.|  
-|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não foi possível executar a função devido à falta de memória.|  
+|ODBC_ERROR_GENERAL_ERR|Erro geral do instalador|Ocorreu um erro para o qual não havia nenhum erro do instalador específico.|  
+|ODBC_ERROR_INVALID_DSN|DSN inválido|O argumento *lpszDSN* era inválido.|  
+|ODBC_ERROR_REQUEST_FAILED|Falha na solicitação|O instalador não pôde remover as informações de DSN do registro.|  
+|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não pôde executar a função devido à falta de memória.|  
   
 ## <a name="comments"></a>Comentários  
- **SQLRemoveDSNFromIni** remove o nome da fonte de dados da seção [fontes de dados ODBC] as informações do sistema. Ela também remove a seção de especificação de fonte de dados das informações do sistema.  
+ **SQLRemoveDSNFromIni** remove o nome da fonte de dados da seção [fontes de dados ODBC] das informações do sistema. Ele também remove a seção especificação da fonte de dados das informações do sistema.  
   
- Essa função deve ser chamada apenas de uma biblioteca de instalação do driver.  
+ Essa função deve ser chamada somente de uma biblioteca de instalação de driver.  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
-|Adicionar, modificar ou remover uma fonte de dados|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
-|Adicionar, modificar ou remover uma fonte de dados|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
+|Adicionando, modificando ou removendo uma fonte de dados|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
+|Adicionando, modificando ou removendo uma fonte de dados|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |Removendo a fonte de dados padrão|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|  
-|Adicionando um nome de fonte de dados para as informações do sistema|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
+|Adicionando um nome de fonte de dados às informações do sistema|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|

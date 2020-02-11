@@ -14,18 +14,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791744"
 ---
 # <a name="add-projects-to-source-control"></a>Adicionar projetos ao controle do código-fonte
-  As soluções do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] podem hospedar vários projetos de script. Como você adiciona um projeto ao controle do código-fonte depende do fato de a solução a que o projeto pertence estar sob controle do código-fonte. Se a solução estiver sob controle do código-fonte, fazer check-in da solução adicionará automaticamente o projeto ao controle do código-fonte. Para obter mais informações sobre como fazer check-in de soluções, consulte [verificar nos arquivos](../../2014/database-engine/check-in-files.md).  
+  As soluções do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] podem hospedar vários projetos de script. Como você adiciona um projeto ao controle do código-fonte depende do fato de a solução a que o projeto pertence estar sob controle do código-fonte. Se a solução estiver sob controle do código-fonte, fazer check-in da solução adicionará automaticamente o projeto ao controle do código-fonte. Para obter mais informações sobre como fazer check-in de soluções, consulte [check in Files](../../2014/database-engine/check-in-files.md).  
   
- Se a solução a que esse projeto pertence não estiver sob controle do código-fonte, você poderá adicionar essa solução ao controle, o que adicionará automaticamente os projetos da solução. Para obter mais informações sobre como adicionar soluções ao controle de origem, consulte [adicionar soluções ao controle do código-fonte](../../2014/database-engine/add-solutions-to-source-control.md).  
+ Se a solução a que esse projeto pertence não estiver sob controle do código-fonte, você poderá adicionar essa solução ao controle, o que adicionará automaticamente os projetos da solução. Para obter mais informações sobre como adicionar soluções ao controle do código-fonte, consulte [Adicionar soluções ao controle do código-fonte](../../2014/database-engine/add-solutions-to-source-control.md).  
   
- Se você não quiser adicionar a solução ao controle de origem, você pode usar o **Adicionar seleção ao controle do código-fonte** comando para adicionar o projeto manualmente.  
+ Se você não quiser adicionar a solução ao controle do código-fonte, poderá usar o comando **Adicionar seleção ao controle do código-fonte** para adicionar o projeto manualmente.  
   
  Os objetos de banco de dados não são protegidos diretamente pelo provedor de controle do código-fonte, mas você pode criar scripts de objetos de banco de dados e salvá-los sob o controle do código-fonte.  
   
@@ -33,18 +33,18 @@ ms.locfileid: "62791744"
   
 1.  No Gerenciador de Soluções, selecione um projeto.  
   
-2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **adicionar projetos selecionados ao controle do código-fonte**.  
+2.  No menu **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **adicionar projetos selecionados ao controle do código-fonte**.  
   
     > [!NOTE]  
-    >  Se você usar o **adicionar projetos selecionados ao controle do código-fonte** de comando para adicionar um projeto que pertence a uma solução de controle do código-fonte, você será solicitado se você deseja adicionar o projeto como uma subpasta da solução de controle do código-fonte ou para adicionar o projeto como uma pasta separada.  
+    >  Se você usar o comando **adicionar projetos selecionados ao controle do código-fonte** para adicionar um projeto que pertence a uma solução controlada por origem, será perguntado se deseja adicionar o projeto como uma subpasta da solução controlada por origem ou adicionar o projeto como uma pasta separada.  
   
 3.  Se solicitado, faça logon em seu provedor de controle do código-fonte.  
   
-4.  O **adicionar ao projeto do SourceSafe** caixa de diálogo é exibida. O nome do seu projeto aparece na **projeto** caixa.  
+4.  A caixa de diálogo **Adicionar ao projeto SourceSafe** é exibida. O nome do seu projeto é exibido na caixa **projeto** .  
   
-5.  No **pastas** lista, abra a pasta onde você deseja colocar seu projeto. Como alternativa, você pode clicar **Create** para criar uma pasta com o nome exibido na **projeto** caixa.  
+5.  Na lista **pastas** , abra a pasta onde você deseja posicionar o projeto. Como alternativa, você pode clicar em **criar** para criar uma pasta com o nome exibido na caixa **projeto** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar soluções e projetos ao controle do código-fonte](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

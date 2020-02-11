@@ -18,21 +18,21 @@ ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c538a217c5d86f2b59f079f8629a6f4cbe9fea3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120061"
 ---
-# <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
+# <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Reduz o tamanho das tabelas de histórico de backup e restauração excluindo as entradas de conjuntos de backup anteriores à data especificada. Linhas adicionais são adicionadas ao backup e restauração de tabelas de histórico depois de cada backup ou operação de restauração é executada; Portanto, é recomendável que você execute periodicamente **sp_delete_backuphistory**.  
+  Reduz o tamanho das tabelas de histórico de backup e restauração excluindo as entradas de conjuntos de backup anteriores à data especificada. Linhas adicionais são adicionadas às tabelas de histórico de backup e restauração depois que cada operação de backup ou restauração é executada; Portanto, recomendamos que você execute periodicamente **sp_delete_backuphistory**.  
   
 > [!NOTE]  
->  As tabelas de histórico de backup e restauração residem na **msdb** banco de dados.  
+>  As tabelas de histórico de backup e restauração residem no banco de dados **msdb** .  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @oldest_date = ] 'oldest\_date'` É a data mais antiga mantida nas tabelas de histórico de backup e restauração. *oldest_date* está **datetime**, sem padrão.  
+`[ @oldest_date = ] 'oldest\_date'`É a data mais antiga retida nas tabelas de histórico de backup e restauração. *oldest_date* é **DateTime**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -51,7 +51,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- **sp_delete_backuphistory** deve ser executado a partir de **msdb** de banco de dados e afeta as tabelas a seguir:  
+ **sp_delete_backuphistory** deve ser executado no banco de dados **msdb** e afeta as seguintes tabelas:  
   
 -   [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)  
   
@@ -72,7 +72,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
  Os arquivos de backup físicos são preservados, até mesmo se todo o histórico for excluído.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **sysadmin** função de servidor fixa, mas as permissões podem ser concedidas a outros usuários.  
+ Requer a associação na função de servidor fixa **sysadmin** , mas as permissões podem ser concedidas a outros usuários.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir exclui todas as entradas que são mais antigas do que 14 de janeiro de 2010, 00h00 nas tabela de histórico de backup e restauração.  
@@ -83,8 +83,8 @@ GO
 EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_delete_database_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
  [Informações de histórico e cabeçalho de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728219"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Editar e excluir um índice (Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "73728219"
   
 1.  No Master Data Manager, clique em **Administração do Sistema**.  
   
-2.  Na página **Gerenciar Modelo** , selecione um modelo na grade e clique em **Entidades**.  
+2.  Na página **gerenciar modelo** , selecione um modelo na grade e clique em **entidades**.  
   
 3.  Na página **Gerenciar Entidade** , selecione a entidade que contém o índice que deseja editar.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "73728219"
   
 8.  Edite a lista de atributos atribuídos adicionando e removendo atributos a partir da lista.  
   
-9. Clique em **Salvar**.  
+9. Clique em **Save** (Salvar).  
   
  **Para excluir um índice**  
   
-1.  Na página **Gerenciar Modelo** , escolha um modelo na grade e clique em **Entidades**.  
+1.  Na página **gerenciar modelo** , selecione um modelo na grade e clique em **entidades**.  
   
 2.  Na página **Gerenciar Entidade** , selecione a entidade que contém o índice que deseja excluir.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "73728219"
   
 5.  Nas caixas de mensagem de confirmação, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um índice &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
  [Índice personalizado &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   

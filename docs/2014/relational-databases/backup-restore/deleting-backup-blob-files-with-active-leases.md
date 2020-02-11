@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783063"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Excluindo arquivos de blob de backup com arrendamentos ativos
@@ -29,17 +29,17 @@ ms.locfileid: "72783063"
 ## <a name="managing-orphaned-blobs"></a>Gerenciando blobs órfãos  
  As etapas a seguir descrevem como efetuar a limpeza após uma atividade de restauração ou backup com falha. Todas as etapas podem ser executadas por meio dos scripts do PowerShell. Um exemplo de código é fornecido na seção a seguir:  
   
-1.  **Identificando os blobs que têm arrendamentos:** Se você tiver um script ou processo que executa os processos de backup, talvez possa capturar a falha no script ou processo e usá-la para limpar os blobs.   Você também pode usar as propriedades LeaseStats e LeastState para identificar os blobs que têm arrendamentos neles. Após identificar os blobs, recomendamos que você examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
+1.  **Identificando BLOBs que têm concessões:** Se você tiver um script ou um processo que executa os processos de backup, você poderá capturar a falha no script ou no processo e usá-lo para limpar os BLOBs.   Você também pode usar as propriedades LeaseStats e LeastState para identificar os blobs que têm arrendamentos neles. Após identificar os blobs, recomendamos que você examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
   
-2.  **Interrompendo a concessão:** uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
+2.  **Dividindo a concessão:** Uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
   
     > [!TIP]  
     >  O SQL Server emite uma ID de concessão para estabelecer o acesso exclusivo durante a operação de restauração. A ID de concessão da restauração é BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Excluindo o blob:** para excluir um blob que tem uma concessão ativa, primeiro você deve interromper a concessão.  
+3.  **Excluindo o blob:** Para excluir um blob que tem uma concessão ativa, você deve primeiro interromper a concessão.  
   
-###  <a name="Code_Example"></a> Exemplo de script do PowerShell  
- **\* \* \* importantes \*** Se você estiver executando o PowerShell 2,0, poderá ter problemas ao carregar o assembly Microsoft WindowsAzure. Storage. dll. Recomendamos que você atualize o Powershell 3.0 para resolver o problema. Você também pode usar a seguinte solução para o PowerShell 2.0:  
+###  <a name="Code_Example"></a>Exemplo de script do PowerShell  
+ ** \* Importante \* \* ** Se você estiver executando o PowerShell 2,0, poderá ter problemas ao carregar o assembly Microsoft WindowsAzure. Storage. dll. Recomendamos que você atualize o Powershell 3.0 para resolver o problema. Você também pode usar a seguinte solução para o PowerShell 2.0:  
   
 -   Crie ou modifique o arquivo powershell.exe.config para carregar os assemblies do .NET 2.0 e do .NET 4.0 em runtime com o seguinte:  
   
@@ -73,15 +73,15 @@ ms.locfileid: "72783063"
   
 2.  Se não houver nenhum blob que tenha bloqueado arrendamentos, você verá a seguinte mensagem:  
   
-     **Não há nenhum blob com status de concessão bloqueado**  
+     **Não há BLOBs com status de concessão bloqueado**  
   
      Se houver blobs com arrendamentos bloqueados, você verá as seguintes mensagens:  
   
-     **Interrompendo arrendamentos**  
+     **Quebras de leasing**  
   
-     **A concessão na \<URL do Blob> é uma concessão de restauração: você verá esta mensagem apenas se tiver um blob com uma concessão de restauração que ainda está ativa.**  
+     **A concessão na \<URL do blob> é uma concessão de restauração: você verá essa mensagem somente se tiver um blob com uma concessão de restauração que ainda esteja ativa.**  
   
-     **A concessão na \<URL do Blob> não é uma concessão de restauração Interrompendo concessão na \<URL do Bob>.**  
+     **A concessão na \<URL do blob> não é uma concessão de restauração que quebra a \<concessão na URL do Bob>.**  
   
 ```powershell
 param(  
@@ -150,4 +150,4 @@ if($lockedBlobs.Count -gt 0)
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Melhores práticas e solução de problemas de backup do SQL Server para URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+ [Solução de problemas e melhores práticas de backup do SQL Server para URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
