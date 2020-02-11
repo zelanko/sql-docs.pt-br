@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637989"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Criar variáveis e colunas de tipo de dados XML
-  O tipo de dados `xml` é um tipo de dados interno no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é um pouco semelhante a outros tipos internos, como `int` e `varchar`. Como com outros tipos internos, você pode usar o `xml` tipo de dados como um tipo de coluna quando você cria uma tabela como um tipo de variável, um tipo de parâmetro, um tipo de retorno de função, ou em [CAST e CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+  O tipo de dados `xml` é um tipo de dados interno no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é um pouco semelhante a outros tipos internos, como `int` e `varchar`. Assim como ocorre com outros tipos internos, você pode usar o `xml` tipo de dados como um tipo de coluna ao criar uma tabela como um tipo de variável, um tipo de parâmetro, um tipo de retorno de função, ou em [cast e Convert](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ## <a name="creating-columns-and-variables"></a>Criando colunas e variáveis  
  Para criar uma coluna de tipo `xml` como parte de uma tabela, use uma instrução `CREATE TABLE` , conforme mostrado no exemplo a seguir:  
@@ -127,9 +127,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>Mesma tabela ou tabela diferente  
- Um `xml` coluna de tipo de dados pode ser criada em uma tabela que contém outras colunas relacionais ou em uma tabela separada com uma relação de chave estrangeira com uma tabela principal.  
+ Uma `xml` coluna de tipo de dados pode ser criada em uma tabela que contém outras colunas relacionais ou em uma tabela separada com uma relação de chave estrangeira com uma tabela principal.  
   
- Criar um `xml` coluna de tipo de dados na mesma tabela quando uma das seguintes condições for verdadeira:  
+ Crie uma `xml` coluna de tipo de dados na mesma tabela quando uma das seguintes condições for verdadeira:  
   
 -   O aplicativo executa recuperação de dados na coluna XML e não requer um índice XML na coluna XML.  
   

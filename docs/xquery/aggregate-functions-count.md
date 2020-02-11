@@ -16,16 +16,16 @@ ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986307"
 ---
 # <a name="aggregate-functions---count"></a>Funções de Agregação – count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o número de itens que estão contidos em sequência especificada por *$arg*.  
+  Retorna o número de itens contidos na sequência especificada por *$ARG*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,12 +39,12 @@ fn:count($arg as item()*) as xs:integer
  Itens a serem contados.  
   
 ## <a name="remarks"></a>Comentários  
- Retorna 0 se *$arg* é uma sequência vazia.  
+ Retornará 0 se *$ARG* for uma sequência vazia.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Usando a função count() XQuery para contar o número de locais de centro de trabalho na fabricação de um modelo de produto  
+### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>a. Usando a função count() XQuery para contar o número de locais de centro de trabalho na fabricação de um modelo de produto  
  A consulta a seguir conta o número de locais de centro de trabalho no processo de fabricação de um modelo de produto (ProductModelID=7).  
   
 ```  
@@ -62,13 +62,13 @@ WHERE Production.ProductModel.ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   O **namespace** palavra-chave na [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define um prefixo de namespace. O prefixo é então usado no corpo do XQuery.  
+-   A palavra-chave **namespace** no [prólogo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define um prefixo de namespace. O prefixo é então usado no corpo do XQuery.  
   
--   A consulta constrói XML que inclui o <`NoOfWorkStations`> elemento.  
+-   A consulta constrói XML que inclui o elemento <`NoOfWorkStations`>.  
   
--   O **Count ()** funcionam no corpo do XQuery conta o número de <`Location`> elementos.  
+-   A função **Count ()** no corpo do XQuery conta o número de <`Location` elementos>.  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 ProductModelID   Name                 WorkCtrCount       
@@ -91,14 +91,14 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID= 7  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <NoOfWorkStations ProductModelID="7"   
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- Em vez de XML, você pode retornar esses valores como tipo não xml, como mostrado na consulta a seguir. A consulta usa o [método Value () (tipo de dados xml)](../t-sql/xml/value-method-xml-data-type.md) para recuperar a contagem de local de centro de trabalho.  
+ Em vez de XML, você pode retornar esses valores como tipo não xml, como mostrado na consulta a seguir. A consulta usa o [método Value () (tipo de dados XML)](../t-sql/xml/value-method-xml-data-type.md) para recuperar a contagem de locais do centro de trabalho.  
   
 ```  
 SELECT  ProductModelID,   
@@ -109,7 +109,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 ProductModelID    Name            WorkCtrCount  
@@ -117,7 +117,7 @@ ProductModelID    Name            WorkCtrCount
 7              HL Touring Frame        6     
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

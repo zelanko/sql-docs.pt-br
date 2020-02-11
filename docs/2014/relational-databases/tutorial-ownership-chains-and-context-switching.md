@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Cadeias de propriedade e alternância de contexto | Microsoft Docs'
+title: 'Tutorial: cadeias de propriedade e alternância de contexto | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524362"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Cadeias de propriedade e comutação de contexto
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   Este tutorial usa um cenário para ilustrar os conceitos de segurança do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] envolvendo cadeias de propriedade e alternância de contexto de usuário.  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "62524362"
  Cada bloco de código neste exemplo é explicado em linha. Para copiar o exemplo completo, consulte [Exemplo completo](#CompleteExample) no fim deste tutorial.  
   
 ## <a name="1-configure-the-environment"></a>1. Configure o ambiente  
- Use o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e o código a seguir para abrir o banco de dados `AdventureWorks2012` e use a instrução [!INCLUDE[tsql](../includes/tsql-md.md)] `CURRENT_USER` para verificar se o usuário dbo é exibido como o contexto.  
+ Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o e o código a seguir para `AdventureWorks2012` abrir o banco de dados `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] e use a instrução para verificar se o usuário dbo é exibido como o contexto.  
   
 ```  
 USE AdventureWorks2012;  
@@ -59,7 +59,7 @@ GO
   
  Para obter mais informações sobre a instrução CURRENT_USER, consulte [CURRENT_USER &#40;Transact-SQL&#41;](/sql/t-sql/functions/current-user-transact-sql).  
   
- Use esse código como o usuário dbo para criar dois usuários no servidor e no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
+ Use esse código como o usuário dbo para criar dois usuários no servidor e no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
   
 ```  
 CREATE LOGIN TestManagerUser   
@@ -80,7 +80,8 @@ GO
   
  Para obter mais informações sobre a instrução CREATE USER, consulte [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). Para obter mais informações sobre a instrução CREATE LOGIN, consulte [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
- Use o código a seguir para alterar a propriedade do esquema `Purchasing` para a conta `TestManagerUser` . Isso permite que a conta use todos os acessos da instrução DML (Linguagem de Manipulação de Dados) (como as permissões `SELECT` e `INSERT` ) nos objetos que ela contém. `TestManagerUser` também tem a capacidade de criar procedimentos armazenados.  
+ Use o código a seguir para alterar a propriedade do esquema `Purchasing` para a conta `TestManagerUser` . Isso permite que a conta use todos os acessos da instrução DML (Linguagem de Manipulação de Dados) (como as permissões `SELECT` e `INSERT` ) nos objetos que ela contém. 
+  `TestManagerUser` também tem a capacidade de criar procedimentos armazenados.  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -95,7 +96,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Para obter mais informações sobre a instrução GRANT, consulte [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Para obter mais informações sobre procedimentos armazenados, consulte [Procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](stored-procedures/stored-procedures-database-engine.md). Para obter um cartaz de todas as permissões [!INCLUDE[ssDE](../includes/ssde-md.md)], consulte [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
+ Para obter mais informações sobre a instrução GRANT, consulte [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Para obter mais informações sobre procedimentos armazenados, consulte [Procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](stored-procedures/stored-procedures-database-engine.md). Para obter um pôster de [!INCLUDE[ssDE](../includes/ssde-md.md)] todas as permissões [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142), consulte.  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Crie um procedimento armazenado para acessar os dados  
  Para alternar o contexto dentro de um banco de dados, use a instrução EXECUTE AS. EXECUTE AS exige permissões IMPERSONATE.  
@@ -146,7 +147,7 @@ WHERE b.name = 'usp_ShowWaitingItems';
 GO  
 ```  
   
- Com essa seção de exemplo concluída, o código muda o contexto de volta ao dbo usando a instrução `REVERT`.  
+ Com essa seção de exemplo concluída, o código muda o contexto de volta ao dbo usando a instrução `REVERT` .  
   
 ```  
 REVERT;  
@@ -156,7 +157,8 @@ GO
  Para obter mais informações sobre a instrução REVERT, consulte [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql).  
   
 ## <a name="3-access-data-through-the-stored-procedure"></a>3. Acesse dados pelo procedimento armazenado  
- `TestEmployeeUser` não tem permissões nos objetos de banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , a não ser um logon e os direitos atribuídos à função de banco de dados pública. O código a seguir retorna um erro quando `TestEmployeeUser` tentar acessar tabelas base.  
+ 
+  `TestEmployeeUser` não tem permissões nos objetos de banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , a não ser um logon e os direitos atribuídos à função de banco de dados pública. O código a seguir retorna um erro quando `TestEmployeeUser` tentar acessar tabelas base.  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -200,7 +202,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-##  <a name="CompleteExample"></a> Exemplo completo  
+##  <a name="CompleteExample"></a>Exemplo completo  
  Esta seção exibe o código de exemplo completo.  
   
 > [!NOTE]  
@@ -321,7 +323,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

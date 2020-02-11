@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62472926"
 ---
 # <a name="pick-schedule-for-job"></a>Selecionar agenda para um trabalho
-  Use essa caixa de diálogo para escolher uma agenda existente para o trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Use esta caixa de diálogo para escolher uma agenda existente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o trabalho do Agent.  
   
 ## <a name="options"></a>Opções  
  **Agendas disponíveis**  
@@ -43,7 +43,7 @@ ms.locfileid: "62472926"
  **Propriedades**  
  Lança a caixa de diálogo **Propriedades da Agenda do Trabalho** na qual você pode exibir informações sobre a agenda.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e anexar agendas para trabalhos](create-and-attach-schedules-to-jobs.md)  
   
   

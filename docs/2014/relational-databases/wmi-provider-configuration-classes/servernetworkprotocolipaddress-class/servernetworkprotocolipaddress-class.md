@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643383"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>Classe ServerNetworkProtocolIPAddress
-  O [classe ServerNetworkProtocolIPAddress] servernetworkprotocolipaddress-class.md) representa um endereço IP com suporte pelo protocolo de rede do servidor.  
+  A [classe ServerNetworkProtocolIPAddress] ServerNetworkProtocolIPAddress-class.md) representa um endereço IP com suporte do protocolo de rede do servidor.  
   
- Com o [classe ServerNetworkProtocolIPAddress] servernetworkprotocolipaddress-class.md), você pode executar as seguintes tarefas:  
+ Com a [classe ServerNetworkProtocolIPAddress] ServerNetworkProtocolIPAddress-class.md), você pode executar as seguintes tarefas:  
   
--   Verificar o nome da instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Verifique o nome da instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Verificar o nome de endereço IP e o nome de protocolo.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62643383"
   
 -   Habilitar e desabilitar o endereço IP.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurando protocolos de rede de servidor e Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

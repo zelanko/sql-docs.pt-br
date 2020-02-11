@@ -1,5 +1,5 @@
 ---
-title: Selecionar DISTINCT do &lt;modelo &gt; (DMX) | Microsoft Docs
+title: SELECIONAR DISTINCT do &lt;modelo &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892535"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>Selecionar DISTINCT do &lt;modelo &gt; (DMX)
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECIONAR DISTINCT do &lt;modelo &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna todos os possíveis estados para a coluna selecionada no modelo. Os valores retornados variam dependendo se a coluna especificada contém valores discretos, valores numéricos diferenciados ou valores numéricos contínuos.  
@@ -41,7 +41,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *lista de condições*  
  Uma condição para restringir os valores retornados da lista de colunas.  
   
- *Expressão*  
+ *expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
@@ -53,9 +53,9 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- Os resultados da instrução **Select distinto do \<modelo >** variam, dependendo do tipo de coluna. A tabela a seguir descreve os tipos de coluna com suporte e a saída da instrução.  
+ Os resultados da instrução **Select distinto do \<modelo>** variam, dependendo do tipo de coluna. A tabela a seguir descreve os tipos de coluna com suporte e a saída da instrução.  
   
-|Tipo de coluna|Output|  
+|Tipo de coluna|Saída|  
 |-----------------|------------|  
 |Discreto|Valores únicos na coluna.|  
 |Discretizado|Ponto central de cada partição diferenciada na coluna.|  
@@ -69,7 +69,7 @@ SELECT DISTINCT [Gender]
 FROM [TM Decision Tree]  
 ```  
   
- Resultados do exemplo:  
+ Exemplos de resultados:  
   
 |Gênero|  
 |------------|  
@@ -89,7 +89,7 @@ SELECT DISTINCT [Age] AS [Midpoint Age],
 FROM [TM Decision Tree]  
 ```  
   
- Resultados do exemplo:  
+ Exemplos de resultados:  
   
 |Idade de ponto médio|Idade mínima|Idade máxima|  
 |------------------|-----------------|-----------------|  
@@ -111,16 +111,16 @@ SELECT DISTINCT [Yearly Income] AS [Bucket Average],
 FROM [TM Decision Tree]  
 ```  
   
- Resultados do exemplo:  
+ Exemplos de resultados:  
   
 |Média de bucket|Mínimo de bucket|Máximo de bucket|  
 |--------------------|--------------------|--------------------|  
 ||||  
-|24610.7|10000|39221.41|  
-|55115.73|39221.41|71010.05|  
-|84821.54|71010.05|98633.04|  
-|111633.9|98633.04|124634.7|  
-|147317.4|124634.7|170000|  
+|24610,7|10000|39221,41|  
+|55115,73|39221,41|71010, 5|  
+|84821,54|71010, 5|98633, 4|  
+|111633,9|98633, 4|124634,7|  
+|147317,4|124634,7|170000|  
   
  Você pode observar que os valores da coluna [Renda Anual] foram diferenciados em cinco buckets, mais uma linha adicional de valores nulos, para representar valores ausentes.  
   
@@ -128,14 +128,14 @@ FROM [TM Decision Tree]
   
  Por exemplo, se você procurar o modelo usando o visualizador de Árvore de Decisão e clicar em um nó que contenha os clientes agrupados por renda, as propriedades de nó a seguir serão exibidas na Dica de Ferramenta:  
   
- Age > = 69 e renda anual < 39221,41  
+ Age >= 69 e renda anual < 39221,41  
   
 > [!NOTE]  
 >  O valor mínimo do bucket mínimo e o valor máximo do bucket máximo são apenas os valores mais alto e mais baixo observados. Os valores dentro desse intervalo observado são considerados como pertencentes aos buckets mínimo e máximo.  
   
-## <a name="see-also"></a>Consulte também  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Instruções de manipulação &#40;de&#41; dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Consulte Também  
+ [SELECIONAR&#41;&#40;DMX](../dmx/select-dmx.md)   
+ [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

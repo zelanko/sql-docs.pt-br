@@ -14,17 +14,17 @@ ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963490"
 ---
 # <a name="reset-method-rds"></a>Método Reset (RDS)
-Executa a classificação ou filtragem em um lado do cliente **Recordset** baseada nas propriedades de classificação e filtro especificadas.  
+Executa a classificação ou o filtro em um **conjunto de registros** do lado do cliente com base nas propriedades de classificação e filtro especificadas.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,19 +33,19 @@ Executa a classificação ou filtragem em um lado do cliente **Recordset** basea
 DataControl.Reset(value)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *DataControl*  
- Uma variável de objeto que representa um [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
+ Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- *value*  
- Opcional. Um **Boolean** valor que é **verdadeiro** (padrão) se você deseja filtrar o conjunto de linhas "filtrado" atual. **False** indica que você filtrar no conjunto de linhas original, removendo quaisquer opções de filtro anteriores.  
+ *valor*  
+ Opcional. Um valor **booliano** que é **verdadeiro** (padrão) se você quiser filtrar o conjunto de linhas "filtrado" atual. **False** indica que você filtra o conjunto de linhas original, removendo todas as opções de filtro anteriores.  
   
 ## <a name="remarks"></a>Comentários  
- O [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)propriedades fornecem classificando e filtrando a funcionalidade do cache do lado do cliente. A funcionalidade de classificação ordena os registros por valores de uma coluna. A funcionalidade de filtragem exibe um subconjunto de registros com base em um critério de localização, enquanto o completo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) é mantido no cache. O **redefina** método executará os critérios e substituir o atual **conjunto de registros** com um atualizável **conjunto de registros**.  
+ As propriedades [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) fornecem funcionalidade de classificação e filtragem no cache do lado do cliente. A funcionalidade de classificação ordena registros por valores de uma coluna. A funcionalidade de filtragem exibe um subconjunto de registros com base em critérios de localização, enquanto o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) completo é mantido no cache. O método **Reset** executará os critérios e substituirá o **conjunto** de registros atual por um **conjunto de registros**atualizável.  
   
- Se houver alterações aos dados originais que não tenham sido enviadas, o **redefinir** método falhará. Primeiro, use o [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) método para salvar as alterações em uma leitura/gravação **conjunto de registros**e, em seguida, usar o **redefinir** método para classificar ou filtrar os registros.  
+ Se houver alterações nos dados originais que não foram enviados, o método **Reset** falhará. Primeiro, use o método [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) para salvar as alterações em um **conjunto de registros**de leitura/gravação e, em seguida, use o método **Reset** para classificar ou filtrar os registros.  
   
- Se você quiser executar mais de um filtro em seu conjunto de linhas, você pode usar opcional *Boolean* argumento com o **redefinir** método. O exemplo a seguir mostra como fazer isso:  
+ Se você quiser executar mais de um filtro em seu conjunto de linhas, poderá usar o argumento *booliano* opcional com o método **Reset** . O exemplo a seguir mostra como fazer isso:  
   
 ```  
 ADC.SQL = "Select au_lname from authors"  
@@ -70,11 +70,11 @@ ADC.FilterValue = "'T'"
 ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".  
 ```  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
- [FilterColumn, FilterCriterion, FilterValue, SortColumn e SortDirection propriedades e exemplo de método Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo das propriedades FilterColumn, FilterCriterion, FilterValue, SortColumn e SortDirection e Método Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

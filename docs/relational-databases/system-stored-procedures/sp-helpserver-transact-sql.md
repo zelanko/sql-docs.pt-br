@@ -18,18 +18,18 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997437"
 ---
-# <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
+# <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Relata informações sobre um determinado servidor de replicação ou remoto, ou sobre todos os servidores de ambos os tipos. Fornece o nome do servidor, o nome da rede do servidor, o status de replicação do servidor, o número de identificação do servidor e o nome de ordenação. Também fornece valores de tempo limite para se conectar a servidores vinculados ou fazer consultas neles.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,11 +41,11 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server = ] 'server'` É o servidor sobre quais informações são relatadas. Quando *server* não for especificado, relatórios sobre todos os servidores no **Servers**. *servidor* está **sysname**, com um padrão NULL.  
+`[ @server = ] 'server'`É o servidor sobre quais informações são relatadas. Quando o *servidor* não for especificado, os relatórios sobre todos os servidores em **Master. sys. Servers**. o *servidor* é **sysname**, com um padrão de NULL.  
   
-`[ @optname = ] 'option'` A opção que descreve o servidor. *opção* está **varchar (** 35 **)** , com um padrão de NULL, e deve ser um destes valores.  
+`[ @optname = ] 'option'`É a opção que descreve o servidor. a *opção* é **varchar (** 35 **)**, com um padrão de NULL e deve ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**compatível com agrupamento**|Afeta a execução da consulta distribuída nos servidores vinculados. Se esta opção for definida como verdadeira,|  
 |**acesso a dados**|Habilita e desabilita um servidor vinculado para o acesso às consultas distribuídas.|  
@@ -53,25 +53,25 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**dpub**|Editor remoto para este Distribuidor.|  
 |**validação de esquema lenta**|Ignora a verificação de esquema de tabelas remotas no início da consulta.|  
 |**pub**|Editor.|  
-|**rpc**|Habilita o RPC a partir do servidor especificado.|  
-|**RPC out**|Habilita o RPC para o servidor especificado.|  
-|**sub**|Assinante.|  
-|**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**RPC**|Habilita o RPC a partir do servidor especificado.|  
+|**saída de RPC**|Habilita o RPC para o servidor especificado.|  
+|**projeto**|Farão.|  
+|**sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**usar agrupamento remoto**|Usa a ordenação de uma coluna remota em vez do servidor local.|  
   
-`[ @show_topology = ] 'show_topology'` É a relação do servidor especificado a outros servidores. *show_topology* está **varchar (** 1 **)** , com um padrão NULL. Se *show_topology* não é igual a **t** ou for NULL, **sp_helpserver** retornará as colunas listadas na seção conjuntos de resultados. Se *show_topology* é igual a **t**, além das colunas listadas nos conjuntos de resultados, **sp_helpserver** também retorna **topx** e **topy** informações.  
+`[ @show_topology = ] 'show_topology'`É a relação do servidor especificado com outros servidores. *show_topology* é **varchar (** 1 **)**, com um padrão de NULL. Se *show_topology* não for igual a **t** ou for nulo, **sp_helpserver** retornará colunas listadas na seção conjuntos de resultados. Se *show_topology* for igual a **t**, além das colunas listadas nos conjuntos de resultados, **sp_helpserver** também retornará informações de **topx** e **Topy** .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome de servidor.|  
 |**network_name**|**sysname**|Nome da rede do servidor.|  
-|**status**|**varchar(** 70 **)**|Status do servidor.|  
-|**id**|**char(** 4 **)**|Número de identificação do servidor.|  
+|**Estado**|**varchar (** 70 **)**|Status do servidor.|  
+|**sessão**|**Char (** 4 **)**|Número de identificação do servidor.|  
 |**collation_name**|**sysname**|Ordenação do servidor.|  
 |**connect_timeout**|**int**|O valor do tempo limite para conexão com um servidor vinculado.|  
 |**query_timeout**|**int**|O valor do tempo limite para as consultas em servidor vinculado.|  
@@ -84,7 +84,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-displaying-information-about-all-servers"></a>A. Exibindo informações sobre todos os servidores  
+### <a name="a-displaying-information-about-all-servers"></a>a. Exibindo informações sobre todos os servidores  
  O exemplo a seguir exibe informações sobre todos os servidores usando `sp_helpserver` sem nenhum parâmetro.  
   
 ```  
@@ -102,17 +102,17 @@ GO
 EXEC sp_helpserver 'SEATTLE2';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addsubscriber](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropserver](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropsubscriber](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpdistributor](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpremotelogin](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

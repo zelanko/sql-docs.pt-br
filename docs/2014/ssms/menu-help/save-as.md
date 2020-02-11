@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510315"
 ---
 # <a name="save-as"></a>Salvar como
-  Use essa caixa de diálogo para salvar uma instância do item atual em um local específico em um formato de arquivo específico. Para exibir essa caixa de diálogo, clique em **salvar**  *\<arquivo >* **como** sobre a **arquivo** menu (onde  *\<arquivo >* é o nome do item atual), ou pressione ALT + F, A no Editor de código.  
+  Use essa caixa de diálogo para salvar uma instância do item atual em um local específico em um formato de arquivo específico. Para exibir essa caixa de diálogo, clique em **salvar** * \<arquivo>* **como** no menu **arquivo** (em que * \<arquivo>* é o nome do item atual) ou pressione ALT + F, a no editor de códigos.  
   
 ## <a name="central-panel"></a>Painel central  
  **Salvar em**  
@@ -37,7 +37,7 @@ ms.locfileid: "62510315"
  **Salvar como tipo**  
  Use essa opção para selecionar um tipo de arquivo novo para o item selecionado. Os tipos de arquivo exibidos incluem todos os tipos de arquivo disponíveis para os quais o item selecionado pode ser convertido.  
   
- **Opções avançadas de salvar**  
+ **Opções Avançadas de Salvamento**  
  Para acessar a **Caixa de Diálogo Opções Avançadas de Salvar**, selecione o pequeno retângulo à direita do botão **Salvar** e clique em **Salvar com Codificação**. Use essa caixa de diálogo para especificar uma codificação para o arquivo e os caracteres a serem usados em finais de Linha.  
   
 ## <a name="left-panel"></a>Painel esquerdo  
@@ -50,7 +50,7 @@ ms.locfileid: "62510315"
  **Meu Computador**  
  Exibe o local **Meu Computador** em seu computador.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções avançadas de salvamento](advanced-save-options.md)   
  [Gerenciar arquivos com codificação](../solution/manage-files-with-encoding.md)  
   

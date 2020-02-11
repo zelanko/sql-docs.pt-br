@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a6813371e7641af1369f94f875ca0d9f96ad3a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470053"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>Propriedade MultiIpConfigurationSupport (classe ServerNetworkProtocol)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Um [propriedade ProtocolName (classe ServerNetworkProtocol)](servernetworkprotocol-class.md) que representa o protocolo de rede usado pela instância do objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *objeto*  
+ Um objeto de [Propriedade ProtocolName (classe ServerNetworkProtocol)](servernetworkprotocol-class.md) que representa o protocolo de rede usado pela instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]do.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor booliano que especifica se vários endereços IP têm suporte do protocolo de rede do servidor: `true` se vários endereços IP tiverem suporte do protocolo de rede do servidor ou `false` se vários endereços IP não tiverem suporte do protocolo de rede do servidor.  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurando protocolos de rede de servidor e Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Alterar a forma de nome de propriedade dinâmica (ADO) | Microsoft Docs
+title: Remodelar propriedade de nome-dinâmico (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,33 +14,33 @@ ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec72b2b1908f967caee4610e27315acaab787ac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917169"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Remodelar a propriedade dinâmica de nome (ADO)
-Especifica um nome para o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Especifica um nome para o objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="return-values"></a>Valores de retorno  
- Retorna um **cadeia de caracteres** valor que é o nome da **conjunto de registros**.  
+ Retorna um valor de **cadeia de caracteres** que é o nome do **conjunto de registros**.  
   
 ## <a name="remarks"></a>Comentários  
- Nomes de manter para a duração da conexão ou até o **Recordset** está fechado.  
+ Os nomes persistem pela duração da conexão ou até que o **conjunto de registros** seja fechado.  
   
- O **nome remodelar** propriedade destina-se principalmente para uso com o recurso de formatação novamente do [Microsoft Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) provedor de serviços. Nomes devem ser exclusivos para participar de shaping novamente.  
+ A propriedade **nome de remodelação** destina-se principalmente ao recurso de remodelagem do [serviço de modelagem de dados da Microsoft para](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) o provedor de serviços OLE DB. Os nomes devem ser exclusivos para participar da nova formatação.  
   
- Essa propriedade é somente leitura, mas pode ser definida indiretamente quando um **Recordset** é criado. Por exemplo, se uma cláusula de um comando de forma cria uma **conjunto de registros** e concede a ele um nome de alias usando o **AS** palavra-chave, o alias é atribuído ao **remodelar nome** propriedade. Se nenhum alias for declarado, o **remodelar nome** propriedade é atribuída um nome exclusivo gerado pelo data shaping service. Se o nome do alias é igual ao nome de existente **conjunto de registros**, nem **Recordset** pode ser reformatado até que um deles seja liberado. O comportamento padrão pode ser alterado definindo um nome exclusivo na [nome remodelar](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md) propriedade sobre a conexão do ADO para **verdadeiro**. Definir essa propriedade fornece os dados shaping de permissão de serviço para alterar o nome de usuário atribuído, se necessário, para garantir a exclusividade. Para obter mais informações sobre a remodelagem, consulte [Microsoft Data Shaping Service para OLE DB (provedor de serviços do ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md).  
+ Essa propriedade é somente leitura, mas pode ser definida indiretamente quando um **conjunto de registros** é criado. Por exemplo, se uma cláusula de um comando de forma cria um **conjunto de registros** e fornece a ele um nome **de alias usando a palavra-** chave as, o alias é atribuído à propriedade nome de **remodelação** . Se nenhum alias for declarado, a propriedade **nome da forma** será atribuída a um nome exclusivo gerado pelo data Shaping Service. Se o nome do alias for igual ao nome de um conjunto de **registros**existente, nenhum **conjunto de registros** poderá ser remodelado até que um deles seja liberado. O comportamento padrão pode ser alterado definindo um nome exclusivo na propriedade [nome da forma](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md) na conexão ADO como **true**. Definir essa propriedade dá permissão ao serviço de modelagem de dados para alterar o nome atribuído pelo usuário, se necessário, para garantir a exclusividade. Para obter mais informações sobre a remodelagem, consulte [serviço de modelagem de dados da Microsoft para OLE DB (provedor de serviços ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md).  
   
- Use o **nome remodelar** propriedade quando você deseja se referir a um **conjunto de registros** em um comando de forma, ou quando você não souber o nome porque ele foi gerado pelo Data Shaping Service. Nesse caso, você pode gerar um comando de forma concatenando o comando em torno de cadeia de caracteres retornada pela **remodelar nome** propriedade.  
+ Use a propriedade **remodelar nome** quando desejar fazer referência a um **conjunto de registros** em um comando de forma ou quando você não souber o nome porque ele foi gerado pelo serviço de modelagem de dados. Nesse caso, você pode gerar um comando de forma concatenando o comando em volta da cadeia de caracteres retornada pela propriedade **nome da remodelação** .  
   
- **Reformatar o nome** uma propriedade dinâmica que é acrescentada ao **conjunto de registros** do objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção quando o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) estiver definida como **adUseClient**.  
+ **Remodelar nome** é uma propriedade dinâmica acrescentada à coleção de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) do objeto **Recordset** quando a propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) é definida como **adUseClient**.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Microsoft Data Shaping Service para OLE DB (provedor de serviços do ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
- [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Serviço de modelagem de dados da Microsoft para OLE DB (provedor de serviços ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
+ [Comandos de forma em geral](../../../ado/guide/data/shape-commands-in-general.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

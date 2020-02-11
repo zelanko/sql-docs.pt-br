@@ -1,5 +1,5 @@
 ---
-title: Habilitando um DLL para ser executado em DCOM | Microsoft Docs
+title: Habilitando uma DLL para ser executada no DCOM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,32 +15,32 @@ ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ea7ea83219780602f8d8d68e5c807178e775bc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922709"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>Habilitar um DLL para ser executado no DCOM
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- As etapas a seguir descrevem como habilitar um objeto de negócios. dll usar o DCOM e serviços de informações de Internet (HTTP) do Microsoft por meio de serviços de componentes.  
+ As etapas a seguir descrevem como habilitar um objeto de negócios. dll para usar o DCOM e o Microsoft Serviços de Informações da Internet (HTTP) por meio de serviços de componentes.  
   
-1.  Crie um novo pacote vazio no snap-in de MMC de serviços de componente.  
+1.  Crie um novo pacote vazio no snap-in MMC dos serviços de componentes.  
   
-     Você usará o snap-in MMC de serviços de componentes para criar um pacote e adicionar a DLL para esse pacote. Isso torna o arquivo. dll acessível por meio do DCOM, mas ele remove a acessibilidade por meio do IIS. (Se você fazer check-in do registro para o arquivo. dll, o **Inproc** chave agora está vazia; definindo o atributo de ativação, explicado mais adiante neste tópico, adiciona um valor na **Inproc** chave.)  
+     Você usará o snap-in MMC dos serviços de componentes para criar um pacote e adicionar a DLL a esse pacote. Isso torna o. dll acessível por meio do DCOM, mas remove a acessibilidade por meio do IIS. (Se você fizer check-in do registro para o. dll, a chave **InProc** estará vazia; definir o atributo de ativação, explicado mais adiante neste tópico, adicionará um valor na chave **InProc** .)  
   
-2.  Instale um objeto de negócios no pacote.  
+2.  Instale um objeto comercial no pacote.  
   
-     - ou -  
+     -ou-  
   
-     Importar o [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto no pacote.  
+     Importe o objeto [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) para o pacote.  
   
-3.  Defina o atributo de ativação para o pacote **no processo do criador** (aplicativo de biblioteca).  
+3.  Defina o atributo de ativação para o pacote como **no processo do criador** (aplicativo de biblioteca).  
   
-     Para disponibilizar o arquivo. dll por meio do DCOM e o IIS no mesmo computador, você deve definir o atributo de ativação do componente no snap-in de MMC de serviços de componente. Depois de definir o atributo como **no processo do criador**, você observará que uma **Inproc** chave no registro do servidor tiver sido adicionada, que aponta para um componente de serviços substitutos. dll.  
+     Para tornar o. dll acessível por meio do DCOM e do IIS no mesmo computador, você deve definir o atributo de ativação do componente no snap-in do MMC dos serviços de componentes. Depois de definir o atributo como **no processo do criador**, você observará que uma chave de servidor **InProc** no registro foi adicionada que aponta para um componente dos serviços de componentes substituto. dll.  
   
- Para obter mais informações sobre serviços de componentes (ou serviço de transação da Microsoft, se você estiver usando o Windows NT) e como executar essas etapas, visite o site do Microsoft Transaction Server.
+ Para obter mais informações sobre os serviços de componentes (ou o Microsoft Transaction Service, se você estiver usando o Windows NT) e como executar essas etapas, visite o site do Microsoft Transaction Server.
 
 

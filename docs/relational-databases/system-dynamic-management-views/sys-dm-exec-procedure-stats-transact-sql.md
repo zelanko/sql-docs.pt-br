@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -21,32 +21,32 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68742897"
 ---
-# <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
+# <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna estatísticas de desempenho de agregação para procedimentos armazenados em cache. A exibição retorna uma linha para cada plano de procedimento armazenado, e o tempo de vida da linha é igual ao tempo em que o procedimento armazenado permanece em cache. Quando um procedimento armazenado é removido do cache, a linha correspondente é eliminada da exibição. Nesse momento, um evento de rastreamento do SQL de estatísticas de desempenho é gerado semelhante a **Sys. dm _ exec_query_stats**.  
+  Retorna estatísticas de desempenho de agregação para procedimentos armazenados em cache. A exibição retorna uma linha para cada plano de procedimento armazenado, e o tempo de vida da linha é igual ao tempo em que o procedimento armazenado permanece em cache. Quando um procedimento armazenado é removido do cache, a linha correspondente é eliminada da exibição. Nesse momento, é gerado um evento de Rastreamento do SQL de Estatísticas de Desempenho similar a **sys.dm_exec_query_stats**.  
   
  No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, todas as linhas que contêm dados que não pertencem ao locatário conectado serão filtradas.  
   
 > [!NOTE]
-> Os resultados de **Sys. dm _exec_procedure_stats** podem variar com cada execução, já que os dados refletem apenas as consultas concluídas e não os que ainda estão em andamento.
-> Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm _pdw_nodes_exec_procedure_stats**. 
+> Os resultados de **Sys. dm_exec_procedure_stats** podem variar com cada execução, já que os dados refletem apenas as consultas concluídas e não os que ainda estão em andamento.
+> Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_exec_procedure_stats**. 
 
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------| 
 |**database_id**|**int**|ID do banco de dados no qual o procedimento armazenado reside.|  
 |**object_id**|**int**|Número de identificação de objeto do procedimento armazenado.|  
-|**type**|**char(2)**|Tipo do objeto:<br /><br /> P = Procedimento armazenado SQL<br /><br /> PC = Procedimento armazenado de assembly (CLR)<br /><br /> X = Procedimento armazenado estendido|  
-|**type_desc**|**nvarchar(60)**|Descrição do tipo de objeto:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary(64)**|Isso pode ser usado para correlacionar com consultas em **Sys. dm _ exec_query_stats** que foram executadas de dentro deste procedimento armazenado.|  
-|**plan_handle**|**varbinary(64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Esse valor pode ser usado com a exibição de gerenciamento dinâmico **Sys. dm _exec_cached_plans** .<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
+|**tipo**|**Char (2)**|Tipo do objeto:<br /><br /> P = Procedimento armazenado SQL<br /><br /> PC = Procedimento armazenado de assembly (CLR)<br /><br /> X = Procedimento armazenado estendido|  
+|**type_desc**|**nvarchar (60)**|Descrição do tipo de objeto:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
+|**sql_handle**|**varbinary (64)**|Isso pode ser usado para correlacionar com consultas em **Sys. dm_exec_query_stats** que foram executadas de dentro deste procedimento armazenado.|  
+|**plan_handle**|**varbinary (64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Esse valor pode ser usado com a exibição de gerenciamento dinâmico **Sys. dm_exec_cached_plans** .<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**cached_time**|**datetime**|Hora em que o procedimento armazenado foi adicionado ao cache.|  
 |**last_execution_time**|**datetime**|Hora em que o procedimento armazenado foi executado pela última vez.|  
 |**execution_count**|**bigint**|O número de vezes que o procedimento armazenado foi executado desde a última compilação.|  
@@ -70,15 +70,15 @@ ms.locfileid: "68742897"
 |**last_elapsed_time**|**bigint**|O tempo decorrido, em microssegundos, para a execução concluída mais recentemente desse procedimento armazenado.|  
 |**min_elapsed_time**|**bigint**|O tempo mínimo decorrido, em microssegundos, para qualquer execução concluída desse procedimento armazenado.|  
 |**max_elapsed_time**|**bigint**|O tempo máximo decorrido, em microssegundos, para qualquer execução concluída desse procedimento armazenado.|  
-|**total_spills**|**bigint**|O número total de páginas despejadas pela execução deste procedimento armazenado desde que ele foi compilado.<br /><br /> **Aplica-se ao**: Iniciando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**last_spills**|**bigint**|O número de páginas despejadas na última vez em que o procedimento armazenado foi executado.<br /><br /> **Aplica-se ao**: Iniciando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**min_spills**|**bigint**|O número mínimo de páginas que esse procedimento armazenado já excedeu durante uma única execução.<br /><br /> **Aplica-se ao**: Iniciando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**max_spills**|**bigint**|O número máximo de páginas que esse procedimento armazenado já excedeu durante uma única execução.<br /><br /> **Aplica-se ao**: Iniciando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
+|**total_spills**|**bigint**|O número total de páginas despejadas pela execução deste procedimento armazenado desde que ele foi compilado.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] a partir de Cu3|  
+|**last_spills**|**bigint**|O número de páginas despejadas na última vez em que o procedimento armazenado foi executado.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] a partir de Cu3|  
+|**min_spills**|**bigint**|O número mínimo de páginas que esse procedimento armazenado já excedeu durante uma única execução.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] a partir de Cu3|  
+|**max_spills**|**bigint**|O número máximo de páginas que esse procedimento armazenado já excedeu durante uma única execução.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] a partir de Cu3|  
 |**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br />**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
-|**total_page_server_reads**|**bigint**|O número total de leituras de servidor de página executadas por execuções deste procedimento armazenado desde que ele foi compilado.<br /><br /> **Aplica-se ao**: Hiperescala do banco de dados SQL do Azure|  
-|**last_page_server_reads**|**bigint**|O número de leituras do servidor de página executadas na última vez em que o procedimento armazenado foi executado.<br /><br /> **Aplica-se ao**: Hiperescala do banco de dados SQL do Azure|  
-|**min_page_server_reads**|**bigint**|O número mínimo de leituras do servidor de páginas que esse procedimento armazenado já realizou durante uma única execução.<br /><br /> **Aplica-se ao**: Hiperescala do banco de dados SQL do Azure|  
-|**max_page_server_reads**|**bigint**|O número máximo de páginas de servidor de página que esse procedimento armazenado já realizou durante uma única execução.<br /><br /> **Aplica-se ao**: Hiperescala do banco de dados SQL do Azure|  
+|**total_page_server_reads**|**bigint**|O número total de leituras de servidor de página executadas por execuções deste procedimento armazenado desde que ele foi compilado.<br /><br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure|  
+|**last_page_server_reads**|**bigint**|O número de leituras do servidor de página executadas na última vez em que o procedimento armazenado foi executado.<br /><br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure|  
+|**min_page_server_reads**|**bigint**|O número mínimo de leituras do servidor de páginas que esse procedimento armazenado já realizou durante uma única execução.<br /><br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure|  
+|**max_page_server_reads**|**bigint**|O número máximo de páginas de servidor de página que esse procedimento armazenado já realizou durante uma única execução.<br /><br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure|  
   
  <sup>1</sup> para procedimentos armazenados compilados nativamente quando a coleta de estatísticas está habilitada, o tempo de trabalho é coletado em milissegundos. Se a consulta for executada em menos de um milissegundo, o valor será 0.  
   
@@ -102,12 +102,12 @@ FROM sys.dm_exec_procedure_stats AS d
 ORDER BY [total_worker_time] DESC;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-[Funções &#40;e exibições de gerenciamento dinâmico relacionadas à execução do TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
-[sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
+## <a name="see-also"></a>Consulte Também  
+[Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+[sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
+[sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
   

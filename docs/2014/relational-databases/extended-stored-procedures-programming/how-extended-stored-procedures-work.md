@@ -13,20 +13,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9b52e8fd5cda7d0b05ebbddbb422f74bd81b1993
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512988"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Como funcionam os procedimentos armazenados estendidos
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  O processo pelo qual um procedimento armazenado estendido funciona é o seguinte:  
   
-1.  Quando um cliente executa um procedimento armazenado estendido, a solicitação é transmitida em formato de protocolo de acesso a objeto simples (SOAP) do aplicativo cliente para ou de fluxo de dados de tabela (TDS) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Quando um cliente executa um procedimento armazenado estendido, a solicitação é transmitida no protocolo TDS ou no formato SOAP (Simple Object Access Protocol) do aplicativo cliente para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o.  
   
 2.  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisa a DLL associada com o procedimento armazenado estendido e carrega a DLL, se ela já não estiver carregada.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62512988"
   
 4.  O procedimento armazenado estendido passa conjuntos de resultados e parâmetros de retorno de volta ao servidor por meio da API de procedimento armazenado estendido.  
   
-## <a name="see-also"></a>Consulte também  
- [Programação do procedimento armazenado estendido do Mecanismo de Banco de Dados](../database-engine-extended-stored-procedure-programming.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Programação do procedimento armazenado estendido do mecanismo do banco de dados](../database-engine-extended-stored-procedure-programming.md)  
   
   

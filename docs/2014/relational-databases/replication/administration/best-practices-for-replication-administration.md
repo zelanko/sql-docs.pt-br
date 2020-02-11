@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629636"
 ---
 # <a name="best-practices-for-replication-administration"></a>Práticas recomendadas para administração de replicação
-  Depois de configurar a replicação, é importante entender como administrar uma topologia de replicação. Este tópico fornece diretrizes básicas de práticas recomendadas em várias áreas com links para mais informações para cada área. Além das seguintes diretrizes de práticas recomendadas apresentadas neste tópico, considere a leitura do tópico de perguntas frequentes para se familiarizar com as questões e problemas mais comuns: [Perguntas frequentes para os administradores de replicação](frequently-asked-questions-for-replication-administrators.md).  
+  Depois de configurar a replicação, é importante entender como administrar uma topologia de replicação. Este tópico fornece diretrizes básicas de práticas recomendadas em várias áreas com links para mais informações para cada área. Além das seguintes diretrizes de práticas recomendadas apresentadas neste tópico, considere ler o tópico de perguntas frequentes para familiarizar-se com as questões e problemas mais comuns: [Perguntas frequentes para administradores de replicação](frequently-asked-questions-for-replication-administrators.md).  
   
  É útil dividir as diretrizes de prática recomendada em duas áreas:  
   
@@ -58,12 +58,12 @@ ms.locfileid: "62629636"
   
 -   Banco de dados de assinatura  
   
--   O banco de dados**msdb** e o banco de dados **mestre** no Publicador, Distribuidor e todos os Assinantes  
+-   banco de dados **msdb** e banco de dados **mestre** no Publicador, distribuidor e todos os assinantes  
   
  Bancos de dados replicados requerem atenção especial em relação a backup e restauração de dados. Para obter mais informações, veja [Fazer backup e restaurar bancos de dados replicados](back-up-and-restore-replicated-databases.md).  
   
 ## <a name="script-the-replication-topology"></a>Faça o script da topologia de replicação  
- Todos os componentes de replicação em uma topologia devem ser incluídos no script como parte de um plano de recuperação de desastre  e os scripts também podem ser usados para automatizar tarefas repetitivas. Um script contém os procedimentos armazenados do sistema [!INCLUDE[tsql](../../../includes/tsql-md.md)] necessários para implementar o(s) componente(s) de replicação que tiveram seus scripts feitos, como uma publicação ou assinatura. Os scripts podem ser criados em um assistente (como o Assistente para Nova Publicação) ou no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] depois de você criar um componente. É possível exibir, modificar e executar o script por meio do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou do **sqlcmd**. Os scripts podem ser armazenados com arquivos de backup para serem usados no caso de uma topologia de replicação precisar ser reconfigurada. Para obter mais informações, consulte [Scripting Replication](../scripting-replication.md).  
+ Todos os componentes de replicação em uma topologia devem ser incluídos no script como parte de um plano de recuperação de desastre  e os scripts também podem ser usados para automatizar tarefas repetitivas. Um script contém os procedimentos armazenados do sistema [!INCLUDE[tsql](../../../includes/tsql-md.md)] necessários para implementar o(s) componente(s) de replicação que tiveram seus scripts feitos, como uma publicação ou assinatura. Os scripts podem ser criados em um assistente (como o assistente para nova publicação) ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] no após a criação de um componente. É possível exibir, modificar e executar o script por meio do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou do **sqlcmd**. Os scripts podem ser armazenados com arquivos de backup para serem usados no caso de uma topologia de replicação precisar ser reconfigurada. Para obter mais informações, consulte [Scripting Replication](../scripting-replication.md).  
   
  Um componente deve ter seu script refeito se qualquer alteração na propriedade for realizada. Se você usar procedimentos armazenados com replicação transacional, uma cópia de cada procedimento deve ser armazenada com os scripts; a cópia deve ser atualizada se o procedimento for alterado (os procedimentos são normalmente alterados devido a mudanças no esquema ou nos requisitos de aplicativo). Para mais informações sobre procedimentos personalizados, consulte [Especificar como as alterações são propagadas para artigos transacionais](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62629636"
   
 -   Parâmetros de agente  
   
--   Manutenção  
+-   Manutenção   
   
  Após a replicação ser configurada, é recomendável desenvolver uma linha de base de desempenho, que permitirá determinar como a replicação se comporta com uma carga de trabalho típica de seus aplicativos e de sua topologia. Use o Replication Monitor e Monitor do Sistema para determinar os números típicos para as seguintes cinco dimensões de desempenho de replicação:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62629636"
  Depois de criar uma publicação, poderá ser necessário adicionar ou descartar artigos, ou alterar as propriedades da publicação e do artigo. A maioria das alterações é permitida após a criação de uma publicação, mas em alguns casos, é necessário gerar um novo instantâneo para a publicação e/ou reinicializar as assinaturas para uma publicação. Para obter mais informações, consulte [Alterar propriedades da publicação e do artigo](../publish/change-publication-and-article-properties.md) e [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>Entenda como fazer alterações de esquema se os requisitos do aplicativo alterarem.  
- Em muitos casos, são necessárias alterações de esquema depois que um aplicativo estiver em produção. Em uma topologia de replicação, essas alterações devem ser propagadas frequentemente a todos os Assinantes. A replicação oferece suporte para um amplo intervalo de alterações de esquema para objetos publicados. Ao fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Publicador do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a alteração é propagada por padrão a todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+ Em muitos casos, são necessárias alterações de esquema depois que um aplicativo estiver em produção. Em uma topologia de replicação, essas alterações devem ser propagadas frequentemente a todos os Assinantes. A replicação oferece suporte para um amplo intervalo de alterações de esquema para objetos publicados. Ao se fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Editor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], essa alteração será propagada por padrão para todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
   
@@ -147,7 +147,7 @@ ms.locfileid: "62629636"
   
  Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Perguntas Frequentes sobre Administração de Replicação](frequently-asked-questions-for-replication-administrators.md)  
   
   

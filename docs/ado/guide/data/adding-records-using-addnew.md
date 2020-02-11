@@ -15,24 +15,24 @@ ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36f6bad9a8f0d74a81d02ce64c78d7a91ddc0fa8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926289"
 ---
 # <a name="adding-records-using-addnew-method"></a>Adicionando registros usando o método AddNew
-Esta é a sintaxe básica do **AddNew** método:
+Esta é a sintaxe básica do método **AddNew** :
 
- *conjunto de registros*. AddNew *FieldList*, *valores*
+ *conjunto de registros*. *FieldList*de AddNew, *valores*
 
- O *FieldList* e *valores* argumentos são opcionais. *FieldList* é um único nome ou uma matriz de nomes ou as posições ordinais dos campos no novo registro.
+ Os argumentos *FieldList* e *Values* são opcionais. *FieldList* é um único nome ou uma matriz de nomes ou posições ordinais dos campos no novo registro.
 
- O *valores* argumento é um único valor ou uma matriz de valores para os campos no novo registro.
+ O argumento *Values* é um único valor ou uma matriz de valores para os campos no novo registro.
 
- Normalmente, quando você pretende adicionar um único registro, você chamará o **AddNew** método sem nenhum argumento. Especificamente, você chamará **AddNew**; defina as **valor** de cada campo no novo registro; e, em seguida, chame **atualização** ou **UpdateBatch**, ou ambos. Você pode garantir que seu **conjunto de registros** dá suporte à adição de novos registros usando o **dá suporte a** propriedade com o **adAddNew** constante enumerada.
+ Normalmente, quando você pretende adicionar um único registro, você chamará o método **AddNew** sem nenhum argumento. Especificamente, você chamará **AddNew**; definir o **valor** de cada campo no novo registro; em seguida, chame **Update** ou **UpdateBatch**, ou ambos. Você pode certificar-se de que o **conjunto de registros** dá suporte à adição de novos registros usando a propriedade de **suporte** com a constante enumerada **adAddNew** .
 
- O código a seguir usa essa técnica para adicionar um novo remetente à amostra **conjunto de registros**. SQL Server fornece o valor do campo CódigoDaTransportadora automaticamente. Portanto, o código não tenta fornecer um valor de campo para os novos registros.
+ O código a seguir usa essa técnica para adicionar um novo transportador ao **conjunto de registros**de exemplo. SQL Server fornece automaticamente o valor do campo transportadora. Portanto, o código não tenta fornecer um valor de campo para os novos registros.
 
 ```
 'BeginAddNew1.1
@@ -48,4 +48,4 @@ End If
 ```
 
 ## <a name="remarks"></a>Comentários
- Como esse código usa um desconectada **conjunto de registros** com um cursor do lado do cliente no modo de lote, você deve reconectar o **conjunto de registros** à fonte de dados com uma nova **Conexão** objeto antes de chamar o **UpdateBatch** método para lançar as alterações no banco de dados. Isso é feito facilmente usando a nova função **GetNewConnection**.
+ Como esse código usa um **conjunto de registros** desconectado com um cursor do lado do cliente no modo de lote, você deve reconectar o **conjunto de registros** à fonte de dados com um novo objeto de **conexão** antes de poder chamar o método **UpdateBatch** para postar alterações no banco de dado. Isso é feito facilmente usando a nova função **GetNewConnection**.

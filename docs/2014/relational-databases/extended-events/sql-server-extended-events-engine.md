@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638227"
 ---
 # <a name="sql-server-extended-events-engine"></a>Mecanismo de eventos estendidos do SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "62638227"
   
  A ilustração seguinte mostra uma exibição simplificada de uma sessão de eventos estendidos. Para obter mais informações, consulte [Sessões de eventos estendidos do SQL Server](sql-server-extended-events-sessions.md).  
   
- ![Arquitetura detalhada de eventos estendidos](../../database-engine/media/xearchitecturedetailed.gif "Arquitetura detalhada de eventos estendidos")  
+ ![Arquitetura de eventos estendidos detalhada](../../database-engine/media/xearchitecturedetailed.gif "Arquitetura de eventos estendidos detalhada")  
   
  Observe o seguinte:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62638227"
   
     -   Quando os buffers estão cheios, aqueles buffers são despachados para os destinos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](extended-events.md)  
   
   

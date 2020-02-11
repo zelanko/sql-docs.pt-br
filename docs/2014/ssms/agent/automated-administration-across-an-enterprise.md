@@ -21,27 +21,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473138"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administração automatizada em toda a empresa
-  A automatização de administração em várias instâncias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é chamada *administração multisservidor*. Use a administração multisservidor para fazer o seguinte:  
+  Automatizar a administração em várias instâncias [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do é chamado de *Administração*multisservidor. Use a administração multisservidor para fazer o seguinte:  
   
 -   Gerenciar dois ou mais servidores.  
   
 -   Programar fluxos de informações entre servidores corporativos para data warehousing.  
   
 > [!NOTE]  
->  Como parte dos esforços contínuos da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para reduzir o custo total de propriedade, o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] apresentou dois recursos: um método de gerenciamento de servidor chamado de Gerenciamento Baseado em Políticas e consultas multisservidores que usam servidores de configuração e grupos de servidores. Esses recursos podem ser usados com, ou em vez de, alguns dos recursos que são descritos neste tópico. Para obter mais informações, consulte [administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) e [administrar vários servidores usando servidores de gerenciamento Central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
+>  Como parte dos esforços contínuos da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para reduzir o custo total de propriedade, o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] apresentou dois recursos: um método de gerenciamento de servidor chamado de Gerenciamento Baseado em Políticas e consultas multisservidores que usam servidores de configuração e grupos de servidores. Esses recursos podem ser usados com, ou em vez de, alguns dos recursos que são descritos neste tópico. Para obter mais informações, consulte [administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) e [administrar vários servidores usando servidores de gerenciamento central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
   
  Para aproveitar a administração multisservidores, é necessário ter pelo menos um servidor mestre e um servidor de destino. Um servidor mestre distribui trabalhos para servidores de destino e também recebe eventos desses servidores. Ele também armazena a cópia central das definições de trabalho para trabalhos que são executados em servidores de destino. Os servidores de destino conectam-se periodicamente ao servidor mestre para atualizar a agenda de trabalhos. Se um trabalho novo existir no servidor mestre, o servidor de destino descarregará o trabalho. Depois que o servidor de destino concluir o trabalho, ele se reconectará ao servidor mestre e reportará o status do trabalho.  
   
  A ilustração a seguir mostra a relação entre servidores mestre e de destino:  
   
- ![Configuração da administração multisservidor](../../database-engine/media/multisvr.gif "Configuração da administração multisservidor")  
+ ![Configuração de administração multisservidor](../../database-engine/media/multisvr.gif "Configuração de administração multisservidor")  
   
  Se você administrar servidores departamentais em uma grande corporação, poderá definir o seguinte:  
   
@@ -81,19 +81,19 @@ ms.locfileid: "62473138"
  [Ajustar a administração automatizada em toda a empresa](tune-automated-administration-across-an-enterprise.md)  
  Contém informações sobre como a administração automatizada em um ambiente multisservidor aproveita os recursos de autoajuste do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Registrar servidores](../register-servers/register-servers.md)   
- [sp_add_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
- [sp_delete_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
- [sp_delete_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
- [sp_help_downloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
- [sp_help_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
- [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
- [sp_resync_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
- [sp_update_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
- [dbo.sysjobservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
- [sys.syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
- [dbo.systargetservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
+ [&#41;&#40;Transact-SQL de sp_add_targetservergroup](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_delete_targetserver](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_delete_targetservergroup](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_help_downloadlist](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_help_jobserver](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_help_targetservergroup](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_resync_targetserver](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_update_targetservergroup](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
+ [dbo. sysjobservers &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
+ [sys. syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
+ [dbo. systargetservers &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
   
   

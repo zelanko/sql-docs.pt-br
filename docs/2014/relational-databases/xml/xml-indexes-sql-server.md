@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62631367"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "62631367"
   
 -   Índice XML secundário  
   
- O primeiro índice na coluna de tipo `xml` deve ser o índice XML primário. Usando o índice XML primário, os seguintes tipos de índices secundários são compatíveis: PATH, VALUE e PROPERTY. Dependendo do tipo de consulta, esses índices secundários podem ajudar a melhorar o desempenho de consultas.  
+ O primeiro índice na coluna de tipo `xml` deve ser o índice XML primário. Usando o índice de XML primário, os seguintes tipos de índices secundários têm suporte: PATH, VALUE e PROPERTY. Dependendo do tipo de consulta, esses índices secundários podem ajudar a melhorar o desempenho de consultas.  
   
 > [!NOTE]  
 >  Não é possível criar ou modificar um índice XML a menos que as opções do banco de dados estejam definidas corretamente para trabalhar com o tipo de dados `xml`. Para obter mais informações, veja [Usar a pesquisa de texto completo com colunas XML](use-full-text-search-with-xml-columns.md).  
@@ -103,13 +103,13 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  O processador de consultas usa índice XML primário para consultas que envolvem [Métodos de tipo de dados xml](/sql/t-sql/xml/xml-data-type-methods) e retorna valores escalares ou as subárvores XML do próprio índice primário. (Esse índice armazena todas as informações necessárias para reconstruir a instância XML.)  
   
- Por exemplo, a consulta a seguir retorna informações resumidas armazenadas do `CatalogDescription``xml` type column no `ProductModel` tabela. A consulta retorna informações de <`Summary`> apenas para modelos de produto cuja descrição de catálogo também armazena a descrição de <`Features`>.  
+ Por exemplo, a consulta a seguir retorna informações resumidas `CatalogDescription``xml` armazenadas na coluna type `ProductModel` da tabela. A consulta retorna informações de <`Summary`> apenas para modelos de produto cuja descrição de catálogo também armazena a descrição de <`Features`>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
- Com relação ao índice XML primário, em vez de fragmentar cada instância de objeto binário grande XML na tabela base, as linhas no índice que correspondem a cada objeto binário grande XML são pesquisadas sequencialmente para a expressão especificada no método `exist()`. Se o caminho for encontrado na coluna Path no índice, o elemento <`Summary`> juntamente com suas subárvores será recuperado do índice XML primário e convertido em um objeto binário grande XML como o resultado do método `query()`.  
+ Com relação ao índice XML primário, em vez de fragmentar cada instância de objeto binário grande XML na tabela base, as linhas no índice que correspondem a cada objeto binário grande XML são pesquisadas sequencialmente para a expressão especificada no método `exist()` . Se o caminho for encontrado na coluna Path no índice, o elemento <`Summary`> juntamente com suas subárvores será recuperado do índice XML primário e convertido em um objeto binário grande XML como o resultado do método `query()`.  
   
  Observe que o índice XML primário não é usado ao recuperar uma instância XML completa. Por exemplo, a consulta a seguir recupera da tabela toda a instância XML que descreve as instruções de fabricação para um modelo de produto específico.  
   
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]` onde a consulta procura o elemento <`book`> que tem algum atributo contendo o valor `"someValue"`.  
   
- A consulta a seguir retorna `ContactID` da tabela `Contact` . O `WHERE` cláusula Especifica um filtro que procura valores no `AdditionalContactInfo``xml` coluna de tipo. As IDs de contato serão retornadas apenas se o objeto binário grande XML das informações de contato adicionais correspondentes incluírem um número de telefone específico. Como o elemento <`telephoneNumber`> pode aparecer em qualquer lugar no XML, a expressão de caminho especifica o eixo descendente ou independente.  
+ A consulta a seguir retorna `ContactID` da tabela `Contact` . A `WHERE` cláusula Especifica um filtro que procura valores na coluna `AdditionalContactInfo``xml` tipo. As IDs de contato serão retornadas apenas se o objeto binário grande XML das informações de contato adicionais correspondentes incluírem um número de telefone específico. Como o elemento <`telephoneNumber`> pode aparecer em qualquer lugar no XML, a expressão de caminho especifica o eixo descendente ou independente.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +183,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  Nessa situação, o valor da pesquisa de <`number`> é conhecido, mas ele pode aparecer em qualquer lugar na instância XML como um filho do elemento <`telephoneNumber`>. Esse tipo de consulta pode se beneficiar de um índice de pesquisa baseado em um valor específico.  
   
 ### <a name="property-secondary-index"></a>Índice XML secundário PROPERTY  
- Consultas que recuperam um ou mais valores de instâncias XML individuais podem se beneficiar de um índice PROPERTY. Esse cenário ocorre ao recuperar as propriedades do objeto, usando o **Value ()** método o `xml` tipo e quando o valor de chave primária do objeto é conhecido.  
+ Consultas que recuperam um ou mais valores de instâncias XML individuais podem se beneficiar de um índice PROPERTY. Esse cenário ocorre quando você recupera propriedades de objeto usando o método **Value ()** do `xml` tipo e quando o valor da chave primária do objeto é conhecido.  
   
  O índice PROPERTY é construído nas colunas (PK, Caminho e valor do nó) do índice XML primário, em que PK é a chave primária da tabela base.  
   
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Exceto pelas diferenças descritas posteriormente neste tópico, criação um índice XML em um`xml` coluna de tipo é semelhante à criação de um índice em uma não -`xml` coluna de tipo. As instruções DDL do [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir podem ser usadas para criar e gerenciar índices XML:  
+ Exceto pelas diferenças descritas posteriormente neste tópico, a criação de um índice XML em`xml` uma coluna de tipo é semelhante à criação de um índice em`xml` uma coluna que não seja de tipo. As instruções DDL do [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir podem ser usadas para criar e gerenciar índices XML:  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
@@ -213,7 +213,7 @@ WHERE ProductModelID = 19
   
  O uso espacial de índices XML pode ser localizado na função com valor de tabela [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql). Ela fornece informações, como o número de páginas ocupadas no disco, tamanho médio das linhas em bytes e o número de registros para todos os tipos de índices. Isso também inclui índices XML. Essas informações estão disponíveis para cada partição do banco de dados. Índices XML usam o mesmo esquema e função de particionamento da tabela base.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)   
  [Dados XML &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   

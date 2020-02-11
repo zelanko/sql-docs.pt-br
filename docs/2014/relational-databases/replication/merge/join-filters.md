@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629751"
 ---
 # <a name="join-filters"></a>filtros de junção
@@ -43,7 +43,7 @@ ms.locfileid: "62629751"
 LoginID = SUSER_SNAME()  
 ```  
   
- Esse filtro garante que a assinatura de cada funcionário só contenha os dados da tabela **HumanResources.Employee** que sejam relevantes para esse funcionário (que, neste caso, é uma linha simples). Para obter mais informações, consulte [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
+ Esse filtro garante que a assinatura de cada funcionário só contenha os dados da tabela **HumanResources.Employee** que sejam relevantes para esse funcionário (que, neste caso, é uma linha simples). Para obter mais informações, consulte [Filtros de linha com parâmetros](parameterized-filters-parameterized-row-filters.md).  
   
  A próxima etapa é estender esse filtro a cada tabela relacionada, usando sintaxe similar à que foi usada para especificar uma junção entre as duas tabelas. A primeira cláusula de filtro de junção é:  
   
@@ -86,8 +86,8 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      É altamente recomendável que toda lógica desse tipo seja expressa em um filtro de junção em vez de em uma subconsulta. Se seu aplicativo requer que um filtro de linha use uma subconsulta, certifique-se de que a subconsulta só referencie dados de pesquisa que não sejam alterados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Filtrar dados publicados para a replicação de mesclagem](filter-published-data-for-merge-replication.md)   
- [Filtros de linha com parâmetros](parameterized-filters-parameterized-row-filters.md)  
+ [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)  
   
   

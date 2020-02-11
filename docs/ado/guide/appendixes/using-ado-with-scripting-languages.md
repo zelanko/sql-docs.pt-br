@@ -14,50 +14,50 @@ ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926485"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar o ADO com linguagens de script
-Dentro de um ambiente de script, o ADO permite que você exponha os dados por meio de scripts do lado do servidor. Nesse cenário, o ADO, o provedor OLE DB subjacente que ele usa, e todos os outros componentes necessários para fazer referência a um repositório de dados fornecidos são instalados em um servidor executando o Internet Information Services (IIS). Usando o Active Server Pages (ASP), o ADO é um componente referenciado em um script que pode gerar HTML, por exemplo. Esse conteúdo HTML pode ser passado por meio de HTTP para um navegador da Web de cliente. Usando scripts, a página da Web pode enviar ações de volta para o script do lado do servidor, permitindo que você atualizar, percorrer ou exibir dados específicos.  
+Em um ambiente de script, o ADO permite expor dados por meio de scripts do lado do servidor. Nesse cenário, o ADO, o provedor de OLE DB subjacente que ele usa, e quaisquer outros componentes necessários para fazer referência a um determinado repositório de dados são instalados em um servidor que executa o Serviços de Informações da Internet (IIS). Usando páginas de Active Server (ASP), o ADO é um componente referenciado em um script que pode gerar HTML, por exemplo. Esse conteúdo HTML pode ser passado via HTTP para um navegador da Web do cliente. Usando scripts, a página da Web pode enviar ações de volta para o script do lado do servidor, permitindo que você atualize, percorra ou exiba dados específicos.  
   
- Antes de usar um objeto ActiveX em uma página da Web, é importante saber se o objeto é seguro para script. Quando um objeto é considerado seguro para script, isso significa que o controle não pode executar qualquer ação prejudicial no computador do usuário e, portanto, pode ser executado sem solicitar a aprovação do usuário. A tabela a seguir lista os objetos do ADO e indica se eles são seguros para script.  
+ Antes de usar um objeto ActiveX em uma página da Web, é importante saber se o objeto é seguro para scripts. Quando um objeto é considerado seguro para scripts, isso significa que o controle não pode executar nenhuma ação prejudicial no computador do usuário e, portanto, pode ser executado sem solicitar a aprovação do usuário. A tabela a seguir lista os objetos ADO e indica se eles são seguros para scripts.  
   
-|Object|É seguro para execução de scripts?|  
+|Objeto|Seguro para scripts?|  
 |------------|-------------------------|  
-|Conexão do ADO|Sim|  
+|Conexão ADO|Sim|  
 |Comando ADO|Não|  
 |Parâmetro ADO|Não|  
-|ADO Recordset|Sim|  
-|ADO Record|Sim|  
-|Stream de ADO|Sim|  
+|Conjunto de registros ADO|Sim|  
+|Registro ADO|Sim|  
+|Fluxo do ADO|Sim|  
 |Erro de ADO|Não|  
 |Catálogo do ADOX|Não|  
-|Conjunto de células do ADOX|Não|  
-|DataControl RDS|Sim|  
-|Espaço de dados do RDS|Sim|  
-|RDS DataFactory|Não|  
+|Células ADOX|Não|  
+|Controle de datards|Sim|  
+|Espaço de DataSpace|Sim|  
+|RDS datafactory|Não|  
   
- A tabela a seguir lista os provedores incluídos com o Windows DAC/MDAC e indica se eles são seguros para script.  
+ A tabela a seguir lista os provedores incluídos com o DAC/MDAC do Windows e indica se eles são seguros para scripts.  
   
-|Provedor|É seguro para execução de scripts?|  
+|Provedor|Seguro para scripts?|  
 |--------------|-------------------------|  
 |Forma|Sim|  
-|Persistir|Sim|  
+|Persist|Sim|  
 |Remote|Sim|  
-|Provedor OLE DB para SQL Server (SQLOLEDB)|Não|  
-|Provedor OLE DB para ODBC (MSDASQL)|Não|  
+|Provedor de OLE DB para SQL Server (SQLOLEDB)|Não|  
+|Provedor de OLE DB para ODBC (MSDASQL)|Não|  
   
 ## <a name="odbc-data-sources"></a>Fontes de dados ODBC  
- Uma diferença importante entre o código ADO de script e scripts não é a fonte de dados ODBC, se usado. Para aplicativos não-script, você pode criar um DSN de usuário no administrador de fonte de dados ODBC. Para scripts que são executados no IIS, você deve criar um DSN de sistema; Caso contrário, os scripts não reconhecerá a fonte de dados que você criou. Isso se aplica a qualquer aplicativo de script do ADO usando o Microsoft OLE DB Provider para ODBC por meio do Microsoft IIS.  
+ Uma diferença notável entre script e código ADO sem scripts é a fonte de dados ODBC, se usada. Para aplicativos que não são de script, você pode criar um DSN de usuário no administrador de fonte de dados ODBC. Para scripts que estão sendo executados no IIS, você deve criar um DSN de sistema; caso contrário, seus scripts não reconhecerão a fonte de dados que você criou. Isso se aplica a qualquer aplicativo de script do ADO usando o provedor de OLE DB da Microsoft para ODBC por meio do IIS da Microsoft.  
   
-## <a name="referencing-the-ado-library"></a>Referência à biblioteca do ADO  
- Não aplicável com linguagens de script.  
+## <a name="referencing-the-ado-library"></a>Referenciando a biblioteca do ADO  
+ Não aplicável a linguagens de script.  
   
 ## <a name="handling-events"></a>Manipulação de eventos  
- Não aplicável com linguagens de script.  
+ Não aplicável a linguagens de script.  
   
  Os tópicos a seguir contêm informações mais específicas sobre como usar o ADO com linguagens de script:  
   
@@ -65,7 +65,7 @@ Dentro de um ambiente de script, o ADO permite que você exponha os dados por me
   
 -   [Programação ADO JScript](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Usando o ADO com o Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Usando o ADO com o Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
+ [Usar o ADO com o Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

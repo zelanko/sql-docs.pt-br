@@ -15,16 +15,16 @@ ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6928d870c00fce0f712e7a9fc01cc2a2a33a57d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918507"
 ---
 # <a name="getstring-method-example-vb"></a>Exemplo do método GetString (VB)
-Este exemplo demonstra a [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) método.  
+Este exemplo demonstra o método [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) .  
   
- Suponha que você está depurando um problema de acesso de dados e desejar uma maneira rápida e simple de imprimir o conteúdo atual de um pequeno [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Suponha que você esteja Depurando um problema de acesso a dados e queira uma maneira rápida e simples de imprimir o conteúdo atual de um pequeno [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ```  
 'BeginGetStringVB  
@@ -101,6 +101,6 @@ End Sub
 'EndGetStringVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

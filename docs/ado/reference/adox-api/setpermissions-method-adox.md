@@ -19,10 +19,10 @@ ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965222"
 ---
 # <a name="setpermissions-method-adox"></a>Método SetPermissions (ADOX)
@@ -35,38 +35,38 @@ Especifica as permissões para um [grupo](../../../ado/reference/adox-api/group-
 GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, ObjectTypeId]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *Name*  
- Um **cadeia de caracteres** valor que especifica o nome do objeto para o qual definir as permissões.  
+#### <a name="parameters"></a>parâmetros  
+ *Nome*  
+ Um valor de **cadeia de caracteres** que especifica o nome do objeto para o qual definir permissões.  
   
  *ObjectType*  
- Um **longo** valor que pode ser um dos [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) constantes, que especifica o tipo de objeto para o qual obter as permissões.  
+ Um valor **longo** que pode ser uma das constantes [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) , que especifica o tipo do objeto para o qual obter permissões.  
   
  *Ação*  
- Um **longo** valor que pode ser um dos [ActionEnum](../../../ado/reference/adox-api/actionenum.md) constantes que especifica o tipo de ação a ser executada ao definir as permissões.  
+ Um valor **longo** que pode ser uma das constantes [ActionEnum](../../../ado/reference/adox-api/actionenum.md) que especifica o tipo de ação a ser executada ao definir permissões.  
   
- *Direitos*  
- Um **longo** valor que pode ser uma máscara de bits de um ou mais da [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) constantes, que indica os direitos para definir.  
+ *Privilégios*  
+ Um valor **longo** que pode ser um bitmask de uma ou mais constantes [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) , que indica os direitos a serem definidos.  
   
- *Herdar*  
- Opcional. Um **longo** valor que pode ser um dos [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) constantes, que especifica como objetos herdarão essas permissões. O valor padrão é **adInheritNone**.  
+ *Herd*  
+ Opcional. Um valor **longo** que pode ser uma das constantes [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) , que especifica como os objetos herdarão essas permissões. O valor padrão é **adInheritNone**.  
   
- *ObjectTypeId*  
- Opcional. Um **Variant** valor que especifica o GUID de um tipo de objeto de provedor que não é definido pela especificação do OLE DB. Esse parâmetro é necessário se *ObjectType* é definido como **adPermObjProviderSpecific**; caso contrário, ele não é usado.  
+ *Objecttypeid*  
+ Opcional. Um valor **Variant** que especifica o GUID para um tipo de objeto de provedor que não é definido pela especificação de OLE DB. Esse parâmetro será necessário se *objecttype* for definido como **adPermObjProviderSpecific**; caso contrário, ele não será usado.  
   
 ## <a name="remarks"></a>Comentários  
- Se o provedor não dá suporte para configurar direitos de acesso para usuários ou grupos, ocorrerá um erro.  
+ Ocorrerá um erro se o provedor não der suporte à configuração de direitos de acesso para grupos ou usuários.  
   
 > [!NOTE]
->  Ao chamar **SetPermissions**, definir a ações como **adAccessRevoke** substitui as configurações dos *direitos* parâmetro. Não defina *ações* à **adAccessRevoke** se você quiser que os direitos especificados no *direitos* parâmetro entrem em vigor.  
+>  Ao chamar **SetPermissions**, a configuração de ações para **adAccessRevoke** substitui as configurações do parâmetro de *direitos* . Não defina *ações* para **adAccessRevoke** se desejar que os direitos especificados no parâmetro *Rights* tenham efeito.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
   
 |||  
 |-|-|  
 |[Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [GetPermissions e SetPermissions métodos (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [Método GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo dos métodos getPermissions e SetPermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Método getPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [Propriedade Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

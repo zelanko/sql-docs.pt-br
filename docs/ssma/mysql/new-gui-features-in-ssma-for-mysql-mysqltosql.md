@@ -9,99 +9,99 @@ ms.topic: conceptual
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c138f76b3c34a378418bb2ba655fa7a2bb5af739
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fd1316850a064a8d1aed3d2994642d44111f421
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908808"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76909676"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>Novos recursos de GUI no SSMA para MySQL (MySQLToSQL)
-Este capítulo descreve os novos recursos da Interface de usuário do SSMA  
+Este capítulo descreve os novos recursos da interface do usuário do SSMA  
   
 ## <a name="layouts"></a>Layouts  
-Esse recurso permite que você escolha uma das duas janelas predefinidas dispor ou crie sua própria layout. Para acessar o submenu de layout, no menu Exibir, aponte para Layouts. Lá você pode escolher um dos layouts existentes, adicione o layout atual ou gerenciar layouts.  
+Esse recurso permite que você escolha uma das duas janelas predefinidas de lay-out do Windows ou crie seu próprio layout. Para acessar o submenu layout, no menu Exibir, aponte para layouts. Lá você pode escolher um dos layouts existentes, adicionar layout atual ou gerenciar layouts.  
   
-### <a name="add-current-layout"></a>Adicionar o Layout atual  
-Para salvar o layout atual do windows, no menu Exibir, aponte para Layouts e clique em Adicionar Layout atual.  
+### <a name="add-current-layout"></a>Adicionar layout atual  
+Para salvar o layout atual do Windows, no menu Exibir, aponte para layouts e clique em Adicionar layout atual.  
   
-### <a name="choose-predefined-layout"></a>Escolha o layout predefinido  
-Para escolher um dos layouts predefinidos, no menu Exibir, aponte para Layouts e clique em Layout padrão ou sem Explorers. Você também pode usar atalhos de Ctrl + Alt + 1 ou Ctrl + Alt + 2 para layouts predefinidos, respectivamente.  
+### <a name="choose-predefined-layout"></a>Escolher layout predefinido  
+Para escolher um dos layouts predefinidos, no menu Exibir aponte para layouts e clique em layout padrão ou sem Explorers. Você também pode usar atalhos Ctrl + Alt + 1 ou Ctrl + Alt + 2 para layouts predefinidos, respectivamente.  
   
-### <a name="choose-user-defined-layout"></a>Escolher o layout definido pelo usuário  
-Para escolher o layout definido pelo usuário, no menu Exibir, aponte para Layouts e clique em um do layout definido pelo usuário. Você também pode usar atalhos definidos para os layouts.  
+### <a name="choose-user-defined-layout"></a>Escolher layout definido pelo usuário  
+Para escolher layout definido pelo usuário, no menu Exibir, aponte para layouts e clique em um dos layouts definidos pelo usuário. Você também pode usar atalhos definidos para os layouts.  
   
 ### <a name="manage-layouts"></a>Gerenciar layouts  
-Para abrir a caixa de diálogo Gerenciar Layouts, no menu Exibir, aponte para Layouts e clique em Gerenciar Layouts. Na caixa de diálogo Gerenciar Layouts, você encontrará uma lista dos layouts existentes no lado esquerdo da caixa de diálogo. Lá você pode selecionar o layout para alterar suas configurações. Também pode alterar a ordem de layouts na lista ou excluir o layout usando os botões na parte superior da lista. No lado direito da caixa de diálogo, você pode alterar as configurações de layout a seguir:  
+Para abrir a caixa de diálogo Gerenciar layouts, no menu Exibir, aponte para layouts e clique em gerenciar layouts. Na caixa de diálogo Gerenciar layouts, você encontrará uma lista dos layouts existentes no lado esquerdo da caixa de diálogo. Lá, você pode selecionar o layout para alterar suas configurações. Além disso, você pode alterar a ordem dos layouts na lista ou excluir o layout usando os botões na parte superior da lista. No lado direito da caixa de diálogo, você pode alterar as seguintes configurações de layout:  
   
--   Nome do layout  
+-   Nome de layout  
   
 -   Sincronização de gerenciadores de metadados  
   
--   Visibilidade e a largura dos exploradores de metadados de origem e destino  
+-   Visibilidade e largura dos gerenciadores de metadados de origem e de destino  
   
--   Visibilidade das janelas de origem ou destino e seus tamanhos  
+-   Visibilidade das janelas de origem ou de destino e seus tamanhos  
   
--   Visibilidade e a altura do windows auxiliares  
+-   Visibilidade e altura das janelas auxiliares  
   
 ## <a name="bookmarks"></a>Indicadores  
-Esse recurso permite que você defina um ou mais indicadores na fonte ou código de destino, o rápido encontrado um indicador usando atalhos, gerenciar indicadores com uma caixa de diálogo amigável.  
+Esse recurso permite que você defina um ou mais indicadores no código de origem ou de destino, rapidamente encontrou um indicador usando atalhos, gerenciando os indicadores com uma caixa de diálogo amigável.  
   
-### <a name="toggle-bookmark"></a>Ativar/Desativar indicador  
-Você pode definir/remover o indicador das seguintes maneiras:  
+### <a name="toggle-bookmark"></a>Ativar/desativar indicador  
+Você pode definir/remover um indicador das seguintes maneiras:  
   
--   Use o botão Ativar/Desativar indicador na parte superior da janela SQL de origem ou destino  
+-   Usar indicador de alternância de botão na parte superior da janela SQL de origem ou de destino  
   
 -   Clique na área cinza à esquerda da janela SQL  
   
--   Use Ctrl + Shift +&lt;0..9&gt; para definir um indicador numerado  
+-   Use CTRL + SHIFT +&lt;0.. 9&gt; para definir o indicador numerado  
   
 ### <a name="bookmark-navigation"></a>Navegação por indicadores  
-Você pode orientá-lo thru indicadores das seguintes maneiras:  
+Você pode percorrer os indicadores das seguintes maneiras:  
   
--   Use os botões Próximo indicador, o indicador anterior na parte superior da janela SQL  
+-   Usar botões próximo indicador, indicador anterior na parte superior da janela SQL  
   
--   Use Ctrl +&lt;0..9&gt; para encontrar o indicador numerado  
+-   Use CTRL +&lt;0.. 9&gt; para localizar o indicador numerado  
   
--   Use os botões Ir para ou exibir código-fonte na caixa de diálogo Gerenciar indicadores  
+-   Usar botões ir para ou exibir origem na caixa de diálogo Gerenciar indicadores  
   
-### <a name="removing-bookmark"></a>Removendo o indicador  
+### <a name="removing-bookmark"></a>Removendo indicador  
 Você pode remover um indicador das seguintes maneiras:  
   
--   Use o botão Limpar na parte superior da janela SQL para remover todos os indicadores no documento atual  
+-   Use o botão limpar na parte superior da janela SQL para remover todos os indicadores no documento atual  
   
--   Use os botões Remover ou remover tudo na caixa de diálogo Gerenciar indicadores  
+-   Usar botões remover ou remover tudo na caixa de diálogo Gerenciar indicadores  
   
 ### <a name="manage-bookmarks"></a>Gerenciar indicadores  
-Para abrir a caixa de diálogo Gerenciar indicadores, no menu Editar, clique em Gerenciar indicadores. Na caixa de diálogo, você verá uma lista de indicadores atuais. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.  
+Para abrir a caixa de diálogo Gerenciar indicadores, no menu Editar, clique em gerenciar indicadores. Na caixa de diálogo, você verá uma lista de indicadores existentes. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.  
   
-## <a name="object-history"></a>Histórico de objeto  
-Histórico de GUI do objeto permite que você as seguintes vantagens ao navegar objetos:  
+## <a name="object-history"></a>Histórico de objetos  
+O histórico de objetos de GUI permite as seguintes vantagens ao navegar pelos objetos:  
   
--   Você pode usar botões Voltar e Avançar para navegar os objetos que você já tenha visitado  
+-   Você pode usar os botões voltar e avançar para navegar pelos objetos que você já visitou  
   
--   Quando você de volta para o objeto, você de volta para a mesma guia que você tenha deixado  
+-   Quando você voltar ao objeto, volte para a mesma guia que você saiu  
   
--   Quando você volta para o objeto e a guia é SQL, você volta para a mesma posição de cursor que você tenha deixado  
+-   Quando você voltar ao objeto e a guia for SQL, voltará para a mesma posição do cursor que você saiu  
   
-## <a name="advanced-search-capabilities"></a>Recursos avançados de pesquisa  
-Recursos avançados de pesquisa fornecem os recursos de pesquisando poderosos e flexíveis e permitem que você localize a declaração de objeto, obter informações do objeto, realizar a pesquisa rápida, executar objetos avançada pesquisando em categorias usando padrões etc.  
+## <a name="advanced-search-capabilities"></a>Recursos de pesquisa avançada  
+Os recursos de pesquisa avançada fornecem recursos de pesquisa poderosos e flexíveis e permitem localizar a declaração de objeto, obter informações de objeto, executar pesquisa rápida, executar pesquisa avançada de objetos em categorias usando padrões, etc.  
   
 ### <a name="get-quick-information"></a>Obter informações rápidas  
 Você pode obter informações rápidas sobre o objeto na posição do cursor das seguintes maneiras:  
   
--   Clique o botão informações rápidas na parte superior da janela SQL  
+-   Clique no botão informações rápidas na parte superior da janela SQL  
   
--   Selecione informações rápidas no menu pop-up do mouse  
+-   Selecione informações rápidas no menu pop-up clique com o botão direito do mouse  
   
 -   Pressione Ctrl + Shift + espaço  
   
-### <a name="find-declaration"></a>Localize a declaração  
+### <a name="find-declaration"></a>Declaração de localização  
 Você pode ir para a declaração do objeto na posição do cursor das seguintes maneiras:  
   
--   Clique em Ir para declaração de botão na parte superior da janela SQL  
+-   Clique no botão ir para a declaração na parte superior da janela SQL  
   
--   Selecione Ir para declaração no menu pop-up do mouse  
+-   Selecione ir para a declaração no menu pop-up, clique com o botão direito do mouse  
   
 -   Pressione F12  
   
@@ -110,16 +110,16 @@ Você pode executar a pesquisa de texto rápido usando os seguintes recursos:
   
 -   Você pode iniciar a pesquisa usando o atalho Ctrl + F  
   
--   Você pode repetir a última pesquisa para frente usando F3  
+-   Você pode repetir a última pesquisa em frente usando F3  
   
--   Você pode repetir a última pesquisa com versões anteriores, usando Shift + F3  
+-   Você pode repetir a última pesquisa para trás usando Shift + F3  
   
 -   Você pode encontrar a próxima ocorrência da palavra na posição do cursor usando Ctrl + F3  
   
--   Você pode localizar a ocorrência anterior da palavra na posição do cursor usando Ctrl + Shift + F3  
+-   Você pode encontrar a ocorrência anterior da palavra na posição do cursor usando Ctrl + Shift + F3  
   
 -   Você também pode executar todas essas ações com itens de menu.  
   
 ### <a name="advanced-search"></a>Pesquisa avançada  
-Para abrir a caixa de diálogo de pesquisa avançada, no menu Editar ponto de localizar, em seguida, clique em pesquisa avançada. Na caixa de diálogo, você poderá localizar qualquer objeto usando o padrão. Na parte superior da caixa de diálogo, você pode escolher categorias de objeto e de área de pesquisa.  
+Para abrir a caixa de diálogo pesquisa avançada, no menu Editar, aponte para localizar e clique em pesquisa avançada. Na caixa de diálogo, você poderá localizar qualquer objeto usando o padrão. Na parte superior da caixa de diálogo, você pode escolher a área de pesquisa e as categorias de objeto.  
   

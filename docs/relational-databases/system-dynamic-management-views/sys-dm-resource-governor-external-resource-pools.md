@@ -1,5 +1,5 @@
 ---
-title: sys. dm _resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
+title: sys. dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cf77a073a1432df839bfd13046c66018496e79f1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68468519"
 ---
-# <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys. dm _resource_governor_external_resource_pools (Transact-SQL)
+# <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Retorna informações sobre o estado atual do pool de recursos externos, a configuração atual dos pools de recursos e as estatísticas do pool de recursos. 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-|Nome do Colmn      |Tipo de dados      |Descrição|  
+|Nome do Colmn      |Tipo de dados      |DESCRIÇÃO|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|ID do pool de recursos. Não permite valor nulo. |
 | name|**sysname**|O nome do pool de recursos. Não permite valor nulo. 
@@ -55,7 +55,7 @@ Retorna informações sobre o estado atual do pool de recursos externos, a confi
 
 Requer a permissão `VIEW SERVER STATE`.
 
-## <a name="see-also"></a>Consulte também  
- [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sys. dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

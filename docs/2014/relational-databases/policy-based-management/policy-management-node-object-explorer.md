@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625891"
 ---
 # <a name="policy-management-node-object-explorer"></a>Nó de gerenciamento de política (Pesquisador de Objetos)
@@ -22,13 +22,13 @@ ms.locfileid: "62625891"
   
 -   [Caixa de diálogo Criar Nova Condição ou Abrir Condição, Página Geral](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
--   [Caixa de diálogo Abrir Condição, página Políticas Dependentes](open-condition-dialog-box-dependent-policies-page.md)  
+-   [Caixa de diálogo Abrir Condição, página de Políticas Dependentes](open-condition-dialog-box-dependent-policies-page.md)  
   
 -   [Caixa de diálogo Edição Avançada &#40;Condição&#41;](advanced-edit-condition-dialog-box.md)  
   
--   [Caixas de diálogo Criar Nova Política ou Abrir política, Página geral](create-new-policy-or-open-policy-dialog-box-general-page.md)  
+-   [Caixa de diálogo Criar Nova Política ou Abrir Política, página Geral](create-new-policy-or-open-policy-dialog-box-general-page.md)  
   
--   [Caixas de diálogo Criar Nova Política ou Abrir Política, página Descrição](create-new-policy-or-open-policy-dialog-box-description-page.md)  
+-   [Caixa de diálogo Criar Nova Política ou Abrir Política, página Descrição](create-new-policy-or-open-policy-dialog-box-description-page.md)  
   
 -   [Caixa de diálogo Criar Nova Condição ou Abrir Condição, página de Descrição](create-new-condition-or-open-condition-dialog-box-description-page.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62625891"
   
 -   [Caixa de diálogo Importar Políticas](import-policies-dialog-box.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](administer-servers-by-using-policy-based-management.md)  
   
   

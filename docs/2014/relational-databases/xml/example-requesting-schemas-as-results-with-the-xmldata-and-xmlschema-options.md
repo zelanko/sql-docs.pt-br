@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637922"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Exemplo: solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Exemplo: Solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA
   A consulta a seguir retorna o esquema XML-DATA que descreve a estrutura do documento.  
   
 ## <a name="example"></a>Exemplo  
@@ -35,7 +35,7 @@ FOR XML RAW, XMLDATA
 GO  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <Schema name="Schema1" xmlns="urn:schemas-microsoft-com:xml-data"   
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  O <`Schema`> é declarado como um namespace. Para evitar colisões de namespace quando vários esquemas XML-Data são solicitados em diferentes consultas FOR XML, o identificador do namespace, `Schema1` neste exemplo, é alterado a cada execução da consulta. O identificador de namespace é composto por **Schema_n_** onde **_n_** é um inteiro.  
+>  O <`Schema`> é declarado como um namespace. Para evitar colisões de namespace quando vários esquemas XML-Data são solicitados em diferentes consultas FOR XML, o identificador do namespace, `Schema1` neste exemplo, é alterado a cada execução da consulta. O identificador de namespace é composto de **Schema_n_** onde **_n_** é um inteiro.  
   
  Com a especificação da opção `XMLSCHEMA` , é possível solicitar o esquema XSD para o resultado.  
   
@@ -66,7 +66,7 @@ FOR XML RAW, XMLSCHEMA
 GO  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -101,7 +101,7 @@ FOR XML RAW, XMLSCHEMA ('urn:example.com')
 GO  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -123,7 +123,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usar modo RAW com FOR XML](use-raw-mode-with-for-xml.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Usar o modo RAW com FOR XML](use-raw-mode-with-for-xml.md)  
   
   

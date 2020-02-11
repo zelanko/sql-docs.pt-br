@@ -1,5 +1,5 @@
 ---
-title: Exemplo da propriedade ActiveConnection (VC + +) de catálogo | Microsoft Docs
+title: Exemplo da propriedade ActiveConnection do catálogo (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d7808e685792fda9c6a6a6a468a275d9d10bb87f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 976864842781828f3505ed18ab9ff81fda570c86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967103"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925610"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Exemplo da propriedade ActiveConnection de catálogo (VC++)
-Definindo o [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) o catálogo de propriedade para uma conexão válida, abra "abre". De um catálogo aberto, você pode acessar os objetos de esquema contidos no catálogo.  
+Definir a propriedade [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) como uma conexão "abrir" válida abre "o catálogo. Em um catálogo aberto, você pode acessar os objetos de esquema contidos nesse catálogo.  
   
 ```  
 // CatalogActiveConnectionCpp.cpp  
@@ -75,7 +75,7 @@ void OpenConnectionX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in OpenConnectionX...." << endl;  
+      cout << "Error occurred in OpenConnectionX...." << endl;  
    }  
   
    if (m_pCnn)  
@@ -106,10 +106,10 @@ void OpenConnectionWithStringX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in OpenConnectionWithStringX...." << endl;  
+      cout << "Error occurred in OpenConnectionWithStringX...." << endl;  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

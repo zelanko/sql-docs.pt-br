@@ -1,5 +1,5 @@
 ---
-title: Termos do glossário ADO | Microsoft Docs
+title: Termos do glossário do ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,205 +12,205 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 67d791820e9dd22b035f98eb76e27723ebfb8fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b92f9c8b65db459d46aff51b7aed58c3ff6e307
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927171"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76940431"
 ---
-# <a name="ado-glossary-terms"></a>Termos do glossário ADO
-Este tópico define termos relevantes à ADO.
+# <a name="ado-glossary-terms"></a>Termos do glossário do ADO
+Este tópico define os termos relevantes para o ADO.
 
 ## <a name="a"></a>Um
- absoluto URL uma URL totalmente qualificada que especifica o local de um recurso que reside na Internet ou intranet. Consulte também *URL* e *URL relativa*.
+ URL absoluta uma URL totalmente qualificada que especifica o local de um recurso que reside na Internet ou em uma intranet. Consulte também *URL* e *URL relativa*.
 
- Componente COM auto-registro, no processo que geralmente tem um elemento visual no tempo de design ou no tempo de execução de controle ActiveX. Controles ActiveX também têm a capacidade de se comunicar com um contêiner de documento ativo, como o Microsoft Internet Explorer.
+ Autoregistro do controle ActiveX, componente COM em processo que geralmente tem um elemento visual em tempo de design ou em tempo de execução. Os controles ActiveX também têm a capacidade de se comunicar com um contêiner de documento ativo, como o Microsoft Internet Explorer.
 
- ADISAPI (Advanced dados Internet Server Application Programming Interface) uma DLL ISAPI que fornece análise, controle de automação, conjunto de registros de marshaling e empacotamento de MIME. O componente ADISAPI funciona por meio da API fornecida pelo Internet Information Services (IIS). Consulte também *ISAPI*.
+ ADISAPI (interface de programação de aplicativos de servidor de Internet de dados avançados) uma DLL ISAPI que fornece análise, controle de automação, empacotamento de conjunto de registros e empacotamento MIME. O componente ADISAPI funciona por meio da API fornecida pelo Serviços de Informações da Internet (IIS). Consulte também *ISAPI*.
 
- função de agregação em uma consulta, uma função como COUNT, AVG ou STDEV que calcula um valor usando todas as linhas em uma coluna de uma tabela. Escrever expressões e programação, você pode usar funções de agregação SQL (incluindo os três listados acima) e funções de agregação de domínio para determinar diversas estatísticas.
+ função de agregação em uma consulta, uma função como COUNT, AVG ou DESVPAD que calcula um valor usando todas as linhas de uma coluna de uma tabela. Em expressões de escrita e em programação, você pode usar funções de agregação SQL (incluindo as três listadas acima) e funções de agregação de domínio para determinar várias estatísticas.
 
- alias um nome alternativo dado a uma coluna ou expressão em uma instrução SQL SELECT, mais frequentemente curta ou significativa. Por exemplo, BobSales é o alias na instrução SELECT a seguir: "Selecione vendas wr como BobSales de SalesDB". Um alias pode ser usado para atribuir dinamicamente colunas a associações de controle no objeto DataControl.
+ alias um nome alternativo que você atribui a uma coluna ou expressão em uma instrução SQL SELECT, geralmente mais curto ou mais significativo. Por exemplo, BobSales é o alias na instrução SELECT a seguir: "Select WR-Sales as BobSales from SalesDB". Um alias pode ser usado para atribuir colunas dinamicamente para controlar associações no objeto DataControl.
 
- apartamento de threading COM um modelo de threading em que todas as chamadas para um objeto ocorrerem em um thread. No apartamento de threading, COM sincroniza e realiza marshaling de chamadas. Consulte também *COMmddefcom*.
+ segmentação de apartamento de um modelo de Threading COM em que todas as chamadas para um objeto ocorrem em um thread. No Threading Apartment, o COM sincroniza e realiza o marshaling de chamadas. Consulte também *COMmddefcom*.
 
- operação assíncrona de uma operação que retorna o controle ao programa de chamada sem aguardar a conclusão da operação. Antes da operação for concluída, continua a execução de código. Consulte também *operação síncrona*.
+ operação assíncrona uma operação que retorna o controle para o programa de chamada sem aguardar a conclusão da operação. Antes que a operação seja concluída, a execução do código continua. Consulte também *operação síncrona*.
 
 ## <a name="b"></a>B
- mapeamento de entrada um entre um campo em uma tabela e uma variável de associação. Nas extensões do Visual C++ de ADO, **Recordset** campos são mapeados para variáveis de C/C++.
+ Associação de entrada de um mapeamento entre um campo em uma tabela e uma variável. Nas extensões de Visual C++ do ADO, os campos do **conjunto de registros** são mapeados para as variáveis C/C++.
 
- valor numérico de bitmask um destinado a uma comparação de valor de bit por bit com outros valores numéricos, normalmente para opções de sinalizador no parâmetro ou valores de retorno. Normalmente, essa comparação é feita com operadores lógicos bit a bit, tal como **e** e **ou** no Visual Basic **&** e **&#124;** em C++.
+ bitmask um valor numérico destinado a uma comparação de valor bit a bit com outros valores numéricos, normalmente para sinalizar opções no parâmetro ou valores de retorno. Normalmente, essa comparação é feita com operadores lógicos de bit a bit, como **e** e **&** **ou** em Visual Basic, e **&#124;** em C++.
 
- Por exemplo, o ADO **FieldAttributeEnum** valores podem ser usados como máscaras de bits para determinar os atributos de um campo. Suponha que você quiser determinar se um campo era atualizável. Você pode testar isso com a seguinte expressão no Visual Basic:`Field.Attributes AND adFldUpdatable`
+ Por exemplo, os valores ADO **FieldAttributeEnum** podem ser usados como bitmasks para determinar os atributos de um campo. Suponha que você quisesse determinar se um campo era atualizável. Você poderia testar isso com a seguinte expressão no Visual Basic:`Field.Attributes AND adFldUpdatable`
 
- Se o resultado for TRUE, o campo é atualizável.
+ Se o resultado for TRUE, o campo será atualizável.
 
- marcar um marcador que identifica exclusivamente uma linha dentro de um conjunto de linhas para que um usuário pode navegar rapidamente para ele.
+ Marque um marcador que identifica exclusivamente uma linha dentro de um conjunto de linhas para que um usuário possa navegar rapidamente para ela.
 
- Um objeto que executa um conjunto definido de operações, como validação de dados ou lógica de regra de negócios de objeto comercial. Objetos de negócios normalmente residem na camada intermediária.
+ objeto de negócio um objeto que executa um conjunto definido de operações, como validação de dados ou lógica de regra de negócio. Os objetos comerciais geralmente residem na camada intermediária.
 
- regra de negócio a combinação de edições de validação, as verificações de logon, pesquisas de banco de dados, políticas e transformações algorítmicos que constituem a forma de uma empresa de fazer negócios. Também conhecido como *lógica de negócios*.
+ regra de negócio a combinação de edições de validação, verificações de logon, pesquisas de banco de dados, políticas e transformações de algoritmos que constituem a maneira da empresa de fazer negócios. Também conhecida como *lógica de negócios*.
 
 ## <a name="c"></a>C
- calculado a expressão de uma expressão que não é constante, mas cujo valor depende de outros valores. Para ser avaliada, uma expressão calculada deve obter e computar valores de outras fontes, geralmente em outros campos ou linhas.
+ expressão calculada uma expressão que não é constante, mas cujo valor depende de outros valores. Para ser avaliado, uma expressão calculada deve obter e computar valores de outras fontes, normalmente em outros campos ou linhas.
 
- referência de capítulo de um a um intervalo de linhas de uma fonte de dados. No ADO, um capítulo normalmente é uma referência a outro **conjunto de registros**.
+ Capítulo uma referência a um intervalo de linhas de uma fonte de dados. No ADO, um capítulo é normalmente uma referência a outro **conjunto de registros**.
 
- Colunas de capítulo tornam possível definir uma *pai-filho* relação em que o *pai* é o **conjunto de registros** que contém a coluna de capítulo e o  *filho* é o **Recordset** representado pelo capítulo.
+ As colunas de capítulo possibilitam definir uma relação *pai-filho* em que o *pai* é o **conjunto de registros** que contém a coluna de capítulo e o *filho* é o conjunto de **registros** representado pelo capítulo.
 
- alias de capítulo um alias que se refere à coluna anexada ao pai.
+ Capítulo-alias de um alias que se refere à coluna anexada ao pai.
 
- Um mapeamento de um conjunto de caracteres do conjunto de caracteres para seus valores numéricos. Por exemplo, o Unicode é um caractere de 16 bits definido capazes de codificar todos os caracteres conhecidos e usado como um padrão de codificação de caracteres em todo o mundo.
+ conjunto de caracteres um mapeamento de um conjunto de caracteres para seus valores numéricos. Por exemplo, o Unicode é um conjunto de caracteres de 16 bits capaz de codificar todos os caracteres conhecidos e usado como um padrão de codificação de caracteres mundial.
 
- o lado dependente de uma relação hierárquica do filho. Um filho é um nó em uma estrutura hierárquica que tem outro nó acima dele (mais próximo da raiz). Consulte também *filho alias*, *relação pai-filho*, *pai*.
+ filho o lado dependente de uma relação hierárquica. Um filho é um nó em uma estrutura hierárquica que tem outro nó acima dele (mais próximo da raiz). Consulte também relação *filho-alias*, *pai-filho*, *pai*.
 
- Um alias que se refere ao filho de alias de filho. Consulte também *alias*, *filho*.
+ alias filho um alias que se refere ao filho. Consulte também *alias*, *filho*.
 
- O CLSID (identificador de classe) um universalmente identificador exclusivo (UUID) que identifica um componente COM. Cada componente COM tem sua CLSID no registro do Windows para que ele pode ser carregado por outros aplicativos. Consulte também *ProgID*, *COM*.
+ CLSID (identificador de classe) um UUID (identificador universal exclusivo) que identifica um componente COM. Cada componente COM tem seu CLSID no registro do Windows para que ele possa ser carregado por outros aplicativos. Consulte também *ProgID*, *com*.
 
- camada de lógica de camada um cliente de um sistema distribuído que normalmente apresenta dados e processos de entrada do usuário, também conhecido como o *front-end*. Normalmente, a camada do cliente e solicita dados de um servidor com base na entrada, em seguida, formata e exibe o resultado. Consulte também *camada intermediária*, *camada de fonte de dados*, *aplicativo distribuído*.
+ camada de cliente de um nível lógico de um sistema distribuído que normalmente apresenta dados e processa a entrada do usuário, às vezes chamado de *front-end*. Normalmente, a camada de cliente solicita dados de um servidor com base na entrada e, em seguida, formata e exibe o resultado. Consulte também *camada intermediária*, *camada de fonte de dados*, *aplicativo distribuído*.
 
- COM (Component Object Model) um binário padrão que permite que objetos interoperem em um ambiente de rede, independentemente da linguagem na qual eles foram desenvolvidos ou em quais computadores eles residem. COM base em tecnologias incluem controles ActiveX, automação e vinculação e incorporação de objetos (OLE). COM permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Ele define como expõe o objeto em si e como essa exposição funciona entre processos e entre redes. COM também define o ciclo de vida do objeto.
+ COM (Component Object Model) um padrão binário que permite que os objetos interoperem em um ambiente de rede, independentemente do idioma em que foram desenvolvidos ou em quais computadores eles residem. As tecnologias baseadas em COM incluem controles ActiveX, automação e vinculação e inserção de objetos (OLE). COM permite que um objeto exponha sua funcionalidade a outros componentes e hospede aplicativos. Ele define como o objeto se expõe e como essa exposição funciona em processos e em redes. COM também define o ciclo de vida do objeto.
 
- Arquivo binário do COM componente - como. dll,. ocx e alguns arquivos .exe - que dá suporte ao padrão COM por fornecer objetos. Esse arquivo contém o código para um ou mais fábricas de classes, classes COM, mecanismos de entrada do registro, código de carregamento e assim por diante.
+ Arquivo binário do componente COM-como. dll,. ocx e alguns arquivos. exe – que dão suporte ao padrão COM para fornecer objetos. Esse arquivo contém código para uma ou mais fábricas de classe, classes COM, mecanismos de entrada de registro, código de carregamento e assim por diante.
 
- Um operador que compara duas expressões e retorna um valor booliano de operador de comparação.
+ operador de comparação um operador que compara duas expressões e retorna um valor booliano.
 
- Um parâmetro de critérios que pode ser expresso como ">" (maior que), "\<" (menor que), "=" (igual), "> =" (maior que ou igual), "< =" (menor ou igual), "<>" (não igual), ou "como" (correspondência de padrões).
+ Um parâmetro de critérios que pode ser expresso como ">" (maior que),\<"" (menor que), "=" (igual), ">=" (maior ou igual), "<=" (menor ou igual), "<>" (diferente de) ou "Like" (correspondência de padrões).
 
- componente de um objeto que encapsula dados e código e fornece um conjunto bem específico de serviços disponíveis publicamente.
+ componente um objeto que encapsula dados e código e fornece um conjunto bem especificado de serviços publicamente disponíveis.
 
- arquivo composto uma implementação de COM o armazenamento para arquivos estruturado. Um arquivo composto armazena objetos separados em um único arquivo estruturado consiste em dois elementos principais: objetos de armazenamento e transmissão de objetos. Juntos, eles funcionam como um sistema de arquivos dentro de um arquivo.
+ arquivo composto uma implementação de armazenamento estruturado COM para arquivos. Um arquivo composto armazena objetos separados em um único arquivo estruturado que consiste em dois elementos principais: objetos de armazenamento e objetos de fluxo. Juntos, eles funcionam como um sistema de arquivos em um arquivo.
 
- Um número de arquivos individuais são associados juntos em um arquivo físico. Cada arquivo individual em um arquivo composto pode ser acessado como se fosse um único arquivo físico.
+ Vários arquivos individuais ligados em um arquivo físico. Cada arquivo individual em um arquivo composto pode ser acessado como se fosse um único arquivo físico.
 
- constante de um valor numérico ou cadeia de caracteres que não são alterados. Enumerações de ADO nomeadas (constantes enumeradas) podem ser usadas em seu código, em vez de valores reais, por exemplo, **adUseClient** é uma constante cujo valor é 3. (Const adUseClient = 3). Consulte também *enumeração*.
+ constante um valor numérico ou de cadeia de caracteres que não é alterado. Enumerações do ADO nomeadas (constantes enumeradas) podem ser usadas em seu código em vez de valores reais, por exemplo, **adUseClient** é uma constante cujo valor é 3. (Const adUseClient = 3). Consulte também *Enumeração*.
 
- cursor de um elemento de banco de dados que controla a navegação de registro, a capacidade de atualização de dados e a visibilidade das alterações feitas no banco de dados por outros usuários.
+ cursor um elemento Database que controla a navegação de registros, a capacidade de atualização dos dados e a visibilidade das alterações feitas no banco de dado por outros usuários.
 
 ## <a name="d"></a>D
- o processo de associar os objetos ou controles de um aplicativo para uma fonte de dados de associação de dados. Um controle associado a uma fonte de dados é chamado um *controle ligado a dados*.
+ dados que vinculam o processo de associação de objetos ou controles de um aplicativo a uma fonte de dados. Um controle associado a uma fonte de dados é chamado de *controle vinculado a dados*.
 
- O conteúdo de um controle associado a dados está associado com valores de um banco de dados. Por exemplo, um controle de grade é associado a um **conjunto de registros** objeto pode ser atualizado quando as linhas na **Recordset** são atualizados. Quando os novos valores são recuperados, o **Recordset**, novos valores são exibidos na grade.
+ O conteúdo de um controle associado a dados é associado a valores de um banco de dado. Por exemplo, um controle de grade que está associado a um objeto **Recordset** pode ser atualizado quando as linhas no **conjunto de registros** são atualizadas. Quando novos valores são recuperados pelo **conjunto de registros**, novos valores são exibidos na grade.
 
- provedor de dados de Software que expõe dados para um aplicativo ADO diretamente ou por meio de um provedor de serviços. Consulte também o provedor de serviços.
+ o software do provedor de dados que expõe dados a um aplicativo ADO diretamente ou por meio de um provedor de serviços. Consulte também provedor de serviços.
 
- Data shaping uma técnica que torna o uso de uma sintaxe formalizada (chamado **linguagem de forma**) para definir um especializado **conjunto de registros** objeto (chamado um *em forma de conjunto de registros*) que contém não apenas os dados, mas também faz referência a si **conjunto de registros** objetos de e/ou valores calculados com base nas informações outra **Recordset** objetos.
+ Data Shaping uma técnica que usa uma sintaxe formalizada (chamada de **linguagem de forma**) para definir um objeto **Recordset** especializado (chamado de *conjunto de registros moldado*) que contém não apenas dados, mas também faz referência a outros objetos **Recordset** e/ou valores computados com base nesses outros objetos **Recordset** .
 
- camada de lógica de camada A de um sistema distribuído que representa um computador executando um DBMS, como um banco de dados do SQL Server da fonte de dados. Consulte também *camada do cliente*, *camada intermediária*, *aplicativo distribuído*.
+ camada de fonte de dados uma camada lógica de um sistema distribuído que representa um computador que executa um DBMS, como um banco de dados SQL Server. Consulte também *camada de cliente*, *camada intermediária*, *aplicativo distribuído*.
 
- Protocolo de transmissão A DCOM que permite que os componentes se comunicam diretamente uns com os outros em uma rede. Consulte também *COM*, *componente*.
+ DCOM um protocolo de transmissão que permite que os componentes COM se comuniquem diretamente entre si em uma rede. Consulte também *com*, *componente*.
 
- DDL (Data Definition Language) essas instruções SQL que definem, em vez de manipular os dados. O esquema de banco de dados é criado ou modificado com DDL. Por exemplo, **CREATE TABLE**, **CREATE INDEX**, **GRANT**, e **REVOGAR** são instruções DDL de SQL.
+ DDL (linguagem de definição de dados) essas instruções no SQL que definem, em vez de manipular, dados. O esquema de um banco de dados é criado ou modificado com DDL. Por exemplo, **CREATE TABLE**, **CREATE INDEX**, **Grant**e **REVOKE** são instruções SQL DDL.
 
- Um fluxo de texto ou binário de fluxo padrão (representado por um **Stream** objeto) que está associado com **registro** ou **Recordset** objetos ao usar determinados provedores OLE DB, como o provedor Microsoft OLE DB para publicação na Internet. O fluxo padrão normalmente contém o conteúdo de um arquivo, como o código HTML para a raiz de um site da Web.
+ transmita por padrão um fluxo de texto ou binário (representado por um objeto de **fluxo** ) associado a objetos de **registro** ou **conjunto de registros** ao usar determinados provedores de OLE DB, como o provedor de OLE DB da Microsoft para publicação na Internet. O fluxo padrão normalmente contém o conteúdo de um arquivo, como o código HTML para a raiz de um site da Web.
 
- programa de aplicativo distribuído um escrito de forma que o processamento pode ser dividido em vários computadores em uma rede. Normalmente, um aplicativo distribuído é dividido em apresentação, lógica de negócios e dados de camadas de armazenamento, ou *camadas*. Consulte também camada do cliente, a camada intermediária, a camada de fonte de dados.
+ aplicativo distribuído um programa escrito para que o processamento possa ser dividido em vários computadores em uma rede. Normalmente, um aplicativo distribuído é dividido *em camadas de*apresentação, lógica de negócios e armazenamento de dados ou camadas. Consulte também camada de cliente, camada intermediária, camada de fonte de dados.
 
- desconectado A Recordset **Recordset** objeto em um cache de cliente que não tem mais uma conexão ao vivo para o servidor. Se a fonte de dados original precisa ser acessados novamente por algum motivo, como a atualização de dados, a conexão deverá ser restabelecida. No entanto, as coleções, propriedades e métodos de um desconectada **Recordset** ainda podem ser acessados.
+ Conjunto de registros desconectado um objeto **Recordset** em um cache do cliente que não tem mais uma conexão dinâmica com o servidor. Se a fonte de dados original precisar ser acessada novamente por algum motivo, como atualizar dados, a conexão deverá ser restabelecida. No entanto, as coleções, as propriedades e os métodos de um **conjunto de registros** desconectado ainda podem ser acessados.
 
- DML (Data Manipulation Language) essas instruções que manipulam, em vez de definir dados no SQL. Os valores em um banco de dados são selecionados e modificados com DML. Por exemplo, **inserir**, **atualização**, **excluir**, e **selecione** são instruções DML SQL.
+ DML (linguagem de manipulação de dados) essas instruções no SQL que manipulam, em vez de definir, os dados. Os valores em um banco de dados são selecionados e modificados com DML. Por exemplo, **Inserir**, **Atualizar**, **excluir**e **selecionar** são instruções SQL DML.
 
- provedor de código-fonte do documento uma classe especial de provedores que gerenciam as pastas e documentos. Quando um documento é representado por um **registro** objeto ou uma pasta de documentos é representado por uma **conjunto de registros** do objeto, o provedor de código-fonte do documento preenche esses objetos com um conjunto exclusivo de campos que descrevem as características do documento, em vez do próprio documento. Consulte também o registro de recurso.
+ provedor de origem de documento uma classe especial de provedores que gerenciam pastas e documentos. Quando um documento é representado por um objeto de **registro** ou uma pasta de documentos é representada por um objeto **Recordset** , o provedor de origem do documento popula esses objetos com um conjunto exclusivo de campos que descrevem as características do documento, em vez do próprio documento propriamente dito. Consulte também registro de recurso.
 
- DSN (nome de fonte de dados) a coleta de informações usada para conectar seu aplicativo para um determinado banco de dados ODBC. O Gerenciador de Driver ODBC usa essas informações para criar uma conexão ao banco de dados. Um DSN pode ser armazenado em um arquivo (um arquivo DSN) ou no registro do Windows (um DSN de máquina).
+ DSN (nome da fonte de dados) a coleção de informações usada para conectar seu aplicativo a um banco de dados ODBC específico. O Gerenciador de driver ODBC usa essas informações para criar uma conexão com o banco de dados. Um DSN pode ser armazenado em um arquivo (um DSN de arquivo) ou no registro do Windows (um DSN de máquina).
 
- propriedade da propriedade dinâmica A específicas para um provedor de dados ou o serviço de cursor. O **propriedades** coleção de um objeto é preenchida automaticamente com estas ("dinamicamente"). Um objeto não tem nenhuma propriedades dinâmicas até que ele está conectado a uma fonte de dados através de um provedor de dados específico. Consulte também data provider, o cursor.
+ Propriedade dinâmica uma propriedade específica para um provedor de dados ou o serviço de cursor. A coleção **Properties** de um objeto é populada com elas automaticamente ("dinamicamente"). Um objeto não tem propriedades dinâmicas até que ele esteja conectado a uma fonte de dados por meio de um provedor de dados específico. Consulte também provedor de dados, cursor.
 
 ## <a name="e"></a>E
- Lista de enumeração A de constantes nomeadas. Valores enumerados não precisam ser exclusivos. No entanto, o nome de cada valor deve ser exclusivo dentro do escopo em que a enumeração for definida. No ADO, enumerações são usadas para o parâmetro numérico em retornam valores, para adicionar o significado para código ADO e protegem o desenvolvedor contra os valores numéricos (que pode ser alterada com a versão). Por exemplo, para abrir um estático **conjunto de registros**, use o **adOpenStatic** valor enumerado: `Recordset.Open ,,adOpenStatic`
+ Enumeração uma lista de constantes nomeadas. Os valores enumerados não precisam ser exclusivos. No entanto, o nome de cada valor deve ser exclusivo dentro do escopo em que a enumeração é definida. No ADO, as enumerações são usadas para parâmetros numéricos e valores de retorno, para adicionar significado ao código ADO e para proteger o desenvolvedor dos valores numéricos (que podem mudar de versão para versão). Por exemplo, para abrir um **conjunto de registros**estático, use o valor enumerado **adOpenStatic** :`Recordset.Open ,,adOpenStatic`
 
- Também conhecido como *constante enumerada*. Consulte também *constante*.
+ Também conhecido como *constante enumerada*. Confira também *constante*.
 
- evento de uma ação reconhecida por um objeto para o qual você pode escrever código para responder. Eventos podem ser gerados pela execução do comando, a conclusão da transação, navegação de conjunto de registros e atualizações de dados, entre outras ações. Consulte também *manipulador de eventos*.
+ evento uma ação reconhecida por um objeto, para o qual você pode escrever código para responder. Os eventos podem ser gerados pela execução do comando, conclusão da transação, navegação do conjunto de registros e atualizações de dados, entre outras ações. Consulte também *manipulador de eventos*.
 
- manipulador de eventos um manipulador de eventos é o código que é executado quando ocorre um evento. Consulte também o evento.
+ manipulador de eventos um manipulador de eventos é o código que é executado quando ocorre um evento. Consulte também evento.
 
 ## <a name="h"></a>H
- rotina do manipulador A que gerencia uma operação, como o gerenciamento de dados ou de recuperação de erro ou condição comuns e relativamente simple.
+ manipulador de rotina que gerencia uma condição ou operação comum e relativamente simples, como recuperação de erro ou gerenciamento de dados.
 
- hierárquica Recordset A **conjunto de registros** que contém outra **conjunto de registros**. Consulte também data shaping capítulo.
+ Conjunto de registros hierárquico um **conjunto** de registros que contém outro **conjunto de registros**. Consulte também data Shaping, capítulo.
 
- Para obter mais informações, consulte [acessar linhas em um conjunto de registros hierárquicos](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).
+ Para obter mais informações, consulte [acessando linhas em um conjunto de registros hierárquico](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).
 
- hierarquia em geral, uma hierarquia é uma estrutura com classificação com um top de nível e níveis subordinados. No ADO, hierárquico **conjuntos de registros** são usados para representar a relação de pai-filho entre um registro e um capítulo. Também no ADO, **registro** e **Stream** objetos podem ser usados para acessar estruturas de árvore hierárquica, como uma pasta e documentos. Também inclui ADO MD **hierarquia** objetos para representar uma relação entre os níveis de uma dimensão em um cubo OLAP. Consulte também conjuntos de registros hierárquicos, relação pai-filho, o capítulo, a árvore.
+ hierarquia em geral, uma hierarquia é uma estrutura classificada com níveis de nível superior e subordinado. No ADO, os **conjuntos de registros** hierárquicos são usados para representar a relação pai-filho entre um registro e um capítulo. Além disso, os objetos ADO, **Record** e **Stream** podem ser usados para acessar estruturas hierárquicas de árvore, como uma pasta e documentos. ADO MD também inclui objetos de **hierarquia** para representar uma relação entre os níveis de uma dimensão em um cubo OLAP. Consulte também conjuntos de registros hierárquicos, relação pai-filho, capítulo, árvore.
 
 ## <a name="i-l"></a>I-L
- ISAPI (Internet Server Application Programming Interface) um conjunto de funções para servidores de Internet, como um Windows NT® Server/Windows 2000 Server executando o Microsoft® Internet Information Services (IIS).
+ ISAPI (interface de programação de aplicativo de servidor da Internet) um conjunto de funções para servidores da Internet, como um servidor Windows NT® Server/Windows 2000 executando o Microsoft® Serviços de Informações da Internet (IIS).
 
- Uma coluna ou colunas que identificam exclusivamente uma linha; em uma tabela de chave geralmente usado para indexar uma tabela.
+ Chave uma coluna ou colunas em uma tabela que identifica exclusivamente uma linha; geralmente usado para indexar uma tabela.
 
 ## <a name="m"></a>M
- o processo de empacotamento, envio e de descompactação parâmetros de método de interface de marshaling entre limites de thread ou processo.
+ marshaling do processo de empacotamento, envio e desempacotamento de parâmetros de método de interface entre limites de thread ou processo.
 
- a camada de lógica em um sistema distribuído entre uma interface do usuário ou cliente Web e o banco de dados de camada intermediária. Normalmente, isso é onde os objetos comerciais são instanciados. A camada intermediária é uma coleção de regras de negócio e funções que geram e operam em cima de receber informações. Eles realizam isso por meio de regras de negócio que podem ser alterados com frequência e, portanto, são encapsuladas em componentes que estão fisicamente separadas da lógica do aplicativo em si. Também conhecido como *camada de servidor de aplicativo*. Consulte também aplicativo distribuído, a camada do cliente, a camada de fonte de dados.
+ camada intermediária a camada lógica em um sistema distribuído entre uma interface do usuário ou um cliente Web e o banco de dados. Normalmente, isso é onde os objetos comerciais são instanciados. A camada intermediária é uma coleção de regras de negócios e funções que geram e operam após o recebimento de informações. Eles realizam isso por meio de regras de negócio, que podem ser alteradas com frequência e, portanto, são encapsuladas em componentes que são separados fisicamente da lógica do aplicativo em si. Também conhecida como *camada de servidor de aplicativos*. Consulte também aplicativo distribuído, camada de cliente, camada de fonte de dados.
 
- Protocolo do MIME (Multi-purpose Internet Mail Extension) à Internet desenvolvidos originalmente para permitir a troca de mensagens de email com conteúdo avançado em ambientes de email, computador e rede heterogênea. Na prática, MIME também foi adotado e estendida por aplicativos não são de correio.
+ MIME (Multipurpose Internet Mail Extension) um protocolo de Internet originalmente desenvolvido para permitir o intercâmbio de mensagens de email eletrônicas com conteúdo rico em ambientes de rede, computador e email heterogêneos. Na prática, o MIME também foi adotado e estendido por aplicativos que não são de email.
 
- MIME é um padrão que permite que os dados binários a ser publicado e ler na Internet. O cabeçalho de um arquivo com dados binários contém o tipo MIME dos dados. Isso informa os programas clientes (navegadores da Web e pacotes de email, por exemplo) que será necessário manipular os dados de maneira diferente do que tratam de texto simples. Por exemplo, o cabeçalho de um documento da Web que contém uma imagem JPEG contém o tipo MIME específico para o formato de arquivo JPEG. Isso permite que um navegador exibir o arquivo com o visualizador JPEG, caso haja algum.
+ MIME é um padrão que permite que dados binários sejam publicados e lidos na Internet. O cabeçalho de um arquivo com dados binários contém o tipo MIME dos dados; Isso informa os programas cliente (navegadores da Web e pacotes de email, por exemplo) de que eles precisarão para lidar com os dados de uma maneira diferente do que manipulam texto simples. Por exemplo, o cabeçalho de um documento da Web que contém um gráfico JPEG contém o tipo MIME específico para o formato de arquivo JPEG. Isso permite que um navegador exiba o arquivo com seu visualizador de JPEG, se houver um.
 
 ## <a name="n-o"></a>N-O
- nó de um elemento em uma estrutura de árvore hierárquica. Um nó pode ser a raiz ou o filho de outro nó. Um nó também pode ser o pai de vários filhos. Consulte também hierarquia, árvore, raiz, filho e pai.
+ nó um elemento em uma estrutura de árvore hierárquica. Um nó pode ser a raiz ou o filho de outro nó. Um nó também pode ser pai de vários filhos. Consulte também hierarquia, árvore, raiz, filho, pai.
 
- variável de variável de um objeto que contém uma referência a um objeto. Por exemplo, `objCustomObject` é uma variável que aponta para um objeto do tipo ObjetoPersonalizado:`Set objCustomObject = CreateObject(adodb.Recordset)`
+ variável de objeto uma variável que contém uma referência a um objeto. Por exemplo, `objCustomObject` é uma variável que aponta para um objeto do tipo customobject:`Set objCustomObject = CreateObject(adodb.Recordset)`
 
- ODBC (Open Database Connectivity) uma interface de linguagem de programação padrão usado para se conectar a uma variedade de fontes de dados. Isso geralmente é acessado por meio do painel de controle, em que os nomes de fonte de dados (DSNs) podem ser atribuídos a usar drivers ODBC específicos.
+ ODBC (Open Database Connectivity) uma interface de linguagem de programação padrão usada para se conectar a uma variedade de fontes de dados. Normalmente, isso é acessado por meio do painel de controle, em que os nomes de fontes de dados (DSNs) podem ser atribuídos para usar drivers ODBC específicos.
 
- OLE DB um conjunto de interfaces que expõem dados de uma variedade de fontes usando COM. Interfaces do OLE DB oferecem aplicativos acesso padronizado aos dados armazenados em várias fontes de informação. Essas interfaces de suporte a quantidade de funcionalidade do DBMS apropriada para a fonte de dados, permitindo que ele compartilhe os próprios dados. Consulte também COM.
+ OLE DB um conjunto de interfaces que expõem dados de uma variedade de fontes usando COM. As interfaces de OLE DB fornecem aplicativos com acesso uniforme aos dados armazenados em diversas fontes de informações. Essas interfaces dão suporte à quantidade de funcionalidade de DBMS apropriada à fonte de dados, permitindo que ela Compartilhe seus dados. Consulte também COM.
 
- otimista de bloqueio de um tipo de proteção no qual é a página de dados que contém um ou mais registros, incluindo o registro que está sendo editado, não esteja disponível para outros usuários somente enquanto o registro está sendo atualizado pelo **atualização** método, mas está disponível antes e após a chamada para **atualização**.
+ bloqueio otimista um tipo de bloqueio no qual a página de dados que contém um ou mais registros, incluindo o registro que está sendo editado, não está disponível para outros usuários somente enquanto o registro está sendo atualizado pelo método **Update** , mas está disponível antes e depois da chamada para **Update**.
 
- Bloqueio otimista é usado quando o **conjunto de registros** objeto é aberto com o **LockType** parâmetro ou a propriedade definida como **adLockOptimistic** ou  **adLockBatchOptimistic**. Consulte também pessimista.
+ O bloqueio otimista é usado quando o objeto **Recordset** é aberto com o parâmetro **LockType** ou a propriedade definida como **adLockOptimistic** ou **adLockBatchOptimistic**. Consulte também bloqueio pessimista.
 
- o local numérico de um item em uma ordem de valor ordinal. Em uma coleção de ADO, o valor ordinal do primeiro item é zero (0). O próximo item é um (1) e assim por diante.
+ valor ordinal o local numérico de um item em um pedido. Em uma coleção ADO, o valor ordinal do primeiro item é zero (0). O próximo item é um (1) e assim por diante.
 
 ## <a name="p"></a>P
- consulta de um comando com parâmetros ou um comando que permite que você defina valores de parâmetro antes do comando é executado. Por exemplo, uma cadeia de caracteres SQL pode ser parametrizada, inserindo marcadores de parâmetro na cadeia de caracteres SQL (designado pelo '?' caracteres). O aplicativo, em seguida, especifica valores para cada parâmetro e executa o comando.
+ comando com parâmetros uma consulta ou comando que permite definir valores de parâmetro antes da execução do comando. Por exemplo, uma cadeia de caracteres SQL pode ser parametrizada inserindo marcadores de parâmetro na cadeia de caracteres SQL (designada pelo caractere "?"). Em seguida, o aplicativo especifica valores para cada parâmetro e executa o comando.
 
- pai do lado do controle de uma relação hierárquica. Em uma estrutura hierárquica, um pai tem um ou mais nós filho diretamente abaixo na hierarquia. Consulte também alias pai, filho e relação pai-filho.
+ pai o lado de controle de uma relação hierárquica. Em uma estrutura hierárquica, um pai tem um ou mais nós filho diretamente abaixo dele na hierarquia. Consulte também relação pai-alias, pai-filho, filho.
 
- Um alias que se refere ao pai de pai-alias. Consulte também alias, o pai.
+ alias pai um alias que se refere ao pai. Consulte também alias, pai.
 
- relação de um da relação pai-filho em uma estrutura hierárquica no qual o pai é um nível superior e diretamente associado a um ou mais filhos. Um filho é um nível inferior e deve ter um pai. Consulte também o pai, filho.
+ relação pai-filho uma relação em uma estrutura hierárquica na qual o pai é um nível superior e está diretamente associado a um ou mais filhos. Um filho é um nível inferior e deve ter um pai. Consulte também pai, filho.
 
- pessimista de bloqueio de um tipo de proteção no qual a página que contém um ou mais registros, incluindo o registro que está sendo editado, está disponível para outros usuários para garantir que uma atualização será feita. Comportamento de bloqueio pessimista é definido pelo provedor OLE DB. Normalmente, os registros estão bloqueados na edição e ficam indisponíveis até que o **atualização** método for concluído.
+ bloqueio pessimista um tipo de bloqueio no qual a página que contém um ou mais registros, incluindo o registro que está sendo editado, não está disponível para outros usuários a fim de garantir que uma atualização será feita. O comportamento de bloqueio pessimista é definido pelo provedor de OLE DB. Normalmente, os registros são bloqueados na edição e permanecem indisponíveis até que o método de **atualização** seja concluído.
 
- Bloqueio pessimista é habilitado quando o **conjunto de registros** objeto é aberto com o **LockType** parâmetro ou a propriedade definida como **adLockPessimistic**. Consulte o bloqueio otimista também.
+ O bloqueio pessimista é habilitado quando o objeto **Recordset** é aberto com o parâmetro **LockType** ou a propriedade definida como **adLockPessimistic**. Consulte também bloqueio otimista.
 
- pool de uma otimização de desempenho com base no uso de coleções de recursos pré-alocados, como conexões de banco de dados ou objetos. Ele é mais eficiente para desenhar um recurso existente do pool que criar um novo recurso.
+ pooling de uma otimização de desempenho com base no uso de coleções de recursos alocados previamente, como objetos ou conexões de banco de dados. É mais eficiente desenhar um recurso existente do pool do que criar um novo recurso.
 
- ProgID (identificador programático) um nome exclusivo que mapeado para o registro do Windows por um aplicativo COM. O ProgID para uma Conexão ADO é "ADODB. Conexão". Consulte também o CLSID, COM.
+ ProgID (identificador programático) um nome exclusivo mapeado para o registro do Windows por um aplicativo COM. O ProgID de uma conexão ADO é "ADODB. Conexão ". Consulte também CLSID, COM.
 
- proxy de um objeto específico de interface que fornece o marshaling do parâmetro e comunicação necessárias para um cliente chamar um objeto de aplicativo que está em execução em um ambiente de execução diferente, como em um thread diferente ou em outro processo. O proxy está localizado com o cliente e se comunica com um stub correspondente que está localizado com o objeto de aplicativo que está sendo chamado. Consulte também o stub.
+ proxy um objeto específico de interface que fornece o marshaling de parâmetro e a comunicação necessários para um cliente chamar um objeto de aplicativo que está sendo executado em um ambiente de execução diferente, como em um thread diferente ou em outro processo. O proxy está localizado com o cliente e se comunica com um stub correspondente que está localizado com o objeto de aplicativo que está sendo chamado. Consulte também stub.
 
 ## <a name="r"></a>R
- URL relativa A parcialmente qualificado URL que especifica um recurso na Internet ou intranet cujo local é relativo ao ponto de partida especificado por uma URL absoluta ou um objeto de Conexão ADO equivalente. Em vigor, o concatenado absoluta e relativa URLs consitute uma URL completa. Consulte também URL e a URL absoluta.
+ URL relativa uma URL parcialmente qualificada que especifica um recurso na Internet ou uma intranet cujo local é relativo a um ponto de partida especificado por uma URL absoluta ou um objeto de conexão ADO equivalente. Na verdade, as URLs absolutas e relativas concatenadas consitutem uma URL completa. Consulte também URL e URL absoluta.
 
- Uma fonte de dados que existe em um outro computador, em vez de no sistema local (em que o aplicativo cliente executa) de fonte de dados remotos.
+ fonte de dados remota uma fonte de dados que existe em outro computador, em vez de no sistema local (onde o aplicativo cliente é executado).
 
- Um registro de um provedor de origem de documento que contém campos para a definição e a descrição de uma pasta ou um documento de registro de recurso. O documento em si não está contido no registro de recurso, mas normalmente pode ser acessado por fluxo padrão ou um campo no registro de recurso que contém uma URL. Consulte também o provedor de código-fonte do documento, fluxo de padrão de URL.
+ o recurso registra um registro de um provedor de origem de documento que contém campos para a definição e a descrição de uma pasta ou documento. O documento em si não está contido no registro de recurso, mas normalmente pode ser acessado pelo fluxo padrão ou por um campo no registro de recurso que contém uma URL. Consulte também provedor de origem de documento, fluxo padrão, URL.
 
- Um conjunto de linhas o conjunto de linhas de uma fonte de dados, tudo que tem o mesmo esquema de campo. Um conjunto de linhas pode representar alguns ou todos os campos de uma tabela. Um conjunto de linhas também pode representar uma tabela virtual, criada por uma consulta ou uma junção de duas ou mais tabelas. No ADO, conjuntos de linhas são representados por **Recordset** objetos.
+ Rowset um conjunto de linhas de uma fonte de dados, todos tendo o mesmo esquema de campo. Um conjunto de linhas pode representar todos ou alguns campos de uma tabela. Um conjunto de linhas também pode representar uma tabela virtual, criada por uma consulta ou uma junção de duas ou mais tabelas. No ADO, conjuntos de linhas são representados por objetos **Recordset** .
 
-## <a name="s"></a>P
- O escopo de referência para um objeto ou variável de intervalo ou um intervalo de registros em uma tabela ou exibição. Por exemplo, variáveis locais podem ser referenciadas apenas dentro do procedimento no qual eles foram definidos. Variáveis públicas são acessíveis de qualquer lugar no aplicativo. Objetos, como o banco de dados atual, estão no escopo se eles estão no caminho de pesquisa definido. Intervalos de registro podem ser especificados com uma cláusula de escopo em muitos comandos.
+## <a name="s"></a>S
+ Escopo o intervalo de referência para um objeto ou uma variável ou um intervalo de registros em uma exibição ou tabela. Por exemplo, variáveis locais podem ser referenciadas somente dentro do procedimento no qual elas foram definidas. As variáveis públicas podem ser acessadas de qualquer lugar no aplicativo. Os objetos, como o banco de dados atual, estarão no escopo se estiverem no caminho de pesquisa definido. Os intervalos de registros podem ser especificados com uma cláusula Scope em muitos comandos.
 
- provedor de serviços de Software que encapsula um serviço, produzindo e consumindo dados, aumentando os recursos em seus aplicativos do ADO. É um provedor que não expõe dados diretamente, em vez disso, ele fornece um serviço, como processamento de consulta. O provedor de serviço pode processar os dados fornecidos pelo provedor de dados. Consulte também o provedor de dados.
+ Software provedor de serviços que encapsula um serviço, produzindo e consumindo dados, aumentando os recursos em seus aplicativos ADO. É um provedor que não expõe dados diretamente, em vez disso, ele fornece um serviço, como o processamento de consulta. O provedor de serviços pode processar os dados fornecidos por um provedor de dados. Consulte também provedor de dados.
 
- em forma A Recordset **conjunto de registros** cujas colunas foram definidas especificamente para conter não apenas dados, mas também (chamadas de capítulos) de referências a outras **Recordset** objetos e/ou valores calculados com base em outros **Recordset** objetos.
+ Conjunto de registros em forma de um **conjunto de registros** cujas colunas foram especificamente definidas para conter não apenas dados, mas também referencia (chamados de capítulos) a outros objetos de **conjunto de registros** e/ou valores computados com base em outros objetos **Recordset** .
 
- irmão quaisquer dois ou mais nós em uma estrutura hierárquica que estão no mesmo nível na hierarquia. O nó de raiz em uma hierarquia não tem nenhum irmão.
+ irmãos de dois ou mais nós em uma estrutura hierárquica que estejam no mesmo nível na hierarquia. O nó raiz em uma hierarquia não tem irmãos.
 
- procedimento armazenado A pré-compilados a coleção de código, como instruções SQL e instruções de controle de fluxo opcionais armazenadas sob um nome e processadas como uma unidade. Procedimentos armazenados são armazenados dentro de um banco de dados; eles podem ser executados com uma chamada de um aplicativo e permitem variáveis declarado pelo usuário, execução condicional e outros recursos avançados de programação.
+ procedimento armazenado uma coleção pré-compilada de código, como instruções SQL e instruções de controle de fluxo opcionais armazenadas com um nome e processadas como uma unidade. Os procedimentos armazenados são armazenados em um banco de dados; Eles podem ser executados com uma chamada de um aplicativo e permitem variáveis declaradas pelo usuário, execução condicional e outros recursos de programação avançados.
 
- stub de um objeto específico de interface que fornece o marshaling do parâmetro e a comunicação necessária para um objeto de aplicativo receber chamadas de um cliente que está em execução em um ambiente de execução diferente, como em um thread diferente ou em outro processo. O fragmento de código está localizado com o objeto de aplicativo e se comunica com um proxy correspondente que está localizado com o cliente que o chama. Consulte também o proxy.
+ stub de um objeto específico de interface que fornece o marshaling de parâmetro e a comunicação necessários para um objeto de aplicativo receber chamadas de um cliente que está sendo executado em um ambiente de execução diferente, como em um thread diferente ou em outro processo. O stub está localizado com o objeto Application e se comunica com um proxy correspondente que está localizado com o cliente que o chama. Consulte também proxy.
 
- filho de consulte subnó.
+ subnó consulte filho.
 
- Uma operação iniciada pelo código que seja concluída antes da próxima operação de operação síncrona pode ser iniciado. Consulte também a operação assíncrona.
+ operação síncrona uma operação iniciada pelo código que é concluída antes que a próxima operação possa ser iniciada. Consulte também operação assíncrona.
 
 ## <a name="t-z"></a>T-Z
- Uma estrutura que representa uma relação hierárquica entre os elementos (nós) de árvore. Há um nó de nível superior de uma árvore (raiz). Abaixo da raiz, pode haver vários filhos. Cada filho por sua vez pode ser o pai de outros filhos, ramificação, portanto, como uma árvore. Uma pasta que contém outras pastas e documentos é um exemplo típico de uma estrutura de árvore. Consulte também hierarquia, nó, raiz, filho e pai.
+ Uma estrutura de árvore A que representa uma relação hierárquica entre elementos (nós). Há um nó no nível superior de uma árvore (a raiz). Sob a raiz, pode haver vários filhos. Cada filho pode, por sua vez, ser o pai de outros filhos, por isso, ramificando como uma árvore. Uma pasta que contém documentos e outras pastas é um exemplo típico de uma estrutura de árvore. Consulte também hierarquia, nó, raiz, filho, pai.
 
- Um computador que fornece serviços da Web e páginas para intranet e os usuários da Internet do servidor de Web.
+ Servidor Web um computador que fornece serviços Web e páginas para usuários de intranet e Internet.

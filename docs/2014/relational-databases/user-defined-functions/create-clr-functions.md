@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524056"
 ---
 # <a name="create-clr-functions"></a>Criar funções CLR
-  É possível criar um objeto de banco de dados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programada em um assembly criado no CLR (Common Language Runtime) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Os objetos do banco de dados que podem aproveitar o modelo de programação avançado fornecido pelo CLR inclui funções de agregação, funções, procedimentos armazenados, gatilhos e tipos.  
+  Você pode criar um objeto de banco de dados dentro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância do que é programada em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] um assembly criado no Common Language Runtime (CLR). Os objetos do banco de dados que podem aproveitar o modelo de programação avançado fornecido pelo CLR inclui funções de agregação, funções, procedimentos armazenados, gatilhos e tipos.  
   
  Criar uma função CLR em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envolve as seguintes etapas:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62524056"
 ## <a name="accessing-native-code"></a>Acessando código nativo  
  Podem ser usadas funções CLR para acessar código nativo (não gerenciado), como código escrito em C ou C++, pelo uso de PInvoke de código gerenciado (veja [Chamando funções nativas com base no código gerenciado](https://go.microsoft.com/fwlink/?LinkID=181929) para obter detalhes). Isto pode permitir reutilizar o código herdado como CLR UDFs ou escrever UDFs de desempenho crítico em código nativo. Isto requer o uso de um assembly UNSAFE. Veja [Segurança de acesso a código da integração CLR](../clr-integration/security/clr-integration-code-access-security.md) para obter advertências sobre o uso de assemblies UNSAFE.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar funções definidas pelo usuário &#40;Mecanismo de Banco de Dados&#41;](create-user-defined-functions-database-engine.md)   
  [Criar agregações definidas pelo usuário](create-user-defined-aggregates.md)   
  [Executar funções definidas pelo usuário](execute-user-defined-functions.md)   

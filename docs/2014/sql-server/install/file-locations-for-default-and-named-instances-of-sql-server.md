@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca9df655e00b1f2fd1919f30bb1bb166e2556b91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62505150"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Locais de arquivos para instâncias padrão e nomeadas do SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "62505150"
 >   
 >  Os bancos de dados de sistema (mestre, modelo, MSDB e tempdb) e os bancos de dados de usuário do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser instalados com um servidor de arquivos SMB como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para saber mais, veja [Instalar o SQL Server com o compartilhamento de arquivos SMB como uma opção de armazenamento](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
 >   
->  Não exclua qualquer um dos seguintes diretórios ou seus conteúdos: Binn, Data, Ftdata, HTML ou 1033. Você pode excluir outros diretórios, se necessário; entretanto, talvez você não possa recuperar alguma funcionalidade ou dados perdidos sem desinstalar e depois reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não exclua, nem modifique quaisquer dos arquivos .htm no diretório de HTML. Eles são necessários para que as ferramentas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionem corretamente.  
+>  Não exclua nenhum dos seguintes diretórios ou seus conteúdos: Binn, Data, Ftdata, HTML ou 1046. Você pode excluir outros diretórios, se necessário; entretanto, talvez você não possa recuperar alguma funcionalidade ou dados perdidos sem desinstalar e depois reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não exclua, nem modifique quaisquer dos arquivos .htm no diretório de HTML. Eles são necessários para que as ferramentas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionem corretamente.  
   
 ## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Arquivos compartilhados para todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Os arquivos comuns usados por todas as instâncias em um único computador são instalados na pasta [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)], em que \<*drive*> é a letra da unidade na qual os componentes são instalados. Em geral, o padrão é a unidade C.  
@@ -64,73 +64,78 @@ ms.locfileid: "62505150"
  Você pode especificar um ID de instância não padrão durante a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Em vez de \<Arquivos de Programas>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um \<caminho personalizado>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado quando o usuário optar por alterar o diretório de instalação padrão. Observe que as IDs de instância que começam com sublinhado (_) ou contêm o sinal numérico (#) ou o cifrão ($) não têm suporte.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e os componentes cliente não reconhecem instâncias e, portanto, não recebem uma ID de instância. Por padrão, os componentes que não reconhecem instância são instalados em um único diretório: [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. A alteração do caminho de instalação de um componente compartilhado também o altera para os outros componentes compartilhados. Instalações subsequentes instalam componentes sem reconhecimento de instância no mesmo diretório que a instalação original.  
+>  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e os componentes cliente não reconhecem instâncias e, portanto, não recebem uma ID de instância. Por padrão, os componentes que não reconhecem instância são instalados em um único diretório: [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. A alteração do caminho de instalação de um componente compartilhado também o altera para os outros componentes compartilhados. Instalações subsequentes instalam componentes sem reconhecimento de instância no mesmo diretório que a instalação original.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é o único componente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dá suporte à renomeação de instância após a instalação. Se uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for renomeada, o ID da instância não será alterado. Depois que a renomeação da instância for concluída, os diretórios e as chaves do registro continuarão usando o ID de instância criado durante a instalação.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é o único [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente que dá suporte à renomeação da instância após a instalação. Se uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for renomeada, o ID da instância não será alterado. Depois que a renomeação da instância for concluída, os diretórios e as chaves do registro continuarão usando o ID de instância criado durante a instalação.  
   
  O hive do Registro é criado em HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*Instance_ID*> para componentes com reconhecimento de instância. Por exemplo,  
   
--   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.MyInstance  
+-   \\[!INCLUDE[msCoName](../../includes/msconame-md.md)]HKLM\Software\\\MSSQL12.[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MyInstance  
   
--   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.MyInstance  
+-   \\[!INCLUDE[msCoName](../../includes/msconame-md.md)]HKLM\Software\\\MSAS12.[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MyInstance  
   
--   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12.MyInstance  
+-   \\[!INCLUDE[msCoName](../../includes/msconame-md.md)]HKLM\Software\\\MSRS12.[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MyInstance  
   
  O registro também mantém um mapeamento do ID da instância para o nome da instância. O mapeamento do ID da instância para o nome da instância é mantido como segue:  
   
--   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\SQL] "InstanceName"="MSSQL12"  
+-   [\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]HKEY_LOCAL_MACHINE \Software[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\SQL] "InstanceName" = "MSSQL12"  
   
--   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\OLAP] "InstanceName"="MSAS12"  
+-   [\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]HKEY_LOCAL_MACHINE \Software[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\OLAP] "InstanceName" = "MSAS12"  
   
--   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\RS] "InstanceName"="MSRS12"  
+-   [\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]HKEY_LOCAL_MACHINE \Software[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\RS] "InstanceName" = "MSRS12"  
   
 ## <a name="specifying-file-paths"></a>Especificando caminhos de arquivos  
  Durante a Instalação, você pode alterar o caminho de instalação dos seguintes recursos:  
   
  O caminho de instalação é exibido na Instalação somente para recursos com uma pasta de destino configurável pelo usuário:  
   
-|Componente|Caminho padrão<sup>1, 2</sup>|Configurável<sup>3</sup> ou caminho fixo|  
+|Componente|Caminho padrão<sup>1, 2</sup>|Caminho configurável<sup>3</sup> ou fixo|  
 |---------------|---------------------------------|--------------------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] componentes de servidor|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID >\|configurável|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] arquivos de dados|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID >\|configurável|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servidor|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID >\|configurável|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] arquivos de dados|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID >\|configurável|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de relatório|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12.\< InstanceID > \reporting\|configurável|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gerenciador de relatórios|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12.\< InstanceID > \Reporting Services\ReportManager\|fixa do caminho|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Diretório de instalação > \120\DTS\|configurável<sup>4</sup>|  
-|Componentes de cliente (exceto bcp.exe e sqlcmd.exe)|\<Diretório de instalação > \120\Tools\|configurável<sup>4</sup>|  
-|Componentes de cliente (bcp.exe e sqlcmd.exe)|\<Diretório de Instalação>\Client SDK\ODBC\110\Tools\Binn|Caminho fixo|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]componentes do servidor|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. \<InstanceId>\|configurável|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]arquivos de dados|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. \<InstanceId>\|configurável|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]servidor|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12. \<InstanceId>\|configurável|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]arquivos de dados|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12. \<InstanceId>\|configurável|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]servidor de relatório|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12. \<InstanceId> \Reporting Services\ReportServer\bin\|configurável|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Gerenciador de relatórios|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12. \<InstanceId> \Reporting Services\ReportManager\|caminho fixo|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Diretório de instalação>\|\120\dts configurável<sup>4</sup>|  
+|Componentes de cliente (exceto bcp.exe e sqlcmd.exe)|\<Diretório de instalação>\|\120\tools configurável<sup>4</sup>|  
+|Componentes de cliente (bcp.exe e sqlcmd.exe)|
+  \<Diretório de Instalação>\Client SDK\ODBC\110\Tools\Binn|Caminho fixo|  
 |Replicação e objetos COM do lado do servidor|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\<sup>5</sup>|Caminho fixo|  
 |DLLs de componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o mecanismo de Tempo de Execução de Transformação de Dados, o mecanismo Pipeline de Transformação de Dados e o utilitário de prompt de comando `dtexec`|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Caminho fixo|  
-|DLLs que dão suporte de conexão gerenciado para o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|Caminho fixo|  
-|DLLs para cada tipo de enumerador cujo suporte é dado pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|Caminho fixo|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , provedores de WMI|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Compartilhado\|fixa do caminho|  
-|Componentes que são compartilhados entre todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Compartilhado\|fixa do caminho|  
+|DLLs que dão suporte de conexão gerenciado para o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|
+  [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|Caminho fixo|  
+|DLLs para cada tipo de enumerador cujo suporte é dado pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|
+  [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|Caminho fixo|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , provedores de WMI|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Caminho\|fixo compartilhado|  
+|Componentes que são compartilhados entre todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Caminho\|fixo compartilhado|  
   
- <sup>1</sup>Certifique-se de que a \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ pasta está protegida com permissões limitadas.  
+ <sup>1</sup> Verifique se a pasta \Program\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Files \ está protegida com permissões limitadas.  
   
- <sup>2</sup>é a unidade padrão para esses locais *systemdrive*, normalmente unidade C.  
+ <sup>2</sup> A unidade padrão para esses locais é *systemdrive*, normalmente a unidade C.  
   
- <sup>3</sup>caminhos de instalação para recursos filhos são determinados pelo caminho de instalação do recurso pai.  
+ <sup>3</sup> Os caminhos de instalação para recursos filho são determinados pelo caminho de instalação do recurso pai.  
   
- <sup>4</sup>um único caminho de instalação é compartilhado entre [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e componentes do cliente. A alteração do caminho de instalação de um componente também o altera para outros componentes. As instalações subsequentes instalam componentes no mesmo local que a instalação original.  
+ <sup>4</sup> Um único caminho de instalação é compartilhado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] entre o e os componentes cliente. A alteração do caminho de instalação de um componente também o altera para outros componentes. As instalações subsequentes instalam componentes no mesmo local que a instalação original.  
   
- <sup>5</sup>esse diretório é usado por todas as instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador. Se você aplicar uma atualização a alguma das instâncias no computador, quaisquer alterações em arquivos nessa pasta afetarão todas as instâncias no computador. Ao adicionar recursos a uma instalação existente, não é possível alterar o local de um recurso instalado anteriormente, nem especificar o local para o novo recurso. Você deve instalar recursos adicionais nos diretórios já estabelecidos pela Instalação ou desinstalar e reinstalar o produto.  
+ <sup>5</sup> Esse diretório é usado por todas as instâncias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do em um computador. Se você aplicar uma atualização a alguma das instâncias no computador, quaisquer alterações em arquivos nessa pasta afetarão todas as instâncias no computador. Ao adicionar recursos a uma instalação existente, não é possível alterar o local de um recurso instalado anteriormente, nem especificar o local para o novo recurso. Você deve instalar recursos adicionais nos diretórios já estabelecidos pela Instalação ou desinstalar e reinstalar o produto.  
   
 > [!NOTE]  
 >  Para configurações clusterizadas, você deve selecionar uma unidade local que esteja disponível em todo nó do cluster.  
   
  Quando você especifica um caminho de instalação durante a Instalação para os componentes de servidor ou os arquivos de dados, o programa de Instalação usa o ID da instância além do local especificado para arquivos de programas e de dados. A Instalação não usa o ID da instância para ferramentas e outros arquivos compartilhados. A Instalação também não usa nenhum ID de instância para os arquivos de programas e de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , embora use o ID da instância para o repositório do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Se você definir um caminho de instalação para o recurso [!INCLUDE[ssDE](../../includes/ssde-md.md)] , a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará esse caminho como o diretório raiz para todas as pastas específicas da instância para essa instalação, incluindo Arquivos de Dados SQL. Nesse caso, se você definir a raiz como "C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceName > \MSSQL\\", diretórios específicos da instância serão adicionados ao final desse caminho.  
+ Se você definir um caminho de instalação para o recurso [!INCLUDE[ssDE](../../includes/ssde-md.md)] , a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará esse caminho como o diretório raiz para todas as pastas específicas da instância para essa instalação, incluindo Arquivos de Dados SQL. Nesse caso, se você definir a raiz como "c:\Arquivos de programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. \<InstanceName> \MSSQL\\", os diretórios específicos da instância são adicionados ao final desse caminho.  
   
- Os clientes que optarem por usar a funcionalidade de atualização USESYSDB no Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (modo UI da Instalação) poderão facilmente colocar-se em uma situação em que o produto é instalado em uma estrutura de pastas recursiva. Por exemplo, \< *SQLProgramFiles*> \MSSQL12\MSSQL\MSSQL10_50\MSSQL\Data\\. Em vez disso, para usar o recurso USESYSDB, defina um caminho de instalação para o recurso Arquivos de Dados SQL em vez do recurso [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+ Os clientes que optarem por usar a funcionalidade de atualização USESYSDB no Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (modo UI da Instalação) poderão facilmente colocar-se em uma situação em que o produto é instalado em uma estrutura de pastas recursiva. Por exemplo, \< *sqlprogramfiles*> \mssql12\mssql\ MSSQL10_50\\\MSSQL\DATA. Em vez disso, para usar o recurso USESYSDB, defina um caminho de instalação para o recurso Arquivos de Dados SQL em vez do recurso [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 > [!NOTE]
->  Espera-se que os arquivos de dados sempre estejam localizados em um diretório filho denominado Data. Por exemplo, especificar C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceName > \ para especificar o caminho raiz do diretório de dados dos bancos de dados do sistema durante a atualização quando os arquivos de dados estiverem localizados em C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceName > \MSSQL\Data.  
+>  Espera-se que os arquivos de dados sempre estejam localizados em um diretório filho denominado Data. Por exemplo, especifique c:\Arquivos de\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]programas \MSSQL12. \<InstanceName> \ para especificar o caminho raiz para o diretório de dados dos bancos de dado do sistema durante a atualização quando os arquivos de dados forem\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]encontrados em c:\Arquivos de programas \MSSQL12. \<InstanceName> \MSSQL\DATA.  
   
-## <a name="see-also"></a>Consulte também  
- [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](../../../2014/sql-server/install/database-engine-configuration-data-directories.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configuração de Mecanismo de Banco de Dados-diretórios de dados](../../../2014/sql-server/install/database-engine-configuration-data-directories.md)   
  [Configuração do Analysis Services - diretórios de dados](../../../2014/sql-server/install/analysis-services-configuration-data-directories.md)  
   
   

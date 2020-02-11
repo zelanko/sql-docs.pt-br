@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62518646"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Passando configurações de informações de dispositivos para extensões de renderização
@@ -42,7 +42,7 @@ ms.locfileid: "62518646"
 </DeviceInfo>  
 ```  
   
- Quando um relatório é renderizado como um fragmento HTML, o conteúdo do relatório está contido dentro de um elemento TABLE sem o uso de um elemento HTML ou BODY. Você pode usar o fragmento de HTML para incorporar o relatório em um documento HTML existente. Para obter mais informações sobre configurações de informações do dispositivo para a saída HTML, consulte [HTML Device Information Settings](../../html-device-information-settings.md).  
+ Quando um relatório é renderizado como um fragmento HTML, o conteúdo do relatório está contido dentro de um elemento TABLE sem o uso de um elemento HTML ou BODY. Você pode usar o fragmento de HTML para incorporar o relatório em um documento HTML existente. Para obter mais informações sobre configurações de informações de dispositivo para a saída HTML, consulte [Configurações de informações de dispositivo HTML](../../html-device-information-settings.md).  
   
 ## <a name="passing-device-information-using-url-access"></a>Passando informações do dispositivo através do acesso à URL  
  Você também pode passar configurações de informações de dispositivo através do acesso à URL. Configurações de informações de dispositivo são passadas como parâmetros URL. A cadeia de caracteres de acesso à URL a seguir pode ser passada ao servidor de relatório para gerar um relatório renderizado sem a barra de ferramentas do visualizador de HTML.  
@@ -53,7 +53,7 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
   
  Para obter mais informações, consulte [Especificar as configurações de informações de dispositivo em uma URL](../../specify-device-information-settings-in-a-url.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurações de informações de dispositivo para extensões de renderização &#40;Reporting Services&#41;](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
  [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Compilar aplicativos usando o Serviço Web e o .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  

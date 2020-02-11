@@ -14,24 +14,24 @@ ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2e3a67e9ad0f1f26f804ecb38e960041863fad9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923574"
 ---
 # <a name="using-cachesize"></a>Usar CacheSize
-Use o **CacheSize** propriedade para controlar quantos registros devem ser recuperados por vez na memória local do provedor. Por exemplo, se o **CacheSize** for 10, após a primeira abertura a **conjunto de registros** do objeto, o provedor recupera os primeiros 10 registros na memória local. Conforme você percorrer as **Recordset** do objeto, o provedor retorna os dados do buffer de memória local. Assim que você move além do último registro no cache, o provedor recupera os próximos 10 registros da fonte de dados no cache.  
+Use a propriedade **CacheSize** para controlar quantos registros recuperar ao mesmo tempo na memória local do provedor. Por exemplo, se o **CacheSize** for 10, depois de abrir primeiro o objeto **Recordset** , o provedor recuperará os 10 primeiros registros na memória local. À medida que você percorre o objeto **Recordset** , o provedor retorna os dados do buffer de memória local. Assim que você passa o último registro no cache, o provedor recupera os 10 registros seguintes da fonte de dados para o cache.  
   
 > [!NOTE]
->  **CacheSize** se baseia o **máximo de linhas abertas** propriedade específica do provedor (no **propriedades** coleção do **Recordset** objeto). Não é possível definir **CacheSize** para um valor maior que **máximo de linhas abertas.** Para modificar o número de linhas que pode ser aberto pelo provedor, defina **máximo de linhas abertas**.  
+>  **CacheSize** é baseado na propriedade máxima específica do provedor **Open Rows** (na coleção **Properties** do objeto **Recordset** ). Não é possível definir o **CacheSize** com um valor maior que o **máximo de linhas abertas.** Para modificar o número de linhas que podem ser abertas pelo provedor, defina **máximo de linhas abertas**.  
   
- O valor de **CacheSize** podem ser ajustadas durante a vida útil do **Recordset** objeto, mas a alteração desse valor afeta somente o número de registros no cache após recuperações subsequentes da fonte de dados. Alterar o valor da propriedade sozinho não alterará o conteúdo atual do cache.  
+ O valor de **CacheSize** pode ser ajustado durante a vida útil do objeto **Recordset** , mas a alteração desse valor afeta apenas o número de registros no cache após recuperações subsequentes da fonte de dados. Alterar o valor da propriedade sozinha não alterará o conteúdo atual do cache.  
   
- Se houver menos registros para recuperar-se que **CacheSize** Especifica, o provedor retorna os registros restantes e não ocorre nenhum erro.  
+ Se houver menos registros a serem recuperados que o **CacheSize** especifica, o provedor retornará os registros restantes e nenhum erro ocorrerá.  
   
- Um **CacheSize** configuração de zero não é permitida e retornará um erro.  
+ Uma configuração de **CacheSize** zero não é permitida e retorna um erro.  
   
- Registros recuperados do cache não refletem as alterações simultâneas feitas por outros usuários aos dados de origem. Para forçar uma atualização de todos os dados armazenados em cache, use o [ressincronizar](../../../ado/reference/ado-api/resync-method.md) método.  
+ Os registros recuperados do cache não refletem as alterações simultâneas feitas por outros usuários nos dados de origem. Para forçar uma atualização de todos os dados armazenados em cache, use o método [Ressync](../../../ado/reference/ado-api/resync-method.md) .  
   
- Se **CacheSize** é definido como um valor maior que 1, os métodos de navegação ([mover](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) pode resultar no painel de navegação para um excluído Registro, se a exclusão ocorrerá depois que os registros foram recuperados. Após a busca inicial, exclusões subsequentes não serão refletidas no seu cache de dados até que você tentar acessar um valor de dados de uma linha excluída. No entanto, definindo **CacheSize** como 1 elimina esse problema, porque as linhas excluídas não podem ser obtidas.
+ Se **CacheSize** for definido como um valor maior que 1, os métodos de navegação ([move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) poderão resultar na navegação para um registro excluído, se a exclusão ocorrer depois que os registros forem recuperados. Após a busca inicial, as exclusões subsequentes não serão refletidas no cache de dados até que você tente acessar um valor de dados de uma linha excluída. No entanto, a definição de **CacheSize** como 1 elimina esse problema porque as linhas excluídas não podem ser buscadas.

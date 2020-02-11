@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626142"
 ---
 # <a name="sql-server-replication"></a>Replicação do SQL Server
@@ -37,7 +37,7 @@ Para informações de compatibilidade com versões anteriores, confira [Compatib
 
  ## <a name="replication-security"></a>Segurança de replicação
   
--   [Exibir e modificar configurações de segurança de replicação](security/view-and-modify-replication-security-settings.md)  
+-   [Exibir e modificar as configurações de segurança de replicação](security/view-and-modify-replication-security-settings.md)  
 -   [Gerenciar logons na lista de acesso à publicação](security/manage-logins-in-the-publication-access-list.md)  
   
 ## <a name="publishing-and-distribution"></a>Publicação e Distribuição  
@@ -48,13 +48,13 @@ Para informações de compatibilidade com versões anteriores, confira [Compatib
   
 ## <a name="publications-and-articles"></a>Publicações e Artigos 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [Criar uma publicação](publish/create-a-publication.md)    
 -   [Defina um Artigo](publish/define-an-article.md)   
 -   [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
 -   [Exibir e modificar as propriedades do artigo](publish/view-and-modify-article-properties.md)    
 -   [Excluir uma publicação](publish/delete-a-publication.md)   
 -   [Excluir um artigo](publish/delete-an-article.md)    
--   [Criar uma publicação de um Banco de Dados Oracle](publish/create-a-publication-from-an-oracle-database.md)   
+-   [Criar uma publicação de um Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
 -   [Definir o período de validade da assinatura](publish/set-the-expiration-period-for-subscriptions.md)  
 -   [Especificar opções de esquema](publish/specify-schema-options.md)  
 -   [Replicar alterações de esquema](publish/replicate-schema-changes.md)    
@@ -63,14 +63,14 @@ Para informações de compatibilidade com versões anteriores, confira [Compatib
   
 ### <a name="snapshot-options"></a>Opções de instantâneo  
   
--   [Configurar Propriedades de Instantâneo](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
--   [Entregar um instantâneo pelo FTP](publish/deliver-a-snapshot-through-ftp.md) 
+-   [Configurar propriedades de instantâneo](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
+-   [Entregar um instantâneo por FTP](publish/deliver-a-snapshot-through-ftp.md) 
   
 ### <a name="filter-data"></a>Filtrar Dados  
   
 -   [Definir e modificar um filtro de colunas](publish/define-and-modify-a-column-filter.md)    
 -   [Definir e modificar um filtro de linha estático](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [Definir e modificar um filtro de linha parametrizado para um artigo de mesclagem](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [Otimizar filtros de linha com parâmetros](publish/optimize-parameterized-row-filters.md)    
 -   [Definir e modificar um filtro de junção entre artigos de mesclagem](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
@@ -81,58 +81,58 @@ Para informações de compatibilidade com versões anteriores, confira [Compatib
   
 ### <a name="merge-replication-options"></a>Opções de replicação de mesclagem  
   
--   [Definir uma relação de registro lógico entre artigos da tabela de mesclagem](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
--   [Especificar propriedades de Replicação de Mesclagem](publish/specify-merge-replication-properties.md)    
+-   [Define a Logical Record Relationship Between Merge Table Articles](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
+-   [Especificar propriedades de replicação de mesclagem](publish/specify-merge-replication-properties.md)    
 -   [Especificar um resolvedor de artigo de mesclagem](publish/specify-a-merge-article-resolver.md)    
 
   
 ## <a name="manage-subscriptions"></a>Gerenciar assinaturas  
   
--   [Criar uma assinatura pull](create-a-pull-subscription.md)    
+-   [Create a Pull Subscription](create-a-pull-subscription.md)    
 -   [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)    
 -   [Excluir uma assinatura pull](delete-a-pull-subscription.md)    
--   [Criar uma assinatura push](create-a-push-subscription.md)   
+-   [Criar uma Assinatura Push](create-a-push-subscription.md)   
 -   [Exibir e modificar propriedades de assinatura push](view-and-modify-push-subscription-properties.md)   
 -   [Excluir uma assinatura push](delete-a-push-subscription.md)   
 -   [Especificar agendas de sincronização](specify-synchronization-schedules.md)    
--   [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
--   [Criar uma assinatura para um assinante não SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md)  
+-   [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [Criar uma assinatura para um Assinante não SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   
 ## <a name="synchronize-subscriptions"></a>Sincronizar Assinaturas  
   
 -   [Criar e aplicar o instantâneo inicial](create-and-apply-the-initial-snapshot.md)   
--   [Criar um instantâneo para uma publicação de mesclagem com filtros parametrizados](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
--   [Inicializar uma assinatura transacional de um Backup](initialize-a-transactional-subscription-from-a-backup.md)    
+-   [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
+-   [Inicializar uma assinatura transacional de um backup](initialize-a-transactional-subscription-from-a-backup.md)    
 -   [Inicializar uma assinatura manualmente](initialize-a-subscription-manually.md)    
 -   [Sincronizar uma assinatura pull](synchronize-a-pull-subscription.md)    
 -   [Sincronizar uma assinatura push](synchronize-a-push-subscription.md)   
 -   [Reinicializar uma assinatura](reinitialize-a-subscription.md)    
--   [Executar Scripts durante a sincronização](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
+-   [Executar scripts durante sincronização](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
 -   [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](implement-a-business-logic-handler-for-a-merge-article.md)  
 -   [Depurar um manipulador de lógica de negócios &#40;Programação de Replicação&#41;](debug-a-business-logic-handler-replication-programming.md)    
--   [Controlar o comportamento de gatilhos e restrições durante sincronização](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
+-   [Controlar o comportamento de gatilhos e restrições durante a sincronização](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
 -   [Implementar um resolvedor de conflitos personalizado para um artigo de mesclagem](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
   
-## <a name="administeration"></a>Administeration 
+## <a name="administeration"></a>Administração do 
   
 -   [Trabalhar com perfis do Agente de Replicação](agents/work-with-replication-agent-profiles.md)   
 -   [Validar dados no assinante](validate-data-at-the-subscriber.md)    
--   [Gerenciar partições para uma publicação de mesclagem com filtros parametrizados](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
--   [Dados de carregamento em massa em tabelas em uma publicação de mesclagem](bulk-load-data-into-tables-in-a-merge-publication.md)    
--   [Limpar os metadados de mesclagem](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
+-   [Gerenciar partições para uma publicação de mesclagem com filtros com parâmetros](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
+-   [Carregar dados em massa em tabelas em uma publicação de mesclagem](bulk-load-data-into-tables-in-a-merge-publication.md)    
+-   [Limpar metadados de mesclagem](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
 -   [Executar uma atualização fictícia para um artigo de mesclagem](administration/perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md)    
 -   [Exibir comandos replicados e outras informações no banco de dados de distribuição](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [Habilitar Backups coordenados para replicação transacional](administration/enable-coordinated-backups-for-transactional-replication.md)   
+-   [Habilitar backups coordenados para replicação transacional](administration/enable-coordinated-backups-for-transactional-replication.md)   
 -   [Administrar uma topologia ponto a ponto](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
--   [Confirmar uma topologia de replicação](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
--   [Configurar o trabalho de conjunto de transações para um publicador Oracle](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [Atualizar Scripts de replicação](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [Desativar uma topologia de replicação](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
+-   [Configurar o trabalho do conjunto de transações para um Publicador Oracle](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+-   [Atualizar scripts de replicação](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>Monitor
+## <a name="monitor"></a>Monitoramento
   
 -   [Permitir que não administradores usem o Replication Monitor](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Monitorar programaticamente a replicação](monitor/programmatically-monitor-replication.md)    
 -   [Exibir comandos replicados e outras informações no banco de dados de distribuição](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [Exibir informações de conflito para publicações de mesclagem](view-conflict-information-for-merge-publications.md) 
--   [Medir a latência e validar as conexões para a replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+-   [Exibir informações sobre conflitos para publicações de mesclagem](view-conflict-information-for-merge-publications.md) 
+-   [Medir a latência e validar conexões para replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468184"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Suporte ao SQL Server Management Studio para OLTP na memória
@@ -64,7 +64,7 @@ ms.locfileid: "62468184"
   
      É exibido um modelo para a criação do tipo de tabela com otimização de memória definido pelo usuário.  
   
-2.  Para substituir os parâmetros de modelo, clique em **Especificar Valores para Parâmetros de Modelo** no menu **Consulta**.  
+2.  Para substituir os parâmetros de modelo, clique em **Especificar Valores para Parâmetros de Modelo** no menu **Consulta** .  
   
      Para obter mais informações sobre como criar e usar um novo procedimento armazenado, veja [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62468184"
   
         -   Importe e exporte dados. Use a opção **Copiar dados de uma ou mais tabelas ou exibições do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Se a tabela de destino for uma tabela com otimização de memória que não existe no banco de dados de destino:  
   
-            1.  No **Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , na tela **Especificar Cópia ou Consulta de Tabela**, selecione **Copiar dados de uma ou mais tabelas ou exibições**. Em seguida, clique em **Avançar**.  
+            1.  No **Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , na tela **Especificar Cópia ou Consulta de Tabela**, selecione **Copiar dados de uma ou mais tabelas ou exibições**. Em seguida, clique em **Próximo**.  
   
             2.  Clique em **Editar Mapeamentos**. Selecione **Criar tabela de destino** e clique **Editar SQL**. Digite a sintaxe CREATE TABLE para criar uma tabela com otimização de memória no banco de dados de destino. Clique em **OK** e conclua as etapas restantes no assistente.  
   
@@ -153,9 +153,9 @@ ms.locfileid: "62468184"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Recursos sem suporte no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Para objetos OLTP na memória, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não oferece suporte a recursos e operações que também não têm suporte no mecanismo de banco de dados.  
   
- Para obter mais informações sobre sem suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos, consulte [suporte para recursos do SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  
+ Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos sem suporte, consulte [recursos de SQL Server com suporte](unsupported-sql-server-features-for-in-memory-oltp.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Suporte ao SQL Server para OLTP na memória](sql-server-support-for-in-memory-oltp.md)  
   
   

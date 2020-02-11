@@ -1,5 +1,5 @@
 ---
-title: Suporte ao conjunto de linhas de esquema (OLE DB) | Microsoft Docs
+title: Suporte a conjunto de linhas de esquema (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,25 +17,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625951"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Suporte a conjunto de linhas de esquema (OLE DB)
-  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client também dá suporte a retornar informações de esquema de um servidor vinculado ao processar [!INCLUDE[tsql](../../../includes/tsql-md.md)] consultas distribuídas.  
+  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo também dá suporte ao retorno de informações de esquema [!INCLUDE[tsql](../../../includes/tsql-md.md)] de um servidor vinculado ao processar consultas distribuídas.  
   
 > [!NOTE]  
 >  Apesar de o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suportar sinônimos, metadados para sinônimos não são retornados pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- As tabelas a seguir lista conjuntos de linhas de esquema e as colunas de restrição compatíveis com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client.  
+ As tabelas a seguir listam conjuntos de linhas de esquema e as colunas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de restrição com suporte do provedor de OLE DB de cliente nativo.  
   
 |Conjunto de linhas de esquema|Colunas de restrição|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|Todas as restrições são suportadas.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|Todas as restrições são suportadas.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> As colunas adicionais a seguir são específicas ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> -COLUMN_LCID, que é a ID de localidade do agrupamento. COLUMN_LCID tem o mesmo valor de um LCID do Windows.<br />-COLUMN_COMPFLAGS define quais comparações são suportadas para o agrupamento. O formato de dados é o mesmo do DBPROB_FINDCOMPAREOPS.<br />-COLUMN_SORTID, que é o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estilo para o agrupamento de classificação.<br />-COLUMN_TDSCOLLATION, que é o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agrupamento para a coluna.<br />-IS_COMPUTED, que é VARIANT_TRUE se a coluna é uma coluna computada e VARIANT_FALSE, caso contrário.|  
+|DBSCHEMA_COLUMNS|Todas as restrições são suportadas.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> As colunas adicionais a seguir são específicas ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> -COLUMN_LCID, que é a ID de localidade do agrupamento. COLUMN_LCID tem o mesmo valor de um LCID do Windows.<br />-COLUMN_COMPFLAGS define quais comparações têm suporte para o agrupamento. O formato de dados é o mesmo do DBPROB_FINDCOMPAREOPS.<br />-COLUMN_SORTID, que é o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estilo de classificação para o agrupamento.<br />-COLUMN_TDSCOLLATION, que é o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agrupamento para a coluna.<br />-IS_COMPUTED, que será VARIANT_TRUE se a coluna for uma coluna computada e VARIANT_FALSE caso contrário.|  
 |DBSCHEMA_FOREIGN_KEYS|Há suporte para todas as restrições.<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|As restrições 1, 2, 3 e 5 são suportadas.<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|Há suporte para todas as restrições.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
@@ -54,7 +54,7 @@ ms.locfileid: "62625951"
   
  [Conjunto de linhas LINKEDSERVERS &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)   
  [Usando tipos definidos pelo usuário](../features/using-user-defined-types.md)  
   

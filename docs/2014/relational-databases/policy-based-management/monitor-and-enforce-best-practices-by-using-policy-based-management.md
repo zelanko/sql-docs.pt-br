@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626043"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas
-  Gerenciamento baseado em política permite que você monitore as práticas recomendadas para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fornece um conjunto de arquivos de política que você pode importar como políticas de práticas recomendadas e avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de banco de dados. É possível avaliar as políticas manualmente, defini-las para avaliar um conjunto de destino de acordo com um agendamento ou defini-las para avaliar um conjunto de destino de acordo com um evento. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](administer-servers-by-using-policy-based-management.md).  
+  O gerenciamento baseado em políticas permite que você monitore as [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]práticas recomendadas para o. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornece um conjunto de arquivos de política que podem ser importados como políticas de práticas recomendadas e, em seguida, avaliar as políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de Database. É possível avaliar as políticas manualmente, defini-las para avaliar um conjunto de destino de acordo com um agendamento ou defini-las para avaliar um conjunto de destino de acordo com um evento. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Política e regras para o mecanismo de banco de dados  
- A tabela a seguir lista as políticas que estão incluídas com a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inclui informações sobre as práticas recomendadas que cada política avalia. As políticas são armazenadas como arquivos XML e são importadas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como importar políticas, consulte [Importar uma política de gerenciamento baseado em políticas](import-a-policy-based-management-policy.md).  
+ A tabela a seguir lista as políticas incluídas com a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inclui informações sobre as regras de práticas recomendadas que cada política avalia. As políticas são armazenadas como arquivos XML e são importadas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como importar políticas, consulte [Importar uma política de gerenciamento baseado em políticas](import-a-policy-based-management-policy.md).  
   
 |Nome de política|Regra de prática recomendada|  
 |-----------------|------------------------|  
@@ -38,8 +38,8 @@ ms.locfileid: "62626043"
 |Permissões de Convidado|[Permissões de convidado em bancos de dados de usuários](guest-permissions-on-user-databases.md)|  
 |Data do Último Backup bem-sucedido|[Backup desatualizado](outdated-backup.md)|  
 |Public Não Recebeu Permissões de Servidor|[Permissões públicas de servidor](server-public-permissions.md)|  
-|Sobreposição de máscara de afinidade de 32 bits do SQL Server|[Corrigir máscara de afinidade e a sobreposição de máscara de entrada e saída de afinidade](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|Sobreposição de Máscara de Afinidade de 64 bits do SQL Server|[Corrigir máscara de afinidade e a sobreposição de máscara de entrada e saída de afinidade](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Sobreposição de máscara de afinidade de 32 bits SQL Server|[Corrigir sobreposição de máscara de afinidade e máscara de saída de entrada de afinidade](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Sobreposição de Máscara de Afinidade de 64 bits do SQL Server|[Corrigir sobreposição de máscara de afinidade e máscara de saída de entrada de afinidade](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |Máscara de Afinidade do SQL Server|[Manter o valor padrão da máscara de afinidade](keep-the-affinity-mask-default-value.md)|  
 |Limite de Processo Bloqueado do SQL Server|[Aumentar ou desabilitar o limite de processo bloqueado](increase-or-disable-blocked-process-threshold.md)|  
 |Rastreamento Padrão do SQL Server|[Arquivos de log de rastreamento padrão desabilitados](default-trace-log-files-disabled.md)|  
@@ -60,7 +60,7 @@ ms.locfileid: "62626043"
 |Erro de Corrupção do Recurso de Disco de Cluster do Log de Eventos do Windows|[Detectar problemas do adaptador de host SCSI](detect-scsi-host-adapter-issues.md)|  
 |Erro de Controle de Driver do Dispositivo do Log de Eventos do Windows|[Erro de controle de driver de dispositivo](device-driver-control-error.md)|  
 |Erro de Dispositivo Não Pronto do Log de Eventos do Windows|[Erro de Dispositivo Não Pronto](device-not-ready-error.md)|  
-|Erro de Solicitação de I_O com Falha do Log de Eventos do Windows|[Detectar a solicitação de entrada e saída com falha](detect-failed-input-and-output-requests.md)|  
+|Erro de Solicitação de I_O com Falha do Log de Eventos do Windows|[Detectar solicitação de saída de entrada com falha](detect-failed-input-and-output-requests.md)|  
 |Aviso de Atraso de I_O do Log de Eventos do Windows|[Verificar o subsistema de entrada e saída de disco para problemas de atraso de E/S](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Erro de I_O do Log de Eventos do Windows durante Falha de Página de Hardware|[Erro de entrada e saída durante falha de página física](input-and-output-error-during-hard-page-fault.md)|  
 |Erro de Repetição de Leitura do Log de Eventos do Windows|[Verificar o subsistema de entrada e saída de disco para problemas de repetição de leitura](check-disk-input-output-subsystem-for-read-retry-problems.md)|  

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62523879"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Define Transact-SQL Job Step Options
-  Este tópico descreve como definir opções para etapas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou SQL Server Management Objects.  
+  Este tópico descreve como definir opções para etapas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de [!INCLUDE[tsql](../../includes/tsql-md.md)] trabalho do Agent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o ou SQL Server Management Objects.  
   
  **Neste tópico**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62523879"
   
      [Segurança](#Security)  
   
--   **Para definir opções de etapa de trabalho Transact-SQL, usando:**  
+-   **Para definir opções de etapa de trabalho Transact-SQL, usando:** ,  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62523879"
   
 9. Se você for membro da função de servidor fixa **sysadmin** e desejar executar a etapa de trabalho como um logon SQL diferente, selecione esse logon na lista **Executar como usuário** .  
   
-##  <a name="SMO"></a> Usando o SQL Server Management Objects  
+##  <a name="SMO"></a>Usando SQL Server Management Objects  
  **Para definir opções de etapa de trabalho Transact-SQL**  
   
  Use a classe `JobStep` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell.  

@@ -1,5 +1,5 @@
 ---
-title: Controle de alterações à tabela Base do conjunto de registros (ADO) | Microsoft Docs
+title: Controlar alterações na tabela base do conjunto de registros (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,39 +16,39 @@ ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911675"
 ---
-# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabela exclusiva, esquema exclusivo exclusiva catálogo propriedades dinâmica (ADO)
-Permite que você de perto as modificações de controle para uma tabela base específica em um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que foi formada por uma operação de junção em várias tabelas base.  
+# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabela exclusiva, esquema exclusivo, propriedades de catálogo exclusivas – dinâmico (ADO)
+Permite que você controle precisamente as modificações em uma tabela base específica em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que foi formado por uma operação de junção em várias tabelas base.  
   
--   **Tabela exclusiva** Especifica o nome da tabela base na qual as atualizações, inserções e exclusões são permitidas.  
+-   **Tabela exclusiva** especifica o nome da tabela base na qual são permitidas atualizações, inserções e exclusões.  
   
--   **Esquema exclusivo** Especifica o *esquema*, ou o nome do proprietário da tabela.  
+-   **Esquema exclusivo** especifica o *esquema*ou o nome do proprietário da tabela.  
   
--   **Catálogo exclusivo** Especifica o *catálogo*, ou o nome do banco de dados que contém a tabela.  
+-   **Catálogo exclusivo** especifica o *Catálogo*ou o nome do banco de dados que contém a tabela.  
   
-## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
- Define ou retorna um **cadeia de caracteres** valor que é o nome da tabela, esquema ou catálogo.  
+## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
+ Define ou retorna um valor de **cadeia de caracteres** que é o nome de uma tabela, um esquema ou um catálogo.  
   
 ## <a name="remarks"></a>Comentários  
- A tabela base desejada é identificada exclusivamente por seus nomes de tabela, esquema e catálogo. Quando o **tabela exclusiva** propriedade for definida, os valores da **esquema exclusivo** ou **catálogo exclusivo** propriedades são usadas para localizar a tabela base. É se destina, mas não obrigatório, que um ou ambos os **esquema exclusivo** e **catálogo exclusivo** propriedades ser definido antes do **tabela exclusiva** propriedade está definida.  
+ A tabela base desejada é identificada exclusivamente por seu catálogo, esquema e nomes de tabela. Quando a propriedade de **tabela exclusiva** é definida, os valores do **esquema exclusivo** ou propriedades de **catálogo exclusivo** são usados para localizar a tabela base. Ela é destinada, mas não é necessária, ou o **esquema exclusivo** e as propriedades de **catálogo exclusivo** devem ser definidos antes que a propriedade de **tabela exclusiva** seja definida.  
   
- A chave primária dos **tabela exclusiva** é tratado como a chave primária de toda a **conjunto de registros**. Esta é a chave que é usada para qualquer método que exigem uma chave primária.  
+ A chave primária da **tabela exclusiva** é tratada como a chave primária do **conjunto de registros**inteiro. Essa é a chave usada para qualquer método que exija uma chave primária.  
   
- Embora **tabela exclusiva** estiver definido, o [excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método afeta apenas a tabela nomeada. O [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [ressincronizar](../../../ado/reference/ado-api/resync-method.md), [atualização](../../../ado/reference/ado-api/update-method.md), e [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) métodos afetam quaisquer tabelas base subjacentes de apropriada da **Recordset**.  
+ Enquanto a **tabela exclusiva** é definida, o método [delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) afeta apenas a tabela nomeada. Os métodos [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [Ressync](../../../ado/reference/ado-api/resync-method.md), [Update](../../../ado/reference/ado-api/update-method.md)e [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) afetam as tabelas base subjacentes apropriadas do **conjunto de registros**.  
   
- **Tabela exclusiva** deve ser especificado antes de fazer qualquer ressincronizações personalizadas. Se **tabela exclusiva** não foi especificado, o [comando ressincronizar](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) propriedade não terá efeito.  
+ A **tabela exclusiva** deve ser especificada antes de fazer quaisquer ressincronizações personalizadas. Se a **tabela exclusiva** não tiver sido especificada, a propriedade de [comando Ressync](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) não terá nenhum efeito.  
   
- Um erro de tempo de execução ocorre se uma tabela de base exclusiva não pode ser encontrada.  
+ Um erro de tempo de execução resultará se uma tabela base exclusiva não puder ser encontrada.  
   
- Essas propriedades dinâmicas são acrescentadas à **conjunto de registros** objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção quando o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade é definida como  **adUseClient**.  
+ Essas propriedades dinâmicas são todas acrescentadas à coleção de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) do objeto **Recordset** quando a propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) é definida como **adUseClient**.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

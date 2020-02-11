@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519136"
 ---
 # <a name="report-server-item-properties"></a>Propriedades do item do servidor de relatório
@@ -58,7 +58,7 @@ ms.locfileid: "62519136"
 |Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Idioma**|O idioma usado em um relatório. O valor é um código de idioma definido na especificação RFC1766 do IETF. A primeira parte é uma designação de dois caracteres do idioma básico. A segunda parte é separada por um hífen e indica a variação ou o dialeto do idioma. Se um valor não for especificado no elemento `Style` associado ao elemento `Body` na definição de relatório, o valor padrão será o idioma do servidor de relatório.|  
-|`ReportProcessingTimeout`|O tempo limite, em segundos, para um relatório individual. Se esse valor for definido, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado tiver decorrido. Os valores válidos são de `-1` até `2`,`147`,`483`,`647`. Se o valor for `-1`, o relatório não terá seu limite expirado durante o processamento. Se o valor for `null`, o valor da propriedade do sistema `ReportProcessingTimeout` é usado para o tempo de limite de processamento de relatório. O valor padrão é `null`. Para obter mais informações, consulte [Propriedades de sistema do servidor de relatório](reporting-services-properties-report-server-system-properties.md).|  
+|`ReportProcessingTimeout`|O tempo limite, em segundos, para um relatório individual. Se esse valor for definido, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado tiver decorrido. Os valores válidos são de `-1` até `2`,`147`,`483`,`647`. Se o valor for `-1`, o relatório não terá seu limite expirado durante o processamento. Se o valor for `null`, o valor da propriedade `ReportProcessingTimeout` System será usado para o tempo limite de processamento do relatório. O valor padrão é `null`. Para obter mais informações, consulte [Propriedades de sistema do servidor de relatório](reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|A data e hora em que um instantâneo de relatório foi criado pela última vez para um relatório.|  
 |**CanRunUnattended**|Um valor que indica se um relatório pode ser executado em estado autônomo em uma agenda. Se essa propriedade for definida como `true`, os valores padrão para parâmetros de relatório serão definidos e as credenciais de fonte de dados serão armazenadas com o relatório, ou a opção de recuperação de credencial será definida como `None`. Se essa propriedade for definida como `false`, não serão atendidos os pré-requisitos para a execução autônoma de um relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma do &#40;Configuration Manager do SSRS&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
 |**HasParameterDefaultValues**|Um valor que indica se o relatório tem valores padrão válidos definidos para todos os parâmetros de relatório. O valor também será `true` se um relatório não tiver parâmetros de relatório. Se essa propriedade for definida como `false`, um ou mais parâmetros de relatório não terão um valor padrão válido.|  
@@ -69,13 +69,13 @@ ms.locfileid: "62519136"
 ## <a name="resource-properties"></a>Propriedades de recurso  
  Além das propriedades do item previamente listadas, a propriedade a seguir se aplica a recursos do banco de dados do servidor de relatório.  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
-|**MimeType**|O tipo MIME de um recurso no banco de dados do servidor de relatório.|  
+|**MIME**|O tipo MIME de um recurso no banco de dados do servidor de relatório.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos usando o serviço Web e o .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   
- [Serviço Web do Servidor de Relatório](../report-server-web-service.md)   
+ [Serviço Web Servidor de Relatórios](../report-server-web-service.md)   
  [Referência técnica &#40;SSRS&#41;](../../technical-reference-ssrs.md)  
   
   

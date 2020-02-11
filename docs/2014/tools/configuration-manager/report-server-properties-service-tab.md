@@ -11,26 +11,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62506768"
 ---
 # <a name="report-server-properties-service-tab"></a>Propriedades do servidor de relatório (guia Serviço)
-  Este é o serviço Servidor de Relatório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  
+  Esse serviço é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço servidor de relatório. Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  
   
 ## <a name="options"></a>Opções  
- **Caminho Binário**  
+ **Caminho binário**  
  Exibe o local dos arquivos de programas usados por este serviço.  
   
- **Controle de Erro**  
+ **Controle de erro**  
  1 indica "SERVICE_ERROR_NORMAL". Se o serviço não for iniciado durante a inicialização do computador, o programa de inicialização registrará o erro em log e exibirá uma caixa de mensagem pop-up, mas continuará a operação de inicialização. Esse valor não pode ser alterado.  
   
- **Código de Saída**  
+ **Código de saída**  
  Quando ocorre um erro, o número do erro é exibido nesta caixa. Use esse número para solucionar problemas de falhas procurando-o na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou forneça o número à sua equipe de suporte técnico.  
   
- **Nome do Host**  
+ **Nome do host**  
  Exibe o nome do computador ou cluster que está executando a pesquisa de texto completo.  
   
  **Nome**  
@@ -39,22 +39,23 @@ ms.locfileid: "62506768"
  **ID do Processo**  
  Exibe a identificação do processo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Tipo de Serviço do SQL**  
- Tipo de serviço fornecido a processos de chamada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala vários serviços.  
+ **Tipo de serviço do SQL**  
+ Tipo de serviço fornecido a processos de chamada. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala vários serviços.  
   
- **Modo Inicial**  
+ **Modo de início**  
  Defina este serviço com as seguintes opções:  
   
--   Manual: Esse serviço não iniciar automaticamente quando o computador é iniciado. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
+-   Manual: este serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
   
--   Automático: Este serviço tenta ser iniciado quando o computador é iniciado.  
+-   Automático: este serviço tenta ser iniciado na inicialização do computador.  
   
--   Desabilitado: Este serviço não pode ser iniciado.  
+-   Desabilitado: este serviço não pode ser iniciado.  
   
  **Estado**  
  Indica se este serviço está sendo executado, se está parado ou desabilitado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Serviços do SQL Server](../../../2014/tools/configuration-manager/sql-server-services.md)  
   
   

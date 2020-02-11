@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modelo&gt;. DIMENSION_CONTENT (DMX) | Microsoft Docs
+title: Selecione do &lt;modelo&gt;. DIMENSION_CONTENT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7fac89454cd31c1334e41d4c2367143f31476e20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928364"
 ---
-# <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM &lt;modelo&gt;. DIMENSION_CONTENT (DMX)
+# <a name="select-from-ltmodelgtdimension_content-dmx"></a>Selecione do &lt;modelo&gt;. DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Um modelo de mineração pode ser usado como uma dimensão em um cubo OLAP, onde cada nó do modelo é representado como um membro da dimensão. **SELECT FROM \<modelo >. Dimension_CONTENT** instrução retorna o conteúdo do modelo que pertence ao seu uso como uma dimensão.  
+  Um modelo de mineração pode ser usado como uma dimensão em um cubo OLAP, onde cada nó do modelo é representado como um membro da dimensão. **O> selecionar \<do modelo. Dimension_CONTENT** instrução retorna o conteúdo do modelo que pertence ao seu uso como uma dimensão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *expressão de condição*  
  Opcional. Uma condição para restringir os valores retornados da lista de colunas.  
   
- *Expressão*  
+ *expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
@@ -56,9 +56,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
 |NODE_NAME|Propriedade do membro.|  
 |NODE_UNIQUE_NAME|Atributo de chave.|  
 |NODE_TYPE|Propriedade do membro.|  
-|NODE_CAPTION|CaptionColumn para **chave** atributo.|  
+|NODE_CAPTION|CaptionColumn para o atributo de **chave** .|  
 |CHILDREN_CARDINALITY|Propriedade do membro.|  
-|PARENT_UNIQUE_NAME|RelatedAttribute para **chave** atributo (ParentAttribute em hierarquia pai-filho).|  
+|PARENT_UNIQUE_NAME|RelatedAttribute para o atributo de **chave** (ParentAttribute na hierarquia pai-filho).|  
 |NODE_DESCRIPTION|Propriedade do membro.|  
 |NODE_RULE|Propriedade do membro.|  
 |MARGINAL_RULE|Propriedade do membro.|  
@@ -68,7 +68,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  O exemplo seleciona todas as colunas do conteúdo do modelo `[TM Decision Tree]` que pertencem a uso do modelo como uma dimensão.  
   
 ### <a name="code"></a>Código  
@@ -78,10 +78,10 @@ SELECT *
 FROM [TM Decision Tree].Dimension_Content  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Extensões de mineração de dados &#40;DMX&#41; instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
- [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Consulte Também  
+ [SELECIONAR&#41;&#40;DMX](../dmx/select-dmx.md)   
+ [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
+ [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

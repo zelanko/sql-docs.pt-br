@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 726c9c77f3f18ededa586f399d3fc3710cc6c006
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952428"
 ---
 # <a name="reporting-services-sharepoint-mode-upgrade-ssrs"></a>Atualização do modo do SharePoint do Reporting Services (SSRS)
@@ -28,8 +28,8 @@ ms.locfileid: "71952428"
   
  Para obter mais informações, consulte [atualizar e migrar Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628).  
   
-## <a name="see-also"></a>Consulte também  
- [Exibir e ler arquivos de log da Instalação do SQL Server](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
+## <a name="see-also"></a>Consulte Também  
+ [Exibir e ler SQL Server arquivos de log da instalação](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
  [Instalação de prompt de comando de modo do SharePoint do Reporting Services e modo nativo](https://go.microsoft.com/fwlink/?LinkId=217620)  
   
   

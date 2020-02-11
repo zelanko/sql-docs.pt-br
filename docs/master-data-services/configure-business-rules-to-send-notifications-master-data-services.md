@@ -15,10 +15,10 @@ ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4645b9faca312eb5bee12eef1130893785c327d5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728559"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurar regras de negócio para enviar notificações (Master Data Services)
@@ -56,26 +56,26 @@ ms.locfileid: "73728559"
   
 7.  Marque a caixa de seleção **Enviar Notificações** e, na lista suspensa, selecione um usuário ou grupo ao qual a notificação por email será enviada.  
   
-8.  Clique em **Salvar**.  
+8.  Clique em **Save** (Salvar).  
   
 9. Clique em **Publicar Tudo**.  
   
 10. Na caixa de diálogo de confirmação, clique em **OK**. O valor na coluna **Estado da Regra de Negócios** mudou para **Ativo** e a coluna **Notificação** mostra o usuário ou grupo selecionado ao qual enviar a notificação.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   Aplique regras de negócio a dados seguindo um destes procedimentos:  
   
-    -   [Validar membros específicos em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Validar membros específicos em relação às regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Validar uma versão em relação às regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   Configure o protocolo de email da seguinte maneira:  
   
     -   [Configurar notificações por email &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Master Data Services de notificações &#40;&#41;](../master-data-services/notifications-master-data-services.md)   
  [Configurar notificações por email &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   
   

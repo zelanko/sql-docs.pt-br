@@ -18,10 +18,10 @@ ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aff19eabc5738e986fca1bf13f85130daead3217
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909863"
 ---
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72909863"
 
   Este procedimento armazenado remove o envio de logs do banco de dados primário, incluindo tarefas de backup, assim como o histórico local e remoto. Use esse procedimento armazenado somente depois de remover os bancos de dados secundários usando **sp_delete_log_shipping_primary_secondary**.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,15 +40,15 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'` é o nome do banco de dados primário de envio de logs. o *banco de dados* é **sysname**, sem padrão, e não pode ser nulo.  
+`[ @database = ] 'database'`É o nome do banco de dados primário de envio de logs. o *banco de dados* é **sysname**, sem padrão, e não pode ser nulo.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma.  
+ Nenhum.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_delete_log_shipping_primary_database** deve ser executado do banco de dados **mestre** no servidor primário. Esse procedimento armazenado faz o seguinte:  
   
 1.  Exclui o trabalho de backup do banco de dados primário especificado.  
@@ -76,7 +76,7 @@ EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureW
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

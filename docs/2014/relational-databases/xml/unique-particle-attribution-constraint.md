@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467412"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Restrição de atribuição de partícula exclusiva
@@ -80,15 +80,15 @@ ms.locfileid: "62467412"
 ## <a name="finding-more-information"></a>Descobrindo mais informações  
  O documento a seguir é publicado pelo World Wide Web Consortium (W3C) e contém a descrição técnica da restrição de atribuição de partícula ambígua.  
   
- "Esquema XML parte 1: Segunda edição das estruturas, W3C recomendações propostas editadas":  
+ "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation":  
   
--   Seção 3.8.6: Restrições em componentes de esquema do grupo de modelos  
+-   Section 3.8.6: Constraints on Model Group Schema Components  
   
--   Apêndice h: Análise da restrição de atribuição de partícula exclusiva (não normativa)  
+-   Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
  Para consultar o documento, visite [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleções de esquemas XML &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  
   
   

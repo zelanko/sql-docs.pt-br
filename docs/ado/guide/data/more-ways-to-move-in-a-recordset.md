@@ -1,5 +1,5 @@
 ---
-title: Mais maneiras de mover em um conjunto de registros | Microsoft Docs
+title: Mais maneiras de se mover em um conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,18 +17,18 @@ ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ea83f40c6d6e595277a173c181c24f33e382393
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924884"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Mais maneiras de se mover em um conjunto de registros
-Os quatro métodos a seguir são usados para mover-se ou role, o **Recordset**: [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Alguns desses métodos estão disponíveis nos cursores de somente avanço.)  
+Os quatro métodos a seguir são usados para mover-se, ou rolar, no **conjunto de registros**: [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Alguns desses métodos não estão disponíveis em cursores de somente avanço.)  
   
- **MoveFirst** altera a posição do registro atual para o primeiro registro a **conjunto de registros**. **MoveLast** altera o registro atual para a última posição o registro em de **conjunto de registros**. Para usar **MoveFirst** ou **MoveLast**, o **Recordset** objeto deve dar suporte a indicadores ou movimento do cursor com versões anteriores; caso contrário, a chamada de método irá gerar um erro.  
+ O **MoveFirst** altera a posição do registro atual para o primeiro registro no **conjunto de registros**. **MoveLast** altera a posição do registro atual para o último registro no **conjunto de registros**. Para usar o **MoveFirst** ou **MoveLast**, o objeto **Recordset** deve dar suporte a indicadores ou movimento de cursor para trás; caso contrário, a chamada do método gerará um erro.  
   
- **MoveNext** move o registro atual posicionar um só lugar para frente. Se você estiver usando o último registro quando você chama **MoveNext**, **EOF** será definido como **verdadeiro**. **MovePrevious** move o registro atual posicionar um só lugar com versões anteriores. Se você está no primeiro registro quando você chama **MovePrevious**, **BOF** será definido como **verdadeiro**. É aconselhável verificar a **EOF** e **BOF** propriedades ao usar esses métodos e para mover o cursor de volta para uma posição do registro atual válida se você deixar de usar ambas as extremidades do **Recordset**, conforme mostrado aqui:  
+ **MoveNext** move a posição do registro atual um lugar para frente. Se você estiver no último registro quando chamar **MoveNext**, **EOF** será definido como **true**. **MovePrevious** move a posição do registro atual um local para trás. Se você estiver no primeiro registro quando chamar **MovePrevious**, **BOF** será definido como **true**. É recomendável verificar as propriedades **EOF** e **BOF** ao usar esses métodos e mover o cursor de volta para uma posição de registro atual válida se você sair de qualquer uma das extremidades do **conjunto de registros**, como mostrado aqui:  
   
 ```  
 . . .  
@@ -37,7 +37,7 @@ If oRs.EOF Then oRs.MoveLast
 . . .   
 ```  
   
- Ou, no caso do **MovePrevious** método:  
+ Ou, no caso do método **MovePrevious** :  
   
 ```  
 . . .   
@@ -46,12 +46,12 @@ If oRs.BOF Then oRs.MoveFirst
 . . .  
 ```  
   
- Em casos em que o **Recordset** filtrada ou classificada e dados do registro atual são alterados, a posição também pode ser alteradas. Nesses casos, o **MoveNext** método normalmente funciona, mas lembre-se de que a posição é movida gravar a nova posição, não a antiga posição para frente. Por exemplo, alterar os dados no registro atual, de modo que o registro é movido para o final do classificado **conjunto de registros**, significa que a chamada **MoveNext** resulta em ADO, definindo o registro atual o posição após o último registro a **conjunto de registros** (**EOF** = **True**).  
+ Nos casos em que o **conjunto de registros** foi filtrado ou classificado e os dados do registro atual são alterados, a posição também pode ser alterada. Nesses casos, o método **MoveNext** funciona normalmente, mas lembre-se de que a posição é movida um registro para frente da nova posição, não da posição antiga. Por exemplo, alterar os dados no registro atual, de modo que o registro seja movido para o final do conjunto de **registros**classificado, significa que chamar **MoveNext** Results no ADO Configurando o registro atual para a posição após o último registro no **conjunto de registros** (**EOF** = **true**).  
   
- O comportamento dos vários métodos de movimentação do **conjunto de registros** depende do objeto, até certo ponto, nos dados dentro de **conjunto de registros**. Novos registros adicionados para o **Recordset** são adicionadas inicialmente em uma ordem específica, que é definida pela fonte de dados e pode ser dependente implicitamente ou explicitamente nos dados no novo registro. Por exemplo, se uma classificação ou uma junção é feita dentro da consulta que preenche o **conjunto de registros**, o novo registro será inserido no local apropriado dentro de **conjunto de registros**. Se a ordenação não for especificada explicitamente ao criar o **Recordset**, alterações na implementação do código-fonte de dados podem fazer com que a ordenação das linhas retornadas alterar inadvertidamente. Além disso, a classificação, filtragem e editar funções do **Recordset** pode afetar a ordem e, possivelmente, quais linhas no conjunto de registros estarão visíveis.  
+ O comportamento dos vários métodos move do objeto **Recordset** depende, em certo ponto, dos dados dentro do **conjunto de registros**. Novos registros adicionados ao **conjunto de registros** são inicialmente adicionados em uma determinada ordem, que é definida pela fonte de dados e pode ser dependente implícita ou explicitamente nos dados no novo registro. Por exemplo, se uma classificação ou uma junção for feita dentro da consulta que popula o **conjunto de registros**, o novo registro será inserido no local apropriado dentro do **conjunto de registros**. Se a ordenação não for especificada explicitamente ao criar o **conjunto de registros**, as alterações na implementação da fonte de dados poderão fazer com que a ordem das linhas retornadas seja alterada inadvertidamente. Além disso, as funções de classificação, filtragem e edição do **conjunto de registros** podem afetar a ordem e, possivelmente, quais linhas no conjunto de registros estarão visíveis.  
   
- Portanto, **MoveNext**, **MovePrevious**, **MoveFirst**, **MoveLast**, e **mover** são todos minúsculas para outras operações executadas na mesma **conjunto de registros**. ADO sempre tentará manter sua posição atual até que você explicitamente movê-lo, mas às vezes, as alterações intermediárias torná-lo difícil de entender os efeitos de uma troca subsequente. Por exemplo, se você chamar **MoveFirst** para a posição na primeira linha de um classificado **Recordset** e você altera a classificação de ordem crescente para decrescente, você ainda está na mesma linha, mas agora é a última linha no **conjunto de registros**. **MoveFirst** levará você até uma linha diferente (a nova linha primeiro).  
+ Portanto, **MoveNext**, **MovePrevious**, **MoveFirst**, **MoveLast**e **move** são todos sensíveis a outras operações executadas no mesmo **conjunto de registros**. O ADO sempre tentará manter sua posição atual até que você a mova explicitamente, mas, às vezes, as alterações intervenientes dificultam a compreensão dos efeitos de uma movimentação subsequente. Por exemplo, se você chamar **MoveFirst** para posição na primeira linha de um conjunto de **registros** classificado e alterar a classificação de ordem crescente para ordem decrescente, ainda estará na mesma linha, mas agora é a última linha do **conjunto de registros**. O **MoveFirst** levará você para uma linha diferente (a nova primeira linha).  
   
- Como outro exemplo, se você estiver localizado em uma determinada linha no meio de um **conjunto de registros** e chamar **excluir** e, em seguida, chame **MoveNext**, agora você está no registro imediatamente após o registro excluído. Mas a chamada **MovePrevious** faz com que o registro anterior aquele que você excluiu o registro atual, porque o registro excluído não é contado na associação do Active Directory a **conjunto de registros**.  
+ Como outro exemplo, se você estiver posicionado em uma linha específica no meio de um **conjunto de registros** e chamar **delete** e, em seguida, chamar **MoveNext**, agora você estará no registro imediatamente após o registro excluído. Mas chamar **MovePrevious** torna o registro anterior ao que você excluiu o registro atual, pois o registro excluído não é mais contado na associação ativa do **conjunto de registros**.  
   
- Ele é especialmente difícil de definir a semântica de movimentação consistente em todos os provedores para os métodos que se movem em relação ao registro atual - **MovePrevious**, **MoveNext**, e **mover** - em caso de alteração de dados no registro atual. Por exemplo, se você estiver trabalhando com um classificado, filtrado **Recordset**e você alterar os dados no registro atual para que ele preceder todos os outros registros, mas os dados alterados também não coincide mais com o filtro, não fica claro onde um **MoveNext** operação deve levar você. A conclusão mais segura é essa movimentação relativa dentro de um **conjunto de registros** é mais arriscadas do que a movimentação absoluta (como o uso de **MoveFirst** ou **MoveLast**) quando os dados são a alteração enquanto os registros estão sendo editados, adicionadas ou excluídas. Classificação e filtragem devem ser baseados em uma chave primária ou a ID, porque esse tipo de valor não deve ser alterada.
+ É particularmente difícil definir a semântica de movimentação consistente em todos os provedores para métodos que se movem em relação ao registro atual – **MovePrevious**, **MoveNext**e **move** -in a face da alteração de dados no registro atual. Por exemplo, se você estiver trabalhando com um **conjunto de registros**filtrado e classificado e alterar os dados no registro atual para que ele precedesse todos os outros registros, mas os dados alterados também não corresponderem ao filtro, não será claro onde uma operação **MoveNext** deve levá-lo. A conclusão mais segura é que a movimentação relativa em um **conjunto de registros** é mais arriscada que a movimentação absoluta (como usar o **MoveFirst** ou **MoveLast**) quando os dados são alterados enquanto os registros estão sendo editados, adicionados ou excluídos. A classificação e a filtragem devem ser baseadas em uma chave primária ou ID, pois esse tipo de valor não deve ser alterado.

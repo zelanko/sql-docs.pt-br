@@ -1,5 +1,5 @@
 ---
-title: 'Apêndice D: Exemplos de ADO | Microsoft Docs'
+title: 'Apêndice D: exemplos de ADO | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b4a1289755d04c2d9f861fbdcb704fad3d8707d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926863"
 ---
-# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Apêndice D: Exemplos de ADO no Windows SDK
-O SDK do Windows contém vários aplicativos de exemplo que demonstram o uso de código ADO e RDS. Esses exemplos destinam-se para ajudá-lo a aprender a usar o ADO e RDS, mas não se destina a ser implantado em servidores de produção.
+# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Apêndice D: exemplos de ADO no SDK do Windows
+O SDK do Windows contém vários aplicativos de exemplo que demonstram o uso de código ADO e RDS. Esses exemplos destinam-se a ajudá-lo a aprender a usar o ADO e o RDS, mas não devem ser implantados em servidores de produção.
 
 > [!NOTE]
->  As empresas, nomes e dados usados em exemplos são fictícios, a menos que indicado o contrário.
+>  Empresas, nomes e dados usados em exemplos são fictícios, salvo indicação em contrário.
 
- Para localizar os exemplos de ADO, navegue para a pasta raiz do SDK do Windows, como C:\Program Files\Microsoft SDKs\Windows\v6.0. Em seguida, navegue até a subpasta Samples\dataaccess\ADO.
+ Para localizar os exemplos de ADO, navegue até a pasta raiz SDK do Windows, como C:\Arquivos de Programas\microsoft SDKs\Windows\v6.0. Em seguida, navegue até a subpasta Samples\dataaccess\ADO.
 
- Para obter uma introdução os aplicativos de exemplo do ADO e RDS, abra Default. htm do ADO e RDS amostras de pastas, respectivamente. Esses arquivos descrevem cada aplicativo de exemplo disponíveis e explicam como configurar e executar os exemplos de como procurar o código-fonte.
+ Para começar a usar os aplicativos de exemplo ADO e RDS, abra default. htm nas pastas ADO e RDS samples, respectivamente. Esses arquivos descrevem cada aplicativo de exemplo disponível e explicam como configurar e executar os exemplos de como procurar o código-fonte de exemplo.
 
- A documentação ADO também contém exemplos de código em vários idiomas, que são incluídos como tópicos dentro desta ajuda online. Para obter mais informações sobre esses exemplos, consulte [exemplos de código ADO](../../../ado/reference/ado-api/ado-code-examples.md).
+ A documentação do ADO também contém exemplos de código em vários idiomas, que são incluídos como tópicos nesta ajuda online. Para obter mais informações sobre esses exemplos, consulte [exemplos de código do ADO](../../../ado/reference/ado-api/ado-code-examples.md).
 
-## <a name="see-also"></a>Consulte também
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md) [exemplos de código ADO](../../../ado/reference/ado-api/ado-code-examples.md) [os exemplos de código ADO no Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [código ADO Exemplos VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [os exemplos de código ADO no Visual C++ ](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [apêndice a: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md) [Configurando o RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [apêndice c: Programando com o ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [histórico ADO](../../../ado/guide/ado-history.md)
+## <a name="see-also"></a>Consulte Também
+ [Referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md) [do Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [exemplo](../../../ado/reference/ado-api/ado-code-examples.md) de código ADO exemplos de código [do ADO em Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [exemplos de código ADO](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) exemplos de código [do VBScript no Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [Apêndice A: provedores](../../../ado/guide/appendixes/appendix-a-providers.md) [Configurando o RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [Apêndice C: programando com](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) o ADO [ADO History](../../../ado/guide/ado-history.md)

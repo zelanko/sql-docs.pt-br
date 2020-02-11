@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874693"
 ---
 # <a name="examples-using-openxml"></a>Exemplos: usando OPENXML
@@ -41,7 +41,7 @@ ms.locfileid: "70874693"
   
  O valor de *flags* fornece o mapeamento padrão. Se nenhum *ColPattern* for especificado no *SchemaDeclaration*, o mapeamento especificado em *flags* será assumido. O valor de *flags* será ignorado se *ColPattern* estiver especificado em *SchemaDeclaration*. O *ColPattern* especificado determina o mapeamento centrado em atributo ou centrado em elemento e também o comportamento para manipulação de dados não consumidos ou de estouro.  
   
-### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. Executando uma instrução SELECT simples com OPENXML  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>a. Executando uma instrução SELECT simples com OPENXML  
  O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações do cliente em um conjunto de linhas de duas colunas, **CustomerID** e **ContactName**, do documento XML.  
   
  Primeiro, o procedimento armazenado **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
@@ -95,7 +95,7 @@ LILAS      Carlos Gonzlez
   
  Como os elementos <`Customer`> não têm nenhum subelemento, se a mesma instrução SELECT for executada com *flags* definido como **2** para indicar mapeamento centrado em elemento, os valores de **CustomerID** e **ContactName** dos dois clientes serão retornados como NULL.  
   
- O @xmlDocument também pode ser do tipo **xml** ou do tipo **(n)varchar(max)** .  
+ O @xmlDocument também pode ser do tipo **xml** ou do tipo **(n)varchar(max)**.  
   
  Se <`CustomerID`> e <`ContactName`> no documento XML forem subelementos, o mapeamento centrado em elemento recuperará os valores.  
   
@@ -143,7 +143,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. Especificando ColPattern para mapeamento entre colunas do conjunto de linhas e os elementos e atributos XML  
  Este exemplo mostra como o padrão Xpath é especificado no parâmetro *ColPattern* opcional para fornecer mapeamento entre colunas do conjunto de linhas e os elementos e atributos XML.  
   
- O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações do cliente e do pedido como um conjunto de linhas (**CustomerID**, **OrderDate**, **ProdID** e **Qty**) do documento XML.  
+ O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações do cliente e do pedido como um conjunto de linhas (**CustomerID**, **OrderDate**, **ProdID**e **Qty**) do documento XML.  
   
  Primeiro, o procedimento armazenado **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
   
@@ -343,7 +343,7 @@ O4    10000.0       NULL
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. Especificando TableName na cláusula WITH  
  Este exemplo especifica *TableName* na cláusula WITH em vez de *SchemaDeclaration*. Isso será útil se você tiver uma tabela que tem a estrutura desejada e nenhum padrão de coluna, parâmetro *ColPattern* , é necessário.  
   
- O documento XML neste exemplo é composto dos elementos <`Customer`> e <`Order`>. A instrução OPENXML recupera informações de pedido em um conjunto de linhas de três colunas (**oid**, **date** e **amount**) do documento XML.  
+ O documento XML neste exemplo é composto dos elementos <`Customer`> e <`Order`>. A instrução OPENXML recupera informações de pedido em um conjunto de linhas de três colunas (**oid**, **date**e **amount**) do documento XML.  
   
  Primeiro, o procedimento armazenado **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
   
@@ -462,7 +462,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. Especificando rowpattern terminando com um atributo  
- O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações sobre os detalhes do pedido em um conjunto de linhas de três colunas (**ProductID**, **Quantity** e **OrderID**) do documento XML.  
+ O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações sobre os detalhes do pedido em um conjunto de linhas de três colunas (**ProductID**, **Quantity**e **OrderID**) do documento XML.  
   
  Primeiro, o **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
   
@@ -610,11 +610,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     Os atributos **id** (ID do estudante), **name**e **attends**. O atributo **attends** é um atributo com vários valores.  
+     Os atributos **id** (ID do estudante), **name**e **attends** . O atributo **attends** é um atributo com vários valores.  
   
 -   \<Class>  
   
-     Os atributos **id** (ID da aula), **name** e **attendedBy**. O atributo **attendedBy** é um atributo com vários valores.  
+     Os atributos **id** (ID da aula), **name**e **attendedBy** . O atributo **attendedBy** é um atributo com vários valores.  
   
  O atributo **attends** em \<Student> e o atributo **attendedBy** em \<Class> representam uma relação **m:n** entre as tabelas Student e Class. Um estudante pode assistir muitas aulas e uma aula pode ter muitos estudantes.  
   
@@ -634,7 +634,7 @@ id  lname   xmlname                   OverFlow
   
          Extrai as IDs de estudantes individuais de cada elemento \<Course>. Uma tabela de borda é usada para recuperar esses valores.  
   
- Estas são as etapas:  
+ Siga estas etapas:  
   
 ```  
 -- Create these tables:  
@@ -800,7 +800,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
  [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   

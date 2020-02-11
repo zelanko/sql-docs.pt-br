@@ -16,22 +16,22 @@ ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925353"
 ---
 # <a name="examining-data"></a>Examinar dados
-O [Obtendo dados](../../../ado/guide/data/getting-data.md) seção explica como recuperar dados de uma fonte de dados como um ou mais **Recordset** objetos. Esta seção aborda **conjunto de registros** mais detalhadamente, incluindo como navegar por meio de **Recordset** e exibir seus dados.  
+A seção [obtendo dados](../../../ado/guide/data/getting-data.md) explicou como recuperar dados de uma fonte de dados como um ou mais objetos **Recordset** . Esta seção discutirá o **conjunto de registros** em mais detalhes, incluindo como navegar pelo conjunto de **registros** e exibir seus dados.  
   
- **Conjunto de registros** oferece suporte a vários [propriedades e métodos](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) para navegar e examinar os dados contidos. Esses recursos são dependentes do provedor. Alguns provedores podem não suportar algumas propriedades ou métodos.  
+ O **conjunto de registros** dá suporte a várias [Propriedades e métodos](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) para você navegar e examinar os dados contidos no. Esses recursos são dependentes do provedor. Alguns provedores podem não dar suporte a algumas propriedades ou métodos.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Registro atual e o tamanho do conjunto de registros](../../../ado/guide/data/current-record-and-size-of-recordset.md)  
   
--   [Navegando pelos dados](../../../ado/guide/data/navigating-through-data.md)  
+-   [Navegar pelos dados](../../../ado/guide/data/navigating-through-data.md)  
   
 -   [Noções básicas sobre a estrutura do conjunto de registros](../../../ado/guide/data/understanding-recordset-structure.md)  
   

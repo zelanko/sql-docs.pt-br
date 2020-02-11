@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781817"
 ---
 # <a name="using-user-defined-tables"></a>Usando tabelas definidas pelo usuário
   Tabelas definidas pelo usuário representam informações tabulares. Elas são usadas como parâmetros quando você transmite dados tabulares em procedimentos armazenados ou em funções definidas pelo usuário. Tabelas definidas pelo usuário não podem ser usadas para representar colunas em uma tabela de banco de dados.  
   
- O objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tem uma propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> que referencia um objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Cada objeto de <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> nessa coleção tem uma propriedade **Columns** que se refere a uma coleção de objetos <xref:Microsoft.SqlServer.Management.Smo.Column> que listam as colunas na tabela definida pelo usuário. Use o método Adicionar para adicionar colunas à tabela definida pelo usuário.  
+ O objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tem uma propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> que referencia um objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Cada <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> objeto nessa coleção tem uma propriedade **Columns** que se refere a uma coleção de <xref:Microsoft.SqlServer.Management.Smo.Column> objetos que listam as colunas na tabela definida pelo usuário. Use o método Adicionar para adicionar colunas à tabela definida pelo usuário.  
   
  Quando você definir uma nova tabela definida pelo usuário através do objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, forneça colunas e uma chave primária com base em uma das colunas.  
   

@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7126b01fcaee1a0ab3f7776cc54e6eb0dbe2774d
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798312"
 ---
-# <a name="create-a-job"></a>Criar um trabalho
+# <a name="create-a-job"></a>Crie um trabalho
   Este tópico descreve como criar um trabalho do SQL Server Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SMO (SQL Server Management Objects).  
   
  Para adicionar etapas de trabalho, agendas, alertas e notificações que podem ser enviadas a operadores, consulte os tópicos na seção Consulte também.  
@@ -31,7 +31,7 @@ ms.locfileid: "72798312"
   
      [Segurança](#Security)  
   
--   **Para criar um trabalho, usando:**  
+-   **Para criar um trabalho usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure),  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72798312"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Para criar um trabalho, o usuário deve ser membro de uma das funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou da função de servidor fixa **sysadmin** . Um trabalho só pode ser editado por seu proprietário ou por membros da função **sysadmin** . Para obter mais informações sobre as funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Funções de banco de dados fixas do SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
   
@@ -69,23 +69,23 @@ ms.locfileid: "72798312"
   
 2.  Clique no sinal de adição para expandir o **SQL Server Agent**.  
   
-3.  Clique com o botão direito do mouse na pasta **Trabalhos** e selecione **Novo Trabalho...** .  
+3.  Clique com o botão direito do mouse na pasta **Trabalhos** e selecione **Novo Trabalho...**.  
   
-4.  Na caixa de diálogo **Novo Trabalho** , na página **Geral** , modifique as propriedades gerais do trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho e página &#40;&#41; geral do novo trabalho](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  Na caixa de diálogo **Novo Trabalho** , na página **Geral** , modifique as propriedades gerais do trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho e novo trabalho &#40;página geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  Na página **Etapas** , organize as etapas de trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: página &#40;&#41; novas etapas do trabalho](job-properties-new-job-steps-page.md)  
+5.  Na página **Etapas** , organize as etapas de trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: página de etapas do novo trabalho &#40;&#41;](job-properties-new-job-steps-page.md)  
   
-6.  Na página **Agendas** , organize agendas para o trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: página &#40;&#41; novas agendas de trabalho](job-properties-new-job-schedules-page.md)  
+6.  Na página **Agendas** , organize agendas para o trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: nova página de agendas de &#40;de trabalho&#41;](job-properties-new-job-schedules-page.md)  
   
-7.  Na página **Alertas** , organize os alertas para o trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: página &#40;&#41; de alertas do novo trabalho](job-properties-new-job-alerts-page.md)  
+7.  Na página **Alertas** , organize os alertas para o trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: nova página de alertas de &#40;de trabalho&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  Na página **Notificações** , defina ações para que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seja executado quando o trabalho terminar. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: nova &#40;&#41;página notificações de trabalho](job-properties-new-job-notifications-page.md).  
+8.  Na página **Notificações** , defina ações para que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seja executado quando o trabalho terminar. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: nova página de notificações de &#40;de trabalho&#41;](job-properties-new-job-notifications-page.md).  
   
-9. Na página **Destinos** , gerencie os servidores de destino para o trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: nova &#40;&#41;página destinos de trabalho](job-properties-new-job-targets-page.md).  
+9. Na página **Destinos** , gerencie os servidores de destino para o trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: nova página de destinos de &#40;de trabalho&#41;](job-properties-new-job-targets-page.md).  
   
 10. Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-sql-server-agent-job"></a>Para criar um trabalho do SQL Server Agent  
   
@@ -126,18 +126,18 @@ ms.locfileid: "72798312"
   
  Para obter mais informações, consulte:  
   
--   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+-   [&#41;&#40;Transact-SQL de sp_add_job](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
--   [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [&#41;&#40;Transact-SQL de sp_add_jobstep](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
+-   [&#41;&#40;Transact-SQL de sp_add_schedule](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
   
--   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [&#41;&#40;Transact-SQL de sp_attach_schedule](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [Transact &#40;-SQL sp_add_jobserver&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [&#41;&#40;Transact-SQL de sp_add_jobserver](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
 ##  <a name="SMOProcedure"></a>Usando SQL Server Management Objects  
- **Para criar um trabalho do SQL Server Agent**  
+ **Para criar um trabalho de SQL Server Agent**  
   
  Chame o método `Create` da classe `Job` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter um código de exemplo, consulte [Agendamento de tarefas administrativas automáticas no SQL Server Agent](sql-server-agent.md).  
   

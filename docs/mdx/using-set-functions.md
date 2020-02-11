@@ -1,5 +1,5 @@
 ---
-title: Usando funções de conjunto | Microsoft Docs
+title: Usando funções Set | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038055"
 ---
 # <a name="using-set-functions"></a>Usando funções de conjunto
@@ -22,7 +22,7 @@ ms.locfileid: "68038055"
   
  As funções de conjunto, assim como as funções de membro e de tupla, são essenciais para negociar as estruturas multidimensionais encontradas no Analysis Services. As funções de conjunto também são essenciais para obter resultados a partir de consultas MDX uma vez que as expressões de conjunto definem os eixos de uma consulta MDX.  
   
- Uma das funções de conjunto mais comuns é a [membros &#40;definir&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md) função, que recupera um conjunto que contém todos os membros de uma dimensão, hierarquia ou nível. O seguinte é um exemplo de seu uso em uma consulta:  
+ Uma das funções de conjunto mais comuns é a função [members &#40;set&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md) , que recupera um conjunto contendo todos os membros de uma dimensão, hierarquia ou nível. O seguinte é um exemplo de seu uso em uma consulta:  
   
  `SELECT`  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68038055"
   
  `FROM [Adventure Works]`  
   
- Outra função comumente usada é a [Crossjoin &#40;MDX&#41; ](../mdx/crossjoin-mdx.md) função. Ela retorna um conjunto de tuplas que representam o produto cartesiano dos conjuntos transmitidos como parâmetros. Em termos práticos, esta função permite criar eixos “aninhados” ou “de referência cruzada” em consultas:  
+ Outra função comumente usada é a função [interjunção &#40;MDX&#41;](../mdx/crossjoin-mdx.md) . Ela retorna um conjunto de tuplas que representam o produto cartesiano dos conjuntos transmitidos como parâmetros. Em termos práticos, esta função permite criar eixos “aninhados” ou “de referência cruzada” em consultas:  
   
  `SELECT`  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68038055"
   
  `FROM [Adventure Works]`  
   
- O [descendentes &#40;MDX&#41; ](../mdx/descendants-mdx.md) função é semelhante a **filhos** funcionam, mas é mais eficiente. Ela retorna os descendentes de qualquer membro em um ou mais níveis em uma hierarquia:  
+ Os [descendentes &#40;função MDX&#41;](../mdx/descendants-mdx.md) é semelhante à função **Children** , mas é mais potente. Ela retorna os descendentes de qualquer membro em um ou mais níveis em uma hierarquia:  
   
  SELECT  
   
@@ -92,7 +92,7 @@ ms.locfileid: "68038055"
   
  FROM [Adventure Works]  
   
- O [ordem &#40;MDX&#41; ](../mdx/order-mdx.md) função permite que você ordenar o conteúdo de um conjunto em ordem de acordo com uma expressão numérica específica crescente ou decrescente. A consulta a seguir retorna os mesmos membros das linhas como a consulta anterior, mas agora os ordena pela medida Quantidade de Vendas pela Internet:  
+ O [pedido &#40;função MDX&#41;](../mdx/order-mdx.md) permite que você ordene o conteúdo de um conjunto em ordem crescente ou decrescente de acordo com uma expressão numérica específica. A consulta a seguir retorna os mesmos membros das linhas como a consulta anterior, mas agora os ordena pela medida Quantidade de Vendas pela Internet:  
   
  `SELECT`  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68038055"
   
  Esta consulta também ilustra como o conjunto retornado de uma função de conjunto, Descendants, pode ser transmitido como um parâmetro a outra função de conjunto, Order.  
   
- Um conjunto de acordo com certos critérios de filtragem é muito útil ao escrever consultas, e para essa finalidade, você pode usar o [filtro &#40;MDX&#41; ](../mdx/filter-mdx.md) funcionar, conforme mostrado no exemplo a seguir:  
+ Filtrar um conjunto de acordo com determinados critérios é muito útil ao escrever consultas e, para essa finalidade, você pode usar o [filtro &#40;função MDX&#41;](../mdx/filter-mdx.md) , conforme mostrado no exemplo a seguir:  
   
  `SELECT`  
   
@@ -150,7 +150,7 @@ ms.locfileid: "68038055"
   
  `FROM [Adventure Works]`  
   
- Existem outras funções mais sofisticadas que permitem filtrar um conjunto de outros modos. Por exemplo, a consulta a seguir mostra a [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md) função retorna os n primeiros itens em um conjunto:  
+ Existem outras funções mais sofisticadas que permitem filtrar um conjunto de outros modos. Por exemplo, a consulta a seguir mostra a função [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md) retorna os n primeiros itens de um conjunto:  
   
  `SELECT`  
   
@@ -176,7 +176,7 @@ ms.locfileid: "68038055"
   
  `FROM [Adventure Works]`  
   
- Por fim, é possível executar várias operações de conjunto lógicas usando funções como [Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md), [união &#40;MDX&#41; ](../mdx/union-mdx.md) e [exceto &#40;MDX&#41; ](../mdx/except-mdx-function.md) funções. A consulta a seguir mostra exemplos das duas últimas funções:  
+ Por fim, é possível executar várias operações de conjunto lógico usando funções como [Intersect &#40;mdx&#41;](../mdx/intersect-mdx.md), [Union &#40;MDX&#41;](../mdx/union-mdx.md) e [, exceto &#40;funções MDX&#41;](../mdx/except-mdx-function.md) . A consulta a seguir mostra exemplos das duas últimas funções:  
   
  `SELECT`  
   
@@ -214,7 +214,7 @@ ms.locfileid: "68038055"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções &#40;sintaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [Usando funções de membro](../mdx/using-member-functions.md)   
  [Usando funções de tupla](../mdx/using-tuple-functions.md)  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8af9ae77562cb8ece9cb23e32c4e4ce216987715
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811121"
 ---
 # <a name="mssql_eng014010"></a>MSSQL_ENG014010
@@ -25,9 +25,9 @@ ms.locfileid: "68811121"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|14010|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
 |Texto da mensagem|O servidor '%s' não está definido como um servidor de assinatura.|  
@@ -46,7 +46,7 @@ ms.locfileid: "68811121"
   
      10.193.17.129 inst1  
   
--   Remova a replicação, registre cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, depois, restabeleça a replicação. Se o valor de @@SERVERNAME não estiver correto para uma instância não clusterizada, siga estas etapas:  
+-   Remova a replicação, registre cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, depois, restabeleça a replicação. Se o valor @@SERVERNAME não estiver correto em uma instância não clusterizada, siga estas etapas:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -57,9 +57,9 @@ ms.locfileid: "68811121"
   
      Depois de executar o procedimento armazenado [sp_addserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), você deverá reiniciar o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que a alteração no @@SERVERNAME entre em vigor.  
   
-     Se o valor @@SERVERNAME não estiver correto em uma instância clusterizada, você deverá alterar o nome usando o Administrador de Cluster. Para obter mais informações, veja [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+     Se o valor @@SERVERNAME não estiver correto em uma instância clusterizada, você deverá alterar o nome usando o Administrador de Cluster. Para obter mais informações, consulte [instâncias de cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [@@SERVERNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/servername-transact-sql)   
  [Referência de erros e eventos &#40;Replicação&#41;](errors-and-events-reference-replication.md)  
   

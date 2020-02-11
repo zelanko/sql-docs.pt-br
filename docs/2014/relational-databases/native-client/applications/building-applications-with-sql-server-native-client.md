@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175418"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Criando aplicativos com o SQL Server Native Client
@@ -41,7 +41,7 @@ ms.locfileid: "70175418"
  [Atualizando um aplicativo do MDAC para o SQL Server Native Client](updating-an-application-to-sql-server-native-client-from-mdac.md)  
  Discute as diferenças entre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e o MDAC, e os problemas que devem ser considerados ao atualizar do MDAC para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- [Atualizando um aplicativo no SQL Server 2005 Native Client](updating-an-application-from-sql-server-2005-native-client.md)  
+ [Atualizando um aplicativo do SQL Server Native Client 2005](updating-an-application-from-sql-server-2005-native-client.md)  
  Aborda problemas que devem ser considerados ao fazer a atualização do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Usando o ADO com SQL Server Native Client](using-ado-with-sql-server-native-client.md)  
@@ -50,11 +50,11 @@ ms.locfileid: "70175418"
  [Políticas de suporte do SQL Server Native Client](support-policies-for-sql-server-native-client.md)  
  Aborda como vários componentes de acesso a dados podem ser usados com versões diferentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- [Conectando-se a um banco de dados SQL do Azure usando SQL Server Native Client](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
+ [Connecting to an Azure SQL Database Using SQL Server Native Client (Conectando a um Banco de Dados SQL do Azure usando o SQL Server Native Client)](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  Discute como conectar-se a um [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Consulte também  
-   de [programação de SQL Server Native Client](../sql-server-native-client-programming.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Programação de SQL Server Native Client](../sql-server-native-client-programming.md)   
  [Tópicos de instruções sobre ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Tópicos de instruções do OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

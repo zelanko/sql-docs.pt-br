@@ -13,14 +13,14 @@ ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a8a13ee7637c0cb16e33e626a218e28242dabf4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925772"
 ---
 # <a name="controlling-transactions-ado"></a>Controlar de transações (ADO)
-ADO dá suporte ao processamento dentro de uma conexão com a Ajuda de transações a **BeginTrans**, **CommitTrans**, e **RollbackTrans** métodos em um  **Conexão** objeto. A ideia geral da implementação de processamento de transações no ADO é ilustrada no seguinte trecho de código simples.  
+O ADO dá suporte ao processamento de transações em uma conexão com a ajuda dos métodos **BeginTrans**, **CommitTrans**e **RollbackTrans** em um objeto de **conexão** . A ideia geral de implementar o processamento de transações no ADO é ilustrada no trecho de código simples a seguir.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -77,6 +77,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- Aqui o processamento de transações é usado para garantir que os dois registros são atualizados como uma unidade da operação, e que os nomes dos dois produtos são trocados ou não foi modificado.  
+ Aqui, o processamento de transações é usado para garantir que os dois registros sejam atualizados como uma unidade de operação e que os dois nomes de produtos sejam trocados ou não sejam alterados.  
   
- Para discussões detalhadas do processamento de transações, consulte [Updating e persistência de dados](../../../ado/guide/data/updating-and-persisting-data.md).
+ Para discussões detalhadas sobre o processamento de transações [, consulte Atualizando e persistindo dados](../../../ado/guide/data/updating-and-persisting-data.md).

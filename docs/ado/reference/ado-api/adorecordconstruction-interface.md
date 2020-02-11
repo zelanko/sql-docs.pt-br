@@ -16,41 +16,41 @@ ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920804"
 ---
 # <a name="adorecordconstruction-interface"></a>Interface ADORecordConstruction
-O **ADORecordConstruction**interface é usada para construir o ADO **registro** objeto a partir de um banco de dados OLE **linha** objeto em um aplicativo C/C++.  
+A interface **ADORecordConstruction**é usada para construir um objeto de **registro** ado de um objeto de **linha** OLE DB em um aplicativo C/C++.  
   
- Esta interface dá suporte as seguintes propriedades:  
+ Esta interface dá suporte às seguintes propriedades:  
   
 ## <a name="properties"></a>Propriedades  
   
 |||  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Somente gravação.<br />Define o contêiner de um banco de dados OLE **linha** objeto esse ADO **registro** objeto.|  
-|[linha](../../../ado/reference/ado-api/row-property-ado.md)|Leitura/gravação.<br />Obtém/define um banco de dados OLE **linha** objeto de/nesse ADO **registro** objeto.|  
+|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Somente gravação.<br />Define o contêiner de um objeto de **linha** de OLE DB neste objeto de **registro** ADO.|  
+|[Fila](../../../ado/reference/ado-api/row-property-ado.md)|Leitura/gravação.<br />Obtém/define um objeto de **linha** de OLE DB de/neste objeto de **registro** ADO.|  
   
 ## <a name="methods"></a>Métodos  
- nenhuma.  
+ Nenhum.  
   
-## <a name="events"></a>Events  
- nenhuma.  
+## <a name="events"></a>Eventos  
+ Nenhum.  
   
 ## <a name="remarks"></a>Comentários  
- Dado um banco de dados OLE **linha** objeto (`pRow`), a construção de ADO **registro** objeto (`adoR`), de valores para as três operações básicas a seguir:  
+ Considerando um objeto de **linha** de`pRow`OLE DB (), a construção de um objeto de`adoR` **registro** ADO (), valores para as três operações básicas a seguir:  
   
-1.  Criar um ADO **registro** objeto:  
+1.  Criar um objeto de **registro** ADO:  
   
     ```  
     _RecordPtr adoR;  
     adoRs.CreateInstance(__uuidof(_Record));  
     ```  
   
-2.  Consulta a **IADORecordConstruction** interface sobre o **registro** objeto:  
+2.  Consulte a interface **IADORecordConstruction** no objeto **Record** :  
   
     ```  
     adoRecordConstructionPtr adoRConstruct=NULL;  
@@ -58,7 +58,7 @@ O **ADORecordConstruction**interface é usada para construir o ADO **registro** 
                         (void**)&adoRConstruct);  
     ```  
   
-3.  Chame o **IADORecordConstruction::put_Row** método de propriedade para definir o banco de dados OLE **linha** objeto ADO **registro** objeto:  
+3.  Chame o método de propriedade **IADORecordConstruction::p ut_Row** para definir o objeto de **linha** de OLE DB no objeto de **registro** ADO:  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -66,13 +66,13 @@ O **ADORecordConstruction**interface é usada para construir o ADO **registro** 
     adoRConstruct->put_Row(pUnk);  
     ```  
   
- O resultante **objeto adoR** objeto agora representa o ADO **registro** objeto construído a partir do OLE DB **linha** objeto.  
+ O objeto **adoR** resultante agora representa o objeto de **registro** ADO construído a partir do OLE DB objeto de **linha** .  
   
- ADO **registro** objeto também pode ser construído a partir do contêiner de um banco de dados OLE **linha** objeto.  
+ Um objeto de **registro** ADO também pode ser construído a partir do contêiner de um objeto de **linha** de OLE DB.  
   
 ## <a name="requirements"></a>Requisitos  
- **Versão:** O ADO 2.0 e posterior  
+ **Versão:** ADO 2,0 e posterior  
   
- **Biblioteca:** msado15.dll  
+ **Biblioteca:** MsADO15. dll  
   
  **UUID:** 00000567-0000-0010-8000-00AA006D2EA4

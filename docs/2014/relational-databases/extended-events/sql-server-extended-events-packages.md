@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638753"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacotes de Eventos Estendidos do SQL Server
@@ -36,13 +36,13 @@ ms.locfileid: "62638753"
   
  Um pacote pode conter qualquer ou todos os objetos a seguir, que serão discutidos em maiores detalhes posteriormente neste tópico:  
   
--   Events  
+-   Eventos  
   
 -   Destinos  
   
 -   Ações  
   
--   Types  
+-   Tipos  
   
 -   Predicados  
   
@@ -53,9 +53,9 @@ ms.locfileid: "62638753"
 ## <a name="package-contents"></a>Conteúdo do pacote  
  A ilustração a seguir mostra os objetos que podem existir em pacotes, que estão contidos em um módulo. Um módulo pode ser um executável ou uma biblioteca de vínculo dinâmico.  
   
- ![O relacionamento de um módulo, pacotes e objeto](../../database-engine/media/xepackagesobjects.gif "O relacionamento de um módulo, pacotes e objeto")  
+ ![A relação de um módulo, pacotes e objeto](../../database-engine/media/xepackagesobjects.gif "A relação de um módulo, pacotes e objeto")  
   
-### <a name="events"></a>Events  
+### <a name="events"></a>Eventos  
  Eventos são pontos de interesse de monitoramento no caminho de execução de um programa, como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O acionamento de um evento induz ao fato de que o ponto de interesse foi alcançado e traz informações do momento de acionamento do evento.  
   
  Os eventos somente podem ser usados para rastreamento ou ações de disparo. Essas ações podem ser síncronas ou assíncronas.  
@@ -79,7 +79,7 @@ ms.locfileid: "62638753"
 |Admin|Os eventos Admin são principalmente direcionados aos usuários finais, administradores e suporte. Os eventos encontrados nos canais admin indicam um problema com uma solução bem definida na qual um administrador pode agir. Um exemplo de um evento admin é quando um aplicativo falha ao se conectar a uma impressora. Esses eventos são bem documentados ou têm uma mensagem associada a eles que diz ao leitor o que fazer para retificar o problema.|  
 |Operacional|Eventos operacionais são usados para analisar e diagnosticar um problema ou uma ocorrência. Eles podem ser usados para disparar ferramentas ou tarefas com base no problema ou na ocorrência. Um exemplo de um evento operacional é quando uma impressora é adicionada ou removida de um sistema.|  
 |Analítico|Eventos analíticos são publicados em grande volume. Eles descrevem operação de programa e são geralmente usados em investigações de desempenho.|  
-|Depurador|Eventos depuradores são usados somente por desenvolvedores para diagnosticar um problema de depuração.<br /><br /> Observação: Eventos do canal de depuração retornam dados de estado internos específicos de implementação. Os esquemas e os dados retornados pelos eventos podem mudar ou se tornar inválidos em versões futuras do SQL Server. Portanto, eventos no canal de depuração podem mudar ou ser removidos em versões futuras do SQL Server, sem aviso prévio.|  
+|Depurar|Eventos depuradores são usados somente por desenvolvedores para diagnosticar um problema de depuração.<br /><br /> Observação: os eventos no canal de depuração retornam dados de estado específicos da implementação interna. Os esquemas e os dados retornados pelos eventos podem mudar ou se tornar inválidos em versões futuras do SQL Server. Portanto, eventos no canal de depuração podem mudar ou ser removidos em versões futuras do SQL Server, sem aviso prévio.|  
   
  **Palavra-chave**  
   
@@ -134,14 +134,14 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  Predicados com efeitos colaterais não podem ser avaliados se a verificação de um predicado anterior falhar.  
   
-### <a name="types"></a>Types  
+### <a name="types"></a>Tipos  
  Como os dados são uma coleção de bytes unidos, o comprimento e as características da coleção de bytes são necessários na interpretação dos dados. Essas informações são encapsuladas no objeto Tipo. Os tipos seguintes são fornecidos para objetos de pacote:  
   
 -   event  
   
--   action  
+-   ação  
   
--   target  
+-   destino  
   
 -   pred_source  
   
@@ -213,9 +213,9 @@ where name = 'lock_mode'
   
  Usando essa tabela como um exemplo, suponhamos que você tenha uma coluna denominada modo e seu valor seja 5. A tabela indica que 5 mapeia para X, o que significa que o tipo de bloqueio é Exclusivo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sessões de eventos estendidos do SQL Server](sql-server-extended-events-sessions.md)   
  [Mecanismo de eventos estendidos do SQL Server](sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
+ [Destinos de eventos estendidos do SQL Server](../../database-engine/sql-server-extended-events-targets.md)  
   
   

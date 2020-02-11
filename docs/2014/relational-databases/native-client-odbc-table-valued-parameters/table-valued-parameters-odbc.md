@@ -14,22 +14,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467296"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parâmetros com valor de tabela (ODBC)
   O suporte de ODBC para parâmetros com valor de tabela permite que o aplicativo cliente envie dados com parâmetros para o servidor de forma mais eficiente, enviando várias linhas ao servidor com uma chamada.  
   
- Para obter informações sobre parâmetros com valor de tabela no servidor, consulte [usar parâmetros &#40;mecanismo de banco de dados&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Para obter informações sobre parâmetros com valor de tabela no servidor, consulte [usar parâmetros com valor de tabela &#40;Mecanismo de Banco de Dados&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
  No ODBC, há duas formas de enviar parâmetros com valor de tabela para o servidor:  
   
--   Todos os dados de parâmetro com valor de tabela podem estar na memória no momento SQLExecDirect ou SQLExecute é chamado. Esses dados são armazenados em matrizes, se houver várias linhas com valor de tabela.  
+-   Todos os dados de parâmetro com valor de tabela podem estar na memória no momento em que SQLExecDirect ou SQLExecute é chamado. Esses dados são armazenados em matrizes, se houver várias linhas com valor de tabela.  
   
--   Um aplicativo pode especificar os dados em execução para um parâmetro com valor de tabela quando SQLExecDirect ou SQLExecute é chamado. Nesse caso, linhas de dados com valor de tabela podem ser fornecidas em lotes ou a qualquer momento, a fim de reduzir os requisitos de memória.  
+-   Um aplicativo pode especificar dados em execução para um parâmetro com valor de tabela quando SQLExecDirect ou SQLExecute é chamado. Nesse caso, linhas de dados com valor de tabela podem ser fornecidas em lotes ou a qualquer momento, a fim de reduzir os requisitos de memória.  
   
  A primeira opção permite que os procedimentos armazenados encapsulem mais lógica corporativa. Por exemplo, um único procedimento armazenado pode encapsular toda uma transação de entrada de pedido quando o item solicitado for transmitido como um parâmetro com valor de tabela. Essa opção é muito eficiente, porque é necessária apenas uma viagem de ida e volta ao servidor. Como alternativa, você pode usar procedimentos diferentes para lidar com o cabeçalho do pedido e itens do pedido separadamente, o que exigiria mais código e um contrato mais complexo entre o cliente e o servidor.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62467296"
  [Usos de parâmetros ODBC com valor de tabela](uses-of-odbc-table-valued-parameters.md)  
  Descreve os cenários principais de usuário para parâmetros com valor de tabela e ODBC.  
   
- [Tipo SQL ODBC para parâmetros com valor de tabela](odbc-sql-type-for-table-valued-parameters.md)  
+ [Tipo ODBC SQL para parâmetros com valor de tabela](odbc-sql-type-for-table-valued-parameters.md)  
  Descreve o tipo SQL_SS_TABLE. Esse é um novo tipo ODBC SQL que oferece suporte a parâmetros com valor de tabela.  
   
  [Campos do descritor de parâmetro com valor de tabela](table-valued-parameter-descriptor-fields.md)  
@@ -63,7 +63,7 @@ ms.locfileid: "62467296"
  Descreve como um aplicativo pode obter metadados para uma chamada de procedimento preparada.  
   
  [Metadados adicionais de parâmetros com valor de tabela](additional-table-valued-parameter-metadata.md)  
- Descreve como usar SQLColumns, SQLProcedureColumns e SQLTables para recuperar metadados para um parâmetro com valor de tabela.  
+ Descreve como usar SQLProcedureColumns, SQLTables e SQLColumns para recuperar metadados para um parâmetro com valor de tabela.  
   
  [Conversão de dados de parâmetros com valor de tabela e outros erros e avisos](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Descreve como processar erros em valores de colunas de parâmetros com valor de tabela.  
@@ -77,8 +77,8 @@ ms.locfileid: "62467296"
  [Exemplos de programação de parâmetros com valor de tabela (ODBC)](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
  Descreve como executar tarefas comuns.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [Parâmetros com valor de tabela &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [Os parâmetros com valor de tabela &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

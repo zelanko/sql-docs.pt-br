@@ -1,5 +1,5 @@
 ---
-title: DM os_buffer_descriptors (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -21,55 +21,55 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265860"
 ---
-# <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
+# <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna informações sobre todas as páginas de dados atualmente no pool de buffer do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A saída dessa exibição pode ser usada para determinar a distribuição de páginas de bancos de dados no pool de buffer de acordo com o banco de dados, objeto ou tipo. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], essa exibição de gerenciamento dinâmico também retorna informações sobre as páginas de dados no arquivo de extensão do pool de buffers. Para obter mais informações, consulte [extensão do Pool de buffers](../../database-engine/configure-windows/buffer-pool-extension.md).  
+  Retorna informações sobre todas as páginas de dados atualmente no pool de buffer do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A saída dessa exibição pode ser usada para determinar a distribuição de páginas de bancos de dados no pool de buffer de acordo com o banco de dados, objeto ou tipo. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], essa exibição de gerenciamento dinâmico também retorna informações sobre as páginas de dados no arquivo de extensão do pool de buffers. Para obter mais informações, consulte [extensão do pool de buffers](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
  Quando uma página de dados é lida a partir do disco, a página é copiada para o pool de buffer do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e armazenada em cache para reutilização. Cada página de dados tem um descritor de buffer. Descritores de buffer que identificam exclusivamente cada página de dados armazenada em cache no momento em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors retorna páginas armazenadas em cache para todos os usuários e bancos de dados do sistema. Isso inclui páginas que estão associadas ao banco de dados de Recursos.  
   
-> **OBSERVAÇÃO:** Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_buffer_descriptors**.  
+> **Observação:** Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_os_buffer_descriptors**.  
 
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Identificação do banco de dados associada à página no pool de buffer. Permite valor nulo.|  
 |file_id|**int**|Identificação do arquivo que armazena a imagem persistida da página. Permite valor nulo.|  
 |page_id|**int**|Identificação da página no arquivo. Permite valor nulo.|  
 |page_level|**int**|Nível de índice da página. Permite valor nulo.|  
 |allocation_unit_id|**bigint**|ID da unidade de alocação da página. Esse valor pode ser usado para unir sys.allocation_units. Permite valor nulo.|  
-|page_type|**nvarchar(60)**|Tipo da página, como: Página de dados ou página de índice. Permite valor nulo.|  
+|page_type|**nvarchar (60)**|Tipo da página, como: página de Dados ou página de Índice. Permite valor nulo.|  
 |row_count|**int**|Número de linhas na página. Permite valor nulo.|  
 |free_space_in_bytes|**int**|Quantidade de espaço livre disponível, em bytes, na página. Permite valor nulo.|  
 |is_modified|**bit**|1 = A página foi modificada depois de lida no disco. Permite valor nulo.|  
 |numa_node|**int**|Nó de acesso à memória não uniforme do buffer. Permite valor nulo.|  
 |read_microsec|**bigint**|A hora real (em microssegundos) necessária para ler a página no buffer. Este número é redefinido quando o buffer é reutilizado. Permite valor nulo.|  
-|is_in_bpool_extension|**bit**|1 = página está na extensão do pool de buffers. Permite valor nulo.|  
-|pdw_node_id|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|is_in_bpool_extension|**bit**|1 = a página está na extensão do pool de buffers. Permite valor nulo.|  
+|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões  
 
-Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
    
 ## <a name="remarks"></a>Comentários  
- DM os_buffer_descriptors retorna páginas que estão sendo usadas pelo banco de dados do recurso. DM os_buffer_descriptors não retorna informações sobre páginas livres ou roubadas ou sobre páginas que apresentaram erros quando foram lidas.  
+ sys. dm_os_buffer_descriptors retorna páginas que estão sendo usadas pelo banco de dados de recursos. sys. dm_os_buffer_descriptors não retorna informações sobre páginas gratuitas ou roubadas, ou sobre páginas que tinham erros quando foram lidas.  
   
-|De|Para|Em|Relação|  
+|De|Para|Por|Relação|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|muitos para um|  
-|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|muitos para um|  
-|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|muitos para um|  
+|sys.dm_os_buffer_descriptors|\<das>. sys. allocation_units|allocation_unit_id|muitos para um|  
+|sys.dm_os_buffer_descriptors|\<das>. sys. database_files|file_id|muitos para um|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|muitos para um|  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-cached-page-count-for-each-database"></a>A. Retornando a contagem de páginas armazenadas em cache para cada banco de dados  
+### <a name="a-returning-cached-page-count-for-each-database"></a>a. Retornando a contagem de páginas armazenadas em cache para cada banco de dados  
  O exemplo a seguir retorna a contagem de páginas carregadas em cada banco de dados.  
   
 ```  
@@ -112,12 +112,12 @@ GROUP BY name, index_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
- [Sistema operacional SQL Server relacionados exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Banco de dados de recursos](../../relational-databases/databases/resource-database.md)   
- [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

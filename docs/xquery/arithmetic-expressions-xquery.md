@@ -16,16 +16,16 @@ ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ccbeda01726a3473f8e955676c3ebd62a93fd630
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985730"
 ---
 # <a name="arithmetic-expressions-xquery"></a>Expressões aritméticas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Há suporte para todos os operadores aritméticos, exceto para **idiv**. Os exemplos a seguir ilustram o uso básico dos operadores aritméticos:  
+  Todos os operadores aritméticos têm suporte, exceto para **IDIV**. Os exemplos a seguir ilustram o uso básico dos operadores aritméticos:  
   
 ```  
 DECLARE @x xml  
@@ -34,7 +34,7 @@ SELECT @x.query('2 div 2')
 SELECT @x.query('2 * 2')  
 ```  
   
- Porque **idiv** é uma solução que não tem suporte, é usar o **xs:integer()** construtor:  
+ Como não há suporte para **IDIV** , uma solução é usar o construtor **xs: Integer ()** :  
   
 ```  
 DECLARE @x xml  
@@ -45,17 +45,17 @@ SET @x=''
 SELECT @x.query('xs:integer(2 div 3)')  
 ```  
   
- O tipo resultante de um operador aritmético é baseado nos tipos dos valores de entrada. Se os operandos forem de tipos diferentes, qualquer um dos dois, ou ambos, quando necessário serão convertidos em um tipo de base primitivo comum, de acordo com a hierarquia do tipo. Para obter informações sobre a hierarquia de tipo, consulte [regras de conversão de tipo em XQuery](../xquery/type-casting-rules-in-xquery.md).  
+ O tipo resultante de um operador aritmético é baseado nos tipos dos valores de entrada. Se os operandos forem de tipos diferentes, qualquer um dos dois, ou ambos, quando necessário serão convertidos em um tipo de base primitivo comum, de acordo com a hierarquia do tipo. Para obter informações sobre a hierarquia de tipos, consulte [regras de conversão de tipo em XQuery](../xquery/type-casting-rules-in-xquery.md).  
   
- Promoção de tipo numérico ocorre se as duas operações forem de tipos de base numéricos diferentes. Por exemplo, adicionando um **xs: decimal** para um **xs: Double** alteraria primeiro o valor decimal para um duplo. Em seguida, a adição seria executada de forma a resultar em um valor duplo.  
+ Promoção de tipo numérico ocorre se as duas operações forem de tipos de base numéricos diferentes. Por exemplo, adicionar um **xs: decimal** a um **xs: Double** primeiro alteraria o valor decimal para Double. Em seguida, a adição seria executada de forma a resultar em um valor duplo.  
   
- Valores atômicos não digitados são convertidos para o tipo de base numérica do outro operando, ou **xs: Double** se o outro operando também não for digitado.  
+ Os valores atômicos não tipados são convertidos no tipo de base numérico do outro operando ou em **xs: Double** se o outro operando também não for digitado.  
   
 ## <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
   
--   Argumentos para os operadores aritméticos devem ser do tipo numérico ou **untypedAtomic**.  
+-   Os argumentos para os operadores aritméticos devem ser do tipo numeric ou **untypedAtomic**.  
   
--   Operações em **xs: Integer** valores resultam em um valor do tipo **xs: decimal** em vez de **xs: Integer**.  
+-   Operações em **xs: valores inteiros** resultam em um valor do tipo **xs: decimal** em vez de **xs: integer**.  
   
   

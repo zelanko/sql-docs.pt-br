@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f44d3426d7a3f11157167763e047dcb7423a904f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62635075"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Método SetNumValue (classe SqlServiceAdvancedProperty)
@@ -40,12 +40,12 @@ NumValue
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Um objeto da [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) que representa uma propriedade avançada.  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
 |*NumValue*|Um valor `uint32` que especifica o valor da propriedade avançada.|  
   
@@ -55,7 +55,7 @@ NumValue
 ## <a name="remarks"></a>Comentários  
  O tipo de valor da propriedade deve ser numérico para poder definir a propriedade como um valor numérico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

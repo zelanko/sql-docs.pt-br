@@ -1,5 +1,5 @@
 ---
-title: Executar um comando | Microsoft Docs
+title: Executando um comando | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f94cc014a04c3392fefb61f4fa291a8f5a44ad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638451"
 ---
 # <a name="executing-a-command"></a>Executando um comando
-  Depois que a conexão a uma fonte de dados é estabelecida, o consumidor chama o **idbcreatesession::** método para criar uma sessão. A sessão atua como um comando, conjunto de linhas ou fábrica de transação.  
+  Depois que a conexão com uma fonte de dados é estabelecida, o consumidor chama o método **IDBCreateSession:: CreateSession** para criar uma sessão. A sessão atua como um comando, conjunto de linhas ou fábrica de transação.  
   
  Para trabalhar diretamente com tabelas ou índices individuais, o consumidor solicita a interface `IOpenRowset`. O método `IOpenRowset::OpenRowset` se abre e retorna um conjunto de linhas que inclui todas as linhas de uma única tabela ou índice base.  
   
- Para executar um comando (como SELECT \* FROM Authors), o consumidor solicita a `IDBCreateCommand` interface. O consumidor pode executar o método `IDBCreateCommand::CreateCommand` para criar um objeto de comando e solicitar a interface `ICommandText`. O método `ICommandText::SetCommandText` é usado para especificar o comando que será executado.  
+ Para executar um comando (como selecionar \* de autores), o consumidor solicita a `IDBCreateCommand` interface. O consumidor pode executar o método `IDBCreateCommand::CreateCommand` para criar um objeto de comando e solicitar a interface `ICommandText`. O método `ICommandText::SetCommandText` é usado para especificar o comando que será executado.  
   
  O comando `Execute` é usado para executar o comando. O comando pode ser qualquer instrução SQL ou nome de procedimento. Nem todos os comandos geram um objeto de conjunto de resultados (conjunto de linhas). Comandos como SELECT * FROM Authors geram um conjunto de resultados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando um aplicativo provedor OLE DB do SQL Server Native Client](creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
   

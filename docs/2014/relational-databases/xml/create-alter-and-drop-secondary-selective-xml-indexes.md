@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b96e0bb7f28349e4d0b0ed5225f9b29e58de982f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637839"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Criar, alterar e remover índices XML seletivos secundários
@@ -22,9 +22,9 @@ ms.locfileid: "62637839"
   
 ##  <a name="create"></a> Criando um índice XML seletivo secundário  
   
-### <a name="how-to-create-a-secondary-selective-xml-index"></a>Como fazer: Criar um índice XML seletivo secundário  
+### <a name="how-to-create-a-secondary-selective-xml-index"></a>Como: Criar um índice XML seletivo secundário  
  **Criar um índice XML seletivo secundário usando Transact-SQL**  
- Crie um índice XML seletivo secundário chamando a instrução CREATE XML INDEX. Para obter mais informações, consulte [CREATE XML INDEX &#40;índices XML seletivos&#41;] (~ / t-sql/statements/create-xml-index-selective-xml-indexes.  
+ Crie um índice XML seletivo secundário chamando a instrução CREATE XML INDEX. Para obter mais informações, consulte [criar índice XML &#40;índices XML seletivos&#41;] (~/t-SQL/Statements/CREATE-XML-index-Selective-XML-indexes.  
   
  **Exemplo**  
   
@@ -44,11 +44,11 @@ FOR
 ##  <a name="alter"></a> Alterando um índice XML seletivo secundário  
  A instrução ALTER não oferece suporte a índices XML secundários seletivos. Para alterar um índice XML secundário, remova o índice existente e recrie-o.  
   
-### <a name="how-to-alter-a-secondary-selective-xml-index"></a>Como fazer: Alterar um índice XML seletivo secundário  
+### <a name="how-to-alter-a-secondary-selective-xml-index"></a>Como: Alterar um índice XML seletivo secundário  
  **Alterar um índice XML seletivo secundário usando Transact-SQL**  
  1.  Remova o índice XML seletivo secundário existente chamando a instrução DROP INDEX. Para obter mais informações, veja [DROP INDEX &#40;Índices XML Seletivos&#41;](../indexes/indexes.md).  
   
-2.  Recrie o índice com as opções desejadas chamando a instrução CREATE XML INDEX. Para obter mais informações, consulte [CREATE XML INDEX &#40;índices XML seletivos&#41;] (~ / t-sql/statements/create-xml-index-selective-xml-indexes.  
+2.  Recrie o índice com as opções desejadas chamando a instrução CREATE XML INDEX. Para obter mais informações, consulte [criar índice XML &#40;índices XML seletivos&#41;] (~/t-SQL/Statements/CREATE-XML-index-Selective-XML-indexes.  
   
  **Exemplo**  
   
@@ -69,7 +69,7 @@ FOR
   
 ##  <a name="drop"></a> Removendo um índice XML seletivo secundário  
   
-### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Como fazer: Descartar um índice XML seletivo secundário  
+### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Como: Remover um índice XML seletivo secundário  
  **Remover um índice XML seletivo secundário usando Transact-SQL**  
  Remova um índice XML seletivo secundário chamando a instrução DROP INDEX. Para obter mais informações, veja [DROP INDEX &#40;Índices XML Seletivos&#41;](../indexes/indexes.md).  
   
@@ -83,7 +83,7 @@ ON tbl
 ```  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices XML Seletivos &#40;SXI&#41;](selective-xml-indexes-sxi.md)  
   
   

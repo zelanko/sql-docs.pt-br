@@ -11,10 +11,10 @@ ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 94543ada58c5af829da6a7650e21f5f4e2deb9bb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729013"
 ---
 # <a name="purge-version-members-master-data-services"></a>Limpar Membros de Versão (Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "73729013"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], excluir um membro apenas o desativa ou exclui temporariamente. Os dados ainda permanecem no banco de dados. Este tópico descreve como limpar (excluir permanentemente) todos os membros excluídos temporariamente em uma versão de modelo.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento.  
   
 -   Você deve ter permissão para acessar a área funcional Gerenciamento de Versões.  

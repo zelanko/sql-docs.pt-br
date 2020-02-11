@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba249d99c991fafc377aee019d666b9fa11df8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629921"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detecting and Resolving Conflicts in Logical Records
-  Este tópico cobre as várias abordagens de combinações de detecção e resolução de conflitos possíveis ao usar registros lógicos. Um conflito na replicação de mesclagem ocorre quando mais de um nó altera os mesmos dados ou quando a replicação de mesclagem encontra determinados tipos de erros, como violação de restrição, durante a replicação de alterações. Para obter mais informações sobre detecção e resolução de conflitos, consulte [Detecção e resolução de conflito de replicação de mesclagem avançada ](advanced-merge-replication-conflict-detection-and-resolution.md).  
+  Este tópico cobre as várias abordagens de combinações de detecção e resolução de conflitos possíveis ao usar registros lógicos. Um conflito na replicação de mesclagem ocorre quando mais de um nó altera os mesmos dados ou quando a replicação de mesclagem encontra determinados tipos de erros, como violação de restrição, durante a replicação de alterações. Para obter mais informações sobre detecção e resolução de conflitos, consulte [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Para especificar o nível de controle e resolução de conflitos para um artigo, consulte [especificar o nível de resolução e de rastreamento de conflito para artigos de mesclagem](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62629921"
   
  A propriedade de artigo **logical_record_level_conflict_detection** pode ser definida como TRUE ou FALSE. O valor deve ser definido apenas para o artigo pai de alto nível, sendo ignorado pelos artigos filho. Se esse valor for FALSE, a replicação de mesclagem detectará conflitos como nas versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com base unicamente no valor da propriedade **column_tracking** do artigo. Se esse valor for TRUE, a replicação de mesclagem ignorará a propriedade **column_tracking** do artigo, e detectará um conflito se alterações forem feitas em qualquer lugar do registro lógico. Por exemplo, considere este cenário:  
   
- ![Três registros lógicos de tabela com valores](../media/logical-records-05.gif "Três registros lógicos de tabela com valores")  
+ ![Registro lógico de três tabelas com valores](../media/logical-records-05.gif "Registro lógico de três tabelas com valores")  
   
  Um conflito é detectado caso dois usuários alterem quaisquer valores do registro lógico Customer2 nas tabelas **Customers**, **Orders**ou **OrderItems** . Esse exemplo invoca alterações feitas por meio da instrução UPDATE, mas o conflito pode igualmente ser detectado pelas alterações feitas com as instruções INSERT ou DELETE.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62629921"
   
  Como os conflitos são resolvidos em nível de registro lógico, as alterações vencedoras feitas no Publicador substituem as alterações feitas nas tabelas do Assinante durante o processo de replicação.  
   
- ![Série de tabelas mostrando alterações a linhas relacionadas](../media/logical-records-06.gif "Série de tabelas mostrando alterações a linhas relacionadas")  
+ ![Série de tabelas mostrando alterações nas linhas relacionadas](../media/logical-records-06.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>Detecção em nível de linha, resolução de registro lógico  
  Nesse exemplo, a publicação é configurada com:  
@@ -89,7 +89,7 @@ ms.locfileid: "62629921"
   
  Como os conflitos são resolvidos em nível de registro lógico, as alterações vencedoras feitas no Publicador substituem as alterações feitas nas tabelas do Assinante durante o processamento da replicação.  
   
- ![Série de tabelas mostrando alterações a linhas relacionadas](../media/logical-records-07.gif "Série de tabelas mostrando alterações a linhas relacionadas")  
+ ![Série de tabelas mostrando alterações nas linhas relacionadas](../media/logical-records-07.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>Detecção de registro lógico, resolução de registro lógico  
  Nesse exemplo, a publicação é configurada com:  
@@ -102,9 +102,9 @@ ms.locfileid: "62629921"
   
  Como os conflitos são também resolvidos no nível do registro lógico, durante a sincronização a alteração vencedora feita no Publicador substitui a alteração feita nas tabelas do Assinante.  
   
- ![Série de tabelas mostrando alterações a linhas relacionadas](../media/logical-records-08.gif "Série de tabelas mostrando alterações a linhas relacionadas")  
+ ![Série de tabelas mostrando alterações nas linhas relacionadas](../media/logical-records-08.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Agrupar alterações em linhas relacionadas com registros lógicos](group-changes-to-related-rows-with-logical-records.md)  
   
   

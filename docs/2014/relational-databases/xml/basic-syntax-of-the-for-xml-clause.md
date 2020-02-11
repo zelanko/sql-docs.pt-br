@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637860"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Sintaxe básica da cláusula FOR XML
@@ -29,7 +29,7 @@ ms.locfileid: "62637860"
 > [!IMPORTANT]  
 >  A diretiva XMLDATA para a opção FOR XML foi preterida. Use geração de XSD no caso dos modos RAW e AUTO. Não há substituição para a diretiva XMLDATA no modo EXPLICIT. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Esta é a sintaxe básica descrita na [Cláusula FOR (Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql):  
+ Veja a seguir a sintaxe básica que é descrita na [cláusula for (Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql):  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -88,14 +88,14 @@ XML
  TYPE  
  Especifica que a consulta retorna os resultados como tipo **xml** . Para obter mais informações, consulte [Diretiva TYPE em consultas FOR XML](type-directive-in-for-xml-queries.md).  
   
- ROOT [('*RootName*')]  
+ RAIZ [('*RootName*')]  
  Especifica que um único elemento de nível superior seja adicionado ao XML resultante. Opcionalmente, é possível especificar o nome do elemento raiz a ser gerado. O valor padrão é "root".  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar modo RAW com FOR XML](use-raw-mode-with-for-xml.md)   
  [Usar o modo AUTO com FOR XML](use-auto-mode-with-for-xml.md)   
  [Usar o modo EXPLICIT com FOR XML](use-explicit-mode-with-for-xml.md)   
- [Usar modo PATH com FOR XML](use-path-mode-with-for-xml.md)   
+ [Usar o modo PATH com FOR XML](use-path-mode-with-for-xml.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
   

@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71199329"
 ---
 # <a name="query-options-execution-advanced-page"></a>Execução de opções de consulta (Página Avançado)
@@ -66,4 +66,4 @@ Os protocolos de atestado com suporte atuais são:
 
 Para obter mais informações, consulte [Always Encrypted com Secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) e [Secure enclave atestation](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 
-**Restaurar Padrões** Redefine todos os valores dessa página com os valores padrão originais.
+**Redefinir para padrão** Redefine todos os valores desta página para os valores padrão originais.

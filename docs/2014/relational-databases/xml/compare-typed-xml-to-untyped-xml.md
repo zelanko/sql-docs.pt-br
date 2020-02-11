@@ -26,14 +26,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637614"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML digitado com XML não digitado
-  É possível criar variáveis, parâmetros e colunas do tipo `xml`. Opcionalmente, é possível associar uma coleção de esquemas XML com uma variável, parâmetro ou coluna de tipo `xml`. Nesse caso, o `xml` instância de tipo de dados é chamada *digitado*. Caso contrário, a instância XML é chamada *sem-tipo*.  
+  É possível criar variáveis, parâmetros e colunas do tipo `xml`. Opcionalmente, é possível associar uma coleção de esquemas XML com uma variável, parâmetro ou coluna de tipo `xml`. Nesse caso, a instância `xml` de tipo de dados é chamada *tipada*. Caso contrário, a instância XML é chamada *sem-tipo*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>XML bem formado e o tipo de dados xml  
  O tipo de dados `xml` implementa o tipo de dados `xml` padrão ISO. Portanto ele pode armazenar documentos bem formados em XML versão 1.0 e também os chamados fragmentos de conteúdo XML com nós de texto e um número arbitrário de elementos de nível superior em uma coluna XML sem-tipo. Os sistema verifica se os dados estão bem formados, se não requerem que a coluna esteja associada a esquemas XML e rejeita dados que não são bem formados no sentido estendido. Isso também é verdadeiro para variáveis e parâmetros XML sem-tipo.  
@@ -52,7 +52,7 @@ ms.locfileid: "62637614"
   
 -   Você tem esquemas, mas não quer que o servidor valide os dados. Algumas vezes, esse é o caso quando um aplicativo executa validação do lado do cliente antes de armazenar os dados no servidor ou armazena temporariamente os dados XML que são inválidos de acordo com o esquema ou usa componentes de esquema que não têm suporte no servidor.  
   
- Use tipada `xml` tipo de dados nas seguintes situações:  
+ Use tipo `xml` de dados tipado nas seguintes situações:  
   
 -   Você tem esquemas para os dados XML e quer que o servidor valide os dados XML de acordo com os esquemas XML.  
   
@@ -63,18 +63,18 @@ ms.locfileid: "62637614"
  Colunas, parâmetros e variáveis de XML com tipo podem armazenar conteúdo ou documentos XML. No entanto é necessário especificar com um sinalizador se você está armazenando um documento ou conteúdo no momento da declaração. Além disso, você precisa fornecer a coleção de esquemas XML. Especifique DOCUMENT se cada instância XML tiver exatamente um elemento de nível superior. Caso contrário, use CONTENT. O compilador de consultas usa o sinalizador DOCUMENT em verificações de tipo durante a compilação de consultas para deduzir elementos singleton de nível superior.  
   
 ## <a name="creating-typed-xml"></a>Criando XML com tipo  
- Antes de criar tipado `xml` variáveis, parâmetros ou colunas, você deve primeiro registrar a coleção de esquema XML usando [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). Em seguida, você pode associar a coleção de esquema XML com variáveis, parâmetros ou colunas do tipo de dados `xml`.  
+ Antes de criar variáveis, `xml` parâmetros ou colunas tipados, primeiro você deve registrar a coleção de esquema XML usando [Create xml Schema Collection &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). Em seguida, você pode associar a coleção de esquema XML com variáveis, parâmetros ou colunas do tipo de dados `xml`.  
   
  Nos exemplos a seguir, uma convenção de nomenclatura de duas partes é usada para especificar o nome da coleção de esquema XML. A primeira parte é o nome do esquema e a segunda parte é o nome da coleção de esquema XML.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemplo: Associando uma coleção de esquemas com uma variável do tipo xml  
- O exemplo a seguir cria um`xml` variável de tipo e associa uma coleção de esquema ela. A coleção de esquema especificada no exemplo já está importada no banco de dados **AdventureWorks** .  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemplo: Associando uma coleção de esquema com uma variável de tipo xml  
+ O exemplo a seguir cria`xml` uma variável de tipo e associa uma coleção de esquema a ela. A coleção de esquema especificada no exemplo já está importada no banco de dados **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemplo: Especificando um esquema para uma coluna do tipo xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemplo: Especificando um esquema para uma coluna de tipo xml  
  O exemplo a seguir cria uma tabela com uma coluna de tipo `xml` e especifica um esquema para a coluna:  
   
 ```  
@@ -105,7 +105,7 @@ AS
   
  Na hierarquia de tipo de dados, o tipo de dados `xml` aparece abaixo dos tipos de dados `sql_variant` e definidos pelo usuário, mas acima de qualquer tipo interno.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemplo: Especificando facetas para restringir uma coluna xml tipada  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemplo: Especificando facetas para restringir uma coluna xml com tipo  
  Para colunas `xml` com tipo, é possível restringir a coluna para permitir que apenas elementos únicos de nível superior de cada instância sejam armazenados nela. Isso é feito especificando a faceta opcional `DOCUMENT` ao criar uma tabela, conforme mostrado no exemplo a seguir:  
   
 ```  
@@ -149,15 +149,15 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
     2.  Todos os valores do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] continuarão a ser representados no fuso horário Z, pois foram normalizados para o fuso horário Z.  
   
-    3.  Quaisquer valores de **xs:date** ou **xs:dateTime** menores que 1º de janeiro do ano 1 resultarão em um erro em tempo de execução quando o índice for reconstruído ou uma instrução XQuery ou XML-DML for executada em relação ao tipo de dados XML que contém esse valor.  
+    3.  Quaisquer valores de **xs:date** ou **xs:dateTime** menores que 1º de janeiro do ano 1 resultarão em um erro de runtime quando o índice for reconstruído ou uma instrução XQuery ou XML-DML for executada em relação ao tipo de dados XML que contém esse valor.  
   
 2.  Quaisquer anos negativos nas facetas **xs:date** ou **xs:dateTime** ou valores padrão em uma coleção de esquema XML serão atualizados automaticamente para o menor valor permitido pelo tipo **xs:date** ou **xs:dateTime** (por exemplo, 0001-01-01T00:00:00.0000000Z para **xs:dateTime**).  
   
  Observe que você ainda pode usar uma instrução select SQL simples para recuperar o tipo de dados XML inteiro, mesmo que ele contenha anos negativos. É recomendável substituir anos negativos por um ano dentro do intervalo com suporte recente ou alterar o tipo do elemento ou atributo para **xs:string**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar instâncias de dados XML](create-instances-of-xml-data.md)   
- [Métodos de tipo de dados xml](/sql/t-sql/xml/xml-data-type-methods)   
+ [Métodos de tipos de dados xml](/sql/t-sql/xml/xml-data-type-methods)   
  [Linguagem de modificação de dados XML &#40;XML DML&#41;](/sql/t-sql/xml/xml-data-modification-language-xml-dml)   
  [Dados XML &#40;SQL Server&#41;](xml-data-sql-server.md)  
   

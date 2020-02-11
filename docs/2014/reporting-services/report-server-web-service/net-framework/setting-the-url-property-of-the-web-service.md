@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520282"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Definindo a propriedade Url do serviço Web
-  A qualquer momento em seus aplicativos do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você pode modificar a URL base do serviço Web Servidor de Relatórios para a qual o aplicativo foi direcionado no momento. Para fazer isso, basta definir a propriedade **Url** do objeto de serviço. Por exemplo:  
+  A qualquer momento em seus [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplicativos, você pode modificar a URL base do serviço Web servidor de relatórios no qual seu aplicativo está direcionado no momento. Para fazer isso, basta definir a propriedade **Url** do objeto de serviço. Por exemplo:  
   
 ```vb  
 Dim rs As New ReportingService2010()  
@@ -106,7 +106,7 @@ class Sample
   
  Para obter mais informações sobre como criar o proxy inicial de serviço Web, consulte [Criar o proxy de serviço Web](creating-the-web-service-proxy.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
  [Criando aplicativos usando o serviço Web e o .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   

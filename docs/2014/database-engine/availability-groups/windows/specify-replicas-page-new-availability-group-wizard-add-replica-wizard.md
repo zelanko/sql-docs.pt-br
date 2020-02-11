@@ -14,17 +14,17 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab74dc982416e3c18f2a0ad649e52de23770c5a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 2a552b5847f1abda254da1d6c7348088ee0e8a03
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176050"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76923040"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar Réplicas (Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Assistente de novo grupo de disponibilidade: assistente para adicionar réplica)
   Este tópico descreve as opções da página **Especificar Réplicas** . Essa página aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
   
-|Tab|Descrição breve|  
+|Tab|Breve descrição|  
 |---------|-----------------------|  
 |[Réplicas](#ReplicasTab)|Use esta guia para especificar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará ou que hospeda uma réplica secundária. Observe que a instância de servidor à qual você está conectado no momento deve hospedar a réplica primária.<br /><br /> Dica: termine de especificar todas as réplicas na guia **Réplicas** antes de iniciar as outras guias.|  
 |[Pontos de extremidade](#EndpointsTab)|Use esta guia para verificar quaisquer pontos de extremidade de espelhamento de banco de dados existentes e também, se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows para criar o ponto de extremidade automaticamente.|  
@@ -38,9 +38,9 @@ ms.locfileid: "70176050"
  Se uma instância de servidor que você usa para hospedar uma réplica secundária não estiver listada na grade **Réplicas de Disponibilidade** , clique no botão **Adicionar Réplica** . Para configurar um grupo de disponibilidade em um ambiente de TI híbrido (confira [Alta disponibilidade e recuperação de desastre para SQL Server nas Máquinas Virtuais do Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), clique no botão **Adicionar Réplica do Azure** para criar máquinas virtuais com réplicas secundárias no Azure.  
   
  **Função inicial**  
- Indica a função que a nova réplica executará inicialmente: **Primária** ou **Secundária**.  
+ Indica a função que a nova réplica executará inicialmente: **Primária** ou **secundária**.  
   
- **Failover automático (até 2)**  
+ **Failover Automático (até 2)**  
  Marque esta caixa de seleção se você desejar que esta réplica de disponibilidade seja um parceiro de failover automático. Para configurar o failover automático, você deve escolher essa opção para a réplica primária inicial e para uma réplica secundária. Essas duas réplicas usarão o modo de disponibilidade da confirmação síncrona. Apenas duas réplicas podem dar suporte a failover automático.  
   
  Para obter informações sobre o modo de disponibilidade de confirmação síncrona, consulte [modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md). Para obter informações sobre failover automático, consulte [Failover e modos de failover &#40;Grupos de disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
@@ -98,7 +98,7 @@ ms.locfileid: "70176050"
   
 -   Se cada instância de servidor estiver sendo executada em uma conta de serviço de domínio, ou seja, se a coluna **Conta de Serviço do SQL Server** exibir uma conta de serviço de domínio para cada instância de servidor, clique em **Avançar**.  
   
--   Se alguma instância de servidor estiver sendo executada em uma conta de serviço que não pertence a um domínio, você precisará fazer uma alteração manual na instância de servidor para que possa continuar as etapas do assistente. Nesse caso, clicar em **Avançar** abre uma caixa de diálogo de aviso; Você deve clicar em **não**, que retorna à guia**pontos de extremidade** . Ao deixar o assistente na página **especificar réplicas** , faça uma das seguintes alterações em cada instância de servidor para a qual a coluna **conta de serviço do SQL Server** exibe uma conta de serviço que não seja de domínio:  
+-   Se alguma instância de servidor estiver sendo executada em uma conta de serviço que não pertence a um domínio, você precisará fazer uma alteração manual na instância de servidor para que possa continuar as etapas do assistente. Nesse caso, quando você clicar em **Avançar** , será exibida uma caixa de diálogo de aviso. Clique em **Não**para retornar à guia**Pontos de Extremidade** . Enquanto estiver saindo do assistente na página **Especificar Réplicas** , faça um das seguintes alterações em cada instância de servidor para a qual a coluna **Conta de Serviço do SQL Server** exiba uma conta de serviço que não pertence a um domínio:  
   
     -   Use o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para transformar a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma conta de domínio. Para obter mais informações, consulte [Alterar a conta de inicialização do serviço SQL Server &#40;SQL Server Configuration Manager&#41;](../../configure-windows/scm-services-change-the-service-startup-account.md).  
   
@@ -115,7 +115,7 @@ ms.locfileid: "70176050"
  **Somente Secundário**  
  Especifica que os backups nunca devem ser executados na réplica primária. Se a réplica primária for a única réplica online, o backup não deveria ocorrer.  
   
- **Primária**  
+ **Primário**  
  Especifica que os backups sempre devem ocorrer na réplica primária. Essa opção será útil se você precisar de recursos de backup, como a criação de backups diferenciais, que não têm suporte quando o backup é executado em uma réplica secundária.  
   
  **Qualquer Réplica**  
@@ -140,7 +140,7 @@ ms.locfileid: "70176050"
  Especifique sua preferência para um[ouvinte de grupo de disponibilidade](../../listeners-client-connectivity-application-failover.md)que fornecerá um ponto de conexão de cliente entre as seguintes opções:  
   
  **Não crie um ouvinte de grupo de disponibilidade agora.**  
- Selecione para ignorar esta etapa. Você pode criar um ouvinte posteriormente. Para obter mais informações, veja [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
+ Selecione para ignorar esta etapa. Você pode criar um ouvinte posteriormente. Para obter mais informações, consulte [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
  **Criar um ouvinte de grupo de disponibilidade.**  
  Especifique suas preferências de ouvinte para este grupo de disponibilidade, da seguinte maneira:  
@@ -174,7 +174,7 @@ ms.locfileid: "70176050"
  **Adicionar**  
  Clique para adicionar uma sub-rede a este ouvinte. Essa ação abre a caixa de diálogo **Adicionar Endereço IP** . Para obter mais informações, consulte o tópico de ajuda [Caixa de diálogo Adicionar Endereço IP &#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Removerr**  
+ **Remover**  
  Clique para remover a sub-rede que está selecionada atualmente na grade.  
   
  **DHCP**  
@@ -206,10 +206,10 @@ ms.locfileid: "70176050"
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [Criar um ponto de extremidade de espelhamento &#40;de banco de dados para grupos de disponibilidade AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Criar um ponto de extremidade de espelhamento de banco de dados para Grupos de Disponibilidade AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   

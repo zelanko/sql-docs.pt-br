@@ -15,25 +15,25 @@ ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925221"
 ---
 # <a name="handling-ado-events"></a>Manipular eventos ADO
-O modelo de evento ADO dá suporte a determinadas operações síncronas e assíncronas do ADO que emitem *eventos*, ou notificações, antes do início da operação ou após a conclusão. Um evento é, na verdade, uma chamada para uma rotina de manipulador de eventos que você define no seu aplicativo.  
+O modelo de evento ADO dá suporte a determinadas operações de ADO síncronas e assíncronas que emitem *eventos*, ou notificações, antes que a operação seja iniciada ou após ser concluída. Um evento é, na verdade, uma chamada para uma rotina de manipulador de eventos que você define em seu aplicativo.  
   
- Se você fornecer procedimentos ou funções de manipulador para o grupo de eventos que ocorrem antes do início da operação, você pode examinar ou modificar os parâmetros que foram passados para a operação. Porque ele não foi executado ainda, você pode cancelar a operação ou permitir que ela seja concluída.  
+ Se você fornecer funções de manipulador ou procedimentos para o grupo de eventos que ocorrem antes do início da operação, poderá examinar ou modificar os parâmetros que foram passados para a operação. Como ele ainda não foi executado, você pode cancelar a operação ou permitir que ela seja concluída.  
   
- Os eventos que ocorrem após a conclusão de uma operação são especialmente importantes se você usar ADO de maneira assíncrona. Por exemplo, um aplicativo que inicia um assíncrono [Recordset.Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) operação é notificada por um evento de conclusão de execução quando conclui a operação.  
+ Os eventos que ocorrem após a conclusão de uma operação são especialmente importantes se você usar o ADO de forma assíncrona. Por exemplo, um aplicativo que inicia um [conjunto de registros assíncrono.](../../../ado/reference/ado-api/open-method-ado-recordset.md) a operação de abertura é notificada por um evento de execução completa quando a operação é concluída.  
   
- Usando o modelo de evento ADO adiciona alguma sobrecarga ao seu aplicativo, mas oferece muito mais flexibilidade do que outros métodos de lidar com operações assíncronas, como o monitoramento do [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade de um objeto com um loop.  
+ O uso do modelo de evento ADO adiciona alguma sobrecarga ao seu aplicativo, mas fornece muito mais flexibilidade do que outros métodos de lidar com operações assíncronas, como o monitoramento da propriedade [State](../../../ado/reference/ado-api/state-property-ado.md) de um objeto com um loop.  
   
 > [!NOTE]
->  Para manipular eventos, ADO precisa ter uma bomba de mensagem ou ser usado em um modelo de single-threaded apartment (STA). Eventos ADO são tratados internamente com a criação de uma janela oculta. ADO posta mensagens para esta janela quando eventos precisam ser acionado. Isso é feito para garantir que os eventos são enviados para o thread que chamou **IConnectionPoint::** no ponto de conexão. Essa arquitetura pode causar problemas quando o thread que deve receber as notificações não bomba de mensagens de janela. Problemas em potencial incluem eventos ADO não estão sendo distribuídos para o thread e difusões de janela global atingindo o tempo limite e, possivelmente, retardando todo o sistema porque as janelas ocultas não processar as mensagens. Os threads STA normalmente têm uma bomba de mensagens em execução para que esse problema não se manifestar em threads STA. Threads MTA, no entanto, geralmente não têm uma bomba de mensagem para que o problema geralmente se manifestará em threads MTA.  
+>  Para lidar com eventos, o ADO precisa ter uma bomba de mensagem ou ser usada em um modelo STA (single-threaded apartment). Os eventos ADO são manipulados internamente pela criação de uma janela oculta. O ADO envia mensagens para essa janela quando os eventos precisam ser acionados. Isso é feito para garantir que os eventos sejam enviados para o thread que chamou **IConnectionPoint:: Advise** no ponto de conexão. Essa arquitetura pode causar problemas quando o thread que deve receber as notificações não bombea as mensagens da janela. Problemas potenciais incluem eventos ADO que não estão sendo entregues ao thread e as difusões de janela global expiram e possivelmente atrasando o sistema inteiro porque as janelas ocultas não processam as mensagens. Os threads STA normalmente têm uma bomba de mensagem em execução, portanto, esse problema não se manifesta em threads STA. Os threads MTA, no entanto, normalmente não têm uma bomba de mensagem, portanto, o problema normalmente se manifestará em threads MTA.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
   
@@ -45,9 +45,9 @@ O modelo de evento ADO dá suporte a determinadas operações síncronas e assí
   
 -   [Instanciação de evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Instanciação de evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Resumo do manipulador de eventos do ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [Instanciação de evento ADO por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Eventos ADO](../../../ado/reference/ado-api/ado-events.md)   
- [Parâmetros de evento](../../../ado/guide/data/event-parameters.md)   
+ [Parâmetros do evento](../../../ado/guide/data/event-parameters.md)   
  [Tipos de eventos](../../../ado/guide/data/types-of-events.md)

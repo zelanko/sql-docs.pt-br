@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62636420"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>Conectar com os Servidores Registrados e o Pesquisador de Objetos
@@ -37,7 +37,7 @@ ms.locfileid: "62636420"
   
 5.  Na caixa **Nome do servidor registrado** , digite [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-6.  Sobre o **propriedades de Conexão** guia da **conectar-se ao banco de dados** lista, selecione  **\<Procurar servidor... >** .  
+6.  Na guia **Propriedades da conexão** , na lista **conectar ao banco de dados** , selecione ** \<procurar servidor... >**.  
   
 7.  Na caixa de diálogo **Procurar Bancos de Dados** , clique em **Sim**.  
   

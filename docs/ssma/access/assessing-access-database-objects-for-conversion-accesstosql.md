@@ -1,5 +1,5 @@
 ---
-title: Avaliar os objetos de banco de dados do Access para conversão (AccessToSQL) | Microsoft Docs
+title: Avaliando objetos de banco de dados do Access para conversão (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,46 +19,46 @@ ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910697"
 ---
-# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Avaliar os objetos de banco de dados do Access para conversão (AccessToSQL)
-Antes de carregar objetos e migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, você deve determinar o quanto da migração seja bem-sucedida, e quanto a conversão pode levar. O SSMA pode criar um relatório de avaliação que mostra o percentual de objetos que foram convertidos com êxito para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou estimativas de sintaxe do SQL Azure e a hora para executar a migração. O SSMA também permite que você exiba os problemas específicos que causava falhas de conversão.  
+# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Avaliando objetos de banco de dados do Access para conversão (AccessToSQL)
+Antes de carregar objetos e migrar dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o ou SQL Azure, você deve determinar quanto da migração será bem-sucedida e por quanto tempo a conversão pode demorar. O SSMA pode criar um relatório de avaliação que mostra a porcentagem de objetos que foram convertidos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com êxito em ou SQL Azure estimativas de sintaxe e tempo para executar a migração. O SSMA também permite que você exiba os problemas específicos que causaram falhas de conversão.  
   
 ## <a name="creating-assessment-reports"></a>Criando relatórios de avaliação  
-Quando ele cria um relatório de avaliação, o SSMA converte os objetos de banco de dados de acesso selecionados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou sintaxe de SQL Azure e, em seguida, mostra os resultados.  
+Quando ele cria um relatório de avaliação, o SSMA converte os objetos de banco [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados do Access selecionados em ou SQL Azure sintaxe e, em seguida, mostra os resultados.  
   
 **Para criar um relatório de avaliação**  
   
-1.  No Gerenciador de metadados de acesso, selecione o banco de dados ou bancos de dados que você deseja avaliar.  
+1.  No Gerenciador de metadados do Access, selecione os bancos de dados que você deseja avaliar.  
   
-2.  Para omitir objetos individuais, desmarque as caixas de seleção ao lado de objetos que você não deseja avaliar.  
+2.  Para omitir objetos individuais, desmarque as caixas de seleção ao lado dos objetos que você não deseja avaliar.  
   
-3.  Clique com botão direito **bancos de dados**e, em seguida, selecione **criar relatório**.  
+3.  Clique com o botão direito do mouse em **bancos de dados**e selecione **criar relatório**.  
   
-    Você também pode analisar objetos individuais clicando duas vezes um objeto e, em seguida, selecionando **criar relatório**.  
+    Você também pode analisar objetos individuais clicando com o botão direito do mouse em um objeto e selecionando **criar relatório**.  
   
     O SSMA mostra o progresso na barra de status na parte inferior da janela. Se o painel de saída estiver visível, você também verá mensagens no painel de saída.  
   
-Quando a avaliação for concluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Access: Janela de relatório de avaliação é exibida.  
+Quando a avaliação for concluída, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] janela Assistente de migração para acesso: relatório de avaliação será exibida.  
   
 ## <a name="using-assessment-reports"></a>Usando relatórios de avaliação  
-A janela de relatório de avaliação contém três painéis: um explorador, um painel de detalhes e um painel de mensagens.  
+A janela relatório de avaliação contém três painéis: um Explorer, um painel de detalhes e um painel de mensagens.  
   
--   O painel do explorer permite procurar os objetos que foram avaliados. Você pode clicar em itens neste painel para detalhar as chaves, índices e tabelas individuais.  
+-   O painel Gerenciador permite procurar os objetos que foram avaliados. Você pode clicar em itens neste painel para fazer uma busca detalhada em tabelas, índices e chaves individuais.  
   
--   O painel de detalhes mostra as estatísticas de conversão para o objeto selecionado.  
+-   O painel detalhes mostra as estatísticas de conversão para o objeto selecionado.  
   
--   O painel mostra os erros, avisos e mensagens informativas para a conversão e estimativas de tempo para executar a migração e as etapas de correção de erros individuais.  
+-   O painel de mensagens mostra erros, avisos e mensagens informativas para a conversão e estimativas de tempo para a execução das etapas de correção de erro individual e de migração.  
   
-Você deve corrigir os erros antes de executar o relatório de avaliação novamente ou converter esquemas. Para encontrar erros, clique o **erros** botão no painel de mensagens e, em seguida, expanda cada erro para exibir uma lista de objetos onde ocorreu o erro. Se você clicar em um objeto no painel de mensagens, todos os erros e avisos para esse objeto aparecerá no painel de detalhes.  
+Você deve corrigir os erros antes de executar o relatório de avaliação novamente ou converter esquemas. Para localizar erros, clique no botão **erros** no painel mensagens e, em seguida, expanda cada erro para exibir uma lista de objetos em que o erro ocorreu. Se você clicar em um objeto no painel mensagens, todos os erros e avisos para esse objeto aparecerão no painel detalhes.  
   
 ## <a name="next-step"></a>Próxima etapa  
 [Converter objetos de banco de dados do Access](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>Consulte também  
-[Migrando bancos de dados do Access para o SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

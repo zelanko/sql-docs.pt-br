@@ -10,14 +10,14 @@ ms.assetid: 9435f6c2-16e7-41b1-906d-d9f09b336f8f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a531208e03c38af7edfa8baf071f855ecd89024d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944642"
 ---
 # <a name="troubleshooting-mysqltosql"></a>Solução de problemas (MySQLToSQL)
-Não é incomum enfrentar midway de problemas de migração executando os comandos ou scripts do console.  
+Não é incomum encontrar problemas de migração no centro da execução dos scripts ou comandos do console.  
   
 Os erros corrigível podem estar relacionados a:  
   
@@ -25,13 +25,13 @@ Os erros corrigível podem estar relacionados a:
   
 2.  Procedimento  
   
-3.  Exibir  
+3.  Visualizar  
   
-4.  Disparador  
+4.  Gatilho  
   
 5.  Modificando o tipo de dados  
   
 6.  Alterando as configurações do projeto  
   
-O problema pode ser corrigido usando a interface de usuário do SSMA, abrindo o arquivo de projeto criado por meio do console.  
+Os problemas podem ser corrigidos usando a interface do usuário do SSMA abrindo o arquivo de projeto criado por meio do console.  
   

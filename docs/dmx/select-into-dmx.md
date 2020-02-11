@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a2e9fb0dfd3607adc1773d4a43561f32ba650ee5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887682"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
@@ -39,8 +39,8 @@ FROM <existing model>
  *lista de parâmetros*  
  Opcional. Uma lista separada por vírgulas de parâmetros definidos pelo provedor para o algoritmo.  
   
- *Expressão*  
- Uma expressão que avalia a uma condição de filtro válida nos dados de treinamento. Para obter mais informações sobre expressões que podem ser usadas como filtros, consulte [filtros para modelos &#40;de mineração Analysis Services-&#41;mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ *expressão*  
+ Uma expressão que avalia a uma condição de filtro válida nos dados de treinamento. Para obter mais informações sobre expressões que podem ser usadas como filtros, consulte [filtros para modelos de mineração &#40;&#41;de mineração de dados de Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
  *modelo existente*  
  Nome do modelo existente, a ser copiado.  
@@ -73,9 +73,9 @@ FROM [TM Clustering]
 > [!NOTE]  
 >  Os filtros aplicados à tabela de casos podem ser alterados com o uso da instrução SELECT INTO, conforme mostrado neste exemplo; no entanto, se o modelo original contiver um filtro em uma tabela aninhada, esse filtro não poderá ser alterado ou removido com o uso dessa sintaxe, mas será copiado sem alterações do modelo original. Para criar um modelo com um filtro diferente em uma tabela aninhada, use a sintaxe ALTER STRTUCTURE... ADD MODEL.  
   
-## <a name="see-also"></a>Consulte também  
- [Instruções de definição &#40;de&#41; dados DMX das extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
- [Instruções de manipulação &#40;de&#41; dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
+ [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

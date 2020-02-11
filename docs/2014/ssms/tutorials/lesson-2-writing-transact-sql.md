@@ -11,17 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470023"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Lição 2: Gravando Transact-SQL
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é um ambiente de desenvolvimento integrado para a escrita de consultas [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML, bem como de comandos SQLCMD. O tutorial ilustra o uso do Editor de Consultas do Mecanismo de Banco de Dados para gravar um script de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]é um ambiente de desenvolvimento integrado para [!INCLUDE[tsql](../../includes/tsql-md.md)]gravação, MDX, DMX, e consultas XML e comandos sqlcmd. O tutorial ilustra o uso do Editor de Consultas do Mecanismo de Banco de Dados para gravar um script de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 > [!NOTE]  
->  Esta lição enfoca os recursos da ferramenta. Para obter um tutorial sobre como escrever [!INCLUDE[tsql](../../includes/tsql-md.md)] consulte [Tutorial: Escrevendo instruções Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md).  
+>  Esta lição enfoca os recursos da ferramenta. Para obter um tutorial sobre como escrever instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [Tutorial: Escrevendo instruções Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md).  
   
  Esta lição abrange os seguintes tópicos:  
   

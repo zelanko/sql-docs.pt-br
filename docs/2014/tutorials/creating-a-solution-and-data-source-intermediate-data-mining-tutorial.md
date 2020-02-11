@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21bedc825f5890e3eb6551818dc5dc10724d2bf8
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891433"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Criando uma solução e uma fonte de dados (tutorial de mineração de dados intermediário)
@@ -22,13 +22,13 @@ ms.locfileid: "68891433"
   
  Quando você cria o projeto, sua solução é armazenada como um arquivo local até ser implantada. Quando você implantar a solução, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] procurará o servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] especificado nas propriedades de projeto e criará um novo banco de dados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] com o mesmo nome que o projeto. Por padrão, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa a instância **localhost** para novos projetos. Se estiver usando uma instância nomeada ou se especificou um nome de servidor diferente para a instância padrão, você deverá alterar a propriedade do banco de dados de implantação do projeto para o local onde deseja criar os objetos de mineração de dados.  
   
- Para obter mais informações [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sobre projetos, consulte [criar um Analysis Services &#40;projeto&#41;SSDT](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt).  
+ Para obter mais informações [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sobre projetos, consulte [criar um projeto de Analysis Services &#40;&#41;SSDT ](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt).  
   
 ### <a name="to-create-a-new-analysis-services-project-for-this-tutorial"></a>Para criar um novo projeto do Analysis Services para este tutorial  
   
-1.  Abra [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Abra o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-2.  No menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.  
+2.  No menu **Arquivo** , aponte para **Novo**e clique em **Projeto**.  
   
 3.  Selecione **Projeto Multidimensional e de Mineração de Dados do Analysis Services** no painel **Modelos Instalados** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68891433"
   
 1.  No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e, em seguida, selecione **Propriedades**.  
   
-     – ou –  
+     -- ou --  
   
      No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no menu **Projeto** , selecione **Propriedades**.  
   
@@ -61,23 +61,23 @@ ms.locfileid: "68891433"
   
 #### <a name="to-create-a-data-source"></a>Para criar uma fonte de dados  
   
--   [Criando um tutorial de &#40;mineração de dados básico de fonte de dados&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+-   [Criando uma fonte de dados &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
- Uma única fonte de dados pode dar suporte a várias exibições de fonte de dados, e cada uma dessas exibições pode ter várias tabelas. No entanto, como a fonte de dados e sua exibição são implantadas no banco de dados [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] com os modelos de mineração de dados criados por você, como prática recomendada, inclua em cada exibição da fonte de dados apenas as tabelas obrigatórias para cada modelo de mineração de dados ou grupo de modelos.  
+ Uma única fonte de dados pode dar suporte a várias exibições de fonte de dados, e cada uma dessas exibições pode ter várias tabelas. No entanto, como a fonte de dados e a exibição da fonte [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de dados são implantadas em seu banco de dados com os modelos de Data Mining que você cria, como uma prática recomendada, você deve incluir em cada exibição da fonte de dado somente as tabelas necessárias para cada modelo de Data Mining ou grupo de modelos.  
   
  Nas próximas lições, você adicionará exibições de fonte de dados para oferecer suporte a cada um dos novos cenários. Apenas as lições de cesta básica e de clustering de sequência usam a mesma exibição de fonte de dados; caso contrário, cada cenário usa uma exibição de fonte de dados diferente. Portanto, as lições são independentes entre si e podem ser concluídas separadamente.  
   
 |Cenário|Dados incluídos na exibição de fonte de dados|  
 |--------------|-------------------------------------------|  
-|[Lição 2: Criando um tutorial de mineração &#40;de dados intermediário de cenário de previsão&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|Relatórios de vendas mensais para modelos de bicicleta em regiões diferentes, coletados como uma única exibição.|  
-|[Lição 3: Tutorial sobre a criação de &#40;um cenário de mineração de dados intermediário do setor de cesta&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Uma tabela que contém uma lista de pedidos de clientes e uma tabela aninhada que mostra as compras individuais de cada cliente.|  
-|[Lição 4: Tutorial sobre a criação de um &#40;cenário de clustering de dados intermediário de agrupamento de sequências&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|Os mesmos dados que são usados para a análise da cesta de compras, com a adição de um identificador que mostra a ordem na qual itens foram comprados.|  
-|[Lição 5: Criando um tutorial de mineração de dados intermediário &#40;de modelos de regressão logística e rede neural&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|Uma única tabela contendo alguns dados de rastreamento de desempenho preliminar de um call center.|  
+|[Lição 2: Criando um cenário de previsão &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|Relatórios de vendas mensais para modelos de bicicleta em regiões diferentes, coletados como uma única exibição.|  
+|[Lição 3: Criando um cenário de cesta de mercado &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Uma tabela que contém uma lista de pedidos de clientes e uma tabela aninhada que mostra as compras individuais de cada cliente.|  
+|[Lição 4: Criando um cenário de clustering de sequência &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|Os mesmos dados que são usados para a análise da cesta de compras, com a adição de um identificador que mostra a ordem na qual itens foram comprados.|  
+|[Lição 5: criando modelos de rede neural e de regressão logística &#40;o tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|Uma única tabela contendo alguns dados de rastreamento de desempenho preliminar de um call center.|  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Criando um tutorial de mineração &#40;de dados intermediário de cenário de previsão&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lição 2: Criando um cenário de previsão &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Projetos de mineração de dados](../../2014/analysis-services/data-mining/data-mining-projects.md)   
  [Exibições de fontes de dados em modelos multidimensionais](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   

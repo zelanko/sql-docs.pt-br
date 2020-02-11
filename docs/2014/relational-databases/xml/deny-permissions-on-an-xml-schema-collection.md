@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2fe1a42540b21fd11dbfb9747a77991073d35c97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637564"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Recusar permissões em uma coleção de esquemas XML
@@ -47,7 +47,7 @@ ms.locfileid: "62637564"
 ## <a name="examples"></a>Exemplos  
  Os cenários nos exemplos a seguir mostram como as permissões de esquema XML funcionam. Cada exemplo cria o banco de dados, os esquemas relacionais e os logons de teste necessários. Esses logons recebem as permissões necessárias na coleção de esquema XML. Cada exemplo faz a limpeza necessária no final.  
   
-### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. Impedindo que um usuário crie uma coleção de esquema XML  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>a. Impedindo que um usuário crie uma coleção de esquema XML  
  Uma das maneiras de impedir que um usuário crie uma coleção de esquema XML é negar a permissão ALTER em um esquema relacional. Isso é mostrado no exemplo a seguir.  
   
  O exemplo cria um usuário, `TestLogin1`, e um banco de dados. Ele também cria um esquema relacional, além do esquema `dbo` , no banco de dados. Inicialmente, a permissão `CREATE XML SCHEMA` permite que o usuário crie uma coleção de esquema em qualquer lugar no banco de dados. Em seguida, o exemplo nega permissão `ALTER` ao usuário em um dos esquemas relacionais. Isto impede que o usuário crie uma coleção de esquema XML naquele esquema relacional.  
@@ -188,7 +188,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Comparar XML digitado com XML não digitado](compare-typed-xml-to-untyped-xml.md)   
  [Coleções de esquemas XML &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)   
  [Requisitos e limitações de uso de coleções de esquema XML no servidor](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630717"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurar segurança de caixa de diálogo para notificações de evento
@@ -28,11 +28,11 @@ ms.locfileid: "62630717"
 > [!IMPORTANT]  
 >  Todos os certificados devem ser criados com datas válidas de início e de validade.  
   
- **Etapa 1: Estabeleça o nome do serviço um TCP porta número e de destino.**  
+ **Etapa 1: Estabeleça um número da porta de TCP e o nome do serviço de destino.**  
   
  Estabeleça a porta de TCP pela qual o servidor de origem e o servidor de destino receberão mensagens. Você também deve determinar o nome do serviço de destino.  
   
- **Etapa 2: Configure a criptografia e compartilhamento de certificados para autenticação em nível de banco de dados.**  
+ **Etapa 2: Configure criptografia e compartilhamento de certificados para autenticação em nível de banco de dados.**  
   
  Efetue as ações abaixo nos servidores de origem e de destino.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62630717"
 ||[Conceda permissão SEND](/sql/t-sql/statements/grant-transact-sql) no serviço de destino ao usuário do banco de dados de origem.|  
 |Forneça o identificador do agente de serviços do banco de dados de origem para o servidor de destino. Esse identificador pode ser obtido consultando-se a coluna **service_broker_guid** da exibição de catálogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) . Para uma notificação de eventos de nível de servidor, use o identificador do service broker do **msdb**.|Forneça o identificador do agente de serviços do banco de dados de destino para o servidor de origem.|  
   
- **Etapa 4: Criar rotas e configure autenticação em nível de servidor.**  
+ **Etapa 4: Crie rotas e configure autenticação em nível de servidor.**  
   
  Efetue as ações abaixo nos servidores de origem e de destino.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62630717"
 |Alterne para o banco de dados de origem no qual criar a notificação de eventos e, caso ainda não esteja conectado como usuário do banco de dados de origem, faça-o agora.|Alterne para o banco de dados de destino a receber as mensagens de notificação de eventos.|  
 |[Crie a notificação de eventos](/sql/t-sql/statements/create-event-notification-transact-sql)e especifique o agente de serviços e o identificador do banco de dados de destino.||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   

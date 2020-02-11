@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 title: Documentação do Microsoft SQL
-summary: Saiba como usar o Microsoft SQL Server para atender às suas necessidades de banco de dados, no local e na nuvem.
+summary: Aprenda a usar os Serviços do SQL do Azure e o SQL Server para gerenciar suas necessidades de banco de dados, tanto localmente quanto na nuvem.
 brand: sql
 metadata:
   title: Documentação do Microsoft SQL | Microsoft Docs
-  description: Saiba como usar o Microsoft SQL Server para gerencias suas necessidades de banco de dados, no local e na nuvem.
+  description: Aprenda a usar os Serviços do SQL do Azure e o SQL Server para gerenciar suas necessidades de banco de dados, tanto localmente quanto na nuvem.
   ms.topic: hub-page
-  ms.openlocfilehash: b1e77857e3b4a9b5159a20c10eec5fdb5a403f85
-  ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+  ms.openlocfilehash: 42bba30813744d9dfeb20e1042ba3a57f1ee99c6
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/07/2019
-  ms.locfileid: "73757215"
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "76831661"
 highlightedContent:
   items:
   - title: Experimente o SQL Server 2019
@@ -20,23 +20,23 @@ highlightedContent:
   - title: Obter uma VM do Azure com o SQL Server
     itemType: overview
     url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
-  - title: Baixar ferramentas de dados de consulta
-    itemType: download
+  - title: Ferramentas do SQL
+    itemType: overview
     url: tools/overview-sql-tools.md
-  - title: Centro de educação do SQL Server
+  - title: Recursos educativos do SQL
     itemType: learn
-    url: lp/sql-server/sql-education-center.md
+    url: sql-server/educational-sql-resources.yml
 productDirectory:
   items:
   - title: SQL no Azure
-    imageSrc: media/index/azure.png
+    imageSrc: media/index/azure.svg
     links:
     - url: https://docs.microsoft.com/azure/sql-database/
-      text: Banco de dados SQL do Azure
+      text: Banco de Dados SQL do Azure
     - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
       text: Azure Synapse Analytics (SQL DW)
   - title: SQL Server no Windows
-    imageSrc: media/index/windows.png
+    imageSrc: media/index/windows.svg
     links:
     - url: sql-server/index.yml
       text: Local
@@ -45,7 +45,7 @@ productDirectory:
     - url: https://docs.microsoft.com/previous-versions/sql/
       text: Versões anteriores (SQL 2005-2012)
   - title: SQL Server no Linux
-    imageSrc: media/index/linux.png
+    imageSrc: media/index/linux.svg
     links:
     - url: linux/sql-server-linux-overview.md
       text: Local
@@ -53,7 +53,7 @@ productDirectory:
       text: Em uma VM do Azure
 conceptualContent:
   items:
-  - title: Guia de introdução
+  - title: Introdução
     links:
     - text: Conexão e consulta (Azure Data Studio)
       url: azure-data-studio/quickstart-sql-server.md
@@ -73,18 +73,18 @@ conceptualContent:
   - title: Novidades
     links:
     - text: SQL Server 2019
-      url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15
+      url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15
       itemType: whats-new
     - text: Cluster de Big Data do SQL Server
-      url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+      url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
       itemType: whats-new
     - text: Azure Data Studio
-      url: azure-data-studio/what-is.md
+      url: azure-data-studio/release-notes-azure-data-studio.md
       itemType: whats-new
     - text: Serviço de Migração de Banco de Dados do Azure
       url: https://docs.microsoft.com/azure/dms/dms-overview
       itemType: whats-new
-    - text: Serviços de Machine Learning do SQL
+    - text: Serviços de Machine Learning do SQL Server
       url: advanced-analytics/index.yml
       itemType: whats-new
   - title: Instalar
@@ -95,6 +95,9 @@ conceptualContent:
     - text: SQL Server Management Studio (SSMS)
       url: ssms/download-sql-server-management-studio-ssms.md
       itemType: deploy
+    - text: Azure Data Studio
+      url: azure-data-studio/download.md
+      itemType: deploy
     - text: Analysis Services (SSAS)
       url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
       itemType: deploy
@@ -104,9 +107,6 @@ conceptualContent:
     - text: Reporting Services (SSRS)
       url: reporting-services/install-windows/install-reporting-services.md
       itemType: deploy
-    footerLink:
-      text: Ver mais
-      url: lp/sql-server/install-sql-and-services.md
   - title: Migrar
     links:
     - text: Guia de migração de dados
@@ -118,7 +118,7 @@ conceptualContent:
     - text: DMS (Serviço de Migração de Banco de Dados) do Azure
       url: https://docs.microsoft.com/azure/dms/dms-overview
       itemType: overview
-    - text: AMD (Assistente de Migração de Banco de Dados)
+    - text: DMA (Assistente de Migração de Banco de Dados)
       url: dma/dma-overview.md
       itemType: overview
     - text: DEA (Assistente para Experimentos de Banco de Dados)
@@ -129,55 +129,29 @@ conceptualContent:
       itemType: overview
     footerLink:
       text: Ver mais
-      url: lp/sql-server/load-move-data.md
+      url: sql-server/migrate/index.yml
 additionalContent:
   sections:
   - items:
-    - title: Administração
-      links:
-      - text: DMVs (exibições de gerenciamento dinâmico)
-        url: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
-      - text: Exibições de catálogo do sistema
-        url: relational-databases/system-catalog-views/catalog-views-transact-sql.md
-      - text: Eventos estendidos
-        url: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
-      - text: Protegendo o SQL Server
-        url: relational-databases/security/securing-sql-server.md
-      - text: SQL PowerShell
-        url: powershell/sql-server-powershell.md
-      - text: API REST do SQL do Azure
-        url: https://docs.microsoft.com/rest/api/sql/
-      - text: PowerShell do SQL do Azure
-        url: https://docs.microsoft.com/powershell/module/az.sql/
-    - title: Segurança e privacidade
-      links:
-      - text: Auditoria do SQL Server
-        url: relational-databases/security/auditing/sql-server-audit-database-engine.md
-      - text: Auditoria do Banco de Dados SQL do Azure
-        url: https://docs.microsoft.com/azure/sql-database/sql-database-auditing
-      - text: Classificação de dados
-        url: relational-databases/security/sql-data-discovery-and-classification.md
-      - text: Always Encrypted
-        url: relational-databases/security/encryption/always-encrypted-database-engine.md
     - title: Desenvolvimento
       links:
       - text: Criar um aplicativo usando o SQL Server
         url: https://www.microsoft.com/sql-server/developer-get-started/
+      - text: Conectividade de cliente do SQL Server
+        url: connect/homepage-sql-connection-programming.md
       - text: DevOps usando o SQL Server
         url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
-      - text: Segurança do SQL Server
-        url: https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security
       - text: Aplicativos de BD do SQL do Azure
         url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
       - text: Bibliotecas de conectividade do BD do SQL do Azure
         url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
-      - text: Conectividade de cliente do SQL Server
-        url: connect/homepage-sql-connection-programming.md
       - text: Transact-SQL (T-SQL)
         url: t-sql/language-reference.md
+      - text: SQL PowerShell
+        url: powershell/sql-server-powershell.md
       - text: Exemplos de banco de dados
         url: samples/sql-samples-where-are.md
-    - title: Relatório e Machine Learning
+    - title: Relatório e análise
       links:
       - text: Servidor de Relatórios do Power BI
         url: https://docs.microsoft.com/power-bi/report-server/get-started
@@ -185,41 +159,21 @@ additionalContent:
         url: https://docs.microsoft.com/power-bi/service-get-started
       - text: SQL Server Reporting Services (SSRS)
         url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-      - text: Azure Machine Learning
-        url: https://docs.microsoft.com/azure/machine-learning/
-      - text: Serviços de Machine Learning do SQL (R & Python)
-        url: advanced-analytics/index.yml
-      - text: SQL Server R Services
-        url: advanced-analytics/r/sql-server-r-services.md
-    - title: Big Data
+      - text: SSAS (SQL Server Analysis Services)
+        url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+      - text: Azure Analysis Services
+        url: https://docs.microsoft.com/azure/analysis-services/
+    - title: Big data aprendizado de máquina
       links:
-      - text: Clusters de Big Data do SQL Server 2019
-        url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+      - text: Clusters de Big Data do SQL Server
+        url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
       - text: Virtualização de dados com Polybase
         url: relational-databases/polybase/polybase-guide.md
       - text: Azure Synapse Analytics (SQL DW)
         url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-      - text: Hiperescala do Banco de Dados SQL do Azure
-        url: https://docs.microsoft.com/azure/sql-database/sql-database-service-tier-hyperscale
-      - text: Azure Analysis Services
-        url: https://docs.microsoft.com/azure/analysis-services/
-      - text: SSAS (SQL Server Analysis Services)
-        url: https://docs.microsoft.com/analysis-services/analysis-services-overview
       - text: Microsoft Analytics Platform System
         url: analytics-platform-system/index.md
-    - title: Ferramentas
-      links:
-      - text: Azure Data Studio
-        url: azure-data-studio/download.md
-      - text: SQL Server Management Studio (SSMS)
-        url: ssms/download-sql-server-management-studio-ssms.md
-      - text: mssql-cli
-        url: tools/mssql-cli.md
-      - text: CLI do SQL do Azure
-        url: https://docs.microsoft.com/cli/azure/sql
-      - text: SQL Server Data Tools (SSDT)
-        url: ssdt/download-sql-server-data-tools-ssdt.md
-      - text: Distributed Replay
-        url: tools/distributed-replay/sql-server-distributed-replay.md
-      - text: Veja mais ferramentas
-        url: tools/overview-sql-tools.md
+      - text: Serviços de Machine Learning do SQL Server (R e Python)
+        url: advanced-analytics/index.yml
+      - text: Azure Machine Learning
+        url: https://docs.microsoft.com/azure/machine-learning/

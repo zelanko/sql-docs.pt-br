@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470176"
 ---
 # <a name="uninstall-sql-server-2014"></a>Desinstalar o SQL Server 2014
@@ -33,7 +33,7 @@ ms.locfileid: "62470176"
  [Desinstalar e remover o Master Data Services](uninstall-and-remove-master-data-services.md)  
  Este tópico descreve o processo de desinstalar e remover o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] do computador local.  
   
- [Remover objetos do Data Quality Server](remove-data-quality-server-objects.md)  
+ [Remover objetos do Servidor de Qualidade de Dados](remove-data-quality-server-objects.md)  
  Este tópico descreve como remover manualmente os objetos [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] após desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou apenas o componente [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] no [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS).  
   
 ## <a name="related-sections"></a>Seções relacionadas  
@@ -42,9 +42,9 @@ ms.locfileid: "62470176"
   
 -   [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
--   [Remover uma instalação do SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
+-   [Descartar uma instalação do SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Planejando uma instalação do SQL Server](planning-a-sql-server-installation.md)   
  [Instalar o SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
  [Atualizar para o SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  

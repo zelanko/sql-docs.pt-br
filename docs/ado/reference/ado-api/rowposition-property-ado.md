@@ -1,5 +1,5 @@
 ---
-title: Propriedade RowPosition (ADO) | Microsoft Docs
+title: Propriedade de função (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931228"
 ---
 # <a name="rowposition-property-ado"></a>Propriedade RowPosition (ADO)
-Obtém ou define um banco de dados OLE **RowPosition** objeto de/em uma **ADORecordsetConstruction** objeto. Quando você usa **put_RowPosition** para definir o **RowPosition** objeto resultante **conjunto de registros** objeto usa o **RowPosition** objeto Determine a linha atual.  
+Obtém ou define um OLE DB objeto de **função** de/em um objeto **ADORecordsetConstruction** . Quando você usa **put_RowPosition** para definir o **objeto de** rowgroup, o objeto **Recordset** resultante **usa o objeto** rowgroup para determinar a linha atual.  
   
  Leitura/gravação.  
   
@@ -38,18 +38,18 @@ HRESULT get_RowPosition([out, retval] IUnknown** ppRowPos);
 HRESULT put_RowPosition([in] IUnknown* pRowPos);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *ppRowPos*  
- Ponteiro para um banco de dados OLE **RowPosition** objeto.  
+ Ponteiro para um objeto de OLE DB de @ **Position** .  
   
  *PRowPos*  
- Um banco de dados OLE **RowPosition** objeto.  
+ Um OLE DB objeto de @ **Position** .  
   
 ## <a name="return-values"></a>Valores de retorno  
- Esse método de propriedade retorna os valores HRESULT padrão, incluindo S_OK e E_FAIL.  
+ Esse método de propriedade retorna os valores de HRESULT padrão, incluindo S_OK e E_FAIL.  
   
 ## <a name="remarks"></a>Comentários  
- Quando essa propriedade é definida, se o **conjunto de linhas** do objeto na **RowPosition** objeto é diferente do **conjunto de linhas** objeto o **Recordset**do objeto, o primeiro substitui o último. O mesmo comportamento se aplica ao atual **capítulo** da **RowPosition** também.  
+ Quando essa propriedade for definida, se o objeto de **conjunto de linhas** no objeto da **posição** for diferente do objeto **Rowset** no objeto **Recordset** , o primeiro substituirá o último. O mesmo comportamento também se aplica ao **capítulo** atual da sua **posição** .  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Interface ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

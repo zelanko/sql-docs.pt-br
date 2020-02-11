@@ -1,5 +1,5 @@
 ---
-title: BeginTrans, CommitTrans e RollbackTrans exemplo dos métodos (VC + +) | Microsoft Docs
+title: Exemplo dos métodos BeginTrans, CommitTrans e RollbackTrans (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f99cab327d9171aaa53b6c273c4a519bf13680b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d91809adccee64e6f9ed4b9c2501718e82c31a4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920424"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76940447"
 ---
-# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans e RollbackTrans exemplo dos métodos (VC + +)
-Este exemplo altera o tipo de livro de todos os livros de psicologia na ***títulos*** tabela do banco de dados. Após o [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método inicia uma transação que isola todas as alterações feitas para o ***títulos*** tabela, o [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método salva as alterações. Você pode usar o [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método para desfazer as alterações que você salvou usando a [atualização](../../../ado/reference/ado-api/update-method.md) método.  
+# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>Exemplo dos métodos BeginTrans, CommitTrans e RollbackTrans (VC + +)
+Este exemplo altera o tipo de livro de todos os livros de psicologia na tabela ***títulos*** do banco de dados. Depois que o método [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) inicia uma transação que isola todas as alterações feitas na tabela de ***títulos*** , o método [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) salva as alterações. Você pode usar o método [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) para desfazer alterações que você salvou usando o método [Update](../../../ado/reference/ado-api/update-method.md) .  
   
 ## <a name="example"></a>Exemplo  
   
@@ -196,7 +196,7 @@ void BeginTransX() {
          printf("%s -  %s\n", titlrs.m_szT_title, titlrs.m_szT_type);  
          rstTitles->MoveNext();  
       }  
-      // Restore original data becasue this is a demonstration.  
+      // Restore original data because this is a demonstration.  
       rstTitles->MoveFirst();  
   
       while (VARIANT_FALSE == rstTitles->EndOfFile) {  
@@ -266,6 +266,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [BeginTrans, CommitTrans e RollbackTrans métodos (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Métodos BeginTrans, CommitTrans e RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Método Update](../../../ado/reference/ado-api/update-method.md)

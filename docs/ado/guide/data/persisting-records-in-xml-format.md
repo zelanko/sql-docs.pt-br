@@ -17,19 +17,19 @@ ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924592"
 ---
 # <a name="persisting-records-in-xml-format"></a>Persistência de registros em formato XML
-Como o formato ADTG **Recordset** persistência em formato XML é implementada com o Microsoft OLE DB provedor de persistência. Esse provedor gera um conjunto de linhas de somente avanço, somente leitura de um fluxo que contém as informações de esquema geradas por ADO ou arquivo XML salvo. Da mesma forma, pode levar a um ADO **conjunto de registros**, gerar o XML e salvá-lo em um arquivo ou qualquer objeto que implementa o COM **IStream** interface. (Na verdade, um arquivo é somente outro exemplo de um objeto que dá suporte a **IStream**.) Para as versões 2.5 e posteriores, o ADO baseia-se no Microsoft XML Parser (MSXML) para carregar o XML para o **conjunto de registros**; portanto, o MSXML. dll é necessária.  
+Como o formato ADTG, a persistência do **conjunto de registros** em formato XML é implementada com o provedor de persistência do Microsoft OLE DB. Esse provedor gera um conjunto de linhas somente de encaminhamento, somente leitura, de um arquivo XML salvo ou fluxo que contém as informações de esquema geradas pelo ADO. Da mesma forma, ele pode pegar um **conjunto de registros**ADO, gerar XML e salvá-lo em um arquivo ou em qualquer objeto que implemente a interface com **IStream** . (Na verdade, um arquivo é apenas outro exemplo de um objeto que dá suporte a **IStream**.) Para as versões 2,5 e posteriores, o ADO depende do Microsoft XML Parser (MSXML) para carregar o XML no **conjunto de registros**; Portanto, MSXML. dll é necessário.  
   
 > [!NOTE]
->  Algumas limitações se aplicam ao salvar hierárquica **conjuntos de registros** (formas de dados) em formato XML. Não é possível salvar em XML se o hierárquica **conjunto de registros** contém as atualizações pendentes, e não é possível salvar um parametrizada hierárquica **conjunto de registros**. Para obter mais informações, consulte [persistindo filtrados e conjuntos de registros hierárquicos](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
+>  Algumas limitações se aplicam ao salvar **conjuntos de registros** hierárquicos (formas de dados) em formato XML. Você não poderá salvar em XML se o **conjunto de registros** hierárquico contiver atualizações pendentes e não for possível salvar um **conjunto de registros**hierárquicos parametrizados. Para obter mais informações, consulte [mantendo conjuntos de registros filtrados e hierárquicos](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
   
- A maneira mais fácil de manter os dados em XML e carregá-lo de volta novamente por meio de ADO é com o **salve** e **abrir** métodos, respectivamente. O exemplo de código ADO demonstra salvando os dados a **títulos** tabela em um arquivo chamado titles.sav.  
+ A maneira mais fácil de manter os dados em XML e carregá-los novamente por meio do ADO é com os métodos **Save** e **Open** , respectivamente. O exemplo de código ADO a seguir demonstra como salvar os dados na tabela **títulos** em um arquivo nomeado titles. SAV.  
   
 ```  
 Dim rs as new Recordset  
@@ -59,16 +59,16 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO sempre persiste todo o **Recordset** objeto. Se você desejar manter um subconjunto de linhas do **conjunto de registros** do objeto, use o **filtro** método para restringir as linhas ou alterar sua cláusula de seleção. No entanto, você deve abrir um **conjunto de registros** objeto com um cursor do lado do cliente (**CursorLocation** = **adUseClient**) para usar o **filtrar** método para salvar um subconjunto de linhas. Por exemplo, para recuperar os títulos que começam com a letra "b", você pode aplicar um filtro para um aberto **Recordset** objeto:  
+ O ADO sempre persiste todo o objeto **Recordset** . Se você quiser manter um subconjunto de linhas do objeto **Recordset** , use o método **Filter** para restringir as linhas ou alterar sua cláusula de seleção. No entanto, você deve abrir um objeto **Recordset** com um cursor do lado do cliente (**CursorLocation** = **adUseClient**) para usar o método de **filtro** para salvar um subconjunto de linhas. Por exemplo, para recuperar títulos que começam com a letra "b", você pode aplicar um filtro a um objeto Open **Recordset** :  
   
 ```  
 rs.Filter "title_id like 'B*'"  
 rs.Save "btitles.sav", adPersistXML  
 ```  
   
- ADO sempre usa o conjunto de linhas do mecanismo de Cursor do cliente para produzir um rolável possíveis de indicação **Recordset** objeto sobre os dados de somente avanço gerados pelo provedor de persistência.  
+ O ADO sempre usa o conjunto de linhas do mecanismo de cursor do cliente para produzir um objeto de **conjunto de registros** que poderá ser marcado como rolável sobre os dados somente de encaminhamento gerados pelo provedor de persistência.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Formato de persistência XML](../../../ado/guide/data/xml-persistence-format.md)  
   
@@ -84,7 +84,7 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [Transformações XSLT](../../../ado/guide/data/xslt-transformations.md)  
   
--   [Salvando no objeto DOM XML](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
+-   [Salvar no objeto DOM XML](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
   
 -   [Considerações sobre segurança XML](../../../ado/guide/data/xml-security-considerations.md)  
   

@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643449"
 ---
 # <a name="granting-access-to-a-database-object"></a>concedendo acesso a um objeto de banco de dados
-  Como administrador, você pode executar SELECT na tabela **Produtos** e na exibição **vw_Names**, além de executar o procedimento **pr_Names**; no entanto, Marina não pode. Para conceder as permissões necessárias à Mary, use a instrução GRANT.  
+  Como administrador, você pode executar SELECT na tabela **Produtos** e na exibição **vw_Names** , além de executar o procedimento **pr_Names** ; no entanto, Marina não pode. Para conceder as permissões necessárias à Mary, use a instrução GRANT.  
   
 ### <a name="procedure-title"></a>Título do procedimento  
   
@@ -40,9 +40,9 @@ ms.locfileid: "62643449"
  É preciso ter permissão EXECUTE para executar um procedimento armazenado. É preciso ter permissões SELECT, INSERT, UPDATE e DELETE para acessar e alterar dados. A instrução GRANT também é usada para outras permissões, como permissão para criar tabelas.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Resumo: Configurando permissões em objetos de banco de dados](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+ [resumo: configurando permissões em objetos de banco de dados](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
   

@@ -1,5 +1,5 @@
 ---
-title: O que&#39;novo no SQL Server Native Client | Microsoft Docs
+title: O que&#39;s New no SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638847"
 ---
-# <a name="what39s-new-in-sql-server-native-client"></a>O que&#39;novo no SQL Server Native Client
+# <a name="what39s-new-in-sql-server-native-client"></a>O que&#39;s New no SQL Server Native Client
   O [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instala o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. Não há nenhum [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client.  
   
  Não haverá mais atualizações para o driver ODBC no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. O sucessor do driver ODBC no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, denominado [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Windows, é instalado com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Para obter mais informações sobre o [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Windows, consulte [Microsoft ODBC Driver 11 para SQL Server - Windows](https://www.microsoft.com/download/details.aspx?id=36434).  
@@ -42,19 +42,20 @@ ms.locfileid: "62638847"
   
 -   Extensibilidade do tipo de dados C. Para obter mais informações, consulte [Tipos de dados C em ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
   
-     Para dar suporte a esse recurso no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, SQLGetDescField pode retornar `SQL_C_SS_TIME2` (para `time` tipos) ou `SQL_C_SS_TIMESTAMPOFFSET` (para `datetimeoffset`) em vez de `SQL_C_BINARY`, se seu aplicativo usar o ODBC 3.8. Para obter mais informações, consulte [suporte de tipo de dados para ODBC aprimoramentos de data e hora](features/date-and-time-improvements.md).  
+     Para dar suporte a esse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recurso no Native Client, SQLGetDescField `SQL_C_SS_TIME2` pode retornar `time` (para tipos `SQL_C_SS_TIMESTAMPOFFSET` ) ou `datetimeoffset`(for) `SQL_C_BINARY`em vez de, se seu aplicativo usar o ODBC 3,8. Para obter mais informações, consulte [suporte de tipo de dados para aprimoramentos de data e hora ODBC](features/date-and-time-improvements.md).  
   
 -   Chamando `SQLGetData` várias vezes com um buffer pequeno para recuperar um valor de parâmetro grande. Para obter mais informações, consulte [Recuperando parâmetros de saída usando SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
   
  Os tópicos a seguir descrevem as alterações de comportamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
--   Ao chamar `ICommandWithParameters::SetParameterInfo`, o valor passado para o *pwszName* parâmetro deve ser um identificador válido. Para obter mais informações, consulte [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
+-   Ao chamar `ICommandWithParameters::SetParameterInfo`, o valor passado para o parâmetro *pwszName* deve ser um identificador válido. Para obter mais informações, consulte [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
   
--   `SQLDescribeParam` agora irá retornar de maneira consistente um valor que esteja de acordo com a especificação de ODBC. Para obter mais informações, consulte [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
+-   
+  `SQLDescribeParam` agora irá retornar de maneira consistente um valor que esteja de acordo com a especificação de ODBC. Para obter mais informações, consulte [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
   
 -   [Alteração de comportamento do driver ODBC ao lidar com conversões de caracteres](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos do SQL Server Native Client](features/sql-server-native-client-features.md)  
   
   
