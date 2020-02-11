@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770649"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivar valores de coluna por meio da transformação Coluna Derivada
@@ -58,12 +58,12 @@ ms.locfileid: "62770649"
   
 12. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Derived Column Transformation](derived-column-transformation.md)   
  [Tipos de dados do Integration Services](../integration-services-data-types.md)   
  [Transformações do Integration Services](integration-services-transformations.md)   
  [Caminhos do Integration Services](../integration-services-paths.md)   
  [Tarefa de Fluxo de Dados](../../control-flow/data-flow-task.md)   
- [Expressões do Integration Services &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md)  
+ [Expressões do SSIS &#40;Integration Services&#41;](../../expressions/integration-services-ssis-expressions.md)  
   
   

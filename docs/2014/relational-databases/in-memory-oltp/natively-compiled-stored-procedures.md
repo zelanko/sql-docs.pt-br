@@ -13,14 +13,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714913"
 ---
 # <a name="natively-compiled-stored-procedures"></a>procedimentos armazenados compilados nativamente
-  Os procedimentos armazenados compilados nativamente são procedimentos armazenados [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados no código nativo que acessam tabelas com otimização de memória. Procedimentos armazenados compilados nativamente permitem a execução eficiente de consultas e lógica de negócios no procedimento armazenado. Para obter mais detalhes sobre o processo de compilação nativo, consulte [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md). Para obter mais informações sobre como migrar procedimentos armazenados baseados em disco para os procedimentos armazenados compilados nativamente, consulte [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md).  
+  Os procedimentos armazenados compilados nativamente são procedimentos armazenados [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados no código nativo que acessam tabelas com otimização de memória. Procedimentos armazenados compilados nativamente permitem a execução eficiente de consultas e lógica de negócios no procedimento armazenado. Para obter mais detalhes sobre o processo de compilação nativo, consulte [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md). Para mais informações sobre a migração de procedimentos armazenados baseados em disco para procedimentos armazenados compilados de modo nativo, veja [Problemas de migração para procedimentos armazenados compilados de modo nativo](migration-issues-for-natively-compiled-stored-procedures.md).  
   
 > [!NOTE]  
 >  Uma diferença entre procedimentos armazenados interpretados (com base em disco) e procedimentos armazenados compilados nativamente é que o procedimento armazenado interpretado é criado na primeira execução enquanto que um procedimento armazenado compilado nativamente é compilado quando é criado. Com os procedimentos armazenados compilados nativamente, muitas condições de erro (estouro aritmético, conversão de tipo e algumas condições de divisão por zero) podem ser detectadas no momento da criação e causarão a falha na geração do procedimento armazenado compilado nativamente. Com os procedimentos armazenados interpretados, essas condições de erro geralmente não causarão uma falha quando o procedimento armazenado for criado, mas todas as execuções falharão.  
@@ -45,7 +45,7 @@ ms.locfileid: "62714913"
   
 -   [Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas com otimização de memória](memory-optimized-tables.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   
