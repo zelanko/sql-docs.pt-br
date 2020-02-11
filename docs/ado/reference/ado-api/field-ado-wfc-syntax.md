@@ -1,5 +1,5 @@
 ---
-title: Campo (ADO – sintaxe WFC) | Microsoft Docs
+title: Campo (sintaxe ADO-WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 583e6de7dc8c3ea05d61dda53c3e630d05e4d5f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918755"
 ---
 # <a name="field-ado---wfc-syntax"></a>Campo (ADO – Sintaxe WFC)
-## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>pacote com. ms. wfc. Data  
   
 ### <a name="methods"></a>Métodos  
   
@@ -44,7 +44,7 @@ public com.ms.com.IUnknown getDataFormat()
 public void setDataFormat(com.ms.com.IUnknown format)  
 ```  
   
- (Para obter mais informações, consulte a documentação para a interface com.ms.wfc.data.IDataFormat).  
+ (Para obter mais informações, consulte a documentação da interface com. ms. wfc. Data. IDataFormat.)  
   
 ```  
 public int getDefinedSize()  
@@ -64,13 +64,13 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="field-accessor-methods"></a>Métodos de acessador de campo  
- O [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade de uma [campo](../../../ado/reference/ado-api/field-object.md) objeto obtém ou define o conteúdo desse objeto. O conteúdo é representado como uma VARIANTE, um tipo de objeto que pode ser atribuído um valor e qualquer um dos vários tipos de dados.  
+ A propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) de um objeto [Field](../../../ado/reference/ado-api/field-object.md) Obtém ou define o conteúdo desse objeto. O conteúdo é representado como uma variante, um tipo de objeto que pode ser atribuído a um valor e qualquer um de vários tipos de dados.  
   
- ADO/WFC implementa o **valor** propriedade com o **getValue** método, que retorna um objeto de VARIANTE; e o **setValue** método, que usa uma VARIANTE como um argumento. Variantes são altamente eficientes em determinados idiomas, como o Microsoft Visual Basic.  
+ O ADO/WFC implementa a propriedade **Value** com o método **GetValue** , que retorna um objeto Variant; e o método **SetValue** , que usa uma variante como um argumento. As VARIAntes são altamente eficientes em determinadas linguagens, como o Microsoft Visual Basic.  
   
- Além de **valor** propriedade, ADO/WFC fornece *acessador* métodos que usam tipos de dados Java para obter e definir o conteúdo de **campo** objetos. A maioria desses métodos têm nomes no formato **Obtenha**_DataType_ ou **definir**_DataType_.  
+ Além da propriedade **Value** , o ADO/WFC fornece métodos *acessadores* que usam tipos de dados Java para obter e definir o conteúdo de objetos de **campo** . A maioria desses métodos tem nomes do formulário **obter**_DataType_ ou **definir**_DataType_.  
   
- Há duas exceções notáveis: Um dos **getObject** métodos retorna um objeto forçado em uma classe especificada. Não há nenhuma **getNull** propriedade; em vez disso, há um **isNull** propriedade que retorna um valor booliano que indica se o campo é nulo.  
+ Há duas exceções notáveis: um dos métodos **GetObject** retorna um objeto forçado a uma classe especificada. Não há nenhuma propriedade **getnull** ; em vez disso, há uma propriedade **IsNull** que retorna um valor booliano que indica se o campo é nulo.  
   
 ```  
 public native boolean getBoolean();  
@@ -98,5 +98,5 @@ public Object getObject(Class c)
 public void setObject(Object value)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)
+## <a name="see-also"></a>Consulte Também  
+ [Objeto Campo](../../../ado/reference/ado-api/field-object.md)

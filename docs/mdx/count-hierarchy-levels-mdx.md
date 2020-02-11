@@ -1,5 +1,5 @@
 ---
-title: Count (níveis de hierarquia) (MDX) | Microsoft Docs
+title: Contagem (níveis de hierarquia) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17fe804de8bf2c20581ca5c00bee3a28dbce4d55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045214"
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count (Níveis de hierarquia) (MDX)
@@ -28,7 +28,7 @@ Hierarchy_Expression.Levels.Count
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expressão_Hierarquia*  
+ *Hierarchy_Expression*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
 ## <a name="remarks"></a>Comentários  
@@ -47,10 +47,10 @@ Select Measures.X ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Contagem de &#40;dimensão&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
- [Contagem de &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Contagem de &#40;de dimensões&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
+ [Contar &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
+ [Contagem &#40;definida&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

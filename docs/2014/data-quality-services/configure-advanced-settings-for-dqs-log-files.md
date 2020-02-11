@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1530594eefbb5c614901f2b8cb73030b989951fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480970"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Definir configurações avançadas para arquivos de log do DQS
@@ -36,7 +36,7 @@ ms.locfileid: "65480970"
   
 -   Você deve estar conectado como membro do grupo Administradores no computador onde está modificando o arquivo DQLog.Client.xml para definir as configurações de log do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
-##  <a name="DQSServer"></a> Definir configurações de log do servidor do Data Quality  
+##  <a name="DQSServer"></a>Definir configurações de log do servidor de qualidade de dados  
  As configurações de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] estão presentes em um formato XML na coluna **VALUE** da linha **ServerLogging** na tabela A_CONFIGURATION no banco de dados DQS_MAIN. Você pode executar a seguinte consulta SQL para exibir informações de configuração:  
   
 ```  
@@ -93,7 +93,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-4.  Pressione F5 para executar as instruções. Consulte o painel **Resultados** para verificar se as instruções foram executadas com êxito.  
+4.  Pressione F5 para executar as instruções. Verifique o painel **resultados** para verificar se as instruções foram executadas com êxito.  
   
 5.  Para aplicar as alterações feitas na configuração de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , execute as seguintes instruções Transact-SQL. Abra uma nova janela Editor de Consultas e cole as seguintes instruções Transact-SQL:  
   
@@ -107,13 +107,13 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-6.  Pressione F5 para executar as instruções. Consulte o painel **Resultados** para verificar se as instruções foram executadas com êxito.  
+6.  Pressione F5 para executar as instruções. Verifique o painel **resultados** para verificar se as instruções foram executadas com êxito.  
   
 > [!NOTE]  
 >  As configurações de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] são geradas e armazenadas dinamicamente no arquivo DQS_MAIN.Log, que geralmente estará disponível em C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log caso você tenha instalado a instância padrão do SQL Server. No entanto, as alterações feitas diretamente nesse arquivo não são mantidas, sendo substituídas pelas configurações da tabela A_CONFIGURATION no banco de dados DQS_MAIN.  
   
-##  <a name="DQSClient"></a> Definir configurações de log do cliente do Data Quality  
- O arquivo de configuração de log do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], DQLog.Client.xml, geralmente está disponível em C:\Arquivos de Programas\Microsoft SQL Server\120\Tools\Binn\DQ\config. O conteúdo do arquivo XML é semelhante ao arquivo XML cujas configurações de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] você modificou anteriormente. Para configurar as configurações de log do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
+##  <a name="DQSClient"></a>Definir configurações de log de Data Quality Client  
+ O [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] arquivo de configuração de log de configuração, DQLog. Client. xml, normalmente está disponível em C:\Program Files\Microsoft SQL Server\120\Tools\Binn\DQ\config. O conteúdo do arquivo XML é semelhante ao arquivo XML que você modificou anteriormente para as definições [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] de configuração de log. Para configurar as configurações de log do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
   
 1.  Execute qualquer ferramenta de edição XML ou bloco de notas como um administrador.  
   
@@ -121,7 +121,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  Faça as alterações necessárias e salve o arquivo para aplicar as novas alterações de log.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar níveis de severidade para arquivos de log do DQS](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

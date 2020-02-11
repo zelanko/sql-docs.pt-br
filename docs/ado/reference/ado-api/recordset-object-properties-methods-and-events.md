@@ -1,5 +1,5 @@
 ---
-title: As propriedades do objeto de conjunto de registros, métodos e eventos | Microsoft Docs
+title: Propriedades, métodos e eventos do objeto Recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,13 @@ ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917329"
 ---
-# <a name="recordset-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de conjunto de registros
+# <a name="recordset-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Recordset
 ## <a name="propertiescollections"></a>Propriedades/coleções  
  [Propriedade AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
   
@@ -29,9 +29,9 @@ ms.locfileid: "67917329"
   
  [Propriedade ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [BOF, EOF propriedades](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
+ [Propriedades BOF, EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
   
- [Propriedade Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)  
+ [Propriedade de indicador](../../../ado/reference/ado-api/bookmark-property-ado.md)  
   
  [Propriedade CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)  
   
@@ -41,11 +41,11 @@ ms.locfileid: "67917329"
   
  [Propriedade DataMember](../../../ado/reference/ado-api/datamember-property.md)  
   
- [Propriedade de fonte de dados](../../../ado/reference/ado-api/datasource-property-ado.md)  
+ [Propriedade DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)  
   
  [Propriedade EditMode](../../../ado/reference/ado-api/editmode-property.md)  
   
- [Coleção de campos](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Coleção Fields](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
  [Propriedade Filter](../../../ado/reference/ado-api/filter-property.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "67917329"
   
  [Propriedade LockType](../../../ado/reference/ado-api/locktype-property-ado.md)  
   
- [Propriedade MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
+ [Propriedade marshaloptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
   
  [Propriedade MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
   
@@ -84,11 +84,11 @@ ms.locfileid: "67917329"
   
  [Método CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
   
- [Método clone](../../../ado/reference/ado-api/clone-method-ado.md)  
+ [Método Clone](../../../ado/reference/ado-api/clone-method-ado.md)  
   
  [Método Close](../../../ado/reference/ado-api/close-method-ado.md)  
   
- [Exemplo do método CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
+ [Método CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
  [Método Delete (Conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67917329"
   
  [Método Move](../../../ado/reference/ado-api/move-method-ado.md)  
   
- [MoveFirst, MoveLast, MoveNext e MovePrevious métodos](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
+ [Métodos MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   
  [Método NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
@@ -120,20 +120,20 @@ ms.locfileid: "67917329"
   
  [Método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
   
-## <a name="events"></a>Events  
- [EndOfRecordset Event](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
+## <a name="events"></a>Eventos  
+ [Evento EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
  [Evento FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
   
  [Evento FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
   
- [Eventos WillChangeField e Fieldchangecomplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
+ [Eventos WillChangeField e FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
   
- [Eventos WillChangeRecord e Recordchangecomplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+ [Eventos WillChangeRecord e RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
   
- [Eventos WillChangeRecordset e Recordsetchangecomplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+ [Eventos WillChangeRecordset e RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
   
- [Eventos WillMove e Movecomplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+ [Eventos WillMove e MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

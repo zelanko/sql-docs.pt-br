@@ -1,5 +1,5 @@
 ---
-title: Mostrar caixa de diálogo de tabela (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Mostrar tabela (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068655"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Mostrar Tabela (Analysis Services - Dados Multidimensionais)
@@ -41,9 +41,9 @@ ms.locfileid: "66068655"
  **Filter**  
  Digite o filtro usado para restringir os objetos listados e clique no botão para filtrar as tabelas listadas em **Selecionar tabelas adicionais a serem mostradas**.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Modo de exibição da fonte de dados &#40;guia estrutura da dimensão, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Modo de exibição da fonte de dados &#40;guia estrutura do cubo, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Exibição da fonte de dados &#40;guia estrutura da dimensão, designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Exibição da fonte de dados &#40;guia estrutura do cubo, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

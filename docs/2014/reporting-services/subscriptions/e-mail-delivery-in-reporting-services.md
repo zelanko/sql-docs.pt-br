@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100892"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega de email no Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "66100892"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo|  
   
 ## <a name="e-mail-delivery-options"></a>Opções de entrega de email  
  A entrega de email do servidor de relatório pode entregar emails das seguintes maneiras:  
@@ -37,9 +37,9 @@ ms.locfileid: "66100892"
   
 -   Enviando uma notificação na linha Assunto: de uma mensagem de email. Por padrão, a linha Assunto: na definição de assinatura inclui as seguintes variáveis que são substituídas por informações específicas do relatório quando a assinatura é processada:  
   
-     **@ReportName** especifica o nome do relatório.  
+     **@ReportName**Especifica o nome do relatório.  
   
-     **@ExecutionTime** especifica quando o relatório foi executado.  
+     **@ExecutionTime**Especifica quando o relatório foi executado.  
   
      Você pode combinar essas variáveis com texto estático ou pode modificar o texto na linha Assunto: para cada assinatura.  
   
@@ -47,7 +47,8 @@ ms.locfileid: "66100892"
   
      Se o navegador oferecer suporte a HTML 4.0 e MHTML, e você escolher o formato de renderização de arquivo da Web, o relatório será inserido como parte da mensagem. Todos os outros formatos de renderização (CSV, PDF etc.) entregam os relatórios como anexos. Você pode desabilitar essa funcionalidade no arquivo de configuração de RSReportServer.  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não verifica o tamanho do anexo ou mensagem antes de enviar o relatório. Se o anexo ou a mensagem exceder o limite máximo permitido pelo servidor de email, o relatório não será entregue. Escolha uma das outras opções de entrega (por exemplo, URL ou notificação) para relatórios grandes.  
+     
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não verifica o tamanho do anexo ou mensagem antes de enviar o relatório. Se o anexo ou a mensagem exceder o limite máximo permitido pelo servidor de email, o relatório não será entregue. Escolha uma das outras opções de entrega (por exemplo, URL ou notificação) para relatórios grandes.  
   
  Você define opções de entrega que determinam como um relatório é entregue ao criar a assinatura. Por exemplo, se você selecionar **Incluir Link** na assinatura, a mensagem de email incluirá um hiperlink para o relatório.  
   
@@ -71,18 +72,18 @@ ms.locfileid: "66100892"
   
  Para obter informações sobre como configurar um servidor de relatório de modo nativo, consulte o seguinte:  
   
--   [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+-   [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
--   [Configurações de email – Configuration Manager &#40;modo nativo do SSRS&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Configurações de email-Configuration Manager &#40;modo nativo do SSRS&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  Para obter informações sobre como configurar um servidor de relatório do modo do SharePoint, consulte o seguinte:  
   
--   [Configurar o email para um serviço de aplicativo do Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Configurar o email para um aplicativo de serviço Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e permissões](../security/tasks-and-permissions.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Assinaturas controladas por dados](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Atribuições de função](../security/role-assignments.md)  
   
   

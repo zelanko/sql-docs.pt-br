@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6f18ff05cf6283e4358e8f8afd76a5858b0b41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109595"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crie e gerencie assinaturas de servidores de relatório no modo Nativo
@@ -32,11 +32,11 @@ ms.locfileid: "66109595"
 -   A tarefa “Gerenciar todas as assinaturas” permite que os usuários acessem e modifiquem todas as assinaturas. Essa tarefa é obrigatória para criar assinaturas controladas por dados. Em funções predefinidas, a função Gerenciador de Conteúdo inclui essa tarefa.  
   
 ## <a name="disabling-subscriptions"></a>Desabilitando assinaturas  
- Para impedir que os usuários criem assinaturas, desmarque a tarefa “Gerenciar assinaturas individuais” da função. Quando essa tarefa é removida, as páginas Assinatura não estão disponíveis. No Gerenciador de Relatórios, a página Minhas Assinaturas parece estar vazia (não é possível excluí-la), mesmo que contivesse assinaturas anteriormente. A remoção de tarefas relacionadas à assinatura impede que os usuários criem e modifiquem assinaturas, mas não exclui as assinaturas existentes. As assinaturas existentes continuarão sendo executadas até serem excluídas. Para obter mais informações sobre a exclusão de assinaturas, consulte [criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo nativo&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Para impedir que os usuários criem assinaturas, desmarque a tarefa “Gerenciar assinaturas individuais” da função. Quando essa tarefa é removida, as páginas Assinatura não estão disponíveis. No Gerenciador de Relatórios, a página Minhas Assinaturas parece estar vazia (não é possível excluí-la), mesmo que contivesse assinaturas anteriormente. A remoção de tarefas relacionadas à assinatura impede que os usuários criem e modifiquem assinaturas, mas não exclui as assinaturas existentes. As assinaturas existentes continuarão sendo executadas até serem excluídas. Para obter mais informações sobre como excluir assinaturas, consulte [criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo nativo&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- Para desabilitar o processamento de assinaturas em um servidor de relatório, você pode definir a `ScheduleEventsAndReportDeliveryEnabled` propriedade para `False` na **configuração de área de superfície do Reporting Services** faceta da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gerenciamento baseado em políticas. Isso impedirá a execução de todas as operações agendadas. Você não pode simplesmente desabilitar o processamento de assinaturas no servidor de relatório.  
+ Para desabilitar o processamento de assinatura em um servidor de relatório, você `ScheduleEventsAndReportDeliveryEnabled` pode definir `False` a propriedade como na **configuração da área de superfície para Reporting Services** faceta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gerenciamento baseado em políticas. Isso impedirá a execução de todas as operações agendadas. Você não pode simplesmente desabilitar o processamento de assinaturas no servidor de relatório.  
   
- Para obter instruções sobre como cancelar a assinatura que está sendo processada no servidor de relatório, consulte [gerenciar um processo em execução](subscriptions/manage-a-running-process.md).  
+ Para obter instruções sobre como cancelar a assinatura que está processando no servidor de relatório, consulte [gerenciar um processo em execução](subscriptions/manage-a-running-process.md).  
   
 ## <a name="disabling-delivery-extensions"></a>Desabilitando extensões de entrega  
  Todas as extensões de entrega instaladas em um servidor de relatório estão disponíveis para qualquer usuário que tenha permissão para criar uma assinatura em um relatório específico. As extensões de entrega a seguir estão disponíveis e são configuradas automaticamente:  
@@ -45,9 +45,9 @@ ms.locfileid: "66109595"
   
 -   Biblioteca do SharePoint (disponível somente a partir de um site do SharePoint que é integrado com um servidor de relatório no modo integrado do SharePoint)  
   
- A entrega de email deve ser configurada antes de ser usada. Se você não configurá-la, esse recurso não estará disponível. Para obter mais informações, consulte [configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+ A entrega de email deve ser configurada antes de ser usada. Se você não configurá-la, esse recurso não estará disponível. Para obter mais informações, consulte [configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Se você desejar desabilitar extensões específicas, remova as entradas de extensão no arquivo RSReportServer.config. Para obter mais informações, consulte [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md) e [configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+ Se você desejar desabilitar extensões específicas, remova as entradas de extensão no arquivo RSReportServer.config. Para obter mais informações, consulte [arquivo de configuração RSReportServer](report-server/rsreportserver-config-configuration-file.md) e [configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
  Depois de ser removida, a extensão de entrega não está mais disponível no Gerenciador de Relatórios ou em um site do SharePoint. A remoção de uma extensão de entrega pode resultar em assinaturas inativas. Exclua as assinaturas ou configure-as para usar uma extensão de entrega diferente antes de remover uma extensão.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66109595"
  [Monitorar assinaturas do Reporting Services](subscriptions/monitor-reporting-services-subscriptions.md)  
  Descreve como é possível determinar se uma assinatura foi bem-sucedida ou falhou, bem como os efeitos das alterações de relatório nas assinaturas existentes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo nativo&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
   

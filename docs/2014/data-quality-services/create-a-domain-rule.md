@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481029"
 ---
 # <a name="create-a-domain-rule"></a>Criar uma regra de domínio
@@ -33,9 +33,9 @@ ms.locfileid: "65481029"
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar uma regra de domínio.  
   
-##  <a name="Build"></a> Criar regras de domínio  
+##  <a name="Build"></a>Criar regras de domínio  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra ou crie uma base de dados de conhecimento. Selecione **Gerenciamento de Domínio** como a atividade e, depois, clique em **Abrir** ou **Criar**. Para obter mais informações, consulte [Criar uma base de dados de conhecimento](../../2014/data-quality-services/create-a-knowledge-base.md) ou [Abrir uma base de dados de conhecimento](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
@@ -70,13 +70,13 @@ ms.locfileid: "65481029"
   
 16. Continue o procedimento de teste a seguir.  
   
-##  <a name="Test"></a> Testar regras de domínio  
+##  <a name="Test"></a>Regras de domínio de teste  
   
 1.  Com uma regra selecionada, clique no ícone **Executar a regra de domínio selecionada em dados de teste** .  
   
 2.  Na caixa de diálogo Testar Regra de Domínio, clique no ícone **Adicionar um novo termo de teste para a regra de domínio** . Insira um valor para testar. Insira outros valores quando necessário. Selecione um valor e clique no ícone **Remover o termo de teste selecionado** se necessário.  
   
-3.  Clique no ícone **Teste a regra de domínio em todos os termos** .  
+3.  Clique no ícone **testar a regra de domínio em todos os termos** .  
   
 4.  Verifique a validade de cada termo. Uma marca de verificação significa "correto", uma cruz significa "erro" e um triângulo significa "inválido".  
   
@@ -86,7 +86,7 @@ ms.locfileid: "65481029"
   
 7.  Continue o procedimento de aplicação a seguir.  
   
-##  <a name="Apply"></a> Aplicar regras de domínio  
+##  <a name="Apply"></a>Aplicar regras de domínio  
   
 1.  Clique em **Aplicar Todas as Regras** para aplicar as regras aos valores do domínio. Se você clicar em **Aplicar Todas as Regras**, uma janela pop-up será exibida informando quantos valores em determinados estados serão afetados pela regra. Clique em **Sim** se você ainda desejar aplicar a regra; caso contrário, clique em **Não** . Se você clicar em **Sim**, clique em **OK** para fechar a janela pop-up de resultados.  
   
@@ -97,19 +97,19 @@ ms.locfileid: "65481029"
   
 3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: após criar uma regra de domínio  
+##  <a name="FollowUp"></a>Acompanhamento: depois de criar uma regra de domínio  
  Depois que você criar uma regra de domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Conditions"></a> Condições de regras de domínio  
+##  <a name="Conditions"></a>Condições de regra de domínio  
  A tabela a seguir descreve as condições que podem ser aplicadas na regra de domínio e fornece um exemplo para ilustrar como as condições podem ser aplicadas.  
   
  Quando uma regra de domínio é aplicada e um valor de domínio não obedece à regra, o valor é designado como Inválido. Um valor designado como Inválido será alterado para Correto se a regra que está fazendo com que ele seja inválido for excluída, for desativada ou se a regra tive sido alterada de modo que o valor não desobedeça mais à regra. Se você tiver designado manualmente um valor como Inválido (na guia Valores de Domínio da atividade de Gerenciamento de Domínio), e uma regra que dite a falha do valor tiver sido excluída, desativada ou alterada, o valor ainda será designado como Inválido, conforme a designação manual.  
   
- Uma regra de domínio com uma condição definitiva aplicará a lógica de regras a sinônimos do valor em uma ou mais condições, bem como os próprios valores. As condições definitivas são Valor é igual a, Valor não é igual a, Valor está em ou Valor não está em. Por exemplo, suponha que você tenha a seguinte regra de domínio: "Para 'Cidade', o valor é igual a ‘Los Angeles'". Se 'Los Angeles' e 'LA' forem sinônimos, ambos estarão corretos. Por outro lado, se a regra não contivesse uma condição definitiva, por exemplo, "Para Cidade, Valor termina com "s", então "Los Angeles" estaria correto, mas seu sinônimo "LA" seria um erro.  
+ Uma regra de domínio com uma condição definitiva aplicará a lógica de regras a sinônimos do valor em uma ou mais condições, bem como os próprios valores. As condições definitivas são Valor é igual a, Valor não é igual a, Valor está em ou Valor não está em. Por exemplo, suponhamos que você tenha a seguinte regra de domínio: "Para ‘Cidade’, Valor é igual a ‘Los Angeles’". Se 'Los Angeles' e 'LA' forem sinônimos, ambos estarão corretos. Por outro lado, se a regra não contivesse uma condição definitiva, por exemplo, "Para Cidade, Valor termina com "s", então "Los Angeles" estaria correto, mas seu sinônimo "LA" seria um erro.  
   
  Você tem alternativas para escolher ao criar uma regra de domínio. Por exemplo, para validar se os valores começarão com a letra A, B ou C, você pode criar uma regra simples com uma condição complexa (como uma expressão regular com caracteres de pipe) ou criar uma regra complexa que contém várias condições simples. Um exemplo da primeira regra é "Valor contém a expressão regular (^A|^B|^C)". Um exemplo da segunda regra é "'Valor começa com A' OU 'Valor começa com B' OU 'Valor começa com C'".  
   
-|Condição|Descrição|Exemplo|  
+|Condição|DESCRIÇÃO|Exemplo|  
 |---------------|-----------------|-------------|  
 |Comprimento é igual a|Somente os valores compostos pelo número de caracteres designado pelo operando serão válidos.|Operando de exemplo: 3<br /><br /> Valor válido: BB1<br /><br /> Valor inválido: AA|  
 |O comprimento é maior ou igual a|Somente os valores compostos pelo número de caracteres designado pelo operando, ou um número de caracteres superior, serão válidos.|Operando de exemplo: 3<br /><br /> Valores válidos: BB1, BBAA<br /><br /> Valor inválido: AA|  
@@ -120,15 +120,15 @@ ms.locfileid: "65481029"
 |Valor não contém|Somente os valores que não estão contidos no operando serão válidos.|Operando de exemplo: A1<br /><br /> Valores válidos: 1A, AA<br /><br /> Valores inválidos: A1, AA1|  
 |Valor começa com|Somente os valores que começam com os caracteres do operando serão válidos.|Operando de exemplo: AA<br /><br /> Valores válidos: AA1<br /><br /> Valores inválidos: 1AAB|  
 |Valor termina com|Somente os valores que terminam com os caracteres do operando serão válidos.|Operando de exemplo: AA<br /><br /> Valores válidos: 1AA<br /><br /> Valores inválidos: 1AAB|  
-|Valor é numérico|Somente os valores que têm um tipo de dados numérico do SQL Server serão válidos. Isso inclui int, decimal, float etc.|Operando de exemplo: N/D<br /><br /> Valores válidos: 1, 25, 345.1234<br /><br /> Valores inválidos: 2b, bcdef|  
-|Valor é data/hora|Somente os valores que têm um tipo de dados de data/hora do SQL Server serão válidos. Isso inclui datetime, time, date etc.|Operando de exemplo: N/D<br /><br /> Valores válidos: 1916-06-04; 1916-06-04 18:24:24; March 21, 2001; 5/18/2011; 18:24:24<br /><br /> Valores inválidos: March 213, 2006|  
+|Valor é numérico|Somente os valores que têm um tipo de dados numérico do SQL Server serão válidos. Isso inclui int, decimal, float etc.|Operando de exemplo: N/A<br /><br /> Valores válidos: 1, 25, 345,1234<br /><br /> Valores inválidos: 2b, bcdef|  
+|Valor é data/hora|Somente os valores que têm um tipo de dados de data/hora do SQL Server serão válidos. Isso inclui datetime, time, date etc.|Operando de exemplo: N/A<br /><br /> Valores válidos: 1916-06-04; 1916-06-04 18:24:24; March 21, 2001; 5/18/2011; 18:24:24<br /><br /> Valores inválidos: March 213, 2006|  
 |Valor está em|Somente os valores que estão no conjunto do operando serão válidos.<br /><br /> Para inserir os valores no conjunto, clique na caixa de texto do operando, insira o primeiro valor, pressione Enter, insira o segundo valor, repita o procedimento para tantos valores quanto você deseja inserir no conjunto e clique novamente na caixa de texto do operando. O DQS adicionará uma vírgula entre os valores do conjunto. Se você inserir uma cadeia de caracteres com vírgulas e nenhum retorno de carro (por exemplo, "A1, B1"), o DQS considerará essa cadeia de caracteres um único valor no conjunto.|Operando de exemplo: [A1, B1]<br /><br /> Valores válidos: A1, B1<br /><br /> Valores inválidos: AA, 11|  
 |Valor não está em|Somente os valores que não estão no conjunto do operando serão válidos.|Operando de exemplo: [A1, B1]<br /><br /> Valores válidos: AA, 11<br /><br /> Valores inválidos: A1, B1|  
 |Padrão de correspondências de valor|Somente os valores que correspondem ao padrão de caracteres, dígitos ou caracteres especiais do operando serão válidos.<br /><br /> Algumas letras (A...Z) podem ser usadas como um padrão para qualquer letra, sem diferenciação entre maiúsculas e minúsculas. Qualquer dígito (0...9) pode ser usado como um padrão para qualquer dígito. Qualquer caractere especial, exceto uma letra ou um dígito, pode ser usado como um padrão para si mesmo. Os colchetes, [], definem correspondência opcional.|Operando de exemplo: AA:000 (um padrão de *quaisquer* dois caracteres seguidos de dois-pontos (:), seguidos novamente de *quaisquer* três dígitos.<br /><br /> Valores válidos: AB:012, df:257<br /><br /> Valores inválidos: abc:123, FJ-369<br /><br /> Para obter mais informações sobre as regras do padrão no DQS e exemplos, consulte [Correspondência de padrão nas regras de domínio do DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
 |Valor não corresponde ao padrão|Somente os valores que não correspondem ao padrão de caracteres, dígitos ou caracteres especiais do operando serão válidos.|Operando de exemplo: A1 (o valor não deve corresponder a um padrão de *qualquer* caractere seguido de *qualquer* dígito.)<br /><br /> Valores válidos: AB1, A, A:5<br /><br /> Valores inválidos: B7, c9|  
 |Valor contém o padrão|Somente valores contendo o padrão de caracteres, dígitos ou caracteres especiais do operando serão válidos.|Operando de exemplo: AA-12 (o valor contém um padrão de *quaisquer* dois caracteres seguidos de um hífen (-), seguidos novamente de *quaisquer* dois dígitos.)<br /><br /> Valores válidos: AAA-01, ab-975<br /><br /> Valor inválido: A7, AA-6, C-45, aa;98|  
 |Valor não contém o padrão|Somente os valores que não contêm o padrão de caracteres do operando serão válidos.|Operando de exemplo: AB-12 (o valor não deve conter um padrão de *quaisquer* dois caracteres seguidos de um hífen (-), seguidos novamente de *quaisquer* dois dígitos.)<br /><br /> Valores válidos: A7, AA-6, C-45, aa;98<br /><br /> Valor inválido: AAA-01, ab-975|  
-|O valor corresponde à expressão regular|Somente os valores iguais à expressão regular no operando serão válidos.<br /><br /> Não inclua a âncora "^" ou "$" à expressão regular, porque o DQS adiciona automaticamente essas âncoras a uma cláusula que contém Valor é igual à expressão regular. (Alternativamente, você pode colocar a expressão regular que contém as âncoras "^" e "$" entre parênteses.) Para obter mais informações sobre as expressões regulares, consulte o artigo sobre [Elementos da linguagem das expressões regulares](https://go.microsoft.com/fwlink/?LinkId=225561).|Operando de exemplo: [1-5] + (cada caractere deve ser um dígito numérico de 1 a 5, ocorrendo uma ou mais vezes)<br /><br /> Valores válidos: 123, 12345, 14352<br /><br /> Valores inválidos: 456, ABC|  
+|O valor corresponde à expressão regular|Somente os valores iguais à expressão regular no operando serão válidos.<br /><br /> Não inclua a âncora "^" ou "$" à expressão regular, porque o DQS adiciona automaticamente essas âncoras a uma cláusula que contém Valor é igual à expressão regular. (Como alternativa, você pode colocar a expressão regular contendo "^" e "$" âncoras com parênteses.) Para obter mais informações sobre expressões regulares, consulte [elementos de linguagem de expressão regular](https://go.microsoft.com/fwlink/?LinkId=225561).|Operando de exemplo: [1-5] + (cada caractere deve ser um dígito numérico de 1 a 5, ocorrendo uma ou mais vezes)<br /><br /> Valores válidos: 123, 12345, 14352<br /><br /> Valores inválidos: 456, ABC|  
 |O valor não corresponde a uma expressão regular|Somente os valores que não correspondem à expressão regular no operando serão válidos.|Operando de exemplo: [1-5] + (a cadeia de caracteres não deve conter apenas dígitos numéricos de 1 a 5)<br /><br /> Valores válidos: 456, ABC<br /><br /> Valor inválido: 123, 123456, 14352|  
   
   

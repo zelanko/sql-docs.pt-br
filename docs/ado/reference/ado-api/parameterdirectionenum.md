@@ -16,25 +16,25 @@ ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917747"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-Especifica se o [parâmetro](../../../ado/reference/ado-api/parameter-object.md) representa um parâmetro de entrada, um parâmetro de saída, uma entrada e um parâmetro de saída, ou o valor de retorno de um procedimento armazenado.  
+Especifica se o [parâmetro](../../../ado/reference/ado-api/parameter-object.md) representa um parâmetro de entrada, um parâmetro de saída, um parâmetro de entrada e de saída ou o valor de retorno de um procedimento armazenado.  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|Padrão. Indica que o parâmetro representa um parâmetro de entrada.|  
-|**adParamInputOutput**|3|Indica que o parâmetro representa um parâmetro de entrada e saído.|  
+|**adParamInputOutput**|3|Indica que o parâmetro representa um parâmetro de entrada e saída.|  
 |**adParamOutput**|2|Indica que o parâmetro representa um parâmetro de saída.|  
 |**adParamReturnValue**|4|Indica que o parâmetro representa um valor de retorno.|  
 |**adParamUnknown**|0|Indica que a direção do parâmetro é desconhecida.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Pacote: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
@@ -44,7 +44,7 @@ Especifica se o [parâmetro](../../../ado/reference/ado-api/parameter-object.md)
 |AdoEnums.ParameterDirection.RETURNVALUE|  
 |AdoEnums.ParameterDirection.UNKNOWN|  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
   
 |||  
 |-|-|  

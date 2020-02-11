@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eef4cc29bdcda107bba55ceab14aa7984fc420a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480389"
 ---
 # <a name="managing-a-composite-domain"></a>Gerenciando um domínio composto
@@ -29,18 +29,18 @@ ms.locfileid: "65480389"
   
 |||  
 |-|-|  
-|Crie uma representação semântica para um campo de dados que consiste em vários termos relacionados que não são analisados|[Criar um domínio de composição](../../2014/data-quality-services/create-a-composite-domain.md)|  
-|Quando você estiver mapeando dados complexos para um domínio composto, poderá analisar os dados com base no conhecimento, além de analisar um delimitador. O DQS tentará primeiro usar seu conhecimento sobre domínios únicos para determinar como as partes da cadeia de caracteres complexa pertencerão aos domínios únicos.|[Criar um domínio de composição](../../2014/data-quality-services/create-a-composite-domain.md)|  
+|Crie uma representação semântica para um campo de dados que consiste em vários termos relacionados que não são analisados|[Criar um domínio composto](../../2014/data-quality-services/create-a-composite-domain.md)|  
+|Quando você estiver mapeando dados complexos para um domínio composto, poderá analisar os dados com base no conhecimento, além de analisar um delimitador. O DQS tentará primeiro usar seu conhecimento sobre domínios únicos para determinar como as partes da cadeia de caracteres complexa pertencerão aos domínios únicos.|[Criar um domínio composto](../../2014/data-quality-services/create-a-composite-domain.md)|  
 |Anexe um serviço de dados de referência, como o que lida com os dados de endereço, a um domínio composto.|[Anexar domínio ou domínio de composição a dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |Crie uma regra de domínio cruzado quando o valor de um domínio em um domínio composto afetar o valor de outro.|[Criar uma regra de domínio cruzado](../../2014/data-quality-services/create-a-cross-domain-rule.md)|  
-|Identifique as combinações de valor para que o DQS possa relatar sua frequência.|[Usar relações de valor em um domínio de composição](../../2014/data-quality-services/use-value-relations-in-a-composite-domain.md)|  
+|Identifique as combinações de valor para que o DQS possa relatar sua frequência.|[Usar relações de valor em um domínio composto](../../2014/data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Criar uma base de dados de conhecimento executando a descoberta da base de dados de conhecimento e gerenciando o conhecimento de modo interativo|[Criar uma base de dados de conhecimento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
-|Importar ou exportar conhecimento para/de uma base de dados de conhecimento.|[Importar e exportar conhecimento](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
-|Criar um domínio único e adicionar conhecimento ao domínio.|[Gerenciar um domínio](../../2014/data-quality-services/managing-a-domain.md)|  
+|Criar uma base de dados de conhecimento executando a descoberta da base de dados de conhecimento e gerenciando o conhecimento de modo interativo|[Criando uma base de dados de conhecimento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|Importar ou exportar conhecimento para/de uma base de dados de conhecimento.|[Importando e exportando conhecimento](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
+|Criar um domínio único e adicionar conhecimento ao domínio.|[Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md)|  
   
   

@@ -16,25 +16,25 @@ ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f24e50b7f6dd8b129a2777ce1132ec426b7ea182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078979"
 ---
 # <a name="writing-an-interoperable-application"></a>Escrever um aplicativo interoperável
-Sempre que um aplicativo usa o mesmo código em relação a mais de um driver, que o código deve ser interoperável entre esses drivers. Na maioria dos casos, isso é uma tarefa fácil. Por exemplo, o código para buscar linhas com um cursor somente de avanço é o mesmo para todos os drivers. Em alguns casos, isso pode ser mais difícil. Por exemplo, o código para construir identificadores para uso em instruções SQL precisa considerar o caso do identificador, citando e convenções de nomenclatura de três partes de uma parte e duas partes.  
+Sempre que um aplicativo usa o mesmo código em relação a mais de um driver, esse código deve ser interoperável entre esses drivers. Na maioria dos casos, essa é uma tarefa fácil. Por exemplo, o código para buscar linhas com um cursor de somente avanço é o mesmo para todos os drivers. Em alguns casos, isso pode ser mais difícil. Por exemplo, o código para construir identificadores para uso em instruções SQL precisa considerar as convenções de nomenclatura de maiúsculas e minúsculas de identificador, de cotação e de uma parte, de duas partes e de três partes.  
   
- Em geral, o código interoperável precisa lidar com problemas de suporte ao recurso e a variabilidade de recurso. *Suporte ao recurso* refere-se ou não há suporte para um determinado recurso. Por exemplo, nem todos os DBMSs oferecem suporte a transações e interoperável código deve funcionar corretamente, independentemente do suporte a transações. *Recurso variabilidade* refere-se à variação da maneira em que há suporte para um determinado recurso. Por exemplo, nomes de catálogo são colocados no início de identificadores em alguns DBMSs e no final de identificadores em outras.  
+ Em geral, o código interoperável deve lidar com problemas de suporte a recursos e variabilidade de recursos. *Suporte a recursos* refere-se a um recurso específico ou não ao qual há suporte. Por exemplo, nem todos os DBMSs dão suporte a transações e o código interoperável deve funcionar corretamente, independentemente do suporte a transações. A *variabilidade do recurso* se refere à variação da maneira em que há suporte para um recurso específico. Por exemplo, os nomes de catálogo são colocados no início dos identificadores em alguns DBMS e no final dos identificadores em outros.  
   
- Aplicativos podem lidar com o suporte ao recurso e a variabilidade de recurso em tempo de design ou em tempo de execução. Para lidar com o suporte ao recurso e variabilidade em tempo de design, um desenvolvedor examina os drivers e DBMSs de destino e torna-se de que o mesmo código será interoperável entre eles. Isso geralmente é a maneira na qual os aplicativos com pouca ou limitada de interoperabilidade lidam com esses problemas.  
+ Os aplicativos podem lidar com o suporte a recursos e variabilidade de recursos em tempo de design ou em tempo de execução. Para lidar com o suporte e a variabilidade do recurso em tempo de design, um desenvolvedor examina os DBMS e os drivers de destino e garante que o mesmo código será interoperável entre eles. Isso é geralmente a maneira como os aplicativos com interoperabilidade baixa ou limitada lidam com esses problemas.  
   
- Por exemplo, se o desenvolvedor garante que um aplicativo vertical só funcionará com quatro DBMSs específicos e se cada um desses DBMSs dá suporte a transações, o aplicativo não precisa de código para verificar se há suporte a transações em tempo de execução. Ele sempre pode assumir as transações estão disponíveis por causa do tempo de design decisão de usar apenas quatro DBMSs, cada um deles oferece suporte a transações.  
+ Por exemplo, se o desenvolvedor garantir que um aplicativo vertical funcionará apenas com quatro DBMSs específicos e se cada um desses DBMSs oferecer suporte a transações, o aplicativo não precisará de um código para verificar o suporte a transações no tempo de execução. Ele sempre pode assumir que as transações estão disponíveis devido à decisão do tempo de design de usar apenas quatro DBMS, cada uma delas com suporte para transações.  
   
- Para lidar com o suporte ao recurso e variabilidade em tempo de execução, o aplicativo deve testar para recursos diferentes em tempo de execução e aja de forma adequada. Isso geralmente é a maneira na qual os aplicativos altamente interoperáveis lidam com esses problemas. Para problemas de suporte do recurso, isso significa escrever o código que torna o código de recurso opcional ou escrita que emula o recurso quando ele não está disponível. Para problemas de variabilidade de recurso, isso significa escrever um código que dá suporte a todas as variações possíveis.  
+ Para lidar com o suporte e a variabilidade de recursos em tempo de execução, o aplicativo deve testar recursos diferentes em tempo de execução e agir de acordo. Geralmente, essa é a maneira em que aplicativos altamente interoperáveis lidam com esses problemas. Para problemas de suporte de recursos, isso significa escrever código que torna o recurso opcional ou gravando código que emula o recurso quando ele não está disponível. Para problemas de variabilidade de recurso, isso significa escrever código que dê suporte a todas as variações possíveis.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
--   [Verificando o suporte ao recurso e a variabilidade](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
+-   [Verificar o suporte ao recurso e a variabilidade](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   
 -   [Recursos a serem inspecionados](../../../odbc/reference/develop-app/features-to-watch-for.md)

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102156"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar autenticação básica no Servidor de Relatório
@@ -38,7 +38,7 @@ ms.locfileid: "66102156"
   
 1.  Abra o RSReportServer.config em um editor de texto.  
   
-     O arquivo está localizado em  *\<unidade >:* \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
+     O arquivo está localizado na * \<unidade>:* \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
   
 2.  Localizar <`Authentication`>.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66102156"
           </AuthenticationTypes>  
     ```  
   
-4.  Cole-a nas entradas existentes para <`Authentication`>.  
+4.  Cole-o nas entradas existentes para <`Authentication`>.  
   
      Se estiver usando vários tipos de autenticação, adicione apenas o elemento `RSWindowsBasic`, mas não exclua as entradas de `RSWindowsNegotiate`, `RSWindowsNTLM` ou `RSWindowsKerberos`.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66102156"
   
      Observe que não é possível usar `Custom` com outros tipos de autenticação.  
   
-5.  Substitua valores vazios de <`Realm`> ou <`DefaultDomain`> com valores que são válidos para seu ambiente.  
+5.  Substitua valores vazios por <`Realm`> ou <`DefaultDomain`> por valores que são válidos para o seu ambiente.  
   
 6.  Salve o arquivo.  
   
@@ -84,9 +84,11 @@ ms.locfileid: "66102156"
 ## <a name="rswindowsbasic-reference"></a>Referência de RSWindowsBasic  
  Os elementos a seguir podem ser especificados na configuração da autenticação Básica.  
   
-|Elemento|Obrigatório|Valores válidos|  
+|Elemento|Obrigatório|Valores Válidos|  
 |-------------|--------------|------------------|  
-|LogonMethod|Sim<br /><br /> Se você não especificar um valor, será usado 3.|`2` = Logon de rede, indicado para servidores de alto desempenho na autenticação de senhas em texto sem formatação.<br /><br /> `3` = Logon de texto não criptografado, que preserva as credenciais de logon no pacote de autenticação enviado com cada solicitação HTTP, permitindo que o servidor represente o usuário durante a conexão com outros servidores da rede. (Padrão)<br /><br /> Observação: Os valores 0 (para logon interativo) e 1 (para logon em lotes) não têm suporte no [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Sim<br /><br /> Se você não especificar um valor, será usado 3.|
+  `2` = Logon de rede, indicado para servidores de alto desempenho na autenticação de senhas em texto sem formatação.<br /><br /> 
+  `3` = Logon de texto não criptografado, que preserva as credenciais de logon no pacote de autenticação enviado com cada solicitação HTTP, permitindo que o servidor represente o usuário durante a conexão com outros servidores da rede. (Default)<br /><br /> Observação: valores 0 (para logon interativo) e 1 (para logon em lotes) não têm suporte no [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Realm|Opcional|Especifica uma partição de recursos que inclui recursos de autorização e autenticação usados para controlar o acesso a recursos protegidos da organização.|  
 |DefaultDomain|Opcional|Especifica o domínio usado pelo servidor para autenticar o usuário. Este valor é opcional, mas, caso seja omitido, o servidor de relatório usará o nome do computador como domínio. Se o computador for um membro de domínio, esse domínio será o padrão. Se você instalou o servidor de relatório em um controlador de domínio, o domínio usado será o que é controlado pelo computador.|  
   
@@ -101,7 +103,7 @@ ms.locfileid: "66102156"
   
 -   Acrescente o elemento `IsReportBuilderAnonymousAccessEnabled` ao arquivo RSReportServer.config e defina-o como `True`. Depois que você salvar o arquivo, o servidor de relatório criará um novo ponto de extremidade para o Construtor de Relatórios. O ponto de extremidade é usado internamente para acessar arquivos de programa e não tem uma interface programática que possa ser usada em código. Quando há um ponto de extremidade separado, o Construtor de Relatórios pode ser executado em seu próprio domínio de aplicativo dentro do limite de processo do serviço Servidor de Relatório.  
   
--   Se preferir, você poderá especificar uma conta com menos privilégios para processar solicitações em um contexto de segurança diferente do servidor de relatório. Essa conta passa a ser a conta anônima que dá acesso a arquivos do Construtor de Relatórios em um servidor de relatório. A conta define a identidade do thread no processo de trabalho do ASP.NET. As solicitações executadas nesse thread são passadas para o servidor de relatório sem uma verificação de autenticação. Essa conta é equivalente para a conta IUSR _\<máquina > conta no Internet Information Services (IIS), que é usado para definir o contexto de segurança para o trabalho do ASP.NET processos quando o acesso anônimo e a representação estão habilitados. Para especificar a conta, adicione-a a um arquivo Web.config do Construtor de Relatórios.  
+-   Se preferir, você poderá especificar uma conta com menos privilégios para processar solicitações em um contexto de segurança diferente do servidor de relatório. Essa conta passa a ser a conta anônima que dá acesso a arquivos do Construtor de Relatórios em um servidor de relatório. A conta define a identidade do thread no processo de trabalho do ASP.NET. As solicitações executadas nesse thread são passadas para o servidor de relatório sem uma verificação de autenticação. Essa conta é equivalente à conta do\<IUSR_ Machine> no serviços de informações da Internet (IIS), que é usado para definir o contexto de segurança para processos de trabalho do ASP.net quando o acesso anônimo e a representação estão habilitados. Para especificar a conta, adicione-a a um arquivo Web.config do Construtor de Relatórios.  
   
  O servidor de relatório deve ser configurado para autenticação Básica se você quiser habilitar o acesso Anônimo para os arquivos de programa do Construtor de Relatórios. Se o servidor de relatório não estiver configurado para a autenticação Básica, você receberá um erro quando tentar habilitar o acesso Anônimo.  
   
@@ -137,7 +139,7 @@ ms.locfileid: "66102156"
   
      O modo de autenticação deverá ser definido como `Windows` se você incluir um arquivo Web.config.  
   
-     `Identity impersonate` pode ser `True` ou `False`.  
+     `Identity impersonate`pode ser `True` ou `False`.  
   
     -   Defina esse valor como `False` se não quiser que o ASP.NET leia o token de segurança. A solicitação será executada no contexto de segurança do serviço Servidor de Relatórios.  
   
@@ -155,8 +157,8 @@ ms.locfileid: "66102156"
   
 8.  Reinicie o servidor de relatório.  
   
-## <a name="see-also"></a>Consulte também  
- [Domínios do aplicativo para aplicativos do Servidor de Relatório](../report-server/application-domains-for-report-server-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Domínios de aplicativo para aplicativos do servidor de relatório](../report-server/application-domains-for-report-server-applications.md)   
  [Segurança e proteção do Reporting Services](reporting-services-security-and-protection.md)  
   
   

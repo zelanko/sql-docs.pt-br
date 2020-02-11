@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273741"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
@@ -44,7 +44,7 @@ ms.locfileid: "63273741"
   
 3.  Clique com o botão direito do mouse no nó Diagramas de Banco de Dados e escolha **Novo Diagrama de Banco de Dados**.  
   
-     Se o banco de dados não tiver os objetos necessários para criar diagramas, a seguinte mensagem será exibida: **Este banco de dados não tem um ou mais dos objetos de suporte necessários para usar a diagramação de banco de dados. Deseja criá-los?** Escolha **Sim**.  
+     Se o banco de dados não tiver os objetos necessários para criar diagramas, a mensagem a seguir será exibida: **Este banco de dados não tem um ou mais dos objetos de suporte necessários para usar a diagramação de banco de dados. Deseja criá-los?** Escolha **Sim**.  
   
      A caixa de diálogo **Adicionar Tabela** será exibida.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63273741"
   
 1.  Clique com o botão direito do mouse na tabela `Address` . No menu de atalho, aponte para **Exibição de Tabela**e clique em **Padrão**.  
   
-     A grade da tabela mostra três colunas: **Nome da Coluna**, **Tipo de Dados** e **Permitir Nulos**.  
+     A grade da tabela mostra três colunas: **Nome da Coluna**, **Tipo de Dados**e **Permitir Nulos**.  
   
 2.  Clique com o botão direito do mouse na tabela `Address` , clique em **Exibir Tabela** e selecione **Chaves**.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "63273741"
   
 1.  Clique com o botão direito do mouse no Designer de Diagramas fora das tabelas existentes e escolha **Nova Tabela**.  
   
-2.  No **Escolher nome** caixa de diálogo, clique em **Okey** para aceitar o nome padrão `Table1`.  
+2.  Na caixa de diálogo **escolher nome** , clique em **OK** para aceitar o nome `Table1`padrão.  
   
-     Uma nova grade de tabela aparece com três colunas: **Nome da Coluna**, **Tipo de Dados** e **Permitir Nulos**.  
+     Uma nova grade de tabela aparece com três colunas: **Nome da Coluna**, **Tipo de Dados**e **Permitir Nulos**.  
   
-3.  Adicione as seguintes informações para `Table1`:  
+3.  Adicione as seguintes informações a `Table1`:  
   
-    |**Nome da coluna**|**Tipo de Dados**|**Permitir Nulos**|  
+    |**Nome da Coluna**|**Tipo de Dados**|**Permitir Nulos**|  
     |---------------------|-------------------|---------------------|  
     |`T1col1`|`int`|verificado|  
     |`T1col2`|`varchar(50)`|verificado|  
@@ -88,7 +88,7 @@ ms.locfileid: "63273741"
   
 5.  No menu **Arquivo** , clique em **Salvar Diagrama1**.  
   
-6.  No **Escolher nome** caixa de diálogo, clique em **Okey** para aceitar o nome padrão `Diagram1`.  
+6.  Na caixa de diálogo **escolher nome** , clique em **OK** para aceitar o nome `Diagram1`padrão.  
   
 7.  A caixa de diálogo **Save** aparece com uma mensagem informando que `Table1` será salva no banco de dados. Clique em **Sim**.  
   
@@ -111,9 +111,10 @@ ms.locfileid: "63273741"
   
 4.  Digite `T1col3 > 5` e clique em **OK**.  
   
-     `Table1` agora tem uma restrição que todos os valores inseridos em `T1col3` devem ser maior que 5.  
+     
+  `Table1` agora tem uma restrição que todos os valores inseridos em `T1col3` devem ser maior que 5.  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 #### <a name="to-create-relationships-between-tables"></a>Para criar relações entre tabelas  
   
@@ -130,7 +131,7 @@ ms.locfileid: "63273741"
   
 2.  Arraste `T2col1` para `T1col1`.  
   
-     Duas caixas de diálogo são exibidas: **Relação de Chave Estrangeira** na tela de fundo e **Tabelas e Colunas** em primeiro plano.  
+     Duas caixas de diálogo são exibidas: **Relação de Chaves Estrangeiras** na tela de fundo e **Tabelas e Colunas** em primeiro plano.  
   
 3.  Clique em **OK** para salvar a nova relação.  
   
@@ -177,7 +178,7 @@ ms.locfileid: "63273741"
   
      Um índice XML com valores padrão será adicionado à lista **Índice XML Selecionado** .  
   
-4.  Clique em **Fechar**.  
+4.  Clique em **fechar**  
   
     > [!NOTE]  
     >  Os índices XML são criados por coluna. O primeiro índice XML é primário; qualquer índice adicional é secundário.  
@@ -206,13 +207,13 @@ ms.locfileid: "63273741"
   
 -   Copiar o diagrama em um bitmap  
   
-## <a name="see-also"></a>Consulte também  
- [Personalizar a quantidade de informações exibidas em diagramas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Configurar o Designer de diagrama de banco de dados &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Personalize a quantidade de informações exibidas em diagramas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Configurar o designer de diagramas de banco de dados &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
  [Adicionar tabelas a diagramas &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [Criar relações entre tabelas em um diagrama de &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+ [Crie relações entre tabelas em um diagrama &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [Criar índices XML](../../relational-databases/xml/create-xml-indexes.md)   
- [Copiar uma imagem de um diagrama de banco de dados na área de transferência &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [Copiar uma imagem de um diagrama de banco de dados para a área de transferência &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [Trabalhar com layout de diagrama &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8de36a4d7929ddba4fcb2a7e046ee81db8d08520
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482706"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Exibir todas as anotações ou transações de um membro (suplemento MDS para Excel)
@@ -29,11 +29,11 @@ ms.locfileid: "65482706"
   
 1.  Clique em uma célula da linha que contém as transações que você deseja exibir.  
   
-2.  Clique com botão direito e no menu que é exibido, clique em **exibir transações**.  
+2.  Clique com o botão direito do mouse e, no menu exibido, clique em **Exibir transações**.  
   
 3.  Na caixa de diálogo **Exibir Transações** , a lista de transações é exibida. Para exibir todas as anotações associadas a uma transação, clique em uma linha da grade.  
   
-## <a name="see-also"></a>Consulte também  
- [Publicação de dados &#40;suplemento do MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Publicando dados &#40;Suplemento MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

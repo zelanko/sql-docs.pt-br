@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bfaad65431cc71c8fa7a6ec5ba24e13fa7692e99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099229"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Erro do Reporting Services
-  O erro do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **rsAccessedDenied** ocorre quando um usuário não tem permissão para realizar uma ação. Por exemplo, o usuário não tem uma atribuição de função que o permita abrir um relatório ou ele não abriu seu navegador com as permissões necessárias.  
+  O erro do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**rsAccessedDenied** ocorre quando um usuário não tem permissão para realizar uma ação. Por exemplo, o usuário não tem uma atribuição de função que o permita abrir um relatório ou ele não abriu seu navegador com as permissões necessárias.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; modo do SharePoint|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo &#124; modo do SharePoint|  
   
 -   Se o erro tiver ocorrido ao acessar o servidor de relatório diretamente através de uma URL, a exceção será mapeada para um erro HTTP 401.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "66099229"
   
 |||  
 |-|-|  
-|**Nome do produto**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**Nome do Produto**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**ID do evento**|rsAccessedDenied|  
-|**Origem do evento**|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
+|**Origem do Evento**|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
 |**Componente**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |**Texto da mensagem**|As permissões concedidas ao usuário 'meudomínio\minhaConta' são insuficientes para a execução dessa operação. (rsAccessDenied) (ReportingServicesLibrary)|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66099229"
   
  Esse erro também é causado pela administração local do servidor de relatório. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atribuições de função](../security/role-assignments.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Funções e permissões &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  

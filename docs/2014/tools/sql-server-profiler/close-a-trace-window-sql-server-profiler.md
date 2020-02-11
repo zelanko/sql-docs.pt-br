@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 19e4ca323ff61f9a5629706e3dcfad7cb7c51688
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316200"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>Fechar uma janela de rastreamento (SQL Server Profiler)
@@ -27,12 +27,12 @@ ms.locfileid: "63316200"
   
 1.  Selecione a janela de rastreamento que deseja fechar.  
   
-2.  No menu **Arquivo** , clique em **Fechar**.  
+2.  No menu **Arquivo**, clique em **Abrir**.  
   
 > [!IMPORTANT]  
 >  Se o rastreamento estiver em execução, fechar sua janela irá interrompê-lo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modelos e permissões do SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Otimizar o exemplo da propriedade (VB) | Microsoft Docs
+title: Exemplo da propriedade Optimize (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f36c0c574917e4f73533a400ea60f363aeb9d74b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917811"
 ---
 # <a name="optimize-property-example-vb"></a>Exemplo da propriedade Optimize (VB)
-Este exemplo demonstra a [campo](../../../ado/reference/ado-api/field-object.md) dinâmico de objeto **otimizar** propriedade. O ***zip*** campo da ***autores*** na tabela a ***Pubs*** banco de dados não está indexado. Definindo o [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriedade a ser **verdadeiro** no ***zip*** campo autoriza o ADO para criar um índice que melhora o desempenho do [localizar](../../../ado/reference/ado-api/find-method-ado.md)método.  
+Este exemplo demonstra a propriedade de **otimização** dinâmica do objeto [Field](../../../ado/reference/ado-api/field-object.md) . O campo ***zip*** da tabela ***autores*** no banco de dados ***pubs*** não está indexado. Definir a propriedade [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) como **true** no campo ***zip*** autoriza o ADO a criar um índice que melhora o desempenho do método [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
   
 ```  
 'BeginOptimizeVB  
@@ -86,6 +86,6 @@ End Sub
 'EndOptimizeVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Otimizar a propriedade dinâmica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

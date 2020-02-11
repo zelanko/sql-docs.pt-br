@@ -11,22 +11,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105585"
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
-  Começando com [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], partes de relatório podem ser publicadas em servidores de relatório e reutilizadas em outros relatórios e por outros usuários se eles tiverem as permissões apropriadas.  
+  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]A partir do, as partes de relatório podem ser publicadas em servidores de relatório e reutilizadas em outros relatórios e por outros usuários se tiverem as permissões apropriadas.  
   
  Partes de relatório podem ser reutilizadas por vários usuários e em vários relatórios. Os usuários podem pesquisar partes de relatório no servidor e adicioná-las a um relatório.  Também podem ser informados de atualizações para a parte de relatório no servidor e republicar novas versões de uma parte de relatório. Essas ações de criação de relatório podem ser afetadas e controladas pelas permissões de segurança dos serviços de relatório.  Este tópico revisa as propriedades de parte de relatório e o comportamento depois que elas estão no servidor.  
   
 ## <a name="managing-report-parts"></a>Gerenciando partes de relatório  
- Para gerenciar partes de relatório, você pode usar o Gerenciador de relatórios para um servidor de relatório no modo nativo ou páginas de aplicativo para um servidor de relatório no modo integrado do SharePoint.  
+ Para gerenciar partes de relatório, você pode usar Report Manager para um servidor de relatório no modo nativo ou páginas de aplicativo para um servidor de relatório no modo integrado do SharePoint.  
   
 ### <a name="server-side-interaction-and-search"></a>Interação e pesquisa do servidor  
- Partes de relatório podem ser publicadas em um servidor de relatório em modo nativo ou em modo integrado do SharePoint. Os usuários podem usar o recurso de galeria de partes de relatório em um aplicativo de criação de relatório, como o Construtor de Relatórios do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para localizar e adicionar partes de relatório a seus relatórios. Quando um usuário pesquisa uma parte de relatório, a pesquisa olha para o catálogo de servidor de relatório independentemente do modo no qual o servidor foi instalado.  
+ Partes de relatório podem ser publicadas em um servidor de relatório em modo nativo ou em modo integrado do SharePoint. Os usuários podem usar o recurso Galeria de partes de relatório em um aplicativo de criação [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de relatório, como Construtor de relatórios para localizar e adicionar partes de relatório a seus relatórios. Quando um usuário pesquisa uma parte de relatório, a pesquisa olha para o catálogo de servidor de relatório independentemente do modo no qual o servidor foi instalado.  
   
  Quando as partes de relatório são publicadas de um aplicativo de criação de relatório, como o Construtor de Relatórios em um servidor de relatório em modo integrado do SharePoint, o catálogo de servidor de relatório também é atualizado e as pesquisas da galeria refletem com precisão a parte de relatório nova ou atualizada.  
   
@@ -51,10 +51,10 @@ ms.locfileid: "66105585"
   
  (*) indica que isso é novo para esta versão.  
   
-|Propriedade|Descrição|Parte de relatório<br /><br /> Critérios de pesquisa de galeria|  
+|Propriedade|DESCRIÇÃO|Parte de relatório<br /><br /> Critérios de pesquisa de galeria|  
 |--------------|-----------------|---------------------------------------------|  
 |Nome|Esse é um dos critérios pelos quais um usuário pode pesquisar na Galeria de Partes de Relatório.|Sim|  
-|Descrição|Você deve organizar os nomes de partes de relatório de uma maneira que facilite para os usuários a localização na galeria. Por exemplo, você pode pesquisar pela descrição iniciando com "Vendas>>" para procurar as partes de relatório que envolvem dados e apresentações relacionadas a vendas.|Sim|  
+|DESCRIÇÃO|Você deve organizar os nomes de partes de relatório de uma maneira que facilite para os usuários a localização na galeria. Por exemplo, você pode pesquisar pela descrição iniciando com "Vendas>>" para procurar as partes de relatório que envolvem dados e apresentações relacionadas a vendas.|Sim|  
 |CreatedBy|A ID do usuário que adicionou originalmente a parte de relatório ao banco de dados do servidor de relatório. O formato exato depende do método de autenticação. Por exemplo, alguns métodos de autenticação mostrarão o domínio\nome de usuário completo nos campos CreatedBy e ModifiedBy.|Sim|  
 |CreationDate|As data em que a parte de relatório foi criada originalmente.<br /><br /> Esse é um dos critérios pelos quais um usuário pode pesquisar na Galeria de Partes de Relatório.|Sim|  
 |ModifiedBy|ModifiedBy é a ID do usuário que modificou por último a parte do relatório.|Sim|  
@@ -75,13 +75,13 @@ ms.locfileid: "66105585"
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Servidor em modo integrado do SharePoint  
   
-|Ações|Role|  
+|Ações|Função|  
 |-------------|----------|  
-|Adicionar, excluir, editar propriedades de item, gerenciar a segurança e baixar partes de relatório|Controle total|  
+|Adicionar, excluir, editar propriedades de item, gerenciar a segurança e baixar partes de relatório|Controle Total|  
 |Adicionar, excluir, editar propriedades de item e baixar partes de relatório|Design<br /><br /> Contribuir|  
-|Pesquisar e reutilizar|leitura<br /><br /> Exibir Apenas|  
+|Pesquisar e reutilizar|Ler<br /><br /> Exibir Apenas|  
   
-### <a name="security-considerations"></a>Considerações sobre segurança  
+### <a name="security-considerations"></a>Considerações de segurança  
   
 -   Quando as definições de partes de relatório são reutilizadas em um relatório, elas são copiadas na definição do relatório em sua totalidade, junto com o ComponentID que as identifica. Se uma parte de relatório for atualizada no servidor, os usuários poderão escolher baixar as partes de relatório atualizadas aos seus relatórios. As atualizações também são cópias completas da parte de relatório, substituindo a versão existente da parte de relatório que estava no relatório.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "66105585"
   
 -   As partes de relatório usam as mesmas políticas de permissão que as existentes no tipo de item "Resource". Dentro de uma pasta, não há nenhuma diferenciação entre itens de recurso tradicionais e partes de relatório a partir de uma perspectiva de herança de segurança. A parte de relatório herdará a mesma política de permissão que as imagens na mesma pasta. Quando esta distinção é necessária, a segurança de nível de item pode ser configurada para as partes de relatório desejadas. Ou você pode colocar partes de relatório que deveriam estar em pastas separadas e que têm as permissões corretas configuradas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Página Propriedades gerais, partes de relatório &#40;Gerenciador de relatórios&#41;](../general-properties-page-report-parts-report-manager.md)   
- [Mover itens de página &#40;Gerenciador de relatórios&#41;](../move-items-page-report-manager.md)   
+ [Página Propriedades gerais, partes de relatório &#40;Report Manager&#41;](../general-properties-page-report-parts-report-manager.md)   
+ [&#40;página mover itens Report Manager&#41;](../move-items-page-report-manager.md)   
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Solucionar problemas de partes de relatório &#40;relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Solucionar problemas de partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   
   

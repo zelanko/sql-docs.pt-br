@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35526e8928a98ccca2e2e61e88fb9361a6d00d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105235"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Função Level (Construtor de Relatórios e SSRS)
@@ -30,12 +30,12 @@ ms.locfileid: "66105235"
 Level(scope)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *escopo*  
  (`String`) (Opcional). O nome de um conjunto de dados, um grupo ou uma região de dados que contém os itens de relatório aos quais a função de agregação deve ser aplicada. Se *scope* não estiver especificado, será usado o escopo atual.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- Retorna um `Integer`. Se *escopo* Especifica um conjunto de dados ou região de dados ou especifica um agrupamento não recursivo (ou seja, um agrupamento sem nenhum `Parent` elemento), `Level` retornará 0. Se o *scope* for omitido, ele retornará o nível do escopo atual.  
+ Retorna um `Integer`. Se *Scope* especifica um DataSet ou uma região de dados, ou especifica um agrupamento nonrecursive (ou seja, um agrupamento `Parent` sem elemento) `Level` , retorna 0. Se o *scope* for omitido, ele retornará o nível do escopo atual.  
   
 ## <a name="remarks"></a>Comentários  
  O valor retornado pela função `Level` é baseado em zero; isto é, o primeiro nível em uma hierarquia é 0.  
@@ -51,7 +51,7 @@ Level(scope)
 =Level("Employees")  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: Propriedades do rastreamento (guia Geral) | Microsoft Docs
+title: Propriedades do rastreamento (guia geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089529"
 ---
 # <a name="trace-properties-general-tab"></a>Propriedades do Rastreamento (guia Geral)
@@ -34,7 +34,7 @@ ms.locfileid: "66089529"
  **Tipo de provedor de rastreamento**  
  Exibe o tipo de servidor que está fornecendo o rastreamento. O arquivo de definição de rastreamento popula o campo **Tipo de provedor de rastreamento** automaticamente. Não é possível modificar esse campo.  
   
- **version**  
+ **Versão**  
  Exibe a versão do servidor que está fornecendo o rastreamento. O arquivo de definição de rastreamento popula o campo **Versão** automaticamente. Não é possível modificar esse campo.  
   
  **Usar o modelo**  
@@ -46,7 +46,7 @@ ms.locfileid: "66089529"
  **Definir tamanho máximo do arquivo (MB)**  
  Se você optar por salvar os dados de rastreamento em um arquivo, especifique o tamanho máximo do arquivo de rastreamento. O padrão é 5 MB (megabytes). O tamanho máximo é limitado somente pelo sistema de arquivos (NTFS, FAT) onde o arquivo é salvo.  
   
- \<Gráfico > **Salvar como**  
+ \<Gráfico> **salvar como**  
  Depois de selecionar para salvar, é possível selecionar esse ícone para alterar o nome de arquivo.  
   
  **Habilitar substituição de arquivo**  
@@ -58,16 +58,16 @@ ms.locfileid: "66089529"
  **Salvar na tabela**  
  Capture os dados de rastreamento para uma tabela de banco de dados. Salvar dados de rastreamento é útil para revisão e análise posteriores. Entretanto, ao salvar dados de rastreamento para uma tabela isso pode levar a uma sobrecarga significativa no servidor no qual o rastreamento está sendo salvo. Se possível, não salve a tabela de rastreamento no mesmo servidor que está sendo rastreado.  
   
- \<Gráfico > **tabela de destino**  
+ \<Tabela de **destino** do gráfico>  
  Depois de selecionar para salvar os dados de rastreamento para uma tabela de banco de dados, é possível selecionar esse ícone para alterar o nome da tabela.  
   
  **Definir máximo de linhas (em milhares)**  
  Especifique o número maior de linhas nas quais salvar dados. O padrão é 1000 linhas.  
   
- **Habilitar horário de parada do rastreamento**  
+ **Habilitar hora de parada do rastreamento**  
  Defina a data e hora para o rastreamento ser concluído e se fechar.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
   

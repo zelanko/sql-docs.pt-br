@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63275966"
 ---
 # <a name="sql-pane-visual-database-tools"></a>Painel SQL (Visual Database Tools)
@@ -53,12 +53,12 @@ ms.locfileid: "63275966"
 > [!NOTE]  
 >  Se você inserir uma instrução SQL, mas depois fizer mais alterações na consulta alterando os painéis Diagrama e Critérios, o Designer de Consulta e Exibição recria e exibe novamente a instrução SQL. Em alguns casos, esta ação resulta em uma instrução SQL que é construída de forma diferente daquela que você inseriu originalmente (embora vá sempre render os mesmos resultados). Esta diferença é particularmente possível quando você estiver trabalhando com critérios de pesquisa que envolvam várias cláusulas associadas a AND e OR.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Executar consultas do &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [Tópicos explicativos de consultas e exibições de design &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Painel de diagrama &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [Painel critérios &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
+ [Executar consultas &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
+ [Tópicos de instruções sobre como criar consultas e exibições &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Painel Diagrama &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
+ [Painel de critérios &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [Painel de Resultados &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   
   

@@ -17,62 +17,62 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066664"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configurações do projeto (mapeamento de tipo) (AccessToSQL)
-As configurações de mapeamento de tipo de projeto permitem que você definir mapeamentos de tipo padrão para o projeto do SSMA. Você também pode especificar mapeamentos de tipo para objetos de banco de dados individuais. Para obter mais informações, consulte [tipos de dados de destino e origem do mapeamento](mapping-source-and-target-data-types-accesstosql.md).  
+As configurações do projeto de mapeamento de tipo permitem que você defina mapeamentos de tipo padrão para o projeto do SSMA. Você também pode especificar mapeamentos de tipo para objetos de banco de dados individuais. Para obter mais informações, consulte [mapeando tipos de dados de origem e de destino](mapping-source-and-target-data-types-accesstosql.md).  
   
-Mapeamento de tipo está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo:  
+O mapeamento de tipo está disponível nas caixas de diálogo **configurações do projeto** e **configurações padrão do projeto** :  
   
--   Use o **configurações do projeto** caixa de diálogo para definir opções de configuração para o projeto atual. Para acessar as configurações de mapeamento de tipo na **ferramentas** menu, selecione **configurações do projeto**e, em seguida, clique em **mapeamento de tipo** no painel esquerdo.  
+-   Use a caixa de diálogo **configurações do projeto** para definir opções de configuração para o projeto atual. Para acessar as configurações de mapeamento de tipo, no menu **ferramentas** , selecione **configurações do projeto**e, em seguida, clique em mapeamento de **tipo** no painel esquerdo.  
   
--   Use o **configurações de projeto padrão** caixa de diálogo para definir opções de configuração para todos os projetos. Para acessar as configurações de mapeamento de tipo na **ferramentas** menu, selecione **configurações do projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibida / alterado de  **Versão de destino de migração** lista suspensa e, em seguida, clique em **mapeamento de tipo** no painel esquerdo.  
+-   Use a caixa de diálogo **configurações de projeto padrão** para definir opções de configuração para todos os projetos. Para acessar as configurações de mapeamento de tipo, no menu **ferramentas** , selecione **configurações de projeto padrão**, selecione tipo de projeto de migração para o qual as configurações devem ser exibidas/Changed do menu suspenso **versão de destino de migração** e clique em mapeamento de **tipo** no painel esquerdo.  
   
 ## <a name="options"></a>Opções  
-**Tipo de Origem**  
-O tipo de dados do Access para mapear.  
+**Tipo de origem**  
+O tipo de dados do Access a ser mapeado.  
   
 **Tipo de destino**  
-O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou tipo de dados do SQL Azure para o tipo de dados de acesso especificado.  
+O tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados de destino ou SQL Azure para o tipo de dados de acesso especificado.  
   
-A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem e destino.  
+A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem e de destino.  
   
-|Tipo de dados do Access|Tipo de dados do SQL Server|  
+|Acessar tipo de dados|Tipo de dados do SQL Server|  
 |--------------------|------------------------|  
-|**binário [\*... \*]**|**varbinary[\*]**|  
-|**booleano**|**bit**|  
-|**byte**|**tinyint**|  
-|**currency**|**money**|  
+|**binário [\*.. \*]**|**varbinary [\*]**|  
+|**Boolean**|**bit**|  
+|**minuciosa**|**tinyint**|  
+|**moeda**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**guid**|**uniqueidentifier**|  
+|**volume**|**uniqueidentifier**|  
 |**inteiro**|**smallint**|  
-|**long**|**int**|  
+|**Longas**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**memo**|**nvarchar(max)**|  
-|**Memorando** - para Access 97|**varchar(max)**|  
-|**single**|**real**|  
-|**text[\*..\*]**|**nvarchar[\*]**|  
-|**texto [\*... \*]** - para Access 97|**varchar[\*]**|  
+|**memorando**|**nvarchar(max)**|  
+|**memorando** -para o Access 97|**varchar(max)**|  
+|**exclusivo**|**real**|  
+|**texto [\*.. \*]**|**nvarchar [\*]**|  
+|**texto [\*.. ] \*** -para o Access 97|**varchar [\*]**|  
   
 **Adicionar**  
 Clique para adicionar um tipo de dados à lista de mapeamento.  
   
 **Editar**  
-Clique para editar um tipo de dados na lista de mapeamento.  
+Clique para editar um tipo de dados na lista mapeamento.  
   
-**Removerr**  
+**Remover**  
 Clique para remover o mapeamento de tipo de dados selecionado da lista de mapeamento.  
   
-**Restaurar Padrões**  
+**Redefinir para padrão**  
 Clique para redefinir todos os mapeamentos de tipo de dados para os padrões do SSMA.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Mapeamento de tipo de dados de destino e de origem](mapping-source-and-target-data-types-accesstosql.md)  
-[Reference(Access) de Interface do usuário](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Referência da interface do usuário (Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

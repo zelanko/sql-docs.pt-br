@@ -1,5 +1,5 @@
 ---
-title: Alocando e liberando Buffers | Microsoft Docs
+title: Alocando e liberando buffers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077196"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Alocar e liberar buffers
-Todos os buffers alocados e liberados pelo aplicativo. Se um buffer não for adiado, ele precisa existir somente para a duração da chamada para uma função. Por exemplo, **SQLGetInfo** retorna o valor associado a uma determinada opção no buffer apontado pela *InfoValuePtr* argumento. Esse buffer pode ser liberado imediatamente após a chamada para **SQLGetInfo**, conforme mostrado no exemplo de código a seguir:  
+Todos os buffers são alocados e liberados pelo aplicativo. Se um buffer não for adiado, ele precisará existir somente pela duração da chamada para uma função. Por exemplo, **SQLGetInfo** retorna o valor associado a uma opção específica no buffer apontado pelo argumento *InfoValuePtr* . Esse buffer pode ser liberado imediatamente após a chamada para **SQLGetInfo**, conforme mostrado no exemplo de código a seguir:  
   
 ```  
 SQLSMALLINT   InfoValueLen;  
@@ -34,7 +34,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- Como buffers adiados são especificados em uma função e usados em outro, ele é um erro de programação de aplicativo ao liberar um buffer adiado, enquanto o driver ainda espera que ele exista. Por exemplo, o endereço do \* *ValuePtr* buffer é passado para **SQLBindCol** para uso posterior pelo **SQLFetch**. Esse buffer não pode ser liberado até que a coluna não está associada, por exemplo, com uma chamada para **SQLBindCol** ou **SQLFreeStmt** conforme mostrado no exemplo de código a seguir:  
+ Como os buffers adiados são especificados em uma função e usados em outro, é um erro de programação de aplicativo para liberar um buffer adiado enquanto o driver ainda espera que ele exista. Por exemplo, o endereço \*do buffer *ValuePtr* é passado para **SQLBindCol** para uso posterior por **SQLFetch**. Esse buffer não pode ser liberado até que a coluna não esteja associada, como com uma chamada para **SQLBindCol** ou **SQLFreeStmt** , conforme mostrado no exemplo de código a seguir:  
   
 ```  
 SQLRETURN    rc;  
@@ -59,7 +59,7 @@ SQLFreeStmt(hstmt, SQL_UNBIND);
 free(ValuePtr);  
 ```  
   
- Esse erro é feito com facilidade, declarando o buffer localmente em uma função; o buffer é liberado quando o aplicativo deixa a função. Por exemplo, o código a seguir faz com que o comportamento indefinido e provavelmente fatal no driver:  
+ Esse erro é facilmente feito declarando o buffer localmente em uma função; o buffer é liberado quando o aplicativo deixa a função. Por exemplo, o código a seguir causa um comportamento indefinido e provavelmente fatal no driver:  
   
 ```  
 SQLRETURN   rc;  

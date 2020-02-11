@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109628"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Criar e gerenciar fontes de dados compartilhadas (Reporting Services no modo integrado do SharePoint)
@@ -36,13 +36,13 @@ ms.locfileid: "66109628"
 2.  No menu **Novo Documento** , clique em **Fonte de Dados de Relatório**  
   
     > [!NOTE]  
-    >  Caso você não veja o item **Fonte de Dados de Relatório** no menu, isso significa que o tipo de conteúdo da fonte de dados de relatório não foi habilitado. Para obter mais informações, consulte [Adicionar servidor de tipos de conteúdo relatório em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+    >  Caso você não veja o item **Fonte de Dados de Relatório** no menu, isso significa que o tipo de conteúdo da fonte de dados de relatório não foi habilitado. Para obter mais informações, consulte [adicionar tipos de conteúdo do servidor de relatório a uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 3.  Em **Nome**, insira um nome descritivo para o arquivo .rsds.  
   
 4.  Em **Tipo de Fonte de Dados**, selecione o tipo de fonte de dados na lista. Para obter mais informações, consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
-5.  Em **Cadeia de Conexão**, especifique um ponteiro para a fonte de dados e outras configurações necessárias para estabelecer uma conexão com a fonte de dados externa. O tipo de fonte de dados usado determina a sintaxe da cadeia de caracteres de conexão. Para obter mais informações e exemplos, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+5.  Em **Cadeia de Conexão**, especifique um ponteiro para a fonte de dados e outras configurações necessárias para estabelecer uma conexão com a fonte de dados externa. O tipo de fonte de dados usado determina a sintaxe da cadeia de caracteres de conexão. Para obter mais informações e exemplos, consulte [conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 6.  Em **Credenciais**, especifique como o servidor de relatório obtém credenciais para acessar a fonte de dados externa. Credenciais podem ser armazenadas, solicitadas, integradas ou configuradas para processamento autônomo do relatório.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66109628"
   
  Tenha cuidado ao excluir um modelo de relatório. Se você excluir um modelo, não será mais possível abrir e modificar relatórios baseados nesse modelo no Construtor de Relatórios. Se você excluir por engano um modelo usado por relatórios existentes, será preciso gerar novamente o modelo, recriar e salvar os relatórios que usam o modelo e especificar novamente a segurança de todos os itens do modelo que deseje usar. Você não pode simplesmente gerar o modelo de novo e, em seguida, anexá-lo a um relatório existente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

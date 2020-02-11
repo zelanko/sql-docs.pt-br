@@ -1,5 +1,5 @@
 ---
-title: Publicar dados do Excel no MDS (suplemento MDS para Excel) | Microsoft Docs
+title: Publicar dados do Excel para o MDS (Suplemento MDS para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478800"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Publicar dados do Excel no MDS (suplemento MDS para Excel)
@@ -49,8 +49,8 @@ ms.locfileid: "65478800"
 ## <a name="next-steps"></a>Próximas etapas  
  [Aplicar regras de negócio &#40;Suplemento MDS para Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Publicação de dados &#40;suplemento do MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Publicando dados &#40;Suplemento MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
  [Validando dados &#40;Suplemento MDS para Excel&#41;](validating-data-mds-add-in-for-excel.md)  
   
   

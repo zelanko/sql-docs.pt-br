@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a8523843633675fb9d0d319dac10417172832f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482809"
 ---
 # <a name="members-master-data-services"></a>Membros (Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "65482809"
   
  Neste exemplo, a tabela representa uma entidade, as linhas da tabela representam membros e as colunas representam atributos. Cada célula representa um valor de atributo de um membro específico.  
   
- ![Entidade do Master Data Services representada como tabela](../../2014/master-data-services/media/mds-conc-entity-table.gif "Entidade do Master Data Services representada como tabela")  
+ ![Entidade de Master Data Services representada como tabela](../../2014/master-data-services/media/mds-conc-entity-table.gif "Entidade de Master Data Services representada como tabela")  
   
 ## <a name="member-types"></a>Tipos de membro  
  Há três tipos de membros: membros folha, membros consolidados e membros de coleção.  
@@ -50,12 +50,12 @@ ms.locfileid: "65482809"
 -   Em hierarquias explícitas, membros consolidados podem ser os pais de outros membros dentro da hierarquia ou podem ser filhos.  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>Usar hierarquias e coleções para organizar os membros  
- As hierarquias e as coleções podem ser usadas para agrupar membros para relatório ou análise. Para obter mais informações, consulte [Hierarchies &#40;Master Data Services&#41;](hierarchies-master-data-services.md) e [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md).  
+ As hierarquias e as coleções podem ser usadas para agrupar membros para relatório ou análise. Para obter mais informações, consulte [Hierarquias &#40;Master Data Services&#41;](hierarchies-master-data-services.md) e [Coleções &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md).  
   
 ## <a name="member-example"></a>Exemplo de membro  
  No exemplo a seguir, cada membro é composto de um valor dos atributos Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto.  
   
- ![Tabela de entidade de produto de bicicleta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela de entidade de produto de bicicleta")  
+ ![Tabela da entidade de produto bicicleta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela da entidade de produto bicicleta")  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -65,8 +65,8 @@ ms.locfileid: "65482809"
 |Criar um novo membro consolidado.|[Criar um membro consolidado &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |Excluir um membro ou uma coleção existente.|[Excluir um membro ou uma coleção &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |Reativar um membro ou coleção excluído.|[Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Atualizar os valores de atributos de um membro.|[Alterar o tipo de atributo &#40;Suplemento MDS para Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
-|Mover membros dentro de uma hierarquia.|[Mover membros dentro de uma hierarquia de &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
+|Atualizar os valores de atributos de um membro.|[Altere o tipo de atributo &#40;Suplemento MDS para Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Mover membros dentro de uma hierarquia.|[Mover membros dentro de uma hierarquia &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65482809"
   
 -   [Permissões de folha &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
--   [Consolidados permissões &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+-   [Permissões consolidadas &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
 -   [Operadores de filtro &#40;Master Data Services&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)  
   

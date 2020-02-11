@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 1: Definindo uma política de correspondência | Microsoft Docs'
+title: 'Tarefa 1: definindo uma política de correspondência | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,59 +11,59 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481311"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>Tarefa 1: Definir uma política de correspondência
-  Nesta tarefa, você criará uma política de correspondência com uma regra nela. A regra terá um pré-requisito: **Supplier ID**, que significa que as IDs de fornecedor deverão corresponder antes do uso de outros domínios na regra. A regra usa dois outros domínios: **Nome do fornecedor** com **similaridade** valor definido como **70%** e **Contact Email** com **similaridade** valor definido como **30%** .  
+# <a name="task-1-defining-a-matching-policy"></a>Tarefa 1: Definindo uma política de correspondência
+  Nesta tarefa, você criará uma política de correspondência com uma regra nela. A regra terá um pré-requisito: **ID do fornecedor**, o que significa que as IDs do fornecedor devem corresponder antes de usar os outros domínios na regra. A regra usa dois outros domínios: **nome do fornecedor** com o valor de **similaridade** definido como **70%** e **email de contato** com o valor de **similaridade** definido como **30%**.  
   
-1.  Na página principal do **cliente DQS**, clique em **seta para a direita** lado **fornecedores** knowledge base e selecione **política de correspondência**.  
+1.  Na página principal do **cliente do DQS**, clique na **seta para a direita** ao lado da base de dados de conhecimento **fornecedores** e selecione **política de correspondência**.  
   
-     ![Menu de política no principal de correspondência página](../../2014/tutorials/media/et-definingamatchingpolicy-01.jpg "correspondência de Menu de política na principal página")  
+     ![Menu Política de Correspondência na página principal](../../2014/tutorials/media/et-definingamatchingpolicy-01.jpg "Menu Política de Correspondência na página principal")  
   
-2.  Sobre o **mapa** página, selecione **arquivo do Excel** para **fonte de dados**.  
+2.  Na página **mapa** , selecione **arquivo do Excel** para **fonte de dados**.  
   
-3.  Clique em **navegue**, certifique-se de que o filtro é definido como **pasta de trabalho do Excel**e selecione **Cleansed Supplier List** que você exportou depois de executar a atividade de limpeza de arquivo.  
+3.  Clique em **procurar**, verifique se o filtro está definido como **pasta de trabalho do Excel**e selecione o arquivo **. xls da lista de fornecedores limpos** que você exportou depois de executar a atividade de limpeza.  
   
     > [!NOTE]  
     >  No final dessa atividade, você não poderá exportar os resultados, pois ela é centralizada basicamente na definição de uma política de correspondência. Você criará um Projeto de Qualidade de Dados para a atividade de correspondência e o executará para remover as duplicatas da lista de fornecedores usando essa política de correspondência na próxima lição.  
   
-4.  Mapa **SupplierID** coluna a ser **Supplier ID** domínio **Supplier Name** coluna a ser **Supplier Name** domínio,  **ContactEmailAddress** coluna para **Contact Email** domínio. Você só precisa mapear as colunas de origem para domínios que queira usar na definição da política de correspondência. Nesse caso, você está tornando os domínios Supplier ID, Supplier Name e Contact Email disponíveis para a atividade de política de correspondência.  
+4.  Mapeie a coluna **CódigoDoFornecedor** para **domínio ID** do fornecedor, coluna **nome do fornecedor** para **nome do fornecedor** domínio, **ContactEmailAddress** coluna para contatar o domínio de **email** . Você só precisa mapear as colunas de origem para domínios que queira usar na definição da política de correspondência. Nesse caso, você está tornando os domínios Supplier ID, Supplier Name e Contact Email disponíveis para a atividade de política de correspondência.  
   
-     ![Mapear a página do processo de definição de política de correspondência](../../2014/tutorials/media/et-definingamatchingpolicy-02.jpg "mapear a página do processo de definição de política de correspondência")  
+     ![Página Mapa do Processo de Definição da Política de Correspondência](../../2014/tutorials/media/et-definingamatchingpolicy-02.jpg "Página Mapa do Processo de Definição da Política de Correspondência")  
   
-5.  Clique em **próxima** para mover para o **política de correspondência** página onde você definirá uma política de correspondência com uma regra nela.  
+5.  Clique em **Avançar** para ir para a página de **política de correspondência** , na qual você definirá uma política de correspondência com uma regra.  
   
-6.  Clique em **criar uma regra de correspondência** na barra de ferramentas para criar uma regra na política.  
+6.  Clique no botão **criar uma regra de correspondência** na barra de ferramentas para criar uma regra na política.  
   
-     ![Criar um botão de barra de ferramentas de regra correspondente](../../2014/tutorials/media/et-definingamatchingpolicy-03.jpg "criar um botão de barra de ferramentas de regra correspondente")  
+     ![Botão de barra de ferramentas Criar uma Regra Correspondente](../../2014/tutorials/media/et-definingamatchingpolicy-03.jpg "Botão de barra de ferramentas Criar uma Regra Correspondente")  
   
-7.  No **detalhes da regra** painel à direita, insira **remover fornecedores duplicados** para o **nome da regra**.  
+7.  No painel **detalhes da regra** à direita, digite **remover fornecedores duplicados** para o **nome da regra**.  
   
-8.  Clique em **adicionar um novo elemento de domínio** na barra de ferramentas no painel direito.  
+8.  Clique em **Adicionar um novo elemento de domínio** na barra de ferramentas no painel direito.  
   
-     ![Detalhes de regra - adicionar um novo botão de elemento de domínio](../../2014/tutorials/media/et-definingamatchingpolicy-04.jpg "detalhes de regra - adicionar um novo botão de elemento de domínio")  
+     ![Detalhes de regra - Botão Adicionar um Novo Elemento de Domínio](../../2014/tutorials/media/et-definingamatchingpolicy-04.jpg "Detalhes de regra - Botão Adicionar um Novo Elemento de Domínio")  
   
-9. Selecione **Supplier ID** para o **domínio** e selecione o **pré-requisito** caixa de seleção. Observe que **similaridade** é automaticamente definido como **Exact**. Definindo **Supplier ID** como o **pré-requisito**, você especificar que os valores para esse campo em dois registros diferentes devem retornar uma correspondência de 100%, ou os registros não serão considerados uma correspondência e as outras cláusulas no regra serão desconsideradas.  
+9. Selecione **ID do fornecedor** para o **domínio** e marque a caixa de seleção de **pré-requisitos** . Observe que a **similaridade** é definida automaticamente como **exata**. Ao definir a **ID do fornecedor** como o **pré-requisito**, você especifica que os valores desse campo nos dois registros devem retornar uma correspondência de 100%, caso contrário, os registros não serão considerados uma correspondência e as outras cláusulas da regra serão desconsideradas.  
   
-     ![Remover definição de regra de fornecedores duplicados](../../2014/tutorials/media/et-definingamatchingpolicy-05.jpg "remover fornecedores duplicados definição de regra")  
+     ![Definição da regra Remover Fornecedores Duplicados](../../2014/tutorials/media/et-definingamatchingpolicy-05.jpg "Definição da regra Remover Fornecedores Duplicados")  
   
-10. Clique em **adicionar um novo elemento de domínio** na barra de ferramentas novamente.  
+10. Clique em **Adicionar um novo elemento de domínio** da barra de ferramentas novamente.  
   
-11. Selecione **Supplier Name** domínio, selecione **Similar** para **similaridade**e o tipo **70** para o **peso**.  Aqui, você está especificando que os nomes de fornecedor não precisam ser idênticos, mas podem ser semelhantes para que os registros sejam considerados uma correspondência. O peso indica a contribuição da pontuação desse campo para a pontuação de correspondência geral.  
+11. Selecione **nome do fornecedor** domínio, selecione **semelhante** a **similaridade**e digite **70** para o **peso**.  Aqui, você está especificando que os nomes de fornecedor não precisam ser idênticos, mas podem ser semelhantes para que os registros sejam considerados uma correspondência. O peso indica a contribuição da pontuação desse campo para a pontuação de correspondência geral.  
   
-12. Repita as duas etapas anteriores para adicionar **Contact Email** domínio com **30** para o **peso**.  
+12. Repita as duas etapas anteriores para adicionar o domínio de **email de contato** com **30** para o **peso**.  
   
-13. Observe que o **min pontuação de correspondência** é definido como **80%** , que é o valor que você vê no **geral** guia do **configuração** página do **Administração do DQS**. Você só poderá aumentar essa pontuação acima desse valor de limite aqui.  
+13. Observe que a **Pontuação de correspondência mínima** está definida como **80%**, que é o valor que você vê na guia **geral** da página de **configuração** da **Administração do DQS**. Você só poderá aumentar essa pontuação acima desse valor de limite aqui.  
   
-14. Observe que **Clusters sobrepostos** opção está selecionada. Com essa opção, um registro pode aparecer em vários clusters. Se você alterar a configuração para Clusters Não Sobrepostos, os clusters que tiverem registros comuns serão combinados em um único cluster.  
+14. Observe que a opção **clusters sobrepostos** está selecionada. Com essa opção, um registro pode aparecer em vários clusters. Se você alterar a configuração para Clusters Não Sobrepostos, os clusters que tiverem registros comuns serão combinados em um único cluster.  
   
-15. O **iniciar** botão nesta página lhe permite testar cada regra na política separadamente, por outro lado, o botão Iniciar na próxima página permite que você teste a política inteira (todas as regras na política).  
+15. O botão **Iniciar** nessa página permite testar cada regra na política separadamente, enquanto que o botão Iniciar na próxima página permite que você teste toda a política (todas as regras na política).  
   
-16. Clique em **próxima** para alternar para o **resultados de correspondência** página.  
+16. Clique em **Avançar** para alternar para a página **resultados de correspondência** .  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Tarefa 2: Testando e publicando a política de correspondência](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  

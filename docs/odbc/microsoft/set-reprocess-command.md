@@ -1,5 +1,5 @@
 ---
-title: Comando SET REPROCESS | Microsoft Docs
+title: Definir comando de reprocessamento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16f87c52b4149d62a8d57884216890b7421e8ef6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063617"
 ---
 # <a name="set-reprocess-command"></a>Comando SET REPROCESS
-Especifica quantas vezes ou para saber como longo para bloquear um arquivo ou um registro após uma tentativa malsucedida de bloqueio.  
+Especifica quantas vezes ou por quanto tempo bloquear um arquivo ou registro após uma tentativa de bloqueio sem êxito.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,26 +31,26 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="arguments"></a>Argumentos  
  PARA *nAttempts*[segundos]  
- Especifica o número de vezes ou o número de segundos para tentar bloquear um arquivo ou registro após a tentativa inicial bem-sucedida. O valor padrão é 0; o valor máximo é de 32.000.  
+ Especifica o número de vezes ou o número de segundos para tentar bloquear um registro ou arquivo após uma tentativa de falha inicial. O valor padrão é 0; o valor máximo é 32.000.  
   
- SEGUNDOS Especifica que o Visual FoxPro tenta bloquear um arquivo de registro ou de *nAttempts* segundos. Ele está disponível apenas quando *nAttempts* é maior que zero.  
+ SEGUNDOS especifica que o Visual FoxPro tenta bloquear um arquivo ou registro por *nAttempts* segundos. Ele está disponível somente quando *nAttempts* é maior que zero.  
   
- Por exemplo, se *nAttempts* é 30, Visual FoxPro tenta bloquear um registro ou arquivos de até 30 vezes. Se você incluir também segundos (definir REPROCESSAR a 30 segundos), do Visual FoxPro continuamente tenta bloquear um arquivo ou registro de até 30 segundos.  
+ Por exemplo, se *nAttempts* for 30, o Visual FoxPro tentará bloquear um registro ou um arquivo até 30 vezes. Se você também incluir segundos (definir o reprocessamento para 30 segundos), o Visual FoxPro tentará, continuamente, bloquear um registro ou um arquivo por até 30 segundos.  
   
- Se uma rotina de ON ERROR está em vigor e tentativas por um comando para bloquear o registro ou arquivo não tiverem êxito, a rotina de ON ERROR é executada. No entanto, se o bloqueio de tentativas de uma função, uma rotina de ON ERROR não será executada e a função retornará False (. F.).  
+ Se uma rotina ON ERROR estiver em vigor e se as tentativas por um comando para bloquear o registro ou o arquivo não forem bem-sucedidas, a rotina ON ERROR será executada. No entanto, se uma função tentar o bloqueio, uma rotina ON ERROR não será executada e a função retornará false (. F.).  
   
- Se uma rotina de ON ERROR não está em vigor, um comando tenta bloquear o registro ou arquivo e o bloqueio não pode ser colocado, um erro será gerado. Se uma função tenta colocar o bloqueio, o alerta não será exibido e a função retornará False (. F.).  
+ Se uma rotina ON ERROR não estiver em vigor, um comando tentará bloquear o registro ou o arquivo, e o bloqueio não poderá ser colocado, um erro será gerado. Se uma função tentar posicionar o bloqueio, o alerta não será exibido e a função retornará false (. F.).  
   
- Se *nAttempts* é 0 (o valor padrão) e emitir um comando ou função que tenta bloquear um arquivo ou registro, do Visual FoxPro tenta bloquear o registro ou arquivo indefinidamente. Se o registro ou o arquivo se torna disponível para bloquear enquanto espera, o bloqueio e a mensagem do sistema está desmarcada. Se uma função tentar colocar o bloqueio, a função retorna True (. T.).  
+ Se *nAttempts* for 0 (o valor padrão) e você emitir um comando ou função que tente bloquear um registro ou arquivo, o Visual FoxPro tentará bloquear o registro ou o arquivo indefinidamente. Se o registro ou o arquivo ficar disponível para bloqueio enquanto você aguarda, o bloqueio é colocado e a mensagem do sistema é apagada. Se uma função tentar posicionar o bloqueio, a função retornará true (. T.).  
   
- Se uma rotina de ON ERROR está em vigor e um comando está tentando bloquear o registro ou o arquivo, a rotina de ON ERROR prevalece sobre tentativas adicionais para bloquear o registro ou arquivo. A rotina de ON ERROR é executada imediatamente. Do Visual FoxPro não tenta fazer registro adicional ou bloqueios de arquivo e não exibe a mensagem do sistema.  
+ Se uma rotina ON ERROR estiver em vigor e um comando estiver tentando bloquear o registro ou o arquivo, a rotina ON ERROR terá precedência sobre tentativas adicionais de bloquear o registro ou o arquivo. A rotina ON ERROR é executada imediatamente. O Visual FoxPro não tenta registro adicional ou bloqueios de arquivo e não exibe a mensagem do sistema.  
   
- Se *nAttempts* é 1, do Visual FoxPro tenta bloquear o registro ou arquivo indefinidamente e uma rotina de ON ERROR não é executada.  
+ Se *nAttempts* for 1, o Visual FoxPro tentará bloquear o registro ou o arquivo indefinidamente e uma rotina On Error não será executada.  
   
- Se um bloqueio foi colocado por outro usuário no arquivo que você está tentando bloquear ou registro, você deve aguardar até que o usuário libera o bloqueio.  
+ Se um bloqueio tiver sido colocado por outro usuário no registro ou arquivo que você está tentando bloquear, você deverá aguardar até que o usuário libere o bloqueio.  
   
- COMO AUTOMÁTICO  
- Especifica que o Visual FoxPro tenta bloquear o registro ou arquivo indefinidamente. (O REPROCESSAMENTO conjunto como -2 é um comando equivalente.)  
+ PARA AUTOMÁTICO  
+ Especifica que o Visual FoxPro tenta bloquear o registro ou o arquivo indefinidamente. (SET Reprocess TO-2 é um comando equivalente.)  
   
 ## <a name="remarks"></a>Comentários  
- A primeira tentativa de bloquear um arquivo ou registro nem sempre é bem-sucedida. Com frequência, um registro ou o arquivo está bloqueado por outro usuário na rede. SET REPROCESS determina se o Visual FoxPro facilita adicional tenta bloquear o registro ou o arquivo quando a tentativa inicial for bem-sucedida. Você pode especificar quantas vezes tentativas adicionais são feitas ou quanto tempo as tentativas são feitas. Uma rotina de ON ERROR afeta como malsucedido bloqueio tentativas são tratadas.
+ A primeira tentativa de bloquear um registro ou arquivo nem sempre é bem-sucedida. Frequentemente, um registro ou arquivo é bloqueado por outro usuário na rede. DEFINIR o reprocessamento determina se o Visual FoxPro faz tentativas adicionais de bloquear o registro ou o arquivo quando a tentativa inicial não for bem-sucedida. Você pode especificar quantas vezes tentativas adicionais são feitas ou por quanto tempo as tentativas são feitas. Uma rotina ON ERROR afeta a forma como as tentativas de bloqueio malsucedidas são tratadas.

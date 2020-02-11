@@ -16,26 +16,26 @@ ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919350"
 ---
 # <a name="count-property-ado"></a>Propriedade Count (ADO)
 Indica o número de objetos em uma coleção.  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna um **longo** valor.  
+ Retorna um valor **longo** .  
   
 ## <a name="remarks"></a>Comentários  
- Use o **contagem** propriedade para determinar quantos objetos estão em uma determinada coleção.  
+ Use a propriedade **Count** para determinar quantos objetos estão em uma determinada coleção.  
   
- Como a numeração de membros de uma coleção começa com zero, você deve sempre codificar loops começando com o membro zero e terminando com o valor da **contagem** propriedade menos 1. Se você estiver usando o Microsoft Visual Basic e deseja executar um loop através dos membros de uma coleção sem verificar a **contagem** propriedade, use o **para cada um... Próxima** comando.  
+ Como a numeração de membros de uma coleção começa com zero, você deve sempre codificar loops começando com o membro zero e terminando com o valor da propriedade **Count** menos 1. Se você estiver usando o Microsoft Visual Basic e quiser executar um loop pelos membros de uma coleção sem verificar a propriedade **Count** , use o **para cada... Próximo** comando.  
   
- Se o **contagem** for zero, não existem objetos na coleção.  
+ Se a propriedade **Count** for zero, não haverá nenhum objeto na coleção.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
   
 ||||  
 |-|-|-|  
@@ -47,7 +47,7 @@ Indica o número de objetos em uma coleção.
 |[Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Coleção Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Coleção Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo da propriedade Count (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [Exemplo da propriedade Count (VC + +)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Método Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

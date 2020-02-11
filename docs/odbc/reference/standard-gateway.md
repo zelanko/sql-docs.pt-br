@@ -18,13 +18,13 @@ ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8120f3cda584240b0b58ed5d6758621b18fe44d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070484"
 ---
 # <a name="standard-gateway"></a>Gateway padrão
-Um *gateway* é uma parte do software que faz com que um DBMS para se parecer com o outro. Ou seja, o gateway aceita a interface de programação, a gramática SQL e o protocolo de um DBMS único de fluxo de dados e converte-o para a interface de programação, gramática SQL, e protocolo do DBMS oculto de fluxo de dados. Por exemplo, aplicativos escritos para usar o Microsoft® SQL Server™ também podem acessar dados do DB2 por meio do Gateway Micro Decisionware DB2; Este produto faz com que o DB2 para se parecer com o SQL Server. Quando os gateways são usados, um gateway diferente deve ser escrito para cada banco de dados de destino.  
+Um *Gateway* é uma parte do software que faz com que um DBMS se pareça com o outro. Ou seja, o gateway aceita a interface de programação, a gramática do SQL e o protocolo de fluxo de dados de um único DBMS e os converte para a interface de programação, a gramática do SQL e o protocolo de fluxo de dados do DBMS oculto. Por exemplo, os aplicativos escritos para usar o Microsoft® SQL Server™ também podem acessar dados do DB2 por meio do gateway do DB2 de tomada de decisões; Este produto faz com que o DB2 pareça SQL Server. Quando os gateways são usados, um gateway diferente deve ser gravado para cada banco de dados de destino.  
   
- Embora os gateways estão limitados pelas diferenças de arquitetura entre DBMSs, eles são um bom candidato para padronização. No entanto, se todos os DBMSs devem padronizar a interface de programação, gramática SQL e dados de fluxo de protocolo de um DBMS único cujo DBMS deve ser escolhido como o padrão? Certamente nenhum fornecedor do DBMS comercial provavelmente concorda com a padronizar em um produto de um concorrente. E se uma interface de programação padrão, a gramática SQL e o protocolo de fluxo de dados são desenvolvidos, nenhum gateway é necessária.
+ Embora os gateways sejam limitados pelas diferenças de arquitetura entre DBMSs, eles são um bom candidato para padronização. No entanto, se todos os DBMSs forem padronizados na interface de programação, na gramática do SQL e no protocolo de fluxo de dados de um único DBMS, cujo DBMS deve ser escolhido como o padrão? Certamente, nenhum fornecedor de DBMS comercial provavelmente concorda em padronizar o produto de um concorrente. E se uma interface de programação padrão, uma gramática SQL e um protocolo de fluxo de dados forem desenvolvidos, nenhum gateway será necessário.

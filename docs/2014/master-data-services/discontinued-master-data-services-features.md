@@ -1,5 +1,5 @@
 ---
-title: Recursos do Master Data Services no SQL Server 2014 descontinuados | Microsoft Docs
+title: Recursos de Master Data Services descontinuados no SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,30 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479434"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Recursos do Master Data Services descontinuados no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que não estão mais disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Recursos descontinuados  
+## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Recursos descontinuados  
  Não há recursos descontinuados nesta versão.  
   
-## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Recursos descontinuados  
+## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>
+  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Recursos descontinuados  
   
 ### <a name="security"></a>Segurança  
  Para tornar a atribuição de segurança mais fácil, você não pode mais atribuir permissões de objeto de modelo a objetos da Hierarquia Derivada, da Hierarquia Explícita e do Grupo de Atributos.  
   
--   Agora, as permissões de hierarquia derivadas são baseadas no modelo. Por exemplo, se você quiser que um usuário tenha permissão para uma hierarquia derivada, você deve atribuir **atualização** para o objeto de modelo. Em seguida, você pode atribuir **Deny** acesso a qualquer entidade que você não deseja que o usuário tenha acesso.  
+-   Agora, as permissões de hierarquia derivadas são baseadas no modelo. Por exemplo, se você quiser que um usuário tenha permissão para uma hierarquia derivada, deverá atribuir **Atualizar** ao objeto de modelo. Em seguida, você pode atribuir acesso **negado** a todas as entidades às quais você não deseja que o usuário tenha acesso.  
   
--   Agora, as permissões de hierarquia explícitas são baseadas na entidade. Por exemplo, se o usuário tiver **atualização** permissões a uma entidade de conta, em seguida, todas as hierarquias explícitas para a entidade será atualizáveis.  
+-   Agora, as permissões de hierarquia explícitas são baseadas na entidade. Por exemplo, se o usuário tiver permissões de **atualização** para uma entidade de conta, todas as hierarquias explícitas para a entidade serão atualizáveis.  
   
--   Permissões de grupo de atributo não podem ser atribuídas a **permissões de usuário e grupo** área funcional. Em vez disso, nos **administração do sistema** área funcional em que os grupos de atributos são criados, os usuários e grupos podem receber **atualização** permissão a grupos de atributos. **Somente leitura** permissão a grupos de atributos não está mais disponível.  
+-   As permissões de grupo de atributos não podem mais ser atribuídas na área funcional **permissões de usuário e grupo** . Em vez disso, na área funcional **Administração do sistema** em que os grupos de atributos são criados, os usuários e grupos podem receber permissão de **atualização** para grupos de atributos. A permissão **somente leitura** para grupos de atributos não está mais disponível.  
   
 ### <a name="staging-process"></a>Processo de preparo  
  Você não pode usar o novo processo de preparo para:  
@@ -53,17 +55,17 @@ ms.locfileid: "65479434"
  Além disso, os pacotes podem ser implantados somente na edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] na qual eles foram criados. Isso significa que os pacotes criados no [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] não podem ser implantados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Você deve implantar o pacote em um ambiente do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] e, em seguida, atualizar o banco de dados para o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="code-generation-business-rules"></a>Regras de negócio de geração de código  
- Regras de negócio que geram valores automaticamente para o atributo Code agora são administradas de maneira diferente. Anteriormente, para gerar valores para o atributo de código, você usou o **atributo padrão para um valor gerado** ação na **administração do sistema** área funcional em **regras de negócio** . Agora, na **administração do sistema**, você deve editar a entidade para habilitar os valores de códigos gerados automaticamente. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
+ Regras de negócio que geram valores automaticamente para o atributo Code agora são administradas de maneira diferente. Anteriormente, para gerar valores para o atributo de código, você usou o **atributo padrão para uma ação de valor gerado** na área funcional **Administração do sistema** em **regras de negócio**. Agora, na **Administração do sistema**, você deve editar a entidade para habilitar valores de código gerados automaticamente. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
   
  Se você tiver um pacote de implantação de modelo do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] que contém uma regra deste tipo, quando atualizar o banco de dados para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], a regra de negócios será excluída.  
   
 ### <a name="bulk-updates-and-exporting"></a>Atualizações e exportações em massa  
- No aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], você não pode mais atualizar valores de atributos em massa para vários membros. Para fazer atualizações em massa, use o processo de preparo ou o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
+ No aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], você não pode mais atualizar valores de atributos em massa para vários membros. Para fazer atualizações em massa, use o processo de preparo ou [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]o.  
   
  No aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], você não pode mais exportar membros para o Excel. Para trabalhar com membros no Excel, use o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
   
-### <a name="transactions"></a>Transações  
- No **Explorer** área funcional, os usuários não podem mais reverter suas próprias transações. Anteriormente, os usuários podiam reverter alterações feitas nos dados no **Explorer**. Os administradores ainda podem reverter as transações para todos os usuários a **gerenciamento de versões** área funcional.  
+### <a name="transactions"></a>Transactions  
+ Na área funcional **Gerenciador** , os usuários não podem mais reverter suas próprias transações. Anteriormente, os usuários podiam reverter as alterações feitas nos dados no **Explorer**. Os administradores ainda podem reverter transações para todos os usuários na área funcional **Gerenciamento de versões** .  
   
  Agora, as anotações são permanentes e não podem ser excluídas. Anteriormente, as anotações eram consideradas transações e podiam ser excluídas com a reversão da transação.  
   
@@ -73,7 +75,7 @@ ms.locfileid: "65479434"
 ### <a name="powershell-cmdlets"></a>Cmdlets do PowerShell  
  O MDS não contém mais cmdlets do PowerShell.  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos do Master Data Services preteridos no SQL Server 2014](deprecated-master-data-services-features.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Recursos do Master Data Services substituídos no SQL Server 2014](deprecated-master-data-services-features.md)  
   
   

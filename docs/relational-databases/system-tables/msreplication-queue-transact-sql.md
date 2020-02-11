@@ -18,32 +18,32 @@ ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68080013"
 ---
-# <a name="msreplicationqueue-transact-sql"></a>MSreplication_queue (Transact-SQL)
+# <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSreplication_queue** tabela é usada pelo processo de replicação para armazenar comandos enfileirados emitidos por todas as assinaturas de atualização em fila que estão usando o SQL-base em fila. Essa tabela é armazenada no banco de dados de assinatura.  
+  A tabela de **MSreplication_queue** é usada pelo processo de replicação para armazenar os comandos na fila emitidos por todas as assinaturas de atualização enfileiradas que estão usando a fila baseada em SQL. Essa tabela é armazenada no banco de dados de assinatura.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|O nome do publicador.|  
+|**Publicador**|**sysname**|O nome do Publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados de publicação.|  
-|**publicação**|**sysname**|O nome da publicação.|  
-|**tranid**|**sysname**|A ID da transação na qual o comando enfileirado foi executado.|  
-|**data**|**varbinary(8000)**|O pacote de fluxo de bytes que armazenou informações sobre os comandos na fila.|  
+|**documento**|**sysname**|O nome da publicação.|  
+|**transid**|**sysname**|A ID da transação na qual o comando enfileirado foi executado.|  
+|**data**|**varbinary (8000)**|O pacote de fluxo de bytes que armazenou informações sobre os comandos na fila.|  
 |**datalen**|**int**|O comprimento dos dados, em bytes.|  
 |**CommandType**|**int**|O tipo de comando que está sendo enfileirado:<br /><br /> 1 = Comando de usuário na transação.<br /><br /> 2 = Comando de sincronização de assinatura.|  
 |**insertdate**|**datetime**|A data da inserção.|  
 |**orderkey**|**bigint**|A coluna de identidade que aumenta de forma monotônica.|  
 |**cmdstate**|**bit**|O estado do comando:<br /><br /> 0 = Completo.<br /><br /> 1 = Parcial.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

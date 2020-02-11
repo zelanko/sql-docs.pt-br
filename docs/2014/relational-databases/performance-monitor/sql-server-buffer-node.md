@@ -14,24 +14,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7e99c6e4f28ecef032ff3b793393e5465740156d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250735"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
-  O objeto **Buffer Node** fornece contadores que complementam aqueles fornecidos pelo objeto **Buffer Manager** . Ele lhe permite monitorar a distribuição de páginas de pool de buffer do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cada nó NUMA (non-uniform memory access). Há uma instância do objeto **Buffer Node** para cada nó NUMA em uso. Em arquiteturas diferentes de NUMA, haverá uma única instância do objeto **Buffer Node** .  
+  O objeto de **nó buffer** fornece contadores que complementam os contadores fornecidos pelo objeto **Gerenciador de buffer** . Ele lhe permite monitorar a distribuição de páginas de pool de buffer do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cada nó NUMA (non-uniform memory access). Há uma instância do objeto **Buffer Node** para cada nó NUMA em uso. Em arquiteturas diferentes de NUMA, haverá uma única instância do objeto **Buffer Node** .  
   
 ## <a name="buffer-node-performance-objects"></a>Objetos de desempenho do Buffer Node  
  Esta tabela descreve os objetos de desempenho de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** .  
   
-|Contadores de Buffer Node do SQL Server|Descrição|  
+|Contadores de Buffer Node do SQL Server|DESCRIÇÃO|  
 |-------------------------------------|-----------------|  
-|**Páginas do banco de dados**|Indica o número de páginas no pool de buffers do nó com conteúdo de banco de dados.|  
+|**Páginas de banco de dados**|Indica o número de páginas no pool de buffers do nó com conteúdo de banco de dados.|  
 |**Expectativa de vida da página**|Indica o número mínimo de segundos que uma página ficará no pool de buffers do nó sem referências.|  
 |**Pesquisas de página de nó local/s**|Indica o número de solicitações de pesquisa desse nó que foram atendidas nesse nó.|  
-|**Pesquisas de página de nó remoto/s**|Indica o número de solicitações de pesquisa desse nó que foram atendidas em outros nós.|  
+|**Pesquisas de página de anotação remota/s**|Indica o número de solicitações de pesquisa desse nó que foram atendidas em outros nós.|  
   
  Se o SQL Server estiver em execução em um hardware diferente de NUMA, os contadores dos objetos **Buffer Node** e **Buffer Manager** deverão ser correspondentes.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "63250735"
 > [!NOTE]  
 >  Os valores e somas dos contadores podem não corresponder exatamente, devido à natureza dinâmica dos contadores e à exatidão da amostragem.  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Server, objeto Buffer Manager](sql-server-buffer-manager-object.md)   
- [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server, objeto Gerenciador de buffer](sql-server-buffer-manager-object.md)   
+ [Opções de configuração de servidor de memória do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478503"
 ---
 # <a name="transactions-master-data-services"></a>Transações (Master Data Services)
@@ -43,7 +43,7 @@ ms.locfileid: "65478503"
 >  Os administradores podem exibir todas as transações para todos os usuários, desde que não tenham o nível de permissão somente leitura aplicado na área funcional **Gerenciamento de Versão**. Por exemplo, se o nível de permissão somente leitura e de permissão de atualização estiver definido para o administrador, ele não poderá ver as transações de outro usuário porque a permissão somente leitura terá precedência sobre a permissão de atualização.
 
 ## <a name="system-settings"></a>Configurações do sistema  
- Há uma configuração no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que afeta se as transações são ou não registradas quando os registros são preparados. Esta configuração só afeta o SQL Server 2008 R2. É possível ajustar essa configuração no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou diretamente na tabela Configurações do Sistema do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](system-settings-master-data-services.md).  
+ Há uma configuração no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que afeta se as transações são ou não registradas quando os registros são preparados. Esta configuração só afeta o SQL Server 2008 R2. É possível ajustar essa configuração no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou diretamente na tabela Configurações do Sistema do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](system-settings-master-data-services.md).  
   
  Ao importar dados nesta versão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você poderá especificar se deseja ou não registrar em log as transações ao iniciar o procedimento armazenado. Para obter mais informações, consulte [Preparando um procedimento armazenado &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -56,12 +56,12 @@ ms.locfileid: "65478503"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Desfazer uma ação por meio de reversão de uma transação (somente administradores).|[Inverter uma transação &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|Desfazer uma ação por meio de reversão de uma transação (somente administradores).|[Inverter uma &#40;de transação Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
 -   [Administradores &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [Anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [&#40;de anotações Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

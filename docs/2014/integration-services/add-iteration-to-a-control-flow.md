@@ -18,13 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061977"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Adicionar iteração a um fluxo de controle
+  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui o contêiner Loop For, um elemento de fluxo de controle que torna simples a inclusão de um looping que repete condicionalmente um fluxo de controle em um pacote. Para obter mais informações, consulte [Contêiner Loop For](control-flow/for-loop-container.md).  
   
  O contêiner Loop For avalia uma condição em cada iteração do loop e para quando a condição for avaliada como falsa. O contêiner Loop For inclui expressões para inicializar o loop, especificar a condição da avaliação que para a execução da repetição do fluxo de controle e designar um valor para uma expressão que atualize o valor contra o qual a condição da avaliação é comparada. Você deve fornecer uma condição de avaliação, mas expressões de inicialização e tarefa são opcionais.  
@@ -38,29 +39,29 @@ ms.locfileid: "66061977"
   
  As expressões podem incluir variáveis. A vantagem de usar variáveis é que elas podem ser atualizadas no tempo de execução, tornando os pacotes mais flexíveis e fáceis de gerenciar. O comprimento máximo de uma expressão é de 4000 caracteres.  
   
- Quando você especifica uma variável em uma expressão, deve introduzir o nome da variável com o sinal de arroba (@). Por exemplo, para uma variável nomeada `Counter`, insira @Counter na expressão que usa o contêiner Loop For. Se você incluir a propriedade namespace na variável, deverá incluir a variável e namespace entre colchetes. Por exemplo, para um `Counter` variável o `MyNamespace` namespace, tipo [@MyNamespace::Counter].  
+ Quando você especifica uma variável em uma expressão, deve introduzir o nome da variável com o sinal de arroba (@). Por exemplo, para uma variável chamada `Counter`, insira @Counter na expressão que o contêiner loop for usa. Se você incluir a propriedade namespace na variável, deverá incluir a variável e namespace entre colchetes. Por exemplo, para uma `Counter` variável no `MyNamespace` namespace, digite [@MyNamespace::Counter].  
   
- As variáveis que o contêiner Loop For usa devem ser definidas no escopo do contêiner Loop For ou no escopo de qualquer contêiner que seja o maior na hierarquia de contêiner do pacote. Por exemplo, um contêiner Loop For pode usar variáveis definidas em seu escopo e também variáveis definidas no escopo do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md).  
+ As variáveis que o contêiner Loop For usa devem ser definidas no escopo do contêiner Loop For ou no escopo de qualquer contêiner que seja o maior na hierarquia de contêiner do pacote. Por exemplo, um contêiner Loop For pode usar variáveis definidas em seu escopo e também variáveis definidas no escopo do pacote. Para obter mais informações, consulte [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md) e [usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md).  
   
  A gramática de expressão do [!INCLUDE[ssIS](../includes/ssis-md.md)] fornece um conjunto completo de operadores e funções para implementar as complexas expressões usadas para avaliação, inicialização ou atribuição. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
 ### <a name="to-implement-a-for-loop-container-in-a-control-flow"></a>Para implementar um contêiner Loop For em um fluxo de controle  
   
-1.  Adicione o contêiner Loop For ao pacote. Para obter mais informações, consulte [adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+1.  Adicione o contêiner Loop For ao pacote. Para obter mais informações, consulte [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
-2.  Adicione tarefas e contêineres ao contêiner Loop For. Para obter mais informações, consulte [adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+2.  Adicione tarefas e contêineres ao contêiner Loop For. Para obter mais informações, consulte [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 3.  Conecte tarefas e contêineres ao contêiner Loop For usando restrições de precedência. Para obter mais informações, consulte [Como conectar tarefas e contêineres utilizando uma restrição de precedência padrão](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  
   
-4.  Configure o contêiner Loop For. Para obter mais informações, consulte [Configurar um Contêiner Loop For](../../2014/integration-services/configure-a-for-loop-container.md).  
+4.  Configure o contêiner Loop For. Para obter mais informações, consulte [Configurar um contêiner Loop For](../../2014/integration-services/configure-a-for-loop-container.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Agrupar ou desagrupar componentes](group-or-ungroup-components.md)   
  [Como conectar tarefas e contêineres por meio de uma restrição de precedência padrão](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [Adicionar enumeração a um fluxo de controle](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
+ [Adicionar Enumeração a um fluxo de controle](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
  [Fluxo de Controle](control-flow/control-flow.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Considerações sobre programação de drivers do Microsoft Excel | Microsoft Docs
+title: Considerações de programação de driver do Microsoft Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: adb76a40b9f8ed79af41fd122ac94f8a0d9ee7c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045043"
 ---
 # <a name="microsoft-excel-driver-programming-considerations"></a>Considerações sobre programação de driver do Microsoft Excel
-Esta seção contém os tópicos a seguir.  
+Esta seção contém os seguintes tópicos:  
   
--   [Configurando opções programaticamente para drivers do Excel](../../odbc/microsoft/setting-options-programmatically-for-the-excel-driver.md)  
+-   [Configurar opções programaticamente para drivers do Excel](../../odbc/microsoft/setting-options-programmatically-for-the-excel-driver.md)  
   
 -   [Tipos de dados do Microsoft Excel](../../odbc/microsoft/microsoft-excel-data-types.md)  
   

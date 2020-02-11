@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aac86ed6438197bc788f08cf9bc618608a65475f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480368"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Abrir projetos do Integration Services no cliente Data Quality
@@ -38,17 +38,17 @@ ms.locfileid: "65480368"
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_kb_operator no banco de dados DQS_MAIN para abrir um projeto do Integration Services.  
   
-##  <a name="Open"></a> Abrir um projeto do Integration Services  
+##  <a name="Open"></a>Abrir um projeto Integration Services  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Abrir Projeto de Qualidade de Dados**. A tela **Abrir projeto** é aberta.  
+2.  Na tela [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] inicial, clique em **Abrir projeto de qualidade de dados**. A tela **Abrir projeto** é aberta.  
   
 3.  Na tela **Abrir projeto** , você pode identificar um projeto do Integration Services de uma destas formas:  
   
-    1.  **Nome do Projeto**: projetos do Integration Services são listados com a seguinte terminologia de nomenclatura: "DQS cleansing _ *\<DATE > * *\<tempo >* _ {GUID}." Sempre que você executa com êxito o mesmo pacote no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], um novo projeto é listado na tela **Abrir projeto** .  
+    1.  **Nome do projeto**: Integration Services projetos são listados usando a seguinte terminologia de nomenclatura: "Package. DQS Cleansing_*\<data> *\<* hora>*_ {GUID}." Sempre que você executa com êxito o mesmo pacote no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], um novo projeto é listado na tela **Abrir projeto** .  
   
-    2.  **Tipo de Projeto**: os projetos do Integration Services têm **SSIS** como o tipo de projeto na tela **Abrir projeto**.  
+    2.  **Tipo de projeto**: projetos de Integration Services têm o **SSIS** como o tipo de projeto na tela **Abrir projeto** .  
   
      Selecione um projeto e clique em **Avançar**.  
   
@@ -58,6 +58,6 @@ ms.locfileid: "65480368"
   
 6.  Depois de exportar os dados, clique em **Concluir** para fechar o projeto do Integration Services.  
   
-## <a name="see-also"></a>Consulte também  
- [Transformação de Limpeza do DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Transformação de limpeza DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Projetos do Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-projects-and-solutions.md)  

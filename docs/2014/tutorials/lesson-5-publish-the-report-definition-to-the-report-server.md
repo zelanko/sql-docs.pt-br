@@ -1,5 +1,5 @@
 ---
-title: 'Lição 5: Publicar a definição de relatório no servidor de relatório | Microsoft Docs'
+title: 'Lição 5: publicar a definição de relatório no servidor de relatório | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63272865"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lição 5: Publicar a definição de relatório no servidor de relatório
@@ -22,7 +22,7 @@ ms.locfileid: "63272865"
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>Para publicar o relatório no catálogo de relatório  
   
-1.  Substitua o código para o `PublishReportDefinition()` método no arquivo Program.cs (Module1.vb para [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) com o código a seguir:  
+1.  Substitua o código do `PublishReportDefinition()` método no arquivo Program.cs (Module1. vb para [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) pelo seguinte código:  
   
     ```csharp  
     private void PublishReportDefinition()  
@@ -77,10 +77,10 @@ ms.locfileid: "63272865"
     ```  
   
 ## <a name="next-lesson"></a>Próxima lição  
- Na próxima lição, você compilará e executará o `SampleRDLSchema` aplicativo. Confira a [Lição 6: Executar o aplicativo de esquema RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ Na próxima lição, você compilará e executará o `SampleRDLSchema` aplicativo. Consulte [lição 6: executar o aplicativo de esquema RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Atualizando relatórios usando classes geradas do esquema RDL &#40;tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Linguagem RDL &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

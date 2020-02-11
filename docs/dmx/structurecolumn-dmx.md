@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68065392"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
@@ -31,28 +31,28 @@ StructureColumn('structure column name')
  nome da coluna da estrutura.  
  O nome de uma coluna da estrutura de mineração de tabela aninhada ou caso.  
   
-## <a name="result-type"></a>Tipo de Resultado  
- O tipo que é retornado depende do tipo da coluna que é referenciado no \<nome de coluna da estrutura > parâmetro. Por exemplo, se a coluna da estrutura de mineração mencionada contiver um valor escalar, a função retornará um valor escalar.  
+## <a name="result-type"></a>Tipo de resultado  
+ O tipo retornado depende do tipo da coluna referenciada no nome da coluna de \<estrutura> parâmetro. Por exemplo, se a coluna da estrutura de mineração mencionada contiver um valor escalar, a função retornará um valor escalar.  
   
  Se a coluna da estrutura de mineração mencionada for uma tabela aninhada, a função retornará um valor de tabela. O valor de tabela retornado pode ser usado na cláusula FROM de uma instrução sub-SELECT.  
   
 ## <a name="remarks"></a>Comentários  
  Esta função é polimórfica e pode ser usada em qualquer lugar de uma instrução que permite expressões, incluindo uma lista de expressões SELECT, uma expressão de condição WHERE e uma expressão ORDER BY.  
   
- O nome da coluna na estrutura de mineração é um valor de cadeia de caracteres e como tal, deve ser colocado entre aspas simples: por exemplo, `StructureColumn('` **coluna 1**`')`. Se houver várias colunas com o mesmo nome, o nome será resolvido no contexto da instrução SELECT de circunscrição.  
+ O nome da coluna na estrutura de mineração é um valor de cadeia de caracteres e, como tal, deve ser colocado entre aspas simples: `StructureColumn('`por exemplo, **coluna 1**`')`. Se houver várias colunas com o mesmo nome, o nome será resolvido no contexto da instrução SELECT de circunscrição.  
   
- Os resultados retornados de uma consulta usando o **StructureColumn** função são afetados pela presença de todos os filtros no modelo. Quer dizer, o filtro do modelo controla os casos que são incluídos no modelo de mineração. Desse modo, uma consulta na coluna de estrutura pode retornar somente os casos que foram usados no modelo de mineração. Consulte a seção Exemplos deste tópico para observar o exemplo de um código que mostra o efeito dos filtros de modelo de mineração nas tabelas de caso e em uma tabela aninhada.  
+ Os resultados retornados de uma consulta usando a função **StructureColumn** são afetados pela presença de filtros no modelo. Quer dizer, o filtro do modelo controla os casos que são incluídos no modelo de mineração. Desse modo, uma consulta na coluna de estrutura pode retornar somente os casos que foram usados no modelo de mineração. Consulte a seção Exemplos deste tópico para observar o exemplo de um código que mostra o efeito dos filtros de modelo de mineração nas tabelas de caso e em uma tabela aninhada.  
   
- Para obter mais informações sobre como usar essa função em uma instrução DMX SELECT, consulte [SELECT FROM &#60;modelo&#62;. CASOS de &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) ou [SELECT FROM &#60;estrutura&#62;. CASOS](../dmx/select-from-structure-cases.md).  
+ Para obter mais informações sobre como usar essa função em uma instrução DMX SELECT, consulte [selecionar do modelo de &#60;&#62;. CASOS &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md) ou [selecione &#60;&#62; de estrutura. CASOS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="error-messages"></a>Mensagens de erro  
  O erro de segurança a seguir ocorrerá se o usuário não tiver permissão de detalhamento na estrutura de mineração pai:  
   
- O ' % {usuário /}' usuário não tem permissão para detalhar a estrutura de mineração pai do ' % {modelo /}' modelo de mineração.  
+ O usuário '% {user/} ' não tem permissão para detalhar a estrutura de mineração pai do modelo de mineração '% {Model/} '.  
   
  A mensagem de erro a seguir será exibida se um nome de coluna de estrutura inválido for especificado:  
   
- O ' % {nome da coluna de estrutura /}' coluna da estrutura de mineração não foi encontrada no ' % {Estrutura /}' pai da estrutura de mineração no contexto atual (linha % {linha /}, coluna % {coluna /}).  
+ A coluna da estrutura de mineração '% {Structure-Column-Name/} ' não foi encontrada na estrutura de mineração pai '% {Structure/} ' no contexto atual (linha% {line/}, coluna% {Column/}).  
   
 ## <a name="examples"></a>Exemplos  
  Usaremos a seguinte estrutura de mineração para obter estes exemplos. Observe que a estrutura de mineração contém duas colunas de tabela aninhada, `Products` e `Hobbies`. A tabela aninhada na coluna `Hobbies` tem uma única coluna que é usada como a chave para a tabela aninhada. A tabela aninhada na coluna `Products` é uma tabela aninhada complexa que tem uma coluna principal e outras colunas usadas para entrada. Os exemplos a seguir ilustram como uma estrutura de mineração de dados pode ser designada para incluir muitas colunas diferentes, mesmo que um modelo talvez não use todas as colunas. Algumas destas colunas podem não ser úteis no nível do modelo para generalizar padrões, mas podem ser muito úteis para detalhamento.  
@@ -103,7 +103,7 @@ WHERE Age > 30
   
  Observe que a filtragem de linhas para restringir os casos a clientes com mais de 30 anos ocorre no nível do modelo. Portanto, esta expressão não retornaria casos que estão incluídos nos dados da estrutura, mas não são usados pelo modelo. Como a condição de filtro usada para criar o modelo (`EXISTS (Products)`) restringe os casos somente aos clientes que adquiriram produtos, podem existir casos na estrutura que não são retornados por esta consulta.  
   
-### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Consulta de exemplo 2: Aplicando um filtro à coluna de estrutura  
+### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Consulta de exemplo 2: Aplicando um filtro à coluna da estrutura  
  A consulta de exemplo a seguir retorna não só as colunas de modelo `CustomerName` e `Age`, e a tabela aninhada `Products`, mas também retorna o valor da coluna `Quantity` na tabela aninhada, que não faz parte do modelo.  
   
 ```  
@@ -112,10 +112,10 @@ SELECT CustomerName, Age,
 WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- Observe que, neste exemplo, um filtro é aplicado à coluna de estrutura para restringir os casos a clientes cuja ocupação é 'Arquiteto' (`WHERE StructureColumn('Occupation') = 'Architect'`). Como a condição de filtro do modelo sempre é aplicada aos casos quando o modelo é criado, somente os casos com pelo menos uma linha qualificada na tabela `Products` são incluídos nos casos do modelo. Desse modo, o filtro no tabela aninhada `Products` e o filtro no caso `('Occupation')` são aplicados.  
+ Observe que, neste exemplo, um filtro é aplicado à coluna de estrutura para restringir os casos aos clientes cuja ocupação é ' arquiteto ' (`WHERE StructureColumn('Occupation') = 'Architect'`). Como a condição de filtro do modelo sempre é aplicada aos casos quando o modelo é criado, somente os casos com pelo menos uma linha qualificada na tabela `Products` são incluídos nos casos do modelo. Desse modo, o filtro no tabela aninhada `Products` e o filtro no caso `('Occupation')` são aplicados.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Consulta de exemplo 3: Selecionando colunas de uma tabela aninhada  
- A consulta de exemplo a seguir retorna os nomes dos clientes que foram usados como casos de treinamento do modelo. Para cada cliente, a consulta também retorna uma tabela aninhada que contém os detalhes de compra. Embora o modelo inclui o `ProductName` coluna, o modelo não usa o valor da `ProductName` coluna. O modelo só verifica se o produto foi adquirido regulares (`NOT``OnSale`) preço. Esta consulta não só retorna o nome do produto, mas também retorna a quantidade adquirida, que não é incluída no modelo.  
+ A consulta de exemplo a seguir retorna os nomes dos clientes que foram usados como casos de treinamento do modelo. Para cada cliente, a consulta também retorna uma tabela aninhada que contém os detalhes de compra. Embora o modelo inclua a `ProductName` coluna, o modelo não usa o valor da `ProductName` coluna. O modelo verifica apenas se o produto foi comprado em preço regular`NOT``OnSale`(). Esta consulta não só retorna o nome do produto, mas também retorna a quantidade adquirida, que não é incluída no modelo.  
   
 ```  
 SELECT CustomerName,    
@@ -135,9 +135,9 @@ FROM MyModel.CASES
 WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

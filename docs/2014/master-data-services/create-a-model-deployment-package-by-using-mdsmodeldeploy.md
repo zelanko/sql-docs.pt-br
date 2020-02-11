@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480001"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Criar um pacote de implantação de modelo usando o MDSModelDeploy
@@ -26,7 +26,7 @@ ms.locfileid: "65480001"
   
  Se desejar implantar um pacote que contém apenas objetos de modelo, você poderá usar o assistente de implantação de modelo no aplicativo Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Para obter mais informações, consulte [Criar um pacote de implantação de modelo usando o assistente](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
-> Esta versão da ferramenta MDSModelDeploy não é possível usar mais de gigabytes (GB) de memória. Ao criar ou implantar modelos grandes usando **objetos e dados de modelo** opção, você pode encontrar erros de "Stream era muito longo" ou "memória insuficiente". Para resolver esse problema, para usar o MDS de preparação para implantar os dados; ou atualizar para o MDS 2016 ou posterior, que inclui a versão atualizada da ferramenta MDSModelDeploy.
+> Esta versão da ferramenta MDSModelDeploy não pode usar mais de gigabytes (GB) de memória. Quando você cria ou implanta modelos grandes usando **objetos de modelo e** a opção de dados, você pode ter erros de "memória insuficiente" ou "o fluxo era muito longo". Para resolver esse problema, use o preparo do MDS para implantar os dados; ou atualize para o MDS 2016 ou uma versão posterior, que inclui a versão atualizada da ferramenta MDSModelDeploy.
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "65480001"
   
 -   [Implantar um pacote de implantação de modelo usando MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de implantação de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
  [Implantando modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   

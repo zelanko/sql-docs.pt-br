@@ -1,5 +1,5 @@
 ---
-title: Escolha o Layout da tabela | Microsoft Docs
+title: Escolher o layout da tabela | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 916ea06221ffd6ff33427a26870cd3005ec79e67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109846"
 ---
 # <a name="choose-the-table-layout"></a>Escolher o layout da tabela
   Use esta página do Assistente de Relatório para selecionar o layout da tabela no relatório.  
   
 ## <a name="options"></a>Opções  
- **De nível**  
+ **Nível**  
  Crie um relatório que contenha uma coluna para cada campo, com campos de grupo aparecendo em cabeçalhos de grupo à esquerda da coluna do campo de detalhes. Este tipo de tabela não tem rodapés de grupo.  
   
- **Bloco**  
+ **Impeça**  
  Crie um relatório que contenha uma coluna para cada campo, com campos de grupo aparecendo na primeira linha de detalhe para cada grupo. Este tipo de tabela só terá rodapés de grupo se a opção **Incluir subtotais** também for selecionada.  
   
  **Incluir subtotais**  
@@ -35,7 +35,7 @@ ms.locfileid: "66109846"
  **Habilitar busca detalhada**  
  Escolha esta opção para ocultar os grupos internos do relatório e habilitar uma alternância de visibilidade, resultando em um relatório de busca detalhada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ajuda do Assistente de Relatório](../../2014/reporting-services/report-wizard-help.md)  
   
   

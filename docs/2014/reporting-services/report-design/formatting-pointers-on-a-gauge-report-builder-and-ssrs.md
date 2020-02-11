@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 294586f0d48ca96ca12d3e9eac70f5d2d288654f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105831"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatando ponteiros de um medidor (Construtor de Relatórios e SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66105831"
 ##  <a name="HowPointer"></a> Como o ponteiro é conectado a dados  
  Por padrão, quando adicionado, um medidor contém um ponteiro sem campo associado. Isso é conhecido como ponteiro vazio. Ele exibirá zero até que um campo seja adicionado ao painel de dados. Quando você adiciona um campo ao painel de dados, o ponteiro é conectado a esse campo. Caso você exclua um campo do painel de dados, o ponteiro associado a esse campo também será excluído.  
   
- Depois de adicionar os dados, quando clicar com o botão direito do mouse no ponteiro, você obterá as opções **Limpar Valor do Ponteiro** e **Excluir Ponteiro** . A opção **Limpar Valor do Ponteiro** removerá o campo anexado ao medidor, mas o ponteiro continuará aparecendo no medidor. A opção **Excluir Ponteiro** removerá o campo do medidor e excluirá o ponteiro da exibição. Se você adicionar novamente um campo ao medidor, o ponteiro padrão reaparecerá. Quando você define o ponteiro **Hidden** propriedade `True`, o ponteiro não está oculto na superfície de design, mas ele está oculto em tempo de execução.  
+ Depois de adicionar os dados, quando clicar com o botão direito do mouse no ponteiro, você obterá as opções **Limpar Valor do Ponteiro** e **Excluir Ponteiro** . A opção **Limpar Valor do Ponteiro** removerá o campo anexado ao medidor, mas o ponteiro continuará aparecendo no medidor. A opção **Excluir Ponteiro** removerá o campo do medidor e excluirá o ponteiro da exibição. Se você adicionar novamente um campo ao medidor, o ponteiro padrão reaparecerá. Quando você define a propriedade **Hidden** do ponteiro como `True`, o ponteiro não é ocultado na superfície de design, mas fica oculto em tempo de execução.  
   
   
 ##  <a name="DisplayingMultiple"></a> Exibindo vários ponteiros no medidor  
@@ -46,16 +46,16 @@ ms.locfileid: "66105831"
   
   
 ##  <a name="SettingSnappingInterval"></a> Como definir um intervalo de ajuste  
- Um intervalo de ajuste define o múltiplo para o qual os valores são arredondados. Por padrão, o medidor apontará para o valor exato do campo especificado no painel de dados. No entanto, talvez você queira arredondar o valor exato para cima ou para baixo de forma que o ponteiro se ajuste a um intervalo predefinido. Por exemplo, se o valor em seu medidor for 34,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 35. Se o valor em seu medidor for 31,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 30. Para obter mais informações, consulte [definir um intervalo de ajuste em um medidor &#40;construtor de relatórios e SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md).  
+ Um intervalo de ajuste define o múltiplo para o qual os valores são arredondados. Por padrão, o medidor apontará para o valor exato do campo especificado no painel de dados. No entanto, talvez você queira arredondar o valor exato para cima ou para baixo de forma que o ponteiro se ajuste a um intervalo predefinido. Por exemplo, se o valor em seu medidor for 34,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 35. Se o valor em seu medidor for 31,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 30. Para obter mais informações, consulte [definir um intervalo de ajuste em um medidor &#40;Construtor de relatórios e SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md).  
   
   
 ##  <a name="SpecifyingImage"></a> Especificando uma imagem como um ponteiro em um medidor radial  
  Além da lista interna dos estilos de ponteiro, é possível especificar uma imagem como um ponteiro. Isso é muito efetivo quando você usa uma imagem para substituir um estilo de ponteiro de agulha existente. A imagem é sobreposta no ponteiro, mas toda a funcionalidade de ponteiro é aplicável. As opções de cor e de gradação não são aplicáveis quando uma imagem é usada no ponteiro.  
   
- Caso a forma da imagem do ponteiro seja irregular, você deve definir a cor como transparente para ocultar as áreas da imagem que não devem ser exibidas no medidor. Quando você define uma cor transparente, o medidor transpõe a imagem no ponteiro existente e corta a imagem para que apenas a forma do ponteiro seja exibida. O medidor redimensiona a imagem para ajustar o tamanho do ponteiro. Quando você especificar uma imagem de um ponteiro, todos os ponteiros subsequentes adicionados acima do medidor serão desenhados abaixo da imagem. Por esse motivo, é melhor não especificar uma imagem para o ponteiro caso haja vários ponteiros no medidor. Para obter mais informações, consulte [especificar uma imagem como um ponteiro em um medidor &#40;construtor de relatórios e SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md).  
+ Caso a forma da imagem do ponteiro seja irregular, você deve definir a cor como transparente para ocultar as áreas da imagem que não devem ser exibidas no medidor. Quando você define uma cor transparente, o medidor transpõe a imagem no ponteiro existente e corta a imagem para que apenas a forma do ponteiro seja exibida. O medidor redimensiona a imagem para ajustar o tamanho do ponteiro. Quando você especificar uma imagem de um ponteiro, todos os ponteiros subsequentes adicionados acima do medidor serão desenhados abaixo da imagem. Por esse motivo, é melhor não especificar uma imagem para o ponteiro caso haja vários ponteiros no medidor. Para obter mais informações, consulte [especificar uma imagem como um ponteiro em um medidor &#40;Construtor de relatórios e SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatando intervalos de um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)  

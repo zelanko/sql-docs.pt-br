@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298629"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
@@ -106,7 +106,7 @@ GO
   
  Nesse exemplo, nenhum valor foi especificado para a coluna `i`, mas o valor `0` foi inserido.  
   
-## <a name="using-the-sqlvariant-data-type"></a>Usando o tipo de dados sql_variant  
+## <a name="using-the-sql_variant-data-type"></a>Usando o tipo de dados sql_variant  
  O tipo de dados `sql_variant` pode armazenar vários tipos de dados diferentes, como `int`, `char` e `date`. Os conjuntos de colunas geram informações de tipo de dados como escala, precisão e informações de localidade que são associadas a um valor `sql_variant` como atributo na coluna XML gerada. Se você tentar fornecer esses atributos em uma instrução XML personalizada como uma entrada para uma operação de inserção ou atualização em um conjunto de colunas, alguns desses atributos serão exigidos e a outros será atribuído um valor padrão. A tabela a seguir lista os tipos de dados e os valores padrão que o servidor gera quando o valor não é fornecido.  
   
 |Tipo de dados|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Comprimento máximo|Precisão|Escala|  
@@ -139,7 +139,7 @@ GO
 ## <a name="examples"></a>Exemplos  
  Nos exemplos a seguir, uma tabela de documento contém o conjunto comum de colunas `DocID` e `Title`. O grupo de Produção quer uma coluna `ProductionSpecification` e `ProductionLocation` para todos os documentos da produção. O grupo Marketing quer uma coluna `MarketingSurveyGroup` para os documentos de marketing.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Criando uma tabela que possui um conjunto de colunas  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>a. Criando uma tabela que possui um conjunto de colunas  
  O exemplo a seguir cria a tabela que usa colunas esparsas e inclui o conjunto de colunas `SpecialPurposeColumns`. O exemplo insere duas linhas na tabela e, depois, seleciona dados da tabela.  
   
 > [!NOTE]  
@@ -255,7 +255,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar colunas esparsas](use-sparse-columns.md)  
   
   

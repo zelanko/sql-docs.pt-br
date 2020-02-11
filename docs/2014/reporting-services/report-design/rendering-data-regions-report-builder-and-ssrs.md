@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 918aa5eee3aada465e904cf7f1627f93d1b9bb6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105369"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Renderizando regiões de dados (Construtor de Relatórios e SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66105369"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="tablix-data-regions"></a>Regiões de dados Tablix  
- A região de dados tablix, que permite que você crie tabelas, matrizes e listas, é renderizada como uma grade composta de colunas e linhas. A interseção de uma linha e uma coluna é uma célula. Quando renderizada, essa célula pode conter dados e outros itens de relatório como imagens, retângulos, caixas de texto ou sub-relatórios. Uma região de dados tablix pode crescer na vertical e/ou horizontal. Além disso, a célula do canto, as células do cabeçalho da região de dados e as células do corpo da região de dados podem crescer com base em seu conteúdo. Se a região de dados ocupar várias páginas, os itens de relatório definidos para serem repetidos com a região de dados serão renderizados em cada página na qual a região de dados for exibida. Para obter mais informações, consulte [lista &#40;construtor de relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ A região de dados tablix, que permite que você crie tabelas, matrizes e listas, é renderizada como uma grade composta de colunas e linhas. A interseção de uma linha e uma coluna é uma célula. Quando renderizada, essa célula pode conter dados e outros itens de relatório como imagens, retângulos, caixas de texto ou sub-relatórios. Uma região de dados tablix pode crescer na vertical e/ou horizontal. Além disso, a célula do canto, as células do cabeçalho da região de dados e as células do corpo da região de dados podem crescer com base em seu conteúdo. Se a região de dados ocupar várias páginas, os itens de relatório definidos para serem repetidos com a região de dados serão renderizados em cada página na qual a região de dados for exibida. Para obter mais informações, consulte [listas &#40;Construtor de relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### <a name="right-to-left"></a>Da direita para a esquerda  
  Uma região de dados tablix definida para ser exibida da direita para a esquerda é renderizada com sua estrutura como uma imagem espelho da região de dados se ela tiver sido renderizada da esquerda para a direita. O canto da região de dados é exibido no canto superior direito. Se existirem colunas dinâmicas no relatório, eles expandirão para a esquerda. As configurações da direita para a esquerda não afetam a ordem dos dados na região de dados; suas colunas são simplesmente ordenadas de maneira diferente.  
@@ -46,7 +46,7 @@ ms.locfileid: "66105369"
 ## <a name="chart-gauge-and-map-data-regions"></a>Regiões de Dados Mapa, Medidor e Gráfico  
  As regiões de dados Gráfico, Medidor e Mapa se comportam como imagens quando elas são renderizadas e exibidas no corpo do relatório. Os valores na região de dados podem ter ações associadas, como link para outro relatório ou ir para um marcador; e essas ações podem ser renderizadas também, se o renderizador oferecer suporte a elas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   

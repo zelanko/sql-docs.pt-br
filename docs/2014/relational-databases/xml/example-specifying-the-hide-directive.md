@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287729"
 ---
-# <a name="example-specifying-the-hide-directive"></a>Exemplo: especificando a diretiva HIDE
+# <a name="example-specifying-the-hide-directive"></a>Exemplo: Especificando a diretiva HIDE
   Este exemplo ilustra o uso da diretiva **HIDE** . Essa diretiva é útil quando você deseja que a consulta retorne um atributo para ordenar as linhas na tabela universal retornada pela consulta, mas não deseja esse atributo no documento XML resultante final.  
   
  Esta consulta constrói este XML:  
@@ -67,7 +67,7 @@ FOR XML EXPLICIT
 go  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  
@@ -81,7 +81,7 @@ go
 </ProductModel>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo EXPLICIT com FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

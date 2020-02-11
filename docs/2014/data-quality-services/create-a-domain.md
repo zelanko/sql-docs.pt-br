@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480967"
 ---
 # <a name="create-a-domain"></a>Criar um domínio
@@ -34,9 +34,9 @@ ms.locfileid: "65480967"
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou o dqs_administrator no banco de dados DQS_MAIN para criar um domínio.  
   
-##  <a name="Discovery"></a> Criar um domínio na atividade Descoberta da Base de Dados de Conhecimento  
+##  <a name="Discovery"></a>Criar um domínio na atividade de descoberta da base de dados de conhecimento  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Abrir base de dados de conhecimento** e selecione uma base de dados de conhecimento ou clique em **Nova base de dados de conhecimento** e insira propriedades para a nova base de dados de conhecimento.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65480967"
   
 5.  Na tabela **Mapeamentos** , selecione uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia. Se não existir um domínio correspondente, clique no ícone **Criar um Domínio** .  
   
-##  <a name="DomainManagement"></a> Criar um domínio na atividade Gerenciamento de Domínio  
+##  <a name="DomainManagement"></a>Criar um domínio na atividade de gerenciamento de domínio  
   
 1.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Abrir base de dados de conhecimento** e selecione uma base de dados de conhecimento ou clique em **Nova base de dados de conhecimento** e insira propriedades para a nova base de dados de conhecimento.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65480967"
   
 3.  Na página **Gerenciamento de Domínio** , clique no ícone **Criar um Domínio** acima da lista de domínios.  
   
-##  <a name="Properties"></a> Definir propriedades do domínio  
+##  <a name="Properties"></a>Definir propriedades de domínio  
   
 1.  Na caixa de diálogo **Criar Domínio** , insira um nome que seja exclusivo da base de dados de conhecimento e uma descrição de até 256 caracteres.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65480967"
   
 10. Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de criar um domínio  
+##  <a name="FollowUp"></a>Acompanhamento: depois de criar um domínio  
  Depois que você criar um domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

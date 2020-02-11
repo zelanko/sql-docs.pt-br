@@ -1,5 +1,5 @@
 ---
-title: sys.external_tables (Transact-SQL) | Microsoft Docs
+title: sys. external_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,40 +12,40 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054307"
 ---
-# <a name="sysexternaltables-transact-sql"></a>sys.external_tables (Transact-SQL)
+# <a name="sysexternal_tables-transact-sql"></a>sys. external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Contém uma linha para cada tabela externa no banco de dados atual.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|\<herdado colunas >||Para obter uma lista de colunas que essa exibição herda valores, consulte [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
-|max_column_id_used|**int**|ID de máximo para a coluna já usada para essa tabela.||  
+|\<colunas herdadas>||Para obter uma lista de colunas que essa exibição herda, consulte [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
+|max_column_id_used|**int**|ID de coluna máximo que já foi usada para esta tabela.||  
 |uses_ansi_nulls|**bit**|A tabela foi criada com a opção de banco de dados SET ANSI_NULLS definida como ON.||  
-|data_source_id|**int**|Identificação do objeto de fonte de dados externa.||  
-|file_format_id|**int**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP, essa é a ID de objeto para o formato de arquivo externo.||  
-|local|**nvarchar(4000)**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP, esse é o caminho dos dados externos no HDFS.||  
-|reject_type|**tinyint**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP, essa é a maneira que linhas rejeitadas são contadas ao consultar dados externos.|VALOR - o número de linhas rejeitadas.<br /><br /> Porcentagem – a porcentagem de linhas rejeitadas.|  
-|reject_value|**float**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP:<br /><br /> Para *reject_type =* valor, isso é o número de rejeições de linha para permitir que antes de fazer a consulta.<br /><br /> Para *reject_type* = porcentagem, esta é a porcentagem de rejeições de linha para permitir que antes de fazer a consulta.||  
-|reject_sample_value|**int**|Para *reject_type* = porcentagem, este é o número de linhas a serem carregadas, com ou sem êxito, antes de calcular a porcentagem de linhas rejeitadas.|NULO se reject_type = VALUE.|  
-|distribution_type|**int**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, essa é a distribuição de dados das linhas entre as tabelas base subjacentes.|0 - fragmentados<br /><br /> 1 - replicados<br /><br /> 2 - Round robin|  
-|distribution_desc|**nvarchar(120)**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, esse é o tipo de distribuição exibido como uma cadeia de caracteres.||  
-|sharding_column_id|**int**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER e uma distribuição fragmentada, essa é a ID de coluna da coluna que contém os valores de chave de fragmentação.||  
-|remote_schema_name|**sysname**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, este é o esquema no qual a tabela base está localizada nos bancos de dados remotos (se for diferente do esquema no qual a tabela externa é definida).||  
-|remote_object_name|**sysname**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, isso é o nome da tabela base nos bancos de dados remotos (se for diferente do nome da tabela externa).||  
+|data_source_id|**int**|ID de objeto para a fonte de dados externa.||  
+|file_format_id|**int**|Para tabelas externas em uma fonte de dados externa do HADOOP, essa é a ID de objeto para o formato de arquivo externo.||  
+|location|**nvarchar(4000)**|Para tabelas externas em uma fonte de dados externa do HADOOP, esse é o caminho dos dados externos no HDFS.||  
+|reject_type|**tinyint**|Para tabelas externas em uma fonte de dados externa do HADOOP, essa é a maneira como as linhas rejeitadas são contadas ao consultar dados externos.|VALOR-o número de linhas rejeitadas.<br /><br /> PORCENTAGEM-a porcentagem de linhas rejeitadas.|  
+|reject_value|**float**|Para tabelas externas em uma fonte de dados externa do HADOOP:<br /><br /> Para *reject_type =* Value, é o número de rejeições de linha a permitir antes de falhar a consulta.<br /><br /> Por *reject_type* = Percentage, essa é a porcentagem de rejeições de linha a permitir antes de falhar a consulta.||  
+|reject_sample_value|**int**|Por *reject_type* = Percentage, esse é o número de linhas a serem carregadas com êxito ou não, antes de calcular a porcentagem de linhas rejeitadas.|NULL se reject_type = VALUE.|  
+|distribution_type|**int**|Para tabelas externas em uma SHARD_MAP_MANAGER fonte de dados externa, essa é a distribuição de dados das linhas nas tabelas base subjacentes.|0-fragmentado<br /><br /> 1-replicado<br /><br /> 2-Round Robin|  
+|distribution_desc|**nvarchar (120)**|Para tabelas externas em uma SHARD_MAP_MANAGER fonte de dados externa, esse é o tipo de distribuição exibido como uma cadeia de caracteres.||  
+|sharding_column_id|**int**|Para tabelas externas em uma SHARD_MAP_MANAGER fonte de dados externa e uma distribuição fragmentada, essa é a ID de coluna da coluna que contém os valores de chave de fragmentação.||  
+|remote_schema_name|**sysname**|Para tabelas externas em uma SHARD_MAP_MANAGER fonte de dados externa, esse é o esquema onde a tabela base está localizada nos bancos de dados remotos (se for diferente do esquema onde a tabela externa está definida).||  
+|remote_object_name|**sysname**|Para tabelas externas em uma SHARD_MAP_MANAGER fonte de dados externa, esse é o nome da tabela base nos bancos de dados remotos (se for diferente do nome da tabela externa).||  
   
 ## <a name="permissions"></a>Permissões  
  A visibilidade dos metadados em exibições do catálogo está limitada aos protegíveis que pertencem a um usuário ou para os quais o usuário recebeu permissão. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
- [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
- [sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys. external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
+ [sys. external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Solucionando problemas de atualização | Microsoft Docs
+title: Resolvendo problemas de atualização | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -31,10 +31,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092496"
 ---
 # <a name="resolving-upgrade-issues"></a>Solucionando problemas de atualização
@@ -42,7 +42,7 @@ ms.locfileid: "66092496"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Problemas de atualização detectados recentemente](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
+-   [Problemas detectados recentemente que podem interromper a instalação](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
   
 -   [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66092496"
   
 -   [Problemas na atualização da replicação](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
--   [Problemas de atualização do Reporting Services &#40;Supervisor de atualização&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+-   [Problemas de atualização do Reporting Services &#40;o supervisor de atualização&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
 -   [Problemas de atualização do SQL Server Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66092496"
   
 -   [Usar sp_rename para renomear o nome do índice duplicado](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

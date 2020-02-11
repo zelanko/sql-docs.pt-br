@@ -1,5 +1,5 @@
 ---
-title: 'Exemplos: Usando o modo AUTO | Microsoft Docs'
+title: 'Exemplos: usando o modo AUTO | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287804"
 ---
-# <a name="examples-using-auto-mode"></a>Exemplos: uso do modo AUTO
+# <a name="examples-using-auto-mode"></a>Exemplos: Usando modo AUTO
   Os exemplos a seguir ilustram o uso do modo AUTO. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna da tabela ProductModel no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 ## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemplo: Recuperando informações de cliente, pedido e detalhes do pedido  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemplo: Especificando colunas computadas no modo AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemplo: Especificando colunas computadas em modo AUTO  
  Essa consulta retorna nomes de clientes individuais concatenados e informações de pedido. Porque a coluna computada é atribuída ao nível interno encontrado naquele ponto, o elemento <`SOH`> neste exemplo. Os nomes concatenados dos clientes são adicionados como atributos do elemento <`SOH`> no resultado.  
   
 ```  
@@ -167,7 +167,8 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
  `...`  
   
 ## <a name="example-returning-binary-data"></a>Exemplo: Retornando dados binários  
- Esta consulta retorna uma fotografia do produto a partir da tabela `ProductPhoto` . `ThumbNailPhoto` é uma coluna `varbinary(max)` na tabela `ProductPhoto`. Por padrão, o modo `AUTO` retorna para os dados binários uma referência que é uma URL relativa à raiz virtual do banco de dados onde a consulta é executada. O atributo de chave `ProductPhotoID` deve ser especificado para identificar a imagem. Para recuperar uma referência de imagem, conforme ilustrado neste exemplo, a chave primária da tabela também deve ser especificada na cláusula `SELECT` para identificar uma linha exclusivamente.  
+ Esta consulta retorna uma fotografia do produto a partir da tabela `ProductPhoto` . 
+  `ThumbNailPhoto` é uma coluna `varbinary(max)` na tabela `ProductPhoto`. Por padrão, o modo `AUTO` retorna para os dados binários uma referência que é uma URL relativa à raiz virtual do banco de dados onde a consulta é executada. O atributo de chave `ProductPhotoID` deve ser especificado para identificar a imagem. Para recuperar uma referência de imagem, conforme ilustrado neste exemplo, a chave primária da tabela também deve ser especificada na cláusula `SELECT` para identificar uma linha exclusivamente.  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  
@@ -176,7 +177,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
  `-- result`  
   
@@ -195,7 +196,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO, BINARY BASE64;  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
  `-- result`  
   
@@ -212,7 +213,7 @@ WHERE  ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
  `<Production.PRODUCTPHOTO`  
   
@@ -243,7 +244,7 @@ INSERT INTO [Special Chars] VALUES ('&', 0x20), ('#', 0x20);
 SELECT * FROM [Special Chars] FOR XML AUTO;  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
  `<Special_x0020_Chars`  
   
@@ -269,7 +270,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Se os valores dos elementos e atributos contiverem qualquer caractere especial da URL com significado especial na URL, eles serão codificados apenas no valor da URL DBOBJECT e apenas quando o caractere especial fizer parte de um nome de tabela ou coluna. No resultado, o caractere `#` que faz parte do nome da tabela `Col#&2` é codificado como `_x0023_ in the DBOJBECT URL`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo AUTO com FOR XML](use-auto-mode-with-for-xml.md)  
   
   

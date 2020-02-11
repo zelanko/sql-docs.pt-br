@@ -13,24 +13,24 @@ ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71afc3c0bac0ea64285c450640d96fe5f5d709b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064970"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (Biblioteca de cursores)
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que usam esse recurso atualmente. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- Este tópico discute o uso do **SQLBindCol** função na biblioteca de cursor. Para obter informações gerais sobre **SQLBindCol**, consulte [função SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
+ Este tópico discute o uso da função **SQLBindCol** na biblioteca de cursores. Para obter informações gerais sobre **SQLBindCol**, consulte [SQLBindCol function](../../../odbc/reference/syntax/sqlbindcol-function.md).  
   
- Um aplicativo aloca um ou mais buffers para a biblioteca de cursor retornar o conjunto de linhas atual no. Ele chama **SQLBindCol** uma ou mais vezes para associar esses buffers para o conjunto de resultados.  
+ Um aplicativo aloca um ou mais buffers para a biblioteca de cursores retornar o conjunto de linhas atual. Ele chama **SQLBindCol** uma ou mais vezes para associar esses buffers ao conjunto de resultados.  
   
- Um aplicativo pode chamar **SQLBindCol** associar novamente o resultado, definir colunas depois que ele é chamado **SQLExtendedFetch**, **SQLFetch**, ou **SQLFetchScroll**, desde que o tipo de dados C, tamanho da coluna e dígitos decimais da coluna acoplada permanecem os mesmos. O aplicativo não precisa fechar o cursor para reassociar colunas para endereços diferentes.  
+ Um aplicativo pode chamar **SQLBindCol** para reassociar colunas de conjunto de resultados depois de chamar **SQLExtendedFetch**, **SQLFetch**ou **SQLFetchScroll**, desde que o tipo de dados C, o tamanho da coluna e os dígitos decimais da coluna associada permaneçam os mesmos. O aplicativo não precisa fechar o cursor para reassociar colunas a endereços diferentes.  
   
- A biblioteca de cursores dá suporte à configuração do atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR para usar os deslocamentos de associação. (**SQLBindCol** não precisa ser chamado para essa nova associação ocorra.) Se a biblioteca de cursores é usada com ODBC *3.x* driver, o deslocamento de associação não é usado quando **SQLFetch** é chamado. O deslocamento de ligação é usado se **SQLFetch** é chamado quando a biblioteca de cursores é usada com ODBC *2.x* driver porque **SQLFetch** , em seguida, é mapeado para  **SQLExtendedFetch**.  
+ A biblioteca de cursores dá suporte à definição do atributo instrução SQL_ATTR_ROW_BIND_OFFSET_PTR para usar deslocamentos de ligação. (**SQLBindCol** não precisa ser chamado para que essa reassociação ocorra.) Se a biblioteca de cursores for usada com um driver ODBC *3. x* , o deslocamento de ligação não será usado quando **SQLFetch** for chamado. O deslocamento de ligação será usado se **SQLFetch** for chamado quando a biblioteca de cursores for usada com um driver ODBC *2. x* porque **SQLFetch** é então mapeado para **SQLExtendedFetch**.  
   
- A biblioteca de cursores dá suporte a chamar **SQLBindCol** para associar a coluna de indicador.  
+ A biblioteca de cursores dá suporte à chamada de **SQLBindCol** para associar a coluna de indicador.  
   
- Ao trabalhar com ODBC *2.x* driver, a biblioteca de cursores retornará SQLSTATE HY090 (comprimento inválido de buffer ou cadeia de caracteres) quando **SQLBindCol** é chamado para definir o comprimento do buffer para uma coluna de indicador a um valor não igual a 4. Ao trabalhar com ODBC *3.x* driver, a biblioteca de cursores permite que o buffer para ser de qualquer tamanho.
+ Ao trabalhar com um driver ODBC *2. x* , a biblioteca de cursores retorna SQLSTATE HY090 (cadeia de caracteres ou comprimento de buffer inválido) quando **SQLBindCol** é chamado para definir o comprimento do buffer para uma coluna de indicador como um valor diferente de 4. Ao trabalhar com um driver ODBC *3. x* , a biblioteca de cursores permite que o buffer seja de qualquer tamanho.

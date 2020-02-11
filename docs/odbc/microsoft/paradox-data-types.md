@@ -1,5 +1,5 @@
 ---
-title: Tipos de dados Paradox | Microsoft Docs
+title: Tipos de dados do Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,46 +18,46 @@ ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8478e80ae2ebd19a3e0f2aa8307e0985b2c092d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043693"
 ---
 # <a name="paradox-data-types"></a>Tipos de dados Paradox
-O driver do Paradox ODBC mapeia tipos de dados do Paradox para tipos de dados SQL ODBC. A tabela a seguir lista todos os tipos de dados Paradox e mostra o SQL ODBC são mapeados para os tipos de dados.  
+O driver ODBC Paradox mapeia tipos de dados do Paradox para tipos de dados SQL ODBC. A tabela a seguir lista todos os tipos de dados do Paradox e mostra os tipos de dados ODBC do SQL aos quais eles estão mapeados.  
   
-|Tipo de dados Paradox|Tipo de dados ODBC|  
+|Tipo de dados do Paradox|Tipo de dados ODBC|  
 |-----------------------|--------------------|  
 |ALFANUMÉRICO|SQL_VARCHAR|  
-|AUTOINCREMENT [1]|SQL_INTEGER|  
-|BCD[1]|SQL_DOUBLE|  
-|BYTES[1]|SQL_BINARY|  
+|INCREMENTO AUTOMÁTICO [1]|SQL_INTEGER|  
+|BCD [1]|SQL_DOUBLE|  
+|BYTES [1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
-|IMAGEM DE [2]|SQL_LONGVARBINARY|  
+|IMAGEM [2]|SQL_LONGVARBINARY|  
 |LÓGICO [1]|SQL_BIT|  
-|LONG[1]|SQL_INTEGER|  
+|LONGO [1]|SQL_INTEGER|  
 |MEMORANDO [2]|SQL_LONGVARCHAR|  
-|MONEY [1]|SQL_DOUBLE|  
+|DINHEIRO [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
-|CURTO|SQL_SMALLINT|  
-|TEMPO [1]|SQL_TIMESTAMP|  
-|CARIMBO DE HORA [1]|SQL_TIMESTAMP|  
+|BAIXO|SQL_SMALLINT|  
+|HORA [1]|SQL_TIMESTAMP|  
+|CARIMBO DE DATA/HORA [1]|SQL_TIMESTAMP|  
   
- [1] válido somente para versões do Paradox 5. *x*.  
+ [1] válido somente para versões 5 do Paradox. *x*.  
   
- Válido somente para versões do Paradox 4 a [2]. *x* e 5. *x*.  
+ [2] válido somente para versões 4 do Paradox. *x* e 5. *x*.  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** retorna tipos de dados de ODBC SQL. Todas as conversões no Apêndice D dos *referência do programador de ODBC* têm suporte para os tipos de dados SQL ODBC listados anteriormente neste tópico.  
+>  **SQLGetTypeInfo** retorna tipos de dados SQL ODBC. Todas as conversões no Apêndice D da *referência do programador de ODBC* têm suporte para os tipos de dados ODBC SQL listados anteriormente neste tópico.  
   
- A tabela a seguir mostra as limitações nos tipos de dados Paradox.  
+ A tabela a seguir mostra as limitações dos tipos de dados do Paradox.  
   
-|Tipo de dados|Descrição|  
+|Tipo de dados|DESCRIÇÃO|  
 |---------------|-----------------|  
-|ALFANUMÉRICO|Criando uma coluna de ALFANUMÉRICO de zero ou comprimento não especificado, na verdade, retorna uma coluna de 255 bytes.|  
-|BYTES|Se você inserir NULL em uma coluna binária com o driver Paradox5, ele é alterado para 0.|  
-|LONG|O valor negativo máximo com suporte pelo driver do Paradox para o tipo de dados Long no Paradox 5. *x* não é -2 ^ 31 (-2147483648), como deveria ser desde muito mapeia para os dados ODBC digite SQL_INTEGER. O valor negativo máximo com suporte por muito tempo é realmente -2 ^ 31 + 1 (-2147483647).|  
-|timestamp|Quando um valor é inserido em uma coluna de carimbo de hora, o driver do Paradox, então, subsequentemente recuperado da coluna, o valor recuperado pode diferir do que o valor inserido pelo máximo de 1 segundo por causa de arredondamento.|  
+|ALFANUMÉRICO|A criação de uma coluna alfanumérica de comprimento zero ou não especificado realmente retorna uma coluna de 255 bytes.|  
+|BYTES|Se você inserir NULL em uma coluna binária com o driver Paradox5, ele será alterado para 0.|  
+|LONG|O valor negativo máximo com suporte do driver do Paradox para o tipo de dados Long no Paradox 5. *x* não é-2 ^ 31 (-2147483648), pois deve ser desde que haja mapas longos para o tipo de dados ODBC SQL_INTEGER. O valor máximo negativo com suporte para Long é, na verdade,-2 ^ 31 + 1 (-2147483647).|  
+|timestamp|Quando um valor é inserido em uma coluna de carimbo de data/hora pelo driver do Paradox e, posteriormente, recuperado da coluna, o valor recuperado pode ser diferente do valor inserido pelo máximo de 1 segundo devido ao arredondamento.|  
   
- Mais limitações nos tipos de dados podem ser encontradas na [limitações do tipo de dados](../../odbc/microsoft/data-type-limitations.md).
+ Mais limitações sobre tipos de dados podem ser encontradas em [limitações de tipo de dados](../../odbc/microsoft/data-type-limitations.md).

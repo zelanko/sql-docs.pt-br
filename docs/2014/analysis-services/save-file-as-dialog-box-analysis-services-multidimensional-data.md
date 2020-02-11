@@ -1,5 +1,5 @@
 ---
-title: Salve o arquivo como caixa de diálogo (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Salvar arquivo como (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070048"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Salvar Arquivo como (Analysis Services - Dados Multidimensionais)
@@ -24,7 +24,7 @@ ms.locfileid: "66070048"
   
 -   Clicando em **Procurar** na caixa de diálogo **Banco de Dados de Backup** .  
   
--   Clicando no botão de reticências ( **...** ) na coluna **Arquivo de backup remoto** da grade da opção **Local de backup da partição remota** na caixa de diálogo **Banco de Dados de Backup** .  
+-   Clicando no botão de reticências (**...**) na coluna **Arquivo de backup remoto** da grade da opção **Local de backup da partição remota** na caixa de diálogo **Banco de Dados de Backup** .  
   
 ## <a name="options"></a>Opções  
  **Selecione a pasta**  
@@ -36,8 +36,8 @@ ms.locfileid: "66070048"
  **Nome do arquivo**  
  Digite para modificar o arquivo selecionado em **Selecionar a pasta**ou para selecionar um arquivo não listado em **Selecionar a pasta**.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Caixa de diálogo banco de dados de backup &#40;Analysis Services - dados multidimensionais&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Caixa de diálogo backup Database &#40;Analysis Services-dados multidimensionais&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

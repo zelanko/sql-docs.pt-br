@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268154"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Elemento TuningTimeInMin (DTA)
@@ -36,9 +36,10 @@ ms.locfileid: "63268154"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|`unsignedInt`, comprimento ilimitado.|  
+|**Comprimento e tipo de dados**|
+  `unsignedInt`, comprimento ilimitado.|  
 |**Valor padrão**|480 minutos (8 horas).|  
 |**Ocorrência**|Exigido, exceto se houver valor especificado para o elemento `NumberOfEvents`.|  
   
@@ -47,11 +48,11 @@ ms.locfileid: "63268154"
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**Elementos filho**|None|  
+|**Elementos filho**|Nenhum|  
   
 ## <a name="example"></a>Exemplo  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  O exemplo de código a seguir mostra como definir 12 horas como tempo máximo de ajuste:  
   
 ## <a name="code"></a>Código  
@@ -66,7 +67,7 @@ ms.locfileid: "63268154"
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

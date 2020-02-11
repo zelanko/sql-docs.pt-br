@@ -14,11 +14,11 @@ ms.assetid: 6eccacdf-b837-4b66-bd48-ba31771acecb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 331b60b31c49a203da5f25c4481a604132fbb0e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079548"
 ---
-# <a name="version-number"></a>Número de Versão
-Há várias versões do ODBC, cada um com diferentes recursos. Um aplicativo determina qual versão do ODBC o Gerenciador de Driver e um driver específico que dão suporte chamando **SQLGetInfo** com as opções SQL_ODBC_VER e SQL_DRIVER_ODBC_VER.
+# <a name="version-number"></a>Número da versão
+Há várias versões do ODBC, cada uma com recursos diferentes. Um aplicativo determina a qual versão ODBC o Gerenciador de driver e um driver específico dão suporte chamando **SQLGetInfo** com as opções SQL_ODBC_VER e SQL_DRIVER_ODBC_VER.

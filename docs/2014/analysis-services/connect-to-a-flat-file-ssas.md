@@ -1,5 +1,5 @@
 ---
-title: Conectar a um arquivo simples (SSAS) | Microsoft Docs
+title: Conectar-se a um arquivo simples (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087357"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Conectar a um arquivo simples (SSAS)
@@ -31,7 +31,7 @@ ms.locfileid: "66087357"
  **Nome de conexão amigável**  
  Digite um nome exclusivo para esta conexão de fonte de dados. Esse é um campo obrigatório.  
   
- **Caminho do Arquivo**  
+ **Caminho do arquivo**  
  Especifique o caminho completo para o arquivo.  
   
  **Procurar**  
@@ -40,7 +40,7 @@ ms.locfileid: "66087357"
  **Separador de coluna**  
  Selecione de uma lista de separadores de colunas disponíveis. Escolha um separador com pouca probabilidade de ocorrer no texto.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Tabulação (t)|As colunas são separadas por uma tabulação (t).|  
 |Vírgula (,)|As colunas são separadas por uma vírgula (,).|  
@@ -66,7 +66,7 @@ ms.locfileid: "66087357"
 |**Caixa de seleção no cabeçalho da coluna**|Marque a caixa de seleção para incluir a coluna na importação de dados. Desmarque a caixa de seleção para remover a coluna da importação de dados.|  
 |**Botão de seta para baixo no cabeçalho da coluna**|Classifique e filtre dados na coluna.|  
   
- **Limpar filtros de linha**  
+ **Limpar Filtros de Linha**  
  Remova todos os filtros aplicados aos dados nas colunas.  
   
   

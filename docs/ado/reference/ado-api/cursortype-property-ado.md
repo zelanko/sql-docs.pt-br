@@ -16,46 +16,46 @@ ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919251"
 ---
 # <a name="cursortype-property-ado"></a>Propriedade CursorType (ADO)
-Indica o tipo de cursor usado em uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Indica o tipo de cursor usado em um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
-## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
- Define ou retorna um [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valor. O valor padrão é **adOpenForwardOnly**.  
+## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
+ Define ou retorna um valor de [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) . O valor padrão é **adOpenForwardOnly**.  
   
 ## <a name="remarks"></a>Comentários  
- Use o **CursorType** propriedade para especificar o tipo de cursor que deve ser usado ao abrir o **Recordset** objeto.  
+ Use a propriedade **CursorType** para especificar o tipo de cursor que deve ser usado ao abrir o objeto **Recordset** .  
   
- Somente uma configuração de **adOpenStatic** terá suporte se o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) estiver definida como **adUseClient**. Se um valor sem suporte for definido, nenhum erro ocorrerá; suporte a mais próxima **CursorType** será usado.  
+ Somente uma configuração de **adOpenStatic** terá suporte se a propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) estiver definida como **adUseClient**. Se um valor sem suporte for definido, nenhum erro será resultado; o **CursorType** com suporte mais próximo será usado em seu lugar.  
   
- Se um provedor não oferece suporte para o tipo de cursor solicitado, ele poderá retornar outro tipo de cursor. O **CursorType** propriedade será alterada para corresponder ao tipo de cursor real em uso quando o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto está aberto. Para verificar a funcionalidade específica do cursor retornado, use o [dá suporte a](../../../ado/reference/ado-api/supports-method.md) método. Depois de fechar o **conjunto de registros**, o **CursorType** propriedade será revertida para sua configuração original.  
+ Se um provedor não oferecer suporte ao tipo de cursor solicitado, ele poderá retornar outro tipo de cursor. A propriedade **CursorType** será alterada para corresponder ao tipo de cursor real em uso quando o objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) estiver aberto. Para verificar a funcionalidade específica do cursor retornado, use o método [com suporte](../../../ado/reference/ado-api/supports-method.md) . Depois de fechar o **conjunto de registros**, a propriedade **CursorType** reverte para sua configuração original.  
   
- O gráfico a seguir mostra a funcionalidade de provedor (identificado por **dá suporte a** constantes do método) necessárias para cada tipo de cursor.  
+ O gráfico a seguir mostra a funcionalidade do provedor (identificada por **suporte** a constantes do método) necessária para cada tipo de cursor.  
   
-|Para um conjunto de registros desse CursorType|O método dá suporte a deve retornar True para todas as constantes|  
+|Para um conjunto de registros deste CursorType|O método de suporte deve retornar true para todas essas constantes|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|nenhum|  
+|**adOpenForwardOnly**|none|  
 |**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
 |**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
   
 > [!NOTE]
->  Embora **suporta**(**adUpdateBatch**) pode ser verdadeiro para cursores dinâmicos e de somente avanço, para atualizações de lote, você deve usar um conjunto de chaves ou um cursor estático. Definir a [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propriedade a ser **adLockBatchOptimistic** e o **CursorLocation** propriedade **adUseClient** para habilitar o Cursor Serviço do OLE DB, que é necessário para atualizações em lotes.  
+>  Embora **suporte**(**adUpdateBatch**) possa ser verdadeiro para cursores dinâmicos e somente de avanço, para atualizações em lotes, você deve usar um conjunto de chaves ou um cursor estático. Defina a propriedade [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) como **adLockBatchOptimistic** e a propriedade **CursorLocation** como **adUseClient** para habilitar o serviço de cursor para OLE DB, que é necessário para atualizações em lote.  
   
- O **CursorType** propriedade é leitura/gravação quando o **Recordset** é fechada e somente leitura quando ele é aberto.  
+ A propriedade **CursorType** é de leitura/gravação quando o **conjunto de registros** é fechado e somente leitura quando é aberto.  
   
 > [!NOTE]
->  **Uso do serviço de dados remotos** quando usado em um lado do cliente **conjunto de registros** objeto, o **CursorType** propriedade pode ser definida somente como **adOpenStatic**.  
+>  **Uso do serviço de dados remoto** Quando usado em um objeto **Recordset** do lado do cliente, a propriedade **CursorType** pode ser definida somente como **adOpenStatic**.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
- [CursorType, LockType, EditMode exemplo das propriedades e (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
- [CursorType, LockType, EditMode exemplo das propriedades e (VC + +)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo das propriedades CursorType, LockType e EditMode (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
+ [Exemplo das propriedades CursorType, LockType e EditMode (VC + +)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Método Supports](../../../ado/reference/ado-api/supports-method.md)

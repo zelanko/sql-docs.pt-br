@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cf8a8310abf9173f613549ef7f2776fc33ea690c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481273"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
@@ -22,7 +22,7 @@ ms.locfileid: "65481273"
   
  Este recurso lhe permite fazer um backup de *todas* as bases de dados de conhecimento no [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de uma só vez, sem precisar exportar individualmente cada base de dados de conhecimento para um arquivo .dqs usando o [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. Da mesma forma, você pode importar *todas* as bases de dados de conhecimento do arquivo de backup para outro [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de uma só vez, sem precisar importar cada base de dados de conhecimento individualmente de um arquivo .dqs usando o [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. Isso é particularmente útil ao fazer backup e restaurar suas bases de dados de conhecimento quando você está desinstalando o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] em um computador, e reinstalando-o em outro computador. Você pode exportar facilmente todas as bases de dados de conhecimento em uma instalação existente do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] para um arquivo de backup DQS (.dqsb) e, depois importar todas as bases de dados de conhecimento do arquivo de backup após instalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] em outro computador.  
   
-##  <a name="export"></a> Exportando bases de dados de conhecimento para um arquivo .dqsb  
+##  <a name="export"></a>Exportando bases de dados de conhecimento para arquivo. dqsb  
  Você pode exportar todas as bases de dados de conhecimento do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] existente a qualquer momento, ou durante a desinstalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].  
   
 -   Para exportar todas as bases de dados de conhecimento em um [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] para um arquivo de backup DQS (.dqsb), execute o DQSInstaller.exe com o parâmetro `exportkbs` do prompt de comando, junto com o caminho completo e o nome de arquivo para onde você deseja exportar as bases de dados de conhecimento. Por exemplo, para exportar todas as bases de dados de conhecimento para o arquivo DQSBackup.dqsb na unidade C:  
@@ -43,7 +43,7 @@ ms.locfileid: "65481273"
     > [!NOTE]  
     >  Se você não especificar o caminho completo e o nome do arquivo de backup DQS durante a desinstalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] no prompt de comando usando o parâmetro `uninstall` , uma mensagem será exibida indicando que todas as bases de dados de conhecimento serão excluídas, e permitindo que você decida se deseja continuar com o processo de desinstalação.  
   
-##  <a name="import"></a> Importando bases de dados de conhecimento de um arquivo .dqsb  
+##  <a name="import"></a>Importando bases de dados de conhecimento do arquivo. dqsb  
  Você pode importar todas as bases de dados de conhecimento de um arquivo de backup DQS (.dqsb) após concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Para importar bases de dados de conhecimento, você deve ter um arquivo de backup DQS válido (.dqsb).  
   
  Execute o arquivo DQSInstaller.exe com o parâmetro `importkbs` do prompt de comando, junto com o caminho completo e o nome de arquivo de onde deseja importar as bases de dados de conhecimento. Por exemplo, para importar todas as bases de dados de conhecimento do arquivo DQSBackup.dqsb na unidade C:  
@@ -54,10 +54,10 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
   
  Se existirem bases de dados de conhecimento em seu [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] com o mesmo nome que aquelas importadas, os nomes das bases de dados de conhecimento importadas serão anexados com um sublinhado (_) seguido de um valor inteiro, começando em 1. Por exemplo, se o domínio "CompanyName" for duplicado, o nome de domínio importado será "CompanyName_1".  
   
-## <a name="see-also"></a>Consulte também  
- [Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Executar o DQSInstaller. exe para concluir a instalação do Data Quality Server](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Instalar o Data Quality Services](install-data-quality-services.md)   
- [Exportar uma base de dados de conhecimento para um arquivo .dqs](../export-a-knowledge-base-to-a-dqs-file.md)   
+ [Exportar uma base de dados de conhecimento para um arquivo. DQS](../export-a-knowledge-base-to-a-dqs-file.md)   
  [Importar uma base de dados de conhecimento de um arquivo .dqs](../import-a-knowledge-base-from-a-dqs-file.md)  
   
   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482735"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Sobrepondo permissões de modelo e membro (Serviços de Dados Mestre)
@@ -26,9 +26,9 @@ ms.locfileid: "65482735"
   
  Se um membro tiver uma permissão que seja diferente daquela correspondente ao objeto de modelo, as seguintes regras se aplicarão:  
   
--   **Negar** substitui todas as outras permissões.  
+-   **Deny** substitui todas as outras permissões.  
   
--   **Somente leitura** substituições **atualização**.  
+-   **Somente leitura** substitui a **atualização**.  
   
  A imagem a seguir mostra quais permissões entram em vigor em um valor de atributo individual quando as permissões de atributo são diferentes das permissões de membro.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65482735"
   
  Na guia **Membros da Hierarquia** , o nó da subcategoria Mountain Bikes em uma hierarquia derivada tem a permissão **Atualizar** atribuída.  
   
- Resultado: No **Explorer**, o usuário tem a permissão **Atualizar** em todos os valores de atributo para todos os membros do nó Mountain Bikes. Todos os outros membros e atributos estão ocultados.  
+ Resultado: no **Explorer**, o usuário tem a permissão **Atualizar** para todos os valores do atributo para todos os membros do nó Mountain Bikes. Todos os outros membros e atributos estão ocultados.  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -50,25 +50,25 @@ ms.locfileid: "65482735"
   
  Na guia **Modelos** , o atributo Subcategory tem a permissão **Atualizar** atribuída.  
   
- Sobre o **membros da hierarquia** guia, o nó da subcategoria Mountain Bikes em uma hierarquia derivada recebe explicitamente **somente leitura** permissão.  
+ Na guia **membros da hierarquia** , o nó subcategoria de Mountain Bikes em uma hierarquia derivada é explicitamente atribuído à permissão **somente leitura** .  
   
- Resultado: Na **Explorer**, o usuário tem **somente leitura** permissão para os valores do atributo Subcategory para os membros no nó Mountain Bikes. Todos os outros membros e atributos estão ocultados.  
+ Resultado: no **Explorer**, o usuário tem permissão **somente leitura** para os valores de atributo de subcategoria para os membros no nó Mountain Bikes. Todos os outros membros e atributos estão ocultados.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="example-3"></a>Exemplo 3  
  ![mds_conc_overlap_model_3](../../2014/master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- Sobre o **modelos** guia, o atributo Subcategory tem **somente leitura** permissão atribuída.  
+ Na guia **modelos** , o atributo subcategoria tem permissão **somente leitura** atribuída.  
   
  Na guia **Membros da Hierarquia** , o nó da subcategoria Mountain Bikes em uma hierarquia derivada recebe explicitamente a permissão **Atualizar** .  
   
- Resultado: Na **Explorer**, o usuário tem **somente leitura** permissão para os valores de atributo. Todos os outros membros e atributos estão ocultados.  
+ Resultado: no **Explorer**, o usuário tem permissão **somente leitura** para os valores de atributo. Todos os outros membros e atributos estão ocultados.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como as permissões são determinadas &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
- [Sobrepondo permissões de usuário e grupo &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+ [Sobreposição de permissões de usuário e grupo &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

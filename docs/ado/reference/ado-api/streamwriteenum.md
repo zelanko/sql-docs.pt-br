@@ -16,22 +16,22 @@ ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cc9de1481cc683bddafe2f92959977319600f6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928637"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
-Especifica se um separador de linha é acrescentado à cadeia de caracteres gravada em um [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
+Especifica se um separador de linha é acrescentado à cadeia de caracteres gravada em um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
-|**adWriteChar**|0|Padrão. Grava a cadeia de caracteres de texto especificado (especificado pela *dados* parâmetro) para o **Stream** objeto.|  
-|**adWriteLine**|1|Grava uma cadeia de caracteres de texto e um caractere de separador de linha para um **Stream** objeto. Se o [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) propriedade não está definida e, em seguida, isso retornará um erro de tempo de execução.|  
+|**adWriteChar**|0|Padrão. Grava a cadeia de caracteres de texto especificada (especificada pelo parâmetro de *dados* ) no objeto de **fluxo** .|  
+|**adWriteLine**|1|Grava uma cadeia de caracteres de texto e um caractere separador de linha em um objeto de **fluxo** . Se a propriedade [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) não for definida, isso retornará um erro em tempo de execução.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Essas constantes não têm equivalentes do ADO/WFC.  
+ Essas constantes não têm equivalentes ADO/WFC.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Método WriteText](../../../ado/reference/ado-api/writetext-method.md)

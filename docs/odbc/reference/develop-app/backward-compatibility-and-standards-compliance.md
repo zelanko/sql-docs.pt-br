@@ -1,5 +1,5 @@
 ---
-title: Compatibilidade com versões anteriores e a conformidade de padrões | Microsoft Docs
+title: Compatibilidade com versões anteriores e conformidade com padrões | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7588859abb8298a9191409e5c05df1949e85ba89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909863"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Compatibilidade com versões anteriores e a conformidade com padrões
-Compatibilidade com versões anteriores é a capacidade dos componentes mais recentes do ODBC para trabalhar com componentes antigos do ODBC. As seções a seguir discutem como esses componentes são afetados pelas alterações no ODBC *3.x*. As informações contidas nelas, basicamente tratam a gravação de ODBC *3.x* aplicativo e como para trás os problemas de compatibilidade são manipulados por drivers ODBC. Para obter diretrizes específicas sobre a compatibilidade com versões anteriores como problemas afetam a gravação de ODBC *3.x* driver, consulte [apêndice g: Diretrizes de driver para compatibilidade com versões anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+A compatibilidade com versões anteriores é a capacidade de componentes mais recentes do ODBC trabalharem com componentes antigos do ODBC. As seções a seguir discutem como esses componentes são afetados pelas alterações no ODBC *3. x*. As informações contidas nela abordam principalmente a gravação de um aplicativo ODBC *3. x* e como os problemas de compatibilidade com versões anteriores são tratados por drivers ODBC. Para obter diretrizes específicas sobre como os problemas de compatibilidade com versões anteriores afetam a gravação de um driver ODBC *3. x* , consulte o [Apêndice G: diretrizes de driver para compatibilidade com versões anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Componentes ODBC afetados](../../../odbc/reference/develop-app/affected-odbc-components.md)  
   
 -   [Tipos de alterações](../../../odbc/reference/develop-app/types-of-changes.md)  
   
--   [Compatibilidade de aplicativo/Driver](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)  
+-   [Compatibilidade de aplicativo/driver](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)  
   
 -   [Novos recursos](../../../odbc/reference/develop-app/new-features.md)  
   
@@ -38,6 +38,6 @@ Compatibilidade com versões anteriores é a capacidade dos componentes mais rec
   
 -   [Alterações comportamentais](../../../odbc/reference/develop-app/behavioral-changes.md)  
   
--   [Escrevendo aplicativos ODBC 3.x](../../../odbc/reference/develop-app/writing-odbc-3-x-applications.md)  
+-   [Escrever aplicativos ODBC 3.x](../../../odbc/reference/develop-app/writing-odbc-3-x-applications.md)  
   
--   [Gravando drivers 3.x ODBC](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)
+-   [Gravar drivers 3.x ODBC](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)

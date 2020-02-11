@@ -1,5 +1,5 @@
 ---
-title: Função Levels (MDX) | Microsoft Docs
+title: Níveis (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905639"
 ---
 # <a name="levels-mdx"></a>Função Levels (MDX)
@@ -32,7 +32,7 @@ Hierarchy_Expression.Levels( Level_Name )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expressão_Hierarquia*  
+ *Hierarchy_Expression*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
  *Level_Number*  
@@ -42,17 +42,17 @@ Hierarchy_Expression.Levels( Level_Name )
  Uma expressão de cadeia de caracteres válida que especifica um nome de nível.  
   
 ## <a name="remarks"></a>Comentários  
- Se um número de nível for especificado, o **níveis** função retorna o nível associado a posição de base zero especificada.  
+ Se um número de nível for especificado, a função **Levels** retornará o nível associado à posição de base zero especificada.  
   
- Se um nome de nível for especificado, o **níveis** função retorna o nível especificado.  
+ Se um nome de nível for especificado, a função **Levels** retornará o nível especificado.  
   
 > [!NOTE]  
 >  Use a sintaxe de expressão de cadeia de caracteres para funções definidas pelo usuário.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir ilustram cada um dos **níveis** sintaxes de função.  
+ Os exemplos a seguir ilustram cada uma das sintaxes de função de **níveis** .  
   
-### <a name="numeric"></a>Numeric  
+### <a name="numeric"></a>Numérico  
  O exemplo a seguir retorna o nível País:  
   
 ```  
@@ -60,7 +60,7 @@ SELECT [Geography].[Geography].Levels(1) ON 0
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>Cadeia de caracteres  
+### <a name="string"></a>String  
  O exemplo a seguir retorna o nível País:  
   
 ```  
@@ -68,7 +68,7 @@ SELECT [Geography].[Geography].Levels('Country') ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

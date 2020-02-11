@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480527"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acessar dados para as operações do DQS
@@ -30,7 +30,7 @@ ms.locfileid: "65480527"
   
 -   Sua conta de usuário do Windows deve ser um membro da função de servidor fixa apropriada (como securityadmin, serveradmin ou sysadmin) na instância do mecanismo de banco de dados para conceder/modificar o acesso ao logon do SQL em bancos de dados.  
   
-### <a name="to-grant-readwrite-access-to-a-user-on-the-dqsstagingdata-database"></a>Para conceder acesso de leitura/gravação a um Usuário no banco de dados DQS_STAGING_DATA  
+### <a name="to-grant-readwrite-access-to-a-user-on-the-dqs_staging_data-database"></a>Para conceder acesso de leitura/gravação a um Usuário no banco de dados DQS_STAGING_DATA  
   
 1.  Inicie o Microsoft SQL Server Management Studio.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "65480527"
   
 4.  Na caixa de diálogo **Propriedades de Logon** , clique na página **Mapeamento de Usuário** no painel esquerdo.  
   
-5.  No painel direito, marque a caixa de seleção na coluna **Mapa** do banco de dados **DQS_STAGING_DATA** e selecione as seguintes funções no painel **Associação à função de banco de dados para: DQS_STAGING_DATA**:  
+5.  No painel direito, marque a caixa de seleção na coluna **Mapa** do banco de dados **DQS_STAGING_DATA** e selecione as seguintes funções no painel **Associação à função de banco de dados para: DQS_STAGING_DATA** :  
   
     -   **db_datareader**: ler dados de tabelas/exibições.  
   
-    -   **db_datawriter**: adicionar, excluir ou alterar dados em tabelas.  
+    -   **db_datawriter**: Adicionar, excluir ou alterar dados em tabelas.  
   
     -   **db_ddladmin**: criar, modificar ou excluir tabelas/exibições.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65480527"
 ## <a name="next-steps"></a>Próximas etapas  
  Tente realizar operações do DQS que acessam o banco de dados como fonte de dados para a operação DQS e, em seguida, exportam os dados processados para o banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Data Quality Services](install-data-quality-services.md)  
   
   

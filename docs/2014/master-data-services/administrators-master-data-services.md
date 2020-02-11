@@ -15,17 +15,17 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480013"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], há dois tipos de administradores: administradores de modelo e o administrador do sistema do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="model-administrators"></a>Administradores de modelo  
- Na [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um administrador de modelo é um usuário que tem **Update** permissão atribuída ao objeto de modelo de nível superior no **objetos de modelo** guia e nenhuma outra receber permissões.  
+ No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um administrador de modelo é um usuário que tem a permissão **Atualizar** atribuída ao objeto de modelo de nível superior na guia **objetos de modelo** e nenhuma outra permissão atribuída.  
   
 -   Se o usuário tiver acesso à área funcional **Gerenciador** , ele poderá adicionar, excluir e atualizar todos os dados mestre nessa área.  
   
@@ -36,27 +36,27 @@ ms.locfileid: "65480013"
  Um usuário ou pode ser configurado como um administrador de modelo no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou programaticamente. Para obter mais informações, consulte [Criar um administrador de modelo &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
   
 ## <a name="master-data-services-system-administrator"></a>Administrador do sistema do Master Data Services  
- Há somente um administrador do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. O administrador do sistema é o usuário especificado para o **conta de administrador** quando você cria o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados.  
+ Há somente um administrador do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. O administrador do sistema é o usuário especificado para a **conta de administrador** quando você [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] cria o banco de dados.  
   
  O administrador do sistema do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]:  
   
 -   Tem acesso automaticamente a todas as áreas funcionais.  
   
--   Pode adicionar, excluir e atualizar todos os dados mestres para todos os modelos na **Explorer** área funcional.  
+-   Pode adicionar, excluir e atualizar todos os dados mestre de todos os modelos na área funcional do **Gerenciador** .  
   
  Você pode alterar o usuário designado como administrador do sistema. Para obter mais informações, consulte [alterar a conta de administrador do sistema &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
 ## <a name="comparing-administrator-types"></a>Comparando tipos de administrador  
   
-|Tipo de administrador|Descrição|  
+|Tipo de administrador|DESCRIÇÃO|  
 |------------------------|-----------------|  
-|Administrador do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Tem automaticamente **atualização** permissão a todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.<br /><br /> Em tbluser, o valor de **ID** coluna é **1**.|  
-|Administrador de modelo|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinam se o usuário é um administrador de modelo.<br /><br /> Pode ser um administrador de modelo com base nas permissões atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> É um administrador somente para modelos que têm **atualização** permissão atribuída ao objeto de modelo de nível superior e nenhuma outra permissão.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> Em tbluser, o valor de **ID** coluna não é **1**.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]administrador do sistema|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Tem automaticamente a permissão **Atualizar** para todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.<br /><br /> No MDM. tblUser, o valor na coluna **ID** é **1**.|  
+|Administrador de modelo|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinam se o usuário é um administrador de modelo.<br /><br /> Pode ser um administrador de modelo com base nas permissões atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> É um administrador somente para modelos que têm permissão de **atualização** atribuída ao objeto de modelo de nível superior e nenhuma outra permissão.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> No MDM. tblUser, o valor na coluna **ID** não é **1**.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um administrador de modelo &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md)   
- [Alterar a conta de administrador do sistema &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)   
- [Criar um banco de dados do Master Data Services](install-windows/create-a-master-data-services-database.md)   
- [Notificações &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+ [Altere a conta de administrador do sistema &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)   
+ [Criar um banco de dados Master Data Services](install-windows/create-a-master-data-services-database.md)   
+ [Master Data Services de notificações &#40;&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
   

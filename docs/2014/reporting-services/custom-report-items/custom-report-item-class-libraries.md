@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264887"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliotecas de classes de itens de relatório personalizados
@@ -63,7 +63,7 @@ ms.locfileid: "63264887"
 |`OnPaint`|Chamado em resposta ao evento `Paint`.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Este é o atributo usado para identificar o tipo do item de relatório personalizado. O nome deve corresponder ao valor da <`Name`> atributo do `ReportItem` elemento no arquivo de configuração do Designer de relatórios.  
+ Este é o atributo usado para identificar o tipo do item de relatório personalizado. O nome deve corresponder ao valor do atributo <`Name`> do `ReportItem` elemento no arquivo de configuração Report Designer.  
   
 #### <a name="public-methods"></a>Métodos públicos  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63264887"
 |`DataSetName`|O nome do conjunto de dados que contém os campos a serem soltos.|  
 |`Fields`|A coleção de campos (`Microsoft.ReportDesigner.Field`) a serem soltos.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Linguagem RDL &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [Criando um componente de item de relatório personalizado em tempo de execução](creating-a-custom-report-item-run-time-component.md)   
  [Criar um componente de tempo de design de item de relatório personalizado](creating-a-custom-report-item-design-time-component.md)  

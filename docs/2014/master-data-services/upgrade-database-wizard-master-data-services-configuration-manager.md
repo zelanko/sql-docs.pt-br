@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478489"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Atualizar Assistente para Banco de Dados (Gerenciador de Configuração do Master Data Services)
@@ -26,17 +26,17 @@ ms.locfileid: "65478489"
 ## <a name="upgrade-review"></a>Análise da atualização  
  Analise as informações especificadas nesta página. Se estiver correto, clique em **Avançar** para atualizar o banco de dados especificado.  
   
-|Nome do controle|Descrição|  
+|Nome do controle|DESCRIÇÃO|  
 |------------------|-----------------|  
-|**Instância do SQL Server**|O nome da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] selecionada no momento.|  
-|**Banco de dados dos Master Data Services**|O nome do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] selecionado no momento.|  
+|**Instância de SQL Server**|O nome da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] selecionada no momento.|  
+|**Banco de dados Master Data Services**|O nome do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] selecionado no momento.|  
   
 ## <a name="progress-and-finish"></a>Progresso e Conclusão  
  Exibe o progresso do processo de atualização. Depois que o banco de dados for atualizado, clique no link do arquivo de log para exibir informações detalhadas sobre a atualização ou clique em **Concluir** para fechar o assistente de banco de dados e voltar à página **Bancos de Dados** . O banco de dados de atualização é selecionado e você pode exibir e modificar as configurações do sistema.  
   
-## <a name="see-also"></a>Consulte também  
- [Página Configuração do Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Configurar o site da Web e o banco de dados do Master Data Services](set-up-the-database-and-website-for-master-data-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Página de configuração do banco de dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+ [Configurar o banco de dados e o site para Master Data Services](set-up-the-database-and-website-for-master-data-services.md)   
  [Atualizar o Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   

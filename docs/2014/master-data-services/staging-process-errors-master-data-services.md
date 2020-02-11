@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 65de28bcf880fab6dc0546c5ed4c315978ad39f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478789"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erros de processo de preparo (Master Data Services)
@@ -32,18 +32,18 @@ ms.locfileid: "65478789"
 |210036|Como existe uma regra de negócio de geração de código, o **MemberCode** não é necessário.|Ao criar ou atualizar membros, um **MemberCode** não é necessário quando você está usando a geração de código automática. Porém, se preferir, você poderá especificar um código. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Folha<br /><br /> Consolidado|  
 |210041|"ROOT" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "ROOT".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210042|"MDMUNUSED" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "MDMUNUSED".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
-|210052|O MemberCode não pode ser desativado porque é usado como um valor de atributo baseado em domínio.|Quando **ImportType** = **3** ou **4**, o preparo falhará se o membro for usado como um valor de atributo para outros membros. Use **ImportType5** ou **6** para definir o valor como NULL ou altere os valores antes de executar o processo de preparo.|Folha<br /><br /> Consolidado|  
-|300002|O código de membro não é válido.|Relações: O código de membro pai ou filho não existe.<br /><br /> Folha ou Consolidado: **ImportType** = **3** ou **4** e o código de membro não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
+|210052|O MemberCode não pode ser desativado porque é usado como um valor de atributo baseado em domínio.|Quando **importType** = **3** ou **4**, o preparo falhará se o membro for usado como um valor de atributo para outros membros. Use **ImportType5** ou **6** para definir o valor como NULL ou altere os valores antes de executar o processo de preparo.|Folha<br /><br /> Consolidado|  
+|300002|O código de membro não é válido.|Relações: o código de membro pai ou filho não existe.<br /><br /> Folha ou consolidada: **importType** = **3** ou **4** e o código de membro não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |300004|O código de membro já existe.|**ImportType** = **1** e você usou um código de membro que já existe na entidade.|Folha<br /><br /> Consolidado|  
 |210011|Quando **RelationshipType** é **1**, o **ParentCode** não pode ser um membro folha.|Verifique se o valor de **ParentCode** é um código de membro consolidado.|Relação|  
 |210015|O código de membro existe várias vezes na tabela de preparo para uma hierarquia e um lote.|Para uma hierarquia explícita, você especificou o local do mesmo membro várias vezes no mesmo lote.|Relação|  
 |210016|Não foi possível criar a relação porque ela causaria uma referência circular.|Isso ocorre quando você tenta atribuir um filho como um pai.|Relação|  
-|210046|O membro não pode ser um irmão de Root.|Isso ocorre quando **RelationshipType** = **2** (irmão) e o **ParentCode** ou **ChildCode** é **Root**. Membros não podem estar no mesmo nível do nó raiz; eles só podem ser filhos.|Relação|  
-|210047|O membro não pode ser um irmão de Unused.|Isso ocorre quando **RelationshipType** = **2** (irmão) e o **ParentCode** ou **ChildCode** é **Unused**. Os membros podem ser filhos apenas do nó Unused.|Relação|  
+|210046|O membro não pode ser um irmão de Root.|Isso ocorre quando **RelationshipType** = **2** (irmão) e **ParentCode** ou **ChildCode** é **raiz**. Membros não podem estar no mesmo nível do nó raiz; eles só podem ser filhos.|Relação|  
+|210047|O membro não pode ser um irmão de Unused.|Isso ocorre quando **RelationshipType** = **2** (irmão) e **ParentCode** ou **ChildCode** não são **usados**. Os membros podem ser filhos apenas do nó Unused.|Relação|  
 |210048|**ParentCode** e **ChildCode** não podem ser iguais.|O valor de **ParentCode** é igual ao valor de **ChildCode** . Esses valores devem ser diferentes.|Relação|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir erros que ocorrem durante o processo de preparo &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
- [Importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ [Master Data Services de importação de dados &#40;&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

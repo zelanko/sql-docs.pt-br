@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250759"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, objeto Buffer Manager
-  O objeto **Gerenciador de Buffer** fornece contadores para monitorar como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa:  
+  O objeto **Gerenciador de buffer** fornece contadores para monitorar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como o usa:  
   
 -   Memória para armazenar páginas de dados.  
   
@@ -40,33 +40,33 @@ ms.locfileid: "63250759"
 ## <a name="buffer-manager-performance-objects"></a>Objetos de desempenho do Gerenciador de Buffer  
  Esta tabela descreve os objetos de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Gerenciador de Buffer** .  
   
-|SQL Server, contadores do Gerenciador de Buffer|Descrição|  
+|SQL Server, contadores do Gerenciador de Buffer|DESCRIÇÃO|  
 |----------------------------------------|-----------------|  
 |**Taxa de acertos do cache do buffer**|Indica a porcentagem de páginas localizadas no cache do buffer sem ter que ler do disco. A taxa é o número total de acertos do cache, dividido pelo número total de pesquisas no cache no acesso dos últimos milhares de páginas. Após um tempo longo, a taxa varia muito pouco. Como ler do cache é muito menos dispendioso que ler do disco, convém que esta taxa seja alta. Geralmente, é possível aumentar a taxa de acertos do cache do buffer aumentando a quantidade de memória disponível para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usando o recurso de extensão do pool de buffers.|  
 |**Páginas de ponto de verificação/s**|Indica o número de páginas liberadas no disco, por segundo, por ponto de verificação ou outra operação que requeira a liberação de todas as páginas sujas.|  
-|**Páginas do banco de dados**|Indica o número de páginas no pool de buffers do nó com conteúdo de banco de dados.|  
-|**Páginas alocadas pela extensão**|O número total de páginas de cache que não estão livres no arquivo de extensão do pool de buffers.|  
-|**Páginas livres de extensão**|O número total de páginas de cache livres no arquivo de extensão do pool de buffers.|  
+|**Páginas de banco de dados**|Indica o número de páginas no pool de buffers do nó com conteúdo de banco de dados.|  
+|**Páginas alocadas da extensão**|O número total de páginas de cache que não estão livres no arquivo de extensão do pool de buffers.|  
+|**Páginas livres da extensão**|O número total de páginas de cache livres no arquivo de extensão do pool de buffers.|  
 |**Extensão em uso como porcentagem**|Porcentagem do arquivo de paginação da extensão do pool de buffers ocupada pelas páginas do gerenciador de buffer.|  
-|**Contador de E/S pendente de extensão**|Comprimento da fila de E/S para o arquivo de extensão do pool de buffers.|  
-|**Remoções da página de extensão/s**|Número de páginas removidas do arquivo de extensão do pool de buffers por segundo.|  
-|**Leituras da página de extensão/s**|Número de páginas lidas do arquivo de extensão do pool de buffers por segundo.|  
-|**Hora não referenciada da página de extensão**|Média de segundos que uma página ficará na extensão do pool de buffers sem fazer referência a ele.|  
-|**Gravações das páginas de extensão/s**|Número de páginas gravadas no arquivo de extensão do pool de buffers por segundo.|  
-|**Paradas de lista livre/s**|Indica o número de solicitações, por segundo, que tiveram de esperar por uma página livre.|  
+|**Contador de e/s pendente de extensão**|Comprimento da fila de E/S para o arquivo de extensão do pool de buffers.|  
+|**Remoções de página de extensão/s**|Número de páginas removidas do arquivo de extensão do pool de buffers por segundo.|  
+|**Leituras de página de extensão/s**|Número de páginas lidas do arquivo de extensão do pool de buffers por segundo.|  
+|**Tempo não referenciado da página de extensão**|Média de segundos que uma página ficará na extensão do pool de buffers sem fazer referência a ele.|  
+|**Gravações de páginas de extensão/s**|Número de páginas gravadas no arquivo de extensão do pool de buffers por segundo.|  
+|**Vagas de lista livre/s**|Indica o número de solicitações, por segundo, que tiveram de esperar por uma página livre.|  
 |**Gravações lentas/s**|Indica o número de buffers gravados, por segundo, pelo gravador lento do gerenciador de buffers. O *gravador lento* é um processo do sistema que libera lotes de buffers sujos e velhos (buffers contendo alterações que necessitam de write-back no disco para que o buffer possa ser reutilizado para outra página) e torna-os disponíveis para processos de usuário. O gravador lento elimina a necessidade de executar pontos de verificação frequentes a fim de criar buffers disponíveis.|  
 |**Expectativa de vida da página**|Indica o número de segundos que uma página ficará no pool de buffers do nó sem referências.|  
 |**Pesquisas de página/s**|Indica o número de solicitações, por segundo, para localizar uma página no pool de buffers.|  
 |**Leituras de página/s**|Indica o número de leituras de página de banco de dados física emitidas por segundo. Essa estatística exibe o número total de leituras de página física em todos os bancos de dados. Como a E/S física é dispendiosa, convém minimizar o custo utilizando um maior cache de dados, índices inteligentes e consultas mais eficientes ou alterando o design do banco de dados.|  
 |**Gravações de página/s**|Indica o número de gravações de página de banco de dados física emitidas por segundo.|  
-|**Páginas lidas por antecipação/s**|Indica o número de páginas lidas, por segundo, antecipadamente ao uso.|  
+|**Páginas de leitura antecipada/s**|Indica o número de páginas lidas, por segundo, antecipadamente ao uso.|  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Server:Buffer Node](sql-server-buffer-node.md)   
- [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [SQL Server, objeto Cache de planos](sql-server-plan-cache-object.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server: nó de buffer](sql-server-buffer-node.md)   
+ [Opções de configuração de servidor de memória do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+ [SQL Server, objeto de cache de plano](sql-server-plan-cache-object.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
- [Extensão do pool de buffers](../../database-engine/configure-windows/buffer-pool-extension.md)  
+ [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)  
   
   

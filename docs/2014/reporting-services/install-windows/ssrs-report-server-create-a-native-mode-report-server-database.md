@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108682"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Criar um banco de dados de servidor de relatório no modo nativo (Gerenciador de configurações do SSRS)
@@ -27,14 +27,14 @@ ms.locfileid: "66108682"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo|  
   
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>Quando criar ou configurar os bancos de dados do servidor de relatório  
  Você deve criar e configurar o banco de dados do servidor de relatório se instalou o servidor de relatório no modo somente arquivos.  
   
  Se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão para o modo nativo, o banco de dados do servidor de relatório foi criado e configurado automaticamente quando a instância do servidor de relatório foi instalada. É possível usar o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para exibir ou modificar as configurações que a Instalação configurou para você.  
   
-##  <a name="rsdbrequirements"></a> Antes de iniciar  
+##  <a name="rsdbrequirements"></a>Antes de começar  
  Criar ou configurar um banco de dados de servidor de relatório é um processo de várias etapas. Antes de criar o banco de dados do servidor de relatório, considere como você deseja especificar os seguintes itens:  
   
  Selecionar um servidor de banco de dados  
@@ -49,7 +49,7 @@ ms.locfileid: "66108682"
  Decidir sobre credenciais do servidor de relatório  
  Decida como o servidor de relatório irá se conectar aos bancos de dados do servidor de relatório. Os tipos de credencial incluem conta de usuário do domínio, conta de usuário do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a conta de serviço do Servidor de Relatório.  
   
- Essas credenciais são criptografadas e armazenadas no arquivo RSReportServer.config. O servidor de relatório usa essas credenciais para conexões contínuas com o banco de dados do servidor de relatório. Para usar uma conta de usuário do Windows ou uma conta de usuário do banco de dados, especifique uma já existente. Embora o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crie um logon e defina as permissões necessárias, ele não criará uma conta para você. Para obter mais informações, consulte [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Essas credenciais são criptografadas e armazenadas no arquivo RSReportServer.config. O servidor de relatório usa essas credenciais para conexões contínuas com o banco de dados do servidor de relatório. Para usar uma conta de usuário do Windows ou uma conta de usuário do banco de dados, especifique uma já existente. Embora o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crie um logon e defina as permissões necessárias, ele não criará uma conta para você. Para obter mais informações, consulte [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  Escolher um idioma do servidor de relatório  
  Escolha um idioma a ser especificado para o servidor de relatório. Os nomes de função predefinidos, as descrições e as pastas Meus Relatórios não aparecem em idiomas diferentes quando usuários se conectam ao servidor usando versões de idiomas diferentes de um navegador.  
@@ -63,11 +63,11 @@ ms.locfileid: "66108682"
   
 2.  Aponte para **Iniciar**, aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
-3.  Abra **Configuração de Rede do SQL Server**.  
+3.  Abra **SQL Server configuração de rede**.  
   
 4.  Selecione a instância.  
   
-5.  Clique com botão direito **TCP/IP** e clique em **habilitado**.  
+5.  Clique com o botão direito do mouse em **TCP/IP** e clique em **habilitado**.  
   
 6.  Reinicie o serviço.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66108682"
   
 2.  Na página Banco de Dados, clique em **Alterar Banco de Dados**.  
   
-3.  Clique em **Criar um novo banco de dados de servidor de relatório**e clique em **Avançar**.  
+3.  Clique em **criar um novo banco de dados do servidor de relatório**e clique em **Avançar**.  
   
 4.  Conecte-se à instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que você usará para criar e hospedar o banco de dados do servidor de relatório:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66108682"
   
     3.  Clique em **Testar Conexão** para validar a conexão com o servidor.  
   
-    4.  Clique em **Avançar**.  
+    4.  Clique em **Próximo**.  
   
 5.  Especifique as propriedades usadas para criar o banco de dados. Para obter mais informações sobre como essas propriedades são usadas, consulte [Antes de iniciar](#rsdbrequirements) neste tópico:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66108682"
   
     3.  O Modo de Servidor de Relatório sempre é definido como **Nativo**.  
   
-    4.  Clique em **Avançar**.  
+    4.  Clique em **Próximo**.  
   
 6.  Especifique as credenciais usadas pelo servidor de relatório para conectar-se ao banco de dados do servidor de relatório.  
   
@@ -111,16 +111,16 @@ ms.locfileid: "66108682"
   
          Selecione **Credenciais de Serviço** para que o servidor de relatório se conecte usando sua conta de serviço. Com essa opção, o servidor se conecta usando segurança integrada; as credenciais não são criptografadas ou armazenadas.  
   
-    2.  Clique em **Avançar**.  
+    2.  Clique em **Próximo**.  
   
 7.  Revise as informações na página Resumo para verificar se as configurações estão corretas e clique em **Avançar**.  
   
 8.  Verifique a conexão clicando em uma URL na página URL do Servidor de Relatório ou na página URL do Gerenciador de Relatórios. As URLs devem estar definidas para que esse teste funcione. Se a conexão do banco de dados do servidor de relatório for válida, você verá a hierarquia de pastas do servidor de relatório ou o Gerenciador de Relatórios em uma janela do navegador. Para obter mais informações, veja [Verificar uma instalação do Reporting Services](verify-a-reporting-services-installation.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurar uma conexão de banco de dados do servidor de relatório &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Banco de dados &#40;modo nativo do SSRS&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
- [Gerenciar um servidor de relatório de modo nativo do Reporting Services](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [Gerenciar um Reporting Services servidor de relatório no modo nativo](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

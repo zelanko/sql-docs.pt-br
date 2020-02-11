@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 851fd1c1f3249a36af6de66aaa374088fab1c1ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298165"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>Filtrar eventos em um rastreamento (SQL Server Profiler)
@@ -32,7 +32,7 @@ ms.locfileid: "63298165"
   
      A guia **Seleção de Eventos** contém um controle de grade. O controle de grade é uma tabela que contém cada uma das classes de evento rastreáveis. A tabela contém uma linha para cada classe de evento. As classes de evento podem diferir ligeiramente, dependendo do tipo e versão de servidor com o qual você está conectado. As classes de evento são identificadas na coluna **Events**da grade e são agrupadas por categoria de evento. As colunas restantes listam as colunas de dados que podem ser retornadas para cada classe de evento.  
   
-2.  Clique em **Filtros de Coluna.**  
+2.  Clique em **filtros de coluna.**  
   
      A caixa de diálogo **Editar Filtro**é exibida. A caixa de diálogo **Editar Filtro**contém uma lista de operadores de comparação que podem ser usados para filtrar eventos em um rastreamento.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "63298165"
   
     -   A data inserida corresponda a este formato: `YYYY/MM/DD HH:mm:sec`.  
   
-         -ou-  
+         -OU-  
   
-    -   **Usar configurações regionais para exibir valores de data e hora** está marcado na caixa de diálogo **Opções Gerais** . Para exibir a caixa de diálogo **Opções Gerais** , no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tools** menu, click **Option**.  
+    -   **Usar configurações regionais para exibir valores de data e hora** é verificado na caixa de diálogo **Opções gerais** . Para exibir a caixa de diálogo **Opções Gerais** , no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **do** clique em **Opção**.  
   
          -E-  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63298165"
   
 -   Se rastrear eventos do utilitário **osql** ou do utilitário **sqlcmd** , sempre acrescente **%** aos filtros na coluna de dados **TextData** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

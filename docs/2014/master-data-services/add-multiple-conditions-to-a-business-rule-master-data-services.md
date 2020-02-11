@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54ab01033fc65f829f2a06bb5cbad8fc9e4d08f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480180"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Adicionar várias condições a uma regra de negócio (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "65480180"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65480180"
   
 4.  Na lista **Entidade** , selecione uma entidade.  
   
-5.  Dos **tipo de membro** , selecione um tipo de membro.  
+5.  Na lista **tipo de membro** , selecione um tipo de membro.  
   
 6.  Na lista **Atributo** , selecione um atributo ou deixe o valor padrão **Todos**.  
   
@@ -52,28 +52,28 @@ ms.locfileid: "65480180"
   
 8.  Clique em **Editar regra de negócio selecionada**.  
   
-9. No **componentes** painel, expanda o **operadores lógicos** nó.  
+9. No painel **componentes** , expanda o nó **operadores lógicos** .  
   
-10. Clique em **AND** ou **OR** e arraste-o para o **IF** do painel **AND** rótulo.  
+10. Clique **** em e **ou em e arraste** -o para o painel de **If** **e** o rótulo.  
   
 11. No painel **Componentes** , expanda o nó **Condições** .  
   
-12. Clique em uma condição e arraste-o para **IF** painel, para o **AND** ou **OR** rótulo da etapa 10.  
+12. Clique em uma condição e arraste-a para **se** painel, para o **e** ou **ou** para o rótulo da etapa 10.  
   
-13. No **atributos** painel, clique em um atributo e arraste-o para o **Editar condição** do painel **Selecionar atributo** rótulo.  
+13. No painel **atributos** , clique em um atributo e arraste-o para o rótulo de **atributo selecionar** do painel de **condição de edição** .  
   
-14. No **Editar condição** painel, preencha os campos necessários.  
+14. No painel **Editar condição** , preencha todos os campos obrigatórios.  
   
 15. No painel **Editar Condição** , clique em **Salvar item**.  
   
-16. Opcionalmente, para adicionar mais condições, a partir de **componentes** painel, arraste **AND** ou **OR** a qualquer **AND** ou **OR**no **IF** painel. Então siga as etapas 13 a 15.  
+16. Opcionalmente, para adicionar mais condições, no painel **componentes** , arraste **e** ou **ou** para qualquer **e** **ou ou no painel** **If** . Então siga as etapas 13 a 15.  
   
     > [!TIP]  
-    >  Para excluir uma condição, clique no nome da condição e, além de **Editar condição** painel, clique em **para excluir um item**.  
+    >  Para excluir uma condição, clique no nome da condição e, no painel **Editar condição** , clique em **Excluir item**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [Alterar o nome de uma regra de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [Alterar o nome de uma regra de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106173"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Criar um mapa de documentos (Construtor de Relatórios e SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "66106173"
     > [!NOTE]  
     >  Para selecionar uma região de dados tablix, clique em uma célula para exibir as alças de linha e coluna e, em seguida, clique na alça de canto.  
   
-2.  No painel Propriedades, digite o texto que você deseja que apareça no mapa do documento no `DocumentMapLabel` propriedade, ou insira uma expressão que é avaliada como um rótulo. Por exemplo, digite **Gráfico de Vendas**.  
+2.  No painel Propriedades, digite o texto que você deseja que apareça no mapa do documento na `DocumentMapLabel` propriedade ou insira uma expressão que seja avaliada como um rótulo. Por exemplo, digite **Gráfico de Vendas**.  
   
     > [!NOTE]  
     >  Se você não vir o painel Propriedades, na guia **Exibir** , no grupo **Mostrar/Ocultar** , clique em **Propriedades**.  
@@ -112,13 +112,13 @@ ms.locfileid: "66106173"
 4.  Cole a URL no Gerenciador de Relatórios e pressione ENTER. O relatório será executado e o mapa do documento será ocultado.  
   
 > [!NOTE]  
->  Para obter mais informações sobre como baixar relatórios de exemplo, consulte os [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Relatórios de exemplo do Construtor de Relatórios e do Designer de Relatórios](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Para obter mais informações sobre como baixar relatórios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]exemplo, consulte [Construtor de relatórios e Report Designer relatórios de exemplo](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Para obter mais informações, consulte “Acesso à URL” na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
   
  
   
-## <a name="see-also"></a>Consulte também  
- [Localizando e exibindo relatórios no Gerenciador de relatórios &#40;relatórios e SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Localizando e exibindo relatórios no Report Manager &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

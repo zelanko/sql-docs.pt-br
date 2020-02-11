@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6184aa9d932355cd935a9131848ec27895faea5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049302"
 ---
 # <a name="divide-mdx"></a>Dividir (MDX)
@@ -29,10 +29,10 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
   
 ## <a name="arguments"></a>Argumentos  
  *numerator*  
- O dividendo ou número para dividir.  
+ O dividendo ou o número a ser dividido.  
   
  *denominator*  
- O divisor ou número pelo qual dividir.  
+ O divisor ou o número para dividir.  
   
  *alternateresult*  
  (Opcional) O valor retornado quando a divisão por zero resulta em um erro. Quando não fornecido, o valor padrão é BLANK().  
@@ -40,7 +40,7 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
 ## <a name="remarks"></a>Comentários  
  O resultado alternativo na divisão por zero deve ser uma constante.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

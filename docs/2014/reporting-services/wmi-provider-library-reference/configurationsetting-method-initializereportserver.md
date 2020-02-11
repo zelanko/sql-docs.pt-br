@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ea9e6e4e36e62828f3036c3765ba42c202448c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098352"
 ---
-# <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>Método InitializeReportServer (WMI MSReportServer_ConfigurationSetting)
+# <a name="initializereportserver-method-wmi-msreportserver_configurationsetting"></a>Método InitializeReportServer (WMI MSReportServer_ConfigurationSetting)
   Inicializa a instância do serviço de relatório especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,11 +40,11 @@ public void InitializeReportServer(string InstallationID,
     out Int32 HRESULT, out string[] ExtendedErrors);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *InstallationID*  
  Uma cadeia de caracteres usada para criptografar a chave de criptografia antes de ela ser retornada.  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
  *ExtendedErrors[]*  
@@ -60,12 +60,12 @@ public void InitializeReportServer(string InstallationID,
   
  O método *InitializeReportServer* deve ser chamado em um servidor de relatório que já tenha acesso às informações seguras para que possa descriptografar a chave de criptografia. Em seguida, a chave de criptografia criptografada resultante é armazenada no banco de dados do servidor de relatório.  
   
- Se o servidor de relatório [IsInitialized](configurationsetting-property-isinitialized.md) estiver definida como `true` quando o método InitializeReportServer for chamado, o método retornará êxito sem tentar criptografar a chave de criptografia.  
+ Se a propriedade [IsInitialized](configurationsetting-property-isinitialized.md) do servidor de relatório for definida `true` como quando o método InitializeReportServer for chamado, o método retornará êxito sem tentar criptografar a chave de criptografia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478887"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Enviar um arquivo de consulta de atalho por email (suplemento MDS para Excel)
@@ -29,7 +29,7 @@ ms.locfileid: "65478887"
   
 ### <a name="to-send-a-shortcut-query-file"></a>Para enviar um arquivo de consulta de atalho  
   
-1.  Verifique se os dados da planilha estão no formato que você deseja compartilhar. Para obter mais informações sobre como filtrar dados e reordenar colunas, consulte [filtrar dados antes de carregar &#40;suplemento MDS para Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) e [reordenar colunas &#40;o suplemento MDS para Excel&#41; ](reorder-columns-mds-add-in-for-excel.md).  
+1.  Verifique se os dados da planilha estão no formato que você deseja compartilhar. Para obter mais informações sobre como filtrar dados e reordenar colunas, consulte [filtrar dados antes de carregar &#40;Suplemento MDS para Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) e [Reordenar colunas &#40;suplemento MDS para Excel&#41;](reorder-columns-mds-add-in-for-excel.md).  
   
 2.  No grupo **Salvar e Enviar** , clique em **Enviar Consulta**. Uma mensagem de email será aberta e o arquivo de consulta de atalho será anexado.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "65478887"
   
 -   Para abrir o arquivo de consulta de atalho, o destinatário do email deve ter o MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] instalado. O destinatário pode clicar duas vezes no arquivo para abri-lo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivos de consulta de atalho &#40;Suplemento MDS para Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Opções (página de planos de manutenção de Designers) | Microsoft Docs
+title: Opções (página designers – planos de manutenção) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283174"
 ---
-# <a name="options-designers-maintenance-plans-page"></a>Opções (página de planos de manutenção de Designers)
+# <a name="options-designers-maintenance-plans-page"></a>Opções (página designers – planos de manutenção)
   Use a caixa de diálogo **Opções** para determinar o comportamento padrão do designer quando novas formas forem adicionadas à superfície de design. No menu **Ferramentas** , clique em **Opções**, expanda **Designers**e selecione **Planos de Manutenção**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  

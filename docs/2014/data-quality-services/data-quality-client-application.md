@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b46b7d020e7a9ebd8bd0ac96d0971b63230c2b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480763"
 ---
 # <a name="data-quality-client-application"></a>Aplicativo cliente Data Quality
@@ -29,18 +29,18 @@ ms.locfileid: "65480763"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como usar o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .|[Executar o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md)|  
+|Descreve como usar o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .|[Executar o aplicativo do cliente do Data Quality](../../2014/data-quality-services/run-the-data-quality-client-application.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
 |Descrição do conteúdo|Tópico|  
 |-------------------------|-----------|  
 |Descreve como usar bases de dados de conhecimento e domínios no DQS.|[Bases de Dados de Conhecimento DQS e domínios](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Descreve como limpar dados no DQS.|[Limpeza de dados](../../2014/data-quality-services/data-cleansing.md)|  
+|Descreve como limpar dados no DQS.|[Data Cleansing](../../2014/data-quality-services/data-cleansing.md)|  
 |Descreve como fazer correspondências no DQS.|[Correspondência de dados](../../2014/data-quality-services/data-matching.md)|  
-|Descreve como administrar o DQS.|[Administração do DQS](../../2014/data-quality-services/dqs-administration.md)|  
+|Descreve como administrar o DQS.|[administração do dqs](../../2014/data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Tela inicial do Data Quality Client](../../2014/data-quality-services/data-quality-client-home-screen.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tela inicial do Cliente Data Quality](../../2014/data-quality-services/data-quality-client-home-screen.md)  
   
   

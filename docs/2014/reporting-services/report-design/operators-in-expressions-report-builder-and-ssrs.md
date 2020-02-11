@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb4ea26e646453b3acd85a4f5e13ab9557f950fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105495"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operadores em expressões (Construtor de Relatórios e SSRS)
@@ -23,10 +23,10 @@ ms.locfileid: "66105495"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### <a name="arithmetic"></a>Aritmética  
+### <a name="arithmetic"></a>Aritmético  
  Os operadores aritméticos executam operações matemáticas sobre dois termos numéricos em uma expressão.  
   
-|Operador|Descrição|  
+|Operador|DESCRIÇÃO|  
 |--------------|-----------------|  
 |^|Eleva um número à potência de outro número.|  
 |*|Multiplica dois números.|  
@@ -39,21 +39,21 @@ ms.locfileid: "66105495"
 ### <a name="comparison"></a>Comparação  
  Os operadores de comparação testam se duas expressões são iguais.  
   
-|Operador|Descrição|  
+|Operador|DESCRIÇÃO|  
 |--------------|-----------------|  
 |<|Menor que.|  
 |\<=|Menor que ou igual a.|  
 |>|Maior que.|  
 |>=|Maior que ou igual a.|  
 |=|Igual a.|  
-|<>|Diferente de.|  
-|Como|Determina se uma cadeia de caracteres específica corresponde a um padrão especificado. Um padrão pode incluir caracteres normais e curingas. Durante a correspondência de padrões, os caracteres normais devem corresponder exatamente aos caracteres especificados na cadeia de caracteres. No entanto, os caracteres curinga podem ser correspondidos a fragmentos arbitrários da cadeia de caracteres. O uso de caracteres curinga torna o operador LIKE mais flexível que o uso dos operadores de comparação de cadeias de caracteres = e !=.<br /><br /> Os seguir lista os caracteres que podem ser usados como curingas:<br /><br /> **%**: Qualquer cadeia de zero ou mais caracteres.<br /><br /> **_**: Qualquer caractere único.<br /><br /> **[ ]**: Qualquer caractere único dentro do intervalo especificado (por exemplo, [a-f]) ou conjunto (por exemplo, [aeiou]).<br /><br /> **[^]**: Qualquer caractere único não dentro do intervalo especificado (por exemplo, [^ a-f]) ou conjunto (por exemplo, [^ aeiou]).|  
+|<>|Não igual a.|  
+|Como|Determina se uma cadeia de caracteres específica corresponde a um padrão especificado. Um padrão pode incluir caracteres normais e curingas. Durante a correspondência de padrões, os caracteres normais devem corresponder exatamente aos caracteres especificados na cadeia de caracteres. No entanto, os caracteres curinga podem ser correspondidos a fragmentos arbitrários da cadeia de caracteres. O uso de caracteres curinga torna o operador LIKE mais flexível que o uso dos operadores de comparação de cadeias de caracteres = e !=.<br /><br /> O seguinte lista os caracteres que podem ser usados como curingas:<br /><br /> **%**: Qualquer cadeia de zero ou mais caracteres.<br /><br /> **_**: Qualquer caractere único.<br /><br /> **[]**: Qualquer caractere único dentro do intervalo especificado (por exemplo, [a-f]) ou definido (por exemplo, [aeiou]).<br /><br /> **[^]**: Qualquer caractere único que não esteja dentro do intervalo especificado (por exemplo, [^ a-f]) ou definido (por exemplo, [^ aeiou]).|  
 |Is|Compara duas referências de objeto.|  
   
 ### <a name="string-concatenation"></a>Concatenação de cadeias de caracteres  
  A concatenação de cadeias de caracteres anexa a segunda cadeia de caracteres à primeira em uma expressão. Para outras operações de cadeia de caracteres, use funções internas.  
   
-|Operador|Descrição|  
+|Operador|DESCRIÇÃO|  
 |--------------|-----------------|  
 |&|Concatena duas cadeias de caracteres|  
 |+|Concatena duas cadeias de caracteres|  
@@ -61,9 +61,9 @@ ms.locfileid: "66105495"
 ### <a name="logical-and-bitwise"></a>Lógico e de bit a bit  
  Os operadores lógicos e de bit a bit executam manipulações lógicas entre dois termos inteiros em uma expressão.  
   
-|Operador|Descrição|  
+|Operador|DESCRIÇÃO|  
 |--------------|-----------------|  
-|And|Executa uma conjunção lógica em duas expressões boolianas ou uma conjunção bit a bit em duas expressões numéricas.|  
+|e|Executa uma conjunção lógica em duas expressões boolianas ou uma conjunção bit a bit em duas expressões numéricas.|  
 |Not|Executa uma negação lógica em uma expressão booliana ou uma negação bit a bit em uma expressão numérica.|  
 |Ou|Executa uma disjunção lógica em duas expressões boolianas ou uma disjunção bit a bit em dois valores numéricos.|  
 |Xor|Executa uma operação de exclusão lógica em duas expressões boolianas ou uma exclusão bit a bit em duas expressões numéricas.|  
@@ -73,12 +73,12 @@ ms.locfileid: "66105495"
 ### <a name="bit-shift"></a>Bit Shift  
  Os operadores bit a bit executam manipulações de bit entre dois termos inteiros em uma expressão.  
   
-|Operador|Descrição|  
+|Operador|DESCRIÇÃO|  
 |--------------|-----------------|  
 |<\<|Executa um deslocamento aritmético à esquerda em um padrão de bit.|  
 |>>|Executa um deslocamento aritmético à direita em um padrão de bit.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Caixa de diálogo Expressão](../expression-dialog-box.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

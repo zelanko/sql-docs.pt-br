@@ -1,5 +1,5 @@
 ---
-title: Acrescente e exemplo dos métodos CreateParameter (JScript) | Microsoft Docs
+title: Exemplo dos métodos Append e CreateParameter (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71bc18b13061b844b35314239ffe4973155a0c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920723"
 ---
-# <a name="append-and-createparameter-methods-example-jscript"></a>Acrescente e exemplo dos métodos CreateParameter (JScript)
-Este exemplo usa o [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) métodos para executar um procedimento armazenado com um parâmetro de entrada. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **AppendJS.asp**.  
+# <a name="append-and-createparameter-methods-example-jscript"></a>Exemplo dos métodos Append e CreateParameter (JScript)
+Este exemplo usa os métodos [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) para executar um procedimento armazenado com um parâmetro de entrada. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **AppendJS. asp**.  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -141,8 +141,8 @@ body {
 <!-- EndAppendJS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Método append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Método Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   

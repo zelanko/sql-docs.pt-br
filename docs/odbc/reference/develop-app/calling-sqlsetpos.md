@@ -17,14 +17,14 @@ ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c64575777fc9210c36be5d417cd3def0c2c7102a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068681"
 ---
 # <a name="calling-sqlsetpos"></a>Chamar SQLSetPos
-Em ODBC *2.x*, o ponteiro para a matriz de status de linha era um argumento para **SQLExtendedFetch**. A matriz de status de linha fosse atualizada posteriormente por uma chamada para **SQLSetPos**. Alguns drivers têm contavam com o fato de que essa matriz não é alterado entre **SQLExtendedFetch** e **SQLSetPos**. Em ODBC *3.x*, o ponteiro para a matriz de status é um campo de descritor e, portanto, o aplicativo pode alterá-la facilmente para apontar para uma matriz diferente. Isso pode ser um problema ao ODBC *3.x* aplicativo está funcionando com um ODBC *2.x* driver, mas está chamando **SQLSetStmtAttr** para definir o ponteiro de status de matriz e está chamando  **SQLFetchScroll** para buscar dados. O Gerenciador de Driver mapeia-os como uma sequência de chamadas para **SQLExtendedFetch**. No código a seguir, um erro teria normalmente gerado quando o Gerenciador de Driver mapeia o segundo **SQLSetStmtAttr** chamar ao trabalhar com ODBC *2.x* driver:  
+No ODBC *2. x*, o ponteiro para a matriz de status de linha era um argumento para **SQLExtendedFetch**. A matriz de status de linha foi atualizada posteriormente por uma chamada para **SQLSetPos**. Alguns drivers se basearam no fato de que essa matriz não é alterada entre **SQLExtendedFetch** e **SQLSetPos**. No ODBC *3. x*, o ponteiro para a matriz de status é um campo de descritor e, portanto, o aplicativo pode alterá-lo facilmente para apontar para uma matriz diferente. Isso pode ser um problema quando um aplicativo ODBC *3. x* está trabalhando com um driver ODBC *2. x* , mas está chamando **SQLSetStmtAttr** para definir o ponteiro de status da matriz e está chamando **SQLFetchScroll** para buscar dados. O Gerenciador de driver o mapeia como uma sequência de chamadas para **SQLExtendedFetch**. No código a seguir, um erro normalmente seria gerado quando o Gerenciador de driver mapeia a segunda chamada **SQLSetStmtAttr** ao trabalhar com um driver ODBC *2. x* :  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  
@@ -33,12 +33,12 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStat1, 0);
 SQLSetPos(hstmt, iRow, fOption, fLock);  
 ```  
   
- O erro será emitido se não havia nenhuma maneira de alterar o ponteiro de status de linha no ODBC *2.x* entre as chamadas para **SQLExtendedFetch**. Em vez disso, o Gerenciador de Driver executa as seguintes etapas ao trabalhar com ODBC *2.x* driver:  
+ O erro seria gerado se não houvesse nenhuma maneira de alterar o ponteiro de status de linha no ODBC *2. x* entre as chamadas para **SQLExtendedFetch**. Em vez disso, o Gerenciador de driver executa as seguintes etapas ao trabalhar com um driver ODBC *2. x* :  
   
-1.  Inicializa um sinalizador interno do Gerenciador de Driver *fSetPosError* como TRUE.  
+1.  Inicializa um sinalizador do Gerenciador de driver interno *fSetPosError* como true.  
   
-2.  Quando um aplicativo chama **SQLFetchScroll**, o Gerenciador de Driver define *fSetPosError* como FALSE.  
+2.  Quando um aplicativo chama **SQLFetchScroll**, o Gerenciador de driver define *fSetPosError* como false.  
   
-3.  Quando o aplicativo chama **SQLSetStmtAttr** para definir SQL_ATTR_ROW_STATUS_PTR, define o Gerenciador de Driver *fSetPosError* toTRUE igual.  
+3.  Quando o aplicativo chama **SQLSetStmtAttr** para definir SQL_ATTR_ROW_STATUS_PTR, o Gerenciador de driver define *FSETPOSERROR* igual a true.  
   
-4.  Quando o aplicativo chama **SQLSetPos**, com *fSetPosError* igual a TRUE, o Gerenciador de Driver gera SQL_ERROR com SQLSTATE HY011 (atributo não pode ser definido agora) para indicar que o aplicativo tentativa de chamar **SQLSetPos** depois de alterar o ponteiro de status de linha, mas antes de chamar **SQLFetchScroll**.
+4.  Quando o aplicativo chama **SQLSetPos**, com *FSETPOSERROR* igual a true, o gerenciador de driver gera SQL_ERROR com SQLSTATE hy011 (o atributo não pode ser definido agora) para indicar que o aplicativo tentou chamar **SQLSetPos** depois de alterar o ponteiro de status de linha, mas antes de chamar **SQLFetchScroll**.

@@ -16,29 +16,29 @@ ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95ba0d84d99d2f0cd51b363a42b8620b55459b7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917750"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
-Especifica os atributos de uma [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto.  
+Especifica os atributos de um objeto de [parâmetro](../../../ado/reference/ado-api/parameter-object.md) .  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|Indica que o parâmetro aceita valores assinados.|  
 |**adParamNullable**|64|Indica que o parâmetro aceita valores nulos.|  
 |**adParamLong**|128|Indica que o parâmetro aceita dados binários longos.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Pacote: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
 |AdoEnums.ParameterAttributes.SIGNED|  
-|AdoEnums.ParameterAttributes.NULLABLE|  
+|AdoEnums. parameterble. NULLABLE|  
 |AdoEnums.ParameterAttributes.LONG|  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Propriedade Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

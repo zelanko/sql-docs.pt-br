@@ -1,5 +1,5 @@
 ---
-title: Opções de consulta de execução (página ANSI) | Microsoft Docs
+title: Execução de opções de consulta (página ANSI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089075"
 ---
 # <a name="query-options-execution-ansi-page"></a>Execução de Opções de Consulta (página ANSI)
-  Use esta página para especificar que o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executará as consultas usando todas ou uma parte das configurações especificadas no padrão ISO (ANSI).  
+  Use esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o executará as consultas usando todas ou uma parte das configurações especificadas no padrão ISO (ANSI).  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **SET ANSI_DEFAULTS**  
+ **DEFINIR ANSI_DEFAULTS**  
  Selecione todas as configurações ISO padrão. Essa caixa fica indisponível por padrão, pois só algumas das configurações ISO são feitas.  
   
  **SET QUOTED_IDENTIFIER**  
@@ -53,7 +53,7 @@ ms.locfileid: "66089075"
  **SET ANSI_NULLS**  
  Especifica o comportamento compatível com ISO dos operadores de comparação Igual a (`=`) e Diferente de (`<>`) quando usados com valores nulos. Quando **SET ANSI_NULLS** é selecionado, todas as comparações com um valor nulo são avaliadas como UNKNOWN, o comportamento compatível com ISO. Quando **SET ANSI_NULLS** não é selecionado, as comparações de todos os dados com um valor nulo são avaliadas como TRUE se o valor dos dados for NULL. Esta opção é selecionada por padrão.  
   
- **Restaurar Padrões**  
+ **Redefinir para padrão**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
   

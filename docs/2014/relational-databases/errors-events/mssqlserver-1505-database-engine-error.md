@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67727734"
 ---
-# <a name="mssqlserver1505"></a>MSSQLSERVER_1505
+# <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|1505|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DUP_KEY|  
 |Texto da mensagem|A instrução CREATE UNIQUE INDEX foi encerrada porque foi encontrada uma chave duplicada para o nome de objeto '%.\*ls' e para o nome de índice '%.\*ls'.  O valor da chave duplicada é %ls.|  
@@ -37,11 +37,11 @@ ms.locfileid: "67727734"
   
  Considere os dados da seguinte tabela **Employee**:  
   
-|LastName|FirstName|JobTitle|HireDate|  
+|LastName|Nome|JobTitle|HireDate|  
 |--------------|---------------|--------------|--------------|  
 |Walters|Rob|Designer de ferramentas sênior|2004-11-19|  
-|Brown|Kevin|Assistente de marketing|NULL|  
-|Brown|Jo|Engenheiro de design|NULL|  
+|Brown|Kevin|Assistente de marketing|NULO|  
+|Brown|Jo|Engenheiro de design|NULO|  
 |Walters|Rob|Designer de ferramentas|2001-08-09|  
   
  Não é possível criar um índice exclusivo com as combinações de coluna **LastName** ou **LastName** e **FirstName** devido aos valores duplicados nas linhas.  
@@ -50,7 +50,7 @@ ms.locfileid: "67727734"
   
  A mensagem de erro 1505 retorna a primeira linha que viola a restrição de exclusividade. Pode haver outras linhas duplicadas na tabela. Para encontrar todas as linhas duplicadas, consulte a tabela especificada e use as cláusulas GROUP BY e HAVING para reportar essas linhas. Por exemplo, a consulta a seguir retorna as linhas da tabela **Employee** que têm nomes e sobrenomes duplicados.  
   
- Contagem de LastName, FirstName, selecione (\*) de dbo. Funcionário grupo por LastName, FirstName ter contagem (\*) > 1;  
+ Selecione LastName, FirstName, Count (\*) de dbo. GRUPO de funcionários por LastName, FirstName com Count\*() > 1;  
   
 ## <a name="user-action"></a>Ação do usuário  
  Considere as soluções descritas a seguir.  
@@ -59,9 +59,9 @@ ms.locfileid: "67727734"
   
 -   Selecione colunas definidas como NOT NULL quando escolher colunas para um índice exclusivo ou para uma restrição exclusiva. Isso elimina a possibilidade de ocorrer uma violação de exclusividade gerada quando mais de uma linha contiver NULL nos valores de chave.  
   
--   Se os valores duplicados forem o resultado de erros de entrada de dados, corrija os dados manualmente e, em seguida, crie o índice ou a restrição. Para obter informações sobre como remover linhas duplicadas de uma tabela, veja o artigo 139444 da base de dados de conhecimento: [Como remover linhas duplicadas de uma tabela no SQL Server](https://support.microsoft.com/kb/139444).  
+-   Se os valores duplicados forem o resultado de erros de entrada de dados, corrija os dados manualmente e, em seguida, crie o índice ou a restrição. Para obter informações sobre como remover linhas duplicadas de uma tabela, consulte o artigo 139444 da Base de Dados de Conhecimento: [Como remover linhas duplicadas de uma tabela no SQL Server](https://support.microsoft.com/kb/139444).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [Criar índices exclusivos](../indexes/indexes.md)   
  [Criar restrições exclusivas](../tables/create-unique-constraints.md)  

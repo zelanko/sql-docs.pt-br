@@ -1,5 +1,5 @@
 ---
-title: As propriedades do objeto, métodos e eventos de comando | Microsoft Docs
+title: Propriedades, métodos e eventos do objeto Command | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,13 @@ ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cd8992acf5652d4fad1e4e14a67c847bb30c6d34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919811"
 ---
-# <a name="command-object-properties-methods-and-events"></a>Propriedades do objeto de comando, métodos e eventos
+# <a name="command-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Command
 ## <a name="propertiescollections"></a>Propriedades/coleções  
  [Propriedade ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
@@ -35,11 +35,11 @@ ms.locfileid: "67919811"
   
  [Propriedade Name](../../../ado/reference/ado-api/name-property-ado.md)  
   
- [Propriedade NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)  
+ [Propriedade namedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)  
   
- [Coleção de parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+ [Coleção Parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
- [Propriedade preparado](../../../ado/reference/ado-api/prepared-property-ado.md)  
+ [Propriedade preparada](../../../ado/reference/ado-api/prepared-property-ado.md)  
   
  [Coleção de propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
@@ -52,8 +52,8 @@ ms.locfileid: "67919811"
   
  [Método Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
   
-## <a name="events"></a>Events  
- nenhuma.  
+## <a name="events"></a>Eventos  
+ Nenhum.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

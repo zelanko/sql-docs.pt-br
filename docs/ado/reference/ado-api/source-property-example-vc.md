@@ -1,5 +1,5 @@
 ---
-title: Fonte de exemplo da propriedade (VC + +) | Microsoft Docs
+title: Exemplo da propriedade Source (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da0bfacc4ab64929bcd37051efa9d36944871253
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930885"
 ---
 # <a name="source-property-example-vc"></a>Exemplo da propriedade Source (VC++)
-Este exemplo demonstra a [fonte](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriedade abrindo três [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos com base em diferentes fontes de dados.  
+Este exemplo demonstra a propriedade [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) abrindo três objetos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) com base em fontes de dados diferentes.  
   
 ```  
 // Source_Property_Sample.cpp  
@@ -156,6 +156,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propriedade Source (Conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

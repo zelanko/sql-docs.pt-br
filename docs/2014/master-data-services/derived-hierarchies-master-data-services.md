@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: af5bbc51420d8f32144bc91f687ae58b86d10d52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479414"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Hierarquias derivadas (Master Data Services)
@@ -53,11 +53,11 @@ ms.locfileid: "65479414"
   
  A estrutura de hierarquia mostra como os membros são agrupados. A entidade com a maioria dos membros está na parte inferior.  
   
- ![Hierarquia derivada da estrutura de modelo](../../2014/master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Hierarquia derivada da estrutura de modelo")  
+ ![Hierarquia derivada da estrutura de modelos](../../2014/master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Hierarquia derivada da estrutura de modelos")  
   
  Em uma hierarquia derivada, você pode realçar a relação entre Product e Subcategory, e depois entre Subcategory e Category. Quando você exibir os membros desta hierarquia, cada nível da árvore conterá membros da mesma entidade.  
   
- ![Exemplo de hierarquia derivada de Mountain Bike](../../2014/master-data-services/media/mds-conc-derived-hierarchy-example.gif "Exemplo de hierarquia derivada de Mountain Bike")  
+ ![Exemplo de hierarquia derivada de mountain bike](../../2014/master-data-services/media/mds-conc-derived-hierarchy-example.gif "Exemplo de hierarquia derivada de mountain bike")  
   
  Este tipo de hierarquia impede que você mova um membro para um nível que não é válido. Por exemplo, você pode mover a Road-650 bike de uma subcategoria, Road Bikes, para outra, Mountain Bikes. Você não pode mover Road-650 diretamente abaixo de uma categoria, como 1 {Bikes}. Cada vez que você move um membro na árvore hierárquica, o valor de atributo baseado em domínio do membro muda para refletir a mudança.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65479414"
 |----------------------|-----------|  
 |Criar uma nova hierarquia derivada.|[Criar uma hierarquia derivada &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Ocultar ou excluir níveis em uma hierarquia derivada existente.|[Ocultar ou excluir níveis em uma hierarquia derivada &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|Alterar o nome de uma hierarquia derivada existente.|[Alterar o nome de uma hierarquia derivada &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|Alterar o nome de uma hierarquia derivada existente.|[Alterar um nome de hierarquia derivada &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Excluir uma hierarquia derivada existente.|[Excluir uma hierarquia derivada &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  
   

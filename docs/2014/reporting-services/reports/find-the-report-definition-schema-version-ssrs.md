@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 395392908055a41a8418f02ce3510c050a3447f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102652"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Localizar a versão do esquema de definição de relatório (SSRS)
   Um arquivo de definição de relatório especifica o namespace do RDL para a versão do esquema de definição de relatório usado para validar o arquivo .rdl. Ao abrir um arquivo .rdl no ambiente de criação de relatório como o Designer de Relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou Construtor de Relatórios, se o relatório tiver sido criado para um namespace anterior, um arquivo de backup será criado automaticamente e o relatório será atualizado para o namespace atual. Se você salvar a definição de relatório atualizada, terá salvo o arquivo .rdl convertido. Esse é o único modo para atualizar uma definição de relatório. A própria definição de relatório não é atualizada em um servidor de relatório. O relatório compilado é atualizado em um servidor de relatório. Para obter mais informações, consulte [Upgrade Reports](../install-windows/upgrade-reports.md).  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Como fazer: Identificar a versão do esquema RDL de um relatório  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Como identificar a versão do esquema RDL de um relatório  
   
 1.  Abra o arquivo de relatório .rdl em um aplicativo como o Bloco de Notas ou Bloco de Notas XML 2007, que permite visualizar o xml.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "66102652"
   
      O namespace de definição de relatório é especificado pela seguinte URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Como fazer: Identificar a versão do esquema RDL de um Designer de Relatórios  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Como identificar a versão do esquema RDL de um Designer de Relatórios  
   
 1.  Abrir um novo projeto. A versão do projeto que você escolhe determina a versão do esquema RDL. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], há suporte para mais de uma versão de esquema. Para obter mais informações, veja [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
-2.  No menu **Projeto**, clique em **Adicionar Novo Item**. A caixa de diálogo **Adicionar Novo Item** é aberta.  
+2.  No menu **Projeto** , clique em **Adicionar Novo Item**. A caixa de diálogo **Adicionar Novo Item** é aberta.  
   
 3.  No painel **Modelos** , clique em **Relatório**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66102652"
   
      O namespace de definição de relatório é especificado pela seguinte URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Como fazer: Identificar a versão do esquema RDL no Servidor de Relatórios  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Como identificar a versão do esquema RDL no Servidor de Relatórios  
   
 -   No Gerenciador de Relatórios, digite a URL para o servidor de relatório: Por exemplo, a URL a seguir especifica um servidor de relatório no computador local:  
   
@@ -80,8 +80,8 @@ ms.locfileid: "66102652"
   
      O namespace de definição de relatório é especificado pela seguinte URL: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-## <a name="see-also"></a>Consulte também  
- [Upgrade Reports](../install-windows/upgrade-reports.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Relatórios de atualização](../install-windows/upgrade-reports.md)   
  [Linguagem RDL &#40;SSRS&#41;](report-definition-language-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1b9f30d90656977bc969987271896c4c548df80e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480723"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
@@ -25,28 +25,28 @@ ms.locfileid: "65480723"
  Para obter informações sobre como instalar o DQS, consulte [Install Data Quality Services](install-windows/install-data-quality-services.md). Se você quiser atualizar sua versão existente do DQS para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consulte [Upgrade Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md).  
   
  **Procurar conteúdo por área**  
- ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Aplicativo Data Quality Client](../../2014/data-quality-services/data-quality-client-application.md)  
+ ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [Data Quality Client aplicativo](../../2014/data-quality-services/data-quality-client-application.md)  
   
- ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Bases de dados de conhecimento e domínios do DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [bancos de dados de conhecimento e domínios do DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Projetos de qualidade de dados](../../2014/data-quality-services/data-quality-projects-dqs.md)  
+ ![Ícone de pasta de arquivo pequeno](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [projetos de qualidade de dados](../../2014/data-quality-services/data-quality-projects-dqs.md)  
   
- ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Limpeza de dados](../../2014/data-quality-services/data-cleansing.md)  
+ ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [limpeza de dados](../../2014/data-quality-services/data-cleansing.md)  
   
- ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Correspondência de dados](../../2014/data-quality-services/data-matching.md)  
+ ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [correspondência de dados](../../2014/data-quality-services/data-matching.md)  
   
- ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Serviços de Dados de Referência no DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)  
+ ![Ícone de pasta de arquivo pequeno](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [serviços de dados de referência no DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)  
   
- ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Criação de perfil de dados e notificações no DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)  
+ ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [criação de perfil de dados e notificações no DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Administração do DQS](../../2014/data-quality-services/dqs-administration.md)  
+ ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [Administração do DQS](../../2014/data-quality-services/dqs-administration.md)  
   
- ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Segurança do DQS](../../2014/data-quality-services/dqs-security.md)  
+ ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [segurança do DQS](../../2014/data-quality-services/dqs-security.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Introdução ao Data Quality Services](../../2014/data-quality-services/introduction-to-data-quality-services.md)   
  [Conceitos do Data Quality Services](../../2014/data-quality-services/data-quality-services-concepts.md)   
  [Recursos do DQS](https://technet.microsoft.com/sqlserver/hh780961)   
- [Central de Recursos do SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)  
+ [Centro de recursos de SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

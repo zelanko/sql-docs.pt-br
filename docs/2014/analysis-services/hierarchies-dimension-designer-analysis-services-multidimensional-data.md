@@ -1,5 +1,5 @@
 ---
-title: Hierarquias (guia estrutura da dimensão, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Hierarquias (guia estrutura da dimensão, designer de dimensão) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080784"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Hierarquias (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
@@ -30,7 +30,7 @@ ms.locfileid: "66080784"
   
 -   Mostrar ou ocultar relações de atributo clicando na seta próximo ao nome do nível.  
   
- **Para exibir o painel hierarquias**  
+ **Para exibir o painel Hierarquias**  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e então abra a dimensão desejada.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "66080784"
  **Hierarquias**  
  Exibe as hierarquias atualmente criadas. Dentro de cada hierarquia estão os atributos que compõem os níveis da hierarquia. As relações de atributo também são mostradas, mas são somente leitura.  
   
-## <a name="see-also"></a>Consulte também  
- [Estrutura da dimensão &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Atributos &#40;guia estrutura da dimensão, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [Modo de exibição da fonte de dados &#40;guia estrutura da dimensão, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barra de ferramentas &#40;guia estrutura da dimensão, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Estrutura de dimensão &#40;designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Atributos &#40;guia estrutura da dimensão, designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Exibição da fonte de dados &#40;guia estrutura da dimensão, designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barra de ferramentas &#40;guia estrutura da dimensão, designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

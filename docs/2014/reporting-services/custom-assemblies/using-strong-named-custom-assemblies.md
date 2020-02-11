@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e685ecda39e0487eb4b469920820fa6e4a10daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264894"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>Usando assemblies de nome forte personalizados
@@ -37,12 +37,12 @@ ms.locfileid: "63264894"
 [assembly:AllowPartiallyTrustedCallers]  
 ```  
   
- **AllowPartiallyTrustedCallersAttribute** só será efetivo quando aplicado por um assembly de nome forte no nível de assembly. Para obter mais informações sobre como aplicar atributos no nível de assembly, consulte “Aplicando atributos” na documentação do SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ **AllowPartiallyTrustedCallersAttribute** só é eficaz quando aplicado por um assembly de nome forte no nível do assembly. Para obter mais informações sobre como aplicar atributos no nível do assembly, consulte "Aplicando atributos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] " na documentação do SDK.  
   
 > [!CAUTION]  
 >  Quando **AllowPartiallyTrustedCallersAttribute** estiver presente, as verificações de segurança de **FullTrustLinkDemand** serão impedidas, fazendo com que o assembly possa ser chamado de qualquer outro assembly parcialmente confiável. Todas as verificações de segurança, incluindo os atributos de segurança declarativos de nível de classe e de nível de método, devem ser declaradas de forma explícita.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar assemblies personalizados com relatórios](using-custom-assemblies-with-reports.md)  
   
   

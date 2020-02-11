@@ -1,5 +1,5 @@
 ---
-title: Opções (Designers Analysis Services Designers – geral) | Microsoft Docs
+title: Opções (designers-Analysis Services designers – geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3378dd7ada96b1885d802804a6e2e2e3dcbd0891
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283647"
 ---
-# <a name="options-designers-analysis-services-designers-general"></a>Opções (Designers Analysis Services Designers – geral)
+# <a name="options-designers-analysis-services-designers-general"></a>Opções (designers-Analysis Services designers – geral)
   Use a página **Designers**, **Planos de Manutenção**, **Analysis Services**, **Geral** para determinar o comportamento padrão dos Designers dos Analysis Services.  
   
 ## <a name="connectivity"></a>Conectividade  

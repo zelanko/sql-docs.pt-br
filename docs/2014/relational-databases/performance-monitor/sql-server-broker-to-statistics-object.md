@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1a8c5bc039e4e6c18680ba4e290ea7e69fa87804
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250777"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server, objeto Broker TO Statistics
@@ -31,14 +31,14 @@ ms.locfileid: "63250777"
 |----------------------------------------------|-----------------|  
 |**Méd. de gravações em lotes**|O número médio de objetos de transmissão salvo em um lote.|  
 |**Méd. de tempo de gravação em lote (ms)**|O número médio de milissegundos exigido para salvar um lote de objetos de transmissão.|  
-|**Méd. de tempo entre lotes (ms)**|O número médio de milissegundos entre gravações de lotes de objetos de transmissão.|  
-|**Obtenções de Objeto de Transmissão/s**|O número de vezes por segundo que os diálogos solicitaram objetos de transmissão.|  
-|**Objetos de Transmissão Marcados como Sujos/s**|O número de vezes por segundo que objetos de transmissão foram marcados como sujos. Os objetos de transmissão são marcados como sujos pela primeira modificação que faz com que a cópia na memória se diferencie da cópia armazenada no **tempdb**. Objetos de transmissão são modificados quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] precisa registrar uma alteração no estado das transmissões das mensagens para o diálogo.|  
-|**Gravações de Objetos de Transmissão/s**|O número de vezes por segundo que um lote de objetos de transmissão foi gravado nas tabelas de trabalho do **tempdb** . Gravações em grande número podem indicar que a memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo pressionada.|  
+|**Tempo Médio entre os Lotes (ms)**|O número médio de milissegundos entre gravações de lotes de objetos de transmissão.|  
+|**Gets de objeto de trans/s**|O número de vezes por segundo que os diálogos solicitaram objetos de transmissão.|  
+|**Objetos de trans marcados como sujos/s**|O número de vezes por segundo que objetos de transmissão foram marcados como sujos. Os objetos de transmissão são marcados como sujos pela primeira modificação que faz com que a cópia na memória se diferencie da cópia armazenada no **tempdb**. Objetos de transmissão são modificados quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] precisa registrar uma alteração no estado das transmissões das mensagens para o diálogo.|  
+|**Gravações de objeto de trans/s**|O número de vezes por segundo que um lote de objetos de transmissão foi gravado nas tabelas de trabalho do **tempdb** . Gravações em grande número podem indicar que a memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo pressionada.|  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Server, Objeto Métodos de Acesso](sql-server-access-methods-object.md)   
- [SQL Server, objeto Memory Manager](sql-server-memory-manager-object.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server, objeto métodos de acesso](sql-server-access-methods-object.md)   
+ [SQL Server, objeto Gerenciador de memória](sql-server-memory-manager-object.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   
