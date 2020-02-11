@@ -1,5 +1,5 @@
 ---
-title: Editor da tarefa email (página email) enviar | Microsoft Docs
+title: Editor da tarefa Enviar email (página email) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055827"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Editor da tarefa Enviar Email (página Email)
@@ -28,12 +28,12 @@ ms.locfileid: "66055827"
   
 ## <a name="options"></a>Opções  
  **SMTPConnection**  
- Selecione um gerenciador de conexões SMTP na lista ou clique em **\<Nova conexão...>** para criar um novo gerenciador de conexões.  
+ Selecione um Gerenciador de conexões SMTP na lista ou clique em ** \<nova conexão... >** para criar um novo Gerenciador de conexões.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões SMTP dá suporte apenas para autenticação anônima e Autenticação do Windows. Ele não suporta a autenticação básica.  
   
- **Tópicos relacionados:** [Gerenciador de Conexões SMTP](connection-manager/smtp-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões SMTP](connection-manager/smtp-connection-manager.md)  
   
  **De**  
  Especifique o endereço de email do remetente.  
@@ -41,7 +41,7 @@ ms.locfileid: "66055827"
  **Para**  
  Forneça os endereços de email dos destinatários, separados por ponto-e-vírgula.  
   
- **Cc**  
+ **CC**  
  Especifique os endereços de email de outras pessoas que também receberão cópias da mensagem, separando todos os emails por ponto-e-vírgula.  
   
  **Cco**  
@@ -53,10 +53,10 @@ ms.locfileid: "66055827"
  **MessageSourceType**  
  Selecione o tipo de origem da mensagem. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Entrada Direta**|Defina a origem do texto da mensagem. Selecionar este valor faz com que seja exibida a opção dinâmica **MessageSource**.|  
-|**Conexão do Arquivo**|Defina a origem do arquivo que contém o texto da mensagem. Selecionar este valor faz com que seja exibida a opção dinâmica **MessageSource**.|  
+|**Entrada direta**|Defina a origem do texto da mensagem. Selecionar este valor faz com que seja exibida a opção dinâmica **MessageSource**.|  
+|**Conexão de arquivo**|Defina a origem do arquivo que contém o texto da mensagem. Selecionar este valor faz com que seja exibida a opção dinâmica **MessageSource**.|  
 |**Variável**|Defina a origem de uma variável que contém o texto da mensagem. Selecionar este valor faz com que seja exibida a opção dinâmica **MessageSource**.|  
   
  **Prioridade**  
@@ -76,19 +76,19 @@ ms.locfileid: "66055827"
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Conexão do arquivo  
  **MessageSource**  
- Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de conexões de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = Variável  
  **MessageSource**  
- Selecione uma variável na lista ou clique em \<**Nova variável...** > para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \< **nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Enviar Email &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa Enviar email &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

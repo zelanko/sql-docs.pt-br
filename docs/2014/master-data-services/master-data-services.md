@@ -11,35 +11,37 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8185534f12c69e03cdb9dc711e9dc12690621d62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054068"
 ---
 # <a name="master-data-services"></a>Master Data Services
   O[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) é a solução do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para gerenciamento de dados mestre. O MDM (gerenciamento de dados mestre) descreve os esforços de uma organização para descobrir e definir listas não transacionais de dados, visando compilar listas mestre sustentáveis. Um projeto MDM em geral inclui uma avaliação e a reestruturação de processos comerciais internos, além da implementação de tecnologia de MDM. O resultado de uma solução MDM com êxito são dados confiáveis e centralizados que podem ser analisados, resultando em melhores decisões comerciais.  
   
- Com o treinamento certo, é provável que um maior número de usuários comerciais consigam implementar uma solução [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Além disso, você pode usar o MDS para gerenciar qualquer domínio; ele não se destina estritamente a gerenciar listas de clientes, produtos ou contas. Quando o MDS é instalado pela primeira vez, ele não inclui a estrutura para todos os domínios-você define os domínios que você precisa com a criação de modelos para eles.  
+ Com o treinamento certo, é provável que um maior número de usuários comerciais consigam implementar uma solução [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Além disso, você pode usar o MDS para gerenciar qualquer domínio; ele não se destina estritamente a gerenciar listas de clientes, produtos ou contas. Quando o MDS é instalado pela primeira vez, ele não inclui a estrutura de nenhum domínio – você define os domínios necessários criando modelos para eles.  
   
  Outros recursos do Master Data Services incluem hierarquias, segurança granular, transações, controle de versão de dados e regras de negócios.  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclui os seguintes componentes e ferramentas:  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]inclui os seguintes componentes e ferramentas:  
   
--   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], uma ferramenta usada para criar e configurar bancos de dados e aplicativos Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   
+  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], uma ferramenta usada para criar e configurar bancos de dados e aplicativos Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], um aplicativo Web usado para executar tarefas administrativas (como a criação de um modelo ou de uma regra de negócios) e acessado por usuários para atualizar dados.  
+-   
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], um aplicativo Web usado para executar tarefas administrativas (como a criação de um modelo ou de uma regra de negócios) e acessado por usuários para atualizar dados.  
   
 -   MDSModelDeploy.exe, uma ferramenta usada para criar pacotes de seus objetos de modelo e dados para que você possa implantá-los em outros ambientes.  
   
 -   O serviço Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], que os desenvolvedores podem usar para estender ou desenvolver soluções personalizadas para o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
--   O [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], que você usa para gerenciar dados e criar novas entidades e atributos.  
+-   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], que você usa para gerenciar dados e criar novas entidades e atributos.  
   
- Para obter um resumo dos recursos do MDS, consulte o [Portal de serviços de dados do SQL Server Master](https://go.microsoft.com/fwlink/?LinkID=214272).  
+ Para obter um resumo dos recursos do MDS, consulte o [portal de SQL Server Master Data Services](https://go.microsoft.com/fwlink/?LinkID=214272).  
   
 |||  
 |-|-|  
-|**Procurar conteúdo por área**<br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [visão geral do Master Data Services](master-data-services-overview-mds.md)<br /><br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [tarefas e recursos do Master Data Services](../../2014/master-data-services/master-data-services-features-and-tasks.md)<br /><br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [referência técnica (Master Data Services)](technical-reference-master-data-services.md)<br /><br /> ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [guia do desenvolvedor (Master Data Services)](develop/master-data-services-developer-documentation.md)||  
+|**Procurar conteúdo por área**<br /> ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [Master Data Services visão geral](master-data-services-overview-mds.md)<br /><br /> ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [Master Data Services recursos e tarefas](../../2014/master-data-services/master-data-services-features-and-tasks.md)<br /><br /> ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [referência técnica (Master Data Services)](technical-reference-master-data-services.md)<br /><br /> ![Ícone de pasta de arquivos pequena](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") [Guia do desenvolvedor (Master Data Services)](develop/master-data-services-developer-documentation.md)||  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Gravar mensagens de rastreamento de execução para o Log de erros do agente do SQL Server (SQL Server Management Studio) | Microsoft Docs
+title: Gravar mensagens de rastreamento de execução para o SQL Server Agent log de erros (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245441"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
-  Este tópico descreve como configurar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para que inclua mensagens de rastreamento de execução em seu log de erros no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Este tópico descreve como configurar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agent para incluir mensagens de rastreamento de execução em seu log [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de erros [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]no usando o.  
   
  **Neste tópico**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63245441"
   
      [Segurança](#Security)  
   
--   [Para gravar mensagens de rastreamento de execução para o Log de erros do SQL Server Agent usando o SQL Server Management Studio](#SSMSProcedure)  
+-   [Para gravar mensagens de rastreamento de execução no log de erros do SQL Server Agent usando o SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63245441"
   
 -   Ajustar cotas de memória para um processo (SeIncreaseQuotaPrivilege)  
   
- Para obter mais informações sobre as permissões do Windows necessárias para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço do Agent, consulte [selecionar uma conta para o serviço do SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [configurar contas de serviço do Windows e Permissões](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Para obter mais informações sobre as permissões do Windows necessárias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a conta de serviço do Agent, consulte [selecionar uma conta para o serviço de SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a>   
 #### <a name="to-write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>Para gravar mensagens de rastreamento de execução no log de erros do SQL Server Agent  
@@ -66,7 +66,7 @@ ms.locfileid: "63245441"
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
   
-3.  No **propriedades do SQL Server Agent -** _nome_do_servidor_ caixa de diálogo **log de erros** no **geral** , selecione o **Incluir mensagens de rastreamento de execução** caixa de seleção.  
+3.  Na caixa de diálogo **Propriedades do SQL Server Agent –**_server_name_ , **em log de erros** na página **geral** , marque a caixa de seleção **incluir mensagens de rastreamento de execução** .  
   
 4.  Clique em **OK**.  
   

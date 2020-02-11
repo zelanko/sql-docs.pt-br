@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891862"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de dados em expressões (Construtor de Relatórios e SSRS)
@@ -30,12 +30,12 @@ ms.locfileid: "68891862"
   
 |Tipo RDL|Tipos CLR|  
 |--------------|---------------|  
-|Cadeia de caracteres|Padrão: Cadeia de caracteres<br /><br /> Chart, GUID, Timespan|  
+|String|Padrão: cadeia de caracteres<br /><br /> Chart, GUID, Timespan|  
 |Boolean|Padrão: Boolean|  
-|Inteiro|Padrão: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|Integer|Padrão: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
 |DateTime|Padrão: DateTime<br /><br /> DateTimeOffset|  
 |Float|Padrão: Double<br /><br /> Single, Decimal|  
-|Binary|Padrão: Byte[]|  
+|Binário|Padrão: Byte[]|  
 |Variante|Qualquer um dos itens acima, exceto Byte[]|  
 |VariantArray|Matriz de Variant|  
 |Serializável|Variação ou tipos marcados com Serializable ou que implementam ISerializable.|  
@@ -65,16 +65,16 @@ ms.locfileid: "68891862"
   
 -   Crie um campo calculado com base em um campo de conjunto de dados de relatório existente, escrevendo uma expressão que converta todos os dados em uma coluna de conjunto de resultados em uma nova coluna com um tipo de dados diferente. Por exemplo, a expressão seguir converte o campo Ano de um valor inteiro para um valor de cadeia: `=CStr(Fields!Year.Value)`. Para saber mais, confira [Adicionar, editar e atualizar campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Verifique se a extensão de processamento de dados que você está usando inclui metadados para recuperar dados pré-formatados. Por exemplo, uma consulta MDX [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui a propriedade estendida FORMATTED_VALUE para valores de cubo que já foram formatados ao processar o cubo. Para obter mais informações, consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Verifique se a extensão de processamento de dados que você está usando inclui metadados para recuperar dados pré-formatados. Por exemplo, uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consulta MDX inclui uma FORMATTED_VALUE propriedade estendida para valores de cubo que já foram formatados durante o processamento do cubo. Para obter mais informações, consulte [Propriedades de campo estendidas para um banco de dados Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Entendendo os tipos de dados de parâmetro  
- Os parâmetros de relatório devem ser um dos cinco tipos de dados: Booliano, DateTime, Inteiro, Float ou Texto (também chamado de Cadeia de caracteres). Quando sua consulta de conjunto de dados inclui parâmetros de consulta, os parâmetros de relatório são criados automaticamente e vinculados a parâmetros de consulta. O tipo de dados padrão para um parâmetro de relatório é String. Para alterar o tipo de dados padrão de um parâmetro de relatório, selecione o valor correto da lista suspensa **Tipo de dados** na página **Geral** da caixa de diálogo **Propriedades do Parâmetro de Relatórios** .  
+ Os parâmetros de relatório devem ser um dos cinco tipos de dados: Boolean, DateTime, Integer, Float ou Text (também conhecido como String). Quando sua consulta de conjunto de dados inclui parâmetros de consulta, os parâmetros de relatório são criados automaticamente e vinculados a parâmetros de consulta. O tipo de dados padrão para um parâmetro de relatório é String. Para alterar o tipo de dados padrão de um parâmetro de relatório, selecione o valor correto da lista suspensa **Tipo de dados** na página **Geral** da caixa de diálogo **Propriedades do Parâmetro de Relatórios** .  
   
 > [!NOTE]  
 >  Os parâmetros de relatório que são tipos de dados DateTime não oferecem suporte a milissegundos. Embora você possa criar um parâmetro com base em valores que incluem milissegundos, você não pode selecionar um valor a partir de uma lista suspensa de valores disponíveis que inclui valores de Data e Hora que incluem milissegundos.  
   
 ## <a name="writing-expressions-that-convert-data-types-or-extract-parts-of-data"></a>Escrevendo expressões que convertem tipos de dados ou extraem partes de dados  
- Quando você combina campos de texto e conjunto de dados usando o operador de concatenação (&), o CLR (Common Language Runtime) geralmente fornece os formatos padrão. Quando você precisa converter explicitamente um parâmetro ou campo de conjunto de dados em um tipo de dados específico, você deve usar um método CLR ou uma função de biblioteca em tempo de execução do Visual Basic para converter os dados.  
+ Quando você combina campos de texto e conjunto de dados usando o operador de concatenação (&), o CLR (Common Language Runtime) geralmente fornece os formatos padrão. Quando você precisa converter explicitamente um parâmetro ou campo de conjunto de dados em um tipo de dados específico, você deve usar um método CLR ou uma função de biblioteca de runtime do Visual Basic para converter os dados.  
   
  A tabela a seguir mostra exemplos de conversão de tipos de dados.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68891862"
 |String para DateTime|`=DateTime.Parse(Fields!DateTimeinStringFormat.Value)`|  
 |String para DateTimeOffset|`=DateTimeOffset.Parse(Fields!DateTimeOffsetinStringFormat.Value)`|  
 |Extraindo o ano|`=Year(Fields!TimeinStringFormat.Value)`<br /><br /> `-- or --`<br /><br /> `=Year(Fields!TimeinDateTimeFormat.Value)`|  
-|Booleano para Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> \- 1 é verdadeiro e 0 é falso.|  
+|Booleano para Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> - 1 é verdadeiro e 0 é falso.|  
 |Booleano para Integer|`=System.Convert.ToInt32(Fields!BooleanFormat.Value)`<br /><br /> 1 é verdadeiro e 0 é falso.|  
 |Apenas a parte DateTime do valor DateTimeOffset|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Apenas a parte Offset do valor DateTimeOffset|`=Fields!MyDatetimeOffset.Value.Offset`|  
@@ -116,9 +116,9 @@ ms.locfileid: "68891862"
   
     -   A expressão a seguir converte a cadeia em um valor de data e hora: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Se a cadeia `MyDateTime.Value` tiver um deslocamento UTC, a função `DateTime.Parse` primeiro se ajustará para o deslocamento UTC (7 AM - [`+08:00`] para a hora UTC de 11 PM. da noite anterior). A função `DateTime.Parse` então aplicará o deslocamento UTC do servidor de relatórios local e, se necessário, ajustará a hora novamente para o Horário de Verão. Por exemplo, em Redmond, Washington, o deslocamento de horário local ajustado para o Horário de Verão é `[-07:00]`ou 7 horas antes de 11 PM. O resultado é o seguinte `DateTime` valor: `2007-07-06 04:07:07 PM` (6 de julho de 2007 às 16:07).  
+         Se a cadeia `MyDateTime.Value` tiver um deslocamento UTC, a função `DateTime.Parse` primeiro se ajustará para o deslocamento UTC (7 AM - [`+08:00`] para a hora UTC de 11 PM. da noite anterior). A função `DateTime.Parse` então aplicará o deslocamento UTC do servidor de relatórios local e, se necessário, ajustará a hora novamente para o Horário de Verão. Por exemplo, em Redmond, Washington, o deslocamento de horário local ajustado para o Horário de Verão é `[-07:00]`ou 7 horas antes de 11 PM. O resultado é o seguinte valor `DateTime`: `2007-07-06 04:07:07 PM` (6 de julho de 2007 às 4:07 PM).  
   
- Para obter mais informações sobre como converter `DateTime` cadeias de caracteres em tipos de dados, consulte Analisando cadeias de [caracteres de data e hora](https://go.microsoft.com/fwlink/?LinkId=89703), [Formatando data e hora para uma cultura específica](https://go.microsoft.com/fwlink/?LinkId=89704)e [escolhendo entre DateTime, DateTimeOffset e TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) em Inglês.  
+ Para obter mais informações sobre como converter `DateTime` cadeias de caracteres em tipos de dados, consulte [analisando cadeias de caracteres de data e hora](https://go.microsoft.com/fwlink/?LinkId=89703), [Formatando data e hora para uma cultura específica](https://go.microsoft.com/fwlink/?LinkId=89704)e [escolhendo entre DateTime, DateTimeOffset e TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) no msdn.  
   
 -   Adicione um novo campo calculado ao conjunto de dados de relatório que use uma expressão para extrair partes da cadeia. Para saber mais, confira [Adicionar, editar e atualizar campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68891862"
   
  Para obter mais emformações sobre tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consulte [Tipos de dados no Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) em [SQL Server Books Onleme](https://go.microsoft.com/fwlink/?linkid=120955).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  
   
   

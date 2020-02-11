@@ -16,10 +16,10 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68764347"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68764347"
 
   Retorna informações de status atuais para assinaturas pertencentes a uma ou mais publicações no Publicador e retorna uma linha para cada assinatura retornada. Esse procedimento armazenado, usado para monitorar a replicação, é executado no Distribuidor, no banco de dados de distribuição.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador cujo status está sendo monitorado. o Publicador é **sysname**, com um valor padrão de NULL. Se for **NULL**, as informações serão retornadas para todos os Publicadores que usam o distribuidor.  
+`[ @publisher = ] 'publisher'`É o nome do Publicador cujo status está sendo monitorado. o *Publicador* é **sysname**, com um valor padrão de NULL. Se for **NULL**, as informações serão retornadas para todos os Publicadores que usam o distribuidor.  
   
 `[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados publicado. *publisher_db* é **sysname**, com um valor padrão de NULL. Se for NULL, as informações serão retornadas para todos os bancos de dados publicados no Publicador.  
   
@@ -52,7 +52,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Se o tipo de publicação. *publication_type* é **int**e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**0**|Publicação transacional.|  
 |**1**|Publicação de instantâneo.|  
@@ -61,14 +61,14 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @mode = ] mode`É o modo de filtragem a ser usado ao retornar informações de monitoramento de assinatura. o *modo* é **int**e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**0** (padrão)|Retorna todas as assinaturas.|  
 |**1**|Retorna somente assinaturas com erros.|  
 |**2**|Retorna somente assinaturas que geraram avisos de métrica de limite.|  
-|**3**|Retorna somente assinaturas que têm erros ou geraram avisos de métrica de limite.|  
-|**4**|Retorna as 25 assinaturas com pior desempenho.|  
-|**5**|Retorna as 50 assinaturas com os piores desempenhos.|  
+|**Beta**|Retorna somente assinaturas que têm erros ou geraram avisos de métrica de limite.|  
+|**quatro**|Retorna as 25 assinaturas com pior desempenho.|  
+|**05**|Retorna as 50 assinaturas com os piores desempenhos.|  
 |**6**|Retorna somente assinaturas que estão sendo atualmente sincronizadas.|  
 |**7**|Retorna somente assinaturas que não estão sendo atualmente sincronizadas.|  
   
@@ -80,7 +80,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**status**|**int**|Verifica o status de todos os agentes de replicação associados com a publicação e retorna o status mais alto encontrado na seguinte ordem:<br /><br /> **6** = com falha<br /><br /> **5** = repetindo<br /><br /> **2** = parado<br /><br /> **4** = ocioso<br /><br /> **3** = em andamento<br /><br /> **1** = iniciado|  
 |**alerta**|**int**|Aviso de limite máximo gerado por uma assinatura pertencente à publicação, que pode ser o resultado de OR lógico de um ou mais desses valores.<br /><br /> **1** = expiração-uma assinatura para uma publicação transacional não foi sincronizada dentro do limite do período de retenção.<br /><br /> **2** = latência-o tempo necessário para replicar dados de um Publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration-uma assinatura para uma publicação de mesclagem não foi sincronizada dentro do limite do período de retenção.<br /><br /> **8** = mergefastrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede rápida.<br /><br /> **16** = mergeslowrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
@@ -89,8 +89,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**publisher_db**|**sysname**|É o nome do banco de dados de publicação.|  
 |**documento**|**sysname**|É o nome de uma publicação.|  
 |**publication_type**|**int**|É o tipo de publicação, que pode ser um destes valores:<br /><br /> **0** = publicação transacional<br /><br /> **1** = publicação de instantâneo<br /><br /> **2** = publicação de mesclagem|  
-|**subtype**|**int**|É o tipo de assinatura, que pode ter um dos seguintes valores:<br /><br /> **0** = enviar por push<br /><br /> **1** = pull<br /><br /> **2** = anônimo|  
-|**latency**|**int**|A latência mais alta, em segundos, para alterações de dados propagadas pelo Log Reader ou Distribution Agents para uma publicação transacional.|  
+|**subtipo**|**int**|É o tipo de assinatura, que pode ter um dos seguintes valores:<br /><br /> **0** = enviar por push<br /><br /> **1** = pull<br /><br /> **2** = anônimo|  
+|**MOLAP**|**int**|A latência mais alta, em segundos, para alterações de dados propagadas pelo Log Reader ou Distribution Agents para uma publicação transacional.|  
 |**latencythreshold**|**int**|É a latência máxima para a publicação transacional acima da qual uma advertência será gerada.|  
 |**agentnotrunning**|**int**|É a quantidade de tempo, em horas, durante a qual o agente não executou.|  
 |**agentnotrunningthreshold**|**int**|É a quantidade de tempo, em horas, em que o agente não executou, antes que um aviso fosse gerado.|  
@@ -106,8 +106,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergerunspeed**|**float**|É a taxa de entrega da última sincronização da assinatura.|  
 |**mergerunduration**|**int**|É a quantidade de tempo para concluir a última sincronização da assinatura.|  
 |**monitorranking**|**int**|É o valor de classificação usado para ordenar as assinaturas no conjunto de resultados, e pode ter um destes valores:<br /><br /> Para uma publicação transacional:<br /><br /> **60** = erro<br /><br /> **56** = aviso: desempenho crítico<br /><br /> **52** = aviso: Expirando em breve ou expirado<br /><br /> **50** = aviso: assinatura não inicializada<br /><br /> **40** = repetindo comando com falha<br /><br /> **30** = não está em execução (êxito)<br /><br /> **20** = em execução (iniciando, em execução ou ocioso)<br /><br /> Para uma publicação de mesclagem:<br /><br /> **60** = erro<br /><br /> **56** = aviso: desempenho crítico<br /><br /> **54** = aviso: mesclagem de execução longa<br /><br /> **52** = aviso: Expirando em breve<br /><br /> **50** = aviso: assinatura não inicializada<br /><br /> **40** = repetindo comando com falha<br /><br /> **30** = em execução (iniciando, em execução ou ocioso)<br /><br /> **20** = não está em execução (êxito)|  
-|**distributionagentjobid**|**binary(16)**|ID de trabalho do Distribution Agent para assinaturas em uma publicação transacional.|  
-|**mergeagentjobid**|**binary(16)**|ID de trabalho do Merge Agent para assinaturas em uma publicação de mesclagem.|  
+|**distributionagentjobid**|**Binary (16)**|ID de trabalho do Distribution Agent para assinaturas em uma publicação transacional.|  
+|**mergeagentjobid**|**Binary (16)**|ID de trabalho do Merge Agent para assinaturas em uma publicação de mesclagem.|  
 |**distributionagentid**|**int**|ID de trabalho do Distribution Agent para a assinatura.|  
 |**distributionagentprofileid**|**int**|ID do perfil de agente usado pelo Distribution Agent.|  
 |**mergeagentid**|**int**|ID de trabalho do Merge Agent para a assinatura.|  
@@ -124,7 +124,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de banco de dados fixa **db_owner** ou **replmonitor** no banco de dados de distribuição podem executar **sp_replmonitorhelpsubscription**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

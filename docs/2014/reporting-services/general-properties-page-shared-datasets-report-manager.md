@@ -1,5 +1,5 @@
 ---
-title: Página Propriedades gerais, Shared Datasets (Gerenciador de relatórios) | Microsoft Docs
+title: Página Propriedades gerais, conjuntos de valores compartilhados (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109073"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Página Propriedades Gerais, conjuntos de dados compartilhados (Gerenciador de Relatórios)
@@ -46,29 +46,29 @@ ms.locfileid: "66109073"
  Selecione essa opção para ocultar o conjunto de dados compartilhado de usuários que estejam usando o modo de exibição de lista no Gerenciador de Relatórios. O modo de exibição de lista é o formato de exibição padrão quando se navega na hierarquia de pastas do servidor de relatórios. Na exibição de lista, os nomes de itens e as descrições fluem pela página. O formato alternativo é a exibição de detalhes. A exibição de detalhes omite descrições, mas contém outras informações sobre o item. Embora seja possível ocultar um item na exibição de lista, você não pode ocultá-lo na exibição de detalhes. Se quiser restringir o acesso a um item, você precisará criar uma atribuição de função.  
   
  **Tempo limite de execução de consulta**  
- Informe o número de segundos até que a consulta expire. Se for 0, a consulta não terá um tempo limite.  
+ Digite o número de segundos até que a consulta expire. Se for 0, a consulta não atingirá o tempo limite.  
   
  **Aplicar**  
- Salve as alterações.  
+ Salve suas alterações.  
   
  **Delete (excluir)**  
  Remove o conjunto de dados compartilhado do banco de dados do servidor de relatório. A exclusão de um conjunto de dados compartilhado desativa qualquer relatório ou versões armazenadas em cache. Para reativar um relatório, você deve abrir cada um em uma ferramenta de criação de relatório e especificar um conjunto de dados com o mesmo nome e a mesma coleção de campos. Como alternativa, você pode atualizar cada referência de região de dados para usar um conjunto de dados diferente com a mesma coleção de campos.  
   
- **Migrar**  
- Realocar um conjunto de dados compartilhado na hierarquia de pastas do servidor de relatório. O clique nesse botão abre a página Mover Itens, na qual você pode navegar até um novo local de pasta. Para obter mais informações, consulte [página Mover itens &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ **Mover**  
+ Realocar um conjunto de dados compartilhado na hierarquia de pastas do servidor de relatório. O clique nesse botão abre a página Mover Itens, na qual você pode navegar até um novo local de pasta. Para obter mais informações, consulte a [página mover itens &#40;Report Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Download**  
+ **Baixar**  
  Extraia uma cópia da definição do conjunto de dados compartilhado. Dependendo das associações de arquivo definidas no seu computador, o arquivo será aberto no Visual Studio ou em um aplicativo diferente. Na maioria dos casos, o conjunto de dados compartilhado é aberto como um arquivo XML.  
   
- **Substituir**  
+ **Substitua**  
  Substitua a definição do conjunto de dados compartilhado por outra de um arquivo .rsd localizado no sistema de arquivos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
- [Opções de atualização de cache &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
- [Página cache, conjuntos de dados de compartilhados &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
+ [Página de conteúdo &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Opções de atualização do cache &#40;Report Manager&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
+ [Página de cache, conjuntos de armazenamento compartilhados &#40;Report Manager&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [Gerenciar conjuntos de dados compartilhados](report-data/manage-shared-datasets.md)   
  [Conjuntos de dados compartilhados em cache &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109688"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
@@ -33,19 +33,19 @@ ms.locfileid: "66109688"
   
  Este tutorial divide-se em três lições:  
   
- [Lição 1: Criando um banco de dados de assinante de exemplo](lesson-1-creating-a-sample-subscriber-database.md)  
+ [Lição 1: Criando um banco de dados do assinante de exemplo](lesson-1-creating-a-sample-subscriber-database.md)  
  Nesta lição, você aprenderá a criar um banco de dados local do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que contém informações de assinante.  
   
- [Lição 2: Modificar as propriedades de fonte de dados de relatório](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
  Nesta lição, você aprenderá a modificar propriedades da fonte de dados de relatório de forma que o relatório possa ser executado de forma autônoma. O processamento autônomo exige credenciais armazenadas. Você também modificará o conjunto de dados de relatório para incluir um parâmetro que é fornecido pelos dados do assinante.  
   
- [Lição 3: Definindo uma assinatura controlada por dados](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
  Nesta lição, você aprenderá a definir uma assinatura controlada por dados. Esta lição o guia por cada página do Assistente de Assinatura Controlada por Dados.  
   
 ## <a name="requirements"></a>Requisitos  
  As assinaturas controladas por dados normalmente são criadas e mantidas por administradores de servidor de relatórios. A capacidade de criar assinaturas controladas por dados requer experiência em criação de consultas, conhecimento das fontes de dados que contêm dados de assinante e permissões elevadas em um servidor de relatório.  
   
- O tutorial usará o relatório criado no tutorial [criar um relatório de tabela básico &#40;Tutorial do SSRS&#41; ](create-a-basic-table-report-ssrs-tutorial.md) e os dados de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ O tutorial usará o relatório criado no tutorial [criar um relatório de tabela básico &#40;tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md) e dados de[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  Para que você possa usar o tutorial, os itens a seguir devem estar instalados no sistema:  
   
@@ -63,9 +63,9 @@ ms.locfileid: "66109688"
   
 -   Uma pasta compartilhada na qual você tenha permissões de gravação. A pasta compartilhada deve ser acessada por uma conexão de rede.  
   
- **Tempo estimado para conclusão do tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
+ **Tempo estimado para concluir o tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Opções (Editor de texto - página de extensão de arquivo) | Microsoft Docs
+title: Opções (página Editor de texto – extensão de arquivo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4bf6c8146e8f3b5f6222affb3709439c37fc5023
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089934"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Opções (página Editor de texto – Extensão de arquivo)
@@ -38,7 +38,7 @@ ms.locfileid: "66089934"
  **Extensão**  
  Lista todas as extensões para as quais foi especificado um editor.  
   
- **Experiência de edição**  
+ **Prática de Edição**  
  Lista os editores selecionados para as **Extensões**.  
   
  **Mapear arquivos sem extensão para**  

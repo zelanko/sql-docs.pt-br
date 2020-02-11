@@ -1,5 +1,5 @@
 ---
-title: Editor do Gerenciador de Conexão de OData | Microsoft Docs
+title: Editor do Gerenciador de conexões OData | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057380"
 ---
 # <a name="odata-connection-manager-editor"></a>Editor de Gerenciador de Conexões OData
@@ -35,7 +35,7 @@ ms.locfileid: "66057380"
  **Testar Conexão**  
  Clique neste botão para testar a conexão com o OData Source.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Conexões OData](connection-manager/odata-connection-manager.md)  
   
   

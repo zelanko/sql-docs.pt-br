@@ -1,5 +1,5 @@
 ---
-title: Desinstalar a versão autônoma do construtor de relatórios (construtor de relatórios) | Microsoft Docs
+title: Desinstalar a versão autônoma do Construtor de Relatórios (Construtor de Relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108657"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Desinstalar a versão autônoma do Construtor de Relatórios (Construtor de Relatórios)
@@ -40,7 +40,7 @@ ms.locfileid: "66108657"
   
 1.  No menu **Iniciar** , clique em **Executar**.  
   
-2.  No **abrir** caixa de texto, digite `cmd.`  
+2.  Na caixa de texto **abrir** , digite`cmd.`  
   
 3.  Na janela do prompt de comando, navegue até pasta com ReportBuilder3_x86.msi.  
   
@@ -54,8 +54,8 @@ ms.locfileid: "66108657"
   
 1.  Pressione **Enter**.  
   
-## <a name="see-also"></a>Consulte também  
- [Instalar, desinstalar e oferecer suporte ao construtor de relatórios](../install-uninstall-and-report-builder-support.md)   
- [Instalar a versão autônoma do construtor de relatórios &#40;construtor de relatórios&#41;](install-report-builder.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Instalar, desinstalar e Construtor de Relatórios suporte](../install-uninstall-and-report-builder-support.md)   
+ [Instale a versão autônoma do Construtor de Relatórios &#40;Construtor de Relatórios&#41;](install-report-builder.md)  
   
   

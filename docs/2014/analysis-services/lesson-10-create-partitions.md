@@ -1,5 +1,5 @@
 ---
-title: 'Lição 11: Criar partições | Microsoft Docs'
+title: 'Lição 11: criar partições | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079196"
 ---
 # <a name="lesson-11-create-partitions"></a>Lição 11: Criar partições
-  Nesta lição, você criará partições para dividir a tabela Internet Sales em partes lógicas menores que podem ser processadas (Atualizadas) independentemente de outras partições. Por padrão, cada tabela incluída em seu modelo tem uma partição que inclui todas as linhas e colunas da tabela. Para a tabela de vendas pela Internet, desejamos dividir os dados por ano; uma partição para cada um dos cinco anos da tabela.  Cada partição pode ser processada independentemente. Para obter mais informações, consulte [Partições &#40;SSAS Tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
+  Nesta lição, você criará partições para dividir a tabela Internet Sales em partes lógicas menores que podem ser processadas (Atualizadas) independentemente de outras partições. Por padrão, cada tabela que você inclui em seu modelo tem uma partição que inclui todas as colunas e linhas da tabela. Para a tabela vendas pela Internet, desejamos dividir os dados por ano; uma partição para cada um dos cinco anos da tabela.  Cada partição pode ser então processada independentemente. Para obter mais informações, consulte [Partições &#40;SSAS Tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
   
- Tempo estimado para concluir esta lição: **15 minutos**  
+ Tempo estimado para conclusão desta lição: **15 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 10: Criar hierarquias](lesson-9-create-hierarchies.md).  
+ Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de realizar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 10: Criar hierarquias](lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Criar partições  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66079196"
   
      A caixa de diálogo **Gerenciador de Partições** é aberta.  
   
-2.  No **Gerenciador de partições** na caixa **partições**, clique no **vendas pela Internet** partição.  
+2.  Na caixa de diálogo **Gerenciador de partições** , em **partições**, clique na partição **Internet Sales** .  
   
-3.  Na **nome da partição**, altere o nome para `Internet Sales 2005`.  
+3.  Em **nome da partição**, altere o nome `Internet Sales 2005`para.  
   
     > [!TIP]  
     >  Antes de passar para a próxima etapa, observe que os nomes de coluna na janela Visualização de Tabela exibem essas colunas incluídas na tabela de modelo (marcada) com os nomes de coluna da origem. Isso acontece porque a janela Visualização de Tabela exibe colunas da tabela de origem, e não da tabela de modelo.  
@@ -79,41 +79,41 @@ ms.locfileid: "66079196"
   
 6.  Clique em **Validar**.  
   
-     Observe que um aviso é exibido, declarando que determinadas colunas não estão presentes na origem. Isso ocorre porque no [lição 3: Renomear colunas](rename-columns.md), você renomeou essas colunas na tabela de vendas pela Internet no modelo a ser diferente das mesmas colunas na origem.  
+     Observe que um aviso é exibido, declarando que determinadas colunas não estão presentes na origem. Isso ocorre porque, na [lição 3: renomear colunas](rename-columns.md), você renomeou essas colunas na tabela vendas pela Internet no modelo para serem diferentes daquelas mesmas colunas na origem.  
   
-#### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Para criar uma partição para o ano de 2006 na tabela de vendas pela Internet  
+#### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Para criar uma partição para o ano de 2006 na tabela vendas pela Internet  
   
-1.  No **Gerenciador de partições** na caixa **partições**, clique no `Internet Sales 2005` partição que você acabou de criar e, em seguida, **cópia**.  
+1.  Na caixa de diálogo **Gerenciador de partições** , em **partições**, clique `Internet Sales 2005` na partição que você acabou de criar e, em seguida, **Copie**.  
   
-2.  Na **nome da partição**, tipo `Internet Sales 2006`.  
+2.  Em **nome da partição**, `Internet Sales 2006`digite.  
   
-3.  Na instrução SQL, para que a partição inclua somente as linhas para o ano de 2006, substitua a cláusula WHERE pelo seguinte:  
+3.  Na instrução SQL, para que a partição inclua somente as linhas do ano 2006, substitua a cláusula WHERE pelo seguinte:  
   
     ```  
     WHERE (([OrderDate] >= N'2006-01-01 00:00:00') AND ([OrderDate] < N'2007-01-01 00:00:00'))  
     ```  
   
-#### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>Para criar uma partição para o ano 2007 na tabela de vendas pela Internet  
+#### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>Para criar uma partição para o ano de 2007 na tabela vendas pela Internet  
   
 1.  Na caixa de diálogo **Gerenciador de Partições** , clique em **Copiar**.  
   
-2.  Na **nome da partição**, tipo `Internet Sales 2007`.  
+2.  Em **nome da partição**, `Internet Sales 2007`digite.  
   
-3.  Na **alternar para**, selecione **Editor de consultas**.  
+3.  Em **alternar para**, selecione **Editor de consultas**.  
   
-4.  Na instrução SQL, para que a partição inclua somente as linhas para o ano 2007, substitua a cláusula WHERE pelo seguinte:  
+4.  Na instrução SQL, para que a partição inclua somente as linhas do ano 2007, substitua a cláusula WHERE pelo seguinte:  
   
     ```  
     WHERE (([OrderDate] >= N'2007-01-01 00:00:00') AND ([OrderDate] < N'2008-01-01 00:00:00'))  
     ```  
   
-#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>Para criar uma partição do ano 2008 na tabela de vendas pela Internet  
+#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>Para criar uma partição para o ano de 2008 na tabela vendas pela Internet  
   
 1.  Na caixa de diálogo **Gerenciador de Partições** , clique em **Novo**.  
   
-2.  Na **nome da partição**, tipo `Internet Sales 2008`.  
+2.  Em **nome da partição**, `Internet Sales 2008`digite.  
   
-3.  Na **alternar para**, selecione **Editor de consultas**.  
+3.  Em **alternar para**, selecione **Editor de consultas**.  
   
 4.  Na instrução SQL, para que a partição inclua somente as linhas do ano 2008, substitua a cláusula WHERE pelo seguinte:  
   
@@ -125,9 +125,9 @@ ms.locfileid: "66079196"
   
 1.  Na caixa de diálogo **Gerenciador de Partições** , clique em **Novo**.  
   
-2.  Na **nome da partição**, tipo `Internet Sales 2009`.  
+2.  Em **nome da partição**, `Internet Sales 2009`digite.  
   
-3.  Na **alternar para**, selecione **Editor de consultas**.  
+3.  Em **alternar para**, selecione **Editor de consultas**.  
   
 4.  Na Instrução SQL, para que a partição inclua somente as linhas do ano 2009, substitua a cláusula WHERE pelo seguinte:  
   
@@ -136,7 +136,7 @@ ms.locfileid: "66079196"
     ```  
   
 ## <a name="process-partitions"></a>Processar partições  
- Na caixa de diálogo **Gerenciador de Partições** , observe o asterisco ( **\*** ) ao lado dos nomes de partição de cada nova partição que você acabou de criar. Isso indica que a partição não foi processada (atualizada). Quando você cria novas partições, deve executar a operação Processar Partições ou Processar Tabela para atualizar os dados nessas partições.  
+ Na caixa de diálogo **Gerenciador de Partições** , observe o asterisco (**\***) ao lado dos nomes de partição de cada nova partição que você acabou de criar. Isso indica que a partição não foi processada (atualizada). Quando você cria novas partições, deve executar a operação Processar Partições ou Processar Tabela para atualizar os dados nessas partições.  
   
 #### <a name="to-process-internet-sales-partitions"></a>Para processar partições Internet Sales  
   
@@ -146,13 +146,13 @@ ms.locfileid: "66079196"
   
 3.  Na caixa de diálogo **Processar Partições** , verifique se o **Modo** está definido como **Processo Padrão**.  
   
-4.  Marque a caixa de seleção na coluna **Processar** para cada uma das cinco partições criadas e clique em **OK**.  
+4.  Selecione a caixa de seleção na coluna **Processo** para cada uma das cinco partições criadas e depois clique em **OK**.  
   
      Se você for solicitado a fornecer credenciais de Representação, insira o nome de usuário e a senha do Windows que especificou na Lição 2, etapa 6.  
   
-     O **processo dados** caixa de diálogo, em seguida, aparece e exibe os detalhes do processo para cada partição. Observe que um número diferente de linhas para cada partição é transferido. Isso acontece porque cada partição inclui somente as linhas referentes ao ano especificado na cláusula WHERE da Instrução SQL: Não há nenhum dado para o ano 2010.  
+     A caixa de diálogo **processo de dados** é exibida e exibe os detalhes do processo para cada partição. Observe que um número diferente de linhas é transferido para cada partição. Isso ocorre porque cada partição inclui somente as linhas para o ano especificado na cláusula WHERE na instrução SQL. Não há nenhum dado para o ano 2010.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Para continuar este tutorial, vá para a próxima lição: Lição: [Lição 12: Criar funções](lesson-11-create-roles.md).  
+ Para continuar este tutorial, vá para a próxima lição: [Lição 12: Criar funções](lesson-11-create-roles.md).  
   
   

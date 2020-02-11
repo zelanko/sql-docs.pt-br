@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524243"
 ---
 # <a name="use-the-eventdata-function"></a>Usar a função EVENTDATA
@@ -49,7 +49,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- A instrução `EVENTDATA()` no gatilho DDL captura o texto da instrução `CREATE TABLE` , que não é permitida. Isso é feito por meio de uma instrução XQuery em relação a `xml` dados que são gerados por EVENTDATA e recuperando o \<CommandText > elemento. Para obter mais informações, veja [Referência da linguagem XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ A instrução `EVENTDATA()` no gatilho DDL captura o texto da instrução `CREATE TABLE` , que não é permitida. Isso é feito usando uma instrução XQuery em relação aos `xml` dados gerados pelo EVENTDATA e recuperando o \<elemento CommandText>. Para obter mais informações, veja [Referência da linguagem XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  A EVENTDATA captura os dados de eventos CREATE_SCHEMA, bem como o <schema_element> da definição CREATE SCHEMA correspondente, se houver. Além disso, EVENTDATA reconhece a definição <schema_element>como um evento separado. Portanto, um disparador DDL criado em ambos os eventos CREATE SCHEMA e um evento representado pelo <schema_element> da definição CREATE SCHEMA podem retornar os mesmos dados de evento duas vezes, como os dados de `TSQLCommand`. Por exemplo, considere um disparador DDL criado em ambos os eventos CREATE_SCHEMA e CREATE_TABLE e a execução do seguinte lote:  
@@ -129,7 +129,7 @@ GO
   
  Um exemplo similar de disparador DDL é fornecido com o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obter o exemplo, localize a pasta Gatilhos de Banco de Dados, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta pasta está localizada na pasta **Programação** do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Clique com o botão direito do mouse em **ddlDatabaseTriggerLog** e selecione **Script de Gatilho de Banco de Dados como**. Por padrão, o gatilho DDL **ddlDatabaseTriggerLog** está desabilitado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos DDL](../triggers/ddl-events.md)   
  [Grupos de eventos DDL](../triggers/ddl-event-groups.md)  
   

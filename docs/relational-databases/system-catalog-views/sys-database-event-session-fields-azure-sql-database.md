@@ -1,5 +1,5 @@
 ---
-title: sys. database_event_session_fields (banco de dados SQL) | Microsoft Docs
+title: sys. database_event_session_fields (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5486fa6f9100e61dbd25ad029f1024115485111
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915118"
 ---
-# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys.database_event_session_fields (Banco de Dados SQL do Azure)
+# <a name="sysdatabase_event_session_fields-azure-sql-database"></a>sys.database_event_session_fields (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada coluna personalizável explicitamente definida em eventos e destinos.  
   
 ||  
 |-|  
-|**Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
+|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e a todas as versões posteriores.|  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
 |object_id|**int**|A ID do objeto ao qual este campo é associado. Não permite valor nulo.|  
@@ -43,11 +43,11 @@ ms.locfileid: "67915118"
 ||||  
 |-|-|-|  
 |De|Para|Relação|  
-|sys.database_event_session_actions.event_session_id|sys.database_event_sessions.event_session_id|Muitos para um|  
-|sys.database_event_session_actions.event_id<br /><br /> sys.database_event_session_actions.object_id<br /><br /> sys.database_event_session_actions.event_session_id|sys.database_event_session_events.event_session_id<br /><br /> sys.database_event_session_events.event_id|Muitos para um|  
-|sys.database_event_session_actions.event_session_id<br /><br /> sys.database_event_session_actions.object_id|sys.database_event_session_targets.event_session_id<br /><br /> sys.database_event_session_targets.target_id|Muitos para um|  
+|sys. database_event_session_actions. event_session_id|sys. database_event_sessions. event_session_id|Muitos para um|  
+|sys. database_event_session_actions. event_id<br /><br /> sys. database_event_session_actions. object_id<br /><br /> sys. database_event_session_actions. event_session_id|sys. database_event_session_events. event_session_id<br /><br /> sys. database_event_session_events. event_id|Muitos para um|  
+|sys. database_event_session_actions. event_session_id<br /><br /> sys. database_event_session_actions. object_id|sys. database_event_session_targets. event_session_id<br /><br /> sys. database_event_session_targets. target_id|Muitos para um|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

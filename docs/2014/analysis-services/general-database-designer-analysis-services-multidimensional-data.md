@@ -1,5 +1,5 @@
 ---
-title: Geral (Designer de banco de dados) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Geral (Database Designer) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081080"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Geral (Designer de Banco de Dados) (Analysis Services - Dados Multidimensionais)
@@ -48,12 +48,12 @@ ms.locfileid: "66081080"
  **Idioma**  
  Selecione o idioma para a transação especificada.  
   
- Para adicionar uma nova tradução à grade, clique em  **\<adicionar nova tradução >** .  
+ Para adicionar uma nova tradução à grade, clique em ** \<Adicionar nova tradução>**.  
   
  **Legenda traduzida**  
  Digite a legenda do banco de dados no idioma adequado para a tradução. Se estiver em branco, será usada a legenda padrão do banco de dados.  
   
- **Descrição traduzida**  
+ **Descrição Traduzida**  
  Digite a descrição do banco de dados no idioma adequado para a tradução. Se estiver em branco, será usada a descrição padrão do banco de dados.  
   
 ## <a name="account-type-mapping-options"></a>Opções de Mapeamento de Tipo de Conta  
@@ -67,7 +67,7 @@ ms.locfileid: "66081080"
  **Nome**  
  Digite o nome do tipo da conta.  
   
- Para adicionar um novo tipo de conta, clique em  **\<adicionar novo tipo de conta >** .  
+ Para adicionar um novo tipo de conta, clique em ** \<adicionar novo tipo de conta>**.  
   
  **Alias**  
  Define o nome padrão do tipo de conta para uso pelo Assistente de Business Intelligence. Se essa coluna for deixada em branco, o padrão na coluna **Nome** será usado.  
@@ -75,9 +75,9 @@ ms.locfileid: "66081080"
  **Função de agregação**  
  Selecione a função de agregação que será usada para o tipo de conta selecionado.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Bancos de dados modelo multidimensionais &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
- [Avisos &#40;Designer de banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Bancos de dados de modelo multidimensional &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
+ [Avisos &#40;designer de banco de dados&#41; &#40;Analysis Services-&#41;multidimensional](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

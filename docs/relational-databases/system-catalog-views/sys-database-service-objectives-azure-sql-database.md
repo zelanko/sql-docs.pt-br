@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 465416e87966ba3a80c8e98394c0b1f2009f591b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844458"
 ---
-# <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys. database_service_objectives (banco de dados SQL do Azure)
+# <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Retorna a edição (camada de serviço), o objetivo de serviço (tipo de preço) e o nome do pool elástico, se houver, para um banco de dados SQL do Azure ou um SQL Data Warehouse do Azure. Se estiver conectado ao banco de dados mestre em um servidor de banco de dados SQL do Azure, retorna informações sobre todos os bancos de dados. Para o Azure SQL Data Warehouse, você deve estar conectado ao banco de dados mestre.  
+Retorna a edição (camada de serviço), o objetivo de serviço (tipo de preço) e o nome do pool elástico, se houver, para um banco de dados SQL do Azure ou um SQL Data Warehouse do Azure. Se estiver conectado ao banco de dados mestre em um servidor do Banco de Dados SQL do Azure, retornará informações sobre todos os bancos de dados. Para o SQL Data Warehouse do Azure, você deve estar conectado ao banco de dados mestre.  
   
   
  Para obter informações sobre preços, consulte [Opções e desempenho do banco de dados SQL: preços do banco de dados SQL](https://azure.microsoft.com/pricing/details/sql-database/) e [preços de SQL data warehouse](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
@@ -35,10 +35,10 @@ Retorna a edição (camada de serviço), o objetivo de serviço (tipo de preço)
   
  A exibição sys. database_service_objectives contém as colunas a seguir.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|database_id|int|A ID do banco de dados, exclusiva dentro de uma instância do servidor de banco de dados SQL do Azure. Ingresse com o [ &#40;Transact-SQL&#41;sys. databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|edição|sysname|A camada de serviço para o banco de dados ou data warehouse: **Basic**, **Standard**, **Premium** ou **data warehouse**.|  
+|database_id|INT|A ID do banco de dados, exclusiva dentro de uma instância do servidor de banco de dados SQL do Azure. É possível associá [-lo com sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|edition|sysname|A camada de serviço para o banco de dados ou data warehouse: **Basic**, **Standard**, **Premium** ou **data warehouse**.|  
 |service_objective|sysname|O tipo de preço do banco de dados. Se o banco de dados estiver em um pool elástico, retornará **ElasticPool**.<br /><br /> Na camada **básica** , retorna **Basic**.<br /><br /> O **banco de dados individual em uma camada de serviço Standard** retorna um dos seguintes: S0, S1, S2, S3, S4, S6, S7, S9 ou S12.<br /><br /> **Um banco de dados individual em uma camada Premium** retorna do seguinte: P1, P2, P4, P6, P11 ou P15.<br /><br /> **SQL data warehouse** retorna DW100 por meio de DW30000c.<br /><br /> Para obter detalhes, consulte bancos de dados [individuais](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [pools elásticos](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)e [data warehouses](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)|  
 |elastic_pool_name|sysname|O nome do [pool elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) ao qual o banco de dados pertence. Retornará **NULL** se o banco de dados for um banco de dado único ou um data warehoue.|  
   

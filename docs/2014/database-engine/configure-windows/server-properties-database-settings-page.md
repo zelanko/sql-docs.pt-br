@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809528"
 ---
 # <a name="server-properties-database-settings-page"></a>Propriedades do Servidor (página Configurações de Banco de Dados)
@@ -59,7 +59,7 @@ ms.locfileid: "62809528"
  **Intervalo de recuperação (minutos)**  
  Define o número máximo de minutos por banco de dados para a recuperação de bancos de dados. O padrão é 0, que indica configuração automática pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Na prática, isso significa um tempo de recuperação inferior a um minuto e um ponto de verificação a cada um minuto aproximadamente para bancos de dados ativos. Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](configure-the-recovery-interval-server-configuration-option.md).  
   
- **Data**  
+ **Dados**  
  Especifica o local padrão para arquivos de dados. Clique no botão Procurar para navegar para um novo local padrão. As alterações não entrarão em vigor até que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja reinicializado.  
   
  **Log**  
@@ -71,7 +71,7 @@ ms.locfileid: "62809528"
  **Executando Valores**  
  Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [Especificar o fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   

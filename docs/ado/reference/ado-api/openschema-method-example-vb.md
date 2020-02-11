@@ -15,14 +15,14 @@ ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a16979e7993fd1ac86679d054508b837a0a08c68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931898"
 ---
 # <a name="openschema-method-example-vb"></a>Exemplo do método OpenSchema (VB)
-Este exemplo usa o [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) método para exibir o nome e tipo de cada tabela na ***Pubs*** banco de dados.  
+Este exemplo usa o método [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) para exibir o nome e o tipo de cada tabela no banco de dados ***pubs*** .  
   
 ```  
 'BeginOpenSchemaVB  
@@ -78,12 +78,12 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- Este exemplo especifica uma restrição de consulta TABLE_TYPE na **OpenSchema** método ***critérios*** argumento. Como resultado, apenas as informações de esquema para os modos de exibição especificado na ***Pubs*** banco de dados são retornados. O exemplo, em seguida, exibe o nome (s) e o tipo (s) de cada tabela (s).  
+ Este exemplo especifica uma restrição de consulta TABLE_TYPE no argumento de ***critérios*** do método **OpenSchema** . Como resultado, somente as informações de esquema para as exibições especificadas no banco de dados ***pubs*** são retornadas. Em seguida, o exemplo exibe os nomes e os tipos de cada tabela.  
   
 ```  
 Attribute VB_Name = "OpenSchema"  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo do método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

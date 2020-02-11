@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211375"
 ---
 # <a name="job-activity-monitor"></a>Monitor de Atividade do Trabalho
@@ -27,7 +27,7 @@ ms.locfileid: "68211375"
  **Nome**  
  Nome do trabalho.  
   
- **Habilitado**  
+ **Enabled**  
  Se o trabalho está habilitado (**sim**) ou desabilitado (**não**).  
   
  **Status** <sup>1</sup>  
@@ -39,7 +39,7 @@ ms.locfileid: "68211375"
  **Última Execução**  
  Data e hora em que o trabalho foi executado pela última vez, usando a data e hora locais do servidor.  
   
- **Em seguida execute** <sup>1</sup>  
+ **Próxima execução** <sup>1</sup>  
  Date e hora em que o trabalho está agendado para ser executado usando a data local e hora locais do servidor.  
   
  **Categoria**  
@@ -49,15 +49,15 @@ ms.locfileid: "68211375"
  **Sim** se o trabalho puder ser executado; **Não** se o trabalho não puder ser executado. Um trabalho não é executável se não tiver nenhuma etapa ou se não tiver nenhum servidor de destino.  
   
  **Agendado**  
- **Sim** se o trabalho estiver atribuído a uma agenda de trabalho; **Não** se o trabalho não tiver nenhuma agenda.  
+ **Sim** se o trabalho for atribuído a um plano de trabalho; **Não** se o trabalho não tiver um agendamento.  
   
- <sup>1</sup>somente os membros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fixa sysadmin função de servidor e administradores do servidor de grupo pode ver valores nesta coluna. Os membros da função SQLAgentOperatorRole não podem ver os valores dessa coluna.  
+ <sup>1</sup> Somente os membros da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] função de servidor fixa sysadmin e do grupo de administradores de servidor podem ver os valores nesta coluna. Os membros da função SQLAgentOperatorRole não podem ver os valores dessa coluna.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>Para abrir o Monitor de Atividade do Trabalho  
   
 -   No **Pesquisador de Objetos**, expanda seu servidor, expanda **SQL Server Agent**, clique com o botão direito do mouse em **Monitor de Atividade do Trabalho**e clique em **Exibir Atividade do Trabalho**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar Atividade do Trabalho](monitor-job-activity.md)  
   
   

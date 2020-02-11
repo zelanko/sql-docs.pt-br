@@ -1,5 +1,5 @@
 ---
-title: Editor da tarefa serviço da Web (página geral) | Microsoft Docs
+title: Editor da tarefa serviço da Web (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054537"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor da Tarefa Serviço da Web (página Geral)
@@ -28,14 +28,14 @@ ms.locfileid: "66054537"
   
 ## <a name="options"></a>Opções  
  **HTTPConnection**  
- Selecione um gerenciador de conexões na lista ou clique em \<**Nova conexão…** > para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões HTTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
   
- **Tópicos relacionados:**  [Gerenciador de Conexões de HTTP](connection-manager/http-connection-manager.md), [Editor do Gerenciador de Conexões de HTTP &#40;página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Tópicos relacionados:**  [Gerenciador de conexões http](connection-manager/http-connection-manager.md), [Editor do Gerenciador de conexões http &#40;página do servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
- **WSDLFile**  
+ **Arquivo WSDL**  
  Digite o caminho totalmente qualificado de um arquivo WSDL que é local para o computador ou clique no botão Procurar **(…)** e localize esse arquivo.  
   
  Se o arquivo WSDL já foi baixado manualmente no computador, selecione-o. No entanto, se o arquivo WSDL ainda não tiver sido baixado, siga estas etapas:  
@@ -44,7 +44,7 @@ ms.locfileid: "66054537"
   
 -   Selecione esse arquivo vazio para a opção **Arquivo WSDL** .  
   
--   Defina o valor de **OverwriteWSDLFile** para `True` para habilitar o arquivo vazio seja substituído pelo arquivo WSDL real.  
+-   Defina o valor de **OverwriteWsdlFile** como `True` para habilitar o arquivo vazio a ser substituído pelo arquivo WSDL real.  
   
 -   Clique em **Baixar WSDL** para baixar o arquivo WSDL real e substituir o arquivo vazio.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66054537"
  **OverwriteWSDLFile**  
  Indique se o arquivo WSDL da tarefa Serviço da Web pode ser substituído.  
   
- Se você pretende baixar o arquivo WSDL usando o **Baixar WSDL** botão, defina esse valor como `True`.  
+ Se você pretende baixar o arquivo WSDL usando o botão **baixar WSDL** , defina esse valor como `True`.  
   
  **Nome**  
  Forneça um nome exclusivo para a tarefa Serviço da Web. Esse nome é usado como rótulo no ícone de tarefa.  
@@ -70,10 +70,10 @@ ms.locfileid: "66054537"
   
  Esse botão não estará habilitado até que você forneça o nome de um arquivo local existente na caixa **Arquivo WSDL** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Serviço da Web &#40;Página Entrada&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Editor da Tarefa Serviço da Web &#40;Página Saída&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Editor da tarefa serviço Web &#40;página de entrada&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Editor da tarefa serviço da Web &#40;página saída&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

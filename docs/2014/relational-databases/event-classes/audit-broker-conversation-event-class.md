@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912180"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Classe de evento Audit Broker Conversation
@@ -26,7 +26,7 @@ ms.locfileid: "62912180"
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Broker Conversation  
   
-|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**BigintData1**|**bigint**|O número de sequência da mensagem.|52|Não|  
@@ -47,19 +47,19 @@ ms.locfileid: "62912180"
 |**Severity**|**int**|A severidade do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se esse evento informar um erro.|29|Não|  
 |**SPID**|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
-|**Estado**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
-|**TextData**|**ntext**|Para erros, contém uma mensagem que descreve a razão da falha. Um dos valores seguintes:<br /><br /> **Certificado não encontrado**. O usuário especificado para segurança de protocolo do diálogo não tem certificado.<br /><br /> **Não está em um período de tempo válido**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas o certificado expirou.<br /><br /> **O certificado é muito grande para a alocação de memória**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas o certificado é muito grande. O tamanho máximo de certificado a que Service Broker oferece suporte são 32.768 bytes.<br /><br /> **Chave privada não encontrada**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas não existe chave privada associada ao certificado.<br /><br /> **Tamanho da chave privada do certificado incompatível com o provedor de criptografia**. A chave privada para o certificado tem um tamanho de chave que não pode ser processado com êxito. O tamanho da chave privada deve ser um múltiplo de 64 bytes.<br /><br /> **Tamanho da chave pública do certificado incompatível com o provedor de criptografia**. A chave pública para o certificado tem um tamanho de chave que não pode ser processado com êxito. O tamanho da chave pública deve ser um múltiplo de 64 bytes.<br /><br /> **Tamanho da chave privada do certificado incompatível com a chave de troca de chaves criptografada**. O tamanho de chave especificado na chave de troca de chave não corresponde ao tamanho da chave privada para o certificado. Isso geralmente indica que o certificado no computador remoto não corresponde ao certificado no banco de dados.<br /><br /> **Tamanho da chave pública do certificado incompatível com a assinatura do cabeçalho de segurança**. O cabeçalho de segurança contém uma assinatura que não pode ser validada com a chave pública do certificado. Isso geralmente indica que o certificado no computador remoto não corresponde ao certificado no banco de dados.|1|Sim|  
+|**State**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
+|**TextData**|**ntext**|Para erros, contém uma mensagem que descreve a razão da falha. Um dos seguintes valores:<br /><br /> **Certificado não encontrado**. O usuário especificado para segurança de protocolo do diálogo não tem certificado.<br /><br /> **Não está em um período de tempo válido**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas o certificado expirou.<br /><br /> **O certificado é muito grande para a alocação de memória**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas o certificado é muito grande. O tamanho máximo de certificado a que Service Broker oferece suporte são 32.768 bytes.<br /><br /> **Chave privada não encontrada**. O usuário especificado para segurança de protocolo do diálogo tem um certificado, mas não existe chave privada associada ao certificado.<br /><br /> **Tamanho da chave privada do certificado incompatível com o provedor de criptografia**. A chave privada para o certificado tem um tamanho de chave que não pode ser processado com êxito. O tamanho da chave privada deve ser um múltiplo de 64 bytes.<br /><br /> **Tamanho da chave pública do certificado incompatível com o provedor de criptografia**. A chave pública para o certificado tem um tamanho de chave que não pode ser processado com êxito. O tamanho da chave pública deve ser um múltiplo de 64 bytes.<br /><br /> **Tamanho da chave privada do certificado incompatível com a chave de troca de chaves criptografada**. O tamanho de chave especificado na chave de troca de chave não corresponde ao tamanho da chave privada para o certificado. Isso geralmente indica que o certificado no computador remoto não corresponde ao certificado no banco de dados.<br /><br /> **Tamanho da chave pública do certificado incompatível com a assinatura do cabeçalho de segurança**. O cabeçalho de segurança contém uma assinatura que não pode ser validada com a chave pública do certificado. Isso geralmente indica que o certificado no computador remoto não corresponde ao certificado no banco de dados.|1|Sim|  
   
  A tabela abaixo lista os valores de subclasse para essa classe de evento.  
   
-|ID|Subclasse|Descrição|  
+|ID|Subclasse|DESCRIÇÃO|  
 |--------|--------------|-----------------|  
 |1|No Security Header|Durante uma conversa segura, o Service Broker recebeu uma mensagem que não contém uma chave de sessão. Quando uma conversa segura é estabelecida, o protocolo de diálogo requer que todas as mensagens na conversa contenham uma chave de sessão.|  
 |2|No Certificate|O Service Broker não pôde localizar um certificado utilizável para um dos participantes na conversa. Para proteger a conversa, o banco de dados deve conter um certificado para o remetente e o destinatário da conversa.|  
 |3|Invalid Signature|O Service Broker não pôde verificar a assinatura de mensagem fornecida pelo remetente usando a chave pública no certificado do remetente. Isso pode indicar que a mensagem está corrompida, que a mensagem foi violada, que o serviço remoto e o serviço local não estão configurados com o mesmo certificado de usuário ou que o certificado está desatualizado.|  
 |4|Run As Target Failure|O usuário de destino não tem permissões de recebimento na fila de destino. Para impedir que usuários não autorizados recebam mensagens, o Service Broker não enfileira mensagens para um usuário de destino que não pode receber da fila, quer o usuário iniciante tenha permissão para enfileirar mensagens, quer não.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

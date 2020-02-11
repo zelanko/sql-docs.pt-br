@@ -1,5 +1,5 @@
 ---
-title: Manipulando Namespaces em XQuery | Microsoft Docs
+title: Manipulando namespaces no XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004535"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Manipulando namespaces em XQuery
@@ -30,7 +30,7 @@ ms.locfileid: "68004535"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-declaring-a-namespace"></a>A. Declarando um namespace  
+### <a name="a-declaring-a-namespace"></a>a. Declarando um namespace  
  A consulta a seguir recupera as etapas do processo de produção de um modelo de produto específico.  
   
 ```  
@@ -49,7 +49,7 @@ WHERE ProductModelID=7
 ...  
 ```  
   
- Observe que o **namespace** palavra-chave é usada para definir um novo prefixo de namespace, "AWMI:". Esse prefixo deve, então, ser usado na consulta para todos os elementos que estejam dentro do escopo desse namespace.  
+ Observe que a palavra-chave **namespace** é usada para definir um novo prefixo de namespace, "AWMI:". Esse prefixo deve, então, ser usado na consulta para todos os elementos que estejam dentro do escopo desse namespace.  
   
 ### <a name="b-declaring-a-default-namespace"></a>B. Declarando um namespace padrão  
  Na consulta anterior, um novo prefixo de namespace foi definido. Depois, esse prefixo teve de ser usado na consulta para selecionar as estruturas XML planejadas. Alternativamente, você pode declarar um namespace como o namespace padrão, como mostrado na seguinte consulta modificada:  
@@ -87,7 +87,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
   
@@ -115,7 +115,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. Construção com o uso de namespaces padrão  
- Você também pode definir um namespace padrão para uso em XML construído. Por exemplo, a consulta a seguir mostra como você pode especificar um namespace padrão, "SomeNameSpace"\\, para usar como padrão para os elementos nomeados localmente que são construídos, como o `<Result>` elemento.  
+ Você também pode definir um namespace padrão para uso em XML construído. Por exemplo, a consulta a seguir mostra como você pode especificar um namespace padrão, "URI: SomeNamespace\\", para usar como o padrão para os elementos nomeados localmente que são construídos, como `<Result>` o elemento.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -129,7 +129,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
   
@@ -145,7 +145,7 @@ where ProductModelID=19
   
  Observe que ao substituir o elemento namespace padrão ou namespace vazio, todos os elementos nomeados localmente no XML construído serão subsequentemente associados ao namespace padrão substituído. Portanto, se você precisar de flexibilidade na construção XML para aproveitar o namespace vazio, não substitua o elemento namespace padrão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

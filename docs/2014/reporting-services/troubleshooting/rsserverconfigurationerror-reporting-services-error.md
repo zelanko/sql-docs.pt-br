@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 19778bce64e5779471e78b8c4305e1bd6315c0ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099206"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Erro do Reporting Services
@@ -25,9 +25,9 @@ ms.locfileid: "66099206"
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|rsServerConfiguration|  
-|Origem do evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
+|Origem do Evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto da mensagem|O servidor de relatório encontrou um erro de configuração.|  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66099206"
 ## <a name="user-action"></a>Ação do usuário  
  Se o erro começar a ocorrer após você ter editado manualmente um arquivo de configuração, remova as alterações e insira o valor anterior, ou restaure uma versão anterior se possuir um backup.  
   
- Para examinar as informações da mensagem de erro adicional que acompanha o `rsServerConfiguration` erro, examine os relatório server rastreamento arquivos de log, estão localizados em \Microsoft SQL Server\MSRS12.\< InstanceName > \reporting. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
+ Para examinar as informações adicionais da mensagem de erro que `rsServerConfiguration` acompanham o erro, examine os arquivos de log de rastreamento do servidor de relatório, que estão localizados em \Microsoft SQL Server\MSRS12. \<InstanceName > \Reporting Services\LogFiles. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Somente interno  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivos de configuração do Reporting Services](../report-server/reporting-services-configuration-files.md)   
  [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   

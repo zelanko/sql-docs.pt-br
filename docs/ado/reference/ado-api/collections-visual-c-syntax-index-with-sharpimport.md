@@ -19,16 +19,16 @@ ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919891"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Coleções (Visual C++ índice de sintaxe com #import)
-É útil saber que as coleções herdam certos métodos e propriedades comuns.  
+É útil saber que as coleções herdam determinados métodos e propriedades comuns.  
   
- Todas as coleções de herdam a **contagem** propriedade e **atualizar** método e todas as coleções, adicione o **Item** propriedade. O **erros** coleção adiciona as **clara** método. O **parâmetros** herda de coleção de **Append** e **excluir** métodos, enquanto o **campos** coleção adiciona o **Append**, **excluir**, e **atualização** métodos.  
+ Todas as coleções herdam a propriedade **Count** e o método **Refresh** , e todas as coleções adicionam a propriedade **Item** . A coleção de **erros** adiciona o método **Clear** . A coleção **Parameters** herda os métodos **Append** e **delete** , enquanto a coleção **Fields** adiciona os métodos **Append**, **delete**e **Update** .  
   
 ## <a name="properties-collection"></a>Coleção de propriedades  
   
@@ -78,7 +78,7 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="fields-collection"></a>Coleção de campos  
+## <a name="fields-collection"></a>Coleção Campos  
   
 ### <a name="methods"></a>Métodos  
   
@@ -96,8 +96,8 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Coleção Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Coleta de erros (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211685"
 ---
 # <a name="view-user-defined-functions"></a>Exibir funções definidas pelo usuário
@@ -79,13 +79,13 @@ ms.locfileid: "68211685"
      **Usuário**  
      Nome do usuário desta conexão.  
   
-     **Data da criação**  
+     **Data de criação**  
      Exibe a data em que a função foi criada.  
   
      **Executar como**  
      Contexto de execução da função.  
   
-     **Name**  
+     **Nome**  
      Nome da função atual.  
   
      **Esquema**  
@@ -106,7 +106,7 @@ ms.locfileid: "68211685"
      **Identificador entre aspas**  
      Indica se o objeto foi criado com a opção de identificador entre aspas.  
   
-     **Ligado a esquema**  
+     **Associado a esquema**  
      Indica se a função é ligada a esquema. Os valores são True e False. Para obter informações sobre funções associadas ao esquema, veja a seção SCHEMABINDING de [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  

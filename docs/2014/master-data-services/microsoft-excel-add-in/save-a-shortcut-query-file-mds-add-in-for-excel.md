@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482860"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Salvar um arquivo de consulta de atalho (suplemento MDS para Excel)
@@ -23,7 +23,7 @@ ms.locfileid: "65482860"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   A planilha ativa deve conter dados gerenciados no MDS no formato que você deseja. Por exemplo, você deve estar visualizando as colunas na ordem em que deseja, com qualquer filtro aplicado. Para obter mais informações, consulte [filtrar dados antes de carregar &#40;suplemento MDS para Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) e [reordenar colunas &#40;o suplemento MDS para Excel&#41;](reorder-columns-mds-add-in-for-excel.md).  
+-   A planilha ativa deve conter dados gerenciados no MDS no formato que você deseja. Por exemplo, você deve estar visualizando as colunas na ordem em que deseja, com qualquer filtro aplicado. Para obter mais informações, consulte [filtrar dados antes de carregar &#40;Suplemento MDS para Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) e [Reordenar colunas &#40;suplemento MDS para Excel ](reorder-columns-mds-add-in-for-excel.md)&#41;.  
   
 ### <a name="to-save-a-shortcut-query-file"></a>Para salvar um arquivo de consulta de atalho  
   
@@ -37,7 +37,7 @@ ms.locfileid: "65482860"
   
 -   [Enviar um arquivo de consulta de atalho por email &#40;Suplemento MDS para Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivos de consulta de atalho &#40;Suplemento MDS para Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

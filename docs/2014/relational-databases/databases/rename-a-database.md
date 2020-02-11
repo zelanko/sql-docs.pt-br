@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916760"
 ---
 # <a name="rename-a-database"></a>Renomear um banco de dados
@@ -54,7 +54,7 @@ ms.locfileid: "62916760"
   
 #### <a name="to-rename-a-database"></a>Para renomear um banco de dados  
   
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e expanda-a.  
+1.  No Pesquisador de **objetos**, conecte-se a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]uma instância do e expanda essa instância.  
   
 2.  Certifique-se de que ninguém esteja usando o banco de dados e, em seguida, [defina o banco de dados como modo de usuário único](set-a-database-to-single-user-mode.md).  
   
@@ -81,10 +81,10 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de renomear um banco de dados  
+##  <a name="FollowUp"></a>Acompanhamento: depois de renomear um banco de dados  
  Faça backup do banco de dados **mestre** e, em seguida, renomeie qualquer banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Identificadores de banco de dados](database-identifiers.md)  
   
