@@ -1,5 +1,5 @@
 ---
-title: Referência de Interface (SPI) do provedor de serviço ODBC | Microsoft Docs
+title: Referência de SPI (interface do provedor de serviços ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88053620fa413c50a8faff4cc47cbbe1457249f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073829"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>Referência da SPI (Interface do Provedor de Serviços) do ODBC
-Tradicionalmente, o ODBC definidos uma interface de programação de aplicativo (API). As funções na API podem ser chamadas por aplicativos e eles devem ser implementados dentro do Gerenciador de Driver e o driver.  
+Tradicionalmente, o ODBC definiu uma API (interface de programação de aplicativo). As funções na API podem ser chamadas por aplicativos e devem ser implementadas dentro do Gerenciador de driver e do driver.  
   
- Com a adição do recurso de pooling de conexão de reconhecimento de driver, ODBC apresenta a interface de provedor de serviço (SPI). As funções no SPI são usadas para comunicação entre o Gerenciador de Driver e o driver. Funções SPI são implementadas pelo driver; o Gerenciador de Driver não expõe funções SPI aos aplicativos. Aplicativos não devem chamar essas funções diretamente.  
+ Com a adição do recurso de pooling de conexão com reconhecimento de driver, o ODBC apresenta a SPI (Service Provider interface). As funções no SPI são usadas para comunicação entre o Gerenciador de driver e o driver. As funções SPI são implementadas pelo driver; o Gerenciador de driver não expõe funções SPI para aplicativos. Os aplicativos não devem chamar essas funções diretamente.  
   
- Inclua sqlspi.h para desenvolvimento de driver ODBC.  
+ Inclua sqlspi. h para o desenvolvimento de driver ODBC.  
   
- Esta seção contém os tópicos a seguir  
+ Esta seção contém os seguintes tópicos.  
   
 -   [SQLCleanupConnectionPoolID](../../../odbc/reference/syntax/sqlcleanupconnectionpoolid-function.md)  
   
@@ -40,7 +40,7 @@ Tradicionalmente, o ODBC definidos uma interface de programação de aplicativo 
   
 -   [SQLSetDriverConnectInfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Desenvolvendo um Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Desenvolvendo o reconhecimento de Pool de Conexão em um Driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Desenvolvendo um driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
+ [Desenvolvendo o reconhecimento do pool de conexões em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [Pool de conexões do Gerenciador de Driver](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

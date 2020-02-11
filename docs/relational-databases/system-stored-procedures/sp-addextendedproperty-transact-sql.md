@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68072696"
 ---
-# <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
+# <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Adiciona uma nova propriedade estendida a um objeto de banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,38 +54,38 @@ sp_addextendedproperty
   
 ## <a name="arguments"></a>Argumentos  
  [ @name ] = {'*property_name*'}  
- É o nome da propriedade a ser adicionada. *Property_Name* está **sysname** e não pode ser NULL. Os nomes também podem incluir espaço em branco ou cadeias de caracteres não alfanuméricos e valores binários.  
+ É o nome da propriedade a ser adicionada. *property_name* é **sysname** e não pode ser nulo. Os nomes também podem incluir espaço em branco ou cadeias de caracteres não alfanuméricos e valores binários.  
   
- [ @value=] {'*valor*'}  
- É o valor a ser associado à propriedade. *valor* está **sql_variant**, com um padrão NULL. O tamanho de *value* não pode ser maior que 7.500 bytes.  
+ [ @value= ] {'*Value*'}  
+ É o valor a ser associado à propriedade. o *valor* é **sql_variant**, com um padrão de NULL. O tamanho de *value* não pode ser maior que 7.500 bytes.  
   
- [ @level0type=] {'*level0_object_type*'}  
- É o tipo de objeto de nível 0. *level0_object_type* está **varchar (128)** , com um padrão NULL.  
+ [ @level0type= ] {'*level0_object_type*'}  
+ É o tipo de objeto de nível 0. *level0_object_type* é **varchar (128)**, com um padrão de NULL.  
   
  As entradas válidas são ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE e NULL.  
   
 > [!IMPORTANT]  
 >  A capacidade de especificar USER como um tipo de nível 0 em uma propriedade estendida de um objeto de tipo de nível 1 será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em vez disso, use SCHEMA como o tipo nível 0. Por exemplo, ao definir uma propriedade estendida em uma tabela, especifique o esquema da tabela em vez de um nome de usuário. A capacidade de especificar TYPE como um tipo de nível 0 será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para TYPE, use SCHEMA como o tipo de nível 0 e TYPE como o tipo de nível 1.  
   
- [ @level0name=] {'*level0_object_name*'}  
- É o nome do tipo de objeto de nível 0 especificado. *level0_object_name* está **sysname** com um padrão NULL.  
+ [ @level0name= ] {'*level0_object_name*'}  
+ É o nome do tipo de objeto de nível 0 especificado. *level0_object_name* é **sysname** com um padrão de NULL.  
   
- [ @level1type=] {'*level1_object_type*'}  
- É o tipo de objeto de nível 1. *level1_object_type* está **varchar (128)** , com um padrão NULL. As entradas válidas são AGREGADOS, padrão, função, LOGICAL FILE NAME, procedimento, fila, regra, SEQUÊNCIA, sinônimo, tabela, TABLE_TYPE, tipo, exibição, XML SCHEMA COLLECTION e NULL.    
- [ @level1name=] {'*level1_object_name*'}  
- É o nome do tipo de objeto de nível 1 especificado. *level1_object_name* está **sysname**, com um padrão NULL.  
+ [ @level1type= ] {'*level1_object_type*'}  
+ É o tipo de objeto de nível 1. *level1_object_type* é **varchar (128)**, com um padrão de NULL. As entradas válidas são AGREGAção, padrão, função, nome de arquivo lógico, procedimento, fila, regra, sequência, sinônimo, tabela, TABLE_TYPE, tipo, exibição, coleção de esquemas XML e nulo.    
+ [ @level1name= ] {'*level1_object_name*'}  
+ É o nome do tipo de objeto de nível 1 especificado. *level1_object_name* é **sysname**, com um padrão de NULL.  
   
- [ @level2type=] {'*level2_object_type*'}  
- É o tipo de objeto de nível 2. *level2_object_type* está **varchar (128)** , com um padrão NULL. As entradas válidas são COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
+ [ @level2type= ] {'*level2_object_type*'}  
+ É o tipo de objeto de nível 2. *level2_object_type* é **varchar (128)**, com um padrão de NULL. As entradas válidas são COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
   
- [ @level2name=] {'*level2_object_name*'}  
- É o nome do tipo de objeto de nível 2 especificado. *level2_object_name* está **sysname**, com um padrão NULL.  
+ [ @level2name= ] {'*level2_object_name*'}  
+ É o nome do tipo de objeto de nível 2 especificado. *level2_object_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Comentários  
- Para especificar as propriedades estendidas, os objetos em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados são classificados em três níveis: 0, 1 e 2. O nível 0 é o nível mais alto e está definido como objetos que estão contidos no escopo do banco de dados. Os objetos de nível 1 estão contidos em um esquema ou escopo de usuário e os objetos de nível 2 estão contidos pelos objetos de nível 1. As propriedades estendidas podem ser definidas para os objetos em qualquer um desses níveis.  
+ Para especificar as propriedades estendidas, os objetos em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são classificados em três níveis: 0, 1 e 2. O nível 0 é o nível mais alto e está definido como objetos que estão contidos no escopo do banco de dados. Os objetos de nível 1 estão contidos em um esquema ou escopo de usuário e os objetos de nível 2 estão contidos pelos objetos de nível 1. As propriedades estendidas podem ser definidas para os objetos em qualquer um desses níveis.  
   
  As referências a um objeto de um nível precisam ser qualificadas com os nomes dos objetos de nível superior que as possua ou contenha. Por exemplo, ao adicionar uma propriedade estendida à coluna de uma tabela (nível 2), é necessário também especificar o nome da tabela (nível 1) que contém a coluna e o esquema (nível 0) que contém a tabela.  
   
@@ -96,19 +96,19 @@ sp_addextendedproperty
  As propriedades estendidas não são permitidas em tabelas com otimização de memória.  
   
 ## <a name="replicating-extended-properties"></a>Replicando propriedades estendidas  
- As propriedades estendidas são replicadas apenas na sincronização inicial entre o Editor e o Assinante. Se você adicionar ou modificar uma propriedade estendida depois da sincronização inicial, a alteração não será replicada. Para obter mais informações sobre como replicar objetos de banco de dados, consulte [publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+ As propriedades estendidas são replicadas apenas na sincronização inicial entre o Editor e o Assinante. Se você adicionar ou modificar uma propriedade estendida depois da sincronização inicial, a alteração não será replicada. Para obter mais informações sobre como replicar objetos de banco de [dados, consulte Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
-## <a name="schema-vs-user"></a>Esquema x. User  
- Não recomendamos a especificação de USER como um tipo de nível 0 ao aplicar uma propriedade estendida a um objeto de banco de dados, pois poderá criar ambiguidade na resolução de nome. Por exemplo, suponha que o usuário Mary seja proprietário dois esquemas (Mary e MySchema) e esses esquemas contenham ambos uma tabela chamada MyTable. Se Mary adicionar uma propriedade estendida à tabela MyTable e especifica  **@level0type = n'User'** ,  **@level0name = Mary**, não ficará claro à qual tabela a propriedade estendida é aplicada. Para manter compatibilidade com versões anteriores, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicará a propriedade à tabela contida no esquema chamado Mary.  
+## <a name="schema-vs-user"></a>Esquema x  Usuário  
+ Não recomendamos a especificação de USER como um tipo de nível 0 ao aplicar uma propriedade estendida a um objeto de banco de dados, pois poderá criar ambiguidade na resolução de nome. Por exemplo, imagine que o usuário Mary seja proprietário dois esquemas (Mary e MySchema) e esses dois esquemas contenham uma tabela chamada MyTable. Se Mary adicionar uma propriedade estendida à tabela MyTable e especificar ** @level0type = N'USER '**, ** @level0name = Mary**, não será claro para qual tabela a propriedade estendida será aplicada. Para manter compatibilidade com versões anteriores, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicará a propriedade à tabela contida no esquema chamado Mary.  
   
 ## <a name="permissions"></a>Permissões  
- Membros de db_owner e db_ddladmin banco de dados fixa podem adicionar propriedades estendidas a qualquer objeto com a seguinte exceção: db_ddladmin não pode adicionar propriedades ao próprio banco de dados ou a usuários ou funções.  
+ Os membros das funções de banco de dados fixa db_owner e db_ddladmin podem adicionar propriedades estendidas a qualquer objeto com a seguinte exceção: db_ddladmin não pode adicionar propriedades ao banco de dados em si ou a usuários ou funções.  
   
  Os usuários podem adicionar propriedades estendidas a objetos que possuam ou para os quais tenham permissões ALTER ou CONTROL.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-adding-an-extended-property-to-a-database"></a>A. Adicionando uma propriedade estendida a um banco de dados  
+### <a name="a-adding-an-extended-property-to-a-database"></a>a. Adicionando uma propriedade estendida a um banco de dados  
  O exemplo a seguir adiciona o nome da propriedade `'Caption'` com um valor de `'AdventureWorks2012 Sample OLTP Database'` ao banco de dados de exemplo `AdventureWorks2012` .  
   
 ```  
@@ -235,10 +235,10 @@ EXEC sys.sp_addextendedproperty
 @level0name = N'CustomApp';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys. fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropextendedproperty](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_updateextendedproperty](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   
   

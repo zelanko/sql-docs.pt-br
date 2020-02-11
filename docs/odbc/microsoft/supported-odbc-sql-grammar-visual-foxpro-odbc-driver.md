@@ -1,5 +1,5 @@
 ---
-title: Suporte para a gramática SQL ODBC (Driver ODBC do Visual FoxPro) | Microsoft Docs
+title: Gramática SQL ODBC com suporte (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,29 +19,29 @@ ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 535f2feaf17d2060c1c65e7aba17951bb3339a5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68080064"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Gramática SQL do ODBC com suporte (Driver ODBC do Visual FoxPro)
-O Driver ODBC do Microsoft Visual FoxPro suporta o seguinte:  
+O driver ODBC do Microsoft Visual FoxPro oferece suporte ao seguinte:  
   
--   Todas as instruções SQL e cláusulas na gramática SQL mínima do ODBC  
+-   Todas as instruções e cláusulas SQL na gramática SQL mínima do ODBC  
   
--   Uma instrução SQL adicional do núcleo ODBC gramática SQL  
+-   Uma instrução SQL adicional da gramática SQL principal do ODBC  
   
- A tabela a seguir lista os itens que têm suportados no driver, por nível de gramática de SQL ODBC.  
+ A tabela a seguir lista os itens com suporte pelo driver, pelo nível de gramática SQL do ODBC.  
   
 |Nível|Elementos|Item|  
 |-----------|--------------|----------|  
-|Mínimo|DDL (linguagem de definição de dados)|CREATE TABLE e DROP TABLE|  
-||DML (linguagem de manipulação de dados)|Selecionar, inserir, atualizar e excluir|  
-||Expressões|Simples (como um > B + C)|  
+|Mínimo|DDL (Linguagem de Definição de Dados)|CREATE TABLE e DROP TABLE|  
+||DML (Linguagem de Manipulação de Dados)|SELECIONAR, inserir, atualizar e excluir|  
+||Expressões|Simples (como>B + C)|  
 ||Tipos de dados|CHAR, VARCHAR ou LONG VARCHAR|  
   
- Além da gramática SQL ODBC com suporte, o Driver de ODBC do Visual FoxPro oferece suporte a sintaxe de linguagem nativa do Visual FoxPro completa para os seguintes comandos do Visual FoxPro:  
+ Além da gramática SQL ODBC com suporte, o driver ODBC do Visual FoxPro dá suporte à sintaxe de linguagem nativa do Visual FoxPro completa para os seguintes comandos do Visual FoxPro:  
   
  [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   

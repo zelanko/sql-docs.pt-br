@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882334"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Adicionar e remover artigos de publicações existentes
@@ -39,7 +39,7 @@ ms.locfileid: "73882334"
   
     -   [Adicionar e remover artigos em uma publicação &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
   
-    -   [Definir um Artigo](define-an-article.md)  
+    -   [Defina um Artigo](define-an-article.md)  
   
 2.  Após adicionar um artigo a uma publicação, é necessário criar um novo instantâneo para a publicação (e todas as partições se for uma publicação de mesclagem com filtros com parâmetros). O Agente de Distribuição ou o Agente de Mesclagem então copiará o esquema e os dados para o novo artigo para o Assinante (ele não reinicializa a publicação inteira).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73882334"
   
  Como observado anteriormente, em alguns casos, descartar um artigo exige descartar assinaturas, recriá-las e, então, sincronizá-las. Para obter mais informações, consulte [Assinar publicações](../subscribe-to-publications.md) e [Sincronizar dados](../synchronize-data.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)   
  [Reinicializar as assinaturas](../reinitialize-subscriptions.md)   
  [Fazer alterações de esquema em bancos de dados de publicação](make-schema-changes-on-publication-databases.md)  

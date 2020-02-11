@@ -16,10 +16,10 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056770"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "74056770"
 
   Define uma opção de banco de dados de replicação para o banco de dados especificado. Esse procedimento armazenado é executado no Publicador ou no Assinante, em qualquer banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,27 +41,27 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'` é o banco de dados para o qual a opção de banco de dados de replicação está sendo definida. *db_name* é **sysname**, sem padrão.  
+`[ @dbname = ] 'dbname'`É o banco de dados para o qual a opção de banco de dados de replicação está sendo definida. *db_name* é **sysname**, sem padrão.  
   
-`[ @optname = ] 'optname'` é a opção de banco de dados de replicação a ser habilitada ou desabilitada. *OptName* é **sysname**e pode ser um desses valores.  
+`[ @optname = ] 'optname'`É a opção de banco de dados de replicação para habilitar ou desabilitar. *OptName* é **sysname**e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**publicação de mesclagem**|O banco de dados pode ser usado para publicações de mesclagem.|  
 |**publicou**|O banco de dados pode ser usado para outros tipos de publicação.|  
-|**Faça**|O banco de dados é um banco de dados de assinatura.|  
-|**sincronizar com backup**|O banco de dados está habilitado para backup coordenado. Para obter mais informações, consulte [habilitar backups coordenados para programação &#40;&#41;Transact-SQL de replicação de replicação transacional](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
+|**assinar**|O banco de dados é um banco de dados de assinatura.|  
+|**sync with backup**|O banco de dados está habilitado para backup coordenado. Para obter mais informações, consulte [habilitar backups coordenados para replicação transacional &#40;Programação Transact-SQL de replicação&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'` é habilitar ou desabilitar a opção de banco de dados de replicação fornecida. o *valor* é **sysname**e pode ser **true** ou **false**. Quando esse valor é **false** e *OptName* é **publicação de mesclagem**, as assinaturas para o banco de dados publicado de mesclagem também são descartadas.  
+`[ @value = ] 'value'`É habilitar ou desabilitar a opção de banco de dados de replicação fornecida. o *valor* é **sysname**e pode ser **true** ou **false**. Quando esse valor é **false** e *OptName* é **publicação de mesclagem**, as assinaturas para o banco de dados publicado de mesclagem também são descartadas.  
   
-`[ @ignore_distributor = ] ignore_distributor` indica se este procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**, o que significa que o distribuidor deve estar conectado e atualizado com o novo status do banco de dados de publicação. O valor **1** deve ser especificado somente se o distribuidor estiver inacessível e **sp_replicationdboption** estiver sendo usado para desabilitar a publicação.  
+`[ @ignore_distributor = ] ignore_distributor`Indica se este procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**, o que significa que o distribuidor deve estar conectado e atualizado com o novo status do banco de dados de publicação. O valor **1** deve ser especificado somente se o distribuidor estiver inacessível e **sp_replicationdboption** estiver sendo usado para desabilitar a publicação.  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_replicationdboption** é usado na replicação de instantâneos, na replicação transacional e na replicação de mesclagem.  
   
  Esse procedimento cria ou descarta tabelas do sistema de replicação específicas, contas de segurança, e assim por diante, que depende das opções fornecidas. Define o **is_published** correspondente (replicação transacational ou de instantâneo), **is_merge_published** (replicação de mesclagem) ou **is_distributor** bits na tabela **mestre. bancos de dados** do sistema e cria as tabelas de sistema necessárias.  
@@ -71,10 +71,10 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_replicationdboption**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Criar uma publicação](../../relational-databases/replication/publish/create-a-publication.md)   
- [Excluir uma  de publicação](../../relational-databases/replication/publish/delete-a-publication.md)  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Excluir uma publicação](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Desabilitar a publicação e a distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

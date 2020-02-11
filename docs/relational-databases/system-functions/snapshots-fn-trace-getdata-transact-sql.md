@@ -17,18 +17,18 @@ ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a85a911d4c9f5cd4565e9839f3be44a4e2366079
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067750"
 ---
-# <a name="snapshotsfntracegetdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
+# <a name="snapshotsfn_trace_getdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Essa função retorna todos os eventos capturados para o rastreamento especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,24 +39,24 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 ## <a name="arguments"></a>Argumentos  
  *trace_info_id*  
- O identificador exclusivo para a chave primária na tabela trace_info em dados de gerenciamento do banco de dados de warehouse. *trace_info_id* está **int**.  
+ O identificador exclusivo para a chave primária na tabela de instantâneos. trace_info no banco de dados de data warehouse de gerenciamento. *trace_info_id* é **int**.  
   
  *start_time*  
- A hora em que o rastreamento foi iniciado. *start_time* está **datetime**.  
+ A hora em que o rastreamento foi iniciado. *start_time* é **DateTime**.  
   
  *end_time*  
- A hora em que o rastreamento foi terminado. *end_time* está **datetime**.  
+ A hora em que o rastreamento foi terminado. *end_time* é **DateTime**.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|\<Todas as colunas de rastreamento >|\<Varia >|Os dados de rastreamento da tabela snapshots.trace_data no banco de dados de data warehouse de gerenciamento.<br /><br /> Uma lista das colunas para o rastreamento especificado pode ser obtida usando a consulta a seguir:<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **Observação:** As colunas que são retornadas pela função snapshots fn_trace_gettable correspondem aos valores na coluna Nome trace_columns do sistema. A única diferença é que a coluna GroupID não é retornada pela função.|  
+|\<Todas as colunas de rastreamento>|\<Varia>|Os dados de rastreamento da tabela snapshots.trace_data no banco de dados de data warehouse de gerenciamento.<br /><br /> Uma lista das colunas do rastreamento especificado pode ser obtida usando a seguinte consulta:<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **Observação:** As colunas retornadas pela função instantâneos. fn_trace_gettable correspondem aos valores na coluna nome na exibição do sistema sys. trace_columns. A única diferença é que a coluna GroupID não é retornada pela função.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissão SELECT para mdw_reader.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
   
   

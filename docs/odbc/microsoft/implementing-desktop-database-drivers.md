@@ -1,5 +1,5 @@
 ---
-title: Implementando os Drivers de banco de dados da área de trabalho | Microsoft Docs
+title: Implementando drivers de banco de dados de desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952353"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementar os drivers de banco de dados de área de trabalho
-Instruções e Observações técnicas sobre como implementar e configurar os Drivers de banco de dados de área de trabalho do Microsoft ODBC podem ser encontradas na Ajuda online do administrador de fonte de dados ODBC. Esse arquivo pode ser acessado durante rotinas de instalação do driver do [administrador de fonte de dados do Microsoft ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
+As instruções e as notas técnicas sobre como implementar e configurar o Microsoft ODBC Desktop Database Drivers podem ser encontradas na ajuda online do administrador de fonte de dados ODBC. Esse arquivo pode ser acessado durante rotinas de instalação de driver do [administrador de fonte de dados ODBC da Microsoft](../../odbc/admin/odbc-data-source-administrator.md).  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
--   [Arquivos a serem usados com os drivers de banco de dados de área de trabalho](../../odbc/microsoft/files-to-use-with-the-desktop-database-drivers.md)  
+-   [Arquivos a usar com os drivers de banco de dados de área de trabalho](../../odbc/microsoft/files-to-use-with-the-desktop-database-drivers.md)  
   
 -   [Arquivos de componentes ODBC](../../odbc/microsoft/odbc-component-files.md)  
   
--   [Requisitos de Hardware e Software](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
+-   [Requisitos de hardware e software](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [Descritores com Drivers de banco de dados da área de trabalho](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [Descritores com drivers de banco de dados de desktop](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [Diagnóstico para drivers de banco de dados de área de trabalho](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   

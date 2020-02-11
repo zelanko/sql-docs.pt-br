@@ -1,5 +1,5 @@
 ---
-title: Count (conjunto) (MDX) | Microsoft Docs
+title: Contagem (definida) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aac2f72cc8cd91e1964fd7734b858be8215cfdd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047288"
 ---
 # <a name="count-set-mdx"></a>Count (Conjunto) (MDX)
@@ -36,12 +36,12 @@ Set_Expression.Count
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
 ## <a name="remarks"></a>Comentários  
- O **Count (conjunto)** função inclui ou exclui células vazias, dependendo da sintaxe usada. Se a sintaxe padrão for usada, células vazias podem ser excluídas ou incluídas usando o **EXCLUDEEMPTY** ou **INCLUDEEMPTY** sinalizadores, respectivamente. Se a sintaxe alternativa for usada, a função sempre incluirá células vazias.  
+ A função **Count (Set)** inclui ou exclui células vazias, dependendo da sintaxe usada. Se a sintaxe padrão for usada, as células vazias poderão ser excluídas ou incluídas usando os sinalizadores **EXCLUDEEMPTY** ou **INCLUDEEMPTY** , respectivamente. Se a sintaxe alternativa for usada, a função sempre incluirá células vazias.  
   
- Para excluir células vazias na contagem de um conjunto, use a sintaxe padrão e opcionais **EXCLUDEEMPTY** sinalizador.  
+ Para excluir células vazias na contagem de um conjunto, use a sintaxe padrão e o sinalizador **EXCLUDEEMPTY** opcional.  
   
 > [!NOTE]  
->  O **Count (conjunto)** função conta células vazias por padrão. Em contraste, o **contagem** função no OLE DB que conta um conjunto exclui células vazias por padrão.  
+>  A função **Count (Set)** conta as células vazias por padrão. Por outro lado, a função **Count** em OLE DB que conta um conjunto exclui células vazias por padrão.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir conta o número de células no conjunto de membros que consistem nos filhos da hierarquia de atributo Nome do Modelo na dimensão Produto.  
@@ -53,14 +53,14 @@ SELECT Measures.X ON 0
 FROM [Adventure Works]  
 ```  
   
- O exemplo a seguir conta o número de produtos na dimensão produto usando o **DrilldownLevel** função em conjunto com o **contagem** função.  
+ O exemplo a seguir conta o número de produtos na dimensão produto usando a função **DrilldownLevel** em conjunto com a função **Count** .  
   
 ```  
 Count(DrilldownLevel (   
    [Product].[Product].[Product]))  
 ```  
   
- O exemplo a seguir retorna os revendedores com queda de vendas em comparação ao trimestre do calendário anterior, usando o **contagem** função em conjunto com o **filtro** função e um número de outros funções. Essa consulta usa a **agregação** função para dar suporte a seleção de vários membros de geografia, como a seleção em uma lista suspensa em um aplicativo cliente.  
+ O exemplo a seguir retorna esses revendedores com vendas decrescentes em comparação com o trimestre do calendário anterior, usando a função **Count** em conjunto com a função **Filter** e uma série de outras funções. Essa consulta usa a função de **agregação** para dar suporte à seleção de vários membros de Geografia, como para seleção de dentro de uma lista suspensa em um aplicativo cliente.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -90,17 +90,17 @@ WHERE ([Geography].[State-Province].x,
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Contagem de &#40;dimensão&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
- [Contagem de &#40;níveis de hierarquia&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Contagem de &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [Aggregate &#40;MDX&#41;](../mdx/aggregate-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Contagem de &#40;de dimensões&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
+ [Contar &#40;níveis de hierarquia&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [Contar &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
+ [DrilldownLevel&#41;MDX &#40;](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers&#41;MDX &#40;](../mdx/addcalculatedmembers-mdx.md)   
+ [Hierarquiar &#40;&#41;MDX](../mdx/hierarchize-mdx.md)   
+ [Propriedades &#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [&#41;&#40;MDX de agregação](../mdx/aggregate-mdx.md)   
+ [Filtrar &#40;&#41;MDX](../mdx/filter-mdx.md)   
+ [PrevMember&#41;MDX &#40;](../mdx/prevmember-mdx.md)   
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

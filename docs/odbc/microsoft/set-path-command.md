@@ -13,10 +13,10 @@ ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063644"
 ---
 # <a name="set-path-command"></a>Comando SET PATH
@@ -30,27 +30,27 @@ SET PATH TO [Path]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- A [ *caminho*]  
- Especifica os diretórios que você deseja que o Visual FoxPro para pesquisar. Use vírgulas ou ponto e vírgula para separar os diretórios.  
+ PARA [ *caminho*]  
+ Especifica os diretórios que você deseja que o Visual FoxPro pesquise. Use vírgulas ou ponto e vírgula para separar os diretórios.  
   
 ## <a name="remarks"></a>Comentários  
- Definir caminho permite que você especifique caminhos de pesquisa para outros programas do Visual FoxPro que podem ser chamados dentro de procedimentos armazenados. Defina o caminho não será alterado para o caminho da fonte de dados que você especificou para a conexão.  
+ SET PATH permite especificar caminhos de pesquisa para outros programas do Visual FoxPro que podem ser chamados em procedimentos armazenados. SET PATH não alterará o caminho da fonte de dados que você especificou para a conexão.  
   
- Emitir Definir caminho para sem *caminho* para restaurar o caminho para o diretório ou pasta padrão.  
+ Problema defina o caminho para sem *caminho* para restaurar o caminho para o diretório ou pasta padrão.  
   
-## <a name="driver-remarks"></a>Comentários de driver  
- Se você emitir o caminho definido em um procedimento armazenado, ele será ignorado pelos comandos e funções a seguir:  
+## <a name="driver-remarks"></a>Comentários do driver  
+ Se você emitir o caminho definido em um procedimento armazenado, ele será ignorado pelas seguintes funções e comandos:  
   
--   Funções de catálogo, como [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) e [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) ignorará o novo caminho e continuar referenciar o caminho especificado pela fonte de dados no [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) ou [ SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
+-   As funções de catálogo, como [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) e [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) , ignorarão o novo caminho e continuarão referenciando o caminho especificado pela fonte de dados em [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) ou [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
   
--   Ignorará o novo caminho e continuar referenciar o caminho especificado pela fonte de dados em comandos como SELECT, INSERT, UPDATE, DELETE e CREATE TABLE **SQLPrepare** ou **SQLExecDirect**.  
+-   Comandos como selecionar, inserir, atualizar, excluir e CREATE TABLE ignorarão o novo caminho e continuarão referenciando o caminho especificado pela fonte de dados em **SQLPrepare** ou **SQLExecDirect**.  
   
- Se você emite o caminho definido em um procedimento armazenado e, posteriormente, não defina o caminho para seu estado original, outras conexões com o banco de dados usará o novo caminho (porque o caminho definido não é vinculado a sessões de dados).  
+ Se você emitir o caminho definido em um procedimento armazenado e não, subsequentemente, definir o caminho de volta para seu estado original, outras conexões com o banco de dados usarão o novo caminho (porque SET PATH não tem o escopo de sessões de data).  
   
  Se você quiser criar, selecionar ou atualizar tabelas em um diretório diferente daquele especificado pela fonte de dados, especifique o caminho completo do arquivo com o comando.  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo de instalação do ODBC do Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
- [SQLColumns (Driver ODBC do Visual FoxPro)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
- [SQLDriverConnect (Driver ODBC do Visual FoxPro)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo configuração do ODBC do Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
+ [SQLColumns (driver ODBC do Visual FoxPro)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
+ [SQLDriverConnect (driver ODBC do Visual FoxPro)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
  [SQLTables (Driver ODBC do Visual FoxPro)](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)

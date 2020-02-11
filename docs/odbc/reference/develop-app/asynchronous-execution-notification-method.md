@@ -11,53 +11,53 @@ ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66b806b698164b306eee4dc7d4c48fbe7835adae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077059"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Execução assíncrona (método de notificação)
-ODBC permite que a execução assíncrona da conexão e as operações de instrução. Um thread de aplicativo pode chamar uma função ODBC no modo assíncrono e a função pode retornar antes da operação for concluída, permitindo que o thread do aplicativo realizar outras tarefas. No SDK do Windows 7, para as operações de conexão, ou instrução assíncrona um aplicativo determinado que a operação assíncrona foi concluída usando o método de sondagem. Para obter mais informações, consulte [execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partir do SDK do Windows 8, você pode determinar que uma operação assíncrona foi concluída usando o método de notificação.  
+O ODBC permite a execução assíncrona de operações de conexão e instrução. Um thread de aplicativo pode chamar uma função ODBC no modo assíncrono e a função pode retornar antes que a operação seja concluída, permitindo que o thread do aplicativo execute outras tarefas. No SDK do Windows 7, para instruções assíncronas ou operações de conexão, um aplicativo determinou que a operação assíncrona foi concluída usando o método de sondagem. Para obter mais informações, consulte [execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partir do SDK do Windows 8, você pode determinar que uma operação assíncrona seja concluída usando o método de notificação.  
   
- O método de sondagem, os aplicativos precisam chamar a função assíncrona cada vez que ele deseja que o status da operação. O método de notificação é semelhante ao retorno de chamada e espera no ADO.NET. No entanto, o ODBC, usa os eventos do Win32 como o objeto de notificação.  
+ No método de sondagem, os aplicativos precisam chamar a função assíncrona cada vez que quiserem o status da operação. O método de notificação é semelhante ao retorno de chamada e aguardar em ADO.NET. O ODBC, no entanto, usa eventos Win32 como o objeto de notificação.  
   
- A biblioteca de cursores ODBC e notificação assíncrona de ODBC não podem ser usados ao mesmo tempo. Configuração de ambos os atributos retornará um erro com SQLSTATE S1119 (biblioteca de cursores e notificação assíncrona não podem ser habilitado ao mesmo tempo).  
+ A biblioteca de cursores ODBC e a notificação assíncrona ODBC não podem ser usadas ao mesmo tempo. Definir ambos os atributos retornará um erro com SQLSTATE S1119 (a biblioteca de cursores e a notificação assíncrona não podem ser habilitadas ao mesmo tempo).  
   
- Ver [notificação de conclusão de função assíncrona](../../../odbc/reference/develop-driver/notification-of-asynchronous-function-completion.md) para obter informações para desenvolvedores de driver.  
+ Consulte [notificação de conclusão de função assíncrona](../../../odbc/reference/develop-driver/notification-of-asynchronous-function-completion.md) para obter informações para desenvolvedores de driver.  
   
 > [!NOTE]  
->  Não há suporte para o método de notificação com a biblioteca de cursores. Um aplicativo receberá a mensagem de erro se tentar habilitar a biblioteca de cursores por meio do SQLSetConnectAttr, quando o método de notificação está habilitado.  
+>  Não há suporte para o método de notificação com a biblioteca de cursores. Um aplicativo receberá uma mensagem de erro se tentar habilitar a biblioteca de cursores via SQLSetConnectAttr, quando o método de notificação estiver habilitado.  
   
 ## <a name="overview"></a>Visão geral  
- Quando uma função ODBC é chamada no modo assíncrono, o controle é retornado ao aplicativo de chamada imediatamente com o código de retorno SQL_STILL_EXECUTING. O aplicativo repetidamente deve sondar a função até ele retornar algo diferente de SQL_STILL_EXECUTING. O loop de sondagem aumenta a utilização de CPU, fazendo com que o desempenho insatisfatório em muitos cenários assíncronos.  
+ Quando uma função ODBC é chamada no modo assíncrono, o controle é retornado para o aplicativo de chamada imediatamente com o código de retorno SQL_STILL_EXECUTING. O aplicativo deve sondar a função repetidamente até que ela retorne algo diferente de SQL_STILL_EXECUTING. O loop de sondagem aumenta a utilização da CPU, causando baixo desempenho em muitos cenários assíncronos.  
   
- Sempre que o modelo de notificação é usado, o modelo de sondagem está desabilitado. Aplicativos não devem chamar a função original novamente. Chame [função SQLCompleteAsync](../../../odbc/reference/syntax/sqlcompleteasync-function.md) para concluir a operação assíncrona. Se um aplicativo chama a função original novamente antes da operação assíncrona for concluída, a chamada retornará SQL_ERROR com SQLSTATE IM017 (sondagem está desabilitada no modo de notificação assíncrona).  
+ Sempre que o modelo de notificação for usado, o modelo de sondagem será desabilitado. Os aplicativos não devem chamar a função original novamente. Chame a [função SQLCompleteAsync](../../../odbc/reference/syntax/sqlcompleteasync-function.md) para concluir a operação assíncrona. Se um aplicativo chamar a função original novamente antes que a operação assíncrona seja concluída, a chamada retornará SQL_ERROR com SQLSTATE IM017 (a sondagem será desabilitada no modo de notificação assíncrona).  
   
- Ao usar o modelo de notificação, o aplicativo pode chamar **SQLCancel** ou **SQLCancelHandle** para cancelar uma operação de instrução ou a conexão. Se a solicitação de cancelamento for bem-sucedida, o ODBC retornará SQL_SUCCESS. Esta mensagem não indica que a função, na verdade, foi cancelada; ele indica que a solicitação de cancelamento foi processada. Se a função, na verdade, é cancelada é dependente do driver e dependente da fonte de dados. Quando uma operação é cancelada, o Gerenciador de Driver ainda sinalizará o evento. O Gerenciador de Driver retornará SQL_ERROR em buffer o código de retorno e o estado é SQLSTATE HY008 (operação cancelada) para indicar o cancelamento foi bem-sucedido. Se a função concluir seu processamento normal, o Gerenciador de Driver retorna SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO.  
+ Ao usar o modelo de notificação, o aplicativo pode chamar **SQLCancel** ou **SQLCancelHandle** para cancelar uma operação de instrução ou de conexão. Se a solicitação de cancelamento for bem-sucedida, o ODBC retornará SQL_SUCCESS. Essa mensagem não indica que a função foi realmente cancelada; Isso indica que a solicitação de cancelamento foi processada. Se a função realmente cancelada é dependente de driver e depende da fonte de dados. Quando uma operação é cancelada, o Gerenciador de driver ainda sinalizará o evento. O Gerenciador de driver retorna SQL_ERROR no buffer de código de retorno e o estado é SQLSTATE HY008 (operação cancelada) para indicar que o cancelamento foi bem-sucedido. Se a função tiver concluído seu processamento normal, o Gerenciador de driver retornará SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO.  
   
 ### <a name="downlevel-behavior"></a>Comportamento de nível inferior  
- A versão do Gerenciador de Driver ODBC que dão suporte a essa notificação em completa é 3.81 ODBC.  
+ A versão do Gerenciador de driver ODBC que dá suporte a essa notificação na conclusão é ODBC 3,81.  
   
-|Versão do aplicativo ODBC|Versão do Gerenciador de driver|Versão do driver|Comportamento|  
+|Versão do ODBC do aplicativo|Versão do Gerenciador de driver|Versão do driver|Comportamento|  
 |------------------------------|----------------------------|--------------------|--------------|  
-|Novo aplicativo de qualquer versão do ODBC|ODBC 3.81|ODBC 3,80 Driver|Aplicativo pode usar esse recurso se o driver dá suporte a esse recurso, caso contrário, o Gerenciador de Driver apresentará um erro.|  
-|Novo aplicativo de qualquer versão do ODBC|ODBC 3.81|Driver ODBC 3,80 pré-|O Gerenciador de Driver apresentará um erro se o driver não dá suporte a esse recurso.|  
-|Novo aplicativo de qualquer versão do ODBC|Pré-ODBC 3.81|Any|Quando o aplicativo usa esse recurso, um Gerenciador de Driver antigo classificará os novos atributos como atributos específicos do driver e o driver deve a um erro. Um novo Gerenciador de Driver não passa esses atributos para o driver.|  
+|Novo aplicativo de qualquer versão do ODBC|ODBC 3,81|Driver ODBC 3,80|O aplicativo poderá usar esse recurso se o driver oferecer suporte a esse recurso, caso contrário, o Gerenciador de driver apresentará um erro.|  
+|Novo aplicativo de qualquer versão do ODBC|ODBC 3,81|Driver anterior ao ODBC 3,80|O Gerenciador de driver apresentará um erro se o driver não oferecer suporte a esse recurso.|  
+|Novo aplicativo de qualquer versão do ODBC|Pré-ODBC 3,81|Qualquer|Quando o aplicativo usar esse recurso, um Gerenciador de driver antigo considerará os novos atributos como atributos específicos do driver e o driver deverá gerar um erro. Um novo Gerenciador de driver não passará esses atributos para o driver.|  
   
- Um aplicativo deve verificar a versão do Gerenciador de Driver antes de usar esse recurso. Caso contrário, se um driver mal escrito não faz erro e a versão do Gerenciador de Driver é pré 3.81 ODBC, o comportamento será indefinido.  
+ Um aplicativo deve verificar a versão do Gerenciador de driver antes de usar esse recurso. Caso contrário, se um driver mal escrito não tiver erro e a versão do Gerenciador de driver for pré-ODBC 3,81, o comportamento será indefinido.  
   
 ## <a name="use-cases"></a>Casos de uso  
- Esta seção mostra casos de uso para a execução assíncrona e o mecanismo de sondagem.  
+ Esta seção mostra casos de uso para execução assíncrona e o mecanismo de sondagem.  
   
 ### <a name="integrate-data-from-multiple-odbc-sources"></a>Integrar dados de várias fontes ODBC  
- Um aplicativo de integração de dados assincronamente busca dados de várias fontes de dados. Alguns dos dados são de fontes de dados remotos e alguns dados são de arquivos locais. O aplicativo não pode continuar até que as operações assíncronas sejam concluídas.  
+ Um aplicativo de integração de dados busca de forma assíncrona dados de várias fontes de dados. Alguns dos dados são de fontes de dados remotas e alguns dados são de arquivos locais. O aplicativo não pode continuar até que as operações assíncronas sejam concluídas.  
   
- Em vez de consultar repetidamente uma operação para determinar se ela for concluída, o aplicativo pode criar um objeto de evento e associá-la com um identificador de conexão ODBC ou um identificador de instrução ODBC. O aplicativo, em seguida, chama APIs de espera em vários objetos de evento (eventos ODBC e outros eventos do Windows) ou o objeto de um evento de sincronização do sistema operacional. ODBC sinalizará o objeto de evento quando a operação assíncrona correspondente do ODBC é concluída.  
+ Em vez de sondar repetidamente uma operação para determinar se ela está concluída, o aplicativo pode criar um objeto de evento e associá-lo a um identificador de conexão ODBC ou a um identificador de instrução ODBC. Em seguida, o aplicativo chama as APIs de sincronização do sistema operacional para aguardar um objeto de evento ou muitos objetos de evento (tanto eventos ODBC quanto outros eventos do Windows). O ODBC sinalizará o objeto de evento quando a operação assíncrona de ODBC correspondente for concluída.  
   
- No Windows, os objetos de evento Win32 serão usados e que fornecerá ao usuário um modelo de programação unificado. Os gerentes de driver em outras plataformas podem usar a implementação do objeto de evento específica para essas plataformas.  
+ No Windows, os objetos de evento do Win32 serão usados e fornecerão ao usuário um modelo de programação unificado. Os gerenciadores de driver em outras plataformas podem usar a implementação do objeto de evento específica para essas plataformas.  
   
- O exemplo de código a seguir demonstra o uso de conexão e notificação assíncrona de instrução:  
+ O exemplo de código a seguir demonstra o uso da notificação assíncrona de conexão e instrução:  
   
 ```  
 // This function opens NUMBER_OPERATIONS connections and executes one query on statement of each connection.  
@@ -295,8 +295,8 @@ Cleanup:
   
 ```  
   
-### <a name="determining-if-a-driver-supports-asynchronous-notification"></a>Determinando se um Driver dá suporte à notificação assíncrona  
- Um aplicativo ODBC pode determinar se um driver ODBC dá suporte à notificação assíncrona chamando [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md). O Gerenciador de Driver ODBC, consequentemente, chamará o **SQLGetInfo** do driver com SQL_ASYNC_NOTIFICATION.  
+### <a name="determining-if-a-driver-supports-asynchronous-notification"></a>Determinando se um driver dá suporte à notificação assíncrona  
+ Um aplicativo ODBC pode determinar se um driver ODBC dá suporte à notificação assíncrona chamando [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md). O Gerenciador de driver ODBC, consequentemente, chamará o **SQLGetInfo** do driver com SQL_ASYNC_NOTIFICATION.  
   
 ```  
 SQLUINTEGER InfoValue;  
@@ -321,31 +321,31 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
 }  
 ```  
   
-### <a name="associating-a-win32-event-handle-with-an-odbc-handle"></a>Associando um identificador de evento do Win32 com um identificador de ODBC  
- Aplicativos são responsáveis pela criação de objetos de evento do Win32 usando as funções do Win32 correspondentes. Um aplicativo pode associar um identificador de evento do Win32 com um identificador de conexão ODBC ou um identificador de instrução ODBC.  
+### <a name="associating-a-win32-event-handle-with-an-odbc-handle"></a>Associando um manipulador de eventos do Win32 a um identificador ODBC  
+ Os aplicativos são responsáveis pela criação de objetos de evento do Win32 usando as funções do Win32 correspondentes. Um aplicativo pode associar um identificador de evento do Win32 a um identificador de conexão ODBC ou a um identificador de instrução ODBC.  
   
- Atributos de Conexão SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE e SQL_ATTR_ASYNC_DBC_EVENT determinam se o ODBC é executado no modo assíncrono e se o ODBC habilita o modo de notificação para um identificador de conexão. Atributos de instrução SQL_ATTR_ASYNC_ENABLE e SQL_ATTR_ASYNC_STMT_EVENT determinam se o ODBC é executado no modo assíncrono e se o ODBC habilita o modo de notificação para um identificador de instrução.  
+ Os atributos de conexão SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE e SQL_ATTR_ASYNC_DBC_EVENT determinam se o ODBC é executado no modo assíncrono e se o ODBC habilita o modo de notificação para um identificador de conexão. Os atributos de instrução SQL_ATTR_ASYNC_ENABLE e SQL_ATTR_ASYNC_STMT_EVENT determinam se o ODBC é executado no modo assíncrono e se o ODBC habilita o modo de notificação para um identificador de instrução.  
   
-|SQL_ATTR_ASYNC_ENABLE ou SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT ou SQL_ATTR_ASYNC_DBC_EVENT|Modo|  
+|SQL_ATTR_ASYNC_ENABLE ou SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT ou SQL_ATTR_ASYNC_DBC_EVENT|Mode|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |Habilitar|não nulo|Notificação assíncrona|  
-|Habilitar|nulo|Sondagem assíncrono|  
-|Disable|any|Síncrona|  
+|Habilitar|nulo|Sondagem assíncrona|  
+|Desabilitar|qualquer|Síncrona|  
   
- Um aplicativo temporariamente pode desabilitar o modo de operação assíncrona. ODBC ignora valores de SQL_ATTR_ASYNC_DBC_EVENT se a operação assíncrona em nível de conexão está desabilitada. ODBC ignora valores de SQL_ATTR_ASYNC_STMT_EVENT se a operação assíncrona em nível de instrução estiver desabilitada.  
+ Um aplicativo pode desabilitar o modo de operação assíncrona temporal. O ODBC ignora valores de SQL_ATTR_ASYNC_DBC_EVENT se a operação assíncrona de nível de conexão estiver desabilitada. O ODBC ignora valores de SQL_ATTR_ASYNC_STMT_EVENT se a operação assíncrona de nível de instrução estiver desabilitada.  
   
  Chamada síncrona de **SQLSetStmtAttr** e **SQLSetConnectAttr**  
- -   **SQLSetConnectAttr** dá suporte a operações assíncronas, mas a invocação de **SQLSetConnectAttr** definir SQL_ATTR_ASYNC_DBC_EVENT sempre é síncrono.  
+ -   O **SQLSetConnectAttr** dá suporte a operações assíncronas, mas a invocação de **SQLSetConnectAttr** para definir SQL_ATTR_ASYNC_DBC_EVENT é sempre síncrona.  
   
--   **SQLSetStmtAttr** não oferece suporte a execução assíncrona.  
+-   **SQLSetStmtAttr** não oferece suporte à execução assíncrona.  
   
- Cenário de saída de erro  
- Quando **SQLSetConnectAttr** é chamado antes de fazer uma conexão, o Gerenciador de Driver não pode determinar qual driver a ser usado. Portanto, o Gerenciador de Driver retorna sucesso para **SQLSetConnectAttr** , mas o atributo não pode estar pronto para definir no driver. O Gerenciador de Driver definirá esses atributos quando o aplicativo chama uma função de conexão. O Gerenciador de Driver pode saída de erro porque o driver não oferece suporte a operações assíncronas.  
+ Cenário de erro  
+ Quando **SQLSetConnectAttr** é chamado antes de fazer uma conexão, o Gerenciador de driver não pode determinar qual driver usar. Portanto, o Gerenciador de driver retorna êxito para **SQLSetConnectAttr** , mas o atributo pode não estar pronto para ser definido no driver. O Gerenciador de driver definirá esses atributos quando o aplicativo chamar uma função de conexão. O Gerenciador de driver pode ter um erro, pois o driver não oferece suporte a operações assíncronas.  
   
  Herança de atributos de conexão  
- Geralmente, as declarações de uma conexão herdará os atributos de conexão. No entanto, o atributo SQL_ATTR_ASYNC_DBC_EVENT não é herdável e só afeta as operações de conexão.  
+ Normalmente, as instruções de uma conexão herdarão os atributos de conexão. No entanto, o atributo SQL_ATTR_ASYNC_DBC_EVENT não é herdável e só afeta as operações de conexão.  
   
- Para associar um identificador de eventos com um identificador de conexão ODBC, um aplicativo ODBC chama a API do ODBC **SQLSetConnectAttr** e especifica SQL_ATTR_ASYNC_DBC_EVENT como lidar com o atributo e o evento como o valor do atributo. O novo atributo ODBC SQL_ATTR_ASYNC_DBC_EVENT é do tipo SQL_IS_POINTER.  
+ Para associar um identificador de evento a um identificador de conexão ODBC, um aplicativo ODBC chama a API ODBC **SQLSetConnectAttr** e especifica SQL_ATTR_ASYNC_DBC_EVENT como o atributo e o identificador de evento como o valor do atributo. O novo atributo ODBC SQL_ATTR_ASYNC_DBC_EVENT é do tipo SQL_IS_POINTER.  
   
 ```  
 HANDLE hEvent;  
@@ -357,7 +357,7 @@ hEvent = CreateEvent(
             );  
 ```  
   
- Normalmente, os aplicativos criam objetos de evento de redefinição automática. ODBC não redefinirão o objeto de evento. Aplicativos devem fazer se o objeto não está no estado sinalizado antes de chamar qualquer função ODBC assíncrona.  
+ Normalmente, os aplicativos criam objetos de evento de redefinição automática. O ODBC não redefinirá o objeto de evento. Os aplicativos devem garantir que o objeto não esteja no estado sinalizado antes de chamar qualquer função ODBC assíncrona.  
   
 ```  
 SQLRETURN retcode;  
@@ -367,17 +367,17 @@ retcode = SQLSetConnectAttr ( hDBC,
                               SQL_IS_POINTER);          // Length Indicator  
 ```  
   
- SQL_ATTR_ASYNC_DBC_EVENT é um atributo de somente do Gerenciador de Driver que não será definido no driver.  
+ SQL_ATTR_ASYNC_DBC_EVENT é um atributo somente do Gerenciador de driver que não será definido no driver.  
   
- O valor padrão de SQL_ATTR_ASYNC_DBC_EVENT é NULL. Se o driver não oferece suporte a notificação assíncrona, obter ou definir SQL_ATTR_ASYNC_DBC_EVENT retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido).  
+ O valor padrão de SQL_ATTR_ASYNC_DBC_EVENT é NULL. Se o driver não oferecer suporte à notificação assíncrona, obter ou definir SQL_ATTR_ASYNC_DBC_EVENT retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido).  
   
- Se o último valor SQL_ATTR_ASYNC_DBC_EVENT definida em um identificador de conexão ODBC não for NULL, e o aplicativo habilitado modo assíncrono, definindo o atributo SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE com SQL_ASYNC_DBC_ENABLE_ON, chamar qualquer conexão de ODBC função que dá suporte ao modo assíncrono receberá uma notificação de conclusão. Se o último valor SQL_ATTR_ASYNC_DBC_EVENT definido em um identificador de conexão ODBC for NULL, ODBC não enviará o aplicativo qualquer notificação, independentemente se o modo assíncrono está habilitado.  
+ Se o último valor de SQL_ATTR_ASYNC_DBC_EVENT definido em um identificador de conexão ODBC não for nulo e o modo assíncrono habilitado para aplicativo Configurando o atributo SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE com SQL_ASYNC_DBC_ENABLE_ON, chamando qualquer conexão ODBC a função que dá suporte ao modo assíncrono receberá uma notificação de conclusão. Se o último valor de SQL_ATTR_ASYNC_DBC_EVENT definido em um identificador de conexão ODBC for nulo, o ODBC não enviará o aplicativo a qualquer notificação, independentemente se o modo assíncrono estiver habilitado.  
   
  Um aplicativo pode definir SQL_ATTR_ASYNC_DBC_EVENT antes ou depois de definir o atributo SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE.  
   
- Aplicativos podem definir o atributo SQL_ATTR_ASYNC_DBC_EVENT em um identificador de conexão ODBC antes de chamar uma função de conexão (**SQLConnect**, **SQLBrowseConnect**, ou  **SQLDriverConnect**). Como o Gerenciador de Driver ODBC não sabe qual driver ODBC, o aplicativo usará, ele retornará SQL_SUCCESS. Quando o aplicativo chama uma função de conexão, o Gerenciador de Driver ODBC verifica se o driver dá suporte à notificação assíncrona. Se o driver não oferece suporte a notificação assíncrona, o Gerenciador de Driver ODBC retornará SQL_ERROR com SQLSTATE S1_118 (Driver não oferece suporte a notificação assíncrona). Se o driver dá suporte à notificação assíncrona, o Gerenciador de Driver ODBC chamará o driver e definir os atributos correspondentes SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK e SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT.  
+ Os aplicativos podem definir o atributo SQL_ATTR_ASYNC_DBC_EVENT em um identificador de conexão ODBC antes de chamar uma função de conexão (**SQLConnect**, **SQLBrowseConnect**ou **SQLDriverConnect**). Como o Gerenciador de driver ODBC não sabe qual driver ODBC será usado pelo aplicativo, ele retornará SQL_SUCCESS. Quando o aplicativo chamar uma função de conexão, o Gerenciador de driver ODBC verificará se o driver dá suporte à notificação assíncrona. Se o driver não oferecer suporte à notificação assíncrona, o Gerenciador de driver ODBC retornará SQL_ERROR com SQLSTATE S1_118 (o driver não oferece suporte à notificação assíncrona). Se o driver oferecer suporte à notificação assíncrona, o Gerenciador de driver ODBC chamará o driver e definirá os atributos correspondentes SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK e SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT.  
   
- Da mesma forma, um aplicativo chama **SQLSetStmtAttr** em uma instrução ODBC manipular e especifica o atributo SQL_ATTR_ASYNC_STMT_EVENT para habilitar ou desabilitar a notificação assíncrona nível de instrução. Como uma função de instrução sempre é chamada depois que a conexão é estabelecida, **SQLSetStmtAttr** retornará SQL_ERROR com SQLSTATE S1_118 (Driver não oferece suporte a notificação assíncrona) imediatamente se correspondente driver não oferece suporte a operações assíncronas ou o driver dá suporte à operação assíncrona, mas não oferece suporte a notificação assíncrona.  
+ Da mesma forma, um aplicativo chama **SQLSetStmtAttr** em um identificador de instrução ODBC e especifica o atributo SQL_ATTR_ASYNC_STMT_EVENT para habilitar ou desabilitar a notificação assíncrona em nível de instrução. Como uma função de instrução é sempre chamada depois que a conexão é estabelecida, **SQLSetStmtAttr** retornará SQL_ERROR com SQLSTATE S1_118 (o driver não oferece suporte à notificação assíncrona) imediatamente se o driver correspondente não oferecer suporte a operações assíncronas ou o driver oferecer suporte à operação assíncrona, mas não oferecer suporte à notificação assíncrona.  
   
 ```  
 SQLRETURN retcode;  
@@ -387,19 +387,19 @@ retcode = SQLSetStmtAttr ( hSTMT,
                            SQL_IS_POINTER);           // length Indicator  
 ```  
   
- SQL_ATTR_ASYNC_STMT_EVENT, que pode ser definida como NULL, é um atributo de somente do Gerenciador de Driver que não será definido no driver.  
+ SQL_ATTR_ASYNC_STMT_EVENT, que pode ser definido como NULL, é um atributo somente do Gerenciador de driver que não será definido no driver.  
   
- O valor padrão de SQL_ATTR_ASYNC_STMT_EVENT é NULL. Se o driver não oferece suporte a notificação assíncrona, obter ou definir o atributo SQL_ATTR_ASYNC_ STMT_EVENT retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido).  
+ O valor padrão de SQL_ATTR_ASYNC_STMT_EVENT é NULL. Se o driver não oferecer suporte à notificação assíncrona, obter ou definir o atributo de STMT_EVENT de SQL_ATTR_ASYNC_ retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido).  
   
- Um aplicativo não deve associar o mesmo identificador de eventos com mais de um identificador ODBC. Caso contrário, uma notificação serão perdida se duas chamadas de função ODBC assíncronas é concluída em duas alças que compartilham o mesmo identificador de eventos. Para evitar um identificador de instrução, herdando o mesmo identificador de evento o identificador de conexão, o ODBC retornará SQL_ERROR com IM016 SQLSTATE (não é possível definir o atributo de instrução para o identificador de conexão) se um aplicativo define SQL_ATTR_ASYNC_STMT_EVENT em um identificador de conexão.  
+ Um aplicativo não deve associar o mesmo identificador de evento a mais de um identificador ODBC. Caso contrário, uma notificação será perdida se duas invocações de função ODBC assíncronas forem concluídas em dois identificadores que compartilham o mesmo identificador de evento. Para evitar um identificador de instrução que herde o mesmo identificador de evento do identificador de conexão, o ODBC retorna SQL_ERROR com SQLSTATE IM016 (não é possível definir o atributo de instrução no identificador de conexão) se um aplicativo definir SQL_ATTR_ASYNC_STMT_EVENT em um identificador de conexão.  
   
-### <a name="calling-asynchronous-odbc-functions"></a>Chamando funções ODBC assíncrona  
- Depois de habilitar a notificação assíncrona e iniciar uma operação assíncrona, o aplicativo pode chamar qualquer função ODBC. Se a função pertence ao conjunto de funções que dão suporte à operação assíncrona, o aplicativo receberá uma notificação de conclusão quando a operação for concluída, independentemente de se a função falhou ou foi bem-sucedida.  A única exceção é que o aplicativo chama uma função ODBC com um identificador de conexão ou instrução inválida. Nesse caso, ODBC não obter o identificador de evento e defini-lo para o estado sinalizado.  
+### <a name="calling-asynchronous-odbc-functions"></a>Chamando funções ODBC assíncronas  
+ Depois de habilitar a notificação assíncrona e iniciar uma operação assíncrona, o aplicativo pode chamar qualquer função ODBC. Se a função pertencer ao conjunto de funções que dão suporte à operação assíncrona, o aplicativo receberá uma notificação de conclusão quando a operação for concluída, independentemente de a função ter falhado ou bem-sucedida.  A única exceção é que o aplicativo chama uma função ODBC com um identificador de conexão ou instrução inválido. Nesse caso, o ODBC não obterá o identificador de eventos e o definirá como o estado sinalizado.  
   
- O aplicativo deve garantir que o objeto de evento associado está em um estado não sinalizado antes de iniciar uma operação assíncrona no identificador do ODBC correspondente. ODBC não redefinirão o objeto de evento.  
+ O aplicativo deve garantir que o objeto de evento associado esteja em um estado não sinalizado antes de iniciar uma operação assíncrona no identificador ODBC correspondente. O ODBC não redefinirá o objeto de evento.  
   
-### <a name="getting-notification-from-odbc"></a>Obtendo a notificação de ODBC  
- Um thread de aplicativo pode chamar **WaitForSingleObject** para aguardar o identificador de um evento ou chamada **WaitForMultipleObjects** aguardar em uma matriz de identificadores de eventos e ser suspensa até que um ou todos os objetos de evento sinalizado ou o intervalo de tempo limite expire.  
+### <a name="getting-notification-from-odbc"></a>Obtendo notificação do ODBC  
+ Um thread de aplicativo pode chamar **WaitForSingleObject** para aguardar um identificador de evento ou chamar **WaitForMultipleObjects** para aguardar em uma matriz de identificadores de eventos e ser suspenso até que um ou todos os objetos de evento sejam sinalizados ou o intervalo de tempo limite decorrido.  
   
 ```  
 DWORD dwStatus = WaitForSingleObject(  

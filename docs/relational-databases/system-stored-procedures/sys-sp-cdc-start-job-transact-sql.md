@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_start_job (Transact-SQL) | Microsoft Docs
+title: sys. sp_cdc_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5f38224cdd1f2ade609d5b10ba2a6b46f913639d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066709"
 ---
-# <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
+# <a name="syssp_cdc_start_job-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Inicia uma limpeza do Change Data Capture ou o trabalho de captura do banco de dados atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ [ @job_type = ] 'job_type' ]` Tipo de trabalho a ser adicionado. *job_type* está **nvarchar (20)** com um padrão de **capturar**. As entradas válidas são **capturar** e **limpeza**.  
+`[ [ @job_type = ] 'job_type' ]`Tipo de trabalho a ser adicionado. *job_type* é **nvarchar (20)** com um padrão de **captura**. As entradas válidas são **Capture** e **Cleanup**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -57,8 +57,8 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-starting-a-capture-job"></a>A. Iniciando um trabalho de captura  
- O exemplo a seguir inicia o trabalho de captura para o banco de dados `AdventureWorks2012`. Especificando um valor para *job_type* não é necessário porque o tipo de trabalho padrão é **capturar**.  
+### <a name="a-starting-a-capture-job"></a>a. Iniciando um trabalho de captura  
+ O exemplo a seguir inicia o trabalho de captura para o banco de dados `AdventureWorks2012`. Não é necessário especificar um valor para *job_type* porque o tipo de trabalho padrão é **captura**.  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,8 +76,8 @@ GO
 EXEC sys.sp_cdc_start_job @job_type = N'cleanup';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [o dbo. cdc_jobs &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys. sp_cdc_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
   
   

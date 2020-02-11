@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 232d1e94892165430867ec5217f8c87ccd625b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036708"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
 
 
-  Retorna a tupla especificada por uma cadeia de caracteres formatada para MDX.  
+  Retorna a tupla especificada por uma cadeia de caracteres formatada com MDX (Multidimensional Expressions).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,9 +32,9 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  Uma expressão de cadeia de caracteres válida especificando, direta ou indiretamente, uma tupla.  
   
 ## <a name="remarks"></a>Comentários  
- O **StrToTuple** função retorna o conjunto especificado. O **StrToTuple** função normalmente é usada com funções definidas pelo usuário para retornar uma especificação de tupla de uma função externa para uma instrução MDX.  
+ A função **StrToTuple** retorna o conjunto especificado. A função **StrToTuple** normalmente é usada com funções definidas pelo usuário para retornar uma especificação de tupla de uma função externa de volta para uma instrução MDX.  
   
--   Quando o sinalizador CONSTRAINED for usado, a especificação de tupla deverá conter nomes de membros qualificados ou não qualificados. Esse sinalizador CONSTRAINED é usado para reduzir o risco de ataques de injeção pela cadeia de caracteres especificada. Se uma cadeia de caracteres for fornecida que não é nomes de membros diretamente resolvido para qualificados ou não qualificados, surge o seguinte erro: "As restrições impostas pelo CONSTRAINED sinalizador na função STRTOVALUE foram violadas."  
+-   Quando o sinalizador CONSTRAINED for usado, a especificação de tupla deverá conter nomes de membros qualificados ou não qualificados. Esse sinalizador CONSTRAINED é usado para reduzir o risco de ataques de injeção pela cadeia de caracteres especificada. Se uma cadeia de caracteres fornecida não for totalmente resolvida para nomes de membros qualificados ou não qualificados, surge o seguinte erro: "As restrições impostas pelo sinalizador CONSTRAINED na função STRTOVALUE foram violadas".  
   
 -   Quando o sinalizador CONSTRAINED não for usado, a tupla especificada pode ser resolvida como uma expressão MDX que retorna uma tupla.  
   
@@ -74,7 +74,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

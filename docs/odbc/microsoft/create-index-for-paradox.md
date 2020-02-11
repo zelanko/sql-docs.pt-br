@@ -1,5 +1,5 @@
 ---
-title: CREATE INDEX para Paradox | Microsoft Docs
+title: CRIAR índice para o Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,62 +14,62 @@ ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 331613676b748453a56da1e41fe85f04a7715038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081944"
 ---
 # <a name="create-index-for-paradox"></a>CREATE INDEX para Paradox
-A sintaxe da instrução CREATE INDEX para o driver do Paradox ODBC é:  
+A sintaxe da instrução CREATE INDEX para o driver ODBC Paradox é:  
   
- **Crie** [**UNIQUE**] **índice** *nome do índice*  
+ **Criar** índice de **índice** [**exclusivo**] *-nome*  
   
- **ON** *table-name*  
+ **Em nome da** *tabela*  
   
  **(** *identificador de coluna* [**ASC**]  
   
- [ **,** *identificador de coluna* [**ASC**]...] **)**  
+ [**,** *identificador de coluna* [**ASC**]...] **)**  
   
- O driver do Paradox ODBC não oferece suporte a **DESC** palavra-chave na gramática SQL ODBC para a instrução CREATE INDEX. O *nome da tabela* argumento pode especificar o caminho completo da tabela.  
+ O driver ODBC do Paradox não oferece suporte à palavra-chave **desc** na gramática do SQL ODBC para a instrução CREATE index. O argumento *table-name* pode especificar o caminho completo da tabela.  
   
- Se a palavra-chave **UNIQUE** for especificado, o driver do Paradox ODBC criará um índice exclusivo. O primeiro índice exclusivo é criado como um índice primário. Este é um arquivo de chave primário da Paradox denominado *nome da tabela*. PX. Índices primários estão sujeitos às seguintes restrições:  
+ Se a palavra-chave **Unique** for especificada, o driver ODBC do Paradox criará um índice exclusivo. O primeiro índice exclusivo é criado como um índice primário. Este é um arquivo de chave primária do Paradox chamado *table-name*. PX. Os índices primários estão sujeitos às seguintes restrições:  
   
--   O índice primário deve ser criado antes de todas as linhas são adicionadas à tabela.  
+-   O índice primário deve ser criado antes de qualquer linha ser adicionada à tabela.  
   
--   Um índice primário deve ser definido após as primeiras colunas "n" em uma tabela.  
+-   Um índice primário deve ser definido nas primeiras colunas "n" em uma tabela.  
   
 -   Somente um índice primário é permitido por tabela.  
   
--   Uma tabela não pode ser atualizada pelo driver do Paradox se um índice primário não está definido na tabela. (Observe que isso não é verdadeiro para uma tabela vazia, o que pode ser atualizada, mesmo se um índice exclusivo não está definido na tabela.)  
+-   Uma tabela não poderá ser atualizada pelo driver do Paradox se um índice primário não estiver definido na tabela. (Observe que isso não é verdadeiro para uma tabela vazia, que pode ser atualizada mesmo que um índice exclusivo não esteja definido na tabela.)  
   
--   O *nome do índice* argumento para um índice primário deve ser o mesmo que o nome de base da tabela, conforme exigido pelo Paradox.  
+-   O argumento de *nome de índice* para um índice primário deve ser o mesmo que o nome base da tabela, conforme exigido pelo Paradox.  
   
- Se a palavra-chave **UNIQUE** é omitido, o driver do Paradox ODBC criará um índice não exclusivo. Isso consiste em dois arquivos de índice secundário Paradox denominados *nome da tabela*. X*nn* e *nome da tabela*. Y*nn*, onde *nn* é o número da coluna na tabela. Índices não exclusivos estão sujeitos às seguintes restrições:  
+ Se a palavra-chave **Unique** for omitida, o driver ODBC do Paradox criará um índice não exclusivo. Isso consiste em dois arquivos de índice secundários do Paradox nomeados *table-name*. X*NN* e *nome da tabela*. Y*NN*, em que *NN* é o número da coluna na tabela. Os índices não exclusivos estão sujeitos às seguintes restrições:  
   
--   Antes de um índice não exclusivo pode ser criado para uma tabela, um índice primário deve existir para essa tabela.  
+-   Antes que um índice não exclusivo possa ser criado para uma tabela, deve existir um índice primário para essa tabela.  
   
--   Para Paradox 3. *x*, o *nome do índice* argumento para qualquer índice que não seja um índice primário (exclusivo ou não exclusivo) deve ser o mesmo que o nome da coluna. Para Paradox 4. *x* e 5. *x*, o nome de tal índice pode ser, mas não precisa ser o mesmo que o nome da coluna.  
+-   Para o Paradox 3. *x*, o argumento de *nome de índice* para qualquer índice que não seja um índice primário (exclusivo ou não exclusivo) deve ser igual ao nome da coluna. Para o Paradox 4. *x* e 5. *x*, o nome desse índice pode ser, mas não precisa ser, o mesmo que o nome da coluna.  
   
--   Apenas uma coluna pode ser especificada para um índice não exclusivo.  
+-   Somente uma coluna pode ser especificada para um índice não exclusivo.  
   
- Não não possível adicionar colunas depois que um índice foi definido em uma tabela. Se a primeira coluna da lista de argumentos de uma instrução CREATE TABLE cria um índice, uma segunda coluna não pode ser incluída na lista de argumentos.  
+ Não é possível adicionar colunas depois que um índice tiver sido definido em uma tabela. Se a primeira coluna da lista de argumentos de uma instrução CREATE TABLE criar um índice, uma segunda coluna não poderá ser incluída na lista de argumentos.  
   
- Por exemplo, para usar o número de ordem de venda e colunas de número de linha como o índice exclusivo na tabela SO_LINES, use a instrução:  
+ Por exemplo, para usar as colunas número da ordem de venda e número da linha como o índice exclusivo na tabela SO_LINES, use a instrução:  
   
 ```  
 CREATE UNIQUE INDEX SO_LINES  
  ON SO_LINES (SONum, LineNum)  
 ```  
   
- Para usar a coluna de número de parte como um índice não exclusivo na tabela SO_LINES, use a instrução:  
+ Para usar a coluna de número de peça como um índice não exclusivo na tabela SO_LINES, use a instrução:  
   
 ```  
 CREATE INDEX PartNum  
  ON SO_LINES (PartNum)  
 ```  
   
- Observe que, quando são executadas duas instruções CREATE INDEX, a primeira instrução sempre criará um índice primário com o mesmo nome que a tabela e a segunda instrução sempre criará um índice não exclusivo com o mesmo nome que a coluna. Esses índices serão nomeados dessa forma, mesmo se nomes diferentes são inseridos nas instruções CREATE INDEX e mesmo se o índice é rotulado como UNIQUE na segunda instrução CREATE INDEX.  
+ Observe que, quando duas instruções CREATE INDEX são executadas, a primeira instrução sempre criará um índice primário com o mesmo nome que a tabela e a segunda instrução sempre criará um índice não exclusivo com o mesmo nome que a coluna. Esses índices serão nomeados dessa forma, mesmo se nomes diferentes forem inseridos nas instruções CREATE INDEX e mesmo se o índice for rotulado exclusivo na segunda instrução CREATE INDEX.  
   
 > [!NOTE]  
->  Quando você usa o driver do Paradox sem implementar o mecanismo de banco de dados Borland, somente leitura e acréscimo instruções são permitidas.
+>  Quando você usa o driver do Paradox sem implementar o Borland Mecanismo de Banco de Dados, somente instruções Read e Append são permitidas.

@@ -1,5 +1,5 @@
 ---
-title: sys.numbered_procedures (Transact-SQL) | Microsoft Docs
+title: sys. numbered_procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,33 +21,33 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d0fa4c5ef671d643f85fa2a1a2d0caa62d00d86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68102297"
 ---
-# <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
+# <a name="sysnumbered_procedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contém uma linha para cada procedimento armazenado do SQL Server que foi criado como um procedimento numerado. Isto não mostra uma linha para o procedimento armazenado básico (número = 1). As entradas para os procedimentos armazenados básicos podem ser encontradas nos modos de exibição, como **sys. Objects** e **Procedures**.  
+  Contém uma linha para cada procedimento armazenado do SQL Server que foi criado como um procedimento numerado. Isto não mostra uma linha para o procedimento armazenado básico (número = 1). As entradas para os procedimentos armazenados base podem ser encontradas em exibições como **Sys. Objects** e **Sys. procedures**.  
   
 > [!IMPORTANT]  
 >  Os procedimentos numerados são preteridos. O uso de procedimentos numerados é desaconselhável. Um evento DEPRECATION_ANNOUNCEMENT será acionado quando uma consulta que usa essa exibição do catálogo for compilada.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto do procedimento armazenado.|  
 |**procedure_number**|**smallint**|Número deste procedimento no objeto, 2 ou maior.|  
-|**definition**|**nvarchar(max)**|O texto do SQL Server que define este procedimento.<br /><br /> NULL = criptografado.|  
+|**defini**|**nvarchar(max)**|O texto do SQL Server que define este procedimento.<br /><br /> NULL = criptografado.|  
   
 > [!NOTE]  
 >  Não há suporte para os parâmetros XML e CLR em procedimentos numerados.  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

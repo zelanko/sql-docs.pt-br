@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056529"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Atualizar SQL Server usando o Assistente de Migração de Dados
@@ -49,7 +49,7 @@ Este artigo fornece instruções passo a passo para atualizar SQL Server locais 
 
 5. É recomendável criptografar a conexão selecionando **criptografar conexão** na seção **Propriedades da conexão** .
 
-6. Clique em **Avançar**.
+6. Clique em **Próximo**.
 
    ![Especificar página de origem e de destino](../dma/media/SourceTarget.png)
 
@@ -64,7 +64,7 @@ Este artigo fornece instruções passo a passo para atualizar SQL Server locais 
    > [!NOTE]
    > Você pode aplicar as configurações de migração a todos os bancos de dados que você está migrando, selecionando o servidor no painel esquerdo. Você também pode configurar um banco de dados individual com configurações específicas selecionando o banco de dados no painel esquerdo.
 
-    A. Especifique o **local compartilhado acessível pelos SQL Servers de origem e de destino para a operação de backup**. Verifique se a conta de serviço que executa a instância de SQL Server de origem tem privilégios de gravação no local compartilhado e se a conta de serviço de destino tem privilégios de leitura no local compartilhado.
+    a. Especifique o **local compartilhado acessível pelos SQL Servers de origem e de destino para a operação de backup**. Verifique se a conta de serviço que executa a instância de SQL Server de origem tem privilégios de gravação no local compartilhado e se a conta de serviço de destino tem privilégios de leitura no local compartilhado.
 
     b. Especifique o local para restaurar os dados e os arquivos de log transacionais no servidor de destino.
 
@@ -95,7 +95,7 @@ O Assistente de Migração de Dados executa validações nas pastas de backup, d
 
    ![Selecionar logons e iniciar a migração](../dma/media/SelectLogins.png)
 
-## <a name="view-results"></a>Exibir os resultados
+## <a name="view-results"></a>Exibir resultados
 
 Você pode monitorar o progresso da migração na página **exibir resultados** .
 
@@ -109,6 +109,6 @@ Você pode monitorar o progresso da migração na página **exibir resultados** 
 
 ## <a name="see-also"></a>Confira também
 
-- [Assistente de Migração de Dados (DMA)](../dma/dma-overview.md)
+- [AMD (Assistente de Migração de Dados)](../dma/dma-overview.md)
 - [Assistente de Migração de Dados: definições de configuração](../dma/dma-configurationsettings.md)
 - [Assistente de Migração de Dados: práticas recomendadas](../dma/dma-bestpractices.md)

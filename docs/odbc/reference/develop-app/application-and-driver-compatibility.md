@@ -16,16 +16,16 @@ ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e31d9f93423db572d2759857b11d3f79af56583b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077080"
 ---
 # <a name="application-and-driver-compatibility"></a>Compatibilidade de aplicativos e de drivers
-Driver e aplicativos ODBC se enquadram em um número de categorias, além de sua versão. Alguns desses aplicativos são incompatíveis com alguns drivers; em outros casos, o tipo do aplicativo ou driver pode ter uma influência sobre os problemas de compatibilidade com versões anteriores entre eles.  
+Os aplicativos e o driver ODBC se enquadram em várias categorias, além de sua versão. Alguns desses aplicativos são incompatíveis com alguns drivers; em outros casos, o tipo de aplicativo ou driver pode ter uma influência sobre os problemas de compatibilidade com versões anteriores entre eles.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Tipos de aplicativos](../../../odbc/reference/develop-app/types-of-applications.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Função String (XQuery) | Microsoft Docs
+title: Função de cadeia de caracteres (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038945"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Funções do Acessador de Dados – string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o valor de *$arg* representado como uma cadeia de caracteres.  
+  Retorna o valor de *$ARG* representado como uma cadeia de caracteres.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,21 +41,21 @@ fn:string($arg as item()?) as xs:string
   
 ## <a name="remarks"></a>Comentários  
   
--   Se *$arg* é a sequência vazia, a cadeia de caracteres de comprimento zero será retornada.  
+-   Se *$ARG* for a sequência vazia, a cadeia de caracteres de comprimento zero será retornada.  
   
--   Se *$arg* é um nó, a função retorna o valor de cadeia de caracteres do nó que é obtido usando o acessador de valor de cadeia de caracteres. Isso está definido nas especificações do W3C XQuery 1.0 e do XPath 2.0 Data Model.  
+-   Se *$ARG* for um nó, a função retornará o valor da cadeia de caracteres do nó que é obtido usando o acessador de valor de cadeia de caracteres. Isso está definido nas especificações do W3C XQuery 1.0 e do XPath 2.0 Data Model.  
   
--   Se *$arg* é um valor atômico, a função retorna a mesma cadeia de caracteres que é retornada pela expressão convertida como **xs: string**, *$arg*, exceto quando indicado o contrário.  
+-   Se *$ARG* for um valor atômico, a função retornará a mesma cadeia de caracteres retornada pela expressão CAST como **xs: String**, *$ARG*, exceto quando indicado de outra forma.  
   
--   Se o tipo de *$arg* é **xs: anyURI**, o URI é convertido em uma cadeia de caracteres sem escapar caracteres especiais.  
+-   Se o tipo de *$ARG* for **xs: anyURI**, o URI é convertido em uma cadeia de caracteres sem escape de caracteres especiais.  
   
--   Nessa implementação, **fn:string()** sem um argumento só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, só pode ser usado entre parênteses ([]).  
+-   Essa implementação, **fn: String ()** sem um argumento, só pode ser usada no contexto de um predicado dependente de contexto. Mais precisamente, só pode ser usado entre parênteses ([]).  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-string-function"></a>A. Usando a função string  
- A seguinte consulta recupera o <`Features`> nó do elemento filho de <`ProductDescription`> elemento.  
+### <a name="a-using-the-string-function"></a>a. Usando a função string  
+ A consulta a seguir recupera o `Features` <> nó de elemento filho do `ProductDescription` elemento <>.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -79,7 +79,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- Se você especificar o **String ()** função, você receberá o valor de cadeia de caracteres do nó especificado.  
+ Se você especificar a função **String ()** , receberá o valor da cadeia de caracteres do nó especificado.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -98,7 +98,7 @@ These are the product highlights.
 ```  
   
 ### <a name="b-using-the-string-function-on-various-nodes"></a>B. Usando a função string em vários nós  
- No exemplo a seguir, uma instância XML é atribuída a uma variável do tipo xml. As consultas são especificadas para ilustrar o resultado da aplicação **String ()** para vários nós.  
+ No exemplo a seguir, uma instância XML é atribuída a uma variável do tipo xml. As consultas são especificadas para ilustrar o resultado da aplicação de **String ()** a vários nós.  
   
 ```  
 declare @x xml  
@@ -118,7 +118,7 @@ just text
 select @x.query('string(/)')  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 This is a comment 10  
@@ -138,13 +138,13 @@ select @x.query('string(/processing-instruction()[1])')
 select @x.query('string(/comment()[1])')  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 This is a comment   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

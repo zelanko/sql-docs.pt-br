@@ -18,10 +18,10 @@ ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067744"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68067744"
   
  Essa função de conjunto de linhas pode ser referenciada na cláusula FROM de uma instrução SELECT 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ```  
   
 ##  <a name="Arguments"></a> Argumentos  
- **table**  
+ **tabela**  
  É o nome de uma tabela que tem indexação de texto completo e semântica habilitada.  
   
  Esse nome pode ser um nome de uma a quatro partes, mas um nome de servidor remoto não é permitido.  
@@ -71,13 +71,13 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Tabela retornada  
  A tabela a seguir descreve as informações sobre as frases-chave que podem ser retornadas por essa função de conjunto de linhas.  
   
-|Column_name|type|Descrição|  
+|Column_name|Type|DESCRIÇÃO|  
 |------------------|----------|-----------------|  
-|**frases-chave**|**NVARCHAR**|A frase chave que contribui com a semelhança entre o documento original e o documento correspondente.|  
-|**score**|**REAL**|Um valor relativo para essa frase-chave em sua relação com todas as outras frases-chave que são semelhantes entre os 2 documentos.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa peso mais alto e 1,0 é a pontuação perfeita.|  
+|**keyphrase**|**NVARCHAR**|A frase chave que contribui com a semelhança entre o documento original e o documento correspondente.|  
+|**placar**|**FOTO**|Um valor relativo para essa frase-chave em sua relação com todas as outras frases-chave que são semelhantes entre os 2 documentos.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa peso mais alto e 1,0 é a pontuação perfeita.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- Para obter mais informações, consulte [localizar documentos semelhantes e relacionados com a pesquisa semântica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+ Para obter mais informações, consulte [localizar documentos semelhantes e relacionados com pesquisa semântica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## <a name="metadata"></a>Metadados  
  Para obter informações e o status da extração e população de similaridade semântica, consulte as exibições de gerenciamento dinâmico a seguir:  
@@ -92,7 +92,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  Exige permissões SELECT na tabela base na qual os índices de texto completo e semânticos foram criados.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir recupera as frases-chave 5 que tiveram a pontuação de similaridade mais alta entre os candidatos especificados na **Jobcandidate** tabela do banco de dados de exemplo AdventureWorks2012. O @CandidateId e @MatchedID variáveis representam valores da coluna de chave do índice de texto completo.  
+ O exemplo a seguir recupera as 5 frases-chave que tinham a pontuação de similaridade mais alta entre os candidatos especificados na tabela **HumanResources. JobCandidate** do banco de dados de exemplo AdventureWorks2012. As @CandidateId variáveis @MatchedID e representam valores da coluna de chave do índice de texto completo.  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

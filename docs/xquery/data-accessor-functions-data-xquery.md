@@ -1,5 +1,5 @@
 ---
-title: Função Data (XQuery) | Microsoft Docs
+title: Função de dados (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038974"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Funções do Acessador de Dados – data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o valor digitado para cada item especificado por *$arg*.  
+  Retorna o valor digitado para cada item especificado por *$ARG*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,19 +55,19 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   Se um nó de atributo é digitado com um tipo de esquema XML, seu valor digitado será o valor digitado.  
   
--   Se o nó de atributo é digitado, seu valor digitado é igual a seu valor de cadeia de caracteres que é retornado como uma instância do **XDT: untypedatomic**.  
+-   Se o nó de atributo for não tipado, seu valor tipado será igual ao valor da cadeia de caracteres retornado como uma instância de **xdt: untypedAtomic**.  
   
--   Se o nó de elemento não tiver sido tipado, seu valor digitado é igual a seu valor de cadeia de caracteres que é retornado como uma instância do **XDT: untypedatomic**.  
+-   Se o nó do elemento não tiver sido digitado, seu valor tipado será igual ao valor da cadeia de caracteres retornado como uma instância de **xdt: untypedAtomic**.  
   
  As descrições a seguir aplicam-se a nós de elemento digitados:  
   
--   Se o elemento tem um tipo de conteúdo simple **Data ()** retorna o valor digitado do elemento.  
+-   Se o elemento tiver um tipo de conteúdo simples, **Data ()** retornará o valor tipado do elemento.  
   
--   Se o nó for do tipo complexo, inclusive xs: anyType, **Data ()** retorna um erro estático.  
+-   Se o nó for de tipo complexo, incluindo xs: anyType, **Data ()** retornará um erro estático.  
   
- Embora o uso de **Data ()** função é muitas vezes opcional, conforme mostrado nos exemplos a seguir, especificando as **Data ()** função explicitamente aumenta a legibilidade da consulta. Para obter mais informações, consulte [fundamentos de XQuery](../xquery/xquery-basics.md).  
+ Embora o uso da função **Data ()** geralmente seja opcional, conforme mostrado nos exemplos a seguir, especificar a função **Data ()** aumenta explicitamente a legibilidade da consulta. Para obter mais informações, consulte [noções básicas do XQuery](../xquery/xquery-basics.md).  
   
- Não é possível especificar **Data ()** em XML construído, conforme mostrado a seguir:  
+ Você não pode especificar **dados ()** em XML construído, conforme mostrado a seguir:  
   
 ```  
 declare @x xml  
@@ -76,10 +76,10 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ```  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. Usando a função data() XQuery para extrair valor com tipo de um nó  
- A consulta a seguir ilustra como o **Data ()** função é usada para recuperar valores de um atributo, um elemento e um nó de texto:  
+### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>a. Usando a função data() XQuery para extrair valor com tipo de um nó  
+ A consulta a seguir ilustra como a função **Data ()** é usada para recuperar valores de um atributo, um elemento e um nó de texto:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -98,13 +98,13 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- Conforme mencionado, o **Data ()** função é opcional quando você está construindo atributos. Se você não especificar o **Data ()** função, ela é assumida implicitamente. A consulta a seguir produz os mesmos resultados da consulta prévia:  
+ Conforme mencionado, a função **Data ()** é opcional quando você está construindo atributos. Se você não especificar a função **Data ()** , ela será implicitamente assumida. A consulta a seguir produz os mesmos resultados da consulta prévia:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -123,9 +123,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Os exemplos a seguir ilustram instâncias em que o **Data ()** função é necessária.  
+ Os exemplos a seguir ilustram as instâncias nas quais a função **Data ()** é necessária.  
   
- Na consulta a seguir **$pd / PD/P1:specifications/material / Material** retorna o <`Material`> elemento. Além disso, **dados ($pd/PD/P1:specifications/material/Material)** retorna dados de caracteres digitados como XDT: untypedatomic, porque o <`Material`> não é digitado. Quando a entrada não for digitada, o resultado da **Data ()** é digitado como **XDT: untypedatomic**.  
+ Na consulta a seguir, **$PD/P1: Specifications/material** retorna o `Material` elemento <>. Além disso, **os dados ($PD/P1: especificações/material)** retornam dados de caractere digitados como xdt `Material` : untypedAtomic, porque <> é não tipado. Quando a entrada é não tipada, o resultado de **Data ()** é digitado como **xdt: untypedAtomic**.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -141,7 +141,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <Root>  
@@ -149,7 +149,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- Na consulta a seguir **data($pd/p1:Features/wm:Warranty)** retorna um erro estático, pois <`Warranty`> é um elemento de tipo complexo.  
+ Na consulta a seguir, os **dados ($PD/P1: Features/WM: warrantion)** retorna um erro estático, `Warranty` porque <> é um elemento de tipo complexo.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -166,7 +166,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID = 23  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

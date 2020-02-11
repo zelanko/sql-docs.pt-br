@@ -16,89 +16,89 @@ ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ca64355a80ce8892f0ea0494e165d934d8d7a88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057096"
 ---
 # <a name="rules-for-conversions"></a>Regras para conversões
-As regras nesta seção se aplicam para conversões que envolvem literais numéricos. Para fins dessas regras, os seguintes termos são definidos:  
+As regras nesta seção se aplicam a conversões que envolvem literais numéricos. Para os fins dessas regras, os seguintes termos são definidos:  
   
--   *Atribuição de Store:* Ao enviar dados para uma coluna de tabela em um banco de dados. Isso ocorre durante chamadas para **SQLExecute**, **SQLExecDirect**, e **SQLSetPos**. Durante a atribuição de armazenamento, "target" refere-se a uma coluna de banco de dados e "fonte" refere-se aos dados em buffers do aplicativo.  
+-   *Atribuição de repositório:* Ao enviar dados para uma coluna de tabela em um banco de dado. Isso ocorre durante chamadas para **SQLExecute**, **SQLExecDirect**e **SQLSetPos**. Durante a atribuição de armazenamento, "destino" refere-se a uma coluna de banco de dados e "origem" refere-se aos seus buffers.  
   
--   *Atribuição de recuperação:* Ao recuperar dados do banco de dados em buffers do aplicativo. Isso ocorre durante chamadas para **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, e **SQLSetPos**. Durante a atribuição de recuperação "target" refere-se aos buffers de aplicativo e "fonte" refere-se para a coluna de banco de dados.  
+-   *Atribuição de recuperação:* Ao recuperar dados do banco de dado em buffers de aplicativo. Isso ocorre durante chamadas para **SQLFetch**, **SQLGetData**, **SQLFetchScroll**e **SQLSetPos**. Durante a atribuição de recuperação, "destino" refere-se aos buffers de aplicativo e "origem" refere-se à coluna de banco de dados.  
   
--   *CS:* O valor na fonte de caractere.  
+-   *CS:* O valor na fonte de caracteres.  
   
 -   *NT:* O valor no destino numérico.  
   
--   *NS:* O valor na fonte de numérico.  
+-   *Ns:* O valor na fonte numérica.  
   
 -   *CT:* O valor no destino de caractere.  
   
 -   Precisão de um literal numérico exato: o número de dígitos que ele contém.  
   
--   A escala de um literal numérico exato: o número de dígitos à direita do período contratual ou legal.  
+-   A escala de um literal numérico exato: o número de dígitos à direita do período expresso ou implícito.  
   
 -   A precisão de um literal numérico aproximado: a precisão de seu mantissa.  
   
-## <a name="character-source-to-numeric-target"></a>Caractere de origem para destino numérico  
- A seguir estão as regras de conversão de uma fonte de caractere (CS) para um destino numérico (NT):  
+## <a name="character-source-to-numeric-target"></a>Origem do caractere para destino numérico  
+ A seguir estão as regras para converter de uma fonte de caracteres (CS) em um destino numérico (NT):  
   
-1.  Substitua o CS com o valor obtido ao remover espaços à esquerda ou à direita no CS. Se CS não é válido *literal numérico*, SQLSTATE 22018 (valor de caractere inválido para especificação de conversão) será retornado.  
+1.  Substitua CS pelo valor obtido removendo espaços à esquerda ou à direita no CS. Se CS não for um *literal numérico*válido, SQLSTATE 22018 (valor de caractere inválido para especificação de conversão) será retornado.  
   
-2.  Substitua o CS com o valor obtido pela remoção de zeros à esquerda antes do ponto decimal, à direita zeros após o ponto decimal, ou ambos.  
+2.  Substitua CS pelo valor obtido removendo zeros à esquerda antes do ponto decimal, com zeros à direita após o ponto decimal ou ambos.  
   
-3.  Converta CS NT. Se a conversão resulta em perda de dígitos significativos, SQLSTATE 22003 (valor numérico fora do intervalo) será retornado. Se a conversão resulta na perda de dígitos não significativas, SQLSTATE 01S07 (Truncamento fracionário) será retornado.  
+3.  Converta CS em NT. Se a conversão resultar em uma perda de dígitos significativos, o SQLSTATE 22003 (valor numérico fora do intervalo) será retornado. Se a conversão resultar na perda de dígitos não significativos, SQLSTATE 01S07 (truncamento fracionário) será retornado.  
   
-## <a name="numeric-source-to-character-target"></a>Origem de numérica para o destino de caractere  
- A seguir estão as regras de conversão de uma fonte numérica (NS) para um destino de caractere (CT):  
+## <a name="numeric-source-to-character-target"></a>Origem numérica para destino de caractere  
+ A seguir estão as regras para converter de uma fonte numérica (NS) em um destino de caractere (CT):  
   
-1.  Permitir que o LT seja o comprimento em caracteres de CT. Para a atribuição de recuperação, LT é igual ao tamanho do buffer em caracteres menos o número de bytes no caractere nulo de terminação para esse conjunto de caracteres.  
+1.  Deixe o tamanho do LT ser o comprimento em caracteres de CT. Para a atribuição de recuperação, o LT é igual ao comprimento do buffer em caracteres menos o número de bytes no caractere de terminação nula para esse conjunto de caracteres.  
   
-2.  Casos:  
+2.  Bolsas  
   
-    -   Se NS é um tipo numérico exato, em seguida, permitir que YP igual a cadeia de caracteres mais curta que esteja de acordo com a definição de *exato numérico-literal* , de modo que a escala de YP é o mesmo que a escala de NS, e o valor interpretado YP é o valor absoluto de NS.  
+    -   Se NS for um tipo numérico exato, deixe YP igual à cadeia de caracteres mais curta que esteja em conformidade com a definição de *literal numérico-numeric* , de modo que a escala de YP seja igual à escala de ns e o valor interpretado de YP seja o valor absoluto de ns.  
   
-    -   Se NS é um tipo numérico aproximado, em seguida, permitir que YP seja uma cadeia de caracteres da seguinte maneira:  
+    -   Se NS for um tipo numérico aproximado, deixe que YP seja uma cadeia de caracteres da seguinte maneira:  
   
-         Caso:  
+         Capitalização:  
   
-         Se NS é igual a 0, YP é 0.  
+         Se NS for igual a 0, YP será 0.  
   
-         Permitir que o YSN seja a cadeia de caracteres mais curta que esteja de acordo com a definição de exato -*literal numérico* e cujo valor interpretado é o valor absoluto de NS. Se o comprimento de YSN é menor que (*precisão* + 1) do tipo de dados de NS, deixe YP YSN ser igual.  
+         Deixe que YSN seja a cadeia de caracteres mais curta que esteja de acordo com a definição de*literal numérico* Exact e cujo valor interpretado seja o valor absoluto de ns. Se o comprimento de YSN for menor que o (*precisão* + 1) do tipo de dados do NS, deixe YP igual a YSN.  
   
-         Caso contrário, YP é a cadeia de caracteres mais curta que esteja de acordo com a definição de *aproximado numérico-literal* cujo valor interpretado é o valor absoluto de NS e cujo *mantissa* consiste em um única *dígito* que é não '0', seguido por um *período* e um *inteiro sem sinal*.  
+         Caso contrário, YP é a cadeia de caracteres mais curta que está em conformidade com a definição de *literal de numérico aproximado* cujo valor interpretado é o valor absoluto de ns e cujo *mantissa* consiste em um único *dígito* que não é ' 0 ', seguido de um *ponto* e um *inteiro não assinado*.  
   
-3.  Caso:  
+3.  Capitalização:  
   
-    -   Se NS é menor que 0, em seguida, permitir que Y seja o resultado de:  
+    -   Se NS for menor que 0, deixe que Y seja o resultado de:  
   
-         '-' &#124; &#124; YP  
+         '-'  &#124;&#124; YP  
   
-         em que '&#124;&#124;' é o operador de concatenação de cadeia de caracteres.  
+         onde ' &#124;&#124; ' é o operador de concatenação de cadeia de caracteres.  
   
-         Caso contrário, deixe o Y igual YP.  
+         Caso contrário, deixe Y igual a YP.  
   
-4.  Permitir que LY seja o comprimento em caracteres de Y.  
+4.  Deixe que LY seja o comprimento em caracteres de Y.  
   
-5.  Caso:  
+5.  Capitalização:  
   
-    -   Se LY for igual a longo prazo, CT é definido como Y.  
+    -   Se LY for igual a LT, CT será definido como Y.  
   
-    -   Se LY for menor que LT, CT é definido como Y estendido à direita pelo número apropriado de espaços.  
+    -   Se LY for menor que LT, CT será definido como Y estendido à direita pelo número apropriado de espaços.  
   
-         Caso contrário (LY > LT), copie os primeiros caracteres LT de Y para CT.  
+         Caso contrário (LY > LT), copie os primeiros caracteres de LT de Y para CT.  
   
-         Caso:  
+         Capitalização:  
   
-         Se essa é uma atribuição de armazenamento, retornará o erro SQLSTATE 22001 (dados de cadeia de caracteres, truncados à direita).  
+         Se essa for uma atribuição de armazenamento, retorne o erro SQLSTATE 22001 (dados de cadeia de caracteres, truncados à direita).  
   
-         Quando se trata de atribuição de recuperação, retorne o aviso SQLSTATE 01004 (dados de cadeia de caracteres, truncados à direita). Quando a cópia resulta na perda de dígitos fracionários (diferente de zeros à direita), é definido pelo driver se ocorrer um dos seguintes:  
+         Se essa for uma atribuição de recuperação, retorne o aviso SQLSTATE 01004 (dados de cadeia de caracteres, truncados à direita). Quando a cópia resulta na perda de dígitos fracionários (diferentes de zeros à direita), ela é definida pelo driver se ocorrer uma das seguintes opções:  
   
-         (1) o driver trunca a cadeia de caracteres em Y para uma escala apropriada (que pode ser zero também) e grava o resultado no CT.  
+         (1) o driver trunca a cadeia de caracteres em Y para uma escala apropriada (que também pode ser zero) e grava o resultado em CT.  
   
-         (2) o driver Arredonda a cadeia de caracteres em Y para uma escala apropriada (que pode ser zero também) e grava o resultado no CT.  
+         (2) o driver Arredonda a cadeia de caracteres em Y para uma escala apropriada (que também pode ser zero) e grava o resultado em CT.  
   
-         (3) o driver nem trunca nem Arredonda, mas copia apenas os primeiros caracteres LT de Y para CT.
+         (3) o driver não trunca nem arredonda, mas apenas copia os primeiros caracteres de LT de Y em CT.

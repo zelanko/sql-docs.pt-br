@@ -1,5 +1,5 @@
 ---
-title: Palavras-chave (sintaxe MDX) reservadas | Microsoft Docs
+title: Palavras-chave reservadas (sintaxe MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037061"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Palavras-chave reservadas (Sintaxe MDX)
@@ -28,7 +28,7 @@ ms.locfileid: "68037061"
   
 -   Use uma convenção de nomenclatura que evite o uso de palavras-chave reservadas. Consoantes ou vogais podem ser removidas se o nome de um objeto precisar ser parecido com uma palavra-chave reservada.  
   
-## <a name="see-also"></a>Consulte também  
- [Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Elementos de sintaxe MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: (Colunas do ADOX) do método append | Microsoft Docs
+title: Método Append (colunas ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967326"
 ---
 # <a name="append-method-adox-columns"></a>Método Append (Colunas do ADOX)
-Adiciona um novo [coluna](../../../ado/reference/adox-api/column-object-adox.md) do objeto para o [colunas](../../../ado/reference/adox-api/columns-collection-adox.md) coleção.  
+Adiciona um novo objeto de [coluna](../../../ado/reference/adox-api/column-object-adox.md) à coleção de [colunas](../../../ado/reference/adox-api/columns-collection-adox.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,30 +33,30 @@ Adiciona um novo [coluna](../../../ado/reference/adox-api/column-object-adox.md)
 Columns.Append Column [,Type] [,DefinedSize]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Coluna*  
- O **coluna** objeto a ser acrescentado ou o nome da coluna para criar e anexar.  
+ O objeto de **coluna** a ser anexado ou o nome da coluna a ser criada e acrescentada.  
   
  *Tipo*  
- Opcional. Um **longo** valor que especifica o tipo de dados da coluna. O *tipo* parâmetro corresponde à [tipo](../../../ado/reference/adox-api/type-property-column-adox.md) propriedade de um **coluna** objeto.  
+ Opcional. Um valor **longo** que especifica o tipo de dados da coluna. O parâmetro de *tipo* corresponde à propriedade [Type](../../../ado/reference/adox-api/type-property-column-adox.md) de um objeto **Column** .  
   
  *DefinedSize*  
- Opcional. Um **longo** valor que especifica o tamanho da coluna. O *DefinedSize* parâmetro corresponde à [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propriedade de um **coluna** objeto.  
+ Opcional. Um valor **longo** que especifica o tamanho da coluna. O parâmetro *DefinedSize* corresponde à propriedade [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) de um objeto **Column** .  
   
 > [!NOTE]
->  Ocorrerá um erro ao anexar um **coluna** para o **colunas** coleção de um [índice](../../../ado/reference/adox-api/index-object-adox.md) se o **coluna** não existe em um [Tabela](../../../ado/reference/adox-api/table-object-adox.md) que já é acrescentado para o [tabelas](../../../ado/reference/adox-api/tables-collection-adox.md) coleção.  
+>  Ocorrerá um erro ao acrescentar uma **coluna** à coleção de **colunas** de um [índice](../../../ado/reference/adox-api/index-object-adox.md) se a **coluna** não existir em uma [tabela](../../../ado/reference/adox-api/table-object-adox.md) que já esteja anexada à coleção de [tabelas](../../../ado/reference/adox-api/tables-collection-adox.md) .  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Coleção Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Columns and Tables Append métodos, exemplo da propriedade Name (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo das propriedades UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo da propriedade Name e métodos de acréscimo de colunas e tabelas (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Exemplo das propriedades método, tipo de chave, RelatedColumn, RELATEDTABLE e UpdateRule da tecla Append (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Exemplo da propriedade ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Acrescentar o método (grupos do ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Acrescentar o método (índices do ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Acrescentar o método (chaves do ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Acrescentar o método (procedimentos do ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Acrescentar o método (tabelas do ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Acrescentar o método (usuários do ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
+ [Método Append (grupos ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Método Append (índices ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Método Append (chaves ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Método Append (procedimentos do ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Método Append (tabelas ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Método Append (usuários do ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Método Append (Exibições do ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
