@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280488"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
@@ -25,7 +25,7 @@ ms.locfileid: "63280488"
   
  A tabela a seguir relaciona os argumentos de ferramentas externas.  
   
-|Nome|Argumento|Descrição|  
+|Nome|Argumento|DESCRIÇÃO|  
 |----------|--------------|-----------------|  
 |**Caminho de item**|$(ItemPath)|O nome completo do arquivo da fonte atual (definido como unidade + caminho + nome de arquivo). Em branco se estiver ativa uma janela que não seja de fonte.|  
 |**Diretório do item**|$(ItemDir)|O diretório da fonte atual (definido como unidade + caminho). Em branco se estiver ativa uma janela que não seja de fonte.|  
@@ -43,10 +43,10 @@ ms.locfileid: "63280488"
 |**Diretório da solução**|$(SolutionDir)|O diretório da solução atual (definido como unidade + caminho).|  
 |**Nome de arquivo da solução**|$(SolutionFileName)|O nome de arquivo da solução atual (definido como unidade + caminho + nome de arquivo).|  
   
- <sup>1</sup> a linha atual, a coluna atual ou o texto atual se baseia na posição do cursor no editor de texto, conforme mostrado na barra de status.  
+ <sup>1</sup> a linha atual, a coluna atual ou o texto atual baseia-se na posição do cursor no editor de texto, conforme mostrado na barra de status.  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo ferramentas externas](external-tools-dialog-box.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo Ferramentas externas](external-tools-dialog-box.md)   
  [Elementos gerais da interface do usuário](general-user-interface-elements.md)  
   
   
