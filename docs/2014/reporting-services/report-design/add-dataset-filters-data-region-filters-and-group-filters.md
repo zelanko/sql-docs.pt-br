@@ -1,5 +1,5 @@
 ---
-title: Adicionar filtros de conjunto de dados, filtros de região de dados e filtros de grupo (construtor de relatórios e SSRS) | Microsoft Docs
+title: Adicionar filtros de conjunto de dados, filtros de região e filtros de grupo (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106627"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Adicionar filtros de conjunto de dados, de região de dados e de grupo (Construtor de Relatórios e SSRS)
@@ -47,26 +47,26 @@ ms.locfileid: "66106627"
   
 -   **Nos grupos de categorias ou séries em uma região de dados Gráfico** Defina um valor em um grupo de séries ou categorias quando quiser incluir ou excluir determinados valores para uma expressão de grupo, a fim de controlar quais os valores exibidos no gráfico.  
   
-##  <a name="FilterEquations"></a> Entendendo uma equação de filtro  
+##  <a name="FilterEquations"></a>Compreendendo uma equação de filtro  
  Em tempo de execução, o processador de relatório converte o valor para o tipo de dados especificado e usa o operador especificado para comparar a expressão e o valor. A lista a seguir descreve cada parte da equação de filtro:  
   
--   **Expressão** Define o que você está filtrando. Geralmente, isso é um campo de conjunto de dados.  
+-   **Expressão** de Define o que você está filtrando. Geralmente, isso é um campo de conjunto de dados.  
   
--   **Tipo de Dados** Especifica o tipo de dados a ser usado quando a equação de filtro é avaliada em tempo de execução pelo processador de relatórios. O tipo de dados selecionado deve ser um dos tipos de dados com suporte do esquema de definição de relatórios.  
+-   **Tipo de dados** Especifica o tipo de dados a ser usado quando a equação de filtro é avaliada em tempo de execução pelo processador de relatório. O tipo de dados selecionado deve ser um dos tipos de dados com suporte do esquema de definição de relatórios.  
   
--   **Operador** Define como comparar as duas partes da equação do filtro.  
+-   **Operador** Define como comparar as duas partes da equação de filtro.  
   
--   `Value` Define a expressão a ser usada na comparação.  
+-   `Value`Define a expressão a ser usada na comparação.  
   
  As seções a seguir descrevem cada parte da equação de filtro.  
   
 ### <a name="expression"></a>Expression  
- Quando a equação de filtro é avaliada pelo processador de relatórios em tempo de execução, os tipos de dados da expressão e o valor devem ser iguais. O tipo de dados do campo selecionado para **Expressão** é determinado pela extensão de processamento de dados ou pelo provedor de dados usado para recuperar dados da fonte de dados. O tipo de dados da expressão digitado para `Value` é determinado pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] padrões. As opções do tipo de dados são determinadas pelos tipos de dados suportados para uma definição de relatório. Os valores do banco de dados podem ser convertidos pelo provedor de dados em um tipo CLR.  
+ Quando a equação de filtro é avaliada pelo processador de relatórios em tempo de execução, os tipos de dados da expressão e o valor devem ser iguais. O tipo de dados do campo selecionado para **Expressão** é determinado pela extensão de processamento de dados ou pelo provedor de dados usado para recuperar dados da fonte de dados. O tipo de dados da expressão inserida para `Value` é determinado por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] padrões. As opções do tipo de dados são determinadas pelos tipos de dados suportados para uma definição de relatório. Os valores do banco de dados podem ser convertidos pelo provedor de dados em um tipo CLR.  
   
 ### <a name="data-type"></a>Tipo de Dados  
  Para o processador de relatórios comparar os dois valores, os tipos de dados devem ser iguais. A tabela a seguir lista o mapeamento entre os tipos de dados CLR e os tipos de dados de definição de relatórios. Os dados recuperados de uma fonte de dados podem ser convertidos em um tipo de dados diferente até o momento em que os dados são relatados.  
   
-|**Tipo de dados de esquema de definição de relatórios**|**Tipo(s) CLR**|  
+|**Tipo de dados de esquema de definição de relatório**|**Tipo (s) CLR**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
 |`DateTime`|`DateTime`, `DateTimeOffset`|  
@@ -81,11 +81,11 @@ ms.locfileid: "66106627"
   
 |Operador|Ação|  
 |--------------|------------|  
-|**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara a expressão a um valor.|  
-|**TopN, BottomN**|Compara a expressão a um valor `Integer`.|  
+|**Igual, like, não igual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara a expressão a um valor.|  
+|**TopN, baixo**|Compara a expressão a um valor `Integer`.|  
 |**TopPercent, BottomPercent**|Compara a expressão a um valor `Integer` ou `Float`.|  
 |**Entre**|Testa se a expressão está entre dois valores, inclusive.|  
-|**Entrada**|Testa se a expressão está contida em um conjunto de valores.|  
+|**No**|Testa se a expressão está contida em um conjunto de valores.|  
   
 ### <a name="value"></a>Valor  
  A expressão Valor especifica a parte final da equação do filtro. O processador de relatórios converte a expressão avaliada para o tipo de dados especificado e avalia a equação de filtro inteira para determinar se os dados especificados na Expressão são transmitidos pelo filtro.  
@@ -94,7 +94,7 @@ ms.locfileid: "66106627"
   
  Esse valor também pode incluir uma referência de parâmetro para permitir que um usuário selecione um valor interativamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md)  
   
