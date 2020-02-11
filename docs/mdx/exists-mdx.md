@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893616"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  Retorna o conjunto de tuplas do primeiro conjunto especificado que existe com uma ou mais tuplas do segundo conjunto especificado. Essa função executa manualmente o que o auto exists executa automaticamente. Para obter mais informações sobre a existência automática, consulte os [principais &#40;conceitos&#41;em MDX Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+  Retorna o conjunto de tuplas do primeiro conjunto especificado que existe com uma ou mais tuplas do segundo conjunto especificado. Essa função executa manualmente o que o auto exists executa automaticamente. Para obter mais informações sobre a existência automática, consulte os [principais conceitos em MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
- Se o nome \<do grupo de medidas opcional > for fornecido, a função retornará tuplas que existem com uma ou mais tuplas do segundo conjunto e as tuplas que têm linhas associadas na tabela de fatos do grupo de medidas especificado.  
+ Se o nome \<do grupo de medidas opcional> for fornecido, a função retornará tuplas que existem com uma ou mais tuplas do segundo conjunto e as tuplas que têm linhas associadas na tabela de fatos do grupo de medidas especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
   
 1.  As linhas do grupo de medidas com medidas que contêm valores nulos contribuem para **existir** quando o argumento MeasureGroupName for especificado. Essa é a diferença entre essa forma de Exists e a função não vazia: se a Propriedade NullProcessing dessas medidas estiver definida como preserve, isso significa que as medidas mostrarão valores nulos quando as consultas forem executadas nessa parte do cubo; Não vazio sempre removerá tuplas de um conjunto que tem valores de medida nulos, enquanto existirá com o argumento MeasureGroupname não filtrará tuplas que têm linhas de grupo de medidas associadas, mesmo que os valores de medida sejam nulos.  
   
-2.  Se o parâmetro MeasureGroupName for usado, os resultados dependerão de se há medidas visíveis no grupo de medidas referenciado; Se não houver nenhuma medida visível no grupo de medidas referenciado, EXISTa sempre retornará um conjunto vazio, independentemente dos valores de *Set_Expression1* e *Set_Expression2*.  
+2.  Se o parâmetro *MeasureGroupName* for usado, os resultados dependerão de se há medidas visíveis no grupo de medidas referenciado; Se não houver nenhuma medida visível no grupo de medidas referenciado, EXISTa sempre retornará um conjunto vazio, independentemente dos valores de *Set_Expression1* e *Set_Expression2*.  
   
 ## <a name="examples"></a>Exemplos  
  Clientes que moram na Califórnia:  
@@ -92,11 +92,11 @@ EXISTS(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX &#40;de interjunção&#41;](../mdx/crossjoin-mdx.md)   
- [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
- [MDX não &#40;vazia&#41;](../mdx/nonempty-mdx.md)   
- [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
+ [&#41;de &#40;MDX interjunção](../mdx/crossjoin-mdx.md)   
+ [NonEmptyCrossjoin&#41;MDX &#40;](../mdx/nonemptycrossjoin-mdx.md)   
+ [&#41;&#40;MDX não vazios](../mdx/nonempty-mdx.md)   
+ [IsEmpty &#40;&#41;MDX](../mdx/isempty-mdx.md)  
   
   

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900217"
 ---
 # <a name="lookup-transformation"></a>transformação Pesquisa
@@ -59,7 +59,7 @@ ms.locfileid: "62900217"
   
 -   Se houver várias correspondências na tabela de referência, a transformação Pesquisa retornará apenas a primeira delas, retornada pela consulta de pesquisa. Se várias correspondências forem encontradas, a transformação Pesquisa gerará um erro ou aviso somente quando a transformação tiver sido configurada para carregar todos os conjuntos de dados de referência no cache. Neste caso, a transformação Pesquisa gera um aviso quando a transformação detecta várias correspondências à medida que ela preenche o cache.  
   
- A junção pode ser composta, o que significa que você pode unir várias colunas na entrada da transformação com colunas no conjunto de dados de referência. A transformação dá suporte às colunas de junção com qualquer tipo de dados, com exceção de DT_R4, DT_R8, DT_TEXT, DT_NTEXT ou DT_IMAGE. Para obter mais informações, consulte [Integration Services Data Types](../integration-services-data-types.md).  
+ A junção pode ser composta, o que significa que você pode unir várias colunas na entrada da transformação com colunas no conjunto de dados de referência. A transformação dá suporte às colunas de junção com qualquer tipo de dados, com exceção de DT_R4, DT_R8, DT_TEXT, DT_NTEXT ou DT_IMAGE. Para obter mais informações, consulte [Integration Services tipos de dados](../integration-services-data-types.md).  
   
  Normalmente, valores do conjunto de dados de referência são adicionados à saída da transformação. Por exemplo, a transformação Pesquisa pode extrair um nome de produto de uma tabela usando um valor de uma coluna de entrada e, em seguida, adicionar esse nome à saída da transformação. Os valores da tabela de referência podem ser substituídos por valores de coluna ou podem ser adicionados a novas colunas.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62900217"
 -   Saída sem-correspondência. A saída sem-correspondência controla as linhas na entrada que não correspondem a pelo menos uma entrada no conjunto de dados de referência. Se você configurar a transformação Pesquisa para tratar as linhas sem entradas correspondentes como erros, as linhas serão redirecionadas à saída de erro. Caso contrário, a transformação redirecionará essas linhas para a saída sem-correspondência.  
   
     > [!NOTE]  
-    >  No [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], a transformação Pesquisa tinha apenas uma saída. Para obter mais informações sobre como executar uma transformação de pesquisa que foi criada no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], consulte [atualizar transformações de pesquisa](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  No [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], a transformação Pesquisa tinha apenas uma saída. Para obter mais informações sobre como executar uma transformação pesquisa que foi criada no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], consulte [Atualizar pesquisa de transformações](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Saída de erro.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62900217"
   
  A seguir, veja alguns benefícios adicionais da persistência de cache para um arquivo:  
   
--   ***Compartilhe o arquivo de cache entre vários pacotes. Para obter mais informações, consulte*** [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
+-   ***Compartilhe o arquivo de cache entre vários pacotes. Para obter mais informações, consulte***  [implementar uma transformação Lookup em modo de cache cheio usando o Gerenciador de conexões de cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   Implante o arquivo de cache com um pacote. ***Você pode usar os dados em vários computadores.*** Para obter mais informações, consulte [Criar e implantar um cache para a Transformação de Pesquisa](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -114,14 +114,15 @@ ms.locfileid: "62900217"
   
      Esta opção de cache é compatível com a opção sem cache que está disponível para a transformação Pesquisa no [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)].  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diferem quanto à forma que comparam cadeias de caracteres. Se a transformação Pesquisa é configurada para carregar o conjunto de dados de referência no cache antes da execução da transformação Pesquisa, o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] faz a comparação de pesquisa no cache. Por outro lado, a operação de pesquisa usa uma instrução SQL parametrizada e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] faz a comparação de pesquisa. Isso significa que a transformação Pesquisa pode retornar um número diferente de correspondências a partir da mesma tabela de consulta, dependendo do tipo de cache.  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diferem quanto à forma que comparam cadeias de caracteres. Se a transformação Pesquisa é configurada para carregar o conjunto de dados de referência no cache antes da execução da transformação Pesquisa, o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] faz a comparação de pesquisa no cache. Por outro lado, a operação de pesquisa usa uma instrução SQL parametrizada e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] faz a comparação de pesquisa. Isso significa que a transformação Pesquisa pode retornar um número diferente de correspondências a partir da mesma tabela de consulta, dependendo do tipo de cache.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente. Para obter mais detalhes, consulte os tópicos a seguir.  
   
 -   [Implementar uma pesquisa no modo Sem Cache ou Cache Parcial](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementar uma Transformação Pesquisa em modo de Cache cheio usando o Gerenciador de Conexões do Cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
 -   [Implementar uma transformação Pesquisa em modo de cache cheio por meio da transformação Gerenciador de Conexões OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
@@ -139,9 +140,9 @@ ms.locfileid: "62900217"
   
      Para obter informações sobre como instalar exemplos e bancos de dados de exemplo do produto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consulte [Exemplos do produto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## <a name="see-also"></a>Consulte também  
- [Transformação Pesquisa Difusa](fuzzy-lookup-transformation.md)   
- [Transformação Pesquisa de Termo](term-lookup-transformation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Transformação pesquisa difusa](fuzzy-lookup-transformation.md)   
+ [Transformação pesquisa de termos](term-lookup-transformation.md)   
  [Fluxo de Dados](../data-flow.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243178"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Usar o utilitário sqlcmd
@@ -219,7 +219,7 @@ ms.locfileid: "75243178"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-running-a-script-by-using-sqlcmd"></a>R. Executando um script usando o sqlcmd  
+### <a name="a-running-a-script-by-using-sqlcmd"></a>a. Executando um script usando o sqlcmd  
  Iniciar o Bloco de Notas e digitar as seguintes instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
  `USE AdventureWorks2012;`  
@@ -567,6 +567,6 @@ SQLCMD -E -N -C
  [Usar sqlcmd com variáveis de script](sqlcmd-use-with-scripting-variables.md)   
  [Editar scripts SQLCMD com o editor de consultas](edit-sqlcmd-scripts-with-query-editor.md)   
  [Gerenciar etapas de trabalho](../../ssms/agent/manage-job-steps.md)   
- [Criar uma etapa de trabalho de CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)  
+ [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

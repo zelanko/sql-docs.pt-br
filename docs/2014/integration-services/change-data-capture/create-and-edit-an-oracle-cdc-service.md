@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771442"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Criar e editar um Serviço Oracle CDC
@@ -59,7 +59,7 @@ ms.locfileid: "62771442"
  **Nome do servidor**: selecione a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino para se conectar (por exemplo, **\\\\<nome_do_computador>\\<nome_da_instância>** ). Por padrão, é exibida a instância de servidor usada na última conexão.  
   
  **Autenticação**  
- Selecione uma destas opções:  
+ Selecione uma das seguintes:  
   
 -   **Autenticação do Windows**: se você selecionar esta opção, o serviço Oracle CDC se conectará à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino usando a identidade da conta de serviço. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo executada em um computador diferente, a Autenticação do Windows deverá ser usada com contas de domínio.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62771442"
   
  A mesma senha mestre também deve ser usada quando outras instâncias são configuradas do mesmo serviço em outros nós em um cluster em configuração de alta disponibilidade. Se você perder ou modificar a senha mestra, todas as senhas de mineração de logs armazenadas em bancos de dados de Instância Oracle CDC devem ser reinseridas usando o CDC Designer Console.  
   
-## <a name="see-also"></a>Consulte também  
- [Como criar e editar um Serviço CDC](how-to-create-and-edit-a-cdc-service.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Como criar e editar um serviço CDC](how-to-create-and-edit-a-cdc-service.md)  
   
   

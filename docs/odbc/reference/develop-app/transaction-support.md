@@ -13,17 +13,17 @@ ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0b5e33f94c5452a2062f7c18339f27c8da73fa9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086061"
 ---
-# <a name="transaction-support"></a>Suporte a transações
-O grau de suporte para transações é definido pelo driver. ODBC é projetada para ser implementada em um banco de dados da área de trabalho ou de usuário único que não precisa gerenciar várias atualizações para seus dados. Além disso, alguns bancos de dados que oferecem suporte a transações fazer apenas para as instruções de linguagem de manipulação de dados (DML) do SQL; há restrições ou semântica de transação especial sobre o uso de linguagem de definição de dados (DDL) quando uma transação está ativa. Ou seja, pode haver suporte a transações para várias atualizações simultâneas em tabelas, mas não para alterar o número e a definição das tabelas durante uma transação.  
+# <a name="transaction-support"></a>Suporte à transação
+O grau de suporte para transações é definido pelo driver. O ODBC foi projetado para ser implementado em um banco de dados de um único usuário ou área de trabalho que não precise gerenciar várias atualizações para eles. Além disso, alguns bancos de dados que dão suporte a transações fazem isso apenas para as instruções DML (linguagem de manipulação de data) do SQL; há restrições ou semântica de transação especial em relação ao uso de DDL (linguagem de definição de dados) quando uma transação está ativa. Ou seja, pode haver suporte a transações para várias atualizações simultâneas em tabelas, mas não para alterar o número e a definição de tabelas durante uma transação.  
   
- Um aplicativo determina se há suporte para transações, se o DDL pode ser incluída em uma transação e qualquer efeitos especiais de inclusão de DDL em uma transação, chamando **SQLGetInfo** com a opção SQL_TXN_CAPABLE. Para obter mais informações, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função.  
+ Um aplicativo determina se as transações têm suporte, se o DDL pode ser incluído em uma transação e quaisquer efeitos especiais de inclusão de DDL em uma transação, chamando **SQLGetInfo** com a opção SQL_TXN_CAPABLE. Para obter mais informações, consulte a descrição da função [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) .  
   
- Se o driver não oferece suporte a transações, mas o aplicativo tem a capacidade (usando uma API que não sejam ODBC) para bloquear e desbloquear os dados, aplicativos podem atingir o suporte a transações, bloqueando e desbloqueando registros e tabelas conforme necessário. Para implementar o exemplo de transferência de conta, o aplicativo seria bloquear os registros para ambas as contas, copie os valores atuais, a primeira conta de débito, a segunda conta de crédito e desbloquear os registros. Se todas as etapas falhar, o aplicativo seria redefinir as contas usando as cópias.  
+ Se o driver não oferecer suporte a transações, mas o aplicativo tiver a capacidade (usando uma API diferente do ODBC) para bloquear e desbloquear dados, os aplicativos poderão obter suporte a transações bloqueando e desbloqueando registros e tabelas conforme necessário. Para implementar o exemplo de transferência de conta, o aplicativo bloquearia os registros de ambas as contas, copiaria os valores atuais, debitará a primeira conta, creditará a segunda conta e desbloqueará os registros. Se alguma das etapas falhar, o aplicativo redefinirá as contas usando as cópias.  
   
- Fontes de dados, mesmo que oferecem suporte a transações podem não ser capazes de dar suporte a mais de uma transação por vez em um ambiente específico. Aplicativos chamam **SQLGetInfo** com a opção SQL_MULTIPLE_ACTIVE_TXN para determinar se uma fonte de dados pode dar suporte a transações ativas simultâneas em mais de uma conexão no mesmo ambiente. Como há uma transação por conexão, isso só é interessante para aplicativos que têm várias conexões para a mesma fonte de dados.
+ Até mesmo fontes de dados que dão suporte a transações podem não ser capazes de dar suporte a mais de uma transação por vez em um ambiente específico. Os aplicativos chamam **SQLGetInfo** com a opção SQL_MULTIPLE_ACTIVE_TXN para determinar se uma fonte de dados pode dar suporte a transações ativas simultâneas em mais de uma conexão no mesmo ambiente. Como há uma transação por conexão, isso só é interessante para aplicativos que têm várias conexões com a mesma fonte de dados.

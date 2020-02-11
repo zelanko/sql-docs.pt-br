@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89f02cfd7ab2116528adb82d6e98023c912c6437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868659"
 ---
-# <a name="mssqlserver33028"></a>MSSQLSERVER_33028
+# <a name="mssqlserver_33028"></a>MSSQLSERVER_33028
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|33028|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SEC_CRYPTOPROV_CANTOPENSESSION|  
 |Texto da mensagem|Não é possível abrir a sessão para %S_MSG '%.*ls'. Código de erro do provedor: %d.|  
@@ -35,7 +35,7 @@ ms.locfileid: "62868659"
 ## <a name="explanation"></a>Explicação  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pôde abrir o provedor criptográfico listado na mensagem de erro. O provedor criptográfico forneceu o código de erro listado. Você talvez precise contatar seu provedor criptográfico para obter mais informações sobre o erro.  
   
-|Código do erro|Descrição|  
+|Código do erro|DESCRIÇÃO|  
 |----------------|-----------------|  
 |0|Sucesso. Nenhum erro.|  
 |1|Falha. Ocorreu um erro não especificado ou inesperado. Não há informações adicionais disponíveis.|  

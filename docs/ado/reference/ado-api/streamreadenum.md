@@ -16,24 +16,24 @@ ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7700fc1ddc3cc619db224ac46006370898af1d62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928668"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
-Especifica se o fluxo inteiro ou a próxima linha deve ser lidos de um [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
+Especifica se o fluxo inteiro ou a próxima linha deve ser lido a partir de um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
-|**adReadAll**|-1|Padrão. Lê todos os bytes do fluxo, da posição atual em diante, o [EOS](../../../ado/reference/ado-api/eos-property.md) marcador. Isso é somente válido **StreamReadEnum** valor com fluxos binários ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) está **adTypeBinary**).|  
-|**adReadLine**|-2|Lê a próxima linha do fluxo (designado pela [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) propriedade).|  
+|**adReadAll**|-1|Padrão. Lê todos os bytes do fluxo, da posição atual em diante para o marcador de [EOS](../../../ado/reference/ado-api/eos-property.md) . Esse é o único valor de **StreamReadEnum** válido com fluxos binários (o[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) é **adTypeBinary**).|  
+|**adReadLine**|-2|Lê a próxima linha do fluxo (designada pela propriedade [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) ).|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Essas constantes não têm equivalentes do ADO/WFC.  
+ Essas constantes não têm equivalentes ADO/WFC.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
   
 |||  
 |-|-|  
