@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a78f0664ea561825bb279db47aa3c01fc98bf7dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036803"
 ---
 # <a name="strtomember-mdx"></a>StrToMember (MDX)
 
 
-  Retorna o membro especificado por uma cadeia de caracteres formatada para MDX.  
+  Retorna o membro especificado por uma cadeia de caracteres formatada com MDX (Multidimensional Expressions).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,16 +32,16 @@ StrToMember(Member_Name [,CONSTRAINED] )
  Uma expressão de cadeia de caracteres válidos especificando, direta ou indiretamente, um membro.  
   
 ## <a name="remarks"></a>Comentários  
- O **StrToMember** função retorna o membro especificado na expressão de cadeia de caracteres. O **StrToMember** função normalmente é usada com funções definidas pelo usuário para retornar uma especificação de membro de uma função externa para uma instrução MDX, ou quando uma consulta MDX é realizada com parâmetros.  
+ A função **StrToMember** retorna o membro especificado na expressão de cadeia de caracteres. A função **StrToMember** normalmente é usada com funções definidas pelo usuário para retornar uma especificação de membro de uma função externa de volta para uma instrução MDX ou quando uma consulta MDX é parametrizada.  
   
--   Quando o sinalizador CONSTRAINED for usado, o nome de membro deverá ser diretamente resolvido para um nome de membro qualificado ou não qualificado. Esse sinalizador CONSTRAINED é usado para reduzir o risco de ataques de injeção pela cadeia de caracteres especificada. Se uma cadeia de caracteres for fornecida não for resolvida diretamente com um nome de membro qualificado ou não qualificados, surge o seguinte erro: "As restrições impostas pelo CONSTRAINED sinalizador na função STRTOMEMBER foram violadas."  
+-   Quando o sinalizador CONSTRAINED for usado, o nome de membro deverá ser diretamente resolvido para um nome de membro qualificado ou não qualificado. Esse sinalizador CONSTRAINED é usado para reduzir o risco de ataques de injeção pela cadeia de caracteres especificada. Se uma cadeia de caracteres fornecida não for totalmente resolvida para um nome de membro qualificado ou não qualificado, surge o seguinte erro: "As restrições impostas pelo sinalizador CONSTRAINED na função STRTOMEMBER foram violadas".  
   
 -   Quando o sinalizador de CONSTRAINED não for usado, o membro especificado poderá resolver diretamente um nome de membro ou uma linguagem MDX que resolve um nome.  
   
 -   Para entender melhor as diferenças entre conjuntos e membros, consulte Usando expressões de conjuntos e Usando expressões de membros.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna a medida de vendas do revendedor para o membro Bayern na hierarquia de atributo estado-província usando o **StrToMember** função. A cadeia de caracteres especificada forneceu o nome de membro qualificado.  
+ O exemplo a seguir retorna a medida valor das vendas do revendedor para o membro Bayern na hierarquia de atributo State-província usando a função **StrToMember** . A cadeia de caracteres especificada forneceu o nome de membro qualificado.  
   
 ```  
 SELECT {StrToMember ('[Geography].[State-Province].[Bayern]')}  
@@ -51,7 +51,7 @@ FROM [Adventure Works]
   
 ```  
   
- O exemplo a seguir retorna a medida de vendas do revendedor para o membro Bayern usando o **StrToMember** função. Considerando que a cadeia de caracteres de nome de membro forneceu apenas um nome de membro não qualificado, a consulta retorna a primeira instância do membro especificado, que está na hierarquia Geografia do Cliente, na dimensão Cliente, que não faz intersecção com Vendas do Revendedor. As práticas recomendadas ditam que se especifique o nome qualificado para assegurar resultados esperados.  
+ O exemplo a seguir retorna a medida valor das vendas do revendedor para o membro Bayern usando a função **StrToMember** . Considerando que a cadeia de caracteres de nome de membro forneceu apenas um nome de membro não qualificado, a consulta retorna a primeira instância do membro especificado, que está na hierarquia Geografia do Cliente, na dimensão Cliente, que não faz intersecção com Vendas do Revendedor. As práticas recomendadas ditam que se especifique o nome qualificado para assegurar resultados esperados.  
   
 ```  
 SELECT {StrToMember ('[Bayern]').Parent}  
@@ -61,7 +61,7 @@ FROM [Adventure Works]
   
 ```  
   
- O exemplo a seguir retorna a medida de vendas do revendedor para o membro Bayern na hierarquia de atributo estado-província usando o **StrToMember** função. A cadeia de caracteres de nome de membro fornecida resolve um nome de membro qualificado.  
+ O exemplo a seguir retorna a medida valor das vendas do revendedor para o membro Bayern na hierarquia de atributo State-província usando a função **StrToMember** . A cadeia de caracteres de nome de membro fornecida resolve um nome de membro qualificado.  
   
 ```  
 SELECT {StrToMember('[Geography].[Geography].[Country].[Germany].FirstChild', CONSTRAINED)}  
@@ -79,7 +79,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

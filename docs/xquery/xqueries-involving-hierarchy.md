@@ -1,5 +1,5 @@
 ---
-title: XQueries que envolvem hierarquias | Microsoft Docs
+title: XQueries envolvendo hierarquia | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,23 +16,23 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946102"
 ---
 # <a name="xqueries-involving-hierarchy"></a>XQueries que envolvem hierarquias
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A maioria dos **xml** colunas de tipo a **AdventureWorks** banco de dados são documentos semiestruturados. Portanto, os documentos armazenados em cada linha podem parecer diferentes. Os exemplos de consulta neste tópico ilustram como extrair informações desses vários documentos.  
+  A maioria das colunas de tipo **XML** no banco de dados **AdventureWorks** são documentos semiestruturados. Portanto, os documentos armazenados em cada linha podem parecer diferentes. Os exemplos de consulta neste tópico ilustram como extrair informações desses vários documentos.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Nos documentos de instruções de fabricação, recuperar os locais de centro de trabalho junto com a primeira etapa de fabricação nesses locais  
- Para o modelo de produto 7, a consulta constrói XML que inclui o <`ManuInstr`> elemento, com **ProductModelID** e **ProductModelName** atributos e um ou mais <`Location`> elementos filho.  
+### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>a. Nos documentos de instruções de fabricação, recuperar os locais de centro de trabalho junto com a primeira etapa de fabricação nesses locais  
+ Para o modelo de produto 7, a consulta constrói XML que inclui o `ManuInstr` elemento <>, com os atributos **ProductModelID** e **ProductModelName** , e um ou `Location` mais <> elementos filho.  
   
- Cada <`Location`> elemento tem seu próprio conjunto de atributos e um <`step`> elemento filho. Isso <`step`> elemento filho é a primeira etapa de fabricação no local de centro de trabalho.  
+ Cada elemento `Location` de> de <tem seu próprio conjunto de atributos e `step` um <elemento filho>. Esse <`step`> elemento filho é a primeira etapa de fabricação no local do centro de trabalho.  
   
 ```sql
 SELECT Instructions.query('  
@@ -55,15 +55,15 @@ WHERE ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   O **namespace** palavra-chave na [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define um prefixo de namespace. Esse prefixo é usado mais tarde no corpo da consulta.  
+-   A palavra-chave **namespace** no [prólogo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define um prefixo de namespace. Esse prefixo é usado mais tarde no corpo da consulta.  
   
 -   As chaves agem como tokens de troca de contexto,{) e (}, e são usadas para alternar a consulta da construção XML para avaliação de consulta.  
   
--   O **SQL: Column** é usado para incluir um valor relacional no XML que está sendo construído.  
+-   O **SQL: Column ()** é usado para incluir um valor relacional no XML que está sendo construído.  
   
--   Para construir o <`Location`> elemento, $wc/@* recupera todos os atributos de localização de centro trabalho.  
+-   Ao construir o elemento <`Location`>, $WC/@ * recupera todos os atributos de local do centro de trabalho.  
   
--   O **String ()** função retorna o valor de cadeia de caracteres da <`step`> elemento.  
+-   A função **String ()** retorna o valor da cadeia de caracteres `step` do elemento <>.  
   
  Este é um resultado parcial:  
   
@@ -84,7 +84,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Localizar todos os números de telefone na coluna AdditionalContactInfo  
- A consulta a seguir recupera os números de telefone adicionais para um contato de cliente específico pesquisando a hierarquia inteira para o <`telephoneNumber`> elemento. Porque o <`telephoneNumber`> elemento pode aparecer em qualquer lugar na hierarquia, a consulta usa o operador descendente e auto-operador (/ /) na pesquisa.  
+ A consulta a seguir recupera números de telefone adicionais para um contato de cliente específico pesquisando toda a hierarquia `telephoneNumber` para o elemento <>. Como o elemento `telephoneNumber` <> pode aparecer em qualquer lugar na hierarquia, a consulta usa o descendente e o operador self (//) na pesquisa.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -98,7 +98,7 @@ FROM  Person.Contact
 WHERE ContactID = 1  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```xml
 \<act:number   
@@ -111,13 +111,13 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Para recuperar apenas os números de telefone de nível superior, especificamente o <`telephoneNumber`> elementos filho de <`AdditionalContactInfo`>, a expressão FOR na consulta muda para  
+ Para recuperar apenas os números de telefone de nível superior, especificamente o `telephoneNumber` <> elementos filho de `AdditionalContactInfo` <>, a expressão for na consulta é alterada para  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
 ## <a name="see-also"></a>Confira também  
- [Fundamentos de XQuery](../xquery/xquery-basics.md)   
- [Construção XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
+ [Noções básicas do XQuery](../xquery/xquery-basics.md)   
+ [Construção XML &#40;&#41;XQuery](../xquery/xml-construction-xquery.md)   
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   
   
