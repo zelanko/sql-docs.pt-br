@@ -1,5 +1,5 @@
 ---
-title: Requisitos de tipo definido pelo usuário | Microsoft Docs
+title: Requisitos de tipo definidos pelo usuário | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919667"
 ---
 # <a name="user-defined-type-requirements"></a>Requisitos do tipo definido pelo usuário
-  Você deve tomar várias decisões de design importantes durante a criação de um tipo definido pelo usuário (UDT) a serem instalados em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De uma forma geral, é recomendável criar o UDT como uma estrutura, embora criá-lo como classe também seja uma opção. A definição do UDT precisa estar de acordo com as especificações para criação de UDTs para que seja registrado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Você deve fazer várias decisões de design importantes ao criar um UDT (tipo definido pelo usuário) a ser instalado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no. De uma forma geral, é recomendável criar o UDT como uma estrutura, embora criá-lo como classe também seja uma opção. A definição do UDT precisa estar de acordo com as especificações para criação de UDTs para que seja registrado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements-for-implementing-udts"></a>Requisitos para implementação de UDTs  
  Para ser executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o UDT precisa implementar os seguintes requisitos na definição do UDT:  
@@ -45,13 +45,14 @@ ms.locfileid: "62919667"
   
 -   Deve haver apenas uma serialização de um objeto UDT. Haverá falha na validação se as rotinas de serialização ou desserialização reconhecerem mais de uma representação de um objeto específico.  
   
--   `SqlUserDefinedTypeAttribute.IsByteOrdered` deve ser `true` para comparar dados em ordem de byte. Se a interface IComparable não estiver implementada e `SqlUserDefinedTypeAttribute.IsByteOrdered` for `false`, as comparações de ordem de byte falharão.  
+-   
+  `SqlUserDefinedTypeAttribute.IsByteOrdered` deve ser `true` para comparar dados em ordem de byte. Se a interface IComparable não estiver implementada e `SqlUserDefinedTypeAttribute.IsByteOrdered` for `false`, as comparações de ordem de byte falharão.  
   
 -   Um UDT definido em uma classe deve ter um construtor público que não leve argumentos. Você tem a opção de criar construtores de classe sobrecarregados adicionais.  
   
 -   O UDT precisa expor elementos de dados como campos públicos ou procedimentos de propriedade.  
   
--   Nomes públicos não pode ter mais de 128 caracteres e deve estar de acordo com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regras de nomeação para identificadores conforme definido na [identificadores de banco de dados](../databases/database-identifiers.md).  
+-   Nomes públicos não podem ter mais de 128 caracteres e devem estar em conformidade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com as regras de nomenclatura para identificadores, conforme definido em [identificadores de banco de dados](../databases/database-identifiers.md).  
   
 -   As colunas `sql_variant` não podem conter instâncias de um UDT.  
   
@@ -69,9 +70,9 @@ ms.locfileid: "62919667"
 ## <a name="native-serialization"></a>Serialização nativa  
  A escolha dos atributos de serialização adequados para o UDT depende do tipo de UDT que você está tentando criar. O formato de serialização `Native` utiliza uma estrutura muito simples que permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazene uma representação nativa eficiente do UDT em disco. O formato `Native` será recomendado se o UDT for simples e contiver somente campos dos tipos a seguir:  
   
- **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **bool**, **byte**, **SByte**, **Short**, **UShort**, **int**, **uint**, **Long**, **ULONG**, **float**, **Double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Tipos de valor que são compostos de campos dos tipos acima são bons candidatos para `Native` Formatar, como `structs` no Visual c# (ou `Structures` conforme eles são conhecidos no Visual Basic). Por exemplo, um UDT especificado com o formato de serialização `Native` pode conter um campo de outro UDT que também foi especificado com o formato `Native`. Se a definição de UDT for mais complexa e contiver tipos de dados na lista anterior, você precisará especificar o formato de serialização `UserDefined`.  
+ Os tipos de valor que são compostos de campos dos tipos acima são bons candidatos `Native` para o formato, `structs` como no Visual C#, ( `Structures` ou como são conhecidos em Visual Basic). Por exemplo, um UDT especificado com o formato de serialização `Native` pode conter um campo de outro UDT que também foi especificado com o formato `Native`. Se a definição de UDT for mais complexa e contiver tipos de dados na lista anterior, você precisará especificar o formato de serialização `UserDefined`.  
   
  O formato `Native` tem os requisitos a seguir:  
   
@@ -81,7 +82,7 @@ ms.locfileid: "62919667"
   
 -   O `System.Runtime.InteropServices.StructLayoutAttribute` precisa ser especificado como `StructLayout.LayoutKindSequential` se o UDT for definido em uma classe, e não em uma estrutura. Esse atributo controla o layout físico dos campos de dados e é usado para obrigar os membros a ser dispostos na ordem em que aparecem. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa esse atributo para determinar a ordem dos campos para UDTs com vários valores.  
   
- Para obter um exemplo de um UDT definido com `Native` serialização, consulte o UDT Point em [Codificando tipos](creating-user-defined-types-coding.md).  
+ Para obter um exemplo de um UDT definido `Native` com serialização, consulte o ponto UDT na [codificação de tipos definidos pelo usuário](creating-user-defined-types-coding.md).  
   
 ## <a name="userdefined-serialization"></a>Serialização UserDefined  
  A configuração do formato `UserDefined` para o atributo `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` proporciona ao desenvolvedor total controle do formato binário. Ao especificar a propriedade de atributo `Format` como `UserDefined`, você precisa seguir este procedimento no código:  
@@ -92,7 +93,7 @@ ms.locfileid: "62919667"
   
 -   Escrever código para implementar os métodos `Read` e `Write` para o UDT implementando a interface `System.Data.Sql.IBinarySerialize`.  
   
- Para obter um exemplo de um UDT definido com `UserDefined` serialização, consulte o UDT Currency em [Codificando tipos](creating-user-defined-types-coding.md).  
+ Para obter um exemplo de um UDT definido `UserDefined` com serialização, consulte a moeda UDT em [codificação de tipos definidos pelo usuário](creating-user-defined-types-coding.md).  
   
 > [!NOTE]  
 >  Os campos UDT precisam usar serialização nativa ou serem persistidos para serem indexados.  
@@ -112,7 +113,7 @@ ms.locfileid: "62919667"
  Indica se todas as instâncias desse UDT têm a mesma extensão.  
   
  `MaxByteSize`  
- O tamanho máximo da instância, em bytes. Você precisa especificar `MaxByteSize` com o formato de serialização `UserDefined`. Para um UDT com serialização definida pelo usuário especificada, `MaxByteSize` se refere ao tamanho total do UDT em sua forma serializada conforme definido pelo usuário. O valor de `MaxByteSize` precisa estar no intervalo de 1 a 8000 ou definido como -1 para indicar que o UDT tem tamanho maior do que 8000 bytes (o tamanho total não pode ultrapassar o tamanho de LOB máximo). Considere um UDT com a propriedade de uma cadeia de 10 caracteres (`System.Char`). Quando o UDT é serializado usando um BinaryWriter, o tamanho total da cadeia de caracteres serializada é de 22 bytes: 2 bytes por caractere Unicode UTF-16, multiplicado pelo número máximo de caracteres, além de controle de 2 bytes de sobrecarga ocasionada pela serialização de um fluxo binário. Portanto, ao determinar o valor de `MaxByteSize`, é necessário considerar o tamanho total do UDT serializado: o tamanho dos dados serializados em forma binária, mais a sobrecarga ocasionada pela serialização.  
+ O tamanho máximo da instância, em bytes. Você precisa especificar `MaxByteSize` com o formato de serialização `UserDefined`. Para um UDT com serialização definida pelo usuário especificada, `MaxByteSize` se refere ao tamanho total do UDT em sua forma serializada conforme definido pelo usuário. O valor de `MaxByteSize` precisa estar no intervalo de 1 a 8000 ou definido como -1 para indicar que o UDT tem tamanho maior do que 8000 bytes (o tamanho total não pode ultrapassar o tamanho de LOB máximo). Considere um UDT com a propriedade de uma cadeia de 10 caracteres (`System.Char`). Quando o UDT é serializado usando um BinaryWriter, o tamanho total da cadeia de caracteres serializada é de 22 bytes: 2 bytes por caractere Unicode UTF-16, multiplicados pelo número máximo de caracteres, mais 2 bytes de controle da sobrecarga ocasionada pela serialização de um fluxo binário. Portanto, ao determinar o valor de `MaxByteSize`, é necessário considerar o tamanho total do UDT serializado: o tamanho dos dados serializados em forma binária, mais a sobrecarga ocasionada pela serialização.  
   
  `ValidationMethodName`  
  O nome do método usado para validar instâncias do UDT.  
@@ -140,15 +141,15 @@ ms.locfileid: "62919667"
   
 -   Menor que (\<)  
   
--   Maior que ou igual a (> =)  
+-   Maior que ou igual a (>=)  
   
--   Menor ou igual a (< =)  
+-   Menor que ou igual a (<=)  
   
 ### <a name="implementing-nullability"></a>Implementando a nulidade  
- Além de especificar corretamente os atributos dos assemblies, sua classe também precisa suportar a nulidade. Os UDTs carregados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconhecem a nulidade, mas para que o UDT reconheça um valor nulo, a classe precisa implementar a interface `INullable`. Para obter mais informações e um exemplo de como implementar a nulidade em um UDT, consulte [Codificando tipos](creating-user-defined-types-coding.md).  
+ Além de especificar corretamente os atributos dos assemblies, sua classe também precisa suportar a nulidade. Os UDTs carregados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconhecem a nulidade, mas para que o UDT reconheça um valor nulo, a classe precisa implementar a interface `INullable`. Para obter mais informações e um exemplo de como implementar a nulidade em um UDT, consulte [codificação de tipos definidos pelo usuário](creating-user-defined-types-coding.md).  
   
 ### <a name="string-conversions"></a>Conversões de cadeia de caracteres  
- Para suportar a conversão de cadeia de caracteres para o UDT e do UDT, você precisa fornecer um método `Parse` e um método `ToString` em sua classe. O método `Parse` permite converter uma cadeia de caracteres em uma UDT. Ele precisa ser declarado como `static` (ou `Shared` no Visual Basic) e usar um parâmetro do tipo `System.Data.SqlTypes.SqlString`. Para obter mais informações e um exemplo de como implementar o `Parse` e `ToString` métodos, consulte [Codificando tipos](creating-user-defined-types-coding.md).  
+ Para suportar a conversão de cadeia de caracteres para o UDT e do UDT, você precisa fornecer um método `Parse` e um método `ToString` em sua classe. O método `Parse` permite converter uma cadeia de caracteres em uma UDT. Ele precisa ser declarado como `static` (ou `Shared` no Visual Basic) e usar um parâmetro do tipo `System.Data.SqlTypes.SqlString`. Para obter mais informações e um exemplo de como implementar os `Parse` métodos `ToString` e, consulte [codificando tipos definidos pelo usuário](creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>Serialização XML  
  Os UDTs precisam suportar a conversão de e para o tipo de dados `xml` cumprindo o contrato para serialização XML. O namespace `System.Xml.Serialization` contém classes que são usadas para serializar objetos em documentos ou fluxos de formato XML. Você pode optar por implementar a serialização `xml` usando a interface `IXmlSerializable` que oferece formatação personalizada para serialização e desserialização XML.  
@@ -165,7 +166,7 @@ ms.locfileid: "62919667"
   
  Os UDTs não são serializados em consultas FOR XML. Para executar uma consulta FOR XML que exibe a serialização XML dos UDTs, converta explicitamente cada coluna de UDT no tipo de dados `xml` da instrução SELECT. Você também pode converter explicitamente as colunas em `varbinary`, `varchar` ou `nvarchar`.  
   
-## <a name="see-also"></a>Consulte também  
- [Criando um tipo definido pelo usuário](creating-user-defined-types.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criar um tipo definido pelo usuário](creating-user-defined-types.md)  
   
   

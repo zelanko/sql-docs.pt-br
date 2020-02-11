@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999849"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Agrupar alterações a linhas relacionadas com registros lógicos
@@ -33,13 +33,13 @@ ms.locfileid: "62999849"
   
  Considere estas três tabelas relacionadas:  
   
- ![Três registros lógicos de tabela, apenas com nomes de coluna](../media/logical-records-01.gif "Três registros lógicos de tabela, apenas com nomes de coluna")  
+ ![Registro lógico de três tabelas, somente com nomes de coluna](../media/logical-records-01.gif "Registro lógico de três tabelas, somente com nomes de coluna")  
   
  A tabela **Customers** é a tabela pai nesta relação e tem uma coluna de chave primária **CustID**. A tabela **Orders** tem uma coluna de chave primária **OrderID**, com uma restrição de chave estrangeira na coluna **CustID** que faz referência à coluna **CustID** na tabela **Customers** . De forma semelhante, a tabela **OrderItems** tem uma coluna de chave primária **OrderItemID**, com uma restrição de chave estrangeira na coluna **OrderID** que faz referência à coluna **OrderID** na tabela **Orders** .  
   
  Neste exemplo, um registro lógico consiste de todas as linhas na tabela **Orders** que são relacionadas a um valor **CustID** único e todas as linhas na tabela **OrderItems** são relacionadas a aquelas linhas na tabela **Orders** . Este diagrama exibe todas as linhas nas três tabelas que estão no registro lógico para Customer2:  
   
- ![Três registros lógicos de tabela com valores](../media/logical-records-02.gif "Três registros lógicos de tabela com valores")  
+ ![Registro lógico de três tabelas com valores](../media/logical-records-02.gif "Registro lógico de três tabelas com valores")  
   
  Definir uma relação de registro lógico entre artigos, consulte [Definir uma relação de registro lógico entre artigos da tabela de mesclagem](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62999849"
 ### <a name="the-application-of-changes-as-a-unit"></a>A aplicação de alterações como uma unidade  
  Se o processamento de mesclagem for interrompido, como no caso de uma conexão descartada, o conjunto parcialmente completado de alterações replicadas relacionadas será revertido se forem usados registros lógicos. Por exemplo, considere o caso onde um Assinante adiciona um novo pedido com **OrderID** = 6 e duas novas linhas na tabela **OrderItems** com **OrderItemID** = 10 e **OrderItemID** = 11 para **OrderID** = 6.  
   
- ![Três registros lógicos de tabela com valores](../media/logical-records-04.gif "Três registros lógicos de tabela com valores")  
+ ![Registro lógico de três tabelas com valores](../media/logical-records-04.gif "Registro lógico de três tabelas com valores")  
   
  Se o processo de replicação for interrompido depois da linha **Pedidos** , para **OrderID** = 6 está concluído, mas, antes que os **OrderItems** 10 e 11 sejam concluídos e os registros lógicos não sejam usados, o valor de **OrderTotal** para **OrderID** = 6 não será consistente com a soma dos valores **OrderAmount** das linhas **OrderItems** . Se forem usados registros lógicos, a linha **Orders** para **OrderID** = 6 não será confirmada até que as alterações **OrderItems** sejam replicadas.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "62999849"
   
     -   Também devem ser usadas partições pré-computadas. Os requisitos de partições pré-computadas também se aplicam a registros lógicos. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
   
-    -   Você não pode usar filtros com parâmetros que não se sobrepõem. Para obter mais informações, consulte a seção "Configurando opções de partição" em [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
+    -   Você não pode usar filtros com parâmetros que não se sobrepõem. Para obter mais informações, consulte a seção "Configurando opções de partição" em [Filtros de linha com parâmetros](parameterized-filters-parameterized-row-filters.md).  
   
 -   Se a publicação usar filtros de junções, a propriedade **juntar chave exclusiva** deverá ser definida como **verdadeiro** para todos os filtros de junção que são envolvidos em relações de registro lógico. Para obter mais informações, consulte [Join Filters](join-filters.md).  
   
@@ -140,7 +140,7 @@ ms.locfileid: "62999849"
   
  Se registros lógicos forem usados, o Merge Agent deverá processar as alterações para cada registro lógico inteiro, de forma conjunta. Isto tem um efeito no tempo necessário para o Merge Agent replicar as linhas. Adicionalmente, como o agente abre uma transação separada para cada registro lógico, os requisitos de bloqueio podem aumentar.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de artigos para a replicação de mesclagem](article-options-for-merge-replication.md)  
   
   

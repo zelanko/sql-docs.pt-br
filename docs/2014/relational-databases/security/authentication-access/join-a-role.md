@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011343"
 ---
 # <a name="join-a-role"></a>unir uma função
@@ -62,7 +62,7 @@ ms.locfileid: "63011343"
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Requer `ALTER ANY ROLE` permissão no banco de dados, `ALTER` permissão na função ou associação na **db_securityadmin**.  
+ Requer `ALTER ANY ROLE` a permissão no banco de `ALTER` dados, a permissão na função ou a associação em **db_securityadmin**.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -76,9 +76,9 @@ ms.locfileid: "63011343"
   
 4.  Clique com o botão direito do mouse na função que você deseja editar e selecione **Propriedades**.  
   
-5.  No **propriedades da função de servidor -**_server_role_name_ caixa de diálogo de **membros** , clique em **adicionar**.  
+5.  Na caixa de diálogo **Propriedades da função de servidor –**_server_role_name_ , na página **Membros** , clique em **Adicionar**.  
   
-6.  Na caixa de diálogo **Selecionar Logon ou Função de Servidor** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de servidor para adicionar a esta função de servidor. Como alternativa, clique em **Procurar...** e selecione um ou todos os objetos disponíveis na caixa de diálogo **Procurar objetos**. Clique em **Okey** para retornar para o **propriedades da função de servidor -**_server_role_name_ caixa de diálogo.  
+6.  Na caixa de diálogo **Selecionar Logon ou Função de Servidor** , em **Digite os nomes de objeto a selecionar (exemplos)** , insira o logon ou função de servidor para adicionar a esta função de servidor. Como alternativa, clique em **Procurar...** e selecione um ou todos os objetos disponíveis na caixa de diálogo **Procurar objetos**. Clique em **OK** para retornar à caixa de diálogo **Propriedades da função de servidor –**_server_role_name_ .  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63011343"
   
 7.  Clique com o botão direito do mouse na função que você deseja editar e selecione **Propriedades**.  
   
-8.  No **propriedades da função de banco de dados -**_database_role_name_ na caixa de **geral** , clique em **adicionar**.  
+8.  Na caixa de diálogo **Propriedades da função de banco de dados –**_database_role_name_ , na página **geral** , clique em **Adicionar**.  
   
-9. Na caixa de diálogo **Selecionar Usuário ou Função do Banco de Dados** , em **Digite os nomes de objeto a selecionar (exemplos)**, insira o logon ou função de banco de dados para adicionar a esta função de banco de dados. Como alternativa, clique em **Procurar...** e selecione um ou todos os objetos disponíveis na caixa de diálogo **Procurar objetos**. Clique em **Okey** para retornar para o **propriedades da função de banco de dados -**_database_role_name_ caixa de diálogo.  
+9. Na caixa de diálogo **Selecionar Usuário ou Função do Banco de Dados** , em **Digite os nomes de objeto a selecionar (exemplos)** , insira o logon ou função de banco de dados para adicionar a esta função de banco de dados. Como alternativa, clique em **Procurar...** e selecione um ou todos os objetos disponíveis na caixa de diálogo **Procurar objetos**. Clique em **OK** para retornar à caixa de diálogo **Propriedades da função de banco de dados –**_database_role_name_ .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -136,7 +136,7 @@ ms.locfileid: "63011343"
   
  Para obter mais informações, consulte [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de nível de servidor](server-level-roles.md)   
  [Funções de nível de banco de dados](../authentication-access/database-level-roles.md)   
  [Funções de aplicativo](../authentication-access/application-roles.md)  

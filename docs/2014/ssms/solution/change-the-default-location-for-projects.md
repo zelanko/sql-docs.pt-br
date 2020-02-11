@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956100"
 ---
 # <a name="change-the-default-location-for-projects"></a>Alterar o local padrão dos projetos
@@ -25,9 +25,9 @@ ms.locfileid: "62956100"
   
 ### <a name="to-change-the-default-location-for-projects"></a>Para alterar o local padrão dos projetos  
   
-1.  Altere o local padrão abrindo ou salvando um arquivo ou projeto de outro local. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] armazena o local do projeto previamente aberto e o utiliza na próxima vez que um projeto é aberto ou salvo.  
+1.  Altere o local padrão abrindo ou salvando um arquivo ou projeto de outro local. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] armazena o local do projeto aberto anteriormente e o utiliza para a próxima abertura ou salvamento de um projeto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Soluções](solution-explorer.md)  
   
   

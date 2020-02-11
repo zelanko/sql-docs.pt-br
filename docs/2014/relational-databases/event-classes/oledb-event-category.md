@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d58f3121cc55a05a564eaeb0975a8154e51a12c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960727"
 ---
 # <a name="oledb-event-category"></a>categoria de evento OLEDB
@@ -28,15 +28,15 @@ ms.locfileid: "62960727"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Classe de evento OLEDB Call](oledb-call-event-class.md)|Indica que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fez uma chamada que não é de dados, nem de**QueryInterface** , a um provedor OLE DB de consultas distribuídas e procedimentos armazenados remotos.|  
-|[Classe de evento OLEDB DataRead](oledb-dataread-event-class.md)|Indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamou um provedor de OLE DB de consultas distribuídas e procedimentos armazenados remotos.|  
-|[Classe de evento OLEDB Errors](oledb-errors-event-class.md)|Indica que uma chamada a um provedor de OLE DB retornou um erro.|  
-|[Classe de evento OLEDB Provider Information](oledb-provider-information-event-class.md)|Indica que uma consulta distribuída executou e coletou informações que correspondem à conexão do provedor.|  
-|[Classe de evento OLEDB QueryInterface](oledb-queryinterface-event-class.md)|Indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitiu uma chamada **QueryInterface** de OLE DB de consultas distribuídas e procedimentos armazenados remotos.|  
+|[classe de evento OLEDB Call](oledb-call-event-class.md)|Indica que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fez uma chamada que não é de dados, nem de**QueryInterface** , a um provedor OLE DB de consultas distribuídas e procedimentos armazenados remotos.|  
+|[classe de evento OLEDB DataRead](oledb-dataread-event-class.md)|Indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamou um provedor de OLE DB de consultas distribuídas e procedimentos armazenados remotos.|  
+|[classe de evento OLEDB Errors](oledb-errors-event-class.md)|Indica que uma chamada a um provedor de OLE DB retornou um erro.|  
+|[classe de evento OLEDB Provider Information](oledb-provider-information-event-class.md)|Indica que uma consulta distribuída executou e coletou informações que correspondem à conexão do provedor.|  
+|[classe de evento OLEDB QueryInterface](oledb-queryinterface-event-class.md)|Indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitiu uma chamada **QueryInterface** de OLE DB de consultas distribuídas e procedimentos armazenados remotos.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)  
   
   

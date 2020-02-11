@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049126"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Classificar linhas (Visual Database Tools)
@@ -89,7 +89,7 @@ ms.locfileid: "63049126"
   
      Observe que a consulta usa `state` como uma coluna de classificação secundária. Assim, se dois estados tiverem o mesmo número de autores, esses estados aparecerão em ordem alfabética.  
   
--   **Você pode classificar usando dados internacionais** .   Isto é, você pode classificar uma coluna usando convenções de exame que diferem das convenções padrão daquela coluna. Por exemplo, você pode escrever uma consulta que recupera todos os títulos de livros por Jaime Pati?? o. Para exibir os títulos em ordem alfabética, você usa uma sequência de exame espanhol para a coluna de título. O SQL resultante pode ter esta aparência:  
+-   **Você pode classificar usando dados internacionais** .   Isto é, você pode classificar uma coluna usando convenções de exame que diferem das convenções padrão daquela coluna. Por exemplo, você pode escrever uma consulta que recupera todos os títulos de livros de Jaime Pati? minúscula. Para exibir os títulos em ordem alfabética, você usa uma sequência de exame espanhol para a coluna de título. O SQL resultante pode ter esta aparência:  
   
     ```  
     SELECT title  
@@ -110,8 +110,8 @@ ms.locfileid: "63049126"
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Classificar e agrupar resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

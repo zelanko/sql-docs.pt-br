@@ -1,5 +1,5 @@
 ---
-title: Funções que aceitam parâmetros de cadeia de caracteres | Microsoft Docs
+title: Funções aceitando parâmetros de cadeia de caracteres | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4165dd51437f143351835bc1739ffb8279bd04ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952481"
 ---
 # <a name="functions-accepting-string-parameters"></a>Funções que aceitam parâmetros de cadeias de caracteres
-Todas as funções que usam parâmetros de cadeia de caracteres serão convertidas para Unicode. (O formato "W" da função será exportado.) Contagem de bytes é convertida para a contagem de caracteres para essas APIs ODBC aplicável. Aplica-se para as seguintes funções:  
+Todas as funções que usam parâmetros de cadeia de caracteres serão convertidas em Unicode. (A forma "W" da função será exportada.) A contagem de bytes é convertida em contagem de caracteres para as APIs ODBC aplicáveis. Isso se aplica às seguintes funções:  
   
 -   **SQLConnect**  
   
@@ -34,7 +34,7 @@ Todas as funções que usam parâmetros de cadeia de caracteres serão convertid
   
 -   **SQLDescribeCol**  
   
--   **SQLError** (substituído por **SQLGetDiagField**)  
+-   **SqlError** (substituído por **SQLGetDiagField**)  
   
 -   **SQLExecDirect**  
   
@@ -46,9 +46,9 @@ Todas as funções que usam parâmetros de cadeia de caracteres serão convertid
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (se torna **SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** (torna-se **SQLGetStmtAttr**)  
   
--   **SQLSetStmtOption** (se torna **SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** (torna-se **SQLSetStmtAttr**)  
   
 -   **SQLGetConnectOption**  
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921186"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar um banco de dados em um novo local (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "62921186"
   
      [Segurança](#Security)  
   
--   **Restaurar um banco de dados para um novo local e, opcionalmente, renomear o banco de dados, usando:**  
+-   **Para restaurar um banco de dados em um novo local e, opcionalmente, renomear o banco de dados usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -79,11 +79,11 @@ ms.locfileid: "62921186"
   
 #### <a name="to-restore-a-database-to-a-new-location-and-optionally-rename-the-database"></a>Para restaurar um banco de dados em um novo local e, opcionalmente, renomear o banco de dados  
   
-1.  Conecte-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e, no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore de servidores.  
+1.  Conecte-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e, no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore de servidores.  
   
 2.  Clique com o botão direito do mouse em **Bancos de Dados**e clique em **Restaurar Banco de Dados**. A caixa de diálogo **Restaurar Banco de Dados** é aberta.  
   
-3.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das opções a seguir:  
+3.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das seguintes opções:  
   
     -   **Backup de banco de dados**  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62921186"
   
          Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .  
   
-         Na caixa de listagem **Fonte: Dispositivo: Banco de Dados**, selecione o nome do banco de dados que deve ser restaurado.  
+         Na caixa de listagem **Origem: Dispositivo: Banco de Dados** , selecione o nome do banco de dados que deve ser restaurado.  
   
          **Observação** Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62921186"
   
 6.  Na grade **Conjuntos de backup a serem restaurados** , selecione os backups a serem restaurados. Essa grade exibe os backups disponíveis para o local especificado. Por padrão, um plano de recuperação é sugerido. Para substituir o plano de recuperação sugerido, você pode alterar as seleções na grade. Backups que dependem da restauração de um backup anterior têm a seleção automaticamente cancelada quando a seleção do backup anterior é cancelada.  
   
-     Para obter informações sobre as colunas da grade **Selecionar os conjuntos de backup a serem restaurados**, veja [Restaurar banco de dados &#40;Página Geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md).  
+     Para obter informações sobre as colunas da grade **Conjuntos de backup a serem restaurados** , veja [Restaurar banco de dados &#40;página Geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)).  
   
 7.  Para especificar o novo local dos arquivos de banco de dados, selecione a página **Arquivos** e clique em **Realoque todos os arquivos para pasta**. Forneça um novo local para a **Pasta do arquivo de dados** e **Pasta do arquivo de log**. Para obter mais informações sobre essa grade, veja [Restaurar banco de dados &#40;Página Arquivos&#41;](restore-database-files-page.md).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62921186"
   
      {  
   
-     [ **RECOVERY** | NORECOVERY ]  
+     [ **Recuperação** | WITH  
   
      [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
@@ -159,10 +159,10 @@ ms.locfileid: "62921186"
     > [!NOTE]  
     >  Se você estiver restaurando o banco de dados em uma instância de servidor diferente, poderá usar o nome do banco de dados original em vez de um novo nome.  
   
-     *backup_device* [ `,`...*n* ]  
+     *backup_device* [ `,`... *n* ]  
      Especifica uma lista separada por vírgulas de 1 a 64 dispositivos de backup nos quais o backup de banco de dados precisa ser restaurado. Você pode especificar um dispositivo de backup físico ou especificar um dispositivo de backup lógico correspondente, se definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:  
   
-     {DISK | FITA} `=` *physical_backup_device_name*  
+     { DISK | TAPE } `=`*physical_backup_device_name*  
   
      Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
@@ -176,14 +176,14 @@ ms.locfileid: "62921186"
   
      Quando esta opção não está especificada, o padrão é usar o primeiro conjunto de backup no dispositivo de backup.  
   
-     Para obter mais informações, consulte "Especificando um conjunto de backup", em [Argumentos RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
+     Para obter mais informações, consulte "especificando um conjunto de backup" em [argumentos de restauração &#40;&#41;Transact-SQL ](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
-     Mover **' *`logical_file_name_in_backup`* '** TO **' *`operating_system_file_name`* '** [ `,`... *n* ]  
+     mover **'*`logical_file_name_in_backup`*'** para **'*`operating_system_file_name`*'** [ `,`... *n* ]  
      Especifica que o arquivo de log ou de dados especificado pelo *logical_file_name_in_backup* deve ser restaurado no local especificado pelo *operating_system_file_name*. Especifique uma instrução MOVE para cada arquivo lógico que você deseja restaurar do conjunto de backup para um novo local.  
   
-    |Opção|Descrição|  
+    |Opção|DESCRIÇÃO|  
     |------------|-----------------|  
-    |*logical_file_name_in_backup*|Especifica o nome lógico de um arquivo de log ou de dados no conjunto de backup. O nome do arquivo lógico de um arquivo de log ou de dados em um conjunto de backup corresponde ao seu nome lógico no banco de dados quando o conjunto de backup foi criado.<br /><br /> Observação: Para obter uma lista dos arquivos lógicos do conjunto de backup, use [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).|  
+    |*logical_file_name_in_backup*|Especifica o nome lógico de um arquivo de log ou de dados no conjunto de backup. O nome do arquivo lógico de um arquivo de log ou de dados em um conjunto de backup corresponde ao seu nome lógico no banco de dados quando o conjunto de backup foi criado.<br /><br /> Observação: para obter uma lista dos arquivos lógicos do conjunto de backup, use [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).|  
     |*operating_system_file_name*|Especifica um novo local para o arquivo especificado por *logical_file_name_in_backup*. O arquivo será restaurado neste local.<br /><br /> Opcionalmente, *operating_system_file_name* especifica um novo nome de arquivo para o arquivo restaurado. Isso será necessário se você estiver criando uma cópia de um banco de dados existente na mesma instância de servidor.|  
     |*n*|É um espaço reservado que indica que você pode especificar instruções MOVE adicionais.|  
   
@@ -191,7 +191,7 @@ ms.locfileid: "62921186"
  Este exemplo cria um novo banco de dados denominado `MyAdvWorks` por meio da restauração de um backup do banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que inclui dois arquivos: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. Esse banco de dados usa o modelo de recuperação simples. O banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] já existe na instância do servidor, portanto, os arquivos no backup devem ser restaurados em um novo local. A instrução RESTORE FILELISTONLY é usada para determinar o número e os nomes dos arquivos no banco de dados que está sendo restaurado. O backup do banco de dados é o primeiro conjunto de backup no dispositivo de backup.  
   
 > [!NOTE]  
->  Os exemplos de como fazer backup e restaurar o log de transações, inclusive restaurações pontuais, usam o banco de dados `MyAdvWorks_FullRM` que é criado no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] exatamente como no exemplo `MyAdvWorks` a seguir. No entanto, o banco de dados `MyAdvWorks_FullRM` resultante deve ser alterado para usar o modelo de recuperação completa usando a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]: ALTER DATABASE <database_name> SET RECOVERY FULL.  
+>  Os exemplos de como fazer backup e restaurar o log de transações, inclusive restaurações pontuais, usam o banco de dados `MyAdvWorks_FullRM` que é criado no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] exatamente como no exemplo `MyAdvWorks` a seguir. No entanto, o banco de dados `MyAdvWorks_FullRM` resultante deve ser alterado para usar o modelo de recuperação completa por meio da seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]: ALTER DATABASE <database_name> SET RECOVERY FULL.  
   
 ```sql  
 USE master;  
@@ -216,13 +216,13 @@ GO
   
 -   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Restaurar um backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Copiar bancos de dados com backup e restauração](../databases/copy-databases-with-backup-and-restore.md)  

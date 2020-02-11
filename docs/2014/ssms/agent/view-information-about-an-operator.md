@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188743"
 ---
 # <a name="view-information-about-an-operator"></a>Exibir informações sobre um operador
-  Este tópico descreve como exibir infoumações sobre um operadou do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Este tópico descreve como exibir informações sobre um operador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de agente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
   
  **Neste tópico**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68188743"
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -68,11 +68,11 @@ ms.locfileid: "68188743"
   
      Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo _operator_name_**Propriedades** , consulte:  
   
-    -   [Propriedades do operador e operador New &#40;página geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Propriedades do operador e novo operador &#40;página Geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Propriedades do operador: Novo operador &#40;página de notificações&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Propriedades do operador: nova página de notificações de &#40;de operador&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [Propriedades do operador &#40;página Histórico&#41;](operator-properties-history-page.md)  
+    -   [Propriedades do operador &#40;página histórico&#41;](operator-properties-history-page.md)  
   
 5.  Quando terminar, clique em **OK**.  
   
@@ -97,6 +97,6 @@ ms.locfileid: "68188743"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_help_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql).  
+ Para obter mais informações, consulte [sp_help_operator &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql).  
   
   

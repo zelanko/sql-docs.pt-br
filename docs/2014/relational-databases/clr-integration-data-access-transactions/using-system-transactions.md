@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919533"
 ---
 # <a name="using-systemtransactions"></a>Usando System.Transactions
@@ -31,7 +31,8 @@ ms.locfileid: "62919533"
   
  Se ocorrer uma exceção no `TransactionScope`, a transação será marcada como inconsistente e abandonada. Ela será revertida quando o `TransactionScope` for descartado. Se nenhuma exceção ocorrer, as transações participantes serão confirmadas.  
   
- `TransactionScope` deve ser usado somente quando são acessados gerenciadores de recursos externos ou fontes de dados locais e remotas. Isso porque `TransactionScope` sempre causa a elevação de transações, mesmo que esteja sendo usado apenas em uma conexão de contexto.  
+ 
+  `TransactionScope` deve ser usado somente quando são acessados gerenciadores de recursos externos ou fontes de dados locais e remotas. Isso porque `TransactionScope` sempre causa a elevação de transações, mesmo que esteja sendo usado apenas em uma conexão de contexto.  
   
 > [!NOTE]  
 >  Por padrão, a classe `TransactionScope` cria uma transação com um `System.Transactions.Transaction.IsolationLevel` de `Serializable`. Dependendo do seu aplicativo, talvez você queira considerar abaixar o nível de isolamento para evitar uma contenção elevada em seu aplicativo.  
@@ -105,7 +106,7 @@ using (TransactionScope transScope = new TransactionScope())
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Integração CLR e transações](../native-client-ole-db-transactions/transactions.md)  
   
   

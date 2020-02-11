@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65777f25066cfb42093313b90ac198c6bc1796a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918199"
 ---
 # <a name="page-compression-implementation"></a>Implementação da compactação de página
@@ -50,14 +50,14 @@ ms.locfileid: "62918199"
   
  A ilustração a seguir mostra a mesma página após a compactação de prefixo. O prefixo é movido para o cabeçalho e os valores da coluna são alterados para referências ao prefixo.  
   
- ![Página após a compactação de prefixo](../media/tblcompression2.gif "Página após a compactação de prefixo")  
+ ![Página após compactação de prefixo](../media/tblcompression2.gif "Página após compactação de prefixo")  
   
  Na primeira coluna da primeira linha, o valor 4b indica que os primeiros quatro caracteres do prefixo (aaab) estão presentes para essa linha, além do caractere b. Isso gera o valor resultante aaabb, que é o valor original.  
   
 ## <a name="dictionary-compression"></a>Compactação de dicionário  
  Após a conclusão da compactação de prefixo, é aplicada a compactação de dicionário. A compactação de dicionário procura valores repetidos em qualquer lugar da página e os armazena na área de informações de compactação. Diferentemente da compactação de prefixo, a compactação de dicionário não é restrita a uma coluna. A compactação de dicionário pode substituir valores repetidos que ocorrem em qualquer lugar de uma página. A ilustração a seguir mostra a mesma página após a compactação de dicionário.  
   
- ![Página após a compactação de dicionário](../media/tblcompression3.gif "Página após a compactação de dicionário")  
+ ![Página após compactação de dicionário](../media/tblcompression3.gif "Página após compactação de dicionário")  
   
  Observe que o valor 4b foi referenciado a partir de colunas diferentes da página.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62918199"
   
  Quando uma tabela existente que contém dados for convertida para compactação de página, cada página será recriada e avaliada. A recriação de todas as páginas causará a recriação da tabela, do índice ou da partição.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compactação de dados](data-compression.md)   
  [Implementação da compactação de linha](row-compression-implementation.md)  
   

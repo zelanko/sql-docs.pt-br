@@ -10,69 +10,69 @@ ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2c9dbd2b42ebde4cdfea602c3ad50c4b7d100bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944652"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modos SQL (MySQLToSQL)
-O SSMA para MySQL pode operar em diferentes modos SQL e pode aplicar esses modos de forma diferente para diferentes clientes.  
+O SSMA para MySQL pode operar em modos SQL diferentes e pode aplicar esses modos de forma diferente para clientes diferentes.  
   
-Modos de definem a sintaxe SQL MySQL deve dar suporte e o tipo de validação de dados verifica que ele deve executar. Isso torna mais fácil de usar o MySQL em ambientes diferentes e usam o MySQL com o SQL Server.  
+Os modos definem a sintaxe SQL que o MySQL deve dar suporte e o tipo de verificações de validação de dados que ele deve executar. Isso torna mais fácil usar o MySQL em ambientes diferentes e usar o MySQL com SQL Server.  
   
 ## <a name="sql-modes-grid"></a>Grade de modos SQL:  
   
--   Grade de modos SQL no nível raiz contém as seguintes colunas: **Nome do modo SQL**, **carregados modos SQL**, e **modos SQL eficaz**.  
+-   A grade de modos SQL no nível de raiz contém as seguintes colunas: **nome do modo SQL**, **modos SQL carregados**e **modos SQL efetivos**.  
   
--   Grade de modos de SQL em bancos de dados categoria, banco de dados, tabela categoria, categoria de instruções, categoria de exibições, tabelas, exibições, funções, procedimentos, UDF e o nível de objeto do evento contém as seguintes colunas: **Nome do modo SQL**, **herdadas modos SQL**, e **modos SQL eficaz**.  
+-   As grades de modos SQL na categoria de bancos de dados Category, Database, tabela, Table Statements, as views categoria, Table, View, functions, Procedures, UDF e Event Object Level contêm as seguintes colunas: **SQL Mode Name**, **modos SQL herdados**e **modos SQL efetivos**.  
   
--   Grade de modos SQL no nível de procedimento armazenado, função armazenado e disparador contém as seguintes colunas: **Nome do modo SQL**, **modos SQL Original**, e **modos SQL eficaz**.  
-  
-> [!NOTE]  
-> Modos de grupo serão mostrados em negrito, sob a coluna 'Nome do modo SQL'.  
-  
-## <a name="loaded-sql-modes"></a>Modos SQL carregado  
-Esses são os modos de SQL, que são definidas no nível da sessão ou raiz. Os modos SQL após o carregamento no banco de dados de destino não pode ser editados ou alterados.  
-  
-## <a name="inherited-sql-modes"></a>Modos SQL herdadas  
-Esses são os modos SQL, que são herdadas a partir do nó pai correspondente.  
-  
-Exceto para a categoria de funções, categoria de procedimentos, categoria de eventos e gatilhos, esses modos SQL estão presentes em todos os níveis (objeto de banco de dados, tabela categoria, categoria de instruções, modos de exibição categoria, tabela, exibição, funções, procedimentos, UDF e eventos).  
+-   A grade de modos SQL no procedimento armazenado, na função armazenada e no nível de gatilho contém as seguintes colunas: **nome do modo SQL**, **modos SQL originais**e **modos SQL efetivos**.  
   
 > [!NOTE]  
-> Selecionando o **herdar do pai** caixa de seleção, modos herdado do SQL podem ser herdada do nó pai. Por padrão, essa caixa de seleção permanece marcada.  
+> Os modos de grupo serão mostrados em negrito, sob a coluna ' nome do modo SQL '.  
+  
+## <a name="loaded-sql-modes"></a>Modos SQL carregados  
+Esses são os modos SQL, que são definidos no nível de sessão ou raiz. Os modos SQL uma vez carregados no banco de dados de destino não podem ser editados ou modificados.  
+  
+## <a name="inherited-sql-modes"></a>Modos SQL herdados  
+Esses são os modos SQL, que são herdados do nó pai correspondente.  
+  
+Exceto a categoria de funções, a categoria de procedimentos, a categoria de eventos e os gatilhos, esses modos SQL estão presentes em todos os níveis (banco de dados, categoria de tabela, categoria de instruções, categoria de exibições, tabela, exibição, funções, procedimentos, UDF e objeto de evento).  
+  
+> [!NOTE]  
+> Ao marcar a caixa de seleção **herdar do pai** , os modos SQL herdados podem ser herdados do nó pai. Por padrão, essa caixa de seleção permanece selecionada.  
   
 ## <a name="original-sql-modes"></a>Modos SQL originais  
-Esses são os modos SQL presentes em apenas os níveis de função, o procedimento e o gatilho.  
+Esses são os modos SQL presentes somente em níveis de função, procedimento e gatilho.  
   
 > [!NOTE]  
-> Selecionando o **uso original** verificar caixa, os modos de SQL que foram originalmente usados na função correspondente ou o procedimento ou gatilho pode ser usado. Por padrão, essa caixa de seleção permanece marcada.  
+> Ao marcar a caixa de seleção **usar original** , os modos SQL que foram usados originalmente na função ou no gatilho correspondente podem ser usados. Por padrão, essa caixa de seleção permanece selecionada.  
   
-## <a name="effective-sql-modes"></a>Modos SQL eficaz  
-Modos de efetivas SQL pode ser definidos em vários níveis da seguinte maneira:  
+## <a name="effective-sql-modes"></a>Modos SQL efetivos  
+Os modos SQL efetivos podem ser definidos em vários níveis da seguinte maneira:  
   
--   **No nível de sessão:**  
+-   **No nível da sessão:**  
   
-    1.  Todos os modos de SQL carregado pode ser chamados, "Modos de efetivas SQL".  
+    1.  Todos os modos SQL carregados podem ser chamados, "modos SQL efetivos".  
   
     2.  Nesse nível, os modos SQL efetivos podem ser diretamente e explicitamente modificados.  
   
-    3.  O modo SQL eficaz que é definido explicitamente não é refletido como modo de SQL carregado e, por fim, é aplicado ao objeto.  
+    3.  O modo SQL efetivo definido explicitamente não é refletido como modo SQL carregado e, por fim, é aplicado ao objeto.  
   
--   **No nível de função ou procedimento ou Gatilho:**  
+-   **Em nível de função ou procedimento ou gatilho:**  
   
-    1.  Todos os modos SQL Original pode ser chamado, "Modos de efetivas SQL".  
+    1.  Todos os modos SQL originais podem ser chamados, "modos SQL efetivos".  
   
-    2.  Nesse nível, o modo SQL eficaz pode ser modificado explicitamente somente quando o **uso original** caixa de seleção está desmarcada.  
+    2.  Nesse nível, o modo SQL efetivo pode ser explicitamente modificado somente quando a caixa de seleção **usar original** estiver desmarcada.  
   
-    3.  O modo SQL eficaz que é definido explicitamente não é refletido como modo Original do SQL e, por fim, é aplicado ao objeto.  
+    3.  O modo SQL efetivo definido explicitamente não é refletido como o modo SQL original e, por fim, é aplicado ao objeto.  
   
--   **Em nós diferentes de nível de função ou procedimento ou Gatilho:**  
+-   **Em nós diferentes de função ou procedimento ou nível de gatilho:**  
   
-    1.  Todos os modos de SQL herdado pode ser chamados, "Modos de efetivas SQL".  
+    1.  Todos os modos SQL herdados podem ser chamados, "modos SQL efetivos".  
   
-    2.  Nesse nível, o modo SQL eficaz pode ser modificado explicitamente somente quando o **herdar do pai** caixa de seleção está desmarcada.  
+    2.  Nesse nível, o modo SQL efetivo pode ser explicitamente modificado somente quando a caixa de seleção **herdar do pai** está desmarcada.  
   
-    3.  O modo SQL eficaz que é definido explicitamente não é refletido como modo herdado de SQL e, por fim, é aplicado ao objeto.  
+    3.  O modo SQL efetivo definido explicitamente não é refletido como modo SQL herdado e, por fim, é aplicado ao objeto.  
   

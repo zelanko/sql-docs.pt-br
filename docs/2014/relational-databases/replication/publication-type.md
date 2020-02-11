@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48c6ccac0692075db43e4a5c3a7010c541827d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021796"
 ---
 # <a name="publication-type"></a>Tipo de Publicação
@@ -34,8 +34,8 @@ ms.locfileid: "63021796"
  **Publication type**  
  Selecione o tipo de replicação apropriado para essa publicação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicar dados e objetos de banco de dados](publish/publish-data-and-database-objects.md)   
- [Create a Publication](publish/create-a-publication.md)  
+ [Criar uma publicação](publish/create-a-publication.md)  
   
   

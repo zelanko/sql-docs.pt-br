@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989067"
 ---
 # <a name="filter-published-data"></a>Filtrar dados publicados
@@ -61,7 +61,7 @@ ms.locfileid: "62989067"
 ## <a name="static-row-filters"></a>filtros de linha estáticos  
  A ilustração a seguir mostra uma tabela publicada que é filtrada de forma que apenas as linhas 2, 3 e 6 são incluídas na publicação.  
   
- ![Filtragem de linha](../media/repl-16.gif "Filtragem de linha")  
+ ![Filtragem de linhas](../media/repl-16.gif "Filtragem de linhas")  
   
  Um filtro de linha estático usa a cláusula WHERE para selecionar os dados apropriados a serem publicados; você especifica a parte final da cláusula WHERE. Considere a tabela **Product** no banco de dados de exemplo Adventure Works, que contém a coluna **ProductLine**. Para publicar somente as linhas com dados em produtos relacionados a mountain bikes, especifique `ProductLine = 'M'`.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62989067"
     > [!NOTE]  
     >  Filtros de linha em publicações transacionais podem adicionar uma sobrecarga significativa por que a cláusula de filtragem de artigo é avaliada para cada linha de log gravada para uma tabela publicada a fim de determinar se a linha deve ser replicada. Filtros de linha em publicações transacionais devem ser evitados se cada nó de replicação puder dar suporte a toda a carga de dados, e o conjunto completo de dados for relativamente pequeno.  
   
--   Com replicação de mesclagem, use filtros de linha com parâmetro em vez de criar várias publicações com filtros de linha estáticos. Para obter mais informações, consulte [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   Com replicação de mesclagem, use filtros de linha com parâmetro em vez de criar várias publicações com filtros de linha estáticos. Para obter mais informações, consulte [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  Para definir ou modificar um filtro de linha estático, consulte [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62989067"
   
  É possível também usar filtragem de linha e coluna juntas, conforme aqui ilustrado.  
   
- ![Filtragem de linha e coluna](../media/repl-18.gif "Filtragem de linha e coluna")  
+ ![Filtragem de linha e de coluna](../media/repl-18.gif "Filtragem de linha e de coluna")  
   
  Após a criação de uma publicação é possível usar a filtragem de coluna para cancelar uma coluna de uma publicação existente, mas retendo a coluna na tabela no Publicador, e também incluir uma coluna existente na publicação. Para outras alterações, como a adição de uma nova coluna a uma tabela e, então, a adição dela ao artigo publicado, use replicação de alteração de esquema. Para mais informações, consulte as seções "Adicionando colunas" e "Removendo colunas" no tópico [Fazer alterações em esquemas nos bancos de dados de publicação](make-schema-changes-on-publication-databases.md).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62989067"
 |Todas as colunas em uma publicação de mesclagem SQL Server 7.0|Colunas não podem ser filtradas em publicações de mesclagem SQL Server 7.0.|  
 |Timestamp|Publicações de instantâneo ou transacionais SQL Server 7.0 que permitem assinaturas atualizáveis|  
   
- <sup>1</sup> se você está publicando uma tabela em uma publicação de mesclagem e aquela tabela já contém uma coluna de tipo de dados `uniqueidentifier` com o `ROWGUIDCOL` conjunto de propriedades, a replicação pode usar essa coluna em vez de criar uma coluna adicional chamada **rowguid**. Nesse caso, a coluna existente deve ser publicada.  
+ <sup>1</sup> se você estiver publicando uma tabela em uma publicação de mesclagem e essa tabela já contiver uma `uniqueidentifier` coluna de `ROWGUIDCOL` tipo de dados com o conjunto de propriedades, a replicação poderá usar essa coluna em vez de criar uma coluna adicional chamada **ROWGUID**. Nesse caso, a coluna existente deve ser publicada.  
   
  Para definir ou modificar um filtro de coluna, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -129,9 +129,9 @@ ms.locfileid: "62989067"
   
 -   Replicação transacional lhe permite reproduzir uma exibição indexada como uma exibição ou como uma tabela. Se você reproduzir a exibição como uma tabela, você não poderá filtrar colunas da tabela.  
   
- Os filtros de linha não são criados para funcionar nos bancos de dados. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe intencionalmente a execução de `sp_replcmds` (quais filtros serão executados em) ao proprietário do banco de dados (`dbo`). O `dbo` não tem privilégios de banco de dados. Com a adição de CDC (Change Data Capture) em [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a lógica de `sp_replcmds` preenche as tabelas de controle de alterações com informações que o usuário pode retornar e consultar. Por motivos de segurança [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe a execução dessa lógica, de modo que um mal-intencionado `dbo` não possa sequestrar esse caminho de execução. Por exemplo, um `dbo` mal-intencionado pode adicionar gatilhos a tabelas CDC que seriam executadas no contexto do usuário que chama `sp_replcmds`, nesse caso, o Log Reader Agent.  Se a conta que o agente está executando tiver um privilégio mais alto, o `dbo` mal-intencionado poderá escalonar os privilégios dele.  
+ Os filtros de linha não são criados para funcionar nos bancos de dados. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe intencionalmente a execução de `sp_replcmds` (quais filtros serão executados em) ao proprietário do banco de dados (`dbo`). O `dbo` não tem privilégios de banco de dados. Com a adição de CDC (Change Data Capture) em [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a lógica de `sp_replcmds` preenche as tabelas de controle de alterações com informações que o usuário pode retornar e consultar. Por motivos de segurança [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o restringe a execução dessa lógica para que um `dbo` mal-intencionado não possa sequestrar esse caminho de execução. Por exemplo, um `dbo` mal-intencionado pode adicionar gatilhos a tabelas CDC que seriam executadas no contexto do usuário que chama `sp_replcmds`, nesse caso, o Log Reader Agent.  Se a conta que o agente está executando tiver um privilégio mais alto, o `dbo` mal-intencionado poderá escalonar os privilégios dele.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)  
   
   

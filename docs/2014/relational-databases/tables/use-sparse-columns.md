@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196668"
 ---
 # <a name="use-sparse-columns"></a>Usar colunas esparsas
@@ -71,7 +71,7 @@ ms.locfileid: "68196668"
   
 |Tipo de dados|Bytes não esparsos|Bytes esparsos|Percentual de NULL|  
 |---------------|---------------------|------------------|---------------------|  
-|`bit`|0.125|5|98%|  
+|`bit`|0,125|5|98%|  
 |`tinyint`|1|5|86%|  
 |`smallint`|2|6|76%|  
 |`int`|4|8|64%|  
@@ -110,7 +110,7 @@ ms.locfileid: "68196668"
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   
- \* O comprimento é igual à média dos dados que estão contidos no tipo, mais 2 ou 4 bytes.  
+ * O comprimento é igual à média dos dados que estão contidos no tipo, mais 2 ou 4 bytes.  
   
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Sobrecarga na memória necessária para atualizações em colunas esparsas  
  Quando for criar tabelas com colunas esparsas, tenha em mente que uma sobrecarga adicional de 2 bytes é necessária para cada coluna esparsa não nula na tabela quando uma linha está sendo atualizada. Em resultado dessa necessidade de memória adicional, as atualizações podem falhar inesperadamente com o erro 576 quando o tamanho total da linha, incluindo essa sobrecarga de memória, excede 8019, e nenhuma coluna pode ser retirada da linha.  
@@ -231,7 +231,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar conjuntos de colunas](../tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   

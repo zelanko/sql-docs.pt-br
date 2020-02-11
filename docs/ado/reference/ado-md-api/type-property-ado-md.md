@@ -1,5 +1,5 @@
 ---
-title: Tipo de propriedade (ADO MD) | Microsoft Docs
+title: Propriedade Type (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,20 +17,20 @@ ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1109ef6cae68fb2edb4ab3867971064637a6385f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949115"
 ---
 # <a name="type-property-ado-md"></a>Propriedade Type (ADO MD)
-Indica o tipo do atual [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+Indica o tipo do [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md)atual.  
   
 ## <a name="return-values"></a>Valores de retorno  
- Retorna um [MemberTypeEnum](../../../ado/reference/ado-md-api/membertypeenum.md) de valor e é somente leitura.  
+ Retorna um valor [MemberTypeEnum](../../../ado/reference/ado-md-api/membertypeenum.md) e é somente leitura.  
   
 ## <a name="remarks"></a>Comentários  
- Essa propriedade é suportada apenas no [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos que pertencem a um [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto. Ocorre um erro quando essa propriedade é referenciada a partir **membro** objetos que pertencem a um [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto.  
+ Essa propriedade tem suporte apenas em objetos [Membros](../../../ado/reference/ado-md-api/member-object-ado-md.md) que pertencem a um objeto de [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Um erro ocorre quando essa propriedade é referenciada de objetos **Membros** que pertencem a um objeto [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

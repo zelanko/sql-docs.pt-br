@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63073841"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Criando e gerenciando armazenamento para objetos com otimização de memória
@@ -32,7 +32,7 @@ ms.locfileid: "63073841"
   
  O armazenamento de tabelas com otimização de memória tem os seguintes atributos de chave:  
   
--   Todas as tabelas com otimização de memória são mapeadas para um grupo de arquivos com otimização de memória. Este grupo de arquivos é criado usando o grupo de arquivos filestream.  
+-   Todas as tabelas com otimização de memória são mapeadas para um grupo de arquivos com otimização de memória. Esse grupo de arquivos é criado usando o grupo de arquivos FILESTREAM.  
   
 -   Não existem páginas e os dados são persistentes como uma linha.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63073841"
   
 -   Ao contrário das tabelas baseadas em disco, o armazenamento para tabelas com otimização de memória não é compactado. Ao migrar uma tabela baseada em disco compactada (ROW ou PAGE) para tabela com otimização de memória, você precisará levar em conta a alteração no tamanho.  
   
--   Uma tabela com otimização de memória pode ser durável ou não durável. Você só precisará configurar o armazenamento de memória-otimizar duráveis a tabelas.  
+-   Uma tabela com otimização de memória pode ser durável ou não durável. Você só precisa configurar o armazenamento para as tabelas duráveis de otimização de memória.  
   
  Esta seção descreve os pares do arquivo do ponto de verificação e outros aspectos do armazenamento de dados em tabelas com otimização de memória.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63073841"
   
 -   [Monitorando e solucionando problemas de mesclagem de pares de arquivos delta e de dados](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OLTP in-memory &#40;Otimização na memória&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

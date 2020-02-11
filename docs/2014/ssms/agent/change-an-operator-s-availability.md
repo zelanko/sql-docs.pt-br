@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017104"
 ---
 # <a name="change-an-operator39s-availability"></a>Alterar a disponibilidade de um operador
@@ -38,7 +38,7 @@ ms.locfileid: "63017104"
   
      [Segurança](#Security)  
   
--   **Para alterar a disponibilidade de um operador usando:**  
+-   **Para alterar a disponibilidade de um operador, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63017104"
   
 4.  Clique com o botão direito do mouse no operador que deseja habilitar ou desabilitar e selecione **Propriedades**e clique na guia **Geral** .  
   
-5.  Na caixa de diálogo _operator_name_**Propriedades** , marque ou desmarque a caixa de seleção **Habilitado** .  
+5.  Na caixa de diálogo**Propriedades** do _operator_name_, marque ou desmarque a caixa de seleção **habilitado** .  
   
 6.  Clique em **OK**.  
   
@@ -88,6 +88,6 @@ ms.locfileid: "63017104"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_update_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql).  
+ Para obter mais informações, consulte [sp_update_operator &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql).  
   
   

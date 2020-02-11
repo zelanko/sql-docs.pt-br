@@ -1,5 +1,5 @@
 ---
-title: Quantificado expressões (XQuery) | Microsoft Docs
+title: Expressões quantificadas (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,10 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946371"
 ---
 # <a name="quantified-expressions-xquery"></a>Expressões quantificadas (XQuery)
@@ -46,9 +46,9 @@ ms.locfileid: "67946371"
 ( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
- Você pode usar essas expressões em uma consulta para aplicar explicitamente quantificação existencial ou universal a uma expressão em uma ou em várias sequências. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a expressão na cláusula `satisfies` deve resultar em um dos seguintes: uma sequência de nó, uma sequência vazia ou um valor Booliano. O valor Booliano efetivo do resultado dessa expressão será usado na quantificação. A quantificação existencial que usa **alguns** retornará True se pelo menos um dos valores associados pelo quantificador tiver um resultado na expressão de satisfação. A quantificação universal que usa **cada** deve ter True em todos os valores associados pelo quantificador.  
+ Você pode usar essas expressões em uma consulta para aplicar explicitamente quantificação existencial ou universal a uma expressão em uma ou em várias sequências. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a expressão na cláusula `satisfies` deve resultar em um dos seguintes: uma sequência de nó, uma sequência vazia ou um valor Booliano. O valor Booliano efetivo do resultado dessa expressão será usado na quantificação. A quantificação Existential que usa **algumas** retornará true se pelo menos um dos valores associados pelo quantificador tiver um resultado verdadeiro na expressão de satisfazo. A quantificação universal que usa a **cada** deve ter verdadeiro para todos os valores associados pelo quantificador.  
   
- Por exemplo, a consulta a seguir verifica cada \<local > elemento para ver se ele tem um atributo LocationID.  
+ Por exemplo, a consulta a seguir verifica \<cada local> elemento para ver se ele tem um atributo LocationID.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,13 +64,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Como LocationID é um atributo necessário do \<local > elemento, você recebe o resultado esperado:  
+ Como LocationID é um atributo necessário do \<local> elemento, você recebe o resultado esperado:  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- Em vez de usar o [método Query ()](../t-sql/xml/query-method-xml-data-type.md), você pode usar o [método Value ()](../t-sql/xml/value-method-xml-data-type.md) para retornar o resultado ao mundo relacional, conforme mostrado na consulta a seguir. A consulta retornará True se todos os locais de centro de trabalho tiverem atributos LocationID. Caso contrário, a consulta retornará False.  
+ Em vez de usar o [método Query ()](../t-sql/xml/query-method-xml-data-type.md), você pode usar o [método Value ()](../t-sql/xml/value-method-xml-data-type.md) para retornar o resultado para o mundo relacional, conforme mostrado na consulta a seguir. A consulta retornará True se todos os locais de centro de trabalho tiverem atributos LocationID. Caso contrário, a consulta retornará False.  
   
 ```  
 SELECT Instructions.value('  
@@ -106,7 +106,7 @@ ProductModelID SmallPicturesStored
   
 -   Não há suporte para a asserção de tipo como parte da associação da variável nas expressões quantificadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões XQuery](../xquery/xquery-expressions.md)  
   
   

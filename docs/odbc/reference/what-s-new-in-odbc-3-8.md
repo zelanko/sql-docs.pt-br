@@ -1,5 +1,5 @@
 ---
-title: O que&#39;novo no ODBC 3.8 | Microsoft Docs
+title: O que&#39;s New no ODBC 3,8 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,36 +11,36 @@ ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48e9c526f4045a4657d7942f3fabcace349cc3ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67951782"
 ---
-# <a name="what39s-new-in-odbc-38"></a>O que&#39;novo no ODBC 3.8
-Windows 8 inclui uma versão atualizada do ODBC 3.8. O ODBC 3.8 no Windows 8 inclui os seguintes recursos:  
+# <a name="what39s-new-in-odbc-38"></a>O que&#39;s New no ODBC 3,8
+O Windows 8 inclui uma versão atualizada do ODBC 3,8. O ODBC 3,8 no Windows 8 inclui os seguintes recursos:  
   
 -   [Pool de conexões com reconhecimento de driver](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)  
   
--   [Execução assíncrona (Método de notificação)](../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
+-   [Execução assíncrona (método de notificação)](../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
--   [Acesso a dados de rastreamento (Windows 8)](https://msdn.microsoft.com/library/windows/desktop/hh829624.aspx)  
+-   [Rastreamento de acesso a dados (Windows 8)](https://msdn.microsoft.com/library/windows/desktop/hh829624.aspx)  
   
--   Comandos do PowerShell foram adicionados para ajudá-lo a gerenciar ODBC dados fontes, drivers ODBC, contador de desempenho do ODBC e dados de rastreamento de acesso na linha de comando.  Para obter mais informações, consulte [comandos do PowerShell do Windows Data Access Components](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+-   Foram adicionados comandos do PowerShell para ajudá-lo a gerenciar fontes de dados ODBC, drivers ODBC, contador de desempenho ODBC e rastreamento de acesso a dados na linha de comando.  Para obter mais informações, consulte [comandos do PowerShell dos componentes de acesso a dados do Windows](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
- Windows 7 inclui uma versão atualizada do ODBC, o ODBC 3.8. O ODBC 3.8 inclui os seguintes recursos:  
+ O Windows 7 inclui uma versão atualizada do ODBC, ODBC 3,8. O ODBC 3,8 inclui os seguintes recursos:  
   
 -   Executando operações de conexão de forma assíncrona. Para obter mais informações, consulte [execução assíncrona (método de sondagem)](../../odbc/reference/develop-app/asynchronous-execution-polling-method.md).  
   
--   Parâmetros de saída em fluxo. Para obter mais informações, consulte [Recuperando parâmetros de saída usando SQLGetData](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+-   Parâmetros de saída transmitidos. Para obter mais informações, consulte [Recuperando parâmetros de saída usando SQLGetData](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 -   Extensibilidade de tipo de dados ODBC C. Para obter mais informações, consulte [Tipos de dados C em ODBC](../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
- Gravadores de driver devem ler [atualizando um Driver 3.5 para um Driver 3.8](../../odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver.md).  
+ Os gravadores de driver devem ler a [atualização de um driver 3,5 para um driver 3,8](../../odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver.md).  
   
- Operações de conexão assíncrona podem ser usadas por ODBC 3. x e os aplicativos ODBC 2. x com um driver ODBC 3.8.  
+ As operações de conexão assíncrona podem ser usadas por aplicativos ODBC 3. x e ODBC 2. x com um driver ODBC 3,8.  
   
  Para obter mais informações, consulte [matriz de compatibilidade](../../odbc/reference/develop-app/compatibility-matrix.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do programador ODBC](../../odbc/reference/odbc-programmer-s-reference.md)

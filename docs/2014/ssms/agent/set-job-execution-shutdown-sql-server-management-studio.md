@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca9343fe8a6f9e89ba9f26dbbbb12dd7362aff91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033592"
 ---
 # <a name="set-job-execution-shutdown-sql-server-management-studio"></a>Set Job Execution Shutdown (SQL Server Management Studio)
-  Este tópico descreve como definir o tempo que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve esperar pelo término dos trabalhos em execução antes de encerrar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Este tópico descreve como definir o tempo que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent aguardará até que os trabalhos em execução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sejam concluídos antes [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]próprio agente seja concluído no usando o.  
   
  **Neste tópico**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "63033592"
   
      [Segurança](#Security)  
   
--   **Para definir um tempo de desligamento para um trabalho do SQL Server Agent, usando:**  
+-   **Para definir um tempo de desligamento para um trabalho de SQL Server Agent, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

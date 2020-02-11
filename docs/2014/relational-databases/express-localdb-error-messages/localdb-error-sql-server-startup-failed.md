@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6478f29c150181b477e6fecc5c4b35f25db3e817
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066284"
 ---
 # <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
@@ -23,11 +23,11 @@ ms.locfileid: "63066284"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|266|  
-|Origem do evento|Tempo de execução de banco de dados local do SQL Server 12.0|  
-|Componente|API do tempo de execução de banco de dados local|  
-|Texto da mensagem|Ocorreu um erro durante a inicialização da instância do banco de dados Local: Processo do SQL Server falhou ao iniciar.|  
+|Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
+|Componente|API do runtime de banco de dados local|  
+|Texto da mensagem|Ocorreu um erro durante a inicialização da instância do Banco de Dados Local: o processo do SQL Server não foi iniciado.|  
   
 ## <a name="explanation"></a>Explicação  
  Um processo do SQL Server foi iniciado, mas houve falha na inicialização do SQL Server.  

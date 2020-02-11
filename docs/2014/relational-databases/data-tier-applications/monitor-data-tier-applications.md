@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8fe96b7d84a2e363166238c3e840cac383f443dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918060"
 ---
 # <a name="monitor-data-tier-applications"></a>Monitorar aplicativos da camada de dados
@@ -36,7 +36,7 @@ ms.locfileid: "62918060"
   
  Os limites mínimos e máximos para uso de recurso são definidos por políticas de monitoração de aplicativo definidas na página de detalhes **Administração do Utilitário** . Os administradores de banco de dados podem personalizar as políticas para corresponder aos limites estabelecidos por suas organizações. Por exemplo, uma empresa pode definir 75% como a utilização de CPU máxima para um DAC, enquanto outra pode definir o máximo como 80%. Para obter mais informações sobre como definir políticas de monitoramento de aplicativo, veja [Administração do Utilitário &#40;Utilitário do SQL Server&#41;](../../database-engine/utility-administration-sql-server-utility.md).  
   
- Para exibir a página de detalhes **Aplicativos da Camada de Dados Implantados**:  
+ Para exibir a página de detalhes **Aplicativos da Camada de Dados Implantados** :  
   
 1.  Selecione o menu **Exibir/Gerenciador do Utilitário** .  
   
@@ -73,8 +73,8 @@ ms.locfileid: "62918060"
 ## <a name="monitoring-dac-databases"></a>Monitorando bancos de dados DAC  
  Depois que um DAC foi implantado com êxito, o banco de dados contido no DAC funciona igual a qualquer outro banco de dados. Use técnicas e ferramentas padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para monitorar desempenho, log, eventos e utilização de recursos do banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de Dados](data-tier-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](deploy-a-data-tier-application.md)  
   
   

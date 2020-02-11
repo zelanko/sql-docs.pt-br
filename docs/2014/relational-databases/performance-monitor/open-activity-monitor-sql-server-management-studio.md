@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032000"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Abrir o Monitor de Atividade (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "63032000"
   
      [Segurança](#Security)  
   
--   **Para abrir o Monitor de atividade usando:**  
+-   **Para abrir o Monitor de Atividade usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63032000"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>Para abrir o Monitor de Atividade no SQL Server Management Studio  
   
-1.  Na barra de ferramentas padrão do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , clique em **Monitor de Atividade**.  
+1.  Na barra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de ferramentas padrão, clique em **Monitor de atividade**.  
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , selecione o nome do servidor e o modo de autenticação e clique em **Conectar**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63032000"
   
 #### <a name="to-open-activity-monitor-in-object-explorer"></a>Para abrir o Monitor de Atividade no Pesquisador de Objetos  
   
--   No Pesquisador de objetos, clique no nome de instância e, em seguida, selecione **Monitor de atividade**.  
+-   No Pesquisador de objetos, clique com o botão direito do mouse no nome da instância e selecione **Monitor de atividade**.  
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>Para abrir o Monitor de Atividade ao abrir o SQL Server Management Studio  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63032000"
   
 4.  Para ativar as alterações, feche e reabra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Refresh"></a> Para definir o intervalo de atualização do Monitor de atividade  
+###  <a name="Refresh"></a>Para definir o intervalo de atualização do monitor de atividade  
   
 -   Abra o Monitor de Atividade.  
   

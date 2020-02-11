@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf8b3b4f00ad2e8a3b9236292ee20948c852b6ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199551"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definir e modificar um filtro de junção entre artigos de mesclagem
@@ -83,7 +83,7 @@ ms.locfileid: "68199551"
         > [!CAUTION]  
         >  A seleção dessa opção indica que a relação entre tabelas pai e filho em um filtro de junção é de um para um ou um para muitos. Só selecione essa opção se houver uma restrição na coluna de junção na tabela filho que garanta a exclusividade. Se a opção for definida incorretamente, poderá ocorrer não convergência de dados.  
   
-    -   Por padrão, os processos de replicação de mesclagem são alterados em uma base de linha por linha durante a sincronização. Para ter alterações relacionadas em linhas de tabelas filtradas e de tabelas unidas processadas como uma unidade, selecione **Registro lógico** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou versões posteriores). Essa opção só estará disponível se os requisitos de  artigo e publicação para uso de registros lógicos forem atendidos. Para obter mais informações, consulte a seção "Considerações para uso de registros lógicos" em [Agrupar alterações a linhas relacionadas com registros lógicos](../merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Por padrão, os processos de replicação de mesclagem são alterados em uma base de linha por linha durante a sincronização. Para processar as alterações relacionadas em linhas da tabela filtrada e da tabela unida como uma unidade, selecione **Registro lógico** (somente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versões posteriores). Essa opção só estará disponível se os requisitos de  artigo e publicação para uso de registros lógicos forem atendidos. Para obter mais informações, consulte a seção "Considerações para uso de registros lógicos" em [Agrupar alterações a linhas relacionadas com registros lógicos](../merge/group-changes-to-related-rows-with-logical-records.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -114,7 +114,7 @@ ms.locfileid: "68199551"
   
 2.  No Publicador no banco de dados de publicação, execute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) para definir um ou mais artigos relacionados, que também são conhecidos como artigos filho, para a publicação. Para obter mais informações, consulte [Define an Article](define-an-article.md).  
   
-3.  No Publicador no banco de dados de publicação, execute [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql). Especifique **@publication** , um nome exclusivo para esse filtro para **@filtername** , o nome do artigo filho criado na etapa 2 para **@article** ; o nome do artigo pai ao qual é feita a junção para **@join_articlename** e um dos valores a seguir para **@join_unique_key** :  
+3.  No Publicador no banco de dados de publicação, execute [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql). Especifique **@publication** **@filtername**, um nome exclusivo para esse filtro, o nome do artigo filho criado na etapa 2 para **@article**, o nome do artigo pai ao **@join_articlename**qual está sendo adicionado e um dos seguintes valores para: **@join_unique_key**  
   
     -   **0** - indica uma junção muitos para um ou muitos para muitos entre os artigos pai e filho.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68199551"
      Isso define um filtro de junção entre os dois artigos.  
   
     > [!CAUTION]  
-    >  Somente defina **@join_unique_key** como **1** se você tiver uma restrição na coluna de junção na tabela subjacente para o artigo pai que garanta exclusividade. Se **@join_unique_key** for definido incorretamente como **1** , poderá ocorrer não convergência de dados.  
+    >  Somente defina **@join_unique_key** como **1** se você tiver uma restrição na coluna de junção na tabela subjacente para o artigo pai que garante a exclusividade. Se **@join_unique_key** é definido como **1** incorretamente, pode ocorrer não convergência de dados.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Este exemplo define um artigo para uma publicação de mesclagem em que o artigo da tabela `SalesOrderDetail` é filtrado em relação à tabela `SalesOrderHeader` que, por sua vez, é filtrada usando um filtro de linha estático. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](define-and-modify-a-static-row-filter.md).  
@@ -134,13 +134,13 @@ ms.locfileid: "68199551"
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
-## <a name="see-also"></a>Consulte também  
- [Filtros de junção](../merge/join-filters.md)   
- [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Join Filters](../merge/join-filters.md)   
+ [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)   
  [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md)   
  [Filtrar dados publicados para a replicação de mesclagem](../merge/filter-published-data-for-merge-replication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Definir uma relação de registro lógico entre artigos da tabela de mesclagem](define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Definir e modificar um filtro de linha parametrizado para um artigo de mesclagem](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Restrições em conexões de contexto e normais | Microsoft Docs
+title: Restrições em conexões regulares e de contexto | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919165"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Restrições em conexões comuns e de contexto
-  Este tópico discute as restrições associadas à execução de código no [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] processo por meio do contexto e conexões normais.  
+  Este tópico discute as restrições associadas ao código em execução no [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] processo por meio de contexto e conexões regulares.  
   
 ## <a name="restrictions-on-context-connections"></a>Restrições em conexões de contexto  
  Ao desenvolver seu aplicativo, leve em consideração as restrições a seguir que se aplicam a conexões de contexto:  
@@ -34,7 +34,8 @@ ms.locfileid: "62919165"
   
 -   Não existe suporte para a execução de atualizações em lote em uma conexão de contexto.  
   
--   `SqlNotificationRequest` não pode ser usado com comandos que são executados em uma conexão de contexto.  
+-   
+  `SqlNotificationRequest` não pode ser usado com comandos que são executados em uma conexão de contexto.  
   
 -   Não existe suporte para o cancelamento de comandos que estão sendo executados na conexão de contexto. O método `SqlCommand.Cancel` ignora a solicitação silenciosamente.  
   
@@ -47,11 +48,11 @@ ms.locfileid: "62919165"
 ## <a name="restrictions-on-regular-connections"></a>Restrições em conexões comuns  
  Ao desenvolver seu aplicativo, leve em consideração as restrições a seguir que se aplicam a conexões comuns:  
   
--   Não existe suporte para a execução assíncrona de comandos em servidores internos. Incluir "async=true" na cadeia de conexão de um comando e, depois, executar o comando resultará na geração de `System.NotSupportedException`. Essa mensagem será exibida: "O processamento assíncrono não é suportado quando em execução dentro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processo."  
+-   Não existe suporte para a execução assíncrona de comandos em servidores internos. Incluir "async=true" na cadeia de conexão de um comando e, depois, executar o comando resultará na geração de `System.NotSupportedException`. Esta mensagem será exibida: "Não existe suporte para processamento assíncrono quando executado dentro do processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Não existe suporte para o objeto `SqlDependency`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conexão de contexto](context-connection.md)  
   
   

@@ -15,17 +15,17 @@ ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4974d6509a0ba864f0159271d9c8cc90e2c4047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963401"
 ---
 # <a name="sql-property-example-vbscript"></a>Exemplo da propriedade SQL (VBScript)
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O código a seguir mostra como definir o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) parâmetro SQL em tempo de design e bind-lo a um controle de reconhecimento de dados usando o banco de dados chamado *Pubs*, que é fornecido com o Microsoft SQL Server. Para testar o exemplo, copie o código a seguir em um documento normal do ASP denominado **SQLDesignVBS.asp** em seu servidor Web.  
+ O código a seguir mostra como definir o [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Parâmetro SQL do DataControl no momento do design e associe-o a um controle com reconhecimento de dados usando o banco de dado chamado *pubs*, que é fornecido com Microsoft SQL Server. Para testar o exemplo, copie o código a seguir em um documento ASP normal chamado **SQLDesignVBS. asp** no servidor Web.  
   
 ```  
 <!-- BeginSQLDesignVBS -->  
@@ -88,7 +88,7 @@ body {
 <!-- EndSQLDesignVBS -->  
 ```  
   
- O exemplo a seguir mostra como definir os parâmetros necessários de **RDS. DataControl** em tempo de execução. Para testar este exemplo, recortar e colar o código a seguir em um documento normal do ASP e denomine **SQLRuntimeVBS.asp**. Script ASP identificará o seu servidor.  
+ O exemplo a seguir mostra como definir os parâmetros necessários de **RDS. Controle** de data em tempo de execução. Para testar este exemplo, recorte e cole o código a seguir em um documento ASP normal e nomeie-o **SQLRuntimeVBS. asp**. O script ASP identificará seu servidor.  
   
 ```  
 <!-- BeginSQLRuntimeVBS -->  
@@ -174,7 +174,7 @@ End Sub
 <!-- EndSQLRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Propriedade SQL](../../../ado/reference/rds-api/sql-property.md)
 

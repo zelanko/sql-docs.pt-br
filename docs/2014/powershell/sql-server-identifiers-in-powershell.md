@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3823b6d55439aad860d9176933c348e44acc1ba5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922840"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Identificadores do SQL Server no PowerShell
@@ -36,7 +36,8 @@ ms.locfileid: "62922840"
 SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
 ```  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Os identificadores são os nomes de objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , como nomes de tabela ou coluna. Existem dois tipos de identificadores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Os identificadores são os nomes de objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , como nomes de tabela ou coluna. Existem dois tipos de identificadores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
 -   Os identificadores regulares estão limitados a um conjunto de caracteres que também são suportados em caminhos do Windows PowerShell. Esses nomes podem ser usados em caminhos do Windows PowerShell sem a necessidade de alterá-los.  
   
@@ -53,8 +54,8 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
 |Descreve como especificar a codificação hexadecimal para caracteres em identificadores delimitados sem suporte em caminhos do Windows PowerShell. Também descreve como decodificar os caracteres hexadecimais.|[Codificar e decodificar identificadores do SQL Server](encode-and-decode-sql-server-identifiers.md)|  
 |Descreve como usar o caractere de escape do Windows PowerShell para caracteres sem suporte em caminhos do PowerShell.|[Retirar identificadores do SQL Server](escape-sql-server-identifiers.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Provedor do SQL Server PowerShell](sql-server-powershell-provider.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Provedor de SQL Server PowerShell](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)   
  [Identificadores de banco de dados](../relational-databases/databases/database-identifiers.md)  
   

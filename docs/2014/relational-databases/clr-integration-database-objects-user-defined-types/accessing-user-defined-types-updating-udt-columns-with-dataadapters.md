@@ -24,17 +24,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919639"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Atualizando colunas UDT com DataAdapters
   UDTs (tipos definidos pelo usuário) são suportados usando um `System.Data.DataSet` e um `System.Data.SqlClient.SqlDataAdapter` para recuperar e modificar dados.  
   
 ## <a name="populating-a-dataset"></a>Populando um conjunto de dados  
- Você pode usar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para selecionar valores de coluna UDT a fim de popular um conjunto de dados usando um adaptador de dados. O exemplo a seguir pressupõe que você tenha um **pontos** tabela definida com a seguinte estrutura e alguns dados de exemplo. O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções criam as **pontos** de tabela e inserir algumas linhas.  
+ Você pode usar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para selecionar valores de coluna UDT a fim de popular um conjunto de dados usando um adaptador de dados. O exemplo a seguir pressupõe que você tenha uma tabela de **pontos** definida com a seguinte estrutura e alguns dados de exemplo. As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir criam a tabela **Points** e inserem algumas linhas.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +46,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- O seguinte fragmento de código do ADO.NET recupera uma cadeia de caracteres de conexão válida, cria um novo `SqlDataAdapter`e preenche uma `System.Data.DataTable` com as linhas de dados das **pontos** tabela.  
+ O fragmento de código ADO.NET a seguir recupera uma cadeia de conexão válida, `SqlDataAdapter`cria um novo e popula `System.Data.DataTable` um com as linhas de dados da tabela **Points** .  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -85,9 +85,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  O seguinte exemplo do ADO.NET tem dois métodos:  
   
--   `UserProvidedCommands`, que demonstra como fornecer `InsertCommand`, `UpdateCommand`, e `DeleteCommand` objetos para atualizar o `Point` UDT no **pontos** tabela (que não contém um `timestamp` coluna).  
+-   `UserProvidedCommands`, que demonstra `InsertCommand`como fornecer objetos, `UpdateCommand`e `DeleteCommand` para atualizar o `Point` UDT na tabela **Points** (que não contém uma `timestamp` coluna).  
   
--   `CommandBuilder`, que demonstra como usar um `SqlCommandBuilder` no **Points_ts** tabela que contém o `timestamp` coluna.  
+-   `CommandBuilder`, que demonstra como usar um `SqlCommandBuilder` na tabela **Points_ts** que contém a `timestamp` coluna.  
   
 ```vb  
 Imports System  
@@ -369,7 +369,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acessando tipos definidos pelo usuário no ADO.NET](accessing-user-defined-types-in-ado-net.md)  
   
   

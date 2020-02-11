@@ -1,5 +1,5 @@
 ---
-title: Propriedades do novo alerta (página resposta) de alerta | Microsoft Docs
+title: Propriedades do alerta – novo alerta (página resposta) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062154"
 ---
-# <a name="alert-properties-new-alert-response-page"></a>Alerta de propriedades do novo alerta (página resposta)
-  Use esta página para especificar um trabalho que você quer executar e para obter uma lista de operadores a serem notificados em resposta a um alerta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+# <a name="alert-properties-new-alert-response-page"></a>Propriedades do alerta – novo alerta (página resposta)
+  Use esta página para especificar um trabalho que você deseja executar e para obter uma lista de operadores a serem notificados em resposta a um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta do Agent.  
   
 ## <a name="options"></a>Opções  
  **Executar trabalho**  
@@ -38,7 +38,7 @@ ms.locfileid: "63062154"
  **Lista de operadores**  
  Lista os operadores a notificar quando ocorrer um alerta. Para especificar um método de notificação, marque a caixa de seleção **Email**, **Pager**ou **Net send** que é exibida depois do nome do operador. Essa opção não está disponível quando **Notificar operadores** não está selecionado.  
   
- **Email**  
+ **Mensagens**  
  Use email para notificar o operador.  
   
  **Pager**  
@@ -53,9 +53,9 @@ ms.locfileid: "63062154"
  **Exibir operador**  
  Exibe a caixa de diálogo **Propriedades** para o operador selecionado atualmente. Você pode exibir e modificar as propriedades do operador na caixa de diálogo **Propriedades do Operador**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Alerts](alerts.md)   
- [Criar um alerta com severidade de nível](create-an-alert-using-severity-level.md)   
+ [Criar um alerta usando o nível de severidade](create-an-alert-using-severity-level.md)   
  [Alerts](alerts.md)   
  [Editar um alerta](edit-an-alert.md)   
  [Delete an Alert](delete-an-alert.md)  
