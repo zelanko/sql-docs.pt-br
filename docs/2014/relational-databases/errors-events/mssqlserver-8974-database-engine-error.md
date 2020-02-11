@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c46f6bee67aa84bb805709e01ea911722902a3e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762167"
 ---
-# <a name="mssqlserver8974"></a>MSSQLSERVER_8974
+# <a name="mssqlserver_8974"></a>MSSQLSERVER_8974
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|8974|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|Texto da mensagem|Erro de tabela: ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, unidade de alocação A_ID ID (tipo TYPE). O nó de dados fora da linha na página P_ID1, slot S_ID1, ID de texto ID TEXT_ID é apontado pela página P_ID2, slot S_ID2 e pela página P_ID3, slot P_ID3.|  
+|Texto da mensagem|Erro de tabela: ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE). O nó de dados fora da linha na página P_ID1, slot S_ID1, ID de texto ID TEXT_ID é apontado pela página P_ID2, slot S_ID2 e pela página P_ID3, slot P_ID3.|  
   
 ## <a name="explanation"></a>Explicação  
  Um nó de dados fora da linha tem dois registros de dados ou de índice que o listam como um nó filho. Um nó pode ter apenas um nó pai.  

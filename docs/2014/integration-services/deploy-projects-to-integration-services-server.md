@@ -1,5 +1,5 @@
 ---
-title: Implantar projetos no servidor do Integration Services | Microsoft Docs
+title: Implantar projetos no Integration Services Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059575"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no servidor do Integration Services
-  Na versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de tempo de execução para pacotes por meio de ambientes.  
+  Na versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de runtime para pacotes por meio de ambientes.  
   
  Para obter mais informações sobre ambientes, consulte [Criar e mapear um ambiente de servidor](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
@@ -29,14 +29,14 @@ ms.locfileid: "66059575"
   
 1.  Criar um catálogo do SSISDB se ainda não tiver criado. Para obter mais informações, consulte [Criar o catálogo SSIS](catalog/ssis-catalog.md).  
   
-2.  Converta o projeto no modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services** . Para obter mais informações, confira as instruções abaixo: [Para converter um projeto no modelo de implantação de projeto](#convert)  
+2.  Converta o projeto no modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services** . Para obter mais informações, consulte as instruções abaixo: [Para converter um projeto no modelo de implantação de projeto](#convert).  
   
     -   Se você criou o projeto no [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)], por padrão o projeto usará o modelo de implantação de projeto.  
   
     -   Se você criou o projeto em uma versão anterior do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], depois que abrir o arquivo de projeto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], converta o projeto no modelo de implantação de projeto.  
   
         > [!NOTE]  
-        >  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
+        >  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [Add, Delete, or Share a Connection Manager in a Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
   
          Dependendo em se você executa o **Assistente de Conversão de Projeto do Integration Services** no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], o assistente executa tarefas de conversão diferentes.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66059575"
   
      Para obter mais informações sobre a atualização de pacotes, consulte [Atualizar pacotes do Integration Services](install-windows/upgrade-integration-services-packages.md) e [Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Implante o projeto no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, confira as instruções abaixo: [Para implantar um projeto no Servidor do Integration Services](#deploy).  
+3.  Implante o projeto no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte as instruções abaixo: [Para implantar um projeto no Servidor do Integration Services](#deploy).  
   
 4.  (Opcional) Crie um ambiente para o projeto implantado. Para obter mais informações, consulte [Criar e mapear um ambiente de servidor](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
-##  <a name="convert"></a> Para converter um projeto no modelo de implantação de projeto  
+##  <a name="convert"></a>Para converter um projeto para o modelo de implantação de projeto  
   
 1.  Abra o projeto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]e, no Gerenciador de Soluções, clique com o botão direito do mouse no projeto e clique em **Converter em Modelo de Implantação de Projeto**.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "66059575"
   
 2.  Conclua o assistente. Para obter mais informações, consulte [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-##  <a name="deploy"></a> Para implantar um projeto no Servidor do Integration Services  
+##  <a name="deploy"></a>Para implantar um projeto no Integration Services Server  
   
 1.  Abra o projeto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]e, em seguida, no menu **Projeto** , selecione **Implantar** para implantar o **Assistente de Implantação do Integration Services**.  
   
      -ou-  
   
-     No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda o nó [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** no Pesquisador de Objetos e localize a pasta Projetos do projeto que você deseja implantar. Clique com o botão direito do mouse na pasta **Projetos** e clique em **Implantar Projeto**.  
+     No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  > o nó **SSISDB** no Pesquisador de objetos e localize a pasta projetos do projeto que você deseja implantar. Clique com o botão direito do mouse na pasta **Projetos** e clique em **Implantar Projeto**.  
   
      -ou-  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66059575"
   
 2.  Na página **Selecionar Origem** , clique em **Arquivo de implantação de projeto** para selecionar o arquivo de implantação do projeto.  
   
-     -ou-  
+     -OU-  
   
      Clique em **Catálogo do Integration Services** para selecionar um projeto que já foi implantado no catálogo do SSISDB.  
   

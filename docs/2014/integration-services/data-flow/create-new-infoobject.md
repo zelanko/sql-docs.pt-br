@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827905"
 ---
 # <a name="create-new-infoobject"></a>Criar Novo InfoObject
@@ -129,7 +129,7 @@ ms.locfileid: "62827905"
  **Tipo do InfoObject**  
  Exiba o tipo do InfoObject. A tabela a seguir lista os valores possíveis do tipo.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |CHA|Características|  
 |KYF|Valores-chave|  
@@ -144,7 +144,7 @@ ms.locfileid: "62827905"
   
  Para adicionar um InfoObject existente, clique em Adicionar e use a caixa de diálogo **Pesquisar InfoObject** para localizar o InfoObject. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up InfoObject](look-up-infoobject.md).  
   
- **Nova**  
+ **Novo**  
  Adicione um novo InfoObject como um atributo.  
   
  Para criar e adicionar um novo InfoObject, clique em Novo e use uma nova instância da caixa de diálogo **Criar Novo InfoObject** para criar o novo InfoObject.  
@@ -152,11 +152,11 @@ ms.locfileid: "62827905"
  **Remover**  
  Remova o InfoObject selecionado da lista **Atributos** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar InfoCube para os Dados da Transação](create-infocube-for-transaction-data.md)   
  [Criar InfoSource](create-infosource.md)   
- [Criar InfoSource para os Dados da Transação](create-infosource-for-transaction-data.md)   
+ [Criar InfoSource para os dados da transação](create-infosource-for-transaction-data.md)   
  [Criar InfoSource para dados mestre](create-infosource-for-master-data.md)   
- [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ajuda F1 do Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

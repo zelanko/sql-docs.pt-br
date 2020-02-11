@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798232"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
-  Este tópico descreve como reatribuir a propriedade de trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a outro usuário.  
+  Este tópico descreve como reatribuir a propriedade de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalhos do Agent a outro usuário.  
   
--   **Antes de começar:**  [Limitações e restrições](#Restrictions), [Segurança](#Security)  
+-   **Antes de começar:**  [limitações e restrições](#Restrictions), [segurança](#Security)  
   
--   **Para conceder a propriedade de um trabalho a outros usando:**  
+-   **Para conceder a propriedade de um trabalho a outros, usando:**  
   
      [SQL Server Management Studio](#SSMSProc2)  
   
@@ -47,10 +47,10 @@ ms.locfileid: "72798232"
  Por questão de segurança, apenas o proprietário do trabalho ou um membro da função **sysadmin** pode alterar a definição do trabalho. Somente os membros da função de servidor fixa **sysadmin** podem atribuir a propriedade do trabalho a outros usuários, bem como executar qualquer trabalho, independentemente de seu proprietário.  
   
 > [!NOTE]  
->  Se você transmitir a propriedade a um usuário que não seja membro da função de servidor fixa **sysadmin** e o trabalho estiver executando etapas que exijam contas proxy (por exemplo, execução de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)]), verifique se o usuário tem acesso à conta proxy necessária, ou o trabalho falhará.  
+>  Se você transmitir a propriedade a um usuário que não seja membro da função de servidor fixa **sysadmin** e o trabalho estiver executando etapas que exijam contas proxy (por exemplo, execução de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] ), verifique se o usuário tem acesso à conta proxy necessária, ou o trabalho falhará.  
   
 ####  <a name="Permissions"></a> Permissões  
- Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProc2"></a> Usando o SQL Server Management Studio  
  **Para conceder a propriedade de um trabalho a outros**  
@@ -63,14 +63,14 @@ ms.locfileid: "72798232"
   
      Atribuir um trabalho a outro logon não garante que o novo proprietário tenha permissões adequadas para executar o trabalho com êxito.  
   
-##  <a name="TsqlProc2"></a> Usando Transact-SQL  
+##  <a name="TsqlProc2"></a> Usando o Transact-SQL  
  **Para conceder a propriedade de um trabalho a outros**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do Mecanismo de Banco de Dados e expanda-a.  
   
 2.  Na barra de ferramentas, clique em **Nova Consulta**.  
   
-3.  Na janela de consulta, insira as instruções a seguir que usam o procedimento armazenado do sistema [Transact-SQL &#40;&#41; de sp_manage_jobs_by_login](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) . O exemplo a seguir reatribui todos os trabalhos de `danw` para `fran??oisa`.  
+3.  Na janela de consulta, insira as instruções a seguir que usam o sp_manage_jobs_by_login &#40;procedimento armazenado do sistema [&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) . O exemplo a seguir reatribui todos os trabalhos de `danw` para `fran??oisa`.  
   
     ```sql
     USE msdb ;  
@@ -87,8 +87,8 @@ ms.locfileid: "72798232"
 
 ### <a name="to-give-others-ownership-of-a-job"></a>Para conceder a propriedade de um trabalho a outros
   
-1.  Chame a classe `Job` usando uma linguagem de programação que você escolher, como Visual Basic, Visual C# ou PowerShell. Para obter um código de exemplo, consulte [Scheduling Automatic Administrative Tasks in SQL Server Agent](sql-server-agent.md).  
+1.  Chame a classe `Job` usando uma linguagem de programação que você escolher, como Visual Basic, Visual C# ou PowerShell. Para obter um código de exemplo, consulte [Agendamento de tarefas administrativas automáticas no SQL Server Agent](sql-server-agent.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementar trabalhos](implement-jobs.md)   
  [Criar trabalhos](create-jobs.md)  

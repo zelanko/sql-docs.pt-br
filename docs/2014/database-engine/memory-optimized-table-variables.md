@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774401"
 ---
 # <a name="memory-optimized-table-variables"></a>Variáveis de tabela com otimização de memória
@@ -36,9 +36,9 @@ ms.locfileid: "62774401"
   
 -   As variáveis de tabela podem ser usados para simular cursores em procedimentos armazenados compilados nativamente, de modo que possam ajudar você a contornar as restrições da área da superfície em procedimentos armazenados compilados nativamente.  
   
- Como as tabelas com otimização de memória, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gera uma DLL para cada tipo de tabela com otimização de memória. (Compilação é invocada quando o tipo de tabela com otimização de memória é criado e não quando usado para criar variáveis de tabela com otimização de memória). Essa DLL inclui as funções para acessar índices e recuperar dados de variáveis de tabela. Quando uma variável de tabela com otimização de memória é declarada com base no tipo de tabela, uma instância da tabela e das estruturas de índice correspondentes ao tipo de tabela é criada na sessão do usuário. A variável de tabela pode ser usada da mesma maneira que as variáveis de tabela baseadas em disco. Você pode inserir, atualizar e excluir linhas na variável de tabela e usar variáveis em consultas do [!INCLUDE[tsql](../includes/tsql-md.md)] . Você também pode passar as variáveis para procedimentos armazenados compilados nativamente e interpretados, como parâmetros com valor de tabela (TVP).  
+ Como as tabelas com otimização de memória, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gera uma DLL para cada tipo de tabela com otimização de memória. (A compilação é invocada quando o tipo de tabela com otimização de memória é criado e não quando usado para criar variáveis de tabela com otimização de memória.) Essa DLL inclui as funções para acessar índices e recuperar dados de variáveis de tabela. Quando uma variável de tabela com otimização de memória é declarada com base no tipo de tabela, uma instância da tabela e das estruturas de índice correspondentes ao tipo de tabela é criada na sessão do usuário. A variável de tabela pode ser usada da mesma maneira que as variáveis de tabela baseadas em disco. Você pode inserir, atualizar e excluir linhas na variável de tabela e usar variáveis em consultas do [!INCLUDE[tsql](../includes/tsql-md.md)] . Você também pode passar as variáveis para procedimentos armazenados compilados nativamente e interpretados, como parâmetros com valor de tabela (TVP).  
   
- O exemplo a seguir mostra um tipo de tabela com otimização de memória do exemplo o OLTP na memória com base no AdventureWorks ([exemplo de OLTP na memória do SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
+ O exemplo a seguir mostra um tipo de tabela com otimização de memória do exemplo de OLTP na memória com base em AdventureWorks ([SQL Server exemplo de OLTP em memória do 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
 ```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
@@ -60,7 +60,8 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  O exemplo a seguir mostra que a sintaxe de tipos de tabela com otimização de memória é semelhante aos tipos de tabela baseados em disco, com as seguintes exceções:  
   
--   `MEMORY_OPTIMIZED=ON` indica se o tipo de tabela tem otimização de memória.  
+-   
+  `MEMORY_OPTIMIZED=ON` indica se o tipo de tabela tem otimização de memória.  
   
 -   O tipo deve ter pelo menos um índice. Assim como ocorre com as tabelas com otimização de memória, você pode usar índices de hash e não clusterizados.  
   
@@ -186,7 +187,7 @@ GO
   
  A memória é contabilizada como parte de um único consumidor de memória de PGPOOL do banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Suporte ao Transact-SQL para OLTP in-memory](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

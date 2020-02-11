@@ -1,5 +1,5 @@
 ---
-title: Editor de origem (página Gerenciador de Conexão) do arquivo simples | Microsoft Docs
+title: Editor de fonte de arquivo simples (página Gerenciador de conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c729faa93cf445e7e0aff46fa94258bc7ea7a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058687"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Editor de Fonte de Arquivo Simples (página Gerenciador de Conexões)
@@ -33,10 +33,10 @@ ms.locfileid: "66058687"
  Para saber mais sobre a fonte de Arquivo Simples, consulte [Flat File Source](data-flow/flat-file-source.md).  
   
 ## <a name="options"></a>Opções  
- **Flat file connection manager**  
+ **Gerenciador de conexões de arquivos simples**  
  Selecione um gerenciador de conexões na lista ou crie um novo gerenciador de conexões clicando em **Novo**.  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões, usando a caixa de diálogo **Editor de Gerenciador de Conexões de Arquivo Simples** .  
   
  **Reter valores nulos da origem como valores nulos no fluxo de dados**  
@@ -45,10 +45,10 @@ ms.locfileid: "66058687"
  **Visualização**  
  Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A visualização pode exibir até 200 linhas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Fonte de Arquivo Simples &#40;Página Colunas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Editor de Fonte de Arquivo Simples &#40;Página Saída de Erro&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Editor de fonte de arquivo simples &#40;página colunas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Editor de fonte de arquivo simples &#40;página saída de erro&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Gerenciador de Conexões de Arquivos Simples](connection-manager/file-connection-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Usar o banco de dados adicionar Assistente de grupo de disponibilidade (SQL Server Management Studio) | Microsoft Docs
+title: Usar o assistente para adicionar banco de dados ao grupo de disponibilidade (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815721"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Adicionar Banco de Dados ao Grupo de disponibilidade (SQL Server Management Studio)
@@ -36,10 +36,10 @@ ms.locfileid: "62815721"
   
      [Segurança](#Security)  
   
--   **Para adicionar um banco de dados, usando:**  [Assistente para adicionar banco de dados ao grupo de disponibilidade (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Para adicionar um banco de dados usando:**  [Assistente para adicionar banco de dados ao grupo de disponibilidade (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
- Se você nunca adicionou um banco de dados a um grupo de disponibilidade, consulte a seção "Bancos de dados de disponibilidade" em [pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Se você nunca adicionou um banco de dados a um grupo de disponibilidade, consulte a seção "bancos de dados de disponibilidade" em [pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos, restrições e recomendações  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62815721"
   
 -   Se um banco de dados estiver criptografado ou contiver até mesmo uma DEK (chave de criptografia de banco de dados), você não poderá usar o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] nem o [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] para adicionar um grupo de disponibilidade. Mesmo se um banco de dados criptografado for descriptografado, seus backups de log poderão conter dados criptografados. Nesse caso, a total sincronização inicial de dados poderia falhar no banco de dados. Isso é porque a operação de log de restauração pode exigir o certificado que foi usado pelas DEKs (chaves de criptografia de banco de dados), e esse certificado pode não estar disponível.  
   
-     **Para tornar um banco de dados descriptografado elegível para adição a um grupo de disponibilidade usando o Assistente:**  
+     **Para tornar um banco de dados descriptografado elegível para adição a um grupo de disponibilidade usando o assistente:**  
   
     1.  Crie um backup de log do banco de dados primário.  
   
@@ -67,15 +67,15 @@ ms.locfileid: "62815721"
   
     -   Você precisará especificar um compartilhamento de rede para que o assistente crie e acesse backups. Para a réplica primária, a conta usada para iniciar o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve ter permissões de leitura e gravação no sistema de arquivos em um compartilhamento de rede. Para réplicas secundárias, a conta deve ter permissão de leitura no compartilhamento de rede.  
   
-     Se você não puder usar o assistente para executar a sincronização de dados inicial completa, precisará preparar seus bancos de dados secundários manualmente. Você pode fazer isto antes de ou depois de executar o assistente. Para obter mais informações, veja [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     Se você não puder usar o assistente para executar a sincronização de dados inicial completa, precisará preparar seus bancos de dados secundários manualmente. Você pode fazer isto antes de ou depois de executar o assistente. Para obter mais informações, consulte [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usando o Assistente para Adicionar Banco de Dados ao Grupo de disponibilidade (SQL Server Management Studio)  
- **Para usar o Assistente para Adicionar Banco de dados ao Grupo de Disponibilidade**  
+##  <a name="SSMSProcedure"></a>Usando o assistente para adicionar banco de dados ao grupo de disponibilidade (SQL Server Management Studio)  
+ **Para usar o assistente para adicionar banco de dados ao grupo de disponibilidade**  
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica primária do grupo de disponibilidade e expanda a árvore de servidores.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "62815721"
   
 3.  Clique com o botão direito do mouse no grupo de disponibilidade no qual você está adicionando um banco de dados e selecione **Adicionar Banco de Dados** . Esse comando inicia o Assistente para Adicionar Banco de Dados ao Grupo de Disponibilidade.  
   
-4.  Na página **Selecionar Bancos de Dados** , selecione um ou mais Bancos de Dados. Para obter mais informações, consulte [Selecionar bancos de dados para a página &#40;disponibilidade / Assistente para adicionar banco de dados do Assistente de novo grupo&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
+4.  Na página **Selecionar Bancos de Dados** , selecione um ou mais Bancos de Dados. Para obter mais informações, consulte [a página Selecionar bancos de dados &#40;assistente de novo grupo de disponibilidade-assistente de adição de banco&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
   
 5.  Na página **Selecionar Sincronização de Dados Inicial** , escolha como você deseja que seus novos bancos de dados secundários sejam criados e unidos ao grupo de disponibilidade. Escolha uma das seguintes opções:  
   
-    -   **Full (cheio)**  
+    -   **Full**  
   
          Selecione esta opção se seu ambiente atender aos requisitos para iniciar automaticamente a sincronização de dados inicial (para obter mais informações, veja [Pré-requisitos, restrições e recomendações](#Prerequisites), anteriormente neste tópico).  
   
@@ -106,15 +106,15 @@ ms.locfileid: "62815721"
   
          Selecione esta opção se desejar usar seus próprios backups de banco de dados e de log de seus bancos de dados primários. Para obter mais informações, consulte [Iniciar movimentação de dados em um banco de dados secundário AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-     Para obter mais informações, consulte [Selecionar página de sincronização de dados inicial &#40;assistentes de grupo de disponibilidade AlwaysOn&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
+     Para obter mais informações, consulte a [página Selecionar sincronização de dados inicial &#40;assistentes do grupo de disponibilidade AlwaysOn&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
   
 6.  Na página **Conectar a Réplicas Secundárias Existentes** , se as instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedam réplicas de disponibilidade para esse grupo de disponibilidade estiverem todas executando como um serviço na mesma conta de usuário, clique em **Conectar tudo**. Se qualquer uma das instâncias de servidor estiver executando como um serviço sob conta diferente, clique no **Conectar** individual à direita de cada nome de instância de servidor.  
   
-     Para obter mais informações, consulte [conectar-se à página réplicas secundárias existentes &#40;Assistente para adicionar réplica e o Assistente de adição de bancos de dados&#41;](connect-to-existing-secondary-replicas-page.md).  
+     Para obter mais informações, consulte [a página conectar-se a réplicas secundárias existentes &#40;assistente para adicionar réplica e adicionar bancos de dados&#41;](connect-to-existing-secondary-replicas-page.md).  
   
 7.  A página **Validação** verifica se os valores especificados neste Assistente atendem aos requisitos do Assistente de Novo Grupo de Disponibilidade. Para fazer uma alteração, clique em **Anterior** para retornar a uma página anterior do assistente para alterar um ou mais valores. Clique em **Avançar** para retornar à página **Validação** e clique em **Executar Novamente a Validação**.  
   
-     Para obter mais informações, consulte [página de validação &#40;assistentes de grupo de disponibilidade AlwaysOn&#41;](validation-page-always-on-availability-group-wizards.md).  
+     Para obter mais informações, consulte [página de validação &#40;assistentes do grupo de disponibilidade AlwaysOn&#41;](validation-page-always-on-availability-group-wizards.md).  
   
 8.  Na página **Resumo** , revise as opções escolhidas para o novo grupo de disponibilidade. Para fazer uma alteração, clique em **Anterior** para retornar à página relevante. Após fazer a alteração, clique em **Avançar** para retornar à página **Resumo** .  
   
@@ -140,11 +140,11 @@ ms.locfileid: "62815721"
   
 -   [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Adicionar um banco de dados a um grupo de disponibilidade &#40;SQL Server&#41;](availability-group-add-a-database.md)   
- [Iniciar movimentação de dados em um banco de dados secundário AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
+ [Iniciar a movimentação de dados em um banco de dado secundário AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
  [Adicionar um banco de dados a um grupo de disponibilidade &#40;SQL Server&#41;](availability-group-add-a-database.md)  
   
   

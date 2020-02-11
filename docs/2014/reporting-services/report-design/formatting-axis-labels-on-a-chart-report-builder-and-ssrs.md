@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105852"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatando rótulos dos eixos de um gráfico (Construtor de Relatórios e SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66105852"
 ## <a name="types-of-axes"></a>Tipos de eixos  
  O gráfico possui dois tipos de eixo primário: o eixo de valor e o eixo de categoria.  
   
- ![Eixos de valor e categóricos de gráfico](../media/rsaxes-categorical-vs-value.gif "Eixos de valor e categóricos de gráfico")  
+ ![Eixos de categorias e valores do gráfico](../media/rsaxes-categorical-vs-value.gif "Eixos de categorias e valores do gráfico")  
   
  Ao arrastar um campo do conjunto de dados sobre a superfície do gráfico, o gráfico determina se esse campo pertence ao eixo de valor ou à categoria.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66105852"
   
  A escala do eixo é associada por um valor mínimo e máximo que define o intervalo de dados a serem exibidos ao longo do eixo. O gráfico calcula o valor mínimo e máximo ao longo de cada eixo com base nos valores no conjunto de resultados. No eixo de valor, a escala é sempre determinada pelo número menor e maior no campo de valor. No eixo de categoria, os tipos de valor mínimo e máximo são determinados de acordo com o tipo de campo de categoria. Qualquer campo em um conjunto de dados pode ser categorizado em um dos três tipos de campo de categoria. A tabela a seguir ilustra esses três tipos de campos de categoria.  
   
-|Tipo de campo de categoria|Descrição|Exemplo|  
+|Tipo de campo de categoria|DESCRIÇÃO|Exemplo|  
 |-------------------------|-----------------|-------------|  
 |Numérico|As categorias são plotadas em ordem numérica ao longo do eixo x.|Um relatório de vendas pelo número de identificação do funcionário exibe os números de identificação dos funcionários ao longo do eixo x.|  
 |Data/hora|As categorias são plotadas em ordem cronológica ao longo do eixo x.|Um relatório de vendas mensal exibe datas formatadas ao longo do eixo x.|  
@@ -117,7 +117,7 @@ ms.locfileid: "66105852"
 ## <a name="in-this-section"></a>Nesta seção  
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [Posicionar rótulos em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [Rótulos de posição em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
  [Especificar um intervalo do eixo &#40;Construtor de Relatórios e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66105852"
   
  [Especificar uma escala logarítmica &#40;Construtor de Relatórios e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  

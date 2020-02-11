@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058216"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementar uma política de assinatura por meio da configuração de um valor do Registro
@@ -34,7 +34,7 @@ ms.locfileid: "66058216"
   
  A tabela a seguir lista os valores válidos dos dados de DWORD e sua política associada.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |0|Nenhuma restrição administrativa.|  
 |1|Bloquear assinaturas inválidas.<br /><br /> Essa configuração não bloqueia pacotes não assinados.|  
@@ -48,7 +48,7 @@ ms.locfileid: "66058216"
   
 1.  No menu **Iniciar** , clique em **Executar**.  
   
-2.  Na caixa de diálogo Executar, digite `Regedit`e, em seguida, clique em **Okey**.  
+2.  Na caixa de diálogo Executar, digite `Regedit`e clique em **OK**.  
   
 3.  Localize a chave do Registro, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66058216"
   
 5.  Atualize o nome do valor novo para `BlockedSignatureStates`.  
   
-6.  Clique com botão direito `BlockedSignatureStates` e clique em **modificar**.  
+6.  Clique `BlockedSignatureStates` com o botão direito do mouse e clique em **Modificar**.  
   
 7.  Na caixa de diálogo **Editar valor DWORD** , digite o valor 0, 1, 2 ou 3.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66058216"
   
 9. No menu **Arquivo** , clique em **Sair**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de segurança &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Identificar a origem dos pacotes com assinaturas digitais](security/identify-the-source-of-packages-with-digital-signatures.md)  
   

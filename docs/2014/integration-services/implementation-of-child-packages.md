@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058186"
 ---
 # <a name="implementation-of-child-packages"></a>Implementação de pacotes filho
@@ -51,7 +51,7 @@ ms.locfileid: "66058186"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>Depurar os trabalhos do SQL Server Agent e os pacotes filho  
  Você pode testar os trabalhos do SQL Server Agent e seus pacotes filho usando um dos seguintes métodos:  
   
--   Executar cada pacote filho no Designer SSIS clicando em **Depurar**  /  **Iniciar sem Depurar**.  
+-   Executando cada pacote filho no Designer SSIS, clicando em **depurar** / **Iniciar sem depuração**.  
   
 -   Executar o trabalho individual do SQL Server Agent no computador remoto usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]para garantir que o pacote seja executado.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66058186"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog, [SSIS: Acessando variáveis em um pacote pai](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), em andyleonard.blog.  
+-   Entrada de blog, [SSIS: acessando variáveis em um pacote pai](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), em andyleonard. blog.  
   
--   Artigo [tarefa executar pacote](../integration-services/control-flow/execute-package-task.md).  
+-   Artigo, [tarefa Executar Pacote](../integration-services/control-flow/execute-package-task.md).  
   
   

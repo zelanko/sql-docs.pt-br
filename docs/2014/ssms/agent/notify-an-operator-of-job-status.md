@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798196"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
-  Este tópico descreve como definir opções de notificação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou o SQL Server Management Objects, de forma que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent possa enviar notificações a operadores sobre trabalhos.  
+  Este tópico descreve como definir as opções de notificação [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou SQL Server Management Objects, para que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agent possa enviar notificações para operadores sobre trabalhos.  
   
  **Neste tópico**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "72798196"
   
      [Segurança](#Security)  
   
--   **Para notificar um operador sobre o status do trabalho usando:**  
+-   **Para notificar um operador sobre o status do trabalho, usando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -58,29 +58,29 @@ ms.locfileid: "72798196"
   
 4.  Se desejar notificar um operador via email, marque **Email**, escolha um operador na lista e selecione uma destas opções:  
   
-    -   **Quando o trabalho for bem-sucedido** , para notificar o operador quando o trabalho for concluído com êxito.  
+    -   **Quando o trabalho for bem-sucedido** , notifique o operador quando o trabalho for concluído com êxito.  
   
-    -   **Quando ocorrer falha no trabalho** para notificar o operador quando o trabalho não for concluído com êxito.  
+    -   **Quando o trabalho falha** ao notificar o operador quando o trabalho é concluído sem êxito.  
   
-    -   **Quando o trabalho for concluído** , para notificar o operador independentemente do status de conclusão.  
+    -   **Quando o trabalho for concluído** para notificar o operador, independentemente do status de conclusão.  
   
 5.  Se desejar notificar um operador via pager, marque **Pager**, escolha um operador na lista e selecione uma destas opções:  
   
-    -   **Quando o trabalho for bem-sucedido** , para notificar o operador quando o trabalho for concluído com êxito.  
+    -   **Quando o trabalho for bem-sucedido** , notifique o operador quando o trabalho for concluído com êxito.  
   
-    -   **Quando ocorrer falha no trabalho** para notificar o operador quando o trabalho não for concluído com êxito.  
+    -   **Quando o trabalho falha** ao notificar o operador quando o trabalho é concluído sem êxito.  
   
-    -   **Quando o trabalho for concluído** , para notificar o operador independentemente do status de conclusão.  
+    -   **Quando o trabalho for concluído** para notificar o operador, independentemente do status de conclusão.  
   
 6.  Se desejar notificar um operador via net send, marque **Net send**, escolha um operador na lista e selecione uma destas opções:  
   
-    -   **Quando o trabalho for bem-sucedido** , para notificar o operador quando o trabalho for concluído com êxito.  
+    -   **Quando o trabalho for bem-sucedido** , notifique o operador quando o trabalho for concluído com êxito.  
   
-    -   **Quando ocorrer falha no trabalho** para notificar o operador quando o trabalho não for concluído com êxito.  
+    -   **Quando o trabalho falha** ao notificar o operador quando o trabalho é concluído sem êxito.  
   
-    -   **Quando o trabalho for concluído** , para notificar o operador independentemente do status de conclusão.  
+    -   **Quando o trabalho for concluído** para notificar o operador, independentemente do status de conclusão.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>Para notificar um operador sobre o status do trabalho  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72798196"
     GO  
     ```  
   
- Para obter mais informações, [consulte &#40;Transact-SQL&#41;sp_add_notification](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql).  
+ Para obter mais informações, consulte [sp_add_notification &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql).  
   
 ##  <a name="SMO"></a>Usando SQL Server Management Objects  
  **Para notificar um operador sobre o status do trabalho**  

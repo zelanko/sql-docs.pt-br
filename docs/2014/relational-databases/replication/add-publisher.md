@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo 'Adicionar publicador'
+title: Caixa de diálogo ' Adicionar publicador '
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,28 +15,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676913"
 ---
-# <a name="sql-server-replication-add-publisher-dialog-box"></a>Caixa de diálogo Adicionar publicador de replicação do SQL Server 
-  A caixa de diálogo **Adicionar Publicador** permite a adição de um ou mais publicadores no painel esquerdo do Replication Monitor. Depois de adicionar um Publicador, selecioná-lo no painel esquerdo mostrará informações sobre o Publicador no painel à direita.  
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>Caixa de diálogo Replicação do SQL Server ' Adicionar publicador ' 
+  A caixa de diálogo **Adicionar Publicador** permite que você adicione um ou mais Publicadores ao painel esquerdo do Replication Monitor. Depois de adicionar um Publicador, selecioná-lo no painel esquerdo mostrará informações sobre o Publicador no painel à direita.  
   
 ## <a name="options"></a>Opções  
  **Adicionar**  
  Clique para selecionar um tipo de Publicador a ser adicionado que inicia a caixa de diálogo **Conectar ao Servidor** . As opções são:  
   
--   **Adicionar Editor SQL Server...**  
+-   **Adicionar SQL Server Publicador...**  
   
      Conectar-se ao Editor usando a caixa de diálogo **Conectar ao Servidor** .  
   
--   **Adicionar Editor Oracle...**  
+-   **Adicionar Publicador Oracle...**  
   
      Conecte-se ao Distribuidor da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com Editor Oracle usando a caixa de diálogo **Conectar ao Servidor** .  
   
--   **Especificar um Distribuidor e Adicionar seus Publicadores...**  
+-   **Especifique um distribuidor e adicione seus Publicadores...**  
   
      Conecte-se ao Distribuidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associado a um ou mais Publicadores usando a caixa de diálogo **Conectar ao Servidor** .  
   
@@ -63,10 +63,10 @@ ms.locfileid: "62676913"
  **Mostrar este Publicador no grupo a seguir**  
  Selecione um grupo de Publicadores na lista. O Publicador é exibido nesse grupo no painel esquerdo. Grupos fornecem uma forma de organizar Publicadores e não causam nenhum efeito em funções de replicação. Se nenhum grupo estiver definido ou você quer criar um novo, clique em **Novo Grupo**.  
   
- **Novo Grupo**  
+ **Novo grupo**  
  Clique para criar um novo grupo de Publicadores. Um grupo de Publicadores é um modo conveniente de organizar Publicadores no Replication Monitor. Grupos não afetam a replicação de dados ou a relação entre servidores em uma topologia de replicação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Monitorando a Replicação](monitoring-replication.md)  
   

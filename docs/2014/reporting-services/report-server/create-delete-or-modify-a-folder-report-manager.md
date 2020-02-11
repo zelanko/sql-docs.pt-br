@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103923"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Criar, excluir ou modificar uma pasta (Gerenciador de Relatórios)
@@ -35,7 +35,7 @@ ms.locfileid: "66103923"
   
      A página **Nova Pasta** será aberta.  
   
-3.  Digite um nome de pasta. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados usados para codificação de URL: ; ? : \@ & = + , $ / * \< > |. Não é possível digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
+3.  Digite um nome de pasta. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados usados para codificação de URL: ; ? : \@ & = +, $/* \< > |. Não é possível digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
   
 4.  Como opção, digite uma descrição.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "66103923"
   
 6.  Ou, para remover a pasta e seu conteúdo, clique em **Excluir**.  
   
-7.  Clique em **Aplicar** para salvar as alterações.  
+7.  Clique em **Aplicar** para salvar os detalhes.  
   
-## <a name="see-also"></a>Consulte também  
- [Página Nova Pasta &#40;Gerenciador de Relatórios&#41;](../new-folder-page-report-manager.md)   
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../contents-page-report-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#40;Report Manager de página nova pasta&#41;](../new-folder-page-report-manager.md)   
+ [Página de conteúdo &#40;Report Manager&#41;](../contents-page-report-manager.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

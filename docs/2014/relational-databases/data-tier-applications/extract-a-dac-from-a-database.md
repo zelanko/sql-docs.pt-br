@@ -22,23 +22,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 37bb440288ccbc832d89180855566a969830e2ca
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797990"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrair um DAC de um banco de dados
   Use o **Assistente para Extrair um Aplicativo da Camada de Dados** ou um script do Windows PowerShell para extrair um pacote de DAC (aplicativo da camada de dados) de um banco de dados do SQL Server existente. O processo de extração cria um arquivo de pacote de DAC que contém definições dos objetos de banco de dados e os elementos em nível de instância relacionados. Por exemplo, um arquivo de pacote de DAC contém as tabelas do banco de dados, os procedimentos armazenados, as exibições e os usuários junto com os logons que mapeiam para os usuários de banco de dados.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Antes de começar:**  [limitações e restrições](#LimitationsRestrictions), [permissões](#Permissions)  
   
 -   **Para extrair um DAC, usando:**  [o assistente para extrair aplicativo da camada de dados](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
- É possível extrair um DAC de bancos de dados que residam em instâncias do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 ou posterior. Se o processo de extração for executado em um banco de dados que foi implantado de um DAC, só serão extraídas as definições dos objetos no banco de dados. O processo não faz referência ao DAC registrado em `msdb` (**mestre** em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). O processo de extração não registra a definição do DAC na instância atual do Mecanismo de Banco de Dados. Para obter mais informações sobre como registrar um DAC, consulte [Register a Database As a DAC](register-a-database-as-a-dac.md).  
+ É possível extrair um DAC de bancos de dados que residam em instâncias do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 ou posterior. Se o processo de extração for executado em um banco de dados que foi implantado de um DAC, só serão extraídas as definições dos objetos no banco de dados. O processo não faz referência ao DAC registrado no `msdb` (**Master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). O processo de extração não registra a definição do DAC na instância atual do Mecanismo de Banco de Dados. Para obter mais informações sobre como registrar um DAC, consulte [Register a Database As a DAC](register-a-database-as-a-dac.md).  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Um DAC só pode ser extraído de um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. Você não poderá extrair um DAC se o banco de dados tiver objetos que não tenham suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
   
 ###  <a name="Permissions"></a> Permissões  
@@ -68,7 +68,7 @@ ms.locfileid: "72797990"
 ###  <a name="Introduction"></a> Página de Introdução  
  Esta página descreve as etapas para extrair um aplicativo da camada de dados.  
   
- **Não exibir esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
+ **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
   
  **Avançar >** : continua para a página **Escolher Método**.  
   
@@ -81,20 +81,20 @@ ms.locfileid: "72797990"
   
  **Tabela de banco de dados** – Marque a caixa de seleção ao lado das tabelas do banco de dados que contêm os dados que você deseja incluir em seu pacote de DAC. Você pode selecionar até dez tabelas com mais ou menos 10.000 linhas.  
   
-###  <a name="SetProperties"></a> Página Definir Propriedades  
+###  <a name="SetProperties"></a>Página definir propriedades  
  Use esta página do assistente para descrever o aplicativo da camada de dados (DAC). Estas propriedades são usadas para identificar o DAC e ajudam a distingui-lo de outros.  
   
  **Nome** – Este nome identifica o DAC. Pode ser diferente do nome do arquivo de pacote de DAC e deve descrever seu aplicativo. Por exemplo, se o banco de dados for usado para um aplicativo de finanças, você poderá nomeá-lo como Finanças do DAC.  
   
- **Versão (use xx.xx.xx.xx, em que x é um número)** – Um valor numérico que identifica a versão do DAC. A versão do DAC é usada no Visual Studio para identificar a versão do DAC em que os desenvolvedores estão trabalhando. Ao implantar um DAC, a versão é armazenada no banco de dados do `msdb` e, posteriormente, pode ser exibida no nó **aplicativos da camada data** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Versão (use xx.xx.xx.xx, em que x é um número)** – Um valor numérico que identifica a versão do DAC. A versão do DAC é usada no Visual Studio para identificar a versão do DAC em que os desenvolvedores estão trabalhando. Ao implantar um DAC, a versão é armazenada no banco `msdb` de dados e, posteriormente, pode ser exibida no nó aplicativos da camada [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de **dados** no.  
   
- **Descrição:** – Opcional. Descreve o DAC. Ao implantar um DAC, a descrição é armazenada no banco de dados do `msdb` e, posteriormente, pode ser exibida no nó **aplicativos da camada data** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ **Descrição:** – Opcional. Descreve o DAC. Ao implantar um DAC, a descrição é armazenada no banco `msdb` de dados e, posteriormente, pode ser exibida no nó **aplicativos da camada data** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  **Salvar o arquivo de pacote de DAC (inclua a extensão .dacpac no nome do arquivo):** – Salva o DAC em um arquivo de pacote de DAC, com uma extensão .dacpac. Clique no botão **Procurar** para especificar um nome e um local para o arquivo.  
   
  **Substituir o arquivo existente** – Marque esta caixa de seleção para substituir o arquivo do pacote de DAC se já existir um com o mesmo nome.  
   
-###  <a name="ValidateSummary"></a> Página Validação e Resumo  
+###  <a name="ValidateSummary"></a>Página validação e Resumo  
  Nesta página, o assistente valida se todos os objetos de banco de dados têm suporte de um DAC (aplicativo da camada de dados). Também verifica dependências entre objetos de banco de dados para determinar o conjunto de objetos que podem ser incluídos com êxito no DAC. Depois disso, exibe o relatório de validação e resume as opções que você selecionou neste assistente. Para alterar uma opção, clique em **Anterior**. Para iniciar a extração de um DAC, clique em **Avançar**.  
   
 > [!NOTE]  
@@ -162,4 +162,4 @@ $extractionunit.Extract($dacpacPath)
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](data-tier-applications.md)  
+ [Aplicativos da camada de dados](data-tier-applications.md)  

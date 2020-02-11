@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b79be33eba191349f324473ad5d80abb7b1f398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103515"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS)
@@ -44,29 +44,30 @@ ms.locfileid: "66103515"
   
 -   Equilibrar as demandas de processamento de relatórios feitas pelo servidor agendando o processamento do relatório e especificando quais podem ser executados sob demanda e quais serão carregados por meio do cache.  
   
--   Fornece permissão para executar tarefas de gerenciamento usando funções predefinidas: **Administrador do sistema** e **Gerenciador de conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções.  
+-   Fornecer permissão para executar tarefas de gerenciamento usando funções predefinidas: **Administrador do Sistema** e **Gerenciador de Conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções.  
   
- Ferramentas para gerenciar o conteúdo do servidor de relatórios incluem [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou Gerenciador de Relatórios. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O Gerenciador de Relatórios é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios. Para obter mais informações, consulte [Ferramentas do Reporting Services](../tools/reporting-services-tools.md).  
+ Ferramentas para gerenciar o conteúdo do servidor de relatórios incluem [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou Gerenciador de Relatórios. 
+  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O Gerenciador de Relatórios é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios. Para obter mais informações, consulte [Ferramentas do Reporting Services](../tools/reporting-services-tools.md).  
   
-##  <a name="bkmk_ReportServerItems"></a> Itens de servidor de relatório  
+##  <a name="bkmk_ReportServerItems"></a>Itens do servidor de relatório  
  Os itens de servidor de relatório incluem relatórios, fontes de dados compartilhadas, conjuntos de dados compartilhados, partes de relatórios, recursos (itens armazenados, mas não processados por um servidor de relatório) e pastas. Os itens podem depender de outros itens, por exemplo, um relatório pode depender d fontes de dados compartilhadas que referencia. Se você mover um item dependente, o servidor de relatório atualizará as informações de referência automaticamente.  
   
  Você pode mover itens do servidor de relatório para locais de pasta diferentes na hierarquia de pastas do servidor de relatório. Quando você move um item, todas as propriedades (inclusive configurações de segurança) são movidas com o item para o novo local. Ao mover uma pasta, todos os itens na pasta são movidos juntos.  
   
  No Gerenciador de Relatórios, os itens que podem ser movidos estão indicados na hierarquia de pasta. A tabela a seguir mostra o ícone para cada item móvel.  
   
-|Ícone|Item móvel|  
+|ícone|Item móvel|  
 |----------|-------------------|  
-|![Ícone Relatório](../media/hlp-16doc.gif "Ícone Relatório")|Relatório|  
-|![Ícone Relatório vinculado](../media/hlp-16linked.gif "Ícone Relatório vinculado")|Relatório vinculado|  
-|![Ícone Pasta](../media/hlp-16folder.gif "Ícone Pasta")|Pasta|  
-|![Ícone Recurso genérico](../media/hlp-16file.gif "Ícone Recurso genérico")|Recurso genérico|  
-|![Ícone Fonte de dados compartilhada](../media/hlp-16datasource.png "Ícone Fonte de dados compartilhada")|Fonte de dados compartilhada|  
+|![Ícone de relatório](../media/hlp-16doc.gif "ícone de relatório")|Relatório|  
+|![Ícone de relatório vinculado](../media/hlp-16linked.gif "Ícone de relatório vinculado")|Relatório vinculado|  
+|![Ícone de pasta](../media/hlp-16folder.gif "Ícone de pasta")|Pasta|  
+|![ícone de recurso genérico](../media/hlp-16file.gif "ícone de recurso genérico")|Recurso genérico|  
+|![Ícone de fonte de dados compartilhada](../media/hlp-16datasource.png "Ícone de fonte de dados compartilhada")|Fonte de dados compartilhada|  
 ||Conjunto de dados compartilhado|  
   
- Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. Permissão para mover um item é concedida quando as tarefas a seguir são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciam pastas" e "Gerenciar fontes de dados".  
+ Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciar pastas" e "Gerenciar fontes de dados".  
   
-##  <a name="bkmk_Folders"></a> Pastas  
+##  <a name="bkmk_Folders"></a>Pastas  
  Uma hierarquia de pastas é usada para tratar itens que são armazenados e gerenciados por um servidor de relatório.  Por padrão, a estrutura de pastas consiste em um nó raiz denominado Página Inicial e em pastas reservadas que dão suporte ao recurso opcional Meus Relatórios. Pastas adicionais são definidas pelo usuário. As pastas do servidor de relatórios serão úteis se você quiser conceder o mesmo nível de acesso a vários itens. As permissões que você define na pasta podem ser herdadas por itens na pasta e por pastas adicionais ramificadas dessa pasta. Por exemplo, você pode criar um conjunto de pastas na pasta Base, atribuir permissões de equipe a cada pasta e permitir que os membros da equipe personalizem pastas sob a pasta de equipe quando necessário.  
   
  Se estiver usando um navegador para conectar-se diretamente a um servidor de relatório da estrutura de pastas, o nó raiz terá o nome do diretório virtual do servidor de relatório. No nó raiz, você pode criar, modificar e excluir pastas conforme necessário para organizar o conteúdo do servidor de relatório. Você pode adicionar conteúdo a uma pasta, mover itens entre pastas, modificar nomes ou locais de pasta e excluir pastas que não são mais necessárias.  
@@ -96,7 +97,7 @@ ms.locfileid: "66103515"
   
 |Pasta|Finalidade|  
 |------------|-------------|  
-|Base|O nó raiz da hierarquia de pastas.|  
+|Página inicial|O nó raiz da hierarquia de pastas.|  
 |Usuários|Esta pasta aparece quando você habilita o recurso Meus Relatórios. Ela contém subpastas para todos os usuários que usam o recurso Meus Relatórios e está acessível somente para administradores do servidor de relatórios. Cada nome de subpasta corresponde ao nome do usuário.|  
 |Meus Relatórios|Fornece um workspace pessoal para cada usuário.|  
   
@@ -117,7 +118,7 @@ ms.locfileid: "66103515"
   
  A visibilidade de um item em uma pasta depende das atribuições de função (isto é, da permissão para exibir um item) e das opções de exibição habilitadas para uma pasta. No Gerenciador de Relatórios, você pode definir a página Conteúdo para exibição de lista ou de detalhes. Em alguns casos, um relatório ou item pode estar oculto na exibição de lista. Não se esqueça de exibir uma pasta em detalhes antes de excluir seu conteúdo.  
   
-##  <a name="bkmk_Resources"></a> Recursos  
+##  <a name="bkmk_Resources"></a>Os  
  Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg, um arquivo de forma ESRI que contém dados espaciais ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG, SHP ou HTML é armazenado no servidor de relatório, mas o servidor de relatório passa o arquivo diretamente ao navegador em vez de processá-lo antes. Para obter mais informações, confira [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) e a seção "Adicionando dados a um mapa" em [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Adicionando e exibindo um recurso  
@@ -125,7 +126,7 @@ ms.locfileid: "66103515"
   
 |Operação|Tipo de arquivo|  
 |---------------|---------------|  
-|Carregar|Para carregar um recurso, é necessário usar o Gerenciador de Relatórios se o servidor de relatório estiver sendo executado no modo nativo ou por uma página de aplicativo em um site do SharePoint, se servidor for executado no modo integrado do SharePoint. Para obter mais informações, consulte [carregar um arquivo ou relatório &#40;Gerenciador de relatórios&#41; ](../reports/upload-a-file-or-report-report-manager.md) ou [carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;]... / upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Carregar|Para carregar um recurso, é necessário usar o Gerenciador de Relatórios se o servidor de relatório estiver sendo executado no modo nativo ou por uma página de aplicativo em um site do SharePoint, se servidor for executado no modo integrado do SharePoint. Para obter mais informações, consulte [carregar um arquivo ou relatório &#40;Report Manager&#41;](../reports/upload-a-file-or-report-report-manager.md) ou [carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;].. /upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Publicar|Todos os arquivos em um projeto que não são relatórios, partes de relatório, fontes de dados ou conjuntos de dados são carregados como recursos. Para publicar um recurso, adicione um item existente a um projeto no Designer de Relatórios e publique o projeto em um servidor de relatório.|  
   
  Todos os recursos são gerados como arquivos em um sistema de arquivos, que são carregados subsequentemente em um servidor de relatório. Exceto pelas limitações de tamanho de arquivo padrão de 4 megabytes impostas pelo ASP.NET, não há restrições quanto ao tipo de arquivo que pode ser carregado. Entretanto, quando publicados em um servidor de relatório como recursos, tipos de arquivo com tipos MIME equivalentes são melhores que outros. Por exemplo, recursos com base em arquivos HTML e JPG serão abertos em uma janela de navegador quando o usuário clicar no recurso, renderizando o HTML como uma página da Web e o JPG como uma imagem que pode ser visualizada pelo usuário. De outro modo, recursos que não possuem tipos MIME equivalentes, como arquivos de aplicativos de desktop, por exemplo, talvez não sejam renderizados em uma janela do navegador.  
@@ -146,7 +147,7 @@ ms.locfileid: "66103515"
   
  Para obter mais informações, consulte [Atualizar um recurso &#40;Gerenciador de Relatórios&#41;](update-a-resource-report-manager.md).  
   
-##  <a name="bkmk_MyReports"></a> Meus Relatórios  
+##  <a name="bkmk_MyReports"></a>Meus relatórios  
  A pasta Meus Relatórios é um workspace pessoal para cada usuário que efetua logon em um servidor de relatório com uma conta de domínio válida. Essa pasta de finalidade especial armazena relatórios de trabalhos em andamento, relatórios que não serão distribuídos amplamente ou relatórios que foram modificados para atender a uma necessidade. Não é possível restringir o número ou o tamanho dos itens armazenados em uma pasta Meus Relatórios, nem configurá-la para ser compartilhada entre usuários.  
   
  Tecnicamente, a pasta Meus Relatórios mapeia o nome de uma pasta virtual que cada usuário vê (Meus Relatórios) para uma pasta Pastas dos Usuários mestre e uma subpasta exclusiva baseada no nome de usuário. Quando um usuário acessa sua pasta Meus Relatórios, na realidade, ele é redirecionado para sua subpasta em Pastas dos Usuários. Cada subpasta armazena os relatórios e itens que um usuário adiciona à sua pasta Meus Relatórios.  
@@ -159,26 +160,26 @@ ms.locfileid: "66103515"
   
  As pastas são alocadas somente para usuários com contas de sistema válidas. Se um nome de usuário contiver caracteres especiais, as pastas serão criadas com caracteres de escape equivalentes. Os caracteres de escape equivalentes são listados na tabela a seguir.  
   
-|Caractere|Valor de escape|Exemplo|  
+|Character|Valor de escape|Exemplo|  
 |---------------|------------------|-------------|  
-|(espaço)|[ ]|*Nome Sobrenome* se transforma em *Nome[ ]Sobrenome*|  
-|\ (barra invertida)|Substituída por um caractere de espaço único|*Nomededomínio\Nomedeusuário* se transforma em *Nomededomínio Nomedeusuário*|  
-|@ (símbolo de arroba)|[arroba]|*nomedeusuário*@hotmail.com se transforma em *nomedeusuário*[arroba]hotmail.com|  
-|& (e comercial)|[E comercial]|*nomedeusuário*@*empresa*&*empresa.com* se transforma em *nomedeusuário*[arroba]*empresa*[E comercial]*empresa.com*|  
-|$ (cifrão)|[cifrão]|*Nome d* $*Usuário* se transforma em *Nome de*[ ][cifrão]*Usuário*|  
+|(espaço)|[ ]|*FirstName LastName* torna-se *FirstName [] LastName*|  
+|\ (barra invertida)|Substituída por um caractere de espaço único|*DomainName\Username* torna-se *nome_do_domínio username*|  
+|@ (símbolo de arroba)|[arroba]|*username* @hotmail.com se torna *username*[at] hotmail. com|  
+|& (e comercial)|[E comercial]|*nome de usuário*@*empresa*&*Company.com* se torna *nome de usuário*[at]*empresa*[amp]*Company.com*|  
+|$ (cifrão)|[cifrão]|** $O*nome* de usuário torna-se *usuário*[] [dólar]*nome*|  
   
  O recurso Meus Relatórios é opcional. Ao instalar um servidor de relatório, Meus Relatórios é desabilitado por padrão. Para obter mais informações sobre como habilitar esse recurso, consulte [Habilitar e desabilitar Meus Relatórios](enable-and-disable-my-reports.md). Para obter mais informações, consulte [Proteger Meus Relatórios](../security/secure-my-reports.md).  
   
 ## <a name="tasks"></a>Tarefas  
  [Carregar arquivos em uma pasta](upload-files-to-a-folder.md)  
   
- [Criar, excluir ou modificar uma pasta &#40;Gerenciador de Relatórios&#41;](create-delete-or-modify-a-folder-report-manager.md)  
+ [Criar, excluir ou modificar uma pasta &#40;Report Manager&#41;](create-delete-or-modify-a-folder-report-manager.md)  
   
- [Atualizar um recurso &#40;Gerenciador de Relatórios&#41;](update-a-resource-report-manager.md)  
+ [Atualizar um &#40;de recursos Report Manager&#41;](update-a-resource-report-manager.md)  
   
  [Carregar arquivos em uma pasta](upload-files-to-a-folder.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ferramentas do Reporting Services](../tools/reporting-services-tools.md)   
  [Funções e permissões &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)   
  [Relatórios do Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)  

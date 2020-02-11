@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b6665165d3b50ef4ac73be2d530a018c0ef5d86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771562"
 ---
 # <a name="cdc-instance-deployment-script"></a>Script de implantação de instância CDC
@@ -33,10 +33,10 @@ ms.locfileid: "62771562"
  **Salvar como**  
  Salva o script em um arquivo de texto que você pode salvar em qualquer local desejado. Você pode copiar o arquivo com o script para qualquer outro servidor executá-lo lá.  
   
- **Copiar**  
+ **Copy**  
  Copiar o script para a área de transferência. Você pode em seguida colar o script no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou em qualquer editor de texto para executar os scripts posteriormente.  
   
-## <a name="see-also"></a>Consulte também  
- [Preparar SQL Server para CDC](prepare-sql-server-for-cdc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Preparar o SQL Server para CDC](prepare-sql-server-for-cdc.md)  
   
   

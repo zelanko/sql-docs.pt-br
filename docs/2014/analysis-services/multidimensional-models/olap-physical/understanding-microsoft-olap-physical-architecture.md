@@ -1,5 +1,5 @@
 ---
-title: Arquitetura física (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Arquitetura física (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68e1bba4999f237d5b38ac3f475d2b67fc41959b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62724801"
 ---
 # <a name="physical-architecture-analysis-services---multidimensional-data"></a>Arquitetura física (Analysis Services – Dados Multidimensionais)
@@ -24,10 +24,10 @@ ms.locfileid: "62724801"
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos a seguir fornecem mais informações sobre a arquitetura de uma solução do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Componentes do servidor de mecanismo OLAP](olap-engine-server-components.md)|Descreve os componentes de um servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
-|[Cubos locais &#40;Analysis Services - dados multidimensionais&#41;](local-cubes-analysis-services-multidimensional-data.md)|Descreve como os cubos autônomos são implementados e o escopo dessa implementação na solução do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
+|[Cubos locais &#40;Analysis Services-dados multidimensionais&#41;](local-cubes-analysis-services-multidimensional-data.md)|Descreve como os cubos autônomos são implementados e o escopo dessa implementação na solução do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |[Requisitos de arquitetura do cliente para o desenvolvimento do Analysis Services](client-architecture-requirements-for-analysis-services-development.md)|Descreve a arquitetura de cliente para acessar os dados e metadados de uma solução do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
   
   

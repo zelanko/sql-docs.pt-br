@@ -1,5 +1,5 @@
 ---
-title: Criar e gerenciar uma partição Local (Analysis Services) | Microsoft Docs
+title: Criar e gerenciar uma partição local (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44b27801af70756913b293afd5e7613f3e026d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076302"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Criar e gerenciar uma partição local (Analysis Services)
@@ -26,8 +26,8 @@ ms.locfileid: "66076302"
   
  As partições podem ser criadas no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] durante o design de modelo, ou após a implantação da solução usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o XMLA. É recomendável escolher apenas uma abordagem. Se você alternar entre ferramentas, talvez descubra que alterações feitas em um banco de dados implantado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] são substituídas quando você subsequentemente reimplanta a solução do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="before-you-start"></a>Antes de iniciar  
- Verifique se você tem a edição business intelligence ou enterprise. A edição Standard não oferece suporte a várias partições. Para verificar a edição, clique com o botão direito do mouse no nó de servidor no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e escolha **Relatórios** | **Geral**. Para obter mais informações sobre disponibilidade de recursos, consulte [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+## <a name="before-you-start"></a>Antes de começar  
+ Verifique se você tem a edição business intelligence ou enterprise. A edição Standard não oferece suporte a várias partições. Para verificar a edição, clique com o botão direito do mouse [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no nó do servidor no e escolha **relatórios** | **geral**. Para obter mais informações sobre disponibilidade de recursos, consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Logo no início, é importante compreender que as partições devem compartilhar o mesmo design de agregação se você pretende mesclá-las posteriormente. As partições só poderão ser mescladas se tiverem designs de agregação e modos de armazenamento idênticos.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66076302"
   
 3.  Na coluna Origem, clique no botão Procurar (. .) para abrir a caixa de diálogo Origem da Partição.  
   
-     ![Coluna de origem no painel de partição](../media/ssas-partitionsource.png "coluna de origem no painel de partição")  
+     ![Coluna de origem no painel Partição](../media/ssas-partitionsource.png "Coluna de origem no painel Partição")  
   
 4.  No Tipo de Associação, selecione **Associação de Consulta**. A consulta SQL que seleciona os dados aparece automaticamente.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66076302"
 > [!NOTE]  
 >  Em vez de filtrar dados em uma partição, é possível usar a mesma consulta para criar uma consulta nomeada na DSV e, em seguida, basear a partição na consulta nomeada.  
   
-## <a name="option-2-use-tables-views-or-named-queries"></a>Opção 2: Usar tabelas, exibições ou consultas nomeadas  
+## <a name="option-2-use-tables-views-or-named-queries"></a>Opção 2: Use tabelas, exibições ou consultas nomeadas  
  Se a DSV já organiza fatos em tabelas individuais (por exemplo, por ano ou trimestre), você pode criar partições baseadas em uma tabela individual, onde cada partição tem sua própria tabela de fonte de dados. É essencialmente dessa forma que grupos de medidas são particionados por padrão, mas, no caso de várias partições, você quebra a partição original em várias partições, e mapeia cada nova partição para a tabela de fonte de dados que fornece os dados.  
   
  As exibições e consultas nomeadas são equivalentes funcionais de tabelas, pois os três objetos são definidos na DSV e associados a uma partição usando a opção Associação de Tabela na caixa de diálogo Origem da Partição. Você pode criar uma exibição ou consulta nomeada para gerar o segmento de dados necessário a cada partição. Para obter mais informações, consulte [Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md).  
@@ -121,9 +121,9 @@ ms.locfileid: "66076302"
   
  Como etapa final, em geral você deseja remover a partição padrão que se baseava na própria tabela (caso ela ainda exista); caso contrário, a consulta baseada na tabela completa será sobreposta pelas partições baseadas na consulta.  
   
-## <a name="see-also"></a>Consulte também  
- [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Partições &#40;Analysis Services de dados multidimensionais&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Partições remotas](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Mesclar partições no Analysis Services &#40;SSAS – Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Mesclar partições em Analysis Services &#40;SSAS –&#41;multidimensional](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

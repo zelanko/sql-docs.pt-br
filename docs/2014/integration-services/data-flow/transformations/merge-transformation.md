@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770409"
 ---
 # <a name="merge-transformation"></a>Transformação Mesclar
@@ -62,7 +62,7 @@ ms.locfileid: "62770409"
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter detalhes sobre como definir propriedades, consulte os tópicos a seguir:  
@@ -71,7 +71,7 @@ ms.locfileid: "62770409"
   
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transformação Junção de Mesclagem](merge-join-transformation.md)   
  [Transformação Unir Tudo](union-all-transformation.md)   
  [Fluxo de Dados](../data-flow.md)   

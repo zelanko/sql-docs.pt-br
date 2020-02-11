@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952425"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implantação de expansão (modo nativo do Servidor de Relatório)
   Use a página **Implantação de Expansão** no Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para exibir o status de inicialização de uma implantação de expansão ou para unir um servidor de relatório a uma implantação de expansão. Uma *implantação de expansão* se refere a duas ou mais instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
   
  Um *servidor de relatório inicializado* descreve um servidor que pode criptografar e descriptografar dados confidenciais que estão armazenados em um banco de dados do servidor de relatório (credenciais armazenadas e cadeias de conexão são exemplos de dados criptografados que são armazenados no banco de dados). A inicialização do servidor de relatório é um requisito para as operações do servidor de relatório.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "71952425"
   
  Para configurar uma implantação de expansão, inicie com duas ou mais instâncias do servidor de relatório que estejam conectadas ao mesmo banco de dados do servidor de relatório. Depois que todas as instâncias estiverem instaladas, conecte-se ao primeiro servidor de relatório e use a página Implantação de Expansão para associar cada instância adicional. Apenas um servidor de relatório que já esteja inicializado para usar um banco de dados pode inicializar nós adicionais.  
   
- Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selecione **Implantação de Expansão** no painel de navegação. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selecione **Implantação de Expansão** no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opções  
  **Nome do SQL Server**  
- Especifique o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda o banco de dados do servidor de relatório.  
+ Especifique o nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instância que hospeda o banco de dados do servidor de relatório.  
   
  **Database Name**  
  Especifica o nome do banco de dados ao qual a instância do servidor de relatório está atualmente conectada.  
@@ -68,15 +68,15 @@ ms.locfileid: "71952425"
   
  Uma instância de servidor de relatório estará disponível somente se você configurou anteriormente uma conexão com o banco de dados do servidor de relatório compartilhado. Além disso, é necessário executar a inicialização a partir de um servidor de relatório que já esteja inicializado para usar o banco de dados do servidor de relatório.  
   
- **Removerr**  
+ **Remover**  
  Clique em **Remover** para remover do banco de dados do servidor de relatório as chaves de criptografia da instância selecionada do servidor de relatório. Você pode remover chaves para remover um servidor de relatório de uma implantação de expansão ou para solucionar um problema de migração ou instalação. Com esta opção, apenas as chaves de criptografia da instância especificada do servidor de relatório são removidas. Os dados criptografados do banco de dados do servidor de relatório não são afetados.  
   
  Como precaução, certifique-se de criar uma cópia de backup da chave simétrica antes de removê-la. Depois de remover as chaves de criptografia do último servidor de relatório na lista, introduza novos requisitos para qualquer inicialização subsequente do servidor de relatório para esse banco de dados. O novo requisito consiste em que, depois de inicializar um servidor de relatório, você deve restaurar uma cópia de backup da chave simétrica. A restauração da chave simétrica será necessária se você deseja acessar os dados criptografados que estejam atualmente no banco de dados do servidor de relatório.  
   
- Se os dados criptografados não mais forem necessários ou se você não tiver uma cópia de backup da chave, você deverá excluir os dados criptografados. Para obter mais informações, consulte [chaves &#40;de criptografia modo&#41;nativo do SSRS](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
+ Se os dados criptografados não mais forem necessários ou se você não tiver uma cópia de backup da chave, você deverá excluir os dados criptografados. Para obter mais informações, consulte [chaves de criptografia &#40;o modo nativo do SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Inicializar um servidor de relatório &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Configurar uma implantação de expansão do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   

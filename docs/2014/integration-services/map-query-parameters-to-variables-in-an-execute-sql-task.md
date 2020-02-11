@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057802"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapear parâmetros de consulta para variáveis em uma tarefa Executar SQL
@@ -38,7 +38,7 @@ ms.locfileid: "66057802"
   
 3.  Clique na guia **Fluxo de Controle** .  
   
-4.  Se o pacote ainda não incluir uma tarefa Executar SQL, adicione uma ao fluxo de controle do pacote. Para obter mais informações, consulte [adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Se o pacote ainda não incluir uma tarefa Executar SQL, adicione uma ao fluxo de controle do pacote. Para obter mais informações, consulte [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  Clique duas vezes na tarefa Executar SQL.  
@@ -59,7 +59,7 @@ ms.locfileid: "66057802"
     |---------------------|----------------------|  
     |ADO|?|  
     |ADO.NET e SQLMOBILE|@\<nome do parâmetro>|  
-    |ODBC|?|  
+    |ODBCODBC|?|  
     |EXCEL e OLE DB|?|  
   
      A tabela a seguir lista exemplos do comando SELECT por tipo de gerenciador de conexões. Os parâmetros fornecem os valores de filtro nas cláusulas WHERE. Os exemplos usam SELECT para retornar produtos da tabela **Produto** em [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] que tenham uma **ProductID** maior e menor que os valores especificados pelos dois parâmetros.  
@@ -70,7 +70,7 @@ ms.locfileid: "66057802"
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
   
-     Para obter exemplos de como usar parâmetros com procedimentos armazenados, consulte [Parâmetros e códigos de retorno na Tarefa Executar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+     Para obter exemplos de como usar parâmetros com procedimentos armazenados, consulte [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 7.  Clique em **Mapeamento de Parâmetro**.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "66057802"
   
      Os nomes de parâmetros que você usa dependem do tipo de conexão que a tarefa Executar SQL usa.  
   
-    |Tipo de conexão|Nome do Parâmetro|  
+    |Tipo de conexão|Nome do parâmetro|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
     |ADO.NET e SQLMOBILE|@\<nome do parâmetro>|  
-    |ODBC|1, 2, 3, ...|  
+    |ODBCODBC|1, 2, 3, ...|  
     |EXCEL e OLE DB|0, 1, 2, 3, ...|  
   
 10. Na lista **Nome da Variável** , selecione uma variável. Para obter mais informações, consulte [Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md).  
@@ -103,7 +103,7 @@ ms.locfileid: "66057802"
   
 14. Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefa Executar SQL](control-flow/execute-sql-task.md)   
  [Parâmetros e códigos de retorno na tarefa Executar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)  

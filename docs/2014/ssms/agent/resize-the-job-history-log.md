@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650880"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-  Este tópico descreve como definir limites de tamanho para logs de históricos de trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Este tópico descreve como definir limites de tamanho para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logs de histórico de trabalhos [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do Agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]no usando o.  
   
 -   **Antes de começar:**  
   
      [Segurança](#Security)  
   
--   **Para definir limites de tamanho para logs de histórico de trabalho, usando:**  
+-   **Para definir limites de tamanho para logs de histórico de trabalhos, usando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -56,12 +56,12 @@ ms.locfileid: "62650880"
   
 #### <a name="to-resize-the-job-history-log-based-on-time"></a>Para redimensionar o log de histórico de trabalho segundo o tempo  
   
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e expanda-a.  
+1.  No Pesquisador de **objetos**, conecte-se a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]uma instância do e expanda essa instância.  
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent**e então clique em **Propriedades**.  
   
 3.  Selecione a página **Histórico** e clique em **Remover automaticamente o histórico do agente**.  
   
-4.  Selecione o número apropriado de **Dia(s)** , **Semana(s)** ou **Mês (meses)** .  
+4.  Selecione o número apropriado de **Dia(s)**, **Semana(s)** ou **Mês (meses)**.  
   
   

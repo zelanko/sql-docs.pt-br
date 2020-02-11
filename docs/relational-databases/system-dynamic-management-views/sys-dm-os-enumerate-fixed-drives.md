@@ -17,10 +17,10 @@ ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fa5834c14bfb1fafe3123c28a60359d64d059dfc
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71342511"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives (Transact-SQL)
@@ -29,20 +29,20 @@ ms.locfileid: "71342511"
 
 Introduzido no SQL Server 2019.
 
-Enumera volumes montados em letras de unidade, como `C:\`.
+Enumera volumes montados em letras de unidade `C:\`como.
 
-|Nome da coluna|Tipo de dados|Descrição|
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|
 |-----------------|---------------|-----------------|  
 |`fixed_drive_path`|`nvarchar(512)`|Caminho para o volume, como `C:\`.|  
-|`drive_type`|`int`|Código para o tipo de unidade. Consulte [`GetDriveTypeW` função](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
-|`drive_type_desc`|`nvarchar(512)`|Descrição do tipo de unidade. Consulte [`GetDriveTypeW` função](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
+|`drive_type`|`int`|Código para o tipo de unidade. Consulte [ `GetDriveTypeW` a função](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
+|`drive_type_desc`|`nvarchar(512)`|Descrição do tipo de unidade. Consulte [ `GetDriveTypeW` a função](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
 |`free_space_in_bytes`|`bigint`|Espaço livre em disco em bytes.|
 
 ## <a name="permissions"></a>Permissões
 
-O usuário deve ter a permissão `VIEW SERVER STATE` no servidor.
+O usuário deve ter `VIEW SERVER STATE` permissão no servidor.
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições e funções &#40;de gerenciamento dinâmico relacionadas a e/s do TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funções e exibições de gerenciamento dinâmico relacionadas a e/s &#40;&#41;de Transact-SQL](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 147664030dd6e52c4bfaf17efd6fa7aea35d53ae
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782777"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Exemplo de uma configuração de privilégios mínimos para o PowerPivot para SharePoint 2013
@@ -25,17 +25,17 @@ ms.locfileid: "72782777"
   
  A tabela a seguir resume as três contas usadas neste exemplo de uma configuração com privilégios mínimos.  
   
-|Escopo|NAME|  
+|Escopo|Nome|  
 |-----------|----------|  
 |Conta do administrador do SharePoint|**SPAdmin**|  
 |Conta do farm do SharePoint|**SPFarm**|  
 |Conta de serviço do Analysis Services|**SPsvc**|  
   
 ### <a name="the-sharepoint-administrator-account-spadmin"></a>A conta do administrador do SharePoint (SpAdmin)  
- **SPAdmin** é uma conta de domínio usada para instalar e configurar o farm. É a conta usada para executar o assistente de configuração do SharePoint e a ferramenta de configuração do PowerPivot para SharePoint 2013. a conta de **administrador** é a única conta que exige direitos de administrador local. Antes de executar a ferramenta de configuração do PowerPivot, conceda os privilégios da conta de **administrador** para a instância de banco de dados SQL Server, em que o SharePoint cria o conteúdo e banco de dados de configuração. Para configurar a conta SPAdmin em um cenário de privilégios mínimos, ela deve ser um membro das funções **securityadmin** e **dbcreator**.  
+ O **admin** é uma conta de domínio usada para instalar e configurar o farm. É a conta usada para executar o assistente de configuração do SharePoint e a ferramenta de configuração do PowerPivot para SharePoint 2013. a conta de **administrador** é a única conta que exige direitos de administrador local. Antes de executar a ferramenta de configuração do PowerPivot, conceda os privilégios da conta de **administrador** para a instância de banco de dados SQL Server, em que o SharePoint cria o conteúdo e banco de dados de configuração. Para configurar a conta SPAdmin em um cenário de privilégios mínimos, ela deve ser um membro das funções **securityadmin** e **dbcreator**.  
   
 ### <a name="the-farm-account-spfarm"></a>A conta do farm (SPFarm)  
- **SPFarm** é uma conta de domínio que o serviço de timer do SharePoint e o aplicativo Web para a Administração Central usam para acessar o banco de dados de conteúdo do SharePoint. Esta conta não precisa ser um administrador local. O assistente de configuração do SharePoint concede o privilégio mínimo apropriado no banco de dados do SQL Server de back-end. A configuração de privilégios mínimos do SQL Server é a associação nas funções **securityadmin** e **dbcreator**.  
+ **SPFarm** é uma conta de domínio que o serviço de timer do SharePoint e o aplicativo Web para administração central usam para acessar o banco de dados de conteúdo do SharePoint. Esta conta não precisa ser um administrador local. O assistente de configuração do SharePoint concede o privilégio mínimo apropriado no banco de dados do SQL Server de back-end. A configuração de privilégios mínimos do SQL Server é a associação nas funções **securityadmin** e **dbcreator**.  
   
 ### <a name="the-service-account-for-powerpivot-service-spsvc"></a>A conta de serviço para o serviço PowerPivot (SPsvc)  
  Se um novo farm do SharePoint não estiver configurado antes de você executar a ferramenta de configuração do PowerPivot, por padrão a ferramenta configuração do PowerPivot criará o seguinte:  
@@ -48,7 +48,7 @@ ms.locfileid: "72782777"
   
  A ferramenta de configuração do PowerPivot configura todos os três aplicativos de serviço no pool de aplicativos padrão. Esse pool de aplicativos normalmente é configurado para ser executado como a conta SPFarm, que tem acesso a vários recursos que uma conta de serviço não necessita. Para tornar o ambiente um ambiente de privilégios mínimos, configure uma nova conta de domínio para ser usada pelo pool de aplicativos e aplicativo Web apropriados.  
   
- **Para criar uma nova conta de domínio SPsvc para ser usada como uma conta de serviço do SharePoint:**  
+ **Para criar uma nova conta de domínio SPsvc a ser usada como uma conta de serviço do SharePoint:**  
   
 1.  Na administração central do SharePoint, clique em **segurança**.  
   

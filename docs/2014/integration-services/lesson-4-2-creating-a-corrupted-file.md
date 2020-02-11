@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 2: Criando um arquivo corrompido | Microsoft Docs'
+title: 'Etapa 2: criar um arquivo corrompido | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767378"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>Etapa 2: Criar um arquivo corrompido
+# <a name="step-2-creating-a-corrupted-file"></a>Etapa 2: Criando um arquivo corrompido
   Para demonstrar a configuração e o tratamento de erros de transformação, você terá que criar um arquivo simples de amostra que no processamento causa a falha de um componente.  
   
  Nesta tarefa, você criará uma cópia de um arquivo simples de amostra existente. Você deverá então abrir o arquivo no Bloco de Notas e editar a coluna **CurrencyID** para certificar-se de que não produzirá uma correspondência durante a pesquisa de transformações. Quando o arquivo novo for processado, a falha na pesquisa irá causar a falha da transformação Pesquisa de Códigos de Moeda e criará, portanto, uma falha no resto do pacote. Depois de criar o arquivo de amostra corrompido, você executará o pacote para exibir a falha do pacote.  
@@ -28,18 +28,18 @@ ms.locfileid: "62767378"
   
      Os dados de exemplo estão incluídos nos pacotes de lição do SSIS. Para baixar os dados de exemplo e os pacotes de lição, faça o seguinte.  
   
-    1.  Navegue até [Exemplos de produtos do Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Navegue até [Integration Services exemplos de produto](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Clique na guia **DOWNLOADS** .  
   
     3.  Clique no arquivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Usar a localização do editor de texto e substitua o recurso para localizar todas as instâncias do `VEB` e substitua-os por `BAD`.  
+2.  Use o recurso Localizar e substituir do editor de texto para localizar todas as `VEB` instâncias do e substituí `BAD`-las por.  
   
-3.  Na mesma pasta dos outros arquivos de dados de exemplo, salve o arquivo modificado como `Currency_BAD.txt`.  
+3.  Na mesma pasta que os outros arquivos de dados de exemplo, salve o arquivo modificado `Currency_BAD.txt`como.  
   
     > [!IMPORTANT]  
-    >  Certifique-se de que `Currency_BAD.txt` é salvo na mesma pasta dos outros arquivos de dados de exemplo.  
+    >  Verifique se o `Currency_BAD.txt` está salvo na mesma pasta que os outros arquivos de dados de exemplo.  
   
 4.  Feche seu editor de texto.  
   

@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72586734"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificar o SKU do banco de dados SQL/Instância Gerenciada do Azure correto para seu banco de dados local
@@ -38,7 +38,7 @@ O recurso de recomendações de SKU permite que você identifique o banco de dad
 
 Veja a seguir as instruções para ajudá-lo a determinar as recomendações de SKU do banco de dados SQL do Azure e provisionar os bancos de dados individuais correspondentes ou instâncias gerenciadas no Azure usando DMA.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Baixe e instale a versão mais recente do [DMA](https://aka.ms/get-dma). Se você já tiver uma versão anterior da ferramenta, abra-a e será solicitado a atualizar o DMA.
 - Verifique se o computador tem o [PowerShell versão 5,1](https://www.microsoft.com/download/details.aspx?id=54616) ou posterior, que é necessário para executar todos os scripts. Para obter informações sobre como findoug a versão do PowerShell que está instalada em seu computador, consulte o artigo [baixar e instalar o Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
@@ -102,7 +102,7 @@ Além disso, selecione um dos seguintes argumentos:
     - **/AzureAuthenticationTenantId**: o locatário de autenticação.
     - **/AzureAuthenticationClientId**: a ID do cliente do aplicativo AAD usado para autenticação.
     - Uma das seguintes opções de autenticação:
-      - Interactive
+      - Interativo
         - **AzureAuthenticationInteractiveAuthentication**: Defina como true para uma janela pop-up de autenticação.
       - Baseado em certificado
         - **AzureAuthenticationCertificateStoreLocation**: defina para o local do repositório de certificados (por exemplo, "CurrentUser").
@@ -115,7 +115,7 @@ Além disso, selecione um dos seguintes argumentos:
 
 Por fim, há um argumento opcional que você pode usar para especificar os bancos de dados para os quais deseja obter recomendações: 
 
-- **/SkuRecommendationDatabasesToRecommend**: uma lista de bancos de dados para os quais fazer recomendações. Os nomes de banco de dados diferenciam maiúsculas de minúsculas e devem (1) ser encontrados em Input. csv, (2) cada um entre aspas duplas e (3) cada um deles separado por um único espaço entre os nomes (por exemplo,/SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3") . Omitir esse parâmetro garante que as recomendações sejam fornecidas para todos os bancos de dados de usuário identificados no arquivo Input. csv.  
+- **/SkuRecommendationDatabasesToRecommend**: uma lista de bancos de dados para os quais fazer recomendações. Os nomes de banco de dados diferenciam maiúsculas de minúsculas e devem (1) ser encontrados em Input. csv, (2) cada um entre aspas duplas e (3) cada um deles separado por um único espaço entre os nomes (por exemplo,/SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3"). Omitir esse parâmetro garante que as recomendações sejam fornecidas para todos os bancos de dados de usuário identificados no arquivo Input. csv.  
 
 Abaixo estão algumas invocações de exemplo:
 
@@ -184,7 +184,7 @@ Segue uma descrição de cada coluna no arquivo de saída.
 - **ExclusionReasons** -esse valor estará em branco se uma camada for recomendada. Para cada camada que não é recomendada, fornecemos os motivos pelos quais ela não foi selecionada.
 - **AppliedRules** – uma breve notação das regras que foram aplicadas.
 
-A camada final recomendada (ou seja, **metrictype**) e o valor (ou seja, **metricvalue**)-encontrados onde a coluna **IsTierRecommended** é true – reflete a SKU mínima necessária para que suas consultas sejam executadas no Azure com uma taxa de êxito semelhante à sua bancos de dados locais. Para a instância gerenciada, o DMA atualmente dá suporte a recomendações para as 8vcore mais usadas para SKUs 40vcore. Por exemplo, se o SKU mínimo recomendado for S4 para a camada Standard, a escolha S3 ou abaixo fará com que as consultas expirem o tempo limite ou falham na execução.
+A camada final recomendada (ou seja, **metrictype**) e o valor (ou seja, **metricvalue**) – encontrados em que a coluna **IsTierRecommended** é true – reflete a SKU mínima necessária para que suas consultas sejam executadas no Azure com uma taxa de sucesso semelhante aos seus bancos de dados locais. Para a instância gerenciada, o DMA atualmente dá suporte a recomendações para as 8vcore mais usadas para SKUs 40vcore. Por exemplo, se o SKU mínimo recomendado for S4 para a camada Standard, a escolha S3 ou abaixo fará com que as consultas expirem o tempo limite ou falham na execução.
 
 O arquivo HTML contém essas informações em um formato gráfico. Ele fornece um meio amigável de exibir a recomendação final e provisionar a próxima parte do processo. Mais informações sobre a saída HTML estão na seção a seguir.
 
@@ -206,7 +206,7 @@ Para inserir informações de provisionamento e fazer alterações nas recomenda
     - **Região** -a região na qual provisionar bancos de dados. Verifique se sua assinatura dá suporte à região selecionada.
     - **Nome do servidor** -o servidor do banco de dados SQL do Azure para o qual você deseja implantar os bancos. Se você inserir um nome de servidor que não existe, ele será criado.
     - **Nome de usuário do administrador** -o nome de usuário do administrador do servidor.
-    - **Senha de administrador** -a senha de administrador do servidor. A senha deve ter pelo menos oito caracteres e no máximo 128 caracteres de comprimento. Sua senha deve conter caracteres de três das seguintes categorias – letras maiúsculas, letras minúsculas, números (0-9) e caracteres não alfanuméricos (!, $, #,%, etc.). A senha não pode conter todo ou parte (3 + letras consecutivas) do nome de usuário.
+    - **Senha de administrador** -a senha de administrador do servidor. A senha deve ter pelo menos oito caracteres e no máximo 128 caracteres de comprimento. A senha deve conter caracteres de três das categorias a seguir – letras maiúsculas, letras minúsculas, números (0-9) e caracteres não alfanuméricos (!, $, #, % etc.). A senha não pode conter todo ou parte (3 + letras consecutivas) do nome de usuário.
 
 2. Revise as recomendações para cada banco de dados e modifique o tipo de preço, o nível de computação e o tamanho máximo do dado, conforme necessário. Certifique-se de anular a seleção de todos os bancos de dados que você não deseja provisionar no momento.
 
@@ -224,7 +224,7 @@ Para inserir informações de provisionamento e fazer alterações nas recomenda
     - **Região** -a região na qual provisionar bancos de dados. Verifique se sua assinatura dá suporte à região selecionada.
     - **Nome da instância** – a instância do Azure SQL instância gerenciada para a qual você deseja migrar os bancos de dados. O nome da instância pode conter apenas letras minúsculas, números e '-', mas não pode começar ou terminar com '-' ou ter mais de 63 caracteres.
     - **Nome de usuário administrador da instância** – o nome de usuário do administrador da instância. Verifique se o nome de logon atende aos seguintes requisitos – é um identificador SQL e não um nome de sistema típico (como admin, administrador, SA, raiz, DBManager, loginmanager, etc.) ou um usuário ou função de banco de dados interno (como dbo, Guest, público etc.). Verifique se seu nome não contém espaços em branco, caracteres Unicode ou caracteres não alfabéticos e se ele não começa com números ou símbolos. 
-    - **Senha do administrador da instância** -a senha de administrador da instância. Sua senha deve ter pelo menos 16 caracteres e no máximo 128 caracteres de comprimento. Sua senha deve conter caracteres de três das seguintes categorias – letras maiúsculas, letras minúsculas, números (0-9) e caracteres não alfanuméricos (!, $, #,%, etc.). A senha não pode conter todo ou parte (3 + letras consecutivas) do nome de usuário.
+    - **Senha do administrador da instância** -a senha de administrador da instância. Sua senha deve ter pelo menos 16 caracteres e no máximo 128 caracteres de comprimento. A senha deve conter caracteres de três das categorias a seguir – letras maiúsculas, letras minúsculas, números (0-9) e caracteres não alfanuméricos (!, $, #, % etc.). A senha não pode conter todo ou parte (3 + letras consecutivas) do nome de usuário.
     - **Nome da vnet** – o nome da vnet sob a qual a instância gerenciada deve ser provisionada. Insira um nome de VNet existente.
     - **Nome da sub-rede** – o nome da sub-rede sob a qual a instância gerenciada deve ser provisionada. Insira um nome de sub-rede existente.
 

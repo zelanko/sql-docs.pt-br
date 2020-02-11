@@ -1,5 +1,5 @@
 ---
-title: Detalhes de instâncias (utilitário do SQL Server) gerenciadas | Microsoft Docs
+title: Detalhes de Instância Gerenciada (Utilitário do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,38 +11,38 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774336"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Detalhes de instâncias gerenciadas (Utilitário do SQL Server)
   As informações da exibição Instâncias Gerenciadas do Gerenciador do Utilitário fornecem dados de utilização para instâncias individuais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , para um computador, para arquivos de banco de dados e arquivos de log e no nível de volumes de armazenamento. Você também pode exibir detalhes de propriedades de instâncias gerenciadas individuais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- Exibição de lista  
+ Exibição Lista  
  A exibição de lista no painel superior exibe dados sobre instâncias individuais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] listadas em linhas por ComputerName\InstanceName.  
   
  Os ícones do estado de integridade fornecem o status resumido de cada instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] por categoria de utilização:  
   
--   Marca de verificação verde – ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") – Número de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que não estão violando políticas de utilização de recursos. Os recursos estão bem-utilizados.  
+-   Verificação verde - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - Número de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que não estão violando políticas de utilização de recursos. Os recursos estão bem-utilizados.  
   
--   Seta para baixo verde – ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") – Os recursos estão subutilizados.  
+-   Seta para baixo verde - ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") - Os recursos estão subutilizados.  
   
--   Seta para cima vermelha – ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow") – Os recursos estão superutilizados.  
+-   Seta para cima vermelha - ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow") - Os recursos estão superutilizados.  
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   
- Para acessar as opções de filtro da exibição de lista do Utilitário, clique com o botão direito do mouse no nó **Instâncias Gerenciadas** no painel de navegação do Gerenciador do Utilitário e selecione **Filtrar**. Depois que as configurações de filtro forem implementadas, o nó **Instâncias Gerenciadas** no Gerenciador do Utilitário será rotulado **Instâncias Gerenciadas (filtradas)** . Para obter mais informações, consulte [Configurações de filtro &#40;Pesquisador de Objetos e Gerenciador do Utilitário&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Para acessar as opções de filtro da exibição de lista do Utilitário, clique com o botão direito do mouse no nó **Instâncias Gerenciadas** no painel de navegação do Gerenciador do Utilitário e selecione **Filtrar**. Depois que as configurações de filtro forem implementadas, o nó **Instâncias Gerenciadas** no Gerenciador do Utilitário será rotulado **Instâncias Gerenciadas (filtradas)**. Para obter mais informações, consulte [Configurações de filtro &#40;Pesquisador de Objetos e Gerenciador do Utilitário&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  Por padrão, as colunas a seguir exibem informações do estado de integridade de cada instância gerenciada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   CPU da Instância – Exibe o estado de integridade da utilização do processador alocado a essa instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O estado de integridade deste parâmetro é determinado de acordo com a política de utilização da CPU definida para a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e o parâmetro de configuração da política de avaliação de recurso volátil. Para obter mais informações, veja [Reduzir o ruído em políticas de utilização da CPU &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU da Instância – Exibe o estado de integridade da utilização do processador alocado a essa instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O estado de integridade deste parâmetro é determinado de acordo com a política de utilização da CPU definida para a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e o parâmetro de configuração da política de avaliação de recurso volátil. Para obter mais informações, consulte [reduzir o ruído nas políticas de utilização da CPU &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Para exibir o histórico da utilização do processador para essa instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ou para exibir ou alterar os limites da política, clique na guia **Utilização da CPU** .  
   
--   CPU do Computador - Exibe o estado de integridade da utilização do processador do computador. O estado de integridade deste parâmetro é determinado de acordo com a política de utilização da CPU definida para o computador e o parâmetro de configuração da política de avaliação de recurso volátil. Para obter mais informações, veja [Reduzir o ruído em políticas de utilização da CPU &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU do Computador - Exibe o estado de integridade da utilização do processador do computador. O estado de integridade deste parâmetro é determinado de acordo com a política de utilização da CPU definida para o computador e o parâmetro de configuração da política de avaliação de recurso volátil. Para obter mais informações, consulte [reduzir o ruído nas políticas de utilização da CPU &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Para exibir o histórico da utilização do processador para essa instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ou para exibir ou alterar os limites da política, clique na guia **Utilização da CPU** .  
   
@@ -68,17 +68,17 @@ ms.locfileid: "62774336"
   
 -   Edição do SQL Server:  
   
--   Clusterizado: (Verdadeiro ou falso)  
+-   Clusterizado: (Verdadeiro ou Falso)  
   
 -   Diretório de Backup:  
   
 -   Ordenação:  
   
--   Diferencia maiusculas de minúsculas: (Verdadeiro ou falso)  
+-   Diferenciar Maiúsculas de Minúsculas: (Verdadeiro ou Falso)  
   
--   Idioma:  
+-   Linguagem:  
   
--   Última hora relatada: Essa coluna mostra o UCP data e hora locais usando o tipo de dados de data e hora. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
+-   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
   
  Guia Utilização da CPU  
  A guia Utilização da CPU mostra gráficos lado a lado de dados históricos da utilização da CPU do computador e da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -165,19 +165,19 @@ ms.locfileid: "62774336"
   
 -   Edição do SQL Server:  
   
--   Clusterizado: (Verdadeiro ou falso)  
+-   Clusterizado: (Verdadeiro ou Falso)  
   
 -   Diretório de Backup:  
   
 -   Ordenação:  
   
--   Diferencia maiusculas de minúsculas: (Verdadeiro ou falso)  
+-   Diferenciar Maiúsculas de Minúsculas: (Verdadeiro ou Falso)  
   
--   Idioma:  
+-   Linguagem:  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Detalhes do aplicativo da camada de dados implantado &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [Painel do utilitário &#40;utilitário do SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [Painel do utilitário &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Monitorar instâncias do SQL Server no Utilitário do SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Recursos e tarefas do Utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas do Utilitário do SQL Server](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  

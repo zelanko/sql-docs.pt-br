@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73a67105a8b70b1b55b15d894ebc13c90417d8e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769492"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (Não de bit a bit) (Expressão SSIS)
@@ -39,7 +39,7 @@ ms.locfileid: "62769492"
  Retorna o tipo de dados de *integer_expression.*  
   
 ## <a name="remarks"></a>Comentários  
- None  
+ Nenhum  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  
  Esse exemplo executa uma operação ~ (NOT) bit a bit no número 170 (0000 0000 1010 1010). O número é um inteiro assinado.  
@@ -57,7 +57,7 @@ ms.locfileid: "62769492"
   
  1111111101010101  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Precedência de operador e capacidade de associação](operator-precedence-and-associativity.md)   
  [Operadores &#40;Expressão do SSIS&#41;](operators-ssis-expression.md)  
   

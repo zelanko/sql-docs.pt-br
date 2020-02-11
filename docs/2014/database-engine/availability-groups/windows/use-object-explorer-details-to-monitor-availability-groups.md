@@ -1,5 +1,5 @@
 ---
-title: Use os detalhes do Pesquisador de objeto para monitorar grupos de disponibilidade (SQL Server Management Studio) | Microsoft Docs
+title: Usar os detalhes do pesquisador de objetos para monitorar grupos de disponibilidade (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788319"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade (SQL Server Management Studio)
@@ -29,11 +29,11 @@ ms.locfileid: "62788319"
 > [!NOTE]  
 >  Para obter informações sobre como usar o painel de detalhes do Pesquisador de objetos, veja [Painel de detalhes do Pesquisador de Objetos](../../../ssms/object/object-explorer-details-pane.md).  
   
--   **Antes de começar:**  [Pré-requisitos](#Prerequisites)  
+-   **Antes de começar:**  [pré-requisitos](#Prerequisites)  
   
 -   **Para monitorar um grupo de disponibilidade usando:**  [SQL Server Management Studio](#SSMSProcedure)  
   
--   **Detalhes do Pesquisador de Objetos:**  
+-   **Detalhes do pesquisador de objetos:**  
   
      [Detalhes do grupo de disponibilidade](#AvGroupsDetails)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62788319"
  Conecte-se à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instância de servidor) que hospeda a réplica primária ou uma réplica secundária.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- **Para monitorar os grupos de disponibilidade, as réplicas de disponibilidade e os bancos de dados de disponibilidade**  
+ **Para monitorar grupos de disponibilidade, réplicas de disponibilidade e bancos de dados de disponibilidade**  
   
 1.  No menu Exibir, clique em **Detalhes do Pesquisador de Objetos**ou pressione a tecla **F7** .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62788319"
   
          Para executar operações em vários bancos de dados de disponibilidade, selecione-as e clique com o botão direito do mouse para abrir um menu de contexto que lista os comandos disponíveis.  
   
-##  <a name="AvGroupsDetails"></a> Detalhes dos grupos de disponibilidade  
+##  <a name="AvGroupsDetails"></a>Detalhes dos grupos de disponibilidade  
  A tela de detalhes **Grupos de Disponibilidade** exibe as seguintes colunas:  
   
  **Nome**  
@@ -82,39 +82,39 @@ ms.locfileid: "62788319"
  **Função**  
  Indica a função atual da réplica de disponibilidade, **Primária** ou **Secundária**. Para obter informações sobre as funções do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
- **Modo de Conexão na Função Secundária**  
+ **Modo de conexão na função secundária**  
  Indica se os bancos de dados de uma determinada réplica de disponibilidade que está executando a função primária (isto é, está atuando como uma réplica secundária) podem aceitar conexões de clientes.  
   
  Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Não Permitir Conexões**|Nenhuma conexão direta é permitida para os bancos de dados de disponibilidade quando essa réplica de disponibilidade está agindo como uma réplica secundária. Os bancos de dados secundários não estão disponíveis para acesso de leitura.|  
-|**Permitir Somente Conexões de Intenção de Leitura**|Apenas conexões diretas somente leitura são permitidas quando essa réplica está agindo como uma réplica secundária. Todos os bancos de dados na réplica estão disponíveis para acesso de leitura.|  
-|**Permitir Todas as Conexões**|Todas as conexões são permitidas para estes bancos de dados para acesso somente leitura quando essa réplica está atuando como uma réplica secundária.|  
+|**Não permitir conexões**|Nenhuma conexão direta é permitida para os bancos de dados de disponibilidade quando essa réplica de disponibilidade está agindo como uma réplica secundária. Os bancos de dados secundários não estão disponíveis para acesso de leitura.|  
+|**Permitir somente conexões de intenção de leitura**|Apenas conexões diretas somente leitura são permitidas quando essa réplica está agindo como uma réplica secundária. Todos os bancos de dados na réplica estão disponíveis para acesso de leitura.|  
+|**Permitir todas as conexões**|Todas as conexões são permitidas para estes bancos de dados para acesso somente leitura quando essa réplica está atuando como uma réplica secundária.|  
   
  **Estado da Conexão**  
  Indica se uma réplica secundária está conectada atualmente à réplica primária. Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Desconectado**|Para uma réplica de disponibilidade remota, indica que ela está desconectada da réplica de disponibilidade local. A resposta da réplica local ao estado Desconectado depende de sua função, da seguinte forma:<br /><br /> na réplica primária, se uma réplica secundária estiver desconectada, os bancos de dados secundários serão marcados como **Não Sincronizado** na réplica primária, e a réplica primária esperará que a secundária seja reconectada.<br /><br /> Na réplica secundária, ao detectar que está desconectada, a réplica secundária tentará reconectar-se à réplica primária.|  
-|**Conectado**|Uma réplica de disponibilidade remota que está conectada atualmente à réplica local.|  
+|**Desconecta**|Para uma réplica de disponibilidade remota, indica que ela está desconectada da réplica de disponibilidade local. A resposta da réplica local ao estado Desconectado depende de sua função, da seguinte forma:<br /><br /> na réplica primária, se uma réplica secundária estiver desconectada, os bancos de dados secundários serão marcados como **Não Sincronizado** na réplica primária, e a réplica primária esperará que a secundária seja reconectada.<br /><br /> Na réplica secundária, ao detectar que está desconectada, a réplica secundária tentará reconectar-se à réplica primária.|  
+|**Connected**|Uma réplica de disponibilidade remota que está conectada atualmente à réplica local.|  
 |**NULL**|Se a réplica local for uma réplica secundária, esse valor será NULL para outras réplicas secundárias.|  
   
  **Estado da Sincronização**  
  Indica se uma réplica secundária está sincronizada no momento com a réplica primária. Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Não Sincronizado**|O banco de dados não está sincronizado ou ainda não foi unido ao grupo de disponibilidade.|  
-|**Sincronizado**|O banco de dados está sincronizado com o banco de dados primário na réplica primária atual, se houver, ou na réplica primária mais recente.<br /><br /> Observação: No modo de desempenho, o banco de dados nunca está no estado Synchronized.|  
+|**Não sincronizado**|O banco de dados não está sincronizado ou ainda não foi unido ao grupo de disponibilidade.|  
+|**Realizada**|O banco de dados está sincronizado com o banco de dados primário na réplica primária atual, se houver, ou na réplica primária mais recente.<br /><br /> Observação: em modo de desempenho, o banco de dados nunca está no estado Sincronizado.|  
 |**NULL**|Estado desconhecido. Este valor ocorre quando a instância do servidor local não pode se comunicar com o cluster de failover do WSFC (isto é, o nó local não faz parte do quorum do WSFC).|  
   
 > [!NOTE]  
 >  Para obter informações sobre contadores de desempenho para réplicas de disponibilidade, veja [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> Detalhes do banco de dados de disponibilidade  
+##  <a name="AvDbDetails"></a>Detalhes do banco de dados de disponibilidade  
  A tela de detalhes **Banco de Dados de Disponibilidade** exibe as seguintes propriedades dos bancos de dados de disponibilidade em um determinado grupo de disponibilidade:  
   
  **Nome**  
@@ -125,27 +125,27 @@ ms.locfileid: "62788319"
   
  Os estados de sincronização possíveis são:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|Sincronizando|O banco de dados secundário recebeu os registros do log de transações do banco de dados primário que ainda não estão gravados no disco (protegidos).<br /><br /> Observação: No modo de confirmação assíncrona, o estado de sincronização é sempre **Synchronizing**.|  
+|Sincronizando|O banco de dados secundário recebeu os registros do log de transações do banco de dados primário que ainda não estão gravados no disco (protegidos).<br /><br /> Observação: no modo de confirmação assíncrona, o estado da sincronização é sempre **Sincronizando**.|  
   
  **Suspenso**  
  Indica se o banco de dados de disponibilidade está online no momento. Os valores possíveis são os seguintes:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Suspenso**|Esse estado indica que o banco de dados está suspenso localmente e precisa ser retomado manualmente.<br /><br /> Na réplica primária, o valor não é confiável para um banco de dados secundário. Para determinar com confiança se um banco de dados secundário está suspenso, consulte-o na réplica secundária que hospeda o banco de dados.|  
-|**Não Unido**|Indica que o banco de dados secundário não foi unido ao grupo de disponibilidade ou foi removido do grupo.|  
-|**Online**|Indica que o banco de dados não está suspenso na réplica de disponibilidade local e que o banco de dados está conectado.|  
-|**Não Conectado**|Indica que a réplica secundária não pode conectar-se à réplica primária.|  
+|**Não associado**|Indica que o banco de dados secundário não foi unido ao grupo de disponibilidade ou foi removido do grupo.|  
+|**Conectar**|Indica que o banco de dados não está suspenso na réplica de disponibilidade local e que o banco de dados está conectado.|  
+|**Não conectado**|Indica que a réplica secundária não pode conectar-se à réplica primária.|  
   
 > [!NOTE]  
 >  Para obter informações sobre contadores de desempenho para bancos de dados de disponibilidade, veja [SQL Server, Réplica de banco de dados](../../../relational-databases/performance-monitor/sql-server-database-replica.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
- [Exibir propriedades do grupo de disponibilidade &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)   
+ [Exibir as propriedades do grupo de disponibilidade &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)   
  [Exibir as propriedades da réplica de disponibilidade &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
   

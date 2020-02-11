@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060226"
 ---
 # <a name="create-a-deployment-utility"></a>Criar um utilitário de implantação
@@ -29,7 +29,7 @@ ms.locfileid: "66060226"
   
  A tabela a seguir lista as propriedades do utilitário de implantação.  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |AllowConfigurationChange|Um valor que especifica se as configurações podem ser atualizadas durante a implantação.|  
 |CreateDeploymentUtility|Um valor que especifica se um utilitário de implantação do pacote é criado quando o projeto é compilado. Essa propriedade deve ser `True` para criar um utilitário de implantação.|  
@@ -45,9 +45,9 @@ ms.locfileid: "66060226"
   
 2.  Clique com o botão direito do mouse no projeto e clique em **Propriedades**.  
   
-3.  Na caixa de diálogo **Páginas de Propriedades do \<project name>** , clique em **Utilitário de Implantação**.  
+3.  Na caixa de diálogo ** \<nome do projeto> páginas de propriedades** , clique em **Utilitário de implantação**.  
   
-4.  Para atualizar as configurações do pacote quando os pacotes são implantados, defina **AllowConfigurationChanges** para `True`.  
+4.  Para atualizar as configurações do pacote quando os pacotes são implantados, defina **AllowConfigurationChanges** como `True`.  
   
 5.  Defina `CreateDeploymentUtility` como `True`.  
   
@@ -59,10 +59,10 @@ ms.locfileid: "66060226"
   
 9. Visualize o progresso da compilação e os erros de compilação na janela **Saída** .  
   
-## <a name="see-also"></a>Consulte também  
- [Configurações do Pacote](../../2014/integration-services/package-configurations.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurações do pacote](../../2014/integration-services/package-configurations.md)   
  [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)   
- [Implantar pacotes por meio do utilitário de implantação](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
+ [Implantar pacotes usando o utilitário de implantação](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
  [Implantação de pacote &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

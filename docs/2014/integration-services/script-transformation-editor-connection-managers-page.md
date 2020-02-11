@@ -1,5 +1,5 @@
 ---
-title: Editor de transformação scripts (página gerenciadores de Conexão) | Microsoft Docs
+title: Editor de transformação scripts (página gerenciadores de conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,26 +15,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056197"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Editor de Transformação Scripts (página Gerenciadores de Conexões)
   Use a página **Gerenciadores de Conexões** do **Editor de Transformação Scripts** para especificar as conexões que serão usadas pelo script.  
   
- Para saber mais sobre o componente Script, consulte [componente de Script](data-flow/transformations/script-component.md) e [Configurando o componente Script no Editor de componente de Script](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Estender o fluxo de dados com o componente de Script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Para obter mais informações sobre o componente Script, consulte [Script Component](data-flow/transformations/script-component.md) e [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Estender o fluxo de dados com o componente de Script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Opções  
- **Connection managers**  
+ **Gerenciadores de conexões**  
  Exiba a lista de conexões disponíveis para serem usadas pelo script.  
   
  **Nome**  
  Digite um nome exclusivo e descritivo para a conexão.  
   
  **Gerenciador de Conexões**  
- Selecione na lista de gerenciadores de conexões disponíveis ou selecione **\<Nova conexão>** para abrir a caixa de diálogo **Adicionar Gerenciador de Conexões SSIS**.  
+ Selecione na lista de gerenciadores de conexões disponíveis ou selecione ** \<novo>de conexão** para abrir a caixa de diálogo **Adicionar Gerenciador de conexões SSIS** .  
   
  **Descrição**  
  Digite uma descrição para a conexão.  
@@ -45,12 +45,12 @@ ms.locfileid: "66056197"
  **Remover**  
  Remova a conexão selecionada da lista **Gerenciadores de conexões** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Selecionar Tipo de Componente do Script](../../2014/integration-services/select-script-component-type.md)   
- [Editor de Transformação Scripts &#40;página Colunas de Entrada&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Editor de Transformação Scripts &#40;Página Entradas e Saídas&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Editor de Transformação Scripts &#40;Página Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [Exemplos de componentes de Script adicionais](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
+ [Selecionar tipo de componente de script](../../2014/integration-services/select-script-component-type.md)   
+ [Editor de transformação scripts &#40;página colunas de entrada&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Editor de transformação scripts &#40;página entradas e saídas&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Editor de transformação scripts &#40;página script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Exemplos de componentes Script adicionais](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

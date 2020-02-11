@@ -18,10 +18,10 @@ ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4bd7f90688d61f9ecee487d553393e38bed82e3
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70211274"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70211274"
 
   Cria um novo perfil do Database Mail.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,20 +41,20 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_name = ] 'profile\_name'` o nome do novo perfil. *profile_name* é **sysname**, sem padrão.  
+`[ @profile_name = ] 'profile\_name'`O nome do novo perfil. *profile_name* é **sysname**, sem padrão.  
  
    > [!NOTE]
    > O nome do perfil que usa o Azure SQL Instância Gerenciada SQL Agent deve ser chamado **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'` a descrição opcional para o novo perfil. a *Descrição* é **nvarchar (256)** , sem padrão.  
+`[ @description = ] 'description'`A descrição opcional para o novo perfil. a *Descrição* é **nvarchar (256)**, sem padrão.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT` retorna a ID do novo perfil. *new_profile_id* é **int**, com um padrão de NULL.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT`Retorna a ID do novo perfil. *new_profile_id* é **int**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
- Um perfil Database Mail contém qualquer número de contas do Database Mail. Os procedimentos armazenados do Database Mail podem se referir a um perfil por meio do nome do perfil ou da identificação do perfil gerada por este procedimento. Para obter mais informações sobre como adicionar uma conta a um perfil, consulte [sysmail_add_profileaccount_sp &#40;Transact&#41;-SQL](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
+## <a name="remarks"></a>Comentários  
+ Um perfil Database Mail contém qualquer número de contas do Database Mail. Os procedimentos armazenados do Database Mail podem se referir a um perfil por meio do nome do perfil ou da identificação do perfil gerada por este procedimento. Para obter mais informações sobre como adicionar uma conta a um perfil, consulte [sysmail_add_profileaccount_sp &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
   
  O nome do perfil e a descrição podem ser alterados com o procedimento armazenado **sysmail_update_profile_sp**, enquanto a ID do perfil permanece constante durante a vida útil do perfil.  
   
@@ -66,7 +66,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  As permissões de execução para este procedimento assumem como padrão os membros da função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
- **A. criando um novo perfil**  
+ **A. Criando um novo perfil**  
   
  O exemplo a seguir cria um novo perfil do Database Mail chamado `AdventureWorks Administrator`.  
   
@@ -76,7 +76,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **B. criando um novo perfil, salvando a ID do perfil em uma variável**  
+ **B. Criando um novo perfil, salvando a identificação do perfil em uma variável**  
   
  O exemplo a seguir cria um novo perfil do Database Mail chamado `AdventureWorks Administrator`. O exemplo armazena o número da identificação do perfil na variável `@profileId` e retorna um conjunto de resultados contendo o número de identificação do perfil para o novo perfil.  
   
@@ -91,10 +91,10 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 SELECT @profileId ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Criar uma conta de Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Objetos de configuração do Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail procedimentos &#40;armazenados TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail objetos de configuração](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

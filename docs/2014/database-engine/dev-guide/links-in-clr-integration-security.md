@@ -1,5 +1,5 @@
 ---
-title: Links em segurança da integração CLR | Microsoft Docs
+title: Links em segurança de integração CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781065"
 ---
 # <a name="links-in-clr-integration-security"></a>Links em segurança da integração CLR
@@ -32,7 +32,7 @@ ms.locfileid: "62781065"
  Os links de acesso à tabela correspondem à recuperação ou à modificação de valores em uma tabela, exibição ou uma função de valor de tabela. Eles são semelhantes aos links de invocação, exceto por apresentarem um controle de acesso mais refinado em termos de permissões SELECT, INSERT, UPDATE e DELETE.  
   
 ## <a name="gated-links"></a>Links de entrada  
- Os links de entrada significam que, durante a execução, as permissões, uma vez estabelecidas, não são verificadas em todas as relações de objeto. Quando há um link de entrada entre dois objetos (por exemplo, objetos **x** e **y**), as permissões no objeto **y** e nos demais objetos acessados no objeto **y** só são verificadas no momento da criação do objeto **x**. No momento da criação do objeto **x**, `REFERENCE` permissão é verificada no **y** em comparação com o proprietário da **x**. Em tempo de execução, (por exemplo, quando alguém chama o objeto **x**), nenhuma permissão é verificada em relação a **y** ou outros objetos referenciados estatisticamente. Em tempo de execução, uma permissão apropriada será verificada em relação ao próprio objeto **x** .  
+ Os links de entrada significam que, durante a execução, as permissões, uma vez estabelecidas, não são verificadas em todas as relações de objeto. Quando há um link de entrada entre dois objetos (por exemplo, objetos **x** e **y**), as permissões no objeto **y** e nos demais objetos acessados no objeto **y** só são verificadas no momento da criação do objeto **x**. No momento da criação do objeto **x**, `REFERENCE` a permissão é verificada em **y** em relação ao proprietário de **x**. Em tempo de execução, (por exemplo, quando alguém chama o objeto **x**), nenhuma permissão é verificada em relação a **y** ou outros objetos referenciados estatisticamente. Em tempo de execução, uma permissão apropriada será verificada em relação ao próprio objeto **x** .  
   
  Os links de entrada são sempre usados em conjunto com uma dependência de metadados entre dois objetos. Essa dependência de metadados é uma relação estabelecida nos catálogos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que impede um objeto de ser descartado enquanto outro objeto depender dele.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62781065"
   
 4.  A permissão é verificada no contexto de execução atual. Procedimentos e funções podem ser criados com um contexto de execução diferente do chamador. Os assemblies sempre são criados com o contexto de execução do procedimento, da função, do disparador definido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança da integração CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

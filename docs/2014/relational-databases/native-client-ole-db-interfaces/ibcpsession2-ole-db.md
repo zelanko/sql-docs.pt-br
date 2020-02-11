@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caa99de2383a022ff73c04dd5fcdeeb151ca086d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691857"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
-  A interface IBCPSession2 é uma extensão IBCPSession que fornece uma função de membro que é uma alternativa à chamada ibcpsession:: BCPColFmt para cada coluna.  IBCPSession2 herda IBCPSession e adiciona um novo método: [IBCPSession2::BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md).  
+  A interface IBCPSession2 é uma extensão para IBCPSession que fornece uma função de membro que é uma alternativa para chamar IBCPSession:: BCPColFmt para cada coluna.  IBCPSession2 herda de IBCPSession e adiciona um novo método: [IBCPSession2:: BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Interfaces &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

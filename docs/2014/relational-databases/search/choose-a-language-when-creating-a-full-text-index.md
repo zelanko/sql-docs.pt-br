@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012729"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Escolher um idioma ao criar um índice de texto completo
@@ -49,7 +49,7 @@ ms.locfileid: "66012729"
   
 -   Segurança  
   
-     Os novos separadores de palavras são habilitados por padrão em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] graças aos aprimoramentos de segurança nos componentes linguísticos. É altamente recomendável que componentes externos, como separadores de palavras e filtros, sejam assinados para melhorar a segurança geral e a robustez do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível configurar a pesquisa de texto completo para verificar se esses componentes estão assinados, da seguinte forma:  
+     Os novos separadores de palavras são habilitados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por padrão em graças aos aprimoramentos de segurança nos componentes lingüísticos. É altamente recomendável que componentes externos, como separadores de palavras e filtros, sejam assinados para melhorar a segurança geral e a robustez do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível configurar a pesquisa de texto completo para verificar se esses componentes estão assinados, da seguinte forma:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -61,7 +61,7 @@ ms.locfileid: "66012729"
   
 -   Cobertura de uma lista extensa de idiomas e separadores de palavras que estão são incluídos no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prontos para uso e habilitados por padrão.  
   
- Para obter uma lista de idiomas para os quais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um separador de palavras e lematizadores, consulte [sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
+ Para obter uma lista dos idiomas para os [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quais o inclui um separador de palavras e lematizadores, consulte [sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
 
   
@@ -108,7 +108,7 @@ ms.locfileid: "66012729"
 ##  <a name="type"></a> Efeito do tipo de coluna na pesquisa de texto completo  
  Outro aspecto a ser considerado na escolha do idioma está relacionada a como os dados são representados. Para dados que não são armazenados na coluna `varbinary(max)`, nenhuma filtragem especial é executada. Em vez disso, o texto geralmente é passado pelo separador de palavras assim como é.  
   
- Além disso, os separadores de palavra foram criados principalmente para processar texto escrito. Então, se você tiver algum tipo de formatação em seu texto (como HTML), não será possível obter grande precisão linguística durante a indexação e procura. Nesse caso, você tem duas opções – o preferencial método é simplesmente armazenar os dados de texto em `varbinary(max)` coluna e indicar seu tipo de documento para que possa ser filtrada. Se não houver essa opção, você poderá considerar a possibilidade de usar o separador de palavras neutro e, se possível, adicionar dados de marcação (como ‘br’ em HTML) à lista de palavras de ruído.  
+ Além disso, os separadores de palavra foram criados principalmente para processar texto escrito. Então, se você tiver algum tipo de formatação em seu texto (como HTML), não será possível obter grande precisão linguística durante a indexação e procura. Nesse caso, você tem duas opções: o método preferencial é simplesmente armazenar os dados de texto na `varbinary(max)` coluna e indicar seu tipo de documento para que ele possa ser filtrado. Se não houver essa opção, você poderá considerar a possibilidade de usar o separador de palavras neutro e, se possível, adicionar dados de marcação (como ‘br’ em HTML) à lista de palavras de ruído.  
   
 > [!NOTE]  
 >  A lematização com base no idioma não entra em jogo quando você especifica o idioma neutro.  
@@ -120,7 +120,7 @@ ms.locfileid: "66012729"
   
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [Tipos de dados &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   

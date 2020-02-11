@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 794dfea63b193ff79fb5831cb3a4e519d7d5f63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691381"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>Definir o grau máximo da opção de paralelismo para obtenção do desempenho ideal
@@ -26,7 +26,7 @@ ms.locfileid: "62691381"
  Defina a opção grau máximo de paralelismo como 8 ou menos usando sp_configure.  
   
 ## <a name="for-more-information"></a>Para obter mais informações  
- [Artigo 329204 da Base de Dados de Conhecimento Microsoft](https://go.microsoft.com/fwlink/?linkid=117786)  
+ [Artigo 329204 da base de dados de conhecimento Microsoft](https://go.microsoft.com/fwlink/?linkid=117786)  
   
  [Configurar a opção de configuração de servidor max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
   

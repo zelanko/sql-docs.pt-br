@@ -13,32 +13,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aae800226a585f7a29334887829be2a09277a004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809141"
 ---
 # <a name="server-properties-processors-page"></a>Propriedades do Servidor (página Processadores)
   Use esta página para exibir ou modificar suas opções de processador. As configurações de afinidade do processador só são habilitadas quando há mais de um processador instalado.  
   
 ## <a name="options"></a>Opções  
- **Afinidade do Processador**  
+ **Afinidade do processador**  
  Atribui processadores a threads específicos para eliminar recargas do processador e reduzir a migração de thread pelos processadores. Para obter mais informações, veja [Opção affinity mask de configuração de servidor](affinity-mask-server-configuration-option.md).  
   
- **Afinidade de E/S**  
- Associa as E/Ss de disco do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a um subconjunto especificado de CPUs. Para obter mais informações, veja [Opção affinity Input-Output mask de configuração de servidor](affinity-input-output-mask-server-configuration-option.md).  
+ **Afinidade de e/s**  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Associa e/SS de disco a um subconjunto especificado de CPUs. Para obter mais informações, veja [Opção affinity Input-Output mask de configuração de servidor](affinity-input-output-mask-server-configuration-option.md).  
   
- **Definir automaticamente a máscara de afinidade de todos os processadores**  
+ **Definir automaticamente a máscara de afinidade do processador para todos os processadores**  
  Permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] defina a afinidade do processador.  
   
- **Definir automaticamente a máscara de afinidade de E/S de todos os processadores**  
+ **Definir automaticamente a máscara de afinidade de e/s para todos os processadores**  
  Permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] defina a afinidade de E/S.  
   
  **Máximo de threads de trabalho**  
  0 permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] defina dinamicamente o número de threads de trabalho. Essa configuração é melhor para a maioria dos sistemas. Porém, dependendo de sua configuração de sistema, definir essa opção com um valor específico às vezes melhora o desempenho. Para obter mais informações, consulte [configurar a opção de configuração de servidor max worker threads](configure-the-max-worker-threads-server-configuration-option.md).  
   
- **Aumentar a prioridade do SQL Server**  
+ **Aumentar a prioridade de SQL Server**  
  Especifica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser executado em uma prioridade de agendamento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows mais alta que outros processos no mesmo computador. Para obter mais informações, consulte [Configure the priority boost Server Configuration Option](configure-the-priority-boost-server-configuration-option.md).  
   
  **Usar fibras do Windows (lightweight pooling)**  
@@ -50,7 +50,7 @@ ms.locfileid: "62809141"
  **Executando Valores**  
  Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011957"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Tabela de exemplo HumanResources.myTeam (SQL Server)
@@ -29,14 +29,14 @@ ms.locfileid: "66011957"
   
  A tabela **myTeam** contém as seguintes colunas.  
   
-|coluna|Tipo de dados|Nulidade|Descrição|  
+|Coluna|Tipo de dados|Nulidade|DESCRIÇÃO|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|Não nulo|Chave primária para as linhas. A ID de funcionário de um membro da minha equipe.|  
 |**Nome**|`nvarchar(50)`|Não nulo|Nome de um membro de myTeam.|  
-|**Título**|`nvarchar(50)`|Anulável|O cargo que o funcionário exerce na minha equipe.|  
-|**Plano de fundo**|`nvarchar(50)`|Não nulo|Data e hora da última atualização da linha. (Padrão)|  
+|**Title**|`nvarchar(50)`|Nullable|O cargo que o funcionário exerce na minha equipe.|  
+|**Segundo plano**|`nvarchar(50)`|Não nulo|Data e hora da última atualização da linha. (Default)|  
   
- **Para criar HumanResources.myTeam**  
+ **Para criar HumanResources. myTeam**  
   
 -   Use as seguintes instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66011957"
     GO  
     ```  
   
- **Para popular HumanResources.myTeam**  
+ **Para popular HumanResources. myTeam**  
   
 -   Execute as seguintes instruções `INSERT` para popular a tabela com duas linhas:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66011957"
     > [!NOTE]  
     >  Essas instruções ignoram a quarta coluna, `Background`. Isso tem um valor padrão. Ignorar essa coluna faz com que essa instrução `INSERT` deixe a coluna em branco.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Importação e exportação em massa de dados &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)  
   
   

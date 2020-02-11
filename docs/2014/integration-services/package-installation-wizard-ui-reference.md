@@ -1,5 +1,5 @@
 ---
-title: Referência de interface do usuário do Assistente de instalação do pacote | Microsoft Docs
+title: Referência da interface do usuário do assistente de instalação do pacote | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,16 +22,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056825"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Referência da interface do usuário do Assistente de Instalação de Pacotes
   Use o **Assistente de Instalação de Pacotes** para implantar um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , inclusive os pacotes e arquivos diversos contidos nele, bem como todas as dependências do pacote.  
   
- Antes de implantar pacotes, você pode criar configurações e implantá-las com os pacotes. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa configurações para atualizar dinamicamente as propriedades de pacotes e objetos de pacote em tempo de execução. Por exemplo, a cadeia de conexão de uma conexão OLE DB pode ser definida dinamicamente em tempo de execução fornecendo-se uma configuração que mapeie um valor para uma propriedade que contenha a cadeia de conexão.  
+ Antes de implantar pacotes, você pode criar configurações e implantá-las com os pacotes. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]usa configurações para atualizar dinamicamente as propriedades de pacotes e objetos de pacote em tempo de execução. Por exemplo, a cadeia de conexão de uma conexão OLE DB pode ser definida dinamicamente em tempo de execução fornecendo-se uma configuração que mapeie um valor para uma propriedade que contenha a cadeia de conexão.  
   
  Você não pode executar o Assistente de Instalação de Pacotes enquanto não criar um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e um utilitário de implantação. Para obter mais informações, consulte [Implantar pacotes por meio do utilitário de implantação](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66056825"
  **Não mostrar esta página inicial novamente**  
  Selecione para ignorar a página inicial ao executar o assistente novamente.  
   
- **Próximo**  
+ **Última**  
  Vá para a próxima página do assistente.  
   
  **Concluir**  
@@ -56,7 +56,7 @@ ms.locfileid: "66056825"
  **Arquivo de configuração**  
  Edite o conteúdo de um arquivo de configuração selecionando o arquivo na lista.  
   
- **Tópicos relacionados:** [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)  
+ **Tópicos relacionados:** [criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)  
   
  **Caminho**  
  Exiba o caminho da propriedade a ser configurada.  
@@ -64,10 +64,10 @@ ms.locfileid: "66056825"
  **Tipo**  
  Exiba o tipo de dados da propriedade.  
   
- **Value**  
+ **Valor**  
  Especifique o valor da configuração.  
   
- **Próximo**  
+ **Última**  
  Vá para a próxima página do assistente.  
   
  **Concluir**  
@@ -76,7 +76,7 @@ ms.locfileid: "66056825"
 ## <a name="confirm-installation-page"></a>Página Confirmar Instalação  
  Use a página **Confirmar Instalação** para iniciar a instalação de pacotes, para exibir o status e para exibir as informações que serão usadas pelo assistente para instalar os arquivos a partir do projeto especificado.  
   
- **Próximo**  
+ **Última**  
  Instale os pacotes e suas dependências e vá para a próxima página do assistente quando instalação for concluída.  
   
  **Status**  
@@ -98,7 +98,7 @@ ms.locfileid: "66056825"
  **Validar pacotes após a instalação**  
  Indique se é preciso validar os pacotes após a instalação.  
   
- **Próximo**  
+ **Última**  
  Vá para a próxima página do assistente.  
   
  **Concluir**  
@@ -107,7 +107,7 @@ ms.locfileid: "66056825"
 ## <a name="packages-validation-page"></a>Página Validação de Pacotes  
  Use a página **Validação de Pacotes** para exibir o progresso e os resultados da validação do pacote.  
   
- **Próximo**  
+ **Última**  
  Vá para a próxima página do assistente.  
   
 ## <a name="select-installation-folder-page"></a>Página Selecionar Pasta de Instalação  
@@ -120,7 +120,7 @@ ms.locfileid: "66056825"
  **Procurar**  
  Procure a pasta de destino usando a caixa de diálogo **Procurar Pasta** .  
   
- **Próximo**  
+ **Última**  
  Vá para a próxima página do assistente.  
   
  **Concluir**  
@@ -133,10 +133,10 @@ ms.locfileid: "66056825"
  **Nome do servidor**  
  Especifique o nome do servidor para o qual deseja implantar os pacotes.  
   
- **Usar Autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Especifique se será usada a Autenticação do Windows para efetuar login no servidor. A Autenticação do Windows é recomendada para obter melhor segurança.  
   
- **Usar Autenticação do SQL Server**  
+ **Usar autenticação SQL Server**  
  Especifique se o pacote deve usar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para fazer login no servidor. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , será preciso fornecer um nome de usuário e uma senha.  
   
  **Nome de usuário**  
@@ -148,15 +148,15 @@ ms.locfileid: "66056825"
  **Caminho do pacote**  
  Especifique o nome da pasta lógica ou digite "/" para a pasta padrão.  
   
- Para selecionar a pasta na caixa de diálogo **Pacote do SSIS** , clique em procurar (...). Entretanto, a caixa de diálogo não fornece uma maneira para selecionar a pasta padrão. Se desejar usar a pasta padrão, digite "/" na caixa de texto.  
+ Para selecionar a pasta na caixa de diálogo **pacote SSIS** , clique em procurar (...). No entanto, a caixa de diálogo não fornece um meio para selecionar a pasta padrão. Se desejar usar a pasta padrão, digite "/" na caixa de texto.  
   
 > [!NOTE]  
->  Se você não inserir um caminho de pacote válido, a seguinte mensagem de erro será exibida: "Um ou mais argumentos são inválidos."  
+>  Se o caminho do pacote não for válido, a seguinte mensagem de erro será exibida: "Um ou mais argumentos são inválidos".  
   
  **Depender do armazenamento do servidor para criptografia**  
  Selecione esta opção para usar os recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)] para ajudar a manter a segurança dos pacotes.  
   
- **Próximo**  
+ **Última**  
  Vá para a próxima página do assistente.  
   
  **Concluir**  
@@ -168,7 +168,7 @@ ms.locfileid: "66056825"
  **Concluir**  
  Para sair do assistente, clique em **Concluir**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implantação de pacote &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

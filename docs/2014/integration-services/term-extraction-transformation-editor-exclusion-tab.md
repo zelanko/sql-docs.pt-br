@@ -1,5 +1,5 @@
 ---
-title: Editor de transformação extração de termos (guia exclusão) | Microsoft Docs
+title: Editor de transformação Extração de termos (guia exclusão) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055225"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Editor de Transformação Extração de Termos (guia Exclusão)
@@ -33,7 +33,7 @@ ms.locfileid: "66055225"
  **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões OLE DB existente ou crie uma nova conexão clicando em **Novo**.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão com um banco de dados usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
   
  **Tabela ou exibição**  
@@ -45,10 +45,10 @@ ms.locfileid: "66055225"
  **Configurar Saída de Erro**  
  Use a caixa de diálogo [Configurar Saída de Erro](../../2014/integration-services/configure-error-output.md) para especificar tratamento de erro em linhas que causam erros.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Transformação Extração de Termos &#40;Guia Extração de Termos&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Editor de Transformação Extração de Termos &#40;Guia Avançado&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
- [Transformação Pesquisa de Termos](data-flow/transformations/lookup-transformation.md)  
+ [Editor de transformação Extração de termos &#40;guia extração de termos&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Editor de transformação Extração de termos &#40;guia Avançado&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [transformação Pesquisa de Termos](data-flow/transformations/lookup-transformation.md)  
   
   

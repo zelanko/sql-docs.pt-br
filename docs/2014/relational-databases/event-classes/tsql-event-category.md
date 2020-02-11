@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cfa8ca59787be1fd6d33c392bfa7333075e38936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62746080"
 ---
 # <a name="tsql-event-category"></a>Categoria de evento TSQL
@@ -28,7 +28,7 @@ ms.locfileid: "62746080"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento Exec Prepared SQL](exec-prepared-sql-event-class.md)|Indica que SqlClient, ODBC, OLE DB ou DB-Library executou uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.|  
 |[Classe de evento Prepare SQL](prepare-sql-event-class.md)|Indica que SqlClient, ODBC, OLE DB ou DB-Library preparou uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para uso.|  
@@ -40,7 +40,7 @@ ms.locfileid: "62746080"
 |[Classe de evento Unprepare SQL](unprepare-sql-event-class.md)|Indica que SqlClient, ODBC, OLE DB ou DB-Library excluiu uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.|  
 |[Classe de evento XQuery Static Type](xquery-static-type-event-class.md)|Ocorre quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma expressão XQuery.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference)  
   
   

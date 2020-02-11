@@ -18,18 +18,18 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054980"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Lista informações sobre o estado de tempo de execução dos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Lista informações sobre o estado de runtime dos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,14 +40,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id*está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id`O número de identificação do trabalho. *job_id*é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name*está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'`O nome do trabalho. *job_name*é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
+>  *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @session_id = ] session_id` A id de sessão para relatar informações sobre. *session_id* está **int**, com um padrão NULL.  
+`[ @session_id = ] session_id`A ID da sessão para relatar informações sobre o. *session_id* é **int**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -55,37 +55,37 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o seguinte conjunto de resultados:  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Número de identificação da sessão do agente.|  
 |**job_id**|**uniqueidentifier**|Identificador do trabalho.|  
 |**job_name**|**sysname**|Nome do trabalho.|  
 |**run_requested_date**|**datetime**|Momento em que foi solicitada a execução do trabalho.|  
-|**run_requested_source**|**sysname**|A origem da solicitação para executar o trabalho. Um dos seguintes:<br /><br /> **1** = executar em um agendamento<br /><br /> **2** = executar em resposta a um alerta<br /><br /> **3** = executar na inicialização<br /><br /> **4** = executar pelo usuário<br /><br /> **6** = executar em um agendamento ocioso de CPU|  
+|**run_requested_source**|**sysname**|A origem da solicitação para executar o trabalho. Um destes:<br /><br /> **1** = executar em uma agenda<br /><br /> **2** = executar em resposta a um alerta<br /><br /> **3** = executar na inicialização<br /><br /> **4** = executar pelo usuário<br /><br /> **6** = executar na agenda de ociosidade de CPU|  
 |**queued_date**|**datetime**|Data em que a solicitação foi colocada em fila. NULL se o trabalho foi executado diretamente.|  
 |**start_execution_date**|**datetime**|Data em que o trabalho foi atribuído a um thread executável.|  
 |**last_executed_step_id**|**int**|A ID de etapa da última etapa de trabalho executada.|  
 |**last_exectued_step_date**|**datetime**|A data em que começou a execução da última etapa de trabalho.|  
 |**stop_execution_date**|**datetime**|A data em que o trabalho parou de ser executado.|  
-|**next_scheduled_run_date**|**datetime**|Quando o trabalho em seguida é agendado para execução.|  
+|**next_scheduled_run_date**|**datetime**|Quando o trabalho estiver agendado para ser executado em seguida.|  
 |**job_history_id**|**int**|Identificador para o histórico de trabalho na tabela de histórico de trabalho.|  
-|**message**|**nvarchar(1024)**|Mensagem produzida durante a última execução do trabalho.|  
-|**run_status**|**int**|Status retornado da última execução do trabalho:<br /><br /> **0** = erro de falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **3** = cancelada<br /><br /> **5** = status desconhecido|  
+|**Mensagem**|**nvarchar(1024)**|Mensagem produzida durante a última execução do trabalho.|  
+|**run_status**|**int**|Status retornado da última execução do trabalho:<br /><br /> **0** = erro falhou<br /><br /> **1** = com êxito<br /><br /> **3** = cancelado<br /><br /> **5** = status desconhecido|  
 |**operator_id_emailed**|**int**|Número de ID do operador notificado por email na conclusão do trabalho.|  
-|**operator_id_netsent**|**int**|Número de identificação do operador notificado **net send** na conclusão do trabalho.|  
+|**operator_id_netsent**|**int**|Número de ID do operador notificado via **net send** na conclusão do trabalho.|  
 |**operator_id_paged**|**int**|Número de ID do operador notificado por pager na conclusão do trabalho.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse procedimento fornece um instantâneo do status atual dos trabalhos. Os resultados retornados representam as informações no momento em que a solicitação é processada.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent cria uma nova ID de sessão sempre que seu serviço é iniciado. A id de sessão é armazenada na tabela **syssessions**.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent cria uma nova ID de sessão sempre que seu serviço é iniciado. A ID da sessão é armazenada na tabela **msdb. dbo. syssessions**.  
   
- Quando nenhum *session_id* for fornecido, que lista informações sobre a sessão mais recente.  
+ Quando nenhum *session_id* for fornecido, o listará informações sobre a sessão mais recente.  
   
- Quando nenhum *job_name* ou *job_id* for fornecido, que lista as informações para todos os trabalhos.  
+ Quando nenhum *job_name* ou *job_id* é fornecido, o lista informações de todos os trabalhos.  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros de **sysadmin** função de servidor fixa pode executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -95,7 +95,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Somente os membros da **sysadmin** pode exibir a atividade de trabalhos pertencentes a outros usuários.  
+ Somente os membros do **sysadmin** podem exibir a atividade de trabalhos pertencentes a outros usuários.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir lista a atividade de todos os trabalhos que o usuário atual tem permissão para exibir.  
@@ -108,7 +108,7 @@ EXEC dbo.sp_help_jobactivity ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados do SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

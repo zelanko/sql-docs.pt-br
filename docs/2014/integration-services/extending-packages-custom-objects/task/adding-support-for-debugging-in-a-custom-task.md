@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768532"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Adicionando suporte para depurando em uma tarefa personalizada
@@ -35,7 +35,7 @@ ms.locfileid: "62768532"
   
  Um site ou destino de ponto de interrupção é um ponto na execução da tarefa onde o processamento pode ser suspenso. Usuários selecionam entre os sites de ponto de interrupção disponíveis na caixa de diálogo **Definir Pontos de Interrupção**. Por exemplo, além das opções de ponto de interrupção padrão, o Contêiner do Loop Foreach oferece a opção "Quebra no início de cada iteração do loop".  
   
- Quando uma tarefa alcança um destino de ponto de interrupção durante a execução, ela avalia esse destino para determinar se um ponto de interrupção está habilitado. Isso indica que o usuário deseja parar a execução nesse ponto de interrupção. Se o ponto de interrupção estiver habilitado, a tarefa gerará o evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> para o mecanismo de tempo de execução. O mecanismo de tempo de execução responde ao evento chamando o método `Suspend` de cada tarefa que está em execução no momento no pacote. A execução da tarefa retoma quando o tempo de execução chama o método `ResumeExecution` da tarefa suspensa.  
+ Quando uma tarefa alcança um destino de ponto de interrupção durante a execução, ela avalia esse destino para determinar se um ponto de interrupção está habilitado. Isso indica que o usuário deseja parar a execução nesse ponto de interrupção. Se o ponto de interrupção estiver habilitado, a tarefa gerará o evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> para o mecanismo de tempo de execução. O mecanismo de tempo de execução responde ao evento chamando o método `Suspend` de cada tarefa que está em execução no momento no pacote. A execução da tarefa retoma quando o runtime chama o método `ResumeExecution` da tarefa suspensa.  
   
  As tarefas que não usam pontos de interrupção ainda devem implementar as interfaces <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. Isso garante que a tarefa será suspensa corretamente quando outros objetos do pacote gerarem eventos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
   
@@ -340,9 +340,9 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando o fluxo de controle](../../troubleshooting/debugging-control-flow.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Depurar o fluxo de controle](../../troubleshooting/debugging-control-flow.md)  
   
   

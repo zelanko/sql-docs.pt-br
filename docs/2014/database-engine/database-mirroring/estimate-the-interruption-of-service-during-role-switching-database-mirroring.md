@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874438"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estime a interrupção do serviço durante troca de função (Espelhamento de Banco de Dados)
@@ -72,9 +72,9 @@ ms.locfileid: "70874438"
 ## <a name="estimating-interruption-of-service-during-automatic-failover"></a>Estimando a interrupção do serviço durante o failover automático  
  A figura seguinte ilustra como a detecção de erros e o tempo de failover contribuem para o tempo geral necessário para um failover automático ser concluído em **Partner_B**. O failover precisa de tempo para efetuar o roll-forward do banco de dados (a fase Refazer) mais uma quantidade pequena de tempo para tornar o banco de dados online. A fase Desfazer, que envolve a reversão de qualquer transação não confirmada, acontece depois que o novo banco de dados principal estiver online e continuar depois do failover. O banco de dados fica disponível durante a fase Desfazer.  
   
- ![Detecção de erro e tempo de failover](../media/dbm-failovauto-time.gif "Error detection and failover time")  
+ ![Hora da detecção e failover de erro](../media/dbm-failovauto-time.gif "Hora da detecção e failover de erro")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modos de operação de espelhamento de banco de dados](database-mirroring-operating-modes.md)   
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  

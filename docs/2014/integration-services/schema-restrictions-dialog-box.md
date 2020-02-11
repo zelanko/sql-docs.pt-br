@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056145"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Caixa de diálogo Restrições de Esquemas
@@ -31,13 +31,13 @@ ms.locfileid: "66056145"
  **Variável**  
  Use uma variável para definir restrições. Selecione uma variável na lista ou clique em **Nova variável...** para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md) , [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
  **Texto**  
  Forneça o texto para definir restrições.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de Loop foreach &#40;página de coleção&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Contêiner do Loop Foreach](control-flow/foreach-loop-container.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de loop foreach &#40;página de coleção&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Contêiner Loop Foreach](control-flow/foreach-loop-container.md)  
   
   

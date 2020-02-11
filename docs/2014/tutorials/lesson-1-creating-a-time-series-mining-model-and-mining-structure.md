@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Criando um modelo de mineração e a estrutura de mineração de série temporal | Microsoft Docs'
+title: 'Lição 1: Criando um modelo de mineração de série temporal e uma estrutura de mineração | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678446"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lição 1: Como criar um modelo de mineração de série temporal e uma estrutura de mineração
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lição 1: Criando um modelo de mineração de série temporal e uma estrutura de mineração
   Nesta lição, você criará um modelo de mineração que permite prever valores com o passar do tempo, com base em dados históricos. Quando você criar o modelo, a estrutura subjacente será gerada automaticamente e poderá ser usada como a base para outros modelos de mineração.  
   
  Esta lição supõe que você já conhece modelos de previsão e os requisitos do algoritmo MTS. Para obter mais informações, consulte [Algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
 ## <a name="create-mining-model-statement"></a>Instrução CREATE MINING MODEL  
- Para criar um modelo de mineração diretamente e gerar automaticamente a estrutura de mineração subjacente, você deve usar o [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) instrução. O código na instrução pode ser dividido nas seguintes partes:  
+ Para criar um modelo de mineração diretamente e gerar automaticamente a estrutura de mineração subjacente, use a instrução [criar modelo de mineração &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx) . O código na instrução pode ser dividido nas seguintes partes:  
   
 -   Nomeando o modelo  
   
@@ -51,7 +51,7 @@ WITH DRILLTHROUGH
 CREATE MINING MODEL [Mining Model Name]  
 ```  
   
- O Analysis Services gera automaticamente um nome para a estrutura subjacente, ao anexar "_structure" ao nome do modelo, o que garante que o nome da estrutura seja diferente do nome do modelo. Para obter informações sobre como nomear um objeto no DMX, consulte [identificadores &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ O Analysis Services gera automaticamente um nome para a estrutura subjacente, ao anexar "_structure" ao nome do modelo, o que garante que o nome da estrutura seja diferente do nome do modelo. Para obter informações sobre como nomear um objeto no DMX, consulte [identificadores &#40;&#41;DMX ](/sql/dmx/identifiers-dmx).  
   
  A próxima linha do código define a coluna de chave do modelo de mineração que, no caso de um modelo de série temporal identifica exclusivamente um período na fonte de dados. A etapa temporal é identificada com as palavras-chave `KEY TIME` após o nome da coluna e os tipos de dados. Se o modelo de série temporal tiver uma chave de série separada, será identificado pela palavra-chave `KEY`.  
   
@@ -72,18 +72,18 @@ CREATE MINING MODEL [Mining Model Name]
   
 -   Alterar a consulta para criar o modelo de mineração  
   
--   Execute a consulta  
+-   Executar a consulta  
   
 ## <a name="creating-the-query"></a>Criando a consulta  
  A primeira etapa é se conectar a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e criar uma nova consulta DMX no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-create-a-new-dmx-query-in-sql-server-management-studio"></a>Para criar uma nova consulta DMX no SQL Server Management Studio  
   
-1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  No **conectar ao servidor** caixa de diálogo, para **tipo de servidor**, selecione **Analysis Services**. Na **nome do servidor**, digite `LocalHost`, ou o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você deseja se conectar para esta lição. Clique em **Conectar**.  
+2.  Na caixa de diálogo **conectar ao servidor** , para **tipo de servidor**, selecione **Analysis Services**. Em **nome do servidor**, `LocalHost`digite ou o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à qual você deseja se conectar para esta lição. Clique em **Conectar**.  
   
-3.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+3.  No Pesquisador de **objetos**, clique com o botão [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]direito do mouse na instância do, aponte para **nova consulta**e clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   
@@ -172,33 +172,33 @@ CREATE MINING MODEL [Mining Model Name]
   
     ```  
   
-6.  Sobre o **arquivo** menu, clique em **salvar DMXQuery1.dmx como**.  
+6.  No menu **arquivo** , clique em **salvar DMXQuery1. DMX como**.  
   
-7.  No **Salvar como** caixa de diálogo, navegue até a pasta apropriada e nomeie o arquivo `Forecasting_MIXED.dmx`.  
+7.  Na caixa de diálogo **salvar como** , navegue até a pasta apropriada e nomeie o arquivo `Forecasting_MIXED.dmx`.  
   
 ## <a name="executing-the-query"></a>Executando a consulta  
- A última etapa é executar a consulta. Depois que você cria e salva a consulta, ela deve ser executada para criar o modelo de mineração e sua estrutura de mineração no servidor. Para obter mais informações sobre como executar consultas no Editor de consultas, consulte [Editor de consultas do mecanismo de banco de dados &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
+ A última etapa é executar a consulta. Depois que você cria e salva a consulta, ela deve ser executada para criar o modelo de mineração e sua estrutura de mineração no servidor. Para obter mais informações sobre a execução de consultas no editor de consultas, consulte [mecanismo de banco de dados editor de consultas &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### <a name="to-execute-the-query"></a>Para executar a consulta.  
   
--   No Editor de consultas, na barra de ferramentas, clique em **Execute**.  
+-   No editor de consultas, na barra de ferramentas, clique em **executar**.  
   
-     O status da consulta é exibido na **mensagens** guia na parte inferior do Editor de consultas após a instrução termina a execução. As mensagens devem exibir:  
+     O status da consulta é exibido na guia **mensagens** na parte inferior do editor de consultas após a conclusão da execução da instrução. As mensagens devem exibir:  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     Uma estrutura nova nomeada **Forecasting_MIXED_Structure** agora existe no servidor, junto com o modelo de mineração relacionado **Forecasting_MIXED**.  
+     Uma nova estrutura chamada **Forecasting_MIXED_Structure** agora existe no servidor, junto com o modelo de mineração relacionado **Forecasting_MIXED**.  
   
- Na próxima lição, você adicionará um modelo de mineração para o **Forecasting_MIXED** estrutura de mineração que você acabou de criar.  
+ Na próxima lição, você adicionará um modelo de mineração à estrutura de mineração de **Forecasting_MIXED** que acabou de criar.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Adicionando modelos de mineração para a estrutura de mineração de série temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Lição 2: Adicionando modelos de mineração à estrutura de mineração de série temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Mining Model Content para modelos de série temporal &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
- [Referência técnica do algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conteúdo do modelo de mineração para modelos de série temporal &#40;mineração de dados Analysis Services&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
+ [Referência técnica do algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

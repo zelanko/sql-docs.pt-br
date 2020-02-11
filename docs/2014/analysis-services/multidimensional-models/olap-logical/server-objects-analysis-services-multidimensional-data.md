@@ -1,5 +1,5 @@
 ---
-title: Objetos de servidor (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Objetos de servidor (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c70c0ba8e402f41a7936c4d70bd3d5ac9a51ad7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62699321"
 ---
 # <a name="server-objects-analysis-services---multidimensional-data"></a>Objetos do servidor (Analysis Services – Dados Multidimensionais)
     
 ## <a name="introducing-server-objects"></a>Apresentando objetos do servidor  
- O <xref:Microsoft.AnalysisServices.Server> objeto representa o servidor e a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que você deseja trabalhar.  
+ O <xref:Microsoft.AnalysisServices.Server> objeto representa o servidor e a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] com a qual você deseja trabalhar.  
   
  Assim que você tiver uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] conectada, será possível consultar:  
   

@@ -10,20 +10,20 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d10bef0df04501c177086b6c89b3f67dec3bab10
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73599239"
 ---
-# <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys. dm_column_encryption_enclave (Transact-SQL)
+# <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave (Transact-SQL)
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 Retorna contadores de desempenho para o enclave seguro para Always Encrypted. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../security/encryption/always-encrypted-enclaves.md).
 
-Se o enclave estiver configurado e tiver sido inicializado corretamente após a última reinicialização de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a exibição conterá exatamente uma linha. Se o enclave não estiver configurado ou não tiver sido inicializado corretamente, a exibição não retornará nenhuma linha. 
+Se o enclave estiver configurado e tiver sido inicializado corretamente após a última reinicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a exibição conterá exatamente uma linha. Se o enclave não estiver configurado ou não tiver sido inicializado corretamente, a exibição não retornará nenhuma linha. 
 
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |current_enclave_session_count|**int**|O número atual de sessões de cliente usando o enclave.|  
 |current_column_encryption_key_count|**int**|A contagem de chaves de criptografia de coluna que o enclave contém atualmente.|  
@@ -40,7 +40,7 @@ SELECT * FROM sys.dm_column_encryption_enclave;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar o tipo de enclave para a opção de configuração de servidor Always Encrypted](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+## <a name="see-also"></a>Consulte Também  
+ [Configurar o tipo de enclave para a Opção de Configuração de Servidor Always Encrypted](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
   
   

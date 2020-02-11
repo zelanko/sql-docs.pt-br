@@ -21,13 +21,13 @@ ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155397"
 ---
-# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Solicita que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] execute um backup do banco de dados especificado.  
@@ -38,7 +38,7 @@ ms.locfileid: "70155397"
   
  Um erro será retornado se o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] estiver no processo de executar um backup do tipo especificado para o banco de dados especificado. Nesse caso, a mensagem de erro retornada inclui o caminho de arquivo do backup completo em que o backup atual está sendo carregado.  
    
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ EXEC managed_backup.sp_backup_on_demand
  O nome do banco de dados em que o backup será executado. O @database_name é **sysname**.  
   
  @type  
- O tipo de backup a ser executado:  Banco de dados ou log. O @type parâmetro é **nvarchar (32)** .  
+ O tipo de backup a ser executado: Banco de Dados ou Log. O @type parâmetro é **nvarchar (32)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito) ou 1 (falha)  

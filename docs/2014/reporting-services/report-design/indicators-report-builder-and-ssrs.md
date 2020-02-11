@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da3f95120b81877076533d19e4cb05785d5cb932
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105653"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Construtor de Relatórios e SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66105653"
   
  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece conjuntos de indicadores internos e ícones de indicador a serem usados no estado em que se encontram, mas você também pode personalizar ícones de indicador e conjuntos de indicadores individuais para atender às suas necessidades.  
   
- Saiba mais sobre como usar indicadores como KPIs no [Tutorial: Adicionar um KPI ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Para obter mais informações sobre como usar indicadores como KPIs, consulte [Tutorial: Adicionar um KPI ao seu relatório &#40;Construtor de Relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar indicadores separadamente de um relatório como partes do relatório. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "66105653"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ComparingIndicatorsToGauges"></a> Comparando indicadores a medidores  
+##  <a name="ComparingIndicatorsToGauges"></a>Comparando indicadores a medidores  
  Embora pareçam diferentes, os indicadores são medidores simples. Os indicadores e os medidores exibem um único valor de dados. As principais diferenças entre eles são elementos como quadros e ponteiros. Os indicadores têm apenas estados, ícones e (opcionalmente) rótulos. Os estados de indicadores são semelhgantes aos intervalos de medidores.  
   
  Assim como os medidores, os indicadores são posicionados dentro de um painel de medidores. Quando você deseja configurar um indicador usando a caixa de diálogo **Propriedades de Indicadores** ou o painel Propriedades, é necessário selecionar o indicador, em vez do painel. Caso contrário, as opções disponíveis se aplicarão às opções do painel de medidores e você não poderá configurar o indicador. A imagem a seguir mostra um indicador selecionado em seu painel de medidores.  
@@ -61,7 +61,7 @@ ms.locfileid: "66105653"
  Dependendo do modo como você deseja descrever o valor dos dados, os medidores talvez sejam mais eficientes do que os indicadores. Para obter mais informações, consulte [Medidores &#40;Construtor de Relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
   
-##  <a name="ChoosingIndicatorTypes"></a> Escolhendo o tipo de indicador a ser usado  
+##  <a name="ChoosingIndicatorTypes"></a>Escolhendo o tipo de indicador a ser usado  
  O uso do conjunto de indicadores certo é essencial para a comunicação instantânea do significado dos dados, quer eles estejam em uma linha de detalhes ou em um grupo de linhas ou colunas em uma tabela ou matriz, ou sozinhos no corpo do relatório ou painel. Os conjuntos de indicadores internos têm três ou mais ícones. Os ícones variam em forma, cor ou ambos. Cada ícone comunica um estado de dados diferente.  
   
  A tabela a seguir lista os conjuntos de indicadores internos e descreve alguns de seus usos comuns.  
@@ -76,7 +76,7 @@ ms.locfileid: "66105653"
  Depois que você escolher um conjunto de indicadores, poderá personalizar a aparência de cada ícone indicador no conjunto definindo suas propriedades nas caixas de diálogo para indicadores ou no painel Propriedades. Você pode usar as cores internas, os ícones e os tamanhos ou as expressões para configurar indicadores.  
   
   
-##  <a name="CustomizingIndicators"></a> Personalizando indicadores  
+##  <a name="CustomizingIndicators"></a>Personalizando indicadores  
  É possível personalizar indicadores de acordo com as suas necessidades. Voc~e pode modificar os conjuntos de indicadores e o ícone indicador individual dentro de um conjunto das seguintes maneiras:  
   
 -   Altere as cores de ícones de indicador. Por exemplo, talvez você queira que o esquema de cores de um conjunto de indicadores seja monocromático ou use cores diferentes do padrão.  
@@ -92,10 +92,10 @@ ms.locfileid: "66105653"
  Para obter mais informações, consulte [Alterar os ícones de indicadores e os conjuntos de indicadores &#40;Construtor de Relatórios e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
   
-##  <a name="UsingIndicatorsInTablesMatrices"></a> Usando indicadores em tabelas e matrizes  
+##  <a name="UsingIndicatorsInTablesMatrices"></a>Usando indicadores em tabelas e matrizes  
  As formas simples de indicadores os tornam ideais para uso em tabelas e matrizes. Até mesmo os indicadores pequenos são efetivos. Isso os torna úteis em detalhes ou linhas de grupo de relatórios.  
   
- O diagrama a seguir mostra um relatório com uma tabela que usa o conjunto de indicadores direcionais, **Quatro Setas (Coloridas)** , para indicar as vendas. Os ícones de indicador no relatório estão configurados para usar tons de azul, em vez das cores padrão: vermelho, amarelo e verde.  
+ O diagrama a seguir mostra um relatório com uma tabela que usa o conjunto de indicadores direcionais, **Quatro Setas (Coloridas)**, para indicar as vendas. Os ícones de indicador no relatório estão configurados para usar tons de azul, em vez das cores padrão: vermelho, amarelo e verde.  
   
  ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66105653"
  Os indicadores usam um único valor. Se você precisar mostrar vários valores de dados, use um minigráfico ou uma barra de dados em vez de um indicador. Eles podem representar vários valores de dados, mas são simples, fáceis de entender em tamanhos pequenos e funcionam bem em tabelas e matrizes. Para obter mais informações, consulte [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
   
-##  <a name="SizingIndicatators"></a> Dimensionando indicadores para maximizar o impacto visual  
+##  <a name="SizingIndicatators"></a>Dimensionando indicadores para maximizar o impacto visual  
  Além de cor, direção e forma, você pode usar o tamanho para maximizar o impacto visual de indicadores. Imagine um relatório que use indicadores para mostrar a satisfação do cliente com os diferentes tipos de bicicletas. O ícone usado pelo indicador pode ser configurado para tamanhos diferentes, dependendo da satisfação do cliente. Quanto maior a satisfação, maior o ícone que aparecerá no relatório. A imagem a seguir mostra um relatório de vendas de bicicletas, e os tamanhos dos ícones refletem o valor das vendas.  
   
  Use expressões para definir dinamicamente o tamanho das estrelas com base nos valores de campo usados pelo indicador. Para obter mais informações, consulte [Especificar o tamanho de um indicador usando uma expressão &#40;Construtor de Relatórios e SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
@@ -120,7 +120,7 @@ ms.locfileid: "66105653"
  Para saber mais sobre gravar e usar expressões, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="IncludingIndicatorsInGauges"></a> Incluindo indicadores e medidores em painéis de medidores  
+##  <a name="IncludingIndicatorsInGauges"></a>Incluindo indicadores e medidores em painéis de medidores  
  Os indicadores sempre são posicionados dentro de um painel de medidores. O painel de medidores é um contêiner de nível superior que pode incluir um ou mais medidores e indicadores de estado. O painel de medidores pode conter medidores filhos ou adjacentes ou indicadores. Se você usar um indicador como filho de outro indicador, poderá visualizar com mais detalhes os dados mostrando o estado do valor de dados exibido no indicador. Por exemplo, um indicador em um medidor pode exibir um círculo verde para informar que o valor no medidor aponta para os 33% superiores do intervalo de valores. Usando um medidor e um indicador lado a lado, você pode representar os dados de modos diferentes. Em todo caso, o indicador e o medidor podem usar os mesmos campos de dados ou campos de dados diferentes.  
   
  O diagrama a seguir mostra um indicador lado a lado e dentro de um indicador.  
@@ -132,7 +132,7 @@ ms.locfileid: "66105653"
  Para obter mais informações sobre o uso de medidores, consulte [Medidores &#40;Construtor de Relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
   
-##  <a name="SequenceIndicatorStates"></a> Sequência de estados do indicador  
+##  <a name="SequenceIndicatorStates"></a>Sequência de Estados de indicador  
  A sequência dos estados do indicador na guia **Valor e Estados** da caixa de diálogo **Propriedades do Indicador** afeta qual ícone de indicador é exibido para um valor de dados quando os valores de início e término dos estados de indicador se sobrepõem.  
   
  Isto poderá acontecer se você usar o percentual ou a unidade de medida em estado numérico. Isso é mais provável ocorrer quando você usa a unidade de medida numérica porque você forneceu valores específicos para esta medida. Isso também é mais provável de ocorrer quando você arredonda valores de dados de relatório, porque isto tende a fazer valores menos discretos.  
@@ -152,55 +152,55 @@ ms.locfileid: "66105653"
 |Sequência de estado|Valor de início|Valor final|  
 |--------------------|-----------------|---------------|  
 |Vermelho|0|3500|  
-|Amarelo|3500|5000|  
-|Verde|5000|10000|  
+|Amarelo|3500|5.000|  
+|Verde|5.000|10000|  
   
  A seta vermelha para baixo descreve o valor 3500 e a seta horizontal amarela, 5000.  
   
 |Sequência de estado|Valor de início|Valor final|  
 |--------------------|-----------------|---------------|  
-|Verde|5000|10000|  
-|Amarelo|3500|5000|  
+|Verde|5.000|10000|  
+|Amarelo|3500|5.000|  
 |Vermelho|0|3500|  
   
  A seta horizontal amarela descreve o valor 3500 e a seta verde para cima, 5000.  
   
 |Sequência de estado|Valor de início|Valor final|  
 |--------------------|-----------------|---------------|  
-|Verde|5000|10000|  
+|Verde|5.000|10000|  
 |Vermelho|0|3500|  
-|Amarelo|3500|5000|  
+|Amarelo|3500|5.000|  
   
  A seta vermelha para baixo descreve o valor 3500 e a seta verde para cima, 5000.  
   
 |Sequência de estado|Valor de início|Valor final|  
 |--------------------|-----------------|---------------|  
-|Amarelo|3500|5000|  
+|Amarelo|3500|5.000|  
 |Vermelho|0|3500|  
-|Verde|5000|10000|  
+|Verde|5.000|10000|  
   
  A seta amarela para baixo agora descreve os valores 3500 e 5000.  
   
  Em resumo, a avaliação inicia e a parte superior da lista de estado de indicador e o relatório exibem o ícone de indicador associado com o primeiro estado de indicador que tem um intervalo de valor nos quais os dados se ajustam. Ao alterar a sequência dos estados do indicador, você poderá, portanto, afetar a visualização de valores de dados.  
   
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="HowTo"></a>Tópicos de instruções  
  Esta seção lista os procedimentos que mostram como adicionar, alterar e excluir indicadores; como configurar e personalizar indicadores e como usar indicadores em medidores.  
   
 -   [Adicionar ou excluir um indicador &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [Alterar os ícones de indicadores e os conjuntos de indicadores &#40;Construtor de Relatórios e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Alterar os ícones de indicador e os conjuntos de indicadores &#40;Construtor de Relatórios e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
 -   [Definir e configurar unidades de medida &#40;Construtor de Relatórios e SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Definir o escopo da sincronização &#40;Construtor de Relatórios e SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Definir o escopo de sincronização &#40;Construtor de Relatórios e SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [Especificar o tamanho de um indicador usando uma expressão &#40;Construtor de Relatórios e SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [Especifique o tamanho de um indicador usando uma expressão &#40;Construtor de Relatórios e SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
 -   [Incluir indicadores e medidores em um painel de medidores &#40;Construtor de Relatórios e SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  

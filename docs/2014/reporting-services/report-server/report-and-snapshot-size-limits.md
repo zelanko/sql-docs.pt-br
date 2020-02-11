@@ -18,26 +18,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cef2943b2d7805a9738662bcd85c9602430a7e6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103534"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de tamanho do relatório e do instantâneo
   Os administradores que gerenciam uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem usar as informações deste tópico para entender os limites de tamanho de relatório quando este é publicado em um servidor de relatório, renderizado em tempo de execução e salvo no sistema de arquivos. Este tópico também fornece uma orientação prática sobre como medir o tamanho de um banco de dados do servidor de relatório e descreve o efeito do tamanho do instantâneo no desempenho do servidor.  
   
 ## <a name="maximum-size-for-published-reports-and-models"></a>Tamanho máximo para relatórios e modelos publicados  
- No servidor de relatório, o tamanho do relatório e do modelo baseia-se nos arquivos de definição de relatório (.rdl) e de modelo de relatório (.smdl) publicados no servidor. O servidor de relatório não limita o tamanho de um relatório ou modelo publicado. Porém, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impõe um tamanho máximo para itens que são postados no servidor. Por padrão, esse limite é 4 megabytes (MB). Se um arquivo que ultrapassa esse limite for transferido ou publicado em um servidor de relatório, ocorrerá uma exceção HTTP. Neste caso, modifique o padrão aumentando o valor do elemento `maxRequestLength` no arquivo Machine.config.  
+ No servidor de relatório, o tamanho do relatório e do modelo baseia-se nos arquivos de definição de relatório (.rdl) e de modelo de relatório (.smdl) publicados no servidor. O servidor de relatório não limita o tamanho de um relatório ou modelo publicado. No entanto, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] o impõe um tamanho máximo para os itens que são postados no servidor. Por padrão, esse limite é 4 megabytes (MB). Se um arquivo que ultrapassa esse limite for transferido ou publicado em um servidor de relatório, ocorrerá uma exceção HTTP. Neste caso, modifique o padrão aumentando o valor do elemento `maxRequestLength` no arquivo Machine.config.  
   
  Embora um modelo de relatório possa ser muito grande, definições de relatório raramente excedem 4 MB. Um tamanho de relatório mais comum é da ordem de quilobytes (KB). No entanto, se imagens inseridas forem incluídas, a codificação dessas imagens pode resultar em grandes definições de relatório que ultrapassam o padrão de 4 MB.  
   
- [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impõe um limite máximo em arquivos postados para reduzir a ameaça de ataques de negação de serviço contra o servidor. Aumentar o valor do limite superior destorce algumas proteções fornecidas por esse limite. Aumente o valor somente se você tiver certeza de que o benefício de fazer isso supera qualquer risco de segurança adicional.  
+ 
+  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impõe um limite máximo em arquivos postados para reduzir a ameaça de ataques de negação de serviço contra o servidor. Aumentar o valor do limite superior destorce algumas proteções fornecidas por esse limite. Aumente o valor somente se você tiver certeza de que o benefício de fazer isso supera qualquer risco de segurança adicional.  
   
  Lembre-se de que o valor definido para o elemento `maxRequestLength` deve ser maior que os limites de tamanho reais que você deseja impor. Você precisa aumentar o valor para dar conta do aumento inevitável no tamanho da solicitação HTTP que ocorre depois que todos os parâmetros são encapsulados em um envelope SOAP, e a codificação Base64 é aplicada a certos parâmetros, como o parâmetro Definition nos métodos <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> e <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. A codificação Base64 aumenta o tamanho dos dados originais em aproximadamente 33%. Consequentemente, o valor que você especifica para o elemento `maxRequestLength` precisa ser aproximadamente 33% maior que o tamanho real utilizável do item. Por exemplo, se você especificar um valor de 64 MB para `maxRequestLength`, na verdade poderá esperar o tamanho máximo de aproximadamente 48 MB para os arquivos de relatório que são postados no servidor de relatório.  
   
 ## <a name="report-size-in-memory"></a>Tamanho do relatório na memória  
- Quando você executa um relatório, o tamanho do relatório é igual à quantidade de dados retornados no relatório mais o tamanho do fluxo de saída. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não impõe um limite máximo para o tamanho de um relatório renderizado. A memória do sistema determina o limite superior do tamanho (por padrão, um servidor de relatório usa toda a memória configurada disponível ao renderizar um relatório), mas é possível especificar configurações para definir os limites e as diretrizes de gerenciamento da memória. Para obter mais informações, consulte [Configurar memória disponível para aplicativos do Servidor de Relatório](../report-server/configure-available-memory-for-report-server-applications.md).  
+ Quando você executa um relatório, o tamanho do relatório é igual à quantidade de dados retornados no relatório mais o tamanho do fluxo de saída. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não impõe um limite máximo para o tamanho de um relatório renderizado. A memória do sistema determina o limite superior do tamanho (por padrão, um servidor de relatório usa toda a memória configurada disponível ao renderizar um relatório), mas é possível especificar configurações para definir os limites e as diretrizes de gerenciamento da memória. Para obter mais informações, consulte [Configurar memória disponível para aplicativos do Servidor de Relatório](../report-server/configure-available-memory-for-report-server-applications.md).  
   
  Para qualquer relatório, o tamanho pode variar consideravelmente dependendo da quantidade de dados retornados e do formato de renderização usado para o relatório. Um relatório parametrizado pode ser maior ou menor dependendo de como os valores de parâmetro afetam os resultados de consulta. O formato de saída escolhido afeta o tamanho do relatório dos seguintes modos:  
   
@@ -45,14 +47,14 @@ ms.locfileid: "66103534"
   
 -   PDF, Excel, TIFF, XML e CSV processam o relatório inteiro na memória antes de exibir o relatório para o usuário.  
   
- Para medir o tamanho de um relatório renderizado, você pode exibir o log de execução de relatório. Para obter mais informações, consulte [Log de execução do servidor de relatório e exibição do ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md).  
+ Para medir o tamanho de um relatório renderizado, você pode exibir o log de execução de relatório. Para obter mais informações, consulte [log de execução do servidor de relatório e a exibição ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md).  
   
  Para calcular o tamanho de um relatório renderizado no disco, você pode exportar e salvar o relatório no sistema de arquivos (o arquivo salvo inclui dados e informações de formatação do relatório).  
   
- O único limite fixo do tamanho do relatório é determinado durante a renderização em formato Excel. As planilhas não podem ter mais de 65536 linhas ou 256 colunas. Outros formatos de renderização não têm esses limites, de modo que o tamanho é limitado somente pela quantidade de recursos do servidor. Para obter mais informações sobre os limites de arquivo do Excel, consulte [exportar um relatório como outro tipo de arquivo &#40;construtor de relatórios e SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ O único limite fixo do tamanho do relatório é determinado durante a renderização em formato Excel. As planilhas não podem ter mais de 65536 linhas ou 256 colunas. Outros formatos de renderização não têm esses limites, de modo que o tamanho é limitado somente pela quantidade de recursos do servidor. Para obter mais informações sobre os limites de arquivos do Excel, consulte [exportar um relatório como outro tipo de arquivo &#40;Construtor de relatórios e SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  O processamento e a renderização do relatório ocorrem na memória. Se houver grandes relatórios ou um grande número de usuários, faça algum tipo de planejamento de capacidade para ter certeza de que a implantação do servidor de relatório seja executada em um nível satisfatório para os usuários. Para obter mais informações sobre ferramentas e diretrizes, consulte as seguintes publicações no MSDN: [Planejando escalabilidade e desempenho com o Reporting Services](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/) e [usando o Visual Studio 2005 para realizar testes de carga em um SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
+>  O processamento e a renderização do relatório ocorrem na memória. Se houver grandes relatórios ou um grande número de usuários, faça algum tipo de planejamento de capacidade para ter certeza de que a implantação do servidor de relatório seja executada em um nível satisfatório para os usuários. Para obter mais informações sobre ferramentas e diretrizes, consulte as seguintes publicações no MSDN: [Planning for Scalability and Performance with Reporting Services (Planejamento de escalabilidade e desempenho com o Reporting Services)](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/) e [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server (Usando o Visual Studio 2005 para realizar o teste de carga em um servidor de relatórios do Reporting Services do SQL Server 2005)](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Medindo o armazenamento de instantâneos  
  O tamanho de qualquer instantâneo é diretamente proporcional à quantidade de dados no relatório. Os instantâneos normalmente são muito maiores que outros itens armazenados em um servidor de relatório. O tamanho do instantâneo varia, em geral, de alguns megabytes a dezenas de megabytes. Se você tiver relatórios muito grandes, espere para ver instantâneos que são ainda muito maiores. Dependendo da frequência de uso dos instantâneos e da configuração do histórico de relatórios, a quantidade de espaço em disco necessária para o banco de dados do servidor de relatório pode aumentar rapidamente em um curto período de tempo.  
@@ -79,7 +81,7 @@ EXEC sp_spaceused
   
  A quantidade de instantâneos que são armazenados em um banco de dados do servidor de relatório não é, por si só, um fator de desempenho. Você pode armazenar um número grande de instantâneos sem afetar o desempenho do servidor. Os instantâneos podem ser mantidos indefinidamente. Porém, verifique se o histórico de relatórios pode ser configurado. Se o administrador de um servidor de relatório diminuir o limite do histórico, os relatórios do histórico que você pretende manter podem ser perdidos. Se você excluir o relatório, todo o histórico relacionado será excluído também.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir as propriedades do processamento de relatórios](set-report-processing-properties.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-database-ssrs-native-mode.md)   
  [Processar relatórios grandes](process-large-reports.md)  

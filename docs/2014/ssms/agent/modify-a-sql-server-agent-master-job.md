@@ -15,23 +15,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c96977ac3b2ed36ab9709d2af86a0d9f79e8eb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653869"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>Modificar um trabalho mestre do SQL Server Agent
-  Os tópicos a seguir descrevem como modificar um trabalho mestre do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Os tópicos a seguir descrevem como modificar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho mestre do Agent.  
   
  [Change the Scheduling Details for a SQL Server Agent Master Job](change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
- [Adicionar etapas a um trabalho mestre do SQL Server Agent](../object/add-steps-to-a-sql-server-agent-master-job.md)  
+ [Add Steps to a SQL Server Agent Master Job](../object/add-steps-to-a-sql-server-agent-master-job.md)  
   
  [Change Steps of a SQL Server Agent Master Job](change-steps-of-a-sql-server-agent-master-job.md)  
   
  [Remove Steps from a SQL Server Agent Master Job](remove-steps-from-a-sql-server-agent-master-job.md)  
   
- [Modificar o servidor de destino&#40;s&#41; associado a um trabalho mestre do SQL Server Agent](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
+ [Modificar o servidor de destino&#40;s&#41; associadas a um trabalho SQL Server Agent mestre](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
   

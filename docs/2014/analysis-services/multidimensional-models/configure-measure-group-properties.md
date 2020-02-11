@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7571457847d8ffb0388608b7d634cc19261a609
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076667"
 ---
 # <a name="configure-measure-group-properties"></a>Configurar propriedades do grupo de medidas
@@ -34,8 +34,8 @@ ms.locfileid: "66076667"
 |`EstimatedRows`|Especifica o número de linhas estimado da tabela de fatos.|  
 |`EstimatedSize`|Especifica o tamanho estimado (em bytes) do grupo de medidas.|  
 |`ID`|Especifica o identificador do objeto.|  
-|`IgnoreUnrelatedDimensions`|Determina se as dimensão não relacionadas são forçadas para seu nível superior quando os membros das dimensões que não estão relacionados ao grupo de medidas são incluídos em uma consulta. Configuração padrão é `True`.|  
-|`Name`|Nome da medida. Esta propriedade é somente leitura.|  
+|`IgnoreUnrelatedDimensions`|Determina se as dimensão não relacionadas são forçadas para seu nível superior quando os membros das dimensões que não estão relacionados ao grupo de medidas são incluídos em uma consulta. A configuração padrão `True`é.|  
+|`Name`|Nome da medida. Essa propriedade é somente leitura.|  
 |`ProactiveCaching`|As definições configuráveis de tratamento de erros para tratamento de chaves duplicadas, chaves desconhecidas, chaves nulas, limites de erro, ação devido à detecção de erros, arquivo de log de erros.|  
 |`ProcessingMode`|Indica se a indexação e a agregação devem ocorrer durante ou após o processamento. As opções são Regular e LazyAggregations. LazyAggregations pode ser usado para executar a agregação como uma tarefa em segundo plano.|  
 |`ProcessingPriority`|Determina a prioridade de processamento do cubo durante as operações em segundo plano, como agregações lentas e indexação. O valor padrão é **0**.|  

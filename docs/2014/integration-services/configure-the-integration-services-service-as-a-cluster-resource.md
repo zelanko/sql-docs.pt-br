@@ -1,5 +1,5 @@
 ---
-title: Configurar o serviço Integration Services como um recurso de Cluster | Microsoft Docs
+title: Configurar o serviço de Integration Services como um recurso de cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060566"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurar o serviço Integration Services como um recurso de cluster
@@ -78,15 +78,15 @@ ms.locfileid: "66060566"
   
 4.  No menu **Arquivo** , aponte para **Novo**e clique em **Recurso**.  
   
-5.  Na página **Novo Recurso** do Assistente de Recurso, digite um nome e selecione **"Serviço Genérico"** como o **Tipo de Serviço**. Não altere o valor de **Grupo**. Clique em **Avançar**.  
+5.  Na página **Novo Recurso** do Assistente de Recurso, digite um nome e selecione **"Serviço Genérico"** como o **Tipo de Serviço**. Não altere o valor de **Grupo**. Clique em **Próximo**.  
   
-6.  Na página **Possíveis Proprietários** , adicione ou remova os nós do cluster como os possíveis proprietários do recurso. Clique em **Avançar**.  
+6.  Na página **Possíveis Proprietários** , adicione ou remova os nós do cluster como os possíveis proprietários do recurso. Clique em **Próximo**.  
   
 7.  Para adicionar dependências, na página **Dependências** , selecione um recurso em **Recursos disponíveis**e clique em **Adicionar**. Caso ocorra um failover, tanto o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quanto o disco compartilhado que armazena os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] devem retornar ao estado online antes que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fique online. Depois de selecionar as dependências, clique em **Avançar**.  
   
      Para obter mais informações, consulte [Adicionar dependências a um recurso do SQL Server](../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md).  
   
-8.  Na página **Parâmetros de Serviço Genérico** , insira **MsDtsServer** como o nome do serviço. Clique em **Avançar**.  
+8.  Na página **Parâmetros de Serviço Genérico** , insira **MsDtsServer** como o nome do serviço. Clique em **Próximo**.  
   
 9. Na página **Replicação de Registro** , clique em **Adicionar** para adicionar a chave do Registro que identifica o local do arquivo de configuração do serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Este arquivo deve estar localizado em um disco compartilhado que esteja no mesmo grupo de recursos do serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66060566"
   
 3.  No disco compartilhado, abra o arquivo de configuração em um editor de texto ou XML. Altere o valor do elemento `ServerName` para o nome do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] virtual que é igual ao grupo de recursos.  
   
-4.  Altere o valor da `StorePath` elemento para o caminho totalmente qualificado do **pacotes** pasta criada no disco compartilhado em uma etapa anterior.  
+4.  Altere o valor do `StorePath` elemento para o caminho totalmente qualificado da pasta **Packages** criada no disco compartilhado em uma etapa anterior.  
   
 5.  Atualize o valor de **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** no Registro para o caminho totalmente qualificado e o nome do arquivo de configuração de serviço no disco compartilhado.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0bb88370db889eac44e3ce71ad498779e55e4d7d
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952048"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>Instalação do PowerPivot para SharePoint 2010
@@ -25,16 +25,16 @@ ms.locfileid: "71952048"
 >   
 >  -   A seção "SQL Server 2012 SP1" da [visão geral da instalação de serviços do SQL Server](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md).  
   
- O Analysis Services oferece processamento do lado de servidor para pastas de trabalho do Excel que contêm dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O Serviço do Sistema do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] trabalha com o Analysis Services, adicionando integração do SharePoint, balanceamento de carga e gerenciamento de conexão. o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estende os serviços do Excel emparelhando seu recurso de processamento de dados em grande escala com os serviços de processamento de dados que o Excel fornece.  
+ O Analysis Services oferece processamento do lado de servidor para pastas de trabalho do Excel que contêm dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O Serviço do Sistema do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] trabalha com o Analysis Services, adicionando integração do SharePoint, balanceamento de carga e gerenciamento de conexão. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]estende os serviços do Excel emparelhando seu recurso de processamento de dados em grande escala com os serviços de processamento de dados que o Excel fornece.  
   
  Para instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], use a mídia de instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  Para obter instruções sobre cenários de implantação avançada, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) e lista de verificação de [implantação: expansão adicionando servidores PowerPivot a um farm do SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Instalar o PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
+ [Instale o PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
   
- [Instalar o Provedor Analysis Services OLE DB nos servidores do SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
+ [Instalar o provedor OLE DB do Analysis Services em SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
  [Instalar o ADOMD.NET em servidores Web front-end executando a Administração Central](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)  
   
@@ -46,9 +46,9 @@ ms.locfileid: "71952048"
   
  [Reparar o PowerPivot para SharePoint](../../../2014/sql-server/install/repair-powerpivot-for-sharepoint.md)  
   
- [PowerPivot para SharePoint de &#40;configuração inicial&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
+ [PowerPivot para SharePoint de configuração inicial &#40;&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração e configuração de servidor do PowerPivot na Administração Central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
   

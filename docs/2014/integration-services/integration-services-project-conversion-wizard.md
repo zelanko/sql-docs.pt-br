@@ -1,5 +1,5 @@
 ---
-title: Assistente de conversão de projeto do Integration Services | Microsoft Docs
+title: Assistente de conversão de projeto Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,43 +13,43 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057982"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Assistente de Conversão de Projeto do Integration Services
   O **Assistente de Conversão de Projeto do Integration Services** converte um projeto no modelo de implantação de projeto.  
   
 > [!NOTE]  
->  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
+>  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [Add, Delete, or Share a Connection Manager in a Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
   
  **O que você deseja fazer?**  
   
--   [Abrir o Assistente de Conversão de Projeto do Integration Services](#open_dialog)  
+-   [Abrir o assistente de conversão de projeto Integration Services](#open_dialog)  
   
--   [Definir opções na página Localizar Pacotes](#locate)  
+-   [Definir opções na página localizar pacotes](#locate)  
   
--   [Definir opções na página Selecionar Pacotes](#selectPackages)  
+-   [Definir opções na página Selecionar pacotes](#selectPackages)  
   
--   [Definir opções na página Selecionar Destino](#destination)  
+-   [Definir opções na página Selecionar destino](#destination)  
   
--   [Definir opções na página Especificar Propriedades do Projeto](#projectProperties)  
+-   [Definir opções na página especificar propriedades do projeto](#projectProperties)  
   
--   [Definir opções na página Atualizar a Tarefa Executar Pacote](#executePackage)  
+-   [Definir opções na página atualizar tarefa Executar Pacote](#executePackage)  
   
--   [Definir opções na página Selecionar Configurações](#configurations)  
+-   [Definir opções na página Selecionar configurações](#configurations)  
   
--   [Definir opções na página Criar Parâmetros](#createParameters)  
+-   [Definir opções na página criar parâmetros](#createParameters)  
   
--   [Definir opções na página Configurar Parâmetros](#configureParameters)  
+-   [Definir opções na página configurar parâmetros](#configureParameters)  
   
--   [Definir as opções na página Revisão](#review)  
+-   [Definir as opções na página revisão](#review)  
   
--   [Definir as opções em Executar Conversão](#conversion)  
+-   [Definir as opções na conversão executar](#conversion)  
   
-##  <a name="open_dialog"></a> Abrir o Assistente de Conversão de Projeto do Integration Services  
+##  <a name="open_dialog"></a>Abrir o assistente de conversão de projeto Integration Services  
  Siga um destes procedimentos para abrir o **Assistente de Conversão de Projeto do Integration Services** .  
   
 -   Abra o projeto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]e, no Gerenciador de Soluções, clique com o botão direito do mouse no projeto e clique em **Converter em Modelo de Implantação de Projeto**.  
@@ -58,7 +58,7 @@ ms.locfileid: "66057982"
   
  Dependendo em se você executa o **Assistente de Conversão de Projeto do Integration Services** no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], o assistente executa tarefas de conversão diferentes. Para obter mais informações, consulte [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
-##  <a name="locate"></a> Definir opções na página Localizar Pacotes  
+##  <a name="locate"></a>Definir opções na página localizar pacotes  
   
 > [!NOTE]  
 >  A página **Localizar Pacotes** somente está disponível quando você executa o assistente de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
@@ -81,10 +81,10 @@ ms.locfileid: "66057982"
  **Servidor**  
  Digite o nome do servidor ou selecione o servidor.  
   
- **Usar a autenticação do Windows**  
+ **Usar autenticação do Windows**  
  O modo de Autenticação do Microsoft Windows permite que um usuário se conecte por meio de uma conta de usuário do Windows. Se usar Autenticação do Windows, não será preciso fornecer um nome de usuário nem senha.  
   
- **Usar Autenticação do SQL Server**  
+ **Usar autenticação SQL Server**  
  Quando um usuário se conecta com um nome de logon e senha especificados em uma conexão não confiável, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autentica a conexão verificando se foi definida uma conta de logon do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e se a senha especificada corresponde a uma senha registrada previamente. Se o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não tiver uma conta de logon definida, ocorrerá falha na autenticação e o usuário receberá uma mensagem de erro.  
   
  **Nome de usuário**  
@@ -96,8 +96,8 @@ ms.locfileid: "66057982"
  **Pasta**  
  Digite o caminho do pacote ou navegue para o pacote clicando em **Procurar**.  
   
-##  <a name="selectPackages"></a> Definir opções na página Selecionar Pacotes  
- **Nome do Pacote**  
+##  <a name="selectPackages"></a>Definir opções na página Selecionar pacotes  
+ **Nome do pacote**  
  Lista o arquivo do pacote.  
   
  **Status**  
@@ -115,7 +115,7 @@ ms.locfileid: "66057982"
  **Atualizar**  
  Atualiza a lista de pacotes.  
   
-##  <a name="destination"></a> Definir opções na página Selecionar Destino  
+##  <a name="destination"></a>Definir opções na página Selecionar destino  
  Nessa página, especifique o nome e o caminho de um novo arquivo de implantação de projeto (.ispac) ou selecione um arquivo existente.  
   
 > [!NOTE]  
@@ -133,7 +133,7 @@ ms.locfileid: "66057982"
  **Descrição do projeto**  
  Digite uma descrição opcional para o projeto.  
   
-##  <a name="projectProperties"></a> Definir opções na página Especificar Propriedades do Projeto  
+##  <a name="projectProperties"></a>Definir opções na página especificar propriedades do projeto  
   
 > [!NOTE]  
 >  A página **Especificar Propriedades do Projeto** está disponível apenas quando você executa o assistente de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
@@ -147,7 +147,7 @@ ms.locfileid: "66057982"
  **Descrição do projeto**  
  Digite uma descrição de projeto opcional.  
   
-##  <a name="executePackage"></a> Definir opções na página Atualizar a Tarefa Executar Pacote  
+##  <a name="executePackage"></a>Definir opções na página atualizar tarefa Executar Pacote  
  Atualizar as Tarefas Executar Pacote contidas nos pacotes, para usar uma referência baseada em projeto. Para obter mais informações, consulte [Execute Package Task Editor](../../2014/integration-services/execute-package-task-editor.md).  
   
  **Pacote pai**  
@@ -162,7 +162,7 @@ ms.locfileid: "66057982"
  **Atribuir referência**  
  Selecione um pacote filho armazenado no projeto.  
   
-##  <a name="configurations"></a> Definir opções na página Selecionar Configurações  
+##  <a name="configurations"></a>Definir opções na página Selecionar configurações  
  Selecione as configurações de pacote que você deseja substituir por parâmetros.  
   
  **Pacote**  
@@ -171,7 +171,7 @@ ms.locfileid: "66057982"
  **Tipo**  
  Lista o tipo de configuração, como um arquivo de configuração XML.  
   
- **Cadeia de Caracteres de Configuração**  
+ **Cadeia de caracteres de configuração**  
  Lista o caminho do arquivo de configuração.  
   
  **Status**  
@@ -188,7 +188,7 @@ ms.locfileid: "66057982"
   
  Se você não selecionar essa opção, somente as configurações selecionadas para substituir por parâmetros serão removidas.  
   
-##  <a name="createParameters"></a> Definir opções na página Criar Parâmetros  
+##  <a name="createParameters"></a>Definir opções na página criar parâmetros  
  Selecione o nome do parâmetro e o escopo para cada propriedade de configuração.  
   
  **Pacote**  
@@ -200,14 +200,14 @@ ms.locfileid: "66057982"
  **Escopo**  
  Selecione o escopo do parâmetro, pacote ou projeto.  
   
-##  <a name="configureParameters"></a> Definir opções na página Configurar Parâmetros  
+##  <a name="configureParameters"></a>Definir opções na página configurar parâmetros  
  **Nome**  
  Lista o nome do parâmetro.  
   
  **Escopo**  
  Lista o escopo do parâmetro.  
   
- **Value**  
+ **Valor**  
  Lista o valor do parâmetro.  
   
  Clique no botão de reticências ao lado do campo de valor para configurar as propriedades do parâmetro.  
@@ -218,16 +218,16 @@ ms.locfileid: "66057982"
   
  A caixa de diálogo **Definir Detalhes de Parâmetros** também lista o tipo de dados do valor de parâmetro e a origem do parâmetro.  
   
-##  <a name="review"></a> Definir as opções na página Revisão  
+##  <a name="review"></a>Definir as opções na página revisão  
  Use a página **Revisão** para confirmar as opções selecionadas para a conversão do projeto.  
   
  **Anterior**  
  Clique para alterar uma opção.  
   
- **Converter**  
+ **Vertê**  
  Clique para converter o projeto no modelo de implantação de projeto.  
   
-##  <a name="conversion"></a> Definir as opções em Executar Conversão  
+##  <a name="conversion"></a>Definir as opções na conversão executar  
  A página Executar Conversão mostra o status da conversão do projeto.  
   
  **Ação**  
@@ -241,7 +241,7 @@ ms.locfileid: "66057982"
  **Salvar relatório**  
  Clique para salvar um resumo da conversão de projeto em um arquivo .xml.  
   
-## <a name="see-also"></a>Consulte também  
- [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Implantar projetos no servidor do Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

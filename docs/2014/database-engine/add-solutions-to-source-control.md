@@ -14,31 +14,31 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815698"
 ---
 # <a name="add-solutions-to-source-control"></a>Adicionar soluções ao controle do código-fonte
   Ao adicionar uma solução ao controle do código-fonte, você normalmente deseja adicionar toda a solução e todos os projetos que ela contém. Você pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para adicionar uma solução ao controle do código-fonte.  
   
- Um projeto do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] reside totalmente em seu disco local. Você edita, salva e cria projetos localmente. Depois de adicionar o projeto ao controle de origem, você pode usar o **Check-Out** comando para verificar os arquivos do projeto fora do controle do código-fonte.  
+ Um projeto do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] reside totalmente em seu disco local. Você edita, salva e cria projetos localmente. Depois de adicionar o projeto ao controle do código-fonte, você pode usar o comando **check-out** para verificar os arquivos do projeto fora do controle do código-fonte.  
   
 ### <a name="to-add-a-solution-to-source-control"></a>Para adicionar uma solução ao controle do código-fonte  
   
 1.  No Gerenciador de Soluções, selecione a solução que deseja adicionar.  
   
-2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **adicionar solução ao controle do código-fonte**.  
+2.  No menu **arquivo** , aponte para **controle do código-fonte**e clique em **Adicionar solução ao controle do código-fonte**.  
   
 3.  Se solicitado, faça logon em seu provedor de controle do código-fonte.  
   
-4.  O **adicionar ao projeto do SourceSafe** caixa de diálogo é exibida. O nome do seu projeto aparece na **projeto** caixa.  
+4.  A caixa de diálogo **Adicionar ao projeto SourceSafe** é exibida. O nome do seu projeto é exibido na caixa **projeto** .  
   
-5.  No **pastas** lista, abra a pasta onde você deseja colocar seu projeto. Como alternativa, você pode clicar **Create** para criar uma pasta com o nome exibido na **projeto** caixa.  
+5.  Na lista **pastas** , abra a pasta onde você deseja posicionar o projeto. Como alternativa, você pode clicar em **criar** para criar uma pasta com o nome exibido na caixa **projeto** .  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar soluções e projetos ao controle de origem](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Adicionar soluções e projetos ao controle do código-fonte](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)   
  [Adicionar projetos ao controle do código-fonte](../../2014/database-engine/add-projects-to-source-control.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105309"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceitos de criação de relatórios (Construtor de Relatórios e SSRS)
@@ -30,19 +30,19 @@ ms.locfileid: "66105309"
  [Relatórios, partes de relatório e definições de relatório &#40;Construtor de Relatórios e SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Apresenta os diversos termos usados para descrever um relatório em diferentes estados, incluindo a definição inicial, o relatório publicado e o relatório exibido conforme aparece para o usuário.  
   
- [Inseridos e compartilhados, conexões de dados ou fontes de dados &#40;relatórios e SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
+ [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
  Descreve como definir conexões com as fontes de dados usadas em relatórios, modelos de relatório e assinaturas controladas por dados.  
   
- [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de e compartilhados, &#40;Construtor de Relatórios e SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Explica as diferenças existentes na criação, no armazenamento e no gerenciamento de conjuntos de dados inseridos e compartilhados.  
   
  [Regiões de dados e mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)  
  Descreve os tipos de regiões de dados que podem ser adicionados a um layout de relatório. As regiões de dados determinam a aparência de um relatório: tabular, matriz, lista ou gráfico.  
   
- [O conceito de parâmetros de relatório &#40;relatórios e SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  
+ [Conceito de parâmetros de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  
  Descreve os métodos para a definição e o uso de parâmetros de relatório e o modo como eles são gerenciados independentemente da definição de relatório no servidor de relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Construtor de Relatórios no SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)  
   
   

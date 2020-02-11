@@ -1,5 +1,5 @@
 ---
-title: Visão geral dos Cmdlets do PowerShell para grupos de disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
+title: Visão geral dos cmdlets do PowerShell para Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789453"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Visão geral de cmdlets do PowerShell para grupos de disponibilidade AlwaysOn (SQL Server)
@@ -41,32 +41,32 @@ ms.locfileid: "62789453"
   
 -   [Adicionando e gerenciando um banco de dados de disponibilidade](#DeployManageDbs)  
   
--   [Monitorando a integridade de grupos de disponibilidade](#MonitorTblshtAGs)  
+-   [Monitorando a integridade do grupo de disponibilidade](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  Para obter uma lista de tópicos [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Manuais Online que descrevem como usar cmdlets para executar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tarefas, consulte a seção "Tarefas relacionadas" [visão geral dos grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
+>  Para obter uma lista de tópicos [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nos manuais online do que descrevem como usar cmdlets para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] executar tarefas, consulte a seção "tarefas relacionadas" de [visão geral do grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="ConfiguringServerInstance"></a> Configurando uma instância de servidor para grupos de disponibilidade AlwaysOn  
+##  <a name="ConfiguringServerInstance"></a>Configurando uma instância de servidor para Grupos de Disponibilidade AlwaysOn  
   
-|Cmdlets|Descrição|Com suporte em|  
+|Cmdlets|DESCRIÇÃO|Com suporte em|  
 |-------------|-----------------|------------------|  
 |`Disable-SqlAlwaysOn`|Desabilita o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância de servidor.|A instância de servidor que é especificada pelo parâmetro `Path`, `InputObject` ou `Name`. (Deve ser uma edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dê suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
-|`Enable-SqlAlwaysOn`|Habilita o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que dá suporte ao recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter informações sobre o suporte para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [pré-requisitos, restrições e recomendações para grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Qualquer edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dê suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
+|`Enable-SqlAlwaysOn`|Habilita o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que dá suporte ao recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter informações sobre o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]suporte para o, consulte [pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Qualquer edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dê suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
 |`New-SqlHadrEndPoint`|Cria um novo ponto de extremidade de espelhamento de banco de dados em uma instância de servidor. Esse ponto de extremidade é necessário para a movimentação de dados entre os bancos de dados primário e secundário.|Qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|Altera as propriedades de um ponto de extremidade de espelhamento de banco de dados existente, como o nome, o estado ou as propriedades de autenticação.|Uma instância de servidor que dá suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e não tem um ponto de extremidade de espelhamento de banco de dados.|  
   
-##  <a name="BnRcmdlets"></a> Fazendo backup e restaurando bancos de dados e logs de transações  
+##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
-|Cmdlets|Descrição|Com suporte em|  
+|Cmdlets|DESCRIÇÃO|Com suporte em|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|Cria um backup de dados ou de log.|Qualquer banco de dados online (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], um banco de dados na instância do servidor que hospeda a réplica primária).|  
-|`Restore-SqlDatabase`|Restaura um backup.|Qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], uma instância de servidor que hospeda uma réplica secundária)<br /><br /> **&#42;&#42;Importante &#42; &#42;**  ao preparar um banco de dados secundário, você deve usar o `-NoRecovery` parâmetro em cada `Restore-SqlDatabase` comando.|  
+|`Restore-SqlDatabase`|Restaura um backup.|Qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], uma instância de servidor que hospeda uma réplica secundária)<br /><br /> **&#42;&#42; importantes &#42;&#42;** Ao preparar um banco de dados secundário, você deve `-NoRecovery` usar o parâmetro `Restore-SqlDatabase` em cada comando.|  
   
  Para obter informações sobre como usar esses cmdlets para preparar um banco de dados secundário, veja [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 ##  <a name="DeployManageAGs"></a> Criando e gerenciando um grupo de disponibilidade  
   
-|Cmdlets|Descrição|Com suporte em|  
+|Cmdlets|DESCRIÇÃO|Com suporte em|  
 |-------------|-----------------|------------------|  
 |`New-SqlAvailabilityGroup`|Cria um novo grupo de disponibilidade.|Instância de servidor para hospedar a réplica primária|  
 |`Remove-SqlAvailabilityGroup`|Exclui um grupo de disponibilidade.|Instância de servidor habilitada para HADR|  
@@ -75,7 +75,7 @@ ms.locfileid: "62789453"
   
 ##  <a name="AGlisteners"></a> Criando e gerenciando um ouvinte de grupo de disponibilidade  
   
-|Cmdlet|Descrição|Com suporte em|  
+|Cmdlet|DESCRIÇÃO|Com suporte em|  
 |------------|-----------------|------------------|  
 |`New-SqlAvailabilityGroupListener`|Cria um novo ouvinte de grupo de disponibilidade e conecta-o a um grupo de disponibilidade existente.|Instância de servidor que hospeda a réplica primária|  
 |`Set-SqlAvailabilityGroupListener`|Modifica a configuração de porta em um ouvinte de grupo de disponibilidade existente.|Instância de servidor que hospeda a réplica primária|  
@@ -83,7 +83,7 @@ ms.locfileid: "62789453"
   
 ##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
-|Cmdlets|Descrição|Com suporte em|  
+|Cmdlets|DESCRIÇÃO|Com suporte em|  
 |-------------|-----------------|------------------|  
 |**New-SqlAvailabilityReplica**|Cria uma nova réplica de disponibilidade. Você pode usar o parâmetro `-AsTemplate` para criar um objeto de réplica de disponibilidade de memória para cada nova réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
 |`Join-SqlAvailabilityGroup`|Une uma réplica secundária ao grupo de disponibilidade.|Instância de servidor que hospeda a réplica secundária|  
@@ -92,7 +92,7 @@ ms.locfileid: "62789453"
   
 ##  <a name="DeployManageDbs"></a> Adicionando e gerenciando um banco de dados de disponibilidade  
   
-|Cmdlets|Descrição|Com suporte em|  
+|Cmdlets|DESCRIÇÃO|Com suporte em|  
 |-------------|-----------------|------------------|  
 |**Add-SqlAvailabilityDatabase**|Na réplica primária, adiciona um banco de dados a um grupo de disponibilidade.<br /><br /> Em uma réplica secundária, une um banco de dados secundário a um grupo de disponibilidade.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade (o comportamento difere para réplicas primárias e secundárias)|  
 |**Remove-SqlAvailabilityDatabase**|Na réplica primária, remove o banco de dados do grupo de disponibilidade.<br /><br /> Em uma réplica secundária, remove o banco de dados secundário da réplica secundária local.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade (o comportamento difere para réplicas primárias e secundárias)|  
@@ -105,7 +105,7 @@ ms.locfileid: "62789453"
 > [!IMPORTANT]  
 >  Você deve ter as permissões CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION para executar esses cmdlets.  
   
-|Cmdlet|Descrição|Com suporte em|  
+|Cmdlet|DESCRIÇÃO|Com suporte em|  
 |------------|-----------------|------------------|  
 |`Test-SqlAvailabilityGroup`|Avalia a integridade de um grupo de disponibilidade avaliando as políticas do PBM (gerenciamento baseado em políticas) do SQL Server.|Qualquer instância de servidor que hospede uma réplica de disponibilidade.*|  
 |`Test-SqlAvailabilityReplica`|Avalia a integridade de réplicas de disponibilidade avaliando as políticas do PBM (gerenciamento baseado em políticas) do SQL Server.|Qualquer instância de servidor que hospede uma réplica de disponibilidade.*|  
@@ -113,10 +113,10 @@ ms.locfileid: "62789453"
   
  *Para exibir informações sobre todas as réplicas de disponibilidade em um grupo de disponibilidade, use a instância do servidor que hospeda a réplica primária.  
   
- Para obter mais informações, consulte [usar as políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md).  
+ Para obter mais informações, consulte [usar políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
   

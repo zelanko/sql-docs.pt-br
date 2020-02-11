@@ -1,5 +1,5 @@
 ---
-title: Especificar uma versão como a versão mais recente | Microsoft Docs
+title: Especifique uma versão como a versão mais recente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773472"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Especificar uma versão como a versão mais recente
@@ -28,9 +28,9 @@ ms.locfileid: "62773472"
   
  Você pode designar a versão mais recente:  
   
--   **Fixando uma versão**. Quando você fixa uma versão de arquivo, as versões mais recentes que a versão fixada não são excluídas. Além disso, você pode desafixar o arquivo fixado anteriormente. Quando você fizer isso, a versão de check-in mais recente do arquivo se tornará a versão mais recente. Entretanto, você não pode fazer check-out de um arquivo fixado.  
+-   **Fixação de uma versão**. Quando você fixa uma versão de arquivo, as versões mais recentes que a versão fixada não são excluídas. Além disso, você pode desafixar o arquivo fixado anteriormente. Quando você fizer isso, a versão de check-in mais recente do arquivo se tornará a versão mais recente. Entretanto, você não pode fazer check-out de um arquivo fixado.  
   
--   **Reverter para uma versão especificada**. Quando você reverte uma versão, todas as versões mais recentes do que a revertida serão excluídas do controle de código-fonte. Depois você pode fazer o check-out da versão mais recente restante.  
+-   **Revertendo para uma versão especificada**. Quando você reverte uma versão, todas as versões mais recentes do que a revertida serão excluídas do controle de código-fonte. Depois você pode fazer o check-out da versão mais recente restante.  
   
 ### <a name="to-pin-a-version"></a>Para fixar uma versão  
   
@@ -38,9 +38,9 @@ ms.locfileid: "62773472"
   
 2.  No Gerenciador de Soluções, selecione o arquivo que você deseja especificar como versão mais recente.  
   
-3.  Sobre o **arquivo** , aponte para **controle do código-fonte** e clique em **ViewHistory**.  
+3.  No menu **arquivo** , aponte para **controle do código-fonte** e clique em **ViewHistory**.  
   
-4.  No **histórico de** \<arquivo > caixa de diálogo, selecione a versão que você deseja especificar como a versão mais recente e, em seguida, clique em **Pin**.  
+4.  Na caixa **de diálogo histórico de> de** \<arquivo, selecione a versão que você deseja especificar como a mais recente e clique em **fixar**.  
   
      Um símbolo de alfinete aparece próximo à versão selecionada, indicando que essa é a versão atual do arquivo. Se você tiver uma versão diferente carregada no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], será solicitado a recarregar o arquivo.  
   
@@ -50,18 +50,18 @@ ms.locfileid: "62773472"
   
 2.  No Gerenciador de Soluções, selecione o item que você deseja especificar como versão mais recente.  
   
-3.  Sobre o **arquivo** , aponte para **controle do código-fonte** e clique em **histórico**.  
+3.  No menu **arquivo** , aponte para **controle do código-fonte** e clique em **histórico**.  
   
-4.  No **opções de histórico** caixa de diálogo, clique em **Okey** para exibir o **histórico de arquivos** caixa de diálogo.  
+4.  Na caixa de diálogo **Opções de histórico** , clique em **OK** para exibir a caixa **de diálogo histórico de arquivo** .  
   
-5.  No **histórico de arquivos** , selecione a versão que você deseja especificar como a versão mais recente e, em seguida, clique em **reversão**.  
+5.  Na caixa **histórico do arquivo** , selecione a versão que você deseja especificar como a versão mais recente e clique em **reverter**.  
   
      Uma mensagem é exibida notificando você de que todas as versões subsequentes àquelas selecionadas serão excluídas.  
   
-6.  Clique em **Sim** para reverter à versão selecionada.  
+6.  Clique em **Sim** para reverter para a versão selecionada.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciar check-ins](../../2014/database-engine/manage-checkins.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciar Check-ins](../../2014/database-engine/manage-checkins.md)   
  [Fazer check-in de arquivos](../../2014/database-engine/check-in-files.md)  
   
   

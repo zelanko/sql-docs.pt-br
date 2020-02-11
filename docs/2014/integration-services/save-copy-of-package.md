@@ -1,5 +1,5 @@
 ---
-title: Salvar cópia de pacote | Microsoft Docs
+title: Salvar cópia do pacote | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056316"
 ---
 # <a name="save-copy-of-package"></a>Salvar cópia de pacote
@@ -53,15 +53,15 @@ ms.locfileid: "66056316"
  Se estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , forneça uma senha.  
   
  **Caminho do pacote**  
- Digite o caminho do pacote ou clique no botão Procurar **(...)**  e localize a pasta na qual o pacote será armazenado.  
+ Digite o caminho do pacote ou clique no botão procurar **(...)** e localize a pasta na qual armazenar o pacote.  
   
  **Nível de proteção**  
- Clique no botão Procurar **(...)**  botão e atualize o nível de proteção na **nível de proteção do pacote** caixa de diálogo. Para obter mais informações, consulte [Caixa de diálogo Nível de Proteção do Pacote e do Projeto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Clique no botão procurar **(...)** e atualize o nível de proteção na caixa de diálogo **nível de proteção do pacote** . Para obter mais informações, consulte [Caixa de diálogo Nível de Proteção do Pacote e do Projeto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da interface do usuário da caixa de diálogo Importar Pacote](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
- [Referência da interface do usuário da caixa de diálogo Exportar Pacote](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência da interface do usuário da caixa de diálogo Importar pacote](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Referência da interface do usuário da caixa de diálogo Exportar pacote](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Salvar pacotes](save-packages.md)   
- [Importar e exportar pacotes &#40;Serviço SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [Importar e exportar pacotes &#40;serviço SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

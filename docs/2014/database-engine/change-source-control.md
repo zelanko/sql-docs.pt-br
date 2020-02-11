@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812729"
 ---
 # <a name="change-source-control"></a>Alterar Controle do Código-Fonte
@@ -31,7 +31,7 @@ ms.locfileid: "62812729"
 >  Esta caixa de diálogo também está disponível clicando com o botão direito do mouse no item no Gerenciador de Soluções.  
   
 ## <a name="options"></a>Opções  
- **Bind**  
+ **Associar**  
  Associe itens selecionados com um local de servidor de controle do código fonte especificado. Por exemplo, você pode usar esse botão para associar à última pasta de servidor de controle do código fonte conhecida e ao banco de dados. Se uma pasta de servidor ou banco de dados recente não puder ser localizada, você será solicitado a especificar outra.  
   
  **Procurar**  
@@ -43,10 +43,10 @@ ms.locfileid: "62812729"
  **Connect**  
  Crie uma conexão entre itens selecionados e o servidor de controle do código fonte.  
   
- **Conectado**  
+ **Connected**  
  Exibe o status da conexão de uma solução ou projeto selecionado.  
   
- **Desconectar**  
+ **Desligar**  
  Desconecte a cópia local de uma solução ou projeto em seu computador a partir de sua cópia mestre no banco de dados. Use esse comando antes de desconectar seu computador do servidor de controle do código fonte, por exemplo, ao trabalhar offline no seu laptop.  
   
  **OK**  
@@ -58,16 +58,16 @@ ms.locfileid: "62812729"
  **Atualizar**  
  Atualize as informações de conexão de todos os projetos listados nesta caixa de diálogo.  
   
- **Ligação de servidor**  
+ **Associação de Servidores**  
  Indica a associação do item com um servidor de controle do código fonte.  
   
  **Nome do servidor**  
  Exibe o nome do servidor de controle do código fonte ao qual a solução ou projeto correspondente está associado.  
   
- **Projeto/solução**  
+ **Solução/Projeto**  
  Exibe o nome de cada solução e projeto na seleção atual.  
   
- **Sort**  
+ **Classificar**  
  Classifique a ordem de colunas exibidas.  
   
  **Status**  
@@ -80,10 +80,10 @@ ms.locfileid: "62812729"
 |Unknown (desconhecido)|O status do item sob controle do código fonte ainda não foi determinado.|  
 |Não Controlado|O item não foi colocado sob controle do código fonte.|  
   
- **desassociar**  
+ **Desassociar**  
  Exiba a caixa de diálogo **Controle do Código Fonte** para permitir que você remova itens selecionados do controle do código fonte e desassocie permanentemente os itens de suas pastas atuais.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Controle do código-fonte do Gerenciador de Soluções](../../2014/database-engine/solution-explorer-source-control.md)  
   
   

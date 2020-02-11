@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766339"
 ---
 # <a name="ssis-toolbox"></a>Caixa de Ferramentas do SSIS
@@ -31,7 +31,7 @@ ms.locfileid: "62766339"
   
  Na **Caixa de Ferramentas do SSIS**, o fluxo de controle e os componentes de fluxo de dados são organizados em categorias.  Você pode expandir e recolher categorias para exibir e pode alterar a organização de componentes de acordo com suas preferências.  Você pode restaurar a organização padrão, clicando com o botão direito do mouse dentro da caixa de ferramentas e clicar em **Restaurar Padrões da Caixa de Ferramentas**.  
   
- As categorias **Favoritos** e **Comum** aparecem na caixa de ferramentas quando você seleciona as guias **Fluxo de Controle**, **Fluxo de Dados**e **Manipuladores de Eventos** . A categoria **Outras Tarefas** aparece na caixa de ferramentas quando você seleciona a guia **Fluxo de Controle** ou a guia **Manipuladores de Eventos** . As categorias **Outras Transformações**, **Outras Fontes**e **Outros Destinos** aparecem na caixa de ferramenta quando você seleciona a guia **Fluxo de Dados** .  
+ As categorias **Favoritos** e **Comum** aparecem na caixa de ferramentas quando você seleciona as guias **Fluxo de Controle**, **Fluxo de Dados**e **Manipuladores de Eventos** . A categoria **outras tarefas** aparece na caixa de ferramentas quando você seleciona a guia **fluxo de controle** ou a guia **manipuladores de eventos** . As **outras transformações**, **outras fontes**e outras categorias de **destinos** aparecem na caixa de ferramentas quando você seleciona a guia **fluxo de dados** .  
   
  Quando você cria um novo projeto de SSIS ou abre um existente, a **Caixa de Ferramentas do SSIS** é exibida automaticamente. Você também pode abrir a caixa de ferramentas clicando no botão caixa de ferramentas localizado no canto superior direito da superfície de design de pacote.  
   

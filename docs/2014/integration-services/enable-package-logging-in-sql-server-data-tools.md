@@ -1,5 +1,5 @@
 ---
-title: Habilitar o log de pacote no SQL Server Data Tools | Microsoft Docs
+title: Habilitar log de pacote no SQL Server Data Tools | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059276"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Habilitar o log de pacote no SQL Server Data Tools
@@ -43,7 +43,7 @@ ms.locfileid: "66059276"
   
     -   Para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use um gerenciador de conexões OLE DB. Para obter mais informações, consulte [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-    -   Para o Log de Eventos de Windows, não faça nada. [!INCLUDE[ssIS](../includes/ssis-md.md)] cria o log automaticamente.  
+    -   Para o Log de Eventos de Windows, não faça nada. [!INCLUDE[ssIS](../includes/ssis-md.md)]cria o log automaticamente.  
   
     -   Para arquivos XML, use um gerenciador de conexões de Arquivo.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66059276"
   
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
- [Registro em Log do Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
- [Registro em Log do Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Log de&#41; Integration Services &#40;SSIS](performance/integration-services-ssis-logging.md)   
+ [Registro em Log do SSIS &#40;Integration Services&#41;](performance/integration-services-ssis-logging.md)  
   
   

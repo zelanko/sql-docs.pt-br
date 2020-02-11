@@ -1,5 +1,5 @@
 ---
-title: Configurar a caixa de diálogo de Logs SSIS | Microsoft Docs
+title: Caixa de diálogo Configurar Logs do SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060593"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>caixa de diálogo Configurar Logs do SSIS
@@ -36,12 +36,12 @@ ms.locfileid: "66060593"
   
 4.  [Configurar as opções na guia Detalhes](#detail)  
   
-##  <a name="open_dialog"></a> Abrir a caixa de diálogo Configurar Logs de SSIS  
+##  <a name="open_dialog"></a>Abrir a caixa de diálogo Configurar Logs do SSIS  
  **Para abrir a caixa de diálogo Configurar Logs de SSIS**  
   
 -   No [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, clique em **Log** no menu **SSIS** .  
   
-##  <a name="container"></a> Configurar as opções no painel Contêineres  
+##  <a name="container"></a>Configurar as opções no painel contêineres  
  Use o painel **Contêineres** da caixa de diálogo **Configurar Logs do SSIS** para habilitar o pacote e seus contêineres para logs.  
   
 ### <a name="options"></a>Opções  
@@ -56,7 +56,7 @@ ms.locfileid: "66060593"
   
  Se um contêiner estiver esmaecido e você quiser definir as opções de log no contêiner, clique duas vezes em sua caixa de seleção. O primeiro clique apaga a caixa de seleção e o segundo clique a seleciona, permitindo escolher os provedores de log que serão usados e selecionar as informações que serão registradas.  
   
-##  <a name="provider"></a> Configurar as opções na guia Provedores e Logs  
+##  <a name="provider"></a>Configurar as opções na guia provedores e logs  
  Use a guia **Provedores e Logs** da caixa de diálogo **Configurar Logs do SSIS** para criar e configurar logs para a captura de eventos do tempo de execução.  
   
 ### <a name="options"></a>Opções  
@@ -80,7 +80,7 @@ ms.locfileid: "66060593"
  **Delete (excluir)**  
  Selecione um provedor de log e clique em **Excluir**.  
   
-##  <a name="detail"></a> Configurar as opções na guia Detalhes  
+##  <a name="detail"></a>Configurar as opções na guia detalhes  
  Use a guia **Detalhes** da caixa de diálogo **Configurar Logs do SSIS** para especificar eventos e detalhes informativos a serem habilitados para log. As informações selecionadas se aplicam a todos os provedores de logs no pacote. Por exemplo, você não pode gravar determinadas informações na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e informações diferentes em um arquivo de texto.  
   
 ### <a name="options"></a>Opções  
@@ -93,9 +93,9 @@ ms.locfileid: "66060593"
  **Avançado**  
  Marque ou desmarque os eventos para log e marque ou desmarque informações que serão usadas no log de cada evento. Clique em **Básico** para ocultar todos os detalhes de log, exceto a lista de eventos. As informações a seguir estão disponíveis para log:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Computer**|O nome do computador no qual o evento de log ocorreu.|  
+|**Ele**|O nome do computador no qual o evento de log ocorreu.|  
 |**Operador**|O nome de usuário da pessoa que iniciou o pacote.|  
 |**SourceName**|O nome do pacote, contêiner ou tarefa no qual o evento de log ocorreu.|  
 |**SourceID**|O Identificador Global Exclusivo (GUID) do pacote, contêiner ou tarefa no qual o evento de log ocorreu.|  
@@ -103,7 +103,7 @@ ms.locfileid: "66060593"
 |**MessageText**|Uma mensagem associada à entrada de log.|  
 |**DataBytes**|Reservado para uso futuro.|  
   
- **Básico**  
+ **Basic**  
  Marque ou desmarque os eventos para log. Esta opção oculta os detalhes de log, exceto a lista de eventos. Se você selecionar um evento, por padrão, todos os detalhes de log serão selecionados para esse evento. Clique em **Avançado** para mostrar todos os detalhes de log.  
   
  **Carregar**  

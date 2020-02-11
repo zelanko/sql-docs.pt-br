@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770382"
 ---
 # <a name="ole-db-command-transformation"></a>transformação Comando OLE DB
@@ -43,13 +43,13 @@ ms.locfileid: "62770382"
   
  Essa transformação tem uma entrada, uma saída comum e uma saída de erro.  
   
-## <a name="logging"></a>Registrando em log  
+## <a name="logging"></a>Registro em log  
  Você poderá fazer log das chamadas que a transformação Comando OLE DB fizer a provedores de dados externos. Você pode usar esse recurso de log para solucionar problemas de conexões e comandos das fontes de dados externos executados pela transformação Comando OLE DB. Para fazer log das chamadas que a transformação Comando OLE DB fizer aos provedores de dados externos, habilite o log do pacote e selecione o evento **Diagnóstico** no nível de pacote. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Você pode configurar a transformação por meio do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer ou do modelo de objeto. Para obter detalhes sobre como configurar a transformação por meio do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, consulte  [Configurar a transformação do Comando OLE DB](../../configure-the-ole-db-command-transformation.md). Consulte o Guia do Desenvolvedor para obter detalhes sobre como configurar essa transformação programaticamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](../data-flow.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   

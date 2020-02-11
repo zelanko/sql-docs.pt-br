@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 50ed3ac0703429f7848a7eb7b4fc9413a0f3e5cf
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783375"
 ---
 # <a name="view-a-job"></a>View a Job
-  Este tópico descreve como exibir um trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Este tópico descreve como exibir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalhos do Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
   
  **Neste tópico**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "72783375"
   
      [Segurança](#Security)  
   
--   **Para exibir um trabalho, usando:**  
+-   **Para exibir um trabalho usando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -52,9 +52,9 @@ ms.locfileid: "72783375"
   
 2.  Expanda o **SQL Server Agent**e, em seguida, **Trabalhos**.  
   
-3.  Clique com o botão direito do mouse em um trabalho e, em seguida, clique em **Propriedades**.  
+3.  Clique com o botão direito do mouse em um trabalho e clique em **Propriedades**.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-a-job"></a>Para exibir um trabalho  
   

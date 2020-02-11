@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773779"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Usando índices columnstore não clusterizados
@@ -24,18 +24,18 @@ ms.locfileid: "62773779"
   
  Para obter informações sobre índices columnstore clusterizados, consulte [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
-## <a name="contents"></a>Sumário  
+## <a name="contents"></a>Conteúdo  
   
--   [Criar um índice Columnstore não clusterizado](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
+-   [Criar um índice columnstore não clusterizado](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
   
 -   [Alterar os dados em um índice Columnstore não clusterizado](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
-##  <a name="load"></a> Criar um índice Columnstore não clusterizado  
- Para carregar dados em um índice columnstore não clusterizado, primeiro carregue dados em uma tabela rowstore tradicional armazenada como um heap ou clusterizado de índice e, em seguida, use [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) para criar um índice ColumnStore.  
+##  <a name="load"></a>Criar um índice Columnstore não clusterizado  
+ Para carregar dados em um índice columnstore não clusterizado, primeiro carregue os dados em uma tabela de armazenamento tradicional armazenada como um índice de heap ou cluster e, em seguida, use [Create COLUMNSTORE index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) para criar um índice columnstore.  
   
- ![Carregar dados em um índice columnstore](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "carregar dados em um índice columnstore")  
+ ![Carregando dados em um índice columnstore](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Carregando dados em um índice columnstore")  
   
-##  <a name="change"></a> Alterar os dados em um índice Columnstore não clusterizado  
+##  <a name="change"></a>Alterar os dados em um índice Columnstore não clusterizado  
  Quando você cria um índice columnstore não clusterizado em uma tabela, não pode modificar diretamente os dados nessa tabela. Uma consulta com INSERT, UPDATE, DELETE ou MERGE falhará e retornará uma mensagem de erro. Para adicionar ou modificar os dados na tabela, siga um destes procedimentos:  
   
 -   Desabilite o índice columnstore. Depois, você pode atualizar os dados na tabela. Se você desabilitar o índice columnstore, poderá recriar o índice columnstore quando concluir a atualização dos dados. Por exemplo:  
@@ -46,7 +46,7 @@ ms.locfileid: "62773779"
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
--   Remova o índice columnstore, atualize a tabela e, em seguida, recrie o índice de columnstore com CREATE COLUMNSTORE INDEX. Por exemplo:   
+-   Descarte o índice columnstore, atualize a tabela e crie novamente o índice columnstore com CREATE COLUMNSTORE INDEX. Por exemplo:  
   
     ```  
     DROP INDEX mycolumnstoreindex ON mytable  

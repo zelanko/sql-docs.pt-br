@@ -14,23 +14,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011721"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Usar um arquivo de formato para ignorar um campo de dados (SQL Server)
   Um arquivo de dados pode conter mais campos do que o número de colunas na tabela. Este tópico descreve como modificar arquivos de formato XML e não XML para acomodar um arquivo de dados com mais campos, mapeando as colunas de tabela para os campos de dados correspondentes e ignorando os campos extras.  
   
 > [!NOTE]  
->  Um arquivo de formato XML ou não XML pode ser usado para a importação em massa um arquivo de dados para a tabela usando um comando **bcp**, uma instrução BULK INSERT ou INSERT... Instrução SELECT * FROM OPENROWSET(BULK...). Para obter mais informações, veja [Usar um arquivo de formato para importação de dados em massa &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
+>  Um arquivo de formato XML ou não XML pode ser usado para importar em massa um arquivo de dados para a tabela usando um comando **bcp** , instrução BULK INSERT ou INSERT... Selecione * da instrução OPENROWSET (BULK...). Para obter mais informações, veja [Usar um arquivo de formato para importação de dados em massa &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
 ## <a name="sample-data-file-and-table"></a>Tabela e arquivo de dados de exemplo  
  Os exemplos de arquivos de formato modificados neste tópico baseiam-se na tabela e no arquivo de dados a seguir.  
   
 ### <a name="sample-table"></a>Tabela de exemplo  
- Os exemplos requerem que uma tabela denominada `myTestSkipField` seja criada no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] no esquema `dbo` . Para criar essa tabela, no Editor de Consultas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] execute o seguinte código:  
+ Os exemplos requerem que uma tabela denominada `myTestSkipField` seja criada no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] no esquema `dbo` . Para criar essa tabela, no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editor de consultas, execute o seguinte código:  
   
 ```  
 USE AdventureWorks2012;  
@@ -45,7 +45,7 @@ GO
 ```  
   
 ### <a name="sample-data-file"></a>Arquivo de dados de exemplo  
- O arquivo de dados `myTestSkipField-c.dat`contém os seguintes registros:  
+ O arquivo de dados `myTestSkipField-c.dat` contém os seguintes registros:  
   
 ```  
 1,Skipme,DataField3,DataField4  
@@ -53,7 +53,7 @@ GO
 1,Skipme,DataField3,DataField4  
 ```  
   
- Para importar em massa dados de `myTestSkipField-c.dat` para a tabela `myTestSkipField` , o arquivo de formato deve fazer o seguinte:  
+ Para importar em massa dados de `myTestSkipField-c.dat` para a tabela `myTestSkipField` , o arquivo de formato deverá fazer o seguinte:  
   
 -   Mapear o primeiro campo de dados para a primeira coluna, `PersonID`.  
   
@@ -84,7 +84,7 @@ GO
 ### <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `INSERT ... SELECT * FROM OPENROWSET(BULK...)` utilizando o arquivo de formato `myTestSkipField.fmt` . O exemplo importa em massa o arquivo de dados `myTestSkipField-c.dat` para a tabela `myTestSkipField` . Para criar a tabela e o arquivo de dados de exemplo, consulte "Tabela e arquivo de dados de exemplo", anteriormente neste tópico.  
   
- No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , execute o seguinte código:  
+ No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], execute o seguinte código:  
   
 ```  
 USE AdventureWorks2012;  
@@ -141,11 +141,11 @@ GO
 > [!NOTE]  
 >  Para obter informações sobre a sintaxe do esquema XML e exemplos adicionais de arquivos de formato XML, veja [Arquivos de formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-## <a name="see-also"></a>Consulte também  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Usar um arquivo de formato para ignorar uma coluna de tabela &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [Use um arquivo de formato para ignorar uma coluna de tabela &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
   

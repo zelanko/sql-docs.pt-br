@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cbf0eee13a113dff42a22da3703e60b3869b757f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098527"
 ---
-# <a name="deleteencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Método DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting)
+# <a name="deleteencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Método DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Exclui as chaves de criptografia do banco de dados do servidor de relatório.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,11 +40,11 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
     out string[] ExtendedErrors);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *InstallationID*  
  A ID de instalação de um servidor de relatório que está na tabela de chaves do banco de dados do servidor de relatório.  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
  *ExtendedErrors[]*  
@@ -57,9 +57,9 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
  O método *DeleteEncryptionKey* exclui entradas da tabela de chaves para qualquer servidor de relatório que tenha acesso a informações seguras do banco de dados do servidor de relatório. Se o parâmetro *InstallationID* especificado não corresponder a uma ID de instalação do banco de dados, o método retornará um erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

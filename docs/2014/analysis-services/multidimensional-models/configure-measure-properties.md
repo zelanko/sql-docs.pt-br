@@ -1,5 +1,5 @@
 ---
-title: Configurar propriedades de medida | Microsoft Docs
+title: Configurar propriedades da medida | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -42,10 +42,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076612"
 ---
 # <a name="configure-measure-properties"></a>Configurar propriedades de medida
@@ -58,18 +58,19 @@ ms.locfileid: "66076612"
   
 |Propriedade|Definição|  
 |--------------|----------------|  
-|`AggregateFunction`|Obrigatórios. Determina como as medidas são agregadas. `Sum` é a agregação padrão. Para obter mais informações, consulte [Usar funções de agregação](use-aggregate-functions.md) para obter uma descrição de cada função.|  
+|`AggregateFunction`|Obrigatórios. Determina como as medidas são agregadas. 
+  `Sum` é a agregação padrão. Para obter mais informações, consulte [Usar funções de agregação](use-aggregate-functions.md) para obter uma descrição de cada função.|  
 |`DataType`|Obrigatórios. Especifica o tipo de dados da coluna da tabela de fatos subjacente à qual a medida está associada. Esse valor é herdado da coluna de origem por padrão.|  
 |`Description`|Fornece uma descrição da medida, que pode ser exposta em aplicativos cliente.|  
 |`DisplayFolder`|Especifica a pasta na qual a medida aparecerá quando os usuários conectarem-se ao cubo. Se o cubo tiver várias medidas, você pode usar as pastas de exibição para categorizar as medidas e aprimorar a experiência de navegação do usuário.|  
 |`FormatString`|Você pode selecionar o formato usado para exibir valores de medida aos usuários utilizando a propriedade `FormatString` da medida.<br /><br /> Embora seja fornecida uma lista de formatos de exibição em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode especificar vários outros formatos que não constam nela. Você pode especificar qualquer formato nomeado ou definido pelo usuário que seja válido no Microsoft Visual Basic.|  
-|`ID`|Obrigatórios. Exibe o identificador exclusivo (ID) da medida. Esta propriedade é somente leitura.|  
+|`ID`|Obrigatórios. Exibe o identificador exclusivo (ID) da medida. Essa propriedade é somente leitura.|  
 |`MeasureExpression`|Especifica uma expressão MDX restrita definindo o valor da medida. A expressão é avaliada no nível de folha antes de ser agregada e leva em consideração a importância de um valor. Por exemplo, em conversão de moedas em que um valor de vendas é ponderado pela taxa de câmbio.|  
 |`Name`|Obrigatórios. Especifica o nome da medida.|  
 |`Source`|Obrigatórios. Especifica a coluna da exibição da fonte de dados à qual a medida está associada. Consulte [Fontes de dados e associações &#40;SSAS Multidimensional&#41;](data-sources-and-bindings-ssas-multidimensional.md).|  
 |`Visible`|Determina a visibilidade da medida em aplicativos cliente.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar propriedades do grupo de medidas](configure-measure-group-properties.md)   
  [Modificando medidas](../lesson-3-1-modifying-measures.md)  
   

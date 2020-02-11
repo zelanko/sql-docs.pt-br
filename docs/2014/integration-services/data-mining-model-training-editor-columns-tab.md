@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059889"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Editor de Treinamento de Modelo de Mineração de Dados (guia Colunas)
@@ -39,8 +39,8 @@ ms.locfileid: "66059889"
  **Colunas da estrutura de mineração**  
  Exiba cada coluna de destino disponível, seja mapeada ou não.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Treinamento de Modelo de Mineração de Dados &#40;guia Conexão&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
+ [Editor de treinamento de modelo de mineração de dados &#40;guia conexão&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

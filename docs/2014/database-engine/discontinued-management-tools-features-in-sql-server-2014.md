@@ -1,5 +1,5 @@
 ---
-title: Descontinuados de gerenciamento de recursos das ferramentas do SQL Server 2014 | Microsoft Docs
+title: Recursos das ferramentas de gerenciamento descontinuados no SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780345"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Recursos das Ferramentas de Gerenciamento descontinuados no SQL Server 2014
   Este tópico descreve os recursos das Ferramentas de Gerenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que não estão mais disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>Recursos removidos do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- None  
+ Nenhum  
   
 ## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>Recursos removidos do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62780345"
 ### <a name="activex-subsystem-for-sql-server-agent"></a>Subsistema de ActiveX para o SQL Server Agent  
  O subsistema de ActiveX para o SQL Server Agent foi removido nesta versão. Não há nenhuma funcionalidade de substituição.  
   
-### <a name="spaddtask-spdeletetask-spupdatetask"></a>sp_addtask, sp_deletetask, sp_updatetask  
+### <a name="sp_addtask-sp_deletetask-sp_updatetask"></a>sp_addtask, sp_deletetask, sp_updatetask  
  Foram removidos Sp_addtask, sp_deletetask e sp_updatetask nesta versão. Não use esta funcionalidade em aplicativos novos ou atualizados.  
   
 ### <a name="net-send-and-pager-notification"></a>Net Send e notificação de pager  
@@ -44,7 +44,7 @@ ms.locfileid: "62780345"
   
  A API do DACfx 3.0 e as ferramentas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oferecem suporte à leitura de arquivos DACPAC e BACPAC criados usando ferramentas anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e versões do DACfx: extraindo bancos de dados em arquivos DACPAC dessas versões e implantando bancos de dados em versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com suporte por meio do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compatibilidade com versões anteriores](../../2014/getting-started/backward-compatibility.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo do Editor de transformação de limpeza DQS | Microsoft Docs
+title: Caixa de diálogo Editor de transformação de limpeza DQS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059414"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Caixa de diálogo Editor de Transformação de Limpeza DQS
@@ -54,7 +54,7 @@ ms.locfileid: "66059414"
  Selecione uma base de dados de conhecimento do DQS para a fonte de dados conectada. Para obter mais informações sobre a base de dados de conhecimento do DQS, consulte [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Criptografar conexão**  
- Especifique se deseja criptografar a conexão para criptografar a transferência de dados entre o servidor DQS e [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ Especifique se deseja criptografar a conexão, a fim de criptografar a transferência de dados entre o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]servidor DQS e o.  
   
  **Domínios disponíveis**  
  Liste os domínios disponíveis para a base de conhecimento selecionada. Há dois tipos de domínios: domínios únicos e domínios compostos que contêm dois ou mais domínios únicos.  
@@ -68,7 +68,7 @@ ms.locfileid: "66059414"
   
  Os valores válidos são os seguintes:  
   
--   **Falha no Componente**, que indica que houve falha na transformação e os dados de entrada não são inseridos no banco de dados do Data Quality Services. Este é o valor padrão.  
+-   **Falha no Componente**, que indica que houve falha na transformação e os dados de entrada não são inseridos no banco de dados do Data Quality Services. Esse é o valor padrão.  
   
 -   **Redirecionar Linha**, que indica que os dados de entrada não estão inseridos no banco de dados do Data Quality Services e são redirecionados para a saída do erro.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66059414"
  Indique se é preciso produzir dados adicionais que são recebidos de um provedor de dados de referência existente. Para obter mais informações, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
  **Esquema de dados acrescentado**  
- Indique se é preciso produzir o esquema de dados. Para obter mais informações, consulte [anexar um domínio ou domínio composto para dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Indique se é preciso produzir o esquema de dados. Para obter mais informações, consulte [anexar um domínio ou domínio de composição aos dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ##  <a name="manager"></a> Definir as opções na caixa de diálogo Gerenciador de Conexões de Limpeza DQS.  
  **Nome do servidor**  
@@ -128,7 +128,7 @@ ms.locfileid: "66059414"
   
 3.  Clique em **Adicionar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicar regras de qualidade de dados à fonte de dados](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

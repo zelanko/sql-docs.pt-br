@@ -1,5 +1,5 @@
 ---
-title: Área de gerenciadores de Conexão | Microsoft Docs
+title: Área Gerenciadores de conexões | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44245b7e64a1ccb16180fd0ceaa0f1dde0937133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060396"
 ---
 # <a name="connection-managers-area"></a>Área Gerenciadores de Conexões
@@ -26,8 +26,8 @@ ms.locfileid: "66060396"
   
  Clique com o botão direito do mouse nesta área e, depois, clique na opção da tarefa que deseja executar.  
   
-## <a name="see-also"></a>Consulte também  
- [Conexões do SSIS &#40;Integration Services&#41;](connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Integration Services &#40;conexões&#41; SSIS](connection-manager/integration-services-ssis-connections.md)   
  [Designer SSIS](ssis-designer.md)  
   
   

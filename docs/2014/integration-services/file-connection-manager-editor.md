@@ -1,5 +1,5 @@
 ---
-title: Editor do Gerenciador de Conexão de arquivo | Microsoft Docs
+title: Editor do Gerenciador de conexões de arquivos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058816"
 ---
 # <a name="file-connection-manager-editor"></a>Editor do Gerenciador de Conexões de Arquivos
@@ -30,17 +30,17 @@ ms.locfileid: "66058816"
  Para obter mais informações sobre o gerenciador de conexões de Arquivos, consulte [File Connection Manager](connection-manager/file-connection-manager.md).  
   
 ## <a name="options"></a>Opções  
- **Tipo de Uso**  
+ **Tipo de uso**  
  Especifique se o **Gerenciador de Conexões de Arquivos** conecta a um arquivo ou pasta existente ou crie um novo arquivo ou pasta.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Criar arquivo|Crie um novo arquivo em tempo de execução.|  
 |Arquivo existente|Use um arquivo existente.|  
 |Criar pasta|Crie uma nova pasta em tempo de execução.|  
 |Pasta existente|Use uma pasta existente.|  
   
- **Arquivo / Pasta**  
+ **Arquivo/pasta**  
  Se **Arquivo**, especifique o arquivo a usar.  
   
  Se **Pasta**, especifique a pasta a usar.  
@@ -48,7 +48,7 @@ ms.locfileid: "66058816"
  **Procurar**  
  Selecione o arquivo ou pasta usando a caixa de diálogo **Selecionar Arquivo** ou **Procurar Pasta** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

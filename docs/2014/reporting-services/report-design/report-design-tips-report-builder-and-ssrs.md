@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba5cdb309d277e751c2de7fcfbce5dfc02174366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105099"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Dicas de design de relatórios (Construtor de Relatórios e SSRS)
@@ -157,9 +157,9 @@ ms.locfileid: "66105099"
   
  Esse comportamento, as propriedades de largura e de altura dos itens do relatório, o tamanho do corpo do relatório, a definição da altura e da largura da página, as configurações de margem do relatório pai e o suporte específico à renderização são todos combinados para determinar quais itens do relatório se ajustam em uma página renderizada. Para obter mais informações, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Construtor de relatórios no SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Construtor de Relatórios no SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
- [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
+ [TUTORIAIS &#40;Construtor de Relatórios&#41;](../report-builder-tutorials.md)  
   
   

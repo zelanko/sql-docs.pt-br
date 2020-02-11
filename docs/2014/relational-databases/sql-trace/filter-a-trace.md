@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714713"
 ---
 # <a name="filter-a-trace"></a>Filtrar um rastreamento
@@ -60,11 +60,11 @@ ms.locfileid: "62714713"
   
  A disponibilidade do filtro depende da coluna de dados. Algumas colunas de dados não podem ser filtradas. As colunas de dados que podem ser filtradas só o podem por certos operadores relacionais, como mostra a tabela a seguir.  
   
-|Operador relacional|Símbolo do operador|Descrição|  
+|Operador relacional|Símbolo do operador|DESCRIÇÃO|  
 |-------------------------|---------------------|-----------------|  
-|Como|Como|Especifica que os dados de evento de rastreamento devem ser semelhantes ao texto digitado. Permite vários valores.|  
+|Como|LIKE|Especifica que os dados de evento de rastreamento devem ser semelhantes ao texto digitado. Permite vários valores.|  
 |Não semelhante a|Não semelhante a|Especifica que os dados de evento de rastreamento não devem ser semelhantes ao texto digitado. Permite vários valores.|  
-|Igual a|=|Especifica que os dados de evento de rastreamento devem ser iguais ao valor digitado. Permite vários valores.|  
+|É igual a|=|Especifica que os dados de evento de rastreamento devem ser iguais ao valor digitado. Permite vários valores.|  
 |É diferente de|<>|Especifica que os dados de evento de rastreamento devem ser diferentes do valor digitado. Permite vários valores.|  
 |Maior que|>|Especifica que os dados de evento de rastreamento devem ser maiores que o valor digitado.|  
 |Maior que ou igual a|>=|Especifica que os dados de evento de rastreamento devem ser iguais ou maiores que o valor digitado.|  
@@ -110,7 +110,7 @@ ms.locfileid: "62714713"
 |**ObjectID2**|=, <>, >=, <=|  
 |**ObjectName**|LIKE, NOT LIKE|  
 |**ObjectType**|=, <>, >=, <=|  
-|**Offset**|=, <>, >=, <=|  
+|**Deslocamento**|=, <>, >=, <=|  
 |**OwnerID**|=, <>, >=, <=|  
 |**OwnerName**|LIKE, NOT LIKE|  
 |**ParentName**|LIKE, NOT LIKE|  
@@ -126,7 +126,7 @@ ms.locfileid: "62714713"
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|Use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar eventos nesta coluna de dados. Para obter mais informações, consulte [Filtrar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
-|**Estado**|=, <>, >=, <=|  
+|**State**|=, <>, >=, <=|  
 |**Êxito**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar eventos nesta coluna de dados. Para obter mais informações, consulte [Filtrar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
@@ -137,7 +137,7 @@ ms.locfileid: "62714713"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> se rastrear eventos do **osql** utilitário ou o **sqlcmd** utility, sempre acrescente ** % ** aos filtros no **TextData ** coluna de dados.  
+ <sup>1</sup> se estiver rastreando eventos do utilitário **osql** ou do utilitário **sqlcmd** , sempre **%** acrescente a filtros na coluna de dados **TextData** .  
   
  Por precaução em razão da segurança, o Rastreamento do SQL omite do rastreamento, automaticamente, toda informação dos procedimentos armazenados relacionados que afetem senhas. Este mecanismo de segurança não é configurável e está sempre em vigor. Ele impede os usuários que detêm permissões para rastrear toda a atividade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de capturar senhas.  
   

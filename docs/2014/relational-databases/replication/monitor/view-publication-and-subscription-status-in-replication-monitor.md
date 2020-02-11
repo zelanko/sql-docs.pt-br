@@ -22,14 +22,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666916"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Exibir o status da publicação e da assinatura no Replication Monitor
-  O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor exibe informações de status para publicações e assinaturas:  
   
 -   O status de uma publicação é determinado pelo status de prioridade mais alta de suas assinaturas. Por exemplo, se uma assinatura para uma publicação tiver um erro e outra tiver um problema de desempenho, será exibido um status de erro para a publicação.  
   
@@ -53,16 +53,16 @@ ms.locfileid: "62666916"
   
  **Para exibir o status da publicação e da assinatura**  
   
--   Replication Monitor: [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).
+-   Replication Monitor: [exiba informações e execute tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).
   
   
 ## <a name="publication-status-values"></a>Valores de status da publicação  
  A tabela abaixo mostra os valores de status da publicação e seus ícones correspondentes em ordem de prioridade.  
   
-|Status|Ícone|  
+|Status|ícone|  
 |------------|----------|  
-|Erro|![Ícone de interface do usuário: erro](../media/repl-icon-error.gif "Ícone de interface do usuário: erro")|  
-|Desempenho crítico|![Ícone de interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone de interface do usuário: aviso")|  
+|Erro|![Ícone da interface do usuário: erro](../media/repl-icon-error.gif "Ícone da interface do usuário: erro")|  
+|Desempenho crítico|![Ícone da interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|  
 |Tentando novamente comando com falha|![Ícone de interface do usuário: repetição do agente de replicação](../media/repl-icon-retry.gif "Ícone de interface do usuário: repetição do agente de replicação")|  
 |OK|none|  
   
@@ -73,41 +73,41 @@ ms.locfileid: "62666916"
   
 ### <a name="transactional-subscriptions"></a>Assinaturas transacionais  
   
-|Status|Ícone|  
+|Status|ícone|  
 |------------|----------|  
-|Erro|![Ícone de interface do usuário: erro](../media/repl-icon-error.gif "Ícone de interface do usuário: erro")|  
-|Desempenho crítico|![Ícone de interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone de interface do usuário: aviso")|  
-|Expirando em breve/Expirado|![Ícone de interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone de interface do usuário: aviso")|  
-|Assinatura não inicializada|![Ícone de interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone de interface do usuário: aviso")|  
+|Erro|![Ícone da interface do usuário: erro](../media/repl-icon-error.gif "Ícone da interface do usuário: erro")|  
+|Desempenho crítico|![Ícone da interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|  
+|Expirando em breve/Expirado|![Ícone da interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|  
+|Assinatura não inicializada|![Ícone da interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|  
 |Tentando novamente comando com falha|![Ícone de interface do usuário: repetição do agente de replicação](../media/repl-icon-retry.gif "Ícone de interface do usuário: repetição do agente de replicação")|  
-|Não está sendo executado|![Ícone de interface do usuário: parar agente de replicação](../media/repl-icon-stopped.gif "Ícone de interface do usuário: parar agente de replicação")|  
-|Executando|![Ícone de interface do usuário: executando agente de replicação](../media/repl-icon-running.gif "Ícone de interface do usuário: executando agente de replicação")|  
+|Não está sendo executado|![Ícone de interface do usuário: agente de replicação interrompido](../media/repl-icon-stopped.gif "Ícone de interface do usuário: agente de replicação interrompido")|  
+|Executando|![Ícone de interface do usuário: agente de replicação em execução](../media/repl-icon-running.gif "Ícone de interface do usuário: agente de replicação em execução")|  
   
 ### <a name="merge-subscriptions"></a>Assinaturas de mesclagem  
   
-|Status|Ícone|  
+|Status|ícone|  
 |------------|----------|  
-|Erro|![Ícone de interface do usuário: erro](../media/repl-icon-error.gif "Ícone de interface do usuário: erro")|  
-|Desempenho crítico|![Ícone de interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone de interface do usuário: aviso")|  
-|Mesclagem de execução longa|![Ícone de interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone de interface do usuário: aviso")|  
-|Expirando em breve/Expirado|![Ícone de interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone de interface do usuário: aviso")|  
-|Assinatura não inicializada|![Ícone de interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone de interface do usuário: aviso")|  
+|Erro|![Ícone da interface do usuário: erro](../media/repl-icon-error.gif "Ícone da interface do usuário: erro")|  
+|Desempenho crítico|![Ícone da interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|  
+|Mesclagem de execução longa|![Ícone da interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|  
+|Expirando em breve/Expirado|![Ícone da interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|  
+|Assinatura não inicializada|![Ícone da interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|  
 |Tentando novamente comando com falha|![Ícone de interface do usuário: repetição do agente de replicação](../media/repl-icon-retry.gif "Ícone de interface do usuário: repetição do agente de replicação")|  
-|Sincronizando|![Ícone de interface do usuário: executando agente de replicação](../media/repl-icon-running.gif "Ícone de interface do usuário: executando agente de replicação")|  
-|Não sincronizando|![Ícone de interface do usuário: parar agente de replicação](../media/repl-icon-stopped.gif "Ícone de interface do usuário: parar agente de replicação")|  
+|Sincronizando|![Ícone de interface do usuário: agente de replicação em execução](../media/repl-icon-running.gif "Ícone de interface do usuário: agente de replicação em execução")|  
+|Não sincronizando|![Ícone de interface do usuário: agente de replicação interrompido](../media/repl-icon-stopped.gif "Ícone de interface do usuário: agente de replicação interrompido")|  
   
 ### <a name="snapshot-subscriptions"></a>Assinaturas de instantâneo  
   
-|Status|Ícone|  
+|Status|ícone|  
 |------------|----------|  
-|Erro|![Ícone de interface do usuário: erro](../media/repl-icon-error.gif "Ícone de interface do usuário: erro")|  
-|Expirando em breve/Expirado|![Ícone de interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone de interface do usuário: aviso")|  
-|Assinatura não inicializada|![Ícone de interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone de interface do usuário: aviso")|  
+|Erro|![Ícone da interface do usuário: erro](../media/repl-icon-error.gif "Ícone da interface do usuário: erro")|  
+|Expirando em breve/Expirado|![Ícone da interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|  
+|Assinatura não inicializada|![Ícone da interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|  
 |Tentando novamente comando com falha|![Ícone de interface do usuário: repetição do agente de replicação](../media/repl-icon-retry.gif "Ícone de interface do usuário: repetição do agente de replicação")|  
-|Sincronizando|![Ícone de interface do usuário: executando agente de replicação](../media/repl-icon-running.gif "Ícone de interface do usuário: executando agente de replicação")|  
-|Não sincronizando|![Ícone de interface do usuário: parar agente de replicação](../media/repl-icon-stopped.gif "Ícone de interface do usuário: parar agente de replicação")|  
+|Sincronizando|![Ícone de interface do usuário: agente de replicação em execução](../media/repl-icon-running.gif "Ícone de interface do usuário: agente de replicação em execução")|  
+|Não sincronizando|![Ícone de interface do usuário: agente de replicação interrompido](../media/repl-icon-stopped.gif "Ícone de interface do usuário: agente de replicação interrompido")|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando a Replicação](../monitoring-replication.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655501"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>Regenerar os procedimentos transacionais personalizados para refletir alterações de esquema
@@ -28,21 +28,21 @@ ms.locfileid: "62655501"
   
 -   A primeira opção é usar um procedimento de script personalizado para substituir os padrões usados pela replicação:  
   
-    1.  Ao executar [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), verifique se o bit **@schema_option** 0x02 é **true**.  
+    1.  Ao executar [sp_addarticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), verifique se **@schema_option** o bit 0x02 é **verdadeiro**.  
   
-    2.  Execute [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) e especifique um valor de “insert”, “update” ou “delete” para o parâmetro **@type** e o nome do procedimento de script personalizado para o parâmetro **@value** .  
+    2.  Execute [sp_register_custom_scripting &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) e especifique um valor de ' Insert ', ' Update ' ou ' Delete ' para o parâmetro **@type** e o nome do procedimento de script personalizado para o parâmetro. **@value**  
   
      Na próxima alteração de esquema, a replicação chamará esse procedimento armazenado para substituir a definição pelo novo procedimento armazenado personalizado definido pelo usuário e depois propagará o procedimento para cada Assinante.  
   
 -   A segunda opção é usar um script que contenha uma nova definição de procedimento personalizada:  
   
-    1.  Ao executar [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), defina o bit **@schema_option** 0x02 como **false** para que a replicação não gere automaticamente procedimentos personalizados no Assinante.  
+    1.  Ao executar [sp_addarticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), defina o **@schema_option** bit 0x02 como **false** para que a replicação não gere automaticamente procedimentos personalizados no Assinante.  
   
-    2.  Antes de cada alteração de esquema, crie um novo arquivo de script e registre o script com replicação executando [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql). Especifique o valor de 'custom_script' para o parâmetro **@type** e o caminho para o script no Publicador para o parâmetro **@value** .  
+    2.  Antes de cada alteração de esquema, crie um novo arquivo de script e registre o script com replicação executando [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql). Especifique um valor de ' custom_script ' para o parâmetro **@type** e o caminho para o script no Publicador para o parâmetro **@value**.  
   
      Na próxima vez em que for feita uma alteração de esquema relevante, esse script será executado em cada Assinante dentro da mesma transação como o comando DDL. Após concluir a alteração de esquema, o registro do script será removido. Você deve registrar de novo o script para que ele seja executado depois de uma alteração de esquema subsequente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Especificar como as alterações são propagadas para artigos transacionais](transactional-articles-specify-how-changes-are-propagated.md)   
  [Fazer alterações de esquema em bancos de dados de publicação](../publish/make-schema-changes-on-publication-databases.md)  
   

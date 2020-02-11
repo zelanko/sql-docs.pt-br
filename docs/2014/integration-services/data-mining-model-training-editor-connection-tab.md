@@ -1,5 +1,5 @@
 ---
-title: Editor de treinamento de modelo de mineração de dados (guia Conexão) | Microsoft Docs
+title: Editor de treinamento de modelo de mineração de dados (guia conexão) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059875"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Editor de Treinamento de Modelo de Mineração de Dados (guia Conexão)
@@ -27,23 +27,23 @@ ms.locfileid: "66059875"
  Para saber mais sobre o destino do Treinamento do Modelo de Mineração de Dados, consulte [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
 ## <a name="options"></a>Opções  
- **Gerenciador de conexões**  
+ **Connection manager**  
  Selecione na lista de conexões existentes do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou crie uma nova conexão do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando o botão **Novo** como descrito abaixo.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão usando a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** .  
   
  **Estrutura de mineração**  
  Selecione na lista de estruturas de mineração disponíveis ou crie uma estrutura nova clicando em **Novo**.  
   
- **Nova**  
+ **Novo**  
  Crie uma estrutura e modelo de mineração novos usando o **Assistente de Mineração de Dados**.  
   
  **Modelos de mineração**  
  Exiba a lista de modelos de mineração associada com a estrutura de mineração selecionada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Treinamento de Modelo de Mineração de Dados &#40;guia Colunas&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [Editor de treinamento de modelo de mineração de dados &#40;guia colunas&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

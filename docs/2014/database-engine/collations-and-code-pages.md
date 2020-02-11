@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786731"
 ---
 # <a name="collations-and-code-pages"></a>Páginas de código de ordenações
@@ -82,7 +82,7 @@ GO
   
 -   Todas as expressões e operações de classificação dentro dos procedimentos armazenados compilados nativamente devem usar ordenações BIN2. A implicação é que todas as comparações e operações de classificação são baseadas nos pontos de código Unicode dos caracteres (representações binárias). Por exemplo, todas as classificações diferenciam maiúsculas de minúsculas ('Z' vem antes de 'a'). Se necessário, use [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado para classificação e comparação sem diferenciação de maiúsculas e minúsculas.  
   
--   O truncamento de dados UTF-16 não tem suporte dentro de procedimentos armazenados compilados nativamente. Isso significa que char n (var) (*n*) valores não podem ser convertidos para o tipo n (var) char (*eu*), se *eu* < *n*, se a agrupamento tem a propriedade SC. Por exemplo, o seguinte não tem suporte:  
+-   O truncamento de dados UTF-16 não tem suporte dentro de procedimentos armazenados compilados nativamente. Isso significa que n (var) valores de Char (*n*) não podem ser convertidos para o tipo n (var) Char (*i*), se *eu* < *n*, se o agrupamento tiver a propriedade _SC. Por exemplo, o seguinte não tem suporte:  
   
     ```sql  
     -- column definition using an _SC collation  
@@ -142,7 +142,7 @@ EXEC usp_EmployeeByName 'thomas', 'John'
 EXEC usp_EmployeeByName 'thomas', 'john'  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OLTP in-memory &#40;Otimização na memória&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

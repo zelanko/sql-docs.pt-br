@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ccdef0ccb338f268abd205a95421382eb554fce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104534"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Compreendendo grupos (Construtor de Relatórios e SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66104534"
   
  Para ajudar a visualizar o que é um grupo, consulte a figura a seguir, que mostra a região de dados tablix em Visualização. Nessa figura, os grupos de linhas categorizam o conjunto de dados por tipo de produto e os grupos de colunas categorizam o conjunto de dados por região geográfica e ano.  
   
- ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Áreas de região de dados Tablix](../media/rs-tablixareas.gif "Áreas de região de dados Tablix")  
   
  As seguintes seções ajudam a descrever os vários aspectos dos grupos.  
   
@@ -33,10 +33,10 @@ ms.locfileid: "66104534"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="what-makes-a-group"></a>O que forma um grupo?  
- Um grupo apresenta um nome e um conjunto de expressões de grupo especificados por você. O conjunto de expressões de grupo pode ser uma referência de campo de conjunto de dados única ou uma combinação entre várias expressões. Em tempo de execução, as expressões de grupo são combinadas, se o grupo tiver várias expressões, e for aplicado a dados em um grupo. Por exemplo, você tem um grupo que usa um campo de data para organizar os dados na região de dados. Em tempo de execução, os dados são organizados por data e exibem com os totais outros valores do conjunto de dados para cada data.  
+ Um grupo apresenta um nome e um conjunto de expressões de grupo especificados por você. O conjunto de expressões de grupo pode ser uma referência de campo de conjunto de dados única ou uma combinação entre várias expressões. Em runtime, as expressões de grupo são combinadas, se o grupo tiver várias expressões, e for aplicado a dados em um grupo. Por exemplo, você tem um grupo que usa um campo de data para organizar os dados na região de dados. Em tempo de execução, os dados são organizados por data e exibem com os totais outros valores do conjunto de dados para cada data.  
   
 ## <a name="when-do-i-create-groups"></a>Quando crio grupos?  
- Na maior parte dos casos, o Construtor de Relatórios e o Designer de Relatórios criam automaticamente um grupo quando você cria uma região de dados. Para uma tabela, matriz ou lista, são criados grupos quando você descarta campos no painel Agrupamento. Para um gráfico, são criados grupos quando você descarta campos nas áreas para arrastar e soltar do gráfico. Para um medidor, você deve usar a caixa de diálogo de propriedades do medidor. Para uma tabela, matriz ou lista, também é possível criar manualmente um grupo. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Confira um exemplo de como adicionar grupos durante a criação de um relatório no [Tutorial: Criar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) ou [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
+ Na maior parte dos casos, o Construtor de Relatórios e o Designer de Relatórios criam automaticamente um grupo quando você cria uma região de dados. Para uma tabela, matriz ou lista, são criados grupos quando você descarta campos no painel Agrupamento. Para um gráfico, são criados grupos quando você descarta campos nas áreas para arrastar e soltar do gráfico. Para um medidor, você deve usar a caixa de diálogo de propriedades do medidor. Para uma tabela, matriz ou lista, também é possível criar manualmente um grupo. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Para obter um exemplo de como adicionar grupos ao criar um relatório, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) ou [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
 ## <a name="how-can-i-modify-a-group"></a>Como posso modificar um grupo?  
  Após a criação de um grupo, é possível definir propriedades específicas da região de dados como, por exemplo, expressões de filtro e de classificação, quebras de página e variáveis do grupo para manter dados específicos do escopo. Para obter mais informações, consulte [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
@@ -63,10 +63,10 @@ ms.locfileid: "66104534"
 > [!NOTE]  
 >  Embora os grupos tenham nomes diferentes em regiões de dados diferentes, os princípios por trás de como você cria e usa grupos são os mesmos. Ao criar um grupo para uma região de dados, você especifica uma forma de organizar os dados detalhados do conjunto vinculado à região. Cada região de dados oferece suporte a uma estrutura de grupo em que os dados agrupados são exibidos.  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Grupos em uma Região de Dados Tablix: Grupos de Detalhes, Linhas e Colunas  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Grupos em uma região de dados tablix: grupos de detalhes, de linhas e de colunas  
  Como mostrado anteriormente neste tópico, uma região de dados tablix permite organizar os dados em grupos por linhas ou colunas. No entanto, os grupos de linhas e de colunas não são os únicos disponíveis em uma região de dados tablix. Essa região de dados pode ter os seguintes tipos de grupo:  
   
--   **Grupo Detalhes** O grupo Detalhes consiste em todos os dados de um conjunto de dados de relatório depois que o Construtor de Relatórios ou o Designer de Relatórios aplica filtros de conjunto de dados e de região de dados. Dessa forma, o grupo Detalhes é o único que não tem nenhuma expressão de grupo.  
+-   **Grupo de detalhes** O grupo de detalhes é composto por todos os dados de um DataSet de relatório depois de Construtor de Relatórios ou Report Designer filtros de aplicação e de região de dados. Dessa forma, o grupo Detalhes é o único que não tem nenhuma expressão de grupo.  
   
      Basicamente, o grupo de detalhes especifica os dados que você veria quando executasse uma consulta de conjunto de dados em um designer de consulta. Por exemplo, você tem uma consulta que recupera todas as colunas de uma tabela com pedidos de venda. Por isso, os dados desse grupo de detalhes incluem todos os valores referentes a todas as linhas de todas as colunas na tabela. Os dados desse grupo de detalhes também incluem valores referentes a campos de conjunto de dados calculados criados por você.  
   
@@ -75,19 +75,20 @@ ms.locfileid: "66104534"
   
      Por padrão, quando você adiciona uma tabela ou lista ao relatório, o Construtor de Relatórios e o Designer de Relatórios criam automaticamente o grupo Detalhes e adicionam uma linha para exibir os dados detalhados. Por padrão, ao adicionar campos de conjunto de dados a células nessa linha, você vê expressões simples referentes aos campos; por exemplo, [Sales]. Quando você exibe a região de dados, a linha detalhada se repete uma vez para todos os valores do conjunto de resultados.  
   
--   **Grupos de linhas e de colunas** É possível organizar dados em grupos por linhas ou colunas. Os grupos de linhas se expandem verticalmente em uma página. Os grupos de colunas se expandem horizontalmente em uma página. Os grupos podem ser aninhados, por exemplo, primeiro por [Year] e depois por [Quarter] e por [Month]. Os grupos também podem ser adjacentes, por exemplo, em [Territory] e independentemente em [ProductCategory].  
+-   **Grupos de linhas e de colunas** Você pode organizar dados em grupos por linhas ou colunas. Os grupos de linhas se expandem verticalmente em uma página. Os grupos de colunas se expandem horizontalmente em uma página. Os grupos podem ser aninhados, por exemplo, primeiro por [Year] e depois por [Quarter] e por [Month]. Os grupos também podem ser adjacentes, por exemplo, em [Territory] e independentemente em [ProductCategory].  
   
      Quando você cria um grupo para uma região de dados, o Construtor de Relatórios e o Designer de Relatórios adicionam automaticamente linhas ou colunas à região de dados e usam essas linhas ou colunas para exibir dados de grupo.  
   
--   **Grupos de hierarquia recursiva** Um grupo de hierarquia recursiva organiza os dados de um único conjunto de dados de relatório que inclui vários níveis. Por exemplo, um grupo de hierarquia recursiva pode exibir a hierarquia de uma organização, como [Employee] que se reporta a [Employee]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece propriedades de grupo e funções internas para permitir a criação de grupos para esse tipo de dados de relatório. Para obter mais informações, consulte [Criar grupos de hierarquias recursivas &#40;Construtor de Relatórios e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+-   **Grupos de hierarquias recursivas** Um grupo de hierarquia recursiva organiza os dados de um único DataSet de relatório que inclui vários níveis. Por exemplo, um grupo de hierarquia recursiva pode exibir a hierarquia de uma organização, como [Employee] que se reporta a [Employee]. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece propriedades de grupo e funções internas para permitir a criação de grupos para esse tipo de dados de relatório. Para obter mais informações, consulte [Criar grupos de hierarquias recursivas &#40;Construtor de Relatórios e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
  A seguinte lista resume a maneira com que você trabalha com grupos de cada região de dados:  
   
--   **Tabela** Define grupos de linhas aninhados, grupos de linhas adjacentes e grupos de linhas de hierarquia recursiva (como, por exemplo, em um organograma). Por padrão, uma tabela inclui um grupo detalhado. Adicione grupos arrastando campos de conjunto de dados para o painel Agrupamento referente a uma tabela selecionada.  
+-   **Tabela** Defina grupos de linhas aninhados, grupos de linhas adjacentes e grupos de linhas de hierarquia recursivas (como para um gráfico organizacional). Por padrão, uma tabela inclui um grupo detalhado. Adicione grupos arrastando campos de conjunto de dados para o painel Agrupamento referente a uma tabela selecionada.  
   
--   **Matriz** Define grupos de linhas e de colunas aninhados e adjacentes. Adicione grupos arrastando campos de conjunto de dados para o painel Agrupamento referente a uma matriz selecionada.  
+-   **Matriz** Defina grupos de linhas e colunas aninhados e grupos de linhas e colunas adjacentes. Adicione grupos arrastando campos de conjunto de dados para o painel Agrupamento referente a uma matriz selecionada.  
   
--   **Lista** Por padrão, ela oferece suporte ao grupo detalhado. O uso típico é para oferecer suporte a um nível de agrupamento. Adicione grupos arrastando campos de conjunto de dados para o painel Agrupamento referente a uma lista selecionada.  
+-   **Lista** de Por padrão, o oferece suporte ao grupo de detalhes. O uso típico é para oferecer suporte a um nível de agrupamento. Adicione grupos arrastando campos de conjunto de dados para o painel Agrupamento referente a uma lista selecionada.  
   
  Depois que você adiciona um grupo, os identificadores de linha e de coluna da região de dados são alterados para refletir a associação a um grupo. Ao excluir um grupo, você tem a opção de excluir apenas a definição de grupo ou excluir o grupo e todas as linhas e colunas associadas. Para obter mais informações, consulte [Células, linhas e colunas da região de dados Tablix &#40;Construtor de Relatórios&#41; e SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
@@ -98,11 +99,11 @@ ms.locfileid: "66104534"
 #### <a name="understanding-group-membership-for-tablix-cells"></a>Compreendendo a associação de grupo para células tablix  
  As células de uma linha ou coluna de uma região de dados tablix podem pertencer a vários grupos de linhas e de colunas. Quando você define uma expressão na caixa de texto de uma célula que usa uma função de agregação (por exemplo, `=Sum(Fields!FieldName.Value`), o escopo do grupo padrão de uma célula é o grupo filho mais interno ao qual ele pertence. Quando uma célula pertence a grupos de linhas e de colunas, o escopo é ambos os grupos internos. Também é possível escrever expressões que calculam subtotais de agregação cujo escopo é um grupo relativo a outro conjunto de dados. Por exemplo, você pode calcular a porcentagem de um grupo em relação ao grupo de colunas ou a todos os dados da região de dados (como `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Para obter mais informações, consulte [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md) e [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [Adicionar um total a um grupo ou a uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Ação de análise detalhada &#40;Construtor de Relatórios e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Ação de busca detalhada &#40;Construtor de Relatórios e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

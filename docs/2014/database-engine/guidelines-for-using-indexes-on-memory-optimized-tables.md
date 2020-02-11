@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779220"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Diretrizes para usar índices em tabelas com otimização de memória
@@ -28,9 +28,9 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Se não houver nenhum índice na coluna c1, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precisará verificar a tabela t inteira e filtrar por linhas que atendam à condição c1=1. No entanto, se t tiver um índice na coluna c1, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá buscar diretamente o valor 1 e recuperar as linhas.  
   
- Ao procurar por registros com um valor específico, ou intervalo de valores, para uma ou mais colunas na tabela, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode usar um índice nessas colunas para localizar rapidamente os registros correspondentes. As tabelas com base em disco e com otimização de memória se beneficiam dos índices. No entanto, há determinadas diferenças entre as estruturas de índice que precisam ser consideradas durante o uso de tabelas com otimização de memória. (Índices em tabelas com otimização de memória são denominados índices com otimização de memória.) Algumas das principais diferenças são:  
+ Ao procurar por registros com um valor específico, ou intervalo de valores, para uma ou mais colunas na tabela, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode usar um índice nessas colunas para localizar rapidamente os registros correspondentes. As tabelas com base em disco e com otimização de memória se beneficiam dos índices. No entanto, há determinadas diferenças entre as estruturas de índice que precisam ser consideradas durante o uso de tabelas com otimização de memória. (Os índices em tabelas com otimização de memória são chamados de índices com otimização de memória.) Algumas das principais diferenças são:  
   
--   Índices com otimização de memória devem ser criados com [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql). Os índices baseados em disco podem ser criados com `CREATE TABLE` e `CREATE INDEX`.  
+-   Os índices com otimização de memória devem ser criados com [CREATE TABLE &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-table-transact-sql). Os índices baseados em disco podem ser criados com `CREATE TABLE` e `CREATE INDEX`.  
   
 -   Os índices com otimização de memória existem apenas na memória. As estruturas de índice não são persistentes no disco e as operações de índice não são registradas no log de transações. A estrutura de índice é criada quando a tabela com otimização de memória é criada na memória, tanto durante a instrução CREATE TABLE quanto durante a inicialização do banco de dados.  
   
@@ -40,7 +40,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Há dois tipos de índices com otimização de memória:  
   
--   Índices de hash não clusterizados, que são projetados para pesquisas de ponto. Para obter mais informações sobre índices de hash, consulte [índices de Hash](hash-indexes.md).  
+-   Índices de hash não clusterizados, que são projetados para pesquisas de ponto. Para obter mais informações sobre índices de hash, consulte [hash Indexes](hash-indexes.md).  
   
 -   Índices não clusterizados, que são projetados para exames de intervalo e exames ordenados.  
   
@@ -50,7 +50,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Cada índice consome memória. Os índices de hash consomem uma quantidade fixa de memória, que é uma função do número de buckets. Para índices não clusterizados com otimização de memória, o consumo de memória é uma função da contagem de linhas e do tamanho das colunas de chave de índice, com alguma sobrecarga adicional, dependendo da carga de trabalho. A memória para índices com otimização de memória é separada da memória usada para armazenar linhas em tabelas com otimização de memória.  
   
- Valores de chave duplicados sempre compartilham o mesmo bucket de hash. Se um índice de hash contiver muitos valores de chave duplicados, as longas sequências de hash resultantes prejudicarão o desempenho. Colisões de hash, que ocorrem em qualquer índice de hash, reduzirão ainda mais o desempenho nesse cenário. Por esse motivo, se o número de chaves de índice exclusivas for pelo menos 100 vezes menor do que a contagem de linhas, você pode reduzir o risco de colisões de hash, tornando o bucket contar muito maior (pelo menos oito vezes o número de chaves de índice exclusivo; consulte [determinando o Contagem de buckets correta para índices de Hash](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) para obter mais informações) ou você pode eliminar as colisões de hash inteiramente usando um índice não clusterizado.  
+ Valores de chave duplicados sempre compartilham o mesmo bucket de hash. Se um índice de hash contiver muitos valores de chave duplicados, as longas sequências de hash resultantes prejudicarão o desempenho. Colisões de hash, que ocorrem em qualquer índice de hash, reduzirão ainda mais o desempenho nesse cenário. Por esse motivo, se o número de chaves de índice exclusivas for pelo menos 100 vezes menor do que a contagem de linhas, você poderá reduzir o risco de colisões de hash, tornando o número de buckets muito maior (pelo menos oito vezes a quantidade de chaves de índice exclusivas; consulte [determinando a contagem de buckets correta para](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) obter mais informações) ou elimine as colisões de hash por completo usando um índice não  
   
 ## <a name="determining-which-indexes-to-use-for-a-memory-optimized-table"></a>Determinando os índices a serem usados em uma tabela com otimização de memória  
  Cada tabela com otimização de memória deve ter pelo menos um índice. Observe que cada restrição PRIMARY KEY cria um índice implicitamente. Desse modo, se uma tabela tiver uma chave primária, ela terá um índice. Uma chave primária é um requisito para uma tabela com otimização de memória durável.  
@@ -71,13 +71,13 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |Verificação de índice, recuperar todas as linhas da tabela.|Sim|Sim|Sim|  
 |Busca de índice em predicados de igualdade (=).|Sim<br /><br /> (Chave completa necessária.)|Sim <sup>1</sup>|Sim|  
-|Busca de índice em predicados de desigualdade (>, <, \<=, > =, BETWEEN).|Não (resultados em uma verificação de índice)|Sim <sup>1</sup>|Sim|  
+|Índice Seek em predicados de desigualdade (>, < \<, =, >=, entre).|Não (resultados em uma verificação de índice)|Sim <sup>1</sup>|Sim|  
 |Recuperar linhas em uma ordem de classificação que corresponda à definição do índice.|Não|Sim|Sim|  
 |Recuperar linhas em uma ordem de classificação que corresponda à inversão da definição do índice.|Não|Não|Sim|  
   
  Na tabela, Sim significa que o índice pode servir adequadamente o pedido e Não significa que o índice não pode ser usado com êxito para satisfazer o pedido.  
   
- <sup>1</sup> para um índice não clusterizado com otimização de memória, a chave completa não é necessária para executar uma busca de índice. Embora, de acordo com a ordem de colunas da chave de índice, ocorrerá um exame se o valor de uma coluna aparecer após uma coluna ausente.  
+ <sup>1</sup> para um índice com otimização de memória não clusterizado, a chave completa não é necessária para executar uma busca de índice. Embora, de acordo com a ordem de colunas da chave de índice, ocorrerá um exame se o valor de uma coluna aparecer após uma coluna ausente.  
   
 ## <a name="index-count"></a>Contagem de índice  
  Uma tabela com otimização de memória pode ter até 8 índices, incluindo o índice criado com a chave primária.  
@@ -90,7 +90,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      A coleta de lixo funciona melhor se todos os índices na tabela forem usados frequentemente. Os índices usados raramente podem fazer com que o sistema de coleta de lixo não seja bem executado em versões de linha antigas.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>Criando um índice com otimização de memória: Exemplos de código  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>Criando um índice com otimização de memória: exemplos de código  
  Índice de hash em nível de coluna:  
   
 ```sql  
@@ -172,9 +172,9 @@ create table t (
 go  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices em tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Determinando o número de buckets correta para índices de Hash](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
+ [Determinando o número correto de buckets para índices de hash](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
  [Índices de hash](hash-indexes.md)  
   
   

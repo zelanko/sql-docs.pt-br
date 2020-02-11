@@ -1,5 +1,5 @@
 ---
-title: Fluxo de dados (página geral) do Editor de caminho | Microsoft Docs
+title: Editor de caminho de fluxo de dados (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059961"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Editor de Caminho do Fluxo de Dados (página Geral)
@@ -30,8 +30,8 @@ ms.locfileid: "66059961"
  **Nome**  
  Forneça um nome exclusivo para o caminho.  
   
- **ID**  
- O identificador de linhagem exclusivo do caminho. Esta propriedade é somente leitura.  
+ **SESSÃO**  
+ O identificador de linhagem exclusivo do caminho. Essa propriedade é somente leitura.  
   
  **IdentificationString**  
  A cadeia de caracteres que identifica o caminho. Gerada automaticamente a partir do nome digitado acima.  
@@ -42,13 +42,13 @@ ms.locfileid: "66059961"
  **PathAnnotation**  
  Especifique o tipo de anotação a ser usada. Escolha **Never** para desabilitar anotações, **AsNeeded** para habilitar anotação sob demanda, **SourceName** para anotações automáticas usando o valor da opção **SourceName** , e **PathName** para anotações automáticas usando o valor da propriedade **Name** .  
   
- **DestinationName**  
+ **Destinoname**  
  Exibe a entrada que é o final do caminho.  
   
  **SourceName**  
  Exibe a saída que é o início do caminho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Editor de caminho de fluxo de dados &#40;página de metadados&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [Editor de caminho de fluxo de dados &#40;página visualizadores de dados&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Fluxo de Dados](data-flow/data-flow.md)   

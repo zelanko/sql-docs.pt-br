@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796417"
 ---
 # <a name="create-a-stored-procedure"></a>Criar um procedimento armazenado
@@ -27,7 +27,7 @@ ms.locfileid: "72796417"
 ##  <a name="Top"></a>   
 -   **Antes de começar:**  [Permissões](#Permissions)  
   
--   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para criar um procedimento usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> Permissões  
  Requer a permissão CREATE PROCEDURE no banco de dados e a permissão ALTER no esquema no qual o procedimento está sendo criado.  
@@ -52,18 +52,18 @@ ms.locfileid: "72796417"
   
 5.  Na caixa de diálogo **Especificar Valores para Parâmetros de Modelo** , digite os seguintes valores para os parâmetros mostrados.  
   
-    |Parâmetro|Value|  
+    |Parâmetro|Valor|  
     |---------------|-----------|  
     |Autor|*Seu nome*|  
     |Data de criação|*A data de hoje*|  
-    |Description|Retorna dados de funcionário.|  
+    |Descrição|Retorna dados de funcionário.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|`nvarchar`(50)|  
-    |Default_Value_For_Param1|NULL|  
+    |Default_Value_For_Param1|NULO|  
     |@Param2|@FirstName|  
     |@Datatype_For_Param2|`nvarchar`(50)|  
-    |Default_Value_For_Param2|NULL|  
+    |Default_Value_For_Param2|NULO|  
   
 6.  Clique em **OK**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "72796417"
 > [!WARNING]  
 >  Valide todas as entradas de usuário. Não concatene a entrada de usuário antes de validá-la. Nunca execute um comando construído por uma entrada de usuário inválida.  
   
-###  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para criar um procedimento no Editor de Consultas**  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

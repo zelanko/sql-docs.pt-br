@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70d32549bb99458b06b835240e826d15967d9b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827811"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>Propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados
@@ -22,17 +22,17 @@ ms.locfileid: "62827811"
   
  A tabela a seguir descreve as propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de Dados|Descrição|  
+|Propriedade|Tipo de Dados|DESCRIÇÃO|  
 |--------------|---------------|-----------------|  
-|ASConnectionId|Cadeia de caracteres|O identificador exclusivo do gerenciador de conexões.|  
-|ASConnectionString|Cadeia de caracteres|A cadeia de caracteres de conexão com uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou com um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|ObjectRef|Cadeia de caracteres|Uma marca XML que identifica a estrutura de mineração de dados usada pela transformação.|  
+|ASConnectionId|String|O identificador exclusivo do gerenciador de conexões.|  
+|ASConnectionString|String|A cadeia de caracteres de conexão com uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou com um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|ObjectRef|String|Uma marca XML que identifica a estrutura de mineração de dados usada pela transformação.|  
   
  A entrada e as colunas de entrada do destino Treinamento do Modelo de Mineração de Dados não têm nenhuma propriedade personalizada.  
   
  Para obter mais informações, consulte [Destino de treinamento do modelo de Data Mining](data-mining-model-training-destination.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades comuns](../common-properties.md)  
   
   

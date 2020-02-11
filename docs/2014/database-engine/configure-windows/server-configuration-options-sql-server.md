@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809564"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opções de configuração do servidor (SQL Server)
@@ -77,7 +77,7 @@ ms.locfileid: "62809564"
     |[allow updates](allow-updates-server-configuration-option.md) (Obsoleta. Não use. Causará um erro durante a reconfiguração.)|0|1|0|  
     |[padrão de soma de verificação de backup](../backup-checksum-default.md)|0|1|0|  
     |[backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0|  
-    |[blocked process threshold](blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
+    |[blocked process threshold](blocked-process-threshold-server-configuration-option.md) (A)|0|86.400|0|  
     |[c2 audit mode](c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](clr-enabled-server-configuration-option.md)|0|1|0|  
     |[common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
@@ -86,7 +86,7 @@ ms.locfileid: "62809564"
     |[cross db ownership chaining](cross-db-ownership-chaining-server-configuration-option.md)|0|1|0|  
     |[cursor threshold](configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
     |[Database Mail XPs](database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
-    |[default full-text language](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1046|  
+    |[default full-text language](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1033|  
     |[idioma padrão](configure-the-default-language-server-configuration-option.md)|0|9999|0|  
     |[default trace enabled](default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
@@ -100,14 +100,14 @@ ms.locfileid: "62809564"
     |[index create memory](configure-the-index-create-memory-server-configuration-option.md) (A, SC)|704|2147483647|0|  
     |[in-doubt xact resolution](in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
     |[lightweight pooling](lightweight-pooling-server-configuration-option.md) (A, RR)|0|1|0|  
-    |[locks](configure-the-locks-server-configuration-option.md) (A, RR, SC)|5000|2147483647|0|  
+    |[locks](configure-the-locks-server-configuration-option.md) (A, RR, SC)|5.000|2147483647|0|  
     |[max degree of parallelism](configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
     |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (Recomendamos 1024 como o máximo para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits e 2048 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits.)|0<br /><br /> Zero configura automaticamente o número máximo de threads de trabalho de acordo com o número de processadores, usando a fórmula (256+( *\<processors>* -4) * 8) para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits e o dobro disso para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits.|  
+    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (Recomendamos 1024 como o máximo para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits e 2048 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits.)|0<br /><br /> Zero configura automaticamente o número máximo de threads de trabalho, dependendo do número de processadores, usando a fórmula (256 + (*\<processadores>* -4) * 8) para 32 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e duas vezes para 64 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |[media retention](configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
-    |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
+    |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1.024|  
     |[min server memory](server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
     |[gatilhos aninhados](configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
     |[network packet size](configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
@@ -137,7 +137,7 @@ ms.locfileid: "62809564"
     |[opções de usuário](configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)  
   

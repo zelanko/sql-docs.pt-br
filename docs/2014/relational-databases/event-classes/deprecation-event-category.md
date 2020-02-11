@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ba973e51a7d3c86b9f1a15075b0a86ac94502cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662841"
 ---
 # <a name="deprecation-event-category"></a>categoria de evento Deprecation
@@ -26,7 +26,7 @@ ms.locfileid: "62662841"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento Deprecation Announcement](deprecation-announcement-event-class.md)|Indica que um recurso será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Classe de evento Deprecation Final Support](deprecation-final-support-event-class.md)|Indica que um recurso será removido na próxima versão principal do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

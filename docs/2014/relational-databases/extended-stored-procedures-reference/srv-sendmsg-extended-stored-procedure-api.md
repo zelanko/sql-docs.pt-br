@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12a7ae2db2d0e1c91e85eeb4a2c2691579c2da70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745547"
 ---
-# <a name="srvsendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API do procedimento armazenado estendido)
+# <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API do procedimento armazenado estendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  Envia uma mensagem ao cliente.  
   
@@ -85,7 +85,7 @@ msglen
  *class*  
  Especifica a gravidade do erro. Uma gravidade menor ou igual a 10 é considerada uma mensagem informativa.  
   
- *state*  
+ *status*  
  Fornece o número do estado de erro para a mensagem atual. O número do estado de erro fornece informações sobre o contexto do erro. Os números de estado válidos variam de 0 a 255.  
   
  *rpcname*  
@@ -97,13 +97,13 @@ msglen
  *linenum*  
  É o número da linha no lote de comando de linguagem onde a mensagem é aplicada. Os números da linha iniciam em 1. Se *linenum* não se aplicar à mensagem, defina-o como 0.  
   
- *message*  
+ *Mensagem*  
  É um ponteiro para a cadeia de caracteres que será enviada ao cliente.  
   
  *msglen*  
  Especifica o tamanho, em bytes, de *message*. Se *message* terminar em nulo, defina *msglen* como SRV_NULLTERM.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SUCCEED ou FAIL  
   
 ## <a name="remarks"></a>Comentários  
@@ -113,9 +113,9 @@ msglen
   
  Para enviar mensagens em Unicode, use **srv_wsendmsg** no lugar de **srv_sendmsg**.  
   
- Para obter mais informações, consulte [Páginas de código do servidor e dados Unicode](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
+ Para obter mais informações [, consulte dados Unicode e páginas de código do servidor](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
->  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

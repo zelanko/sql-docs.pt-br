@@ -1,5 +1,5 @@
 ---
-title: Implantar um aplicativo de caixa de mensagem de exceção | Microsoft Docs
+title: Implantando um aplicativo da caixa de mensagem de exceção | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 162c878c5d39356f08f01c4eb51a0f88e3ed2d45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753253"
 ---
 # <a name="deploying-an-exception-message-box-application"></a>Implantando um aplicativo de caixa de mensagem de exceção
-  A caixa de mensagem de exceção é instalada pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e há suporte para uso em seus aplicativos personalizados do Windows para melhorar a manipulação de exceção. Como a caixa de mensagem de exceção é instalada por todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exceto [!INCLUDE[ssEW](../../includes/ssew-md.md)], você pode usá-lo sem nenhuma configuração adicional em qualquer computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes de cliente, incluindo o SDK, tenham sido instalados.  
+  A caixa de mensagem de exceção é [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada pelo e tem suporte para uso em seus aplicativos personalizados do Windows para melhorar o tratamento de exceção. Como a caixa de mensagem de exceção é instalada por todas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as [!INCLUDE[ssEW](../../includes/ssew-md.md)]edições do, exceto, você pode usá-la sem nenhuma configuração adicional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em qualquer computador em que os componentes cliente, incluindo o SDK, tenham sido instalados.  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de mensagem de exceção de programa](../../../2014/database-engine/dev-guide/program-exception-message-box.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de mensagem de exceção do programa](../../../2014/database-engine/dev-guide/program-exception-message-box.md)   
  [Referência da caixa de mensagem de exceção](../../../2014/database-engine/dev-guide/exception-message-box-reference.md)  
   
   

@@ -16,36 +16,36 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 290f1e5fe7efb876ab6c24004c7465cf109de0d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702228"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>Bloqueando e desbloqueando bancos de dados (XMLA)
-  Você pode bloquear e desbloquear bancos de dados usando, respectivamente, o [bloqueio](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) e [Unlock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) comandos no XML for Analysis (XMLA). Normalmente, outros comandos do XMLA bloqueiam e desbloqueiam objetos automaticamente quando necessário para concluir o comando durante a execução. Explicitamente, você pode bloquear ou desbloquear um banco de dados para executar vários comandos em uma única transação, como um [lote](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) comando, evitando que outros aplicativos confirmem uma transação de gravação ao banco de dados.  
+  Você pode bloquear e desbloquear bancos de dados usando, respectivamente, os comandos [Lock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) e [Unlock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) no XML for Analysis (XMLA). Normalmente, outros comandos do XMLA bloqueiam e desbloqueiam objetos automaticamente quando necessário para concluir o comando durante a execução. Você pode bloquear ou desbloquear explicitamente um banco de dados para executar vários comandos em uma única transação, como um comando de [lote](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) , ao mesmo tempo em que impede que outros aplicativos confirmassem uma transação de gravação no banco de dados.  
   
 ## <a name="locking-databases"></a>Bloqueando bancos de dados  
- O comando `Lock` bloqueia um objeto, para uso compartilhado ou exclusivo, no contexto da transação ativa no momento. Um bloqueio em um objeto impede a confirmação de transações até que o bloqueio seja removido. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte a dois tipos de bloqueios, bloqueios compartilhados e bloqueios exclusivos. Para obter mais informações sobre os tipos de bloqueio com suporte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [elemento Mode &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/mode-element-xmla).  
+ O comando `Lock` bloqueia um objeto, para uso compartilhado ou exclusivo, no contexto da transação ativa no momento. Um bloqueio em um objeto impede a confirmação de transações até que o bloqueio seja removido. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]O  oferece suporte a dois tipos de bloqueios, bloqueios compartilhados e bloqueios exclusivos. Para obter mais informações sobre os tipos de bloqueio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]com suporte no, consulte [elemento Mode &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/mode-element-xmla).  
   
- O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite apenas o bloqueio de bancos de dados. O [objeto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) elemento deve conter uma referência de objeto para um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados. Se o `Object` não for especificado ou se o `Object` elemento se refere a um objeto diferente de um banco de dados, ocorrerá um erro.  
+ O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite apenas o bloqueio de bancos de dados. O elemento [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) deve conter uma referência de objeto a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] um banco de dados. Se o `Object` elemento não for especificado ou se o `Object` elemento se referir a um objeto que não seja um banco de dados, ocorrerá um erro.  
   
 > [!IMPORTANT]  
 >  Apenas administradores de banco de dados ou de servidor podem emitir um comando `Lock` explicitamente.  
   
- Outros comandos emitem um comando `Lock` implicitamente em um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Qualquer operação que lê dados ou metadados de um banco de dados, por exemplo, qualquer [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) método ou uma [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) método executando uma [instrução](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) de comando, emite implicitamente um compartilhado bloqueio no banco de dados. Qualquer transação que confirme alterações em dados ou metadados em um objeto em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados, como um `Execute` método executando um [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) de comando, emite implicitamente um bloqueio exclusivo no banco de dados.  
+ Outros comandos emitem um comando `Lock` implicitamente em um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Qualquer operação que lê dados ou metadados de um banco de dado, como qualquer método [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) ou um método [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) que executa um comando de [instrução](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) , implicitamente emite um bloqueio compartilhado no banco de dados. Qualquer transação que confirme alterações nos dados ou metadados em um objeto em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dado, como um `Execute` método que executa um comando [ALTER](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) , emite implicitamente um bloqueio exclusivo no banco de dados.  
   
 ## <a name="unlocking-objects"></a>Desbloqueando objetos  
  O comando `Unlock` remove um bloqueio estabelecido dentro do contexto da transação ativa no momento.  
   
 > [!IMPORTANT]  
->  Apenas administradores de banco de dados ou servidor podem emitir explicitamente um `Unlock` comando.  
+>  Somente administradores de banco de dados ou administradores de servidor `Unlock` podem emitir um comando explicitamente.  
   
  Todos os bloqueios são mantidos no contexto da transação atual. Quando a transação atual é confirmada ou revertida, todos os bloqueios definidos dentro da transação são liberados automaticamente.  
   
-## <a name="see-also"></a>Consulte também  
- [Bloquear elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)   
- [Desbloquear elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)   
+## <a name="see-also"></a>Consulte Também  
+ [Bloquear o elemento &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)   
+ [Elemento Unlock &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)   
  [Desenvolvendo com XMLA no Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

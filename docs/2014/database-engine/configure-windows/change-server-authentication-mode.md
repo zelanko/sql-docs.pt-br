@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812292"
 ---
 # <a name="change-server-authentication-mode"></a>Alterar modo de autenticação do servidor
@@ -54,11 +54,11 @@ ms.locfileid: "62812292"
   
 3.  Na caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , clique em **OK** para confirmar o requisito para reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-4.  No Pesquisador de Objetos, clique com o botão direito do mouse no servidor e clique em **Reiniciar**. Se o agente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução, ele também deverá ser reiniciado.  
+4.  No Object Explorer, clique com o botão direito do mouse no seu servidor, e em seguida, clique em **Reiniciar**. Se o agente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução, ele também deverá ser reiniciado.  
   
 #### <a name="to-enable-the-sa-login"></a>Para habilitar o logon sa  
   
-1.  No Pesquisador de objetos, expanda **segurança**, expanda logons, clique com botão direito `sa`e, em seguida, clique em **propriedades**.  
+1.  No Pesquisador de objetos, expanda **segurança**, logons, clique `sa`com o botão direito do mouse e clique em **Propriedades**.  
   
 2.  Na página **Geral** , talvez seja necessário criar e confirmar uma senha para o logon.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62812292"
   
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Senhas fortes](../../relational-databases/security/strong-passwords.md)   
  [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   

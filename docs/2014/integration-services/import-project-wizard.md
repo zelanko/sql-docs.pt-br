@@ -1,5 +1,5 @@
 ---
-title: Assistente de projeto de importação | Microsoft Docs
+title: Assistente de importação de projeto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058045"
 ---
 # <a name="import-project-wizard"></a>Assistente para Importação de Projeto
@@ -24,7 +24,7 @@ ms.locfileid: "66058045"
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>Para criar um projeto com base em um projeto em arquivo .ispac ou em catálogo  
   
-1.  Clique em **Arquivo**, aponte para **Novo**e clique em Projeto.  
+1.  Clique em **arquivo**, aponte para **novo**e clique em projeto.  
   
 2.  Expanda **Business Intelligence**e clique em **Integration Services**.  
   
