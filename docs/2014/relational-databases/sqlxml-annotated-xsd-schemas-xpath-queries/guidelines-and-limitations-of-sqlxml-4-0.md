@@ -1,5 +1,5 @@
 ---
-title: Diretrizes e limitações do SQLXML 4.0 | Microsoft Docs
+title: Diretrizes e limitações do SQLXML 4,0 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dec69250a728edbb61805528320670908a0671bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012716"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>Diretrizes e limitações do SQLXML 4.0
@@ -28,6 +28,6 @@ ms.locfileid: "66012716"
   
      Você está executando um aplicativo que usa SQLXML 4.0 e os PROGIDs dependentes de versão, e decide instalar outro programa de software. Esse programa pode instalar uma versão anterior do SQLXML. Seu aplicativo pode falhar, pois os PROGIDS independentes de versão do seu aplicativo agora apontam para a versão mais antiga do SQLXML, o que pode ou não possuir o recurso SQL XML que seu aplicativo está usando.  
   
--   Se por algum motivo você não deseja usar o provedor SQLXMLOLEDB e, em vez disso deseja usar o SQLOLEDB provedor para os recursos do SQLXML, defina as **SQLXML Version** propriedade como "SQLXML.4.0".  
+-   Se, por algum motivo, você não quiser usar o provedor SQLXMLOLEDB e, em vez disso, quiser usar o provedor SQLOLEDB para os recursos do SQLXML, defina a propriedade **versão do SQLXML** como "SQLXML. 4.0".  
   
   

@@ -13,14 +13,14 @@ ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926074"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>Instanciação de evento ADO: Visual Basic
-Para tratar eventos ADO no Microsoft® Visual Basic®, você deve declarar uma variável de nível de módulo usando o **WithEvents** palavra-chave. A variável pode ser declarada somente como parte de um módulo de classe e deve ser declarada no nível de módulo. Isso não é tão restritivo quanto parece, no entanto, como Visual Basic **formulário** objetos também são classes. A maneira mais simples para lidar com eventos ADO é declarar uma variável usando **WithEvents**. A exemplo a seguir identifica os **eventos ConnectComplete** evento para um **Conexão** objeto:  
+Para manipular eventos ADO no Microsoft® Visual Basic®, você deve declarar uma variável em nível de módulo usando a palavra-chave **WithEvents** . A variável só pode ser declarada como parte de um módulo de classe e deve ser declarada no nível do módulo. No entanto, isso não é tão restritivo, porque Visual Basic objetos de **formulário** também são classes. A maneira mais simples de manipular eventos ADO é declarar uma variável usando **WithEvents**. O exemplo a seguir manipula o evento **ConnectComplete** para um objeto de **conexão** :  
   
 ```  
 ' BeginEventExampleVB02  
@@ -65,4 +65,4 @@ End Sub
 ' EndEventExampleVB02  
 ```  
   
- O **Conexão** objeto é declarado na **formulário** nível usando o **WithEvents** palavra-chave para habilitar a manipulação de eventos. O manipulador de eventos Form_Load efetivamente cria o objeto, atribuindo um novo **Conexão** objeto *connEvent* e, em seguida, abre a conexão. Obviamente, um aplicativo real faria mais processamento no manipulador de eventos Form_Load que foi mostrado aqui.
+ O objeto de **conexão** é declarado no nível de **formulário** usando a palavra-chave **WithEvents** para habilitar a manipulação de eventos. O manipulador de eventos de Form_Load, na verdade, cria o objeto atribuindo um novo objeto de **conexão** a *connEvent* e, em seguida, abre a conexão. É claro que um aplicativo real faria mais processamento no manipulador de eventos Form_Load do que é mostrado aqui.
