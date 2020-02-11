@@ -1,5 +1,5 @@
 ---
-title: Chamando um procedimento armazenado como um método em um objeto de Conexão | Microsoft Docs
+title: Chamando um procedimento armazenado como um método em um objeto de conexão | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925894"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Chamar um procedimento armazenado como um método em um objeto Connection
-Você pode chamar um procedimento armazenado como se fosse um método nativo na abertura associada **Conexão** objeto. Isso é semelhante a chamar um comando nomeado na **Conexão** objeto.  
+Você pode chamar um procedimento armazenado como se fosse um método nativo no objeto de **conexão** aberta associado. Isso é semelhante à chamada de um comando nomeado no objeto de **conexão** .  
   
- O exemplo de código do Visual Basic chama um procedimento armazenado no banco de dados de exemplo do Northwind, chamado CustOrdersOrders, que está listado aqui novamente para sua conveniência.  
+ O exemplo de código a seguir Visual Basic chama um procedimento armazenado no banco de dados de exemplo Northwind, chamado CustOrdersOrders, que é listado aqui novamente para sua conveniência.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -34,7 +34,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- O exemplo de código a seguir demonstra como chamar um procedimento armazenado como se fosse um método nativo em um aberto associado **Conexão** objeto.  
+ O exemplo de código a seguir demonstra como chamar um procedimento armazenado como se fosse um método nativo em um objeto de **conexão** aberta associado.  
   
 ```  
 Const DS = "MySQLServer"  
@@ -78,5 +78,5 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

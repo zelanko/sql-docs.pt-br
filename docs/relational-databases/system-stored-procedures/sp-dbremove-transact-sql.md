@@ -18,21 +18,21 @@ ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ea264c48332f6e72a5f26b330e42cfb1e3d3ff8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061247"
 ---
-# <a name="spdbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
+# <a name="sp_dbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Remove um banco de dados e todos os arquivos associados a ele.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] É recomendável que você use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]É recomendável usar [drop Database](../../t-sql/statements/drop-database-transact-sql.md) em vez disso.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,9 +42,9 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'database'` É o nome do banco de dados a ser removido. *banco de dados* está **sysname**, com um valor padrão de NULL.  
+`[ @dbname = ] 'database'`É o nome do banco de dados a ser removido. o *banco de dados* é **sysname**, com um valor padrão de NULL.  
   
-`[ @dropdev = ] 'dropdev'` É um sinalizador fornecido para compatibilidade com versões anteriores e é ignorado atualmente. *dropdev* tem o valor **dropdev**.  
+`[ @dropdev = ] 'dropdev'`É um sinalizador fornecido apenas para compatibilidade com versões anteriores e é ignorado no momento. *dropdev* tem o valor **dropdev**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -62,9 +62,9 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 EXEC sp_dbremove sales;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   

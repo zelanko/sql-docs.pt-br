@@ -27,16 +27,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d9ca444c4e889c68f90abf4cf76c07d1c2d574a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887921"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Células de cubo (Analysis Services - Dados Multidimensionais)
   Um cubo é composto de células, organizadas por grupos de medidas e dimensões. Uma célula representa a interseção lógica exclusiva em um cubo de um membro de toda dimensão no cubo. Por exemplo, o cubo descrito pelo seguinte diagrama contém um grupo de medidas que tem duas medidas, organizadas juntamente com três dimensões chamadas Origem, Rota e Temporal.  
   
- ![Diagrama de cubo identificando uma única célula](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro5.gif "Diagrama de cubo identificando uma única célula")  
+ ![Diagrama de cubo que identifica uma única célula](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro5.gif "Diagrama de cubo que identifica uma única célula")  
   
  A única célula sombreada neste diagrama é a interseção dos seguintes membros:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68887921"
   
  O membro 2º semestre da dimensão Temporal é um membro não folha. Portanto, todos os valores associados a ele devem ser agregação de valores, como mostrado no diagrama a seguir.  
   
- ![células de 3º e 4º trimestre para a 2ª parte do membro](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro6.gif "células de 3º e 4º trimestre para a 2ª parte do membro")  
+ ![Células de terceiro e quarto trimestres para membro da segunda metade](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro6.gif "Células de terceiro e quarto trimestres para membro da segunda metade")  
   
  Presumindo que as agregações para o 3º e 4º trimestres são somas, o valor de célula especificado é 400, que é o total de todas as células folha sombreadas no diagrama anterior. Como o valor da célula é derivado da agregação de outras células, a célula especificada é considerada uma *célula não folha*.  
   
@@ -74,15 +74,15 @@ ms.locfileid: "68887921"
   
  Por exemplo, a estrutura do cubo mostrada no diagrama a seguir é semelhante a outros exemplos neste tópico. Entretanto, nesse exemplo, não há remessas para a África para o terceiro trimestre ou para a Austrália no quarto trimestre. Não há dados na tabela de fatos para oferecer suporte às interseções dessas dimensões e medidas; portanto, as células nessas interseções estão vazias.  
   
- ![Diagrama de cubo identificando células vazias](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro7.gif "Diagrama de cubo identificando células vazias")  
+ ![Diagrama de cubo que identifica células vazias](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro7.gif "Diagrama de cubo que identifica células vazias")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma célula vazia é uma célula que tem qualidades especiais. Como as células vazias podem distorcer os resultados de interjunções, contagens etc., muitas funções MDX oferecem a habilidade de ignorar as células vazias para fins de cálculo. Para obter mais informações, consulte [expressões multidimensionais &#40; MDX &#41; Referência](/sql/mdx/multidimensional-expressions-mdx-reference), e [principais conceitos em MDX &#40; Analysis Services &#41; ](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma célula vazia é uma célula que tem qualidades especiais. Como as células vazias podem distorcer os resultados de interjunções, contagens etc., muitas funções MDX oferecem a habilidade de ignorar as células vazias para fins de cálculo. Para obter mais informações, consulte [expressões multidimensionais &#40;referência mdx&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)e os [principais conceitos em MDX &#40;Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
   
 ## <a name="security"></a>Segurança  
- O acesso a dados de célula é gerenciado no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no nível da função, e pode ser controlado minuciosamente pelo uso de expressões MDX. Para obter mais informações, consulte [conceder acesso personalizado a dimensão de dados &#40; Analysis Services &#41; ](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md), e [conceder acesso personalizado a célula de dados &#40; Analysis Services &#41; ](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
+ O acesso a dados de célula é gerenciado no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no nível da função, e pode ser controlado minuciosamente pelo uso de expressões MDX. Para obter mais informações, consulte [conceder acesso personalizado a dados de dimensão &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)e [conceder acesso personalizado a dados de célula &#40;Analysis Services ](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)&#41;.  
   
-## <a name="see-also"></a>Consulte também  
- [Armazenamento de cubo &#40; Analysis Services - dados multidimensionais &#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#40;de armazenamento de cubos Analysis Services dados multidimensionais&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
  [Agregações e designs de agregação](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

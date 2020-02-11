@@ -1,5 +1,5 @@
 ---
-title: Invocando funções de agregação definida pelo usuário CLR | Microsoft Docs
+title: Invocando funções de agregação definidas pelo usuário CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2019
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028375"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Agregação do CLR definida pelo usuário – Invocação de funções
@@ -30,13 +30,13 @@ ms.locfileid: "68028375"
   
  As seguintes regras adicionais se aplicam:  
   
--   O usuário atual deve ter **EXECUTE** permissão na agregação definida pelo usuário.  
+-   O usuário atual deve ter a permissão **Execute** na agregação definida pelo usuário.  
   
--   Agregações definidas pelo usuário devem ser invocadas usando um nome de duas partes na forma de *udagg_name*.  
+-   As agregações definidas pelo usuário devem ser chamadas usando um nome de duas partes na forma de *schema_name. udagg_name*.  
   
--   O tipo de argumento da agregação definida pelo usuário deve corresponder ou ser implicitamente conversível para o *input_type* de agregação, conforme definido na **CREATE AGGREGATE** instrução.  
+-   O tipo de argumento da agregação definida pelo usuário deve corresponder ou ser implicitamente conversível para o *input_type* da agregação, conforme definido na instrução **Create agregate** .  
   
--   O tipo de retorno da agregação definida pelo usuário deve corresponder a *return_type* na **CREATE AGGREGATE** instrução.  
+-   O tipo de retorno da agregação definida pelo usuário deve corresponder ao *return_type* na instrução **Create agregate** .  
   
 ## <a name="example-1"></a>Exemplo 1  
  O seguinte exemplo é uma função de agregação definida pelo usuário que concatena um conjunto de valores de cadeia de caracteres obtidos de uma coluna em uma tabela:  
@@ -196,7 +196,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Depois de compilar o código em **myagg. dll**, você pode registrar a agregação no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da seguinte maneira:  
+ Depois de compilar o código em **MyAgg. dll**, você pode registrar a agregação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no da seguinte maneira:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -208,7 +208,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  Objetos de banco de dados Visual C++, como funções com valor escalar, que foram compilados com a opção do compilador /clr:pure não têm suporte para execução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Como com a maioria das agregações, a maior parte da lógica está no **Accumulate** método. Aqui, a cadeia de caracteres que é passada como um parâmetro para o **Accumulate** método é acrescentado à **StringBuilder** que foi inicializado no objeto de **Init** método. Supondo que isso não é a primeira vez que o **Accumulate** método foi chamado, uma vírgula também é acrescentada à **StringBuilder** antes do acréscimo de cadeia de caracteres passada. Ao concluir as tarefas computacionais, o **Terminate** método é chamado, que retorna o **StringBuilder** como uma cadeia de caracteres.  
+ Assim como acontece com a maioria das agregações, a maior parte da lógica está no método **Accumulate** . Aqui, a cadeia de caracteres que é passada como um parâmetro para o método **Accumulate** é anexada ao objeto **StringBuilder** que foi inicializado no método **init** . Supondo que essa não seja a primeira vez que o método **Accumulate** foi chamado, uma vírgula também é anexada ao **StringBuilder** antes de acrescentar a cadeia de caracteres passada. Na conclusão das tarefas computacionais, o método **Terminate** é chamado, que retorna o **StringBuilder** como uma cadeia de caracteres.  
   
  Por exemplo, considere uma tabela com o seguinte esquema:  
   
@@ -241,7 +241,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>Exemplo 2  
- O exemplo a seguir mostra uma agregação que tem dois parâmetros na **Accumulate** método.  
+ O exemplo a seguir mostra uma agregação que tem dois parâmetros no método **Accumulate** .  
   
  [C#]  
   
@@ -441,7 +441,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Agregações do CLR definidas pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Agregações CLR definidas pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
   
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760595"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos de dados CLR grandes definidos pelo usuário (ODBC)
@@ -37,7 +37,7 @@ ms.locfileid: "73760595"
   
  A seguinte tabela mostra o mapeamento de tipos de dados em parâmetros e conjuntos de resultados:  
   
-|Tipo de dados do SQL Server|Tipo de dados SQL|Value|  
+|Tipo de dados do SQL Server|Tipo de dados SQL|Valor|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73760595"
   
 |Tipo de dados SQL|Layout de memória|Tipos de dados do C|Valor (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (\*de caracteres não assinados)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (caractere \*não assinado)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Campos do descritor dos parâmetros  
  As informações são retornadas nos campos IPD são as seguintes:  
@@ -115,9 +115,9 @@ ms.locfileid: "73760595"
 |TYPE_NAME|O nome do UDT.|O nome do UDT.|  
 |COLUMN_SIZE|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |BUFFER_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|DECIMAL_DIGITS|NULL|NULL|  
+|DECIMAL_DIGITS|NULO|NULO|  
 |SQL_DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
-|SQL_DATETIME_SUB|NULL|NULL|  
+|SQL_DATETIME_SUB|NULO|NULO|  
 |CHAR_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SS_UDT_CATALOG_NAME|O nome do catálogo que contém o UDT.|O nome do catálogo que contém o UDT.|  
 |SS_UDT_SCHEMA_NAME|O nome do esquema que contém o UDT.|O nome do esquema que contém o UDT.|  
@@ -133,20 +133,20 @@ ms.locfileid: "73760595"
 |Conversão para e de:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Porta|  
-|SQL_C_BINARY|Tem suporte|  
+|SQL_C_BINARY|Suportado|  
 |SQL_C_CHAR|Porta|  
   
- \* dados binários são convertidos em uma cadeia de caracteres hexadecimal.  
+ \*Os dados binários são convertidos em uma cadeia de caracteres hexadecimal.  
   
  As conversões com suporte dos tipos de dados do C para SQL são as seguintes:  
   
 |Conversão para e de:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Porta|  
-|SQL_C_BINARY|Tem suporte|  
+|SQL_C_BINARY|Suportado|  
 |SQL_C_CHAR|Porta|  
   
- \* cadeia de caracteres hexadecimal para conversão de dados binários ocorre.  
+ \*A conversão de cadeia de caracteres hexadecimal para dados binárias ocorre.  
   
 ## <a name="sql_variant-support-for-udts"></a>Suporte SQL_VARIANT para UDTs  
  Não há suporte para UDTs em colunas de SQL_VARIANT.  
@@ -213,7 +213,7 @@ ms.locfileid: "73760595"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Os valores retornados para UDTs são os seguintes:  
   
-|Tipo de dados SQL|Tipo|Subtipo|Comprimento|Precisão|Escala|  
+|Tipo de dados SQL|Type|SubType|Comprimento|Precisão|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -233,7 +233,7 @@ ms.locfileid: "73760595"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Os valores permitidos para UDTs são os seguintes:  
   
-|Tipo de dados SQL|Tipo|Subtipo|Comprimento|Precisão|Escala|  
+|Tipo de dados SQL|Type|SubType|Comprimento|Precisão|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -241,7 +241,7 @@ ms.locfileid: "73760595"
 ### <a name="sqlspecialcolumns"></a>SQLSpecialColumns  
  Os valores retornados para os UDTs das colunas DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH e DECIMAL_DIGITS são os descritos na seção "Metadados de coluna retornados por SQLColumns e SQLProcedureColumns (metadados de catálogo)", anteriormente neste tópico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados CLR grandes definidos pelo usuário](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

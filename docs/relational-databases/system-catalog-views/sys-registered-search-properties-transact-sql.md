@@ -1,5 +1,5 @@
 ---
-title: sys.registered_search_properties (Transact-SQL) | Microsoft Docs
+title: sys. registered_search_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,25 +25,25 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 055e64c743c453fb6362d45587b395bf6f3d77bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067895"
 ---
-# <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
+# <a name="sysregistered_search_properties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contém uma linha para cada propriedade de pesquisa contida por qualquer lista de propriedades de pesquisa no banco de dados atual.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|ID da lista de propriedades de pesquisa à qual esta propriedade pertence.|  
 |**property_set_guid**|**uniqueidentifier**|GUID (identificador global exclusivo) que identifica o conjunto de propriedades ao qual a propriedade de pesquisa pertence.|  
 |**property_int_id**|**int**|Inteiro que identifica esta propriedade de pesquisa dentro do conjunto de propriedades. **property_int_id** é exclusivo dentro do conjunto de propriedades.|  
-|**property_name**|**nvarchar(64)**|Nome que identifica exclusivamente esta propriedade de pesquisa na lista de propriedades de pesquisa.<br /><br /> Observação: Para pesquisar em uma propriedade, especifique o nome da propriedade na [CONTAINS](../../t-sql/queries/contains-transact-sql.md) predicado.|  
+|**property_name**|**nvarchar (64)**|Nome que identifica exclusivamente esta propriedade de pesquisa na lista de propriedades de pesquisa.<br /><br /> Observação: para pesquisar em uma propriedade, especifique esse nome de propriedade no predicado [Contains](../../t-sql/queries/contains-transact-sql.md) .|  
 |**property_description**|**nvarchar(512)**|Descrição da propriedade.|  
-|**property_id**|**int**|ID de propriedade interna da propriedade de pesquisa dentro da lista de propriedade de pesquisa identificada pelo **property_list_id** valor.<br /><br /> Quando uma determinada propriedade é adicionada a uma determinada lista de propriedades de pesquisa, o Mecanismo de Texto Completo registra a propriedade e atribui uma ID de propriedade interna que é específica àquela lista de propriedades a propriedade. A ID de propriedade interna, que é um inteiro, é exclusiva de uma determinada lista de propriedades de pesquisa. Se uma determinada propriedade for registrada para várias listas de propriedades de pesquisa, uma ID de propriedade interna diferente poderá ser atribuída para cada lista de propriedades de pesquisa.<br /><br /> Observação: A ID de propriedade interna é distinta do identificador de inteiro de propriedade que é especificado ao adicionar a propriedade à lista de propriedades de pesquisa. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para exibir conteúdo tudo relacionado à propriedade no índice de texto completo: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
+|**property_id**|**int**|A ID de propriedade interna da propriedade de pesquisa na lista de propriedades de pesquisa identificada pelo valor **property_list_id** .<br /><br /> Quando uma determinada propriedade é adicionada a uma determinada lista de propriedades de pesquisa, o Mecanismo de Texto Completo registra a propriedade e atribui uma ID de propriedade interna que é específica àquela lista de propriedades a propriedade. A ID de propriedade interna, que é um inteiro, é exclusiva de uma determinada lista de propriedades de pesquisa. Se uma determinada propriedade for registrada para várias listas de propriedades de pesquisa, uma ID de propriedade interna diferente poderá ser atribuída para cada lista de propriedades de pesquisa.<br /><br /> Observação: a ID de propriedade interna é distinta do identificador inteiro de propriedade que é especificado ao adicionar a propriedade à lista de propriedades de pesquisa. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para exibir todo o conteúdo relacionado à propriedade no índice de texto completo: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre listas de propriedades de pesquisa, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
@@ -64,9 +64,9 @@ SELECT * FROM sys.registered_search_properties;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
- [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
+ [sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

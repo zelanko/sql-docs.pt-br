@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104099"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar um servidor de relatório para administração remota
@@ -60,9 +60,9 @@ ms.locfileid: "66104099"
   
 ### <a name="to-open-ports-in-windows-firewall"></a>Para abrir portas no Firewall do Windows  
   
-1.  [Configurar um Firewall do Windows para acesso ao mecanismo de banco de dados](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+1.  [Configure um firewall do Windows para acesso mecanismo de banco de dados](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-2.  [Configurar um Firewall para acesso ao servidor de relatório](configure-a-firewall-for-report-server-access.md).  
+2.  [Configure um firewall para acesso ao servidor de relatório](configure-a-firewall-for-report-server-access.md).  
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>Para configurar conexões remotas com o banco de dados do servidor de relatório  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66104099"
   
 2.  Se o servidor de relatório estiver em execução no Windows Vista, clique com o botão direito do mouse em **Prompt de Comando** e selecione **Executar como administrador**. Em outros sistemas operacionais, abra uma janela do prompt de comando.  
   
-3.  Execute o seguinte comando:  
+3.  Execute o comando a seguir:  
   
     ```  
     netsh.exe firewall set service type=REMOTEADMIN mode=ENABLE scope=ALL  
@@ -98,7 +98,7 @@ ms.locfileid: "66104099"
   
 1.  No menu Iniciar, aponte para **Ferramentas Administrativas**e clique em **Serviços de Componentes**.  
   
-     Para o Windows Vista, no menu Iniciar, clique em **todos os programas**, clique em **execute**e, em seguida, insira `mmc comexp.msc`.  
+     Para o Windows Vista, no menu Iniciar, clique em **todos os programas**, clique em **executar**e `mmc comexp.msc`, em seguida, digite.  
   
 2.  Abra a pasta Serviços de Componentes.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66104099"
   
 9. Digite o nome de sua conta de usuário e clique em **OK**.  
   
-10. Em **Permissões para \<Usuário ou Grupo>**, na coluna **Permitir**, selecione **Inicialização Remota** e **Ativação Remota** e, em seguida, clique em **OK**.  
+10. Em **Permissões para \<Usuário ou Grupo>** , na coluna **Permitir**, selecione **Inicialização Remota** e **Ativação Remota** e, em seguida, clique em **OK**.  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Para definir permissões no namespace WMI do servidor de relatório para não administradores  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66104099"
   
 13. Na coluna **Permitir** , selecione **Habilitar Conta**, **Ativação Remota**e **Ler Segurança**e clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

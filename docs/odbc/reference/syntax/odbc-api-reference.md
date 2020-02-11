@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085465"
 ---
 # <a name="odbc-api-reference"></a>Referência de API do ODBC
-Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cada função é definida como uma função de linguagem de programação de C. Descrições incluem o seguinte:  
+Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cada função é definida como uma função de linguagem de programação C. As descrições incluem o seguinte:  
   
 -   Finalidade  
   
 -   Versão do ODBC  
   
--   Nível de conformidade padrão da CLI  
+-   Nível de conformidade da CLI padrão  
   
 -   Sintaxe  
   
@@ -33,20 +33,20 @@ Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cad
   
 -   Valores retornados  
   
--   Diagnóstico  
+-   Diagnósticos  
   
--   Comentários sobre a implementação e uso  
+-   Comentários sobre o uso e a implementação  
   
 -   Exemplo de código  
   
 -   Referências a funções relacionadas  
   
- O nível de conformidade padrão da CLI pode ser uma das seguintes opções: ISO-92, abra o grupo, ODBC, ou preterido. Uma função marcada como em conformidade com ISO 92 também aparece no Open Group versão 1, como Open Group é um superconjunto puro de 92 ISO. Uma função marcada como compatível com o Open grupo também aparece no ODBC 3. *x*, pois o ODBC 3. *x* é um superconjunto puro do Open Group versão 1. Uma função marcada como compatível com ODBC aparece em nenhum padrão. Uma função marcada como preterida foi preterida no ODBC 3. *x*.  
+ O nível de conformidade da CLI padrão pode ser um dos seguintes: ISO 92, Open Group, ODBC ou preterido. Uma função marcada como ISO 92-compatível também aparece no Open Group versão 1, pois Open Group é um superconjunto puro de ISO 92. Uma função marcada como em conformidade com grupo aberto também aparece no ODBC 3. *x*, porque o ODBC 3. *x* é um superconjunto puro do Open Group versão 1. Uma função marcada como em conformidade com ODBC aparece em nenhum padrão. Uma função marcada como preterida foi preterida no ODBC 3. *x*.  
   
- Manipulação de informações de diagnóstico é descrita na [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrição da função. O texto associado a valores SQLSTATE está incluído para fornecer uma descrição da condição, mas não se destina para prescrever um texto específico.  
+ A manipulação de informações de diagnóstico é descrita na descrição da função [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) . O texto associado a valores SQLSTATE está incluído para fornecer uma descrição da condição, mas não se destina a prescrever um texto específico.  
   
 > [!NOTE]  
->  Para obter informações sobre as funções ODBC específicos do driver, consulte a seção do driver.  
+>  Para obter informações específicas do driver sobre funções ODBC, consulte a seção para o driver.  
   
  Esta seção contém tópicos para as seguintes funções:  
   
@@ -154,7 +154,7 @@ Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cad
   
 -   [Função SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)  
   
--   [Função SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)  
+-   [SQLNumParams Função](../../../odbc/reference/syntax/sqlnumparams-function.md)  
   
 -   [Função SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)  
   

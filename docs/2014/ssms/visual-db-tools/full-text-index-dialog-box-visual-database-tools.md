@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028403"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Caixa de diálogo Índice de Texto Completo (Visual Database Tools)
@@ -59,11 +59,11 @@ ms.locfileid: "63028403"
  **Categoria do Designer de Tabelas**  
  Quando expandido, mostra as propriedades que ditam como o índice é executado.  
   
- **Ativa**  
+ **Ativo**  
  Indica se você pode executar uma pesquisa de texto completo usando este índice de texto completo.  
   
  **Definição de Rastreamento de alterações**  
- Descreve o status do controle de alterações deste índice: Manual, automático ou desabilitado.  
+ Descreve o status do controle de alterações para este índice: Manual, Automático ou Desligado.  
   
  **Rastreamento Concluído**  
  Mostra se o rastreamento mais recente foi concluído. Se este valor de propriedade for Não, um rastreamento está em progresso no momento.  
@@ -92,8 +92,8 @@ ms.locfileid: "63028403"
  **Nome do Índice Exclusivo**  
  Exibe uma lista de todos os nomes de colunas neste banco de dados que têm índices de uma única coluna exclusivos. Estas colunas podem ser usadas para criar um índice de texto completo.  
   
-## <a name="see-also"></a>Consulte também  
- [Use o Assistente para indexação de texto completo](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Usar o assistente para indexação de texto completo](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
   

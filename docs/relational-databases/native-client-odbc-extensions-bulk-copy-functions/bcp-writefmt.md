@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 388b51c79681589d3caec2ee3ea03b1ece6ff459
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782339"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
@@ -46,13 +46,13 @@ RETCODE bcp_writefmt (
  *szFormatFile*  
  É o caminho e o nome do arquivo de usuário que receberá valores de formato para o arquivo de dados.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Comentários  
  O arquivo de formato especifica o formato de dados de um arquivo de dados criado por cópia em massa. Chamadas para [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) e [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) definem o formato do arquivo de dados. **bcp_writefmt** salva essa definição no arquivo referenciado por *szFormatFile*. Para obter mais informações, consulte [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
   
- Para obter mais informações sobre a estrutura de arquivos de formato de dados **bcp** , consulte [importar e exportar dados em massa usando &#40;o&#41;utilitário bcp SQL Server](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+ Para obter mais informações sobre a estrutura de arquivos de formato de dados **bcp** , consulte [importar e exportar dados em massa usando o utilitário bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  Para carregar um arquivo de formato salvo, use [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md).  
   
@@ -114,7 +114,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

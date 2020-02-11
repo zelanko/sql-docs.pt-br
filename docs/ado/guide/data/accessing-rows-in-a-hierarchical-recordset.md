@@ -14,24 +14,24 @@ ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926352"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Acessando linhas em um conjunto de registros hierárquico (exemplo)
-O exemplo a seguir mostra as etapas necessárias para linhas de acesso em modo hierárquico [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
+O exemplo a seguir mostra as etapas necessárias para acessar linhas em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)hierárquico:
 
-1.  **Conjunto de registros** objetos de **autores** e **titleauthor** tabelas estão relacionadas pelo ID do autor.
+1.  Os objetos **Recordset** das tabelas **Authors** e **titleauthor** são relacionados por ID de autor.
 
-2.  O loop externo exibe o nome e sobrenome, estado e identificação de cada autor.
+2.  O loop externo exibe o nome e o sobrenome de cada autor, o estado e a identificação.
 
-3.  O acréscimo **conjunto de registros** para cada linha é recuperada do [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção e atribuído à *rstTitleAuthor*.
+3.  O conjunto de **registros** anexado para cada linha é recuperado da coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) e atribuído a *rstTitleAuthor*.
 
-4.  O loop interno exibe quatro campos de cada linha no acréscimo **conjunto de registros**.
+4.  O loop interno exibe quatro campos de cada linha no **conjunto de registros**anexado.
 
- O [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) estiver definida como **falso** para fins de ilustração, para que você possa ver o capítulo alterar explicitamente em cada iteração do loop externo. Para tornar o exemplo de código mais eficiente, você pode mover a atribuição na etapa 3, antes da primeira linha na etapa 2, para que a atribuição seja executada apenas uma vez. Em seguida, defina a [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriedade **verdadeiro**, de modo que *rstTitleAuthor* implicitamente e automaticamente alterará o capítulo correspondente sempre que *rst* move para uma nova linha.
+ A propriedade [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) é definida como **false** para fins de ilustração, para que você possa ver o capítulo ser alterado explicitamente em cada iteração do loop externo. Para tornar o exemplo de código mais eficiente, você pode mover a atribuição na etapa 3 antes da primeira linha na etapa 2, para que a atribuição seja executada apenas uma vez. Em seguida, defina a propriedade [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) como **true**para que o *rstTitleAuthor* seja alterado implicitamente e automaticamente para o capítulo correspondente sempre que *RST* se mover para uma nova linha.
 
 ## <a name="example"></a>Exemplo
 
@@ -67,5 +67,5 @@ Sub datashape()
 End Sub
 ```
 
-## <a name="see-also"></a>Consulte também
- [Visão geral de modelagem de dados](../../../ado/guide/data/data-shaping-overview.md) [objeto Field](../../../ado/reference/ado-api/field-object.md) [(ADO) da coleção de campos](../../../ado/reference/ado-api/fields-collection-ado.md) [gramática de forma Formal](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service para OLE DB (Provedor de serviços do ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [necessários provedores para Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md) [cláusula APPEND de forma](../../../ado/guide/data/shape-append-clause.md) [comandos da forma Gerais](../../../ado/guide/data/shape-commands-in-general.md) [cláusula COMPUTE de forma](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic para funções de aplicativos](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+## <a name="see-also"></a>Consulte Também
+ Definição de campos de [objeto de campo](../../../ado/reference/ado-api/field-object.md) de [visão geral de data Shaping](../../../ado/guide/data/data-shaping-overview.md) [(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [gramática forma formal](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service for OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) (ADO) [requerido Providers for Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md) [Shape Append](../../../ado/guide/data/shape-append-clause.md) function [Commands na](../../../ado/guide/data/shape-commands-in-general.md) [cláusula COMPUTE de forma](../../../ado/guide/data/shape-compute-clause.md) geral [Visual Basic for Applications funções](../../../ado/guide/data/visual-basic-for-applications-functions.md)

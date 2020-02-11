@@ -1,5 +1,5 @@
 ---
-title: Algoritmo associação da Microsoft | Microsoft Docs
+title: Algoritmo de associação da Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -31,18 +31,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a799f5a8aef79dec7cb951e95e6f252b3be2626
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084065"
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo Associação da Microsoft
-  O algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de associação fornecido pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que é útil para mecanismos de recomendação. Um mecanismo de recomendação recomenda produtos aos clientes com base nos itens que eles já compraram ou pelos quais mostraram interesse. O algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] também é útil para análise da cesta básica. Para obter um exemplo de uma análise da cesta de compras, consulte [lição 3: Criando um cenário de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) no Tutorial de mineração de dados.  
+  O algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de associação fornecido pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que é útil para mecanismos de recomendação. Um mecanismo de recomendação recomenda produtos aos clientes com base nos itens que eles já compraram ou pelos quais mostraram interesse. O algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] também é útil para análise da cesta básica. Para obter um exemplo de análise de cesta de compras, consulte [lição 3: Criando um cenário de cesta de mercado &#40;tutorial de mineração de dados intermediário&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) no tutorial de mineração de dados.  
   
  Modelos de associação são criados a partir de conjuntos de dados que contêm identificadores de casos individuais e de itens contidos em casos. Um grupo de itens em um caso é chamado de *conjunto de itens*. Um modelo de associação é formado por uma série de conjuntos de itens e regras que descrevem como esses itens são agrupados nos casos. As regras que o algoritmo identificar podem ser usadas para prever as prováveis compras futuras do cliente com base nos itens já existentes em seu carrinho de compras. O diagrama a seguir mostra uma série de regras em um conjunto de itens.  
   
- ![Um conjunto de regras para um modelo de associação](../media/association.gif "um conjunto de regras para um modelo de associação")  
+ ![Um conjunto de regras para um modelo de associação](../media/association.gif "Um conjunto de regras para um modelo de associação")  
   
  Como ilustra o diagrama, o algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] pode potencialmente localizar muitas regras em um conjunto de dados. O algoritmo usa dois parâmetros, suporte e probabilidade, para descrever os conjuntos de itens e as regras que gera. Por exemplo, se X e Y representassem dois itens que poderiam estar em um carrinho de compras, o parâmetro de suporte seria o número de casos no conjunto de dados que contém a combinação dos itens X e Y. Ao usar o parâmetro de suporte em combinação com os parâmetros definidos pelo usuário, *MINIMUM_SUPPORT* e *MAXIMUM_SUPPORT* , o algoritmo controla o número de conjuntos de itens gerados. O parâmetro de probabilidade, também chamado de *confiança*, representa a fração de casos no conjunto de dados que contém X e que também contém Y. Ao usar o parâmetro de probabilidade combinado com o parâmetro *MINIMUM_PROBABILITY* , o algoritmo controla o número de regras geradas.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66084065"
   
  Os requisitos de um modelo de regras de associação são:  
   
--   **Uma única coluna de chave** Cada modelo deve conter uma coluna de texto ou numérica que identifique unicamente cada registro. Não são permitidas chaves compostas.  
+-   **Uma única coluna de chave** Cada modelo deve conter uma coluna numérica ou de texto que identifique exclusivamente cada registro. Não são permitidas chaves compostas.  
   
 -   **Uma única coluna previsível** Um modelo de associação pode ter apenas uma coluna previsível. Geralmente, é a coluna de chave da tabela aninhada, como aquela arquivada, que lista os produtos que foram comprados. Os valores devem ser discretos ou diferenciados.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66084065"
 ## <a name="viewing-an-association-model"></a>Exibindo um modelo de associação  
  Para explorar o modelo, você pode usar o **Visualizador de Associação da Microsoft**. Quando você exibir um modelo de associação, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apresentará as correlações de ângulos diferentes para que você possa entender melhor as relações e as regras encontradas nos dados. O painel **Conjunto de Itens** do visualizador fornece uma análise detalhada das combinações, ou conjuntos de itens, mais comuns. O painel **Regras** apresenta uma lista de regras que foram generalizadas por meio dos dados, adiciona cálculos de probabilidade e classifica as regras por importância relativa. Com o Visualizador de Rede de Dependências, você pode explorar como se conectam itens diferentes. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Cluster da Microsoft](browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Para obter mais detalhes sobre qualquer dos conjuntos de itens ou das regras, você pode navegar pelo modelo no [Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). O conteúdo armazenado para o modelo inclui o suporte para cada conjunto de itens, uma pontuação para cada regra e outras estatísticas. Para obter mais informações, consulte [Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ Para obter mais detalhes sobre qualquer dos conjuntos de itens ou das regras, você pode navegar pelo modelo no [Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). O conteúdo armazenado para o modelo inclui o suporte para cada conjunto de itens, uma pontuação para cada regra e outras estatísticas. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de associação &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Criando previsões  
  Depois de processado o modelo, você pode usar as regras e os conjuntos de itens para fazer previsões. Em um modelo de associação, uma previsão indica qual item deveria aparecer mediante a presença do item especificado, além de poder incluir informações como probabilidade, suporte ou importância. Para obter exemplos de como criar consultas em um modelo de associação, consulte [Exemplos de consulta de um modelo associação](association-model-query-examples.md).  
@@ -78,7 +78,7 @@ ms.locfileid: "66084065"
  Para obter informações gerais sobre como criar uma consulta com base em um modelo de mineração de dados, consulte [Consultas de mineração de dados](data-mining-queries.md).  
   
 ## <a name="performance"></a>Desempenho  
- O processo de criação de conjuntos de itens e de contagem de correlações pode ser demorado. Embora o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo regras de associação usa técnicas de otimização para economizar espaço e acelerar o processamento, você deve saber que podem ocorrer problemas de desempenho sob as seguintes condições:  
+ O processo de criação de conjuntos de itens e de contagem de correlações pode ser demorado. Embora o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo regras de associação Use técnicas de otimização para economizar espaço e tornar o processamento mais rápido, você deve saber que problemas de desempenho podem ocorrer em condições como as seguintes:  
   
 -   O conjunto de dados é grande, com muitos itens individuais.  
   
@@ -96,10 +96,10 @@ ms.locfileid: "66084065"
   
 -   Suporta a criação de dimensões de mineração de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Procurar um modelo usando o Visualizador de Regras de Associação da Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Conteúdo do modelo de mineração para modelos de associação &#40; Analysis Services – mineração de dados &#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Procurar um modelo usando o Visualizador de regras de associação da Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Conteúdo do modelo de mineração para modelos de associação &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Referência técnica do algoritmo de associação da Microsoft](microsoft-association-algorithm-technical-reference.md)   
  [Exemplos de consulta de um modelo de associação](association-model-query-examples.md)  
   

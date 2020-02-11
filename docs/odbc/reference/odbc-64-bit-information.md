@@ -1,5 +1,5 @@
 ---
-title: Informações de 64 bits do ODBC | Microsoft Docs
+title: Informações de ODBC 64-bit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9ead25f93ff16d453923be437dfacd7572c09f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937974"
 ---
 # <a name="odbc-64-bit-information"></a>Informações de 64 bits do ODBC
-Começando com o Windows Server 2003, sistemas operacionais da Microsoft têm suporte para as bibliotecas ODBC de 64 bits. Os cabeçalhos ODBC e bibliotecas fornecidas inicialmente com o SDK do MDAC 2.7 contêm alterações para permitir que os programadores a escrever facilmente código para novas plataformas de 64 bits. Ao garantir que seu código usa os tipos ODBC definido listados abaixo, você pode compilar o código-fonte mesmo tanto para plataformas de 64 bits e 32 bits com base nas **_WIN64** ou **WIN32** macros.  
+A partir do Windows Server 2003, os sistemas operacionais da Microsoft têm suporte para as bibliotecas ODBC de 64 bits. Os cabeçalhos e bibliotecas ODBC fornecidos pela primeira vez com o SDK do MDAC 2,7 contêm alterações para permitir que os programadores gravem facilmente o código para as novas plataformas de 64 bits. Ao garantir que seu código use os tipos de ODBC definidos listados abaixo, você pode compilar o mesmo código-fonte para plataformas de 64 bits e 32 bits com base nas macros **_WIN64** ou **Win32** .  
   
- Há vários pontos para ter em mente ao programar para um processador de 64 bits:  
+ Há vários pontos a ter em mente ao programar para um processador de 64 bits:  
   
--   Embora o tamanho de um ponteiro foi alterado de 4 bytes para 8 bytes, inteiros e longos ainda são valores de 4 bytes. Os tipos **INT64** e **UINT64** foram definidas para inteiros de 8 bytes. Os novos tipos ODBC **SQLLEN** e **SQLULEN** são definidos no arquivo de cabeçalho ODBC como **INT64** e **UINT64** quando **_WIN64**  foi definido.  
+-   Embora o tamanho de um ponteiro tenha mudado de 4 bytes para 8 bytes, inteiros e longos ainda são valores de 4 bytes. Os tipos **Int64** e **UINT64** foram definidos para números inteiros de 8 bytes. Os novos tipos de ODBC **SQLLEN** e **SQLULEN** são definidos no arquivo de cabeçalho ODBC como **Int64** e **UINT64** quando **_WIN64** foi definido.  
   
--   Várias funções de ODBC são declaradas como colocar um parâmetro de ponteiro. No ODBC de 32 bits, os parâmetros definidos como ponteiros foram usados com frequência para passar um valor inteiro ou um ponteiro para um buffer, dependendo do contexto da chamada. Isso era, claro, possível devido ao fato de que os ponteiros e inteiros tiveram o mesmo tamanho. No Windows de 64 bits, isso não é o caso.  
+-   Várias funções no ODBC são declaradas como pegar um parâmetro de ponteiro. No ODBC de 32 bits, os parâmetros definidos como ponteiros eram frequentemente usados para passar um valor inteiro ou um ponteiro para um buffer, dependendo do contexto da chamada. Isso, é claro, possível devido ao fato de que ponteiros e inteiros tinham o mesmo tamanho. No Windows de 64 bits, esse não é o caso.  
   
--   Algumas funções ODBC que anteriormente foram definidas com **sqlinteger que contém** e **SQLUINTEGER** parâmetros foram alterados onde for apropriado para usar o novo **SQLLEN** e  **SQLULEN** definições de tipo. Essas alterações são listadas na próxima seção, alterações de declaração de função.  
+-   Algumas funções ODBC definidas anteriormente com os parâmetros **SQLINTEGER** e **SQLUINTEGER** foram alteradas quando apropriado para usar os novos TYPEDEFs **SQLLEN** e **SQLULEN** . Essas alterações são listadas na próxima seção, alterações de declaração de função.  
   
--   Alguns dos campos de descritor que podem ser definidos por meio dos vários **SQLSet** e **SQLGet** funções foram alteradas para acomodar os valores de 64 bits, enquanto outros são valores ainda de 32 bits. Certifique-se de que você use a variável de tamanho apropriada ao definir e recuperar esses campos. As especificações de descritor de quais campos foram alterados estão listadas em alterações de declaração de função.  
+-   Alguns dos campos de descritores que podem ser definidos por meio das várias funções **SQLSet** e **SQLGet** foram alterados para acomodar valores de 64 bits, enquanto outros ainda são valores de 32 bits. Certifique-se de usar a variável de tamanho apropriada ao definir e recuperar esses campos. As especificidades de quais campos de descritores foram alterados são listadas em alterações de declaração de função.  
   
 ## <a name="function-declaration-changes"></a>Alterações de declaração de função  
- As assinaturas de função a seguir foram alterados para programação de 64 bits. Os itens em negrito são os parâmetros específicos que são diferentes.  
+ As assinaturas de função a seguir foram alteradas para a programação de 64 bits. Os itens em negrito são os parâmetros específicos que são diferentes.  
   
 ```cpp
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
@@ -112,7 +112,7 @@ SQLSetStmtOption (SQLHSTMT StatementHandle, SQLUSMALLINT Option,
 ```  
   
 ## <a name="changes-in-sql-data-types"></a>Alterações nos tipos de dados SQL  
- Ainda há suporte para os quatro tipos SQL a seguir em 32 bits. eles não são definidos para os compiladores de 64 bits. Esses tipos não são mais usados para todos os parâmetros no MDAC 2.7; uso desses tipos causará falhas de compilador em plataformas de 64 bits.  
+ Os quatro tipos SQL a seguir ainda têm suporte em apenas 32 bits; Eles não são definidos para compiladores de 64 bits. Esses tipos não são mais usados para parâmetros no MDAC 2,7; o uso desses tipos causará falhas de compilador em plataformas de 64 bits.  
   
 ```cpp
 #ifdef WIN32   
@@ -123,7 +123,7 @@ typedef SQLLEN SQLROWOFFSET;
 #endif  
 ```  
   
- A definição de SQLSETPOSIROW foi alterada para compiladores de 32 bits e 64 bits:  
+ A definição de SQLSETPOSIROW foi alterada para os compiladores de 32 bits e de 64 bits:  
   
 ```cpp
 #ifdef _WIN64   
@@ -133,7 +133,7 @@ typedef UINT64 SQLSETPOSIROW;
 #endif  
 ```  
   
- As definições de SQLLEN e SQLULEN foram alterados para compiladores de 64 bits:  
+ As definições de SQLLEN e SQLULEN foram alteradas para compiladores de 64 bits:  
   
 ```cpp
 #ifdef _WIN64   
@@ -145,7 +145,7 @@ typedef UINT64 SQLULEN;
 #endif  
 ```  
   
- Embora SQL_C_BOOKMARK foi preterido no ODBC 3.0, os compiladores de 64 bits em 2.0 clientes, esse valor foi alterado:  
+ Embora SQL_C_BOOKMARK seja preterida no ODBC 3,0, para compiladores de 64 bits em clientes 2,0, esse valor foi alterado:  
   
 ```cpp
 #ifdef _WIN64   
@@ -155,18 +155,18 @@ typedef UINT64 SQLULEN;
 #endif  
 ```  
   
- O tipo de INDICADOR é definido de forma diferente nos cabeçalhos de mais recentes:  
+ O tipo de indicador é definido de forma diferente nos cabeçalhos mais recentes:  
   
 ```cpp
 typedef SQLULEN BOOKMARK;  
 ```  
   
-## <a name="values-returned-from-odbc-api-calls-through-pointers"></a>Valores retornados de chamadas à API ODBC por meio de ponteiros  
- As seguintes chamadas de função ODBC levam como um parâmetro de entrada um ponteiro para um buffer no qual os dados são retornados do driver. O contexto e o significado dos dados retornados é determinado por outros parâmetros de entrada para as funções. Em alguns casos, esses métodos agora podem retornar valores de 64 bits (inteiro de 8 bytes) em vez dos valores de inteiro típicos de (4 bytes) de 32 bits. Esses casos são da seguinte maneira:  
+## <a name="values-returned-from-odbc-api-calls-through-pointers"></a>Valores retornados de chamadas da API do ODBC por meio de ponteiros  
+ As chamadas de função ODBC a seguir assumem como um parâmetro de entrada um ponteiro para um buffer no qual os dados são retornados do driver. O contexto e o significado dos dados retornados são determinados por outros parâmetros de entrada para as funções. Em alguns casos, esses métodos agora podem retornar valores de 64 bits (números inteiros de 8 bytes) em vez dos valores inteiros típicos de 32 bits (4 bytes). Esses casos são os seguintes:  
   
  **SQLColAttribute**  
   
- Quando o *FieldIdentifier* parâmetro tem um dos valores a seguir, um valor de 64 bits é retornado em **NumericAttribute*:  
+ Quando o parâmetro *FieldIdentifier* tem um dos valores a seguir, um valor de 64 bits é retornado em **numericattribute*:  
   
  SQL_DESC_AUTO_UNIQUE_VALUE  
   
@@ -204,7 +204,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLColAttributes**  
   
- Quando o *fDescType* parâmetro tem um dos valores a seguir, um valor de 64 bits é retornado em **pfDesc*:  
+ Quando o parâmetro *fDescType* tiver um dos valores a seguir, um valor de 64 bits será retornado em **pfDesc*:  
   
  SQL_COLUMN_COUNT  
   
@@ -228,7 +228,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetConnectAttr**  
   
- Quando o *atributo* parâmetro tem um dos valores a seguir, um valor de 64 bits é retornado na *valor*:  
+ Quando o parâmetro de *atributo* tem um dos valores a seguir, um valor de 64 bits é retornado no *valor*:  
   
  SQL_ATTR_ASYNC_ENABLE  
   
@@ -240,13 +240,13 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetConnectOption**  
   
- Quando o *atributo* parâmetro tem um dos valores a seguir, um valor de 64 bits é retornado na *valor*:  
+ Quando o parâmetro de *atributo* tem um dos valores a seguir, um valor de 64 bits é retornado no *valor*:  
   
  SQL_ATTR_QUIET_MODE  
   
  **SQLGetDescField**  
   
- Quando o *FieldIdentifier* parâmetro tem um dos valores a seguir, um valor de 64 bits é retornado em **ValuePtr*:  
+ Quando o parâmetro *FieldIdentifier* tiver um dos valores a seguir, um valor de 64 bits será retornado em **ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -270,7 +270,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetDiagField**  
   
- Quando o *DiagIdentifier* parâmetro tem um dos valores a seguir, um valor de 64 bits é retornado em **DiagInfoPtr*:  
+ Quando o parâmetro *DiagIdentifier* tiver um dos valores a seguir, um valor de 64 bits será retornado em **DiagInfoPtr*:  
   
  SQL_DIAG_CURSOR_ROW_COUNT  
   
@@ -280,7 +280,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetInfo**  
   
- Quando o *tipo de informação* parâmetro tem um dos valores a seguir, um valor de 64 bits é retornado em **InfoValuePtr*:  
+ Quando o parâmetro *InfoType* tem um dos valores a seguir, um valor de 64 bits é retornado em **InfoValuePtr*:  
   
  SQL_DRIVER_HDBC  
   
@@ -288,7 +288,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_DRIVER_HLIB  
   
- Quando *tipo de informação* tenha qualquer um dos seguintes 2 valores **InfoValuePtr* é 64 bits na entrada e saída:  
+ Quando o *InfoType* tem um dos dois valores a seguir, **InfoValuePtr* é 64 bits na entrada e na saída:  
   
  SQL_DRIVER_HDESC  
   
@@ -296,7 +296,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetStmtAttr**  
   
- Quando o *atributo* parâmetro tem um dos valores a seguir, um valor de 64 bits é retornado em **ValuePtr*:  
+ Quando o parâmetro de *atributo* tem um dos valores a seguir, um valor de 64 bits é retornado em **ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -364,7 +364,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetStmtOption**  
   
- Quando o *opção* parâmetro tem um dos valores a seguir, um valor de 64 bits é retornado em **valor*:  
+ Quando o parâmetro de *opção* tem um dos valores a seguir, um valor de 64 bits é retornado em **valor*:  
   
  SQL_KEYSET_SIZE  
   
@@ -376,7 +376,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetConnectAttr**  
   
- Quando o *atributo* parâmetro tem um dos valores a seguir, um valor de 64 bits é transmitido *valor*:  
+ Quando o parâmetro de *atributo* tem um dos valores a seguir, um valor de 64 bits é passado no *valor*:  
   
  SQL_ATTR_ASYNC_ENABLE  
   
@@ -388,13 +388,13 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetConnectOption**  
   
- Quando o *atributo* parâmetro tem um dos valores a seguir, um valor de 64 bits é transmitido *valor*:  
+ Quando o parâmetro de *atributo* tem um dos valores a seguir, um valor de 64 bits é passado no *valor*:  
   
  SQL_ATTR_QUIET_MODE  
   
  **SQLSetDescField**  
   
- Quando o *FieldIdentifier* parâmetro tem um dos valores a seguir, um valor de 64 bits é transmitido *ValuePtr*:  
+ Quando o parâmetro *FieldIdentifier* tiver um dos valores a seguir, um valor de 64 bits será passado em *ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -418,7 +418,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtAttr**  
   
- Quando o *atributo* parâmetro tem um dos valores a seguir, um valor de 64 bits é transmitido *ValuePtr*:  
+ Quando o parâmetro de *atributo* tem um dos valores a seguir, um valor de 64 bits é passado em *ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -486,7 +486,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- Quando o *opção* parâmetro tem um dos valores a seguir, um valor de 64 bits é transmitido *valor*:  
+ Quando o parâmetro de *opção* tem um dos valores a seguir, um valor de 64 bits é passado no *valor*:  
   
  SQL_KEYSET_SIZE  
   
@@ -496,5 +496,5 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Introdução ao ODBC](../../odbc/reference/introduction-to-odbc.md)

@@ -15,14 +15,15 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ae18ecad34fa3c172e3ed25439f4bb6d8c42c23
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892191"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>Interface do usuário do Designer de Consulta do SAP NetWeaver BI (Construtor de Relatórios)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um designer de consultas gráficas para criar consultas MDX para uma fonte de dados do SAP NetWeaver® Business Intelligence. O designer de consulta gráfica MDX tem dois modos: Modo de design e modo de consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um InfoCube, MultiProvider ou consulta habilitada para Web definida na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
+  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um designer de consultas gráficas para criar consultas MDX para uma fonte de dados do SAP NetWeaver® Business Intelligence. O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um InfoCube, MultiProvider ou consulta habilitada para Web definida na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
   
 > [!IMPORTANT]  
 >  Os usuários acessam fontes de dados quando criam e executam consultas. Você deve conceder permissões mínimas nas fontes de dados, como permissões somente leitura.  
@@ -32,7 +33,7 @@ ms.locfileid: "68892191"
 ## <a name="graphical-query-designer-in-design-mode"></a>Designer de Consultas Gráficas no modo Design  
  Quando você edita uma consulta de um conjunto de dados que usa uma fonte de dados do [!INCLUDE[SAP_DPE_BW_1](../includes/sap-dpe-bw-1-md.md)] , o designer de consultas gráficas é aberto no modo Design.  
   
- ![Designer de Consultas usando MDX no modo de Design](media/rsqd-dssapbw-mdx-designmode.gif "Designer de Consultas usando MDX no modo de Design")  
+ ![Designer de Consulta usando MDX no Modo Design](media/rsqd-dssapbw-mdx-designmode.gif "Designer de Consulta usando MDX no Modo Design")  
   
  A tabela a seguir lista os painéis neste modo.  
   
@@ -48,26 +49,26 @@ ms.locfileid: "68892191"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Barra de ferramentas do Designer de Consultas Gráficas na barra de ferramentas do modo Design  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas MDX por meio da interface gráfica. A tabela a seguir descreve os botões e as respectivas funções.  
   
-|Botão|Descrição|  
+|Botão|DESCRIÇÃO|  
 |------------|-----------------|  
-|**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Não disponível para esse tipo de fonte de dados.|  
-|**Importarar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos.|  
+|**Editar como texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Não disponível para esse tipo de fonte de dados.|  
+|**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos.|  
 |![Atualizar campos de conjunto de dados](media/rsqdicon-refreshfields.gif "Atualizar campos de conjunto de dados")|Atualiza metadados na fonte de dados.|  
-|![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
+|![Adicionar Membro Calculado](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Adicionar Membro Calculado")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
 |![Alternar para mostrar células vazias](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias")|Alterna entre mostrar ou não células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
 |![Executar a consulta automaticamente](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado toda vez que é feita uma alteração, por exemplo, excluindo uma coluna no painel Dados. Os resultados são mostrados no painel Dados.|  
-|![Excluir](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
+|![Delete (excluir)](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
 |![Ícone da caixa de diálogo Parâmetros de Consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Ícone da caixa de diálogo Parâmetros de Consulta")|Exiba a caixa de diálogo **Variáveis** . Esse botão é habilitado somente quando o cubo selecionado é um cubo de Consulta (porque somente os cubos de consulta oferecem suporte a variáveis). Quando você atribui um valor padrão a uma variável, um parâmetro de relatório correspondente é criado.|  
 |![Executar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  
 |![Cancelar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Cancelar a consulta")|Cancela a consulta.|  
-|![Alternar para o modo de Design](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Alternar para o modo de Design")|Alterna entre o modo Design e o modo Consulta.|  
+|![Alternar para o modo de design](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Alterna para o modo de design")|Alterna entre o modo Design e o modo Consulta.|  
   
 ## <a name="graphical-query-designer-in-query-mode"></a>Designer de consultas gráficas no modo Consulta  
  Para alterar o designer de consultas gráficas para o modo Consulta, clique no botão de alternância **Modo Design** na barra de ferramentas.  
   
  A figura a seguir indica as partes do designer de consulta no modo Consulta.  
   
- ![Designer de consultas MDX do SAP BW na exibição de consulta](media/rsqd-dssapbw-mdx-querymode.gif "Designer de consultas MDX do SAP BW na exibição de consulta")  
+ ![Designer de consulta SAP BW MDX na exibição de consulta](media/rsqd-dssapbw-mdx-querymode.gif "Designer de consulta SAP BW MDX na exibição de consulta")  
   
  A tabela a seguir descreve a função de cada painel.  
   
@@ -88,17 +89,17 @@ ms.locfileid: "68892191"
 ### <a name="toolbar-for-the-graphical-query-designer-in-query-mode"></a>Barra de ferramentas do Designer de Consultas Gráficas no modo Consulta  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas MDX por meio da interface gráfica. Os botões da barra de ferramentas são idênticos nos modos Design e Consulta, mas os botões a seguir não estão ativados no modo Consulta:  
   
--   **Editar como Texto**  
+-   **Editar como texto**  
   
--   **Adicionar Membro Calculado** (![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Adicionar membro calculado** (![Adicionar membro calculado](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Adicionar Membro Calculado"))  
   
--   **Mostrar Células Vazias** (![Alternar para mostrar células vazias](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
+-   **Mostrar células vazias** (![alternar para mostrar células vazias](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
   
--   **Executar automaticamente** (![Executar a consulta automaticamente](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente"))  
+-   **Executar** automaticamente (![executar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")automaticamente)  
   
--   **Excluir** (![Excluir](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Excluir"))  
+-   **Excluir** (![excluir](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Excluir"))  
   
-## <a name="see-also"></a>Consulte também  
- [Designers de Consultas &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Designers de consulta &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
   
   

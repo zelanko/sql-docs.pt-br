@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a9a93c9c6efdd5a864b5ab3ce0beacb7cbf1632
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049613"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>Alterar o endereço IP de uma instância do cluster de failover
@@ -28,15 +28,15 @@ ms.locfileid: "63049613"
 -   **Antes de começar:**  [Segurança](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
- Antes de começar, examine o seguinte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tópico dos Manuais Online: [Before Installing Failover Clustering](../install/before-installing-failover-clustering.md).  
+ Antes de começar, examine o seguinte tópico dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : [Antes de instalar o Clustering de Failover](../install/before-installing-failover-clustering.md).  
   
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
  Para manter ou atualizar uma FCI, você deve ser um administrador local com permissão para fazer logon como um serviço em todos os nós da FCI.  
   
-##  <a name="WSFC"></a> Usando o snap-in Gerenciador de Cluster de Failover  
- **Para alterar o recurso de endereço IP para uma FCI**  
+##  <a name="WSFC"></a>Usando o snap-in Gerenciador de Cluster de Failover  
+ **Para alterar o recurso de endereço IP para um FCI**  
   
 1.  Abra o snap-in Gerenciador de Cluster de Failover.  
   

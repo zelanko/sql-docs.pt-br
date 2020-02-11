@@ -13,10 +13,10 @@ ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 870341b6ae6a3ffbda345aa7a0abc4a2fe253ac5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728933"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Inverter uma transação (Master Data Services)
@@ -47,9 +47,9 @@ ms.locfileid: "73728933"
   
 7.  Na caixa de diálogo de confirmação, clique em **OK**. Outra transação é adicionada à grade para registrar a transação invertida.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transações &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)   
  [Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
- [Reverter HISTÓRICO DE REVISÕES DO MEMBRO](../master-data-services/rollback-member-revision-history-master-data-services.md)
+ [Reverter Histórico de Revisões do Membro](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   

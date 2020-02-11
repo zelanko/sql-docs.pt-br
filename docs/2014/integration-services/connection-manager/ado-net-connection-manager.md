@@ -15,25 +15,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97a0690775b7b6d95a257bc5f5ed0a6483e1c24a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833858"
 ---
 # <a name="adonet-connection-manager"></a>Gerenciador de conexões ADO.NET
-  Um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permite que um pacote acesse fontes de dados usando um provedor .NET. Esse gerenciador de conexões é geralmente usado para acessar fontes de dados como do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e também fontes de dados exibidas pelo OLE DB e XML em tarefas personalizadas, gravadas em códigos gerenciados e usando uma linguagem C#.  
+  Um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permite que um pacote acesse fontes de dados usando um provedor .NET. Esse gerenciador de conexões normalmente é usado para acessar fontes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de dados, como e também fontes de dados expostas por meio de OLE DB e XML em tarefas personalizadas que são escritas em código gerenciado usando uma linguagem como C#.  
   
- Quando você adiciona uma [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexão a um pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão manager é resolvido como um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] conexão em tempo de execução, define propriedades do Gerenciador da conexão e adiciona o Gerenciador de conexão o `Connections` coleção do pacote.  
+ Quando você adiciona um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexões a um pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o cria um Gerenciador de conexões que é [!INCLUDE[vstecado](../../includes/vstecado-md.md)] resolvido como uma conexão em tempo de execução, define as propriedades do Gerenciador de conexões e adiciona `Connections` o Gerenciador de conexões à coleção no pacote.  
   
  A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `ADO.NET`. O valor de `ConnectionManagerType` está qualificado para incluir o nome do provedor .NET usado pelo gerenciador de conexões.  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>Solução de problemas do gerenciador de conexões ADO.NET  
- Você pode registrar as chamadas que o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] faz a provedores de dados externos. Você pode usar esse recurso de registro para solucionar problemas de conexões que o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] faz com fontes de dados externas. Para registrar as chamadas que o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] faz aos provedores de dados externos, habilite o registro do pacote e selecione o evento **Diagnóstico** no nível de pacote. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Você pode registrar as chamadas que o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] faz a provedores de dados externos. Você pode usar esse recurso de registro para solucionar problemas de conexões que o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] faz com fontes de dados externas. Para registrar as chamadas que o [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexões faz aos provedores de dados externos, habilite o log de pacote e selecione o evento de **diagnóstico** no nível do pacote. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
  Ao serem lidos por um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , os dados de certos tipos de dados de data do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vão gerar os resultados mostrados na tabela a seguir.  
   
-|Tipo de dados do SQL Server|Resultado|  
+|Tipo de dados do SQL Server|Result|  
 |--------------------------|------------|  
 |`time`, `datetimeoffset`|O pacote apresentará erros, a menos que use comandos com parâmetros SQL. Para utilizar comandos SQL parametrizados, use a tarefa Executar SQL em seu pacote. Para obter mais informações, consulte [Tarefa Executar SQL](../control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](../parameters-and-return-codes-in-the-execute-sql-task.md).|  
 |`datetime2`|O gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] trunca o valor de milissegundo.|  
@@ -62,7 +62,7 @@ ms.locfileid: "62833858"
   
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conexões do SSIS &#40;Integration Services&#41;](integration-services-ssis-connections.md)  
   
   

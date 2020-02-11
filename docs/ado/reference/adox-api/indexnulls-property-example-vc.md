@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6b6a51a16abf767924ee83e93016743693a9f335
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e119dba2a24df76a918e87a6a5a28d66e381400
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965966"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929427"
 ---
 # <a name="indexnulls-property-example-vc"></a>Exemplo da propriedade IndexNulls (VC++)
-Este exemplo demonstra a [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) propriedade de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria um novo índice e define o valor de **IndexNulls** com base na entrada do usuário. Em seguida, o **índice** é acrescentado para o **funcionários** [tabela](../../../ado/reference/adox-api/table-object-adox.md) no *Northwind* [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). O novo **índice** é aplicado a um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no **funcionários** tabela e o **Recordset** é aberto. Um novo registro é adicionado para o **funcionários** tabela, com um **nulo** valor no campo indexado. Se este novo registro é exibido depende da configuração das **IndexNulls** propriedade.  
+Este exemplo demonstra a propriedade [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria um novo índice e define o valor de **IndexNulls** com base na entrada do usuário. Em seguida, o **índice** é anexado à tabela **Employees** [](../../../ado/reference/adox-api/table-object-adox.md) no catálogo *Northwind* [](../../../ado/reference/adox-api/catalog-object-adox.md). O novo **índice** é aplicado a um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) baseado na tabela **Employees** e o **conjunto de registros** é aberto. Um novo registro é adicionado à tabela **Employees** , com um valor **nulo** no campo indexado. Se esse novo registro é exibido depende da configuração da propriedade **IndexNulls** .  
   
 ```  
 // BeignIndexNullCpp.cpp  
@@ -169,7 +169,7 @@ void IndexNullsX(_bstr_t strSel) {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
   
    if (m_pRstEmployees)  

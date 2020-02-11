@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050922"
 ---
 # <a name="spcachemiss-event-class"></a>Classe de evento SP:CacheMiss
-  A classe de evento SP:CacheMiss indica que o procedimento não foi encontrado no cache. Se a classe de evento SP:CacheMiss ocorrer com muita frequência, isso significa que talvez seja necessário aumentar a memória disponível para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e, portanto, aumentar o tamanho do cache de procedimento.  
+  A classe de evento SP:CacheMiss indica que o procedimento não foi encontrado no cache. Se a classe de evento SP: CacheMiss ocorrer com frequência, ela poderá indicar que mais memória deve ser disponibilizada para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o, aumentando assim o tamanho do cache de procedimento.  
   
 ## <a name="spcachemiss-event-class-data-columns"></a>Colunas de dados da classe de evento SP:CacheMiss  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
@@ -52,7 +52,7 @@ ms.locfileid: "63050922"
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|`bigint`|Token que descreve a transação atual.|50|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Classe de evento SP:CacheInsert](sp-cacheinsert-event-class.md)  

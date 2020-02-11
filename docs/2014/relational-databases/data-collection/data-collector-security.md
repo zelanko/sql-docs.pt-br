@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873615"
 ---
 # <a name="data-collector-security"></a>Segurança do coletor de dados
@@ -48,13 +48,13 @@ ms.locfileid: "62873615"
   
  Essas funções são armazenadas no banco de dados msdb. Por padrão, nenhum usuário é membro dessas funções de banco de dados. A associação do usuário a elas deve ser explicitamente concedida.  
   
- Os usuários que são membros do `sysadmin` função de servidor fixa têm acesso completo aos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibições do coletor de dados e objetos de agente. Porém, eles precisam ser adicionados explicitamente à funções de coletor de dados.  
+ Os usuários que são membros da `sysadmin` função de servidor fixa têm acesso completo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a objetos de agente e exibições do coletor de dados. Porém, eles precisam ser adicionados explicitamente à funções de coletor de dados.  
   
 > [!IMPORTANT]  
 >  Os membros das funções db_ssisadmin e dc_admin podem elevar seus privilégios para sysadmin. Essa elevação de privilégios pode ocorrer porque essas funções podem modificar os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o contexto de segurança sysadmin do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para se proteger contra essa elevação de privilégios ao executar planos de manutenção, conjuntos de coletas de dados e outros pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure os trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou apenas adicione membros sysadmin às funções db_ssisadmin e dc_admin.  
   
-### <a name="dcadmin-role"></a>Função dc_admin  
- Os usuários atribuídos ao `dc_admin` função têm acesso total de administrador (criação, leitura, atualização e exclusão) à configuração do coletor de dados em uma instância de servidor. Membros dessa função podem executar as seguintes operações:  
+### <a name="dc_admin-role"></a>Função dc_admin  
+ Os usuários atribuídos à `dc_admin` função têm acesso de administrador completo (criar, ler, atualizar e excluir) à configuração do coletor de dados em uma instância de servidor. Membros dessa função podem executar as seguintes operações:  
   
 -   Definir propriedades de nível de coletor.  
   
@@ -64,16 +64,16 @@ ms.locfileid: "62873615"
   
 -   Execute todas as operações permitidas à função **dc_operator** .  
   
- O `dc_admin` função é um membro das funções a seguir:  
+ A `dc_admin` função é um membro das seguintes funções:  
   
 -   **SQLAgentUserRole**. Essa função é necessária para criar agendas e executar tarefas.  
   
     > [!NOTE]  
-    >  Proxies criados para o coletor de dados deve conceder acesso ao `dc_admin` criá-los e usá-los em qualquer etapa de trabalho que exija um proxy.  
+    >  Os proxies criados para o coletor de dados devem conceder `dc_admin` acesso ao para criá-los e usá-los em qualquer etapa de trabalho que exija um proxy.  
   
 -   **dc_operator**. Os membros `dc_admin` herdam as permissões dadas a **dc_operator**.  
   
-### <a name="dcoperator-role"></a>Função dc_operator  
+### <a name="dc_operator-role"></a>Função dc_operator  
  Membros da função **dc_operator** têm acesso de Leitura e Atualização. Essa função suporta tarefas de operações relacionadas com a execução e configuração de conjuntos de coleta. Membros dessa função podem executar as seguintes operações:  
   
 -   Iniciar ou parar um conjunto de coleta.  
@@ -94,7 +94,7 @@ ms.locfileid: "62873615"
   
  Para obter mais informações, veja [Funções do Integration Services &#40;Serviço do SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
-### <a name="dcproxy-role"></a>Função dc_proxy  
+### <a name="dc_proxy-role"></a>Função dc_proxy  
  Membros da função **dc_proxy** têm acesso de Leitura aos conjuntos de coleta do coletor de dados e às propriedades de nível de coletor. Os membros dessa função também podem executar tarefas de sua propriedade e criar etapas de tarefa executadas como uma conta proxy existente.  
   
  Membros dessa função podem executar as seguintes operações:  
@@ -124,9 +124,9 @@ ms.locfileid: "62873615"
   
  Essas funções são armazenadas no banco de dados msdb. Por padrão, nenhum usuário é membro dessas funções de banco de dados. A associação do usuário a elas deve ser explicitamente concedida.  
   
- Os usuários que são membros do `sysadmin` função de servidor fixa têm acesso total às exibições do coletor de dados. Porém, eles precisam ser adicionados explicitamente à funções do banco de dados para executar outras operações.  
+ Os usuários que são membros da `sysadmin` função de servidor fixa têm acesso completo às exibições do coletor de dados. Porém, eles precisam ser adicionados explicitamente à funções do banco de dados para executar outras operações.  
   
-### <a name="mdwadmin-role"></a>Função mdw_admin  
+### <a name="mdw_admin-role"></a>Função mdw_admin  
  Membros da função **mdw_admin** têm acesso de Leitura, Gravação, Atualização e Exclusão no data warehouse de gerenciamento.  
   
  Membros dessa função podem executar as seguintes operações:  
@@ -134,17 +134,17 @@ ms.locfileid: "62873615"
 -   Alterar o esquema do data warehouse de gerenciamento quando necessário (por exemplo, adicionando uma tabela nova quando é instalado um novo tipo de coleta).  
   
     > [!NOTE]  
-    >  Onde houver uma alteração de esquema, o usuário também deve ser um membro do `dc_admin` função para instalar um novo tipo de coletor, pois esta ação exige permissão para atualizar a configuração do coletor de dados no msdb.  
+    >  Quando há uma alteração de esquema, o usuário também deve ser um membro da `dc_admin` função para instalar um novo tipo de coletor, pois essa ação requer permissão para atualizar a configuração do coletor de dados no msdb.  
   
 -   Executar tarefas de manutenção no data warehouse de gerenciamento, como arquivo ou limpeza.  
   
-### <a name="mdwwriter-role"></a>Função mdw_writer  
+### <a name="mdw_writer-role"></a>Função mdw_writer  
  Membros da função **mdw_writer** podem carregar e gravar dados no data warehouse de gerenciamento. Qualquer coletor que armazena dados no data warehouse de gerenciamento deve ser membro dessa função.  
   
-### <a name="mdwreader-role"></a>Função mdw_reader  
+### <a name="mdw_reader-role"></a>Função mdw_reader  
  Membros da função **mdw_reader** têm acesso de Leitura ao data warehouse de gerenciamento. Como o objetivo dessa função é dar suporte à solução de problemas fornecendo acesso a dados históricos, os membros dessa função não podem exibir outros elementos do esquema do data warehouse de gerenciamento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

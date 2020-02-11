@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d3f7e5829c19b79ca19783d36885f6bfd3761f7
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637881"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Instalar, desinstalar e oferecer suporte ao Construtor de Relatórios
@@ -27,7 +27,7 @@ ms.locfileid: "73637881"
 > [!NOTE]  
 >  O Construtor de Relatórios não pode ser instalado em computadores baseados no Itanium. Isso se aplica ao [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] e às versões autônomas do Construtor de Relatórios.  
   
- Um administrador normalmente instala e configura o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], concede permissão para usar a versão [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] do Construtor de Relatórios e gerencia pastas e permissões para relatórios, partes de relatório e conjuntos de dados compartilhados salvos no servidor de relatório. Para obter mais informações sobre a administração de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Reporting Services &#40;modo&#41; nativo do servidor de relatório](report-server/reporting-services-report-server-native-mode.md) nos [manuais online](https://go.microsoft.com/fwlink/?LinkId=154888) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no msdn.Microsoft.com.  
+ Um administrador normalmente instala e configura o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], concede permissão para usar a versão [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] do Construtor de Relatórios e gerencia pastas e permissões para relatórios, partes de relatório e conjuntos de dados compartilhados salvos no servidor de relatório. Para obter mais informações [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sobre administração, consulte [Reporting Services servidor de relatório &#40;modo nativo&#41;](report-server/reporting-services-report-server-native-mode.md) nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [manuais online](https://go.microsoft.com/fwlink/?LinkId=154888) do MSDN.Microsoft.com.  
   
 ##  <a name="Installing"></a>Instalando o Construtor de Relatórios  
  O Construtor de Relatórios está disponível em versões autônoma e [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Você ou o administrador baixa e instala a versão autônoma no computador, e a versão [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] é instalada com o [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Você pode baixar o Construtor de Relatórios do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=53613).  
@@ -37,8 +37,8 @@ ms.locfileid: "73637881"
   
  Antes de instalar uma versão do Construtor de Relatórios, verifique os requisitos do sistema e instale todos.  
   
-### <a name="system-requirements"></a>Requisitos do sistema  
- O Construtor de Relatórios requer que o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] versão 3.5 esteja instalado no computador local. Se o [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] não estiver instalado no computador local quando você instalar o Construtor de Relatórios, você será solicitado a instalá-lo para continuar e concluir a instalação:  
+### <a name="system-requirements"></a>Requisitos do Sistema  
+ Construtor de relatórios requer que a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] versão 3,5 esteja instalada no computador local. Se o [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] não estiver instalado no computador local quando você instalar o Construtor de Relatórios, você será solicitado a instalá-lo para continuar e concluir a instalação:  
   
  O Microsoft .NET Framework 3.5 é gratuito. É possível baixar o .NET Framework 3.5 no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=21).  
   
@@ -51,21 +51,22 @@ ms.locfileid: "73637881"
   
  Também é possível executar uma instalação de linha de comando e incluir opções, como tornar a instalação silenciosa e gravar arquivos de log para a instalação. A documentação do Windows Installer, que executa arquivos .msi, fornece informações sobre as opções disponíveis.  
   
- Para obter mais informações, consulte [instalar a versão autônoma &#40;do construtor de relatórios Construtor de relatórios&#41;](install-windows/install-report-builder.md).  
+ Para obter mais informações, consulte [instalar a versão autônoma do Construtor de Relatórios &#40;Construtor de Relatórios&#41;](install-windows/install-report-builder.md).  
   
  Um administrador também pode usar software como o SMS (Microsoft Systems Manager Server) para instalar o programa no computador. Para saber como usar software específico para instalar o Construtor de Relatórios, consulte a documentação do software.   
   
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Instalando a versão ClickOnce do Construtor de Relatórios no seu computador  
  A versão [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] do Construtor de Relatórios é instalada com o [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Ela é instalada pelas instalações nativa e integrada do SharePoint do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] é uma tecnologia da Microsoft para implantar aplicativos do Windows. O [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permite que os usuários instalem e executem um aplicativo Windows, como o Construtor de Relatórios, clicando em um link de uma página da Web. Para obter mais informações sobre como implantar aplicativos [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], aplicar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] segurança de aplicativo ou executar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplicativos na zona da Internet, consulte a "implantação do ClickOnce para aplicativos Windows Forms", "segurança em Windows Forms visão geral "ou" visão geral da implantação de aplicativo confiável "no site [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network, em [https://developer.microsoft.com/](https://developer.microsoft.com/).  
+ 
+  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] é uma tecnologia da Microsoft para implantar aplicativos do Windows. O [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permite que os usuários instalem e executem um aplicativo Windows, como o Construtor de Relatórios, clicando em um link de uma página da Web. Para obter mais informações sobre a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] implantação de aplicativos [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , a aplicação da segurança [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] de aplicativos ou a execução de aplicativos na zona da Internet, consulte os artigos "implantação do ClickOnce para aplicativos Windows Forms", "segurança em Windows Forms visão geral" ou " [!INCLUDE[msCoName](../includes/msconame-md.md)] visão geral da implantação de [https://developer.microsoft.com/](https://developer.microsoft.com/)aplicativos confiáveis" no site da rede de desenvolvedores em.  
   
  A versão [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] do Construtor de Relatórios está localizada no servidor de relatório e é instalada no computador quando você clica no botão **Construtor de Relatórios** no Gerenciador de Relatórios ou clica na opção **Relatório do Construtor de Relatórios** no menu **Novo Documento** em uma biblioteca do SharePoint.  
   
 > [!NOTE]  
 >  Se o menu **Novo Documento** não listar as opções **Relatório do Construtor de Relatórios**, **Modelo do Construtor de Relatórios**e **Fonte de Dados de Relatório** , seus tipos de conteúdo precisarão ser adicionados à biblioteca do SharePoint.   
   
- É possível abrir o Construtor de Relatórios a partir do Gerenciador de Relatórios ou de uma biblioteca do SharePoint. Para obter mais informações sobre como abrir Construtor de Relatórios, consulte [ &#40;iniciar&#41;Construtor de relatórios Construtor de relatórios](report-builder/start-report-builder.md).  
+ É possível abrir o Construtor de Relatórios a partir do Gerenciador de Relatórios ou de uma biblioteca do SharePoint. Para obter mais informações sobre como abrir Construtor de Relatórios, consulte [Start Construtor de Relatórios &#40;Construtor de Relatórios&#41;](report-builder/start-report-builder.md).  
   
 ### <a name="report-builder-languages"></a>Idiomas do Construtor de Relatórios  
  O Construtor de Relatórios está disponível em 21 idiomas além do inglês. Quando você baixa a versão autônoma do Construtor de Relatórios, escolhe a versão de idioma que deseja instalar. Você deve repetir o download para cada versão de idioma que deseja usar.  
@@ -74,28 +75,28 @@ ms.locfileid: "73637881"
   
  A tabela a seguir contém informações sobre as versões de idioma disponíveis.  
   
-|LCID|Idioma|Cultura|  
+|LCID|Linguagem|Cultura|  
 |----------|--------------|-------------|  
-|1028|Chinês (tradicional)|zh-TW|  
+|1028|Chinês (Tradicional)|zh-TW|  
 |1029|Tcheco|cs-CZ|  
 |1030|Dinamarquês|da-DK|  
 |1031|Alemão|de-DE|  
-|1032|Greek|el-GR|  
-|1046|Inglês|pt-BR|  
+|1032|Grego|el-GR|  
+|1033|Inglês|pt-BR|  
 |1035|Finlandês|fi-FI|  
 |1036|Francês|fr-FR|  
 |1038|Húngaro|hu-HU|  
-|1040|Italian|it-IT|  
+|1040|Italiano|it-IT|  
 |1041|Japonês|ja-JP|  
 |1042|Coreano|ko-KR|  
 |1043|Holandês|nl-NL|  
 |1044|Norueguês (Bokmal)|nb-NO|  
 |1045|Polonês|pl-PLl|  
-|1046|Portuguese (Brazil)|pt-BR|  
-|1049|Russian|ru-RU|  
+|1046|Português (Brasil)|pt-BR|  
+|1049|Russo|ru-RU|  
 |1053|Sueco|sv-SE|  
 |1055|Turco|tr-TR|  
-|2052|Chinês (simplificado)|zh-CN|  
+|2052|Chinês (Simplificado)|zh-CN|  
 |2070|Português (Portugal)|pt-PT|  
 |3082|Espanhol (Espanha)|es-ES|  
   
@@ -103,7 +104,7 @@ ms.locfileid: "73637881"
 ##  <a name="Uninstalling"></a>Desinstalando o Construtor de Relatórios  
  É possível desinstalar a versão autônoma do Construtor de Relatórios no painel de controle ou na linha de comando. Isso se aplica apenas à versão autônoma do Construtor de Relatórios. O [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] do Construtor de Relatórios não pode ser desinstalado separadamente. Ele sempre é instalado e desinstalado com o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- Para obter mais informações, consulte [desinstalar a versão autônoma &#40;do construtor de relatórios Construtor de relatórios&#41;](install-windows/uninstall-report-builder.md).  
+ Para obter mais informações, consulte [desinstalar a versão autônoma do Construtor de Relatórios &#40;Construtor de Relatórios&#41;](install-windows/uninstall-report-builder.md).  
   
   
 ##  <a name="Supporting"></a>Suporte a Construtor de Relatórios  
@@ -126,7 +127,7 @@ ms.locfileid: "73637881"
   
 -   Imagens como imagens de plano de fundo e logotipos que podem ser usadas em vários relatórios e armazenadas externamente de relatórios tendo em vista uma manutenção mais fácil.  
   
- Para obter mais informações, consulte [modo &#40;&#41; nativo do SSRS de gerenciamento de conteúdo do servidor de relatório](report-server/report-server-content-management-ssrs-native-mode.md) nos [manuais online](https://go.microsoft.com/fwlink/?LinkId=154888) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no msdn.Microsoft.com.  
+ Para obter mais informações, consulte [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md) nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [manuais online](https://go.microsoft.com/fwlink/?LinkId=154888) do MSDN.Microsoft.com.  
   
 ### <a name="permissions"></a>Permissões  
  O administrador concede permissão para o servidor de relatório. Como usuário do Construtor de Relatórios, você precisa de permissões para o servidor de relatório para poder acessar o conteúdo e a funcionalidade do servidor de relatório. Por exemplo, você talvez queira usar partes de relatório armazenadas no servidor de relatório, atualizar relatórios e salvá-los novamente no servidor de relatório e executar relatórios no Gerenciador de Relatórios. Dependendo das necessidades e das tarefas executadas, permissões mais baixas ou mais altas podem ser concedidas. Por exemplo, permissões com privilégios menores são concedidas a usuários que só precisam abrir relatórios compartilhados, em comparação com usuários que precisam modificar um relatório compartilhado.  
@@ -152,7 +153,7 @@ ms.locfileid: "73637881"
   
  No entanto, com uma configuração adicional, o servidor de relatório é disponibilizado para usuários do Construtor de Relatórios. É possível adicionar URLs do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a sites confiáveis. Por padrão, o Internet Explorer 7.0 ou posterior é executado no Modo Protegido no Windows Vista, no Windows Server 2008 e no Windows 7. O Modo Protegido é um recurso que impede que solicitações do navegador alcancem processos de nível superior executados no mesmo computador. Você pode desabilitar o modo protegido para os aplicativos do servidor de relatório adicionando-os como Sites Confiáveis. Você deve ter permissão de administrador para fazer essa alteração.  
   
- Para obter mais informações sobre como configurar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][, &#40;consulte&#41; Gerenciador de configurações do Reporting Services del](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) no msdn.Microsoft.com.  
+ Para obter mais informações sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]como configurar o, consulte [Gerenciador de Configurações do Reporting Services &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) no msdn.Microsoft.com.  
   
   
 ##  <a name="SampleDatabases"></a>SQL Server bancos de dados de exemplo  
@@ -171,17 +172,17 @@ ms.locfileid: "73637881"
  Para obter os pré-requisitos e as instruções sobre como baixar e instalar os bancos de dados de exemplo do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , consulte os [pré-requisitos de instalação dos bancos de dados de exemplo do SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=166648) e a [instalação de bancos de dados de exemplos](https://go.microsoft.com/fwlink/?LinkId=166649) no CodePlex.  
   
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="HowTo"></a>Tópicos de instruções  
  Esta seção lista procedimentos que mostram como instalar e desinstalar o Construtor de Relatórios.  
   
- [Instalar a versão autônoma do Construtor de Relatórios &#40;Construtor de relatórios&#41;](install-windows/install-report-builder.md)  
+ [Instale a versão autônoma do Construtor de Relatórios &#40;Construtor de Relatórios&#41;](install-windows/install-report-builder.md)  
   
- [Desinstalar a versão autônoma do Construtor de Relatórios &#40;Construtor de relatórios&#41;](install-windows/uninstall-report-builder.md)  
+ [Desinstale a versão autônoma do Construtor de Relatórios &#40;Construtor de Relatórios&#41;](install-windows/uninstall-report-builder.md)  
   
- [Iniciar Construtor de Relatórios &#40;Construtor de relatórios&#41;](report-builder/start-report-builder.md)  
+ [Iniciar Construtor de Relatórios &#40;Construtor de Relatórios&#41;](report-builder/start-report-builder.md)  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745876"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizar uma assinatura push
-  Este tópico descreve como sincronizar uma assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicação](agents/replication-agents-overview.md), ou RMO (Replication Management Objects).  
+  Este tópico descreve como sincronizar uma assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], agentes de [replicação](agents/replication-agents-overview.md)ou Replication Management Objects (RMO).  
   
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
@@ -40,9 +40,9 @@ ms.locfileid: "62745876"
   
 4.  Clique com o botão direito do mouse na assinatura a ser sincronizada e clique em **Exibir Status da Sincronização**.  
   
-5.  Na caixa de diálogo **Exibir Status da Sincronização – \<Subscriber>:\<SubscriptionDatabase>** , clique em **Iniciar**. Quando a sincronização estiver concluída, a mensagem **Sincronização concluída** será exibida.  
+5.  Na caixa de diálogo **Exibir Status da Sincronização – \<Subscriber>:\<SubscriptionDatabase>**, clique em **Iniciar**. Quando a sincronização estiver concluída, a mensagem **Sincronização concluída** será exibida.  
   
-6.  Clique em **Fechar**.  
+6.  Clique em **fechar**  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>Para sincronizar uma assinatura push sob demanda no Management Studio (no Assinante)  
   
@@ -54,9 +54,9 @@ ms.locfileid: "62745876"
   
 4.  Uma mensagem é exibida sobre como estabelecer conexão com o Distribuidor. Clique em **OK**.  
   
-5.  Na caixa de diálogo **Exibir Status da Sincronização – \<Subscriber>:\<SubscriptionDatabase>** , clique em **Iniciar**. Quando a sincronização estiver concluída, a mensagem **Sincronização concluída** será exibida.  
+5.  Na caixa de diálogo **Exibir Status da Sincronização – \<Subscriber>:\<SubscriptionDatabase>**, clique em **Iniciar**. Quando a sincronização estiver concluída, a mensagem **Sincronização concluída** será exibida.  
   
-6.  Clique em **Fechar**.  
+6.  Clique em **fechar**  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-replication-monitor"></a>Para sincronizar uma assinatura push sob demanda no Replication Monitor  
   
@@ -68,20 +68,20 @@ ms.locfileid: "62745876"
   
 4.  Para exibir o andamento da sincronização, clique com o botão direito do mouse na assinatura e, depois, clique em **Exibir Detalhes**.  
   
-##  <a name="ReplProg"></a> Usando agentes de replicação  
+##  <a name="ReplProg"></a>Usando agentes de replicação  
  Assinaturas push podem ser sincronizadas por programa e sob demanda chamando o arquivo executável apropriado do agente de replicação do prompt de comando. O arquivo executável do agente de replicação chamado dependerá do tipo de publicação para a qual a assinatura push pertence.  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>Para iniciar o Distribution Agent para sincronizar uma assinatura push a uma publicação transacional  
   
 1.  Do prompt de comando ou do arquivo de lote no Distribuidor, execute **distrib.exe**. Especifique os seguintes argumentos de linha de comando:  
   
-    -   **-Publisher**  
+    -   **-Publicador**  
   
     -   **-PublisherDB**  
   
-    -   **-Distributor**  
+    -   **-Distribuidor**  
   
-    -   **-Subscriber**  
+    -   **-Assinante**  
   
     -   **-SubscriberDB**  
   
@@ -114,15 +114,15 @@ ms.locfileid: "62745876"
   
 1.  Do prompt de comando ou do arquivo de lote no Distribuidor, execute **replmerg.exe**. Especifique os seguintes argumentos de linha de comando:  
   
-    -   **-Publisher**  
+    -   **-Publicador**  
   
     -   **-PublisherDB**  
   
-    -   **-Publication**  
+    -   **-Publicação**  
   
-    -   **-Distributor**  
+    -   **-Distribuidor**  
   
-    -   **-Subscriber**  
+    -   **-Assinante**  
   
     -   **-SubscriberDB**  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62745876"
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-###  <a name="TsqlExample"></a> Exemplos (agentes de replicação)  
+###  <a name="TsqlExample"></a>Exemplos (agentes de replicação)  
  O exemplo seguinte inicia o Agente de Distribuição para sincronizar uma assinatura push.  
   
  
@@ -270,8 +270,8 @@ REM -- The following command must be supplied without line breaks.
   
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos de objetos de gerenciamento de replicação](concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Sincronizar dados](synchronize-data.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  
   

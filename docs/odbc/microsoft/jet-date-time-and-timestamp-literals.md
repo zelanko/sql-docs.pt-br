@@ -1,5 +1,5 @@
 ---
-title: 'Jet: Data, hora e literais de carimbo de hora | Microsoft Docs'
+title: 'Jet: Date, time e literais de carimbo de data/hora | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bb7f0fb02049b6d2f1897c4f495035aee2858f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085491"
 ---
-# <a name="jet-date-time-and-timestamp-literals"></a>Jet: Data, hora e literais de carimbo de data/hora
-Para interoperabilidade máxima, aplicativos devem passar literais de data no formato canônico ODBC usando a sintaxe da cláusula de escape:  
+# <a name="jet-date-time-and-timestamp-literals"></a>Jet: data, hora e literais de carimbo de data/hora
+Para a interoperabilidade máxima, os aplicativos devem passar literais de data no formato ODBC canônico usando sintaxe de cláusula de escape:  
   
--   Para literais de data, {1!d '*valor*'}, onde *valo*e está no formato "aaaa-mm-dd"  
+-   Para literais de data, {d '*Value*'}, em que *valo*e está no formato "aaaa-mm-dd"  
   
--   Para literais de hora, {t '*valor*'}, onde *valo*e está no formato "hh"  
+-   Para literais de tempo, {t '*Value*'}, em que *valo*e está no formato "hh: mm: SS"  
   
- Para literais de carimbo de hora {ts'*valor*'}, onde *valo*e está no formato "aaaa-mm-dd hh: mm ss [. f...]".
+ Para literais de carimbo de data/hora {TS '*Value*'}, em que *valo*e está no formato "aaaa-mm-dd hh: mm: SS [. f...]".

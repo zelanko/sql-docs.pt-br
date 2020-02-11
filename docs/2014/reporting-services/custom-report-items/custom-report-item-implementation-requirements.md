@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0000e0c7a5933003544de22b60a8adc4d9c59c82
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684451"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Requisitos de implementação de item de relatório personalizado
@@ -46,9 +46,9 @@ ms.locfileid: "74684451"
 >  Por padrão, o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] é instalado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não com o SDK de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . A menos que o SDK esteja instalado no computador e a documentação do SDK esteja incluída na coleção de manuais online, os links para o conteúdo do SDK desta seção não funcionarão. Depois de instalar o SDK do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], você pode adicionar a documentação do SDK à coleção de Manuais Online e ao sumário seguindo as instruções fornecidas em [Adicionar ou remover a documentação do produto do SQL Server](../../2014-toc/index.yml).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criando um componente de tempo de execução de item de relatório personalizado](creating-a-custom-report-item-run-time-component.md)   
+ [Criando um componente de item de relatório personalizado em tempo de execução](creating-a-custom-report-item-run-time-component.md)   
  [Criando um componente de item de relatório personalizado em tempo de design](creating-a-custom-report-item-design-time-component.md)   
  [Como: implantar um item de relatório personalizado](how-to-deploy-a-custom-report-item.md)   
- [Bibliotecas de classe de item de relatório personalizado](custom-report-item-class-libraries.md)  
+ [Bibliotecas de classes de itens de relatório personalizados](custom-report-item-class-libraries.md)  
   
   

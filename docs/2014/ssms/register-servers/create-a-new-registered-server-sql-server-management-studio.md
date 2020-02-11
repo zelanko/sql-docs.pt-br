@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: cce885929deff7484a4e068bf06ac3b39dbb3062
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244665"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Criar um novo servidor registrado (SQL Server Management Studio)
@@ -38,7 +38,7 @@ ms.locfileid: "75244665"
   
      Os Servidores de Gerenciamento Central armazenam registros de servidor no Servidor de Gerenciamento Central em vez de usar o sistema de arquivos. Os Servidores de Gerenciamento Central e os servidores registrados subordinados podem ser registrados somente com o uso da Autenticação do Windows. Após o registro de um Servidor de Gerenciamento Central, seus servidores registrados associados são exibidos automaticamente. Para obter mais informações sobre Servidores de Gerenciamento Central, veja [Administrar vários servidores usando os Servidores de Gerenciamento Central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). As versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] não podem ser designadas como um Servidor de Gerenciamento Central.  
   
-##  <a name="SSMSProcedure"></a>Usando SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>Para registrar as instâncias de servidor local automaticamente  
   
@@ -52,27 +52,27 @@ ms.locfileid: "75244665"
      Quando um servidor é registrado em Servidores Registrados, a caixa **Tipo de servidor** é somente leitura e corresponde ao tipo de servidor exibido no painel Servidores Registrados. Para registrar outro tipo de servidor, clique em **Mecanismo de Banco de Dados**, **Analysis Server**, **Reporting Services**ou **Integration Services** na barra de ferramentas **Servidores Registrados** antes de começar a registrar um novo servidor.  
   
      **Nome do servidor**  
-     Selecione a instância de servidor a ser registrada no formato: * \<ServerName>*[\\*\<InstanceName>*].  
+     Selecione a instância do servidor a ser registrada no formato: *\<servername>* [\\ *\<instancename>* ].  
   
-     **Authentication**  
+     **Autenticação**  
      Dois modos de autenticação estão disponíveis quando se estabelece conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      **Autenticação do Windows**  
      O modo de Autenticação do Windows permite que um usuário se conecte por meio de uma conta de usuário do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-     **Autenticação SQL Server**  
+     **Autenticação do SQL Server**  
      Quando um usuário se conecta com um nome de logon e senha especificados em uma conexão não confiável, o próprio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efetua a autenticação, verificando se foi definida uma conta de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se a senha especificada corresponde a uma senha registrada previamente. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tiver uma conta de logon definida, ocorrerá falha na autenticação e o usuário receberá uma mensagem de erro.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]Para obter mais informações, consulte [escolher um modo de autenticação](../../relational-databases/security/choose-an-authentication-mode.md).  
+    >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Para obter mais informações, veja [Escolher um modo de autenticação](../../relational-databases/security/choose-an-authentication-mode.md).  
   
      **Nome de usuário**  
      Mostra o nome de usuário atual com o que você está se conectando. Essa opção somente leitura só estará disponível se você tiver optado por conectar-se usando a Autenticação do Windows. Para alterar **Nomes de usuários**, faça logon no computador como um usuário diferente.  
   
-     **Entrar**  
+     **Logon**  
      Insira o logon com o qual se conectar. Esta opção só estará disponível se você tiver optado por conectar-se usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **La**  
+     **Senha**  
      Digite a senha do logon. Esta opção poderá ser editada somente se você tiver optado por conectar-se usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Lembrar senha**  
@@ -87,21 +87,21 @@ ms.locfileid: "75244665"
      **Descrição do servidor registrado**  
      Digite uma descrição opcional do servidor.  
   
-     **Testar**  
+     **Test**  
      Clique para testar a conexão com o servidor selecionado em **Nome do servidor**.  
   
-     **Guarde**  
+     **Salvar**  
      Clique para salvar as configurações do servidor registrado.  
   
 ## <a name="multiserver-queries"></a>Consultas multisservidor  
  A janela de Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode conectar e consultar várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao mesmo tempo. Os resultados retornados pela consulta podem ser mesclados em um único painel de resultados ou em painéis de resultados separados. Opcionalmente, o Editor de Consultas pode incluir colunas que fornecem o nome do servidor que produziu cada linha, e também o logon usado para conexão com o servidor que forneceu cada linha. Para obter mais informações sobre como executar consultas multisservidor, veja [Executar instruções em vários servidores simultaneamente &#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md).  
   
- Para executar consultas em todos os servidores de um grupo do servidor local, clique com o botão direito do mouse no grupo de servidores, aponte para **Conectar**e clique em **Nova Consulta**. Quando as consultas forem executadas na nova janela do Editor de Consultas, serão executadas em todos os servidores do grupo, usando as informações de conexão armazenadas, inclusive o contexto de autenticação do usuário. Os servidores registrados com o uso da Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mas sem salvar a senha apresentarão falha na conexão.  
+ Para executar consultas em todos os servidores de um grupo do servidor local, clique com o botão direito do mouse no grupo de servidores, aponte para **Conectar** e clique em **Nova Consulta**. Quando as consultas forem executadas na nova janela do Editor de Consultas, serão executadas em todos os servidores do grupo, usando as informações de conexão armazenadas, inclusive o contexto de autenticação do usuário. Os servidores registrados com o uso da Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mas sem salvar a senha apresentarão falha na conexão.  
   
  Para executar consultas em todos os servidores registrados em um Servidor de Gerenciamento Central, expanda o Servidor de Gerenciamento Central, clique com o botão direito do mouse no grupo de servidores, aponte para clicar em **Conectar**e em **Nova Consulta**. Quando as consultas são executadas na nova janela do Editor de Consultas, elas serão executadas em todos os servidores do grupo, usando as informações de conexão armazenadas e usando o contexto de Autenticação do Windows do usuário.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Ocultar objetos do sistema no Pesquisador de objetos](../object/hide-system-objects-in-object-explorer.md)   
+ [Ocultar objetos do sistema no Pesquisador de Objetos](../object/hide-system-objects-in-object-explorer.md)   
  [Exportar informações de servidor registrado &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [Importar informações de servidor registrado &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)  
   

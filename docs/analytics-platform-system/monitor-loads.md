@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400963"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Monitorar cargas em data warehouse paralelos
@@ -26,7 +26,7 @@ Monitore cargas de [dwloader](dwloader.md) ativas e recentes usando o console de
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Independentemente do método usado para monitorar uma carga, o logon deve ter permissão para acessar as fontes de dados subjacentes. 
 
 <!-- MISSING LINKS
@@ -51,9 +51,9 @@ Consulte essas exibições do sistema para obter informações sobre os metadado
   
 -   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
--   [sys. pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
 ### <a name="to-monitor-loads-by-using-system-views"></a>Para monitorar cargas usando exibições do sistema  
 Para monitorar as cargas ativas e recentes usando SQL Server PDW exibições, siga as etapas abaixo. Para cada exibição do sistema usada, consulte a documentação dessa exibição para obter informações sobre as colunas e os valores possíveis retornados pela exibição.  

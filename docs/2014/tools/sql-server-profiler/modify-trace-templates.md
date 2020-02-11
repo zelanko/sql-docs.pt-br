@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebe8924f46de15a3a34c0f49304c87a904919bdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035033"
 ---
 # <a name="modify-trace-templates"></a>Modificar modelos de rastreamento
@@ -32,23 +32,23 @@ ms.locfileid: "63035033"
   
  [Criar um modelo de rastreamento &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)  
   
- **Para executar um rastreamento a partir de um modelo de rastreamento**  
+ **Para executar um rastreamento de um modelo de rastreamento**  
   
  [Criar um rastreamento &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)  
   
  **Para modificar um modelo de rastreamento**  
   
- [Usando o SQL Server Profiler](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
+ [Usando SQL Server Profiler](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
- [Usando Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
+ [Usando o Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
- **Para adicionar ou remover eventos de um modelo ou arquivo de rastreamento**  
+ **Para adicionar ou remover eventos de um modelo de rastreamento ou arquivo de rastreamento**  
   
- [Usando o SQL Server Profiler](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+ [Usando SQL Server Profiler](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
- [Usando Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
+ [Usando o Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar um rastreamento](start-a-trace.md)  
   
   

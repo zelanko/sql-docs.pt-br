@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1424d4e7ff08cee6dea1e53dfac0e5cf231ea266
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784392"
 ---
 # <a name="positioned-updates-odbc"></a>Atualizações posicionadas (ODBC)
@@ -81,7 +81,7 @@ ms.locfileid: "73784392"
   
  **SQLSetPos** é preferível quando atual de quando você está usando cursores de servidor. Se você estiver usando um cursor atualizável estático com a biblioteca de cursores ODBC, a biblioteca de cursores implementará as atualizações WHERE CURRENT OF com os valores de chave para a tabela subjacente. Isso pode provocar atualizações não pretendidas, caso as chaves da tabela não foram exclusivas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usando cursores &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

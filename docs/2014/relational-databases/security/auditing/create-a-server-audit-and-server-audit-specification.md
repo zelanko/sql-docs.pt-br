@@ -18,14 +18,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198409"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Criar uma auditoria de servidor e uma especificação de auditoria de servidor
-  Este tópico descreve como criar uma especificação de auditoria de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto *SQL Server Audit* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação da Auditoria do Servidor* pertence a uma auditoria. É possível criar uma especificação de auditoria de servidor por auditoria, já que ambas são criadas no escopo da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
+  Este tópico descreve como criar uma especificação de auditoria de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto *SQL Server Audit* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação da Auditoria do Servidor* pertence a uma auditoria. É possível criar uma especificação de auditoria de servidor por auditoria, já que ambas são criadas no escopo da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
   
  **Neste tópico**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68198409"
      Especifica o período máximo, em milissegundos, que pode decorrer antes de as ações de auditorias serem forçadas a serem processadas.  Um valor 0 indica entrega síncrona. O valor padrão mínimo é **1000** (1 segundo). O máximo é 2.147.483.647 (2.147.483.647 segundos ou 24 dias, 20 horas, 31 minutos, 23.647 segundos).  
   
      **Em caso de falha de log de auditoria:**  
-     **Continue**  
+     **Continuar**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] As operações continuam. Os registros de auditoria não são retidos. A auditoria retomará tentando registrar eventos em log e será retomada se a condição de falha for resolvida. A seleção da opção **Continuar** pode permitir atividade não auditada, o que pode violar suas políticas de segurança. Selecionar essa opção ao continuar a operação do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] é mais importante do que manter uma auditoria completa. Essa é a seleção padrão.  
   
      **Desligar servidor**  
@@ -95,7 +95,7 @@ ms.locfileid: "68198409"
      Especifica a localização da pasta em que os dados de auditoria serão gravados quando o **Destino da auditoria** for um arquivo.  
   
      **Reticências (...)**  
-     Abre o **localizar pasta –** _nome_do_servidor_ caixa de diálogo para especificar um caminho de arquivo ou criar uma pasta em que o arquivo de auditoria é gravado.  
+     Abre a caixa de diálogo **Localizar pasta-**_server_name_ para especificar um caminho de arquivo ou criar uma pasta na qual o arquivo de auditoria é gravado.  
   
      **Audite o limite máximo de arquivo:**  
      **Máximo de arquivos de substituição**  
@@ -128,7 +128,7 @@ ms.locfileid: "68198409"
   
      As opções a seguir estão disponíveis na caixa de diálogo **Criar Especificação de Auditoria de Servidor** .  
   
-     **Name**  
+     **Nome**  
      O nome da especificação de auditoria de servidor. Esse nome é gerado automaticamente quando você cria uma nova especificação de auditoria de servidor, mas é editável.  
   
      **Auditoria**  

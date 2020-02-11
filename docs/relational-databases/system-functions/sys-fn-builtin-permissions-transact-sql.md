@@ -28,18 +28,18 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046519"
 ---
-# <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
+# <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma descrição da hierarquia de permissões interna do servidor. `sys.fn_builtin_permissions` só pode ser chamado em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e ela retorna todas as permissões, independentemente se eles têm suporte na plataforma atual. A maioria das permissões se aplica a todas as plataformas, mas algumas delas, não. Por exemplo, permissões de nível de servidor não podem ser concedidas no banco de dados SQL. Para obter informações sobre quais plataformas oferecem suporte a cada permissão, consulte [permissões &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Retorna uma descrição da hierarquia de permissões interna do servidor. `sys.fn_builtin_permissions`Só pode ser chamado em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e retorna todas as permissões, independentemente de terem suporte na plataforma atual. A maioria das permissões se aplica a todas as plataformas, mas algumas delas, não. Por exemplo, as permissões de nível de servidor não podem ser concedidas no banco de dados SQL. Para obter informações sobre quais plataformas oferecem suporte a cada permissão, consulte [permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,27 +59,27 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="arguments"></a>Argumentos  
  DEFAULT  
- Quando ele é chamado com a opção padrão (sem aspas), a função retornará uma lista completa de permissões internas.  
+ Quando for chamado com a opção padrão (sem aspas), a função retornará uma lista completa de permissões internas.  
   
- NULL  
+ NULO  
  Equivalente a DEFAULT.  
   
  *empty_string*  
  Equivalente a DEFAULT.  
   
- **'** <securable_class> **'**  
- Quando ele é chamado com o nome de uma classe protegível, sys. fn_builtin_permissions retornará todas as permissões que se aplicam à classe. < securable_class > é uma cadeia de caracteres literal que requer aspas. **nvarchar(60)**  
+ **'**<securable_class>**'**  
+ Quando chamado com o nome de uma classe protegível, sys. fn_builtin_permissions retornará todas as permissões que se aplicam à classe. <securable_class> é um literal de cadeia de caracteres que requer aspas. **nvarchar (60)**  
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
   
-|Nome da coluna|Tipo de dados|Ordenação|Descrição|  
+|Nome da coluna|Tipo de dados|Collation|DESCRIÇÃO|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar(60)**|Ordenação do servidor|Descrição da classe de protegível.|  
-|permission_name|**nvarchar(60)**|Ordenação do servidor|Nome de permissão.|  
-|type|**varchar(4)**|Ordenação do servidor|Código de tipo de permissão compacto. Consulte a tabela a seguir.|  
-|covering_permission_name|**nvarchar(60)**|Ordenação do servidor|Se não for NULL, será o nome da permissão nessa classe que indica as outras permissões dela.|  
-|parent_class_desc|**nvarchar(60)**|Ordenação do servidor|Se não for NULL, será o nome da classe pai que contém a classe atual.|  
-|parent_covering_permission_name|**nvarchar(60)**|Ordenação do servidor|Se não for NULL, será o nome da permissão nessa classe pai que indica todas as outras permissões dela.|  
+|class_desc|**nvarchar (60)**|Ordenação do servidor|Descrição da classe de protegível.|  
+|permission_name|**nvarchar (60)**|Ordenação do servidor|Nome de permissão.|  
+|type|**varchar (4)**|Ordenação do servidor|Código de tipo de permissão compacto. Consulte a tabela a seguir.|  
+|covering_permission_name|**nvarchar (60)**|Ordenação do servidor|Se não for NULL, será o nome da permissão nessa classe que indica as outras permissões dela.|  
+|parent_class_desc|**nvarchar (60)**|Ordenação do servidor|Se não for NULL, será o nome da classe pai que contém a classe atual.|  
+|parent_covering_permission_name|**nvarchar (60)**|Ordenação do servidor|Se não for NULL, será o nome da permissão nessa classe pai que indica todas as outras permissões dela.|  
   
 ### <a name="permission-types"></a>Tipos de permissão  
   
@@ -98,11 +98,11 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER|CERTIFICATE|  
 |AL|ALTER|CONTRACT|  
 |AL|ALTER|DATABASE|  
-|AL|ALTER<br /> **Aplica-se o t**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |CREDENCIAL NO ESCOPO DO BANCO DE DADOS|
+|AL|ALTER<br /> **Aplica t o**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |CREDENCIAL NO ESCOPO DO BANCO DE DADOS|
 |AL|ALTER|ENDPOINT|  
 |AL|ALTER|FULLTEXT CATALOG|  
 |AL|ALTER|FULLTEXT STOPLIST|  
-|AL|ALTER|Logon|  
+|AL|ALTER|LOGIN|  
 |AL|ALTER|MESSAGE TYPE|  
 |AL|ALTER|OBJECT|  
 |AL|ALTER|REMOTE SERVICE BINDING|  
@@ -113,7 +113,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
-|AL|ALTER|Usuário|  
+|AL|ALTER|USER|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
 |ALAG|ALTER ANY AVAILABILITY GROUP<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
@@ -167,7 +167,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|ENDPOINT|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
-|CL|CONTROL|Logon|  
+|CL|CONTROL|LOGIN|  
 |CL|CONTROL|MESSAGE TYPE|  
 |CL|CONTROL|OBJECT|  
 |CL|CONTROL|REMOTE SERVICE BINDING|  
@@ -180,10 +180,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
-|CL|CONTROL|Usuário|  
+|CL|CONTROL|USER|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
-|CO|CONNECT|DATABASE|  
-|CO|CONNECT|ENDPOINT|  
+|CO|CONECTAR|DATABASE|  
+|CO|CONECTAR|ENDPOINT|  
 |CORP|CONNECT REPLICATION|DATABASE|  
 |COSQ|CONNECT SQL|SERVER|  
 |CP|CHECKPOINT|DATABASE|  
@@ -220,9 +220,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTRAR OPERAÇÕES EM LOTE DO BANCO DE DADOS<br /> **Aplica-se a**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|DELETE|DATABASE|  
-|DL|DELETE|OBJECT|  
-|DL|DELETE|SCHEMA|  
+|DL|Delete (excluir)|DATABASE|  
+|DL|Delete (excluir)|OBJECT|  
+|DL|Delete (excluir)|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|Execute|DATABASE|  
 |EX|Execute|OBJECT|  
@@ -230,8 +230,8 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |EX|Execute|TYPE|  
 |EX|Execute|XML SCHEMA COLLECTION|  
 |IAL|IMPERSONATE ANY LOGIN<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
-|IM|IMPERSONATE|Logon|  
-|IM|IMPERSONATE|Usuário|  
+|IM|IMPERSONATE|LOGIN|  
+|IM|IMPERSONATE|USER|  
 |IN|INSERT|DATABASE|  
 |IN|INSERT|OBJECT|  
 |IN|INSERT|SCHEMA|  
@@ -297,7 +297,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|ENDPOINT|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
-|VW|VIEW DEFINITION|Logon|  
+|VW|VIEW DEFINITION|LOGIN|  
 |VW|VIEW DEFINITION|MESSAGE TYPE|  
 |VW|VIEW DEFINITION|OBJECT|  
 |VW|VIEW DEFINITION|REMOTE SERVICE BINDING|  
@@ -309,7 +309,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
-|VW|VIEW DEFINITION|Usuário|  
+|VW|VIEW DEFINITION|USER|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
@@ -323,11 +323,14 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
 ## <a name="remarks"></a>Comentários  
- `sys.fn_builtin_permissions` é uma função com valor de tabela que emite uma cópia da hierarquia de permissões predefinidas. Essa hierarquia inclui permissões de cobertura. O `DEFAULT` conjunto de resultados descreve um grafo direcionado acíclico da hierarquia de permissões, do qual é a raiz (classe = SERVER, permissão = CONTROL SERVER).  
+ 
+  `sys.fn_builtin_permissions` é uma função com valor de tabela que emite uma cópia da hierarquia de permissões predefinidas. Essa hierarquia inclui permissões de cobertura. O `DEFAULT` conjunto de resultados descreve um grafo direcionado acíclico da hierarquia de permissões, da qual a raiz é (Class = Server, PERMISSION = Control Server).  
   
- `sys.fn_builtin_permissions` não aceita parâmetros correlatos.  
+ 
+  `sys.fn_builtin_permissions` não aceita parâmetros correlatos.  
   
- `sys.fn_builtin_permissions` retornará um conjunto vazio quando for chamado com um nome de classe inválido.  
+ 
+  `sys.fn_builtin_permissions` retornará um conjunto vazio quando for chamado com um nome de classe inválido.  
  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
@@ -336,7 +339,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-listing-all-built-in-permissions"></a>A. Listando todas as permissões internas   
+### <a name="a-listing-all-built-in-permissions"></a>a. Listando todas as permissões internas   
 Use `DEFAULT` ou uma cadeia de caracteres vazia para retornar todas as permissões.   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
@@ -356,7 +359,7 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
     WHERE permission_name = 'SELECT';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   

@@ -16,10 +16,10 @@ ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985747"
 ---
 # <a name="aggregate-functions---sum"></a>Funções de Agregação – sum
@@ -39,18 +39,18 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  Sequência de valores atômicos cuja soma deve ser calculada.  
   
 ## <a name="remarks"></a>Comentários  
- Todos os tipos de valores atomizados que são passados para **SUM ()** têm que ser subtipos do mesmo tipo base. Os tipos base aceitos são os três tipos base numéricos internos ou xdt:untypedAtomic. Valores do tipo xdt:untypedAtomic são convertidos em xs:double. Se há uma mistura desses tipos, ou se outros valores de outros tipos são passados, um erro estático será gerado.  
+ Todos os tipos de valores Atom que são passados para **Sum ()** precisam ser subtipos do mesmo tipo base. Os tipos base aceitos são os três tipos base numéricos internos ou xdt:untypedAtomic. Valores do tipo xdt:untypedAtomic são convertidos em xs:double. Se houver uma mistura desses tipos, ou se outros valores de outros tipos forem passados, um erro estático será gerado.  
   
- O resultado de **SUM ()** recebe o tipo base dos tipos passados como xs: Double no caso de XDT: untypedatomic, mesmo se a entrada for opcionalmente a sequência vazia. Se a entrada estiver estaticamente vazia, o resultado será 0 com o tipo estático e dinâmico de xs:integer.  
+ O resultado de **Sum ()** recebe o tipo base do passado em tipos, como xs: Double no caso de xdt: untypedAtomic, mesmo que a entrada seja opcionalmente a sequência vazia. Se a entrada estiver estaticamente vazia, o resultado será 0 com o tipo estático e dinâmico de xs:integer.  
   
- O **SUM ()** função retorna a soma dos valores numéricos. Se um valor XDT: untypedatomic não puder ser convertido em xs: Double, o valor será ignorado na sequência de entrada *$arg*. Se a entrada for uma sequência vazia dinamicamente calculada, o valor 0 do tipo base usado será retornado.  
+ A função **Sum ()** retorna a soma dos valores numéricos. Se um valor de xdt: untypedAtomic não puder ser convertido em xs: Double, o valor será ignorado na sequência de entrada, *$ARG*. Se a entrada for uma sequência vazia dinamicamente calculada, o valor 0 do tipo base usado será retornado.  
   
- A função retorna um erro de tempo de execução quando um estouro ou exceção fora do intervalo acontece.  
+ A função retorna um erro de runtime quando um estouro ou exceção fora do intervalo acontece.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são **** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
   
-### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. Usando a função sum() XQuery para localizar o número combinado total de horas de trabalho para todos os locais do centro de trabalho no processo de fabricação.  
+### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>a. Usando a função sum() XQuery para localizar o número combinado total de horas de trabalho para todos os locais do centro de trabalho no processo de fabricação.  
  A consulta a seguir acha o total de horas de trabalho de todos os locais de centro de trabalho no processo de fabricação de todos os modelos de produtos nos quais as instruções de fabricação são armazenadas.  
   
 ```  
@@ -105,19 +105,19 @@ ProductModelID Name                 TotalLaborHours
 ### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
   
--   Somente a versão de único argumento de **SUM ()** tem suporte.  
+-   Somente a versão de argumento único de **Sum ()** tem suporte.  
   
 -   Se a entrada for uma sequência vazia dinamicamente calculada, o valor 0 do tipo base usado será retornado, em vez do tipo xs:integer.  
   
--   O **SUM ()** função mapeia todos os números inteiros para xs: decimal.  
+-   A função **Sum ()** mapeia todos os inteiros para xs: decimal.  
   
--   O **SUM ()** não há suporte para a função em valores do tipo xs: Duration.  
+-   Não há suporte para a função **Sum ()** em valores do tipo xs: Duration.  
   
 -   Não há suporte para sequências que misturam tipos, atravessando os limites de tipo base.  
   
--   Sum, xs gera um erro de domínio.  
+-   A soma ((xs: Double ("INF"), xs: Double ("-INF"))) gera um erro de domínio.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

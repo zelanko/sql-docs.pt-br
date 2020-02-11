@@ -1,5 +1,5 @@
 ---
-title: Obtendo dados Long | Microsoft Docs
+title: Obtendo dados longos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68216367"
 ---
 # <a name="getting-long-data"></a>Obter dados Long
-Definem DBMSs *dados long* como qualquer caractere ou dados binários ao longo de um determinado tamanho, como 255 caracteres. Esses dados podem ser pequenos o suficiente para ser armazenado em um único buffer, como uma descrição da parte de vários milhares de caracteres. No entanto, pode ser muito longo para armazenar na memória, como documentos de texto longos ou bitmaps. Porque esses dados não podem ser armazenados em um único buffer, ela é recuperada do driver em partes com **SQLGetData** depois que os outros dados na linha foi buscados.  
+DBMSs definem *dados longos* como qualquer caractere ou dados binários em um determinado tamanho, como 255 caracteres. Esses dados podem ser pequenos o suficiente para serem armazenados em um único buffer, como uma descrição de parte de vários milhares de caracteres. No entanto, pode ser muito longo para armazenar na memória, como documentos de texto longo ou bitmaps. Como esses dados não podem ser armazenados em um único buffer, eles são recuperados do driver em partes com **SQLGetData** depois que os outros dados na linha são buscados.  
   
 > [!NOTE]  
->  Um aplicativo, na verdade, pode recuperar qualquer tipo de dados com **SQLGetData**, longo não apenas dados, embora somente os caracteres e dados binários podem ser recuperados em partes. No entanto, se os dados são pequenos o suficiente para caber em um único buffer, há geralmente não há motivo para usar **SQLGetData**. É muito mais fácil associar um buffer para a coluna e permitir que o driver retornar os dados no buffer.  
+>  Um aplicativo pode realmente recuperar qualquer tipo de dados com **SQLGetData**, não apenas dados longos, embora apenas dados de caracteres e binários possam ser recuperados em partes. No entanto, se os dados forem pequenos o suficiente para caber em um único buffer, geralmente não há motivo para usar **SQLGetData**. É muito mais fácil associar um buffer à coluna e permitir que o driver retorne os dados no buffer.  
   
- Para recuperar dados longos de uma coluna, um aplicativo chama primeiramente **SQLFetchScroll** ou **SQLFetch** para mover para uma linha e buscar os dados para colunas associadas. O aplicativo, em seguida, chama **SQLGetData**. **SQLGetData** tem os mesmos argumentos que **SQLBindCol**: um identificador de instrução; um número de coluna; o comprimento C de byte, o endereço e o tipo de dados de uma variável de aplicativo; e o endereço de um buffer de comprimento/indicador. Ambas as funções têm os mesmos argumentos porque eles executam essencialmente a mesma tarefa: Eles descrevem uma variável de aplicativo para o driver tanto especificam que os dados para uma determinada coluna devem ser retornados nessa variável. As principais diferenças são que **SQLGetData** é chamado depois que uma linha é buscada (e às vezes é conhecido como *ligação tardia* por esse motivo) e que a associação especificada pelo **SQLGetData**  dura apenas para a duração da chamada.  
+ Para recuperar dados longos de uma coluna, um aplicativo primeiro chama **SQLFetchScroll** ou **SQLFetch** para mover para uma linha e buscar os dados para as colunas associadas. O aplicativo então chama **SQLGetData**. **SQLGetData** tem os mesmos argumentos que **SQLBindCol**: um identificador de instrução; um número de coluna; o tipo de dados C, o endereço e o comprimento de bytes de uma variável de aplicativo; e o endereço de um buffer de comprimento/indicador. Ambas as funções têm os mesmos argumentos porque executam essencialmente a mesma tarefa: elas descrevem uma variável de aplicativo para o driver e especificam que os dados de uma determinada coluna devem ser retornados nessa variável. As principais diferenças são que **SQLGetData** é chamado depois que uma linha é buscada (e, às vezes, é referida como *associação tardia* por esse motivo) e que a associação especificada por **SQLGetData** dura apenas a duração da chamada.  
   
- Em relação a uma única coluna, **SQLGetData** se comporta como **SQLFetch**: Recupera os dados da coluna, converte-o para o tipo de variável de aplicativo e retorna-a nessa variável. Ele também retorna o comprimento de bytes dos dados no buffer de comprimento/indicador. Para obter mais informações sobre como **SQLFetch** retorna dados, consulte [buscando uma linha de dados](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
+ Em relação a uma única coluna, **SQLGetData** se comporta como **SQLFetch**: recupera os dados da coluna, converte-os no tipo da variável do aplicativo e retorna-os nessa variável. Ele também retorna o comprimento de bytes dos dados no buffer de comprimento/indicador. Para obter mais informações sobre como **SQLFetch** retorna dados, consulte [buscando uma linha de dados](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- **SQLGetData** difere **SQLFetch** em um aspecto importante. Se ele for chamado mais de uma vez em sucessão para a mesma coluna, cada chamada retorna uma parte sucessiva dos dados. Cada chamada, exceto a última chamada retorna SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (cadeia de caracteres dados à direita truncados); a última chamada retorna SQL_SUCCESS. Isso é como **SQLGetData** é usado para recuperar dados longos em partes. Quando não há mais dados para retornar, não há **SQLGetData** retorne SQL_NO_DATA. O aplicativo é responsável por reunir os dados longos, que pode significar concatenando as partes dos dados. Cada parte é terminada em nulo; o aplicativo deve remover o caractere nulo de terminação se concatenando as partes. Recuperando dados em partes pode ser feito para indicadores de comprimento variável, bem como para outros dados long. O valor retornado as diminuições de buffer de comprimento/indicador em cada chamada pelo número de bytes retornados da chamada anterior, embora seja comum para o driver não conseguir descobrir a quantidade de dados disponíveis e retornar um comprimento de byte de SQL_NO_TOTAL. Por exemplo:  
+ **SQLGetData** difere de **SQLFetch** em um aspecto importante. Se ele for chamado mais de uma vez em sucessivamente para a mesma coluna, cada chamada retornará uma parte sucessiva dos dados. Cada chamada, exceto a última chamada, retorna SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dados de cadeia de caracteres, truncados à direita); a última chamada retorna SQL_SUCCESS. É assim que o **SQLGetData** é usado para recuperar dados longos em partes. Quando não há mais dados a serem retornados, **SQLGetData** retorna SQL_NO_DATA. O aplicativo é responsável por colocar os dados longos juntos, o que pode significar concatenar as partes dos dados. Cada parte é terminada em nulo; o aplicativo deve remover o caractere de terminação nula se estiver concatenando as partes. A recuperação de dados em partes pode ser feita para indicadores de comprimento variável, bem como para outros dados longos. O valor retornado no buffer de comprimento/indicador diminui em cada chamada pelo número de bytes retornados na chamada anterior, embora seja comum que o driver não possa descobrir a quantidade de dados disponíveis e retornar um comprimento de bytes de SQL_NO_TOTAL. Por exemplo:  
   
 ```  
 // Declare a binary buffer to retrieve 5000 bytes of data at a time.  
@@ -72,16 +72,16 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- Há várias restrições sobre como usar **SQLGetData**. Em geral, as colunas acessadas com **SQLGetData**:  
+ Há várias restrições no uso de **SQLGetData**. Geralmente, as colunas acessadas com **SQLGetData**:  
   
--   Deve ser acessado em ordem crescente número de coluna (por causa da forma que as colunas de um conjunto de resultados são lidos da fonte de dados). Por exemplo, é um erro ao chamar **SQLGetData** para a coluna 5 e, em seguida, chamá-lo para a coluna 4.  
+-   Deve ser acessado na ordem de aumento do número da coluna (devido à maneira como as colunas de um conjunto de resultados são lidas da fonte de dados). Por exemplo, é um erro chamar **SQLGetData** para a coluna 5 e, em seguida, chamá-la para a coluna 4.  
   
--   não pode ser associado.  
+-   Não pode ser associado.  
   
--   Deve ter um número de coluna superior na última coluna associada. Por exemplo, se a última coluna associada for a coluna 3, é um erro ao chamar **SQLGetData** para a coluna 2. Por esse motivo, os aplicativos devem Certifique-se colocar colunas de dados longos no final da lista de seleção.  
+-   Deve ter um número de coluna superior à última coluna associada. Por exemplo, se a última coluna associada for a coluna 3, será um erro para chamar **SQLGetData** para a coluna 2. Por esse motivo, os aplicativos devem fazer com que você coloque colunas de dados longas no final da lista de seleção.  
   
--   Não pode ser usado se **SQLFetch** ou **SQLFetchScroll** foi chamado para recuperar mais de uma linha. Para obter mais informações, consulte [usando cursores em bloco](../../../odbc/reference/develop-app/using-block-cursors.md).  
+-   Não poderá ser usado se **SQLFetch** ou **SQLFetchScroll** tiver sido chamado para recuperar mais de uma linha. Para obter mais informações, consulte [usando cursores de bloco](../../../odbc/reference/develop-app/using-block-cursors.md).  
   
- Alguns drivers não impor essas restrições. Aplicativos interoperáveis ou devem supor que eles existem, ou determinam quais restrições não são aplicadas por meio da chamada **SQLGetInfo** com a opção SQL_GETDATA_EXTENSIONS.  
+ Alguns drivers não impõem essas restrições. Os aplicativos interoperáveis devem presumir que existam ou determinar quais restrições não são impostas chamando **SQLGetInfo** com a opção SQL_GETDATA_EXTENSIONS.  
   
- Se o aplicativo não precisar de todos os dados em um caractere ou uma coluna de dados binários, ele pode reduzir o tráfego de rede em drivers baseados em DBMS, definindo o atributo da instrução SQL_ATTR_MAX_LENGTH antes de executar a instrução. Isso restringe o número de bytes de dados que serão retornados para qualquer caractere ou uma coluna binária. Por exemplo, suponha que uma coluna contiver documentos de texto longo. Um aplicativo que navega a tabela que contém esta coluna pode ter que exibir apenas a primeira página de cada documento. Embora esse atributo de instrução pode ser simulado no driver, não há nenhum motivo para fazer isso. Em particular, se um aplicativo deseja truncar caracteres ou dados binários, ele deve associar um buffer pequeno para a coluna com **SQLBindCol** e permitir que o driver truncar os dados.
+ Se o aplicativo não precisar de todos os dados em uma coluna de dados binários ou de caracteres, ele poderá reduzir o tráfego de rede em drivers baseados em DBMS definindo o atributo de instrução SQL_ATTR_MAX_LENGTH antes de executar a instrução. Isso restringe o número de bytes de dados que serão retornados para qualquer caractere ou coluna binária. Por exemplo, suponha que uma coluna contenha documentos de texto longo. Um aplicativo que procura a tabela que contém essa coluna pode ter que exibir apenas a primeira página de cada documento. Embora esse atributo de instrução possa ser simulado no driver, não há motivo para fazer isso. Em particular, se um aplicativo quiser truncar dados de caractere ou binário, ele deverá associar um pequeno buffer à coluna com **SQLBindCol** e deixar que o driver TRUNCATE os dados.

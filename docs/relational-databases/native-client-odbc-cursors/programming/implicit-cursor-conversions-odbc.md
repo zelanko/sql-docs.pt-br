@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e62604404c83e7780d50438a485910e5af4d4f05
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784378"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>Conversões implícitas de cursor (ODBC)
@@ -34,7 +34,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client] Cursor type changed"
   
  O aplicativo pode determinar que tipo de cursor está sendo usado agora chamando **SQLGetStmtOption** definido como SQL_CURSOR_TYPE. A conversão do tipo de cursor se aplica somente a uma instrução. O próximo **SQLExecDirect** ou **SQLExecute** será feito usando as configurações de cursor da instrução original.  
   
-## <a name="see-also"></a>Consulte também  
- [Detalhes &#40;de programação do cursor ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Detalhes de programação do cursor &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

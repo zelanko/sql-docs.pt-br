@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211982"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Criar uma especificação de auditoria de banco de dados e de servidor
@@ -78,7 +78,7 @@ ms.locfileid: "68211982"
   
      As opções a seguir estão disponíveis na caixa de diálogo **Criar Especificação de Auditoria de Banco de Dados** .  
   
-     **Name**  
+     **Nome**  
      O nome da especificação de auditoria de banco de dados. Esse nome é gerado automaticamente quando você cria uma nova especificação de auditoria de servidor, mas é editável.  
   
      **Auditoria**  
@@ -133,7 +133,7 @@ ms.locfileid: "68211982"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo a seguir cria uma especificação de auditoria de banco de dados denominada `Audit_Pay_Tables` que audita instruções SELECT e INSERT pelo usuário `dbo`, para a tabela `HumanResources.EmployeePayHistory` baseada na auditoria de servidor definida acima.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo a seguir cria uma especificação de auditoria de banco de dados denominada `Audit_Pay_Tables` que audita instruções SELECT e INSERT pelo usuário `dbo` , para a tabela `HumanResources.EmployeePayHistory` baseada na auditoria de servidor definida acima.  
   
     ```  
     USE AdventureWorks2012 ;   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8e46d7fc8a0c214501841de448a94d1211b95fa1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892959"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Compreendendo os requisitos para um modelo de série temporal (Tutorial de mineração de dados intermediário)
@@ -31,7 +31,7 @@ ms.locfileid: "68892959"
   
 ### <a name="to-identify-the-time-key-for-the-forecasting-model"></a>Para identificar a chave de tempo para o modelo de previsão  
   
-1.  No painel, **SalesByRegion. dsv [Design]** , clique com o botão direito do mouse na tabela vTimeSeries e, em seguida, selecione **explorar dados**.  
+1.  No painel, **SalesByRegion. dsv [Design]**, clique com o botão direito do mouse na tabela vTimeSeries e, em seguida, selecione **explorar dados**.  
   
      Uma nova guia é aberta, intitulada **explorar a tabela vTimeSeries**.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "68892959"
 -   Clique com o botão direito do mouse na guia, **Explore a tabela vTimeSeries**e selecione **fechar**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Criando uma estrutura de previsão e um &#40;tutorial de mineração de dados intermediário de modelo&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [Criando uma estrutura de previsão e modelo &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

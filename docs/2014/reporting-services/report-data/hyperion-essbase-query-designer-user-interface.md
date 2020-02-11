@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 812c1679af046f799e06fc207a5591565682a018
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890882"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta do Hyperion Essbase
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece um designer de consultas gráficas para criar consultas MDX (Multidimensional Expression) para uma fonte de dados do [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] . O designer de consulta gráfica MDX tem dois modos: Modo de design e modo de consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um cubo definido na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]fornece um designer de consultas gráficas para criar consultas MDX (multidimensional Expression) [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] para uma fonte de dados. O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um cubo definido na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
   
 > [!IMPORTANT]  
 >  Os usuários acessam fontes de dados quando criam e executam consultas. Você deve conceder permissões mínimas nas fontes de dados, como permissões somente leitura.  
@@ -41,7 +41,7 @@ ms.locfileid: "68890882"
   
  A figura a seguir mostra os painéis do modo Design.  
   
- ![Designer de Consultas para a fonte de dados do Hyperion Essbase](../media/rsqd-dshyperionessbase-mdx-designmode.gif "Designer de Consultas para a fonte de dados do Hyperion Essbase")  
+ ![Designer de Consulta da fonte de dados do Hyperion Essbase](../media/rsqd-dshyperionessbase-mdx-designmode.gif "Designer de Consulta da fonte de dados do Hyperion Essbase")  
   
  A tabela a seguir lista os painéis neste modo.  
   
@@ -60,23 +60,23 @@ ms.locfileid: "68890882"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Barra de ferramentas do Designer de Consultas Gráficas na barra de ferramentas do modo Design  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas MDX por meio da interface gráfica. A tabela a seguir mostra os botões e descreve suas funções.  
   
-|Botão|Descrição|  
+|Botão|DESCRIÇÃO|  
 |------------|-----------------|  
-|**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Não disponível para esse tipo de fonte de dados.|  
-|**Importarar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Editar como texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Não disponível para esse tipo de fonte de dados.|  
+|**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Atualizar campos de conjunto de dados](../media/rsqdicon-refreshfields.gif "Atualizar campos de conjunto de dados")|Atualiza metadados na fonte de dados.|  
-|![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Exibe a caixa de diálogo **Construtor de Membro Calculado** . Use essa opção para criar ou editar expressões de um membro calculado, incluindo a definição da propriedade **Ordem de Resolução** .|  
+|![Adicionar Membro Calculado](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Adicionar Membro Calculado")|Exibe a caixa de diálogo **Construtor de Membro Calculado** . Use essa opção para criar ou editar expressões de um membro calculado, incluindo a definição da propriedade **Ordem de Resolução** .|  
 |![Alternar para mostrar células vazias](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias")|Alterna entre mostrar ou não células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
 |![Executar a consulta automaticamente](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado toda vez que é feita uma alteração, por exemplo, excluindo uma coluna no painel Dados. Os resultados são mostrados no painel Dados.|  
-|![Excluir](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Excluir")|Exclui o item selecionado da consulta. Use esse botão para excluir as linhas selecionadas no painel Filtro.|  
+|![Delete (excluir)](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Excluir")|Exclui o item selecionado da consulta. Use esse botão para excluir as linhas selecionadas no painel Filtro.|  
 |![Executar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  
 |![Cancelar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Cancelar a consulta")|Cancela a consulta.|  
-|![Alternar para o modo de Design](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Alternar para o modo de Design")|Alterna entre o modo Design e o modo Consulta.|  
+|![Alternar para o modo de design](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Alterna para o modo de design")|Alterna entre o modo Design e o modo Consulta.|  
   
 ## <a name="graphical-query-designer-in-query-mode"></a>Designer de consultas gráficas no modo Consulta  
  Para alterar o designer de consultas gráficas para o modo Consulta, clique no botão de alternância **Modo Design** na barra de ferramentas. A figura a seguir indica as partes do designer de consulta no modo Consulta.  
   
- ![Designer de Consultas no modo de consulta do Hyperion](../media/rsqd-hyperionessbase-mdx-querymode.gif "Designer de Consultas no modo de consulta do Hyperion")  
+ ![Designer de Consulta em Modo de Consulta para Hyperion](../media/rsqd-hyperionessbase-mdx-querymode.gif "Designer de Consulta em Modo de Consulta para Hyperion")  
   
  A tabela a seguir descreve a função de cada painel.  
   
@@ -92,16 +92,16 @@ ms.locfileid: "68890882"
 ### <a name="toolbar-for-the-graphical-query-designer-in-query-mode"></a>Barra de ferramentas do Designer de Consultas Gráficas no modo Consulta  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas MDX por meio da interface gráfica. Os botões da barra de ferramentas são idênticos nos modos Design e Consulta, mas os botões a seguir não estão ativados no modo Consulta:  
   
--   **Editar como Texto**  
+-   **Editar como texto**  
   
--   **Adicionar Membro Calculado** (![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Adicionar membro calculado** (![Adicionar membro calculado](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Adicionar Membro Calculado"))  
   
--   **Mostrar Células Vazias** (![Alternar para mostrar células vazias](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
+-   **Mostrar células vazias** (![alternar para mostrar células vazias](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
   
--   **Executar automaticamente** (![Executar a consulta automaticamente](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente"))  
+-   **Executar** automaticamente (![executar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")automaticamente)  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Arquivo de configuração RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criar um conjunto de um DataSet compartilhado ou um conjunto de &#40;inserido Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [arquivo de configuração RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)  
   
   

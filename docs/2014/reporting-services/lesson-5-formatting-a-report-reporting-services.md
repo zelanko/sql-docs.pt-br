@@ -1,5 +1,5 @@
 ---
-title: 'Lição 5: como formatar um relatório (Reporting Services) | Microsoft Docs'
+title: 'Lição 5: Formatando um relatório (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108429"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lição 5: como formatar um relatório (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   Agora que já adicionou uma região de dados e alguns campos ao relatório de ordens de venda, você pode formatar os campos de data e moeda, além dos cabeçalhos da coluna.  
   
  Neste tópico:  
@@ -26,9 +26,9 @@ ms.locfileid: "66108429"
   
 -   [Formatar a moeda](#bkmk_format_currency)  
   
--   [Alterar o estilo de texto e larguras da coluna](#bkmk_change_textstyle)  
+-   [Alterar estilo de texto e larguras de coluna](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a> Formatar a data  
+##  <a name="bkmk_format_date"></a>Formatar a data  
  Por padrão, o campo Data exibe informações de data e hora. É possível formatá-lo para exibir apenas a data.  
   
 #### <a name="to-format-a-date-field"></a>Para formatar um campo de data  
@@ -37,7 +37,7 @@ ms.locfileid: "66108429"
   
 2.  Clique com o botão direito do mouse na célula com a expressão de campo `[Date]` e clique em **Propriedades da Caixa de Texto**.  
   
-3.  Clique em **número**e, em seguida, o **categoria** campo, selecione `Date`.  
+3.  Clique em **número**e, no campo **categoria** , selecione `Date`.  
   
 4.  Na caixa **Tipo** , selecione **31 de janeiro de 2000**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66108429"
   
 6.  Visualize o relatório para ver a alteração no campo `[Date]` e, em seguida, altere de volta para a exibição de design.  
   
-##  <a name="bkmk_format_currency"></a> Formatar a moeda  
+##  <a name="bkmk_format_currency"></a>Formatar a moeda  
  O campo LineTotal exibe um número geral. Formate-o para exibir o número como moeda.  
   
 #### <a name="to-format-a-currency-field"></a>Para formatar um campo de conversor de moedas  
@@ -58,11 +58,11 @@ ms.locfileid: "66108429"
   
     -   **Casas decimais: 2**  
   
-    -   **Números negativos: (R$ 1.2345,00)**  
+    -   **Números negativos: ($12345)**  
   
-    -   **Símbolo: R$ português (Brasil)**  
+    -   **Símbolo: $ Inglês (Estados Unidos)**  
   
-4.  Selecione **Usar separador de milhar (.)** .  
+4.  Selecione **Usar separador de milhar (.)**.  
   
      Caso o texto de exemplo seja **$12.345,00**, as configurações estão corretas.  
   
@@ -70,14 +70,14 @@ ms.locfileid: "66108429"
   
 6.  Visualize o relatório para ver a alteração no campo `[LineTotal]` e, em seguida, altere de volta para a exibição de design.  
   
-##  <a name="bkmk_change_textstyle"></a> Alterar o estilo de texto e larguras da coluna  
+##  <a name="bkmk_change_textstyle"></a>Alterar estilo de texto e larguras de coluna  
  Também é possível alterar a formatação da linha do cabeçalho para diferenciá-la das linhas de dados no relatório. Por fim, você ajustará as larguras das colunas.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>Para formatar as linhas do cabeçalho e as colunas da tabela  
   
 1.  Clique na tabela de forma que os identificadores de coluna e linha sejam exibidos acima e ao lado da tabela.  
   
-     ![Design, tabela com linha de cabeçalho e de linha de detalhe](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Design, tabela com linha de cabeçalho e de linha de detalhes")  
+     ![Design, Tabela com linha de cabeçalho e linha de detalhes](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Design, Tabela com linha de cabeçalho e linha de detalhes")  
   
      As barras em cinza ao longo da parte superior e ao lado da tabela são os identificadores de coluna e de linha.  
   
@@ -85,16 +85,16 @@ ms.locfileid: "66108429"
   
 3.  Selecione a linha que contém rótulos de cabeçalho de coluna e, no menu **Formatar** , aponte para **Fonte** e clique em **Negrito**.  
   
-4.  Para visualizar o relatório, clique na guia **Visualizar** . O resultado deve ser algo como:  
+4.  Para visualizar o relatório, clique na guia **Visualizar** . Ele deve ser semelhante a este:  
   
-     ![Visualização de tabela com cabeçalhos de coluna em negrito](../../2014/tutorials/media/rs-basictabledetailsformattedpreview.gif "Visualização de tabela com cabeçalhos de coluna em negrito")  
+     ![Visualização da tabela com cabeçalhos de colunas em negrito](../../2014/tutorials/media/rs-basictabledetailsformattedpreview.gif "Visualização da tabela com cabeçalhos de colunas em negrito")  
   
 5.  No menu **Arquivo** , clique em **Salvar Tudo** para salvar o relatório.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você formatou cabeçalhos de coluna e valores de data e moeda com êxito. Agora você adicionará agrupamento e totais ao relatório. Confira a [Lição 6: como adicionar agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+ Você formatou cabeçalhos de coluna e valores de data e moeda com êxito. Agora você adicionará agrupamento e totais ao relatório. Consulte a [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096125"
 ---
 # <a name="hadoop-connection-manager"></a>Gerenciador de conexões do Hadoop
@@ -62,7 +62,7 @@ ms.locfileid: "74096125"
   
 5.  Selecione **Testar Conexão**. (Apenas a conexão que você habilitou é testada.)  
   
-6.  Clique em **OK** para fechar a caixa de diálogo.  
+6.  Selecione **OK** para fechar a caixa de diálogo.  
 
 ## <a name="connect-with-kerberos-authentication"></a>Conecte-se com a autenticação Kerberos
 Há duas opções para configurar o ambiente local. Assim, você pode usar a autenticação Kerberos com o Gerenciador de Conexões do Hadoop. Você pode escolher a opção que melhor se ajusta às suas circunstâncias.
@@ -90,7 +90,7 @@ No computador do SSIS:
 
     Após a execução desses comandos, reinicie o computador.
 
-2.  Verifique a configuração com o comando **Ksetup**. A saída deverá ser semelhante a esta amostra:
+2.  Verifique a configuração com o comando **Ksetup**. A saída deve se parecer com o exemplo a seguir:
 
     ```
     C:> Ksetup
@@ -208,7 +208,7 @@ Execute os seguintes comandos **Ksetup** para adicionar uma entrada de realm.
 
 ## <a name="see-also"></a>Confira também  
  [Tarefa do Hive do Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   
- [Tarefa de Pig do Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
+ [Tarefa do Pig do Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Tarefas do Sistema de Arquivos Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   

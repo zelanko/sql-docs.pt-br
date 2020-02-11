@@ -11,14 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035315"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Sobre os termos de licença do SQL Server (SSCM)
-  Os Termos da Licença de Software do [!INCLUDE[msCoName](../../includes/msconame-md.md)]são copiados para o computador local quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado. Quando várias instâncias da mesma edição e do mesmo idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instaladas no mesmo computador, uma única cópia dos termos de licença será aplicável a todas as instâncias dessa edição e idioma. Os arquivos são gravados em: %ProgramFiles%\Microsoft SQL Server\110\License terms \ ou % ProgramFiles (x86) %\Microsoft SQL Server\110\License termos\\.  
+  Os Termos da Licença de Software do [!INCLUDE[msCoName](../../includes/msconame-md.md)]são copiados para o computador local quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado. Quando várias instâncias da mesma edição e do mesmo idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instaladas no mesmo computador, uma única cópia dos termos de licença será aplicável a todas as instâncias dessa edição e idioma. Os arquivos são gravados em:%ProgramFiles%\Microsoft SQL Server\110\License terms \ ou% ProgramFiles (x86)% \ Microsoft\\SQL Server\110\License terms.  
   
  Quando várias instâncias da mesma edição e do mesmo idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instaladas no mesmo computador, uma única cópia dos termos da licença é aplicável a todas as instâncias dessa edição e idioma.  
   
@@ -77,8 +77,8 @@ ms.locfileid: "63035315"
 ## <a name="sql-server-licensing-options"></a>Opções de licenciamento do SQL Server  
  Para obter mais informações sobre preço e opções de licenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte o site do [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) .  
   
-## <a name="see-also"></a>Consulte também  
- [Declaração de privacidade do Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Microsoft SQL Server declaração de privacidade](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [Aviso legal para documentação](../../../2014/getting-started/legal-notice-for-documentation.md)  
   
   

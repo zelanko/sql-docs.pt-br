@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814029"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Opção affinity mask de configuração de servidor
@@ -59,9 +59,9 @@ ms.locfileid: "62814029"
   
  Se você especificar uma máscara de afinidade que tenta fazer mapeamento para uma CPU inexistente, o comando RECONFIGURE reportará uma mensagem de erro à sessão do cliente e ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O uso da opção RECONFIGURE WITH OVERRIDE não tem nenhum efeito nesse caso, e o mesmo erro de configuração é reportado novamente.  
   
- Você também pode excluir atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de processadores com atribuições de carga de trabalho específicas aos sistemas operacionais Windows 2000 ou Windows Server 2003. Se você definir um bit representando um processador como 1, esse processador será selecionado pelo Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atribuição de thread. Quando você define `affinity mask` como 0 (o padrão), o Microsoft Windows 2000 ou Windows Server 2003, algoritmos de agendamento definem a afinidade do thread. Quando você define a `affinity mask` como qualquer valor diferente de zero, a afinidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta o valor como um bitmask que especifica esses processadores qualificados para seleção.  
+ Você também pode excluir atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de processadores com atribuições de carga de trabalho específicas aos sistemas operacionais Windows 2000 ou Windows Server 2003. Se você definir um bit representando um processador como 1, esse processador será selecionado pelo Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atribuição de thread. Quando você define `affinity mask` como 0 (o padrão), os algoritmos de agendamento do Microsoft Windows 2000 ou do windows Server 2003 definem a afinidade do thread. Quando você define a `affinity mask` como qualquer valor diferente de zero, a afinidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta o valor como um bitmask que especifica esses processadores qualificados para seleção.  
   
- Ao isolar threads do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da execução em determinados processadores, o Microsoft Windows 2000 ou o Windows Server 2003 pode avaliar melhor como o sistema está controlando os processos específicos do Windows. Por exemplo, em um servidor de 8 CPUs que executa duas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (instâncias A e B), o administrador do sistema poderia usar a opção de máscara de afinidade para atribuir o primeiro conjunto de 4 CPUs à instância A e o segundo conjunto de 4 CPUs à instância B. Para configurar mais de 32 processadores, defina a máscara de afinidade e a máscara de afinidade64. Os valores para `affinity mask` são da seguinte maneira:  
+ Ao isolar threads do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da execução em determinados processadores, o Microsoft Windows 2000 ou o Windows Server 2003 pode avaliar melhor como o sistema está controlando os processos específicos do Windows. Por exemplo, em um servidor de 8 CPUs que executa duas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (instâncias A e B), o administrador do sistema poderia usar a opção de máscara de afinidade para atribuir o primeiro conjunto de 4 CPUs à instância A e o segundo conjunto de 4 CPUs à instância B. Para configurar mais de 32 processadores, defina a máscara de afinidade e a máscara de afinidade64. Os valores para `affinity mask` são os seguintes:  
   
 -   Uma `affinity mask` de 1 byte abrange até 8 CPUs em um computador multiprocessador.  
   
@@ -114,7 +114,7 @@ GO
 |127|01111111|0, 1, 2, 3, 4, 5 e 6|  
 |255|11111111|0, 1, 2, 3, 4, 5, 6 e 7|  
   
- A opção de máscara de afinidade é uma opção avançada. Se você estiver usando o procedimento armazenado do sistema sp_configure para alterar a configuração, você poderá alterar `affinity mask` apenas quando **Mostrar opções avançadas** é definido como 1. Após executar o comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , a nova configuração terá efeito imediatamente sem a necessidade de reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ A opção de máscara de afinidade é uma opção avançada. Se você estiver usando o procedimento armazenado do sistema sp_configure para alterar a configuração, poderá alterar `affinity mask` somente quando **Mostrar opções avançadas** estiver definido como 1. Após executar o comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , a nova configuração terá efeito imediatamente sem a necessidade de reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="non-uniform-memory-access-numa"></a>Acesso de memória não uniforme (NUMA)  
  Ao usar hardware baseado em NUMA com a máscara de afinidade definida, todo agendador em um nó terá uma afinidade com sua própria CPU. Quando a máscara de afinidade não estiver definida, cada agendador terá uma afinidade com o grupo de CPUs dentro do nó NUMA e um agendador mapeado para o nó NUMA N1 poderá agendar trabalho em qualquer CPU no nó, mas não em CPUs associadas a outro nó.  
@@ -127,10 +127,10 @@ GO
 ### <a name="startup"></a>Inicialização  
  Se uma máscara de afinidade especificada violar a política de licenciamento durante a inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou durante a anexação do banco de dados, a camada do mecanismo concluirá o processo de inicialização ou a operação de anexação/restauração do banco de dados e depois redefinirá o valor de execução de sp_configure da máscara de afinidade como zero, emitindo uma mensagem de erro para o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="reconfigure"></a>Reconfiguração  
+### <a name="reconfigure"></a>Reconfigurar  
  Se uma máscara de afinidade especificada violar a política de licenciamento ao executar o comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , uma mensagem de erro será reportada à sessão do cliente e ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o administrador do banco de dados terá que reconfigurar a máscara de afinidade. Nenhum comando RECONFIGURE WITH OVERRIDE é aceito nesse caso.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154028"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Editor de Destino ADO NET (Página Gerenciador de Conexões)
@@ -24,7 +24,7 @@ ms.locfileid: "70154028"
   
  Para obter mais informações sobre o destino ADO NET, consulte [ADO NET Destination](data-flow/ado-net-destination.md).  
   
- **Para abrir a página Gerenciador de Conexões**  
+ **Para abrir a página Gerenciador de conexões**  
   
 1.  Em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que tenha o destino ADO NET.  
   
@@ -33,20 +33,20 @@ ms.locfileid: "70154028"
 3.  No **Editor de Destino ADO NET**, clique em **Gerenciador de Conexões**.  
   
 ## <a name="static-options"></a>Opções estáticas  
- **Gerenciador de Conexões**  
+ **Connection manager**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Configurar Gerenciador de Conexões ADO NET** .  
   
- **Use uma tabela ou exibição**  
- Selecione uma tabela ou exibição existente na lista ou crie uma nova tabela clicando em **Nova**.  
+ **Usar uma tabela ou exibição**  
+ Selecione uma tabela ou exibição existente na lista ou crie uma nova tabela clicando em **novo**.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova tabela ou exibição usando a caixa de diálogo **Criar Tabela** .  
   
 > [!NOTE]  
->  Ao clicar em **Novo**, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gera uma instrução CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Quando você clica **** em novo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o gera uma instrução de CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Visualização**  
  Visualize os resultados usando a caixa de diálogo **Visualizar Resultados da Consulta** . A visualização pode exibir até 200 linhas.  
@@ -58,7 +58,7 @@ ms.locfileid: "70154028"
   
  Você pode usar o Provedor de Dados .NET para o SQL Server (SqlClient) para conectar-se ao [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
- Se você selecionar **Usar a inserção em massa quando disponível**e definir a opção **Erro** como **Redirecionar a linha**, o lote de dados que o destino redireciona à saída de erro poderá incluir linhas válidas. Para obter mais informações sobre o tratamento de erro em operações em massa, consulte [Tratamento de erros em dados](data-flow/error-handling-in-data.md). Para obter mais informações sobre a opção **Erro** , consulte [ADO NET Destination Editor &#40;Erro Output Page&#41;.](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+ Se você selecionar **Usar a inserção em massa quando disponível**e definir a opção **Erro** como **Redirecionar a linha**, o lote de dados que o destino redireciona à saída de erro poderá incluir linhas válidas. Para obter mais informações sobre o tratamento de erro em operações em massa, consulte [Tratamento de erros em dados](data-flow/error-handling-in-data.md). Para obter mais informações sobre a opção **Erro** , consulte [Editor de Destino ADO NET &#40;Página Saída de Erro&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
 >  Se uma tabela de origem do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou do Sybase incluir uma coluna de identidade, utilize as tarefas Executar SQL para executar uma instrução SET IDENTITY_INSERT antes e depois do destino ADO NET. A propriedade da coluna de identidade especifica um valor incremental para a coluna. A instrução SET IDENTITY_INSERT habilita os valores explícitos a serem inseridos na coluna de identidade. Para executar as instruções CREATE TABLE e SET IDENTITY na mesma conexão de banco de dados, defina a propriedade `RetainSameConnection` do gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)] para `True`. Use também o mesmo gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)] para as tarefas Executar SQL e para o destino ADO NET.  
@@ -68,9 +68,9 @@ ms.locfileid: "70154028"
 ## <a name="external-resources"></a>Recursos externos  
  Artigo técnico: [Carregamento rápido de dados no Banco de Dados SQL do Azure](https://go.microsoft.com/fwlink/?LinkId=244333); em sqlcat.com  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de Destino ADO NET &#40;página Mapeamentos&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
- [Editor de Destino ADO NET &#40;Página Saída de Erro&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Editor de destino ADO NET &#40;página Mapeamentos&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
+ [Editor de destino ADO NET &#40;página saída de erro&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [Gerenciador de conexões ADO.NET](connection-manager/ado-net-connection-manager.md)   
  [Tarefa Executar SQL](control-flow/execute-sql-task.md)  
   

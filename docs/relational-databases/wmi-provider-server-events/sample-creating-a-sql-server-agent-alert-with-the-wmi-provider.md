@@ -15,10 +15,10 @@ ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b9ceab4fd40174a68bd512fedf2c1b6d5b159b99
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660528"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Exemplo: Criar um alerta do SQL Server Agent com o Provedor WMI
@@ -35,7 +35,7 @@ ms.locfileid: "73660528"
  O alerta executa o trabalho sempre que um evento de rastreamento do grafo deadlock é registrado. Para um alerta de WMI, o SQL Server Agent cria uma consulta de notificação que usa o namespace e a instrução WQL especificados. Para esse alerta, o SQL Server Agent monitora a instância padrão no computador local. A instrução WQL solicita quaisquer eventos `DEADLOCK_GRAPH` na instância padrão. Para alterar a instância que o alerta monitora, substitua o nome de instância para `MSSQLSERVER` no `@wmi_namespace` para o alerta.  
   
 > [!NOTE]  
->  Para SQL Server Agent receber eventos WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser habilitado no **msdb** e no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+>  Para SQL Server Agent receber eventos WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] o deve estar habilitado no **msdb** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]no.  
   
 ```  
 USE AdventureWorks ;  
@@ -103,7 +103,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Execute o script a seguir na segunda guia de consulta. Esse script produz um conjunto de resultados e, em seguida, os bloqueia, aguardando a aquisição de um bloqueio no `Production.Product`.  
+ Execute o script a seguir na segunda guia de consulta. Esse script produz um conjunto de resultados e, em seguida, os bloqueia, aguardando a aquisição de um bloqueio `Production.Product`.  
   
 ```  
 USE AdventureWorks ;  
@@ -119,7 +119,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Execute o script a seguir na primeira guia de consulta. Esse script é bloqueado, aguardando a aquisição de um bloqueio no `Production.Location`. Depois de um tempo limite curto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolherá este script ou o script no exemplo como a vítima de deadlock e encerrará a transação.  
+ Execute o script a seguir na primeira guia de consulta. Esse script é bloqueado, aguardando a aquisição de `Production.Location`um bloqueio. Depois de um tempo limite curto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolherá este script ou o script no exemplo como a vítima de deadlock e encerrará a transação.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  
@@ -135,7 +135,7 @@ GO
   
  A coluna `DeadlockGraph` deve conter um documento XML que mostra todas as propriedades do evento do gráfico de deadlock.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Provedor WMI para conceitos de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

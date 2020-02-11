@@ -16,16 +16,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148711"
 ---
 # <a name="setting-properties---smo"></a>Configurar propriedades – SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Propriedades são valores que armazenam informações descritivas sobre o objeto. Por exemplo, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]asopções de configuração são representadas pelas propriedades do objeto.<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> As propriedades podem ser acessadas direta ou indiretamente por meio da coleção de propriedades. O acesso direto às propriedades usa a seguinte sintaxe:  
+  Propriedades são valores que armazenam informações descritivas sobre o objeto. Por exemplo, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as opções de configuração são representadas pelas propriedades do <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> objeto. As propriedades podem ser acessadas direta ou indiretamente por meio da coleção de propriedades. O acesso direto às propriedades usa a seguinte sintaxe:  
   
  `objInstance.PropertyName`  
   
@@ -58,11 +58,11 @@ ms.locfileid: "70148711"
  O método <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> define o comportamento de carregamento da propriedade para o restante do aplicativo ou até que ele seja reiniciado. Você pode salvar o comportamento original usando o método <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> e pode restaurá-lo conforme necessário.  
   
 ## <a name="examples"></a>Exemplos  
-Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Obtendo e configurando uma propriedade no Visual Basic  
- Este exemplo de código mostra como obter a <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propriedade <xref:Microsoft.SqlServer.Management.Smo.Information> do objeto e <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> como definir a <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propriedade da propriedade como o membro **ExecuteSQL** do <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> tipo enumerado.  
+ Este exemplo de código mostra como obter a <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> Propriedade do <xref:Microsoft.SqlServer.Management.Smo.Information> objeto e <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> como definir a propriedade da <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Propriedade como o membro **ExecuteSQL** do tipo <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerado.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Obtendo e configurando uma propriedade no Visual C#  
- Este exemplo de código mostra como obter a <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propriedade <xref:Microsoft.SqlServer.Management.Smo.Information> do objeto e <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> como definir a <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propriedade da propriedade como o membro **ExecuteSQL** do <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> tipo enumerado.  
+ Este exemplo de código mostra como obter a <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> Propriedade do <xref:Microsoft.SqlServer.Management.Smo.Information> objeto e <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> como definir a propriedade da <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Propriedade como o membro **ExecuteSQL** do tipo <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerado.  
   
 ```csharp  
 {   

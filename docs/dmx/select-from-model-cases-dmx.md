@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5f0334c37eeedafee7066f01d61745fcb82d1629
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892840"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Selecione do &lt;modelo&gt;. CASOS (DMX)
@@ -25,7 +25,7 @@ ms.locfileid: "68892840"
 > [!NOTE]  
 >  No DMX (Data Mining Extensions) é possível apenas habilitar o detalhamento ao criar o modelo. É possível adicionar o detalhamento a um modelo existente usando o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], mas o modelo deve ser reprocessado antes de você poder exibir ou consultar os casos.  
   
- Para obter mais informações sobre como habilitar o detalhamento, consulte [criar &#40;modelo&#41;de mineração DMX](../dmx/create-mining-model-dmx.md), [ &#40;selecionar no DMX&#41;](../dmx/select-into-dmx.md)e [alterar a &#40;estrutura de mineração DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
+ Para obter mais informações sobre como habilitar o detalhamento, consulte [criar modelo de mineração &#40;&#41;DMX ](../dmx/create-mining-model-dmx.md), [Selecione em &#40;DMX&#41;](../dmx/select-into-dmx.md)e [alterar estrutura de mineração &#40;&#41;DMX ](../dmx/alter-mining-structure-dmx.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,20 +50,20 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *expressão de condição*  
  Uma condição para restringir os valores retornados da lista de colunas.  
   
- *Expressão*  
+ *expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
  Se o detalhamento for habilitado no modelo e na estrutura de mineração, os usuários que foram membros de uma função com permissão de detalhamento no modelo e na estrutura poderão acessar as colunas da estrutura de mineração que não foram incluídas no modelo e mineração. Portanto, para proteger dados confidenciais ou informações pessoais, você deve construir sua exibição da fonte de dados para mascarar informações pessoais e conceder a permissão **AllowDrillThrough** em uma estrutura de mineração somente quando for necessário.  
   
- A [função &#40;DMX&#41; de retardo](../dmx/lag-dmx.md) pode ser usada com modelos de série temporal para retornar ou filtrar o intervalo de tempo entre cada caso e a hora inicial.  
+ A função [Lag &#40;&#41;DMX](../dmx/lag-dmx.md) pode ser usada com modelos de série temporal para retornar ou filtrar o intervalo de tempo entre cada caso e a hora inicial.  
   
- O uso [da &#40;função&#41; DMX IsInNode](../dmx/isinnode-dmx.md) na cláusula **Where** retorna apenas os casos associados ao nó especificado pela coluna NODE_UNIQUE_NAME do conjunto de linhas de esquema.  
+ Usar a função [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) na cláusula **Where** retorna apenas os casos associados ao nó especificado pela coluna NODE_UNIQUE_NAME do conjunto de linhas de esquema.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir são baseados na estrutura de mineração direcionada para mala direta, que é [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]baseada no banco de dados e seus modelos de mineração associados. Para obter mais informações, consulte o [tutorial básico de mineração de dados](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
-### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Exemplo 1: Detalhamento para casos de modelo e colunas de estrutura  
+### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Exemplo 1: detalhamento para casos de modelo colunas de estrutura  
  O seguinte exemplo retorna as colunas para todos os casos usados para testar o modelo Correspondência destinada. Se a estrutura de mineração na qual o modelo foi construído não tiver um conjunto de dados de testes de validação, essa consulta retornará 0 casos. É possível usar a lista de expressões para retornar apenas as colunas necessárias.  
   
 ```  
@@ -84,12 +84,12 @@ AND IsInNode('002')
  Para retornar uma coluna de estrutura, as permissões de detalhamento devem estar habilitadas no modelo de mineração e na estrutura de mineração.  
   
 > [!NOTE]  
->  Nem todos os modelos de mineração suportam o detalhamento. Para obter informações sobre os modelos que dão suporte ao detalhamento, consulte [mineração &#40;&#41;de dados de consultas](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)de detalhamento.  
+>  Nem todos os modelos de mineração suportam o detalhamento. Para obter informações sobre os modelos que dão suporte ao detalhamento, consulte [consultas de detalhamento &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining).  
   
-## <a name="see-also"></a>Consulte também  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Instruções de definição &#40;de&#41; dados DMX das extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
- [Instruções de manipulação &#40;de&#41; dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Consulte Também  
+ [SELECIONAR&#41;&#40;DMX](../dmx/select-dmx.md)   
+ [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
+ [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

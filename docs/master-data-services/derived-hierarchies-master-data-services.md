@@ -15,10 +15,10 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728278"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Hierarquias derivadas (Master Data Services)
@@ -58,11 +58,11 @@ ms.locfileid: "73728278"
   
  A estrutura de hierarquia mostra como os membros são agrupados. A entidade com a maioria dos membros está na parte inferior.  
   
- ![Hierarquia derivada da estrutura do modelo](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Hierarquia derivada da estrutura do modelo")  
+ ![Hierarquia derivada da estrutura de modelos](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Hierarquia derivada da estrutura de modelos")  
   
  Em uma hierarquia derivada, você pode realçar a relação entre Product e Subcategory, e depois entre Subcategory e Category. Quando você exibir os membros desta hierarquia, cada nível da árvore conterá membros da mesma entidade.  
   
- ![Exemplo de hierarquia derivada da bicicleta de Mountain Bike](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Exemplo de hierarquia derivada da bicicleta de Mountain Bike")  
+ ![Exemplo de hierarquia derivada de mountain bike](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Exemplo de hierarquia derivada de mountain bike")  
   
  Este tipo de hierarquia impede que você mova um membro para um nível que não é válido. Por exemplo, você pode mover a Road-650 bike de uma subcategoria, Road Bikes, para outra, Mountain Bikes. Você não pode mover Road-650 diretamente abaixo de uma categoria, como 1 {Bikes}. Cada vez que você move um membro na árvore hierárquica, o valor de atributo baseado em domínio do membro muda para refletir a mudança.  
   
@@ -71,13 +71,13 @@ ms.locfileid: "73728278"
   
  Se o atributo baseado em domínio de um membro estiver em branco e o atributo for usado para uma hierarquia derivada, o membro não será exibido na hierarquia. Crie regras de negócios para exigir o preenchimento de atributos. Para obter mais informações, consulte [Exigir valores de atributos &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Criar uma nova hierarquia derivada.|[Criar uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Ocultar ou excluir níveis em uma hierarquia derivada existente.|[Ocultar ou excluir níveis em uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|Alterar o nome de uma hierarquia derivada existente.|[Alterar o nome de uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|Alterar o nome de uma hierarquia derivada existente.|[Alterar um nome de hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Excluir uma hierarquia derivada existente.|[Excluir uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
@@ -90,7 +90,7 @@ ms.locfileid: "73728278"
   
 -   [Hierarquias derivadas com limites explícitos &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [Mostrar relações muitos para muitos em Hierarquias Derivadas &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
+-   [Mostrar relações muitos para muitos em hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
   
 -   [Coleções &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   

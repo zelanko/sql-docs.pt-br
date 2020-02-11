@@ -16,10 +16,10 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f5ee076163ff3cf0f69daab7ceff115bf5876a6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769017"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68769017"
 
   Inicia uma solicitação de validação de dados para o artigo especificado. Esse procedimento armazenado é executado no Publicador no banco de dados de publicação e no Assinante, no banco de dados de assinatura.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ sp_article_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] type_of_check_requested`Especifica se apenas o número de linhas da tabela é retornado. *type_of_check_requested* é **smallint**, com um padrão de **1**.  
   
- Se **0**, execute um número de linhas [!INCLUDE[msCoName](../../includes/msconame-md.md)] e uma soma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificação compatível com 7,0.  
+ Se **0**, execute um número de linhas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma soma de verificação compatível com 7,0.  
   
  Se **1**, execute apenas uma verificação de número de linhas.  
   
@@ -62,7 +62,7 @@ sp_article_validation [ @publication = ] 'publication'
 |---------------|---------------------|  
 |**0**|Executa a contagem completa usando COUNT (*).|  
 |**1**|Executa a contagem rápida de **sysindexes. Rows**. A contagem de linhas em **sysindexes** é mais rápida do que a contagem de linhas na tabela real. No entanto, o **sysindexes** é atualizado lentamente e o número de linhas pode não ser preciso.|  
-|**2** (padrão)|Executa a contagem rápida condicional experimentando primeiro o método rápido. Se o método rápido mostrar diferenças, reverterá ao método completo. Se *expected_rowcount* for nulo e o procedimento armazenado estiver sendo usado para obter o valor, uma contagem completa (*) sempre será usada.|  
+|**2** (padrão)|Executa a contagem rápida condicional experimentando primeiro o método rápido. Se o método rápido mostrar diferenças, reverterá ao método completo. Se *expected_rowcount* for NULL e o procedimento armazenado estiver sendo usado para obter o valor, uma contagem completa (*) sempre será usada.|  
   
 `[ @shutdown_agent = ] shutdown_agent`Especifica se o Distribution Agent deve desligar imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se for **0**, o agente de distribuição não será desligado. Se **1**, o agente de distribuição será desligado depois que o artigo for validado.  
   
@@ -70,10 +70,10 @@ sp_article_validation [ @publication = ] 'publication'
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o Publicador é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o Publicador não deve ser usado ao solicitar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validação em um Publicador.  
+>  o *Publicador* não deve ser usado ao solicitar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validação em um Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -86,11 +86,11 @@ sp_article_validation [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissões  
  Somente os usuários com permissões selecionar tudo na tabela de origem do artigo que está sendo validado podem executar **sp_article_validation**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Validar dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_marksubscriptionvalidation](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_publication_validation](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_table_validation](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

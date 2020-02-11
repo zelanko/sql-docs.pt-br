@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412844"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
@@ -57,7 +57,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | NULO
 
- **aplica-se a:** SQL Server (a partir do 2008), banco de dados SQL do Azure
+ **Aplica-se a:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
 
  ID do banco de dados. *database_id* é int, sem padrão. São entradas válidas o número de ID de um banco de dados ou NULL. Quando NULL for especificado, serão retornados todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -65,7 +65,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | NULO
 
-**aplica-se a:** SQL Server (a partir do 2008), banco de dados SQL do Azure
+**Aplica-se a:** SQL Server (começando com o 2008), o Banco de Dados SQL do Azure
  
 ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número de ID de um arquivo ou NULL. Quando NULL for especificado, serão retornados todos os arquivos do banco de dados.  
   
@@ -73,7 +73,7 @@ ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número d
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|nome do banco de dados.</br></br>Por SQL Data Warehouse, esse é o nome do banco de dados armazenado no nó que é identificado pelo pdw_node_id. Cada nó tem um banco de dados tempdb que tem 13 arquivos. Cada nó também tem um banco de dados por distribuição e cada banco de dados de distribuição tem 5 arquivos. Por exemplo, se cada nó contiver 4 distribuições, os resultados mostrarão 20 arquivos de banco de dados de distribuição por pdw_node_id. 
 |**database_id**|**smallint**|ID do banco de dados.|  
@@ -90,7 +90,7 @@ ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número d
 |**file_handle**|**varbinary**|Identificador de arquivo do Windows desse arquivo.|  
 |**io_stall_queued_read_ms**|**bigint**|**Não se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latência total de E/S apresentada pela administração do recurso de E/S para leituras. Não permite valor nulo. Para obter mais informações, consulte [Sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Não se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latência total de E/S apresentada pela administração do recurso de E/S para gravações. Não permite valor nulo.|
-|**pdw_node_id**|**inteiro**|**Aplica-se a:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador do nó para a distribuição.
+|**pdw_node_id**|**int**|**Aplica-se a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador do nó para a distribuição.
  
 ## <a name="remarks"></a>Comentários
 Os contadores são inicializados para vazios sempre que o serviço de SQL Server (MSSQLSERVER) é iniciado.
@@ -100,7 +100,7 @@ Os contadores são inicializados para vazios sempre que o serviço de SQL Server
   
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-return-statistics-for-a-log-file"></a>R. Retornar estatísticas para um arquivo de log
+### <a name="a-return-statistics-for-a-log-file"></a>a. Retornar estatísticas para um arquivo de log
 
 **Aplica-se a:** SQL Server (a partir do 2008), banco de dados SQL do Azure
 
@@ -122,10 +122,10 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 ```
 
 ## <a name="see-also"></a>Consulte Também  
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [E/s relacionadas a exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
 

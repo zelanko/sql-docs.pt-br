@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015768"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Converter um script existente de Rastreamento do SQL em uma sessão de Eventos Estendidos
@@ -100,7 +100,7 @@ ms.locfileid: "63015768"
 ## <a name="to-create-the-extended-events-session"></a>Para criar a sessão de Eventos Estendidos  
  Use o Editor de Consultas para criar a sessão de Eventos Estendidos e gravar a saída em um destino de arquivo. As etapas a seguir descrevem uma única consulta, com explicações para mostrar como criar a consulta. Para obter o exemplo de consulta completo, consulte a seção "Exemplo" deste tópico.  
   
-1.  Adicione instruções para criar a sessão de evento, substituindo*session_name* pelo nome que você deseja usar para a sessão de Eventos Estendidos.  
+1.  Adicione instruções para criar a sessão de evento, substituindo s*ession_name* pelo nome que você deseja usar para a sessão de eventos estendidos.  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -247,7 +247,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibir os Eventos Estendidos equivalentes às classes de rastreamento de eventos do SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

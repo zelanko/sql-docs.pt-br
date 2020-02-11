@@ -14,10 +14,10 @@ ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a8a16d3730ea9dba7071403051dfc69d87f74473
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728526"
 ---
 # <a name="create-a-collection-master-data-services"></a>Criar uma coleção (Master Data Services)
@@ -53,11 +53,11 @@ ms.locfileid: "73728526"
   
 9. Clique em **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
   
 -   [Adicionar membros a uma coleção &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleções &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
  [Excluir um membro ou uma coleção &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Criar uma hierarquia explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  

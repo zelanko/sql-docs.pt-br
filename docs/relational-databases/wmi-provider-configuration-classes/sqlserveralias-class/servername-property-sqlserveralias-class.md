@@ -18,15 +18,15 @@ ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 979b738b046bb53168bbbbbef4d3d64563f2add0
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659690"
 ---
 # <a name="servername-property-sqlserveralias-class"></a>Propriedade ServerName (classe SqlServerAlias)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Obtém o nome da instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] especificado pelo alias de conexão do servidor.  
+  Obtém o nome da instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] especificada pelo alias de conexão do servidor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ object.ServerName [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Um objeto da [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) que representa um alias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

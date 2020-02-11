@@ -1,5 +1,5 @@
 ---
-title: HelpContext, HelpFile propriedades | Microsoft Docs
+title: Propriedades HelpContext, HelpFile | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -22,30 +22,30 @@ ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918473"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Propriedades HelpContext, HelpFile
-Indica o arquivo de Ajuda e o tópico associado a um [erro](../../../ado/reference/ado-api/error-object.md) objeto.  
+Indica o arquivo de ajuda e o tópico associado a um objeto de [erro](../../../ado/reference/ado-api/error-object.md) .  
   
 ## <a name="return-values"></a>Valores de retorno  
   
--   **IdentificaçãoDoContextoDaAjuda** retorna uma ID de contexto, como uma **longo** valor para um tópico em um arquivo de Ajuda.  
+-   **HelpContextId** Retorna uma ID de contexto, como um valor **longo** , para um tópico em um arquivo de ajuda.  
   
--   **HelpFile** retorna um **cadeia de caracteres** valor que é avaliada para um caminho totalmente resolvido para um arquivo de Ajuda.  
+-   **ArquivoDeAjuda** Retorna um valor de **cadeia de caracteres** que é avaliado como um caminho totalmente resolvido para um arquivo de ajuda.  
   
 ## <a name="remarks"></a>Comentários  
- Se um arquivo de Ajuda é especificado na **HelpFile** propriedade, o **HelpContext** propriedade é usada para exibir o tópico da Ajuda que ele identifica automaticamente. Se não houver nenhum tópico da Ajuda relevante disponíveis, o **HelpContext** propriedade retorna zero e o **HelpFile** propriedade retorna uma cadeia de caracteres de comprimento zero ("").  
+ Se um arquivo de ajuda for especificado na propriedade **HelpFile** , a propriedade **HelpContext** será usada para exibir automaticamente o tópico da ajuda que ele identifica. Se não houver nenhum tópico de ajuda relevante disponível, a propriedade **HelpContext** retornará zero e a propriedade **HelpFile** retornará uma cadeia de caracteres de comprimento zero ("").  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Error](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Descrição, HelpContext, HelpFile, NativeError, número, código-fonte e exemplo de propriedades de SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Descrição, HelpContext, HelpFile, NativeError, número, código-fonte e SQLState exemplo das propriedades (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Propriedade Description](../../../ado/reference/ado-api/description-property.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo das propriedades Description, HelpContext, ArquivoDeAjuda, NativeError, Number, Source e SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Exemplo das propriedades Description, HelpContext, ArquivoDeAjuda, NativeError, Number, Source e SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Propriedade de descrição](../../../ado/reference/ado-api/description-property.md)   
  [Propriedade Number (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Propriedade Source (Erro ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)

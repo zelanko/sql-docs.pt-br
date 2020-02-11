@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 47bb74bf5fd35696481a88c4ccc30a8733f257a2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153557"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Gerenciamento de informações da empresa usando o SSIS, o MDS e o DQS em conjunto [Tutorial]
@@ -34,11 +34,11 @@ ms.locfileid: "70153557"
   
  O SQL Server Master Data Services (MDS) fornece um hub de dados central que assegura a constante integridade das informações e consistência dos dados entre diferentes aplicativos. Consulte [Master Data Services tópico de visão geral](../master-data-services/master-data-services-overview-mds.md) para obter descrições breves de recursos importantes do MDS.  
   
- Consulte [limpeza e correspondência de dados mestres usando](https://msdn.microsoft.com/library/hh403491.aspx) os White papers de EIM Technologies para obter uma orientação abrangente sobre como implementar uma solução de EIM usando essas [tecnologias de EIM da Microsoft em conjunto e assistir a EIM (gerenciamento de informações da empresa) : Reunindo o SSIS, o DQS e](https://go.microsoft.com/fwlink/?LinkId=258672) o MDS video para uma demonstração fria de um cenário de EIM.  
+ Consulte [limpeza e correspondência de dados mestres usando](https://msdn.microsoft.com/library/hh403491.aspx) os White papers de EIM Technologies para obter uma orientação abrangente sobre como implementar uma solução de EIM usando essas tecnologias de EIM da Microsoft e assistir ao [EIM (gerenciamento de informações da empresa): reunindo o SSIS, o DQS e o MDS](https://go.microsoft.com/fwlink/?LinkId=258672) video para uma demonstração fria de um cenário de EIM.  
   
  Neste tutorial, você aprenderá a usar o SSIS, o MDS e o DQS em conjunto para implementar um exemplo de solução de Gerenciamento de informações da empresa (EIM). Primeiro, use o DQS para criar uma base de dados de conhecimento que contenha informações sobre os dados (metadados), limpar os dados em um arquivo do Excel usando a base de dados de conhecimento, e fazer a correspondência dos dados para identificar e remover duplicatas. Em seguida, use o Suplemento MDS para Excel a fim de carregar os dados limpos e correspondentes no MDS. Depois, automatize todo o processo usando uma solução SSIS. A solução SSIS neste tutorial lê os dados de entrada de um arquivo do Excel, mas você pode estendê-lo para ler de várias fontes, como Oracle, Teradata, DB2 e banco de dados SQL do Azure.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
   
 1.  Microsoft SQL Server 2012 com os seguintes componentes instalados.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "70153557"
   
          Consulte o [Guia de instalação do SQL Server 2012](../database-engine/install-windows/installation-for-sql-server.md) para obter detalhes sobre como instalar o produto.  
   
-2.  [Configurar o MDS usando o Gerenciador de Configuração do Master Data Services](https://msdn.microsoft.com/library/ee633884.aspx)  
+2.  [Configure o MDS usando o Gerenciador de Configuração do Master Data Services](https://msdn.microsoft.com/library/ee633884.aspx)  
   
      Use o Gerenciador de Configuração para criar e configura um banco de dados do Master Data Services. Depois de criar o banco de dados do MDS, crie um aplicativo Web para o MDS em um site da [http://localhost/MDS](http://localhost/MDS)Web (por exemplo:) e associe o banco de dados do MDS ao aplicativo Web do MDS. Observe que, para criar um aplicativo Web do MDS, você deve ter o IIS instalado no computador. Consulte [requisitos do aplicativo Web (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) e [requisitos de banco de dados (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) para obter detalhes sobre os pré-requisitos para configurar o banco de dados MDS e o aplicativo Web.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "70153557"
   
 4.  Microsoft Excel 2010 (32 bits é preferencial).  
   
-5.  Instale o **suplemento do Master Data Services para Excel** (32 bits ou 64-bit com base na versão do Excel que você tem em seu computador) [aqui](https://www.microsoft.com/download/details.aspx?id=29064). Para localizar a versão do Excel instalada no seu computador, execute o **Excel**, clique em **arquivo** na barra de menus e clique em **ajuda** para ver a versão no painel direito. Observe que você precisa instalar o Visual Studio 2010 Tools for Office Runtime antes de instalar o suplemento do Excel.  
+5.  Instale o **suplemento do Master Data Services para Excel** (32 bits ou 64-bit com base na versão do Excel que você tem em seu computador) [aqui](https://www.microsoft.com/download/details.aspx?id=29064). Para localizar a versão do Excel instalada no seu computador, execute o **Excel**, clique em **arquivo** na barra de menus e clique em **ajuda** para ver a versão no painel direito. Observe que você precisa instalar o Visual Studio 2010 Tools for Office runtime antes de instalar o Suplemento do Excel.  
   
 6.  Adicional Crie uma conta com o [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). Uma das tarefas no tutorial exige que você tenha uma conta **do Azure Marketplace** (originalmente nomeada **no mercado de dados**). Você poderá ignorar essa tarefa se desejar e passar para a próxima tarefa.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "70153557"
   
 |Lição|Breve descrição|Tempo estimado para concluir (em minutos).|  
 |------------|-----------------------|------------------------------------------------|  
-|[Lição 1: Criando a base de dados de conhecimento do DQS dos fornecedores](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)|Nesta lição, você criará uma base de dados deconhecimento do DQS chamada suppliers.|60|  
-|[Lição 2: Limpando dados do fornecedor usando a base de conhecimento dos fornecedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|Nesta lição, você criará e executará um projeto do DQS para limpar os dados do fornecedor em um arquivo do Excel usando a base de dados de conhecimento dos **fornecedores** criada na primeira lição.|45|  
-|[Lição 3: Dados correspondentes para remover duplicatas da lista de fornecedores](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|Nesta lição, você criará um projeto do DQS para executar a atividade de correspondência a fim de identificar e remover duplicatas da lista de fornecedores limpa.|45|  
+|[Lição 1: Criando a base de dados de conhecimento do DQS de fornecedores](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)|Nesta lição, você criará uma base de dados de conhecimento do DQS chamada **suppliers**.|60|  
+|[Lição 2: Limpando dados de fornecedor usando a base de dados de conhecimento de fornecedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|Nesta lição, você criará e executará um projeto do DQS para limpar os dados do fornecedor em um arquivo do Excel usando a base de dados de conhecimento dos **fornecedores** criada na primeira lição.|45|  
+|[Lição 3: Correspondendo dados para remover duplicatas da lista de fornecedores](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|Nesta lição, você criará um projeto do DQS para executar a atividade de correspondência a fim de identificar e remover duplicatas da lista de fornecedores limpa.|45|  
 |[Lição 4: Armazenando dados do fornecedor no MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|Nesta lição, você carregará os dados de fornecedor limpos e correspondidos para Master Data Services (MDS) usando o **suplemento MDS para Excel**.|45|  
 |[Lição 5: Automatizando a limpeza e a correspondência usando o SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|Nesta lição, você criará uma solução SSIS que limpa os dados de entrada usando o DQS, faz a correspondência dos dados limpos para remover duplicatas, e armazena os dados limpos e correspondentes no MDS de forma automatizada.|75|  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Para iniciar o tutorial, continue na primeira lição: [Lição 1: Criando a base](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)de dados de conhecimento do DQS dos fornecedores.  
+ Para iniciar o tutorial, continue na primeira lição: [lição 1: criando a base de dados de conhecimento do DQS dos fornecedores](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  
   
   

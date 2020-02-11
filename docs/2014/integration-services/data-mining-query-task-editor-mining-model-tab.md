@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890781"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Modelo de Mineração)
@@ -27,7 +27,7 @@ ms.locfileid: "68890781"
  Para saber mais sobre como implementar a mineração de dados em pacotes, consulte [Tarefa Consulta de mineração de dados](control-flow/data-mining-query-task.md) e [Soluções de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Opções gerais  
- **Name**  
+ **Nome**  
  Forneça um nome exclusivo para a tarefa Consulta de Mineração de Dados. Esse nome é usado como rótulo no ícone de tarefa.  
   
 > [!NOTE]  
@@ -40,12 +40,12 @@ ms.locfileid: "68890781"
  **Conexão**  
  Selecione um gerenciador de conexões do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] na lista, ou clique em **Novo** para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:**  [Gerenciador de Conexões do Analysis Services](connection-manager/analysis-services-connection-manager.md)  
+ **Tópicos relacionados:**  [Analysis Services Gerenciador de conexões](connection-manager/analysis-services-connection-manager.md)  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- **Tópicos relacionados:** [Referência de IU da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Tópicos relacionados:** [Adicionar Analysis Services referência da interface do usuário da caixa de diálogo do Gerenciador de conexões](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Estrutura de mineração**  
  Selecione uma estrutura de mineração na lista.  
@@ -53,10 +53,10 @@ ms.locfileid: "68890781"
  **Modelos de mineração**  
  Selecione um modelo de mineração com base na estrutura de mineração selecionada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Saída&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Designer de Mineração de Dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [Editor da tarefa consulta de mineração de dados &#40;guia consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Editor da tarefa consulta de mineração de dados &#40;guia saída&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

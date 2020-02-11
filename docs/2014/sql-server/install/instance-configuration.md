@@ -16,13 +16,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68190966"
 ---
-# <a name="instance-configuration"></a>Configuração da instância
+# <a name="instance-configuration"></a>Configuração de Instância
   Use a página **Configuração de Instância** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar se uma instância padrão ou uma instância nomeada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser criada. Se uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é ainda não estiver instalada, uma instância padrão será criada, a menos que você especifique uma instância nomeada.  
   
  Cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste em um conjunto distinto de serviços que têm configurações específicas para ordenações e outras opções. A estrutura de diretórios, a estrutura do Registro e os nomes do serviço refletem o nome da instância e uma ID de instância específica criada durante a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "68190966"
 ## <a name="multiple-instances"></a>Várias instâncias  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um único servidor ou processador, mas somente uma instância pode ser a padrão. Todas as demais devem ser instâncias nomeadas. Um computador pode executar várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simultaneamente e cada instância é executada independentemente das demais.  
   
- Para obter mais informações, consulte [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
+ Para obter mais informações, consulte [especificações de capacidade máxima para SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ## <a name="options"></a>Opções  
  Somente instâncias de cluster de failover – especifique o nome da rede de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse nome identifica a instância do cluster de failover na rede.  
@@ -57,7 +57,7 @@ ms.locfileid: "68190966"
   
 -   Nomes de instância não podem iniciar nem terminar com um sublinhado (_).  
   
--   Os nomes de instância não podem conter o termo "Padrão" ou outras palavras-chave reservadas. Se uma palavra-chave reservada for usada em um nome de instância, ocorrerá um erro de Instalação. Para obter mais informações, veja [Palavras-chave reservadas &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql).  
+-   Os nomes de instância não podem conter o termo "Padrão" ou outras palavras-chave reservadas. Se uma palavra-chave reservada for usada em um nome de instância, ocorrerá um erro de Instalação. Para obter mais informações, consulte [palavras-chave reservadas &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/reserved-keywords-transact-sql).  
   
 -   Se você especificar MSSQLServer para o nome de instância, uma instância padrão será criada.  
   
@@ -71,12 +71,12 @@ ms.locfileid: "68190966"
   
 -   Não são permitidos espaços inseridos ou outros caracteres especiais em nomes de instância. Os caracteres barra invertida (\\), vírgula (,), dois-pontos (:), ponto-e-vírgula (;), aspas simples ('), E comercial (&), hífen (-) e arroba (@) também não são permitidos.  
   
--   **Somente caracteres válidos na página de código atual do Windows podem ser usados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomes de instância. Se um caractere Unicode sem-suporte for usado, ocorrerá um erro de instalação.**  
+-   **Somente caracteres que são válidos na página de código atual do Windows podem ser usados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em nomes de instância. Se um caractere Unicode sem suporte for usado, ocorrerá um erro de instalação.**  
   
  **Instâncias e recursos detectados**  
  Exiba uma lista de instâncias e componentes instalados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador em que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada.  
   
- **ID da Instância** – Por padrão, o nome da instância é usado como a ID da Instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, especifique-a no campo **ID da Instância** .  
+ **ID da Instância** – Por padrão, o nome da instância é usado como a ID da Instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, especifique-a no campo **ID da instância** .  
   
 > [!IMPORTANT]  
 >  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, a ID da Instância exibida nesta página é a ID da Instância especificada durante a etapa de preparação da imagem do processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep. Você não poderá especificar uma ID da Instância diferente durante a etapa de conclusão de imagem.  
@@ -84,7 +84,7 @@ ms.locfileid: "68190966"
 > [!NOTE]  
 >  As IDs de instância que começam com sublinhado (_) ou contêm o sinal numérico (#) ou o cifrão ($) não têm suporte.  
   
- Para obter mais informações sobre nomenclatura de ID de instância, locais de arquivos e diretórios, consulte [Locais de arquivo para instâncias nomeadas e padrão do SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
+ Para obter mais informações sobre diretórios, locais de arquivos e nomenclatura de ID de instância, consulte [locais de arquivo para instâncias padrão e nomeadas de SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
   
  Todos os componentes de uma determinada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são gerenciados como uma unidade. Todos os service packs e atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão aplicados a cada componente de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -99,7 +99,8 @@ ms.locfileid: "68190966"
 -   **Mesmo estado clusterizado**  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não dá suporte a cluster.  
+    >  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não dá suporte a cluster.  
   
 -   **Mesmo sistema operacional**  
   

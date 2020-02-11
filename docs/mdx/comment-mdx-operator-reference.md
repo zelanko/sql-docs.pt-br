@@ -1,5 +1,5 @@
 ---
-title: -(Comentário) (MDX) | Microsoft Docs
+title: --(Comentário) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c848277505dde5fabb10247641ee6b7f955d84e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006286"
 ---
-# <a name="comment---mdx-operator-reference"></a>Comment - referência de operador MDX
+# <a name="comment---mdx-operator-reference"></a>Comentário-referência de operador MDX
 
 
   Indica o texto de comentário fornecido pelo usuário.  
@@ -27,7 +27,7 @@ ms.locfileid: "68006286"
 -- Comment_Text      
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Comment_Text*  
  Cadeia de caracteres que contém o texto do comentário.  
   
@@ -54,9 +54,9 @@ WHERE
     [Measures].[Gross Profit Margin]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Comentário &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [&#40;Comentário&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
- [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Comentário &#40;&#41;MDX](../mdx/comment-mdx.md)   
+ [Comentário de&#40;&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 96e3c04692360bd13010fe40063b0e761d60b2ce
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779983"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Construindo uma instrução SQL (ODBC)
@@ -35,7 +35,7 @@ ms.locfileid: "73779983"
   
      Instruções SQL construídas em tempo de execução que permitem ao usuário adaptar a instrução usando cláusulas comuns, como SELECT, WHERE e ORDER BY. Isso inclui consultas ad hoc inseridas por usuários.  
   
- O driver ODBC do cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analisa instruções SQL somente para sintaxe ODBC e ISO sem suporte direto pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)], que o driver transforma em [!INCLUDE[tsql](../../includes/tsql-md.md)]. Todas as outras sintaxes SQL são transmitidas inalteradas ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinará se é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Essa abordagem gera dois benefícios:  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do cliente analisa instruções SQL somente para sintaxe ODBC e ISO sem suporte direto do [!INCLUDE[ssDE](../../includes/ssde-md.md)], que o driver transforma em. [!INCLUDE[tsql](../../includes/tsql-md.md)] Todas as outras sintaxes SQL são transmitidas inalteradas ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinará se é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Essa abordagem gera dois benefícios:  
   
 -   Redução da sobrecarga  
   
@@ -43,11 +43,11 @@ ms.locfileid: "73779983"
   
 -   Flexibilidade  
   
-     Os programadores podem adaptar a portabilidade dos aplicativos. Para aumentar a portabilidade em vários bancos de dados, use principalmente as sintaxes ISO e ODBC. Para usar aprimoramentos específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] apropriada. O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dá suporte à sintaxe de [!INCLUDE[tsql](../../includes/tsql-md.md)] completa, portanto, os aplicativos baseados em ODBC podem aproveitar todos os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Os programadores podem adaptar a portabilidade dos aplicativos. Para aumentar a portabilidade em vários bancos de dados, use principalmente as sintaxes ISO e ODBC. Para usar aprimoramentos específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] apropriada. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte [!INCLUDE[tsql](../../includes/tsql-md.md)] à sintaxe completa, portanto, os aplicativos baseados em ODBC podem aproveitar todos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]os recursos do.  
   
  A lista de colunas em uma instrução SELECT deverá conter apenas as colunas necessárias para executar a tarefa atual. Isso não apenas reduz a quantidade de dados enviados pela rede, mas também reduz o efeito das alterações no banco de dados no aplicativo. Se um aplicativo não fizer referência a uma coluna de uma tabela, ele não será afetado por qualquer alteração feita nessa coluna.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Executando consultas &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

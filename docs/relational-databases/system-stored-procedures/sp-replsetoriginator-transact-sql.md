@@ -16,18 +16,18 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5ca3487a22989261f0d6039f065ae0c102e534a1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770873"
 ---
-# <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
+# <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Usado para invocar detecção de loopback e tratar replicação transacional bidirecional. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** no Publicador, os membros da função de banco de dados fixa **db_owner** no banco de dados de publicação ou os usuários na PAL (lista de acesso à publicação) podem executar **sp_replsetoriginator**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

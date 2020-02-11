@@ -14,15 +14,15 @@ ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1cc8cf58d4e4d826dc4b152e395dedbea395a095
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088200"
 ---
 # <a name="update-statement-limitations"></a>Limitações da instrução UPDATE
-Para o driver do Paradox atualizar uma tabela, a tabela deve ter um índice exclusivo (chave primária do Paradox). Quando você usa o driver do Paradox sem implementar o mecanismo de banco de dados Borland, não é possível atualizar uma tabela Paradox.  
+Para que o driver do Paradox atualize uma tabela, a tabela deve ter um índice exclusivo (chave primária do Paradox). Quando você usa o driver do Paradox sem implementar o Borland Mecanismo de Banco de Dados, não é possível atualizar uma tabela do Paradox.  
   
- Não tem suporte pelo driver de texto.  
+ Não há suporte para o driver de texto.  
   
- Quando o driver do Microsoft Excel é usado, é possível atualizar os valores, mas uma linha não pode ser excluída de uma tabela com base em uma planilha do Microsoft Excel. Como resultado, a instrução UPDATE não é considerada oficialmente com suporte pelo driver do Microsoft Excel. Somente a instrução INSERT é considerada com suporte.
+ Quando o driver do Microsoft Excel é usado, é possível atualizar valores, mas uma linha não pode ser excluída de uma tabela com base em uma planilha do Microsoft Excel. Como resultado, a instrução UPDATE não é considerada oficialmente suportada pelo driver do Microsoft Excel. Somente a instrução INSERT é considerada suportada.

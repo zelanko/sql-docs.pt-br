@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6cd3599ff68fadf6a55af1c57379e9cdd8cc4b5d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154490"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurar DQS para usar dados de referência
@@ -27,16 +27,16 @@ ms.locfileid: "70154490"
 ## <a name="before-you-begin"></a>Antes de começar  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
- Para usar dados de referência do Marketplace, você deve ter uma chave de conta válida no Marketplace. Para obter informações detalhadas sobre como criar uma chave de conta do Marketplace, consulte [Criar sua conta](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936). Você também pode criar uma chave de conta do Marketplace no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] clicando em **Configuração** sob **Administração** na tela de início do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] e depois clicando em **Criar uma ID de Conta do DataMarket** na guia **Dados de Referência** .  
+ Para usar dados de referência do Marketplace, você deve ter uma chave de conta válida no Marketplace. Para obter informações detalhadas sobre como criar uma chave de conta do Marketplace, consultehttps://go.microsoft.com/fwlink/?LinkId=212936) [criar sua conta](https://go.microsoft.com/fwlink/?LinkId=212936) (. Você também pode criar uma chave de conta do Marketplace no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] clicando em **Configuração** sob **Administração** na tela de início do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] e depois clicando em **Criar uma ID de Conta do DataMarket** na guia **Dados de Referência** .  
   
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_administrator no banco de dados DQS_MAIN para definir configurações de serviço de dados de referência no DQS.  
   
-##  <a name="Marketplace"></a> Configurar o DQS para usar dados de referência do Marketplace  
+##  <a name="Marketplace"></a>Configurar o DQS para usar dados de referência do Marketplace  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela de início do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , sob **Administração**, clique em **Configuração**.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "70154490"
   
  Agora você está pronto para usar os serviços de dados de referência do Marketplace no DQS assinados para a chave de conta do Marketplace especificada.  
   
-##  <a name="ThirdParty"></a> Configurar o DQS para usar dados de referência de provedores de dados de referência terceirizados online diretos  
+##  <a name="ThirdParty"></a>Configurar o DQS para usar dados de referência de provedores de dados de referência de terceiros online diretos  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela de início do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , sob **Administração**, clique em **Configuração**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "70154490"
   
  Agora você está pronto para usar os serviços de dados de referência do provedor de serviço de dados de referência terceirizado online direto recém-configurado no DQS.  
   
-##  <a name="FollowUp"></a> Acompanhamento: após configurar o DQS para usar dados de referência  
+##  <a name="FollowUp"></a>Acompanhamento: depois de configurar o DQS para usar dados de referência  
  Agora você deve mapear os domínios da base de conhecimento necessários para os dados de referência disponíveis nos provedores de dados que acabou de configurar. Para fazer isso, consulte [anexar um domínio ou domínio de composição aos dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
   

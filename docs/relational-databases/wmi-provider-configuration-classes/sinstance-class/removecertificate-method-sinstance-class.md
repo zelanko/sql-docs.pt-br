@@ -18,10 +18,10 @@ ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d78f2908cf2a354c462674f2cc957be551bab5a2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660102"
 ---
 # <a name="removecertificate-method-sinstance-class"></a>Método RemoveCertificate (classe SInstance)
@@ -36,7 +36,7 @@ object.RemoveCertificate()
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Um objeto da [classe SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) que representa as configurações de servidor em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
@@ -44,7 +44,7 @@ object.RemoveCertificate()
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas net](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurando protocolos de rede de servidor e Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

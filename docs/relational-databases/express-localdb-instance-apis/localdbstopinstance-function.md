@@ -16,17 +16,17 @@ ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 89db6e2a85e502b675db2006a682ff6b35fb4491
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022063"
 ---
 # <a name="localdbstopinstance-function"></a>Função LocalDBStopInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Interrompe a execução da instância especificada de LocalDB do SQL Server Express.  
   
- **Arquivo de cabeçalho:** sqlncli.h  
+ **Arquivo de cabeçalho:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ HRESULT LocalDBStopInstance(
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *pInstanceName*  
  [Entrada] O nome da instância de LocalDB a ser interrompida.  
   
@@ -58,7 +58,7 @@ HRESULT LocalDBStopInstance(
  *ulTimeout*  
  [Entrada] O tempo em segundos que deve ser aguardado para essa operação ser concluída. Se este valor for 0, esta função retornará imediatamente sem aguardar que a instância LocalDB pare.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  S_OK  
  A função foi bem-sucedida.  
   
@@ -104,7 +104,7 @@ HRESULT LocalDBStopInstance(
 ## <a name="remarks"></a>Comentários  
  Para obter uma amostra do código que usa a API LocalDB, consulte [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalho e informações de versão de LocalDB do SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

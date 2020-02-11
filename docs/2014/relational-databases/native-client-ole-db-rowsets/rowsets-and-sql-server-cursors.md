@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de linhas e cursores do SQL Server | Microsoft Docs
+title: Conjuntos de linhas e SQL Server cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206998"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de linha e cursores do SQL Server
@@ -56,7 +56,7 @@ ms.locfileid: "68206998"
   
     -   Não oferecem suporte a nenhuma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que retorna mais do que um único conjunto de resultados.  
   
- Os consumidores podem solicitar diversos comportamentos de cursor em um conjunto de linhas definindo determinadas propriedades de conjunto de linhas. Se o consumidor não definir qualquer uma dessas propriedades de conjunto de linhas ou defina todas como seus valores padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client implementa o conjunto de linhas usando um conjunto de resultados padrão. Se qualquer uma dessas propriedades for definida como um valor diferente do padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client implementa o conjunto de linhas usando um cursor de servidor.  
+ Os consumidores podem solicitar diversos comportamentos de cursor em um conjunto de linhas definindo determinadas propriedades de conjunto de linhas. Se o consumidor não definir uma dessas propriedades de conjunto de linhas ou definir todos como seus valores padrão, o provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB de cliente nativo implementará o conjunto de linhas usando um conjunto de resultados padrão. Se qualquer uma dessas propriedades for definida com um valor diferente do padrão, o provedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB de cliente nativo implementará o conjunto de linhas usando um cursor de servidor.  
   
  As seguintes propriedades de conjunto de linhas levam o provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usar cursores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Algumas propriedades podem ser tranquilamente combinadas com outras. Por exemplo, um conjunto de linhas que exibe as propriedades DBPROP_IRowsetScroll e DBPROP_IRowsetChange será um conjunto de linhas indicador que exibe um comportamento de atualização imediato. Outras propriedades são mutuamente excludentes. Por exemplo, um conjunto de linhas que exibe DBPROP_OTHERINSERT não pode conter indicadores.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68206998"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas oferece suporte apenas a roll-forward. Há suporte para o posicionamento de linha relativo. O texto do comando pode incluir uma cláusula ORDER BY caso haja um índice nas colunas referenciadas.<br /><br /> DBPROP_IMMOBILEROWS só está disponível em conjuntos de linhas capazes de mostrar linhas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inseridas por comandos em outras sessões ou por outros usuários. Tentar abrir um conjunto de linhas com a propriedade definida como VARIANT_FALSE em qualquer conjunto de linhas em que DBPROP_OTHERINSERT não pode ser VARIANT_TRUE causa um erro.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas oferece suporte apenas a roll-forward. Há suporte para o posicionamento de linha relativo. O texto do comando pode conter uma cláusula ORDER BY, exceto quando restrito por outra propriedade.|  
   
- Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjunto de linhas do provedor OLE DB do Native Client tem suportado por um cursor de servidor pode ser facilmente criado em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela base ou exibição usando o **IOpenRowset:: OPENROWSET** método. Especifique a tabela ou a exibição por nome, passando os conjuntos de propriedades do conjunto de linhas necessários no parâmetro *rgPropertySets*.  
+ Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjunto de linhas de provedor de OLE DB de cliente nativo com suporte de um cursor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servidor pode ser facilmente criado em uma tabela base ou exibição usando o método **IOpenRowset:: OPENROWSET** . Especifique a tabela ou a exibição por nome, passando os conjuntos de propriedades do conjunto de linhas necessários no parâmetro *rgPropertySets*.  
   
  O texto do comando que cria um conjunto de linhas é restringido quando o consumidor exige que haja suporte ao conjunto por um cursor de servidor. Mais especificamente, o texto do comando é restringido a uma única instrução SELECT que retorna um único resultado do conjunto de linhas ou um procedimento armazenado que implementa uma única instrução SELECT que retorna um único resultado do conjunto de linhas.  
   
@@ -85,7 +85,8 @@ ms.locfileid: "68206998"
   
  T = VARIANT_TRUE  
   
- \- = VARIANT_TRUE ou VARIANT_FALSE  
+ 
+  \- = VARIANT_TRUE ou VARIANT_FALSE  
   
  Para usar um determinado tipo de modelo de cursor, localize a coluna correspondente ao modelo de cursor e encontre todas as propriedades do conjunto de linhas com o valor 'T' na coluna. Defina essas propriedades do conjunto de linhas como VARIANT_TRUE para usar o modelo de cursor específico. As propriedades do conjunto de linhas com '-' como um valor podem ser definidas como VARIANT_TRUE ou VARIANT_FALSE.  
   
@@ -144,13 +145,13 @@ ms.locfileid: "68206998"
  Na coleção especificada de propriedades do conjunto de linhas, obtenha um subconjunto das propriedades listadas nas tabelas anteriores. Divida essas propriedades em dois subgrupos de acordo com o valor do sinalizador obrigatório (T, F) ou opcional (-) de cada propriedade do conjunto de linhas. Para cada modelo de cursor, comece na primeira tabela e se mova da esquerda para direita. Compare os valores das propriedades nos dois subgrupos com os valores das propriedades correspondentes na coluna. O modelo de cursor que não tem nenhuma incompatibilidade com as propriedades exigidas e o menor número de incompatibilidades com as propriedades opcionais é selecionado. Caso haja mais de um modelo de cursor, é escolhido o mais à esquerda.  
   
 ## <a name="sql-server-cursor-block-size"></a>Tamanho do bloco de cursor do SQL Server  
- Quando um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor dá suporte a uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjunto de linhas de provedor OLE DB do Native Client, o número de elementos na linha de parâmetro de matriz de lidar com o **IRowset::** ou o **irowsetlocate:: Getrowsat**  métodos define o tamanho do bloco de cursor. As linhas apontadas pelos identificadores na matriz são os membros do bloco de cursor.  
+ Quando um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor dá suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a um conjunto de linhas de provedor de OLE DB de cliente nativo, o número de elementos no parâmetro de matriz identificador de linha dos métodos **IRowset:: GetNextRows** ou **IRowsetLocate:: GetRowsAt** define o tamanho do bloco de cursor. As linhas apontadas pelos identificadores na matriz são os membros do bloco de cursor.  
   
  Para conjuntos de linhas que dão suporte a indicadores, os identificadores de linha recuperados usando o método **IRowsetLocate::GetRowsByBookmark** definem os membros do bloco de cursor.  
   
  Independentemente do método usado para preencher o conjunto de linhas e formar o bloco de cursor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o bloco permanece ativo até que o próximo método de busca de linhas seja executado no conjunto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas](rowsets.md)  
   
   

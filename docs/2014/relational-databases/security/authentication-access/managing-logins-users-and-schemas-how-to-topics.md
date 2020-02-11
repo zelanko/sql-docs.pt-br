@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011496"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Tópicos de instruções sobre gerenciamento de logons, usuários e esquemas
@@ -30,11 +30,11 @@ ms.locfileid: "63011496"
   
 -   [Criar um esquema de banco de dados](create-a-database-schema.md)  
   
--   [Unir uma função](join-a-role.md)  
+-   [Ingressar em uma função](join-a-role.md)  
   
--   [Conceder uma permissão a uma entidade de segurança](grant-a-permission-to-a-principal.md)  
+-   [Conceder uma permissão a uma entidade](grant-a-permission-to-a-principal.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](principals-database-engine.md)   
  [Protegendo o SQL Server](../securing-sql-server.md)  
   

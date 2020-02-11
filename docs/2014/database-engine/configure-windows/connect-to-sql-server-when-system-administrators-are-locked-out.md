@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782379"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados
@@ -58,12 +58,12 @@ ms.locfileid: "62782379"
   
 4.  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no painel esquerdo, selecione **Serviços do SQL Server**. No painel direito, localize a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. (A instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui **(MSSQLSERVER)** após o nome do computador. As instâncias nomeadas aparecem em maiúsculas com o mesmo nome apresentado na área Servidores Registrados.) Clique com o botão direito do mouse na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e clique em **Propriedades**.  
   
-5.  Sobre o **parâmetros de inicialização** guia o **especificar um parâmetro de inicialização** , digite `-m` e, em seguida, clique em `Add`. (É um traço seguido da letra m minúscula.)  
+5.  Na guia **parâmetros de inicialização** , na caixa **especificar um parâmetro de inicialização** , digite `-m` e, em `Add`seguida, clique em. (É um traço seguido da letra m minúscula.)  
   
     > [!NOTE]  
     >  Em algumas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , não há nenhuma guia **Parâmetros de Inicialização** . Nesse caso, na guia **Avançado** , clique duas vezes em **Parâmetros de Inicialização**. Os parâmetros são abertos em uma janela muito pequena. Tenha cuidado para não alterar os parâmetros existentes. No final, adicione um novo parâmetro `;-m` e clique em `OK`. (É um ponto-e-vírgula seguido da letra m minúscula.)  
   
-6.  Clique em `OK`e, após a mensagem de reinicialização, o nome do servidor com o botão direito e, em seguida, clique em **reiniciar**.  
+6.  Clique `OK`em e depois da mensagem para reiniciar, clique com o botão direito do mouse no nome do servidor e clique em **reiniciar**.  
   
 7.  Depois que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reiniciar, o servidor estará no modo de usuário único. Verifique se o Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está em execução. Se for iniciado, ele usará sua única conexão.  
   
@@ -74,16 +74,16 @@ ms.locfileid: "62782379"
   
      Em algumas configurações, o SSMS tentará criar várias conexões. Várias conexões falharão porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está no modo de usuário único. Você pode selecionar uma das seguintes ações para executar. Execute uma delas.  
   
-    1.  Conecte-se ao Pesquisador de Objetos usando a autenticação do Windows (que inclui as credenciais do administrador). Expanda **Segurança**, expanda **Logons**e clique duas vezes no seu próprio logon. Sobre o **funções de servidor** página, selecione `sysadmin`e, em seguida, clique em `OK`.  
+    1.  Conecte-se ao Pesquisador de Objetos usando a autenticação do Windows (que inclui as credenciais do administrador). Expanda **Segurança**, expanda **Logons**e clique duas vezes no seu próprio logon. Na página **funções do servidor** , selecione `sysadmin`e clique em `OK`.  
   
-    2.  Em vez de conectar-se ao Pesquisador de Objetos, conecte-se à Janela de Consulta usando a autenticação do Windows (que inclui as credenciais do administrador). (Você só poderá se conectar dessa maneira se não tiver se conectado ao Pesquisador de Objetos.) Executar o código como o seguinte para adicionar um novo logon de autenticação do Windows que seja membro do `sysadmin` função de servidor fixa. O exemplo a seguir adiciona um usuário de domínio chamado `CONTOSO\PatK`.  
+    2.  Em vez de conectar-se ao Pesquisador de Objetos, conecte-se à Janela de Consulta usando a autenticação do Windows (que inclui as credenciais do administrador). (Você só poderá se conectar dessa maneira se não tiver se conectado ao pesquisador de objetos.) Execute um código como o seguinte para adicionar um novo logon de autenticação do Windows que seja membro da `sysadmin` função de servidor fixa. O exemplo a seguir adiciona um usuário de domínio chamado `CONTOSO\PatK`.  
   
         ```  
         CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  
         ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK];  
         ```  
   
-    3.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo executado no modo de autenticação mista, conecte-se a uma Janela de Consulta usando a autenticação do Windows (que inclui as credenciais do administrador). Execute o seguinte para criar um novo código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon de autenticação que é um membro do `sysadmin` função de servidor fixa.  
+    3.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo executado no modo de autenticação mista, conecte-se a uma Janela de Consulta usando a autenticação do Windows (que inclui as credenciais do administrador). Execute um código como o seguinte para criar um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon de autenticação que seja membro da função `sysadmin` de servidor fixa.  
   
         ```  
         CREATE LOGIN TempLogin WITH PASSWORD = '************';  
@@ -93,7 +93,7 @@ ms.locfileid: "62782379"
         > [!WARNING]  
         >  Substitua ************ por uma senha forte.  
   
-    4.  Se sua [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução no modo de autenticação mista e você deseja redefinir a senha do `sa` de conta, conecte-se com uma janela de consulta usando a autenticação do Windows (que inclui suas credenciais de administrador). Alterar a senha das `sa` conta com a sintaxe a seguir.  
+    4.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo executado no modo de autenticação mista e você quiser redefinir a senha da `sa` conta, conecte-se com uma janela de consulta usando a autenticação do Windows (que inclui suas credenciais de administrador). Altere a senha da `sa` conta com a sintaxe a seguir.  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -106,16 +106,16 @@ ms.locfileid: "62782379"
   
 10. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no painel esquerdo, selecione **Serviços do SQL Server**. No painel direito, clique com o botão direito do mouse na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e clique em **Propriedades**.  
   
-11. Sobre o **parâmetros de inicialização** guia, o **parâmetros existentes** caixa, selecione `-m` e, em seguida, clique em `Remove`.  
+11. Na guia **parâmetros de inicialização** , na caixa **parâmetros existentes** , selecione `-m` e clique em `Remove`.  
   
     > [!NOTE]  
-    >  Em algumas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , não há nenhuma guia **Parâmetros de Inicialização** . Nesse caso, na guia **Avançado** , clique duas vezes em **Parâmetros de Inicialização**. Os parâmetros são abertos em uma janela muito pequena. Remover o `;-m` que você adicionou anteriormente e, em seguida, clique em `OK`.  
+    >  Em algumas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , não há nenhuma guia **Parâmetros de Inicialização** . Nesse caso, na guia **Avançado** , clique duas vezes em **Parâmetros de Inicialização**. Os parâmetros são abertos em uma janela muito pequena. Remova o `;-m` que você adicionou anteriormente e, em seguida `OK`, clique em.  
   
 12. Clique com o botão direito do mouse no nome do servidor e clique em **Reiniciar**.  
   
- Agora você deve ser capaz de se conectar normalmente a uma das contas, que agora é um membro do `sysadmin` função de servidor fixa.  
+ Agora você deve ser capaz de se conectar normalmente com uma das contas que agora é um membro da função `sysadmin` de servidor fixa.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o SQL Server no modo de usuário único](start-sql-server-in-single-user-mode.md)   
  [Opções de inicialização do serviço Mecanismo de Banco de Dados](database-engine-service-startup-options.md)  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917039"
 ---
 # <a name="master-database"></a>Banco de dados mestre
@@ -38,16 +38,16 @@ ms.locfileid: "62917039"
   
 |Opção de banco de dados|Valor padrão|Pode ser modificado|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Não|  
+|ALLOW_SNAPSHOT_ISOLATION|ATIVADO|Não|  
 |ANSI_NULL_DEFAULT|OFF|Sim|  
 |ANSI_NULLS|OFF|Sim|  
 |ANSI_PADDING|OFF|Sim|  
 |ANSI_WARNINGS|OFF|Sim|  
 |ARITHABORT|OFF|Sim|  
 |AUTO_CLOSE|OFF|Não|  
-|AUTO_CREATE_STATISTICS|ON|Sim|  
+|AUTO_CREATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_SHRINK|OFF|Não|  
-|AUTO_UPDATE_STATISTICS|ON|Sim|  
+|AUTO_UPDATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
 |CHANGE_TRACKING|OFF|Não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
@@ -55,28 +55,28 @@ ms.locfileid: "62917039"
 |CURSOR_DEFAULT|GLOBAL|Sim|  
 |Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Não<br /><br /> Não|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
-|DB_CHAINING|ON|Não|  
+|DB_CHAINING|ATIVADO|Não|  
 |ENCRYPTION|OFF|Não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM|Sim|  
-|PARAMETERIZATION|SIMPLE|Sim|  
+|PARAMETERIZATION|SIMPLES|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
 |READ_COMMITTED_SNAPSHOT|OFF|Não|  
-|RECOVERY|SIMPLE|Sim|  
+|RECOVERY|SIMPLES|Sim|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
 |Opções do Service Broker|DISABLE_BROKER|Não|  
 |TRUSTWORTHY|OFF|Sim|  
   
  Para obter uma descrição dessas opções de banco de dados, veja [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
  As seguintes operações não podem ser executadas no banco de dados **mestre** :  
   
 -   Adicionando arquivos ou grupos de arquivos.  
   
 -   Alteração de ordenação. A ordenação padrão é a ordenação do servidor.  
   
--   Alteração do proprietário do banco de dados. **master** pertence a **sa**.  
+-   Alteração do proprietário do banco de dados. o **mestre** pertence a **SA**.  
   
 -   Criando um catálogo de texto completo ou índice de texto completo.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62917039"
     >  A recriação de **master** recria todos os bancos de dados do sistema.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Recriar bancos de dados do sistema](rebuild-system-databases.md)  
+ [Recompilar bancos de dados do sistema](rebuild-system-databases.md)  
   
  [Bancos de dados do sistema](system-databases.md)  
   

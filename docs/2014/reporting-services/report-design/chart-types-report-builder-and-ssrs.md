@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106273"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Tipos de gráficos (Construtor de Relatórios e SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106273"
   
  Você poderá alterar o tipo de gráfico depois de criá-lo. Para obter mais informações, consulte [Alterar um tipo de gráfico &#40;Construtor de Relatórios e SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md).  
   
- Exemplos de muitos desses tipos de gráficos estão disponíveis como relatórios de exemplo. Para obter mais informações sobre como baixar relatórios de exemplo, consulte os [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][(Relatórios de exemplo do Construtor de relatórios e Designer de relatórios) do](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Exemplos de muitos desses tipos de gráficos estão disponíveis como relatórios de exemplo. Para obter mais informações sobre como baixar relatórios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]exemplo, consulte [Construtor de relatórios e Report Designer relatórios de exemplo](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Tipo de gráfico|Exibir dados de taxa|Exibir dados de estoque|Exibir dados lineares|Exibir dados de vários valores|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "66106273"
 |[Minigráficos](sparklines-and-data-bars-report-builder-and-ssrs.md)|![Disponível](../media/greencheck.gif "Disponível")|![Disponível](../media/greencheck.gif "Disponível")|![Disponível](../media/greencheck.gif "Disponível")|![Disponível](../media/greencheck.gif "Disponível")|  
 |[Gráficos de estoque &#40;Construtor de Relatórios e SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![Disponível](../media/greencheck.gif "Disponível")||![Disponível](../media/greencheck.gif "Disponível")|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Adicionar um gráfico a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  

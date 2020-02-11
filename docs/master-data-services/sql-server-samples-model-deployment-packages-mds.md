@@ -9,15 +9,15 @@ ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - master data services
-- sample
+- exemplo
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727880"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Exemplos de SQL Server: Pacotes de implantação de modelo (MDS)
@@ -29,7 +29,7 @@ ms.locfileid: "73727880"
  Para obter instruções sobre como implantar os pacotes de modelo de exemplo, consulte [Implantando dados e modelos de exemplo](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). Implante os pacotes de modelo de exemplo usando a [ferramenta MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]
->  **Atualizações de amostra no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Atualizações de exemplo no[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 > 
 >  Os pacotes de exemplo foram atualizados para dar suporte às novas funcionalidades a seguir.  
 > 
@@ -54,7 +54,7 @@ ms.locfileid: "73727880"
  
  No Master Data Services, um pacote é um arquivo XML que contém uma estrutura de modelo implantável e, opcionalmente, dados do modelo. Use pacotes de modelo para mover cópias de modelos de um ambiente MDS para outro, ou crie novos modelos em seu ambiente do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] existente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implantar um pacote de implantação de modelo usando MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

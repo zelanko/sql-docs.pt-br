@@ -16,42 +16,42 @@ ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931662"
 ---
 # <a name="parameter-object"></a>Objeto Parameter
-Representa um parâmetro ou um argumento associado a um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto com base em uma consulta parametrizada ou procedimento armazenado.  
+Representa um parâmetro ou argumento associado a um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) com base em uma consulta parametrizada ou em um procedimento armazenado.  
   
 ## <a name="remarks"></a>Comentários  
- Muitos provedores dão suporte a comandos parametrizados. Estes são os comandos no qual a ação desejada é definida uma vez, mas as variáveis (ou parâmetros) são usados para alterar alguns detalhes do comando. Por exemplo, uma instrução SQL SELECT poderia usar um parâmetro para definir os critérios de correspondência de uma cláusula WHERE e outra para definir o nome de coluna para uma cláusula classificar por.  
+ Muitos provedores oferecem suporte a comandos com parâmetros. Esses são comandos nos quais a ação desejada é definida uma vez, mas variáveis (ou parâmetros) são usadas para alterar alguns detalhes do comando. Por exemplo, uma instrução SQL SELECT poderia usar um parâmetro para definir os critérios de correspondência de uma cláusula WHERE e outra para definir o nome da coluna para uma cláusula SORT BY.  
   
- **Parâmetro** objetos representam parâmetros associados às consultas com parâmetros, ou os argumentos de entrada/saída e valores de retorno de procedimentos armazenados. Dependendo da funcionalidade do provedor, algumas coleções, métodos ou propriedades de um **parâmetro** objeto pode não estar disponível.  
+ Os objetos de **parâmetro** representam parâmetros associados a consultas parametrizadas ou os argumentos in/out e os valores de retorno de procedimentos armazenados. Dependendo da funcionalidade do provedor, algumas coleções, métodos ou propriedades de um objeto de **parâmetro** podem não estar disponíveis.  
   
- Com as coleções, métodos e propriedades de um **parâmetro** do objeto, você pode fazer o seguinte:  
+ Com as coleções, métodos e propriedades de um objeto de **parâmetro** , você pode fazer o seguinte:  
   
--   Definir ou retornar o nome de um parâmetro com o [nome](../../../ado/reference/ado-api/name-property-ado.md) propriedade.  
+-   Defina ou retorne o nome de um parâmetro com a propriedade [Name](../../../ado/reference/ado-api/name-property-ado.md) .  
   
--   Definir ou retornar o valor de um parâmetro com o [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade. **Valor** é a propriedade padrão de **parâmetro** objeto.  
+-   Defina ou retorne o valor de um parâmetro com a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) . **Value** é a propriedade padrão do objeto **Parameter** .  
   
--   Definir ou retornar as características de parâmetro com o [atributos](../../../ado/reference/ado-api/attributes-property-ado.md), [direção](../../../ado/reference/ado-api/direction-property.md), [precisão](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [ Tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md), e [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedades.  
+-   Defina ou retorne características de parâmetro com os [atributos](../../../ado/reference/ado-api/attributes-property-ado.md), [direção](../../../ado/reference/ado-api/direction-property.md), [precisão](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md)e propriedades de [tipo](../../../ado/reference/ado-api/type-property-ado.md) .  
   
--   Passar dados binários longos ou de caractere para um parâmetro com o [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) método.  
+-   Passe dados binários longos ou de caractere para um parâmetro com o método [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) .  
   
--   Acessar atributos específicos do provedor usando o [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção.  
+-   Acesse atributos específicos do provedor usando a coleção de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
- Se você souber os nomes e as propriedades dos parâmetros associados com o procedimento armazenado ou uma consulta parametrizada que você deseja chamar, você pode usar o [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) método criem **parâmetro** objetos com as configurações de propriedade apropriada e o uso de [Append](../../../ado/reference/ado-api/append-method-ado.md) método para adicioná-los para o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção. Isso lhe permite definir e retornar valores de parâmetro sem precisar telefonar para o [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) método na **parâmetros** coleção para recuperar as informações de parâmetro do provedor de um potencialmente operação de uso intensivo de recursos.  
+ Se você souber os nomes e as propriedades dos parâmetros associados ao procedimento armazenado ou à consulta parametrizada que deseja chamar, poderá usar o método [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) para criar objetos de **parâmetro** com as configurações de propriedade apropriadas e usar o método [Append](../../../ado/reference/ado-api/append-method-ado.md) para adicioná-los à coleção de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) . Isso permite que você defina e retorne valores de parâmetro sem precisar chamar o método de [atualização](../../../ado/reference/ado-api/refresh-method-ado.md) na coleção de **parâmetros** para recuperar as informações de parâmetro do provedor, uma operação potencialmente intensiva de recursos.  
   
- O **parâmetro** objeto não é seguro para script.  
+ O objeto de **parâmetro** não é seguro para scripts.  
   
  Esta seção contém o tópico a seguir.  
   
--   [Eventos, métodos e propriedades do objeto de parâmetro](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
+-   [Propriedades, métodos e eventos do objeto Parameter](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Funções (Transact-SQL) e exibições de gerenciamento dinâmico relacionadas à execução | Microsoft Docs
+title: Funções e exibições de gerenciamento dinâmico relacionadas à execução (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eaab973d2554e22d9fc7244850dcfbc0e8f3d4e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130829"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>Funções e exibições de gerenciamento dinâmico relacionadas à execução (Transact-SQL)
@@ -53,11 +53,11 @@ ms.locfileid: "68130829"
 
   
 > [!NOTE]  
->  O **DM exec_query_transformation_stats** exibição de gerenciamento dinâmico é identificada apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.  
+>  A exibição de gerenciamento dinâmico **Sys. dm_exec_query_transformation_stats** é identificada apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Exibições do sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

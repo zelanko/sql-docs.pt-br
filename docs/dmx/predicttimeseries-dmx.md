@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893879"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *referência de coluna de tabela >, clic de coluna escalar > \<*  *\<*  
+ *referência de coluna de tabela>, clic de coluna escalar>\< * * \<*  
  Especifica o nome da coluna a ser prevista. A coluna pode conter dados escalares ou tabulares.  
   
  *n*  
@@ -45,14 +45,14 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n* não pode ser 0. A função retornará um erro se você não fizer pelo menos uma previsão.  
   
- *n-start, n-end*  
+ *n-iniciar, n-end*  
  Especifica um intervalo de etapas de série temporal.  
   
  *n-Start* deve ser um inteiro e não pode ser 0.  
   
  *n-end* deve ser um número inteiro maior que *n-Start*.  
   
- *\<> de consulta de origem*  
+ *\<>de consulta de origem*  
  Define os dados externos usados para fazer previsões.  
   
  REPLACE_MODEL_CASES | EXTEND_MODEL_CASES  
@@ -84,7 +84,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   O terceiro exemplo mostra como usar o parâmetro EXTEND_MODEL_CASES para atualizar um modelo de mineração com dados novos.  
   
- Para saber mais sobre como trabalhar com modelos de série temporal, confira o [tutorial Data Mining, lição 2: Criando um tutorial do cenário &#40;de previsão de data&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) Mining e tutorial [DMX de previsão de série temporal](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Para saber mais sobre como trabalhar com modelos de série temporal, confira o tutorial de Data Mining, [lição 2: Criando um cenário de previsão &#40;tutorial de mineração de dados intermediário&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) e [tutorial DMX de previsão de série temporal](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  Você pode obter diferentes resultados do seu modelo. Os resultados dos exemplos a seguir são fornecidos somente para ilustrar o formato do resultado.  
@@ -118,7 +118,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replace_model_cases"></a>Exemplo 2: Adicionando novos dados e usando REPLACE_MODEL_CASES  
  Suponha que você acha que os dados estavam incorretos para uma região específica e deseja usar os padrões no modelo, mas ajustar as previsões para que correspondam aos novos dados. Ou, você pode achar que outra região tenha mais tendências confiáveis e desejar aplicar o modelo mais confiável aos dados de uma região diferente.  
   
- Nestes cenários, você pode usar o parâmetro REPLACE_MODEL_CASES e especificar um novo conjunto de dados a serem usados como dados históricos. Dessa maneira, as projeções serão baseadas nos padrões do modelo especificado, mas continuarão naturalmente a partir do final dos novos pontos de dados. Para obter uma explicação completa deste cenário, consulte [tutorial&#41;avançado de mineração de &#40;dados intermediário de previsões de série temporal](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ Nestes cenários, você pode usar o parâmetro REPLACE_MODEL_CASES e especificar um novo conjunto de dados a serem usados como dados históricos. Dessa maneira, as projeções serão baseadas nos padrões do modelo especificado, mas continuarão naturalmente a partir do final dos novos pontos de dados. Para obter uma explicação completa deste cenário, consulte [&#41;de previsões de série temporal avançadas &#40;tutorial de mineração de dados intermediário ](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
   
  A seguinte consulta PREDICTION JOIN ilustra a sintaxe para substituir dados e fazer novas previsões. Para os dados de substituição, o exemplo recupera o valor das colunas Amount e Quantity e multiplica cada um deles por dois:  
   
@@ -193,11 +193,11 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Retorna novas previsões para as três frações de tempo restantes com base no modelo recém-expandido.  
   
- A seguinte tabela lista os resultados da consulta do Exemplo 2. Observe que os dois primeiros valores retornados para M200 Europa são exatamente os mesmos dos novos valores fornecidos. Esse comportamento ocorre por design. Se você desejar iniciar as previsões após o final dos novos dados, deverá especificar um período de início e de término. Para obter um exemplo de como fazer isso, consulte [lição 5: Estendendo o modelo](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)de série temporal.  
+ A seguinte tabela lista os resultados da consulta do Exemplo 2. Observe que os dois primeiros valores retornados para M200 Europa são exatamente os mesmos dos novos valores fornecidos. Esse comportamento ocorre por design. Se você desejar iniciar as previsões após o final dos novos dados, deverá especificar um período de início e de término. Para obter um exemplo de como fazer isso, consulte [lição 5: estendendo o modelo de série temporal](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
   
  Além disso, observe que você não forneceu novos dados para a região do Pacífico. Portanto, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] retorna novas previsões para todas as cinco frações de tempo.  
   
- Quantidade M200 Europe. EXTEND_MODEL_CASES:  
+ Quantidade: Europa M200l. EXTEND_MODEL_CASES:  
   
 |$TIME|Quantidade|  
 |-----------|--------------|  
@@ -207,7 +207,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|69|  
 |11/25/2008 0:00|68|  
   
- Quantidade  M200 Pacífico. EXTEND_MODEL_CASES:  
+ Quantity: M200 Pacífico. EXTEND_MODEL_CASES:  
   
 |$TIME|Quantidade|  
 |-----------|--------------|  
@@ -218,7 +218,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |11/25/2008 0:00|38|  
   
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Exemplo 4: Retornando estatísticas em uma previsão de série temporal  
- A função **PredictTimeSeries** não dá suporte a *INCLUDE_STATISTICS* como parâmetro. No entanto, a seguinte consulta pode ser usada para retornar as estatísticas de previsão para uma consulta de série temporal. Esse método também pode ser usado com modelos que possuam colunas de tabela aninhada.  
+ A função **PredictTimeSeries** não oferece suporte a *INCLUDE_STATISTICS* como parâmetro. No entanto, a seguinte consulta pode ser usada para retornar as estatísticas de previsão para uma consulta de série temporal. Esse método também pode ser usado com modelos que possuam colunas de tabela aninhada.  
   
  Nesse modelo específico, o atributo previsível é quantidade, portanto, você deve `[Quantity]` usar como o primeiro argumento para a função PredictTimeSeries. Se seu modelo usa um atributo previsível diferente, você pode substituir um nome de coluna diferente.  
   
@@ -251,9 +251,9 @@ OR [Model Region] = 'M200 North America'
 > [!NOTE]  
 >  A palavra-chave FLATTENED foi usada neste exemplo para facilitar a apresentação dos resultados em uma tabela; no entanto, se o provedor suportar conjuntos de linhas hierárquicos, você poderá omitir a palavra-chave FLATTENED. Se você omitir a palavra-chave FLATTENED, a consulta retornará duas colunas, a primeira contendo o valor que identifica a série de dados `[Model Region]` e a segunda contendo a tabela aninhada de estatísticas.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da função &#40;DMX&#41; das extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Exemplos de consulta de modelo de série temporal](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
- [Prever &#40;DMX&#41;](../dmx/predict-dmx.md)  
+ [Prever &#40;&#41;DMX](../dmx/predict-dmx.md)  
   
   

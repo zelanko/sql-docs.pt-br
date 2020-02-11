@@ -1,5 +1,5 @@
 ---
-title: 'Lição 3: Criar o relatório pai usando o Assistente de relatório | Microsoft Docs'
+title: 'Lição 3: Criar o relatório pai usando o Assistente de Relatório | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108492"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lição 3: Criar o relatório pai usando o Assistente de Relatório
@@ -26,22 +26,22 @@ ms.locfileid: "66108492"
   
 2.  Clique com o botão direito do mouse no site e selecione **Adicionar Novo Item**.  
   
-3.  No **Adicionar Novo Item** caixa de diálogo, selecione **Assistente de relatório**, insira um nome para o arquivo de relatório e, em seguida, clique em **adicionar**.  
+3.  Na caixa de diálogo **Adicionar novo item** , selecione **Assistente de relatório**, insira um nome para o arquivo de relatório e clique em **Adicionar**.  
   
      Isso iniciará o Assistente de Relatório.  
   
-4.  No **propriedades do conjunto de dados** página, o **fonte de dados** caixa, selecione o **DataSet1** criado por você na [lição 2: Definir uma Conexão de dados e uma tabela de dados para o relatório pai](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  Na página **Propriedades do Conjunto de Dados** , na caixa **Fonte de dados** , selecione o **DataSet1** criado na [Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
     A caixa **Conjuntos de dados disponíveis** é atualizada automaticamente com a **DataTable** criada acima.  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
 6.  Na página **Organizar campos** , faça o seguinte:  
   
     1.  Arraste **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**e **ReorderLevel** de **Campos disponíveis** até a caixa **Valores** .  
   
-    2.  Clique na seta ao lado **SUM (ProductID)** , **SUM (SafetyStockLevel)** , **SUM (reorderlevel)** e desmarque o **soma** seleção.  
+    2.  Clique na seta ao lado de **Soma (ProductID)**, **Soma (SafetyStockLevel)**, **Soma (ReorderLevel)** e desmarque a seleção **soma** .  
   
-7.  Clique em **próxima** duas vezes, em seguida, clique em **concluir** para fechar o **Assistente de relatório**.  
+7.  Clique em **Avançar** duas vezes e, em seguida, clique em **concluir** para fechar o **Assistente de relatório**.  
   
      Agora você criou o arquivo .rdlc. O arquivo é aberto no Designer de Relatórios. Agora, o tablix que você criou será exibido na superfície de design.  
   

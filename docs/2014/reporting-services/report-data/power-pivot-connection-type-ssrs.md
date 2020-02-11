@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200413"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Tipo de conexão PowerPivot (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "74200413"
   
  Use as informações deste tópico para criar uma fonte de dados. Para obter instruções detalhadas, consulte [Adicionar e verificar uma &#40;de conexão de dados ou fonte de dados Construtor de relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  A fonte de dados PowerPivot deve ser publicada em um Galeria PowerPivot em um site do SharePoint.  
   
  Para dar suporte a conexões do Construtor de Relatórios a uma pasta de trabalho PowerPivot, o SQL Server 2008 R2 ADOMD.NET deve estar instalado no computador de sua estação de trabalho. Essa biblioteca de cliente é instalada com o PowerPivot para Excel, mas se você estiver usando um computador que não tenha esse aplicativo, deverá baixar e instalar o ADOMD.NET no site [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
@@ -44,7 +44,7 @@ ms.locfileid: "74200413"
 ## <a name="filters"></a>Filtros  
  No painel Filtros, especifique dimensões e membros a serem filtrados ou incluídos nos resultados da consulta.  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  No painel Filtros, selecione a opção **Parâmetros** de um filtro para criar automaticamente um parâmetro de relatório com os valores disponíveis correspondentes às seleções do filtro.  
   
 ## <a name="remarks"></a>Comentários  

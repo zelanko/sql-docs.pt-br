@@ -1,5 +1,5 @@
 ---
-title: SQLColAttributes (Driver ODBC do Visual FoxPro) | Microsoft Docs
+title: SQLColAttributes (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,36 +13,36 @@ ms.assetid: d403dfa0-c26d-47d4-91d9-2f29aa387399
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fb35211160cb7cba866c2b1c9b1cf72340e92ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68132616"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas do driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte a: Completo  
+ Suporte: completo  
   
- Conformidade com a API ODBC: Nível de núcleo  
+ Conformidade da API ODBC: nível de núcleo  
   
- Retorna informações de descritor para uma coluna em um conjunto de resultados. Informações do descritor são retornadas como uma cadeia de caracteres, um valor de descritor dependente de 32 bits ou um valor inteiro.  
+ Retorna informações de descritor para uma coluna em um conjunto de resultados. As informações do descritor são retornadas como uma cadeia de caracteres, um valor dependente de descritor de 32 bits ou um valor inteiro.  
   
 > [!NOTE]  
->  **SQLColAttributes** não pode ser usado para retornar informações sobre a coluna de indicador (coluna 0).  
+>  **SQLColAttributes** não pode ser usado para retornar informações sobre a coluna Bookmark (coluna 0).  
   
- O Driver de ODBC do Visual FoxPro dá suporte a todas *fDescType* valores. A tabela a seguir inclui comentários sobre a implementação do driver de valores selecionados.  
+ O driver ODBC do Visual FoxPro dá suporte a todos os valores de *fDescType* . A tabela a seguir inclui comentários sobre a implementação do driver dos valores selecionados.  
   
 |*fDescType*|Comentário|  
 |-----------------|-------------|  
-|SQL_COLUMN_AUTO_INCREMENT|Retorna FALSE: Do Visual FoxPro não tem nenhum campo contador.|  
-|SQL_COLUMN_CASE_SENSITIVE|Sempre retorna TRUE se o tipo de coluna for caractere.|  
-|SQL_COLUMN_LABEL|Retorna o nome de coluna, que também é retornado por SQL_COLUMN_NAME.|  
-|SQL_COLUMN_MONEY|Retornará TRUE se o tipo de coluna é a moeda (representada por um "Y" na linguagem do Visual FoxPro).|  
+|SQL_COLUMN_AUTO_INCREMENT|Retorna FALSE: o Visual FoxPro não tem nenhum campo de contador.|  
+|SQL_COLUMN_CASE_SENSITIVE|Sempre retornará TRUE se o tipo de coluna for Character.|  
+|SQL_COLUMN_LABEL|Retorna o nome da coluna, que também é retornado por SQL_COLUMN_NAME.|  
+|SQL_COLUMN_MONEY|Retornará TRUE se o tipo de coluna for Currency (representado por um "Y" na linguagem do Visual FoxPro).|  
 |SQL_COLUMN_OWNER_NAME|Sempre retorna uma cadeia de caracteres vazia.|  
 |SQL_COLUMN_QUALIFIER_NAME|Sempre retorna uma cadeia de caracteres vazia.|  
-|SQL_COLUMN_SEARCHABLE|Retorna SQL_UNSEARCHABLE para colunas do tipo geral; Essas colunas não podem ser usadas em uma cláusula WHERE.<br /><br /> Não defina retorna SQL_SEARCHABLE para colunas do tipo de caractere ou Memorando com NOCPTRANS; Essas colunas podem ser usadas em uma cláusula WHERE com qualquer operador de comparação.<br /><br /> Retorna SQL_ALL_EXCEPT_LIKE para todos os outros tipos de coluna. Essas colunas podem ser usadas em uma cláusula WHERE com todos os operadores de comparação, exceto SEMELHANTE.|  
+|SQL_COLUMN_SEARCHABLE|Retorna SQL_UNSEARCHABLE para colunas do tipo geral; essas colunas não podem ser usadas em uma cláusula WHERE.<br /><br /> Retorna SQL_SEARCHABLE para colunas do tipo Character ou Memo com NOCPTRANS não definido; essas colunas podem ser usadas em uma cláusula WHERE com qualquer operador de comparação.<br /><br /> Retorna SQL_ALL_EXCEPT_LIKE para todos os outros tipos de coluna; essas colunas podem ser usadas em uma cláusula WHERE com todos os operadores de comparação, exceto como.|  
 |SQL_COLUMN_TABLE_NAME|Sempre retorna uma cadeia de caracteres vazia.|  
   
  Para obter mais informações, consulte [SQLColAttributes](../../odbc/reference/syntax/sqlcolattributes-function.md) na *referência do programador de ODBC*.

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 for SAP BW | Microsoft Docs
+title: Microsoft Connector 1,1 para SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd4cf8f8fe90afcda343b2b494e0b0b050c8c951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890588"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
@@ -40,13 +40,13 @@ ms.locfileid: "62890588"
 ## <a name="documentation"></a>Documentação  
  Este arquivo da Ajuda para o [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW contém os seguintes tópicos e seções:  
   
- [Instalar o Microsoft Connector para 1.1 SAP BW](installing-the-microsoft-connector-for-sap-bw.md)  
+ [Instalando o Microsoft Connector para 1.1 SAP BW](installing-the-microsoft-connector-for-sap-bw.md)  
  Descreve os requisitos de instalação para o [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
   
  [Componentes do Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-components.md)  
  Descreve cada componente do [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
   
- [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ajuda F1 do Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
  Descreve a interface do usuário de cada componente do [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys. dm _external_script_requests | Microsoft Docs
+title: sys. dm_external_script_requests | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2018
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 33a7b546b9479add67a05f9bb7537f953fa2e9f9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68476282"
 ---
-# <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
+# <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Retorna uma linha para cada conta de trabalho ativa que executa um script externo.
@@ -34,10 +34,10 @@ Retorna uma linha para cada conta de trabalho ativa que executa um script extern
 >  
 > Essa DMV (exibição de gerenciamento dinâmico) estará disponível somente se você tiver instalado e habilitado o recurso que dá suporte à execução de script externo. Para obter mais informações, consulte [r Services in SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) e [serviços de Machine Learning (R, Python) no SQL Server 2017 e posterior](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**identificador exclusivo**|ID do processo que enviou a solicitação de script externo. Isso corresponde à ID do processo conforme recebido por[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
-|language|**nvarchar**|Palavra-chave que representa uma linguagem de script com suporte. |  
+|Linguagem|**nvarchar**|Palavra-chave que representa uma linguagem de script com suporte. |  
 |degree_of_parallelism|**int**|Número que indica o número de processos paralelos que foram criados. Esse valor pode ser diferente do número de processos paralelos solicitados.|  
 |external_user_name|**nvarchar**|A conta de trabalho do Windows na qual o script foi executado.|  
   
@@ -74,16 +74,16 @@ FROM sys.dm_external_script_requests;
 Resultados  
 
 
-external_script_request_id  |language  |degree_of_parallelism  |external_user_name  
+external_script_request_id  |Linguagem  |degree_of_parallelism  |external_user_name  
 ---------|---------|---------|---------
 183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01       
 
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
+[sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 

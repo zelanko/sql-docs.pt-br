@@ -1,5 +1,5 @@
 ---
-title: Notificação da conclusão da função assíncrona | Microsoft Docs
+title: Notificação de conclusão de função assíncrona | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,29 +11,29 @@ ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de3496661f2ab329e5bf662a9cb8fa749cb81bfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129318"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Notificação de conclusão da função assíncrona
-No SDK do Windows 8, ODBC adicionado um mecanismo para notificar aplicativos quando uma operação assíncrona é concluída, que nos referiremos a como "notificação de conclusão". (Consulte [execução assíncrona (método de notificação)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) para obter mais informações.) Este tópico discute alguns dos problemas para os desenvolvedores de driver.  
+No SDK do Windows 8, o ODBC adicionou um mecanismo para notificar aplicativos quando uma operação assíncrona for concluída, para o qual iremos nos referir como "notificação sobre conclusão". (Consulte [execução assíncrona (método de notificação)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) para obter mais informações.) Este tópico discute alguns dos problemas para os desenvolvedores de driver.  
   
-## <a name="the-interface-between-the-driver-manager-and-driver"></a>A Interface entre o Gerenciador de Driver e o Driver  
- Internamente, o Gerenciador de Driver fornece uma função de retorno de chamada [função SQLAsyncNotificationCallback](../../../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md). **SQLAsyncNotificationCallback** só pode ser chamado pelo driver – um aplicativo não pode chamá-la diretamente. O driver chama **SQLAsyncNotificationCallback** sempre que novos dados recebidos do servidor após a última SQL_STILL_EXECUTING retornando.  
+## <a name="the-interface-between-the-driver-manager-and-driver"></a>A interface entre o Gerenciador de driver e o driver  
+ O Gerenciador de driver fornece internamente uma função de retorno de chamada [SQLAsyncNotificationCallback function](../../../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md). **SQLAsyncNotificationCallback** só pode ser chamado pelo driver – um aplicativo não pode chamá-lo diretamente. O driver chama **SQLAsyncNotificationCallback** sempre que novos dados recebidos do servidor após o último retorno de SQL_STILL_EXECUTING.  
   
- O Gerenciador de Driver fornece um mecanismo de retorno de chamada para que um driver pode notificar o Gerenciador de Driver quando algum progresso realmente foi feito na execução de uma operação assíncrona depois que a função correspondente retornará SQL_STILL_EXECUTING  
+ O Gerenciador de driver fornece um mecanismo de retorno de chamada para que um driver possa notificar o Gerenciador de driver quando algum progresso for feito na execução de uma operação assíncrona depois que a função correspondente retornar SQL_STILL_EXECUTING  
   
- O Gerenciador de Driver define o atributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK em um identificador de conexão de driver com um ponteiro de função não-nulo, o que é do tipo SQL_ASYNC_NOTIFICATION_CALLBACK, para o driver funcionar no modo de notificação para qualquer assíncrona operações nesse identificador. Da mesma forma, o Gerenciador de Driver define o atributo SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK em um identificador de instrução de driver com um ponteiro de função não-nulo, que também é do tipo SQL_ASYNC_NOTIFICATION_CALLBACK, para o driver funcionar no modo de notificação para as operações assíncronas nesse identificador.  
+ O Gerenciador de driver define o atributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK em um identificador de conexão de driver com um ponteiro de função não nulo, que é do tipo SQL_ASYNC_NOTIFICATION_CALLBACK, para que o driver funcione no modo de notificação para qualquer serviço assíncrono operações nesse identificador. Da mesma forma, o Gerenciador de driver define o atributo SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK em um identificador de instrução de driver com um ponteiro de função não nulo, que também é do tipo SQL_ASYNC_NOTIFICATION_CALLBACK, para que o driver funcione no modo de notificação para quaisquer operações assíncronas nesse identificador.  
   
- Se uma operação assíncrona é executada em um identificador de driver, as funções assíncronas driver deverá funcionar em um estilo sem bloqueio. Se a operação não pode ser concluída imediatamente, a função do driver deve retornar SQL_STILL_EXECUTING. Esse requisito se aplica para o modo de sondagem e o modo de notificação.  
+ Se uma operação assíncrona for executada em um identificador de driver, as funções de driver assíncronas devem funcionar em um estilo sem bloqueio. Se a operação não puder ser concluída imediatamente, a função de driver deverá retornar SQL_STILL_EXECUTING. Esse requisito é verdadeiro para o modo de sondagem e o modo de notificação.  
   
- Se um identificador está no modo assíncrono de notificação, o driver deve chamar a função de retorno de chamada de notificação, cujo endereço é o valor para o atributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK ou SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK, uma vez após retornando SQL_STILL_EXECUTING. Em outras palavras, um SQL_STILL_EXECUTING de retorno deve ser emparelhado com uma invocação da função de retorno de chamada de notificação. O driver deve usar o valor atual do atributo de identificador SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT ou SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT como o valor para o parâmetro de função de retorno de chamada *pContext*.  
+ Se um identificador estiver no modo assíncrono de notificação, o driver deverá chamar a função de retorno de chamada de notificação, cujo endereço é o valor para o atributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK ou SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK, uma vez após retornando SQL_STILL_EXECUTING. Em outras palavras, um retorno SQL_STILL_EXECUTING deve ser emparelhado com uma invocação da função de retorno de chamada de notificação. O driver deve usar o valor atual do SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT ou SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT atributo de identificador como o valor para o parâmetro de função de retorno de chamada *pContext*.  
   
- O driver não deve chamar de volta no thread que chama a função do driver; Não há nenhum motivo para notificar o andamento antes da função retorna. O driver deve usar seu próprio thread de retorno de chamada. O Gerenciador de Driver não usará o thread de retorno de chamada do driver para a execução de lógica de processamento extensivo.  
+ O driver não deve chamar de volta no thread que chama a função do driver; Não há motivo para notificar o progresso antes que a função retorne. O driver deve usar seu próprio thread para retorno de chamada. O Gerenciador de driver não usará o thread de retorno de chamada do driver para executar uma lógica de processamento extensivo.  
   
- O Gerenciador de Driver chamará a função original novamente depois que o driver chama de volta. O Gerenciador de Driver pode usar um thread que não é um thread de aplicativo nem um thread de driver. Se o driver usa algumas informações associadas ao thread (por exemplo, usuário ou token de identificador de segurança), o driver deve salvar as informações necessárias na chamada assíncrona inicial e usar o valor salvo antes da operação assíncrona toda é concluída. Geralmente, apenas **SQLDriverConnect**, **SQLConnect**, ou **SQLBrowseConnect** precisa usar esse tipo de informação.  
+ O Gerenciador de driver chamará a função original novamente depois que o driver chamar de volta. O Gerenciador de driver pode usar um thread que não seja um thread de aplicativo nem um thread de driver. Se o driver usar algumas informações associadas ao thread (por exemplo, token de segurança ou identificador de usuário), o driver deverá salvar as informações necessárias na chamada assíncrona inicial e usar o valor salvo antes da operação assíncrona inteira conclusão. Normalmente, somente **SQLDriverConnect**, **SQLConnect**ou **SQLBrowseConnect** precisam usar esse tipo de informação.  
   
-## <a name="see-also"></a>Consulte também  
- [Desenvolvendo um driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
+## <a name="see-also"></a>Consulte Também  
+ [Desenvolver um driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

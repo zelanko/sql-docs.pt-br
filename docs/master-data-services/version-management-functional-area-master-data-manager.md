@@ -11,10 +11,10 @@ ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9b2421d38401b3d0ff6b1e33a7b07bd86a1ab22e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728876"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Área funcional Gerenciamento de Versões (Master Data Manager)
@@ -30,7 +30,7 @@ ms.locfileid: "73728876"
   
  [Bloquear uma versão &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
- [Alterar o nome de uma versão &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)  
+ [Alterar um nome de versão &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)  
   
  [Copiar uma versão &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
@@ -46,11 +46,11 @@ ms.locfileid: "73728876"
 ## <a name="validation"></a>Validação  
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
- [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+ [Validar uma versão em relação às regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
- [Inverter uma transação &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+ [Inverter uma &#40;de transação Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicativo Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
   
   

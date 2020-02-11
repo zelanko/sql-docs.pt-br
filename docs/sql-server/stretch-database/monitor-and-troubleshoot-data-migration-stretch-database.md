@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843776"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Monitorar e solucionar problemas de migração de dados (Stretch Database)
@@ -24,7 +24,7 @@ ms.locfileid: "73843776"
 
   Para monitorar a migração de dados no Monitor do Stretch Database, selecione **Tarefas | Stretch | Monitorar** para um banco de dados no SQL Server Management Studio.  
   
-## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Verificar o status de migração de dados no monitor do Stretch Database  
+## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Verificar o status de migração de dados no Monitor do Stretch Database  
  Selecione **Tarefas | Stretch | Monitorar** para que um banco de dados no SQL Server Management Studio abra o monitor do Stretch Database e monitore a migração de dados.  
   
 -   A parte superior do monitor exibe informações gerais sobre o banco de dados SQL Server habilitado para Stretch e o banco de dados remoto do Azure.  
@@ -42,7 +42,7 @@ ms.locfileid: "73843776"
   
 -   Verifique a conectividade de rede para o computador do SQL Server.  
   
--   Verifique se o firewall do Azure não está bloqueando o SQL Server de se conectar ao ponto de extremidade remoto.  
+-   Verifique se o firewall do Azure não está impedindo o SQL Server de se conectar ao ponto de extremidade remoto.  
   
 -   Verifique a exibição do gerenciamento dinâmico **sys.dm_db_rda_migration_status** o status do lote mais recente. Se tiver ocorrido um erro, verifique os valores error_number, error_state e error_severity para o lote.  
   

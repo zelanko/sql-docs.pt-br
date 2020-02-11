@@ -15,20 +15,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 026c588f2fc35a6cb256a63046ad91e5d1b5641a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830243"
 ---
 # <a name="select-a-package"></a>Selecionar um Pacote
   Use a caixa de diálogo **Selecionar um Pacote** para especificar o pacote do qual a tarefa Fila de Mensagens pode receber mensagens.  
   
 ## <a name="static-options"></a>Opções estáticas  
- **Local**  
+ **Localidade**  
  Especifique o local do pacote. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Defina o local como uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao selecionar esse valor, as opções dinâmicas **Servidor**, **Usar Autenticação do Windows**, **Usar Autenticação do SQL Server**, **Nome de usuário**e **Senha**são exibidas.|  
 |Arquivo DTSX|Defina o local para um arquivo DTSX. Ao selecionar este valor,a opção dinâmica **Nome do arquivo**será exibida.|  
@@ -58,7 +58,7 @@ ms.locfileid: "62830243"
  **Nome do arquivo**  
  Forneça o caminho de um pacote ou clique no botão Procurar **(…)** e localize o pacote.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefa Fila de Mensagens](message-queue-task.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Criar um projeto Visual c# SMO no Visual Studio .NET | Microsoft Docs
+title: Criar um projeto do Visual C# SMO no Visual Studio .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131648"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Criar um projeto SMO do Visual C# no Visual Studio .NET
@@ -28,17 +28,17 @@ ms.locfileid: "63131648"
   
 1.  Inicie o [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] (ou [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]).  
   
-2.  No menu **Arquivo**, clique em **NewProject.** A caixa de diálogo **Novo Projeto** será exibida.  
+2.  No menu **Arquivo**, clique em **NewProject.** A caixa de diálogo **Novo Projeto** aparecerá.  
   
-3.  Na **tipos de projeto** caixa de diálogo, selecione **Visual c#** e, em seguida, selecione **Windows**. No [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] painel de modelos instalados, selecione **aplicativo do Windows**.  
+3.  Na caixa de diálogo **tipos de projeto** , selecione **Visual C#** e, em seguida, selecione **Windows**. No painel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] modelos instalados, selecione **aplicativo do Windows**.  
   
-4.  (Opcional) No **nome** , digite o nome do novo aplicativo  
+4.  Adicional No campo **nome** , digite o nome do novo aplicativo  
   
-5.  Selecione o tipo de aplicativo do Visual C#. Para os exemplos a seguir, selecione **aplicativo de Console**.  
+5.  Selecione o tipo de aplicativo do Visual C#. Para os exemplos a seguir, selecione **aplicativo de console**.  
   
 6.  No menu **Projeto**, selecione **Adicionar Referência**. A caixa de diálogo **Adicionar Referência** é exibida.  
   
-7.  Clique em **navegue**, localize os assemblies SMO no [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] pasta e, em seguida, selecione os arquivos a seguir. Estes são os arquivos mínimos exigidos para criar um aplicativos SMO:  
+7.  Clique em **procurar**, localize os ASSEMBLIES do Smo [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] na pasta e, em seguida, selecione os arquivos a seguir. Estes são os arquivos mínimos exigidos para criar um aplicativos SMO:  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63131648"
   
 9. Clique em **Abrir**.  
   
-10. Sobre o **modo de exibição** menu, clique em **código**. - ou - selecione o Program1.cs [Design] Windows e clique duas vezes no formulário do windows para mostrar a janela de código.  
+10. No menu **Exibir** , clique em **código**.-ou selecione as janelas Program1.cs [Design] e clique duas vezes no Windows Form para mostrar a janela de código.  
   
 11. No código, antes da instrução do namespace, digite as instruções `using` a seguir para qualificar os tipos no namespace SMO:  
   

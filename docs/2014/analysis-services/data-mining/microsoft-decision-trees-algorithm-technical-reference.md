@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637522"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Referência técnica do algoritmo Árvores de Decisão da Microsoft
@@ -66,10 +66,10 @@ ms.locfileid: "73637522"
   
 |Algoritmo|Método de análise|Comentários|  
 |---------------|------------------------|--------------|  
-|Árvores de decisão|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método padrão ou o especificado.|  
+|Árvores de decisão|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método padrão ou o especificado.|  
 |Regressão Linear|Pontuação de interesse|A Regressão Linear usa apenas o interesse, pois suporta apenas colunas contínuas.|  
   
-### <a name="scalability-and-performance"></a>Escalabilidade e desempenho  
+### <a name="scalability-and-performance"></a>Desempenho e escalabilidade  
  A classificação é uma estratégia de mineração de dados importante. Em geral, a quantidade de informações necessária para classificar os casos aumenta em proporção direta ao número de registros de entrada. Isso limita o tamanho dos dados que podem ser classificados. O algoritmo Árvores de Decisão da Microsoft usa os seguintes métodos para resolver esses problemas, melhorar o desempenho e eliminar as restrições de memória:  
   
 -   Seleção de recursos para otimizar a seleção dos atributos.  
@@ -99,7 +99,7 @@ ms.locfileid: "73637522"
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] tem suporte para parâmetros que afetam o desempenho e a precisão do modelo de mineração resultante. Também é possível definir sinalizadores de modelagem nas colunas do modelo de mineração ou da estrutura de mineração para controlar a maneira como os dados são processados.  
   
 > [!NOTE]  
->  O algoritmo Árvores de Decisão da Microsoft está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, alguns parâmetros avançados para personalizar o comportamento do algoritmo Árvores de Decisão da Microsoft estão disponíveis para uso apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  O algoritmo Árvores de Decisão da Microsoft está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, alguns parâmetros avançados para personalizar o comportamento do algoritmo Árvores de Decisão da Microsoft estão disponíveis para uso apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (.https://go.microsoft.com/fwlink/?linkid=232473)  
   
 ### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
  A tabela a seguir descreve os parâmetros que você pode usar com o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -149,7 +149,7 @@ ms.locfileid: "73637522"
  *SCORE_METHOD*  
  Determina o método usado para calcular a pontuação da divisão. As seguintes opções estão disponíveis:  
   
-|ID|NAME|  
+|ID|Nome|  
 |--------|----------|  
 |1|Entropia|  
 |3|Bayesian com K2 a priori|  
@@ -162,18 +162,18 @@ ms.locfileid: "73637522"
  *SPLIT_METHOD*  
  Determina o método usado para dividir o nó. As seguintes opções estão disponíveis:  
   
-|ID|NAME|  
+|ID|Nome|  
 |--------|----------|  
-|1|**Binary:** Indica que, independentemente do número real de valores do atributo, a árvore deverá ser dividida em duas ramificações.|  
-|2|**Complete:** Indica que a árvore pode criar tantas divisões quanto há valores de atributo.|  
-|3|**Both:** Especifica que o Analysis Services pode determinar se uma divisão binária ou completa deve ser usada para produzir os melhores resultados.|  
+|1|**Binário:** Indica que, independentemente do número real de valores para o atributo, a árvore deve ser dividida em duas ramificações.|  
+|2|**Concluir:** Indica que a árvore pode criar tantas divisões quanto houver valores de atributo.|  
+|3|**Ambos:** Especifica que Analysis Services pode determinar se uma divisão binária ou completa deve ser usada para produzir os melhores resultados.|  
   
  O padrão é 3.  
   
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte aos seguintes sinalizadores de modelagem. Ao criar um modelo ou uma estrutura de mineração, você define sinalizadores de modelagem para especificar como os valores em cada coluna são manipulados durante a análise. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md).  
   
-|Sinalizador de modelagem|Descrição|  
+|Sinalizador de modelagem|DESCRIÇÃO|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|Significa que a coluna será tratada como se tivesse dois estados possíveis: `Missing` e `Existing`. Nulo é um valor ausente.<br /><br /> Aplica-se às colunas de modelo de mineração.|  
 |NOT NULL|Indica que a coluna não pode conter um nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se às colunas de estrutura de mineração.|  
@@ -183,7 +183,7 @@ ms.locfileid: "73637522"
   
  Não é necessário especificar que uma coluna de dados numéricos contínuos representa um regressor. O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usará automaticamente a coluna como um regressor potencial e particionará o conjunto de dados em regiões com padrões significativos, mesmo que você não defina o sinalizador REGRESSOR na coluna.  
   
- No entanto, você pode usar o parâmetro FORCE_REGRESSOR para garantir que o algoritmo utilizará um determinado regressor. Esse parâmetro só pode ser usado com os algoritmos Árvores de decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Quando você define o sinalizador de modelagem, o algoritmo tentará encontrar equações de regressão do formato a * C1 + b\*C2 +... para ajustar os padrões nos nós da árvore. A soma dos restos é calculada e, se o desvio for muito grande, será forçada uma divisão da árvore.  
+ No entanto, você pode usar o parâmetro FORCE_REGRESSOR para garantir que o algoritmo utilizará um determinado regressor. Esse parâmetro só pode ser usado com os algoritmos Árvores de decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Quando você define o sinalizador de modelagem, o algoritmo tentará encontrar equações de regressão da forma a * C1 + b\*C2 +... para ajustar os padrões nos nós da árvore. A soma dos restos é calculada e, se o desvio for muito grande, será forçada uma divisão da árvore.  
   
  Por exemplo, se você estiver prevendo o comportamento de compra dos clientes usando a **Renda** como um atributo e definir o sinalizador de modelagem REGRESSOR na coluna, o algoritmo primeiro tentará adequar os valores de **Renda** usando uma fórmula de regressão padrão. Se o desvio for muito grande, a fórmula de regressão será abandonada e a árvore será dividida em outro atributo. O algoritmo de árvore de decisão tentará ajustar um regressor para renda em cada uma das ramificações após a divisão.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "73637522"
 ### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir. Para obter mais informações sobre o significado dos tipos de conteúdo quando usados em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](content-types-data-mining.md).  
   
-|Column|Tipos de conteúdo|  
+|Coluna|Tipos de conteúdo|  
 |------------|-------------------|  
 |Atributo de entrada|Contínuo, cíclico, discreto, diferenciado, chave, ordenado, tabela|  
 |Atributo previsível|Contínuo, cíclico, discreto, diferenciado, ordenado, tabela|  
@@ -201,9 +201,9 @@ ms.locfileid: "73637522"
 > [!NOTE]  
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmo árvores de decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
  [Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services de mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

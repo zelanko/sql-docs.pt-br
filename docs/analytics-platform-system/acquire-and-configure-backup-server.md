@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401492"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Adquirir e configurar um servidor de backup para data warehouse paralelos
@@ -122,7 +122,7 @@ Para obter mais informações, consulte:
   
 -   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
 ## <a name="Security"></a>Avisos de segurança  
 O servidor de backup não está ingressado no domínio privado do dispositivo. Ele está em sua própria rede e não há nenhuma relação de confiança entre seu próprio domínio e domínio de dispositivo privado.  

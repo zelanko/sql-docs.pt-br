@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 280d4edef062429304d5c6e1d6c65ea63fac2eee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786930"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Configurar a opção de configuração de servidor index create memory
@@ -38,13 +38,13 @@ ms.locfileid: "62786930"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [Depois de configurar a opção index create memory](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção index create memory](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   A configuração da opção **min memory per query** tem precedência sobre a opção **index create memory** . Quando ambas as opções são alteradas, e a **index create memory** é inferior à **min memory per query**, você recebe uma mensagem de aviso, mas o valor foi definido. Durante a execução de consulta, você recebe um aviso semelhante.  
+-   A configuração da opção **min memory per query** tem precedência sobre a opção **index create memory**. Quando ambas as opções são alteradas, e a **index create memory** é inferior à **min memory per query**, você recebe uma mensagem de aviso, mas o valor foi definido. Durante a execução de consulta, você recebe um aviso semelhante.  
   
 -   Ao usar tabelas e índices particionados, os requisitos mínimos de memória para criação de índice podem aumentar significativamente se houver índices particionados não alinhados e um alto grau de paralelismo. Essa opção controla a quantidade inicial total de memória alocada para todas as partições de índice em uma única operação de criação de índice. A consulta terminará com uma mensagem de erro se a quantidade definida por essa opção for inferior ao mínimo exigido para a execução da consulta.  
   
@@ -97,13 +97,13 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção index create memory  
+##  <a name="FollowUp"></a>Acompanhamento: depois de configurar a opção index create memory  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## <a name="see-also"></a>Consulte também  
- [sys.configurations &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql)   
+## <a name="see-also"></a>Consulte Também  
+ [sys. Configurations &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
- [Opções Server Memory de configuração do servidor](server-memory-server-configuration-options.md)   
+ [Opções de configuração de servidor de memória do servidor](server-memory-server-configuration-options.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   

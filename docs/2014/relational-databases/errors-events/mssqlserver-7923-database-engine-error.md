@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8dc32ad3061f4991cc38a136e2346e5087a93d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913128"
 ---
-# <a name="mssqlserver7923"></a>MSSQLSERVER_7923
+# <a name="mssqlserver_7923"></a>MSSQLSERVER_7923
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|7923|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_SUMMARY_TABLE_NAME|  
 |Texto da mensagem|Tabela TABLE                ID de objeto O_ID.|  
@@ -36,6 +36,6 @@ ms.locfileid: "62913128"
  Essa é uma mensagem informativa do comando DBCC CHECKALLOC. Ela contém o nome e o ID da tabela na parte superior de uma lista de informações sobre alocação de todas as unidades de alocação da tabela.  
   
 ## <a name="user-action"></a>Ação do usuário  
- None  
+ Nenhum  
   
   

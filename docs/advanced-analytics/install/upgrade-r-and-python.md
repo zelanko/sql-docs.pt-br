@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69634547"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Atualizar componentes de aprendizado de máquina (R e Python) em instâncias do SQL Server
@@ -20,7 +20,7 @@ ms.locfileid: "69634547"
 
 A integração do R e do Python no SQL Server inclui pacotes de software livre e de propriedade da Microsoft. Em serviços de SQL Server padrão, os pacotes são atualizados de acordo com o ciclo de lançamento do SQL Server com correções de bug dos pacotes existentes na versão atual, mas sem atualizações de versão principal. 
 
-No entanto, muitos cientistas de dados estão acostumados a trabalhar com pacotes mais recentes conforme eles se tornam disponíveis. Para os Serviços de Machine Learning do SQL Server (no banco de dados) e os SQL Server R Services (no banco de dados), você pode obter [versões mais recentes do R e do Python](#version-map) *associando-se* ao **Microsoft Machine Learning Server**. 
+No entanto, muitos cientistas de dados estão acostumados a trabalhar com pacotes mais recentes conforme eles se tornam disponíveis. Para os Serviços de Machine Learning do SQL Server (no banco de dados) e os SQL Server R Services (no banco de dados), você pode obter [versões mais recentes do R e do Python](#version-map)*associando-se* ao **Microsoft Machine Learning Server**. 
 
 ## <a name="what-is-binding"></a>O que é associação?
 
@@ -194,7 +194,7 @@ As instruções a seguir explicam como inserir os arquivos para uma instalação
 
 1. Baixe os arquivos .cab. Os links a seguir são para a versão 9.3. Se você precisar de versões anteriores, poderão ser encontrados links adicionais no [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Lembre-se de que o Python/Anaconda só podem ser adicionados a uma instância dos Serviços de Machine Learning do SQL Server. Há modelos pré-treinados para o R e o Python; o .cab fornece modelos nas linguagens que você está usando.
 
-    | Recurso | Download |
+    | Recurso | Baixar |
     |---------|----------|
     | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
     | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
@@ -239,7 +239,7 @@ Você pode restaurar uma instância associada para uma instalação inicial dos 
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>Etapa 1: Desvincular
+### <a name="step-1-unbind"></a>Etapa 1: Desassociar
 
 Você tem duas opções para reverter a associação: executar novamente a instalação ou usar o utilitário de linha de comando do SqlBindR.
 
@@ -282,7 +282,7 @@ Você pode ter adicionado outros pacotes de software livre ou de terceiros à su
 
 `sqlbindr [/list] [/bind <SQL_instance_ID>] [/unbind <SQL_instance_ID>]`
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Nome|Descrição|
 |------|------|

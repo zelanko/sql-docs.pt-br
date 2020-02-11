@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 68c731767a83acbd4b7df84843f2c140c5a63d3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727703"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problemas comuns com o serviço do Launchpad e a execução de script externo no SQL Server
@@ -131,9 +131,9 @@ Se você tiver instalado e habilitado o aprendizado de máquina, mas receber ess
 
 4. A reinicialização do serviço geralmente corrige o problema para que os scripts de aprendizado de máquina possam ser executados. Se a reinicialização não corrigir o problema, observe o caminho e os argumentos na propriedade **Caminho Binário** e faça o seguinte:
 
-    A. Examine o arquivo .config do inicializador e verifique se o diretório de trabalho é válido.
+    a. Examine o arquivo .config do inicializador e verifique se o diretório de trabalho é válido.
 
-    B. Verifique se o grupo do Windows usado pelo Launchpad pode se conectar à instância do SQL Server.
+    b. Verifique se o grupo do Windows usado pelo Launchpad pode se conectar à instância do SQL Server.
 
     c. Se você alterar qualquer uma das propriedades do serviço, reinicie o serviço Launchpad.
 

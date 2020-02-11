@@ -11,18 +11,18 @@ ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c12a94abcc8f31071bb13639c6df1e9c1e2e264a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68023258"
 ---
 # <a name="programming-considerations"></a>Considerações sobre programação
-Esta seção aborda brevemente alguns tópicos relacionados ao escrever drivers e aplicativos de ODBC.  
+Esta seção aborda brevemente alguns tópicos relacionados à gravação de drivers e aplicativos ODBC.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
--   [Multithread](../../../odbc/reference/develop-app/multithreading.md)  
+-   [Multithreading](../../../odbc/reference/develop-app/multithreading.md)  
   
 -   [Alinhamento](../../../odbc/reference/develop-app/alignment.md)  
   
@@ -32,7 +32,7 @@ Esta seção aborda brevemente alguns tópicos relacionados ao escrever drivers 
   
 -   [Ferramentas de Diagnóstico](../../../odbc/reference/develop-app/diagnostic-tools.md)  
   
--   [Visual Studio Analyzer](../../../odbc/reference/develop-app/visual-studio-analyzer.md)  
+-   [Analisador do Visual Studio](../../../odbc/reference/develop-app/visual-studio-analyzer.md)  
   
 -   [Tipos de dados específicos do driver, tipos de descritor, tipos de informações, tipos de diagnóstico e atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)  
   

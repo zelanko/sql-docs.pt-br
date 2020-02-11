@@ -1,5 +1,5 @@
 ---
-title: Fazer upgrade e atualização de servidores do grupo de disponibilidade com tempo mínimo de inatividade e perda de dados | Microsoft Docs
+title: Atualização e atualização de servidores do grupo de disponibilidade com tempo de inatividade mínimo e perda de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812920"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Fazer upgrade e atualização dos servidores de grupo de disponibilidade com tempo de inatividade e perda de dados mínimos
   Ao atualizar ou fazer upgrade de instâncias de servidor do SQL Server 2012 para um service pack ou uma versão mais recente, você pode reduzir o tempo de inatividade de um grupo de disponibilidade para apenas um único failover manual executando uma atualização ou um upgrade sequencial. Para fazer upgrade de versões do SQL Server, essa ação é conhecida como upgrade sem interrupção; para atualizar a versão atual do SQL Server com hotfixes ou service packs, essa ação é conhecida como atualização sem interrupção.  
   
- Este tópico limita a discussão somente a upgrades/atualizações do SQL Server. Para sistema operacional-upgrades/atualizações executados em instâncias do SQL Server altamente disponível, consulte [entre clusters migração de grupos de disponibilidade AlwaysOn para atualizações do sistema operacional](https://msdn.microsoft.com/library/jj873730.aspx)  
+ Este tópico limita a discussão somente a upgrades/atualizações do SQL Server. Para upgrades/atualizações relacionadas ao sistema operacional nas quais as instâncias de SQL Server altamente disponíveis estão em execução, consulte [migração entre clusters de grupos de disponibilidade AlwaysOn para atualizações do sistema operacional](https://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Práticas recomendadas de upgrade/atualização sem interrupção de grupos de disponibilidade AlwaysOn  
  As práticas recomendadas a seguir devem ser observadas durante os upgrades/atualizações de servidor para minimizar o tempo de inatividade e a perda de dados dos grupos de disponibilidade:  
@@ -50,7 +50,7 @@ ms.locfileid: "62812920"
 ## <a name="rolling-upgradeupdate-process"></a>Processo de upgrade/atualização sem interrupção  
  Na prática, o processo exato dependerá de fatores como a topologia da implantação dos grupos de disponibilidade e o modo de confirmação de cada réplica. Mas, no cenário mais simples, o upgrade/atualização sem interrupção é um processo de vários estágios que, na sua forma mais simples, envolve as seguintes etapas:  
   
- ![Upgrade de grupo de disponibilidade no cenário HADR](../../media/alwaysonupgrade-ag-hadr.gif "Upgrade de grupo de disponibilidade no cenário HADR")  
+ ![Atualização do Grupo de Disponibilidade no Cenário HADR](../../media/alwaysonupgrade-ag-hadr.gif "Atualização do Grupo de Disponibilidade no Cenário HADR")  
   
 1.  Remover o failover automático em todas as réplicas de confirmação síncrona  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62812920"
 ## <a name="availability-group-with-one-remote-secondary-replica"></a>Grupo de disponibilidade com uma réplica secundária remota  
  Se você tiver implantado um grupo de disponibilidade somente para recuperação de desastre, talvez seja necessário fazer failover do grupo de disponibilidade para uma réplica secundária de confirmação assíncrona. Essa configuração é ilustrada na figura a seguir:  
   
- ![Upgrade de grupo de disponibilidade no cenário DR](../../media/agupgrade-ag-dr.gif "Upgrade de grupo de disponibilidade no cenário DR")  
+ ![Atualização do Grupo de Disponibilidade no Cenário DR](../../media/agupgrade-ag-dr.gif "Atualização do Grupo de Disponibilidade no Cenário DR")  
   
  Nesse caso, você deve fazer failover do grupo de disponibilidade para uma réplica secundária de confirmação assíncrona durante o upgrade/atualização sem interrupção. Para evitar a perda de dados, altere o modo de confirmação para confirmação síncrona e aguarde a réplica secundária ser sincronizada para que você possa fazer o failover do grupo de disponibilidade. Portanto, o processo de upgrade/atualização sem interrupção possivelmente será o seguinte:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62812920"
 ## <a name="availability-group-with-failover-cluster-instance-nodes"></a>Grupo de disponibilidade com nós de instância de cluster de failover  
  Se um grupo de disponibilidade contiver nós de FCI (instância de cluster de failover), você deverá fazer upgrade/atualização dos nós inativos antes de fazer upgrade/atualização dos nós ativos. A figura a seguir ilustra um cenário de grupo de disponibilidade comum com FCIs para alta disponibilidade local e confirmação assíncrona entre as FCIs de recuperação de desastre remota, e a sequência de upgrade.  
   
- ![Upgrade de grupo de disponibilidade com FCIs](../../media/agupgrade-ag-fci-dr.gif "Upgrade de grupo de disponibilidade com FCIs")  
+ ![Atualização do Grupo de Disponibilidade com FCIs](../../media/agupgrade-ag-fci-dr.gif "Atualização do Grupo de Disponibilidade com FCIs")  
   
 1.  Fazer upgrade/atualização de REMOTE2  
   

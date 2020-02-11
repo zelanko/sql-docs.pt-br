@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148570"
 ---
 # <a name="smo-syntax-conventions"></a>Convenções de sintaxe de SMO
@@ -30,9 +30,9 @@ ms.locfileid: "70148570"
   
 |Convenção|Usado para|  
 |----------------|--------------|  
-|UPPERCASE|Instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], nomes de macro e termos usados no nível do sistema operacional; nomes de arquivo em texto.|  
+|LETRAS MAIÚSCULAS|Instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], nomes de macro e termos usados no nível do sistema operacional; nomes de arquivo em texto.|  
 |`monospace`|Exemplos de linhas de comando e código de programa.|  
-|*italic*|Variáveis, fórmulas ou termos definidos em texto. Em sintaxe, letras em itálico indicam espaços reservados para obter informações fornecidas.|  
-|**bold**|Objetos, eventos, métodos ou propriedades SMO; termos de programação em texto.|  
+|*itálico*|Variáveis, fórmulas ou termos definidos em texto. Em sintaxe, letras em itálico indicam espaços reservados para obter informações fornecidas.|  
+|**negrito**|Objetos, eventos, métodos ou propriedades SMO; termos de programação em texto.|  
   
   

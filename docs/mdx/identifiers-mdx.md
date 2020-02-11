@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891215"
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
@@ -44,7 +44,7 @@ ms.locfileid: "68891215"
   
     -   O sublinhado (_).  
   
-3.  O identificador não deve ser uma palavra-chave MDX reservada. As palavras-chave reservadas fazem diferenciação entre maiúsculas e minúsculas em MDX. Para obter mais informações, consulte [sintaxe &#40;&#41;MDX de palavras-chave reservadas](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  O identificador não deve ser uma palavra-chave MDX reservada. As palavras-chave reservadas fazem diferenciação entre maiúsculas e minúsculas em MDX. Para obter mais informações, consulte [palavras-chave reservadas &#40;sintaxe MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  Não são permitidos espaços ou caracteres especiais.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "68891215"
   
  Além disso, o identificador Measures no exemplo anterior foi delimitado para demonstrar a delimitação de mais de um identificador.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência de linguagem MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [Elementos &#40;de sintaxe MDX MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementos de sintaxe MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
   
   

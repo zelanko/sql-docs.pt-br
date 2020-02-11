@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 021db5a2283eb6ec68ea80302e938f08e7ba1a5c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154337"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configurar o Backup Gerenciado (SQL Server Management Studio)
@@ -29,11 +29,12 @@ ms.locfileid: "70154337"
   
 ## <a name="task-list"></a>Lista de Tarefas  
   
-## <a name="includess_smartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Funções usando Interface Backup Gerenciado no SQL Server Management Studio  
+## <a name="includess_smartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>
+  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Funções usando Interface Backup Gerenciado no SQL Server Management Studio  
  Nesta versão, você só pode configurar as configurações padrão de nível de instância usando a interface **Backup de Gerenciamento** . Não é possível configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para um banco de dados, pausar ou retomar operações [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] , nem configurar notificações por email. Para obter informações sobre como executar operações que não têm suporte no momento por meio da interface de **backup gerenciado** , consulte [SQL Server Backup gerenciado para o Azure – retenção e configurações de armazenamento](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ## <a name="permissions"></a>Permissões  
- **O nó exibir backup gerenciado é SQL Server Management Studio:** Para exibir o nó de **backup gerenciado** no Pesquisador de **objetos**, você deve ser um administrador do sistema ou ter as seguintes permissões concedidas especificamente à sua conta de usuário:  
+ O **nó exibir backup gerenciado é SQL Server Management Studio:** Para exibir o nó de **backup gerenciado** no Pesquisador de **objetos**, você deve ser um administrador do sistema ou ter as seguintes permissões concedidas especificamente à sua conta de usuário:  
   
 -   `db_backupoperator`  
   
@@ -47,13 +48,13 @@ ms.locfileid: "70154337"
   
 -   `SELECT`em `smart_admin.fn_backup_instance_config`.  
   
- **Para configurar o Backup gerenciado:** para configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no SQL Server Management Studio, você deve ser um administrador do sistema ou ter as seguintes permissões:  
+ **Para configurar o backup gerenciado:** para [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurar o no SQL Server Management Studio, você deve ser um administrador do sistema ou ter as seguintes permissões:  
   
  Associação na função de banco de dados `db_backupoperator`, com permissões `ALTER ANY CREDENTIAL` e permissões `EXECUTE` no procedimento armazenado `sp_delete_backuphistory`.  
   
  `SELECT`permissões na `smart_admin.fn_get_current_xevent_settings` função.  
   
- `EXECUTE`permissões no `smart_admin.sp_get_backup_diagnostics` procedimento armazenado. Além disso, requer permissões `VIEW SERVER STATE`, pois chama internamente outros objetos do sistema que exigem essa permissão.  
+ `EXECUTE`permissões no procedimento `smart_admin.sp_get_backup_diagnostics` armazenado. Além disso, requer permissões `VIEW SERVER STATE`, pois chama internamente outros objetos do sistema que exigem essa permissão.  
   
  Permissões `EXECUTE` em `smart_admin.sp_set_instance_backup` e `smart_admin.sp_backup_master_switch`.  
   
@@ -68,7 +69,7 @@ ms.locfileid: "70154337"
   
  Especifique a **URL de armazenamento** para a conta de armazenamento do Azure, a credencial SQL que armazena as informações de autenticação para a conta de armazenamento e o período de retenção para os arquivos de backup.  
   
- O formato da URL de armazenamento é\<: https://StorageAccount >. blob. Core. Windows. net/  
+ O formato da URL de armazenamento é\<: https://StorageAccount>. blob.Core.Windows.net/  
   
  Para definir as configurações de criptografia no nível da instância, marque a opção **Criptografar Backup** e especifique o algoritmo e um certificado ou chave assimétrica a serem usados na criptografia.  Isso é definido no nível da instância e é usado para todos os novos bancos de dados criados depois de essa configuração ser aplicada.  
   
@@ -78,9 +79,9 @@ ms.locfileid: "70154337"
 ### <a name="considerations"></a>Considerações  
  Se você configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no nível de instância, as configurações são aplicadas a qualquer novo banco de dados criado depois disso.  No entanto, bancos de dados existentes não herdarão essas configurações automaticamente. Para configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] em bancos de dados existentes, você deve configurar cada banco de dados especificamente. Para obter mais informações, consulte [habilitar e configurar SQL Server Backup gerenciado para o Azure para um banco de dados](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  
   
- Se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] o tiver sido pausado usando `smart_admin.sp_backup_master_switch`o, você verá uma mensagem de aviso "o backup gerenciado está desabilitado e as configurações atuais não entrarão em vigor..." Quando você tenta concluir a configuração. Use o `smart_admin.sp_backup_master_switch` armazenado e defina o @new_state= 1. Isso retomará os serviços [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] e as definições de configuração entrarão em vigor. Para obter mais informações sobre o procedimento armazenado, consulte [smart_admin. sp_ &#40;BACKUP_MASTER_SWITCH Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  
+ Se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] o tiver sido pausado usando `smart_admin.sp_backup_master_switch`o, você verá uma mensagem de aviso "o backup gerenciado está desabilitado e as configurações atuais não entrarão em vigor..." Quando você tenta concluir a configuração. Use o `smart_admin.sp_backup_master_switch` armazenado e defina o @new_state= 1. Isso retomará os serviços [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] e as definições de configuração entrarão em vigor. Para obter mais informações sobre o procedimento armazenado, consulte [smart_admin. sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Server Backup gerenciado no Azure: Interoperabilidade e coexistência](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Backup gerenciado do SQL Server para o Azure: interoperabilidade e coexistência](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
   

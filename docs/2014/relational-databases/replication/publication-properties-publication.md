@@ -1,5 +1,5 @@
 ---
-title: Propriedades de publicação de replicação do SQL Server - | Microsoft Docs
+title: Propriedades da publicação do Replicação do SQL Server-| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022458"
 ---
-# <a name="sql-server-replication-publication-properties"></a>Propriedades de publicação de replicação do SQL Server 
-  Esta seção fornece informações sobre todas as páginas do **propriedades de publicação** caixa de diálogo. 
+# <a name="sql-server-replication-publication-properties"></a>Propriedades da publicação do Replicação do SQL Server 
+  Esta seção fornece informações sobre todas as páginas da caixa de diálogo **Propriedades da publicação** . 
 
 ## <a name="general"></a>Geral
   A página **Geral** da caixa de diálogo **Propriedades de Publicação** contém informações básicas sobre a publicação, incluindo nome, descrição e a política de validade da assinatura.  
@@ -47,7 +47,7 @@ ms.locfileid: "63022458"
  O tipo da publicação (somente leitura).  
   
  **Validade da assinatura**  
- Selecione uma das opções para término da assinatura: **Assinaturas nunca expiram** ou **Assinaturas expiram** com um período explícito (**intervalo**).  
+ Selecione uma das opções para validade da assinatura: **As assinaturas nunca expiram** ou **As assinaturas expiram**, com um período de tempo explícito (**Intervalo**).  
   
  Para publicações de instantâneo e transacionais, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você aceite o padrão de **As assinaturas nunca expiram**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63022458"
  Para obter mais informações, consulte [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
  **Nível de compatibilidade**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only; merge publications only. Selecione versão mínima requerida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Assinantes que sincronizam com essa publicação. Há várias regras associadas com a determinação do nível de compatibilidade.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores somente; só publicações de mesclagem. Selecione versão mínima requerida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Assinantes que sincronizam com essa publicação. Há várias regras associadas com a determinação do nível de compatibilidade.  
 
 ## <a name="filter-rows"></a>Filtrar linhas
 
@@ -84,7 +84,7 @@ ms.locfileid: "63022458"
  Esse painel é populado com filtros à medida que são adicionados a artigos de tabela na publicação. Tabelas com filtros de linha são mostradas como nós de alto nível no painel. Para publicações de mesclagem, tabelas para as quais a filtragem foi estendida através de um filtro de junção são mostradas como nós filhos.  
   
  **Adicionar**  
- Clique em **Adicionar** para iniciar uma caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicar em **Adicionar** para uma publicação de mesclagem exibe três opções: **Adicionar Filtro**; **Adicionar junção para estender o filtro selecionado**; **Gerar filtros automaticamente**.  
+ Clique em **Adicionar** para iniciar uma caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicar em **Adicionar** para uma publicação de mesclagem exibe três opções: **Adicionar Filtro**; **Adicionar Junção para Estender o Filtro Selecionado**; **Gerar Filtros Automaticamente**.  
   
 -   Selecione **Adicionar Filtro** para iniciar a caixa de diálogo **Adicionar filtro** . Essa caixa de diálogo permite aplicar filtros de linha a um artigo de tabela. Na caixa de diálogo **Adicionar Filtro** você pode, por exemplo, especificar que uma tabela com dados de cliente só contenha dados de clientes franceses quando for replicada para Assinantes.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63022458"
   
 Essa página permite:  
   
--   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [transferir instantâneos pelo FTP](transfer-snapshots-through-ftp.md) documentação do Windows para obter mais informações.  
+-   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [transferir instantâneos por meio](transfer-snapshots-through-ftp.md) da documentação do Windows FTP para obter mais informações.  
   
     > [!NOTE]  
     >  Alterações em qualquer configuração do FTP exigem que um novo instantâneo seja gerado.  
@@ -153,7 +153,7 @@ Essa página permite:
 
   Essa página permite:  
   
--   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [transferir instantâneos pelo FTP](transfer-snapshots-through-ftp.md) documentação do Windows para obter mais informações.  
+-   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [transferir instantâneos por meio](transfer-snapshots-through-ftp.md) da documentação do Windows FTP para obter mais informações.  
   
     > [!NOTE]  
     >  Alterações em qualquer configuração do FTP exigem que um novo instantâneo seja gerado.  
@@ -215,7 +215,7 @@ Essa página permite:
  **Formato do instantâneo**  
  Selecione modo nativo ou modo de caractere para o formato do instantâneo.  
   
--   Selecione **Native SQL Server - todos os Assinantes devem ser servidores executando o SQL Server** se todos os Assinantes forem instâncias do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. O formato de instantâneo nativo fornece o melhor desempenho.    
+-   Selecione **Native SQL Server – todos os Assinantes devem ser servidores executando o SQL Server** se todos os Assinantes forem instâncias do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. O formato de instantâneo nativo fornece o melhor desempenho.    
 -   Selecione **Caractere - necessário se um Publicador ou Assinante não estiver executando o SQL Server** se nenhum Assinante estiver executando o [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou forem Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Local dos arquivos de instantâneo**  
@@ -234,12 +234,12 @@ Essa página permite:
 
 
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
  [Publicar dados e objetos de banco de dados](publish/publish-data-and-database-objects.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Segurança de replicação do SQL Server](security/view-and-modify-replication-security-settings.md)  
+ [Segurança de Replicação do SQL Server](security/view-and-modify-replication-security-settings.md)  
  [Inicializar uma assinatura com um instantâneo](initialize-a-subscription-with-a-snapshot.md)   
   
   

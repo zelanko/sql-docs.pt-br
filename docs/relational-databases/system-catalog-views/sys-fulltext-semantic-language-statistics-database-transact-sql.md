@@ -20,13 +20,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133786"
 ---
-# <a name="sysfulltextsemanticlanguagestatisticsdatabase-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
+# <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha sobre o banco de dados de estatísticas semânticas de idioma instalado na instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -40,13 +40,13 @@ ms.locfileid: "68133786"
 |**database_id**|**int**|ID do banco de dados, exclusivo em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**register_date**|**datetime**|Data do registro do banco de dados para processamento semântico.|  
 |**registered_by**|**int**|ID da entidade de segurança de servidor que registrou o banco de dados para processamento semântico.|  
-|**version**|**nvarchar(128)**|As informações de versão mais recentes específicas ao banco de dados de estatísticas de idioma semântico.|  
+|**Versão**|**nvarchar(128)**|As informações de versão mais recentes específicas ao banco de dados de estatísticas de idioma semântico.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Para obter mais informações, veja [Instalar e configurar a pesquisa semântica](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## <a name="metadata"></a>Metadados  
- Para obter informações sobre os idiomas que têm suporte para indexação semântica, consulte a exibição do catálogo [sys. fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
+ Para obter informações sobre os idiomas com suporte para indexação semântica, consulte a exibição de catálogo [Sys. fulltext_semantic_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## <a name="security"></a>Segurança  
   
@@ -54,14 +54,14 @@ ms.locfileid: "68133786"
  A visibilidade dos metadados em exibições do catálogo está limitada aos protegíveis que pertencem a um usuário ou para os quais o usuário recebeu permissão.  
   
 ## <a name="examples"></a>Exemplos  
- A exemplo a seguir mostra como consultar **sys. fulltext_semantic_language_statistics_database** para obter informações sobre o banco de dados de estatísticas semânticas de idioma registrado na instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ O exemplo a seguir mostra como consultar **Sys. fulltext_semantic_language_statistics_database** para obter informações sobre o banco de dados de estatísticas semânticas de idioma registrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]na instância atual do.  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar e configurar a pesquisa semântica](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

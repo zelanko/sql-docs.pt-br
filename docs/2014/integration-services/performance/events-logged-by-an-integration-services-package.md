@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889828"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventos registrados em log por um pacote do Integration Services
@@ -35,7 +35,7 @@ ms.locfileid: "62889828"
 > [!NOTE]  
 >  O pacote registrará em log as mensagens listadas na tabela abaixo mesmo que você não tenha habilitado o log no pacote.  
   
-|ID do evento|Nome simbólico|Text|Observações|  
+|ID do evento|Nome simbólico|Texto|Observações|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|Pacote "" iniciado.|A execução do pacote foi iniciada.|  
 |12289|DTS_MSG_PACKAGESUCCESS|Pacote "" concluído com êxito.|O pacote foi executado com êxito e não está mais sendo executado.|  
@@ -55,7 +55,7 @@ ms.locfileid: "62889828"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>Mensagens sobre os estágios da execução do pacote.  
   
-|ID do evento|Nome simbólico|Text|Observações|  
+|ID do evento|Nome simbólico|Texto|Observações|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|Nome do Evento: %1%r Mensagem: %9%r Operador: %2%r Nome da Origem: %3%r ID da Origem: %4%r ID de Execução: %5%r Hora de Início: %6%r Hora de Término: %7%r Código de Dados: %8|Quando você configura o log de pacotes para o log de eventos de Aplicativo, várias mensagens usam esse formato genérico.|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|Nome do Evento: %1%r Mensagem: %9%r Operador: %2%r Nome da Origem: %3%r ID da Origem: %4%r ID de Execução: %5%r Hora de Início: %6%r Hora de Término: %7%r Código de Dados: %8|O pacote foi iniciado.|  
@@ -66,9 +66,9 @@ ms.locfileid: "62889828"
 |12557|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|Nome do Evento: %1%r Mensagem: %9%r Operador: %2%r Nome da Origem: %3%r ID da Origem: %4%r ID de Execução: %5%r Hora de Início: %6%r Hora de Término: %7%r Código de Dados: %8|A execução do pacote foi concluída.|  
   
 ### <a name="messages-about-events-that-occur"></a>Mensagens sobre eventos que ocorrem  
- A tabela a seguir lista apenas algumas das mensagens geradas por eventos. Para obter uma lista mais completa de erros, avisos e mensagens informativas usados pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Referência de mensagens e erros do Integration Services](../integration-services-error-and-message-reference.md).  
+ A tabela a seguir lista apenas algumas das mensagens geradas por eventos. Para obter uma lista mais completa de erros, avisos e mensagens informativas usados pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Referência de mensagens e erros do Integration Services](../integration-services-error-and-message-reference.md).  
   
-|ID do evento|Nome simbólico|Text|Observações|  
+|ID do evento|Nome simbólico|Texto|Observações|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|Nome do Evento: %1%r Mensagem: %9%r Operador: %2%r Nome da Origem: %3%r ID da Origem: %4%r ID de Execução: %5%r Hora de Início: %6%r Hora de Término: %7%r Código de Dados: %8|A tarefa falhou.|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|Nome do Evento: %1%r Mensagem: %9%r Operador: %2%r Nome da Origem: %3%r ID da Origem: %4%r ID de Execução: %5%r Hora de Início: %6%r Hora de Término: %7%r Código de Dados: %8|Esta mensagem reporta um erro ocorrido.|  
@@ -78,7 +78,7 @@ ms.locfileid: "62889828"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter informações sobre como exibir entradas de log em tempo real, consulte [Exibir entradas de log na janela Eventos de Log](../view-log-entries-in-the-log-events-window.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos registrados em log pelo serviço Integration Services Service](../service/events-logged-by-the-integration-services-service.md)  
   
   

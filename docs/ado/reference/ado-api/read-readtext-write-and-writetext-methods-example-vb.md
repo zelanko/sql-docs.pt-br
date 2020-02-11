@@ -1,5 +1,5 @@
 ---
-title: Exemplo dos métodos WriteText (VB), ReadText, gravação e leitura | Microsoft Docs
+title: Exemplo dos métodos Read, ReadText, Write e WriteText (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f77b2d395b76b537107ad87cf1487bb4d25a430c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931449"
 ---
-# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Instruções ReadText, leitura, gravação e exemplo dos métodos WriteText (VB)
-Este exemplo demonstra como ler o conteúdo de uma caixa de texto em ambos os texto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) e um binário **Stream**. Incluem outras propriedades e métodos mostrados [posição](../../../ado/reference/ado-api/position-property-ado.md), [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), e [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Exemplo dos métodos Read, ReadText, Write e WriteText (VB)
+Este exemplo demonstra como ler o conteúdo de uma caixa de texto em um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) de texto e em um **fluxo**binário. Outras propriedades e métodos mostrados incluem [Position](../../../ado/reference/ado-api/position-property-ado.md), [size](../../../ado/reference/ado-api/size-property-ado-parameter.md), [charset](../../../ado/reference/ado-api/charset-property-ado.md)e [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
 ```  
 'BeginReadVB  
@@ -110,13 +110,13 @@ End Sub
 'EndReadVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade charset (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
  [Propriedade Position (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
  [Método Read](../../../ado/reference/ado-api/read-method.md)   
  [Método ReadText](../../../ado/reference/ado-api/readtext-method.md)   
  [Método SetEOS](../../../ado/reference/ado-api/seteos-method.md)   
- [Propriedade Size (Stream do ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
+ [Propriedade Size (fluxo ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Método de gravação](../../../ado/reference/ado-api/write-method.md)   
  [Método WriteText](../../../ado/reference/ado-api/writetext-method.md)

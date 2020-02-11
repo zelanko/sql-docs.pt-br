@@ -18,13 +18,13 @@ ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7189a0586ba4f62091d5eb209a56931627bc6f7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036405"
 ---
 # <a name="manual-commit-mode"></a>Modo de confirmação manual
-*No modo de confirmação manual* aplicativos explicitamente devem concluir as transações chamando **SQLEndTran** para confirmá-las ou revertê-los. Este é o modo de transação normal para a maioria dos bancos de dados relacionais.  
+*No modo de confirmação manual,* os aplicativos devem concluir explicitamente as transações chamando **SQLEndTran** para confirmá-las ou redistribuí-las de volta. Esse é o modo de transação normal para a maioria dos bancos de dados relacionais.  
   
- As transações em ODBC não têm explicitamente seja iniciada. Em vez disso, uma transação começa implicitamente sempre que o aplicativo é iniciado para operar no banco de dados. Se a fonte de dados requer a iniciação de transação explícita, o driver deve fornecer a ele sempre que o aplicativo executa uma instrução que exigem uma transação e não há nenhuma transação atual.
+ As transações em ODBC não precisam ser iniciadas explicitamente. Em vez disso, uma transação começa implicitamente sempre que o aplicativo começa a operar no banco de dados. Se a fonte de dados exigir um início de transação explícito, o driver deverá fornecê-lo sempre que o aplicativo executar uma instrução que requer uma transação e não houver nenhuma transação atual.

@@ -1,5 +1,5 @@
 ---
-title: Gerenciar Backups (OracleToSQL) | Microsoft Docs
+title: Gerenciando backups (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,86 +14,86 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262966"
 ---
 # <a name="managing-backups-oracletosql"></a>Gerenciar backups (OracleToSQL)
-Gerenciamento de Backup do Oracle permite backup e restauração de dados da tabela antes ou depois de executar um teste. Você também pode gerenciar o conteúdo de backup com a caixa de diálogo Gerenciar conteúdos de Backup.  
+O gerenciamento de backup Oracle permite que você faça backup e restaure os dados da tabela antes ou depois de executar um teste. Você também pode gerenciar o conteúdo de backup com a caixa de diálogo gerenciar conteúdo de backup.  
   
-## <a name="oracle-backup-management"></a>Gerenciamento de Backup do Oracle  
-  
-### <a name="backup"></a>Backup  
-Para abrir a caixa de diálogo de backup, no ponto de menu de testador para gerenciamento de Backup do Oracle, em seguida, clique em Backup... Na caixa de diálogo backup, você encontrará a árvore de metadados do Oracle exibindo todas as tabelas do esquema Oracle carregado. Selecione uma ou mais tabelas para realizar um backup.  
-  
-Os seguintes botões estão disponíveis na caixa de diálogo:  
-  
--   Clique o **estado de seleção** botão para verificar o backup do estado da tabela.  
-  
--   Clique o **Backup** botão para fazer backup de tabela de dados.  
-  
--   Clique o **Cancelar** botão para fechar a caixa de diálogo.  
-  
-### <a name="restore"></a>Restaurar  
-Para abrir a caixa de diálogo de restauração, no menu de testador, aponte para gerenciamento de Backup do Oracle e clique em Restaurar... Lá você encontrará uma árvore que contém as tabelas disponíveis no backup. Selecione uma ou mais tabelas para restaurar seus dados.  
-  
-Os seguintes botões estão disponíveis na caixa de diálogo:  
-  
--   Clique o **estado de seleção** botão para verificar o backup do estado da tabela.  
-  
--   Clique o **restaurar** botão Restaurar dados de backup para a tabela.  
-  
--   Clique o **Cancelar** botão para fechar a caixa de diálogo.  
-  
-### <a name="managing-backup-contents"></a>Gerenciamento de conteúdo de Backup  
-Para abrir o gerenciamento de conteúdo de Backup, no menu de testador, aponte para o gerenciamento de Backup do Oracle e clique em conteúdo de Backup... Lá você encontrará uma árvore que contém as tabelas no backup.  
-  
-Os seguintes botões estão disponíveis na caixa de diálogo:  
-  
--   Clique o **estado de seleção** botão para verificar o backup do estado da tabela.  
-  
--   Clique o **remover** botão para remover a tabela a partir do backup.  
-  
--   Clique o **feche** botão para fechar a caixa de diálogo.  
-  
-## <a name="sql-server-backup-management"></a>Gerenciamento de Backup do SQL Server  
-Gerenciamento de Backup do SQL Server permite backup e restauração de dados da tabela antes ou depois de executar um teste. Você também pode gerenciar o conteúdo de backup com a caixa de diálogo Gerenciar conteúdos de Backup.  
+## <a name="oracle-backup-management"></a>Gerenciamento de backup do Oracle  
   
 ### <a name="backup"></a>Backup  
-Para abrir a caixa de diálogo de backup, no ponto de menu de testador para gerenciamento de Backup do SQL Server, em seguida, clique em Backup... Na caixa de diálogo backup, você encontrará a árvore de metadados do SQL Server, exibindo todas as tabelas dos bancos de dados do SQL Server carregados. Selecione uma ou mais tabelas para realizar um backup.  
+Para abrir a caixa de diálogo de backup, no menu de teste, aponte para gerenciamento de backup Oracle e clique em backup.... Na caixa de diálogo de backup, você encontrará a árvore de metadados do Oracle que exibe todas as tabelas do esquema Oracle carregado. Selecione uma ou mais tabelas para executar um backup.  
   
-Os seguintes botões estão disponíveis na caixa de diálogo:  
+Os botões a seguir estão disponíveis na caixa de diálogo:  
   
--   Clique o **estado de seleção** botão para verificar o backup do estado da tabela.  
+-   Clique no botão **verificar estado** para verificar o estado de backup da tabela.  
   
--   Clique o **Backup** botão para fazer backup dos dados da tabela.  
+-   Clique no botão **backup** para fazer backup dos dados da tabela.  
   
--   Clique o **Cancelar** botão para fechar a caixa de diálogo.  
+-   Clique no botão **Cancelar** para fechar a caixa de diálogo.  
   
 ### <a name="restore"></a>Restaurar  
-Para abrir a caixa de diálogo de restauração, no menu de testador, aponte para o gerenciamento de Backup do SQL Server, o clique de restauração... Lá você encontrará uma árvore que contém as tabelas disponíveis no backup. Selecione a tabela de um ou mais para restaurar seus dados.  
+Para abrir a caixa de diálogo restaurar, no menu testador, aponte para gerenciamento de backup Oracle e clique em restaurar.... Lá, você encontrará uma árvore que contém as tabelas disponíveis no backup. Selecione uma ou mais tabelas para restaurar seus dados.  
   
-Os seguintes botões estão disponíveis na caixa de diálogo:  
+Os botões a seguir estão disponíveis na caixa de diálogo:  
   
--   Clique o **estado de seleção** botão para verificar o backup do estado da tabela.  
+-   Clique no botão **verificar estado** para verificar o estado de backup da tabela.  
   
--   Clique o **restaurar** botão Restaurar dados de backup para a tabela.  
+-   Clique no botão **restaurar** para restaurar os dados de backup na tabela.  
   
--   Clique o **Cancelar** botão para fechar a caixa de diálogo.  
+-   Clique no botão **Cancelar** para fechar a caixa de diálogo.  
   
-### <a name="managing-backup-contents"></a>Gerenciamento de conteúdo de Backup  
-Para abrir o gerenciamento de conteúdo de Backup, no menu de testador, aponte para o gerenciamento de Backup do SQL Server e clique em conteúdo de Backup... Lá você encontrará uma árvore que contém as tabelas no backup.  
+### <a name="managing-backup-contents"></a>Gerenciando conteúdo de backup  
+Para abrir o gerenciamento de conteúdo de backup, no menu de teste, aponte para gerenciamento de backup Oracle e clique em conteúdo de backup.... Lá, você encontrará uma árvore que contém as tabelas no backup.  
   
-Os seguintes botões estão disponíveis na caixa de diálogo:  
+Os botões a seguir estão disponíveis na caixa de diálogo:  
   
--   Clique o **estado de seleção** botão para verificar o backup do estado da tabela.  
+-   Clique no botão **verificar estado** para verificar o estado de backup da tabela.  
   
--   Clique o **remover** botão para remover a tabela a partir do backup.  
+-   Clique no botão **remover** para remover a tabela do backup.  
   
--   Clique o **feche** botão para fechar a caixa de diálogo.  
+-   Clique no botão **fechar** para fechar a caixa de diálogo.  
   
-## <a name="see-also"></a>Consulte também  
-[Testar objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="sql-server-backup-management"></a>Gerenciamento de backup SQL Server  
+SQL Server gerenciamento de backup permite que você faça backup e restaure os dados da tabela antes ou depois de executar um teste. Você também pode gerenciar o conteúdo de backup com a caixa de diálogo gerenciar conteúdo de backup.  
+  
+### <a name="backup"></a>Backup  
+Para abrir a caixa de diálogo de backup, no menu do testador, aponte para SQL Server gerenciamento de backup e clique em backup...... Na caixa de diálogo backup, você encontrará a árvore de metadados SQL Server exibindo todas as tabelas dos bancos de dados do SQL Server carregados. Selecione uma ou mais tabelas para executar um backup.  
+  
+Os botões a seguir estão disponíveis na caixa de diálogo:  
+  
+-   Clique no botão **verificar estado** para verificar o estado de backup da tabela.  
+  
+-   Clique no botão **backup** para fazer backup dos dados da tabela.  
+  
+-   Clique no botão **Cancelar** para fechar a caixa de diálogo.  
+  
+### <a name="restore"></a>Restaurar  
+Para abrir a caixa de diálogo restaurar, no menu testador, aponte para SQL Server gerenciamento de backup, clique em restaurar.... Lá, você encontrará uma árvore que contém as tabelas disponíveis no backup. Selecione uma ou mais tabelas para restaurar seus dados.  
+  
+Os botões a seguir estão disponíveis na caixa de diálogo:  
+  
+-   Clique no botão **verificar estado** para verificar o estado de backup da tabela.  
+  
+-   Clique no botão **restaurar** para restaurar os dados de backup na tabela.  
+  
+-   Clique no botão **Cancelar** para fechar a caixa de diálogo.  
+  
+### <a name="managing-backup-contents"></a>Gerenciando conteúdo de backup  
+Para abrir o gerenciamento de conteúdo de backup, no menu do testador, aponte para SQL Server gerenciamento de backup e clique em conteúdo de backup.... Lá, você encontrará uma árvore que contém as tabelas no backup.  
+  
+Os botões a seguir estão disponíveis na caixa de diálogo:  
+  
+-   Clique no botão **verificar estado** para verificar o estado de backup da tabela.  
+  
+-   Clique no botão **remover** para remover a tabela do backup.  
+  
+-   Clique no botão **fechar** para fechar a caixa de diálogo.  
+  
+## <a name="see-also"></a>Consulte Também  
+[Testando objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400939"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Monitorar o dispositivo com o console do administrador-Analytics Platform System
@@ -31,7 +31,7 @@ Exibe a topologia do dispositivo com indicadores que mostram a integridade de ca
   
 Exibe alertas de hardware e software.  
   
-Monitorar Desempenho  
+Monitor de desempenho  
 Exibe grafos do monitor de desempenho.  
   
 **Parallel Data Warehouse**  
@@ -61,7 +61,7 @@ Exibe uma lista de bloqueios de recursos do PDW e seu status atual.
 Armazenamento  
 Resume a utilização do armazenamento do PDW.  
   
-Monitorar Desempenho  
+Monitor de desempenho  
 Exibe grafos do monitor de desempenho do PDW.  
  
 > [!NOTE]  

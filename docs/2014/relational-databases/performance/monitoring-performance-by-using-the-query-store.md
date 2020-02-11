@@ -11,23 +11,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028601"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
-  O recurso repositório de consultas fornece aos DBAs insights sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, permitindo que você localize rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O recurso captura automaticamente um histórico de consultas, planos e estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas de tempo, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) .  
+  O recurso repositório de consultas fornece aos DBAs insights sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, permitindo que você localize rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O recurso captura automaticamente um histórico de consultas, planos e estatísticas de runtime e os mantém para sua análise. Ele separa os dados por janelas de tempo, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) .  
   
 ||  
 |-|  
-|**Aplica-se ao**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([Obtenha-](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)o).|  
+|**Aplica-se a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([obtenha](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
 >  Este é um recurso de visualização. Para usar o repositório de consultas, você deve reconhecer e concordar que a implementação do repositório está sujeita aos termos de visualização anteriores do contrato de licença (por exemplo, Contrato Enterprise, Contrato do Microsoft Azure ou Contrato de Assinatura do Microsoft Online), bem como quaisquer [Termos suplementares de uso da Visualização do Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)aplicáveis.  
   
-##  <a name="Enabling"></a> Habilitando o Repositório de Consultas  
+##  <a name="Enabling"></a>Habilitando o Repositório de Consultas  
  O repositório de consultas não está ativo para novos bancos de dados por padrão.  
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>Usando a página Repositório de Consultas no Management Studio  
@@ -53,7 +53,7 @@ ms.locfileid: "69028601"
   
 
   
-##  <a name="About"></a> Informações no Repositório de Consultas  
+##  <a name="About"></a>Informações no Repositório de Consultas  
  Planos de execução para qualquer consulta específica no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] normalmente envolvem horas extras por vários motivos diferentes, como alterações de estatísticas, alterações de esquema, criação/exclusão de índices, etc. O cache de procedimento (no qual os planos de consulta em cache são armazenados) armazena apenas o plano de execução mais recente. Os planos também são removidos do cache do plano devido à pressão da memória. Como resultado, as regressões do desempenho de consulta causadas por alterações no plano de execução podem não ser triviais e podem ter resolução lenta.  
   
  Como o repositório de consultas mantém vários planos de execução por consulta, ele pode impor políticas para direcionar o processador de consultas para usar um plano de execução específico para uma consulta. Isso é conhecido como imposição de plano. A imposição de plano no repositório de consultas é fornecida usando um mecanismo semelhante à dica de consulta [USE PLAN](/sql/t-sql/queries/hints-transact-sql-query) , mas não requer nenhuma alteração nos aplicativos do usuário. A imposição de plano pode resolver uma regressão de desempenho de consulta causada por uma alteração do plano em um período muito curto.  
@@ -70,7 +70,7 @@ ms.locfileid: "69028601"
   
 -   Analisar os padrões de uso dos recursos (CPU, E/S e memória) para determinado banco de dados.  
   
- O armazenamento de consultas contém dois repositórios; um **repositório de planos** para manter as informações do plano de execução e um **repositório de estatísticas de tempo de execução** para manter as informações de estatísticas de execução. O número de planos exclusivos que pode ser armazenado para uma consulta no repositório de planos é limitado pela opção de configuração `max_plans_per_query`. Para melhorar o desempenho, as informações são gravadas nos dois repositórios de forma assíncrona. Para otimizar o uso do espaço, as estatísticas de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixa. As informações nesses repositórios são visíveis consultando as exibições de catálogo do repositório de consultas.  
+ O armazenamento de consultas contém dois repositórios; um **repositório de planos** para manter as informações do plano de execução e um **repositório de estatísticas de runtime** para manter as informações de estatísticas de execução. O número de planos exclusivos que pode ser armazenado para uma consulta no repositório de planos é limitado pela opção de configuração `max_plans_per_query`. Para melhorar o desempenho, as informações são gravadas nos dois repositórios de forma assíncrona. Para otimizar o uso do espaço, as estatísticas de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixa. As informações nesses repositórios são visíveis consultando as exibições de catálogo do repositório de consultas.  
   
  A consulta a seguir retorna informações sobre consultas e planos no repositório de consultas.  
   
@@ -86,19 +86,19 @@ JOIN sys.query_store_query_text AS Txt
 
   
 ## <a name="using-the-regressed-queries-feature"></a>Usando o recurso de consultas regredidas  
- Depois de habilitar o repositório de consultas, atualize a parte do banco de dados do painel Pesquisador de Objetos para adicionar a seção **Repositório de Consultas** .  
+ Depois de habilitar o repositório de consultas, atualize a parte do banco de dados do painel Pesquisador de objetos para adicionar a seção **repositório de consultas** .  
   
- ![A querystore](../../database-engine/media/querystore.PNG "A querystore")  
+ ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
  A seleção de **Consultas Regredidas**abre o painel **Consultas Regredidas** no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. O painel Consultas Regredidas mostra consultas e planos no repositório de consultas. Caixas de listas suspensas na parte superior permitem que você selecione consultas com base em vários critérios. Selecione um plano para ver o plano de consulta gráfico. Botões estão disponíveis para exibir a consulta de origem, impor e cancelar a imposição de um plano de consulta e atualizar a exibição.  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
- Para impor um plano, selecione uma consulta e um plano e, em seguida, clique em **Impor Plano.** Você pode impor apenas planos que foram salvos pelo recurso de plano de consulta e ainda são mantidos no cache do plano de consulta.  
+ Para forçar um plano, selecione uma consulta e um plano e, em seguida, clique em **forçar plano.** Você pode impor apenas planos que foram salvos pelo recurso de plano de consulta e ainda são mantidos no cache do plano de consulta.  
   
 
   
-##  <a name="Options"></a> Opções de configuração  
+##  <a name="Options"></a>Opções de configuração  
  OPERATION_MODE  
  Pode ser READ_WRITE ou READ_ONLY.  
   
@@ -112,7 +112,7 @@ JOIN sys.query_store_query_text AS Txt
  Configura o tamanho máximo do repositório de consultas. Se os dados no repositório de consultas atingir o limite MAX_SIZE_MB, o repositório de consultas alterará automaticamente o status de somente gravação para somente leitura e interromperá a coleta de novos dados.  
   
  INTERVAL_LENGTH_MINUTES  
- Determina o intervalo de tempo em que os dados de estatísticas de execução do tempo de execução são agregados no repositório de consultas. Para otimizar o uso de espaço, as estatísticas de execução de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixa. Essa janela de tempo fixa é configurada usando INTERVAL_LENGTH_MINUTES.  
+ Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no repositório de consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixa. Essa janela de tempo fixa é configurada usando INTERVAL_LENGTH_MINUTES.  
   
  Consulte a exibição `sys.database_query_store_options` para determinar as opções atuais do repositório de consultas.  
   
@@ -120,55 +120,55 @@ JOIN sys.query_store_query_text AS Txt
   
  
   
-##  <a name="Related"></a> Exibições, Funções e Procedimentos Relacionados  
+##  <a name="Related"></a>Exibições, funções e procedimentos relacionados  
  O repositório de consultas pode ser exibido e gerenciado por meio do [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou usando as exibições e os procedimentos a seguir.  
   
--   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
+-   [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
   
 ### <a name="query-store-catalog-views"></a>Exibições do catálogo de repositório de consulta  
  Sete exibições do catálogo apresentam informações sobre o repositório de consultas.  
   
--   [sys.database_query_store_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)  
+-   [sys. database_query_store_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)  
   
--   [sys.query_context_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)  
+-   [sys. query_context_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)  
   
--   [sys.query_store_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)  
+-   [sys. query_store_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)  
   
--   [sys.query_store_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)  
+-   [sys. query_store_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)  
   
--   [sys.query_store_query_text &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)  
+-   [sys. query_store_query_text &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)  
   
--   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)  
+-   [sys. query_store_runtime_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)  
   
--   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)  
+-   [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)  
   
 ### <a name="query-store-stored-procedures"></a>Procedimentos armazenados do repositório de consulta  
  Seis procedimentos armazenados configuram o repositório de consultas.  
   
--   [sp_query_store_flush_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)  
+-   [&#41;&#40;Transact-SQL de sp_query_store_flush_db](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)  
   
--   [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)  
+-   [&#41;&#40;Transact-SQL de sp_query_store_reset_exec_stats](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)  
   
--   [sp_query_store_force_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)  
+-   [&#41;&#40;Transact-SQL de sp_query_store_force_plan](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)  
   
--   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)  
+-   [&#41;&#40;Transact-SQL de sp_query_store_unforce_plan](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)  
   
 -   [sp_query_store_remove_plan &#40;Transct-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)  
   
--   [sp_query_store_remove_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)  
+-   [&#41;&#40;Transact-SQL de sp_query_store_remove_query](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)  
   
 
   
-##  <a name="Scenarios"></a> Principais cenários de uso  
+##  <a name="Scenarios"></a>Principais cenários de uso  
   
-###  <a name="OptionMgmt"></a> Gerenciamento de opção  
+###  <a name="OptionMgmt"></a>Gerenciamento de opções  
  Esta seção fornece algumas diretrizes sobre como gerenciar recursos do próprio repositório de consultas.  
   
- **O Repositório de Consultas está ativo no momento?**  
+ **Repositório de Consultas está atualmente ativo?**  
   
  O Repositório de Consultas armazena seus dados dentro do banco de dados do usuário e é por isso que ele tem limite de tamanho (configurado com `MAX_STORAGE_SIZE_MB`). Se os dados no repositório de consultas atingirem esse limite, o repositório de consultas alterará automaticamente o status de somente gravação para somente leitura e interromperá a coleta de novos dados.  
   
- Execute o script a seguir para determinar se o repositório de consultas está ativo no momento e se está coletando estatísticas de tempo de execução ou não.  
+ Execute o script a seguir para determinar se o repositório de consultas está ativo no momento e se está coletando estatísticas de runtime ou não.  
   
 ```  
 DECLARE @x nvarchar(100) = CAST(newid() AS nvarchar(100));  
@@ -184,7 +184,7 @@ ELSE SELECT ''Query Store is NOT active''' ;
 EXEC sp_executesql @query;  
 ```  
   
- **Opções Obter Repositório de Consultas**  
+ **Obter Repositório de Consultas opções**  
   
  Para obter informações detalhadas sobre o status do repositório de consultas, execute o seguinte em um banco de dados do usuário.  
   
@@ -192,9 +192,9 @@ EXEC sp_executesql @query;
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
- **Configurar o intervalo do Repositório de Consultas**  
+ **Definindo Repositório de Consultas intervalo**  
   
- Você pode substituir o intervalo para agregar estatísticas de tempo de execução de consulta (o padrão é 60 minutos).  
+ Você pode substituir o intervalo para agregar estatísticas de runtime de consulta (o padrão é 60 minutos).  
   
 ```  
   
@@ -205,7 +205,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- Observe que os valores arbitrários não são permitidos-você deve usar um dos seguintes: 1, 5, 10, 15, 30 e 60.  
+ Observe que não são permitidos valores arbitrários – você deve usar um dos seguintes: 1, 5, 10, 15, 30 e 60.  
   
  O novo valor do intervalo é exposto na exibição `sys.database_query_store_options`.  
   
@@ -216,7 +216,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
   
- **Opções Obter Todos os Repositórios de Consultas**  
+ **Definir todas as opções de Repositório de Consultas**  
   
  Você pode definir várias opções de repositório de consultas de uma só vez com uma única instrução ALTER DATABASE.  
   
@@ -232,7 +232,7 @@ SET QUERY_STORE (
 );  
 ```  
   
- **Limpar o espaço**  
+ **Limpando o espaço**  
   
  Tabelas internas do repositório de consultas são criadas no grupo de arquivos PRIMARY durante a criação do banco de dados e essa configuração não pode ser alterada posteriormente. Se você estiver executando sem espaço, limpe os dados antigos do repositório de consultas usando a instrução a seguir.  
   
@@ -242,7 +242,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  Você pode também limpar apenas dados de consulta ad hoc, pois são menos relevantes para otimizações de consulta e análise do plano, mas eles ocupam a mesma quantidade de espaço.  
   
- **Excluir consultas ad hoc** Isso exclui as consultas que só foram executadas uma vez e que têm mais de 24 horas.  
+ **Excluir consultas ad hoc** Isso exclui as consultas que só foram executadas uma vez e que têm mais de 24 horas de idade.  
   
 ```  
 DECLARE @id int  
@@ -283,8 +283,8 @@ DEALLOCATE adhoc_queries_cursor;
   
 
   
-###  <a name="Peformance"></a> Auditoria e solução de problemas de desempenho  
- Como o repositório de consultas mantém o histórico de compilação e métricas do tempo de execução durante as execuções da consulta, há muitas questões diferentes que podem ser respondidas facilmente com relação à carga de trabalho.  
+###  <a name="Peformance"></a>Auditoria e solução de problemas de desempenho  
+ Como o repositório de consultas mantém o histórico de compilação e métricas do runtime durante as execuções da consulta, há muitas questões diferentes que podem ser respondidas facilmente com relação à carga de trabalho.  
   
  **Últimas *n* consultas executadas no banco de dados.**  
   
@@ -382,7 +382,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **Consultas que regressivou recentemente o desempenho (comparando diferentes pontos no tempo).** O exemplo de consulta a seguir retorna todas as consultas para as quais o tempo de execução dobrou nas últimas 48 horas em razão de alteração na escolha do plano. A consulta compara todos os intervalos de estatísticas de tempo de execução lado a lado.  
+ **Consultas que regressivou recentemente o desempenho (comparando diferentes pontos no tempo).** O exemplo de consulta a seguir retorna todas as consultas para as quais o tempo de execução dobrou nas últimas 48 horas em razão de alteração na escolha do plano. A consulta compara todos os intervalos de estatísticas de runtime lado a lado.  
   
 ```  
 SELECT   
@@ -498,12 +498,12 @@ OPTION (MERGE JOIN);
   
 
   
-###  <a name="Stability"></a> Manter a estabilidade do desempenho da consulta  
+###  <a name="Stability"></a>Mantendo a estabilidade do desempenho da consulta  
  Para consultas executadas várias vezes você pode perceber que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usou diferentes planos que resultaram em diferentes utilizações de recurso e duração. Com o repositório de consultas, você pode facilmente detectar quando o desempenho da consulta regrediu e determinar o plano ideal dentro de um período de interesse. Em seguida, você pode forçar o plano ideal para execução futura da consulta.  
   
  Você também pode identificar desempenho inconsistente de consulta para uma consulta com parâmetros ( autoparametrizada ou parametrizada manualmente). Entre diferentes planos, você pode identificar o plano que é rápido e ideal o suficiente para todos ou a maioria dos valores de parâmetro e forçar esse plano, mantendo desempenho previsível para o conjunto mais amplo de cenários de usuário.  
   
- **Impor um plano para uma consulta (aplicar política de imposição).** Quando um plano é forçado para determinada consulta, sempre que uma consulta é executada com o plano imposto.  
+ **Force ou um plano para uma consulta (aplicar política de força).** Quando um plano é forçado para determinada consulta, sempre que uma consulta é executada com o plano imposto.  
   
 ```  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
@@ -511,7 +511,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  Ao usar `sp_query_store_force_plan` você só pode impor planos registrados pelo repositório de consultas como um plano para essa consulta. Em outras palavras, os únicos planos disponíveis para uma consulta são aqueles que já foram usados para executar Q1 enquanto o repositório de consultas estava ativo.  
   
- **Remover a imposição de plano de uma consulta.** Para depender novamente no otimizador de consultas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para calcular o plano de consulta ideal, use `sp_query_store_unforce_plan` para impor o plano selecionado para a consulta.  
+ **Remover a imposição de plano para uma consulta.** Para confiar novamente no otimizador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consulta para calcular o plano de consulta ideal, `sp_query_store_unforce_plan` use para não forçar o plano selecionado para a consulta.  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
@@ -519,10 +519,10 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
   
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar e ajustar o desempenho](../performance/monitor-and-tune-for-performance.md)   
  [Ferramentas para monitoramento e ajuste de desempenho](../performance/performance-monitoring-and-tuning-tools.md)   
  [Abrir o Monitor de Atividade &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
- [Monitor de Atividade](../performance-monitor/activity-monitor.md)  
+ [Monitor de atividade](../performance-monitor/activity-monitor.md)  
   
   

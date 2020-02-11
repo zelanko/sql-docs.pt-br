@@ -13,16 +13,16 @@ ms.assetid: a5e3f966-3357-4827-afbc-6153682d26bc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6424d7b6a6a48c36adb00ca877eadc6c69e064f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67951830"
 ---
 # <a name="types-of-data-sources"></a>Tipos de fontes de dados
-Há dois tipos de fontes de dados: fontes de dados e fontes de dados de arquivos de máquina. Embora ambos contêm informações semelhantes sobre a origem dos dados, eles são diferentes da maneira que essas informações são armazenadas. Por causa dessas diferenças, eles são usados em um pouco diferentes maneiras.  
+Há dois tipos de fontes de dados: fontes de dados do computador e fontes de dados de arquivo. Embora ambos contenham informações semelhantes sobre a origem dos dados, eles diferem na forma como essas informações são armazenadas. Devido a essas diferenças, elas são usadas em modos um pouco diferentes.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Fontes de dados do computador](../../odbc/reference/machine-data-sources.md)  
   

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767578"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>Etapa 1: Compilar o utilitário de implantação
+# <a name="step-1-building-the-deployment-utility"></a>Etapa 1: Compilando o utilitário de implantação
   Nesta tarefa, você configurará e compilará um utilitário de implantação para o projeto do Tutorial de Implantação.  
   
  Antes de compilar o utilitário de implantação, você deve modificar as propriedades do projeto do Tutorial de Implantação. Você usará a caixa de diálogo **Páginas de Propriedades do Tutorial de Implantação** para configurar essas propriedades. Nesta caixa de diálogo, você deve habilitar o recurso para atualizar configurações durante a implantação e especificar que o processo de compilação gera um utilitário de implantação. Depois que você definir as propriedades, o projeto será compilado.  
@@ -34,7 +34,7 @@ ms.locfileid: "62767578"
   
 4.  Na caixa de diálogo **Páginas de Propriedades do Tutorial de Implantação** , expanda Propriedades de Configurações e clique em Utilitário de Implantação.  
   
-5.  No painel à direita do **páginas de propriedade do Tutorial de implantação** diálogo caixa, verifique `AllowConfigurationChanges` é definido como `true`, defina `CreateDeploymentUtility` para `true`e, opcionalmente, atualize o valor padrão de `DeploymentOutputPath`.  
+5.  No painel direito da caixa de diálogo **páginas de propriedades do tutorial de implantação** , `AllowConfigurationChanges` Verifique se está `true`definido como `CreateDeploymentUtility` , `true`defina como e, opcionalmente, atualize o `DeploymentOutputPath`valor padrão de.  
   
 6.  Clique em **OK**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62767578"
   
 4.  Na janela Saída, verifique as seguintes informações:  
   
-     Compilação iniciada: Projeto do Integration Services do SQL: Incremental ...  
+     Compilação iniciada: Projeto do SQL Integration Services: Incremental ...  
   
      Criando utilitário de implantação...  
   
@@ -61,11 +61,11 @@ ms.locfileid: "62767578"
 5.  No menu **Arquivo** , clique em **Sair**. Se for solicitado que você salve as alterações dos itens do Tutorial de Implantação, clique em **Sim**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 2: verificar o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [Etapa 2: Verificando o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um utilitário de implantação](../../2014/integration-services/create-a-deployment-utility.md)  
   
   

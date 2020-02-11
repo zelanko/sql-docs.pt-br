@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033498"
 ---
 # <a name="schedule-the-policies"></a>Agendar as políticas
@@ -22,21 +22,21 @@ ms.locfileid: "63033498"
   
 ### <a name="to-schedule-the-best-practices-policies"></a>Para agendar as políticas de práticas recomendadas  
   
-1.  No Pesquisador de objetos, expanda **Management**, expanda **gerenciamento de política**, expanda **políticas**, uma política de práticas recomendadas com o botão direito e, em seguida, clique em  **Propriedades**.  
+1.  No Pesquisador de objetos, expanda **Gerenciamento**, **Gerenciamento de políticas**, expanda **políticas**, clique com o botão direito do mouse em uma política de práticas recomendadas e clique em **Propriedades**.  
   
     > [!NOTE]  
-    >  Como alternativa, para ver facilmente quais políticas estão associadas com as práticas recomendadas para classificar os melhores práticas e categorias, expanda **Management**, expanda **gerenciamento de política**e, em seguida, clique em **Diretivas**. No menu **Exibir** , clique em **Detalhes do Pesquisador de Objetos**. No **detalhes do Pesquisador** painel, clique no **categoria** título para classificar as diretivas por categoria. As políticas de práticas recomendadas têm o prefixo **práticas recomendadas da Microsoft**. A política que você deseja configurar e, em seguida, clique com o botão direito **propriedades**.  
+    >  Como alternativa, para ver facilmente quais políticas estão associadas às práticas recomendadas e para classificar as categorias de práticas recomendadas, expanda **Gerenciamento**, expanda **Gerenciamento de políticas**e clique em **políticas**. No menu **Exibir** , clique em **Detalhes do Pesquisador de Objetos**. No painel **detalhes** do pesquisador de objetos, clique no título **categoria** para classificar as políticas por categoria. As políticas de práticas recomendadas têm o prefixo práticas **recomendadas da Microsoft**. Clique com o botão direito do mouse na política que você deseja configurar e clique em **Propriedades**.  
   
-2.  No **gerais** página do **abrir política** na caixa a **modo de avaliação** , clique em **em agendamento**.  
+2.  Na página **geral** da caixa de diálogo **abrir política** , na lista **modo de avaliação** , clique **em agendar**.  
   
-3.  Ao lado de **agenda** , clique em **escolher** para especificar uma agenda existente ou clique em **New** para criar uma nova agenda.  
+3.  Ao lado da caixa **agenda** , clique em **escolher** para especificar uma agenda existente ou clique em **novo** para criar uma nova agenda.  
   
-4.  Depois de configurar uma agenda, você pode selecionar o **Enabled** caixa de seleção próxima à parte superior da página para habilitar a política agendada.  
+4.  Depois de configurar uma agenda, você pode marcar a caixa de seleção **habilitado** na parte superior da página para habilitar a política agendada.  
   
 5.  Repita as etapas de 1 a 4 para cada política que você deseja agendar.  
   
     > [!NOTE]  
-    >  Para exibir os resultados da avaliação após a execução de uma diretiva agendada, abra o log Histórico da Diretiva na instância de destino. Para abrir o log, clique com botão direito **gerenciamento de política**e, em seguida, clique em **Exibir histórico**.  
+    >  Para exibir os resultados da avaliação após a execução de uma diretiva agendada, abra o log Histórico da Diretiva na instância de destino. Para abrir o log, clique com o botão direito do mouse em **Gerenciamento de políticas**e clique em **Exibir histórico**.  
   
 ## <a name="summary"></a>Resumo  
  Você configurou políticas agendadas para serem executadas em uma única instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se você desejar implantar políticas agendadas em várias instâncias, continue na próxima tarefa deste tutorial.  

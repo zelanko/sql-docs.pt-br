@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530822"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services
   Use as instruções e links fornecidos neste tópico para instalar todos os dados e arquivos de projeto usados nos Tutoriais do Analysis Services.  
   
-## <a name="step-1-install-sql-server-software"></a>Etapa 1: Instalar SQL Server software  
- As lições neste tutorial presumem que você tenha o seguinte software instalado. Todos os softwares a seguir são instalados usando a mídia de instalação do SQL Server. Para a simplicidade de implantação, você pode instalar todos os recursos em um único computador. Para instalar estes recursos, execute a Instalação do SQL Server e selecione-os na página Seleção de Recursos. Para obter mais informações, consulte [instalar o SQL Server 2014 na instalação &#40;&#41;do assistente de instalação](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
+## <a name="step-1-install-sql-server-software"></a>Etapa 1: Instalar o software do SQL Server  
+ As lições neste tutorial presumem que você tenha o seguinte software instalado. Todos os softwares a seguir são instalados usando a mídia de instalação do SQL Server. Para a simplicidade de implantação, você pode instalar todos os recursos em um único computador. Para instalar estes recursos, execute a Instalação do SQL Server e selecione-os na página Seleção de Recursos. Para obter mais informações, consulte [instalar SQL Server 2014 do assistente de instalação &#40;&#41;de ](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)instalação.  
   
 -   Mecanismo de Banco de Dados  
   
--   Analysis Services  
+-   Serviços de análise  
   
-     Analysis Services está disponível somente nestas edições: Avaliação, Enterprise, Business Intelligence, Standard.  
+     O Analysis Services está disponível apenas nestas edições: Evaluation, Enterprise, Business Intelligence, Standard.  
   
-     Observe que as edições do SQL Server Express não incluem o Analysis Services. [Baixe a edição Evaluation](https://go.microsoft.com/fwlink/?LinkId=392824) se desejar experimentar gratuitamente o software.  
+     Observe que as edições do SQL Server Express não incluem o Analysis Services. [Baixe a edição de avaliação](https://go.microsoft.com/fwlink/?LinkId=392824) se quiser experimentar o software gratuitamente.  
   
      Por padrão, o Analysis Services é instalado como uma instância multidimensional, que você pode substituir escolhendo Modo de Servidor de Tabela na página de configuração do servidor do Assistente de Instalação. Se você desejar executar ambos os modos de servidor, reexecute a Instalação do SQL Server no mesmo computador para instalar uma segunda instância do Analysis Services no outro modo.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "69530822"
   
  Como alternativa, você pode procurar dados usando o designer de consulta MDX interno que é embutido no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. O criador de consultas retorna os mesmos dados, menos os que são apresentados como um conjunto de linhas simples.  
   
-## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Etapa 2: Baixe o SQL Server Data Tools-Business Intelligence para Visual Studio 2012  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Etapa 2: baixar o SQL Server Data Tools-Business Intelligence para Visual Studio 2012  
  Nesta versão, o SQL Server Data Tools é baixado e instalado separadamente de outros recursos do SQL Server. Os designers e os modelos de projeto usados para criar modelos e relatórios de BI agora estão disponíveis como um download gratuito da Web.  
   
 -   [Baixe a versão de Business Intelligence do SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). O arquivo é salvo na pasta de Downloads. Execute a instalação para instalar a ferramenta.  
@@ -65,7 +65,7 @@ ms.locfileid: "69530822"
   
 4.  Clique com o botão direito do mouse em Bancos de dados e clique em **Anexar**.  
   
-5.  Clique em **Adicionar** .  
+5.  Clique em **Adicionar**.  
   
 6.  Selecione o arquivo de banco de dados **AdventureWorksDW2012_Data.mdf** e clique em **OK**. Se o arquivo não estiver listado, verifique a pasta C:\Arquivos de Programas\MSSQL12.MSSQLSERVER\MSSQL\Data para ver se ele está lá.  
   
@@ -147,9 +147,9 @@ ms.locfileid: "69530822"
 ## <a name="next-step"></a>Próxima etapa  
  Você agora está pronto para usar o tutorial. Para obter mais informações sobre como começar, consulte [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Instalar o SQL Server 2014 da instalação do &#40;assistente de instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Instale o SQL Server 2014 do assistente de instalação &#40;a instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [Configurar o Firewall do Windows para permitir acesso Analysis Services](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

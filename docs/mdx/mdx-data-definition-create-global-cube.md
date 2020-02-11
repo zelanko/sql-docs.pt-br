@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892156"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Definição de dados MDX – CREATE GLOBAL CUBE
 
 
-  Cria e popula um cubo localmente persistente, com base em um subcubo a partir de um cubo no servidor. Uma conexão com o servidor não é exigida para a conexão com o cubo localmente persistente. Para obter mais informações sobre cubos locais, consulte [cubos &#40;locais Analysis Services-dados&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)multidimensionais.  
+  Cria e popula um cubo localmente persistente, com base em um subcubo a partir de um cubo no servidor. Uma conexão com o servidor não é exigida para a conexão com o cubo localmente persistente. Para obter mais informações sobre cubos locais, consulte [cubos locais &#40;Analysis Services&#41;de dados multidimensionais ](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -104,13 +104,13 @@ FROM source_cube_name (<param list>)
  dimension_name  
  O nome da dimensão no cubo local.  
   
- Da \<cláusula Dim from >  
+ DA \<cláusula dim from>  
  Especificação válida somente para definição de dimensão derivada.  
   
  NOT_RELATED_TO_FACTS  
  Especificação válida somente para definição de dimensão derivada.  
   
- \<tipo de nível >  
+ \<tipo de nível>  
  Especificação válida somente para definição de dimensão derivada.  
   
 ## <a name="remarks"></a>Comentários  
@@ -196,8 +196,8 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [MDX de instruções &#40;de definição de dados MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instrução &#40;Create de cubo de sessão MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Instrução CREATE SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

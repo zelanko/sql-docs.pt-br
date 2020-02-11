@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836089"
 ---
 # <a name="configure-dialog-box"></a>Caixa de diálogo Configurar
@@ -59,7 +59,7 @@ ms.locfileid: "62836089"
  **Nome**  
  Lista o nome do parâmetro.  
   
- **Value**  
+ **Valor**  
  Lista o valor do parâmetro. Clique no botão de reticências para alterar o valor na caixa de diálogo **Definir Valor do Parâmetro** .  
   
  Esta é uma lista das opções na guia **Gerenciadores de Conexões** . Use essa guia para alterar valores de propriedades do gerenciador de conexões. Os parâmetros são gerados automaticamente no servidor do SSIS para as propriedades.  
@@ -73,13 +73,13 @@ ms.locfileid: "62836089"
  **Nome da propriedade**  
  Lista o nome da propriedade do gerenciador de conexões.  
   
- **Value**  
+ **Valor**  
  Lista o valor atribuído à propriedade do gerenciador de conexões. Clique no botão de reticências para alterar o valor na caixa de diálogo **Definir Valor do Parâmetro** . Você pode inserir um valor literal, mapear uma variável de ambiente que contém o valor a ser usado, ou usar o valor padrão do pacote.  
   
 ##  <a name="references"></a> Definir as opções na página Referências  
  Use a página **Referências** para adicionar e remover referências a ambientes, e para acessar propriedades de ambiente.  
   
- Um ambiente especificar valores de tempo de execução para pacotes contidos nos projetos que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ Um ambiente especificar valores de runtime para pacotes contidos nos projetos que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  **Ambiente**  
  Lista o ambiente.  

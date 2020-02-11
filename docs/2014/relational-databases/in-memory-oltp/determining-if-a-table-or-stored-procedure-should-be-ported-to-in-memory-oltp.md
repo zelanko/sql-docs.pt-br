@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072358"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória
-  O coletor de desempenho de transação em [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ajuda você a avaliar se o OLTP na memória melhorará o desempenho do seu aplicativo de banco de dados. O relatório de análise de desempenho da transação também indica quanto trabalho você deverá executar para habilitar o OLTP na Memória no seu aplicativo. Depois de identificar uma tabela baseada em disco a ser transportada para o OLTP in-memory, você poderá usar o [Orientador de Otimização da Memória](memory-optimization-advisor.md)para ajudar na migração da tabela. De maneira semelhante, o [Native Compilation Advisor](native-compilation-advisor.md) o ajudará a transportar um procedimento armazenado para um procedimento armazenado compilado nativamente.  
+  O coletor de desempenho de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] transação no ajuda a avaliar se o OLTP na memória melhorará o desempenho do aplicativo de banco de dados. O relatório de análise de desempenho da transação também indica quanto trabalho você deverá executar para habilitar o OLTP na Memória no seu aplicativo. Depois de identificar uma tabela baseada em disco a ser transportada para o OLTP in-memory, você poderá usar o [Orientador de Otimização da Memória](memory-optimization-advisor.md)para ajudar na migração da tabela. De maneira semelhante, o [Native Compilation Advisor](native-compilation-advisor.md) o ajudará a transportar um procedimento armazenado para um procedimento armazenado compilado nativamente.  
   
  Este tópico descreverá como:  
   
@@ -44,12 +44,12 @@ ms.locfileid: "63072358"
     > [!IMPORTANT]  
     >  O desempenho de um sistema de banco de dados depende de vários fatores e nem todos podem ser observados e medidos pelo coletor de desempenho da transação. Portanto, o relatório de análise de desempenho da transação não garante que os ganhos de desempenho reais corresponderão a essas previsões, caso elas sejam feitas.  
   
- O coletor de desempenho de transação e a capacidade de gerar um relatório de análise de desempenho da transação são instalados quando você seleciona **ferramentas de gerenciamento-Basic** ou **ferramentas de gerenciamento-avançadas** Quando você instala [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ O coletor de desempenho de transação e a capacidade de gerar um relatório de análise de desempenho de transação são instalados quando você seleciona **ferramentas de gerenciamento-ferramentas básicas** ou [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] **de gerenciamento-avançadas** quando você instala o.  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  O fluxo de trabalho recomendado é ilustrado no fluxograma a seguir. Os nós amarelos representam os procedimentos opcionais:  
   
- ![Fluxo de trabalho da AMR](../../database-engine/media/amr-1.gif "fluxo de trabalho da AMR")  
+ ![Fluxo de trabalho da AMR](../../database-engine/media/amr-1.gif "Fluxo de trabalho da AMR")  
   
  Você pode usar qualquer método para estabelecer uma linha de base de desempenho, incluindo, entre outros, usar logs do contador de desempenho ou o Monitor de Atividade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As informações a serem usadas na linha de base de desempenho e nas comparações são:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63072358"
   
  O coletor de desempenho da transação captura dados a cada 15 minutos. Para obter resultados utilizáveis, execute o coletor de desempenho da transação por, pelo menos, uma hora. Para obter os melhores resultados, execute o coletor de desempenho da transação pelo tempo necessário para capturar dados de seus cenários primários. Gere um relatório de análise de desempenho da transação somente depois de concluir a coleta de dados.  
   
- Configure o coletor de desempenho da transação para ser executado na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em produção e colete os dados em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no ambiente de desenvolvimento (teste) para garantir uma sobrecarga mínima. Para obter informações sobre como salvar dados em um banco de dados do Data Warehouse de gerenciamento em um controle remoto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da instância, consulte [configurar a coleta de dados em uma instância remota do SQL Server](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Configure o coletor de desempenho da transação para ser executado na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em produção e colete os dados em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no ambiente de desenvolvimento (teste) para garantir uma sobrecarga mínima. Para obter informações sobre como salvar dados em um data warehouse de gerenciamento em uma instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] remota, consulte [Configurar a coleta de dados em uma instância de SQL Server remota](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## <a name="performance-impacts"></a>Impactos do desempenho  
  O coletor de desempenho da transação consiste em dois conjuntos de coleta de dados:  
@@ -87,13 +87,13 @@ ms.locfileid: "63072358"
   
 1.  No Pesquisador de Objetos, expanda **Gerenciamento**.  
   
-2.  Clique com botão direito **coleta de dados** e selecione **tarefas** e, em seguida, **configurar Data Warehouse de gerenciamento**. O **Assistente Configurar o gerenciamento de Data Warehouse** começa.  
+2.  Clique com o botão direito do mouse em **coleta de dados** e selecione **tarefas** e **Configure Data warehouse de gerenciamento**. O **Assistente para configurar data warehouse de gerenciamento** é iniciado.  
   
-3.  Clique em **próxima** para selecionar o banco de dados que atuará como o Data Warehouse de gerenciamento.  
+3.  Clique em **Avançar** para selecionar o banco de dados que atuará como o data warehouse de gerenciamento.  
   
-4.  Clique em **New** para criar um novo banco de dados para manter os dados de perfil. Depois de terminar de criar o banco de dados, clique em **próxima** no assistente.  
+4.  Clique em **novo** para criar um novo banco de dados a fim de armazenar o perfil. Depois de concluir a criação do banco de dados, clique em **Avançar** no assistente.  
   
-5.  A próxima etapa do assistente permite adicionar usuários e logons. Você pode mapear logons para associações de função da instância do MDW. Isso não é necessário para coletar dados da instância local. Se não estiver coletando dados da instância local, você poderá conceder a associação de função de banco de dados `mdw_admin` à conta que executará transações cujo perfil está sendo criado. Quando terminar, clique em **próxima**.  
+5.  A próxima etapa do assistente permite adicionar usuários e logons. Você pode mapear logons para associações de função da instância do MDW. Isso não é necessário para coletar dados da instância local. Se não estiver coletando dados da instância local, você poderá conceder a associação de função de banco de dados `mdw_admin` à conta que executará transações cujo perfil está sendo criado. Quando terminar, clique em **Avançar**.  
   
 6.  Verifique se o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent está em execução.  
   
@@ -102,36 +102,36 @@ ms.locfileid: "63072358"
 ### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>Configurar a coleta de dados em uma instância local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  A coleta de dados exige que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agente seja iniciado. Você só precisará configurar um coletor de dados em um servidor.  
   
- Um coletor de dados pode ser configurado em um SQL Server 2012 ou versão posterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Um coletor de dados pode ser configurado em uma versão SQL Server 2012 ou posterior [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]do.  
   
  Para configurar a coleta de dados para carregar um banco de dados do Data Warehouse de Gerenciamento na mesma instância,  
   
-1.  Na **Pesquisador de objetos**, expanda **Management**.  
+1.  No Pesquisador de **objetos**, expanda **Gerenciamento**.  
   
-2.  Clique com botão direito **coleta de dados**, selecione **tarefas**e então **configurar a coleta de dados**. O **Assistente para configurar coleta de dados** começa.  
+2.  Clique com o botão direito do mouse em **coleta de dados**, selecione **tarefas**e **Configurar coleta de dados**. O **Assistente para configurar coleta de dados** é iniciado.  
   
-3.  Clique em **próxima** para selecionar o banco de dados que coletará os dados de perfil.  
+3.  Clique em **Avançar** para selecionar o banco de dados que coletará o perfil.  
   
 4.  Selecione a instância atual do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um banco de dados do Data Warehouse de Gerenciamento nessa instância.  
   
-5.  Na caixa rotulada **selecionar conjuntos de Coletores de dados você deseja habilitar**, selecione **conjuntos de coleta de desempenho de transação**. Clique em **próxima** quando terminar.  
+5.  Na caixa denominada **Selecionar conjuntos de coletores de dados que você deseja habilitar**, selecione **conjuntos de coleta de desempenho da transação**. Clique em **Avançar** quando terminar.  
   
-6.  Verifique as seleções. Clique em **volta** para modificar as configurações. Clique em **Concluir** quando tiver terminado.  
+6.  Verifique as seleções. Clique em **voltar** para modificar as configurações. Clique em **Concluir** quando tiver terminado.  
   
-###  <a name="xxx"></a> Configurar a coleta de dados em um controle remoto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância  
+###  <a name="xxx"></a>Configurar a coleta de dados em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uma instância remota  
  A coleta de dados exige que o Agente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja iniciado na instância que coletará os dados.  
   
- Um coletor de dados pode ser configurado em um SQL Server 2012 ou versão posterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Um coletor de dados pode ser configurado em uma versão SQL Server 2012 ou posterior [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]do.  
   
- É necessário um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent estabelecido com a credencial correta para que o coletor de dados carregue os dados em um banco de dados do Data Warehouse de Gerenciamento em uma instância que seja diferente de onde as transações serão analisadas. Para habilitar um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, primeiramente é preciso estabelecer uma credencial com um logon habilitado para domínio. O logon habilitado para domínio deve ser um membro do grupo `mdw_admin` do banco de dados do Data Warehouse de Gerenciamento. Veja [Como Criar uma credencial (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) para obter informações sobre como criar uma credencial.  
+ É necessário um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent estabelecido com a credencial correta para que o coletor de dados carregue os dados em um banco de dados do Data Warehouse de Gerenciamento em uma instância que seja diferente de onde as transações serão analisadas. Para habilitar um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, primeiramente é preciso estabelecer uma credencial com um logon habilitado para domínio. O logon habilitado para domínio deve ser um membro do grupo `mdw_admin` do banco de dados do Data Warehouse de Gerenciamento. Consulte [como: criar uma credencial (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) para obter informações sobre como criar uma credencial.  
   
  Para configurar a coleta de dados para carregar um banco de dados do Data Warehouse de Gerenciamento em outra instância,  
   
-1.  Na instância que contém os objetos com base em disco que você deseja migrar para o OLTP na memória, expanda o **gerenciamento** nó no Pesquisador de objetos.  
+1.  Na instância do que contém os objetos baseados em disco que você deseja migrar para o OLTP na memória, expanda o nó **Gerenciamento** no Pesquisador de objetos.  
   
-2.  Clique com botão direito **coleta de dados** e selecione **tarefas** e, em seguida, **configurar a coleta de dados**. O **Assistente para configurar coleta de dados** começa.  
+2.  Clique com o botão direito do mouse em **coleta de dados** e selecione **tarefas** e configure a **coleta de dados**. O **Assistente para configurar coleta de dados** é iniciado.  
   
-3.  Clique em **próxima** para selecionar o banco de dados que coletará os dados de perfil.  
+3.  Clique em **Avançar** para selecionar o banco de dados que coletará o perfil.  
   
 4.  Verifique se um banco de dados do Data Warehouse de Gerenciamento existe em outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -139,34 +139,34 @@ ms.locfileid: "63072358"
   
      A versão da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sobre a qual você coletará dados (perfil) deve ser a mesma versão ou mais antiga do que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] onde o Data Warehouse de Gerenciamento está configurado.  
   
-6.  Na caixa rotulada **selecionar conjuntos de Coletores de dados você deseja habilitar**, selecione **conjuntos de coleta de desempenho de transação**.  
+6.  Na caixa denominada **Selecionar conjuntos de coletores de dados que você deseja habilitar**, selecione **conjuntos de coleta de desempenho da transação**.  
   
-7.  Selecione **Use uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proxy de agente para carregamentos remotos**.  
+7.  Selecione **usar um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proxy de agente para carregamentos remotos**.  
   
-8.  Clique em **próxima** quando terminar.  
+8.  Clique em **Avançar** quando terminar.  
   
 9. Selecione o proxy.  
   
      Se desejar criar um novo proxy do Agente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)],  
   
-    1.  Clique em **New** para exibir o **nova conta Proxy** caixa de diálogo.  
+    1.  Clique em **novo** para exibir a caixa de diálogo **nova conta proxy** .  
   
-    2.  No **nova conta Proxy** caixa de diálogo, insira o nome do proxy, selecione a credencial e, opcionalmente, insira uma descrição. Em seguida, clique em **entidades**.  
+    2.  Na caixa de diálogo **nova conta proxy** , digite o nome do proxy, selecione a credencial e, opcionalmente, insira uma descrição. Em seguida, clique em **entidades de segurança**.  
   
-    3.  Clique em **Add** e selecione **Msdb** função.  
+    3.  Clique em **Adicionar** e selecione função **msdb** .  
   
-    4.  Selecione `dc_proxy` e clique em **Okey**. Em seguida, clique em **Okey** novamente.  
+    4.  Selecione `dc_proxy` e clique em **OK**. Em seguida, clique em **OK**.  
   
-     Depois que o proxy correto for selecionado, clique em **próxima**.  
+     Depois que o proxy correto for selecionado, clique em **Avançar**.  
   
-10. Para configurar conjuntos de coleta do sistema, verifique **conjuntos de coleta do sistema** e clique em **próxima**.  
+10. Para configurar conjuntos de coleta do sistema, verifique os **conjuntos de coleta do sistema** e clique em **Avançar**.  
   
-11. Verifique as seleções. Clique em **volta** para modificar as configurações. Clique **concluir** quando terminar.  
+11. Verifique as seleções. Clique em **voltar** para modificar as configurações. Clicck **concluir** quando terminar.  
   
  Os conjuntos de coleta de dados agora devem estar configurados e em execução na sua instância.  
   
 ### <a name="generate-reports"></a>Gerar relatórios  
- Você pode gerar relatórios de análise de desempenho de transação com o botão direito clicando em banco de dados do Data Warehouse de gerenciamento e selecionando **relatórios**, em seguida, **Data Warehouse de gerenciamento**e então **Visão geral da análise de desempenho de transação**.  
+ Você pode gerar relatórios de análise de desempenho da transação clicando com o botão direito do mouse no banco de dados do data warehouse de gerenciamento e selecionando **relatórios**, **Gerenciamento data warehouse**e, em seguida, **visão geral da análise de desempenho da transação**.  
   
  O relatório coleta informações sobre todos os bancos de dados do usuário no servidor de carga de trabalho. Se seu banco de dados MDW (Data Warehouse de Gerenciamento) estiver no computador local, você verá o(s) banco de dado(s) do MDW no relatório.  
   
@@ -186,19 +186,19 @@ ms.locfileid: "63072358"
   
 -   Seção de Estatísticas de Contenção  
   
-     Esta seção inclui uma tabela que mostra a contenção na tabela do banco de dados. Para obter mais informações sobre banco de dados de travas e bloqueios, consulte [arquitetura de bloqueio](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). As colunas são apresentadas assim:  
+     Esta seção inclui uma tabela que mostra a contenção na tabela do banco de dados. Para obter mais informações sobre travas e bloqueios de banco de dados, consulte a [arquitetura de bloqueio](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). As colunas são apresentadas assim:  
   
     -   Porcentagem do total de esperas. O percentual de esperas de travas e bloqueios nessa tabela de banco de dados em comparação com a atividade do banco de dados. Quanto mais alto for esse percentual, mais intensa será a utilização da tabela em comparação com outras tabelas no banco de dados.  
   
     -   Estatísticas de Trava. Essas colunas registram o número de esperas de travas para consultas que envolvem essa tabela. Para obter informações sobre travas, consulte [travamento](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Quanto mais alto for esse número, mais contenção de trava haverá na tabela.  
   
-    -   Estatísticas de Bloqueio. Esse grupo de colunas registra o número de aquisições de bloqueio de página e esperas para consultas para essa tabela. Para obter mais informações sobre bloqueios, consulte [Noções básicas sobre bloqueio no SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Quanto mais esperas, maior a contenção de bloqueio na tabela.  
+    -   Estatísticas de Bloqueio. Esse grupo de colunas registra o número de aquisições de bloqueio de página e esperas para consultas para essa tabela. Para obter mais informações sobre bloqueios, consulte [Understanding locking in SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Quanto mais esperas, maior a contenção de bloqueio na tabela.  
   
 -   Seção Dificuldades de Migração  
   
-     Esta seção inclui uma tabela que mostra a dificuldade de converter essa tabela de banco de dados em uma tabela com otimização de memória. Uma classificação de dificuldade mais alta indica mais dificuldade para converter a tabela. Para ver os detalhes da conversão dessa tabela de banco de dados, use o [orientador de otimização de memória](memory-optimization-advisor.md).  
+     Esta seção inclui uma tabela que mostra a dificuldade de converter essa tabela de banco de dados em uma tabela com otimização de memória. Uma classificação de dificuldade mais alta indica mais dificuldade para converter a tabela. Para ver detalhes para converter esta tabela de banco de dados, use o [Orientador de otimização de memória](memory-optimization-advisor.md).  
   
- Estatísticas de verificação e contenção no relatório de detalhes da tabela são coletadas e agregadas de [DM db_index_operational_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql).  
+ As estatísticas de verificação e contenção no relatório detalhes da tabela são coletadas e agregadas de [Sys. dm_db_index_operational_stats &#40;&#41;Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql).  
   
  Os detalhes relatados para um procedimento armazenado consistem em duas seções:  
   
@@ -220,11 +220,11 @@ ms.locfileid: "63072358"
   
      Esta seção inclui uma tabela que mostra as tabelas às quais esse procedimento armazenado se refere. Antes da conversão do procedimento armazenado em um procedimento armazenado compilado nativamente, todas essas tabelas devem ser convertidas em tabelas com otimização de memória e devem permanecer no mesmo servidor e banco de dados.  
   
- Estatísticas de execução do relatório de detalhes de procedimento armazenado são coletadas e agregadas de [DM exec_procedure_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql). As referências são obtidas [sys. sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql).  
+ As estatísticas de execução no relatório detalhes do procedimento armazenado são coletadas e agregadas de [Sys. dm_exec_procedure_stats &#40;&#41;Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql). As referências são obtidas de [Sys. sql_expression_dependencies &#40;&#41;Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql).  
   
- Para ver os detalhes sobre como converter um procedimento armazenado em um procedimento armazenado nativamente compilado, use o [Native Compilation Advisor](native-compilation-advisor.md).  
+ Para ver detalhes sobre como converter um procedimento armazenado em um procedimento armazenado compilado nativamente, use o [Native Compilation Advisor](native-compilation-advisor.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Migrando para OLTP na memória](migrating-to-in-memory-oltp.md)  
   
   

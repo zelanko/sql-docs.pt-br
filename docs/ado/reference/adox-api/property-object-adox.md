@@ -14,33 +14,33 @@ ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7911608970e9860d7eddcf3e83156ac99645c3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965395"
 ---
 # <a name="property-object-adox"></a>Objeto Property (ADOX)
-Representa uma característica de um objeto do ADOX.  
+Representa uma característica de um objeto ADOX.  
   
 ## <a name="remarks"></a>Comentários  
- Objetos ADOX têm dois tipos de propriedades: interna e dinâmicos.  
+ Os objetos ADOX têm dois tipos de propriedades: interno e dinâmico.  
   
- Propriedades internas são as propriedades disponíveis imediatamente para qualquer novo objeto, usando a sintaxe MyObject.Property. Eles não aparecem como objetos de propriedade em um objeto [coleção de propriedades](../../../ado/reference/ado-api/properties-collection-ado.md), portanto, embora você possa alterar seus valores, você não pode modificar suas características.  
+ As propriedades internas são essas propriedades imediatamente disponíveis para qualquer novo objeto, usando a sintaxe MyObject. Property. Eles não aparecem como objetos de propriedade na [coleção de propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)de um objeto, portanto, embora você possa alterar seus valores, não é possível modificar suas características.  
   
- Propriedades dinâmicas são definidas pelo provedor de dados subjacente e aparecem na coleção de propriedades para o objeto ADOX apropriado.  Propriedades dinâmicas podem ser referenciadas apenas por meio da coleção, usando a sintaxe MyObject.Properties(0) ou MyObject.Properties("Name").  
+ As propriedades dinâmicas são definidas pelo provedor de dados subjacente e aparecem na coleção de propriedades do objeto ADOX apropriado.  As propriedades dinâmicas podem ser referenciadas somente por meio da coleção, usando a sintaxe MyObject. Properties (0) ou MyObject. Properties ("Name").  
   
- Você não pode excluir um desses tipos de propriedade.  
+ Não é possível excluir qualquer tipo de propriedade.  
   
- Um objeto dinâmico de propriedade tem quatro propriedades internas de seu próprio:  
+ Um objeto de propriedade dinâmica tem quatro propriedades internas próprias:  
   
- O [nome](../../../ado/reference/ado-api/name-property-ado.md) propriedade é uma cadeia de caracteres que identifica a propriedade.  
+ A propriedade [Name](../../../ado/reference/ado-api/name-property-ado.md) é uma cadeia de caracteres que identifica a propriedade.  
   
- O [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade é um inteiro que especifica o tipo de dados de propriedade.  
+ A propriedade [Type](../../../ado/reference/ado-api/type-property-ado.md) é um inteiro que especifica o tipo de dados Property.  
   
- O [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade é uma variante que contém a configuração da propriedade. Valor é a propriedade padrão para um objeto de propriedade.  
+ A propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) é uma variante que contém a configuração de propriedade. Valor é a propriedade padrão para um objeto de propriedade.  
   
- O [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propriedade é um valor longo que indica as características da propriedade específica do provedor.  
+ A propriedade [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) é um valor longo que indica as características da propriedade específica para o provedor.  
   
  Esta seção contém o tópico a seguir.  
   

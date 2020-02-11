@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278211"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Renomear logons que coincidem com nomes de funções fixas do servidor
@@ -28,12 +28,12 @@ ms.locfileid: "72278211"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  Os seguintes nomes de funções de servidor fixas são exclusivos e não podem ser usados como nomes de logon definidos pelo usuário.  
   
 -   **sysadmin**  
   
--   **serveradmin**  
+-   **ServerAdmin**  
   
 -   **setupadmin**  
   
@@ -60,10 +60,10 @@ ms.locfileid: "72278211"
   
 2.  Descarte os logons.  
   
-3.  Use o procedimento do sistema **sp_addlogin** para criar novos logons. Especifique o SID retornado na etapa 1 no parâmetro **\@Sid** para cada logon correspondente.  
+3.  Use o procedimento do sistema **sp_addlogin** para criar novos logons. Especifique o SID retornado na etapa 1 no parâmetro ** \@Sid** para cada logon correspondente.  
   
-## <a name="see-also"></a>Consulte também  
- [Mecanismo de banco de dados problemas de atualização](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Novo supervisor &#91;de atualização do SQL Server 2014&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

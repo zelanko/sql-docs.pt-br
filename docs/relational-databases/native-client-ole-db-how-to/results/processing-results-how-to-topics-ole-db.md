@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bc0494bc85111f2220f95f83850a625e817e891
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789849"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Tópicos de instrução sobre processamento de resultados (OLE DB)
@@ -27,15 +27,15 @@ ms.locfileid: "73789849"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Executar um procedimento armazenado &#40;usando a sintaxe ODBC CALL&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [Execute um procedimento armazenado &#40;usando sintaxe de chamada ODBC&#41; e códigos de retorno de processo e parâmetros de saída &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [Executar um procedimento armazenado &#40;usando a sintaxe de RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [Execute um procedimento armazenado &#40;usando a sintaxe RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [Executar uma função definida pelo usuário e processar o código de retorno &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [Execute uma função definida pelo usuário e processe o código de retorno &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [Buscar linhas em um conjunto de resultados &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
+-   [Buscar linhas de um conjunto de resultados &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções do OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

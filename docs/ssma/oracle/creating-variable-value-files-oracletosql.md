@@ -1,5 +1,5 @@
 ---
-title: Criar arquivos de valor da variável (OracleToSQL) | Microsoft Docs
+title: Criando arquivos de valor de variável (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +14,19 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 87db0ebd006e2ca87ddc4744a4bbcd396a827712
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266117"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Criar arquivos de valor da variável (OracleToSQL)
-Arquivo de valor de variável é um arquivo XML que compõem os valores de parâmetro de comandos, como o nome do servidor de origem ou destino que mudam frequentemente de migração de um servidor para outro. Quando ocorre um grande número de migrações de banco de dados, vários arquivos de variável para armazenar o valor de cada servidor de origem serão criados e referenciados em um arquivo de script mestre com o **- v** alternar na linha de comando. Isso ajuda a manter os valores estáticos em alguns arquivos de script com os valores das variáveis em vários arquivos de variável.  
+O arquivo de valor da variável é um arquivo XML que inclui os valores de parâmetro de comandos, como, o nome do servidor de origem ou de destino que costuma ser alterado de uma migração de servidor para outra. Quando ocorre um grande número de migrações de banco de dados, vários arquivos de variáveis para armazenar o valor de cada servidor de origem serão criados e referenciados em um arquivo de script mestre com a opção **-v** na linha de comando. Isso ajuda a manter valores estáticos em alguns arquivos de script com os valores de variáveis em vários arquivos de variáveis.  
   
 > [!NOTE]  
-> 1.  Nomes de variáveis são o prefixo e o sufixo com um símbolo $ (cifrão). Se as variáveis não são atribuídas a um valor no arquivo de valor da variável, você encontrará um erro durante a análise do arquivo de script, resultando em atrasando o processo de execução do console.  
-> 2.  O caractere de escape para o **$** é **$$** . Se o valor de um valor estático ou variável de um parâmetro contiver **$** símbolo (cifrão), em seguida, **$$** devem ser especificados para tratá-lo como um caractere em vez de uma variável.  
-> 3.  Para fins de facilidade de manutenção, as variáveis podem ser declaradas dentro `'variable-group'` variáveis definidas de elementos para uma separação lógica do usuário.  O uso desse elemento não é obrigatório.  
+> 1.  Os nomes de variáveis são prefixados e sufixos com um símbolo de $ (dólar). Se as variáveis não forem atribuídas a um valor no arquivo de valor de variável, você encontrará um erro durante a análise do arquivo de script, resultando na parada do processo de execução do console.  
+> 2.  O caractere de escape **$** para **$$** é. Se o valor de uma variável ou valor estático de um parâmetro contiver **$** um símbolo (dólar) **$$** , deverá ser especificado para tratá-lo como um caractere em vez de uma variável.  
+> 3.  Para fins de manutenção, as variáveis podem ser declaradas dentro `'variable-group'` de elementos para separação lógica de variáveis definidas pelo usuário.  O uso deste elemento não é obrigatório.  
   
 **Exemplos:**  
   
@@ -88,8 +88,8 @@ Arquivo de valor de variável é um arquivo XML que compõem os valores de parâ
 ```  
   
 ## <a name="next-step"></a>Próxima etapa  
-É a próxima etapa no operando o console [criar os arquivos de Conexão de servidor &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+A próxima etapa na operação do console é [criar os arquivos de conexão do servidor &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte também  
-[Criar os arquivos do servidor (Oracle)](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
+## <a name="see-also"></a>Consulte Também  
+[Criando os arquivos do servidor (Oracle)](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   

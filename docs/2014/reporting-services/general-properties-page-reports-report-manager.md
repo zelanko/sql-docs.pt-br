@@ -1,5 +1,5 @@
 ---
-title: Página Propriedades gerais, relatórios (Gerenciador de relatórios) | Microsoft Docs
+title: Página Propriedades gerais, relatórios (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109098"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Página Propriedades Gerais, Relatórios (Gerenciador de Relatórios)
@@ -33,7 +33,7 @@ ms.locfileid: "66109098"
   
 ## <a name="options"></a>Opções  
  **Nome**  
- Especifique um nome para o relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : \@ & = + , $ * \< >  
+ Especifique um nome para o relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : \@ & = +, $ *\< >  
   
  " ou / ao especificar um nome.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "66109098"
  **Delete (excluir)**  
  Clique para remover o relatório do banco de dados do servidor de relatório. A exclusão de um relatório exclui todo o histórico de relatório associado e agendas e assinaturas específicas de relatório. Se o relatório for associado com relatórios vinculados, os relatórios vinculados serão invalidados.  
   
- **Migrar**  
- Clique para realocar um relatório na hierarquia de pasta do servidor de relatório. O clique nesse botão abre a página Mover Itens, na qual você pode navegar até um novo local de pasta. Para obter mais informações, consulte [página Mover itens &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ **Mover**  
+ Clique para realocar um relatório na hierarquia de pasta do servidor de relatório. O clique nesse botão abre a página Mover Itens, na qual você pode navegar até um novo local de pasta. Para obter mais informações, consulte a [página mover itens &#40;Report Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Criar relatório vinculado**  
- Clique para abrir a página Novo Relatório Vinculado. Para obter mais informações sobre essa página e relatórios vinculados, consulte [página novo relatório vinculado &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
+ **Criar Relatório Vinculado**  
+ Clique para abrir a página Novo Relatório Vinculado. Para obter mais informações sobre esta página e relatórios vinculados, consulte a [página novo relatório vinculado &#40;Report Manager&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
   
  **Salvar**  
  Clique para extrair uma cópia somente leitura da definição do relatório. Dependendo das associações de arquivo definidas no computador, o arquivo abrirá no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou em um aplicativo diferente. Na maioria dos casos, o relatório é aberto como um arquivo XML.  
@@ -62,13 +62,13 @@ ms.locfileid: "66109098"
   
  Você pode modificar a definição do relatório e salvá-lo em um novo arquivo em uma pasta compartilhada e carregar a definição do relatório para o servidor de relatório como um novo item. Modificações feitas na definição do relatório enquanto ele está aberto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou outro aplicativo) não são salvas diretamente no servidor de relatório. Você deve carregar o arquivo para publicar o relatório modificado no servidor de relatório.  
   
- **Substituir**  
+ **Substitua**  
  Clique para substituir a definição do relatório usada no relatório atual por uma diferente de um arquivo .rdl localizado no sistema de arquivos. Se você atualizar uma definição do relatório, deve reajustar as configurações de fonte de dados quando a atualização for concluída.  
   
  **Alterar Link**  
  Clique para selecionar uma definição de relatório diferente para o relatório vinculado. Essa opção será exibida se o relatório for um relatório vinculado. Se o relatório for vinculado, você poderá definir essa propriedade para substituir a definição do relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   

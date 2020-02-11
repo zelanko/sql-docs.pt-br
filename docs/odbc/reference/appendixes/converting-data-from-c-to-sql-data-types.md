@@ -21,60 +21,60 @@ ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aca333a6f3006b1f12cf44d1670e38556027e476
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019124"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Converter dados de C para tipos de dados SQL
-Quando um aplicativo chama **SQLExecute** ou **SQLExecDirect**, o driver recupera os dados para quaisquer parâmetros associados com **SQLBindParameter** nos locais de armazenamento em o aplicativo. Quando um aplicativo chama **SQLSetPos**, o driver recupera os dados para uma atualização ou operação de adição de colunas associadas **SQLBindCol**. Para parâmetros de dados em execução, o aplicativo envia os dados de parâmetro com **SQLPutData**. Se necessário, o driver converterá os dados do tipo de dados especificado pela *ValueType* argumento na **SQLBindParameter** para o tipo de dados especificado pelo *ParameterType*argumento na **SQLBindParameter**e, em seguida, envia os dados para a fonte de dados.  
+Quando um aplicativo chama **SQLExecute** ou **SQLExecDirect**, o driver recupera os dados de todos os parâmetros associados ao **SQLBindParameter** de locais de armazenamento no aplicativo. Quando um aplicativo chama **SQLSetPos**, o driver recupera os dados para uma atualização ou adição de uma operação de colunas associadas a **SQLBindCol**. Para parâmetros de dados em execução, o aplicativo envia os dados de parâmetro com **SQLPutData**. Se necessário, o driver converte os dados do tipo de dados especificado pelo argumento *ValueType* em **SQLBindParameter** para o tipo de dados especificado pelo argumento *ParameterType* em **SQLBindParameter**e, em seguida, envia os dados para a fonte de dados.  
   
- A tabela a seguir mostra as conversões com suporte do ODBC C em tipos de dados para tipos de dados SQL ODBC. Um círculo preenchido indica a conversão padrão para um tipo de dados SQL (o tipo de dados C da qual os dados serão convertidos quando o valor de *ValueType* ou o campo do descritor SQL_DESC_CONCISE_TYPE for SQL_C_DEFAULT). Um círculo vazio indica uma conversão com suporte.  
+ A tabela a seguir mostra as conversões com suporte dos tipos de dados ODBC C para tipos de dados ODBC do SQL. Um círculo preenchido indica a conversão padrão para um tipo de dados SQL (o tipo de dados C do qual os dados serão convertidos quando o valor de *ValueType* ou o campo do descritor de SQL_DESC_CONCISE_TYPE for SQL_C_DEFAULT). Um círculo vazio indica uma conversão com suporte.  
   
- O formato dos dados convertidos não é afetado pela configuração de país Windows®.  
+ O formato dos dados convertidos não é afetado pela configuração de país do Windows®.  
   
- ![Conversões com suporte: ODBC C para tipos de dados SQL](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
+ ![Conversões suportadas: tipos de dados ODBC C em SQL](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
   
- As tabelas nas seções a seguir descrevem como o driver ou fonte de dados converte os dados enviados para a fonte de dados; drivers são necessários para dar suporte a conversões de todos os tipos de dados ODBC C para os tipos de dados SQL ODBC que dão suporte a eles. Para um determinado tipo de dados ODBC C, a primeira coluna da tabela lista os valores de entrada válidos do *ParameterType* argumento **SQLBindParameter**. A segunda coluna lista os resultados de um teste que o driver executa para determinar se ele pode converter os dados. A terceira coluna lista o SQLSTATE retornado para cada resultado por **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, **SQLSetPos**, ou **SQLPutData**. Dados são enviados à fonte de dados somente se SQL_SUCCESS for retornado.  
+ As tabelas nas seções a seguir descrevem como o driver ou a fonte de dados converte os dados enviados para a fonte de dados; os drivers são necessários para dar suporte a conversões de todos os tipos de dados ODBC C para os tipos de dados ODBC SQL para os quais dão suporte. Para um determinado tipo de dados ODBC C, a primeira coluna da tabela lista os valores de entrada legais do argumento *ParameterType* em **SQLBindParameter**. A segunda coluna lista os resultados de um teste que o driver executa para determinar se ele pode converter os dados. A terceira coluna lista o SQLSTATE retornado para cada resultado por **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, **SQLSetPos**ou **SQLPutData**. Os dados serão enviados para a fonte de dados somente se SQL_SUCCESS for retornado.  
   
- Se o *ParameterType* argumento **SQLBindParameter** contém o identificador de um tipo de dados SQL ODBC que não seja mostrado na tabela para um determinado tipo de dados C **SQLBindParameter**retorna um SQLSTATE 07006 (violação do atributo de tipo de dados restrito). Se o *ParameterType* argumento contém um identificador específico do driver e o driver não oferece suporte para a conversão de tipo de dados ODBC C específico para esse tipo de dados SQL específico do driver, **SQLBindParameter** retorna um SQLSTATE HYC00 (recurso opcional não implementado).  
+ Se o argumento *ParameterType* em **SQLBindParameter** contiver o identificador de um tipo de dados ODBC SQL que não é mostrado na tabela para um determinado tipo de dados C, **SQLBindParameter** retornará SQLSTATE 07006 (violação de atributo de tipo de dados restrito). Se o argumento *ParameterType* contiver um identificador específico de driver e o driver não oferecer suporte à conversão do tipo de dados ODBC C específico para esse tipo de dados SQL específico de driver, **SQLBINDPARAMETER** retornará SQLSTATE HYC00 (recurso opcional não implementado).  
   
- Se o *ParameterValuePtr* e *StrLen_or_IndPtr* argumentos especificados na **SQLBindParameter** são ambos ponteiros nulos, que a função retornará SQLSTATE HY009 (inválido o uso de ponteiro nulo). Embora não seja mostrado nas tabelas, um aplicativo define o valor do buffer de comprimento/indicador apontado para o *StrLen_or_IndPtr* argumento de **SQLBindParameter** ou o valor da  *StrLen_or_IndPtr* argumento de **SQLPutData** como SQL_NULL_DATA para especificar um valor de dados SQL NULL. (O *StrLen_or_IndPtr* argumento corresponde ao campo SQL_DESC_OCTET_LENGTH_PTR de APD.) O aplicativo define esses valores como SQL_NTS para especificar que o valor \* *ParameterValuePtr* na **SQLBindParameter** ou \* *DataPtr*na **SQLPutData** (apontando para o campo SQL_DESC_DATA_PTR de APD) é uma cadeia de caracteres terminada em nulo.  
+ Se os argumentos *ParameterValuePtr* e *StrLen_or_IndPtr* especificados em **SQLBindParameter** forem ambos ponteiros nulos, essa função retornará SQLSTATE HY009 (uso inválido de ponteiro NULL). Embora não seja mostrada nas tabelas, um aplicativo define o valor do buffer de comprimento/indicador apontado pelo argumento *StrLen_or_IndPtr* de **SQLBindParameter** ou o valor do argumento *StrLen_or_IndPtr* de **SQLPutData** para SQL_NULL_DATA para especificar um valor de dados SQL nulo. (O argumento *StrLen_or_IndPtr* corresponde ao campo SQL_DESC_OCTET_LENGTH_PTR do APD.) O aplicativo define esses valores como SQL_NTS para especificar que o valor em \* *ParameterValuePtr* em **SQLBindParameter** ou \* *DataPtr* em **SQLPutData** (apontado pelo campo SQL_DESC_DATA_PTR do APD) é uma cadeia de caracteres terminada em nulo.  
   
  Os seguintes termos são usados nas tabelas:  
   
--   **Comprimento de bytes dos dados** - número de bytes de dados do SQL enviar para a fonte de dados, ou não os dados serão truncados antes de serem enviado à fonte de dados. Para dados de cadeia de caracteres, isso não inclui espaço para o caractere nulo de terminação.  
+-   **Tamanho de bytes de dados** -número de bytes de dados SQL disponíveis para enviar para a fonte de dados, se os dados serão truncados antes de serem enviados para a fonte de dados. Para dados de cadeia de caracteres, isso não inclui espaço para o caractere de terminação nula.  
   
--   **Comprimento de bytes da coluna** -número de bytes necessários para armazenar os dados na fonte de dados.  
+-   **Comprimento de byte de coluna** -número de bytes necessários para armazenar os dados na fonte de dados.  
   
--   **Bytes de comprimento de caracteres** - máximo número de bytes necessários para exibir dados em formato de caractere. Isso é, conforme definido para cada tipo de dados SQL no [exibir tamanho](../../../odbc/reference/appendixes/display-size.md), exceto o comprimento de byte do caractere está em bytes, e o tamanho da exibição está em caracteres.  
+-   **Comprimento de byte de caractere** – número máximo de bytes necessários para exibir dados no formato de caractere. Isso é conforme definido para cada tipo de dados SQL no [tamanho de exibição](../../../odbc/reference/appendixes/display-size.md), exceto que comprimento de byte de caractere está em bytes, enquanto o tamanho de exibição está em caracteres.  
   
--   **Número de dígitos** - número de caracteres usados para representar um número, incluindo o sinal de subtração, o ponto decimal e o expoente (se necessário).  
+-   **Número de dígitos** -número de caracteres usados para representar um número, incluindo o sinal de subtração, o ponto decimal e o expoente (se necessário).  
   
 -   **Palavras em**   
-     ***Itálico*** -elementos da gramática SQL. Para obter a sintaxe de elementos de gramática, consulte [apêndice c: Gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***itálico*** -elementos da gramática SQL. Para obter a sintaxe dos elementos gramaticais, consulte o [Apêndice C: SQL Grammar](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
--   [C to SQL: Caractere](../../../odbc/reference/appendixes/c-to-sql-character.md)  
+-   [C para SQL: caractere](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [C to SQL: numérico](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [C para SQL: numérico](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [C to SQL: Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [C para SQL: bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
--   [C to SQL: binário](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
+-   [C para SQL: binário](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
--   [C to SQL: Data](../../../odbc/reference/appendixes/c-to-sql-date.md)  
+-   [C para SQL: data](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
--   [C to SQL: GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
+-   [C para SQL: GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
   
--   [C to SQL: tempo](../../../odbc/reference/appendixes/c-to-sql-time.md)  
+-   [C para SQL: hora](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C to SQL: carimbo de hora](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [C para SQL: carimbo de data/hora](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
--   [C to SQL: Intervalos de ano / mês](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
+-   [C para SQL: intervalos de ano-mês](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
--   [C to SQL: Intervalos de tempo do dia](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
+-   [C para SQL: intervalos de tempo-dia](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
--   [Exemplos de conversão de dados C to SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)
+-   [Exemplos de conversão de dados de C para SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)

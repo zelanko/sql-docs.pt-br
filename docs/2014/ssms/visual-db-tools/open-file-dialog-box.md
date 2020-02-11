@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138873"
 ---
 # <a name="open-file-dialog-box"></a>Caixa de diálogo Abrir Arquivo
@@ -51,7 +51,7 @@ ms.locfileid: "63138873"
  **Opções de codificação e Abrir com**  
  Para usar a caixa de diálogo **Abrir com** para especificar um editor para o arquivo de destino, selecione o retângulo pequeno à direita do botão **Abrir** e escolha **Abrir com**. Se necessário, você também pode especificar um esquema de codificação de linguagem para aplicar ao abrir o arquivo selecionado. Para isso, selecione um programa na lista que contém "**com Codificação**" e escolha **Abrir** para exibir a **caixa de diálogo Codificação**. Esse botão nem sempre está disponível.  
   
-## <a name="toolbar"></a>Barra de Ferramentas  
+## <a name="toolbar"></a>Barra de ferramentas  
  **Navegação Regressiva**  
  Retorna a pasta, unidade ou local de Internet exibido por último.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63138873"
  **Pesquisar na Web**  
  Esse botão não está disponível.  
   
- **Delete (excluir) (excluir)**  
+ **Delete (excluir)**  
  Exclui os arquivos ou pastas selecionadas do armazenamento.  
   
  **Nova Pasta**  
@@ -85,7 +85,7 @@ ms.locfileid: "63138873"
  **Detalhes**  
  Exibe o nome, tamanho, tipo e data da última modificação de arquivos e pastas em formato de lista. Para ordenar por um detalhe específico, clique no cabeçalho da sua coluna.  
   
- **Exibição da Web**  
+ **WebView**  
  Esse comando não está disponível.  
   
 ## <a name="tools"></a>Ferramentas  

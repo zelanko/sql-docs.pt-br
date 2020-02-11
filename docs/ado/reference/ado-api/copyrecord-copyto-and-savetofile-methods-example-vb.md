@@ -1,5 +1,5 @@
 ---
-title: Exemplo de CopyRecord, CopyTo e SaveToFile exemplo dos métodos (VB) | Microsoft Docs
+title: Exemplo dos métodos CopyRecord, CopyTo e SaveToFile (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b128c935ec0119344a213dbe5289cc8a3cd190fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919363"
 ---
-# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>Exemplo de CopyRecord, CopyTo e SaveToFile exemplo dos métodos (VB)
-Este exemplo demonstra como criar cópias de um arquivo usando [Stream](../../../ado/reference/ado-api/stream-object-ado.md) ou [registro](../../../ado/reference/ado-api/record-object-ado.md) objetos. Uma cópia é feita para uma pasta da Web para publicação na Internet. Incluem outras propriedades e métodos mostrados [tipo Stream](../../../ado/reference/ado-api/type-property-ado-stream.md), **abra**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), e [registro aberto](../../../ado/reference/ado-api/open-method-ado-record.md).  
+# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>Exemplo dos métodos CopyRecord, CopyTo e SaveToFile (VB)
+Este exemplo demonstra como criar cópias de um arquivo usando objetos [Stream](../../../ado/reference/ado-api/stream-object-ado.md) ou [Record](../../../ado/reference/ado-api/record-object-ado.md) . Uma cópia é feita em uma pasta da Web para publicação na Internet. Outras propriedades e métodos mostrados incluem [tipo de fluxo](../../../ado/reference/ado-api/type-property-ado-stream.md), **abrir**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)e [registro aberto](../../../ado/reference/ado-api/open-method-ado-record.md).  
   
 ```  
 'BeginCopyRecordVB  
@@ -124,12 +124,12 @@ End Sub
 'EndCopyRecordVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método CopyRecord (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
  [Método CopyTo (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
  [Método LoadFromFile (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
  [Método Open (registro ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Método Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Método Open (fluxo ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Método SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)   
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   

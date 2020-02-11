@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8e3b2f19d25374a592203cbd4b00f118385d980
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781681"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurar o Driver ODBC do SQL Server – Excluir uma fonte de dados
@@ -29,7 +29,7 @@ ms.locfileid: "73781681"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Para excluir uma fonte de dados usando o Administrador de ODBC  
   
-1.  No **painel de controle**, **abra Ferramentas administrativas**e clique duas vezes em **fontes de dados ODBC (64 bits)** ou **fontes de dados ODBC (32 bits)** . Alternativamente, você pode executar odbcad32.exe no prompt de comando.  
+1.  No **painel de controle**, **abra Ferramentas administrativas**e clique duas vezes em **fontes de dados ODBC (64 bits)** ou **fontes de dados ODBC (32 bits)**. Alternativamente, você pode executar odbcad32.exe no prompt de comando.  
   
 2.  Clique na guia **DSN do usuário**, DSN do **sistema**ou DSN de **arquivo** .  
   
@@ -59,7 +59,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar uma fonte &#40;de dados ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Adicionar uma fonte de dados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

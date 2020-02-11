@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 3: Adicionando e configurando um Gerenciador de Conexão do OLE DB | Microsoft Docs'
+title: 'Etapa 3: adicionar e configurar um gerenciador de conexões OLE DB | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891715"
 ---
-# <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Etapa 3: Adicionar e configurar um gerenciador de conexões OLE DB
+# <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Etapa 3: adicionando e configurando um gerenciador de conexões OLE DB
   Depois de ter adicionado um gerenciador de conexões de arquivo simples para conectar-se à origem de dados, a próxima tarefa é adicionar um gerenciador de conexões OLE DB para conectar-se ao destino. Um gerenciador de conexões OLE DB permite que um pacote extraia dados de qualquer fonte de dados compatível com OLE DB ou carregue dados nela. Usando o gerenciador de conexões OLE DB, você pode especificar o servidor, o método de autenticação e o banco de dados padrão para a conexão.  
   
  Nesta lição, você aprenderá a criar um gerenciador de conexões OLE DB que usa a Autenticação do Windows para se conectar à instância local do **AdventureWorksDB2012**. O gerenciador de conexões OLE DB que você criar também será referenciado por outros componentes que você criar posteriormente neste tutorial, como, por exemplo, a transformação Pesquisa e o destino OLE DB.  
@@ -34,7 +34,7 @@ ms.locfileid: "62891715"
   
 4.  No grupo **Fazer logon no servidor** , verifique se a opção **Usar Autenticação do Windows** está selecionada.  
   
-5.  No **conectar-se a um banco de dados** grupo, o **selecione ou insira um nome de banco de dados** caixa, digite ou selecione `AdventureWorksDW2012`.  
+5.  No grupo **conectar-se a um banco de dados** , na caixa **selecionar ou inserir um nome de banco** de `AdventureWorksDW2012`dados, digite ou selecione.  
   
 6.  Clique em **Testar Conexão** para verificar se as configurações de conexão especificadas são válidas.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62891715"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 4: Adicionando uma tarefa de fluxo de dados ao pacote](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md)  
+## <a name="see-also"></a>Consulte Também  
+ [gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

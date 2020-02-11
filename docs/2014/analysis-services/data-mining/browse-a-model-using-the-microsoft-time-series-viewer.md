@@ -1,5 +1,5 @@
 ---
-title: Procurar um modelo usando o visualizador MTS | Microsoft Docs
+title: Procurar um modelo usando o Visualizador do Microsoft Time Series | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085978"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Procurar um modelo usando o Visualizador MTS
-  O Visualizador Time Series da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração que são criados com o algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de regressão que cria modelos de mineração de dados para previsão de colunas contínuas, tais como vendas de produtos, em um cenário de previsão. Esses modelos de série temporal podem incluir informações baseadas em diferentes algoritmos:  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizador de série temporal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no exibe modelos de mineração que são criados [!INCLUDE[msCoName](../../includes/msconame-md.md)] com o algoritmo de série temporal. O algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de regressão que cria modelos de mineração de dados para previsão de colunas contínuas, tais como vendas de produtos, em um cenário de previsão. Esses modelos de série temporal podem incluir informações baseadas em diferentes algoritmos:  
   
 -   O algoritmo ARTxp foi otimizado para previsão a curto prazo.  
   
@@ -39,17 +39,18 @@ ms.locfileid: "66085978"
 > [!NOTE]  
 >  Para exibir informações detalhadas sobre as equações usadas no modelo e os padrões identificados, use o Visualizador de Árvore de Conteúdo Genérica da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de Dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a> Guias do Visualizador  
+##  <a name="BKMK_ViewerTabs"></a>Guias do Visualizador  
  Quando você navega em um modelo de mineração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ele é exibido na guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados no visualizador adequado ao modelo. O Visualizador MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece as seguintes guias:  
   
--   [Modelo](#BKMK_Tree)  
+-   [Deprecia](#BKMK_Tree)  
   
 -   [Gráficos](#BKMK_Charts)  
   
- **Observação** As informações indicadas para o conteúdo do modelo e na Legenda de Mineração dependem do algoritmo usado pelo modelo. Porém, as guias **Modelo** e **Gráficos** são as mesmas, independentemente da combinação de algoritmos.  
+ **Observação** As informações mostradas para o conteúdo do modelo e na legenda de mineração dependem do algoritmo usado pelo modelo. Porém, as guias **Modelo** e **Gráficos** são as mesmas, independentemente da combinação de algoritmos.  
   
-###  <a name="BKMK_Tree"></a> Modelo  
- Quando um modelo de série temporal é criado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apresenta o modelo concluído como uma árvore. Se seus dados tiverem várias séries de casos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará uma árvore separada para cada série. Por exemplo, você está prevendo vendas para o Pacífico, América do Norte e regiões da Europa. As previsões para cada uma destas regiões são série de caso. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma árvore separada para cada uma destas séries. Para exibir uma série específica, selecione-a na lista **Árvore** .  
+###  <a name="BKMK_Tree"></a>Deprecia  
+ Quando um modelo de série temporal é criado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apresenta o modelo concluído como uma árvore. Se seus dados tiverem várias séries de casos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará uma árvore separada para cada série. Por exemplo, você está prevendo vendas para o Pacífico, América do Norte e regiões da Europa. As previsões para cada uma destas regiões são série de caso. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma árvore separada para cada uma destas séries. Para exibir uma série específica, selecione-a na lista **Árvore** .  
   
  Para cada árvore, o modelo de série temporal contém um nó **Todos** e, depois, se divide em vários nós que representam estruturas periódicas identificadas pelo algoritmo. Você pode clicar em cada nó para exibir estatísticas tais como o número de casos e a equação.  
   
@@ -65,9 +66,9 @@ ms.locfileid: "66085978"
   
  O sombreamento da cor de fundo de cada nó equivale ao número de casos localizados no nó. Para saber o número exato de casos no nó, coloque o ponteiro sobre o nó para exibir uma InfoDica para o nó.  
   
- [Voltar ao Início](#BKMK_ViewerTabs)  
+ [Voltar ao início](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Charts"></a> Gráficos  
+###  <a name="BKMK_Charts"></a>Spersão  
  A guia **Gráficos** exibe o gráfico que mostra o comportamento do atributo previsto ao longo do tempo, junto com cinco valores de previsão futuros. O eixo vertical do gráfico representa o valor da série e o eixo horizontal representa o tempo.  
   
 > [!NOTE]  
@@ -83,12 +84,12 @@ ms.locfileid: "66085978"
   
  Você pode selecionar quantas **etapas** de tempo futuras deseja exibir no modelo usando as **Etapas de Previsão**. Se você marcar a caixa de seleção **Mostrar Desvios** , o visualizador fornecerá barras de erro para que seja possível verificar a exatidão do valor previsto.  
   
- [Voltar ao Início](#BKMK_ViewerTabs)  
+ [Voltar ao início](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>Consulte também  
- [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
- [Algoritmo MTS](microsoft-time-series-algorithm.md)   
- [Exemplos de consulta de um modelo de série temporal](time-series-model-query-examples.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tarefas e instruções do Visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Algoritmo do Microsoft Time Series](microsoft-time-series-algorithm.md)   
+ [Exemplos de consulta de modelo de série temporal](time-series-model-query-examples.md)   
  [Visualizadores do Modelo de Mineração de Dados](data-mining-model-viewers.md)  
   
   

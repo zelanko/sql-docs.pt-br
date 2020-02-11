@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982229"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "73982229"
 
   Especifica os disparadores AFTER que são acionados em primeiro ou último lugar. Os disparadores AFTER que são acionados entre o primeiro e o último disparador são executados em ordem indefinida.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,34 +43,34 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` é o nome do gatilho e o esquema ao qual ele pertence, se aplicável, cuja ordem deve ser definida ou alterada. [_triggerschema_ **.** ] *triggername* é **sysname**. Se o nome não corresponder a um disparador ou se o nome corresponder a um disparador INSTEAD OF, o procedimento retornará um erro. *triggerschema* não pode ser especificado para gatilhos DDL ou de logon.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'`É o nome do gatilho e o esquema ao qual ele pertence, se aplicável, cuja ordem deve ser definida ou alterada. [_triggerschema_**.**] *triggername* é **sysname**. Se o nome não corresponder a um disparador ou se o nome corresponder a um disparador INSTEAD OF, o procedimento retornará um erro. *triggerschema* não pode ser especificado para gatilhos DDL ou de logon.  
   
-`[ @order = ] 'value'` é a configuração para a nova ordem do gatilho. o *valor* é **varchar (10)** e pode ser qualquer um dos valores a seguir.  
+`[ @order = ] 'value'`É a configuração para a nova ordem do gatilho. o *valor* é **varchar (10)** e pode ser qualquer um dos valores a seguir.  
   
 > [!IMPORTANT]  
 >  O **primeiro** e o **último** gatilho devem ser dois gatilhos diferentes.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Primeiro**|O disparador é acionado em primeiro lugar.|  
-|**Last**|O disparador é acionado em último lugar.|  
-|**Nenhum.**|O disparador é acionado em ordem indefinida.|  
+|**Última**|O disparador é acionado em último lugar.|  
+|**Nenhuma**|O disparador é acionado em ordem indefinida.|  
   
-`[ @stmttype = ] 'statement_type'` especifica a instrução SQL que dispara o gatilho. *statement_type* é **varchar (50)** e pode ser de inserção, atualização, exclusão, logon ou qualquer evento de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] listado em [eventos DDL](../../relational-databases/triggers/ddl-events.md). Os grupos de eventos não podem ser especificados.  
+`[ @stmttype = ] 'statement_type'`Especifica a instrução SQL que dispara o gatilho. *statement_type* é **varchar (50)** e pode ser inserir, atualizar, excluir, fazer logon ou qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de instrução listado em [eventos DDL](../../relational-databases/triggers/ddl-events.md). Os grupos de eventos não podem ser especificados.  
   
- Um gatilho pode ser designado como o **primeiro** ou **último** gatilho para um tipo de instrução somente depois que esse gatilho tiver sido definido como um gatilho para esse tipo de instrução. Por exemplo, o disparador de **TR1** pode ser designado **primeiro** para INSERT na tabela **T1** se o **TR1** for definido como um gatilho de inserção. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará um erro se o **TR1**, que foi definido somente como um gatilho de inserção, estiver definido como um gatilho **First**ou **Last**, para uma instrução UPDATE. Para obter mais informações, consulte a seção Comentários.  
+ Um gatilho pode ser designado como o **primeiro** ou **último** gatilho para um tipo de instrução somente depois que esse gatilho tiver sido definido como um gatilho para esse tipo de instrução. Por exemplo, o disparador de **TR1** pode ser designado **primeiro** para INSERT na tabela **T1** se o **TR1** for definido como um gatilho de inserção. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retorna um erro se o **TR1**, que foi definido somente como um gatilho de inserção, é definido como um gatilho **First**ou **Last**, para uma instrução UPDATE. Para obter mais informações, consulte a seção Comentários.  
   
- **\@namespace =** { **' database '**  |  **' Server '** | NULO  
- Quando *triggername* é um gatilho DDL, **\@namespace** especifica se *triggername* foi criado com escopo de banco de dados ou escopo de servidor. Se *triggername* for um gatilho de logon, o servidor deverá ser especificado. Para obter mais informações sobre o escopo do gatilho DDL, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md). Se não for especificado, ou se NULL for especificado, *triggername* será um gatilho DML.  
+ namespace = { **' banco de dados '** | '**servidor** ' | ** \@** NULO  
+ Quando *triggername* é um gatilho DDL, ** \@namespace** especifica se *triggername* foi criado com escopo de banco de dados ou escopo de servidor. Se *triggername* for um gatilho de logon, o servidor deverá ser especificado. Para obter mais informações sobre o escopo do gatilho DDL, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md). Se não for especificado, ou se NULL for especificado, *triggername* será um gatilho DML.  
   
 ||  
 |-|  
-|O servidor aplica-se a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.|  
+|O servidor aplica- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] se a: e posterior.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) e 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="dml-triggers"></a>Gatilhos DML  
  Pode haver apenas um **primeiro** e um **último** gatilho para cada instrução em uma única tabela.  
@@ -108,7 +108,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>A. Definindo a ordem de acionamento para um disparador DML  
+### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>a. Definindo a ordem de acionamento para um disparador DML  
  O exemplo a seguir especifica que o disparador `uSalesOrderHeader` será o primeiro disparador a ser acionado depois que uma operação `UPDATE` ocorrer na tabela `Sales.SalesOrderHeader`.  
   
 ```  
@@ -126,9 +126,9 @@ GO
 sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmttype = 'ALTER_TABLE', @namespace = 'DATABASE';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Mecanismo de banco de dados procedimentos &#40;armazenados  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

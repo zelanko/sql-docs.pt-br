@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154482"
 ---
 # <a name="data-quality-client-home-screen"></a>Tela inicial do Cliente Data Quality
@@ -27,10 +27,10 @@ ms.locfileid: "70154482"
 ### <a name="knowledge-base-management"></a>Gerenciamento da base de dados de conhecimento  
  Uma base de conhecimento do DQS é um repositório de metadados usado pelo DQS para melhorar a qualidade dos dados. Estes metadados são criados pela plataforma do DQS em um processo de descoberta da base de dados de conhecimento assistido por computador e pelo administrador de dados em um processo de gerenciamento de domínio interativo.  
   
- **Nova base de conhecimento**  
+ **Nova base de dados de conhecimento**  
  Inicie o processo de criação de uma base de conhecimento a partir do zero ou baseado nos metadados de uma base de conhecimento existente. Este comando abre uma página na qual você pode identificar a base de dados de conhecimento, baseá-la em uma base de dados de conhecimento existente, selecionar a atividade de base de dados de conhecimento desejada e, em seguida, criar a base de dados de conhecimento.  
   
- **Abrir Base de Dados de Conhecimento**  
+ **Abrir base de dados de conhecimento**  
  Abrir uma base de dados de conhecimento para que você possa gerenciar seus domínios, executar a descoberta da base de dados de conhecimento ou criar uma política de correspondência. Clicar no botão **Abrir Base de Dados de Conhecimento** exibe a página **Abrir Base de Dados de Conhecimento** , que mostra uma lista de bases de dados de conhecimento existentes com suas propriedades, estado atual, base de dados de conhecimento e detalhes de seus domínios. Selecione uma base de dados de conhecimento e abra-a em **Abrir Base de Dados de Conhecimento**.  
   
  **Base de dados de conhecimento recente**  
@@ -38,7 +38,7 @@ ms.locfileid: "70154482"
   
  Você pode abrir uma base de dados de conhecimento bloqueada e editá-la somente se você a bloqueou. Nesse caso, a base de dados de conhecimento será aberta no estado em que estava quando foi fechada, indicado em parênteses. Se uma base de conhecimento estiver bloqueada, e você não a tiver bloqueado, você só poderá abri-la como somente leitura.  
   
-### <a name="data-quality-projects"></a>Data Quality Projects  
+### <a name="data-quality-projects"></a>Projetos de qualidade de dados  
  Um projeto de qualidade de dados é o processo no qual o DQS executa a limpeza de dados ou correspondência de dados, por meio de correção de dados assistida por computador e limpeza de dados interativa.  
   
  **Novo projeto de qualidade de dados**  
@@ -53,15 +53,15 @@ ms.locfileid: "70154482"
 ### <a name="administration"></a>Administração  
  A administração do DQS permite monitorar, configurar e manter o DQS.  
   
- **Monitoramento de Atividades**  
+ **Monitoramento de atividades**  
  Exibe o status de todas as atividades (atuais e históricas) que estão relacionadas ao servidor do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]conectado. Os tipos de atividades monitoradas incluem Gerenciamento de Conhecimento, um Projeto de Qualidade de Dados e uma correção de dados baseada no SSIS.  
   
  **Configuração**  
  Exibe as propriedades de configuração para contas de serviço de dados de referência (tanto por meio do Azure Marketplace quanto diretamente para serviços de dados de referência), configurações gerais (limpeza interativa, correspondência e criação de perfil) e configurações de severidade de log.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bases de dados de conhecimento e domínios do DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [Projetos de qualidade de dados &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)   
- [Administração do DQS](../../2014/data-quality-services/dqs-administration.md)  
+ [Projetos de qualidade de dados &#40;o DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)   
+ [administração do dqs](../../2014/data-quality-services/dqs-administration.md)  
   
   

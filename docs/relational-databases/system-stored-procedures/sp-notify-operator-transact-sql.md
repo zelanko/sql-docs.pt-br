@@ -18,19 +18,19 @@ ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107986"
 ---
-# <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
+# <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Envia uma mensagem de email a um operador usando o Database Mail.  
   
  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,21 +47,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_name = ] 'profilename'` O nome do perfil do Database Mail para usar para enviar a mensagem. *ProfileName* está **nvarchar (128)** . Se *profilename* não for especificado, o perfil de email de banco de dados padrão será usado.  
+`[ @profile_name = ] 'profilename'`O nome do perfil de Database Mail a ser usado para enviar a mensagem. *ProfileName* é **nvarchar (128)**. Se *ProfileName* não for especificado, o perfil de Database Mail padrão será usado.  
   
-`[ @id = ] id` O identificador do operador para enviar a mensagem. *ID* está **int**, com um padrão NULL. Um dos *identificação* ou *nome* deve ser especificado.  
+`[ @id = ] id`O identificador para o operador para o qual enviar a mensagem. a *ID* é **int**, com um padrão de NULL. Um de *ID* ou *nome* deve ser especificado.  
   
-`[ @name = ] 'name'` O nome do operador para enviar a mensagem. *nome da* está **nvarchar (128)** , com um padrão NULL. Um dos *identificação* ou *nome* deve ser especificado.  
+`[ @name = ] 'name'`O nome do operador para o qual enviar a mensagem. o *nome* é **nvarchar (128)**, com um padrão de NULL. Um de *ID* ou *nome* deve ser especificado.  
   
-> **OBSERVAÇÃO:** Um endereço de email deve ser definido para o operador que ele possa receber mensagens.  
+> **Observação:** Um endereço de email deve ser definido para o operador antes que ele possa receber mensagens.  
   
-`[ @subject = ] 'subject'` O assunto da mensagem de email. *Assunto* está **nvarchar(256)** sem nenhum padrão.  
+`[ @subject = ] 'subject'`O assunto da mensagem de email. *Subject* é **nvarchar (256)** sem padrão.  
   
-`[ @body = ] 'message'` O corpo da mensagem de email. *mensagem* está **nvarchar (max)** sem nenhum padrão.  
+`[ @body = ] 'message'`O corpo da mensagem de email. a *mensagem* é **nvarchar (max)** sem padrão.  
   
-`[ @file_attachments = ] 'attachment'` O nome de um arquivo a ser anexado à mensagem de email. *anexo* está **nvarchar(512)** , sem padrão.  
+`[ @file_attachments = ] 'attachment'`O nome de um arquivo a ser anexado à mensagem de email. o *anexo* é **nvarchar (512)**, sem padrão.  
   
-`[ @mail_database = ] 'mail_host_database'` Especifica o nome do host de database mail. *mail_host_database* está **nvarchar (128)** . Se nenhum *mail_host_database* for especificado, o **msdb** banco de dados é usado por padrão.  
+`[ @mail_database = ] 'mail_host_database'`Especifica o nome do banco de dados do host de email. *mail_host_database* é **nvarchar (128)**. Se nenhum *mail_host_database* for especificado, o banco de dados **msdb** será usado por padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -72,7 +72,7 @@ sp_notify_operator
  O Database Mail e um banco de dados host de email devem ser configurados para que uma notificação possa ser enviada a um operador.  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -98,9 +98,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Confira também  
- [Procedimentos armazenados do SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+ [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_operator](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_operator](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_operator](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   

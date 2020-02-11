@@ -10,43 +10,43 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b601c08633ffe98d6b6005aa3dc34c773810ba3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892028"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
-  A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo `Value` e `IsMissing` que estão disponíveis na fonte de dados e são suportadas pela extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode incluir valores de propriedade de campo estendidos em seu relatório escrevendo expressões que os especificam por nome usando a `Fields` coleção interna.  
+  A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo `Value` e `IsMissing` que estão disponíveis na fonte de dados e são suportadas pela extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode incluir valores de propriedade de campo estendidos em seu relatório escrevendo expressões que os especificam por nome usando a `Fields` coleção interna.  
   
  As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns para várias fontes de dados mapeadas para nomes de propriedade de campo específico e podem ser acessadas por nome através da coleção incorporada de `Fields`. As propriedades personalizadas são específicas de cada provedor de dados e pode ser acessada por meio da coleção interna de `Fields` apenas pela sintaxe usando o nome da propriedade estendida como uma cadeia de caracteres.  
   
- Ao usar o designer de consultas MDX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo gráfico para definir a consulta, um conjunto predefinido de propriedades de células e propriedades de dimensão é adicionado automaticamente à consulta MDX. Apenas as propriedades estendidas que estiverem especificamente listadas na consulta MDX em seu relatório poderão ser usadas. Dependendo do relatório, é possível modificar o texto do comando MDX padrão para incluir outra dimensão ou propriedades personalizadas definidas no cubo. Para obter mais informações sobre os campos estendidos disponíveis nas fontes de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Criando e usando valores de propriedade &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/creating-and-using-property-values-mdx).  
+ Ao usar o designer de consultas MDX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo gráfico para definir a consulta, um conjunto predefinido de propriedades de células e propriedades de dimensão é adicionado automaticamente à consulta MDX. Apenas as propriedades estendidas que estiverem especificamente listadas na consulta MDX em seu relatório poderão ser usadas. Dependendo do relatório, é possível modificar o texto do comando MDX padrão para incluir outra dimensão ou propriedades personalizadas definidas no cubo. Para obter mais informações sobre os campos estendidos disponíveis nas fontes de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Criando e usando valores de propriedade &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Trabalhando com as propriedades de campo em um relatório  
  As propriedades de campo estendidas incluem as propriedades predefinidas e as propriedades específicas para um provedor de dados. As propriedades de campo não são exibidas com a lista de campos no painel **Dados do Relatório** , embora elas estejam na consulta criada para um conjunto de dados; portanto, não é possível arrastar as propriedades de campo para a superfície de design de relatórios. Em vez disso, você deverá arrastar o campo para o relatório e alterar a propriedade `Value` do campo para a propriedade que você deseja usar. Por exemplo, se os dados da célula de um cubo já tiverem sido formatados, você poderá usar a propriedade de campo FormattedValue usando a seguinte expressão: `=Fields!FieldName.FormattedValue`.  
   
  Para consultar uma propriedade estendida que não seja predefinida, use a seguinte sintaxe em uma expressão:  
   
--   *Fields!FieldName("PropertyName")*  
+-   *Campo! FieldName ("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>Propriedades de campo predefinidas  
  Na maioria dos casos, as propriedades de campo predefinidas são aplicadas a medidas, níveis ou dimensões. Uma propriedade de campo predefinida deve ter um valor correspondente armazenado na fonte de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se não existir um valor ou se você especificar uma propriedade de campo em um nível apenas para medida (por exemplo), a propriedade retornará um valor nulo.  
   
  Para consultar uma propriedade predefinida a partir de uma expressão, use as seguintes sintaxes:  
   
--   *Fields!FieldName.PropertyName*  
+-   *Campo! FieldName. PropertyName*  
   
--   *Fields!FieldName("PropertyName")*  
+-   *Campo! FieldName ("PropertyName")*  
   
  A tabela a seguir fornece uma lista das propriedades de campo predefinidas que você pode usar.  
   
-|**Property**|**Tipo**|**Descrição ou valor esperado**|  
+|**Propriedade**|**Tipo**|**Descrição ou valor esperado**|  
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Especifica o valor de dados do campo.|  
 |`IsMissing`|`Boolean`|Indica se o campo foi encontrado no conjunto de dados resultante.|  
-|`UniqueName`|`String`|Retorna o nome totalmente qualificado de um nível. Por exemplo, o `UniqueName` valor de um funcionário pode ser *[Employee]. [ Departamento do funcionário]. [Department]. & [Sales]. & [gerente de vendas da América do Norte]. & [272]* .|  
+|`UniqueName`|`String`|Retorna o nome totalmente qualificado de um nível. Por exemplo, o `UniqueName` valor de um funcionário pode ser *[Employee]. [ Departamento do funcionário]. [Department]. & [Sales]. & [gerente de vendas da América do Norte]. & [272]*.|  
 |`BackgroundColor`|`String`|Retorna a cor do segundo plano definida no banco de dados para o campo.|  
 |`Color`|`String`|Retorna a cor do primeiro plano definida no banco de dados para o item.|  
 |`FontFamily`|`String`|Retorna o nome da fonte definido no banco de dados para o item.|  
@@ -97,8 +97,8 @@ FROM [Adventure Works]
 |DateCaption|DateUniqueName|DateDayName|DateValueinOriginalDatatype|DateParentUniqueName|DateMemberKeyinOriginalDatatype|  
 |-----------------|--------------------|-----------------|---------------------------------|--------------------------|-------------------------------------|  
 |Todos os Períodos|[Data].[Data].[Todos os Períodos]|(null)|(null)|(null)|0|  
-|1-Jul-01|[Date].[Date].&[1]|Domingo|7/1/2001|[Data].[Data].[Todos os Períodos]|1|  
-|2-Jul-01|[Date].[Date].&[2]|Segunda-feira|7/2/2001|[Data].[Data].[Todos os Períodos]|2|  
+|1-Jul-01|[Date].[Date].&[1]|Sunday|7/1/2001|[Data].[Data].[Todos os Períodos]|1|  
+|2-Jul-01|[Date].[Date].&[2]|Monday|7/2/2001|[Data].[Data].[Todos os Períodos]|2|  
 |3-Jul-01|[Date].[Date].&[3]|Terça-feira|7/3/2001|[Data].[Data].[Todos os Períodos]|3|  
   
  As consultas MDX padrão incorporadas usando o Designer de Consulta MDX no modo gráfico incluem apenas MEMBER_CAPTION e UNIQUENAME para as propriedades de dimensão. Por padrão, esses valores sempre são do tipo de dados `String`.  
@@ -126,12 +126,12 @@ CELL PROPERTIES
 |Março|2,749|  
 |Abril|2,739|  
   
- Embora as propriedades façam parte da instrução de seleção MDX, elas não são exibidas nas colunas de conjunto de resultados. No entanto, os dados são disponibilizados para um relatório usando o recurso de propriedades estendidas. No painel de resultados da consulta MDX no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode clicar duas vezes na célula e ver os valores de propriedade da célula, caso eles estejam definidos no cubo. Se clicar duas vezes na primeira célula Contagem de Pedidos que contém 1379, será exibida uma janela com as seguintes propriedades da célula:  
+ Embora as propriedades façam parte da instrução de seleção MDX, elas não são exibidas nas colunas de conjunto de resultados. No entanto, os dados são disponibilizados para um relatório usando o recurso de propriedades estendidas. Em um painel de resultados de consulta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]MDX no, você pode clicar duas vezes na célula e ver os valores de propriedade da célula se eles estiverem definidos no cubo. Se clicar duas vezes na primeira célula Contagem de Pedidos que contém 1379, será exibida uma janela com as seguintes propriedades da célula:  
   
 |Propriedade|Valor|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|VALUE|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  
@@ -148,7 +148,7 @@ CELL PROPERTIES
   
  Isso classifica o valor do campo em seu tipo de dados de inteiro original a partir da fonte de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  

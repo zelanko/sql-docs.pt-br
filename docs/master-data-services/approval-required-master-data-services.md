@@ -11,10 +11,10 @@ ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 61d03410e5217175335caf0ca37241b28c887989
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729759"
 ---
 # <a name="approval-required-master-data-services"></a>Aprovação Necessária (Master Data Services)
@@ -30,12 +30,12 @@ ms.locfileid: "73729759"
 >   
 >  As alterações feitas por uma regra de negócio ignoram a aprovação.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional da Administração do Sistema.  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
 -   Uma entidade deve existir. Para obter mais informações, consulte [Criar uma entidade &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
@@ -43,13 +43,13 @@ ms.locfileid: "73729759"
   
 1.  No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], clique em **Administração do Sistema**.  
   
-2.  Na página **Gerenciar Modelo** , selecione um modelo na grade e clique em **Entidades**.  
+2.  Na página **gerenciar modelo** , selecione um modelo na grade e clique em **entidades**.  
   
 3.  Na página **Gerenciar Entidade** , da grade, selecione a linha da entidade para a qual você deseja habilitar a  **Aprovação Necessária** .  
   
 4.  Clique em **Editar**, escolha **Aprovação Necessária**e, em seguida, clique em **Salvar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de alterações &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)  
   
   

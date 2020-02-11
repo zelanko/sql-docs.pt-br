@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745715"
 ---
 # <a name="securables"></a>Protegíveis
   Protegíveis são os recursos cujo acesso é regulado pelo sistema de autorização do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por exemplo, uma tabela é um protegível. Alguns protegíveis podem ser contidos dentro de outros, criando hierarquias aninhadas chamadas "escopos" que podem ser protegidos. Os escopos protegíveis são **servidor**, **banco de dados**e **esquema**.  
   
-## <a name="securable-scope-server"></a>Escopo protegível: Servidor  
+## <a name="securable-scope-server"></a>Escopo protegível: servidor  
  O escopo protegível **servidor** contém os seguintes protegíveis:  
   
 -   grupo de disponibilidade  
@@ -39,7 +39,7 @@ ms.locfileid: "62745715"
   
 -   Função de servidor  
   
--   banco de dados  
+-   Banco de dados  
   
 ## <a name="securable-scope-database"></a>Escopo protegível: banco de dados  
  O escopo protegível **banco de dados** contém os seguintes protegíveis:  
@@ -66,7 +66,7 @@ ms.locfileid: "62745715"
   
 -   Rota  
   
--   esquema  
+-   Esquema  
   
 -   Lista de propriedades de pesquisa  
   
@@ -74,12 +74,12 @@ ms.locfileid: "62745715"
   
 -   Chave simétrica  
   
--   User  
+-   Usuário  
   
 ## <a name="securable-scope-schema"></a>Escopo protegível: esquema  
  O escopo protegível **esquema** contém os seguintes protegíveis:  
   
--   Tipo  
+-   Type  
   
 -   Coleção de esquemas XML  
   
@@ -95,9 +95,9 @@ ms.locfileid: "62745715"
   
     -   Sinônimo  
   
-    -   Table  
+    -   Tabela  
   
-    -   Exibição  
+    -   Visualizar  
   
 ## <a name="controlling-access-to-a-securable"></a>Controlando o acesso a um protegível  
  A entidade que recebe permissão para um protegível é chamada de entidade de segurança. As entidades de segurança mais comuns são logons e usuários de banco de dados. O acesso a protegíveis é controlado pela concessão ou negação de permissões, ou pela adição de logons e de usuários a funções que têm acesso. Para obter informações sobre como controlar permissões, veja [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql), [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql), [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql), [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) e [sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql).  

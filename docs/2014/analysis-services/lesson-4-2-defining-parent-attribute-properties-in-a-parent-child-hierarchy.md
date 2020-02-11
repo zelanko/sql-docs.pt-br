@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494010"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definindo propriedades de atributo pai em uma hierarquia pai-filho
@@ -37,7 +37,7 @@ ms.locfileid: "69494010"
   
 3.  Selecione o membro **Pedro J. Martins** .  
   
-     Observe que o nome do nível para esse membro é **Nível 02**. (O nome do nível é exibido depois de **Nível atual:** logo acima do membro **Todos os Funcionários**.) Na próxima tarefa, você definirá nomes mais descritivos para cada nível.  
+     Observe que o nome do nível para esse membro é **Nível 02**. (O nome do nível é exibido depois de **Nível atual:** logo acima do membro **Todos os Funcionários** .) Na próxima tarefa, você definirá nomes mais descritivos para cada nível.  
   
 4.  Expanda **Pedro J. Martins** para exibir os nomes de funcionários subordinados a esse gerente e selecione **Vitor S. Barros** para exibir o nome desse nível.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "69494010"
   
      A imagem a seguir mostra a hierarquia de Employees expandida.  
   
-10. ![Tabela dinâmica mostrando a hierarquia de funcionários](../../2014/tutorials/media/l4-employee-1.gif "Tabela dinâmica mostrando a hierarquia de funcionários")  
+10. ![Tabela dinâmica que mostra a hierarquia Funcionários](../../2014/tutorials/media/l4-employee-1.gif "Tabela dinâmica que mostra a hierarquia Funcionários")  
   
      Observe que as vendas de cada gerente no Nível 03 também são exibidas no Nível 04. Isso é porque cada gerente também é funcionário de outro gerente. Na próxima tarefa, você ocultará os valores das vendas.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "69494010"
   
      Observe que ícone é exclusivo para esse atributo. Esse ícone indica que o atributo é a chave pai em uma hierarquia pai-filho. Observe também, na janela Propriedades, que a propriedade **Usage** do atributo é definida como **Pai**. Essa propriedade foi definida pelo Assistente para Dimensões no momento em que a dimensão foi criada. O assistente detectou a relação pai-filho automaticamente.  
   
-3.  Na janela Propriedades, clique no botão Procurar ( **...** ) na célula da propriedade **NamingTemplate** .  
+3.  Na janela Propriedades, clique no botão Procurar (**...**) na célula da propriedade **NamingTemplate** .  
   
-     Na caixa de diálogo **Modelo de Nomeação de Nível**, você define o modelo de nomeação de nível que determina os nomes de nível na hierarquia pai-filho exibidos aos usuários à medida que eles procuram os cubos.  
+     Na caixa de diálogo **Modelo de Nomeação de Nível** , você define o modelo de nomeação de nível que determina os nomes de nível na hierarquia pai-filho exibidos aos usuários à medida que eles procuram os cubos.  
   
-4.  Na segunda linha, na linha **\*** , digite **Nível do Funcionário \*** na coluna **Nome** e clique na terceira linha.  
+4.  Na segunda linha, a **\*** linha, digite nível ** \* de funcionário** na coluna **nome** e, em seguida, clique na terceira linha.  
   
-     Observe agora que, abaixo de **Resultado**, cada nível é exibido nomeado como “Nível do Funcionário” seguido de números crescentes e consecutivos.  
+     Observe agora que, abaixo de **Resultado** , cada nível é exibido nomeado como “Nível do Funcionário” seguido de números crescentes e consecutivos.  
   
      A imagem a seguir mostra as alterações na caixa de diálogo **Modelo de Nomeação de Nível** .  
   
-     ![Caixa de diálogo modelo de nomeação de nível](../../2014/tutorials/media/l4-namingtemplate.gif "Caixa de diálogo modelo de nomeação de nível")  
+     ![Caixa de diálogo modelo de nomeação de nível](../../2014/tutorials/media/l4-namingtemplate.gif "Caixa de diálogo Modelo de Nomeação de Nível")  
   
 5.  Clique em **OK**.  
   
@@ -101,12 +101,12 @@ ms.locfileid: "69494010"
   
      A imagem a seguir mostra as alterações que foram realizadas na hierarquia Funcionários. Observe que Marcos Y. Azevedo não é exibido mais como um funcionário de si próprio.  
   
-     ![Hierarquia de funcionários modificada](../../2014/tutorials/media/l4-employee-2.png "Hierarquia de funcionários modificada")  
+     ![Hierarquia Funcionários modificada](../../2014/tutorials/media/l4-employee-2.png "Hierarquia Funcionários modificada")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Agrupando membros de atributo automaticamente](lesson-4-3-automatically-grouping-attribute-members.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquia pai-filho](multidimensional-models/parent-child-dimension.md)   
  [Atributos em hierarquias pai-filho](multidimensional-models/parent-child-dimension-attributes.md)  
   

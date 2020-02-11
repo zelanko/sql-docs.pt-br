@@ -16,17 +16,17 @@ ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00a369b4fd6cc11728fb9e3fcea2db958d4ae45d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990602"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>Funções ODBC executadas pela biblioteca de cursores
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que usam esse recurso atualmente. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- A biblioteca de cursores executa as seguintes funções. Quando um aplicativo chama uma função nesta lista, o Gerenciador de Driver chama a biblioteca de cursores, não o driver. Observe que a biblioteca de cursores pode chamar o driver ao executar a função.  
+ A biblioteca de cursores executa as funções a seguir. Quando um aplicativo chama uma função nessa lista, o Gerenciador de driver invoca a biblioteca de cursores, não o driver. Observe que a biblioteca de cursores pode chamar o driver ao executar a função.  
   
 |||  
 |-|-|  

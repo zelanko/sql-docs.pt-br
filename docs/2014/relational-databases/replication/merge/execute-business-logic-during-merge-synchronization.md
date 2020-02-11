@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999570"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Executar lógica de negócios durante sincronizações de mesclagem
@@ -29,7 +29,7 @@ ms.locfileid: "62999570"
   
 -   A referência da interface de programas aplicativos (API): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Instruções de como implementar um manipulador de lógica de negócios: [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Instruções sobre como implementar um manipulador de lógica de negócios: [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Usos para manipuladores de lógica comercial  
  O processo de sincronização de mesclagem pode chamar manipuladores de lógica comercial para executar:  
@@ -59,7 +59,7 @@ ms.locfileid: "62999570"
      Isto é útil para aplicativos que precisam substituir valores de dados ou operações específicos. Por exemplo, uma aplicativo poderá transformar a exclusão de uma linha em uma atualização especial que define uma coluna de **status** na linha a um valor de "excluído" e então rastreia a identidade do cliente executando a exclusão. Isto poderá ser útil para fins de auditoria ou de fluxo de trabalho.  
   
 ### <a name="custom-conflict-resolution"></a>Resolução de conflito personalizada  
- A replicação de mesclagem fornece detecção e solução de conflitos, permitindo que você aceite uma estratégia de resolução padrão ou escolha uma resolução personalizada para conflitos. Para obter mais informações, consulte [Detecção e resolução de conflito de replicação de mesclagem avançada ](advanced-merge-replication-conflict-detection-and-resolution.md). O manipulador de lógica comercial pode ser chamado durante o processamento de alterações de dados conflitantes e pode executar uma destas duas ações:  
+ A replicação de mesclagem fornece detecção e solução de conflitos, permitindo que você aceite uma estratégia de resolução padrão ou escolha uma resolução personalizada para conflitos. Para obter mais informações, consulte [Replicação de mesclagem avançada – detecção e resolução de conflito](advanced-merge-replication-conflict-detection-and-resolution.md). O manipulador de lógica comercial pode ser chamado durante o processamento de alterações de dados conflitantes e pode executar uma destas duas ações:  
   
 -   Aceite resolução padrão  
   
@@ -89,10 +89,10 @@ ms.locfileid: "62999570"
   
 -   Um servidor IIS (Serviços de Informações da Internet) se a sincronização da Web for usada. Use uma assinatura pull sincronizada com a sincronização da Web e o manipulador de lógica comercial executará no Servidor IIS.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Replicação de mesclagem](merge-replication.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)   
  [Sincronizar dados](../synchronize-data.md)   
- [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
+ [Sincronização da Web para replicação de mesclagem](../web-synchronization-for-merge-replication.md)  
   
   

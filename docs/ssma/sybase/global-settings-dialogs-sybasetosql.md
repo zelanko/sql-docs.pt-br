@@ -10,33 +10,33 @@ ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 484460c56ae043561f8f19313e6f09743ba2caed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029083"
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>Configurações globais (caixas de diálogo) (SybaseToSQL)
-Use a página de caixas de diálogo do **configurações globais** caixa de diálogo para especificar as configurações de aviso para o SSMA e uma ação do usuário padrão.  
+Use a página diálogos da caixa de diálogo **configurações globais** para especificar as configurações de ação e aviso do usuário padrão para o SSMA.  
   
-Para acessar as configurações de caixa de diálogo sobre o **ferramentas** menu, selecione **configurações globais**, clique em **GUI** na parte inferior do painel esquerdo e, em seguida, selecione **caixas de diálogo**.  
+Para acessar as configurações da caixa de diálogo no menu **ferramentas** , selecione **configurações globais**, clique em **GUI** na parte inferior do painel esquerdo e, em seguida, selecione **caixas de diálogo**.  
   
 ## <a name="options"></a>Opções  
-**Avisar antes de substituir os objetos**  
-Quando o SSMA converte objetos para o SQL Server, alguns objetos talvez já exista nos metadados do SQL Server do projeto. Esses objetos podem já foram convertidos ou os objetos simplesmente podem ter o mesmo nome dentro do esquema de destino que objetos que serão convertidas.  
+**Avisar antes de substituir objetos**  
+Quando o SSMA converte objetos em SQL Server, alguns objetos podem já existir nos metadados de SQL Server do projeto. Esses objetos podem já ter sido convertidos ou os objetos podem simplesmente ter o mesmo nome dentro do esquema de destino como objetos que você pretende converter.  
   
-Use esta opção para especificar se o SSMA solicitará que você para substituir as definições de objeto duplicados:  
+Use esta opção para especificar se o SSMA deve solicitar que você substitua definições de objetos duplicadas:  
   
--   Se você selecionar **verdadeira**, SSMA exibirá uma caixa de diálogo de aviso quando ele encontra um objeto duplicado. Nesta caixa de diálogo, você pode especificar para substituir os objetos individuais ou todos os objetos duplicados ou para ignorar objetos individuais ou para todos os objetos duplicados.  
+-   Se você selecionar **verdadeiro**, o SSMA exibirá uma caixa de diálogo de aviso quando encontrar um objeto duplicado. Nesta caixa de diálogo, você pode especificar para substituir objetos individuais ou todos os objetos duplicados, ou para ignorar objetos individuais ou todos os objetos duplicados.  
   
--   Se você selecionar **falsos**, o **ação padrão de substituição de objeto** opção é exibida em que você especifica a ação padrão.  
+-   Se você selecionar **falso**, a opção de **ação substituir objeto padrão** será exibida onde você especificar a ação padrão.  
   
-**Ação de padrão de substituição de objeto**  
-Essa opção aparecerá se você selecionar **falsos** para o **Avisar antes de substituir objetos** opção.  
+**Ação padrão de substituição de objeto**  
+Essa opção será exibida se você selecionar **falso** para a opção **avisar antes de substituir objetos** .  
   
-Use esta opção para especificar o comportamento de substituição de objeto padrão:  
+Use esta opção para especificar o comportamento de substituição do objeto padrão:  
   
--   Se você selecionar **verdadeira**, SSMA substituirá automaticamente os objetos nos metadados do projeto do SQL Server que têm o mesmo nome e estão no mesmo esquema de destino como o objeto a ser convertido.  
+-   Se você selecionar **true**, o SSMA substituirá automaticamente os objetos no SQL Server metadados do projeto que têm o mesmo nome e estarão no mesmo esquema de destino que o objeto a ser convertido.  
   
--   Se você selecionar **falsos**, SSMA não substitui os metadados de objeto durante a conversão.  
+-   Se você selecionar **falso**, o SSMA não substituirá os metadados do objeto durante a conversão.  
   

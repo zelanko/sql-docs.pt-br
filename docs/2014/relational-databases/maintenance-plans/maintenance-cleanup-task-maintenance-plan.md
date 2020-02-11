@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035696"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tarefa de limpeza de manutenção (plano de manutenção)
@@ -31,7 +31,7 @@ ms.locfileid: "63035696"
  **Conexão**  
  Exibe a conexão atual.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão com o servidor para usar ao executar esta tarefa. A caixa de diálogo **Nova Conexão** é descrita abaixo.  
   
  **Arquivos de backup**  
@@ -61,7 +61,7 @@ ms.locfileid: "63035696"
  **Excluir arquivos com base na idade do arquivo em tempo de execução da tarefa**  
  Especifique a idade mínima dos arquivos que você deseja excluir fornecendo um número e unidade de tempo na caixa **Excluir arquivos com idade acima de** .  
   
- **Excluir arquivos com idade acima de**  
+ **Excluir arquivos anteriores ao seguinte**  
  Especifique a idade mínima dos arquivos que você deseja excluir, fornecendo um número e unidade de tempo (Dia, Semana, Mês ou Ano). Arquivos com idade acima do período especificado serão excluídos.  
   
  **Exibir T-SQL**  
@@ -95,7 +95,7 @@ ms.locfileid: "63035696"
  **Senha**  
  Forneça uma senha a ser usada na autenticação. Essa opção não está disponível.  
   
-## <a name="see-also"></a>Consulte também  
- [Planos de Manutenção](maintenance-plans.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Planos de manutenção](maintenance-plans.md)  
   
   

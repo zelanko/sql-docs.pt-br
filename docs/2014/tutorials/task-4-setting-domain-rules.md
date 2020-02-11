@@ -11,20 +11,20 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72381738"
 ---
 # <a name="task-4-setting-domain-rules"></a>Tarefa 4: Definindo regras de domínio
-  Nesta tarefa, você cria uma regra para o domínio de **email de contato** para verificar se o endereço de email termina com **\@adventure-Works.com**. Consulte o tópico [criando uma regra de domínio](https://msdn.microsoft.com/library/hh510397.aspx) para obter mais detalhes sobre a página.  
+  Nesta tarefa, você cria uma regra para o domínio de **email de contato** para verificar se o endereço de email termina com ** \@Adventure-Works.com**. Consulte o tópico [criando uma regra de domínio](https://msdn.microsoft.com/library/hh510397.aspx) para obter mais detalhes sobre a página.  
   
 1.  Clique em **email de contato** na lista de **domínios**.  
   
 2.  Alterne para a guia **regras de domínio** no painel direito.  
   
-     ![Botão da barra de ferramentas adicionar um novo domínio](../../2014/tutorials/media/et-settingdomainrules-01.jpg "Botão da barra de ferramentas adicionar um novo domínio")  
+     ![Botão de barra de ferramentas Adicionar uma Nova Regra de Domínio](../../2014/tutorials/media/et-settingdomainrules-01.jpg "Botão de barra de ferramentas Adicionar uma Nova Regra de Domínio")  
   
 3.  No painel direito, clique no botão **Adicionar uma nova regra de domínio** na barra de ferramentas (consulte a imagem) para adicionar uma regra.  
   
@@ -32,29 +32,29 @@ ms.locfileid: "72381738"
   
 5.  No painel **criar uma regra** , clique na **seta para baixo**e selecione **valor termina com**.  
   
-6.  Digite **\@adventure-Works.com** na caixa de texto e pressione **Tab**. Você pode adicionar mais condições clicando em **Adicionar uma nova condição ao** botão da barra de ferramentas da cláusula selecionada no painel **criar uma regra** .  
+6.  Digite ** \@Adventure-Works.com** na caixa de texto e pressione **Tab**. Você pode adicionar mais condições clicando em **Adicionar uma nova condição ao** botão da barra de ferramentas da cláusula selecionada no painel **criar uma regra** .  
   
-     ![Regra de validação de email](../../2014/tutorials/media/et-settingdomainrules-02.jpg "Regra de validação de email")  
+     ![Regra Validação de Email](../../2014/tutorials/media/et-settingdomainrules-02.jpg "Regra Validação de Email")  
   
 7.  Clique no botão **executar a regra de domínio selecionada no dados de teste** na barra de ferramentas no painel direito para testar a regra em relação aos dados de exemplo.  
   
-     ![Executar a regra de domínio no botão da barra de ferramentas dados de teste](../../2014/tutorials/media/et-settingdomainrules-03.jpg "Executar a regra de domínio no botão da barra de ferramentas dados de teste")  
+     ![Executar a Regra de Domínio em botão de barra de ferramentas Testar Dados](../../2014/tutorials/media/et-settingdomainrules-03.jpg "Executar a Regra de Domínio em botão de barra de ferramentas Testar Dados")  
   
 8.  Na caixa de diálogo **testar regra de domínio** , clique em **adiciona um novo termo de teste para o botão regra de domínio** na barra de ferramentas.  
   
-     ![Caixa de diálogo testar regra de domínio](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Caixa de diálogo testar regra de domínio")  
+     ![Caixa de diálogo de regra Testar Domínio](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Caixa de diálogo de regra Testar Domínio")  
   
-9. Digite **frank7\@adventure-works.com** (um valor válido) na coluna **email de contato** .  
+9. Digite **frank7\@Adventure-Works.com** (um valor válido) na coluna **email de contato** .  
   
-10. Repita as duas etapas anteriores para adicionar **joe2\@adventure-work.com** (um valor inválido sem ' ').  
+10. Repita as duas etapas anteriores para **Adicionar\@joe2 Adventure-Work.com** (um valor inválido sem ' ').  
   
 11. Clique no botão último (**teste a regra de domínio em todos os termos**) na barra de ferramentas para testar os dados de entrada em relação à regra.  
   
-     ![Botão de barra de ferramentas testar regra de domínio em todos os termos](../../2014/tutorials/media/et-settingdomainrules-05.jpg "Botão de barra de ferramentas testar regra de domínio em todos os termos")  
+     ![Testar a Regra de Domínio em botão de barra de ferramentas Todos os Termos](../../2014/tutorials/media/et-settingdomainrules-05.jpg "Testar a Regra de Domínio em botão de barra de ferramentas Todos os Termos")  
   
 12. Observe que a primeira entrada será mostrada como um item válido e a segunda como um item inválido.  
   
-     ![Testar resultados da regra de domínio](../../2014/tutorials/media/et-settingdomainrules-06.jpg "Testar resultados da regra de domínio")  
+     ![Resultados da Regra Testar Domínio](../../2014/tutorials/media/et-settingdomainrules-06.jpg "Resultados da Regra Testar Domínio")  
   
 13. Clique em **fechar** para fechar a caixa de diálogo **testar regra de domínio** .  
   

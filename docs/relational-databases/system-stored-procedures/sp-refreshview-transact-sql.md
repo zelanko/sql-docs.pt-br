@@ -18,18 +18,18 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b8c1b95d8d04e2b11982af14971e43e83db146f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075770"
 ---
-# <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
+# <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Atualiza os metadados para a exibição não associada a esquema. Os metadados persistentes de uma exibição podem tornar-se desatualizados devido a alterações em objetos subjacentes dos quais a exibição depende.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,20 +39,20 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @viewname = ] 'viewname'` É o nome da exibição. *viewname* está **nvarchar**, sem padrão. *viewname* pode ser um identificador de várias partes, mas só pode se referir a exibições no banco de dados atual.  
+`[ @viewname = ] 'viewname'`É o nome da exibição. *ViewName* é **nvarchar**, sem padrão. *ViewName* pode ser um identificador de várias partes, mas só pode fazer referência a exibições no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  
   
 ## <a name="remarks"></a>Comentários  
- Se um modo de exibição não for criado com schemabinding, **sp_refreshview** deve ser executado quando forem feitas alterações aos objetos subjacentes à exibição que afetam a definição da exibição. Caso contrário, a exibição poderá gerar resultados inesperados quando consultada.  
+ Se uma exibição não for criada com SCHEMABINDING, **sp_refreshview** deverá ser executada quando forem feitas alterações nos objetos subjacentes à exibição que afetam a definição da exibição. Caso contrário, a exibição poderá gerar resultados inesperados quando consultada.  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissão ALTER na exibição e permissão REFERENCES em tipos definidos pelo usuário de common language runtime (CLR) e coleções de esquema XML referenciadas por colunas de exibição.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-updating-the-metadata-of-a-view"></a>A. Atualizando os metadados de uma exibição  
+### <a name="a-updating-the-metadata-of-a-view"></a>a. Atualizando os metadados de uma exibição  
  O exemplo a seguir atualiza os metadados da exibição `Sales.vIndividualCustomer`.  
   
 ```  
@@ -74,10 +74,10 @@ INNER JOIN sys.sql_expression_dependencies AS sed
 WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [sp_refreshsqlmodule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

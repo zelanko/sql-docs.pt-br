@@ -19,10 +19,10 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038923"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexto de expressão e avaliação de consulta (XQuery)
@@ -32,12 +32,12 @@ ms.locfileid: "68038923"
   
 -   **Contexto estático** -esta é a fase de compilação de consulta. Com base nas informações disponíveis, os erros às vezes ocorrem durante essa análise estática da consulta.  
   
--   **Contexto dinâmico** -esta é a fase de execução de consulta. Mesmo se uma consulta não tiver erros estáticos, como erros durante a compilação da consulta, a consulta poderá retornar erros durante sua execução.  
+-   **Contexto dinâmico** – esta é a fase de execução da consulta. Mesmo se uma consulta não tiver erros estáticos, como erros durante a compilação da consulta, a consulta poderá retornar erros durante sua execução.  
   
 ## <a name="static-context"></a>Contexto estático  
  A inicialização de contexto estático refere-se ao processo de reunir todas as informações para análise estática da expressão. Como parte da inicialização do contexto estático, o seguinte é completado:  
   
--   O **limite o espaço em branco** política é configurada para ser eliminada. Portanto, a boundary white space não é preservada pela **qualquer elemento** e **atributo** construtores na consulta. Por exemplo:  
+-   A política de **espaço em branco de limite** é definida como strip. Portanto, o espaço em branco de limite não é preservado pelos construtores de **elemento** e **atributo** na consulta. Por exemplo:  
   
     ```  
     declare @x xml  
@@ -57,9 +57,9 @@ ms.locfileid: "68038923"
   
     -   Um conjunto de namespaces predefinidos.  
   
-    -   Qualquer namespace definido usando WITH XMLNAMESPACES. Para obter mais informações, consulte [adicionar Namespaces a consultas com WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
+    -   Qualquer namespace definido usando WITH XMLNAMESPACES. Para obter mais informações, consulte [Adicionar namespaces a consultas com with SQLnamespaces](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
   
-    -   Qualquer namespace definido no prólogo da consulta. Observe que as declarações de namespace no prólogo podem substituir a declaração de namespace no WITH XMLNAMESPACES. Por exemplo, na consulta a seguir, WITH XMLNAMESPACES declara um prefixo (pd) que associa ao namespace (`https://someURI`). Entretanto, na cláusula WHERE, o prólogo da consulta substitui a associação.  
+    -   Qualquer namespace definido no prólogo da consulta. Observe que as declarações de namespace no prólogo podem substituir a declaração de namespace no WITH XMLNAMESPACES. Por exemplo, na consulta a seguir, WITH XMLNAMESPACES declara um prefixo (PD) que o associa ao namespace (`https://someURI`). Entretanto, na cláusula WHERE, o prólogo da consulta substitui a associação.  
   
         ```  
         WITH XMLNAMESPACES ('https://someURI' AS pd)  
@@ -77,9 +77,9 @@ ms.locfileid: "68038923"
   
      Todas essas associações de namespace são resolvidas durante a inicialização de contexto estática.  
   
--   Se a consulta com um tipo **xml** coluna ou variável, os componentes da coleção de esquemas XML associada com a coluna ou variável são importados para o contexto estático. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+-   Se você consultar uma coluna ou variável **XML** com tipo, os componentes da coleção de esquema XML associados à coluna ou variável serão importados para o contexto estático. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
--   Para todo tipo atômico nos esquemas importados, uma função de conversão também se torna disponível no contexto estático. Isso é ilustrado no exemplo a seguir. Neste exemplo, uma consulta é especificada em relação a um tipado **xml** variável. A coleção de esquemas XML associada a essa variável define um tipo atômico, myType. Correspondendo a esse tipo, uma função de conversão **myType()** , está disponível durante a análise estática. A expressão de consulta (`ns:myType(0)`) retorna um valor de myType.  
+-   Para todo tipo atômico nos esquemas importados, uma função de conversão também se torna disponível no contexto estático. Isso é ilustrado no exemplo a seguir. Neste exemplo, uma consulta é especificada em uma variável **XML** com tipo. A coleção de esquemas XML associada a essa variável define um tipo atômico, myType. Correspondente a esse tipo, uma função de conversão, **com MyType ()**, está disponível durante a análise estática. A expressão de consulta (`ns:myType(0)`) retorna um valor de myType.  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -104,7 +104,7 @@ ms.locfileid: "68038923"
     SELECT @var.query('declare namespace ns="myNS"; ns:myType(0)')  
     ```  
   
-     No exemplo a seguir, a função de conversão de **int** tipo XML interno é especificado na expressão.  
+     No exemplo a seguir, a função de conversão para o tipo XML interno **int** é especificada na expressão.  
   
     ```  
     declare @x xml  
@@ -119,7 +119,7 @@ ms.locfileid: "68038923"
   
 2.  Resolução dos nomes de tipo e função especificados na expressão.  
   
-3.  Digitação estática da consulta. Isso garante que a consulta é do tipo seguro. Por exemplo, a consulta a seguir retorna um erro estático, pois o **+** operador requer argumentos de tipo primitivo numéricos:  
+3.  Digitação estática da consulta. Isso garante que a consulta é do tipo seguro. Por exemplo, a consulta a seguir retorna um erro estático, porque **+** o operador requer argumentos de tipo primitivos numéricos:  
   
     ```  
     declare @x xml  
@@ -127,7 +127,7 @@ ms.locfileid: "68038923"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     No exemplo a seguir, o **Value ()** operador requer um singleton. Conforme especificado no esquema XML, pode haver vários \<Elem > elementos. A análise estática da expressão estabelece que não é de tipo seguro e um erro estático é retornado. Para resolver o erro, a expressão deve ser reescrita para especificar um singleton (`data(/x:Elem)[1]`) explicitamente.  
+     No exemplo a seguir, o operador **Value ()** requer um singleton. Conforme especificado no esquema XML, pode haver vários \<elementos de> Elem. A análise estática da expressão estabelece que não é de tipo seguro e um erro estático é retornado. Para resolver o erro, a expressão deve ser reescrita para especificar um singleton (`data(/x:Elem)[1]`) explicitamente.  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  
@@ -152,7 +152,7 @@ ms.locfileid: "68038923"
   
 -   Não há suporte para o modo de compatibilidade XPath.  
   
--   Para a construção XML, só há suporte para o modo de construção de tira. Essa é a configuração padrão. Portanto, o tipo do nó de elemento construído é do **xdt: sem-tipo** são de tipo e os atributos do **XDT: untypedatomic** tipo.  
+-   Para a construção XML, só há suporte para o modo de construção de tira. Essa é a configuração padrão. Portanto, o tipo do nó de elemento construído é de **xdt: tipo não tipado** e os atributos são do tipo **xdt: untypedAtomic** .  
   
 -   Só há suporte para o modo de ordenação ordenada.  
   
@@ -160,20 +160,20 @@ ms.locfileid: "68038923"
   
 -   Não há suporte para a funcionalidade de URI base.  
   
--   **Fn:doc()** não tem suporte.  
+-   **fn: doc ()** sem suporte.  
   
--   **Fn:Collection()** não tem suporte.  
+-   **fn: Collection ()** sem suporte.  
   
 -   O sinalizador estático do XQuery não é fornecido.  
   
--   O agrupamento associado a **xml** tipo de dados é usado. Esta ordenação sempre é definida como ordenação Unicode Codepoint.  
+-   O Agrupamento associado ao tipo de dados **XML** é usado. Esta ordenação sempre é definida como ordenação Unicode Codepoint.  
   
 ## <a name="dynamic-context"></a>Contexto dinâmico  
  O contexto dinâmico refere-se a informações que devem estar disponíveis no momento que a expressão é executada. Além do contexto estático, as informações a seguir são inicializadas como parte do contexto dinâmico:  
   
 -   O foco de expressão, como item de contexto, posição de contexto e tamanho de contexto, é inicializado como mostrado a seguir. Observe que todos esses valores podem ser substituídos pelo [método Nodes ()](../t-sql/xml/nodes-method-xml-data-type.md).  
   
-    -   O **xml** tipo de dados define o item de contexto, o nó que está sendo processado, para o nó do documento.  
+    -   O tipo de dados **XML** define o item de contexto, o nó que está sendo processado, para o nó do documento.  
   
     -   A posição de contexto, a posição do item de contexto relativo aos nós que são processados, é primeiro configurada como 1.  
   
@@ -182,16 +182,16 @@ ms.locfileid: "68038923"
 ### <a name="implementation-restrictions"></a>Restrições de implementação  
  A seguir são descritas as limitações relacionadas ao contexto dinâmico:  
   
--   O **data e hora atuais** funções de contexto **fn:current-data**, **fn:current-hora**, e **fn:current-dateTime**, não são com suporte.  
+-   As funções de contexto de **data e hora atuais** , **fn:** Current-Date, **fn: Current-Time**e **fn: Current-DateTime**, não têm suporte.  
   
--   O **fuso horário implícito** é fixo como UTC+0 e não pode ser alterado.  
+-   O **fuso horário implícito** é fixo para UTC + 0 e não pode ser alterado.  
   
--   O **fn:doc()** não há suporte para a função. Todas as consultas são executadas no **xml** variáveis ou colunas do tipo.  
+-   Não há suporte para a função **fn: doc ()** . Todas as consultas são executadas em colunas do tipo **XML** ou variáveis.  
   
--   O **fn:collection()** não há suporte para a função.  
+-   Não há suporte para a função **fn: Collection ()** .  
   
-## <a name="see-also"></a>Consulte também  
- [Fundamentos de XQuery](../xquery/xquery-basics.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Noções básicas do XQuery](../xquery/xquery-basics.md)   
  [Comparar XML digitado com XML não digitado](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Coleções de esquemas XML &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)  
   

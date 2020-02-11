@@ -1,5 +1,5 @@
 ---
-title: Definindo a granularidade da dimensão dentro de um grupo de medidas | Microsoft Docs
+title: Definindo a granularidade da dimensão em um grupo de medidas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078457"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definindo a granularidade da dimensão dentro de um grupo de medidas
@@ -32,9 +32,9 @@ ms.locfileid: "66078457"
   
 1.  Mude para a exibição da fonte de dados **Adventure Works DW 2012** .  
   
-2.  Clique com botão direito em qualquer lugar na **organizador** painel, clique em **novo diagrama**e, em seguida, nomeie o diagrama `Sales Quotas`.  
+2.  Clique com o botão direito do mouse em qualquer lugar no painel **organizador de diagramas** , clique em `Sales Quotas` **novo diagrama**e, em seguida, nomeie o diagrama.  
   
-3.  Arraste o **funcionário**, **região de vendas**, e `Date` tabelas o **tabelas** painel para o **diagrama** painel.  
+3.  Arraste o **funcionário**, a **região**de vendas `Date` e as tabelas do painel **tabelas** para o painel **diagrama** .  
   
 4.  Adicione a tabela **FactSalesQuota** ao painel **Diagrama** clicando com o botão direito do mouse em qualquer lugar do painel **Diagrama** e selecionando **Adicionar/Remover Tabelas**.  
   
@@ -44,49 +44,50 @@ ms.locfileid: "66078457"
   
      Observe que a granulação dos dados dentro dessa tabela é trimestral, que é o nível mais baixo de detalhes na tabela FactSalesQuota.  
   
-6.  No Designer de exibição da fonte de dados, alterar o **FriendlyName** propriedade da **FactSalesQuota** tabela `SalesQuotas`.  
+6.  No designer de exibição da fonte de dados, altere a propriedade **FriendlyName** da tabela `SalesQuotas` **FactSalesQuota** para.  
   
 7.  Mude para o cubo Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e clique na guia **Estrutura do Cubo** .  
   
-8.  Clique com botão direito em qualquer lugar na **medidas** painel, clique em **novo grupo de medidas**, clique em `SalesQuotas` no **novo grupo de medidas** caixa de diálogo caixa e, em seguida, clique em **Okey**.  
+8.  Clique com o botão direito do mouse em qualquer lugar no painel **medidas** , clique `SalesQuotas` em **novo grupo de medidas**, clique na caixa de diálogo **novo grupo de medidas** e clique em **OK**.  
   
-     O `Sales Quotas` grupo de medidas é exibido na **medidas** painel. No **dimensões** painel, observe que uma nova `Date` dimensão de cubo também está definida com base no `Date` dimensão de banco de dados. Uma nova dimensão do cubo relacionada ao tempo é definida porque o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não sabe quais dimensões do cubo relacionadas ao tempo existentes devem ser relacionadas à coluna **DateKey** da tabela de fatos **FactSalesQuota** subjacente ao grupo de medidas Cotas de Vendas. Você alterará isso depois em outra tarefa neste tópico.  
+     O `Sales Quotas` grupo de medidas aparece no painel **medidas** . No painel **dimensões** , observe que uma nova `Date` dimensão de cubo também é definida, com base na `Date` dimensão do banco de dados. Uma nova dimensão do cubo relacionada ao tempo é definida porque o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não sabe quais dimensões do cubo relacionadas ao tempo existentes devem ser relacionadas à coluna **DateKey** da tabela de fatos **FactSalesQuota** subjacente ao grupo de medidas Cotas de Vendas. Você alterará isso depois em outra tarefa neste tópico.  
   
-9. Expanda o `Sales Quotas` grupo de medidas.  
+9. Expanda `Sales Quotas` o grupo de medidas.  
   
 10. No painel **Medidas** , selecione **Cota do Valor de Vendas**e defina o valor da propriedade **FormatString** como **Moeda** na janela Propriedades.  
   
-11. Selecione o **contagem de cotas de vendas** medir e, em seguida, digite `#,#` como o valor para o **FormatString** propriedade na janela Propriedades.  
+11. Selecione a medida **contagem de cotas de vendas** e, `#,#` em seguida, digite como o valor da propriedade **FormatString** no janela Propriedades.  
   
-12. Excluir o **Calendar Quarter** medida a `Sales Quotas` grupo de medidas.  
+12. Exclua a medida **trimestre** do calendário `Sales Quotas` do grupo de medidas.  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] detectou que a coluna subjacente à medida Trimestre do Calendário contém medidas. Entretanto, essa coluna e a coluna Trimestre Calendário contêm os valores que você utilizará para vincular o grupo de medidas Cotas de Vendas à dimensão Data posteriormente neste tópico.  
+     
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] detectou que a coluna subjacente à medida Trimestre do Calendário contém medidas. Entretanto, essa coluna e a coluna Trimestre Calendário contêm os valores que você utilizará para vincular o grupo de medidas Cotas de Vendas à dimensão Data posteriormente neste tópico.  
   
-13. No **medidas** painel, clique com botão direito do `Sales Quotas` grupo de medidas e, em seguida, clique em **nova medida**.  
+13. No painel **medidas** , clique com o botão direito `Sales Quotas` do mouse no grupo de medidas e clique em **nova medida**.  
   
      A caixa de diálogo **Nova Medida** é exibida. Essa caixa contém as colunas de origem disponíveis para uma medida com o tipo de uso **Soma**.  
   
-14. No **nova medida** caixa de diálogo, selecione **contagem distinta** no **uso** lista, verifique `SalesQuotas` está selecionado no **tabeladeorigem** lista, selecione **EmployeeKey** no **coluna de origem** lista e, em seguida, clique em **Okey**.  
+14. Na caixa de diálogo **nova medida** , selecione **contagem distinta** na lista **uso** , verifique se `SalesQuotas` está selecionado na lista **tabela de origem** , selecione **EmployeeKey** na lista **coluna de origem** e clique em **OK**.  
   
      Observe que a medida é criada em um novo grupo de medidas chamado **Cotas de Vendas 1**. Medidas de contas distintas no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] são criadas em seus próprios grupos de medidas para maximizar o desempenho de processamento.  
   
-15. Altere o valor para o **nome** propriedade para o **conta distinta da chave de funcionário** medida a `Sales Person Count`e, em seguida, digite `#,#` como o valor para o **FormatString** propriedade.  
+15. Altere o valor da propriedade **Name** da medida de **contagem distinta da chave Employee** para `Sales Person Count`e, em seguida `#,#` , digite como o valor para a propriedade **FormatString** .  
   
 ## <a name="browsing-the-measures-in-the-sales-quota-measure-group-by-date"></a>Navegando pelas medidas do grupo de medidas Sales Quota por data  
   
 1.  No menu **Compilar** , clique em **Implantar Tutorial do Analysis Services**.  
   
-2.  Quando a implantação for concluída com êxito, clique na guia **Navegador** do Designer do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e clique no botão **Reconectar**.  
+2.  Quando a implantação for concluída com êxito, clique na guia **Navegador** do Designer do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e clique no botão **Reconectar** .  
   
 3.  Clique no atalho do Excel e em **Habilitar**.  
   
-4.  Na lista de campos da tabela dinâmica, expanda o `Sales Quotas` grupo de medidas e, em seguida, arraste o **Sales Amount Quota** medida à área valores.  
+4.  Na lista de campos da tabela dinâmica, `Sales Quotas` expanda o grupo de medidas e arraste a medida **cota do valor de vendas** até a área valores.  
   
 5.  Expanda a dimensão **Sales Territory** e arraste a hierarquia **Sales Territories** definida pelo usuário para Rótulos de Linha.  
   
      Observe que a dimensão do cubo Sales Territory não está relacionada, direta ou indiretamente, à tabela Fact Sales Quota, como mostra a imagem a seguir:  
   
-     ![Dimensão do cubo Sales Territory](../../2014/tutorials/media/l5-granularity-2.gif "dimensão de cubo região de vendas")  
+     ![Dimensão do cubo de região de vendas](../../2014/tutorials/media/l5-granularity-2.gif "Dimensão de cubo Região de Vendas")  
   
      Na próxima série de etapas deste tópico, você definirá uma relação de dimensão de referência entre essa dimensão e essa tabela de fatos.  
   
@@ -94,25 +95,25 @@ ms.locfileid: "66078457"
   
 7.  Na lista Campos da Tabela Dinâmica, selecione a hierarquia **Sales Territories** definida pelo usuário e clique na seta para baixo à direita.  
   
-     ![Hierarquia da região de vendas na lista de campos](../../2014/tutorials/media/l5-granularity-1a.png "hierarquia região de vendas na lista de campos")  
+     ![A hierarquia Região de Vendas na lista de campos](../../2014/tutorials/media/l5-granularity-1a.png "A hierarquia Região de Vendas na lista de campos")  
   
 8.  No filtro, clique na caixa de seleção Selecionar Tudo para desmarcar todas as seleções e escolha somente **América do Norte**.  
   
-     ![Painel de filtro para a seleção de América do Norte](../../2014/tutorials/media/l5-granularity-1b.png "painel de filtro para a seleção de América do Norte")  
+     ![Painel de filtros para seleção de América do Norte](../../2014/tutorials/media/l5-granularity-1b.png "Painel de filtros para seleção de América do Norte")  
   
-9. Na lista de campos da tabela dinâmica, expanda `Date`.  
+9. Na lista de campos da tabela dinâmica `Date`, expanda.  
   
 10. Arraste a hierarquia de usuário **Date.Fiscal Date** até Rótulos de Linha  
   
 11. Na Tabela Dinâmica, clique na seta para baixo ao lado de Rótulos de Linha. Desmarque todos os anos, com exceção de **FY 2008**.  
   
-     Observe que somente o **julho de 2007** membro do **mês** nível é exibido, em vez da **de julho de 2007**, **de agosto de 2007**e **De setembro de 2007** os membros **mês** nível e que somente o **1 de julho de 2007** membro do `Date` nível é exibido, em vez de todos os 31 dias. Esse comportamento ocorre porque a granulação dos dados na tabela de fatos é no nível do trimestre e o detalhamento do `Date` dimensão é diária. Você alterará esse comportamento na próxima tarefa deste tópico.  
+     Observe que apenas o membro de **julho de 2007** do nível de **mês** é exibido, em vez dos membros de **julho, 2007**, **agosto, 2007**e **setembro, 2007** do nível de **mês** e que apenas o membro 1º de julho `Date` de **2007** do nível é exibido, em vez de todos os 31 dias. Esse comportamento ocorre porque a granulação dos dados na tabela de fatos está no nível trimestre e a granulação da `Date` dimensão é o nível diário. Você alterará esse comportamento na próxima tarefa deste tópico.  
   
      Observe também que o valor **Cota do Valor de Vendas** para os níveis mensal e diário é o mesmo valor do nível trimestral, US$ 13.733.000,00. Isso acontece porque o menor nível de dados no grupo de medidas Cotas de Vendas é o trimestral. Você alterará esse comportamento na Lição 6.  
   
      A imagem a seguir mostra os valores de **Cota do Valor de Vendas**.  
   
-     ![Valores de vendas Amount Quota](../../2014/tutorials/media/l5-granularity-3.png "cota do valor de valores de vendas")  
+     ![Valores para a cota de vendas](../../2014/tutorials/media/l5-granularity-3.png "Valores para a cota de vendas")  
   
 ## <a name="defining-dimension-usage-properties-for-the-sales-quotas-measure-group"></a>Definindo propriedades de uso de dimensão para o grupo de medidas Sales Quotas  
   
@@ -120,13 +121,13 @@ ms.locfileid: "66078457"
   
 2.  No painel **Atributos** , selecione **SalesTerritoryKey**e defina a propriedade **AttributeHierarchyVisible** como **False** na janela Propriedades, a propriedade **AttributeHierarchyOptimizedState** como **NotOptimized**e a propriedade **AttributeHierarchyOrdered** como **False**.  
   
-     Esse atributo é necessário para vincular a **região de vendas** de dimensão para o `Sales Quotas` e **cotas de vendas 1** grupos de medidas como uma dimensão referenciada.  
+     Esse atributo é necessário para vincular a dimensão **região de vendas** aos `Sales Quotas` grupos de medidas e **cotas de vendas 1** como uma dimensão referenciada.  
   
-3.  No Designer de cubo para o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo do Tutorial, clique no **uso da dimensão** guia e, em seguida, examine o uso da dimensão dentro de `Sales Quotas` e **cotas de vendas 1** grupos de medidas.  
+3.  No designer de cubo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo do tutorial do, clique na guia **uso da dimensão** e examine o uso da dimensão `Sales Quotas` dentro dos grupos de medidas e **cotas de vendas 1** .  
   
-     Observe que o **funcionário** e `Date` dimensões do cubo são vinculadas para o **cotas de vendas de cotas de vendas 1** grupos de medidas através de relações regulares. Observe também que a dimensão do cubo **Região de Vendas** não está vinculada a nenhum desses grupos de medidas.  
+     Observe que as **** dimensões de `Date` funcionário e cubo estão vinculadas aos grupos de medidas Sales **Quotasand Sales 1** por meio de relações regulares. Observe também que a dimensão do cubo **Região de Vendas** não está vinculada a nenhum desses grupos de medidas.  
   
-4.  Clique na célula na interseção de **território de vendas** dimensão e o `Sales Quotas` grupo de medidas e, em seguida, clique no botão Procurar ( **...** ). A caixa de diálogo **Definir Relação** é aberta.  
+4.  Clique na célula na interseção da dimensão **região de vendas** e no `Sales Quotas` grupo de medidas e, em seguida, clique no botão procurar (**...**). A caixa de diálogo **definir relação** é aberta.  
   
 5.  Na lista **Selecionar tipo de relação** , selecione **Referenciada**.  
   
@@ -140,7 +141,7 @@ ms.locfileid: "66078457"
   
 10. Clique em **OK**.  
   
-11. Clique na célula na interseção de **território de vendas** dimensão e o **cotas de vendas 1** grupo de medidas e, em seguida, clique no botão Procurar ( **...** ). A caixa de diálogo **Definir Relação** é aberta.  
+11. Clique na célula na interseção da dimensão **região de vendas** e no grupo de medidas **cotas de vendas 1** e, em seguida, clique no botão procurar (**...**). A caixa de diálogo **definir relação** é aberta.  
   
 12. Na lista **Selecionar tipo de relação** , selecione **Referenciada**.  
   
@@ -154,15 +155,15 @@ ms.locfileid: "66078457"
   
 17. Clique em **OK**.  
   
-18. Excluir o `Date` dimensão do cubo.  
+18. Exclua `Date` a dimensão do cubo.  
   
-     Em vez de ter quatro dimensões do cubo relacionadas ao tempo, você usará o **data do pedido** dimensão do cubo no `Sales Quotas` grupo de medidas como a data na qual as cotas de vendas serão dimensionadas. Você também usará essa dimensão do cubo como a dimensão de data primária no cubo.  
+     Em vez de ter quatro dimensões de cubo relacionadas ao tempo, você usará a dimensão de cubo Data `Sales Quotas` do **pedido** no grupo de medidas como a data em que as cotas de vendas serão dimensionadas. Você também usará essa dimensão do cubo como a dimensão de data primária no cubo.  
   
-19. No **dimensões** listar, renomeie o **data do pedido** dimensão de cubo para `Date`.  
+19. Na lista **dimensões** , renomeie a dimensão do cubo Data `Date`do **pedido** como.  
   
-     Renomeando a **data do pedido** dimensão de cubo para `Date` torna mais fácil para os usuários entendam como a dimensão de data primária desse cubo.  
+     Renomear a dimensão do cubo de `Date` data do **pedido** para facilitar para os usuários a compreensão de sua função como a dimensão de data primária neste cubo.  
   
-20. Clique no botão Procurar ( **...** ) na célula na interseção de `Sales Quotas` grupo de medidas e o `Date` dimensão.  
+20. Clique no botão procurar (**...**) na célula na interseção do grupo de `Sales Quotas` medidas e da `Date` dimensão.  
   
 21. Na caixa de diálogo **Definir Relação** , selecione **Regular** na lista **Selecionar tipo de relação** .  
   
@@ -179,9 +180,9 @@ ms.locfileid: "66078457"
   
 ## <a name="defining-attribute-relationships-between-the-calendar-quarter-attribute-and-the-other-dimension-attributes-in-the-date-dimension"></a>Definindo relações de atributo entre o atributo Calendar Quarter e outros atributos de dimensão na dimensão Date  
   
-1.  Alterne para **Designer de dimensão** para o `Date` da dimensão e, em seguida, clique no **relações de atributo** guia.  
+1.  Alterne para **** o `Date` designer de dimensão da dimensão e, em seguida, clique na guia relações de **atributo** .  
   
-     Observe que, embora **ano civil** esteja vinculado à **trimestre do calendário** por meio de **semestre do calendário** de atributo, o calendário fiscal atributos estão vinculados somente a um outro; eles não estão vinculados à **trimestre do calendário** do atributo e, portanto, não serão agregados corretamente no `Sales Quotas` grupo de medidas.  
+     Observe que, embora o **ano civil** esteja vinculado ao **trimestre do calendário** por meio do atributo **semestre do calendário** , os atributos do calendário fiscal são vinculados somente uns aos outros; Eles não estão vinculados ao atributo de **trimestre do calendário** e, portanto, não serão `Sales Quotas` agregados corretamente no grupo de medidas.  
   
 2.  No diagrama, clique com o botão direito do mouse no atributo **Trimestre Calendário** e selecione **Nova Relação de Atributo**.  
   
@@ -189,7 +190,7 @@ ms.locfileid: "66078457"
   
 4.  Clique em **OK**.  
   
-     Observe que uma mensagem de aviso será exibida informando que o `Date` dimensão contém uma ou mais relações de atributo redundantes que podem impedir que dados sejam agregados quando um atributo não chave é usado como um atributo de granularidade.  
+     Observe que uma mensagem de aviso é exibida informando que a dimensão contém uma ou mais relações de atributo redundantes que podem impedir que os `Date` dados sejam agregados quando um atributo não chave é usado como um atributo de granularidade.  
   
 5.  Exclua a relação de atributo entre os atributos **Month Name** e **Fiscal Quarter** .  
   
@@ -217,14 +218,14 @@ ms.locfileid: "66078457"
   
      Observe também que todos os membros do nível trimestre fiscal contêm o mesmo valor que o nível trimestral. Usando **Q1 FY 2008** como exemplo, a cota de US$ 9.180.000,00 para **Q1 FY 2008** também é o valor de cada um de seus membros. Isso acontece porque a granulação dos dados na tabela de fatos é trimestral e a granulação da dimensão Date também é trimestral. Na Lição 6, você aprenderá a alocar a quantia trimestral proporcionalmente a cada mês.  
   
-     ![Grupo de medidas cota vendas dimensionado corretamente](../../2014/tutorials/media/l5-granularity-7.gif "grupo de medidas Sales Quota dimensionado corretamente")  
+     ![Grupo de medidas Cota de Vendas dimensionado corretamente](../../2014/tutorials/media/l5-granularity-7.gif "Grupo de medidas Cota de Vendas dimensionado corretamente")  
   
 ## <a name="next-lesson"></a>Próxima lição  
  [Lição 6: Definindo cálculos](lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Definir uma relação Regular e propriedades de relação Regular](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Definir uma relação regular e propriedades de relação regular](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
+ [Trabalhar com diagramas no designer de exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

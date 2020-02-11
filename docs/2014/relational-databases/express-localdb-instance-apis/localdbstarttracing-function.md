@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5dcb8b62b3ef2b0e6419bfff82dfa572d5fb0d39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135245"
 ---
 # <a name="localdbstarttracing-function"></a>Função LocalDBStartTracing
   Habilita o rastreamento de chamadas de API para todas as instâncias de LocalDB do SQL Server Express de propriedade do usuário atual do Windows.  
   
- **Arquivo de cabeçalho:** sqlncli.h  
+ **Arquivo de cabeçalho:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63135245"
 HRESULT LocalDBStartTracing();  
 ```  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  S_OK  
  A função foi bem-sucedida.  
   
@@ -47,7 +47,7 @@ HRESULT LocalDBStartTracing();
 ## <a name="remarks"></a>Comentários  
  Para obter uma amostra do código que usa a API LocalDB, consulte [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalho e informações de versão de LocalDB do SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  
   
   

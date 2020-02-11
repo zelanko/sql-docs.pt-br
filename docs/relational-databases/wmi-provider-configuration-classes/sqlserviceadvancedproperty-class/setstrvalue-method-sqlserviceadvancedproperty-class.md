@@ -18,10 +18,10 @@ ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 02e0e825b52263acb819c4fedaa73efc6944741b
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659510"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Método SetStrValue (classe SqlServiceAdvancedProperty)
@@ -36,12 +36,12 @@ object.SetStrValue(StrValue)
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Um objeto da [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) que representa uma propriedade avançada.  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
 |*StrValue*|Um valor da cadeia de caracteres que especifica o valor da propriedade avançada.|  
   
@@ -51,7 +51,7 @@ object.SetStrValue(StrValue)
 ## <a name="remarks"></a>Comentários  
  O tipo de valor da propriedade deve ser *string* para definir a propriedade como um valor da cadeia de caracteres.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493820"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definindo e usando uma ação de detalhamento
@@ -30,7 +30,7 @@ ms.locfileid: "69493820"
   
      A imagem a seguir mostra a guia **Ações** do Designer de Cubo.  
   
-     ![Guia ações do designer de cubo](../../2014/tutorials/media/l8-action1.gif "Guia ações do designer de cubo")  
+     ![Guia Ações do Designer de Cubo](../../2014/tutorials/media/l8-action1.gif "Guia Ações do Designer de Cubo")  
   
 2.  Na barra de ferramentas da guia **Ações** , clique no botão **Nova Ação de Detalhamento** .  
   
@@ -46,11 +46,11 @@ ms.locfileid: "69493820"
   
 6.  Na lista **Retornar Colunas** , marque as caixas de seleção **Descrição do Item** e **Número do Pedido** e clique em **OK**. A imagem a seguir mostra como o modelo Ação deve estar sendo exibido neste momento no procedimento.  
   
-     ![Caixa colunas](../../2014/tutorials/media/l8-action3.gif " de detalhamento Caixa colunas") de detalhamento  
+     ![Caixa Colunas de Detalhamento](../../2014/tutorials/media/l8-action3.gif "Caixa Colunas de Detalhamento")  
   
 7.  Expanda a caixa **Propriedades Adicionais** , como mostra a imagem a seguir.  
   
-     ![Caixa de propriedades adicionais](../../2014/tutorials/media/l8-action4.gif "Caixa de propriedades adicionais")  
+     ![Caixa Propriedades Adicionais](../../2014/tutorials/media/l8-action4.gif "Caixa Propriedades Adicionais")  
   
 8.  Na caixa **máximo de linhas** , digite `10`.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "69493820"
   
      Essas configurações limitam o número de linhas a serem retornadas e especificam a legenda que será exibida no menu do aplicativo cliente. A imagem a seguir mostra essas configurações na caixa **Propriedades Adicionais** .  
   
-     ![Caixa de propriedades adicionais](../../2014/tutorials/media/l8-action5.gif "Caixa de propriedades adicionais")  
+     ![Caixa Propriedades Adicionais](../../2014/tutorials/media/l8-action5.gif "Caixa Propriedades Adicionais")  
   
 ## <a name="using-the-drillthrough-action"></a>Usando a ação de detalhamento  
   
@@ -104,11 +104,11 @@ ms.locfileid: "69493820"
   
     -   ShipDateKey  
   
-6.  Altere a propriedade **nome** do atributo de chave de data do `Order Date` **pedido** para, clique no botão procurar da propriedade **coluna de nome** e, na caixa de diálogo coluna de **nome** , selecione **Data** como a tabela de origem e selecione SimpleDate como a coluna de origem. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Altere a propriedade **nome** do atributo de **chave de data** do `Order Date` pedido para, clique no botão procurar da propriedade **coluna de nome** e, na caixa de diálogo coluna de **nome** , selecione **Data** como a tabela de origem e selecione SimpleDate como a coluna de origem. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Altere a propriedade **nome** do atributo de chave de data de `Due Date` **vencimento** para e, em seguida, usando o mesmo método que o atributo de chave de **data do pedido** , altere a propriedade de coluna de **nome** desse atributo para **Date. SimpleDate (WCHAR)** .  
+7.  Altere a propriedade **nome** do atributo de **chave de data** de `Due Date`vencimento para e, em seguida, usando o mesmo método que o atributo de **chave de data do pedido** , altere a propriedade de coluna de **nome** desse atributo para **Date. SimpleDate (WCHAR)**.  
   
-8.  Altere a propriedade **Name** do atributo de chave de data de `Ship Date` **envio** para e altere a propriedade de **coluna de nome** desse atributo para **Date. SimpleDate (WCHAR)** .  
+8.  Altere a propriedade **Name** do atributo de **chave de data** de `Ship Date`envio para e altere a propriedade de **coluna de nome** desse atributo para **Date. SimpleDate (WCHAR)**.  
   
 9. Mude para a guia **Ações** do Designer do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -122,7 +122,7 @@ ms.locfileid: "69493820"
   
      A imagem a seguir mostra essas colunas selecionadas.  
   
-     ![Caixa colunas](../../2014/tutorials/media/l8-action7.gif " de detalhamento Caixa colunas") de detalhamento  
+     ![Caixa Colunas de Detalhamento](../../2014/tutorials/media/l8-action7.gif "Caixa Colunas de Detalhamento")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Revisando a ação de detalhamento modificada  
   
@@ -145,8 +145,8 @@ ms.locfileid: "69493820"
 ## <a name="next-lesson"></a>Próxima lição  
  [Lição 9: Definindo perspectivas e traduções](lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Ações &#40;Analysis Services-dados multidimensionais&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ações &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Ações em modelos multidimensionais](multidimensional-models/actions-in-multidimensional-models.md)   
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definindo uma relação de fatos](lesson-5-2-defining-a-fact-relationship.md)   

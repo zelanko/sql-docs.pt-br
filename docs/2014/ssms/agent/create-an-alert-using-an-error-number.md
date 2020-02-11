@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0884a37c443f863cf0c1001bae1242852db3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135347"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Criar um alerta usando um número de erro
-  Este tópico descreve como criar um alerta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que ocou ou oe no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e que será emitido ao ocou ou oer um erro de número específico usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Este tópico descreve como criar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta do Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que será gerado quando ocorrer um erro de um número específico usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o ou [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
   
  **Neste tópico**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63135347"
   
      [Segurança](#Security)  
   
--   **Para criar um alerta usando um número de erro com:**  
+-   **Para criar um alerta usando um número de erro, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,7 +42,8 @@ ms.locfileid: "63135347"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um modo gráfico e fácil para gerenciar o sistema de alertas inteiro e é recomendado para configurar uma infraestrutura de alerta.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um modo gráfico e fácil para gerenciar o sistema de alertas inteiro e é recomendado para configurar uma infraestrutura de alerta.  
   
 -   Eventos gerados com **xp_logevent** ocorrem no banco de dados mestre. Portanto, **xp_logevent** não dispara um alerta a menos que o **@database_name** para o alerta seja **'mestre'** ou NULL.  
   
@@ -100,6 +101,6 @@ ms.locfileid: "63135347"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_add_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql).  
+ Para obter mais informações, consulte [sp_add_alert &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql).  
   
   

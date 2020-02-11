@@ -1,5 +1,5 @@
 ---
-title: Editor de transformação de cache (página Gerenciador de Conexão) | Microsoft Docs
+title: Editor de transformação cache (página Gerenciador de conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061069"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Editor de Transformação Cache (Página Gerenciador de Conexões)
@@ -27,16 +27,16 @@ ms.locfileid: "66061069"
  Para obter mais informações sobre o Gerenciador de conexões de cache, consulte [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
 ## <a name="options"></a>Opções  
- **Cache connection manager**  
+ **Gerenciador de conexões de cache**  
  Selecione um gerenciador de conexões de Cache existente usando a lista ou crie uma conexão nova usando o botão **Novo** .  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão usando a caixa de diálogo Editor de Gerenciador de Conexões de Cache.  
   
  **Editar**  
  Modifique uma conexão existente.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor da Transformação Cache &#40;Página Mapeamentos&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de transformação cache &#40;página Mapeamentos&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

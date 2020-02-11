@@ -1,5 +1,5 @@
 ---
-title: Exemplo da propriedade Index (VC + +) e do método Seek | Microsoft Docs
+title: Exemplo da propriedade index e do método Seek (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e19a30e60bb953dd8f521699b23fd00406d2d95d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931071"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Exemplo da propriedade Index e do método Seek (VC++)
-Este exemplo usa o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [busca](../../../ado/reference/ado-api/seek-method.md) método e [índice](../../../ado/reference/ado-api/index-property.md) propriedade em conjunto com um determinado ***ID do funcionário***, para localizar o nome do funcionário na ***funcionários*** tabela do banco de dados Nwind.  
+Este exemplo usa o método [Seek](../../../ado/reference/ado-api/seek-method.md) do objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e a propriedade [index](../../../ado/reference/ado-api/index-property.md) em conjunto com uma determinada ***ID de funcionário***, para localizar o nome do funcionário na tabela ***Employees*** do banco de dados Nwind. mdb.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -225,7 +225,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedade Index](../../../ado/reference/ado-api/index-property.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Propriedade index](../../../ado/reference/ado-api/index-property.md)   
+ [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Método Seek](../../../ado/reference/ado-api/seek-method.md)

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70227f556ae268144549616dab0895e70ff39de8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228738"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Usar a caixa de diálogo Assistente de Grupo de Disponibilidade (SQL Server Management Studio)
@@ -41,10 +41,10 @@ ms.locfileid: "75228738"
 > [!NOTE]  
 >  Como alternativa ao uso do Assistente de Novo Grupo de Disponibilidade, você pode usar os cmdlets PowerShell [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Criar um grupo de disponibilidade &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md) ou [Criar um grupo de disponibilidade &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md).  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
  É recomendável que você leia esta seção antes de tentar criar seu primeiro grupo de disponibilidade.  
   
-###  <a name="PrerequisitesRestrictions"></a>Pré-requisitos, restrições e recomendações  
+###  <a name="PrerequisitesRestrictions"></a> Pré-requisitos, restrições e recomendações  
  Na maioria dos casos, você pode usar o Assistente de Novo Grupo de Disponibilidade para concluir todas as tarefas necessárias para criar e configurar um grupo de disponibilidade. No entanto, talvez seja necessário concluir algumas das tarefas manualmente.  
   
 -   Antes de criar um grupo de disponibilidade, verifique se as instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedam réplicas de disponibilidade residem em um nó diferente do WSFC (Windows Server Failover Clustering), dentro do mesmo cluster de failover do WSFC. Também verifique se cada instância de servidor atende todos os outros pré-requisitos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter mais informações, é altamente recomendável que você leia [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "75228738"
   
      `To use certificates for a database mirroring endpoint:`  
   
-     [CRIAR ponto de extremidade &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-endpoint-transact-sql)  
+     [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
      [Usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75228738"
   
     5.  Restaure esse backup de log no banco de dados secundário.  
   
--   **Pré-requisitos para o assistente executar a sincronização de dados inicial completa**  
+-   **Pré-requisitos para o assistente realizar sincronização de dados inicial total**  
   
     -   Todos os caminhos de arquivos do banco de dados devem ser idênticos em cada instância de servidor que hospede uma réplica para o grupo de disponibilidade.  
   
@@ -84,16 +84,16 @@ ms.locfileid: "75228738"
         > [!IMPORTANT]  
         >  Os backups de log farão parte de sua cadeia de backup de log. Armazene os arquivos de backup de log adequadamente.  
   
-     Se você não puder usar o assistente para executar a sincronização de dados inicial completa, precisará preparar seus bancos de dados secundários manualmente. Você pode fazer isto antes de ou depois de executar o assistente. Para obter mais informações, veja [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     Se você não puder usar o assistente para executar a sincronização de dados inicial completa, precisará preparar seus bancos de dados secundários manualmente. Você pode fazer isto antes de ou depois de executar o assistente. Para obter mais informações, consulte [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  Requer a associação na função de servidor fixa **sysadmin** e a permissão de servidor CREATE AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
  Também exige permissão CONTROL ON ENDPOINT se você desejar permitir que o Assistente de grupo de disponibilidade gerencie o ponto de extremidade de espelhamento de banco de dados.  
   
-##  <a name="RunAGwiz"></a>Usando o assistente de novo grupo de disponibilidade  
+##  <a name="RunAGwiz"></a> Usando o Assistente de Novo Grupo de Disponibilidade  
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica de disponibilidade primária.  
   
@@ -116,13 +116,13 @@ ms.locfileid: "75228738"
     |Tab|Breve descrição|  
     |---------|-----------------------|  
     |**Réplicas**|Use esta guia para especificar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará uma réplica secundária. Observe que a instância de servidor à qual você está conectado no momento deve hospedar a réplica primária.|  
-    |**Extremidade**|Use esta guia para verificar quaisquer pontos de extremidade de espelhamento de banco de dados existentes e também, se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows para criar o ponto de extremidade automaticamente. **Observação:**  Se alguma instância de servidor estiver sendo executada sob uma conta de usuário que não seja de domínio, você precisará fazer uma alteração manual na instância do servidor antes de prosseguir no assistente. Para obter mais informações, consulte [Pré-requisitos](#PrerequisitesRestrictions)anteriormente neste tópico.|  
+    |**Pontos de extremidade**|Use esta guia para verificar quaisquer pontos de extremidade de espelhamento de banco de dados existentes e também, se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows para criar o ponto de extremidade automaticamente. **Observação:**  Se alguma instância de servidor estiver sendo executada sob uma conta de usuário que não seja de domínio, você precisará fazer uma alteração manual na instância do servidor antes de prosseguir no assistente. Para obter mais informações, consulte [Pré-requisitos](#PrerequisitesRestrictions)anteriormente neste tópico.|  
     |**Preferências de backup**|Use esta guia para especificar sua preferência de backup para o grupo de disponibilidade como um todo e suas prioridades de backup para as réplicas de disponibilidade individuais.|  
-    |**Listener**|Use esta guia para criar um ouvinte de grupo de disponibilidade. Por padrão, o assistente não cria um ouvinte.|  
+    |**Ouvinte**|Use esta guia para criar um ouvinte de grupo de disponibilidade. Por padrão, o assistente não cria um ouvinte.|  
   
 8.  Na página **Selecionar Sincronização de Dados Inicial** , escolha como você deseja que seus novos bancos de dados secundários sejam criados e unidos ao grupo de disponibilidade. Escolha uma das seguintes opções:  
   
-    -   **Completo**  
+    -   **Full**  
   
          Selecione esta opção se seu ambiente atender aos requisitos para iniciar automaticamente a sincronização de dados inicial (para obter mais informações, veja [Pré-requisitos, restrições e recomendações](#PrerequisitesRestrictions), anteriormente neste tópico).  
   
@@ -153,38 +153,38 @@ ms.locfileid: "75228738"
   
      Quando o assistente for concluído, clique em **Fechar** para sair.  
   
-##  <a name="RelatedTasks"></a>Tarefas relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para concluir a configuração do grupo de disponibilidade**  
   
 -   [Unir uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Preparar manualmente um banco de dados secundário para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 -   [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [Criar ou configurar um ouvinte de grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
  **Maneiras alternativas de criar um grupo de disponibilidade**  
   
--   [Use a caixa de diálogo novo grupo de disponibilidade &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Criar um grupo de disponibilidade &#40;&#41;Transact-SQL](create-an-availability-group-transact-sql.md)  
+-   [Criar um grupo de disponibilidade &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
   
 -   [Criar um grupo de disponibilidade &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
   
  **Para habilitar Grupos de Disponibilidade AlwaysOn**  
   
--   [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [Habilitar e desabilitar grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
  **Para configurar um ponto de extremidade de espelhamento de banco de dados**  
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para Grupos de Disponibilidade AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Criar um ponto de extremidade de espelhamento de banco de dados para autenticação do Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Especifique a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Para solucionar problemas de configuração de grupos de disponibilidade AlwaysOn**  
   
@@ -192,29 +192,29 @@ ms.locfileid: "75228738"
   
 -   [Solucionar problemas de uma operação de adição de arquivo com falha &#40;Grupos de Disponibilidade AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a>Conteúdo relacionado  
+##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   **Bloga**  
+-   **Blogs:**  
   
      [Série de aprendizado do AlwaysON - HADRON: uso de trabalho do pool para bancos de dados habilitados do HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [Blogs da equipe do SQL Server AlwaysOn: o blog oficial da equipe do SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs de engenheiros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
+     [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Explica**  
+-   **Vídeos:**  
   
      [Microsoft SQL Server codinome "Denali" Série AlwaysOn, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server codinome "Denali" Série AlwaysOn, Parte 2: Criando uma solução de disponibilidade de missão crítica usando AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **White papers**  
+-   **Whitepapers:**  
   
      [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [White papers da Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server White papers da equipe de consultoria ao cliente](http://sqlcat.com/)  
+     [White papers da equipe de consultoria do cliente do SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

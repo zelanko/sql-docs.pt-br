@@ -18,19 +18,19 @@ ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124655"
 ---
-# <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
+# <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lista as permissões para que os proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent acessem subsistemas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,20 +43,20 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] proxy_id` O número de identificação do proxy para listar informações. O *proxy_id* é **int**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
+`[ @proxy_id = ] proxy_id`O número de identificação do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão de NULL. A *ID* ou a *proxy_name* pode ser especificada.  
   
-`[ @proxy_name = ] 'proxy_name'` O nome do proxy para listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
+`[ @proxy_name = ] 'proxy_name'`O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão de NULL. A *ID* ou a *proxy_name* pode ser especificada.  
   
-`[ @subsystem_id = ] subsystem_id` O número de identificação do subsistema para listar informações. O *subsystem_id* é **int**, com um padrão NULL. Ambos os *subsystem_id* ou o *subsystem_name* pode ser especificado.  
+`[ @subsystem_id = ] subsystem_id`O número de identificação do subsistema para o qual listar informações. O *subsystem_id* é **int**, com um padrão de NULL. O *subsystem_id* ou o *subsystem_name* pode ser especificado.  
   
-`[ @subsystem_name = ] 'subsystem_name'` O nome do subsistema para listar informações. O *subsystem_name* é **sysname**, com um padrão NULL. Ambos os *subsystem_id* ou o *subsystem_name* pode ser especificado.  
+`[ @subsystem_name = ] 'subsystem_name'`O nome do subsistema para o qual listar informações. O *subsystem_name* é **sysname**, com um padrão de NULL. O *subsystem_id* ou o *subsystem_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|Número de identificação do subsistema.|  
 |**subsystem_name**|**sysname**|O nome do subsistema.|  
@@ -65,20 +65,20 @@ sp_enum_proxy_for_subsystem
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Comentários  
- Quando nenhum parâmetro for fornecido, **sp_enum_proxy_for_subsystem** lista informações sobre todos os proxies na instância para cada subsistema.  
+ Quando nenhum parâmetro é fornecido, **sp_enum_proxy_for_subsystem** lista informações sobre todos os proxies na instância para cada subsistema.  
   
- Quando uma id de proxy ou nome de proxy é fornecido, **sp_enum_proxy_for_subsystem** lista os subsistemas proxy tem acessem. Quando uma id de subsistema ou nome de subsistema é fornecido, **sp_enum_proxy_for_subsystem** lista os proxies que têm acesso a esse subsistema.  
+ Quando uma ID de proxy ou um nome de proxy é fornecido, **sp_enum_proxy_for_subsystem** lista os subsistemas aos quais o proxy tem acesso. Quando uma ID de subsistema ou nome de subsistema é fornecido, **sp_enum_proxy_for_subsystem** lista os proxies que têm acesso a esse subsistema.  
   
  Quando informações de proxy e informações de subsistema são fornecidas, o conjunto de resultados retornará uma linha se o proxy especificado tiver acesso ao subsistema especificado.  
   
- Esse procedimento armazenado está localizado em **msdb**.  
+ Esse procedimento armazenado está localizado no **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
+ As permissões de execução para este procedimento assumem como padrão os membros da função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-listing-all-associations"></a>A. Listando todas as associações  
+### <a name="a-listing-all-associations"></a>a. Listando todas as associações  
  O exemplo a seguir lista todas as permissões estabelecidas entre proxies e subsistemas para a instância atual.  
   
 ```sql
@@ -102,7 +102,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_grant_proxy_to_subsystem](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

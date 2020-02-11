@@ -1,5 +1,5 @@
 ---
-title: Mining Model Content para modelos de regressão Linear (Analysis Services - mineração de dados) | Microsoft Docs
+title: Conteúdo do modelo de mineração para modelos de regressão linear (Analysis Services-Mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,19 +15,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083636"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de regressão linear (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Entendendo a estrutura de um modelo de regressão linear  
- Um modelo de regressão linear tem uma estrutura extremamente simples. Cada modelo tem um único nó pai que representa o modelo e seus metadados e um nó de árvore de regressão (NODE_TYPE = 25) que contém a fórmula de regressão para cada atributo previsível.  
+ Um modelo de regressão linear tem uma estrutura extremamente simples. Cada modelo tem um único nó pai que representa o modelo e seus metadados, e um nó de árvore de regressão (NODE_TYPE = 25) que contém a fórmula de regressão para cada atributo previsível.  
   
- ![Estrutura do modelo de regressão linear](../media/modelcontentstructure-linreg.gif "estrutura do modelo de regressão linear")  
+ ![Estrutura do modelo para regressão linear](../media/modelcontentstructure-linreg.gif "Estrutura do modelo para regressão linear")  
   
  Os modelos de regressão linear usam o mesmo algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , mas são usados parâmetros diferentes para restringir a árvore e apenas atributos contínuos são aceitos como entradas. Entretanto, como os modelos de regressão linear são baseados no algoritmo Árvores de Decisão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] , eles são exibidos com o uso do Visualizador de Árvore de Decisão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter informações, consulte [Procurar um modelo usando o Visualizador de Árvores da Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66083636"
 ## <a name="model-content-for-a-linear-regression-model"></a>Conteúdo de um modelo de regressão linear  
  Esta seção fornece detalhes e exemplos somente para as colunas de conteúdo do modelo de mineração que são relevantes para a regressão linear.  
   
- Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Para obter informações sobre as colunas de uso general no conjunto de linhas de esquema, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome do banco de dados no qual o modelo é armazenado.  
@@ -45,7 +45,7 @@ ms.locfileid: "66083636"
  Nome do modelo.  
   
  ATTRIBUTE_NAME  
- **Nó raiz:** Em branco  
+ **Nó raiz:** Ficará  
   
  **Nó de regressão:** O nome do atributo previsível.  
   
@@ -58,16 +58,16 @@ ms.locfileid: "66083636"
  NODE_TYPE  
  Um modelo de regressão linear gera os seguintes tipos de nó:  
   
-|ID do tipo de nó|Tipo|Descrição|  
+|ID do tipo de nó|Type|DESCRIÇÃO|  
 |------------------|----------|-----------------|  
 |25|Raiz da árvore de regressão|Contém a fórmula que descreve a relação entre a variável de entrada e saída.|  
   
  NODE_CAPTION  
  Um rótulo ou uma legenda associada ao nó. Essa propriedade é usada principalmente para exibição.  
   
- **Nó raiz:** Em branco  
+ **Nó raiz:** Ficará  
   
- **Nó de regressão:** Todos.  
+ **Nó de regressão:** Os.  
   
  CHILDREN_CARDINALITY  
  Uma estimativa do número de filhos do nó.  
@@ -82,9 +82,9 @@ ms.locfileid: "66083636"
  NODE_DESCRIPTION  
  Uma descrição do nó.  
   
- **Nó raiz:** Em branco  
+ **Nó raiz:** Ficará  
   
- **Nó de regressão:** Todos.  
+ **Nó de regressão:** Os.  
   
  NODE_RULE  
  Não é usado em modelos de regressão linear.  
@@ -145,12 +145,12 @@ ms.locfileid: "66083636"
   
  Além disso, ao criar um modelo de árvores de decisão que inclui um atributo previsível contínuo, a árvore, algumas vezes, tem nós de regressão que compartilham as propriedades dos nós da árvore de regressão.  
   
-##  <a name="NodeDist_Regression"></a> Distribuição de nó em atributos contínuos  
+##  <a name="NodeDist_Regression"></a>Distribuição de nó para atributos contínuos  
  A maioria da informações importantes em um nó de regressão está localizada na tabela NODE_DISTRIBUTION. O exemplo a seguir ilustra o layout da tabela NODE_DISTRIBUTION. Nesse exemplo, a estrutura de mineração Correspondência Destinada é usada para criar um modelo de regressão linear que prevê a renda do cliente com base na idade. Esse modelo é apenas ilustrativo, pois pode ser criado facilmente com o uso da estrutura de mineração e dos dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPORTE|PROBABILITY|variance|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Renda Anual|Ausente|0|0.000457142857142857|0|1|  
+|Renda Anual|Missing|0|0.000457142857142857|0|1|  
 |Renda Anual|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |Idade|471.687717702463|0|0|126.969442359327|7|  
 |Idade|234.680904692439|0|0|0|8|  
@@ -162,7 +162,8 @@ ms.locfileid: "66083636"
 ### <a name="elements-of-the-regression-formula"></a>Elementos da fórmula de regressão  
  A tabela NODE_DISTRIBUTION aninhada contém cada elemento da fórmula de regressão em uma linha separada. As duas primeiras linhas de dados nos resultados do exemplo contêm informações sobre o atributo previsível, **Renda anual**, que modela a variável dependente. A coluna SUPPORT exibe o número de casos para os dois estados desse atributo: ou um valor de **Renda anual** disponível ou o valor de **Renda anual** ausente.  
   
- A coluna VARIANCE indica a variância computada do atributo previsível. A*variância* é uma medida de quão disperso são os valores em um exemplo de acordo com uma determinada distribuição. Aqui, a variância é calculada ao considerar a média do desvio quadrado da média. A raiz quadrada de uma variância também é conhecida como desvio padrão. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não fornece um desvio padrão, mas você poderá calculá-lo facilmente.  
+ A coluna VARIANCE indica a variância computada do atributo previsível. A *variação* é uma medida de quão dispersão os valores estão em um exemplo, dada uma distribuição esperada. Aqui, a variância é calculada ao considerar a média do desvio quadrado da média. A raiz quadrada de uma variância também é conhecida como desvio padrão. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não fornece um desvio padrão, mas você poderá calculá-lo facilmente.  
   
  Para cada regressor, são produzidas três linhas. Elas contêm o coeficiente, o ganho de contagem e a estatísticas de regressor.  
   
@@ -180,16 +181,16 @@ ms.locfileid: "66083636"
 #### <a name="intercept"></a>Interceptação  
  Normalmente, a *interceptação* (VALUETYPE = 11) ou o *residual* de uma equação de regressão indica o valor do atributo previsível no instante em que o atributo de entrada é 0. Em muitos casos, isso pode não acontecer e gerar resultados inesperados.  
   
- Por exemplo, em um modelo que prevê a renda com base na idade, é inútil obter a renda para a idade de 0 anos. Em casos reais, normalmente é mais útil saber o comportamento da linha com relação aos valores médios. Sendo assim, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modifica a interceptação para expressar cada regressor em uma relação com a média.  
+ Por exemplo, em um modelo que prevê a renda com base na idade, é inútil obter a renda para a idade de 0 anos. Em casos reais, normalmente é mais útil saber o comportamento da linha com relação aos valores médios. Portanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o modifica a interceptação para expressar cada regressor em uma relação com a média.  
   
  Esse ajuste é difícil de ser visualizado no conteúdo do modelo de mineração, mas fica bem-aparente ao exibir toda a equação na **Legenda de Mineração** do **Visualizador de Árvores da Microsoft**. A fórmula de regressão é deslocada do ponto 0 para o ponto que representa a média. Isso apresenta uma exibição que é mais intuitiva com relação aos dados atuais.  
   
  Com isso, presumindo que a idade média seja de aproximadamente 45 anos, a interceptação (VALUETYPE = 11) da fórmula de regressão indica a renda média.  
   
-## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo Regressão Linear da Microsoft](microsoft-linear-regression-algorithm.md)   
- [Referência Técnica do Algoritmo de Regressão Linear da Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Conteúdo do modelo de mineração &#40;Analysis Services Mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Algoritmo de regressão linear da Microsoft](microsoft-linear-regression-algorithm.md)   
+ [Referência técnica do algoritmo regressão linear da Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)  
   
   

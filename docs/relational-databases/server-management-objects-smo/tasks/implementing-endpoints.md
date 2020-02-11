@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cb20b6bf7275dea4f44b21aa9deb0c3f0310bfea
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095192"
 ---
 # <a name="implementing-endpoints"></a>Implementando pontos de extremidade
@@ -31,7 +31,7 @@ ms.locfileid: "74095192"
   
 -   SOAP (o suporte a pontos de extremidade SOAP está presente no [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] e nas versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )  
   
--   Service Broker  
+-   Agente de Serviço  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
   
@@ -50,7 +50,7 @@ ms.locfileid: "74095192"
  Quando o ponto de extremidade estiver sido criado e totalmente definido, usuários do banco de dados, grupos, funções e logons poderão ter o acesso concedido, revogado e negado.  
   
 ## <a name="example"></a>Exemplo  
- Para o exemplo de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para o exemplo de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>Criando um serviço de ponto de extremidade de espelhamento de banco de dados no Visual Basic  
  O exemplo de código demonstra como criar um ponto de extremidade de espelhamento de banco de dados no SMO. Isso é necessário antes da criação de um espelho de banco de dados. Use o <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> e outras propriedades do objeto <xref:Microsoft.SqlServer.Management.Smo.Database> para criar um espelho de banco de dados.  
@@ -132,7 +132,7 @@ $ep.Start()
 $ep.EndpointState;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

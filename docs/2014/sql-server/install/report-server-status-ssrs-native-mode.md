@@ -13,27 +13,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 15a177080792eb26273399f41aad577962885376
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952464"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Status do Servidor de Relatórios (modo nativo do SSRS)
   Use esta página para exibir informações sobre a instância do servidor de relatório à qual você está conectado atualmente. Essa é a página inicial para a configuração do servidor de relatórios. Estão disponíveis páginas adicionais para configurar URLs, a conta de serviço, o banco de dados do servidor de relatórios, a entrega de email do servidor de relatórios, a implantação de expansão e chaves de criptografia.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
   
- Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se à instância do servidor de relatórios. Para obter mais informações, [consulte &#40;Gerenciador de configurações do Reporting Services&#41;del](reporting-services-configuration-manager-native-mode.md).  
+ Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se à instância do servidor de relatórios. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md).  
   
 > [!TIP]  
->  O Configuration Manager de[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (RSConfigTool. exe) é instalado com um nível de privilégio de "highestAvailable". Este comportamento ocorre por design. O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige a comunicação com APIs do WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Algumas comunicações de WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exigem um nível mais alto ou administrativo de privilégios.  
+>  O[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool. exe) é instalado com um nível de privilégio de "highestAvailable". Este comportamento ocorre por design. O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige a comunicação com APIs do WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Algumas comunicações de WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exigem um nível mais alto ou administrativo de privilégios.  
   
  Se você estabelecer conexão com o servidor de relatórios e todos os links da página estiverem esmaecidos, verifique se o serviço Servidor de Relatórios foi iniciado. O **status do serviço de relatório:** deve ser "iniciado". Você também pode usar o aplicativo de console Serviços em Ferramentas do Administrador para verificar o status do serviço.  
   
 ## <a name="options"></a>Opções  
- **Instância de SQL Server**  
- Exibe informações sobre a instância do servidor de relatórios à qual você está atualmente conectado. Os nomes de instância do servidor de relatórios têm como base as instâncias nomeadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A instância padrão é MSSQLSERVER. Uma instância nomeada será um valor que você especificou durante a instalação. Para obter mais informações sobre instâncias, consulte [trabalhar com várias versões e instâncias do SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Instância do SQL Server**  
+ Exibe informações sobre a instância do servidor de relatórios à qual você está atualmente conectado. Os nomes de instância do servidor de relatórios têm como base as instâncias nomeadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A instância padrão é MSSQLSERVER. Uma instância nomeada será um valor que você especificou durante a instalação. Para obter mais informações sobre instâncias, consulte [trabalhar com várias versões e instâncias do SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online do.  
   
 > [!NOTE]  
 >  No SQL Server Express with Advanced Services, a instância padrão é SQLExpress.  
@@ -49,16 +49,16 @@ ms.locfileid: "71952464"
   
  Se você instalar uma segunda instância de um componente já instalado, como o [!INCLUDE[ssDE](../../includes/ssde-md.md)], e nomear a instância como Contoso, a **ID da Instância** será MSSQL12.Contoso.  
   
- **Edição**  
+ **Versão**  
  Exibe informações de edição. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server](https://go.microsoft.com/fwlink/?linkid=232473).  
   
- **Versão do Produto**  
+ **Versão do produto**  
  Exibe a versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que você instalou.  
   
- **Banco de dados do Servidor de Relatório**  
+ **Banco de dados do servidor de relatório**  
  Exibe o nome do banco de dados do servidor de relatórios que armazena dados de aplicativo para a instância atual do servidor de relatórios.  
   
- **Modo do servidor de relatório**  
+ **Modo do Servidor de Relatório**  
  Isso sempre deve mostrar um valor **Nativo**. O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece suporte apenas a servidores de relatório no modo Nativo. Se você vir o valor **modo integrado do SharePoint**, isso poderá indicar que sua implantação de modo nativo não está configurada corretamente e que você precisa conectar-se a um catálogo de relatório no modo nativo. Use a página **Banco de Dados** do Configuration Manager para alterar o banco de dados e criar um novo banco de dados ou conectar-se a um catálogo de banco de dados de servidor de relatório no modo nativo existente.  
   
  **Status do servidor**  
@@ -68,11 +68,11 @@ ms.locfileid: "71952464"
  Inicia o serviço Servidor de Relatórios. O reinício do serviço será necessário depois de algumas alterações na configuração (por exemplo, ao reconfigurar um servidor de relatórios depois da alteração de um nome de computador). Se você reconfigurar as reservas de URL, o serviço será reiniciado automaticamente. O reinício é necessário para obter as alterações.  
   
  **Parar**  
- Para o serviço Servidor de Relatórios. Parar o serviço faz com que o servidor de relatórios pare de funcionar. Para obter mais informações, consulte [Iniciar e parar o serviço servidor de relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para o serviço Servidor de Relatórios. Parar o serviço faz com que o servidor de relatórios pare de funcionar. Para obter mais informações, consulte [Iniciar e parar o serviço servidor](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatório nos manuais online do.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda do modo&#41; nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Gerenciador de configurações do Reporting Services &#40;del&#41; ](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de Configurações do Reporting Services F1 tópicos de ajuda &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gerenciador de Configurações do Reporting Services &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

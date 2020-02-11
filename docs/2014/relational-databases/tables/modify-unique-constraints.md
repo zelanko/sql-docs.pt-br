@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8bb3daf170e25abc9b346aeaedb4b835cae2dfdd
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68809922"
 ---
 # <a name="modify-unique-constraints"></a>Modificar restrições exclusivas
@@ -50,7 +50,7 @@ ms.locfileid: "68809922"
   
 1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela que contém restrição exclusiva e selecione **Design**.  
   
-2.  No menu **Designer de Tabela**, clique em **Índices/Chaves...** .  
+2.  No menu **Designer de Tabela**, clique em **Índices/Chaves...**.  
   
 3.  Na caixa de diálogo **Índices/Chaves** , selecione **Índice ou Chave Exclusiva/Primária Selecionada**e selecione a restrição que deseja editar.  
   
@@ -58,14 +58,14 @@ ms.locfileid: "68809922"
   
     |Para|Siga estas etapas|  
     |--------|------------------------|  
-    |Alterar as colunas às quais a restrição está associada|1) Na grade, em **(Geral)** , clique em **Colunas** e nas reticências **(…)** à direita da propriedade.<br /><br /> 2) Na caixa de diálogo **Colunas de Índice** , especifique a nova coluna, a ordem de classificação ou ambas para o índice.|  
+    |Alterar as colunas às quais a restrição está associada|1) Na grade, em **(Geral)**, clique em **Colunas** e nas reticências **(…)** à direita da propriedade.<br /><br /> 2) Na caixa de diálogo **Colunas de Índice** , especifique a nova coluna, a ordem de classificação ou ambas para o índice.|  
     |Renomear a restrição|Na grade, em **Identidade**, digite um novo nome na caixa **Nome** . Verifique se seu novo nome não duplica um nome na lista **Índice ou Chave Exclusiva/Primária Selecionada** .|  
-    |Definir a opção clustered|Na grade em **Designer de tabela**, selecione **criar como clusterizado** e, na lista suspensa, escolha Sim para criar um índice clusterizado e não para criar um não clusterizado. Só pode existir um índice clusterizado por tabela. Se já houver um índice clusterizado nessa tabela, você deverá desmarcar essa configuração no índice original.|  
+    |Definir a opção clustered|Na grade, em **Designer de Tabela**, selecione **Criar como Clusterizado** e, na lista suspensa, escolha Sim para criar um índice clusterizado e Não para criar um não clusterizado. Só pode existir um índice clusterizado por tabela. Se já houver um índice clusterizado nessa tabela, você deverá desmarcar essa configuração no índice original.|  
     |Definir um fator de preenchimento|Na grade, em **Designer de Tabela**, expanda a categoria **Especificação de Preenchimento** e digite um inteiro de 0 a 100 na caixa **Fator de Preenchimento** .|  
   
-5.  No menu **Arquivo** , clique em **Salvar**_table name_.  
+5.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
   
-##  <a name="TsqlProcedure"></a> **Para modificar uma restrição exclusiva**  
+##  <a name="TsqlProcedure"></a>**Para modificar uma restrição exclusiva**  
   
  Para modificar a restrição UNIQUE usando o Transact-SQL, exclua primeiramente a restrição UNIQUE existente e, em seguida, recrie-a com a nova definição. Para obter mais informações, consulte [Delete Unique Constraints](delete-unique-constraints.md) e [Create Unique Constraints](create-unique-constraints.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: 'SQL para C: Data | Microsoft Docs'
+title: 'SQL to C: Date | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d282798a31ac9059ed3c1901ea01f1f3104f09c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056883"
 ---
-# <a name="sql-to-c-date"></a>SQL para C: Date
-O identificador para a data do tipo de dados SQL do ODBC:  
+# <a name="sql-to-c-date"></a>SQL para C: data
+O identificador para o tipo de dados SQL ODBC de data é:  
   
  SQL_TYPE_DATE  
   
- A tabela a seguir mostra o ODBC C para o qual a data de dados do SQL pode ser convertida de tipos de dados. Para obter uma explicação das colunas e os termos na tabela, consulte [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+ A tabela a seguir mostra os tipos de dados ODBC C para os quais os dados SQL podem ser convertidos. Para obter uma explicação das colunas e dos termos na tabela, consulte [convertendo dados de SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
   
 |Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > bytes de comprimento de caracteres<br /><br /> 11 < = *BufferLength* < = comprimento de byte do caractere<br /><br /> *BufferLength* < 11|Data<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > comprimento de caracteres<br /><br /> 11 < = *BufferLength* < = comprimento de caracteres<br /><br /> *BufferLength* < 11|Data<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Comprimento de bytes de dados < = *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Data<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|None [a]|Data|6[c]|n/d|  
-|SQL_C_TYPE_TIMESTAMP|None [a]|Dados [b]|16[c]|n/d|  
+|SQL_C_CHAR|*BufferLength* > comprimento de byte de caractere<br /><br /> 11 <= *BufferLength* <= comprimento de byte de caractere<br /><br /> *BufferLength* < 11|data<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > comprimento de caractere<br /><br /> 11 <= *BufferLength* <= comprimento do caractere<br /><br /> *BufferLength* < 11|data<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Comprimento de bytes de dados <= *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|data<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|Nenhum [a]|data|6 [c]|n/d|  
+|SQL_C_TYPE_TIMESTAMP|Nenhum [a]|Dados [b]|16 [c]|n/d|  
   
  [a] o valor de *BufferLength* é ignorado para essa conversão. O driver pressupõe que o tamanho de **TargetValuePtr* é o tamanho do tipo de dados C.  
   
- [b] os campos de hora da estrutura de carimbo de hora são definidos como zero.  
+ [b] os campos de tempo da estrutura de carimbo de data/hora são definidos como zero.  
   
- [c] esse é o tamanho do tipo de dados C correspondente.  
+ [c] Este é o tamanho do tipo de dados C correspondente.  
   
- Quando a data de dados do SQL é convertida em dados de caractere C, a cadeia de caracteres resultante está no "*aaaa*-*mm*-*dd*" formato. Esse formato não é afetado pela configuração de país Windows®.
+ Quando os dados SQL de data são convertidos em dados de caractere C, a cadeia de caracteres resultante está no formato "*aaaa*-*mm*-*DD*". Esse formato não é afetado pela configuração de país do Windows®.

@@ -1,5 +1,5 @@
 ---
-title: Conceder permissões ao serviço Integration Services | Microsoft Docs
+title: Conceder permissões para Integration Services serviço | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 989db1ed792d960b7a0dca22bd82ec8b2f5aa7df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058228"
 ---
 # <a name="grant-permissions-to-integration-services-service"></a>Conceder permissões ao serviço Integration Services
@@ -26,7 +26,7 @@ ms.locfileid: "66058228"
   
 2.  Na caixa de diálogo **Serviços de Componentes**, expanda o nó Serviços de Componentes > Computadores > Meu Computador > Configuração de DCOM.  
   
-3.  Clique com botão direito **Microsoft SQL Server Integration Services 12.0**e, em seguida, clique em **propriedades**.  
+3.  Clique com o botão direito do mouse em **Microsoft SQL Server Integration Services 12,0**e clique em **Propriedades**.  
   
 4.  Na guia **Segurança** , clique em **Editar** na área **Permissões de Inicialização e Ativação** .  
   

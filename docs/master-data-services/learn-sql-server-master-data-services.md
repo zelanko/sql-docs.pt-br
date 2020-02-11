@@ -13,10 +13,10 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d4580db494d31a528a807cf4349e3ddc65b91aee
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729083"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Aprender sobre o SQL Server Master Data Services
@@ -26,10 +26,10 @@ ms.locfileid: "73729083"
   
   
 ## <a name="training"></a>Treinamento  
-* Para explorar os novos recursos e funcionalidades introduzidos no [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs) (entre com seu conta Microsoft é necessário).  
-* Para desenvolver uma solução de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] para armazenar e gerenciar listas mestras de dados geográficos, usando o suplemento para Excel e o [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs). Você criará entidades e hierarquias e usará o [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para preencher uma tabela de dimensões.  
+* Para explorar os novos recursos e funcionalidades introduzidos [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]no, experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs) (é necessário entrar com seu conta Microsoft).  
+* Para desenvolver uma [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] solução para armazenar e gerenciar listas mestras de dados geográficos, usando o suplemento para Excel e [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]o, experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs). Você criará entidades e hierarquias e usará o [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para preencher uma tabela de dimensões.  
   
-## <a name="videos"></a>Vídeos  
+## <a name="videos"></a>vídeos  
 * Para saber mais sobre os novos recursos no [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] versão [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**assista a este vídeo**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
   
 ## <a name="samples"></a>Exemplos  
@@ -49,9 +49,9 @@ ms.locfileid: "73729083"
     * Amostra da API de Segurança do Master Data Services  
   
 ## <a name="sql-server-certification"></a>Certificação do SQL Server  
-* [Certificação e Treinamento do Microsoft SQL Server](https://www.microsoft.com/learning/sql-training.aspx)  
-* [Lista dos Exames de Certificação da Microsoft](https://www.microsoft.com/learning/exam-list.aspx)  
-* [A Microsoft Adora Aprender sobre o Blog (Comunidade de Treinamento e Certificação)](https://borntolearn.mslearn.net/b/weblog/archive/2016/03)  
+* [Treinamento e certificação de Microsoft SQL Server](https://www.microsoft.com/learning/sql-training.aspx)  
+* [Lista de exames de certificação da Microsoft](https://www.microsoft.com/learning/exam-list.aspx)  
+* [A Microsoft nasceu para aprender sobre o blog (comunidade de treinamento e certificação)](https://borntolearn.mslearn.net/b/weblog/archive/2016/03)  
   
   
   

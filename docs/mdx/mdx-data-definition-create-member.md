@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494070"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definição de dados MDX – CREATE MEMBER
@@ -47,11 +47,11 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  Uma expressão escalar válida que define o valor de propriedade do membro calculado.  
   
 ## <a name="remarks"></a>Comentários  
- A instrução CREATE MEMBRO define membros calculados disponíveis ao longo da sessão e que, então, podem ser usados em várias consultas durante a sessão. Para obter mais informações, consulte [criando MDX &#40;&#41;de membros calculados no escopo da sessão](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
+ A instrução CREATE MEMBRO define membros calculados disponíveis ao longo da sessão e que, então, podem ser usados em várias consultas durante a sessão. Para obter mais informações, consulte [Criando membros calculados no escopo da sessão &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
- Também é possível definir um membro calculado para ser usado por uma consulta única. Para definir um membro calculado limitado a uma consulta única, use a cláusula WITH na instrução SELECT. Para obter mais informações, consulte [criando MDX &#40;&#41;de membros calculados no escopo da consulta](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ Também é possível definir um membro calculado para ser usado por uma consulta única. Para definir um membro calculado limitado a uma consulta única, use a cláusula WITH na instrução SELECT. Para obter mais informações, consulte [Criando membros calculados no escopo da consulta &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
- *Property_name* pode se referir a propriedades padrão ou membros calculados opcionais. Propriedades do membro padrão são listadas neste tópico. Os membros calculados criados com CREATE MEMBER sem um valor de **sessão** têm escopo de sessão. Além disso, cadeias de caracteres dentro de definições de membros calculados são delimitadas entre aspas duplas. Isso é diferente do método definido por OLE DB que especifica quais cadeias de caracteres devem ser delimitadas por aspas simples.  
+ *Property_name* pode se referir a propriedades de membro calculado padrão ou opcional. Propriedades do membro padrão são listadas neste tópico. Os membros calculados criados com CREATE MEMBER sem um valor de **sessão** têm escopo de sessão. Além disso, cadeias de caracteres dentro de definições de membros calculados são delimitadas entre aspas duplas. Isso é diferente do método definido por OLE DB que especifica quais cadeias de caracteres devem ser delimitadas por aspas simples.  
   
  A especificação de um cubo diferente daquele conectado no momento causa um erro. Portanto, deve-se usar CURRENTCUBE no lugar de um nome de cubo para indicar o cubo atual.  
   
@@ -60,8 +60,8 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
 ## <a name="scope"></a>Escopo  
  Um membro calculado pode acontecer dentro de um dos escopos listados na tabela a seguir.  
   
- Escopo de consulta  
- A visibilidade e o tempo de vida do membro calculado estão limitados à consulta. O membro calculado é definido em uma consulta individual. Escopo de consulta substitui escopo de sessão. Para obter mais informações, consulte [criando MDX &#40;&#41;de membros calculados no escopo da consulta](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ Escopo da consulta  
+ A visibilidade e o tempo de vida do membro calculado estão limitados à consulta. O membro calculado é definido em uma consulta individual. Escopo de consulta substitui escopo de sessão. Para obter mais informações, consulte [Criando membros calculados no escopo da consulta &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  Escopo de sessão  
  A visibilidade e o tempo de vida do membro calculado estão limitados à sessão em que são criados. (O tempo de vida é menor que a duração da sessão se uma instrução DROP MEMBER for emitida no membro calculado.) A instrução CREATE MEMBER cria um membro calculado com escopo de sessão.  
@@ -72,7 +72,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
 > [!NOTE]  
 >  Em determinados cenários, a função [Aggregate (MDX)](../mdx/aggregate-mdx.md) e a função [VisualTotals (MDX)](../mdx/visualtotals-mdx.md) não exibem esse comportamento.  
   
- O comportamento permite aos aplicativos cliente genéricos trabalhar com cubos que contenham cálculos complexos, sem ter de levar em conta a implementação específica dos cálculos. No entanto, em determinados cenários, talvez você queira executar membros calculados no escopo da consulta ou da sessão antes de determinados cálculos no cubo e nem a função de agregação nem a função **VisualTotals** são aplicáveis. Para isso, use a propriedade de cálculo SCOPE_ISOLATION.  
+ O comportamento permite aos aplicativos cliente genéricos trabalhar com cubos que contenham cálculos complexos, sem ter de levar em conta a implementação específica dos cálculos. No entanto, em determinados cenários, talvez você queira executar membros calculados no escopo da consulta ou da sessão antes de determinados cálculos no cubo e nem a função de **agregação** nem a função **VisualTotals** são aplicáveis. Para isso, use a propriedade de cálculo SCOPE_ISOLATION.  
   
 #### <a name="example"></a>Exemplo  
  O script a seguir é um exemplo de um cenário em que a propriedade de cálculo SCOPE_ISOLATION é exigida para produzir o resultado correto.  
@@ -114,14 +114,14 @@ WHERE ProfitRatio
 |SOLVE_ORDER|A ordem na qual o membro calculado será resolvido quando um membro calculado fizer referência a outro membro calculado (ou seja, quando membros calculados se cruzarem).|  
 |FORMAT_STRING|Uma cadeia de caracteres de formato de estilo do Office que o aplicativo cliente pode usar ao exibir valores de células.|  
 |VISIBLE|Um valor que indica se o membro calculado é visível em um conjunto de linhas de esquema. Membros calculados visíveis podem ser adicionados a um conjunto com a função [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Um valor diferente de zero indica que o membro calculado é visível. O valor padrão dessa propriedade é *visível*.<br /><br /> Membros calculados que não são visíveis (em que o valor é definido como zero) são em geral usados como etapas intermediárias em membros calculados mais complexos. Esses membros calculados também podem ser consultados por outros tipos de membros, como medidas.|  
-|NON_EMPTY_BEHAVIOR|A medida ou o conjunto usado para determinar o comportamento de membros calculados ao resolver células vazias.<br /><br /> **Aviso estapropriedade\* foi preterida. \* \* \*** Evite configurá-la. Consulte [recursos de Analysis Services preteridos no SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) para obter detalhes.|  
+|NON_EMPTY_BEHAVIOR|A medida ou o conjunto usado para determinar o comportamento de membros calculados ao resolver células vazias.<br /><br /> ** \* Aviso \* \* ** Esta propriedade foi preterida. Evite configurá-la. Consulte [recursos de Analysis Services preteridos no SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) para obter detalhes.|  
 |CAPTION|Uma cadeia de caracteres que o aplicativo cliente usa como legenda para o membro.|  
 |DISPLAY_FOLDER|Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o membro. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e os clientes fornecidos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]pelo, a barra invertida (\\) é o separador de nível. Para fornecer várias pastas de exibição para um membro definido, use um ponto-e-vírgula (;) para separar as pastas.|  
 |ASSOCIATED_MEASURE_GROUP|O nome do grupo de medidas ao qual esse membro está associado.|  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução &#40;drop member MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
- [ATUALIZAR a instrução &#40;de membro MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
- [MDX de instruções &#40;de definição de dados MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Instrução DROP MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
+ [ATUALIZAR a instrução de membro &#40;MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
+ [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

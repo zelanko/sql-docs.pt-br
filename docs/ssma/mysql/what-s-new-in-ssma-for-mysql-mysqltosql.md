@@ -2,23 +2,34 @@
 title: O que há de novo no SSMA para MySQL (MySQLToSql) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: ccb8c325a2e0b2966c0355be0f9cd84bd8882d24
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: 96e27e6ec25d500b55ec71f5ca1c24d48c230ac5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834308"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516527"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novidades no SSMA para MySQL (MySQLToSql)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para MySQL alterações em cada versão.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+Além de um conjunto direcionado de correções projetadas para melhorar a usabilidade e o desempenho, a versão do v 8.6 do SSMA para MySQL foi aprimorada adicionando uma configuração que permite aos usuários omitir as propriedades estendidas do SSMA no código convertido.
+
+Para aproveitar essa configuração, no SSMA para MySQL, navegue até **ferramentas** > **configurações** > do projeto**conversão****geral** > e **, em seguida, atualize**o valor da configuração **omitir propriedades estendidas** para **Sim**.
+
+![Omitir a configuração de propriedades estendidas](../mysql/media/ssma-omit-extended-properties.png)
+
+> [!IMPORTANT]
+> Com o SSMA v 8.5 e posterior, o .NET 4.7.2 é um pré-requisito de instalação. Se precisar instalar essa versão, você poderá baixar o arquivo de tempo de execução [aqui](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -155,7 +166,7 @@ A versão v 7.1 do SSMA para MySQL contém as seguintes alterações:
 
 * SQL Server 2017 no Windows e Linux CTP1 agora é uma plataforma de destino com suporte para migração. Esse recurso está em visualização técnica e permite a movimentação de esquema e dados para servidores SQL de destino.
 * O SSMA agora dá suporte a atualizações automáticas para baixar a versão mais recente do SSMA assim que estiver disponível.
-* Os binários instaláveis do SSMA agora são fornecidos por meio dos arquivos de pacote do Windows Installer (. msi).
+* Os binários instaláveis do SSMA agora são entregues por meio de arquivos de pacote Windows Installer (. msi).
 
 ## <a name="may-2016"></a>Maio de 2016  
 A versão de maio de 2016 do SSMA para MySQL contém as seguintes alterações:
@@ -201,7 +212,7 @@ A versão de julho de 2014 do SSMA para MySQL contém as seguintes alterações:
 A versão de abril de 2014 do SSMA para MySQL contém as seguintes alterações:  
   
 * Suporte adicionado do MS SQL Server 2014.  
-* Correção de bugs referentes à conversão no Azure  
+* Correção de bugs referentes à conversão no Azure.
 * Correção de bugs em relação a páginas de relatório invisíveis no IE 10.  
   
 ## <a name="july-2011"></a>julho de 2011

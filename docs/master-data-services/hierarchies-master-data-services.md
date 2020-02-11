@@ -14,10 +14,10 @@ ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729227"
 ---
 # <a name="hierarchies-master-data-services"></a>Hierarquias (Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "73729227"
   
 -   Hierarquias desbalanceadas de uma única entidade, que são chamadas de hierarquias explícitas. Para obter mais informações, consulte [Hierarquias explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md).  
   
--   Hierarquias baseadas em nível de várias entidades, com base nas relações existentes entre as entidades e seus atributos, que são chamadas de hierarquias derivadas. Para obter mais informações, consulte [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
+-   Hierarquias baseadas em nível de várias entidades, com base nas relações existentes entre as entidades e seus atributos, que são chamadas de hierarquias derivadas. Para obter mais informações, consulte [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
   
 > [!NOTE]  
 >  Todos os membros em uma hierarquia devem estar dentro do mesmo modelo.  
@@ -53,9 +53,9 @@ ms.locfileid: "73729227"
 ## <a name="hierarchy-example"></a>Exemplo de hierarquia  
  No exemplo a seguir, os membros de produto são agrupados por membros de subcategoria.  
   
- ![Exemplo de hierarquia agrupada por subcategoria](../master-data-services/media/mds-conc-hierarchy.gif "Exemplo de hierarquia agrupada por subcategoria")  
+ ![Hierarquia agrupada por exemplo de subcategoria](../master-data-services/media/mds-conc-hierarchy.gif "Hierarquia agrupada por exemplo de subcategoria")  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

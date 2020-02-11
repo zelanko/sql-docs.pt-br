@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Criando a base de dados de conhecimento do DQS dos fornecedores | Microsoft Docs'
+title: 'Lição 1: criando a base de dados de conhecimento do DQS dos fornecedores | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26759a68274cfbc520e5e176d0dd3e1fab07e720
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154973"
 ---
-# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lição 1: Como criar a base de dados de conhecimento do DQS Fornecedores
+# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lição 1: Criando a base de dados de conhecimento do DQS de fornecedores
   Nesta lição, você criará uma base de dados de conhecimento do DQS denominada **fornecedores** com o conhecimento (metadados) sobre os dados do fornecedor. Use a base de dados de conhecimento para executar as atividades de limpeza e correspondência nos dados do fornecedor de entrada. A atividade de limpeza identifica dados incorretos ou inválidos, corrige os dados incorretos, propõe correções/sugestões, padroniza os dados e enriquece os dados com mais informações. A atividade de correspondência compara dados e identifica registros semelhantes (mas um pouco diferentes) nos dados que o ajudam a remover duplicatas nos dados.  
   
  É possível usar tanto processos interativos quanto processos auxiliados pelo computador para criar, compilar e gerenciar uma base de dados de conhecimento. O conhecimento em uma base de dados de conhecimento é mantido em domínios, cada qual específico para um campo de dados nos dados que você deseja limpar e/ou corresponder.  
   
  Nesta lição, você executará as seguintes tarefas para criar a base de dados de conhecimento dos **fornecedores** :  
   
--   Crie uma base de dados deconhecimento do DQS chamada suppliers. Você pode criar uma base de dados de conhecimento de várias maneiras. Você pode compilar uma base de dados de conhecimento a partir do zero ou compilá-la a partir de uma base de dados de conhecimento existente ou importando um arquivo DQS (.dqs) que contém uma base de dados de conhecimento pré-compilada e exportada ou uma atividade de descoberta de conhecimento nos dados de exemplo. Neste tutorial, você cria a base de dados de conhecimento do zero.  
+-   Crie uma base de dados de conhecimento do DQS chamada **suppliers**. Você pode criar uma base de dados de conhecimento de várias maneiras. Você pode compilar uma base de dados de conhecimento a partir do zero ou compilá-la a partir de uma base de dados de conhecimento existente ou importando um arquivo DQS (.dqs) que contém uma base de dados de conhecimento pré-compilada e exportada ou uma atividade de descoberta de conhecimento nos dados de exemplo. Neste tutorial, você cria a base de dados de conhecimento do zero.  
   
--   Crie domínios na base de dados de conhecimento do suppliers que você usa para limpar e dados correspondentes para identificar duplicatas. Crie domínios para os campos de dados que você deseja usar nas atividades limpeza e correspondência, não para todos os campos de dados nos dados.  
+-   Crie domínios na base de dados de conhecimento do **suppliers** que você usa para limpar e dados correspondentes para identificar duplicatas. Crie domínios para os campos de dados que você deseja usar nas atividades limpeza e correspondência, não para todos os campos de dados nos dados.  
   
 -   Adicione valores a um domínio manualmente, importando valores de um arquivo do Excel, executando uma atividade de descoberta de conhecimento nos dados de exemplo e importando valores de projeto de um projeto de limpeza. Você também pode importar valores de domínio importando um arquivo DQS que contém as propriedades e os valores de domínio, que não executa no tutorial.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "70154973"
 -   Publique a base de dados de conhecimento para que ela possa ser usada nas atividades de limpeza e correspondência.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 1: Criando uma base de dados de conhecimento e domínios](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
+ [Tarefa 1: Criando a base de dados de conhecimento e domínios](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

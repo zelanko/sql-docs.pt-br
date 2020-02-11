@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 73a2bf2973d8c4f8f9bf9ac886728fb45250343f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038138"
 ---
 # <a name="mdx-data-definition---update-member"></a>Definição de dados MDX – UPDATE MEMBER
@@ -60,15 +60,15 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |Identificador de propriedade|Significado|  
 |-------------------------|-------------|  
-|FORMAT_STRING|Uma cadeia de formato de estilo Office que o aplicativo cliente pode usar para exibir valores de célula.|  
-|VISIBLE|Um valor que indica se o membro calculado é visível em um conjunto de linhas de esquema. Calculados visíveis membros podem ser adicionados a um conjunto com o [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) função. Um valor diferente de zero indica que o membro calculado é visível. O valor padrão desta propriedade é *Visible*.<br /><br /> Em geral, membros calculados não visíveis são usados como etapas intermediárias em membros calculados mais complexos. Esses membros calculados também podem ser consultados por outros tipos de membros, como medidas.|  
+|FORMAT_STRING|Uma cadeia de caracteres de formato de estilo do Office que o aplicativo cliente pode usar para exibir valores de células.|  
+|VISIBLE|Um valor que indica se o membro calculado é visível em um conjunto de linhas de esquema. Membros calculados visíveis podem ser adicionados a um conjunto com a função [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Um valor diferente de zero indica que o membro calculado é visível. O valor padrão dessa propriedade é *visível*.<br /><br /> Em geral, membros calculados não visíveis são usados como etapas intermediárias em membros calculados mais complexos. Esses membros calculados também podem ser consultados por outros tipos de membros, como medidas.|  
 |NON_EMPTY_BEHAVIOR|A medida ou o conjunto usado por MDX para determinar o comportamento de membros calculados ao resolver células vazias.|  
 |CAPTION|Um valor de cadeia de caracteres que especifica a legenda que o aplicativo cliente usa para exibir o membro.|  
-|DISPLAY_FOLDER|Um valor de cadeia de caracteres que especifica o caminho da pasta de exibição onde o membro será mostrado pelo aplicativo cliente. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e clientes fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a barra invertida (\\) como separador de nível. Para fornecer várias pastas de exibição para um membro definido, use um ponto-e-vírgula (;) para separar as pastas.|  
+|DISPLAY_FOLDER|Um valor de cadeia de caracteres que especifica o caminho da pasta de exibição onde o membro será mostrado pelo aplicativo cliente. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e os clientes fornecidos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]pelo, a barra invertida (\\) como o separador de nível. Para fornecer várias pastas de exibição para um membro definido, use um ponto-e-vírgula (;) para separar as pastas.|  
 |ASSOCIATED_MEASURE_GROUP|O nome do grupo de medidas ao qual esse membro está associado.|  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução de membro DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Instrução DROP MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [Instrução CREATE MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
  [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   

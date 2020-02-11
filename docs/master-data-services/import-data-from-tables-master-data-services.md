@@ -11,10 +11,10 @@ ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729248"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importar Dados de Tabelas (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73729248"
   
 -   O modelo não deve ter um status de **Confirmado**.  
   
- **Para adicionar, atualizar e excluir dados no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
+ **Para adicionar, atualizar e excluir dados no banco de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] dado**  
   
 1.  Prepare os membros para importação na tabela de preparo adequada no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , incluindo fornecer valores para os campos requisitados. Para obter uma visão geral das tabelas de preparo, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73729248"
   
          Na página **Lotes de Preparo** , selecione o modelo ao qual você está adicionando dados na lista suspensa e clique em **Iniciar Lotes**. O status do processamento em lotes é indicado no campo **Status** . Para obter mais informações sobre os status, consulte [Status de importação &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md).  
   
-         ![Página de lotes de preparo no Master Data Manager](../master-data-services/media/mds-stagingbatchespage.png "Página de lotes de preparo no Master Data Manager")  
+         ![Página de lotes de preparação no Master Data Manager](../master-data-services/media/mds-stagingbatchespage.png "Página de lotes de preparação no Master Data Manager")  
   
          O processo de preparo é iniciado em intervalos determinados pela configuração de **Intervalo de lotes de preparo** no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   

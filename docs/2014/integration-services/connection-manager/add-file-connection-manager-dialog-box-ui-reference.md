@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833868"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões de Arquivos
@@ -33,7 +33,7 @@ ms.locfileid: "62833868"
  **Tipo de uso**  
  Especifique os tipos de arquivos a serem usados para o gerenciador de conexões de vários arquivos.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Criar arquivos**|O gerenciador de conexões criará os arquivos.|  
 |**Arquivos existentes**|O gerenciador de conexões utilizará arquivos existentes.|  
@@ -55,7 +55,7 @@ ms.locfileid: "62833868"
  **Botões de seta**  
  Selecione um arquivo ou pasta e use os botões de seta para movê-los para cima ou para baixo para especificar a sequência de acesso.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../integration-services-error-and-message-reference.md)  
   
   
