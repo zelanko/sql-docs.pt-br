@@ -1,5 +1,5 @@
 ---
-title: Ambiente hospedado de CLR | Microsoft Docs
+title: Ambiente hospedado do CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922560"
 ---
 # <a name="clr-hosted-environment"></a>Ambiente hospedado de CLR
@@ -72,10 +72,10 @@ ms.locfileid: "62922560"
  O CLR fornece vários serviços para ajudar atingir as metas de design da integração do CLR com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ###### <a name="type-safety-verification"></a>Verificação de segurança de tipo  
- Código fortemente tipado é um código que acessa as estruturas de memória somente de modos bem definidos. Por exemplo, dada uma referência de objeto válida, o código fortemente tipado pode acessar memória em offsets fixos, correspondentes a membros de campo reais. Entretanto, se o código acessar a memória em offsets arbitrários dentro ou fora do intervalo de memória que pertence ao objeto, então ele não será fortemente tipado. Quando os assemblies são carregados no CLR, antes de a MSIL ser compilada usando compilação JIT (just-in-time), o tempo de execução executa uma fase de verificação que examina o código antes de determinar sua segurança de tipos. O código aprovado com êxito nesta verificação é chamado de código fortemente tipado verificável.  
+ Código fortemente tipado é um código que acessa as estruturas de memória somente de modos bem definidos. Por exemplo, dada uma referência de objeto válida, o código fortemente tipado pode acessar memória em offsets fixos, correspondentes a membros de campo reais. Entretanto, se o código acessar a memória em offsets arbitrários dentro ou fora do intervalo de memória que pertence ao objeto, então ele não será fortemente tipado. Quando os assemblies são carregados no CLR, antes de a MSIL ser compilada usando compilação JIT (just-in-time), o runtime executa uma fase de verificação que examina o código antes de determinar sua segurança de tipos. O código aprovado com êxito nesta verificação é chamado de código fortemente tipado verificável.  
   
 ###### <a name="application-domains"></a>Domínios de aplicativo  
- O CLR dá suporte à noção de domínios de aplicativo como zonas de execução dentro de um processo de host, onde assemblies de código gerenciado podem ser carregados e executados. O limite do domínio do aplicativo fornece isolamento entre assemblies. Os assemblies são isolados em termos de visibilidade de variáveis estáticas e membros de dados e de capacidade para chamar código dinamicamente. Domínios de aplicativo também são o mecanismo para carregar e descarregar código. O código só pode ser descarregado da memória através do descarregamento do domínio de aplicativo. Para obter mais informações, consulte [domínios de aplicativo e segurança da integração CLR](../../database-engine/dev-guide/application-domains-and-clr-integration-security.md).  
+ O CLR dá suporte à noção de domínios de aplicativo como zonas de execução dentro de um processo de host, onde assemblies de código gerenciado podem ser carregados e executados. O limite do domínio do aplicativo fornece isolamento entre assemblies. Os assemblies são isolados em termos de visibilidade de variáveis estáticas e membros de dados e de capacidade para chamar código dinamicamente. Domínios de aplicativo também são o mecanismo para carregar e descarregar código. O código só pode ser descarregado da memória através do descarregamento do domínio de aplicativo. Para obter mais informações, consulte [domínios de aplicativo e segurança de integração CLR](../../database-engine/dev-guide/application-domains-and-clr-integration-security.md).  
   
 ###### <a name="code-access-security-cas"></a>CAS (segurança de acesso ao código)  
  O sistema de segurança CLR sistema fornece um modo de controlar quais os tipos de código gerenciado de operações que podem ser executados, atribuindo permissões ao código. As permissões de acesso ao código são atribuídas com base na identidade do código (por exemplo, a assinatura do assembly ou a origem do código).  
@@ -84,7 +84,7 @@ ms.locfileid: "62922560"
   
  Se uma API gerenciada no .NET Framework expuser operações sobre recursos que são protegidas por uma permissão de acesso a código, a API solicitará essa permissão antes de acessar o recurso. Essa solicitação faz o sistema de segurança CLR ativar uma verificação abrangente de cada unidade de código (assembly) na pilha de chamadas. Somente se toda a cadeia de chamada tiver permissão, o acesso ao recurso será concedido.  
   
- Observe que não há suporte à capacidade de gerar código gerenciado dinamicamente, usando a API Reflection.Emit, dentro do ambiente hospedado pelo CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esse código não teria as permissões de execução da CAS e, portanto, falharia em tempo de execução. Para obter mais informações, consulte [segurança de acesso do código de integração de CLR](security/clr-integration-code-access-security.md).  
+ Observe que não há suporte à capacidade de gerar código gerenciado dinamicamente, usando a API Reflection.Emit, dentro do ambiente hospedado pelo CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esse código não teria as permissões de execução da CAS e, portanto, falharia em tempo de execução. Para obter mais informações, consulte [segurança de acesso ao código de integração CLR](security/clr-integration-code-access-security.md).  
   
 ###### <a name="host-protection-attributes-hpas"></a>HPAs (atributos de proteção de host)  
  O CLR fornece um mecanismo para anotar APIs gerenciadas que fazem parte do .NET Framework com determinados atributos que podem ser de interesse de um host do CLR. Exemplos de tais atributos incluem:  
@@ -95,12 +95,12 @@ ms.locfileid: "62922560"
   
 -   ExternalProcessMgmt, que indica se a API expõe um modo de controlar o processo de host.  
   
- Dados esses atributos, o host pode especificar uma lista de HPAs, como o atributo SharedState, que devem ser desabilitados no ambiente hospedado. Nesse caso, o CLR nega as tentativas do código de usuário de chamar APIs que são anotadas pelo HPAs na lista proibida. Para obter mais informações, consulte [atributos de proteção de Host e programação de integração de CLR](../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
+ Dados esses atributos, o host pode especificar uma lista de HPAs, como o atributo SharedState, que devem ser desabilitados no ambiente hospedado. Nesse caso, o CLR nega as tentativas do código de usuário de chamar APIs que são anotadas pelo HPAs na lista proibida. Para obter mais informações, consulte [atributos de proteção do host e programação de integração do CLR](../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Como o SQL Server e o CLR trabalham juntos  
  Esta seção discute como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integra os modelos de threading, agendamento, sincronização e gerenciamento de memória do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e do CLR. Em particular, esta seção examina a integração sob o ponto de vista das metas de escalabilidade, confiabilidade e segurança. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] atua essencialmente como o sistema operacional para o CLR quando este é hospedado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O CLR chama rotinas de baixo nível implementadas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para threading, agendamento e gerenciamento de memória. Elas são as mesmas primitivas que o restante do mecanismo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa. Esta abordagem fornece vários benefícios de escalabilidade, confiabilidade e segurança.  
   
-###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Escalabilidade: Comuns de threading, agendamento e sincronização  
+###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Escalabilidade: Threading, agendamento e sincronização comuns  
  O CLR chama as APIs do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para criar threads, tanto para executar código de usuário quanto para seu próprio uso interno. Para fazer a sincronização de vários threads, o CLR chama objetos de sincronização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Isto permite que o agendador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para agende outras tarefas quando um thread estiver esperando um objeto de sincronização. Por exemplo, quando o CLR iniciar a coleta de lixo, todos os seus threads esperam a coleta de lixo terminar. Como os threads do CLR e os objetos de sincronização pelos quais eles estão esperando são conhecidos para o agendador do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode agendar threads que estão executando outras tarefas do banco de dados que não envolvem o CLR. Isto também permite que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detecte deadlocks que envolvem bloqueios tomados pelos objetos de sincronização CLR e utilize técnicas tradicionais para remoção de deadlock.  
   
  O código gerenciado é executado preventivamente no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O agendador do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem a capacidade de detectar e parar threads que não tenham sido executados durante um tempo significativo. A capacidade de conectar threads do CLR a threads do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implica que o agendador do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode identificar threads “fugitivos” no CLR e gerenciar sua prioridade. Tais threads fugitivos são suspensos e devolvidos à fila. Os threads que são identificados repetidamente como fugitivos não recebem permissão de execução por um determinado período de tempo, para que outros trabalhos possam ser executados.  
@@ -116,8 +116,8 @@ ms.locfileid: "62922560"
   
  Quando é feita hospedagem no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], essas anulações de thread são manipuladas da seguinte forma: o CLR detecta qualquer estado compartilhado no domínio do aplicativo no qual a anulação de thread ocorre. Ele faz isto verificando para a presença de objetos de sincronização. Se houver um estado compartilhado no domínio do aplicativo, então o próprio domínio do aplicativo será descarregado. A descarga do domínio do aplicativo para transações de banco de dados que estão em execução no momento, naquele domínio de aplicativo. Como a presença do estado compartilhado pode ampliar o impacto de tais exceções críticas para as sessões de usuário que não são aquela que está disparando a exceção, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o CLR tomaram medidas para reduzir a probabilidade de estado compartilhado. Para obter mais informações, consulte a documentação do .NET Framework.  
   
-###### <a name="security-permission-sets"></a>Segurança: Conjuntos de permissões  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite que os usuários especifiquem os requisitos de confiabilidade e segurança para o código implantado no banco de dados. Quando os assemblies são carregados no banco de dados, o autor do assembly pode especificar um dos três conjuntos de permissões para esse assembly: -SAFE, EXTERNAL_ACCESS e UNSAFE.  
+###### <a name="security-permission-sets"></a>Segurança: conjuntos de permissões  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite que os usuários especifiquem os requisitos de confiabilidade e segurança para o código implantado no banco de dados. Quando os assemblies são carregados no banco de dados, o autor do assembly pode especificar um dos três conjuntos de permissões para esse assembly: SAFE, EXTERNAL_ACCESS e UNSAFE.  
   
 |||||  
 |-|-|-|-|  
@@ -140,10 +140,10 @@ ms.locfileid: "62922560"
   
  Dadas essas considerações, desencorajamos o uso de variáveis estáticas e membros de dados estáticos de classes usado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para assemblies SAFE e EXTERNAL_ACCESS, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] examina os metadados do assembly na ocasião CREATE ASSEMBLY e gerará uma falha na criação desses assemblies se encontrar o uso de membros e variáveis de dados estáticos.  
   
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também desabilita as chamadas às APIs do .NET Framework que são anotadas com os atributos de proteção do host `SharedState`, `Synchronization` e `ExternalProcessMgmt`. Isso impede que os assemblies SAFE e EXTERNAL_ACCESS chamem APIs que permitam compartilhar o estado, fazer sincronização e afetar a integridade do processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [restrições do modelo de programação de integração de CLR](database-objects/clr-integration-programming-model-restrictions.md).  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também desabilita as chamadas às APIs do .NET Framework que são anotadas com os atributos de proteção do host `SharedState`, `Synchronization` e `ExternalProcessMgmt`. Isso impede que os assemblies SAFE e EXTERNAL_ACCESS chamem APIs que permitam compartilhar o estado, fazer sincronização e afetar a integridade do processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [restrições do modelo de programação de integração CLR](database-objects/clr-integration-programming-model-restrictions.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Segurança da integração CLR](security/clr-integration-security.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Segurança de integração CLR](security/clr-integration-security.md)   
  [Desempenho da integração CLR](clr-integration-architecture-performance.md)  
   
   

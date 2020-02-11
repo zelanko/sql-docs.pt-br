@@ -1,5 +1,5 @@
 ---
-title: Alerta de propriedades do novo alerta (página geral) | Microsoft Docs
+title: Propriedades do alerta – novo alerta (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062140"
 ---
-# <a name="alert-properties-new-alert-general-page"></a>Alerta de propriedades do novo alerta (página geral)
-  Use esta página para exibir e modificar as propriedades gerais dos alertas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+# <a name="alert-properties-new-alert-general-page"></a>Propriedades do alerta – novo alerta (página Geral)
+  Use esta página para exibir e modificar as propriedades gerais de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas do Agent.  
   
 ## <a name="options"></a>Opções  
  **Nome**  
@@ -32,11 +32,11 @@ ms.locfileid: "63062140"
  **Tipo**  
  Selecione o tipo de alerta:  
   
--   O**Alerta de evento do SQL Server** responde às mensagens no log de eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+-   **SQL Server alerta de evento** responde às mensagens no [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de eventos do Windows.  
   
--   O**Alerta de condição de desempenho do SQL Server** responde a uma condição específica em um contador de desempenho.  
+-   **SQL Server alerta de condição de desempenho** responde a uma condição específica em um contador de desempenho.  
   
--   O**Alerta de evento do WMI** responde a um evento WMI (Instrumentação de Gerenciamento do Windows).  
+-   **Alerta de evento WMI** responde a um evento Instrumentação de gerenciamento do Windows (WMI).  
   
 ## <a name="sql-server-event-alert-options"></a>Opções de alerta de evento do SQL Server  
  **Nome do banco de dados**  
@@ -48,7 +48,7 @@ ms.locfileid: "63062140"
  **Severity**  
  Especifique que este evento responda a qualquer mensagem com um nível de severidade específico e o nível de severidade.  
   
- **Gerar alertas quando a mensagem contiver**  
+ **Gerar alerta quando a mensagem contiver**  
  Filtre os eventos por uma cadeia de caracteres específica. Quando esta opção é selecionada, o alerta só responde a eventos que contenham uma cadeia de caracteres específica.  
   
  **Texto da mensagem**  
@@ -67,7 +67,7 @@ ms.locfileid: "63062140"
  **Alertar se o contador**  
  Especifique o comportamento do contador ao qual o alerta responde. Por exemplo, o alerta pode responder a uma condição em que o valor do contador de **Espaço livre em tempdb (KB)** cai abaixo de um determinado valor ou responder a uma condição em que as **Compilações de SQL/s** subam acima de um determinado valor.  
   
- **Value**  
+ **Valor**  
  Especifique um valor para o contador.  
   
 ## <a name="wmi-event-alert-options"></a>Opções de alerta de evento WMI  
@@ -77,7 +77,7 @@ ms.locfileid: "63062140"
  **Consulta**  
  Especifique a instrução WQL que identifica o evento ao qual o alerta responde.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Alerts](alerts.md)   
  [Usando o WQL com o provedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [Criar um alerta usando um número de erro](create-an-alert-using-an-error-number.md)   

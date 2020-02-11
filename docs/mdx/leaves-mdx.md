@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d29c77250c23900d74d1969a6c37bc719c89cdd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905733"
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 
 
-  Retorna um conjunto composto de todos os atributos (limitado, opcionalmente, aos que pertencem a uma dimensão específica). Para cada atributo x no conjunto retornado, se x for o atributo de granularidade, ou estiver relacionado direta ou indiretamente a esse atributo, a granularidade será definida no atributo x sem afetar a fatia. O **deixa** função foi projetada para uso em uma instrução SCOPE ou no lado esquerdo de uma atribuição.  
+  Retorna um conjunto composto de todos os atributos (limitado, opcionalmente, aos que pertencem a uma dimensão específica). Para cada atributo x no conjunto retornado, se x for o atributo de granularidade, ou estiver relacionado direta ou indiretamente a esse atributo, a granularidade será definida no atributo x sem afetar a fatia. A **função** Leaves foi projetada para uso dentro de uma instrução Scope ou no lado esquerdo de uma atribuição.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ Leaves( [ Dimension_expression ] )
 ## <a name="remarks"></a>Comentários  
  Membros folha são tuplas formadas pela junção cruzada do mais baixo nível de todas as hierarquias de atributo. Os membros calculados são excluídos.  
   
--   Se um nome de dimensão for especificado, o **deixa** função retorna um conjunto que contém os membros folha do atributo de chave para a dimensão especificada.  
+-   Se um nome de dimensão for especificado, **a função** Leave retornará um conjunto que contém os membros folha do atributo de chave para a dimensão especificada.  
   
 -   Se a dimensão for associada a vários grupos de medidas, a dimensão da medida no escopo atual será usada.  
   
@@ -46,7 +46,7 @@ Leaves( [ Dimension_expression ] )
     > [!IMPORTANT]  
     >  Um erro será gerado se nem todos os atributos tiverem a mesma granularidade nos grupos de medidas do escopo atual.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

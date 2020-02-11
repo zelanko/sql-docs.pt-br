@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036192"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Especificar fator de preenchimento para um índice
@@ -77,7 +77,7 @@ ms.locfileid: "63036192"
   
 6.  Expanda **Especificação de Preenchimento**, selecione a linha **Fator de Preenchimento** e digite o fator de preenchimento que você deseja na linha.  
   
-7.  Clique em **Fechar**.  
+7.  Clique em **fechar**  
   
 8.  No menu **Arquivo** , selecione **Salvar**_table_name_.  
   

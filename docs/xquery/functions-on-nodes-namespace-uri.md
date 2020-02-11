@@ -1,5 +1,5 @@
 ---
-title: Função namespace-uri (XQuery) | Microsoft Docs
+title: namespace-função URI (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929949"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funções em Nós – namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o URI do QName especificado no namespace *$arg* como xs: String.  
+  Retorna o URI do namespace do QName especificado em *$ARG* como um xs: String.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,16 +42,16 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   Se o argumento for omitido, o padrão será o nó de contexto.  
   
--   No SQL Server **fn:namespace-uri()** sem um argumento só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, só pode ser usado entre parênteses ([]).  
+-   Em SQL Server, **fn: namespace-URI ()** sem um argumento só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, só pode ser usado entre parênteses ([]).  
   
--   Se *$arg* é a sequência vazia, a cadeia de caracteres de comprimento zero será retornada.  
+-   Se *$ARG* for a sequência vazia, a cadeia de caracteres de comprimento zero será retornada.  
   
--   Se *$arg* é um elemento ou nó de atributo cujo expanded-QName não está em um namespace, a função retorna a cadeia de caracteres de comprimento zero  
+-   Se *$ARG* for um nó de elemento ou atributo cujo QName de expansão não está em um namespace, a função retornará a cadeia de caracteres de comprimento zero  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. Recuperar o URI do namespace de um nó específico  
+### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>a. Recuperar o URI do namespace de um nó específico  
  A consulta a seguir é especificada em uma instância XML não digitada. A expressão de consulta, `namespace-uri(/ROOT[1])`, recupera a parte do namespace URI do nó especificado.  
   
 ```  
@@ -61,7 +61,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  Em razão do QName especificado não possuir a parte do namespace URI, mas só a parte de nome local, o resultado será uma cadeia de caracteres de comprimento zero.  
   
- A consulta a seguir é especificada em digitada Instructions **xml** coluna. A expressão `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`, retorna o namespace URI do primeiro <`Location`> do filho do elemento de <`root`> elemento.  
+ A consulta a seguir é especificada em relação à coluna **XML** de instruções tipadas. A expressão, `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`, retorna o URI do namespace do primeiro <`Location`> filho do elemento <`root`>.  
   
 ```  
 SELECT Instructions.query('  
@@ -71,14 +71,14 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. Usando um namespace-uri() sem argumento em um predicado  
- A consulta a seguir está especifica em uma coluna digitada CatalogDescription xml. A expressão retorna todos os nós de elementos cujo namespace URI seja `https://www.adventure-works.com/schemas/OtherFeatures`. O namespace -**URI ()** for especificada sem um argumento de função e usa o nó de contexto.  
+ A consulta a seguir está especifica em uma coluna digitada CatalogDescription xml. A expressão retorna todos os nós de elementos cujo namespace URI seja `https://www.adventure-works.com/schemas/OtherFeatures`. A função namespace-**URI ()** é especificada sem um argumento e usa o nó de contexto.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -98,15 +98,15 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- Você pode alterar o namespace URI na consulta anterior para `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Em seguida, você receberá todos os filhos do nó de elemento da <`ProductDescription`> elemento cuja parte do namespace URI do QName expandido é `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
+ Você pode alterar o namespace URI na consulta anterior para `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Em seguida, você receberá todos os filhos do nó de `ProductDescription` elemento do <> elemento cuja parte do URI do namespace `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`do QName expandido é.  
   
 ### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
   
--   O **namespace-uri()** função retorna instâncias do tipo xs: String em vez de xs: anyURI.  
+-   A função **namespace-URI ()** retorna instâncias do tipo xs: String em vez de xs: anyURI.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções em nós](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
- [Função local-name &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
+ [Função de nome local &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   
   

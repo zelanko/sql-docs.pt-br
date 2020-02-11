@@ -16,32 +16,32 @@ ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 512569ce2baa8acabdf8bcbf8f637ebf20e4f613
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917841"
 ---
 # <a name="originalvalue-property-ado"></a>Propriedade OriginalValue (ADO)
-Indica o valor de uma [campo](../../../ado/reference/ado-api/field-object.md) que existiam no registro antes de todas as alterações foram feitas.  
+Indica o valor de um [campo](../../../ado/reference/ado-api/field-object.md) que existia no registro antes de qualquer alteração ser feita.  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna um **Variant** valor que representa o valor de um campo antes de qualquer alteração.  
+ Retorna um valor **Variant** que representa o valor de um campo antes de qualquer alteração.  
   
 ## <a name="remarks"></a>Comentários  
- Use o **OriginalValue** propriedade para retornar o valor do campo original para um campo do registro atual.  
+ Use a propriedade **OriginalValue** para retornar o valor do campo original para um campo do registro atual.  
   
- Na *modo de atualização imediata* (no qual o provedor grava as alterações à fonte de dados subjacentes depois de chamar o [atualizar](../../../ado/reference/ado-api/update-method.md) método), o **OriginalValue** retorna de propriedade o valor do campo que existiam antes de todas as alterações (ou seja, desde a última **atualização** chamada de método). Isso é o mesmo valor que o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) usa o método para substituir o [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade.  
+ No *modo de atualização imediata* (no qual o provedor grava alterações na fonte de dados subjacente depois que você chama o método [Update](../../../ado/reference/ado-api/update-method.md) ), a propriedade **OriginalValue** retorna o valor do campo que existia antes de qualquer alteração (isto é, desde a última chamada do método **Update** ). Esse é o mesmo valor que o método [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) usa para substituir a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) .  
   
- Na *modo de atualização em lotes* (em que o provedor armazena em cache várias alterações e os grava em fonte de dados subjacente somente quando você chama o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método), o **OriginalValue** propriedade retorna o valor do campo que existiam antes de todas as alterações (ou seja, desde a última **UpdateBatch** chamada de método). Isso é o mesmo valor que o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) usa o método para substituir o **valor** propriedade. Quando você usa essa propriedade com o [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propriedade, você pode resolver conflitos que podem surgir de atualizações em lotes.  
+ No *modo de atualização em lotes* (no qual o provedor armazena em cache várias alterações e as grava na fonte de dados subjacente somente quando você chama o método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) ), a propriedade **OriginalValue** retorna o valor do campo que existia antes de qualquer alteração (ou seja, desde a última chamada do método **UpdateBatch** ). Esse é o mesmo valor que o método [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) usa para substituir a propriedade **Value** . Ao usar essa propriedade com a propriedade [subdependent](../../../ado/reference/ado-api/underlyingvalue-property.md) , você pode resolver conflitos que surgem de atualizações em lotes.  
   
-## <a name="record"></a>Record  
- Para [registro](../../../ado/reference/ado-api/record-object-ado.md) objetos, o **OriginalValue** propriedade ficará vazia para campos adicionados antes [atualização](../../../ado/reference/ado-api/update-method.md) é chamado.  
+## <a name="record"></a>Registro  
+ Para objetos de [registro](../../../ado/reference/ado-api/record-object-ado.md) , a propriedade **OriginalValue** estará vazia para os campos adicionados antes de a [atualização](../../../ado/reference/ado-api/update-method.md) ser chamada.  
   
-## <a name="applies-to"></a>Aplica-se a  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+## <a name="applies-to"></a>Aplica-se A  
+ [Objeto Campo](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo de OriginalValue e UnderlyingValue exemplo das propriedades (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
- [Exemplo de OriginalValue e UnderlyingValue propriedades (VC + +)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo das propriedades OriginalValue e subdependvalue (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
+ [Exemplo das propriedades OriginalValue e subdependvalue (VC + +)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [Propriedade UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

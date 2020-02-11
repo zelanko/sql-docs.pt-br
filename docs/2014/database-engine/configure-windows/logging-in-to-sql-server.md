@@ -22,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782096"
 ---
 # <a name="logging-in-to-sql-server"></a>Fazendo o logon no SQL Server
-  Você pode fazer o logon para uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando qualquer uma das ferramentas de administração gráficas ou em um prompt de comando.  
+  Você pode fazer logon em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando qualquer uma das ferramentas de administração gráficas ou de um prompt de comando.  
   
  Quando você faz o logon em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando uma ferramenta de administração gráfica, como o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é solicitado que você forneça o nome do servidor, um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma senha, se necessário. Se você fizer logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do Windows, não precisará fornecer um logon do SQL Server cada vez que acessar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em vez, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa sua conta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para fazer o logon automaticamente. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução na autenticação de modo misto ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Modo de Autenticação do Windows) e você optar por fazer o logon usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será necessário fornecer um logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma senha. Quando possível, use a Autenticação do Windows.  
   
@@ -63,8 +63,10 @@ ms.locfileid: "62782096"
 |Conexão a uma instância nomeada, especificando o endereço IP e a porta TCP que está sendo usada, neste caso, 2828.|192.168.17.28,2828|  
 |Conectando à instância padrão através de nome, forçando uma conexão TCP.|tcp:APPHOST|  
 |Conectando à instância nomeada através de nome, forçando uma conexão TCP.|tcp:APPHOST\SQLEXPRESS|  
-|Conectando a uma instância padrão especificando um nome de pipe nomeado.|\\\APPHOST\pipe\unit\app|  
-|Conectando a uma instância nomeada especificando um nome de pipe nomeado.|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
+|Conectando a uma instância padrão especificando um nome de pipe nomeado.|
+  \\\APPHOST\pipe\unit\app|  
+|Conectando a uma instância nomeada especificando um nome de pipe nomeado.|
+  \\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |Conectando à instância padrão através de nome, forçando uma conexão de pipes nomeados.|np:APPHOST|  
 |Conectando à instância nomeada através de nome, forçando uma conexão de pipes nomeados.|np:APPHOST\SQLEXPRESS|  
   
@@ -78,11 +80,11 @@ WHERE session_id = @@SPID;
 ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Fazer logon em uma instância do SQL Server &#40;Prompt de Comando&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
+ [Faça logon em uma instância do SQL Server &#40;prompt de comando&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Os recursos a seguir podem ajudá-lo a solucionar um problema de conexão.  
   
--   [Como solucionar problemas na conexão ao Mecanismo de Banco de Dados do SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [Como solucionar problemas de conexão com o SQL Server Mecanismo de Banco de Dados](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
 -   [Etapas para solucionar problemas de conectividade do SQL](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   

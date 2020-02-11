@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807520"
 ---
 # <a name="database-engine-cross-instance-features"></a>Recursos entre instâncias do Mecanismo de Banco de Dados
@@ -29,7 +29,7 @@ ms.locfileid: "62807520"
 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)  
 [Coleta de dados](../relational-databases/data-collection/data-collection.md)  
 [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-[Administrar vários servidores usando os Servidores Centrais de Gerenciamento](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
+[Administrar vários servidores usando os Servidores de Gerenciamento Centrais](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
 [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md)  
 [Monitor de Atividade](../relational-databases/performance-monitor/activity-monitor.md)  
   

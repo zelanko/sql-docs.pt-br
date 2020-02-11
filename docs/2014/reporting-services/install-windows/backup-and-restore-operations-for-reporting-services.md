@@ -20,28 +20,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c992148017f6a3ecb383e85ad5bbfcc3a3ec3c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108906"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operações de backup e restauração para o Reporting Services
   Este tópico fornece uma visão geral de todos os arquivos de dados usados em uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e descreve quando e como você deve fazer backup dos arquivos. O desenvolvimento de um plano de backup e restauração para os arquivos do banco de dados do servidor de relatório é a parte mais importante de uma estratégia de recuperação. No entanto, uma estratégia de recuperação mais abrangente inclui backups de chaves de criptografia, assemblies ou extensões personalizados, arquivos de configuração e arquivos de origem para relatórios e modelos.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint  
   
  As operações de backup e restauração são usadas com frequência para mover todo ou parte de uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
--   Se estiver movendo apenas os bancos de dados do servidor de relatório, poderá usar o backup e restauração ou anexar e desanexar para realocar os bancos de dados em uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Movendo os bancos de dados do servidor de relatório para outro computador &#40;modo nativo do SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   Se estiver movendo apenas os bancos de dados do servidor de relatório, poderá usar o backup e restauração ou anexar e desanexar para realocar os bancos de dados em uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Mover uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para um computador novo é chamado de migração. Quando você migra uma instalação, o Programa de Instalação é executado para instalar uma nova instância do servidor de relatório e, em seguida, os dados da instância são copiados para o novo computador. Para obter mais informações sobre como migrar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consulte os seguintes tópicos:  
   
     -   [Atualizar e migrar o Reporting Services](upgrade-and-migrate-reporting-services.md)  
   
-    -   [Migrar uma instalação do Reporting Services &#40;modo do SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [Migre uma instalação do Reporting Services &#40;modo do SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
-    -   [Migrar uma instalação do Reporting Services &#40;modo nativo&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+    -   [Migre uma instalação do Reporting Services &#40;modo nativo&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>Fazendo backup dos bancos de dados do servidor de relatório  
  Uma vez que um servidor de relatório é um servidor sem monitoração de estado, os dados de todos os aplicativos são armazenados nos bancos de dados **reportserver** e **reportservertempdb** que são executados em uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Você pode fazer backup dos bancos de dados **reportserver** e **reportservertempdb** que usam um dos métodos com suporte para fazer backup dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As recomendações específicas para os bancos de dados do servidor de relatório incluem:  
@@ -61,7 +61,8 @@ ms.locfileid: "66108906"
  Você deve fazer backup das chaves de criptografia ao configurar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pela primeira vez. Você também deve fazer backup das chaves sempre que alterar a identidade das contas de serviço ou renomear o computador. Para saber mais, confira [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Para servidores de relatório do modo do SharePoint, confira a seção "Gerenciamento de chaves" de [Manage a Reporting Services SharePoint Service Application](../manage-a-reporting-services-sharepoint-service-application.md)(Gerenciar um aplicativo de serviço SharePoint do Reporting Services).  
   
 ## <a name="backing-up-the-configuration-files"></a>Fazendo backup dos arquivos de configuração  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa arquivos de configuração para armazenar as configurações do aplicativo. Você deve fazer backup dos arquivos quando configurar o servidor pela primeira vez e depois de implantar qualquer extensão personalizada. Os arquivos dos quais deve ser feito backup incluem:  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa arquivos de configuração para armazenar as configurações do aplicativo. Você deve fazer backup dos arquivos quando configurar o servidor pela primeira vez e depois de implantar qualquer extensão personalizada. Os arquivos dos quais deve ser feito backup incluem:  
   
 -   RSReportServer.config  
   
@@ -82,12 +83,12 @@ ms.locfileid: "66108906"
   
  Verifique se você tem uma cópia de backup de todas as extensões e assemblies personalizados que você está usando.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Arquivos de configuração do Reporting Services](../report-server/reporting-services-configuration-files.md)   
  [Utilitário rskeymgmt &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
  [Copiar bancos de dados com backup e restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
- [Administrar um banco de dados do Servidor de Relatório &#40;modo nativo do SSRS&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+ [Administrar um banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

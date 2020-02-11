@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 00645f619a89010bb4e2b112d50e00cbc6f40dce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127153"
 ---
-# <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (API de procedimento armazenado estendido)
+# <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API de procedimento armazenado estendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  Define o valor de um parâmetro de retorno de chamada do procedimento armazenado remoto. Esta função foi substituída pela função **srv_paramsetoutput**.  
   
@@ -64,26 +64,26 @@ len
  *data*  
  É um ponteiro para o valor dos dados a ser enviado de volta ao cliente como o parâmetro de retorno do procedimento armazenado remoto.  
   
- *len*  
+ *Len*  
  Especifica o comprimento dos dados a serem retornados. Se o tipo de dados do parâmetro tiver um tamanho constante e não permitir valores nulos (por exemplo, *srvbit* ou *srvint1*), *len* será ignorado.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SUCCEED se o valor do parâmetro tiver sido definido com êxito; caso contrário, FAIL. FAIL será retornado quando não houver procedimentos armazenados remotos atuais, quando não existir o *n*-ésimo parâmetro de procedimento armazenado remoto, quando o parâmetro não for um parâmetro de retorno e quando o argumento *len* não for válido.  
   
  Se *len* for 0, NULL será retornado. Definir *len* como 0 é o único modo de retornar NULL ao cliente.  
   
- Essa função retornará os valores a seguir se o parâmetro for um dos tipos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ Essa função retornará os valores a seguir, se o parâmetro for um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] dos tipos de dados.  
   
 |Novos tipos de dados|Comprimento dos dados de retorno|  
 |--------------------|------------------------|  
-|`BITN`|**NULL:** *len* = 0, data = IG, RET = 0<br /><br /> **ZERO:** N/D<br /><br /> **>=255:** N/D<br /><br /> **<255:** N/D|  
-|`BIGVARCHAR`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|`BIGCHAR`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|`BIGBINARY`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|`BIGVARBINARY`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|NCHAR|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|NVARCHAR|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|`NTEXT`|**NULL:** *len* = IG, data = IG, RET = 0<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = IG, data = IG, RET = 0<br /><br /> **\<255:** *len* = IG, data = IG, RET = 0|  
+|`BITN`|**NULL:** *Len* = 0, data = IG, RET = 0<br /><br /> **Zero:** N/A<br /><br /> **>= 255:** N/A<br /><br /> **<255:** N/A|  
+|`BIGVARCHAR`|**NULL:** *Len* = 0, data = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = Valid, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
+|`BIGCHAR`|**NULL:** *Len* = 0, data = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = Valid, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
+|`BIGBINARY`|**NULL:** *Len* = 0, data = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = Valid, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
+|`BIGVARBINARY`|**NULL:** *Len* = 0, data = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = Valid, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
+|NCHAR|**NULL:** *Len* = 0, data = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = Valid, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
+|NVARCHAR|**NULL:** *Len* = 0, data = IG, RET = 1<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = max8k, data = Valid, RET = 0<br /><br /> **<255:** *Len* = <8K, data = Valid, RET = 1|  
+|`NTEXT`|**NULL:** *Len* = IG, data = IG, RET = 0<br /><br /> **Zero:** *Len* = IG, data = IG, RET = 0<br /><br /> **>= 255:** *Len* = IG, data = IG, RET = 0<br /><br /> 255: *Len* = IG, data = IG, RET = 0 ** \<**|  
 |RET = Valor de retorno de srv_paramset||  
 |IG = Valor será ignorado||  
 |valid = Qualquer ponteiro válido para dados||  
@@ -95,12 +95,12 @@ len
   
  Esta função define o valor de retorno para um parâmetro, mas não envia o valor de retorno ao cliente. Todos os parâmetros de retorno, independentemente se seus valores retornados foram ou não com **srv_paramset**, serão automaticamente enviados ao cliente quando **srv_senddone** for chamado com o sinalizador de status SRV_DONE_FINAL definido.  
   
- Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  
+ Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador de SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  
   
 > [!IMPORTANT]  
 >  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Consulte também  
- [srv_paramsetoutput &#40;API de Procedimento Armazenado Estendido&#41;](srv-paramsetoutput-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>Consulte Também  
+ [srv_paramsetoutput &#40;API de procedimento armazenado estendido&#41;](srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   

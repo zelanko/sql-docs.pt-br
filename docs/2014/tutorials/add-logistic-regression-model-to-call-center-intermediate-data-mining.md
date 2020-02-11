@@ -1,5 +1,5 @@
 ---
-title: Adicionando um modelo de regressão logística à estrutura do Call Center (Tutorial de mineração de dados intermediário) | Microsoft Docs
+title: Adicionando um modelo de regressão logística à estrutura do Call Center (tutorial de mineração de dados intermediário) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823260"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Adicionando um modelo de regressão logística à estrutura do call center (Tutorial de mineração de dados intermediário)
@@ -28,47 +28,47 @@ ms.locfileid: "62823260"
   
 ### <a name="to-add-a-new-mining-model-to-the-call-center-mining-structure"></a>Para adicionar um novo modelo de mineração à estrutura de mineração do call center  
   
-1.  Na [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no Gerenciador de soluções, clique com botão direito na estrutura de mineração **Call Center guardado**e selecione **abrir Designer**.  
+1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], em Gerenciador de soluções, clique com o botão direito do mouse na estrutura de mineração, **compartimentalizados do Call Center**e selecione **Abrir Designer**.  
   
-2.  No Designer de mineração de dados, clique o **modelos de mineração** guia.  
+2.  No designer de mineração de dados, clique na guia **modelos de mineração** .  
   
 3.  Clique em **criar um modelo de mineração relacionado**.  
   
-4.  No **novo modelo de mineração** caixa de diálogo, para **nome do modelo**, tipo `Call Center - LR`.  Para **nome do algoritmo**, selecione **Regressão logística da Microsoft**.  
+4.  Na caixa de diálogo **novo modelo de mineração** , para **nome**do modelo `Call Center - LR`, digite.  Para **nome do algoritmo**, selecione **regressão logística da Microsoft**.  
   
 5.  Clique em **OK**.  
   
-     O modelo de mineração novo é exibido na **modelos de mineração** guia.  
+     O novo modelo de mineração é exibido na guia **modelos de mineração** .  
   
 ### <a name="to-customize-the-logistic-regression-model"></a>Para personalizar o modelo de regressão logística  
   
-1.  Na coluna para o novo modelo de mineração, `Call Center - LR`, deixe Fact CallCenter ID como a chave.  
+1.  Na coluna para o novo modelo de mineração, `Call Center - LR`deixe a ID callcenter do fato como a chave.  
   
-2.  Altere o valor de ServiceGrade e operadores de nível dois para **Predict**.  
+2.  Altere o valor dos operadores ServiceGrade e Level dois para **prever**.  
   
      Essas colunas serão usadas como entrada e para previsão. Em essência, você está criando dois modelos separados com os mesmos dados: um que prevê o número de operadores e outro que prevê a classificação de serviço.  
   
-3.  Alterar todas as outras colunas a serem **entrada**.  
+3.  Altere todas as outras colunas para **entrada**.  
   
 ### <a name="to-specify-the-seed-and-process-the-models"></a>Para especificar a semente e processar os modelos  
   
-1.  No **modelo de mineração** guia, clique com botão direito na coluna para o modelo denominado Call Center - LR e selecione **definir parâmetros de algoritmo**.  
+1.  Na guia **modelo de mineração** , clique com o botão direito do mouse na coluna do modelo chamado Call Center-LR e selecione **definir parâmetros de algoritmo**.  
   
-2.  Na linha para o parâmetro HOLDOUT_SEED, clique na célula vazia sob **valor**e o tipo `1`. Clique em **OK**.  
+2.  Na linha do parâmetro HOLDOUT_SEED, clique na célula vazia em **valor**e digite `1`. Clique em **OK**.  
   
     > [!NOTE]  
     >  O valor escolhido como semente não importa, desde que você use a mesma semente para todos os modelos relacionados.  
   
-3.  No **modelos de mineração** menu, selecione **processar estrutura de mineração e todos os modelos**. Clique em **Sim** para implantar o projeto de mineração de dados atualizados no servidor.  
+3.  No menu **modelos de mineração** , selecione **processar estrutura de mineração e todos os modelos**. Clique em **Sim** para implantar o projeto de Data Mining atualizado no servidor.  
   
-4.  No **processar modelo de mineração** caixa de diálogo, clique em **executar**.  
+4.  Na caixa de diálogo **modelo de mineração de processo** , clique em **executar**.  
   
-5.  Clique em **feche** para fechar o **progresso do processo** caixa de diálogo e clique **fechar** novamente no **processar modelo de mineração** caixa de diálogo.  
+5.  Clique em **fechar** para fechar a caixa de diálogo **progresso do processo** e clique em **fechar** novamente na caixa de diálogo **processar modelo de mineração** .  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Criando previsões para modelos de Call Center &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+ [Criando previsões para os modelos do Call Center &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Requisitos e considerações de processamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033569"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
-  Este tópico descreve como configurar o log de histórico de trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Este tópico descreve como configurar o log de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] histórico de trabalhos do Agent.  
   
 -   **Antes de começar:**  [Segurança](#Security)  
   
--   **Para configurar o log do histórico de trabalhos usando:**  [SQL Server Management Studio](#SSMS)  
+-   **Para configurar o log de histórico do trabalho usando:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -43,13 +43,13 @@ ms.locfileid: "63033569"
   
 3.  Na caixa de diálogo **Propriedades do SQL Server Agent** , selecione a página **Histórico** .  
   
-4.  Escolha entre as seguintes opções:  
+4.  Escolha uma das seguintes opções:  
   
     1.  Marque **Limitar tamanho do log do histórico de trabalho**e indique o número máximo de linhas para o log de histórico de trabalhos e o número máximo de linhas por trabalho.  
   
     2.  Marque **Remover automaticamente o histórico do agente**e especifique um período de tempo, para que os históricos anteriores a ele sejam excluídos do log.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementar trabalhos](implement-jobs.md)   
  [Monitorar atividade do trabalho](monitor-job-activity.md)   
  [Criar trabalhos](create-jobs.md)  

@@ -16,13 +16,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044051"
 ---
-# <a name="force-a-target-server-to-poll-the-master-server"></a>Forçar um servidor de destino a sondar o servidor mestre
+# <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
   Este tópico descreve como obrigar um servidor de destino a sondar o servidor mestre. O servidor de destino deve estar registrado no servidor mestre.  
   
  Um trabalho é uma série especificada de ações que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executa. Um trabalho multisservidor é um trabalho executado por um servidor mestre em um ou mais servidores de destino. Cada servidor de destino pode executar uma instância do mesmo trabalho ao mesmo tempo. Cada servidor de destino sonda o servidor mestre periodicamente, baixa uma cópia dos eventuais trabalhos novos a ele atribuídos e, em seguida, desconecta-se. O servidor de destino executa o trabalho localmente e, depois, reconecta-se ao servidor mestre para carregar o status do resultado do trabalho.  
@@ -30,9 +30,9 @@ ms.locfileid: "63044051"
 > [!NOTE]  
 >  Se o servidor mestre não estiver acessível quando o servidor de destino tentar carregar o status do trabalho, este será colocado em spool até que o servidor mestre esteja novamente acessível.  
   
--   **Antes de começar:**  [Limitações e Restrições](#Restrictions), [Segurança](#Security)  
+-   **Antes de começar:**  [limitações e restrições](#Restrictions), [segurança](#Security)  
   
--   **Para forçar um servidor de destino a sondar o servidor mestre usando:**  [SQL Server Management Studio](#SSMS)  
+-   **Para forçar um servidor de destino a sondar o servidor mestre, usando:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   

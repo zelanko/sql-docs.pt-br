@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022662"
 ---
 # <a name="new-agent-profile"></a>Novo Perfil de Agente
@@ -40,20 +40,20 @@ ms.locfileid: "63022662"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [Agente de Mesclagem de Replicação](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [Agente de Leitor de Fila de Replicação](agents/replication-queue-reader-agent.md)  
   
  **Valor padrão**  
  O valor padrão para cada parâmetro de agente.  
   
- **Value**  
+ **Valor**  
  O valor especificado para o parâmetro no perfil no qual o perfil novo é baseado. Edite esse campo para obter qualquer valor de parâmetro que você queira alterar.  
   
  **Mostrar apenas os parâmetros usados neste perfil**  
  Desmarque para mostrar todos os parâmetros válidos para um determinado agente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com perfis do Agente de Replicação](agents/work-with-replication-agent-profiles.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)   
  [Perfis do agente de replicação](agents/replication-agent-profiles.md)  

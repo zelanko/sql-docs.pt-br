@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 809420b875ebf20b45efb6b297cb198cfed8422b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990395"
 ---
 # <a name="localdb_error_internal_error"></a>LOCALDB_ERROR_INTERNAL_ERROR
@@ -23,10 +23,10 @@ ms.locfileid: "62990395"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|264|  
-|Origem do evento|Tempo de execução de banco de dados local do SQL Server 12.0|  
-|Componente|API do tempo de execução de banco de dados local|  
+|Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
+|Componente|API do runtime de banco de dados local|  
 |Texto da mensagem|Ocorreu um erro inesperado dentro de uma chamada de método API de instância de banco de dados local. Consulte o log do Aplicativo do Windows para obter detalhes sobre o erro.|  
   
 ## <a name="explanation"></a>Explicação  

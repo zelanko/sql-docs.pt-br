@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022221"
 ---
 # <a name="oracle-subscribers"></a>Assinantes Oracle
@@ -31,17 +31,17 @@ ms.locfileid: "63022221"
   
 1.  Instale e configure o software de rede cliente Oracle e o provedor Oracle OLE DB no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , para que o Distribuidor possa realizar as conexões ao Assinante Oracle. O software de rede cliente Oracle deve ter a versão mais recente disponível. A Oracle recomenda que os usuários instalem as mais recentes versões do software cliente. O software cliente é, portanto, muitas vezes uma versão mais recente do que o software do banco de dados. A maneira mais prática para instalar o software é usar o Instalador Universal Oracle no disco do Oracle Cliente. No Instalador Universal Oracle, você deverá fornecer as seguintes informações:  
   
-    |Informações|Descrição|  
+    |Informações|DESCRIÇÃO|  
     |-----------------|-----------------|  
     |Oracle Home|Esse é o caminho para diretório de instalação do software Oracle. Aceite o padrão (C:\oracle\ora90 ou semelhante) ou digite outro caminho. Para obter mais informações sobre o Oracle Home, consulte a seção "Considerações sobre o Oracle Home" mais adiante neste tópico.|  
     |Nome do Oracle home|Um alias para o caminho do Oracle home.|  
-    |Tipo de instalação|No Oracle 10g, selecione a opção de instalação **Tempo de Execução** ou **Administrador** .|  
+    |Tipo de instalação|No Oracle 10g, selecione a opção de instalação **Runtime** ou **Administrador** .|  
   
 2.  Crie um nome de TNS para o Assinante. O TNS (Substrato Transparente de Rede) é uma camada de comunicação usada pelos bancos de dados Oracle. O nome de serviço do TNS é o nome pelo qual uma instância do banco de dados Oracle é identificada em uma rede. Você atribui um nome de serviço ao TNS quando for configurar a conectividade do banco de dados Oracle. A replicação usa o nome de serviço do TNS para identificar o Assinante e estabelecer conexões.  
   
      Após a conclusão do Instalador Universal Oracle, use o Assistente de Configuração Net para configurar a conectividade da rede. Você deve fornecer quatro informações para configurar a conectividade de rede. O administrador do banco de dados Oracle configura a configuração de rede quando define o banco de dados e o ouvinte e, se você não tiver essas informações, elas deverão ser fornecidas pelo administrador. Você deve fazer o seguinte:  
   
-    |Ação|Descrição|  
+    |Ação|DESCRIÇÃO|  
     |------------|-----------------|  
     |Identificar o banco de dados|Há dois métodos para identificar o banco de dados. O primeiro método usa o Sistema Identificador Oracle (SID) e está disponível em todas as versões do Oracle. O segundo método usa o nome de serviço, que está disponível a partir da versão 8.0 do Oracle. Ambos os métodos usam um valor que é configurado quando o banco de dados é criado, e é importante que a configuração de rede cliente use o mesmo método de nomenclatura que o administrador usou ao configurar o ouvinte para o banco de dados.|  
     |Identificar um alias de rede para o banco de dados|Você deve especificar um alias de rede que será usado para acessar o banco de dados Oracle. O alias de rede é essencialmente um ponteiro para o SID remoto ou o nome de serviço que foi configurado quando o banco de dados foi criado, ele foi referenciado por diversos nomes em diferentes versões e produtos Oracle, incluindo o nome de serviço Net e o alias TNS. O SQL*Plus solicita esse alias como o parâmetro "Cadeia de caracteres de Host" ao efetuar logon.|  
@@ -142,7 +142,7 @@ ms.locfileid: "63022221"
 |`varchar(max)`|CLOB|  
 |`xml`|NCLOB|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
  [Assinar publicações](../subscribe-to-publications.md)  
   

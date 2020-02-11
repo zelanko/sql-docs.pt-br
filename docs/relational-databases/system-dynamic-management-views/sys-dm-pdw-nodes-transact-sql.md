@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_nodes (Transact-SQL) | Microsoft Docs
+title: sys. dm_pdw_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,27 +13,27 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 61593522e09ed86ec10f08a6ad8ff7a941a2e10e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899346"
 ---
-# <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-SQL)
+# <a name="sysdm_pdw_nodes-transact-sql"></a>sys. dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre todos os nós no [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]. Ele lista uma linha por nó no dispositivo.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|Id numérico exclusivo associado ao nó.<br /><br /> A chave para este modo de exibição.|Exclusivo em todo o dispositivo, independentemente do tipo.|  
-|type|**nvarchar(32)**|Tipo de nó.|'GERENCIAMENTO DE COMPUTAÇÃO', 'CONTROL',' '|  
-|name|**nvarchar(32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de tamanho apropriado.|  
-|endereço|**nvarchar(32)**|Endereço IP deste nó.|No formato de [0-255]. [0 a 255]. [0 a 255]. [0 a 255].|  
-|is_passive|**int**|Indica se a máquina virtual executando o nó está em execução no servidor atribuído ou realizou o failover para o servidor de reserva.|0 - VM do nó está em execução no servidor original.<br /><br /> 1 - VM do nó está em execução no servidor de reserva.|  
-|região|**nvarchar(32)**|A região onde o nó está em execução.|'PDW', 'HDINSIGHT'|  
+|pdw_node_id|**int**|ID numérica exclusiva associada ao nó.<br /><br /> Chave para esta exibição.|Exclusivo em todo o dispositivo, independentemente do tipo.|  
+|type|**nvarchar (32)**|Tipo do nó.|' COMPUTAÇÃO ', ' CONTROLE ', ' GERENCIAMENTO '|  
+|name|**nvarchar (32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de comprimento apropriado.|  
+|address|**nvarchar (32)**|Endereço IP deste nó.|No formato [0-255]. [0-255]. [0-255]. [0-255].|  
+|is_passive|**int**|Indica se a máquina virtual que está executando o nó está em execução no servidor atribuído ou se passou por failover para o servidor sobressalente.|a VM de 0 nó está em execução no servidor original.<br /><br /> a VM de 1 nó está em execução no servidor sobressalente.|  
+|region|**nvarchar (32)**|A região em que o nó está sendo executado.|' PDW ', ' HDINSIGHT '|  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse e Parallel Data Warehouse exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

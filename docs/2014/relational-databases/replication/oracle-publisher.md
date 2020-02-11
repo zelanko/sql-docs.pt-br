@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b38b397c0a2128aed5ebaba0b1367ca14ebdcd09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022034"
 ---
 # <a name="oracle-publisher"></a>Editor Oracle
-  A partir do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite publicar dados de um banco de dados Oracle usando replicação de instantâneo e transacional. Para obter mais informações, consulte [Visão geral da publicação Oracle](non-sql/oracle-publishing-overview.md).  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]A partir do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o permite que você publique dados de um Oracle Database usando instantâneo e replicação transacional. Para obter mais informações, consulte [Visão geral da publicação Oracle](non-sql/oracle-publishing-overview.md).  
   
  O Editor Oracle deve usar um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor remoto; esse assistente deve ser executado no servidor depois que o software de rede Oracle necessário tiver sido instalado e testado. Para obter mais informações, consulte [Configure an Oracle Publisher](non-sql/configure-an-oracle-publisher.md) (Configurar um publicador do Oracle).  
   
@@ -31,14 +31,14 @@ ms.locfileid: "63022034"
  **Publicadores Oracle**  
  Selecione um Editor Oracle na lista. Essa lista contém Editores Oracle que foram previamente configurados para usar o servidor no qual o assistente está sendo executado como Distribuidor. Se a lista estiver vazia ou o Editor Oracle que você quiser usar não estiver na lista, clique em **Adicionar Editor Oracle**.  
   
- **Adicionar Editor Oracle**  
+ **Adicionar Publicador Oracle**  
  Clique para iniciar a caixa de diálogo **Propriedades do Distribuidor** . Nessa caixa de diálogo, clique em **Adicionar**e em **Adicionar Editor Oracle**. Na caixa de diálogo **Conectar ao Servidor** , especifique o nome do servidor Oracle, o logon e a senha para o esquema de usuário administrativo de replicação. Para obter mais informações, consulte [Conectar ao servidor &#40;Oracle&#41;, Logon](connect-to-server-oracle-login.md).  
   
 > [!NOTE]  
 >  Se o servidor no qual o assistente está sendo executado ainda não estiver configurado como Distribuidor, você será solicitado a configurá-lo agora.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma publicação de um Banco de Dados Oracle](publish/create-a-publication-from-an-oracle-database.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criar uma publicação de um Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
 
   
   

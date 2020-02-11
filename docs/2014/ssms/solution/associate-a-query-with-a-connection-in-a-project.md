@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a28982b3dcf8136e7981899b50aed1aa8f9904c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955889"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Associar uma consulta a uma conexão em um projeto
@@ -31,9 +31,9 @@ ms.locfileid: "62955889"
   
 2.  Na caixa de diálogo **Conectar ao Mecanismo de Banco de Dados** , forneça as informações da conexão. Se as informações de conexão corresponderem a uma conexão existente, a consulta será associada com aquela conexão.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de soluções](solution-explorer.md)   
- [Alterar a Conexão associada a uma consulta](change-the-connection-associated-with-a-query.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de Soluções](solution-explorer.md)   
+ [Alterar a conexão associada a uma consulta](change-the-connection-associated-with-a-query.md)   
  [Exibir ou alterar as propriedades de uma conexão em um projeto](view-or-change-the-properties-of-a-connection-in-a-project.md)  
   
   

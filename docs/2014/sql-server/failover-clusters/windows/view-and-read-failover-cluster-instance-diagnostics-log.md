@@ -11,25 +11,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049332"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Exibir e ler o log de diagnóstico da instância do cluster de failover
   Todos os erros críticos e eventos de aviso para a DLL de Recursos do SQL Server são gravados no log de eventos do Windows. Um log em execução das informações de diagnóstico específicas do SQL Server é capturado pelo procedimento armazenado do sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) e gravado nos arquivos de log de diagnóstico do cluster de failover do SQL Server (também conhecidos como logs *SQLDIAG*).  
   
--   **Antes de começar:**  [Recomendações](#Recommendations), [segurança](#Security)  
+-   **Antes de começar:**  [recomendações](#Recommendations), [segurança](#Security)  
   
--   **Para exibir o Log de diagnóstico, usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para exibir o log de diagnóstico, usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Para definições de configurar o Log de diagnóstico, usando:** [Transact-SQL](#TsqlConfigure)  
+-   **Para definir as configurações de log de diagnóstico, usando:** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Recommendations"></a> Recomendações  
- Por padrão, o SQLDIAG são armazenados em uma pasta LOG local do diretório de instância do SQL Server, por exemplo, ' c\arquivos Files\Microsoft SQL Server\MSSQL12. \<InstanceName > \mssql\log. ' do nó proprietário do AlwaysOn Failover Cluster FCI (instância). O tamanho de cada arquivo de log de SQLDIAG é fixo em 100 MB. Dez arquivos de log desse tipo são armazenados no computador antes de serem reciclados para novos logs.  
+ Por padrão, o SQLDIAG é armazenado em uma pasta de LOG local do diretório da instância do SQL Server, por exemplo, ' C\Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName> \MSSQL\LOG ' do nó proprietário da FCI (instância de cluster de failover) AlwaysOn. O tamanho de cada arquivo de log de SQLDIAG é fixo em 100 MB. Dez arquivos de log desse tipo são armazenados no computador antes de serem reciclados para novos logs.  
   
  Os logs usam o formato de arquivo de eventos estendidos. A função do sistema **sys.fn_xe_file_target_read_file** pode ser usada para leitura dos arquivos criados por Eventos Estendidos. É retornado um evento, em formato XML, por linha. Consulte a exibição do sistema para analisar os dados XML como um conjunto de resultados. Para obter mais informações, veja [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
@@ -87,20 +87,20 @@ ORDER BY Time;
 > [!NOTE]  
 >  Você pode filtrar os resultados para componentes específicos ou um estado usando a cláusula WHERE.  
   
-##  <a name="TsqlConfigure"></a> Usando Transact-SQL  
- **Para configurar as propriedades de log de diagnóstico**  
+##  <a name="TsqlConfigure"></a> Usando o Transact-SQL  
+ **Para configurar as propriedades do log de diagnóstico**  
   
 > [!NOTE]  
 >  Para obter um exemplo desse procedimento, veja [Exemplo (Transact-SQL)](#TsqlExample), mais adiante nesta seção.  
   
- Usando a instrução de linguagem de definição de dados (DDL), `ALTER SERVER CONFIGURATION`, você pode iniciar ou parar o registro em log dados de diagnóstico capturados pelo [sp_server_diagnostics &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) procedimento e o log do conjunto de SQLDIAG parâmetros de configuração, como a contagem de substituições de arquivo de log, o tamanho do arquivo de log e o local do arquivo. Para obter detalhes da sintaxe, consulte [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
+ Usando a instrução DDL (linguagem de definição de dados `ALTER SERVER CONFIGURATION`), você pode iniciar ou parar o log de dados de diagnóstico capturados pelo [sp_server_diagnostics &#40;procedimento de&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) e definir parâmetros de configuração de log SQLdiag, como a contagem de sobreposição do arquivo de log, o tamanho do arquivo de log e o local do arquivo. Para obter detalhes da sintaxe, consulte [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
   
 ###  <a name="ConfigTsqlExample"></a> Exemplos (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Setting diagnostic log options  
+####  <a name="TsqlExample"></a>Definindo opções de log de diagnóstico  
  Os exemplos desta seção mostram como definir os valores para a opção de log de diagnóstico.  
   
-##### <a name="a-starting-diagnostic-logging"></a>A. Iniciando o log de diagnóstico  
+##### <a name="a-starting-diagnostic-logging"></a>a. Iniciando o log de diagnóstico  
  O exemplo a seguir inicia o log de dados de diagnóstico.  
   
 ```  
@@ -130,7 +130,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Política de failover para instâncias de cluster de failover](failover-policy-for-failover-cluster-instances.md)  
   
   

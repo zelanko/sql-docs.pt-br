@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922148"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurações completas de banco de dados (modelo de recuperação completa)
@@ -38,7 +38,7 @@ ms.locfileid: "62922148"
   
 -   [Restaurando um banco de dados até o ponto de falha](#PointOfFailure)  
   
--   [Restaurando um banco de dados em um ponto em um backup de log](#PointWithinBackup)  
+-   [Restaurando um banco de dados para um ponto dentro de um backup de log](#PointWithinBackup)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62922148"
   
  A ilustração a seguir mostra esta sequência de restauração. Depois de uma falha (1), um backup do final do log de final é criado (2). Em seguida, o banco de dados é restaurado ao ponto da falha. Isso envolve a restauração de um backup de banco de dados, de um backup diferencial subsequente e de todos os backups de log feitos depois do backup diferencial, inclusive o do backup do final do log.  
   
- ![Restauração completa de banco de dados para o momento da falha](../../database-engine/media/bnrr-rmfull1-db-failure-pt.gif "Restauração completa de banco de dados para o momento da falha")  
+ ![Restauração de banco de dados completa no momento da falha](../../database-engine/media/bnrr-rmfull1-db-failure-pt.gif "Restauração de banco de dados completa no momento da falha")  
   
 > [!NOTE]  
 >  Ao restaurar um backup de banco de dados em uma instância de servidor diferente, veja [Copiar bancos de dados com Backup e Restauração](../databases/copy-databases-with-backup-and-restore.md).  
@@ -151,7 +151,7 @@ GO
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para restaurar um backup de banco de dados completo**  
   
--   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Restaurar um backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurar um banco de dados em um novo local &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -175,7 +175,7 @@ GO
   
 -   [Recuperar para um número de sequência de log &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   

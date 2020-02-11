@@ -19,17 +19,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917463"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bancos de dados com backup e restauração
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível criar um novo banco de dados por meio da restauração de um backup de um banco de dados do usuário criado por meio do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou de uma versão posterior. No entanto, backups de **master**, **model** e **msdb** que foram criados em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Além disso, backups do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não podem ser restaurados por nenhuma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usa um caminho padrão diferente das versões anteriores. Portanto, para restaurar backups de um banco de dados criados no local padrão de versões anteriores, você deve usar a opção MOVE. Para obter informações sobre o novo caminho padrão, veja [Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Para obter mais informações sobre como mover arquivos de banco de dados, consulte "Movendo arquivos do banco de dados", mais adiante neste tópico.  
+>  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usa um caminho padrão diferente das versões anteriores. Portanto, para restaurar backups de um banco de dados criados no local padrão de versões anteriores, você deve usar a opção MOVE. Para obter informações sobre o novo caminho padrão, veja [Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Para obter mais informações sobre como mover arquivos de banco de dados, consulte "Movendo arquivos do banco de dados", mais adiante neste tópico.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Etapas gerais para usar Backup e Restauração para copiar um banco de dados  
  Quando você usa backup e restauração para copiar um banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os computadores de origem e de destino podem ser todas as plataformas na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado.  
@@ -38,7 +39,7 @@ ms.locfileid: "62917463"
   
 1.  Faça backup do banco de dados de origem que pode residir em uma instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior. O computador no qual essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada é o *computador de origem*.  
   
-2.  No computador ao qual você deseja copiar o banco de dados (o *computador de destino*), conecte-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual você planeja restaurar o banco de dados. Se necessário, na instância do servidor de destino, crie os mesmos dispositivos usados para fazer o backup dos bancos de dados de origem.  
+2.  No computador para o qual você deseja copiar o banco de dados (o *computador de destino*), conecte-se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à instância do na qual você planeja restaurar o banco de dados. Se necessário, na instância do servidor de destino, crie os mesmos dispositivos usados para fazer o backup dos bancos de dados de origem.  
   
 3.  Restaure o backup do banco de dados de origem no computador de destino. A restauração do banco de dados cria automaticamente todos os arquivos de banco de dados.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "62917463"
   
     -   Se o arquivo existente não puder ser substituído, ocorrerá um erro na restauração.  
   
- Para evitar erros e consequências não intencionais, antes da operação de restauração, você pode usar o [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabela de histórico para descobrir os arquivos de log e banco de dados no backup que você planeja restaurar.  
+ Para evitar erros e consequências indesejadas, antes da operação de restauração, você pode usar a tabela de histórico do [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) para descobrir o banco de dados e os arquivos de log no backup que você planeja restaurar.  
   
 ## <a name="moving-the-database-files"></a>Movendo os arquivos do banco de dados  
  Se os arquivos que estão no backup do banco de dados não puderem ser restaurados no computador de destino pelas razões mencionadas anteriormente, será necessário mover os arquivos para um novo local enquanto estiverem sendo restaurados. Por exemplo:  
@@ -98,11 +99,11 @@ ms.locfileid: "62917463"
   
 -   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
- **Para restaurar arquivos e grupos de arquivos para um novo local**  
+ **Para restaurar arquivos e grupos de arquivos em um novo local**  
   
 -   [Restaurar arquivos em um novo local &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [Restaurar um backup de banco de dados &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
  **Para restaurar arquivos e grupos de arquivos sobre arquivos existentes**  
   
@@ -110,9 +111,9 @@ ms.locfileid: "62917463"
   
  **Para restaurar um banco de dados com um novo nome**  
   
--   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [Restaurar um backup de banco de dados &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
- **Reiniciar uma operação de restauração interrompida**  
+ **Para reinicializar uma operação de restauração interrompida**  
   
 -   [Reiniciar uma operação de restauração interrompida &#40;Transact-SQL&#41;](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
@@ -120,7 +121,7 @@ ms.locfileid: "62917463"
   
 -   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **Copiar um banco de dados usando o SQL Server Management Objects (SMO)**  
+ **Para copiar um banco de dados usando o SQL Server Management Objects (SMO)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   
@@ -130,7 +131,7 @@ ms.locfileid: "62917463"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Copiar bancos de dados em outros servidores](copy-databases-to-other-servers.md)   
  [Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   

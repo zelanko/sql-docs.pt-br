@@ -1,5 +1,5 @@
 ---
-title: Definir dados grandes | Microsoft Docs
+title: Definindo dados grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140623"
 ---
 # <a name="setting-large-data"></a>Definindo dados grandes
-  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, você pode definir dados de BLOB, passando um ponteiro para um objeto de armazenamento do consumidor.  
+  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo, você pode definir dados de blob passando um ponteiro para um objeto de armazenamento do consumidor.  
   
  O consumidor cria um objeto de armazenamento que contém os dados e transmite um ponteiro a este objeto de armazenamento para o provedor. Em seguida, o provedor lê dados do objeto de armazenamento do consumidor e grava-os na coluna de BLOB.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63140623"
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
-3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento *wType* na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento *pObject* para apontar para a estrutura DBOBJECT que você criou.  
+3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento *wType* na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento *pObject* para que ele aponte para a estrutura DBOBJECT criada.  
   
 4.  Crie um acessador que usa as informações de associação na matriz de estruturas DBBINDINGS.  
   
@@ -717,7 +717,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BLOBs e objetos OLE](blobs-and-ole-objects.md)   
  [Usando tipos de valor grande](../native-client/features/using-large-value-types.md)  
   

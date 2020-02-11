@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955839"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicar dados em colunas criptografadas (SQL Server Management Studio)
@@ -60,7 +60,7 @@ ms.locfileid: "62955839"
   
 6.  Assine a publicação. Para obter mais informações, consulte [Criar uma assinatura pull](../create-a-pull-subscription.md) ou [Criar uma assinatura push](../create-a-push-subscription.md).  
   
-7.  Inicialize a assinatura. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+7.  Inicialize a assinatura. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../create-and-apply-the-initial-snapshot.md).  
   
 8.  No Assinante, execute [CREATE SYMMETRIC KEY](/sql/t-sql/statements/create-symmetric-key-transact-sql) usando os mesmos valores para ALGORITHM, KEY_SOURCE, e IDENTITY_VALUE da etapa 1. Você pode especificar um valor diferente para ENCRYPTION BY.  
   
@@ -85,8 +85,8 @@ ms.locfileid: "62955839"
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
-## <a name="see-also"></a>Consulte também  
- [Segurança de replicação do SQL Server](view-and-modify-replication-security-settings.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Segurança de Replicação do SQL Server](view-and-modify-replication-security-settings.md)   
  [Criar chaves simétricas idênticas em dois servidores](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

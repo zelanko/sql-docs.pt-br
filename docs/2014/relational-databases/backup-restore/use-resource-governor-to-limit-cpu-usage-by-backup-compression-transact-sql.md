@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920785"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL)
@@ -76,7 +76,7 @@ ms.locfileid: "62920785"
   
      Para obter mais informações, consulte [Permissões de principal do banco de dados GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-principal-permissions-transact-sql).  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Exemplo a: Configurando um logon e um usuário (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Exemplo A: Configurando um logon e um usuário (Transact-SQL)  
  O exemplo a seguir é relevante apenas se você optar por criar um novo logon e usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para backups de baixa prioridade. Alternativamente, você pode usar um logon e um usuário existentes, se forem apropriados.  
   
 > [!IMPORTANT]  
@@ -124,7 +124,7 @@ GO
   
  **Para configurar o Administrador de Recursos (SQL Server Management Studio)**  
   
--   [Configurar o administrador de recursos usando um modelo](../resource-governor/configure-resource-governor-using-a-template.md)  
+-   [Configurar o Resource Governor usando um modelo](../resource-governor/configure-resource-governor-using-a-template.md)  
   
 -   [Criar um pool de recursos](../resource-governor/create-a-resource-pool.md)  
   
@@ -183,7 +183,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>Exemplo b: Configurando o Resource Governor (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Exemplo B: Configurando o Resource Governor (Transact-SQL)  
  O exemplo a seguir executa as seguintes etapas em uma única transação:  
   
 1.  Cria o pool de recursos `pMAX_CPU_PERCENT_20` .  
@@ -259,9 +259,9 @@ GO
  [&#91;Início&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> Compactando backups usando uma sessão com CPU limitada  
- Para criar um backup compactado em uma sessão com uma CPU máxima limitada, faça logon como o usuário especificado na função de classificação. No comando de backup, especifique WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) ou selecione **Compactar backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Para criar um backup de banco de dados compactado, consulte [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
+ Para criar um backup compactado em uma sessão com uma CPU máxima limitada, faça logon como o usuário especificado na função de classificação. No comando backup, especifique com COMPACTação ([!INCLUDE[tsql](../../includes/tsql-md.md)]) ou selecione **Compactar backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Para criar um backup de banco de dados compactado, consulte [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemplo c: Criando um backup compactado (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemplo C: Criando um backup compactado (Transact-SQL)  
  O exemplo de [BACKUP](/sql/t-sql/statements/backup-transact-sql) a seguir cria um backup completo compactado do banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] em um arquivo de backup recém-formatado, `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```sql  
@@ -277,8 +277,8 @@ GO
   
  [&#91;Início&#93;](#Top)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e testar uma função de classificação definida pelo usuário](../resource-governor/create-and-test-a-classifier-user-defined-function.md)   
- [Administrador de Recursos](../resource-governor/resource-governor.md)  
+ [Resource Governor](../resource-governor/resource-governor.md)  
   
   

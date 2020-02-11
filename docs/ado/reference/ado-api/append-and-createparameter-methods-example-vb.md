@@ -1,5 +1,5 @@
 ---
-title: Acrescente e exemplo dos métodos CreateParameter (VB) | Microsoft Docs
+title: Exemplo dos métodos Append e CreateParameter (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60ea4653fac6bd2fada500d562420b1ff705d4d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920713"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Exemplo dos métodos Append e CreateParameter (VB)
-Este exemplo usa o [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) métodos para executar um procedimento armazenado com um parâmetro de entrada.  
+Este exemplo usa os métodos [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) para executar um procedimento armazenado com um parâmetro de entrada.  
   
 ```  
 'BeginAppendVB  
@@ -119,8 +119,8 @@ End Sub
 'EndAppendVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Método append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Método Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   

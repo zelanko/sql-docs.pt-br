@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63000339"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
@@ -81,7 +81,7 @@ ms.locfileid: "63000339"
   
 -   Resolvedor personalizado baseado em COM  
   
-     A replicação de mesclagem founece uma API para escrever resolvedoues como objetos COM em linguagens, como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para obter mais informações, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     A replicação de mesclagem fornece uma API para escrever resolvedores como objetos COM em linguagens como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para obter mais informações, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Resolvedor baseado em COM fornecido pela [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
@@ -96,7 +96,7 @@ ms.locfileid: "63000339"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar um tipo de assinatura de mesclagem e a prioridade da resolução de conflitos &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Programação de replicação do [!INCLUDE[tsql](../../../includes/tsql-md.md)] e programação do RMO (Replication Management Objects): [Criar uma assinatura pull](../create-a-pull-subscription.md) e [Criar uma assinatura push](../create-a-push-subscription.md)  
+-   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação e programação RMO (Replication Management Objects): [Create a Pull Subscription](../create-a-pull-subscription.md) e [Create a Push Subscription](../create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Resolvedor Interativo  
  A replicação fornece uma interface de usuário de Resolvedor Interativo que pode ser usada tanto em conjunto com o resolvedor padrão de conflitos, baseado em prioridade, como com o resolvedor de artigo. Ao realizar a sincronização sob demanda por meio do Gerenciador de Sincronização do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, o Resolvedor Interativo exibe os dados do conflito em tempo real e permite que se opte pela forma de resolução dos conflitos. Para obter mais informações sobre como ativar resolução interativa e iniciar o Resolvedor Interativo, consulte [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -129,9 +129,9 @@ ms.locfileid: "63000339"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Exibir e resolver conflitos de dados em publicações de mesclagem &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Programação de replicação do [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Exibir informações sobre conflitos para publicações de mesclagem &#40;programação Transact-SQL de replicação&#41;](../view-conflict-information-for-merge-publications.md)  
+-   Replicando programação do [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Exibir informações sobre conflitos em publicações de mesclagem &#40;Programação Transact-SQL de replicação&#41;](../view-conflict-information-for-merge-publications.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sincronizar dados](../synchronize-data.md)  
   
   

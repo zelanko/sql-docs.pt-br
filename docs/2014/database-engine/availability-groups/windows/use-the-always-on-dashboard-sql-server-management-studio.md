@@ -1,5 +1,5 @@
 ---
-title: Use o painel do AlwaysOn (SQL Server Management Studio) | Microsoft Docs
+title: Usar o painel AlwaysOn (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788723"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Use the AlwaysOn Dashboard (SQL Server Management Studio)
@@ -61,13 +61,13 @@ ms.locfileid: "62788723"
 ####  <a name="Permissions"></a> Permissões  
  Requer as permissões CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a> Para iniciar o painel AlwaysOn  
+##  <a name="SSMSProcedure"></a>Para iniciar o painel AlwaysOn  
   
 1.  No Pesquisador de Objetos, conecte à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na qual você deseja executar o Painel AlwaysOn.  
   
 2.  Expanda o nó **Alta Disponibilidade AlwaysOn**, clique com o botão direito do mouse em **Grupos de Disponibilidade** e clique em **Mostrar Painel**.  
   
-###  <a name="DashboardOptions"></a> Para alterar as opções do painel AlwaysOn  
+###  <a name="DashboardOptions"></a>Para alterar as opções do painel AlwaysOn  
  Você pode usar a caixa de diálogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opções** para configurar o comportamento do Painel AlwaysOn do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para atualização e habilitação automática de uma política de AlwaysOn definida automaticamente.  
   
 1.  No menu **Ferramentas** , clique em **Opções**.  
@@ -76,7 +76,7 @@ ms.locfileid: "62788723"
   
 3.  Para habilitar uma política definida pelo usuário, selecione **Habilitar política AlwaysOn definida pelo usuário**.  
   
-##  <a name="AvGroupsView"></a> Resumo do grupo de disponibilidade  
+##  <a name="AvGroupsView"></a>Resumo do grupo de disponibilidade  
  A tela de grupo de disponibilidade exibe uma linha de resumo para cada grupo de disponibilidade para o qual a instância de servidor conectada hospeda uma réplica. Esse painel exibe as seguintes colunas.  
   
  **Nome do Grupo de Disponibilidade**  
@@ -93,7 +93,7 @@ ms.locfileid: "62788723"
 -   **Manual**. Indica que nenhuma réplica está em modo de failover automático.  
   
  **Problemas**  
- Clique no link **Problemas** para abrir documentação de solução de problemas para determinado problema. Para obter uma lista de todos os problemas da política AlwaysOn, consulte [políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Clique no link **Problemas** para abrir documentação de solução de problemas para determinado problema. Para obter uma lista de todos os problemas da política AlwaysOn, consulte [políticas AlwaysOn para problemas operacionais com o grupos de disponibilidade AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Clique nos títulos das colunas para classificar as informações de grupo de disponibilidade pelo nome do grupo de disponibilidade, a instância primária, o modo de failover ou o Problema.  
@@ -148,7 +148,7 @@ ms.locfileid: "62788723"
 -   **NULL**. Estado desconhecido. Este valor ocorre quando a instância do servidor local não pode se comunicar com o cluster de failover do WSFC (isto é, o nó local não faz parte do quorum do WSFC).  
   
  **Problemas**  
- Lista o nome do problema. Esse valor é mostrado por padrão. Para obter uma lista de todos os problemas da política AlwaysOn, consulte [políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Lista o nome do problema. Esse valor é mostrado por padrão. Para obter uma lista de todos os problemas da política AlwaysOn, consulte [políticas AlwaysOn para problemas operacionais com o grupos de disponibilidade AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Modo de Disponibilidade**  
  Indica a propriedade de réplica que você define separadamente para cada réplica de disponibilidade. Esse valor é ocultado por padrão. Os valores possíveis são:  
@@ -203,7 +203,7 @@ ms.locfileid: "62788723"
 > [!NOTE]  
 >  Para obter informações sobre contadores de desempenho para réplicas de disponibilidade, veja [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> Para agrupar informações do grupo de disponibilidade  
+##  <a name="AvDbDetails"></a>Para agrupar informações do grupo de disponibilidade  
  Para agrupar as informações, clique em **Agrupar por**e selecione uma das opções a seguir:  
   
 -   **Réplicas de disponibilidade**  
@@ -263,7 +263,7 @@ ms.locfileid: "62788723"
     > [!CAUTION]  
     >  Quando um banco de dados está no estado INITIALIZING, um failover forçado da réplica secundária sempre deixará esse banco de dados em um estado no qual não pode ser iniciado.  
   
- **Failover Readiness**  
+ **Prontidão de Failover**  
  Indica em qual réplica de disponibilidade pode ser feito failover com ou sem perda de dados potencial. Essa coluna é mostrada por padrão. Os valores possíveis são:  
   
 -   **Perda de Dados**  
@@ -277,7 +277,7 @@ ms.locfileid: "62788723"
   
 -   **Crítico**. Clique para exibir os problemas críticos.  
   
- Para obter uma lista de todos os problemas da política AlwaysOn, consulte [políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Para obter uma lista de todos os problemas da política AlwaysOn, consulte [políticas AlwaysOn para problemas operacionais com o grupos de disponibilidade AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Suspenso**  
  Indica se o banco de dados está **Suspenso** ou **Retomado**. Esse valor é ocultado por padrão.  
@@ -350,9 +350,9 @@ ms.locfileid: "62788723"
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Use as políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Use políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   

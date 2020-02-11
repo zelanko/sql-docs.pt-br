@@ -33,19 +33,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917273"
 ---
 # <a name="database-files-and-filegroups"></a>Arquivos e grupos de arquivos do banco de dados
   Todo o banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem, no mínimo, dois arquivos de sistema operacional: um arquivo de dados e um arquivo de log. Os arquivos de dados contêm dados e objetos como tabelas, índices, procedimentos armazenados e exibições. Os arquivos de log contêm as informações necessárias para recuperar todas as transações no banco de dados. Os arquivos de dados podem ser agrupados em grupos de arquivos para propósitos de alocação e administração.  
   
 ## <a name="database-files"></a>Arquivos do banco de dados  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possuem três tipos de arquivos, como mostrado na tabela a seguir.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possuem três tipos de arquivos, como mostrado na tabela a seguir.  
   
-|Arquivo|Descrição|  
+|Arquivo|DESCRIÇÃO|  
 |----------|-----------------|  
 |Primária|O arquivo de dados primário contém as informações de inicialização do banco de dados e aponta para os outros arquivos no banco de dados. Dados do usuário e objetos podem ser armazenados neste arquivo ou em arquivos de dados secundários. Todo banco de dados possui um arquivo de dados primário. A extensão de nome de arquivo indicada para arquivos de dados primários é .mdf.|  
 |Secundário|Os arquivos de dados secundários são opcionais, definidos pelo usuário, e armazenam dados do usuário. Arquivos secundários podem ser usados para distribuir os dados entre os diversos discos, colocando cada arquivo em uma unidade de disco diferente. Além disso, caso um banco de dados exceda o tamanho máximo em um único arquivo Windows, será possível usar arquivos de dados secundários, assim, o banco de dados continuará a crescer.<br /><br /> A extensão de nome de arquivo indicada para arquivos de dados secundários é .ndf.|  
@@ -62,7 +63,7 @@ ms.locfileid: "62917273"
   
  Todos os arquivos de dados são armazenados nos grupos de arquivos listados na tabela a seguir.  
   
-|Grupo de arquivos|Descrição|  
+|Grupo de arquivos|DESCRIÇÃO|  
 |---------------|-----------------|  
 |Primária|O grupo de arquivos que contém o arquivo primário. Todas as tabelas do sistema são alocadas no grupo de arquivos primário.|  
 |Definido pelo usuário|Qualquer grupo de arquivos que seja criado especificamente pelo usuário quando o usuário cria primeiro ou modifica depois o banco de dados.|  

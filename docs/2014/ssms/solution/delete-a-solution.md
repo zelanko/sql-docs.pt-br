@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63043941"
 ---
 # <a name="delete-a-solution"></a>Excluir uma solução
@@ -37,8 +37,8 @@ ms.locfileid: "63043941"
   
 4.  No menu **Arquivo** , clique em **Excluir**.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de soluções](solution-explorer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de Soluções](solution-explorer.md)   
  [Criar uma nova solução](create-a-new-solution.md)   
  [Criar um projeto](create-a-project.md)   
  [Remover ou excluir um item ou projeto](remove-or-delete-an-item-or-project.md)  

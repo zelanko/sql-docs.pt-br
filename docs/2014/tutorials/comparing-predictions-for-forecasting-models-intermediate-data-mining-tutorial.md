@@ -1,5 +1,5 @@
 ---
-title: Comparando previsões para modelos (Tutorial de mineração de dados intermediário) de previsão | Microsoft Docs
+title: Comparando previsões para modelos de previsão (tutorial de mineração de dados intermediários) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066326"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Comparando previsões para modelos de previsão (Tutorial de mineração de dados intermediário)
@@ -34,8 +34,8 @@ ms.locfileid: "63066326"
   
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
-##  <a name="bkmk_EXTEND"></a> Comparando os resultados originais com os resultados depois de adicionar dados  
- Vamos examinar os dados para apenas a linha de produto M200 na região do Pacífico, para ver como atualizar o modelo com novos dados afeta os resultados. Lembre-se de que a série de dados original terminava em junho de 2004, e nós obtivemos novos dados para julho, agosto e setembro.  
+##  <a name="bkmk_EXTEND"></a>Comparando os resultados originais com os resultados depois de adicionar dados  
+ Vamos examinar os dados apenas da linha de produtos M200 na região do Pacífico, para ver como a atualização do modelo com novos dados afeta os resultados. Lembre-se de que a série de dados original terminava em junho de 2004, e nós obtivemos novos dados para julho, agosto e setembro.  
   
 -   A primeira coluna mostra os novos dados que foram adicionados.  
   
@@ -56,16 +56,16 @@ ms.locfileid: "63066326"
   
  Em geral, o algoritmo pondera as alterações nos novos dados mais fortemente do que nos dados iniciais do modelo. Porém, neste caso, os novos números de vendas representam um aumento de apenas 20-30% sobre o período anterior. Então, só houve um pequeno aumento nas vendas projetadas, depois das quais as projeções de vendas caíram novamente, mais alinhados com a tendência dos meses anteriores aos novos dados.  
   
-##  <a name="bkmk_REPLACE"></a> Comparando os resultados originais e a previsão cruzada  
- Lembre-se de que o modelo de mineração original revelou grandes diferenças entre as regiões e as linhas de produtos. Por exemplo, as vendas para o modelo M200 foram muito fortes, ao passo que as vendas para o modelo T1000 foram bastante baixas em todas as regiões. Além disso, algumas séries não tinham muitos dados. Séries ficaram em desvantagem, o que significa que eles não têm o mesmo ponto de partida.  
+##  <a name="bkmk_REPLACE"></a>Comparando os resultados original e de previsão cruzada  
+ Lembre-se de que o modelo de mineração original revelou grandes diferenças entre as regiões e as linhas de produtos. Por exemplo, as vendas para o modelo M200 foram muito fortes, ao passo que as vendas para o modelo T1000 foram bastante baixas em todas as regiões. Além disso, algumas séries não tinham muitos dados. As séries foram irregulares, o que significa que elas não tinham o mesmo ponto de partida.  
   
- ![Séries que preveem a quantidade M200 e T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "séries que preveem a quantidade M200 e T1000")  
+ ![Séries que preveem a quantidade M200 e T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "Séries que preveem a quantidade M200 e T1000")  
   
  Então, como as previsões mudaram quando você fez suas projeções com base no modelo geral, que é baseado em vendas mundiais, e não nos conjuntos de dados originais? Para não perder informações nem distorcer as previsões, você pode salvar os resultados a uma tabela, unir a tabela de previsões à tabela de dados históricos, e traçar um gráfico dos dois conjuntos de dados históricos e previsões.  
   
  O diagrama a seguir é baseado apenas uma linha de produto, a M200. O gráfico compara as previsões do modelo de mineração inicial com as previsões usando o modelo de mineração agregado.  
   
- ![Gráfico do Excel comparando previsões](../../2014/tutorials/media/m200-predictions-compared.gif "gráfico do Excel comparando previsões")  
+ ![Gráfico do Excel comparando previsões](../../2014/tutorials/media/m200-predictions-compared.gif "Gráfico do Excel comparando previsões")  
   
  Neste diagrama, é possível ver que o modelo de mineração agregado preserva a variação e as tendências gerais em valores ao mesmo tempo em que minimiza as flutuações nas séries de dados individuais.  
   
@@ -76,8 +76,8 @@ ms.locfileid: "63066326"
   
  Você aprendeu a criar modelos que podem ser usados para previsão cruzada, usando o parâmetro REPLACE_MODEL_CASES e aplicando o modelo a uma série de dados diferente.  
   
-## <a name="see-also"></a>Consulte também  
- [Tutorial de mineração de dados intermediário &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Exemplos de consulta de modelos de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tutorial de mineração de dados intermediário &#40;Analysis Services de mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+ [Exemplos de consulta de um modelo de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

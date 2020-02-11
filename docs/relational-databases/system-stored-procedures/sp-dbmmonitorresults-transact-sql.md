@@ -19,18 +19,18 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899172"
 ---
-# <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
+# <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna as linhas de status de um banco de dados monitorado a partir da tabela de status na qual o monitoramento de espelhamento de banco de dados é armazenado e permite selecionar se o procedimento obtém o último status antes.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,9 +62,9 @@ sp_dbmmonitorresults database_name
   
  6 = últimas 100 linhas  
   
- 7 = último 500 linhas  
+ 7 = últimas 500 linhas  
   
- 8 = último 1.000 linhas  
+ 8 = últimas 1.000 linhas  
   
  9 = Últimas 1.000.000 linhas  
   
@@ -73,7 +73,7 @@ sp_dbmmonitorresults database_name
   
  0 = Não atualiza o status do banco de dados. Os resultados são computados utilizando somente as últimas duas linhas, a idade depende de quando a tabela de status foi atualizada.  
   
- 1 = atualiza o status do banco de dados chamando **sp_dbmmonitorupdate** antes de computar os resultados. No entanto, se a tabela de status tenha sido atualizada nos 15 segundos anteriores, ou o usuário não é um membro do **sysadmin** função de servidor fixa **sp_dbmmonitorresults** é executado sem atualizar o status.  
+ 1 = atualiza o status do banco de dados chamando **sp_dbmmonitorupdate** antes de calcular os resultados. No entanto, se a tabela de status tiver sido atualizada nos 15 segundos anteriores ou se o usuário não for membro da função de servidor fixa **sysadmin** , o **sp_dbmmonitorresults** será executado sem Atualizar o status.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhum  
@@ -81,11 +81,11 @@ sp_dbmmonitorresults database_name
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o número solicitado de linhas de status de histórico do banco de dados especificado. Cada linha contém as seguintes informações:  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome de um banco de dados espelho.|  
-|**role**|**int**|Função de espelhamento atual da instância do servidor:<br /><br /> 1 = Principal<br /><br /> 2 = Espelhamento|  
-|**mirroring_state**|**int**|Estado do banco de dados:<br /><br /> 0 = Suspended<br /><br /> 1 = desconectado<br /><br /> 2 = Sincronização<br /><br /> 3 = Failover pendente<br /><br /> 4 = Sincronizado|  
+|**cargo**|**int**|Função de espelhamento atual da instância do servidor:<br /><br /> 1 = Principal<br /><br /> 2 = Espelhamento|  
+|**mirroring_state**|**int**|Estado do banco de dados:<br /><br /> 0 = suspenso<br /><br /> 1 = desconectado<br /><br /> 2 = Sincronização<br /><br /> 3 = Failover pendente<br /><br /> 4 = Sincronizado|  
 |**witness_status**|**int**|O status da conexão da testemunha na sessão de espelhamento de banco de dados pode ser:<br /><br /> 0 = Desconhecido<br /><br /> 1 = conectado<br /><br /> 2 = Desconectado|  
 |**log_generation_rate**|**int**|Quantidade de log gerado desde a atualização anterior do status de espelhamento deste banco de dados em kilobytes/segundo.|  
 |**unsent_log**|**int**|Tamanho de log não enviado na fila de envio do principal em kilobytes.|  
@@ -100,13 +100,13 @@ sp_dbmmonitorresults database_name
 |**local_time**|**datetime**|Hora de relógio de sistema na instância de servidor local quando esta linha foi atualizada.|  
   
 ## <a name="remarks"></a>Comentários  
- **sp_dbmmonitorresults** pode ser executado somente no contexto do **msdb** banco de dados.  
+ **sp_dbmmonitorresults** pode ser executado somente no contexto do banco de dados **msdb** .  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **sysadmin** função de servidor fixa ou nos **dbm_monitor** função de banco de dados fixa no **msdb** banco de dados. O **dbm_monitor** função permite que seus membros exibir o status de espelhamento de banco de dados, mas não atualizá-lo, mas não exibir ou configurar eventos de espelhamento de banco de dados.  
+ Requer a associação na função de servidor fixa **sysadmin** ou na função de banco de dados fixa **dbm_monitor** no banco de dados **msdb** . A função **dbm_monitor** permite que seus membros exibam o status de espelhamento de banco de dados, mas não os atualize, mas não exiba nem configure eventos de espelhamento de banco de dados.  
   
 > [!NOTE]  
->  Na primeira vez em que **sp_dbmmonitorupdate** é executado, ele cria a **dbm_monitor** função de banco de dados fixa no **msdb** banco de dados. Membros do **sysadmin** função de servidor fixa pode adicionar qualquer usuário para o **dbm_monitor** função fixa de banco de dados.  
+>  Na primeira vez que **sp_dbmmonitorupdate** é executado, ele cria a função de banco de dados fixa **dbm_monitor** no banco de dados **msdb** . Os membros da função de servidor fixa **sysadmin** podem adicionar qualquer usuário à função de banco de dados fixa **dbm_monitor** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo seguinte retorna as linhas registradas durante as duas horas anteriores sem atualizar o status do banco de dados.  
@@ -116,12 +116,12 @@ USE msdb;
 EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitordropmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorhelpmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
   

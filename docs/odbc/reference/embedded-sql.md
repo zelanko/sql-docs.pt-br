@@ -1,5 +1,5 @@
 ---
-title: Embedded SQL | Microsoft Docs
+title: SQL inserido | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,31 +17,31 @@ ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6a7fa2b3105aedee6cb054c5d5dfa76f3c430f35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915420"
 ---
 # <a name="embedded-sql"></a>SQL inserido
-A primeira técnica para enviar instruções SQL para o DBMS é incorporada SQL. Porque o SQL não usa variáveis e instruções de controle de fluxo, ele geralmente é usado como um subidioma do banco de dados que pode ser adicionado a um programa gravado em uma linguagem de programação convencional, como C ou COBOL. Essa é uma ideia central do embedded SQL: colocar instruções SQL em um programa gravado em um host de linguagem de programação. Em resumo, as técnicas a seguir são usadas para inserir instruções SQL em uma linguagem de host:  
+A primeira técnica para enviar instruções SQL para o DBMS é inserida no SQL. Como o SQL não usa variáveis e instruções de controle de fluxo, ele é frequentemente usado como uma sublinguagem de banco de dados que pode ser adicionada a um programa escrito em uma linguagem de programação convencional, como C ou COBOL. Esta é uma ideia central de SQL inserido: colocando instruções SQL em um programa escrito em uma linguagem de programação de host. Resumidamente, as seguintes técnicas são usadas para inserir instruções SQL em um idioma de host:  
   
--   Instruções inseridas do SQL são processadas por um pré-compilador especial do SQL. Todas as instruções SQL começam com um introdutor e terminam com um terminador de que a instrução SQL para o pré-compilador do sinalizador. O terminador e Introdutor variam de acordo com o idioma do host. Por exemplo, o Introdutor é "EXEC SQL" em C e "& SQL (" em MUMPS, e o terminador é um ponto e vírgula (;) em C e um parêntese direito em MUMPS.  
+-   Instruções SQL inseridas são processadas por um SQL PreCompiler especial. Todas as instruções SQL começam com um apresentador e terminam com um terminador, ambos sinalizam a instrução SQL para o pré-compilador. O apresentador e o terminador variam de acordo com o idioma do host. Por exemplo, o apresentador é "EXEC SQL" em C e "&SQL (" em MUMPS, e o terminador é um ponto-e-vírgula (;) em C e um parêntese direito em MUMPS.  
   
--   Variáveis do programa de aplicativo, chamadas de variáveis de host, podem ser usadas em instruções inseridas do SQL onde quer que as constantes são permitidas. Eles podem ser usados na entrada para personalizar uma instrução SQL para uma determinada situação e na saída para receber os resultados de uma consulta.  
+-   Variáveis do programa de aplicativo, chamadas de variáveis de host, podem ser usadas em instruções SQL inseridas sempre que forem permitidas constantes. Eles podem ser usados na entrada para personalizar uma instrução SQL para uma situação específica e na saída para receber os resultados de uma consulta.  
   
--   Consultas que retornam uma única linha de dados são tratadas com uma instrução SELECT de singleton; Essa instrução Especifica que a consulta e as variáveis de host no qual retornar dados.  
+-   As consultas que retornam uma única linha de dados são manipuladas com uma instrução SELECT singleton; Essa instrução especifica a consulta e as variáveis de host nas quais retornar dados.  
   
--   Consultas que retornam várias linhas de dados são tratadas com cursores. Um cursor mantém o controle da linha atual dentro de um conjunto de resultados. A instrução DECLARE CURSOR define a consulta, a instrução OPEN inicia o processamento de consulta, a instrução FETCH recupera as linhas sucessivas dos dados e a instrução CLOSE termina o processamento de consulta.  
+-   As consultas que retornam várias linhas de dados são tratadas com cursores. Um cursor mantém o controle da linha atual em um conjunto de resultados. A instrução DECLARE CURSOR define a consulta, a instrução OPEN começa o processamento da consulta, a instrução FETCH recupera linhas sucessivas de dados e a instrução CLOSE encerra o processamento da consulta.  
   
--   Enquanto o cursor estiver aberto, instruções delete posicionadas e atualização posicionadas podem ser usadas para atualizar ou excluir a linha selecionada no momento pelo cursor.  
+-   Enquanto um cursor está aberto, as instruções DELETE de atualização e posicionadas posicionadas podem ser usadas para atualizar ou excluir a linha selecionada no momento pelo cursor.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Exemplo de SQL inserido](../../odbc/reference/embedded-sql-example.md)  
   
--   [Compilando um programa SQL inserido](../../odbc/reference/compiling-an-embedded-sql-program.md)  
+-   [Compilar um programa SQL inserido](../../odbc/reference/compiling-an-embedded-sql-program.md)  
   
--   [SQL estático](../../odbc/reference/static-sql.md)  
+-   [SQL Estático](../../odbc/reference/static-sql.md)  
   
 -   [SQL dinâmico](../../odbc/reference/dynamic-sql.md)

@@ -1,5 +1,5 @@
 ---
-title: Exibir o histórico do projeto | Microsoft Docs
+title: Exibir histórico do projeto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773492"
 ---
 # <a name="view-project-history"></a>Exibir histórico de projetos
@@ -34,9 +34,9 @@ ms.locfileid: "62773492"
   
 1.  No Gerenciador de Soluções, selecione o projeto.  
   
-2.  Sobre o **arquivo** , aponte para **controle do código-fonte** e clique em **Exibir histórico**.  
+2.  No menu **arquivo** , aponte para **controle do código-fonte** e clique em **Exibir histórico**.  
   
-3.  No **histórico de** \<projeto > caixa de diálogo caixa, execute uma das seguintes ações:  
+3.  Na caixa de diálogo **histórico de> do** \<projeto, execute qualquer uma das seguintes ações:  
   
     -   Exiba a cópia do sistema de controle do código-fonte de um arquivo selecionado.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "62773492"
   
     -   Exporte o relatório de histórico para uma impressora, um arquivo ou para a área de transferência.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir e recuperar informações de versão](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Exibir o Status do arquivo](../../2014/database-engine/view-file-status.md)   
+ [Exibir status do arquivo](../../2014/database-engine/view-file-status.md)   
  [Recuperar arquivos](../../2014/database-engine/retrieve-files.md)   
  [Comparar arquivos](../../2014/database-engine/compare-files.md)  
   

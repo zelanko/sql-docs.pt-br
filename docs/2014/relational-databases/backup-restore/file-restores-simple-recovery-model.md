@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921800"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restaurações de arquivos (modelo de recuperação simples)
@@ -46,11 +46,11 @@ ms.locfileid: "62921800"
      Para obter informações sobre o suporte para restauração de arquivo e de página online, consulte [Recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Para obter mais informações sobre restaurações online, veja [Restauração online &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Se você deseja que o banco de dados esteja offline para uma restauração arquivo, coloque o banco de dados offline antes de iniciar a sequência de restauração executando a seguinte instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options): ALTER DATABASE *database_name* SET OFFLINE.  
+    >  Se quiser que o banco de dados fique offline para uma restauração de arquivo, coloque o banco de dados offline antes de iniciar a sequência de restauração, executando a seguinte instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) : ALTER DATABASE *database_name* SET OFFLINE.  
   
 
   
-##  <a name="Overview"></a> Visão geral da restauração de arquivos e grupos de arquivos no modelo de recuperação simples  
+##  <a name="Overview"></a>Visão geral da restauração de arquivo e grupo de arquivos no modelo de recuperação simples  
  Um cenário de restauração de arquivos consiste em uma única sequência de restauração que copia, efetua roll forward e recupera os dados apropriados da seguinte maneira:  
   
 1.  Restaure cada arquivo danificado de seu mais recente backup de arquivos.  
@@ -58,17 +58,17 @@ ms.locfileid: "62921800"
 2.  Restaure o backup de arquivo diferencial mais recente para cada arquivo restaurado e recupere o banco de dados.  
   
 ### <a name="transact-sql-steps-for-file-restore-sequence-simple-recovery-model"></a>Etapas do Transact-SQL para a sequência de restauração de arquivos (modelo de recuperação simples)  
- Esta seção mostra as opções básicas de [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) do [!INCLUDE[tsql](../../../includes/tsql-md.md)] para uma sequência de restauração de arquivo simples. Sintaxe e detalhes que não sejam relevantes para esse propósito são omitidos.  
+ Esta seção mostra as opções básicas de [!INCLUDE[tsql](../../../includes/tsql-md.md)]RESTORE[ do ](/sql/t-sql/statements/restore-statements-transact-sql) para uma sequência de restauração de arquivo simples. Sintaxe e detalhes que não sejam relevantes para esse propósito são omitidos.  
   
  A sequência de restauração contém apenas duas instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] . A primeira instrução restaura um arquivo secundário, o arquivo `A`, que é restaurado usando WITH NORECOVERY. A segunda operação restaura dois outros arquivos, `B` e `C` , que são restaurados usando WITH RECOVERY de um dispositivo de backup diferente:  
   
-1.  RESTORE DATABASE *database* FILE **=** _name_of_file_A_  
+1.  RESTORE DATABASE *database* FILE **=**_name_of_file_A_  
   
      FROM *file_backup_of_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *database* FILE **=** _name_of_file_B_ **,** _name_of_file_C_  
+2.  RESTORE DATABASE *database* FILE **=**_name_of_file_B_**,**_name_of_file_C_  
   
      FROM *file_backup_of_files_B_and_C*  
   
@@ -78,12 +78,12 @@ ms.locfileid: "62921800"
   
 -   [Exemplo: restauração online de um arquivo somente leitura &#40;Modelo de recuperação simples&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Exemplo: restauração offline do grupo de arquivos primário e mais um &#40;Modelo de recuperação completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Exemplo: restauração offline de um grupo de arquivos primário e outro &#40;modelo de recuperação completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
- **Para restaurar arquivos e grupos de arquivos**  
+ **Para restaurar arquivos e grupos de arquivo**  
   
 -   [Restaurar arquivos e grupos de arquivos sobre arquivos existentes &#40;SQL Server&#41;](restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
@@ -95,8 +95,8 @@ ms.locfileid: "62921800"
   
   
   
-## <a name="see-also"></a>Consulte também  
- [Backup e Restauração: Interoperabilidade e Coexistência &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Backup e restauração: interoperabilidade e coexistência &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Backups completos de arquivos &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   

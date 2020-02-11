@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011968"
 ---
 # <a name="create-a-server-role"></a>Criar uma função de servidor
@@ -69,13 +69,13 @@ ms.locfileid: "63011968"
   
 3.  Clique com o botão direito do mouse na pasta **Funções de Servidor** e selecione **Nova Função de Servidor...** .  
   
-4.  No **nova função de servidor -** _server_role_name_ caixa de diálogo de **geral** página, insira um nome para a nova função de servidor no **nome da função de servidor**caixa.  
+4.  Na caixa de diálogo **nova função de servidor –**_server_role_name_ , na página **geral** , insira um nome para a nova função de servidor na caixa **nome da função de servidor** .  
   
 5.  Na caixa **Proprietário** , digite o nome da entidade de segurança de servidor que será proprietária da nova função. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Logon ou Função de Servidor**.  
   
 6.  Em **Protegíveis**, selecione um ou mais protegíveis do nível do servidor. Quando um protegível é selecionado, essa função de servidor pode receber ou ter as permissões negadas naquele protegível.  
   
-7.  No **permissões: Explícito** , marque a caixa de seleção para conceder, conceder com concessão ou negar permissão a esta função de servidor para os protegíveis selecionados. Se uma permissão não puder ser concedida ou negada a todos os protegíveis selecionados, a permissão será representada como uma seleção parcial.  
+7.  Na caixa **Permissões: Explícitas** , marque a caixa de seleção para conceder, conceder com concessão ou negar permissão a esta função de servidor para os protegíveis selecionados. Se uma permissão não puder ser concedida ou negada a todos os protegíveis selecionados, a permissão será representada como uma seleção parcial.  
   
 8.  Na página **Membros** , use o botão **Adicionar** para adicionar logons que representam indivíduos ou grupos à nova função de servidor.  
   

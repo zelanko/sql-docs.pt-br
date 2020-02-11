@@ -27,10 +27,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127882"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considerações sobre segurança para uma instalação do SQL Server
@@ -120,9 +120,9 @@ ms.locfileid: "63127882"
   
 -   Depois que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for instalado em um computador, você não poderá alterar o computador de um controlador de domínio para um membro do domínio. Você deve desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de alterar o computador host para um membro do domínio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde os nós de agrupamento sejam controladores de domínio.  
+-   Não há suporte às instâncias de cluster de failover do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que os nós de agrupamento sejam controladores de domínio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação não pode criar grupos de segurança nem provisionar contas de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um controlador de domínio somente leitura. Nesse cenário, haverá falha na Instalação.  
+-   A Instalação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode criar grupos de segurança ou provisionar contas de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um controlador de domínio somente leitura. Nesse cenário, haverá falha na Instalação.  
   
 ## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Durante ou após a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Após a instalação, você pode aprimorar a segurança da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguinte estas práticas recomendadas relativas a contas e modos de autenticação:  
@@ -133,7 +133,7 @@ ms.locfileid: "63127882"
   
 -   Associe os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a contas de usuário locais do Windows ou contas de usuário do domínio com pouco privilégio.  
   
--   Para obter mais informações, veja [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Para obter mais informações, consulte [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
  **Modo de autenticação**  
   
@@ -152,8 +152,8 @@ ms.locfileid: "63127882"
 > [!IMPORTANT]  
 >  Durante instalação do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , é adicionado um logon para o grupo BUILTIN\Users. Assim, todos os usuários autenticados do computador podem acessar a instância do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] como membros da função pública. O logon BUILTIN\Users pode ser removido com segurança para restringir o acesso a [!INCLUDE[ssDE](../../includes/ssde-md.md)] aos usuários do computador que têm logons individuais ou que são membros de outros grupos do Windows com logons.  
   
-## <a name="see-also"></a>Consulte também  
- [Requisitos de hardware e Software para instalação do SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Requisitos de hardware e software para a instalação do SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Protocolos de rede e bibliotecas de rede](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)   
  [Registrar um nome de entidade de serviço para conexões de Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

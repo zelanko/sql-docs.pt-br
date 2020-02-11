@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63058088"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Logon para Assinaturas Atualizáveis
-  Se você tiver selecionado **replicar** sobre o **inscrições atualizáveis** página desse assistente, você deve especificar uma conta no assinante na qual as conexões com o publicador são feitas para atualização imediata assinaturas. Conexões são usadas pelos gatilhos acionados no Assinante e que propagam as alterações no Publicador. Essa conta é necessária mesmo se você selecionou **enfileirar alterações e confirmar quando possível** sobre o **inscrições atualizáveis** página, porque, por padrão o Assistente para nova assinatura configura atualização enfileirada com a capacidade de alternar para atualização imediata, se necessário.  
+  Se você selecionou **replicar** na página **assinaturas atualizáveis** desse assistente, deverá especificar uma conta no Assinante sob a qual as conexões com o Publicador são feitas para assinaturas de atualização imediata. Conexões são usadas pelos gatilhos acionados no Assinante e que propagam as alterações no Publicador. Essa conta é necessária mesmo se você selecionou **as alterações de fila e confirma quando possível** na página **assinaturas atualizáveis** , pois, por padrão, o assistente para nova assinatura configura a atualização em fila com a capacidade de alternar para a atualização imediata, se necessário.  
   
 > [!IMPORTANT]  
->  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_**_\<HexadecimalNumber>_ para a conta configurada em cada Assinante.  
+>  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_** _\<HexadecimalNumber>_ para a conta configurada em cada Assinante.  
   
  Há três opções disponíveis para o tipo de conexão:  
   
@@ -33,14 +33,14 @@ ms.locfileid: "63058088"
   
 -   Um servidor vinculado que a replicação cria; a conexão é feita com as credenciais do usuário que faz a alteração no Assinante.  
   
- As duas primeiras opções podem ser especificadas nesse assistente. A última opção só pode ser especificada com o uso de [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql); especifique um valor igual a **1** para o parâmetro **@security_mode**.  
+ As duas primeiras opções podem ser especificadas nesse assistente. A última opção só pode ser especificada usando [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql); Especifique um valor de **1** para o parâmetro **@security_mode**.  
   
 ## <a name="options"></a>Opções  
- **Criar um servidor vinculado que conecta usando o seguinte logon de Autenticação do SQL Server:**  
+ **Crie um servidor vinculado que se conecte usando o seguinte logon de autenticação do SQL Server:**  
  A replicação cria um servidor vinculado usando as credenciais especificadas nos campos **Logon** e **Senha** .  
   
  **Logon**  
- Insira um logon [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tenha somente as permissões descritas neste tópico.  
+ Insira um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon que tenha apenas as permissões descritas neste tópico.  
   
  **Senha**  
  Insira uma senha forte para o logon especificado em **Logon**.  
@@ -51,10 +51,10 @@ ms.locfileid: "63058088"
  **Usar servidor vinculado ou remoto já definido.**  
  Essa opção requer um servidor vinculado ou remoto já definido. Para obter mais informações, consulte [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../linked-servers/linked-servers-database-engine.md) e [Servidores remotos](../../database-engine/configure-windows/remote-servers.md). Verifique se o logon usado para o servidor vinculado ou servidor remoto tem uma senha forte e somente as permissões descritas nesse tópico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Exibir e modificar configurações de segurança de replicação](security/view-and-modify-replication-security-settings.md)   
- [Assinaturas atualizáveis para replicação transacional](transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Assinar publicações](subscribe-to-publications.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM e FileTable com grupos de disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
+title: FILESTREAM e Filetable com Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814134"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM e FileTable com grupos de disponibilidade AlwaysOn (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62814134"
   
 -   [Pré-requisitos](#Prerequisites)  
   
--   [Usando VNNs (nomes de rede virtual) para acesso FILESTREAM e FileTable](#vnn)  
+-   [Usando VNNs (nomes de rede virtual) para acesso de FILESTREAM e Filetable](#vnn)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -77,14 +77,14 @@ ms.locfileid: "62814134"
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [Habilitar e configurar o FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
--   [Habilitar os pré-requisitos para FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
+-   [Habilitar os pré-requisitos para o FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
  Nenhum.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

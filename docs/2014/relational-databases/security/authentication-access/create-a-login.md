@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012024"
 ---
 # <a name="create-a-login"></a>Crie um logon
@@ -36,17 +36,17 @@ ms.locfileid: "63012024"
   
 -   **Antes de começar:**  
   
-     [Plano de fundo](#Background)  
+     [Segundo plano](#Background)  
   
      [Segurança](#Security)  
   
--   **Para criar um logon, usando:**  
+-   **Para criar um logon usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [Etapas a serem executadas após criar um logon](#FollowUp)  
+-   **Acompanhamento:**  [etapas a serem executadas após a criação de um logon](#FollowUp)  
   
 ##  <a name="Background"></a> Plano de fundo  
  Um logon é uma entidade de segurança ou uma entidade que pode ser autenticada por um sistema seguro. Usuários precisam de um logon para se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você pode criar um logon com base em uma entidade de segurança do Windows (como um usuário de domínio ou um grupo de domínio do Windows) ou pode criar um logon que não esteja baseado em uma entidade de segurança do Windows (como um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
@@ -87,7 +87,7 @@ ms.locfileid: "63012024"
   
 5.  Para criar um logon salvo em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , selecione **Autenticação do SQL Server**.  
   
-    1.  Na caixa **Senha** , digite uma senha para o novo usuário. Digite essa senha novamente na caixa **Confirmar Senha** .  
+    1.  Na caixa **Senha** , digite uma senha para o novo usuário. Insira novamente essa senha na caixa **Confirmar Senha** .  
   
     2.  Ao alterar uma senha existente, selecione **Especificar senha antiga**e digite a senha antiga na caixa **Senha antiga** .  
   
@@ -146,9 +146,9 @@ ms.locfileid: "63012024"
  A página **Mapeamento de Usuário** lista todos os possíveis bancos de dados e associações de função de banco de dados nesses bancos de dados que podem ser se aplicados ao logon. Os bancos de dados selecionados determinam as associações de função que estão disponíveis para o logon. As opções a seguir estão disponíveis nesta página:  
   
  **Usuários mapeados para este logon**  
- Selecione os bancos de dados que este logon pode acessar. Quando você seleciona um banco de dados, suas funções de banco de dados válidas são exibidas no painel **Associação à função de banco de dados para:** _database_name_ .  
+ Selecione os bancos de dados que este logon pode acessar. Quando você seleciona um banco de dados, as funções de banco de dados válidas dele são exibidas no painel **Associação à função de banco de dados para:** _database_name_.  
   
- **Mapeamento**  
+ **Map**  
  Permita que o logon acesse os bancos de dados listados abaixo.  
   
  **Backup de banco de dados**  
@@ -160,10 +160,10 @@ ms.locfileid: "63012024"
  **Esquema Padrão**  
  Especifica o esquema padrão do usuário. Quando um usuário é criado pela primeira vez, seu esquema padrão é **dbo**. É possível especificar um esquema padrão que ainda não existe. Você não pode especificar um esquema padrão para um usuário mapeado para um grupo do Windows, um certificado ou uma chave assimétrica.  
   
- **Guest account enabled for:**  _database_name_  
+ **Conta Convidado habilitada para:** _database_name_  
  Atributo somente leitura que indica se a conta de Convidado está habilitada no banco de dados selecionado. Use a página **Status** da caixa de diálogo **Propriedades de Logon** da conta Convidado para habilitar ou desabilitar a conta Convidado.  
   
- **Database role membership for:**  _database_name_  
+ **Associação à função de banco de dados para:** _database_name_  
  Selecione as funções para o usuário no banco de dados especificado. Todos os usuários são membros da função **pública** em todo banco de dados e não podem ser removidos. Para obter mais informações sobre as funções de banco de dados, veja [Funções no nível de banco de dados](database-level-roles.md).  
   
 ### <a name="securables"></a>Protegíveis  
@@ -176,10 +176,10 @@ ms.locfileid: "63012024"
   
 1.  Clique em **Pesquisar**.  
   
-2.  Na caixa de diálogo **Adicionar Objetos**, selecione uma das seguintes opções: **Objetos específicos...** , **Todos os objetos dos tipos...** , ou **o servidor**_nome_do_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Na caixa de diálogo **Adicionar objetos** , selecione uma das seguintes opções: **objetos específicos...**, **todos os objetos dos tipos...** ou_server_name_do **servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  A seleção de **O servidor**_server_name_ preenche automaticamente a grade superior com os objetos protegíveis de todos os servidores.  
+    >  **A seleção do servidor**_server_name_ preenche automaticamente a grade superior com todos os objetos protegíveis dos servidores.  
   
 3.  Se você selecionar **Objetos específicos...** :  
   
@@ -236,7 +236,7 @@ ms.locfileid: "63012024"
   
  Selecione esta opção para habilitar ou desabilitar o logon. Esta opção usa a instrução ALTER LOGON com a opção ENABLE ou DISABLE.  
   
- **SQL Server Authentication**  
+ **Autenticação do SQL Server**  
  A caixa de seleção **O logon está bloqueado** só estará disponível se o logon selecionado se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e se estiver bloqueado. Esta configuração é somente leitura. Para desbloquear um logon bloqueado, execute ALTER LOGIN com a opção UNLOCK.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  

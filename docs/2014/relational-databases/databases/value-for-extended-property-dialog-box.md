@@ -16,20 +16,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916498"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Caixa de diálogo Valor da Propriedade Estendida
-  Use a caixa de diálogo **Valor de**  *\<property name>* para inserir ou exibir um valor. Essa é uma caixa de diálogo comum que pode ser aberta em vários locais.  
+  Use a caixa de diálogo **valor para** * \<nome da propriedade>* para inserir ou exibir um valor. Essa é uma caixa de diálogo comum que pode ser aberta em vários locais.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Nome da propriedade estendida**  
  Nome da propriedade estendida exibida ou definida.  
   
- **Valor da Propriedade Estendida**  
+ **Valor da propriedade estendida**  
  Digite ou altere o valor da propriedade estendida.  
   
   

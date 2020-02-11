@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f5425fdc189febd23e9fc61765f4ad56fe484111
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067582"
 ---
 # <a name="sqlendtran"></a>SQLEndTran
   Por padrão, o driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client fecha o cursor associado de uma instrução quando **SQLEndTran** confirma ou reverte uma operação. Os cursores de servidor são fechados, a menos que eles sejam estáticos. Quando **SQLEndTran** confirma ou reverte uma operação, o comportamento do cursor associado da instrução é determinado pelo valor do atributo SQL_COPT_SS_PRESERVE_CURSORS da conexão ODBC específica do driver, definido por [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Detalhes de implementação de API do ODBC](odbc-api-implementation-details.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Detalhes de implementação da API ODBC](odbc-api-implementation-details.md)   
  [Função SQLEndTran](https://go.microsoft.com/fwlink/?LinkId=59342)  
   
   

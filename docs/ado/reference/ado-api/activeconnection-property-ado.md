@@ -18,64 +18,64 @@ ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921519"
 ---
 # <a name="activeconnection-property-ado"></a>Propriedade ActiveConnection (ADO)
-Indica para o qual [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) do objeto especificado [comando](../../../ado/reference/ado-api/command-object-ado.md), [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md), ou [registro](../../../ado/reference/ado-api/record-object-ado.md) no momento, o objeto pertence.  
+Indica a qual objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) o [comando](../../../ado/reference/ado-api/command-object-ado.md), [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)ou objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) especificado atualmente pertence.  
   
-## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
- Define ou retorna um **cadeia de caracteres** valor que contém uma definição para uma conexão se a conexão é fechada ou um **Variant** contendo atual **Conexão** objeto se a conexão está aberta. O padrão é uma referência de objeto nulo. Consulte a [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade.  
+## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
+ Define ou retorna um valor de **cadeia de caracteres** que contém uma definição para uma conexão se a conexão for fechada ou uma **variante** que contém o objeto de **conexão** atual se a conexão estiver aberta. O padrão é uma referência de objeto nulo. Consulte a propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
 ## <a name="remarks"></a>Comentários  
- Use o **ActiveConnection** propriedade para determinar a **Conexão** objeto sobre o qual especificado **comando** objeto executará ou especificado  **Conjunto de registros** será aberta.  
+ Use a propriedade **ActiveConnection** para determinar o objeto de **conexão** sobre o qual o objeto de **comando** especificado será executado ou o **conjunto de registros** especificado será aberto.  
   
 ## <a name="command"></a>Comando  
- Para **comando** objetos, o **ActiveConnection** propriedade é leitura/gravação.  
+ Para objetos de **comando** , a propriedade **ActiveConnection** é de leitura/gravação.  
   
- Se você tentar chamar o [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método em um **comando** objeto antes de definir essa propriedade como um aberto **Conexão** objeto ou cadeia de caracteres de conexão válida, ocorrerá um erro.  
+ Se você tentar chamar o método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) em um objeto **Command** antes de definir essa propriedade como um objeto de **conexão** aberta ou uma cadeia de conexão válida, ocorrerá um erro.  
   
- Se um **Conexão** objeto é atribuído para o **ActiveConnection** propriedade, o objeto deve ser aberto. Atribuição de um objeto de Conexão fechado causa um erro.  
+ Se um objeto de **conexão** for atribuído à propriedade **ActiveConnection** , o objeto deverá ser aberto. A atribuição de um objeto de conexão fechado causa um erro.  
   
 ### <a name="note"></a>Observação  
- **Microsoft Visual Basic** configuração o **ActiveConnection** propriedade *nada* desassocia o **comando** objeto atuais **Conexão** e faz com que o provedor liberar quaisquer recursos associados à fonte de dados. Em seguida, você pode associar o **comando** objeto com o mesmo ou outro **Conexão** objeto. Alguns provedores permitem que você altere a configuração da propriedade de um **Conexão** para outra, sem precisar primeiro defina a propriedade como *nada*.  
+ **Visual Basic da Microsoft** Definir a propriedade **ActiveConnection** como *Nothing* desassocia o objeto **Command** da **conexão** atual e faz com que o provedor libere todos os recursos associados na fonte de dados. Em seguida, você pode associar o objeto de **comando** ao mesmo ou a outro objeto de **conexão** . Alguns provedores permitem que você altere a configuração de propriedade de uma **conexão** para outra, sem precisar primeiro definir a propriedade como *Nothing*.  
   
- Se o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção da **comando** objeto contém os parâmetros fornecidos pelo provedor, a coleção está desmarcada se você definir o **ActiveConnection** propriedade para *nada* ou para outro **Conexão** objeto. Se você criar manualmente [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objetos e usá-los para preencher o **parâmetros** coleção dos **comando** objeto, definindo o **ActiveConnection**  propriedade para *nada* ou em outro **Conexão** objeto deixa o **parâmetros** coleção intacta.  
+ Se a coleção [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) do objeto **Command** contiver parâmetros fornecidos pelo provedor, a coleção será desmarcada se você definir a propriedade **ActiveConnection** como *Nothing* ou como outro objeto **Connection** . Se você criar manualmente objetos de [parâmetro](../../../ado/reference/ado-api/parameter-object.md) e usá-los para preencher a coleção de **parâmetros** do objeto de **comando** , a definição da propriedade **ActiveConnection** como *Nothing* ou outro objeto de **conexão** deixará a coleção de **parâmetros** intacta.  
   
- Fechando a **Conexão** objeto com o qual um **comando** conjuntos associados do objeto é o **ActiveConnection** propriedade *nada*. Definir essa propriedade para um fechado **Conexão** objeto gera um erro.  
+ Fechar o objeto de **conexão** ao qual um objeto de **comando** está associado define a propriedade **ActiveConnection** como *Nothing*. A definição dessa propriedade como um objeto de **conexão** fechado gera um erro.  
   
 ## <a name="recordset"></a>Conjunto de registros  
- Para abrir **conjunto de registros** objetos ou para **conjunto de registros** objetos cujo [origem](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriedade é definida como válido **comando** objeto, a **ActiveConnection** propriedade é somente leitura. Caso contrário, ele é leitura/gravação.  
+ Para objetos Open **Recordset** ou objetos **Recordset** cuja propriedade [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) está definida como um objeto **Command** válido, a propriedade **ActiveConnection** é somente leitura. Caso contrário, será leitura/gravação.  
   
- Você pode definir essa propriedade platnou **Conexão** objeto ou uma cadeia de caracteres de conexão válida. Nesse caso, o provedor cria uma nova **Conexão** usando esta definição de objeto e abre a conexão. Além disso, o provedor pode definir essa propriedade para o novo **Conexão** objeto para dar a você uma maneira de acessar o **Conexão** para informações sobre erros estendidos ou executar outros comandos do objeto.  
+ Você pode definir essa propriedade como um objeto de **conexão** válido ou com uma cadeia de conexão válida. Nesse caso, o provedor cria um novo objeto de **conexão** usando essa definição e abre a conexão. Além disso, o provedor pode definir essa propriedade como o novo objeto de **conexão** para dar a você uma maneira de acessar o objeto de **conexão** para obter informações de erro estendidas ou executar outros comandos.  
   
- Se você usar o *ActiveConnection* argumento do [abra](../../../ado/reference/ado-api/open-method-ado-recordset.md) método para abrir um **conjunto de registros** objeto, o **ActiveConnection** será de propriedade herde o valor do argumento.  
+ Se você usar o argumento *ActiveConnection* do método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) para abrir um objeto **Recordset** , a propriedade **ActiveConnection** irá herdar o valor do argumento.  
   
- Se você definir a **fonte** propriedade da **conjunto de registros** objeto a ser válido **comando** variável de objeto, o **ActiveConnection** propriedade de o **conjunto de registros** herda a configuração do **comando** do objeto **ActiveConnection** propriedade.  
-  
-> [!NOTE]
->  **Uso do serviço de dados remotos** quando usado em um lado do cliente **conjunto de registros** objeto, essa propriedade pode ser definida somente para uma cadeia de caracteres de conexão ou (no Microsoft Visual Basic ou Visual Basic, Scripting Edition) para *nada* .  
-  
-## <a name="record"></a>Record  
- Essa propriedade é leitura/gravação quando o **registro** objeto está fechado e pode conter uma cadeia de caracteres de conexão ou referência a um aberto **Conexão** objeto. Essa propriedade é somente leitura quando o **registro** objeto está aberto e contém uma referência a um aberto **Conexão** objeto.  
-  
- Um **Conexão** objeto é criado implicitamente quando o **registro** objeto está aberto a partir de uma URL. Abra o **registro** com um existente, abra **Conexão** objeto por meio da atribuição a **Conexão** do objeto para essa propriedade, ou usando o **Conexão** objeto como um parâmetro em de [aberto](../../../ado/reference/ado-api/open-method-ado-record.md) chamada de método. Se o **registro** é aberta a partir de um existente **registro** ou [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md), em seguida, ele é automaticamente associado que **registro** ou  **Conjunto de registros** do objeto **Conexão** objeto.  
+ Se você definir a propriedade **Source** do objeto **Recordset** como uma variável de **objeto Command** válida, a propriedade **ActiveConnection** do conjunto de **registros** herdará a configuração da propriedade **ActiveConnection** do objeto **Command** .  
   
 > [!NOTE]
->  URLs usando o esquema http invocará automaticamente o [Microsoft OLE DB Provider para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [absoluta e relativa URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  **Uso do serviço de dados remoto** Quando usado em um objeto **Recordset** do lado do cliente, essa propriedade pode ser definida somente como uma cadeia de conexão ou (no Microsoft Visual Basic ou Visual Basic, Scripting Edition) como *Nothing*.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="record"></a>Registro  
+ Essa propriedade é de leitura/gravação quando o objeto de **registro** é fechado e pode conter uma cadeia de conexão ou referência a um objeto de **conexão** aberta. Essa propriedade é somente leitura quando o objeto de **registro** está aberto e contém uma referência a um objeto de **conexão** aberta.  
+  
+ Um objeto de **conexão** é criado implicitamente quando o objeto de **registro** é aberto a partir de uma URL. Abra o **registro** com um objeto de **conexão** aberto existente atribuindo o objeto de **conexão** a essa propriedade ou usando o objeto de **conexão** como um parâmetro na chamada do método [Open](../../../ado/reference/ado-api/open-method-ado-record.md) . Se o **registro** for aberto a partir de um **registro** ou [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)existente, ele será associado automaticamente a esse **registro** ou objeto de **conexão** do objeto **Recordset** .  
+  
+> [!NOTE]
+>  As URLs que usam o esquema http invocarão automaticamente o [provedor do Microsoft OLE DB para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [URLs absolutas e relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+  
+## <a name="applies-to"></a>Aplica-se A  
   
 ||||  
 |-|-|-|  
 |[Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [ActiveConnection, CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
- [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+ [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Propriedade ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)

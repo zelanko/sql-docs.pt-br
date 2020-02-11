@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 63407b3bf1a2860ad3f8c35b5cd8ecc4a4b125c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032329"
 ---
 # <a name="localdbshareinstance-function"></a>Função LocalDBShareInstance
   Compartilha a instância especificada do LocalDB do SQL Server Express com outros usuários do computador, usando o nome compartilhado especificado.  
   
- **Arquivo de cabeçalho:** sqlncli.h  
+ **Arquivo de cabeçalho:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ HRESULT LocalDBShareInstance(
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *pOwnerSID*  
  [Entrada] O SID do proprietário da instância.  
   
@@ -52,7 +52,7 @@ HRESULT LocalDBShareInstance(
  *dwFlags*  
  [Entrada] Reservado para uso futuro. Atualmente deve ser definido como 0.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  S_OK  
  A função foi bem-sucedida.  
   
@@ -83,7 +83,7 @@ HRESULT LocalDBShareInstance(
 ## <a name="remarks"></a>Comentários  
  Para obter uma amostra do código que usa a API LocalDB, consulte [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalho e informações de versão de LocalDB do SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  
   
   

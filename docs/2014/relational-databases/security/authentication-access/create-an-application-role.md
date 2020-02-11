@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011942"
 ---
 # <a name="create-an-application-role"></a>Criar uma função de aplicativo
@@ -62,14 +62,14 @@ ms.locfileid: "63011942"
   
 6.  Na caixa **Esquema Padrão** , especifique o esquema que possuirá objetos criados por essa função digitando os nomes dos objetos. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Localizar Esquema**.  
   
-7.  Na caixa **Senha** , digite uma senha para a nova função. Digite essa senha novamente na caixa **Confirmar Senha** .  
+7.  Na caixa **Senha** , digite uma senha para a nova função. Insira novamente essa senha na caixa **Confirmar Senha** .  
   
 8.  Em **Esquemas de propriedade dessa função**, selecione ou confira os esquemas que serão de propriedade desta função. Um esquema pode ser de propriedade de um só esquema ou função.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opções adicionais  
- O **função de aplicativo - nova** caixa de diálogo também oferece opções em duas páginas adicionais: **Protegíveis** e **propriedades estendidas**.  
+ A caixa de diálogo **Função de Aplicativo – Nova** também oferece opções em duas páginas adicionais: **Protegíveis** e **Propriedades Ampliadas**.  
   
 -   A página **Protegíveis** lista todos os protegíveis e as permissões possíveis nesses protegíveis que podem ser concedidos ao logon.  
   

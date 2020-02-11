@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015697"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Adicionar colunas a consultas (Visual Database Tools)
@@ -40,7 +40,7 @@ ms.locfileid: "63015697"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>Para adicionar todas as colunas de uma tabela ou objeto avaliado por tabela  
   
--   No **painel de diagrama**, marque a caixa de seleção ao lado  **\*(todas as colunas)** .  
+-   No **painel Diagrama**, marque a caixa de seleção ao lado de ** \*(todas as colunas)**.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>Para adicionar todas as colunas para todas as tabelas e objetos estruturados por tabela  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63015697"
   
 3.  Na janela Propriedades, clique em **Todas as colunas de saída** e escolha **Sim** ou **Não** na lista suspensa.  
   
-## <a name="see-also"></a>Consulte também  
- [Remover colunas de resultados da consulta &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Remover colunas dos resultados da consulta &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Remover colunas de consultas &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
  [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [Resumir resultados da consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Resumir os resultados da consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

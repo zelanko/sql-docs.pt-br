@@ -1,5 +1,5 @@
 ---
-title: Abrir e fechar um exemplo dos métodos (VBScript) | Microsoft Docs
+title: Exemplo dos métodos Open e Close (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87b2753c989ad2996dc7788bb0820d78b3b9b6ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931912"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Exemplo dos métodos Open e Close (VBScript)
-Este exemplo usa o [aberto](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [Close](../../../ado/reference/ado-api/close-method-ado.md) métodos em ambos [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos que foram abertos.  
+Este exemplo usa os métodos [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [Close](../../../ado/reference/ado-api/close-method-ado.md) nos objetos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e [Connection](../../../ado/reference/ado-api/connection-object-ado.md) que foram abertos.  
   
- Use o exemplo a seguir em um Active Server Page (ASP). Use **localizar** para localizar o arquivo Adovbs.inc e coloque-o no diretório que você planeja usar. Recorte e cole o código a seguir no bloco de notas ou outro editor de texto e salve-o como **OpenVBS.asp**. Você pode exibir o resultado em qualquer navegador.  
+ Use o exemplo a seguir em uma página de Active Server (ASP). Use **Localizar** para localizar o arquivo Adovbs. Inc e colocá-lo no diretório que você planeja usar. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **OpenVBS. asp**. Você pode exibir o resultado em qualquer navegador.  
   
 ```  
 <!-- BeginOpenVBS -->  
@@ -161,9 +161,9 @@ BODY {
 <!-- EndOpenVBS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Close (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Método Open (Conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Método Open (conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

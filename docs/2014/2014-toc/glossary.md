@@ -14,10 +14,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67412692"
 ---
 # <a name="glossary"></a>Glossário
@@ -43,11 +43,11 @@ ms.technology:
   
 |Termo|Definição|  
 |----------|----------------|  
-|action|Uma operação iniciada pelo usuário final em um cubo selecionado ou em parte de um cubo.|  
+|ação|Uma operação iniciada pelo usuário final em um cubo selecionado ou em parte de um cubo.|  
 |ActiveX Data Objects|Uma interface de acesso a dados que se comunica com fontes de dados em conformidade com OLE DB para conectar, recuperar, manipular e atualizar dados.|  
 |ActiveX Data Objects (Multidimensional)|Um conjunto de interfaces de acesso a dados baseadas em objeto de alto nível e independente de idioma, otimizado para aplicativos de dados multidimensionais.|  
 |host do adaptador|A classe abstrata raiz Adapter, que define o handshake entre o adaptador e o servidor StreamInsight no ponto de interação ENQUEUE. Ela fornece todos os serviços de adaptador obrigatórios, como o gerenciamento de memória e a manipulação de exceção.|  
-|ADO|Uma interface de acesso a dados que se comunica com fontes de dados compatíveis com OLE DB para conectar, recuperar, manipular e atualizar dados.|  
+|ADO|Uma interface de acesso a dados que se comunica com fontes de dados em conformidade com OLE DB para conectar, recuperar, manipular e atualizar dados.|  
 |ADO MD|Um conjunto de interfaces de acesso a dados baseadas em objeto de alto nível e independente de idioma, otimizado para aplicativos de dados multidimensionais.|  
 |ADOMD.NET|Um provedor de dados gerenciados de .NET que fornece acesso a fontes de dados multidimensionais, como o Microsoft SQL Server Analysis Services.|  
 |função de agregação|Uma função que executa um cálculo em diversos valores e retorna um único valor.|  
@@ -86,9 +86,9 @@ ms.technology:
 |relação de atributo|A hierarquia associada a um atributo que contém um único nível baseado na coluna correspondente em uma tabela de dimensão.|  
 |tipo de atributo|O tipo de informações contidas por um atributo, como trimestres ou meses em uma dimensão de hora, que pode habilitar um tratamento específico pelos aplicativos servidor e cliente.|  
 |auditando|O processo usado por um sistema operacional para detectar e registrar eventos relativos à segurança; por exemplo, uma tentativa de criar, acessar ou excluir objetos como arquivos e diretórios. Os registros destes eventos são armazenados em um arquivo conhecido como um log de segurança, cujo conteúdo é disponibilizado apenas para aqueles com o espaço vazio adequado.|  
-|autenticação|O processo de verificar a identidade de um usuário, computador, processo ou outra entidade validando as credenciais fornecidas pela entidade. Formas comuns de credenciais são assinaturas digitais, cartões inteligentes, dados biométricos e uma combinação de nomes e senhas de usuários.|  
+|Autenticação|O processo de verificar a identidade de um usuário, computador, processo ou outra entidade validando as credenciais fornecidas pela entidade. Formas comuns de credenciais são assinaturas digitais, cartões inteligentes, dados biométricos e uma combinação de nomes e senhas de usuários.|  
 |autenticador|Uma estrutura de dados usada por uma parte para comprovar que a outra parte conhece uma chave secreta. No protocolo de autenticação Kerberos, autenticadores incluem carimbos de data/hora para impedir ataques de retomada e são criptografados com a chave de sessão emitida pelo KDC (Centro de distribuição de chaves).|  
-|autorização|O processo de conceder a uma pessoa, um processo de computador ou um dispositivo acesso a certas informações, serviços ou funcionalidade. A autorização deriva da identidade da pessoa, processo de computador ou dispositivo que solicita acesso, o que é verificado através da autenticação.|  
+|authorization|O processo de conceder a uma pessoa, um processo de computador ou um dispositivo acesso a certas informações, serviços ou funcionalidade. A autorização deriva da identidade da pessoa, processo de computador ou dispositivo que solicita acesso, o que é verificado através da autenticação.|  
 |modo de confirmação automática|O modo de gerenciamento de transações padrão do Mecanismo de Banco de Dados. O Mecanismo de Banco de Dados inicia automaticamente uma transação para cada instrução Transact-SQL individual. Quando a instrução é concluída, a transação é confirmada ou revertida com base no êxito ou fracasso da instrução.|  
 |verificação de consistência automática|Um recurso que automaticamente executa uma verificação de consistência em fontes de dados protegidas quando detecta uma réplica inconsistente.|  
 |failover automático|Um failover que ocorre automaticamente na perda da réplica primária.|  
@@ -108,10 +108,10 @@ ms.technology:
 |processamento em lotes|A execução de um arquivo em lotes.|  
 |tipo blittable|Um tipo de dados que tem uma característica exclusiva e uma apresentação idêntica em memória para ambientes gerenciados e não gerenciados. Ele pode ser compartilhado diretamente.|  
 |BLOB|Um pacote discreto de dados binários com um tamanho excepcionalmente grande, como imagens ou faixas de áudio armazenadas como dados digitais, ou qualquer variável ou coluna da tabela grande o suficiente para manter esses valores. O 'objeto binário grande' de designação em geral se refere a um pacote de dados armazenados em um banco de dados e é tratado como uma sequência de bytes não interpretados.|  
-|bloco|Uma instrução Transact-SQL incluída entre BEGIN e END.|  
+|block|Uma instrução Transact-SQL incluída entre BEGIN e END.|  
 |cursor em bloco|Um cursor com um tamanho de conjunto de linhas maior que 1.|  
 |transação de bloqueio|Uma transação que faz outra transação falhar.|  
-|expressão booliana|Uma expressão que gera um valor booliano (true ou false). Essas expressões podem envolver comparações (testando valores para igualdade ou, para valores não boolianos, o \< [menor que] ou > [maior que] relação) e combinação lógica (usando operadores boolianos como AND, OR e XOR) de expressões Boolianas.|  
+|expressão booliana|Uma expressão que gera um valor booliano (true ou false). Essas expressões podem envolver comparações (valores de teste para igualdade ou, para valores não boolianos \< , a relação [menor que] ou > [maior que]) e a combinação lógica (usando operadores boolianos, como and, or e XOR) de expressões booleanas.|  
 |operador booliano|Um operador criado para funcionar com valores boolianos. Os quatro operadores boolianos mais comuns no uso em programação são AND (conjunção lógica), OR (inclusão lógica), XOR (OR exclusivo) e NOT (negação lógica).|  
 |fluxo associado|Um fluxo de eventos que contém todas as informações necessárias para produzir eventos. As informações já são uma fonte de dados instanciada ou são suficientes para o servidor StreamInsight iniciar a fonte de dados.|  
 |caixa delimitadora|A área retangular menor ao redor de um caminho, forma ou grupo de objetos.|  
@@ -163,7 +163,7 @@ ms.technology:
 |exibição de carrossel|Na Galeria PowerPivot, uma exibição especializada em que a área de visualização é centralizada e as miniaturas imediatamente antes e depois da miniatura atual são adjacentes à área de visualização.|  
 |exclusão em cascata|Para relações que forçam a integridade referencial entre tabelas, a exclusão de todos os registros relacionados nas tabelas relacionadas quando um registro na tabela primária é excluído.|  
 |atualização em cascata|Para relações que forçam a integridade referencial entre tabelas, a atualização de todos os registros relacionados nas tabelas relacionadas quando um registro na tabela primária é alterado.|  
-|caso|Uma exibição abstrata de dados caracterizados por atributos e relações com outros casos.|  
+|case|Uma exibição abstrata de dados caracterizados por atributos e relações com outros casos.|  
 |chave do caso|O elemento de um caso através do qual o caso é referenciado dentro de um conjunto de casos.|  
 |exibições do catálogo|Exibições internas que formam o catálogo do sistema do SQL Server.|  
 |erro catastrófico|Um erro que faz o sistema ou um programa falhar abruptamente sem esperança de recuperação. Um exemplo de um erro fatal é uma exceção não identificada que não pode ser tratada.|  
@@ -180,10 +180,10 @@ ms.technology:
 |emissor do certificado|A autoridade de certificação que emitiu o certificado ao sujeito.|  
 |Cliente CLM|Um pacote de ferramentas do cliente CLM (Certificate Lifecycle Manager) que ajuda usuários finais a gerenciarem seus cartões inteligentes. As ferramentas incluem o controle de autoatendimento de cartão inteligente, o controle de personalização de cartão inteligente e o controle de atualização de perfil de certificado. Ver o controle de autoatendimento de cartão inteligente, o controle de personalização de cartão inteligente e o controle de atualização de perfil de certificado.|  
 |gerenciador de certificados|Um usuário do CLM (Certificate Lifecycle Manager) com as permissões de CLM apropriadas para administrar outros usuários de CLM ou administrar o próprio aplicativo CLM.|  
-|portal da Web do gerenciador de certificados|Um aplicativo Web executado no servidor CLM (Certificate Lifecycle Manager). Este portal permite que os administradores de certificado administrar outros usuários certificados e cartões inteligentes. Os portais da Web do assinante de certificado e do gerenciador de certificado são acessados pela mesma URL (localizador de recurso universal); porém, o conteúdo exibido se baseia nas funções e permissões de um usuário.|  
+|portal da Web do gerenciador de certificados|Um aplicativo Web executado no servidor CLM (Certificate Lifecycle Manager). Esse portal permite que os administradores de certificados administrem certificados e cartões inteligentes de outros usuários. Os portais da Web do assinante de certificado e do gerenciador de certificado são acessados pela mesma URL (localizador de recurso universal); porém, o conteúdo exibido se baseia nas funções e permissões de um usuário.|  
 |Controle de atualização de perfil de certificado|Um controle ActiveX que automatiza a atualização de perfis de CLM (Certificate Lifecycle Manager) em computadores cliente.|  
 |revogação de certificado|O processo de revogar um certificado digital.|  
-|assinante de certificado|Um usuário que precisa de certificados com ou sem cartões inteligentes. Assinantes do certificado podem acessar um pequeno número de funções que só pode ser executada para que os certificados do usuário.|  
+|assinante de certificado|Um usuário que precisa de certificados com ou sem cartões inteligentes. Os assinantes de certificado podem acessar um pequeno número de funções que só podem ser executadas para os próprios certificados do usuário.|  
 |portal da Web do assinante de certificados|Um aplicativo Web executado no servidor CLM (Certificate Lifecycle Manager). Este componente do servidor de CLM interage diretamente com usuários em um modo de autoatendimento. A funcionalidade específica se baseia nas associações e permissões do grupo Active Directory. Os portais da Web do assinante de certificado e do gerenciador de certificado são acessados pela mesma URL (localizador de recurso universal); porém, o conteúdo exibido se baseia nas funções e permissões de um usuário.|  
 |modelo de certificado|Uma construção Windows que especifica o formato e o conteúdo de certificados com base no seu uso planejado. Ao solicitar um certificado de uma CA (autoridade de certificação) corporativa Windows, os solicitadores de certificado podem optar entre diversos tipos de certificados com base em modelos de certificado.|  
 |aplicador de alterações|Um objeto que executa a detecção e a manipulação de conflitos, bem como a aplicação de alterações em um lote de alterações.|  
@@ -217,16 +217,16 @@ ms.technology:
 |Auditoria CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a geração e a exibição de modelos de política CLM, definindo políticas de gerenciamento em um modelo de perfil e gerando relatórios de CLM.|  
 |Credenciais de CLM|Informações de conta de usuário que podem ser usadas para autenticar um usuário para o CLM (Certificate Lifecycle Manager). Essas credenciais podem estar na forma de credenciais de domínio ou de senhas antigas.|  
 |Inscrição de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite ao usuário especificar o fluxo de trabalho e os dados serem coletados, emitindo certificados através de um modelo. Essa permissão estendida só se aplica a modelos de perfis.|  
-|Agente de inscrição de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a um usuário ou grupo executar solicitações de certificado em nome de outro usuário. Assunto do certificado emitido conterá o nome do usuário de destino, em vez do nome do solicitante.|  
+|Agente de inscrição de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a um usuário ou grupo executar solicitações de certificado em nome de outro usuário. A entidade do certificado emitido conterá o nome do usuário de destino, em vez do nome do solicitante.|  
 |Recuperação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação da recuperação de chave de criptografia a partir do banco de dados de autoridade de certificação.|  
-|Renovação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação, execução ou conclusão de uma solicitação de matrícula. A solicitação de renovação substitui o certificado de usuário que esteja perto de sua data de validade com um novo certificado que tem um novo período de validade.|  
+|Renovação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação, execução ou conclusão de uma solicitação de matrícula. A solicitação de renovação substitui o certificado de um usuário próximo à data de validade por um novo certificado que tenha um novo período de validade.|  
 |Relatórios CLM|Informações de auditoria que pertencem a atividades de gerenciamento de credencial no CLM (Certificate Lifecycle Manager).|  
 |Registro de solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação, execução ou conclusão de uma solicitação de matrícula.|  
 |Recuperação de solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação da recuperação de chave de criptografia a partir do banco de dados de autoridade de certificação.|  
-|Renovação de solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação, execução ou conclusão de uma solicitação de matrícula. A solicitação de renovação substitui o certificado de usuário que esteja perto de sua data de validade com um novo certificado que tem um novo período de validade.|  
-|Revogação de solicitação de CLM|Um ciclo de vida do CLM (Certificate Manager) permissão estendida no Active Directory que permite a revogação de um certificado antes da expiração do período de validade do certificado. Um exemplo de quando isso é necessário é se de um usuário computador ou cartão inteligente fica comprometido (roubado).|  
-|Cartão inteligente desbloqueado em solicitação de CLM|Um ciclo de vida do CLM (Certificate Manager) permissão estendida no Active Directory que permite usuário identificação número pessoal (PIN de um cartão inteligente) a serem redefinidas, permitindo o acesso ao material da chave em um cartão inteligente e material ser restabelecida.|  
-|Revogação de CLM|Um ciclo de vida do CLM (Certificate Manager) permissão estendida no Active Directory que permite a revogação de um certificado antes da expiração do período de validade do certificado. Um exemplo de quando isso é necessário é se de um usuário computador ou cartão inteligente fica comprometido (roubado).|  
+|Renovação de solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a iniciação, execução ou conclusão de uma solicitação de matrícula. A solicitação de renovação substitui o certificado de um usuário próximo à data de validade por um novo certificado que tenha um novo período de validade.|  
+|Revogação de solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a revogação de um certificado antes da expiração do período de validade do certificado. Um exemplo de quando isso é necessário é se o computador ou cartão inteligente de um usuário está comprometido (roubado).|  
+|Cartão inteligente desbloqueado em solicitação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite que o PIN (número de identificação pessoal) do usuário do cartão inteligente seja redefinido, permitindo o acesso ao material da chave em um cartão inteligente e para que esse material seja restabelecido.|  
+|Revogação de CLM|Uma permissão estendida do CLM (Certificate Lifecycle Manager) no Active Directory que permite a revogação de um certificado antes da expiração do período de validade do certificado. Um exemplo de quando isso é necessário é se o computador ou cartão inteligente de um usuário está comprometido (roubado).|  
 |vetor de relógio|Uma coleção de elementos de vetor de relógio que representa atualizações em uma réplica. Qualquer alteração que ocorra entre 0 e a contagem em escala está contida no vetor.|  
 |elemento de vetor de relógio|Um par de valores, consistindo em uma chave de réplica e uma contagem em escala que representam uma alteração em uma réplica.|  
 |função CLR|Uma função criada em relação a um assembly do SQL Server cuja implementação é definida em um assembly criado no CLR (Common Language Runtime) do .NET Framework.|  
@@ -249,7 +249,7 @@ ms.technology:
 |latência fria|O tempo que decorre quando o fluxo de trabalho está sendo usado pela primeira vez e o XOML ou XAML precisa ser compilado.|  
 |espera passiva|Um segundo data center que oferecer disponibilidade em algumas horas ou dias.|  
 |ordenação|Um conjunto de regras que determina como os dados são comparados, ordenados e apresentados.|  
-|coleção|Um objeto que contém um conjunto de objetos relacionados. A posição de um objeto na coleção pode alterar sempre que uma alteração ocorre na coleção; portanto, a posição de qualquer objeto específico em uma coleção pode variar.|  
+|collection|Um objeto que contém um conjunto de objetos relacionados. A posição de um objeto na coleção pode alterar sempre que uma alteração ocorre na coleção; portanto, a posição de qualquer objeto específico em uma coleção pode variar.|  
 |item de coleta|Uma instância de um tipo de coletor que é criado com um conjunto específico de propriedades de entrada e a frequência de coleção; isso é usado para coletar tipos específicos de dados.|  
 |modo de coleta|A frequência com que dados são coletados e carregados no data warehouse de gerenciamento.|  
 |conjunto de coleta|Um grupo de itens de coleta com o qual um usuário pode interagir através da interface do usuário.|  
@@ -259,7 +259,7 @@ ms.technology:
 |intervalo de cores|O intervalo de cores disponível a um dispositivo de vídeo.|  
 |regra de cores|A regra que se aplica a cores de preenchimento para polígonos, linhas e marcadores que representam pontos ou pontos centrais de polígono.|  
 |escala de cores|Uma escala que exibe apenas os resultados das regras de cores.|  
-|column|A área em cada linha de uma tabela de banco de dados que armazena o valor de dados para algum atributo do objeto modelado pela tabela.|  
+|coluna|A área em cada linha de uma tabela de banco de dados que armazena o valor de dados para algum atributo do objeto modelado pela tabela.|  
 |associação de coluna|A associação de um objeto do Analysis Services a uma coluna em uma exibição de fonte de dados.|  
 |delimitador de colunas|Um caractere que separa colunas umas das outras no arquivo CSV que está sendo importado/exportado.|  
 |filtro de colunas|Um filtro que restringe colunas que precisam ser incluídas como parte de uma publicação de instantâneo, transacional ou de mesclagem.|  
@@ -296,7 +296,7 @@ ms.technology:
 |Conflito de simultaneidade|Um conflito que ocorre quando o mesmo item ou unidade de alteração é alterada em duas réplicas diferentes que são sincronizadas mais tarde.|  
 |modelo de simultaneidade|Um modo no qual um aplicativo pode ser criado para responder por operações simultâneas que usam os mesmos dados armazenados em cache. O Windows Server AppFabric oferece suporte a modelos de simultaneidade otimistas e pessimistas.|  
 |operação simultânea|Uma operação de computador na qual dois ou mais processos (programas) têm acesso à hora do microprocessador e são realizados quase simultaneamente. Como um microprocessador pode funcionar com muitas unidades de tempo menores do que as pessoas conseguem perceber, processos simultâneos parecem estar ocorrendo simultaneamente, mas, na realidade não estão.|  
-|expressão condicional|Uma expressão que gera um valor booliano (true ou false). Essas expressões podem envolver comparações (testando valores para igualdade ou, para valores não boolianos, o \< [menor que] ou > [maior que] relação) e combinação lógica (usando operadores boolianos como AND, OR e XOR) de expressões Boolianas.|  
+|expressão condicional|Uma expressão que gera um valor booliano (true ou false). Essas expressões podem envolver comparações (valores de teste para igualdade ou, para valores não boolianos \< , a relação [menor que] ou > [maior que]) e a combinação lógica (usando operadores boolianos, como and, or e XOR) de expressões booleanas.|  
 |divisão condicional|Uma restauração de um backup completo de banco de dados, o backup de banco de dados diferencial mais recente (se houver) e os backups de logs (se houver) feitos desde o backup completo do banco de dados.|  
 |arquivo config|Um arquivo que contém especificações operacionais legíveis por máquina para um hardware ou software, ou que contém informações sobre outro arquivo ou sobre um usuário específico, como a ID de logon do usuário.|  
 |configuração|Em referência a um único microcomputador, a soma de componentes internos e externos de um sistema, incluindo memória, unidades de disco, teclado, vídeo e geralmente hardware complementar menos crítico, como mouse, modem ou impressora. Software (o sistema operacional e vários drivers de dispositivo), as opções do usuário definidas através de arquivos de configuração como os arquivos AUTOEXEC.BAT e CONFIG.SYS em PCs IBM e compatíveis e, às vezes, hardware (comutadores e saltadores) são necessários para 'configurar a configuração' para que funcione corretamente. Embora a configuração de sistema possa ser alterada, como através da adição de mais memória ou capacidade de disco, a estrutura básica do sistema (sua arquitetura) permanece inalterada.|  
@@ -313,7 +313,7 @@ ms.technology:
 |conflito de restrição|Um conflito que viola as restrições dos itens ou das unidades de alteração, como a relação de pastas ou o local dos dados de mesmo nome em um sistema de arquivos.|  
 |violação da restrição|Uma violação que ocorre quando os critérios de restrição não são atendidos.|  
 |banco de dados independente|Um banco de dados do SQL Server que inclui toda a autenticação de usuário, as configurações de banco de dados e os metadados necessários para definir e acessar o banco de dados, e que não tem dependência de configuração na instância do Mecanismo de Banco de Dados do SQL Server onde o banco de dados está instalado.|  
-|container|Um elemento de fluxo de controle que fornece estrutura de pacote.|  
+|contêiner|Um elemento de fluxo de controle que fornece estrutura de pacote.|  
 |formatador de conteúdo|A parte do distribuidor que transforma dados de notificação brutos em mensagens legíveis.|  
 |chave de conteúdo|A chave criptográfica usada para criptografar e descriptografar conteúdo protegido durante a publicação e o consumo.|  
 |contenção|Em uma rede, a competição entre estações para a oportunidade de usar uma linha de comunicação ou um recurso de rede.|  
@@ -335,7 +335,7 @@ ms.technology:
 |referendar|Assinar um documento já assinado pela outra parte.|  
 |ocupação da CPU|Uma estatística do SQL Server que relata o tempo, em milissegundos, que a unidade de processamento central (CPU) gastou em trabalho do SQL Server.|  
 |rastreamento|O processo de examinar o conteúdo para compilar e manter um índice.|  
-|credenciais|Informações que incluem identificação e prova de identificação que são usadas para obter acesso a recursos locais e de rede. Exemplos de credenciais são nomes de usuários e senhas, cartões inteligentes e certificados.|  
+|credenciais|Informações que incluem a identificação e prova de identificação usadas para obter acesso ao local e aos recursos da rede. Exemplos de credenciais são nomes de usuário e senhas, cartões inteligentes e certificados.|  
 |encadeamento de propriedades de bancos de dados|Uma cadeia de propriedade que percorre mais de um banco de dados.|  
 |validação cruzada|Um método para avaliar a exatidão de um modelo de mineração de dados.|  
 |evento CTI|Um evento de pontuação especial que indica a conclusão dos eventos existentes.|  
@@ -403,7 +403,7 @@ ms.technology:
 |catálogo do banco de dados|A parte de um banco de dados que contém a definição de todos os objetos no banco de dados, bem como a definição do banco de dados.|  
 |diagrama de banco de dados|Uma representação gráfica de qualquer parte de um esquema de banco de dados. Pode ser uma imagem inteira ou parcial da estrutura do banco de dados. Inclui tabelas, as colunas que elas contêm, e os relacionamentos entre as tabelas.|  
 |mecanismo de banco de dados|O módulo ou módulos do programa que fornecem acesso a um sistema de gerenciamento de banco de dados (DBMS).|  
-|Orientador de Otimização do Mecanismo de Banco de Dados|Uma ferramenta para ajustar o design de banco de dados físico que ajuda os usuários a selecionarem e criarem um conjunto ideal de índices, exibições indexadas e particionamento.|  
+|Database Engine Tuning Advisor|Uma ferramenta para ajustar o design de banco de dados físico que ajuda os usuários a selecionarem e criarem um conjunto ideal de índices, exibições indexadas e particionamento.|  
 |Gerenciador de Banco de Dados|Uma ferramenta simples de administração de banco de dados que permite que o usuário execute operações de banco de dados, crie novas tabelas, consulte e modifique dados existentes, além de outras funções de desenvolvimento de banco de dados.|  
 |arquivo de banco de dados|Um dos arquivos físicos que compõem um banco de dados.|  
 |linguagem do banco de dados|A linguagem usada para acessar, consultar, atualizar e gerenciar dados em sistemas de banco de dados relacionais.|  
@@ -465,8 +465,8 @@ ms.technology:
 |remover da fila|Remover de uma fila.|  
 |coluna derivada|Uma transformação que cria novos valores de coluna com a aplicação de expressões às colunas de entrada de transformação.|  
 |desserialização|O processo de converter um objeto de um formato de armazenamento serial para formato binário na forma de um objeto que os aplicativos podem usar. Isto acontece quando o objeto é recuperado do cluster de cache com as APIs de cliente Get.|  
-|destination|O componente de fluxo de dados do SSIS que carrega dados em repositórios de dados ou cria conjuntos de dados na memória.|  
-|destination|Um provedor de sincronização que fornece seu conhecimento atual, aceita uma lista de alterações do provedor de origem, detecta quaisquer conflitos entre aquela lista e seus próprios itens, e aplica as alterações ao seu repositório de dados.|  
+|destino|O componente de fluxo de dados do SSIS que carrega dados em repositórios de dados ou cria conjuntos de dados na memória.|  
+|destino|Um provedor de sincronização que fornece seu conhecimento atual, aceita uma lista de alterações do provedor de origem, detecta quaisquer conflitos entre aquela lista e seus próprios itens, e aplica as alterações ao seu repositório de dados.|  
 |adaptador de destino|Um componente de fluxo de dados que carrega dados em um repositório de dados.|  
 |provedor de destino|Um provedor de sincronização que fornece seu conhecimento atual, aceita uma lista de alterações do provedor de origem, detecta quaisquer conflitos entre aquela lista e seus próprios itens, e aplica as alterações ao seu repositório de dados.|  
 |detectar|Localizar algo.|  
@@ -474,7 +474,7 @@ ms.technology:
 |diacrítico|Uma marca colocada sobre, sob, ou através de um caractere, geralmente para indicar uma alteração no valor fonético do estado sem marca.|  
 |marca diacrítica|Uma marca colocada sobre, sob, ou através de um caractere, geralmente para indicar uma alteração no valor fonético do estado sem marca.|  
 |dialeto|As regras gerais e de sintaxe usadas para analisar uma cadeia de caracteres ou uma instrução de consulta.|  
-|relação em forma de losango|Uma cadeia de relações de atributo que se divide e volta a se reunir, mas sem conter nenhuma relação redundante. Por exemplo, o dia -> mês -> ano e dia -> trimestre -> ano têm os mesmos pontos inicial e final, mas não tem nenhuma relação comum.|  
+|relação em forma de losango|Uma cadeia de relações de atributo que se divide e volta a se reunir, mas sem conter nenhuma relação redundante. Por exemplo, dia >mês->ano e dia->trimestre->ano têm os mesmos pontos inicial e final, mas não têm relações comuns.|  
 |diferenciador|Uma interface para uma ferramenta que cria um objeto DifferencingService.|  
 |backup diferencial|Um backup que contém somente alterações feitas no banco de dados desde o backup de dados anterior no qual o backup diferencial é baseado.|  
 |base diferencial|O backup completo mais recente de todos os dados em um banco de dados ou em um subconjunto dos arquivos ou grupos de arquivos de um banco de dados.|  
@@ -518,7 +518,7 @@ ms.technology:
 |sessão inativa|Sessão em estado de pré-logon. As sessões podem ser iniciadas ou finalizadas para modificar seus estados, mas, em geral, permanecem no estado "sleep/idle", como quando a sessão foi iniciada e está aberta no servidor para uso do cliente; ou no estado "dormant", como quando a sessão foi finalizada e não está disponível atualmente no servidor para uso do cliente.|  
 |conjunto de caracteres de dois bytes|Um conjunto de caracteres que pode usar mais de um byte para representar um caractere único. Um DBCS inclui alguns caracteres que consistem em 1 byte e alguns caracteres que consistem em 2 bytes. Idiomas como chinês, japonês e coreano usam o DBCS.|  
 |conjunto de caracteres de dois bytes|Um conjunto de caracteres que pode usar mais de um byte para representar um caractere único. Um DBCS inclui alguns caracteres que consistem em 1 byte e alguns caracteres que consistem em 2 bytes. Idiomas como chinês, japonês e coreano usam o DBCS.|  
-|inativo|Não funcionando, em referência a computadores, impressoras, linhas de comunicações em redes e outros tipos de hardware.|  
+|ligar|Não funcionando, em referência a computadores, impressoras, linhas de comunicações em redes e outros tipos de hardware.|  
 |artigo de somente download|Um artigo em uma publicação de mesclagem que pode ser atualizado somente no Publicador ou em um Assinante que usa uma assinatura de servidor.|  
 |cliente DPM|O cliente DPM (Data Protection Manager) permite que o usuário proteja e recupere seus dados de acordo com a política de proteção de empresa configurada pelo administrador de backup.|  
 |Mecanismo DPM|Um mecanismo orientado por política que o DPM usa para proteger e recuperar dados.|  
@@ -548,7 +548,7 @@ ms.technology:
 |dump|Uma duplicata de um programa, disco ou dados, criada para fins de arquivamento ou para salvaguardar arquivos.|  
 |dispositivo de despejo|Uma unidade de fita ou de disco que contém uma mídia de backup.|  
 |cursor dinâmico|Um cursor que pode refletir modificações de dados feitas nos dados subjacentes enquanto o cursor está aberto.|  
-|filtro dinâmico|Um filtro de linha disponível com replicação de mesclagem que permite restringir os dados replicados a um assinante com base em uma função do sistema ou função definida pelo usuário (por exemplo: SUSER_SNAME()).|  
+|filtro dinâmico|Um filtro de linha disponível com replicação de mesclagem que permite restringir os dados replicados a um Assinante com base em uma função do sistema ou em uma função definida pelo usuário (por exemplo: SUSER_SNAME()).|  
 |bloqueio dinâmico|O processo usado pelo SQL Server para determinar os bloqueios mais econômicos a serem usados a qualquer momento.|  
 |função de gerenciamento dinâmico|Um dos conjuntos de funções internas que retorna informações de estado de servidor sobre valores, objetos e configurações no SQL Server.|  
 |exibição de gerenciamento dinâmico|Um conjunto exibições internas que retornam informações de estado de servidor sobre valores, objetos e configurações no SQL Server.|  
@@ -562,10 +562,10 @@ ms.technology:
 |criptografia|O processo de converter dados legíveis (texto não criptografado) em um formulário codificado (texto cifrado) para impedi-lo de ser lido por uma parte não autorizada.|  
 |chave de criptografia|Uma cadeia de caracteres de bit que é usada junto com um algoritmo de criptografia para criptografar e descriptografar dados.|  
 |proteção final|Para caminhos que contêm extremidades não conectadas, como linhas, o término de um traço. Você pode alterar a aparência do traço em cada extremidade, aplicando um de quatro estilos de extremidade: extremidade plana, extremidade redonda, extremidade quadrada e extremidade triangular.|  
-|ponto de extremidade|Um provedor de sincronização e sua réplica associada.|  
+|endpoint|Um provedor de sincronização e sua réplica associada.|  
 |mapeador de pontos de extremidade|Um serviço em um servidor RPC (chamada de procedimento remoto) que mantém um banco de dados de pontos de extremidade dinâmicos e permite que clientes mapeiem um par de UUID de interface/objeto para um ponto de extremidade dinâmico local.|  
 |enfileirar|Colocar (um item) em uma fila.|  
-|inscrever|Adicionar uma instância de SQL Server ao conjunto de instâncias de SQL Server gerenciadas por um ponto de controle de utilitário.|  
+|enroll|Adicionar uma instância de SQL Server ao conjunto de instâncias de SQL Server gerenciadas por um ponto de controle de utilitário.|  
 |inscrição|O processo de solicitar, receber e instalar um certificado.|  
 |agente de inscrição|Uma conta de usuário usada para solicitar certificados de cartão inteligente em nome de outra conta de usuário. Um modelo de certificado específico é aplicado a um Agente de Matrícula.|  
 |licença Enterprise|Uma licença que autoriza a proteção de arquivo e recursos de aplicativo em um único computador.|  
@@ -605,7 +605,7 @@ ms.technology:
 |painel Plano de Execução|Um das guias que hospeda a saída de plano de execução real ou estimado usado pelo SQL Server.|  
 |árvore de execução|O caminho de dados no fluxo de dados de um pacote do SQL Server 2005 Integration Services de fontes até transformações e destinos.|  
 |módulo de saída|Um componente dos Serviços de Certificados que executa pós-processamento depois que um certificado é emitido, como a publicação de um certificado emitido para Active Directory.|  
-|validade|O ponto no qual um objeto excedeu o valor de tempo limite de cache. Quando um objeto expira, é removido.|  
+|expiração|O ponto no qual um objeto excedeu o valor de tempo limite de cache. Quando um objeto expira, é removido.|  
 |extremidade explícita|Uma hierarquia explícita usada como o nível superior de uma estrutura de hierarquia derivada.|  
 |hierarquia explícita|No Master Data Services, uma hierarquia que usa membros consolidados para agrupar outros membros consolidados e membros folha.|  
 |carregamento explícito|Um padrão de carregamento em que objetos relacionados não são carregados até que sejam explicitamente solicitados usando o método Load em uma propriedade de navegação.|  
@@ -614,10 +614,10 @@ ms.technology:
 |gráfico de pizza destacada.|Um gráfico de pizza que exibe a contribuição de cada valor para um total enfatizando valores individuais, mostrando cada fatia da pizza como "arrancada" ou separada do todo.|  
 |média móvel exponencial|Uma média móvel de dados que dá mais peso para os dados mais recentes no período e menos peso para os dados mais antigos no período. A fórmula aplica fatores de importância que diminuem exponencialmente. A importância para cada ponto de dados mais antigo diminui exponencialmente, dando muito mais relevância a observações recentes, embora não descartando completamente as observações mais antigas.|  
 |formato de exportação|Texto de interface de usuário para assinaturas e visualizador de HTML. Corresponde a extensões de renderização.|  
-|expression|Qualquer combinação de operadores, constantes, valores literais, funções e nomes de campos (colunas), controles e propriedades que são avaliadas como um único valor.|  
+|expressão|Qualquer combinação de operadores, constantes, valores literais, funções e nomes de campos (colunas), controles e propriedades que são avaliadas como um único valor.|  
 |assembly de host de expressões|Todas as expressões localizadas dentro de um relatório que são compiladas em um assembly. O assembly de host de expressões é armazenado como uma parte do relatório compilado.|  
 |permissão estendida|Uma permissão que é específica a um objeto adicionado ao esquema de objeto padrão do Active Directory.  A permissão associada ao novo objeto estende o conjunto de permissões padrão existente.|  
-|propriedade estendida|Texto definido pelo usuário (descritivo ou instrutivo, incluindo máscaras de entrada e regras de formatação) específico para um banco de dados ou objeto de banco de dados. O texto é armazenado no banco de dados como uma propriedade do banco de dados ou do objeto.|  
+|Propriedade estendida|Texto definido pelo usuário (descritivo ou instrutivo, incluindo máscaras de entrada e regras de formatação) específico para um banco de dados ou objeto de banco de dados. O texto é armazenado no banco de dados como uma propriedade do banco de dados ou do objeto.|  
 |Proteção Estendida para Autenticação|Um recurso de segurança que ajuda a proteger contra ataques MITM (a intermediários).|  
 |procedimento armazenado estendido|Uma função em uma biblioteca de links dinâmicos (DLL) que é codificada usando a API do Procedimento Armazenado Estendido do SQL Server. Em seguida, a função pode ser invocada no Transact-SQL usando as mesmas instruções que são usadas para executar procedimentos armazenados do Transact-SQL.|  
 |Linguagem XSL|Um vocabulário XML que é usado para transformar dados XML em outro formato, como HTML, por meio de uma folha de estilo que define as regras de apresentação.|  
@@ -625,7 +625,7 @@ ms.technology:
 |Linguagem XSL Transformations|Linguagem declarativa baseada em XML usada para apresentar ou transformar dados XML.|  
 |extensão|Em um disco ou outro dispositivo de armazenamento de acesso direto, um bloco contínuo de espaço de armazenamento reservado pelo sistema operacional para um arquivo específico ou programa.|  
 |sistema de entrega externo|Um sistema, como o Microsoft Exchange Server que entrega notificações formatadas a dispositivos de destino.|  
-|extrair|Compilar um arquivo de pacote de DAC que contém as definições de todos os objetos em um banco de dados existente, assim como objetos de instância que estão associados ao banco de dados.|  
+|extract|Compilar um arquivo de pacote de DAC que contém as definições de todos os objetos em um banco de dados existente, assim como objetos de instância que estão associados ao banco de dados.|  
 |extração, transformação e carregamento|O ato de extrair dados de várias origens, transformando dados em tipos consistentes e carregando os dados transformados para serem usados por aplicativos.|  
 |faceta|Um conjunto de propriedades lógicas pré-definidas que modelam o comportamento ou características para certos tipos de destinos gerenciados (como um banco de dados, tabela, logon, exibição etc) em gerenciamento baseado em política.|  
 |Faceta|Um conjunto de propriedades lógicas pré-definidas que modelam o comportamento ou características para certos tipos de destinos gerenciados (como um banco de dados, tabela, logon, exibição etc) em gerenciamento baseado em política.|  
@@ -646,7 +646,7 @@ ms.technology:
 |consumidor de feed|Um componente de software que extrai itens de um feed do FeedSync e os aplica a uma réplica de destino usando um provedor de sincronização.|  
 |fibra|Um thread leve do Windows NT programado dentro de um único thread de SO.|  
 |modo fibra|Uma situação em que uma instância do SQL Server aloca um thread do Windows por agendador de SQL e, em seguida, aloca uma fibra por thread de trabalho, até atingir o valor definido na opção de máximo de threads de trabalho.|  
-|campo|Uma área em uma janela ou registro que armazena um único valor de dados.|  
+|field|Uma área em uma janela ou registro que armazena um único valor de dados.|  
 |tamanho do campo|Na cópia em massa, o número máximo de caracteres necessários para representar um item de dados em um arquivo de dados de formato de caractere de cópia em massa.|  
 |marshaler de campos|Um recurso do SQL Server que trata o marshaling para os campos.|  
 |terminador de campo|Na cópia em massa, um ou mais caracteres que marcam o final de um campo ou uma linha, separando um campo ou uma linha no arquivo de dados do próximo.|  
@@ -722,7 +722,7 @@ ms.technology:
 |atributo de granularidade|O único atributo é usado para especificar o nível de granularidade de uma determinada dimensão em relação a um determinado grupo de medidas.|  
 |designer de consultas gráficas|Um designer de consultas fornecido pelos Reporting Services que permite que o usuário crie uma consulta interativamente e veja os resultados de tipos de fonte de dados do SQL Server, Oracle, OLE DB e ODBC.|  
 |primitiva gráfica|Uma forma básica (ponto, linha, círculo, curva ou polígono) que um adaptador gráfico pode manipular como uma entidade discreta.|  
-|grupo|Uma coleção de usuários, computadores, contatos e outros grupos que é usada como segurança ou como coleções de distribuição de email. Grupos de distribuição são usados somente para email. Grupos de segurança são usados para conceder acesso a recursos e também como listas de distribuição de email.|  
+|group|Uma coleção de usuários, computadores, contatos e outros grupos que é usada como segurança ou como coleções de distribuição de email. Grupos de distribuição são usados somente para email. Grupos de segurança são usados para conceder acesso a recursos e também como listas de distribuição de email.|  
 |agrupamento|Um conjunto de dados que é agrupado em um relatório.|  
 |caractere de meia-largura|Em um conjunto de caracteres de dois bytes, um caractere que é representado por um byte e geralmente tem uma variante de largura completa.|  
 |disco rígido|Uma placa inflexível coberta com material no qual podem ser registrados dados magneticamente com cabeçotes de leitura/gravação.|  
@@ -741,12 +741,12 @@ ms.technology:
 |marca-d'água alta|Um limite de consumo de memória em cada host de cache que especifica quando os objetos são removidos da memória, independentemente de terem expirado ou não, até que o consumo de memória volte até a marca-d'água baixa.|  
 |caixa estreita alta|O valor mais alto que não é um valor discrepante em um gráfico de caixa.|  
 |Dica de|Uma opção ou estratégia especificada para aplicação pelo processador de consultas do SQL Server em instruções SELECT, INSERT, UPDATE ou DELETE. A dica substitui qualquer plano de execução que o otimizador de consulta possa selecionar para uma consulta.|  
-|histórico|Uma lista das ações do usuário dentro de um programa, como comandos inseridos em um shell do sistema operacional, menus passados usando Gopher ou links seguidos usando um navegador da Web.|  
-|colocação em espera|Refere-se à possibilidade de deixar conjuntos de resultados abertos ("em espera") que tenham sido processados e são fechados normalmente depois disto. Por exemplo:  "O SQL Server dá suporte a colocação em espera no nível de conexão somente."|  
+|history|Uma lista das ações do usuário dentro de um programa, como comandos inseridos em um shell do sistema operacional, menus passados usando Gopher ou links seguidos usando um navegador da Web.|  
+|colocação em espera|Refere-se à possibilidade de deixar conjuntos de resultados abertos ("em espera") que tenham sido processados e são fechados normalmente depois disto. Por exemplo: "O SQL Server somente dá suporte a colocação em espera no nível de conexão".|  
 |controle|Uma porcentagem de dados de treinamento que são reservados para uso na medição da exatidão da estrutura do modelo de mineração de dados.|  
 |dados de validação|Uma porcentagem de dados de treinamento que são reservados para uso na medição da exatidão da estrutura do modelo de mineração de dados.|  
 |repositório de controle|A estrutura de mineração de dados que é usada para armazenar em cache os dados de controle. Ele contém referências aos dados de controle.|  
-|Base|Pasta raiz no namespace de pasta de servidor de relatório.|  
+|Página inicial|Pasta raiz no namespace de pasta de servidor de relatório.|  
 |home page|Um documento que serve como um ponto de partida em um sistema de hipertexto. Na World Wide Web, uma página de entrada para um conjunto de páginas da Web e outros arquivos em um site. A home page é exibida por padrão quando um visitante navega para o site usando um navegador da Web.|  
 |dados homogêneos|Dados que vêm de várias fontes de dados que são todos gerenciados pelo mesmo software.|  
 |salto|Em comunicações de dados, um segmento do caminho entre roteadores em uma rede geograficamente dispersa.|  
@@ -797,7 +797,7 @@ ms.technology:
 |evento de inserção|O tipo de evento usado para significar a chegada de um evento ao fluxo. O tipo de evento de inserção consiste em metadados que definem o tempo de vida válido do evento e os campos de carga (dados) do evento.|  
 |consulta Insert Into|Uma consulta que copia colunas e linhas específicas de uma tabela para outra ou para a mesma tabela.|  
 |consulta Insert Values|Uma consulta (instrução SQL) que cria uma linha nova e insere valores em colunas especificadas.|  
-|instância|Uma cópia do SQL Server em execução em um computador.|  
+|instance|Uma cópia do SQL Server em execução em um computador.|  
 |provedor de controle de instâncias|Um provedor que permite emitir comandos de controle em relação a instâncias de fluxo de trabalho em um repositório de instâncias. Por exemplo, um provedor de controle SQL permite que você suspenda, retome ou finalize instâncias armazenadas em um banco de dados do SQL Server. Quando você executar um cmdlet que controla uma instância de fluxo de trabalho em um repositório de instâncias, o cmdlet internamente usará o provedor de controle para que aquele repositório de instância envie comandos à instância.|  
 |provedor de consulta de instâncias|Um provedor que permite emitir consultas em relação a um repositório de instâncias. Por exemplo, um provedor de consulta SQL permite consultar instâncias de fluxo de trabalho armazenadas em um banco de dados do SQL Server. Quando você executar um cmdlet que consulta instâncias em relação a um repositório de instâncias, o cmdlet internamente usará o provedor de consulta para recuperar instâncias do repositório.|  
 |repositório de instâncias|Um conjunto de tabelas de banco de dados que armazenam estado de instância de fluxo de trabalho e metadados de instância de fluxo de trabalho.|  
@@ -828,34 +828,34 @@ ms.technology:
 |iterar|Executar uma ou mais instruções ou instruções repetidamente. Instruções executadas dessa maneira são chamadas de instruções em loop.|  
 |trabalho|Uma série especificada de operações e etapas chamadas, executadas em sequência por um programa para concluir uma ação.|  
 |histórico do trabalho|Log que mantém um registro histórico de trabalhos.|  
-|junção|Combinar o conteúdo de duas ou mais tabelas e produzir um conjunto de resultados que incorpora linhas e colunas de cada tabela. Tabelas são geralmente unidas usando dados que têm em comum.|  
+|join|Combinar o conteúdo de duas ou mais tabelas e produzir um conjunto de resultados que incorpora linhas e colunas de cada tabela. Tabelas são geralmente unidas usando dados que têm em comum.|  
 |coluna de junção|Uma coluna referenciada em uma condição de junção.|  
 |condição de junção|Uma cláusula de comparação que especifica como as tabelas estão relacionadas pelas suas colunas de junção.|  
 |filtro de junção|Um filtro usado em replicação de mesclagem que estende o filtro de linha de uma tabela para uma tabela relacionada.|  
-|operador de junção|Um operador de comparação em uma condição de junção que determina como são avaliados os dois lados da condição e quais linhas são retornadas.|  
+|operador join|Um operador de comparação em uma condição de junção que determina como são avaliados os dois lados da condição e quais linhas são retornadas.|  
 |caminho de junção|Uma série de junções que indicam como duas tabelas estão relacionadas.|  
 |tabela de junção|Uma tabela que estabelece uma relação entre outras tabelas.|  
 |gráfico Kagi|Um gráfico, na maioria das vezes independente de tempo, usado para acompanhar movimentos de preço e decisões relacionadas a compra de estoque.|  
-|key|Uma cadeia de caracteres que identifica um objeto no cache. Essa cadeia de caracteres deve ser exclusiva dentro de uma região. Os objetos são associados a uma chave quando são adicionados e, em seguida, recuperados com a mesma chave.|  
-|key|Em criptografia, autenticação e assinaturas digitais, um valor usado em combinação com um algoritmo para criptografar ou descriptografar informações.|  
-|key|Em uma matriz, o campo pelo qual os dados armazenados são organizados e acessados.|  
-|key|Uma coluna ou um grupo de colunas que identifica exclusivamente uma linha (chave primária), define a relação entre duas tabelas (chave estrangeira) ou é usada para criar um índice.|  
+|chave|Uma cadeia de caracteres que identifica um objeto no cache. Essa cadeia de caracteres deve ser exclusiva dentro de uma região. Os objetos são associados a uma chave quando são adicionados e, em seguida, recuperados com a mesma chave.|  
+|chave|Em criptografia, autenticação e assinaturas digitais, um valor usado em combinação com um algoritmo para criptografar ou descriptografar informações.|  
+|chave|Em uma matriz, o campo pelo qual os dados armazenados são organizados e acessados.|  
+|chave|Uma coluna ou um grupo de colunas que identifica exclusivamente uma linha (chave primária), define a relação entre duas tabelas (chave estrangeira) ou é usada para criar um índice.|  
 |atributo de chave|O atributo de uma dimensão que vincula os atributos não chave na dimensão para medidas relacionadas.|  
 |coluna de chave|Uma coluna cujo conteúdo identifica exclusivamente cada linha em uma tabela.|  
 |gerador de chave|Um componente de hardware ou software que é usado para gerar material de chave de criptografia.|  
 |indicador chave de desempenho|Uma medida predefinida que é usada para rastrear o desempenho de uma meta estratégica, objetivo, plano, iniciativa ou processo empresarial. Um KPI é avaliado em relação a um destino. Um valor explícito e mensurável levado diretamente de uma fonte de dados. KPIs (indicadores chave de desempenho) são usados para medir desempenho em uma área específica, por exemplo, renda por cliente.|  
 |bloqueio de intervalo de chaves|Um bloqueio usado para bloquear intervalos entre registros em uma tabela para impedir adições fantasmas em um conjunto de registros ou exclusões desse conjunto. Assegura transações serializáveis.|  
 |recuperação de chave|O processo de recuperar a chave privada de um usuário.|  
-|agente de recuperação de chave|Um usuário designado que trabalha com um administrador de certificado para recuperar a chave privada de um usuário. Um modelo de certificado específico é aplicado a um Agente de Recuperação de Chave.|  
+|agente de recuperação de chave|Um usuário designado que funciona com um administrador de certificado para recuperar a chave privada de um usuário. Um modelo de certificado específico é aplicado a um Agente de Recuperação de Chave.|  
 |cursor controlado por conjunto de chaves|Um cursor que mostra os efeitos das atualizações feitas nas linhas de seu membro por outros usuários, enquanto o cursor está aberto, mas que não mostra os efeitos de inserções ou de exclusões.|  
 |conhecimento|Os metadados sobre todas as alterações que um participante viu e mantém.|  
 |KPI|Uma medida predefinida que é usada para rastrear o desempenho de uma meta estratégica, objetivo, plano, iniciativa ou processo empresarial. Um KPI é avaliado em relação a um destino. Um valor explícito e mensurável levado diretamente de uma fonte de dados. KPIs (indicadores chave de desempenho) são usados para medir desempenho em uma área específica, por exemplo, renda por cliente.|  
-|KRA|Um usuário designado que trabalha com um administrador de certificado para recuperar a chave privada de um usuário. Um modelo de certificado específico é aplicado a um Agente de Recuperação de Chave.|  
+|KRA|Um usuário designado que funciona com um administrador de certificado para recuperar a chave privada de um usuário. Um modelo de certificado específico é aplicado a um Agente de Recuperação de Chave.|  
 |Idioma para programas não Unicode|Uma configuração de Opções Regionais e de Idioma que especifica as páginas de código padrão e arquivos de fonte de bitmap associados para um computador específico que afeta todos os usuários desse computador. As páginas de código padrão e fontes permitem que um aplicativo não Unicode gravado para uma versão de idioma de sistema operacional seja executado corretamente em outra versão de idioma de sistema operacional.|  
 |analisador de serviço de linguagem|Um componente que é usado para descrever as funções e o escopo dos tokens no código-fonte.|  
 |identificador de serviço de linguagem|Um componente que é usado para identificar tipos de tokens em código-fonte. Estas informações são usadas para realçar a sintaxe e para identificar rapidamente tipos de tokens que podem disparar outras operações, por exemplo, correspondência de chave.|  
 |trava|Um objeto de sincronização de curto prazo que protege ações que precisam não ser bloqueadas para a vida de uma transação. Uma trava é usada principalmente para proteger uma linha que o mecanismo de armazenamento está transferindo ativamente de uma tabela base ou índice para o mecanismo relacional.|  
-|latência|O atraso que ocorre enquanto os dados são processados ou entregues.|  
+|latency|O atraso que ocorre enquanto os dados são processados ou entregues.|  
 |carregamento preguiçoso|Um padrão de carregamento de dados onde objetos relacionados não são carregados até que uma propriedade de navegação seja acessada.|  
 |validação de esquema lenta|Uma opção que atrasa a verificação do esquema remoto para validar seus metadados em relação a uma consulta até a execução, a fim de aumentar o desempenho.|  
 |byte inicial|O valor de byte que é a primeira metade de um caractere de byte duplo.|  
@@ -867,7 +867,7 @@ ms.technology:
 |conhecimento adquirido|O conhecimento atual de uma réplica de origem sobre um conjunto de alterações específico e os conflitos da réplica registrados em log.|  
 |menos usado recentemente|O tipo de despejo usado pelo cluster de cache, onde os objetos usados menos recentemente são despejados antes dos objetos usados mais recentemente.|  
 |junção externa esquerda|Um tipo de junção externa na qual todas as linhas da tabela mais à esquerda na cláusula JOIN são incluídas. Quando as linhas na tabela esquerda não correspondem às linhas na tabela direita, todas as colunas do conjunto de resultados que vêm da tabela direita são atribuídas um valor NULL.|  
-|nível|O nome de um conjunto de membros em uma hierarquia de dimensão, de forma que todos os membros do conjunto estejam na mesma distância da raiz da hierarquia. Por exemplo, uma hierarquia de tempo pode conter os níveis de Ano, Mês e Dia.|  
+|level|O nome de um conjunto de membros em uma hierarquia de dimensão, de forma que todos os membros do conjunto estejam na mesma distância da raiz da hierarquia. Por exemplo, uma hierarquia de tempo pode conter os níveis de Ano, Mês e Dia.|  
 |gráfico de comparação de precisão|No Analysis Services, um gráfico que compara a exatidão das previsões de cada modelo de mineração de dados no conjunto de comparações.|  
 |lightweight pooling|Uma opção que fornece um meio de reduzir a sobrecarga do sistema associada com a alternância excessiva de contexto, às vezes encontrada em ambientes SMP (multiprocessamento simétrico), executando a alternância de contexto embutido, ajudando, assim, a reduzir transições de usuário/anel kernel.|  
 |camada de linha|A camada em um relatório de mapa que exibe dados espaciais como linhas; por exemplo, linhas que indicam caminhos ou rotas.|  
@@ -884,7 +884,7 @@ ms.technology:
 |assinatura local|Uma assinatura em uma publicação de mesclagem que usa o valor de prioridade do Publicador para detecção e resolução de conflitos.|  
 |localidade|Uma coleção de regras e dados específicos de um idioma e de uma área geográfica. As localidades incluem informações sobre como classificar regras, a formação de data e hora, as convenções numérica e monetária e a classificação de caractere.|  
 |localização|O processo de adaptar um produto e/ou conteúdo (inclusive elementos de texto e não texto) para atender às expectativas de idioma, culturais e políticas e/ou os requisitos de um mercado local específico (localidade).|  
-|bloqueio|Uma restrição no acesso a um recurso em um ambiente multiusuário.|  
+|lock|Uma restrição no acesso a um recurso em um ambiente multiusuário.|  
 |escalonamento de bloqueios|O processo de converter muitos bloqueios refinados em poucos bloqueios de alta granularidade, reduzindo, assim, a sobrecarga do sistema.|  
 |backup de log|Um backup de logs de transações que inclui todos os registros de log sem backup nos backups de log anteriores. Backups de logs são necessários nos modelos de recuperação completa ou bulk-logged e não estão disponíveis no modelo de recuperação simples.|  
 |cadeia de logs|Uma sequência contínua de logs de transação para um banco de dados. Uma nova cadeia de logs começa com o primeiro backup usado depois que o banco de dados é criado ou quando o banco de dados é alternado do modelo de recuperação simples para o completo ou bulk-logged. A bifurcação de uma cadeia de logs depois de uma restauração seguida de uma recuperação, criando uma nova ramificação de recuperação.|  
@@ -917,7 +917,7 @@ ms.technology:
 |failover manual|Em uma sessão de espelhamento de banco de dados, um failover iniciado pelo proprietário do banco de dados, enquanto o servidor principal ainda estiver em execução, que transfere o serviço do banco de dados principal para o banco de dados espelho, enquanto eles estão em um estado sincronizado.|  
 |dimensão muitos para muitos|Uma relação entre uma dimensão e um grupo de medidas na qual um único fato pode estar associado a muitos membros de dimensão e um único membro de dimensão pode estar associado a muitos fatos. Para definir esta relação entre a dimensão e a tabela de fatos, a dimensão é unida a uma tabela de fatos intermediária e a tabela de fatos intermediária, por sua vez, é unida a uma tabela de dimensão intermediária, que é unida a uma tabela de fatos.|  
 |relação muitos para um|Uma relação entre duas tabelas em que uma linha em uma tabela pode se relacionar com muitas linhas em outra tabela.|  
-|mapa|Associar dados a um local especificado na memória.|  
+|map|Associar dados a um local especificado na memória.|  
 |controle de mapa|Um controle JavaScript que contém os objetos, métodos e eventos necessários para exibir mapas ativados pelo Bing Maps™ no site.|  
 |galeria de mapas|Uma galeria que contém mapas de relatórios localizados na pasta da galeria de mapas do ambiente de criação de relatórios.|  
 |camada do mapa|Um elemento filho do mapa, cada camada do mapa, incluindo elementos dos membros e atributos de membros de mapa.|  
@@ -925,7 +925,7 @@ ms.technology:
 |peça de mapa|Uma entre várias imagens de 256 x 256 pixels que são combinadas para criar um mapa do Bing. Uma peça de mapa contém um segmento de uma exibição da terra em projeção de Mercator, com possível sobreposição de estrada e texto, dependendo do estilo do mapa de Bing.|  
 |visor do mapa|A área do mapa a ser exibida no item de relatório do mapa. Por exemplo, um mapa para todos os Estados Unidos pode ser inserido em um relatório, mas somente a área dos estados do noroeste é exibida.|  
 |MAPI|Uma arquitetura de transferência de mensagens que habilita vários aplicativos a interagir com vários sistemas de transferência de mensagens em diversas plataformas de hardware. A MAPI é compilada na base COM (Component Object Model).|  
-|mapeador|Um componente que mapeia objetos.|  
+|mapper|Um componente que mapeia objetos.|  
 |marcador|Um indicador visual que identifica um ponto de dados. Em um relatório de mapa, um marcador é o indicador visual que identifica a localização de cada ponto na camada de ponto.|  
 |mapa de marcador|Um mapa que exibe um marcador em cada local (por exemplo, cidades) e varia cor de marcador, tamanho e tipo.|  
 |análise da cesta de compras|Um algoritmo de mineração de dados padrão que analisa uma lista de transações para fazer previsões sobre quais itens são comprados mais frequentemente em conjunto.|  
@@ -951,7 +951,7 @@ ms.technology:
 |média|O valor intermediário em um conjunto de números ordenados. O valor mediano é determinado escolhendo-se o valor menor de maneira que pelo menos a metade dos valores no conjunto não sejam maiores do que o valor escolhido. Se o número de valores dentro do conjunto for ímpar, o valor mediano corresponderá a um valor único. Se o número de valores dentro do conjunto for par, o valor mediano corresponderá à soma dos dois valores do meio dividido por dois.|  
 |fórmula de preço médio|Uma fórmula que calcula a média dos preços altos e baixos.|  
 |valor médio|O valor intermediário em um conjunto de números ordenados. O valor mediano é determinado escolhendo-se o valor menor de maneira que pelo menos a metade dos valores no conjunto não sejam maiores do que o valor escolhido. Se o número de valores dentro do conjunto for ímpar, o valor mediano corresponderá a um valor único. Se o número de valores dentro do conjunto for par, o valor mediano corresponderá à soma dos dois valores do meio dividido por dois.|  
-|membro|Uma única posição ou item em uma dimensão. Membros de dimensão podem ser definidos ou predefinidos pelo usuário e podem ter propriedades associadas a eles.|  
+|member|Uma única posição ou item em uma dimensão. Membros de dimensão podem ser definidos ou predefinidos pelo usuário e podem ter propriedades associadas a eles.|  
 |delegação de membros|Um conceito de modelagem que descreve como os membros da interface são mapeados de uma interface para outra.|  
 |expressão de membro|Uma linguagem MDX válida que retorna um membro.|  
 |propriedade do membro|Uma característica de um membro de dimensão. Propriedades do membro de dimensão podem ser alfanuméricas, boolianas ou tipos de dados de data/hora. Elas também podem ser definidas ou predefinidas pelo usuário.|  
@@ -965,7 +965,7 @@ ms.technology:
 |tipo de mensagem|Uma definição de uma mensagem do Service Broker. O tipo de mensagem especifica o nome da mensagem e o tipo de validação que o Service Broker executa em mensagens de entrada desse tipo.|  
 |painel Mensagens|Um das guias que hospeda as mensagens retornadas do SQL Server depois que uma consulta TSQL é executada.|  
 |Messaging Application Programming Interface|Uma arquitetura de transferência de mensagens que habilita vários aplicativos a interagir com vários sistemas de transferência de mensagens em diversas plataformas de hardware. A MAPI é compilada na base COM (Component Object Model).|  
-|metadados|Informações sobre as propriedades ou a estrutura de dados que não fazem parte dos valores que os dados contêm.|  
+|metadata|Informações sobre as propriedades ou a estrutura de dados que não fazem parte dos valores que os dados contêm.|  
 |method|Em programação orientada a objeto, um bloco de código nomeado que executa uma tarefa quando chamado.|  
 |Enfileiramento de Mensagens da Microsoft|Uma tecnologia da Microsoft que habilita aplicativos executados em horas diferentes a se comunicarem por redes e sistemas heterogêneos que podem ficar temporariamente offline.|  
 |algoritmo MSC|O algoritmo que é uma combinação de análise de sequência e clustering, que identifica clusters de eventos ordenados de forma semelhante em uma sequência. Os clusters podem ser usados para prever a provável ordenação de eventos em uma sequência com base em características conhecidas.|  
@@ -974,11 +974,11 @@ ms.technology:
 |Microsoft SQL Server|Uma família de sistemas de gerenciamento e análise de banco de dados relacional da Microsoft para soluções de comércio eletrônico, linha de negócios e data warehouse.|  
 |Microsoft SQL Server 2008 Express|Uma versão lightweight e inserível do Microsoft SQL Server 2008.|  
 |Microsoft SQL Server 2008 Express com Advanced Services|Um sistema de gerenciamento e criação de banco de dados relacional da Microsoft para soluções de comércio eletrônico, linha de negócios e data warehouse.|  
-|Microsoft SQL Server 2008 Express with Tools|Uma versão gratuita e fácil de usar do que a plataforma de dados SQL Server Express que inclui a ferramenta de gerenciamento gráfico: SQL Server Management Studio (SMSS) Express.|  
+|Microsoft SQL Server 2008 Express with Tools|Uma versão gratuita e fácil de usar da plataforma de dados do SQL Server Express que inclui a ferramenta de gerenciamento gráfico: SQL Server Management Studio (SMSS) Express.|  
 |Manuais Online do Microsoft SQL Server|Uma coleção de documentação eletrônica que inclui a documentação completa fornecida com o Microsoft SQL Server.|  
 |Business Intelligence do Microsoft SQL Server|A plataforma de infraestrutura de dados e BI baseada no Microsoft SQL Server que consiste no Microsoft SQL Server Integration Services, Relational Engine, Master Data Services, Reporting Services e no Analysis Services.|  
 |Microsoft SQL Server Compact|Um sistema de gerenciamento e análise de banco de dados relacional da Microsoft para soluções de comércio eletrônico, linha de negócios e data warehouse.|  
-|Microsoft SQL Server Compact 3.5 for Devices|Um arquivo que instala os componentes de tempo de execução de dispositivos do SQL Server Compact 3.5.|  
+|Microsoft SQL Server Compact 3.5 for Devices|Um arquivo que instala os componentes de runtime de dispositivos do SQL Server Compact 3.5.|  
 |Microsoft SQL Server Notification Services|Um suplemento do Microsoft SQL Server que fornece uma estrutura de desenvolvimento e servidor de hospedagem para criar e implantar aplicativos de notificação.|  
 |Microsoft SQL Server Playback Capture Wizard|Um assistente que oferece suporte à captura de informações sobre um evento para análise posterior.|  
 |Microsoft SQL Server PowerPivot para Microsoft Excel|Suplemento do SQL Server para o Excel.|  
@@ -1085,8 +1085,8 @@ ms.technology:
 |pacote|Uma unidade de informações transmitidas de um computador ou dispositivo para outro em uma rede.|  
 |Preenchimento de índice|Uma opção que especifica o espaço a ser deixado aberto em cada página nos níveis intermediários do índice.|  
 |preenchimento|Em armazenamento de dados, a adição de um ou mais bits, normalmente zeros, em um bloco de dados para preenchê-lo, para forçar os bits de dados reais em uma certa posição ou impedir que os dados dupliquem um padrão de bits com um significado estabelecido, como um comando inserido|  
-|página|Retornar os resultados de uma consulta em subconjuntos menores de dados, possibilitando que o usuário navegue pelo conjunto de resultados, exibindo 'páginas' de dados.|  
-|página|Em um sistema de armazenamento virtual, um bloco de comprimento fixo de endereços virtuais contíguos copiado como uma unidade da memória para o disco e retornado durante operações de paginação.|  
+|Página|Retornar os resultados de uma consulta em subconjuntos menores de dados, possibilitando que o usuário navegue pelo conjunto de resultados, exibindo 'páginas' de dados.|  
+|Página|Em um sistema de armazenamento virtual, um bloco de comprimento fixo de endereços virtuais contíguos copiado como uma unidade da memória para o disco e retornado durante operações de paginação.|  
 |falha de página|A interrupção que ocorre quando o software tenta ler ou gravar em um local de memória virtual que está marcado 'não está presente'.|  
 |restauração de página|Uma operação que restaura uma ou mais páginas de dados. A restauração de página é para restaurar páginas danificadas isoladas.|  
 |pager|Um dispositivo eletrônico sem fio, de bolso, que usa sinais de rádio para registrar números de telefone de entrada ou mensagens de texto curto. Alguns pagers também permitem aos usuários enviar mensagens.|  
@@ -1096,12 +1096,12 @@ ms.technology:
 |processamento paralelo|Um método de processamento que só pode ser executado em um computador que contém dois ou mais processadores executados simultaneamente. O processamento paralelo difere do multiprocessamento quanto ao modo em que uma tarefa é distribuída nos processadores disponíveis. No multiprocessamento, um processo pode ser dividido em blocos sequenciais, com um processador que gerencia o acesso a um banco de dados, outro que analisa os dados e um terceiro que trata da saída gráfica para a tela. Programadores que trabalham com sistemas que executam o processamento paralelo devem encontrar formas de dividir uma tarefa para que ela seja distribuída uniformemente entre os processadores disponíveis.|  
 |consulta parametrizada|Uma consulta que aceita valores de entrada por meio de parâmetros.|  
 |relatório com parâmetros|Um relatório publicado que aceita valores de entrada por meio de parâmetros.|  
-|filtro de linha com parâmetros|Um filtro de linha disponível com replicação de mesclagem que permite restringir os dados replicados a um assinante com base em uma função do sistema ou função definida pelo usuário (por exemplo: SUSER_SNAME()).|  
+|filtro de linha com parâmetros|Um filtro de linha disponível com replicação de mesclagem que permite restringir os dados replicados a um Assinante com base em uma função do sistema ou em uma função definida pelo usuário (por exemplo: SUSER_SNAME()).|  
 |backup parcial|Um backup de todos os dados no grupo de arquivos primário, de todos os grupos de arquivos de leitura-gravação e de todos os arquivos especificados opcionalmente. Um backup parcial de um banco de dados somente leitura contém apenas o grupo de arquivos primário.|  
 |restauração parcial de banco de dados|Uma restauração de apenas uma parte de um banco de dados que consiste em seu grupo de arquivos primário e um ou mais grupos de arquivos secundários. Os outros grupos de arquivos permanecem permanentemente offline, mas podem ser restaurados posteriormente.|  
 |backup diferencial parcial|Um backup parcial que é diferencial em relação a um backup parcial anterior único (o backup de base). Para um banco de dados somente leitura, o backup diferencial parcial contém apenas o grupo de arquivos primário.|  
 |participante|Um provedor de sincronização e sua réplica associada.|  
-|partícula|Um pedaço ou parte muito pequena; um objeto indivisível.|  
+|Afixos|Um pedaço ou parte muito pequena; um objeto indivisível.|  
 |função de partição|Uma função que define como as linhas de um índice ou tabela particionada se espalham em um conjunto de partições com base nos valores de determinadas colunas, chamadas de colunas de particionamento.|  
 |esquema de partição|Um objeto de banco de dados que mapeia as partições de uma função de partição para um conjunto de grupos de arquivos.|  
 |índice particionado|Um índice criado em um esquema de partição, cujos dados estão divididos horizontalmente em unidades que podem ser difundidas por meio de mais de um grupo de arquivos em um banco de dados.|  
@@ -1117,7 +1117,7 @@ ms.technology:
 |instrução de passagem|Uma instrução SELECT que é passada diretamente para o banco de dados de origem sem modificação ou atraso.|  
 |política de senha|Uma coleção de configurações de política que definem os requisitos de senha para um Objeto de Política de Grupo (GPO).|  
 |provedor de senha|Componente de geração e validação de senha de uma só vez para a autenticação de usuário.|  
-|path|Um elemento do fluxo de dados que conecta a saída de um componente de fluxo de dados à entrada de outro componente de fluxo de dados.|  
+|caminho|Um elemento do fluxo de dados que conecta a saída de um componente de fluxo de dados à entrada de outro componente de fluxo de dados.|  
 |PBM|Um conjunto de funções internas que retornam informações de estado de servidor sobre valores, objetos e configurações no SQL Server. O Gerenciamento Baseado em Política permite que um administrador de banco de dados declare o estado desejado do sistema e verifique a conformidade do sistema com esse estado.|  
 |replicação ponto a ponto|Um tipo de replicação transacional. Em contraste com a replicação transacional somente leitura e a replicação transacional com atualização de assinaturas, as relações entre nós em uma topologia de replicação ponto a ponto são relações pares, em vez das hierárquicas, com cada nó contendo esquema e dados idênticos.|  
 |ferramentas de desempenho|Ferramentas que você pode usar para avaliar o desempenho de uma solução. Ferramentas de desempenho podem ter propósitos diferentes; algumas são criadas para avaliar o desempenho ponta a ponta e outras focam a avaliação do desempenho de um aspecto específico de uma solução.|  
@@ -1134,7 +1134,7 @@ ms.technology:
 |restauração por etapas|Uma restauração composta na qual um banco de dados é restaurado em fases, em que cada fase corresponde a uma sequência de restauração. A sequência inicial restaura os arquivos no grupo de arquivos primário e, opcionalmente, outros arquivos, para qualquer ponto no tempo com suporte do modelo de recuperação e coloca o banco de dados online. Sequências de restauração subsequentes trazem os arquivos restantes ao ponto consistente com o banco de dados e os colocam online.|  
 |PIN|Um código de identificação exclusivo e secreto, semelhante a uma senha, que é atribuído a um usuário autorizado e usado para obter acesso a informações pessoais ou ativos por um dispositivo eletrônico.|  
 |PInvoke|A funcionalidade fornecida pelo common language runtime para habilitar o código gerenciado a chamar pontos de entrada DLL nativos não gerenciados.|  
-|dinâmico|Girar uma expressão com valor de tabela ao transformar os valores exclusivos de uma coluna da expressão em várias colunas na saída, e executar agregações onde elas forem necessárias em quaisquer valores de coluna remanescentes desejados na saída final.|  
+|pivot|Girar uma expressão com valor de tabela ao transformar os valores exclusivos de uma coluna da expressão em várias colunas na saída, e executar agregações onde elas forem necessárias em quaisquer valores de coluna remanescentes desejados na saída final.|  
 |moeda corrente|A moeda em relação à qual as taxas de câmbio são inseridas no grupo de medidas de taxa.|  
 |Tabela Dinâmica|Uma tecnologia interativa no Microsoft Excel ou Access que pode mostrar exibições dinâmicas dos mesmos dados de uma lista ou banco de dados.|  
 |PL/SQL|A linguagem de manipulação de dados da Oracle que permite a execução sequenciada ou agrupada de instruções SQL e que costuma ser usada para manipular dados em um banco de dados da Oracle. A sintaxe é semelhante à linguagem de programação Ada.|  
@@ -1144,7 +1144,7 @@ ms.technology:
 |planar|Em computação gráfica, encontrar-se dentro de um avião.|  
 |invocação de plataforma|A funcionalidade fornecida pelo common language runtime para habilitar o código gerenciado a chamar pontos de entrada DLL nativos não gerenciados.|  
 |camada de plataforma|A camada que inclui os servidores físicos e serviços que oferecem suporte à camada de serviços. A camada de plataforma consiste em muitas instâncias do SQL Server, cada uma gerenciada pela malha do SQL Azure.|  
-|PMML|Uma linguagem baseada em XML que habilita o compartilhamento de modelos previsíveis definidos entre aplicativos de fornecedores compatíveis.|  
+|PMML|Uma linguagem baseada em XML que habilita o compartilhamento de modelos previsíveis definidos entre aplicativos de fornecedores em conformidade.|  
 |gráfico Ponto e Figura|Um gráfico que plota movimentos de preço cotidianos sem levar em conta a passagem do tempo.|  
 |profundidade de ponto|A profundidade de pontos de dados exibida em uma área de gráfico em 3D.|  
 |evento pontual|Uma ocorrência de evento como um único ponto no tempo. Apenas a hora de início é necessária para o evento. O servidor CEP infere a hora de término válida, adicionando um tique (a menor unidade de tempo no tipo de dados de tempo subjacente) à hora de início para definir o intervalo de tempo válido para o evento. Os eventos pontuais só são válidos para esse único instante.|  
@@ -1172,7 +1172,7 @@ ms.technology:
 |restrição de precedência|Um elemento de fluxo de controle que conecta tarefas e contêineres em um fluxo de trabalho sequenciado.|  
 |partição pré-computada|Uma otimização de desempenho que pode ser usada com publicações de mesclagem filtradas.|  
 |coluna previsível|Uma coluna de mineração de dados da qual o algoritmo construirá um modelo baseado nos valores das colunas de entrada. Além de servir como uma coluna de saída, uma coluna previsível pode ser usada também como entrada para outras colunas previsíveis dentro da mesma estrutura de mineração.|  
-|previsão|Uma técnica de mineração de dados que analisa dados existentes e usa os resultados para prever valores de atributos para novos registros ou atributos ausentes em registros existentes. Por exemplo, dados existentes de aplicativo de crédito podem ser usados para prever o risco de crédito para um novo aplicativo.|  
+|prediction|Uma técnica de mineração de dados que analisa dados existentes e usa os resultados para prever valores de atributos para novos registros ou atributos ausentes em registros existentes. Por exemplo, dados existentes de aplicativo de crédito podem ser usados para prever o risco de crédito para um novo aplicativo.|  
 |Cálculo de Previsão|Um novo relatório que se baseia na análise de regressão logística e que apresenta cada fator de contribuição junto com uma pontuação calculada pelo algoritmo. O relatório é apresentado como uma planilha que o ajuda a inserir dados e faz cálculos dos resultados prováveis e também como um relatório impresso que tem a mesma função.|  
 |caracteres de prefixo|Um conjunto de 1 a 4 bytes que prefixa cada campo de dados em um arquivo de dados de cópia em massa em formato nativo.|  
 |comprimento do prefixo|O número de caracteres de prefixo que precedem cada campo de não caractere em um arquivo de dados em formato nativo bcp.|  
@@ -1191,7 +1191,7 @@ ms.technology:
 |chave privada|A metade secreta de um par de chaves criptográficas que é usada com um algoritmo de chave pública. As chaves privadas costumam ser usadas para descriptografar uma chave de sessão simétrica, assinar digitalmente dados ou descriptografar dados que foram criptografados com a chave pública correspondente.|  
 |cache pró-ativo|Um sistema que gerencia a obsolescência dos dados em um cubo pelo qual os objetos no armazenamento MOLAP são atualizados e processados automaticamente em cache enquanto as consultas são redirecionadas para o armazenamento ROLAP.|  
 |cache de procedimento|A parte do pool de memória do SQL Server que é usada para armazenar planos de execução de procedimentos armazenados, gatilhos e lotes Transact-SQL.|  
-|modelo de perfil|O núcleo de todas as atividades de gerenciamento do CLM (Certificate Lifecycle Manager). O modelo de perfil fornece uma única unidade administrativa que inclui todas as informações necessárias para gerenciar o vários certificados que podem ser requerido por uma comunidade de usuários em todo o ciclo de vida do certificado. Um modelo de perfil também inclui informações relativas ao local final desses certificados, que podem se basear em software (ou seja, armazenados no computador local) ou em hardware (armazenados em um cartão inteligente). Um modelo de perfil não pode incluir certificados baseados em software e certificados baseados em cartão inteligente.|  
+|modelo de perfil|O núcleo de todas as atividades de gerenciamento do CLM (Certificate Lifecycle Manager). O modelo de perfil fornece uma única unidade administrativa que inclui todas as informações necessárias para gerenciar os vários certificados que podem ser exigidos por uma comunidade de usuários durante todo o ciclo de vida do certificado. Um modelo de perfil também inclui informações relativas ao local final desses certificados, que podem se basear em software (ou seja, armazenados no computador local) ou em hardware (armazenados em um cartão inteligente). Um modelo de perfil não pode incluir certificados baseados em software e certificados baseados em cartão inteligente.|  
 |gráfico de ganho|Um diagrama que exibe o aumento teórico no ganho que é associado ao uso de vários modelos de dados.|  
 |programável|Capaz de aceitar instruções para executar uma tarefa ou uma operação. Ser programável é uma característica de computadores.|  
 |página de propriedades|Uma caixa de diálogo que exibe informações sobre um objeto na interface.|  
@@ -1200,9 +1200,9 @@ ms.technology:
 |página de propriedades|Um agrupamento de propriedades apresentado como uma página tabulada de uma folha de propriedade.|  
 |computador protegido|Um computador que contém fontes de dados que são membros do grupo de proteção.|  
 |membro protegido|Uma fonte de dados dentro de um grupo de proteção.|  
-|protocolo|Um conjunto padrão de formatos e procedimentos que permitem que computadores troquem informações.|  
-|provedor|Uma DLL (biblioteca de vínculo dinâmico) em processo que fornece acesso a um banco de dados.|  
-|provedor|Um componente de software que permite que uma réplica sincronize seus dados com outras réplicas.|  
+|protocol|Um conjunto padrão de formatos e procedimentos que permitem que computadores troquem informações.|  
+|provider|Uma DLL (biblioteca de vínculo dinâmico) em processo que fornece acesso a um banco de dados.|  
+|provider|Um componente de software que permite que uma réplica sincronize seus dados com outras réplicas.|  
 |objeto de provedor|Um objeto que faz parte de um provedor de dados como o Provedor Oracle para o SQL Server.|  
 |pesquisa por proximidade|Consulta de texto completo que procura ocorrências em que as palavras especificadas estão próximas umas das outras.|  
 |conta proxy|Uma conta usada para fornecer permissões adicionais de determinadas ações a usuários que não têm essas permissões, mas precisam executar essas ações.|  
@@ -1220,7 +1220,7 @@ ms.technology:
 |replicação pull|Replicação que é invocada ao destino.|  
 |assinatura pull|Uma assinatura criada e administrada no Assinante. O Distribution Agent ou o Merge Agent da assinatura é executado no Assinante.|  
 |backup de log puro|Um backup que contém somente o log de transações que abrange um intervalo sem qualquer alteração em massa.|  
-|push|O processo de enviar dados a um servidor de rede.|  
+|efetuar push|O processo de enviar dados a um servidor de rede.|  
 |replicação push|Replicação que é invocada na origem.|  
 |assinatura push|Uma assinatura criada e administrada no Publicador.|  
 |componente qualificado|Um método de identificar um componente indiretamente em um banco de dados de MSI por um par 'GUID de categoria de componente, qualificador de cadeia de caracteres' em vez de identificá-lo diretamente pelo identificador de componente.|  
@@ -1241,7 +1241,7 @@ ms.technology:
 |identificador entre aspas|Um objeto em um banco de dados que requer o uso de caracteres especiais (delimitadores) porque o nome do objeto não é compatível com as regras de formatação de identificadores regulares.|  
 |RAD|Um método de compilar sistemas de computador nos quais o sistema é programado e é implementado em segmentos, em vez de esperar até que o projeto inteiro seja concluído para implementação. Desenvolvido pelo programador James Martin, o RAD usa ferramentas como CASE e programação visual.|  
 |hierarquia desbalanceada|Uma hierarquia na qual um ou mais níveis não contêm os membros em uma ou mais ramificações da hierarquia.|  
-|intervalo|Um conjunto de identificadores de item contínuos para o qual o mesmo vetor de relógio se aplica. Um intervalo é representado por um ponto inicial, um ponto final e um vetor de relógio que se aplica a todas as IDs intermediárias.|  
+|range|Um conjunto de identificadores de item contínuos para o qual o mesmo vetor de relógio se aplica. Um intervalo é representado por um ponto inicial, um ponto final e um vetor de relógio que se aplica a todas as IDs intermediárias.|  
 |partição de intervalo|Uma partição de tabela que é definida por intervalos específicos e personalizáveis de dados.|  
 |particionamento por intervalos|Um modo de particionar uma tabela ou índice especificando partições para manter linhas com intervalos de valores de uma única coluna de particionamento.|  
 |consulta de intervalo|Uma consulta que especifica um intervalo de valores como parte dos critérios da pesquisa, como todas as linhas de 10 a 100.|  
@@ -1258,7 +1258,7 @@ ms.technology:
 |RDL|Um conjunto de instruções que descrevem informações de layout e de consulta de um relatório. A linguagem RDL é composta por elementos XML que seguem uma gramática XML criada para pelo Reporting Services.|  
 |RDL Sandboxing|Um recurso que possibilita detectar e restringir tipos específicos de uso de recurso por locatários individuais em um cenário onde vários locatários compartilham um único Web farm de servidores de relatórios.|  
 |conjunto de registros|Uma estrutura de dados constituída de um grupo de registros de banco de dados. Ela pode ser originada de uma tabela base ou de uma consulta à tabela.|  
-|recuperação|Retornar a uma condição estável. Um usuário de computador talvez possa recuperar dados perdidos ou danificados usando um programa para procurar e salvar quaisquer informações ainda em armazenamento. Um banco de dados pode ser recuperado restaurando sua integridade após danos causados por algum problema, como encerramento anormal do programa de gerenciamento de banco de dados.|  
+|recover|Retornar a uma condição estável. Um usuário de computador talvez possa recuperar dados perdidos ou danificados usando um programa para procurar e salvar quaisquer informações ainda em armazenamento. Um banco de dados pode ser recuperado restaurando sua integridade após danos causados por algum problema, como encerramento anormal do programa de gerenciamento de banco de dados.|  
 |recuperação|Uma fase de inicialização do banco de dados que leva o banco de dados para um estado de transação consistente. A recuperação pode incluir o avanço de todas as transações nos registros de log (o fase refazer) e a reversão de transações não comprometidas (a fase desfazer), dependendo de como o banco de dados foi desligado.|  
 |ramificação de recuperação|Um intervalo de LSNs que compartilham o mesmo GUID da ramificação de recuperação. Uma nova ramificação de recuperação tem origem quando um banco de dados é criado ou quando RESTORE WITH RECOVERY gera uma bifurcação de recuperação. É possível obter um caminho de recuperação da várias ramificações que inclua intervalos de LSNs abrangendo dois ou mais pontos de bifurcação de recuperação.|  
 |ponto de bifurcação da recuperação|O ponto (LSN,GUID) em que uma nova ramificação de recuperação é iniciada, sempre que um RESTORE WITH RECOVERY é executado. Cada bifurcação de recuperação determina uma relação pai-filho entre as ramificações de recuperação. Se você recuperar um banco de dados para um ponto anterior no tempo e começar a usar o banco de dados a partir desse ponto, o ponto de bifurcação de recuperação iniciará um novo caminho de recuperação.|  
@@ -1278,8 +1278,8 @@ ms.technology:
 |chave referenciada|Uma chave primária ou exclusiva referenciada por uma chave estrangeira.|  
 |chave de referência|Uma chave em uma tabela de banco de dados originada por outra tabela (também conhecida como 'tabela referenciada') e cujos valores coincidem com a chave primária (PK) ou a chave exclusiva na tabela referenciada.|  
 |relação reflexiva|Uma relação de uma coluna ou combinação de colunas em uma tabela com outras colunas nessa mesma tabela.|  
-|região|Um contêiner de dados, em um cache, que coloca todos os objetos armazenados em cache em um único host de cache. As regiões de cache habilitam a capacidade de pesquisar todos os objetos armazenados na região usando cadeias de caracteres descritivas, denominadas marcas.|  
-|região|Uma coleção de 128 páginas em nível folha em ordem lógica em um único arquivo. Usada para identificar áreas de um arquivo que estão fragmentadas.|  
+|region|Um contêiner de dados, em um cache, que coloca todos os objetos armazenados em cache em um único host de cache. As regiões de cache habilitam a capacidade de pesquisar todos os objetos armazenados na região usando cadeias de caracteres descritivas, denominadas marcas.|  
+|region|Uma coleção de 128 páginas em nível folha em ordem lógica em um único arquivo. Usada para identificar áreas de um arquivo que estão fragmentadas.|  
 |modelo de registro|Um método definido para enviar e aprovar solicitações de inscrição. Uma empresa geralmente escolhe um modelo de registro e modifica as políticas de gerenciamento de forma adequada.|  
 |regressão|O processo estatístico de prever um ou mais variáveis contínuas, como lucro ou perda, com base nos outros atributos do conjunto de dados.|  
 |regressor|Uma variável de entrada que tem uma relação linear com a variável de saída.|  
@@ -1334,22 +1334,22 @@ ms.technology:
 |serviço Web Servidor de Relatórios|Um serviço Web que hospeda, processa e entrega relatórios.|  
 |instantâneo de relatório|Um relatório estático que contém dados capturados em um momento específico.|  
 |agenda específica do relatório|Agenda definida embutida com um relatório. As agendas específicas do relatório são definidas no contexto de um relatório individual, assinatura ou operação de execução de relatório para determinar a expiração de cache ou as atualizações de instantâneo.|  
-|repositório|Um banco de dados que contém modelos de informações que, em conjunto com o software executável, gerenciam o banco de dados.|  
+|repository|Um banco de dados que contém modelos de informações que, em conjunto com o software executável, gerenciam o banco de dados.|  
 |motor do repositório|Software orientado por objeto que fornece suporte de gerenciamento e acesso de cliente a um banco de dados de repositório.|  
 |objeto de repositório|Um objeto COM que representa uma construção de dados armazenados em uma biblioteca de tipos de repositório.|  
 |esquema SQL do repositório|Um conjunto de tabelas padrão usado pelo motor do repositório para gerenciar todos os objetos, relações e coleções de objetos do repositório.|  
 |modelo RTIM|Um modelo básico de objeto que representa definições de tipos de repositório para Serviços de Metadados.|  
 |republicador|Um Assinante que publica dados que recebeu de um Publicador.|  
-|caractere reservado|Um caractere de teclado que tem um significado especial para um programa e, como resultado, normalmente não pode ser usado atribuindo nomes a arquivos, documentos e outras ferramentas geradas pelo usuário, como macros. Caracteres comumente reservados para usos especiais incluem o asterisco (*), barra (/), barra invertida (\\), ponto de interrogação (?) e barra vertical (&#124;).|  
+|caractere reservado|Um caractere de teclado que tem um significado especial para um programa e, como resultado, normalmente não pode ser usado atribuindo nomes a arquivos, documentos e outras ferramentas geradas pelo usuário, como macros. Os caracteres geralmente reservados para usos especiais incluem o asterisco (*), a barra (/), a barra\\invertida (), o ponto de interrogação (?) e a barra vertical (&#124;).|  
 |estratégia de resolução|Um conjunto de critérios avaliados sequencialmente pelo motor do repositório ao selecionar um objeto onde há várias versões e as informações da versão não são especificadas no programa de chamada.|  
-|resource|Uma variável especial que contém uma referência a uma conexão ou instrução de banco de dados.|  
-|resource|Qualquer item em um banco de dados de servidor de relatório que não seja um relatório, uma pasta ou um item de fonte de dados compartilhado.|  
+|recurso|Uma variável especial que contém uma referência a uma conexão ou instrução de banco de dados.|  
+|recurso|Qualquer item em um banco de dados de servidor de relatório que não seja um relatório, uma pasta ou um item de fonte de dados compartilhado.|  
 |dados de recurso|Um tipo de dados que é caracterizado por compartilhado, lido e gravado simultaneamente em operações e acessado por muitas transações. Exemplos de dados do recurso são contas de usuário e itens de leilão.|  
 |administrador de recursos|Um recurso do SQL Server 2008 que permite que o usuário gerencie a carga de trabalho e os recursos do SQL Server especificando limites de consumo de recursos por solicitações de entrada.|  
 |restaurar|Um processo multifase que copia todos as páginas de logs e de dados de um backup especificado para um banco de dados especificado (a fase de cópia de dados) e efetua roll forward de todas as transações registradas no backup (a fase de refazer). Nesse momento, por padrão, uma restauração reverte as transações incompletas (a fase de desfazer), o que conclui a recuperação do banco de dados e o torna disponível aos usuários.|  
 |sequência de restauração|Uma sequência de um ou mais comandos de restauração que, geralmente, inicializa o conteúdo do banco de dados, arquivos e/ou páginas que estão sendo restaurados (a fase de cópia de dados), efetua roll forward de transações registradas (a fase de refazer) e reverte transações não confirmadas (a fase de desfazer).|  
 |conjunto de resultados|O conjunto de registros que é o resultado da execução de uma consulta ou da aplicação de um filtro.|  
-|resultados|O conjunto de registros que é o resultado da execução de uma consulta ou da aplicação de um filtro.|  
+|results|O conjunto de registros que é o resultado da execução de uma consulta ou da aplicação de um filtro.|  
 |painel de resultados|Um painel que exibe detalhes sobre um item selecionado em outra parte da interface do usuário. Por exemplo, no MMC (Console de Gerenciamento Microsoft), o painel de detalhes é o painel à direita que exibe os detalhes do item selecionado na árvore de console.|  
 |evento de retirada|Um tipo de evento interno usado para modificar um evento de inserção existente, modificando o tempo de término do evento.|  
 |indicador reutilizável|A indicador que pode ser consumido de um conjunto de linhas para uma determinada tabela e usado em um conjunto de linhas diferente da mesma tabela para se posicionar em uma linha correspondente.|  
@@ -1362,7 +1362,7 @@ ms.technology:
 |RMO|Um assembly de código gerenciado que encapsula funcionalidades de replicação para o SQL Server.|  
 |atribuição de função|A atribuição de uma função específica que determina se um usuário ou grupo pode acessar um item específico e executar uma operação sobre ele.|  
 |definição de função|A coleção de permissões de tarefas associada a uma função.|  
-|troca de função|Em uma sessão de espelhamento de banco de dados, a captura da função principal pelo espelho.|  
+|Troca de função|Em uma sessão de espelhamento de banco de dados, a captura da função principal pelo espelho.|  
 |dimensão com função múltipla|Uma única dimensão de banco de dados unida à tabela de fatos em uma chave estrangeira diferente para produzir várias dimensões de cubo.|  
 |reverter|Para reverter alterações.|  
 |roll-forward|Aplicar alterações registradas nos dados em um conjunto de roll forward para avançar os dados no tempo.|  
@@ -1382,7 +1382,7 @@ ms.technology:
 |utilitário rsconfig|Ferramenta de gerenciamento de conexões com o servidor.|  
 |rsconfig.exe|Ferramenta de gerenciamento de conexões com o servidor.|  
 |acionamento de regra|O processo de executar uma das regras do aplicativo (regras de crônica de eventos, regras de eventos de assinatura e regras agendadas de assinatura) definida no arquivo de definição de aplicativo.|  
-|consulta sem controle|Uma consulta com tempo de execução excedente que pode gerar um problema de bloqueio. Consultas sem controle normalmente, não usam um tempo limite de consulta ou de bloqueio.|  
+|consulta sem controle|Uma consulta com tempo de execução excedente que pode gerar um problema de bloqueio. As consultas de fuga geralmente não usam uma consulta ou tempo limite de bloqueio.|  
 |erro em tempo de execução|Erro de software que ocorre enquanto um programa está sendo executado, conforme detectado por um compilador ou outro programa de supervisão.|  
 |código seguro|Código executado pelo ambiente Common Language Runtime, e não diretamente pelo sistema operacional. Aplicativos de código gerenciado adquirem serviços de Common Language Runtime, como coleta de lixo automática, verificação de tipo em tempo de execução, suporte de segurança e assim por diante. Esses serviços ajudam a fornecer uma plataforma uniforme, bem como comportamento independente da linguagem de aplicativos de código gerenciado.|  
 |amostragem|Processo estatístico que rende um conhecimento deduzível sobre uma população ou conjunto de dados de interesse como um todo observando ou analisando uma parte da população ou do conjunto de dados.|  
@@ -1397,12 +1397,12 @@ ms.technology:
 |conjunto de linhas de esquema|Um conjunto de linhas especialmente definido que retorna metadados sobre objetos ou funcionalidade em uma instância do SQL Server ou do Analysis Services.  Por exemplo, o conjunto de linhas de esquema OLE DB DBSCHEMA_COLUMNS descreve as colunas de uma tabela, enquanto o conjunto de linhas de esquema MDSCHEMA_MEASURES do Analysis Services descreve as medidas de um cubo.|  
 |instantâneo de esquema|Um instantâneo que inclui esquema para tabelas publicadas e objetos necessários para replicação (gatilhos, tabelas de metadados, etc), mas não dados de usuário.|  
 |sensível a esquema|Pertence a um método de processamento baseado em um esquema que define elementos, atributos e tipos que serão usados para validar documentos de entrada e saída.|  
-|escopo|Até que ponto um identificador, como um objeto ou propriedade, pode ser referenciado em um programa. O escopo pode ser global no aplicativo ou local para o documento ativo.|  
+|scope|Até que ponto um identificador, como um objeto ou propriedade, pode ser referenciado em um programa. O escopo pode ser global no aplicativo ou local para o documento ativo.|  
 |scope|O conjunto de dados que está sendo sincronizado.|  
 |memória de script|A memória local (RAM do cliente) que é usada por um script PHP.|  
 |painel de script|A parte do editor de texto do Designer de Tabela.|  
 |script|Pertence à automação de ações de usuário ou à configuração de um estado padrão em um computador por meio de scripts.|  
-|SDK|Um conjunto de rotinas (normalmente em uma ou mais bibliotecas) criado para permitir que os desenvolvedores gravem programas mais facilmente em determinado computador, sistema operacional ou interface do usuário.|  
+|.|Um conjunto de rotinas (normalmente em uma ou mais bibliotecas) criado para permitir que os desenvolvedores gravem programas mais facilmente em determinado computador, sistema operacional ou interface do usuário.|  
 |critério de pesquisa|Em uma cláusula WHERE ou HAVING, predicados que especificam as condições em que as linhas de origem devem se encontrar para serem incluídas na instrução SQL.|  
 |chave de pesquisa|O valor que será procurado em um documento ou qualquer coleção de dados.|  
 |banco de dados secundário|Uma cópia somente leitura de um banco de dados principal.|  
@@ -1429,19 +1429,19 @@ ms.technology:
 |relação sequenciada|Uma relação em um repositório que especifica posições explícitas para cada objeto de destino dentro da coleção de objetos de destino.|  
 |número de série|Um número atribuído a um item de inventário específico para identificá-lo e diferenciá-lo de itens semelhantes com o mesmo número de item.|  
 |serialização|O processo de converter as informações do estado de um objeto em um formato que pode ser armazenado ou transportado. Durante a serialização, um objeto grava seu estado atual no armazenamento temporário ou persistente. Posteriormente, o objeto pode ser recriado por meio da leitura ou desserialização, o estado do objeto de armazenamento.|  
-|server|Um computador que fornece recursos compartilhados, como arquivos ou impressoras, para usuários da rede.|  
+|Servidor|Um computador que fornece recursos compartilhados, como arquivos ou impressoras, para usuários da rede.|  
 |ordenação do servidor|A ordenação de uma instância do SQL Server.|  
 |cursor de servidor|Um cursor implementado no servidor.|  
 |nome do servidor|Um nome que identifica exclusivamente um computador servidor em uma rede.|  
 |assinatura de servidor|Uma assinatura em uma publicação de mesclagem com um valor de prioridade atribuído usada para detecção de conflito e resolução.|  
 |serviço|Programa, rotina ou processo que executa uma função de sistema específica para oferecer suporte a outros programas.|  
-|Service Broker|Uma tecnologia que auxilia os desenvolvedores a criar aplicativos de banco de dados escalonáveis e seguros.|  
+|Agente de Serviço|Uma tecnologia que auxilia os desenvolvedores a criar aplicativos de banco de dados escalonáveis e seguros.|  
 |ponto de conexão de serviço|Um nó do Active Directory em que administradores do sistema podem definir permissões de gerenciamento do CLM para usuários e grupos.|  
 |entidade de serviço|Um nome global exclusivo associado a uma entidade de serviço em um nó de extremidade de um Kerberos de comunicação ponto a ponto.|  
 |nome da entidade de serviço|O nome pelo qual um cliente identifica exclusivamente uma instância de um serviço. É normalmente criado a partir do nome DNS do host. O SPN é usado no processo de autenticação mútua entre o cliente e o servidor que hospeda um serviço específico.|  
 |programa de serviço|Um programa que usa a funcionalidade do Service Broker.  Um programa de serviço pode ser um procedimento armazenado Transact-SQL, um procedimento armazenado SQLCLR ou um programa externo.|  
 |sessão|Período em que uma conexão permanece ativa e a comunicação pode acontecer. Com a finalidade de comunicação de dados entre unidades funcionais, sessão também se refere a todas as atividades que acontecem durante o estabelecimento, a manutenção e a liberação da conexão.|  
-|estado da sessão|No ASP.NET, um repositório variável criado no servidor para o usuário atual; cada usuário mantém um estado de sessão separado no servidor. O estado da sessão é usado normalmente para armazenar informações específicas do usuário entre postbacks.|  
+|estado de sessão|No ASP.NET, um repositório variável criado no servidor para o usuário atual; cada usuário mantém um estado de sessão separado no servidor. O estado da sessão é usado normalmente para armazenar informações específicas do usuário entre postbacks.|  
 |set|Um agrupamento de membros de dimensão ou itens de uma fonte de dados que são nomeados e tratados como uma única unidade e pode ser referenciado ou reutilizado várias vezes.|  
 |arquivo de inicialização da instalação|Um arquivo de texto, que usa o formato de arquivo .ini do Windows, que armazena informações de configuração que permitem que o SQL Server seja instalado sem que um usuário precise estar presente para responder aos prompts do programa de Instalação.|  
 |reparo de instalação|Processo de relatório de erro que pode ser executado durante a instalação de um programa se um ocorrer problema.|  
@@ -1469,15 +1469,15 @@ ms.technology:
 |sleep|Suspender a operação sem finalizar.|  
 |fatia|Um subconjunto dos dados em um cubo, especificado por meio da limitação de uma ou mais dimensões por membros da dimensão.|  
 |Segmentações de dados|Um recurso que fornece controles de filtragem com um clique, facilitando a restrição da parte de um conjunto de dados que está sendo examinada.|  
-|janela deslizante|Uma janela de tamanho L fixo que se move ao longo de uma linha do tempo de acordo com os eventos do fluxo. Com todos os eventos na linha do tempo, uma nova janela é criada, começando na hora de início do evento.|  
+|janela deslizante|Uma janela de comprimento fixo L que se move ao longo de uma linha do tempo de acordo com os eventos do fluxo. Com cada evento na linha do tempo, uma nova janela é criada, começando na hora de início do evento.|  
 |instalação integrada|Integrar atualizações, patches ou pacotes de serviço nos arquivos de instalação de base do software original, de forma que os arquivos resultantes permitam uma instalação de uma única etapa do software atualizado.|  
 |instalação integrada|Um tipo de instalação que integra os arquivos de instalação de base de um sistema operacional ou programa aos seus pacotes de serviço, atualizações ou patches, e permite que eles sejam instalados em uma única etapa.|  
-|cartão inteligente|Um dispositivo (tamanho de cartão de crédito ou menor) plástico com um microprocessador inserido e uma pequena quantidade de armazenamento que é usado, com um código de acesso, para habilitar a autenticação baseada em certificado. Cartões inteligentes armazenam certificados, chaves públicas e privadas, senhas e outros tipos de informações pessoais com segurança.|  
+|cartão inteligente|Um dispositivo de plástico (de tamanho de cartão de crédito ou menor) com um microprocessador incorporado e uma pequena quantidade de armazenamento que é usada, com um código de acesso, para habilitar a autenticação baseada em certificado. Cartões inteligentes armazenam certificados, chaves públicas e privadas, senhas e outros tipos de informações pessoais com segurança.|  
 |Controle de personalização de cartão inteligente|Um controle ActiveX que executa todas as atividades de gerenciamento de aplicativos de cartão inteligente do CLM (Certificate Lifecycle Manager) em um computador cliente.|  
 |perfil de cartão inteligente|Um perfil do CLM (Certificate Lifecycle Manager) criado quando uma solicitação é executada usando um modelo de perfil que inclui somente modelos de certificado baseados em cartão inteligente.|  
 |leitor de cartão inteligente|Um dispositivo que é instalado em computadores para habilitar o uso de cartões inteligentes para recursos de segurança aprimorados.|  
 |Controle de autoatendimento de cartão inteligente|Software instalado em um computador cliente que permite que usuários finais e administradores gerenciem cartões inteligentes fornecendo uma conexão do computador cliente com o cartão inteligente.|  
-|desbloqueio de cartão inteligente|Contador de tentativas da ação de associar um cartão inteligente com credenciais administrativas para redefinir o número de identificação pessoal (PIN).|  
+|desbloqueio de cartão inteligente|A ação de associar um cartão inteligente com credenciais administrativas para redefinir o contador de tentativas de PIN (número de identificação pessoal).|  
 |SMO|Uma interface de programação de aplicativo com suporte para a incorporação da administração do SQL Server em qualquer aplicativo de automação COM ou OLE.|  
 |SMTP|Um membro do pacote de TCP/IP de protocolos que governa a troca de correio eletrônico entre agentes de transferência de mensagem.|  
 |snap-in|Tipo de ferramenta que você pode adicionar a um console compatível com o MMC (Console de Gerenciamento Microsoft). Um snap-in autônomo pode ser adicionado por conta própria; um snap-in de extensão pode ser adicionado somente para estender a função de outro snap-in.|  
@@ -1497,7 +1497,7 @@ ms.technology:
 |ordem de classificação|Modo de organizar dados com base em tipo de valor ou de dados. Você pode classificar dados em ordem alfabética, numérica ou cronológica. As ordens de classificação usam uma ordem crescente (1 a 9, A a Z) ou decrescente (9 a 1, Z a A).|  
 |source|Disco, arquivo, documento ou outra coleção de informações da qual os dados são obtidos ou movidos.|  
 |source|Componente de fluxo de dados do SSIS que disponibiliza os dados de diferentes fontes de dados externas aos outros componentes do fluxo de dados.|  
-|origem|Um provedor de sincronização que enumera alterações e as envia ao provedor de destino.|  
+|source|Um provedor de sincronização que enumera alterações e as envia ao provedor de destino.|  
 |adaptador de fonte|Um componente de fluxo de dados que extrai dados de um repositório de dados.|  
 |controle do código-fonte|Conjunto de recursos que inclui um mecanismo para fazer o check-in e o check-out do código-fonte em um repositório central. Também implica um sistema de controle de versão que pode gerenciar arquivos pelo ciclo de vida de desenvolvimento, mantendo o controle das alterações efetuadas, de quem as efetuou, quando foram efetuadas e por quê.|  
 |controle do código-fonte|Conjunto de recursos que inclui um mecanismo para fazer o check-in e o check-out do código-fonte em um repositório central. Também implica um sistema de controle de versão que pode gerenciar arquivos pelo ciclo de vida de desenvolvimento, mantendo o controle das alterações efetuadas, de quem as efetuou, quando foram efetuadas e por quê.|  
@@ -1513,7 +1513,7 @@ ms.technology:
 |dados espaciais|Dados que são representados por imagens 2D ou 3D. Dados espaciais podem ser mais subdivididos em dados geométricos (dados que podem usar cálculos que envolvem a geometria euclidiana) e dados geográficos (dados que identificam localizações geográficas e limites na Terra).|  
 |SPN|O nome pelo qual um cliente identifica exclusivamente uma instância de um serviço. É normalmente criado a partir do nome DNS do host. O SPN é usado no processo de autenticação mútua entre o cliente e o servidor que hospeda um serviço específico.|  
 |SQL|Linguagem de consulta e programação de banco de dados usada amplamente para acessar, consultar, atualizar e gerenciar dados em sistemas de banco de dados relacionais.|  
-|banco de dados SQL|Um banco de dados baseado na linguagem SQL.|  
+|Banco de dados SQL|Um banco de dados baseado na linguagem SQL.|  
 |expressão SQL|Qualquer combinação de operadores, constantes, valores literais, funções e nomes de tabelas e campos que são avaliadas como um único valor.|  
 |SQL Native Client|API de acesso a dados autônoma que é usada para OLE DB e ODBC.|  
 |SQL Server|Uma família de sistemas de gerenciamento e análise de banco de dados relacional da Microsoft para soluções de comércio eletrônico, linha de negócios e data warehouse.|  
@@ -1550,9 +1550,9 @@ ms.technology:
 |painel do Utilitário do SQL Server|Painel que fornece um resumo da integridade dos recursos para instâncias gerenciadas do SQL Server e aplicativos da camada de dados. Também pode ser chamado de exibição detalhada do Utilitário do SQL Server ou exibição de lista com detalhes.|  
 |Gerenciador do Utilitário do SQL Server|Árvore hierárquica que exibe os objetos no Utilitário do SQL Server.|  
 |pontos de visualização do Utilitário do SQL Server|Recurso do Utilitário do SQL Server que fornece aos administradores uma exibição holística da integridade dos recursos do por meio de uma instância do SQL Server que funciona como um UCP (ponto de controle do utilitário).|  
-|instrução SQL|Um comando SQL ou Transact-SQL, como SELECT ou DELETE, que executa uma ação nos dados.|  
+|Instrução SQL|Um comando SQL ou Transact-SQL, como SELECT ou DELETE, que executa uma ação nos dados.|  
 |Rastreamento do SQL|Um conjunto de procedimentos armazenados do sistema Transact-SQL para criar rastreamentos em uma instância do SQL Server Database Engine.|  
-|gravador do SQL|Um gravador compatível com VSS fornecido pelo SQL Server que trata a interação do VSS com o SQL Server.|  
+|gravador do SQL|Um gravador em conformidade com VSS fornecido pelo SQL Server que trata a interação do VSS com o SQL Server.|  
 |Serviço do gravador do SQL|Um serviço que permite que programas de backup do Windows copiem arquivos de dados do SQL Server pela estrutura do VSS (Serviço de Cópias de Sombra de Volume), enquanto o SQL Server está em execução.|  
 |SQL-92|Versão do padrão SQL publicada em 1992.|  
 |SSAS|Um serviço do Microsoft SQL Server que oferece suporte ao OLAP (processamento analítico online) e à mineração de dados para aplicativos de business intelligence. O Analysis Services organiza dados de um data warehouse em cubos com dados de agregação pré-calculados para fornecer respostas rápidas a consultas analíticas complexas.|  
@@ -1561,7 +1561,7 @@ ms.technology:
 |SSRS|Ambiente de geração de relatório baseado em servidor para a funcionalidade de relatórios online que permite criar relatórios que se conectam a conteúdos de várias fontes de dados, permite também, publicar os relatórios em diversos formatos e além disso centralizar o gerenciamento de segurança e de assinaturas.|  
 |SSRT|Ferramenta usada por usuários finais para recuperar backups do DPM, sem qualquer ação necessária do administrador do DPM.|  
 |dados preparados|Dados importados para tabelas de preparo durante o processo de preparo no SQL Server Master Data Services.|  
-|preparo|O processo usado no SQL Server Master Data Services para importar dados para tabelas de preparo e depois processar os dados preparados como um lote antes de importá-los para o banco de dados mestre.|  
+|staging|O processo usado no SQL Server Master Data Services para importar dados para tabelas de preparo e depois processar os dados preparados como um lote antes de importá-los para o banco de dados mestre.|  
 |processo de preparo|O processo usado no SQL Server Master Data Services para importar dados para tabelas de preparo e depois processar os dados preparados como um lote antes de importá-los para o banco de dados mestre.|  
 |fila de preparo|Tabela de lote no SQL Server Master Data Services em que os registros preparados são enfileirados como lotes para serem processados no banco de dados do Master Data Services.|  
 |tabela de preparo|Tabela no SQL Server Master Data Services que é preenchida com dados de negócios durante o processo de preparo.|  
@@ -1577,7 +1577,7 @@ ms.technology:
 |instrução|Uma consulta T-SQL compilada.|  
 |cursor estático|Um cursor que mostra o conjunto de resultados exatamente como estava na hora que o cursor foi aberto.|  
 |filtros de linhas estático|Um filtro disponível para todos os tipos de replicação que permite restringir os dados replicados a um Assinante baseado em uma cláusula WHERE.|  
-|lematizador|Em Pesquisa de Texto Completo, para um determinado idioma, um lematizador gera formas flexionadas de uma palavra específica com base nas regras léxicas desse idioma. Lematizadores são específicos do idioma.|  
+|stemmer|Em Pesquisa de Texto Completo, para um determinado idioma, um lematizador gera formas flexionadas de uma palavra específica com base nas regras léxicas desse idioma. Lematizadores são específicos do idioma.|  
 |passar|Executar a instrução atual e entrar no modo de quebra, entrando no próximo procedimento sempre que uma chamada para outro procedimento é realizada.|  
 |portal de administração|Um recurso do MDS que fornece controle centralizado sobre dados mestre, incluindo membros e hierarquias, e permite que os administradores de modelo de dados assegurem a qualidade de dados desenvolvendo, revisando e gerenciando modelos de dados e impondo-os consistentemente por domínios.|  
 |unidade de manutenção de estoque|Um identificador exclusivo, normalmente alfanumérico, para um produto. O SKU permite rastrear um produto para fins de inventário. Um SKU pode ser associado a qualquer item que pode ser comprado. Por exemplo, uma camisa número 3726, tamanho 8, pode ter um SKU de 3726-8.|  
@@ -1593,7 +1593,7 @@ ms.technology:
 |Depurador do Fluxo de Eventos do StreamInsight|Uma ferramenta autônoma na plataforma Microsoft StreamInsight que fornece depuração e análise do fluxo de eventos.|  
 |Plataforma StreamInsight|A plataforma que consiste no servidor StreamInsight, ferramenta Depuração do Fluxo de Eventos, Visual Studio IDE e outros componentes para o desenvolvimento de aplicativos de processamento de eventos complexos.|  
 |Servidor StreamInsight|O mecanismo básico e os componentes da estrutura de adaptador do Microsoft StreamInsight. O servidor StreamInsight pode ser usado para processar e analisar os fluxos de eventos associados a um aplicativo de processamento de eventos complexos.|  
-|cadeia de caracteres|Grupo de caracteres ou bytes de caractere tratados como uma única entidade. Programas de computador usam cadeias de caracteres para armazenar e transmitir dados e comandos. A maioria das linguagens de programação considera cadeias de caracteres (como 2674:gstmn) como distintas de valores numéricos (como 470924).|  
+|string|Grupo de caracteres ou bytes de caractere tratados como uma única entidade. Programas de computador usam cadeias de caracteres para armazenar e transmitir dados e comandos. A maioria das linguagens de programação considera cadeias de caracteres (como 2674:gstmn) como distintas de valores numéricos (como 470924).|  
 |faixa|Intervalos horizontais ou verticais que definem o padrão de plano de fundo do gráfico em intervalos regulares ou personalizados. Você pode usar faixas para melhorar a legibilidade para buscar valores individuais no gráfico, realçar datas que ocorrem em intervalos normais ou realçar um intervalo de chave específico.|  
 |faixa|Intervalos horizontais ou verticais que definem o padrão de plano de fundo do gráfico em intervalos regulares ou personalizados. Você pode usar faixas para melhorar a legibilidade para buscar valores individuais no gráfico, realçar datas que ocorrem em intervalos normais ou realçar um intervalo de chave específico.|  
 |conjunto de mídias distribuído|Um conjunto de mídias que usa vários dispositivos, entre os quais cada backup é distribuído.|  
@@ -1601,12 +1601,12 @@ ms.technology:
 |linguagem SQL|Linguagem de consulta e programação de banco de dados usada amplamente para acessar, consultar, atualizar e gerenciar dados em sistemas de banco de dados relacionais.|  
 |subconsulta|Uma instrução SELECT que contém uma ou mais subconsultas.|  
 |sub-relatório|Um relatório contido dentro de outro relatório.|  
-|subscribe|Solicitar dados de um publicador.|  
+|assinar|Solicitar dados de um publicador.|  
 |subscriber|No Notification Services, pessoa ou processo para quem as notificações são enviadas.|  
 |subscriber|Na replicação, uma instância do banco de dados que recebe dados replicados.|  
 |banco de dados do assinante|Na replicação, uma instância do banco de dados que recebe dados replicados.|  
 |servidor de assinatura|Um servidor que executa uma instância do Analysis Services que armazena um cubo vinculado.|  
-|assinatura|Uma solicitação de uma cópia de uma publicação a ser entregue a um assinante.|  
+|subscription|Uma solicitação de uma cópia de uma publicação a ser entregue a um assinante.|  
 |banco de dados de assinatura|Um banco de dados no Assinante que recebe dados e objetos de banco de dados publicados por um Publicador.|  
 |regra de eventos de assinatura|Uma regra que processa informações para assinaturas controladas por eventos.|  
 |regra agendada de assinatura|Uma ou mais instruções Transact-SQL que processam informações de assinatura agendadas.|  
@@ -1645,7 +1645,7 @@ ms.technology:
 |tabelas do sistema|Tabelas internas que formam o catálogo do sistema do SQL Server.|  
 |variável do sistema|Uma variável fornecida por DTS.|  
 |página de guia|Parte de um controle de guia que consiste na guia de elemento de interface do usuário e na área de exibição, que age como um contêiner para dados ou outros controles, como caixas de texto, caixas de combinação e botões de comando.|  
-|table|Um objeto de banco de dados que armazena dados em registros (linhas) e campos (colunas). Os dados são normalmente sobre uma categoria específica de ideias, como funcionários ou ordens.|  
+|tabela|Um objeto de banco de dados que armazena dados em registros (linhas) e campos (colunas). Os dados são normalmente sobre uma categoria específica de ideias, como funcionários ou ordens.|  
 |região de dados de tabela|Um item em um layout de relatório que exibe dados em um formato de coluna variável.|  
 |Criador de Tabelas|Uma superfície de design visual que é usada para criar e editar tabelas TSQL e objetos relacionados a tabelas.|  
 |bloqueio de tabela|Um bloqueio em uma tabela que inclui todos os dados e índices.|  
@@ -1658,7 +1658,7 @@ ms.technology:
 |consulta de tabela|Operação padrão, como pesquisa, classificação, filtragem ou transformação de dados em uma tabela.|  
 |backup do final do log|Um backup de log feito de um banco de dados possivelmente danificado para capturar o log cujo backup ainda não foi feito. Um backup da parte final do log é executado após a falha a fim de evitar perda de trabalho.|  
 |backup em fita|Uma operação de backup do SQL Server que grava em qualquer dispositivo de fita suportado pelo sistema operacional.|  
-|target|O banco de dados em que uma operação age.|  
+|destino|O banco de dados em que uma operação age.|  
 |partição de destino|Uma partição do Analysis Services com a qual outra é mesclada, e que contém os dados das duas partições após a mesclagem.|  
 |fila de destino|No Service Broker, a fila associada ao serviço para o qual mensagens são enviadas.|  
 |servidor de destino|Um servidor que recebe trabalhos de um servidor mestre.|  
@@ -1682,7 +1682,7 @@ ms.technology:
 |geração de tokens|Na mineração de texto ou na Pesquisa de Texto Completo, o processo de identificação de unidades significativas dentro de cadeias de caracteres, seja nos limites das palavras, nos morfemas ou na raiz das palavras, de forma que os tokens possam ser agrupados. Por exemplo, embora "São Francisco" tenha duas palavras, poderia ser tratado como um único token.|  
 |marca de exclusão|Um marcador que é usado representar e rastrear um item excluído e evitar sua reintrodução acidental na comunidade de sincronização.|  
 |ferramenta|Um utilitário ou recurso que ajuda a concluir uma tarefa ou conjunto de tarefas.|  
-|topologia|O conjunto de participantes envolvidos na sincronização e o modo como são conectados entre si.|  
+|Topologia|O conjunto de participantes envolvidos na sincronização e o modo como são conectados entre si.|  
 |rastreamento|Uma coleção de eventos e dados retornados pelo Mecanismo de Banco de Dados.|  
 |arquivo de rastreamento|Um arquivo que contém registros de atividades de um objeto especificado, como um aplicativo, sistema operacional ou rede. Um arquivo de rastreamento pode incluir chamadas efetuadas a APIs, as atividades de APIs, as atividades de links de comunicação e fluxos internos, e outras informações.|  
 |token de rastreamento|Uma ferramenta de monitoramento de desempenho disponível para replicação transacional. Um token (uma pequena quantidade de dados) é enviado por meio do sistema de replicação para medir a quantidade de tempo necessária para que as transações atinjam o Distribuidor e os Assinantes.|  
@@ -1706,7 +1706,7 @@ ms.technology:
 |conexão confiável|Uma conexão de rede do Windows que pode ser aberta apenas por usuários que foram autenticados pela rede.|  
 |painel TSQL|Um das guias que hospeda o controle de editor para permitir a edição de códigos TSQL.|  
 |janela em cascata|Uma janela de salto cujo tamanho de salto é igual ao tamanho da janela.|  
-|tupla|Uma coleção ordenada de membros que identifica exclusivamente uma célula, com base em uma combinação de membros de atributo de cada hierarquia de atributo no cubo.|  
+|tuple|Uma coleção ordenada de membros que identifica exclusivamente uma célula, com base em uma combinação de membros de atributo de cada hierarquia de atributo no cubo.|  
 |protocolo 2PC|Um protocolo que garante que transações que se aplicam a mais de um servidor sejam concluídas em todos os servidores ou em nenhum. A confirmação em duas fases é coordenada pelo gerenciador de transações e tem suporte de gerenciadores de recursos.|  
 |verificação de tipo|O processo executado por um compilador ou interpretador para garantir que quando uma variável for usada, ela seja tratada como tendo o mesmo tipo de dados que declarava ter.|  
 |adaptador tipado|Um adaptador que emite apenas um único tipo de evento.|  
@@ -1729,10 +1729,10 @@ ms.technology:
 |Hora Universal Coordenada|Hora padrão comum para todos os lugares no mundo, coordenada pela Agência Internacional de Pesos e Medidas. A Hora Universal Coordenada é usada para a sincronização de computadores na Internet.|  
 |membro desconhecido|Um membro de uma dimensão para a qual nenhuma chave é localizada durante o processamento de um cubo que contém a dimensão.|  
 |fita desconhecida|Fita que não foi identificada pelo servidor DPM.|  
-|código não gerenciado|Código executado diretamente pelo sistema operacional, fora do tempo de execução de linguagem comum do .NET Framework. O código não gerenciado deve fornecer seu próprio gerenciamento de memória, verificação de tipo e suporte de segurança, diferente do código gerenciado, que recebe esses serviços no tempo de execução de linguagem comum.|  
+|código não gerenciado|Código executado diretamente pelo sistema operacional, fora do Common Language runtime do .NET Framework. O código não gerenciado deve fornecer seu próprio gerenciamento de memória, verificação de tipo e suporte de segurança, diferente do código gerenciado, que recebe esses serviços no Common Language runtime.|  
 |instância não gerenciada|Uma instância do SQL Server não monitorada por um ponto de controle do utilitário.|  
 |anular dinamização|Expandir valores de várias colunas de um único registro em vários registros com os mesmos valores em uma única coluna.|  
-|código não seguro|Código executado diretamente pelo sistema operacional, fora do tempo de execução de linguagem comum do .NET Framework. O código não gerenciado deve fornecer seu próprio gerenciamento de memória, verificação de tipo e suporte de segurança, diferente do código gerenciado, que recebe esses serviços no tempo de execução de linguagem comum.|  
+|código não seguro|Código executado diretamente pelo sistema operacional, fora do Common Language runtime do .NET Framework. O código não gerenciado deve fornecer seu próprio gerenciamento de memória, verificação de tipo e suporte de segurança, diferente do código gerenciado, que recebe esses serviços no Common Language runtime.|  
 |adaptador não tipado|Um adaptador que aceita ou emite vários tipos de evento nos quais a estrutura de carga ou o tipo de campos na carga não são conhecidos com antecedência. Os exemplos são eventos de um arquivo CSV ou de texto, uma tabela SQL ou um soquete.|  
 |bloqueio de atualização|Um bloqueio colocado em recursos (como linha, página, tabela) que podem ser atualizados.|  
 |atualização de estatísticas|Um processo que recalcula informações sobre a distribuição de valores de chaves em índices especificados.|  
@@ -1769,7 +1769,7 @@ ms.technology:
 |pool da Web|Agrupamento de uma ou mais URLs fornecidas por um processo de trabalho.|  
 |Agente de pool da Web|Processo isolado em que o portal da Web do CLM (Certificate Lifecyle Manager) é executado.|  
 |projeto Web|Coleção de arquivos que especifica elementos de um aplicativo Web.|  
-|site|Grupo de páginas da Web relacionadas que é hospedado por um servidor HTTP na World Wide Web ou em uma intranet. As páginas de um site abrangem normalmente um ou mais tópicos e são interligadas por hiperlinks.|  
+|Site da Web|Grupo de páginas da Web relacionadas que é hospedado por um servidor HTTP na World Wide Web ou em uma intranet. As páginas de um site abrangem normalmente um ou mais tópicos e são interligadas por hiperlinks.|  
 |Sincronização da Web|Na replicação de mesclagem, um recurso que permite replicar dados usando o protocolo HTTPS.|  
 |site|Grupo de páginas da Web relacionadas que é hospedado por um servidor HTTP na World Wide Web ou em uma intranet. As páginas de um site abrangem normalmente um ou mais tópicos e são interligadas por hiperlinks.|  
 |fórmula de fechamento ponderada|Uma fórmula que calcula a média de preços altos, baixos e de fechamento, enquanto fornece peso adicional ao preço de fechamento.|  
@@ -1790,7 +1790,7 @@ ms.technology:
 |eixo x|A linha de referência horizontal em uma grade, tabela ou gráfico que tem dimensões horizontais e verticais.|  
 |XML for Analysis|Uma especificação que descreve um padrão aberto que dá suporte a fontes de dados que residem na World Wide Web.|  
 |XMLA|Uma especificação que descreve um padrão aberto que dá suporte a fontes de dados que residem na World Wide Web.|  
-|XQuery|Linguagem de consulta funcional que é amplamente aplicável a uma variedade de tipos de dados XML derivados de Quilt, XPath e XQL. Ipedo e Software AG implementam as próprias versões da especificação proposta do W3C para a linguagem XQuery. Também chamado de: Consulta XML, XQL.|  
+|XQuery|Linguagem de consulta funcional que é amplamente aplicável a uma variedade de tipos de dados XML derivados de Quilt, XPath e XQL. Ipedo e Software AG implementam as próprias versões da especificação proposta do W3C para a linguagem XQuery. Também chamada de: consulta XML, XQL.|  
 |XSL|Um vocabulário XML que é usado para transformar dados XML em outro formato, como HTML, por meio de uma folha de estilo que define as regras de apresentação.|  
 |XSL Transformation|Linguagem declarativa baseada em XML usada para apresentar ou transformar dados XML.|  
 |XSLT|Linguagem declarativa baseada em XML usada para apresentar ou transformar dados XML.|  

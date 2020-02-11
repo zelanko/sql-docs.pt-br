@@ -1,5 +1,5 @@
 ---
-title: '&gt; (Maior que) (MDX) | Microsoft Docs'
+title: '&gt;(Maior que) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bb4f04e623096857cce9dd27f0cddc77f6a59798
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906034"
 ---
-# <a name="gt-greater-than-mdx"></a>&gt; (Maior que) (MDX)
+# <a name="gt-greater-than-mdx"></a>&gt;(Maior que) LINGUAGEM
 
 
   Realiza uma operação de comparação que determina se o valor de uma expressão MDX (Multidimensional Expressions) é maior do que o valor de outra expressão MDX.  
@@ -27,16 +27,16 @@ ms.locfileid: "67906034"
 MDX_Expression > MDX_Expression  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *MDX_Expression*  
  Uma expressão MDX válida.  
   
 ## <a name="return-value"></a>Valor retornado  
  Um valor booliano baseado nas seguintes condições:  
   
--   **True** se ambos os parâmetros forem não nulos e o primeiro parâmetro tiver um valor que é maior que o valor do segundo parâmetro.  
+-   **true** se ambos os parâmetros forem não nulos e o primeiro parâmetro tiver um valor maior que o valor do segundo parâmetro.  
   
--   **False** se ambos os parâmetros forem não nulos e o primeiro parâmetro tiver um valor que é igual ou inferior ao valor do segundo parâmetro.  
+-   **false** se ambos os parâmetros forem não nulos e o primeiro parâmetro tiver um valor que seja igual ou inferior ao valor do segundo parâmetro.  
   
 -   nulo se um ou os dois parâmetros forem avaliados como um valor nulo.  
   
@@ -61,7 +61,7 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

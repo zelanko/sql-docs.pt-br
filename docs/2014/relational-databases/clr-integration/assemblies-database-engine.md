@@ -1,5 +1,5 @@
 ---
-title: Assemblies (mecanismo de banco de dados) | Microsoft Docs
+title: Assemblies (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,26 +15,26 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920777"
 ---
 # <a name="assemblies-database-engine"></a>Assemblies (Mecanismo de Banco de Dados)
   Os tópicos desta seção fornecem informações para ajudá-lo a entender, projetar e implementar assemblies.  
   
- Assemblies são arquivos DLL usados em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para implantar funções, procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário que são escritos em uma das linguagens de código gerenciado hospedadas pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] runtime de linguagem comum (CLR), em vez de usar [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Os assemblies são arquivos DLL usados em uma instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do para implantar funções, procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário que são escritos em uma das linguagens de código gerenciado hospedadas pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), em [!INCLUDE[tsql](../../../includes/tsql-md.md)]vez de em.  
   
  Um assembly no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é um objeto que faz referência a um módulo de aplicativo gerenciado (arquivo .dll) criado em CLR do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Um assembly contém metadados de classe e código gerenciado. Carregar um assembly para uma instância do SQL Server é a primeira etapa da criação de qualquer um dos objetos de banco de dados a seguir:  
   
--   Funções CLR. Para obter mais informações, consulte [criar funções de CLR](../user-defined-functions/create-clr-functions.md).  
+-   Funções CLR. Para obter mais informações, consulte [Create CLR Functions](../user-defined-functions/create-clr-functions.md).  
   
 -   Procedimentos armazenados CLR Para obter mais informações, consulte [procedimentos armazenados CLR](../../database-engine/dev-guide/clr-stored-procedures.md).  
   
--   Gatilhos CLR. Para obter mais informações, consulte [criar gatilhos de CLR](../triggers/create-clr-triggers.md).  
+-   Gatilhos CLR. Para obter mais informações, consulte [criar gatilhos CLR](../triggers/create-clr-triggers.md).  
   
--   Funções de agregação definidas pelo usuário. Para obter mais informações, consulte [agregações definidas pelo usuário criar](../user-defined-functions/create-user-defined-aggregates.md).  
+-   Funções de agregação definidas pelo usuário. Para obter mais informações, consulte [criar agregações definidas pelo usuário](../user-defined-functions/create-user-defined-aggregates.md).  
   
 -   Tipos definidos pelo usuário. Para obter mais informações, confira [Usando tipos definidos pelo usuário](../native-client/features/using-user-defined-types.md).  
   
@@ -50,13 +50,13 @@ ms.locfileid: "62920777"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Criação de Assemblies](assemblies-designing.md)|Explica o que levar em consideração antes de criar um assembly. Inclui assemblies de empacotamento, permissões de acesso a código e outras restrições.|  
 |[Implementando assemblies](assemblies-implementing.md)|Explica como criar e eliminar assemblies, como e quando modificar assemblies e como recuperar metadados sobre assemblies.|  
 |[Obtendo informações sobre assemblies](assemblies-getting-information.md)|Lista as exibições do catálogo e funções que podem ser consultadas para metadados sobre assemblies.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceitos de programação da Integração CLR &#40;Common Language Runtime&#41;](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

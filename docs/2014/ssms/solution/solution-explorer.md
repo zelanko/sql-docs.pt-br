@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63025719"
 ---
 # <a name="solution-explorer"></a>Gerenciador de Soluções
-  O painel Gerenciador de Soluções no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece contêineres chamado projetos para gerenciar itens como scripts de banco de dados, consultas, conexões de dados e arquivos. Um ou mais projetos relacionados um ao outro podem ser combinados em um contêiner chamado solução.  
+  O painel de Gerenciador de soluções [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no fornece contêineres chamados projetos para gerenciar itens como scripts de banco de dados, consultas, conexões de dados e arquivos. Um ou mais projetos relacionados um ao outro podem ser combinados em um contêiner chamado solução.  
   
  Uma solução inclui um ou mais projetos, mais arquivos e metadados que ajudam a definir a solução como um todo. Um projeto é um conjunto de arquivos mais metadados relacionados, como informações de conexão. Soluções e projetos contêm itens que representam scripts, consultas, informações de conexão e arquivos necessários para criar sua solução de banco de dados.  
   

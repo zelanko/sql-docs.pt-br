@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7324979238eda7f3ee63a709c199878350edb82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916193"
 ---
-# <a name="mssqlserver10531"></a>MSSQLSERVER_10531
+# <a name="mssqlserver_10531"></a>MSSQLSERVER_10531
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|10531|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|PG_NO_ELIGIBLE_STMT|  
 |Texto da mensagem|Não é possível criar o guia de plano '%.*ls' do cache porque o usuário não tem as permissões adequadas. Conceda a permissão VIEW SERVER STATE para o usuário que está criando o guia de plano.|  
@@ -38,7 +38,7 @@ ms.locfileid: "62916193"
 ## <a name="user-action"></a>Ação do usuário  
  Conceda a permissão VIEW SERVER STATE ao usuário que está criando o guia de plano.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Guias de plano](../performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  

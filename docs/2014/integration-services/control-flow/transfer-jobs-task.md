@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03913242246fcdaf11e9272e827cd8e06951a108
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829892"
 ---
 # <a name="transfer-jobs-task"></a>Tarefa Transferir Trabalhos
@@ -39,7 +39,7 @@ ms.locfileid: "62829892"
 ## <a name="transferring-jobs-between-instances-of-sql-server"></a>Transferindo trabalhos entre instâncias do SQL Server  
  A tarefa Transferir Trabalhos dá suporte a uma origem e a um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não há nenhuma restrição quanto à versão a ser usada como origem ou destino.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  A tarefa Transferir Trabalhos gera um evento de informação com o número de trabalhos transferidos e um evento de aviso quando um trabalho é substituído. A tarefa não informa o progresso incremental da transferência de trabalhos; informa só 0% e 100% concluídos.  
   
 ## <a name="execution-value"></a>Valor de execução  
@@ -64,7 +64,7 @@ ms.locfileid: "62829892"
   
 -   [Editor da Tarefa Transferir Trabalhos &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da Tarefa Transferir Trabalhos &#40;página Trabalhos&#41;](../transfer-jobs-task-editor-jobs-page.md)  
+-   [Editor da tarefa Transferir trabalhos &#40;página trabalhos&#41;](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62829892"
   
 -   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](integration-services-tasks.md)   
  [Fluxo de Controle](control-flow.md)  
   

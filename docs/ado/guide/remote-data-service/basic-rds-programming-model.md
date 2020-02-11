@@ -1,5 +1,5 @@
 ---
-title: Modelo de programação do RDS básica | Microsoft Docs
+title: Modelo de programação RDS básica | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,41 +13,41 @@ ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84b90e2c1338c38538d0c33779fb8e3f5cf2af79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922955"
 ---
 # <a name="basic-rds-programming-model"></a>Modelo de programação básica do RDS
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- RDS trata os aplicativos que existem no ambiente do seguinte: Um aplicativo cliente especifica um programa que será executado em um servidor e os parâmetros necessários para retornar as informações desejadas. O programa invocado no servidor ganhos acesso à fonte de dados especificado, recupera as informações de, opcionalmente, processa os dados e, em seguida, retorna as informações resultantes ao seu aplicativo cliente em um formato que pode usar facilmente. O RDS fornece os meios para que você possa executar a seguinte sequência de ações:  
+ Os aplicativos RDS que existem no seguinte ambiente: um aplicativo cliente especifica um programa que será executado em um servidor e os parâmetros necessários para retornar as informações desejadas. O programa invocado no servidor obtém acesso à fonte de dados especificada, recupera as informações, opcionalmente processa os dados e, em seguida, retorna as informações resultantes para o aplicativo cliente em um formato que possa ser usado facilmente. O RDS fornece os meios para que você execute a seguinte sequência de ações:  
   
--   Especifique o programa a ser invocado no servidor e obter uma maneira de fazer referência a ele partir do cliente. (Essa referência é chamada, às vezes, uma *proxy*. Representa o programa de servidor remoto. O aplicativo cliente será "chamar" proxy como se fosse um programa local, mas ele realmente invoca o programa de servidor remoto.)  
+-   Especifique o programa a ser invocado no servidor e obtenha uma maneira de consultá-lo a partir do cliente. (Às vezes, essa referência é chamada de *proxy*. Representa o programa do servidor remoto. O aplicativo cliente "chamará" o proxy como se fosse um programa local, mas, na verdade, invoca o programa do servidor remoto.)  
   
--   Invocar o programa do servidor. Passe parâmetros para o programa de servidor que identifique a fonte de dados e emitir o comando. (O programa de servidor, na verdade, usa ADO para acessar a fonte de dados. ADO faz uma conexão com um dos parâmetros especificados e, em seguida, emite o comando especificado no parâmetro de.)  
+-   Invocar o programa do servidor. Passe parâmetros para o programa do servidor que identifica a fonte de dados e o comando a ser emitido. (O programa de servidor realmente usa o ADO para obter acesso à fonte de dados. O ADO faz uma conexão com um dos parâmetros especificados e, em seguida, emite o comando especificado no outro parâmetro.)  
   
--   O programa de servidor obtém um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto da fonte de dados. Opcionalmente, o **Recordset** objeto for processado no servidor.  
+-   O programa de servidor Obtém um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) da fonte de dados. Opcionalmente, o objeto **Recordset** é processado no servidor.  
   
--   O programa de servidor retorna o último **Recordset** objeto para o aplicativo cliente.  
+-   O programa de servidor retorna o objeto **Recordset** final para o aplicativo cliente.  
   
--   No cliente, o **Recordset** objeto deve ser colocado em um formulário que pode ser facilmente usado por controles visuais.  
+-   No cliente, o objeto **Recordset** é colocado em um formulário que pode ser facilmente usado por controles visuais.  
   
--   Todas as modificações a **Recordset** objeto são enviados para o programa de servidor, que usa para atualizar a fonte de dados.  
+-   Todas as modificações no objeto **Recordset** são enviadas de volta para o programa do servidor, o que os utiliza para atualizar a fonte de dados.  
   
- Esse modelo de programação contém determinados recursos de conveniência. Se você não precisa de um programa de servidor complexas para acessar a fonte de dados e, se você fornecer a conexão necessária e os parâmetros de comando, RDS serão automaticamente recupere os dados especificados com um programa simples, de servidor padrão.  
+ Esse modelo de programação contém determinados recursos de conveniência. Se você não precisar de um programa de servidor complexo para acessar a fonte de dados e se fornecer a conexão necessária e os parâmetros de comando, o RDS recuperará automaticamente os dados especificados com um programa de servidor padrão simples.  
   
- Se você precisar de processamento mais complexo, você pode especificar seu próprio programa de servidor personalizado. Por exemplo, como um programa de servidor personalizado tem toda a potência do ADO à sua disposição, ele pode se conectar a várias fontes de dados diferentes, combinar seus dados de alguma forma complexa e, em seguida, retornar um resultado simple, processado para o aplicativo cliente.  
+ Se precisar de processamento mais complexo, você poderá especificar seu próprio programa de servidor personalizado. Por exemplo, como um programa de servidor personalizado tem todo o potencial do ADO em sua disposição, ele pode se conectar a várias fontes de dados diferentes, combinar seus dados de alguma maneira complexa e retornar um resultado simples e processado para o aplicativo cliente.  
   
- Por fim, se suas necessidades estiverem em algum lugar entre os dois, ADO agora dá suporte a personalizar o comportamento do programa de servidor padrão.  
+ Por fim, se suas necessidades estiverem em algum lugar entre elas, o ADO agora dará suporte à personalização do comportamento do programa servidor padrão.  
   
-## <a name="see-also"></a>Consulte também  
- [Modelo de programação do RDS em detalhes](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
- [Cenário RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Modelo de programação de RDS em detalhes](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
+ [Cenário de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [Tutorial do RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Segurança e uso RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

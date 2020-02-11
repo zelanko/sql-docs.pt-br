@@ -1,5 +1,5 @@
 ---
-title: Líder (MDX) | Microsoft Docs
+title: Cliente potencial (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cc4d362fbc7656e9427548a352b32d5d8297071e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905738"
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
@@ -37,13 +37,13 @@ Member_Expression.Lead( Index )
 ## <a name="remarks"></a>Comentários  
  As posições de membros em um nível são determinadas pela ordem natural da hierarquia de atributo. A numeração das posições se baseia em zero.  
   
- Se o lead especificado for zero (0), o **levar** função retorna o membro especificado.  
+ Se o cliente potencial especificado for zero (0), a função **Lead** retornará o membro especificado.  
   
- Se o lead especificado for negativo, o **levar** função retorna um membro anterior.  
+ Se o cliente potencial especificado for negativo, a função **Lead** retornará um membro anterior.  
   
- `Lead(1)` é equivalente a [NextMember](../mdx/nextmember-mdx.md) função. `Lead(-1)` é equivalente a [PrevMember](../mdx/prevmember-mdx.md) função.  
+ `Lead(1)`é equivalente à função [NextMember](../mdx/nextmember-mdx.md) . `Lead(-1)`é equivalente à função [PrevMember](../mdx/prevmember-mdx.md) .  
   
- O **levar** função é semelhante ao [latência](../mdx/lag-mdx.md) funcionar, exceto que o **retardo** função procura na direção oposta a **levar** função. Ou seja, `Lead(n)` é equivalente a `Lag(-n)`.  
+ A função **Lead** é semelhante à função [lag](../mdx/lag-mdx.md) , exceto que a função **lag** procura na direção oposta à função **Lead** . Ou seja, `Lead(n)` é equivalente a `Lag(-n)`.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna o valor para dezembro de 2001:  
@@ -62,7 +62,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956141"
 ---
 # <a name="add-existing-items-to-a-project"></a>Adicionar itens existentes a um projeto
-  Adicione novos itens a um projeto para estender a funcionalidade do aplicativo. Um item existente pode ser uma consulta ou um arquivo diverso. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tem dois tipos de projeto: Projeto de Script do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Projeto de Script do Analysis Services. O tipo de projeto determina os arquivos de consulta que você pode adicionar ao projeto. Por exemplo, você pode adicionar uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] (um arquivo com uma extensão .sql) a um projeto de script do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas não pode adicioná-lo a um Projeto de Script do Analysis Services. Para associar extensões de arquivo adicionais a um tipo de projeto, consulte [associar extensões de arquivo para um Editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+  Adicione novos itens a um projeto para estender a funcionalidade do aplicativo. Um item existente pode ser uma consulta ou um arquivo diverso. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tem dois tipos de projeto: Projeto de Script do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Projeto de Script do Analysis Services. O tipo de projeto determina os arquivos de consulta que você pode adicionar ao projeto. Por exemplo, você pode adicionar uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] (um arquivo com uma extensão .sql) a um projeto de script do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas não pode adicioná-lo a um Projeto de Script do Analysis Services. Para associar extensões de arquivo adicionais a um tipo de projeto, consulte [associar extensões de arquivo a um editor de códigos](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>Para adicionar uma consulta existente ou um arquivo diverso a um projeto  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62956141"
      Use esta opção para filtrar os arquivos e pastas a serem exibidos. Insira o nome completo ou parcial do arquivo a filtrar; use um asterisco (`*`) como curinga.  
   
     > [!NOTE]  
-    >  Navegue na Web e em locais de rede inserindo a URL ou o caminho de rede na caixa **Nome do arquivo** . Por exemplo, **http://mywebsite** exibe os arquivos disponíveis no local da Web meusite e **\\ \meuservidor\meucompartilhamento** exibe os arquivos disponíveis no local meucompartilhamento em meuservidor.  
+    >  Navegue na Web e em locais de rede inserindo a URL ou o caminho de rede na caixa **Nome do arquivo** . Por exemplo, **http://mywebsite** exibe os arquivos disponíveis no local da Web meusite e **\\\meuservidor\meucompartilhamento** exibe os arquivos disponíveis no local meucompartilhamento em meuservidor.  
   
      **Arquivos do tipo**  
      Use esta opção para filtrar arquivos com base na extensão de arquivo. Cada produto lista filtros padrões dos tipos de arquivo mais comuns.  
@@ -65,8 +65,8 @@ ms.locfileid: "62956141"
   
 4.  O arquivo será adicionado à pasta **Consultas** ou **Arquivos Diversos** do projeto.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de soluções](solution-explorer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de Soluções](solution-explorer.md)   
  [Adicionar novos itens a um projeto](add-new-items-to-a-project.md)   
  [Remover ou excluir um item ou projeto](remove-or-delete-an-item-or-project.md)  
   

@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036186"
 ---
 # <a name="set-index-options"></a>Opções Set Index
@@ -41,7 +41,7 @@ ms.locfileid: "63036186"
   
      [Segurança](#Security)  
   
--   **Para modificar as propriedades de um índice usando:**  
+-   **Para modificar as propriedades de um índice, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -51,9 +51,9 @@ ms.locfileid: "63036186"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   As opções a seguir são aplicadas imediatamente ao índice usando a cláusula SET na instrução ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY e STATISTICS_NORECOMPUTE.  
+-   As opções a seguir são se aplicadas imediatamente ao índice usando a cláusula SET na instrução ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY e STATISTICS_NORECOMPUTE.  
   
--   As seguintes opções podem ser definidas quando você recompila um índice usando ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP e DROP_EXISTING (somente CREATE INDEX).  
+-   As opções a seguir podem ser definidas quando você reconstrói um índice usando ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP e DROP_EXISTING (somente CREATE INDEX).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -70,13 +70,13 @@ ms.locfileid: "63036186"
   
 3.  Clique com o botão direito do mouse na tabela em que você deseja modificar as propriedades de um índice e selecione **Design**.  
   
-4.  No menu **Designer de Tabela** , clique em **Índices/Chaves**.  
+4.  No menu **Designer de tabela** , clique em **índices/chaves**.  
   
 5.  Selecione o índice a ser modificado. Suas propriedades aparecerão na grade principal.  
   
 6.  Altere as configurações de alguma ou de todas as propriedades para personalizar o índice.  
   
-7.  Clique em **Fechar**.  
+7.  Clique em **fechar**  
   
 8.  No menu **Arquivo** , selecione **Salvar**_table_name_.  
   

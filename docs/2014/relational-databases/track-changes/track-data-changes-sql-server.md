@@ -34,14 +34,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63073869"
 ---
 # <a name="track-data-changes-sql-server"></a>Controle de alterações de dados (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece dois recursos que controlam alterações em dados de bancos de dados: [captura de dados de alterações](#Capture) e [controle de alterações](#Tracking). Esses recursos permitem que os aplicativos determinem as alterações de DML (operações de inserção, atualização e exclusão) que foram feitas em tabelas de usuários em um banco de dados. A captura de dados de alteração e o controle de alterações podem ser habilitados no mesmo banco de dados; nenhuma consideração especial necessária. Para as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que a alteração de suporte à captura de dados e controle de alterações, consulte [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece dois recursos que controlam alterações em dados de bancos de dados: [captura de dados de alterações](#Capture) e [controle de alterações](#Tracking). Esses recursos permitem que os aplicativos determinem as alterações de DML (operações de inserção, atualização e exclusão) que foram feitas em tabelas de usuários em um banco de dados. A captura de dados de alteração e o controle de alterações podem ser habilitados no mesmo banco de dados; nenhuma consideração especial necessária. Para as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte à captura de dados de alteração e ao controle de alterações, consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Benefícios do uso da captura de dados de alterações ou do controle de alterações  
  Um requisito importante para a eficiência de alguns aplicativos é a capacidade de consultar os dados que foram alterados em um banco de dados. Em geral, para determinar alterações de dados, os desenvolvedores de aplicativos devem implementar um método personalizado de controle nos aplicativos usando uma combinação de gatilhos, colunas de carimbo de data/hora e tabelas adicionais. A criação desses aplicativos costumava envolve uma implementação muito trabalhosa, leva a atualizações de esquema e frequentemente acarreta uma sobrecarga de alto desempenho.  
@@ -79,13 +79,13 @@ ms.locfileid: "63073869"
   
  Como mostrado na ilustração a seguir, as alterações feitas para tabelas de usuários são capturadas nas tabelas de alteração correspondentes. Essas tabelas de alteração fornecem uma exibição histórica das alterações com o passar do tempo. As funções da [captura de dados de alterações](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece habilita o consumo fácil e sistemático dos dados de alteração.  
   
- ![Ilustração conceitual da captura de dados de alteração](../../database-engine/media/cdcart1.gif "Ilustração conceitual da captura de dados de alteração")  
+ ![Ilustração conceitual da captura de dados de alterações](../../database-engine/media/cdcart1.gif "Ilustração conceitual da captura de dados de alterações")  
   
 ### <a name="security-model"></a>Modelo de segurança  
  Esta seção descreve o modelo de segurança da captura de dados de alterações.  
   
  **Configuração e administração**  
- Para habilitar ou desabilitar a alteração de captura de dados para um banco de dados, o chamador de [sp_cdc_enable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) ou [sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)deve ser um membro do servidor fixo `sysadmin` função. Habilitando e desabilitando o change data capture no nível de tabela exigem que o chamador de [sp_cdc_enable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) e [sp_cdc_disable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) ao ser um membro da função sysadmin ou um membro do banco de dados `database db_owner` função.  
+ Para habilitar ou desabilitar o Change Data Capture para um banco de dados, o chamador de [Sys. sp_cdc_enable_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) ou [sys. Sp_cdc_disable_db &#40;o transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) deve ser um membro da `sysadmin` função de servidor fixa. Habilitar e desabilitar a captura de dados de alterações no nível de tabela requer que o chamador de [Sys. sp_cdc_enable_table &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) e [sys. Sp_cdc_disable_table &#40;o transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) seja um membro da função sysadmin ou um membro da função `database db_owner` de banco de dados.  
   
  O uso dos procedimentos armazenados para fornecer suporte aos trabalhos de captura de dados de alteração é restrito a membros da função `sysadmin` do servidor e a membros da função `database db_owner`.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63073869"
 |Colunas esparsas|Sim|Não dão suporte à captura de alterações durante o uso de columnset.|  
 |Colunas computadas|Não|As alterações feitas a colunas computadas não são rastreadas. A coluna aparecerá na tabela de alterações com o tipo apropriado, mas terá um valor de NULL.|  
 |XML|Sim|As alterações a elementos XML individuais não são rastreadas.|  
-|timestamp|Sim|O tipo de dados na tabela de alterações é convertido em binário.|  
+|Timestamp|Sim|O tipo de dados na tabela de alterações é convertido em binário.|  
 |Tipos de dados BLOB|Sim|A imagem anterior da coluna BLOB somente será armazenada se a própria coluna for alterada.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture e outros recursos do SQL Server  
@@ -125,9 +125,9 @@ ms.locfileid: "63073869"
  Para obter mais informações sobre o espelhamento de banco de dados, veja [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 #### <a name="transactional-replication"></a>Replicação transacional  
- A captura de dados de alteração e a replicação transacional podem coexistir no mesmo banco de dados, mas a população das tabelas de alteração ocorre de modo diferente quando os dois recursos estão habilitados. A captura de dados de alteração e a replicação transacional sempre usam o mesmo procedimento, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), para ler alterações no log de transações. Quando a captura de dados de alteração é habilitada por iniciativa própria, um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent chama `sp_replcmds`. Quando os dois recursos estão habilitados no mesmo banco de dados, o Log Reader Agent chama `sp_replcmds`. Esse agente preenche as tabelas de alteração e do banco de dados de distribuição. Para obter mais informações, consulte [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ A captura de dados de alteração e a replicação transacional podem coexistir no mesmo banco de dados, mas a população das tabelas de alteração ocorre de modo diferente quando os dois recursos estão habilitados. A captura de dados de alteração e a replicação transacional sempre usam o mesmo procedimento, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), para ler alterações no log de transações. Quando a captura de dados de alteração é habilitada por iniciativa própria, um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent chama `sp_replcmds`. Quando ambos os recursos estão habilitados no mesmo banco de dados, `sp_replcmds`o agente de leitor de log chama. Esse agente preenche as tabelas de alteração e do banco de dados de distribuição. Para obter mais informações, consulte [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
- Considere um cenário em que a captura de dados de alteração está habilitada no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e há duas tabelas habilitadas para captura. Para preencher a alteração de tabelas, o trabalho de captura chama `sp_replcmds`. O banco de dados está habilitado para replicação transacional, e é criada uma publicação. Agora, o Agente de Leitor de Log é criado para o banco de dados, e o trabalho de captura é excluído. O Agente de Leitor de Log continua a examinar o log do último número de sequência de log confirmado na tabela de alteração. Isso assegura a consistência de dados nas tabelas de alteração. Se a replicação transacional estiver desabilitada nesse banco de dados, o Log Reader Agent será removido e o trabalho de captura, recriado.  
+ Considere um cenário em que a captura de dados de alteração está habilitada no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e há duas tabelas habilitadas para captura. Para popular as tabelas de alteração, as chamadas `sp_replcmds`de trabalho de captura. O banco de dados está habilitado para replicação transacional, e é criada uma publicação. Agora, o Agente de Leitor de Log é criado para o banco de dados, e o trabalho de captura é excluído. O Agente de Leitor de Log continua a examinar o log do último número de sequência de log confirmado na tabela de alteração. Isso assegura a consistência de dados nas tabelas de alteração. Se a replicação transacional estiver desabilitada nesse banco de dados, o Log Reader Agent será removido e o trabalho de captura, recriado.  
   
 > [!NOTE]  
 >  Quando o Agente de Leitor de Log for usado para captura de dados e replicação transacional, as alterações replicadas serão gravadas primeiro no banco de dados de distribuição. Em seguida, as alterações capturadas são gravadas nas tabelas de alteração. As duas operações são confirmadas ao mesmo tempo. Se houver uma latência na gravação no banco de dados de distribuição, haverá uma latência correspondente antes de as alterações aparecerem nas tabelas de alteração.  
@@ -143,14 +143,14 @@ ms.locfileid: "63073869"
   
 -   Se um banco de dados for desanexado e anexado ao mesmo servidor ou a outro servidor, a captura de dados de alteração permanecerá habilitada.  
   
--   Se um banco de dados for anexado ou restaurado com o `KEEP_CDC` opção para qualquer edição diferente da Enterprise, a operação está bloqueada porque o change data capture requer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. A mensagem de erro 932 é exibida:  
+-   Se um banco de dados for anexado ou restaurado com a `KEEP_CDC` opção para qualquer edição diferente de Enterprise, a operação será bloqueada porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a captura de dados de alterações requer Enterprise. A mensagem de erro 932 é exibida:  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   
  Você pode usar [sys.sp_cdc_disable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) para remover a captura de dados de alterações de um banco de dados restaurado ou anexado.  
  
 
-  ##  <a name="Tracking"></a> Change Tracking  
+  ##  <a name="Tracking"></a> Controle de alterações  
  O controle de alteração captura o motivo pelo qual as linhas em uma tabela foram alteradas, mas não captura o que foi alterado. Isso permite que os aplicativos determinem as linhas que foram alteradas com os últimos dados de linha obtidos diretamente das tabelas de usuários. Então, o controle de alterações é mais limitado nas perguntas de histórico do que pode responder comparado à captura de dados de alterações. Entretanto, para aqueles aplicativos que não exigem informações de histórico, há menos sobrecarga de armazenamento pois os dados alterados não são capturados. Um mecanismo de controle síncrono é usado para controlar as alterações. Isso foi projetado para ter o mínimo de sobrecarga nas operações de DML.  
   
  A ilustração a seguir mostra um cenário de sincronização que se beneficiaria com o uso do controle de alterações. No cenário, um aplicativo requer as seguintes informações: todas as linhas na tabela que foram alteradas desde a última sincronização da tabela e apenas os dados da linha atual. Como um mecanismo síncrono é usado para controlar as alterações, um aplicativo pode executar a sincronização de duas vias e detectar de modo confiável qualquer conflito que possa ocorrer.  
@@ -185,7 +185,7 @@ ms.locfileid: "63073869"
 |Descreve como gerenciar o controle de alterações, configurar a segurança e identificar os efeitos sobre o armazenamento e o desempenho quando você usa o controle de alterações.|[Gerenciar o controle de alterações &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)|  
 |Descreve como os aplicativos que usam o controle de alterações podem obter as alterações controladas, aplicá-las a outro repositório de dados e atualizar o banco de dados de origem. Este tópico também descreve a função que o controle de alterações desempenha quando ocorre um failover e um banco de dados precisa ser restaurado de um backup.|[Trabalhar com o controle de alterações &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções da captura de dados de alterações &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)   
  [Funções do controle de alterações &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)   
  [Procedimentos armazenados de captura de dados de alterações &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql)   

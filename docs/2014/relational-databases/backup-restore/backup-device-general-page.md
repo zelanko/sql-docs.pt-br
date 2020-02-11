@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4f23fd3d6d8208410c520676ee4e0c8bbe00fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922137"
 ---
 # <a name="backup-device-general-page"></a>Dispositivo de backup (página Geral)
-  Use a página **Geral** para especificar ou exibir as propriedades gerais de um dispositivo de backup lógico.  
+  Use a página **geral** para especificar ou exibir as propriedades gerais de um dispositivo de backup lógico.  
   
  **Para usar o SQL Server Management Studio para exibir o conteúdo de um dispositivo de backup**  
   
@@ -29,16 +29,16 @@ ms.locfileid: "62922137"
 -   [Exibir as propriedades e o conteúdo de um dispositivo de backup lógico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 ## <a name="options"></a>Opções  
- **Nome de dispositivo**  
+ **Nome do dispositivo**  
  Exibe o nome de um dispositivo de backup lógico existente ou especifica o nome de um novo dispositivo de backup lógico.  
   
  **Tape**  
- Exibe ou seleciona o dispositivo de fita de destino na lista **Fita** . Essa opção estará disponível apenas se uma unidade de fita for anexada ao computador que está executando a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ Exibe ou seleciona o dispositivo de fita de destino na lista **Fita** . Essa opção estará disponível somente se uma unidade de fita estiver conectada ao computador que está executando a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
 >  Dispositivos de backup em fita em computadores remotos não são destinos de backup válidos.  
   
- **File**  
+ **Arquivo**  
  Exibe o arquivo de destino de um dispositivo de backup lógico existente ou especifica um arquivo de destino para um novo dispositivo de backup lógico.  
   
 -   O caminho do arquivo de backup é exibido para um dispositivo de backup lógico existente. O campo **Arquivo** não é editável e o botão Procurar está indisponível.  
@@ -63,7 +63,7 @@ ms.locfileid: "62922137"
   
 -   [Definir um dispositivo de backup lógico para uma unidade de fita &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [Especificar um disco ou fita como destino de backup &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Especifique um disco ou fita como um destino de backup &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Excluir um dispositivo de backup &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62922137"
   
 -   [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
   

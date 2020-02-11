@@ -17,14 +17,14 @@ ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25eef06b7e25538cb874d99af98aee95495b95ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932338"
 ---
 # <a name="infomessage-event-ado"></a>Evento InfoMessage (ADO)
-O **InfoMessage** eventos é chamado sempre que ocorrer um aviso durante uma **ConnectionEvent** operação.  
+O evento **InfoMessage** é chamado sempre que ocorrer um aviso durante uma operação de **ConnectionEvent** .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,19 +33,19 @@ O **InfoMessage** eventos é chamado sempre que ocorrer um aviso durante uma **C
 InfoMessage pError, adStatus, pConnection  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *pError*  
- Uma [erro](../../../ado/reference/ado-api/error-object.md) objeto. Este parâmetro conterá todos os erros que são retornados. Se vários erros forem retornados, enumerar os **erros** coleção encontrá-los.  
+ Um objeto de [erro](../../../ado/reference/ado-api/error-object.md) . Esse parâmetro contém todos os erros retornados. Se vários erros forem retornados, enumere a coleção de **erros** para encontrá-los.  
   
  *adStatus*  
- Uma [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de status. Se ocorrer um aviso, *adStatus* é definido como **adStatusOK** e o *pError* contém o aviso.  
+ Um valor de status de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) . Se ocorrer um aviso, *adStatus* será definido como **AdStatusOK** e o *perror* conterá o aviso.  
   
- Antes de retorna a este evento, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
+ Antes desse evento retornar, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
   
  *pConnection*  
- Um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. A conexão para a qual o aviso ocorreu. Por exemplo, os avisos podem ocorrer ao abrir um **Conexão** objeto ou à execução de uma [comando](../../../ado/reference/ado-api/command-object-ado.md) em um **Conexão**.  
+ Um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) . A conexão para a qual o aviso ocorreu. Por exemplo, podem ocorrer avisos ao abrir um objeto de **conexão** ou executar um [comando](../../../ado/reference/ado-api/command-object-ado.md) em uma **conexão**.  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo de modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo do modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [Resumo do manipulador de eventos do ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

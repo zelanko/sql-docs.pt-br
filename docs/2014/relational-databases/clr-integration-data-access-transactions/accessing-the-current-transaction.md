@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920015"
 ---
 # <a name="accessing-the-current-transaction"></a>Acessando a transação atual
@@ -43,7 +43,7 @@ ms.locfileid: "62920015"
   
 -   A função ou o procedimento gerenciado pode retornar um valor usando um parâmetro de saída. O procedimento [!INCLUDE[tsql](../../includes/tsql-md.md)] de chamada pode verificar o valor retornado e, se apropriado, executar `ROLLBACK TRANSACTION`.  
   
--   A função ou o procedimento gerenciado pode gerar uma exceção personalizada. A chamada [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento pode capturar a exceção gerada pelo procedimento gerenciado ou função em um bloco try/catch e executar `ROLLBACK TRANSACTION`.  
+-   A função ou o procedimento gerenciado pode gerar uma exceção personalizada. O procedimento [!INCLUDE[tsql](../../includes/tsql-md.md)] de chamada pode capturar a exceção gerada pelo procedimento gerenciado ou função em um bloco try/catch e executar `ROLLBACK TRANSACTION`.  
   
 -   A função ou o procedimento gerenciado poderá cancelar a transação atual chamando o método `Transaction.Rollback` se uma determinada condição for atendida.  
   
@@ -64,7 +64,7 @@ The context transaction which was active before entering user defined routine, t
  Essa exceção também é esperada e, para que a execução continue, é preciso ter um bloco try/catch em torno da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que executa a ação que aciona o gatilho. Apesar das duas exceções geradas, a transação é revertida e as alterações não são confirmadas.  
   
 ### <a name="example"></a>Exemplo  
- A seguir, é mostrado um exemplo de uma transação que é revertida de um procedimento gerenciado usando o método `Transaction.Rollback`. Observe o bloco try/catch em torno do método `Transaction.Rollback` no código gerenciado. O script [!INCLUDE[tsql](../../includes/tsql-md.md)] cria um assembly e um procedimento armazenado gerenciado. Lembre-se que o `EXEC uspRollbackFromProc` instrução é encapsulado em um bloco try/catch, de forma que a exceção gerada quando o procedimento gerenciado for concluído seja capturada.  
+ A seguir, é mostrado um exemplo de uma transação que é revertida de um procedimento gerenciado usando o método `Transaction.Rollback`. Observe o bloco try/catch em torno do método `Transaction.Rollback` no código gerenciado. O script [!INCLUDE[tsql](../../includes/tsql-md.md)] cria um assembly e um procedimento armazenado gerenciado. Lembre-se de `EXEC uspRollbackFromProc` que a instrução é encapsulada em um bloco try/catch, para que a exceção gerada quando o procedimento gerenciado concluir a execução seja detectada.  
   
 ```csharp  
 using System;  
@@ -200,7 +200,7 @@ DROP ASSEMBLY TestProcs;
 Go  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Integração CLR e transações](../native-client-ole-db-transactions/transactions.md)  
   
   

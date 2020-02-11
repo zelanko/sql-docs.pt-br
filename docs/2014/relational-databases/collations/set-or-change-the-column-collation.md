@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918966"
 ---
 # <a name="set-or-change-the-column-collation"></a>Definir ou alterar a ordenação de coluna
@@ -38,7 +38,7 @@ ms.locfileid: "62918966"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, [Suporte a ordenações e a Unicode](collation-and-unicode-support.md).  
   
--   Usando o `Column.Collation` propriedade em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+-   Usando a `Column.Collation` Propriedade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (Smo).  
   
  Você não pode alterar a ordenação de uma coluna atualmente referenciada por qualquer um dos seguintes:  
   
@@ -87,7 +87,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- Porque **tempdb** usa o agrupamento de servidor padrão e `TestPermTab.Col1` usa um agrupamento diferente, o SQL Server retorna este erro: "Não é possível resolver o conflito de agrupamento entre 'Latin1_General_CI_AS_KS_WS' e 'Estonian_CS_AS ' igualmente na igual a operação."  
+ Como **tempdb** usa a ordenação do servidor padrão e `TestPermTab.Col1` usa uma ordenação diferente, o SQL Server retorna este erro: "Não é possível resolver o conflito de ordenação entre 'Latin1_General_CI_AS_KS_WS' e 'Estonian_CS_AS' igualmente na operação".  
   
  Para evitar o erro, você pode usar uma das seguintes alternativas:  
   
@@ -109,7 +109,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir ou alterar a ordenação do servidor](set-or-change-the-server-collation.md)   
  [Definir ou alterar a ordenação de banco de dados](set-or-change-the-database-collation.md)   
  [Suporte a ordenações e a Unicode](collation-and-unicode-support.md)  

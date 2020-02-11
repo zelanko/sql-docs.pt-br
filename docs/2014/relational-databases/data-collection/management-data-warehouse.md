@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918334"
 ---
 # <a name="management-data-warehouse"></a>data warehouse de gerenciamento
@@ -39,7 +39,7 @@ ms.locfileid: "62918334"
   
  A tabela a seguir descreve as tabelas de banco de dados no esquema principal. Essas tabelas de banco de dados permitem que o coletor de dados rastreie o local de origem dos dados, quem os inseriu e quando foram carregados no data warehouse.  
   
-|Nome da tabela|Descrição|  
+|Nome da tabela|DESCRIÇÃO|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Armazena informações sobre como os relatórios do data warehouse de gerenciamento devem agrupar e agregar contadores de desempenho.|  
 |core.snapshots_internal|Identifica cada novo instantâneo. Uma nova linha é inserida nessa tabela sempre que um pacote de carregamento inicia o carregamento de um novo lote de dados.|  
@@ -109,7 +109,7 @@ ms.locfileid: "62918334"
   
  Você pode obter informações detalhadas sobre o tipo de dados e o conteúdo de colunas de tabelas do banco de dados lendo a documentação do procedimento armazenado do coletor de dados adequado para cada uma das tabelas.  
   
-### <a name="best-practices"></a>Práticas recomendadas  
+### <a name="best-practices"></a>Práticas Recomendadas  
  Ao trabalhar com o data warehouse de gerenciamento, recomendamos que você siga estas práticas recomendadas:  
   
 -   Não modifique o metadados de tabelas de data warehouse de gerenciamento a menos que você esteja adicionando um tipo de coletor novo.  
@@ -125,10 +125,10 @@ ms.locfileid: "62918334"
 |Adicionada a tabela core.performance_counter_report_group_items à seção "Esquema principal".|  
 |Atualizada a lista de tabelas na seção "Esquema de instantâneos". Adicionados snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory e snapshots.io_virtual_file_stats. snapshots.os_process_memory e snapshots.distinct_query_stats foram removidos.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do data warehouse de gerenciamento &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
- [Coleta de dados](data-collection.md)   
+ [Coleta de Dados](data-collection.md)   
  [Exibir um relatório de conjuntos de coleta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Defina os bancos de dados definido pelo agrupamento de usuário para corresponder do mestre e bancos de dados modelo | Microsoft Docs
+title: Definir o agrupamento de bancos de dados definidos pelo usuário para corresponder aos dos bancos de dados mestre e modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773303"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Definir a ordenação de bancos de dados definidos pelo usuário para corresponder aos dos bancos de dados mestre e modelo
@@ -29,7 +29,7 @@ ms.locfileid: "62773303"
   
 -   Exporte os dados do banco de dados do usuário e importe-os em novas tabelas com a mesma ordenação que os bancos de dados mestre e modelo.  
   
--   Recrie os bancos de dados do sistema para usar uma ordenação que corresponda à ordenação do banco de dados do usuário. Para obter mais informações sobre como recriar os bancos de dados do sistema, consulte [recriar bancos de dados do sistema](../relational-databases/databases/system-databases.md).  
+-   Recrie os bancos de dados do sistema para usar uma ordenação que corresponda à ordenação do banco de dados do usuário. Para obter mais informações sobre como recriar os bancos de dados do sistema, consulte [Recompilar bancos de dados do sistema](../relational-databases/databases/system-databases.md).  
   
 -   Modifique os procedimentos armazenados que uniram as tabelas do usuário às tabelas em tempdb para criar tabelas no tempdb usando a ordenação do banco de dados do usuário. Para isso, adicione a cláusula `COLLATE database_default` às definições de coluna da tabela temporária, como demonstrado no exemplo a seguir:  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62773303"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Artigo da Base de Conhecimento Microsoft 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
+ [Artigo 325335 da base de dados de conhecimento Microsoft](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [Como: Instalar o SQL Server 2008 do Prompt de comando](https://go.microsoft.com/fwlink/?LinkId=81585)  
+ [Como instalar o SQL Server 2008 pelo prompt de comando](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
-## <a name="see-also"></a>Consulte também  
- [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Monitorar e impor melhores práticas usando o gerenciamento baseado em políticas](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

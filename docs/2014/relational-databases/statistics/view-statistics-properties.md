@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015643"
 ---
 # <a name="view-statistics-properties"></a>Exibir propriedades de estatísticas
@@ -31,7 +31,7 @@ ms.locfileid: "63015643"
   
      [Segurança](#Security)  
   
--   **Para exibir propriedades de estatísticas usando:**  
+-   **Para exibir propriedades de estatísticas, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -65,36 +65,36 @@ ms.locfileid: "63015643"
      **Nome da tabela**  
      Exibe o nome da tabela descrito pelas estatísticas.  
   
-     **Nome das Estatísticas**  
+     **Nome da estatística**  
      Exibe o nome do objeto de banco de dados onde as estatísticas são armazenadas.  
   
      **Estatísticas para INDEXstatistics_name**  
-     Esta caixa de texto mostra as propriedades retornadas do objeto de estatísticas. Essas propriedades são divididas em três seções: Cabeçalho de Estatísticas, Vetor de Densidade e Histograma.  
+     Esta caixa de texto mostra as propriedades retornadas do objeto de estatísticas. Estas propriedades são divididas em três seções: Cabeçalho de Estatísticas, Vetor de Densidade e Histograma.  
   
      As informações a seguir descrevem as colunas retornadas no conjunto de resultados do Cabeçalho de Estatísticas.  
   
      **Nome**  
      O nome do objeto de estatísticas.  
   
-     **Atualizado**  
+     **Atualizações**  
      Data e hora da última atualização de estatísticas.  
   
      **Linhas**  
      O número total de linhas na tabela ou exibição indexada quando as estatísticas foram atualizadas pela última vez. Se as estatísticas forem filtradas ou corresponderem a um índice filtrado, o número de linhas talvez seja menor do que o número de linhas na tabela.  
   
-     **Linhas Amostradas**  
+     **Linhas amostradas**  
      O número total de linhas amostradas para cálculos de estatísticas. Se Linhas Amostradas < Linhas, o histograma e os resultados de densidade exibidos serão estimativas com base nas linhas amostradas.  
   
      **Etapas**  
      O número de etapas no histograma. Cada etapa abrange uma gama de valores de colunas seguidos por um valor de coluna associada superior. As etapas do histograma são definidas na primeira coluna de chave nas estatísticas. O número máximo de etapas é 200.  
   
-     **Densidade**  
+     **Dens**  
      Calculado como 1 / *valores distintos* para todos os valores na primeira coluna de chave do objeto de estatísticas, excluindo os valores de limite de histograma. Esse valor de Densidade não é usado pelo otimizador de consulta e é exibido para fins de compatibilidade com versões anteriores ao SQL Server 2008.  
   
-     **Comprimento Médio de Chave**  
+     **Comprimento médio da chave**  
      O número médio de bytes por valor para todas as colunas de chave do objeto de estatísticas.  
   
-     **Índice de Cadeia de Caracteres**  
+     **Índice de cadeia de caracteres**  
      Sim indica que o objeto de estatísticas contém estatísticas do resumo da cadeia de caracteres para melhorar a estimativa de cardinalidade para predicados de consulta que usam o operador LIKE; por exemplo, `WHERE ProductName LIKE '%Bike'`. As estatísticas de resumo da cadeia de caracteres são armazenadas separadamente do histograma e são criadas na primeira coluna de chave do objeto de estatísticas quando ele é do tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**ou **ntext**.  
   
      **Expressão de filtro**  
@@ -105,10 +105,10 @@ ms.locfileid: "63015643"
   
      As informações a seguir descrevem as colunas retornadas no conjunto de resultados do Vetor de Densidade.  
   
-     **Toda Densidade**  
-     A densidade é 1 / *valores distintos*. Os resultados exibem a densidade de cada prefixo de colunas no objeto de estatísticas, uma linha por densidade. Um valor distinto é uma lista distinta dos valores de coluna por linha e por prefixo de colunas. Por exemplo, se o objeto de estatísticas contiver colunas de chave (A, B, C), os resultados reportarão a densidade de listas distintas de valores em cada um desses prefixos de colunas: (A), (A, B) e (A, B, C). Usando o prefixo (A, B, C), cada uma dessas listas é uma lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Usando o prefixo (A, B) os mesmos valores de coluna têm estas listas de valores distintos: (3, 5), (4, 4) e (4, 5).  
+     **Toda a densidade**  
+     A densidade é 1 / *valores distintos*. Os resultados exibem a densidade de cada prefixo de colunas no objeto de estatísticas, uma linha por densidade. Um valor distinto é uma lista distinta dos valores de coluna por linha e por prefixo de colunas. Por exemplo, se o objeto de estatísticas contiver colunas de chave (A, B, C), os resultados reportarão a densidade de listas distintas de valores em cada um desses prefixos de colunas: (A), (A,B) e (A, B, C). Com o uso do prefixo (A, B, C), cada uma dessas listas é uma lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Com o uso do prefixo (A, B) os mesmos valores de colunas têm estas listas de valores distintos: (3, 5), (4, 4) e (4, 5).  
   
-     **Comprimento Médio**  
+     **Comprimento médio**  
      O comprimento médio, em bytes, para armazenar uma lista dos valores das colunas para o prefixo da coluna. Por exemplo, se os valores na lista (3, 5, 6) exigirem cada um 4 bytes, o comprimento será de 12 bytes.  
   
      **Colunas**  

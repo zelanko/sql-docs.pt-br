@@ -11,13 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072733"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
+  
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fornece a durabilidade completa para tabelas com otimização de memória. Quando uma transação que modificou uma tabela com otimização de memória é confirmada, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (como faz em tabelas baseadas em disco), garante que as alterações sejam permanentes (sobreviverão uma reinicialização do banco de dados), contanto que o armazenamento subjacente esteja disponível. Há dois principais componentes de durabilidade: log de transações e persistência das alterações de dados para armazenamento em disco.  
   
 ## <a name="transaction-log"></a>Log de Transações  
@@ -43,7 +44,7 @@ ms.locfileid: "63072733"
 ## <a name="populating-data-and-delta-files"></a>Populando arquivos de dados e delta  
  Os arquivos de dados e delta são populados por um thread em segundo plano chamado de ponto de verificação offline. Esse thread lê os registros do log de transações gerados por transações confirmadas em tabelas com otimização de memória e anexa informações sobre as linhas inseridas e excluídas em arquivos delta e de dados apropriados. Diferentemente das tabelas baseadas em disco, nas quais páginas de dados/índice são liberadas com E/S aleatória quando o ponto de verificação é realizado, a persistência da tabela com otimização de memória é uma operação em segundo plano contínua. Vários arquivos delta são acessados, pois uma transação pode excluir ou atualizar qualquer linha que foi inserida por qualquer transação anterior. As informações de exclusão sempre são anexadas no final do arquivo delta. Por exemplo, uma transação com um carimbo de data/hora de confirmação de 600 insere uma linha nova e exclui linhas inseridas por transações com um carimbo de data/hora de confirmação de 150, 250 e 450, conforme mostrado na imagem a seguir. As quatro operações de E/S de arquivo (três para linhas excluídas e uma para as linhas recentemente inseridas) são operações somente de acréscimo nos arquivos delta e de dados correspondentes.  
   
- ![Registros de log de leitura para tabelas com otimização de memória.](../../database-engine/media/read-logs-hekaton.gif "Registros de log de leitura para tabelas com otimização de memória.")  
+ ![Registros de leitura de log para tabelas com otimização de memória.](../../database-engine/media/read-logs-hekaton.gif "Registros de leitura de log para tabelas com otimização de memória.")  
   
 ## <a name="accessing-data-and-delta-files"></a>Acessando arquivos delta e de dados  
  Os pares de arquivos de dados e delta são acessados quando as situações a seguir ocorrem.  
@@ -83,12 +84,13 @@ ms.locfileid: "63072733"
   
  No exemplo abaixo, o grupo de arquivos da tabela com otimização de memória tem quatro pares de arquivos delta e de dados no carimbo de data/hora 500 que contém dados de transações anteriores. Por exemplo, as linhas no primeiro arquivo de dados correspondem a transações com carimbo de data/hora superior a 100 e inferior ou igual a 200; alternativamente representados como (100, 200]. O segundo e terceiro arquivos de dados apresentam menos de 50% de utilização após a contagem das linhas marcadas como excluídas. A operação de mesclagem combina esses dois CFPs e cria um novo CFP que contém transações com carimbo de data/hora superior a 200 e inferior ou igual a 400, que é o intervalo combinado desses dois CFPs. Você vê outro CFP com intervalo (500, 600] e o arquivo delta não vazio do intervalo de transações (200, 400] mostra que a operação de mesclagem pode ser realizada junto com atividades transacionais, incluindo a exclusão de mais linhas dos CFPs de origem.  
   
- ![O diagrama mostra o grupo de arquivo de tabela com otimização de memória](../../database-engine/media/storagediagram-hekaton.png "O diagrama mostra o grupo de arquivo de tabela com otimização de memória")  
+ ![O diagrama mostra o grupo de arquivos de tabela com otimização de memória](../../database-engine/media/storagediagram-hekaton.png "O diagrama mostra o grupo de arquivos de tabela com otimização de memória")  
   
  Um thread de segundo plano avalia todos os CFPs fechados usando uma política de mesclagem e, em seguida, inicia uma ou mais solicitações de mesclagem para os CFPs de qualificação. Essas solicitações de mesclagem são processadas pelo thread de ponto de verificação offline. A avaliação da política de mesclagem é feita periodicamente e também quando um ponto de verificação é fechado.  
   
-### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Política de mesclagem  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa a seguinte política de mesclagem:  
+### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Mesclar política  
+ 
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa a seguinte política de mesclagem:  
   
 -   Uma mesclagem será agendada se dois ou mais CFPs consecutivos puderem ser consolidados, após a contagem das linhas excluídas, para que as linhas resultantes possam caber em 1 CFP do tamanho ideal. O tamanho ideal do CFP é determinado desta forma:  
   
@@ -108,16 +110,16 @@ ms.locfileid: "63072733"
   
  Nem todos os CFPs com o espaço disponível se qualificam para mesclagem. Por exemplo, se dois CFPs adjacentes apresentarem 60% de utilização, eles não estarão qualificados para mesclagem e cada um desses CFPs terá 40% do armazenamento não usado. No pior caso, todos os CFPs terão 50% de utilização, uma utilização do armazenamento de apenas 50%. Embora as linhas excluídas possam existir no armazenamento porque os CFPs não se qualificam para mesclagem, essas linhas talvez já tenham sido removidas da memória pela coleta de lixo na memória. O gerenciamento de armazenamento e de memória é independente da coleta de lixo. O armazenamento ocupado pelos CFPs ativos (nem todos os CFPs estão sendo atualizados) pode ser até 2 vezes maior do que o tamanho de tabelas duráveis na memória.  
   
- Se necessário, uma mesclagem manual pode ser executada explicitamente chamando [sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
+ Se necessário, uma mesclagem manual pode ser executada explicitamente chamando [Sys. sp_xtp_merge_checkpoint_files &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo de vida de um CFP  
- Transição de CPFs por vários estados antes de poderem ser desalocados. Em um determinado momento, os CFPs estão em uma das seguintes fases: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE e marca para exclusão. Para obter uma descrição dessas fases, veja [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Transição de CPFs por vários estados antes de poderem ser desalocados. A qualquer momento, os CFPs estarão em uma das seguintes fases: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE e TOMBSTONE. Para obter uma descrição dessas fases, veja [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
- Após a contagem do armazenamento ocupado pelos CFPs em diversos estados, o armazenamento geral ocupado pelas tabelas com otimização de memória duráveis poderá ser muito maior do que 2 vezes o tamanho das tabelas na memória. O DMV [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) pode ser consultado para listar todos os CFPs em arquivos com otimização de memória, incluindo a fase. A transição de estados de CFPs de MERGE SOURCE para TOMBSTONE e por fim a coleta de lixo pode demorar cinco pontos de verificação, com cada ponto de verificação seguido por um backup de log de transações, caso o banco de dados esteja configurado para o modelo de recuperação completa ou bulk-logged.  
+ Após a contagem do armazenamento ocupado pelos CFPs em diversos estados, o armazenamento geral ocupado pelas tabelas com otimização de memória duráveis poderá ser muito maior do que 2 vezes o tamanho das tabelas na memória. A [&#41;DMV. dm_db_xtp_checkpoint_files &#40;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) pode ser consultada para listar todos os CFPS no grupo de arquivos com otimização de memória, incluindo sua fase. A transição de estados de CFPs de MERGE SOURCE para TOMBSTONE e por fim a coleta de lixo pode demorar cinco pontos de verificação, com cada ponto de verificação seguido por um backup de log de transações, caso o banco de dados esteja configurado para o modelo de recuperação completa ou bulk-logged.  
   
  Você pode forçar manualmente o ponto de verificação seguido pelo backup de log para acelerar a coleta de lixo, mas isso adicionaria 5 CFPs vazios (5 pares de arquivos de dados/delta com o arquivo de dados de tamanho de 128 MB). Nos cenários de produção, os backups automáticos de pontos de verificação e log ocorrem como parte da estratégia de backup que executará a transição perfeita de CFPs por essas fases, sem a necessidade de nenhuma intervenção manual. O impacto do processo de coleta de lixo é que os bancos de dados com tabelas com otimização de memória podem ter um tamanho de armazenamento maior em comparação com seu tamanho na memória. Não é raro para CFPs serem até quatro vezes o tamanho das tabelas com otimização de memória duráveis em memória.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando e gerenciando armazenamento para objetos com otimização de memória](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

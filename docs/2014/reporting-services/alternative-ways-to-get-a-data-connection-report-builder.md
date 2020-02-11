@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 36f489f25adc9746f844a6289ca8a2849ad83870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109993"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Formas alternativas de obter uma conexão de dados (Construtor de Relatórios)
@@ -37,7 +37,7 @@ ms.locfileid: "66109993"
   
 3.  Para verificar se é possível se conectar à fonte de dados, clique em **Testar Conexão**. A mensagem "Conexão criada com êxito" será exibida. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  Clique em **Avançar**.  
+4.  Clique em **Próximo**.  
   
      Se necessário, insira suas credenciais. Para salvar as credenciais localmente, selecione **Salvar senha com a conexão**. Se você não selecionar essa opção, deverá inserir credenciais sempre que executar o relatório  
   
@@ -65,14 +65,14 @@ ms.locfileid: "66109993"
   
      A mensagem "Conexão criada com êxito" será exibida. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Se for solicitado que você informe um nome de usuário e uma senha, insira suas credenciais. Para salvar as credenciais localmente, selecione **Salvar senha com a conexão**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [TUTORIAIS &#40;Construtor de Relatórios&#41;](report-builder-tutorials.md)  
   
   

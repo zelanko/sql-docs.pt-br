@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4424504ddbfd0dfa1b16169186988141bb7b4c41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999561"
 ---
 # <a name="open-and-configure-object-explorer"></a>Abrir e configurar o Pesquisador de Objetos
@@ -26,11 +26,11 @@ ms.locfileid: "62999561"
 ## <a name="configuring-object-explorer-options"></a>Configurando as opções do Pesquisador de Objetos  
  Para definir as configurações do Pesquisador de Objetos, no menu **Ferramentas** , clique em **Opções**e em **Pesquisador de Objetos do SQL Server**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pesquisador de objetos](object-explorer.md)   
- [Conectar a uma instância do Pesquisador de objetos](connect-to-an-instance-from-object-explorer.md)   
- [Gerenciar objetos usando o Pesquisador de objetos](manage-objects-by-using-object-explorer.md)   
- [Painel de detalhes do Gerenciador de objeto](object-explorer-details-pane.md)   
+ [Conectar-se a uma instância do pesquisador de objetos](connect-to-an-instance-from-object-explorer.md)   
+ [Gerenciar objetos usando o pesquisador de objetos](manage-objects-by-using-object-explorer.md)   
+ [Painel de detalhes do pesquisador de objetos](object-explorer-details-pane.md)   
  [Relatórios personalizados no Management Studio](custom-reports-in-management-studio.md)  
   
   

@@ -18,14 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065685"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
-  Interno `hierarchyid` tipo de dados torna mais fácil de armazenar e consultar dados hierárquicos. `hierarchyid` é otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
+  O tipo de `hierarchyid` dados interno torna mais fácil armazenar e consultar dados hierárquicos. `hierarchyid`é otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
   
  Os dados hierárquicos são definidos como um conjunto de itens de dados mutuamente relacionados por relações hierárquicas. As relações hierárquicas existem onde um item de dados é o pai de outro item. Exemplos dos dados hierárquicos que geralmente são armazenados em bancos de dados incluem o seguinte:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63065685"
   
 -   A comparação está na ordem de profundidade  
   
-     Dado dois `hierarchyid` valores **um** e **b**, **um < b** significa um vem antes de b em uma passagem de profundidade da árvore. Índices em tipos de dados `hierarchyid` estão na ordem de profundidade e os nós que estão próximos um do outro são armazenados em uma passagem de profundidade próximos um do outro. Por exemplo, os filhos de um registro são armazenados adjacentes àquele registro.  
+     Considerando dois `hierarchyid` valores **a** e **b**, **um<b** significa que o vem antes de b em uma passagem de profundidade da árvore. Índices em tipos de dados `hierarchyid` estão na ordem de profundidade e os nós que estão próximos um do outro são armazenados em uma passagem de profundidade próximos um do outro. Por exemplo, os filhos de um registro são armazenados adjacentes àquele registro.  
   
 -   Suporte a inserções e exclusões arbitrárias  
   
@@ -108,7 +108,7 @@ GO
   
 -   Consultas raramente examinam por seções da hierarquia. Em outras palavras, as consultas normalmente se dirigem apenas a um único ponto na hierarquia. Nesses casos, a colocação não é importante. Por exemplo, Pai/Filho é superior quando a tabela de organização é usada somente para processar a folha de pagamento de funcionários individuais.  
   
--   Subárvores de não folha mudam frequentemente e o desempenho é muito importante. Em uma representação pai/filho, alterando o local de uma linha em uma hierarquia afeta uma linha única. Alterando o local de uma linha em uma `hierarchyid` uso afeta *n* linhas, onde *n* é o número de nós na subárvore sendo movida.  
+-   Subárvores de não folha mudam frequentemente e o desempenho é muito importante. Em uma representação pai/filho, alterando o local de uma linha em uma hierarquia afeta uma linha única. Alterar o local de uma linha em um `hierarchyid` uso afeta *n* linhas, em que *n* é o número de nós na subárvore que está sendo movida.  
   
      Se as subárvores sem folha mudarem frequentemente e o desempenho for importante, mas a maioria das mudanças estiver em um nível bem definido da hierarquia, considere dividir os níveis superiores e inferiores em duas hierarquias. Isso faz todas as mudanças em níveis de folha da hierarquia mais alta. Por exemplo, considere uma hierarquia de sites hospedados por um serviço. Sites contêm muitas páginas organizadas de uma maneira hierárquica. Sites hospedados poderiam ser movidos a outros locais na hierarquia do site, mas as páginas subordinadas raramente seriam reorganizadas. Isso poderia ser representado por:  
   
@@ -122,7 +122,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Um documento XML é uma árvore e, portanto, uma instância de tipo de dados XML única pode representar uma hierarquia completa. Na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quando um índice XML é criado, `hierarchyid` valores são usados internamente para representar a posição na hierarquia.  
+ Um documento XML é uma árvore e, portanto, uma instância de tipo de dados XML única pode representar uma hierarquia completa. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Quando um índice XML é criado, `hierarchyid` os valores são usados internamente para representar a posição na hierarquia.  
   
  Usar um tipo de dados XML pode ser vantajoso quando todos os seguintes itens forem verdadeiros:  
   
@@ -159,7 +159,7 @@ GO
   
      Em um índice por amplitude todos os filhos diretos de um nós são colocados. Índices por amplitude são, portanto, eficientes para responder consultas sobre filhos diretos, como "Localizar todos os empregados que se reportam diretamente a esse gerente".  
   
- Ter opções por profundidade, por amplitude, ou ambas, e qual delas tornar a chave de clustering (se houver), depende da importância relativa dos tipos de consultas anteriores e da importância relativa de operações SELECT versus DML. Para obter um exemplo detalhado de indexação de estratégias, veja [Tutorial: Como usar o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Ter opções por profundidade, por amplitude, ou ambas, e qual delas tornar a chave de clustering (se houver), depende da importância relativa dos tipos de consultas anteriores e da importância relativa de operações SELECT versus DML. Para obter um exemplo detalhado de estratégias de indexação, consulte [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Criando índices  
@@ -265,7 +265,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> Tarefas relacionadas  
   
 ###  <a name="migrating"></a> Migrando de Pai/Filho para hierarchyid  
- A maioria das árvores é representada usando Pai/Filho. O modo mais fácil de migrar de uma estrutura Pai/Filho para uma tabela usando `hierarchyid` é usar uma coluna ou uma tabela temporária para manter o controle do número de nós em cada nível da hierarquia. Para obter um exemplo de migração de uma tabela Pai/Filho, veja a lição 1 do [Tutorial: Como usar o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ A maioria das árvores é representada usando Pai/Filho. O modo mais fácil de migrar de uma estrutura Pai/Filho para uma tabela usando `hierarchyid` é usar uma coluna ou uma tabela temporária para manter o controle do número de nós em cada nível da hierarquia. Para obter um exemplo de migração de uma tabela Pai/Filho, consulte a lição 1 do [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gerenciando uma árvore com hierarchyid  
@@ -319,7 +319,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Exemplo utilizando uma transação serializável  
- O tipo de dados **Org_BreadthFirst** assegura que a determinação de **@last_child** use uma busca de intervalo. Além de outros casos de erro que um aplicativo tente verificar, uma violação da chave duplicada depois da inserção indica uma tentativa de adicionar vários funcionários com a mesma ID e, portanto, **@last_child** deve ser novamente computado. O código a seguir usa uma transação serializável e um índice de primeira amplitude para computar o valor do novo nó:  
+ O tipo de dados **Org_BreadthFirst** assegura que a determinação de **@last_child** use uma busca de intervalo. Além de outros casos de erro, um aplicativo pode querer verificar, uma violação de chave duplicada após a inserção indica uma tentativa de adicionar vários funcionários com a mesma ID e **@last_child** , portanto, deve ser recomputado. O código a seguir usa uma transação serializável e um índice de primeira amplitude para computar o valor do novo nó:  
   
 ```  
 CREATE TABLE Org_T2  
@@ -389,7 +389,7 @@ GO
   
   
 ###  <a name="findclr"></a> Localizando ancestrais usando o CLR  
- Uma operação comum que envolve dois nós em uma hierarquia é encontrar o mais baixo ancestral comum. Isso pode ser escrito em [!INCLUDE[tsql](../includes/tsql-md.md)] ou CLR, porque o `hierarchyid` tipo está disponível em ambos. CLR é recomendado porque o desempenho será mais rápido.  
+ Uma operação comum que envolve dois nós em uma hierarquia é encontrar o mais baixo ancestral comum. Isso pode ser escrito em um [!INCLUDE[tsql](../includes/tsql-md.md)] ou CLR, pois o `hierarchyid` tipo está disponível em ambos. CLR é recomendado porque o desempenho será mais rápido.  
   
  Use o código CLR a seguir para listar os ancestrais e localizar o ancestral comum mais baixo:  
   
@@ -497,7 +497,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> Movendo subárvores  
- Outra operação comum é mover subárvores. O procedimento abaixo toma uma subárvore de **@oldMgr** e a transforma em ( **@oldMgr** inclusive) uma subárvore de **@newMgr** .  
+ Outra operação comum é mover subárvores. O procedimento a seguir usa a subárvore de **@oldMgr** e a torna **@oldMgr**(incluindo) uma **@newMgr**subárvore de.  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
@@ -523,9 +523,9 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de método de tipo de dados hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Tutorial: Usar o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

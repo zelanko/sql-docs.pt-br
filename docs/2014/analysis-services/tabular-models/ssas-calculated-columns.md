@@ -1,5 +1,5 @@
 ---
-title: Colunas (SSAS Tabular) calculadas | Microsoft Docs
+title: Colunas calculadas (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284890"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Colunas calculadas (SSAS tabular)
-  Colunas calculadas, em modelos tabulares, permitem que você adicione novos dados a seu modelo. Em vez de colar ou importar valores na coluna, você deve criar uma fórmula DAX que define os valores de nível de linha da coluna. A coluna calculada pode então ser usada em um relatório, Tabela Dinâmica ou Gráfico Dinâmico como você faria com qualquer outra coluna.  
+  Colunas calculadas, em modelos tabulares, permitem que você adicione novos dados a seu modelo. Em vez de colar ou importar valores para a coluna, você cria uma fórmula DAX que define os valores de nível de linha da coluna. A coluna calculada pode então ser usada em um relatório, Tabela Dinâmica ou Gráfico Dinâmico como você faria com qualquer outra coluna.  
   
 > [!NOTE]  
 >  As colunas calculadas não têm suporte para modelos tabulares no modo DirectQuery. Para obter mais informações, consulte [Modo DirectQuery &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "67284890"
   
  Esta fórmula extrai o mês da coluna StartDate. Em seguida, ela calcula o final do valor de mês para cada linha da tabela. O segundo parâmetro especifica o número de meses antes ou depois do mês em StartDate; neste caso, 0 significa o mesmo mês. Por exemplo, se o valor na coluna StartDate for 01/06/2001, o valor na coluna calculada será 30/06/2001.  
   
-##  <a name="bkmk_naming"></a> Nomeando uma coluna calculada  
+##  <a name="bkmk_naming"></a>Nomeando uma coluna calculada  
  Por padrão, novas colunas calculadas são adicionadas à direita de outras colunas em uma tabela, e a coluna recebe automaticamente o nome padrão **CalculatedColumn1**, **CalculatedColumn2**e assim por diante. Você também pode clicar com o botão direito em uma coluna e clicar em Inserir Coluna para criar uma nova coluna entre duas colunas existentes. Você pode reorganizar as colunas dentro da mesma tabela clicando e arrastando, e pode renomear as colunas depois que elas forem criadas; porém, você deve estar atento às seguintes restrições sobre alterações para colunas calculadas:  
   
 -   Cada nome de coluna deve ser exclusivo dentro de uma tabela.  
@@ -62,7 +62,7 @@ ms.locfileid: "67284890"
   
 -   Há alguns caracteres que não podem ser usados nos nomes de colunas. Para obter mais informações, consulte "Requisitos de nomenclatura" em [DAX Syntax Specification for PowerPivot](/dax/dax-syntax-reference).  
   
-##  <a name="bkmk_perf"></a> Desempenho de colunas calculadas  
+##  <a name="bkmk_perf"></a>Desempenho de colunas calculadas  
  A fórmula de uma coluna calculada pode consumir mais recursos do que a fórmula usada para uma medida. Um motivo é que o resultado para uma coluna calculada sempre é calculado para cada linha de uma tabela, enquanto uma medida é calculada apenas para as células definidas pelo filtro usado em um relatório, Tabela Dinâmica ou Gráfico Dinâmico. Por exemplo, uma tabela com um milhão de linhas sempre terá uma coluna calculada com um milhão de resultados, e um efeito correspondente em desempenho. No entanto, uma Tabela Dinâmica normalmente filtra os dados, aplicando títulos de linha e coluna; por isso, uma medida só é calculada para o subconjunto de dados em cada célula da Tabela Dinâmica.  
   
  Uma fórmula tem dependências nos objetos referenciados na fórmula, como outras colunas ou expressões que avaliam valores. Por exemplo, uma coluna calculada baseada em outra coluna, ou um cálculo que contenha uma expressão com uma referência de coluna, não pode ser avaliada até que a outra coluna seja avaliada. Por padrão, a atualização automática permanece habilitada em pastas de trabalho; por isso, todas essas dependências podem afetar o desempenho enquanto os valores são atualizados e as fórmulas, atualizadas.  
@@ -79,13 +79,13 @@ ms.locfileid: "67284890"
   
 ##  <a name="bkmk_rel_tasks"></a> Tarefas relacionadas  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Criar uma coluna calculada &#40;SSAS Tabular&#41;](ssas-calculated-columns-create-a-calculated-column.md)|As tarefas neste tópico descrevem como adicionar uma nova coluna calculada a uma tabela.|  
+|[Criar uma coluna calculada &#40;SSAS de tabela&#41;](ssas-calculated-columns-create-a-calculated-column.md)|As tarefas neste tópico descrevem como adicionar uma nova coluna calculada a uma tabela.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas e colunas &#40;SSAS de Tabela&#41;](tables-and-columns-ssas-tabular.md)   
- [Medidas &#40;SSAS de Tabela&#41;](measures-ssas-tabular.md)   
- [Cálculos &#40;SSAS de Tabela&#41;](calculations-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas e colunas &#40;SSAS de tabela&#41;](tables-and-columns-ssas-tabular.md)   
+ [Medidas &#40;&#41;de tabela do SSAS](measures-ssas-tabular.md)   
+ [Cálculos &#40;SSAS de tabela&#41;](calculations-ssas-tabular.md)  
   
   

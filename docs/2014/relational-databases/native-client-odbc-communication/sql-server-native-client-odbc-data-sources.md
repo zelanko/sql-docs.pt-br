@@ -1,5 +1,5 @@
 ---
-title: Fontes de dados do SQL Server Native Client ODBC | Microsoft Docs
+title: SQL Server Native Client fontes de dados ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de1226d675859312e1ccaf908141586f865c8946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028383"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>fontes de dados ODBC do SQL Server Native Client
   Um DSN (nome da fonte de dados) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica uma fonte de dados ODBC que contém todas as informações de que um aplicativo ODBC precisa para se conectar a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor específico. Há duas maneiras de definir um nome da fonte de dados ODBC:  
   
--   Em um computador cliente, abra Ferramentas administrativas no painel de controle e clique duas vezes em **fontes de dados (ODBC)** . O Administrador de Fonte de Dados ODBC será aberto e poderá ser usado para criar um DSN.  
+-   Em um computador cliente, abra Ferramentas administrativas no painel de controle e clique duas vezes em **fontes de dados (ODBC)**. O Administrador de Fonte de Dados ODBC será aberto e poderá ser usado para criar um DSN.  
   
 -   Em um aplicativo ODBC, chame [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63028383"
   
  Não é necessário um aplicativo ODBC para se conectar através de uma fonte de dados. Entretanto, o aplicativo precisa fornecer as mesmas informações de conectividade para uma função de conexão ODBC que de outro modo o driver encontraria em um DSN.  
   
-## <a name="see-also"></a>Consulte também  
- [Comunicando-se com o SQL Server &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Comunicando-se com SQL Server &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
   
   

@@ -17,14 +17,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919955"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Trabalhando com tipos de dados definidos pelo usuário no SQL Server
-  Você pode acessar a funcionalidade do tipo definido pelo usuário (UDT) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do [!INCLUDE[tsql](../../includes/tsql-md.md)] idioma usando a sintaxe da consulta regular. Os UDTs podem ser usados na definição de objetos de banco de dados, como variáveis em lotes do [!INCLUDE[tsql](../../includes/tsql-md.md)], em funções e procedimentos armazenados, e como argumentos em funções e procedimentos armazenados.  
+  Você pode acessar a funcionalidade de UDT (tipo definido pelo usuário [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) no [!INCLUDE[tsql](../../includes/tsql-md.md)] por meio do idioma usando a sintaxe de consulta regular. Os UDTs podem ser usados na definição de objetos de banco de dados, como variáveis em lotes do [!INCLUDE[tsql](../../includes/tsql-md.md)], em funções e procedimentos armazenados, e como argumentos em funções e procedimentos armazenados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Definindo tabelas e colunas UDT](working-with-user-defined-types-defining-udt-tables-and-columns.md)  
@@ -33,7 +33,7 @@ ms.locfileid: "62919955"
  [Manipulando dados UDT](working-with-user-defined-types-manipulating-udt-data.md)  
  Descreve como usar o [!INCLUDE[tsql](../../includes/tsql-md.md)] para trabalhar com dados UDT no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos definidos pelo usuário do CLR](clr-user-defined-types.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tipos CLR definidos pelo usuário](clr-user-defined-types.md)  
   
   

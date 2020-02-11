@@ -1,5 +1,5 @@
 ---
-title: Exemplo do método (VC + +) move | Microsoft Docs
+title: Exemplo do método Move (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ad0cfea4762dc1e6e757a0fe6182505927b70c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932093"
 ---
 # <a name="move-method-example-vc"></a>Exemplo do método Move (VC++)
-Este exemplo usa o [mover](../../../ado/reference/ado-api/move-method-ado.md) método para posicionar o ponteiro de registro com base na entrada do usuário.  
+Este exemplo usa o método [move](../../../ado/reference/ado-api/move-method-ado.md) para posicionar o ponteiro de registro com base na entrada do usuário.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -257,5 +257,5 @@ Enter number of records to Move
 (positive or negative, Enter to quit):  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)

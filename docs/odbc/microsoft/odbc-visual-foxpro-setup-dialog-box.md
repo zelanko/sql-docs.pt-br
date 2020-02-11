@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de instalação do ODBC do Visual FoxPro | Microsoft Docs
+title: Caixa de diálogo instalação do ODBC do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9aa8954cd42ac715b3e6e67e0b0add69d07a570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915661"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Caixa de diálogo da instalação do Visual FoxPro do ODBC
-O **a instalação do Visual FoxPro ODBC** caixa de diálogo permite que você adicionar ou alterar uma fonte de dados do Visual FoxPro.  
+A caixa de diálogo **configuração do ODBC do Visual FoxPro** permite que você adicione ou altere uma fonte de dados do Visual FoxPro.  
   
- Para baixar o driver, consulte [o site de download do Driver ODBC do Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Para baixar o driver, consulte [o site de download do driver ODBC do Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
 ## <a name="dialog-box-options"></a>Opções da caixa de diálogo  
  **Nome da fonte de dados**  
@@ -34,40 +34,40 @@ O **a instalação do Visual FoxPro ODBC** caixa de diálogo permite que você a
  Digite uma descrição para a fonte de dados.  
   
  **Tipo de banco de dados**  
- Permite que você escolha o tipo de banco de dados que você deseja que sua fonte de dados para se conectar ao.  
+ Permite que você escolha o tipo de banco de dados ao qual você deseja que sua fonte se conecte.  
   
- **Banco de dados do Visual FoxPro (. DBC)**  
- Especifica que a fonte de dados se conecta a um Visual FoxPro [banco de dados](../../odbc/microsoft/visual-foxpro-terminology.md) (arquivo. dbc) e para todas as tabelas e exibições locais no banco de dados.  
+ **Banco de dados do Visual FoxPro (. DBC**  
+ Especifica que a fonte de dados se conecta a um [banco](../../odbc/microsoft/visual-foxpro-terminology.md) de dado do Visual FoxPro (arquivo. DBC) e a todas as tabelas e exibições locais no banco de dados.  
   
- **Diretório livre de tabela**  
- Especifica que a fonte de dados se conecta a um diretório da [tabelas livres](../../odbc/microsoft/visual-foxpro-terminology.md). Qualquer [banco de dados](../../odbc/microsoft/visual-foxpro-terminology.md) tabelas no mesmo diretório, como são ignoradas pelas funções de catálogo ODBC [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) ou [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md). Tabelas de banco de dados podem ser acessadas usando instruções SQL SELECT enviadas por meio [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) e [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
+ **Diretório de tabela livre**  
+ Especifica que a fonte de dados se conecta a um diretório de [tabelas livres](../../odbc/microsoft/visual-foxpro-terminology.md). Todas as tabelas de [banco de dados](../../odbc/microsoft/visual-foxpro-terminology.md) no mesmo diretório são ignoradas por funções de catálogo ODBC, como [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) ou [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md). As tabelas de banco de dados podem ser acessadas usando instruções SQL SELECT enviadas por meio de [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) e [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
   
  **Caminho**  
- Exibe o caminho e o nome para o banco de dados ou o diretório de tabelas livres ao qual a fonte de dados se conecta.  
+ Exibe o caminho e o nome do banco de dados ou o diretório de tabelas livres aos quais a fonte de dado se conecta.  
   
  **Procurar**  
- Permite que você pesquise seu sistema e rede para o banco de dados ou o diretório ao qual você deseja se conectar à fonte de dados.  
+ Permite pesquisar o sistema e a rede no banco de dados ou diretório no qual você deseja conectar-se à fonte.  
   
  **Opções**  
- Expande a caixa de diálogo para que você pode definir opções de Driver de ODBC do Visual FoxPro.  
+ Expande a caixa de diálogo para que você possa definir opções de driver ODBC do Visual FoxPro.  
   
 ## <a name="driver"></a>Driver  
  **Sequência de agrupamento**  
- A sequência na qual os campos são classificados. As sequências de padrão refletem as sequências compatíveis com sua versão de idioma do sistema operacional. Para obter uma lista de sequências de agrupamento com suporte, consulte [definir COLLATE](../../odbc/microsoft/set-collate-command.md).  
+ A sequência na qual os campos são classificados. As sequências padrão refletem as sequências com suporte na sua versão de idioma do sistema operacional. Para obter uma lista de sequências de agrupamento com suporte, consulte [set COLLATE](../../odbc/microsoft/set-collate-command.md).  
   
- **Exclusive**  
- Quando essa caixa de seleção é selecionada, o driver abre o banco de dados do Visual FoxPro exclusivamente ao acessar dados usando a fonte de dados. Outros usuários não podem acessar o banco de dados ou as tabelas no banco de dados enquanto o banco de dados fica aberto exclusivamente. Tabelas no banco de dados aberto exclusivamente são abertas como compartilhado. Para abrir uma tabela de modo exclusivo, use o [exclusivo definido](../../odbc/microsoft/set-exclusive-command.md) comando. Essa caixa de seleção está desabilitada quando **tipo de banco de dados** é definido como **tabela livre**.  
+ **Exclusivo**  
+ Quando essa caixa de seleção está marcada, o driver abre o banco de dados do Visual FoxPro exclusivamente quando você acessa os dados usando a fonte. Outros usuários não podem acessar o banco de dados ou as tabelas no banco de dados enquanto o banco de dados é aberto exclusivamente. As tabelas dentro do banco de dados aberto exclusivamente são abertas como compartilhadas. Para abrir uma tabela exclusivamente, use o comando [set Exclusive](../../odbc/microsoft/set-exclusive-command.md) . Essa caixa de seleção é desabilitada quando o **tipo de banco de dados** é definido como diretório de **tabela livre**.  
   
  **Nulo**  
- Determina se as colunas com ALTER TABLE e CREATE TABLE permitirão valores nulos. Se você definir ON nulo, o INSERT - SQL insere um valor nulo em qualquer coluna que não são incluída em uma instrução INSERT - SQL... Cláusula VALUE. Um espaço em branco é inserido quando Null é OFF. Você também pode controlar essa opção por meio de uma cadeia de caracteres de conexão passada como no código a seguir:  
+ Determina se as colunas criadas com ALTER TABLE e CREATE TABLE permitem valores nulos. Se você definir NULL ON, INSERT-SQL inserirá um valor nulo em qualquer coluna não incluída em um INSERT-SQL... Cláusula VALUE. Um espaço em branco será inserido se NULL for OFF. Você também pode controlar essa opção por meio de uma cadeia de conexão passada como no código a seguir:  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
 SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;NULL=NO"  
 ```  
   
- **Excluído**  
- Determina se as linhas marcadas como excluídas são retornadas. Você também pode controlar essa opção por meio de uma cadeia de caracteres de conexão passada como no código a seguir:  
+ **Excluí**  
+ Determina se as linhas marcadas como excluídas são retornadas. Você também pode controlar essa opção por meio de uma cadeia de conexão passada como no código a seguir:  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
@@ -76,4 +76,4 @@ DELETED=YES"
 ```  
   
  **Buscar dados em segundo plano**  
- Determina se os registros serão buscados em segundo plano (buscando progressivo) ou seu aplicativo aguardará até que todos os registros no conjunto de resultados.
+ Determina se os registros serão buscados em segundo plano (busca progressiva) ou se o aplicativo aguardará até que todos os registros no conjunto de resultados sejam buscados.

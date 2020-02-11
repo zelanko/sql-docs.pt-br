@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7e95af96249b64f86bb1466283e8a1a38a32d90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905771"
 ---
 # <a name="lag-mdx"></a>Latência (MDX)
@@ -37,13 +37,13 @@ Member_Expression.Lag(Index)
 ## <a name="remarks"></a>Comentários  
  As posições de membros em um nível são determinadas pela ordem natural da hierarquia de atributo. A numeração das posições se baseia em zero.  
   
- Se o retardo especificado for zero, o **Lag** função retorna o próprio membro especificado.  
+ Se o retardo especificado for zero, a função **lag** retornará o próprio membro especificado.  
   
- Se o retardo especificado for negativo, o **Lag** função retorna um membro subsequente.  
+ Se o retardo especificado for negativo, a função **lag** retornará um membro subsequente.  
   
- `Lag(1)` é equivalente a [PrevMember](../mdx/prevmember-mdx.md) função. `Lag(-1)` é equivalente a [NextMember](../mdx/nextmember-mdx.md) função.  
+ `Lag(1)`é equivalente à função [PrevMember](../mdx/prevmember-mdx.md) . `Lag(-1)`é equivalente à função [NextMember](../mdx/nextmember-mdx.md) .  
   
- O **Lag** função é semelhante ao [levar](../mdx/lead-mdx.md) funcionar, exceto que o **levar** função procura na direção oposta a **retardo** função. Ou seja, `Lag(n)` é equivalente a `Lead(-n)`.  
+ A função **lag** é semelhante à função [Lead](../mdx/lead-mdx.md) , exceto que a função **Lead** procura na direção oposta à função **lag** . Ou seja, `Lag(n)` é equivalente a `Lead(-n)`.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna o valor para dezembro de 2001:  
@@ -62,7 +62,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

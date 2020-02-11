@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999934"
 ---
 # <a name="object-explorer-details-pane"></a>Painel Detalhes do Pesquisador de Objetos
@@ -38,15 +38,15 @@ ms.locfileid: "62999934"
   
  Detalhes do Pesquisador de Objetos inclui uma barra de ferramentas que contém os ícones descritos na tabela a seguir. Os ícones estão disponíveis apenas quando apropriado.  
   
-|Ícone|Ação|  
+|ícone|Ação|  
 |----------|------------|  
 |**Voltar**|Move para os itens anteriores exibidos em Detalhes do Pesquisador de Objetos. Executa novamente uma pesquisa quando a exibição anterior é o resultado de uma operação de pesquisa.|  
 |**Avançar**|Move para a próxima tela depois que uma operação **Voltar** é selecionada.|  
-|**Para cima**|Move para o objeto ou a pasta pai.|  
+|**Operante**|Move para o objeto ou a pasta pai.|  
 |**Sincronizar**|Define o foco de Pesquisador de Objetos para o objeto selecionado em Detalhes do Pesquisador de Objetos.|  
 |**Filter**|Quando disponível, mostra um subconjunto configurável de objetos.|  
 |**Atualizar**|Atualiza a exibição em Detalhes do Pesquisador de Objetos.|  
-|**Pesquisa**|Fornece uma área para inserir um termo de pesquisa para objetos de banco de dados específicos.|  
+|**Pesquisar**|Fornece uma área para inserir um termo de pesquisa para objetos de banco de dados específicos.|  
   
 ### <a name="column-header-selections"></a>Seleções de cabeçalho de coluna  
  Detalhes do Pesquisador de Objetos possui colunas selecionáveis. Você pode clicar com o botão direito do mouse em qualquer cabeçalho de coluna e pode verificar os itens que deseja exibir. Suas seleções serão persistentes entre os diferentes objetos pelos quais você navega. As seleções de cada usuário são preservadas quando você sai do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e o reinicia.  
@@ -87,7 +87,7 @@ ms.locfileid: "62999934"
 ## <a name="sql-server-object-search"></a>Pesquisa de objetos do SQL Server  
  Curingas  
   
--   Há suporte para os caracteres curinga padrão. Por exemplo, uma pesquisa por **dm_os%counters** retorna dm_os_memory_cache_counters e dm_os_performance_counters. Para obter mais informações, consulte [pesquisar texto com curingas](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Há suporte para os caracteres curinga padrão. Por exemplo, uma pesquisa por **dm_os%counters** retorna dm_os_memory_cache_counters e dm_os_performance_counters. Para obter mais informações, consulte [Pesquisar texto com curingas](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
  Escopo de pesquisa  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62999934"
   
 -   A pesquisa de conjuntos de objetos grandes pode levar muito tempo e reduzir o desempenho do servidor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pesquisador de Objetos](object-explorer.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Exemplo da propriedade MarshalOptions (VC + +) | Microsoft Docs
+title: Exemplo da propriedade marshaloptions (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ce0f7bce4af9a57963a7efa29f6bcbc4280c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932263"
 ---
 # <a name="marshaloptions-property-example-vc"></a>Exemplo da propriedade MarshalOptions (VC++)
-Este exemplo usa o [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) propriedade para especificar quais linhas são enviadas de volta para o servidor - todas as linhas ou apenas as linhas modificadas.  
+Este exemplo usa a propriedade [marshaloptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) para especificar quais linhas são enviadas de volta para o servidor-todas as linhas ou apenas as linhas modificadas.  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  
@@ -244,5 +244,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)

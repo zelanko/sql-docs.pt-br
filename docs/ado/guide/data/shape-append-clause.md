@@ -1,5 +1,5 @@
 ---
-title: Cláusula APPEND de forma | Microsoft Docs
+title: Cláusula de ANEXAção de forma | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924188"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND de forma
-A cláusula de ACRÉSCIMO do comando de forma acrescenta uma coluna ou colunas para um **conjunto de registros**. Com frequência, essas colunas são colunas de capítulo que se referem a um filho **conjunto de registros**.  
+A cláusula comando de forma APPEND acrescenta uma coluna ou colunas a um **conjunto de registros**. Frequentemente, essas colunas são colunas de capítulo, que se referem a um **conjunto de registros**filho.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,25 +30,25 @@ A cláusula de ACRÉSCIMO do comando de forma acrescenta uma coluna ou colunas p
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>Descrição  
- As partes dessa cláusula são da seguinte maneira:  
+## <a name="description"></a>DESCRIÇÃO  
+ As partes dessa cláusula são as seguintes:  
   
- *parent-command*  
- Zero ou uma das opções a seguir (você pode omitir as *comando pai* completamente):  
+ *comando pai*  
+ Zero ou um dos seguintes (você pode omitir completamente o *comando pai* ):  
   
--   Um comando de provedor entre chaves ("{}") que retorna um **Recordset** objeto. O comando for emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos do provedor. Isso geralmente será a linguagem SQL, embora o ADO não exige qualquer linguagem de consulta específica.  
+-   Um comando de provedor entre chaves ("{}") que retorna um objeto **Recordset** . O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos desse provedor. Normalmente, essa será a linguagem SQL, embora o ADO não exija nenhuma linguagem de consulta específica.  
   
--   Inserido comando de outra forma entre parênteses.  
+-   Outro comando de forma inserido entre parênteses.  
   
--   A tabela a palavra-chave, seguida do nome de uma tabela no provedor de dados.  
+-   A palavra-chave TABLE, seguida pelo nome de uma tabela no provedor de dados.  
   
  *parent-alias*  
- Um alias opcional que se refere ao pai **conjunto de registros**.  
+ Um alias opcional que se refere ao **conjunto de registros**pai.  
   
- *column-list*  
- Um ou mais das seguintes opções:  
+ *lista de colunas*  
+ Um ou mais dos seguintes:  
   
--   Uma coluna agregada.  
+-   Uma coluna de agregação.  
   
 -   Uma coluna calculada.  
   
@@ -65,52 +65,52 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>Comentários  
- *child-recordset*  
- -   Um comando de provedor entre chaves ("{}") que retorna um **Recordset** objeto. O comando for emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos do provedor. Isso geralmente será a linguagem SQL, embora o ADO não exige qualquer linguagem de consulta específica.  
+ *filho-conjunto de registros*  
+ -   Um comando de provedor entre chaves ("{}") que retorna um objeto **Recordset** . O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos desse provedor. Normalmente, essa será a linguagem SQL, embora o ADO não exija nenhuma linguagem de consulta específica.  
   
--   Inserido comando de outra forma entre parênteses.  
+-   Outro comando de forma inserido entre parênteses.  
   
--   O nome de um existente em forma **conjunto de registros**.  
+-   O nome de um conjunto de **registros**moldado existente.  
   
--   A tabela a palavra-chave, seguida do nome de uma tabela no provedor de dados.  
+-   A palavra-chave TABLE, seguida pelo nome de uma tabela no provedor de dados.  
   
- *child-alias*  
- Um alias que se refere ao filho **conjunto de registros**.  
+ *alias filho*  
+ Um alias que se refere ao **conjunto de registros**filho.  
   
- *parent-column*  
- Uma coluna na **conjunto de registros** retornado pela *comando pai.*  
+ *coluna pai*  
+ Uma coluna no **conjunto de registros** retornada pelo *comando pai.*  
   
- *child-column*  
- Uma coluna na **conjunto de registros** retornado pela *comando filho*.  
+ *coluna filho*  
+ Uma coluna no **conjunto de registros** retornada pelo *comando filho*.  
   
- *param-number*  
- Ver [operação de comandos parametrizados](../../../ado/guide/data/operation-of-parameterized-commands.md).  
+ *param-Number*  
+ Consulte a [operação de comandos com parâmetros](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *chapter-alias*  
- Um alias que refere-se para a coluna de capítulo anexada ao pai.  
-  
-> [!NOTE]
->  O *"coluna pai* TO *coluna filho"* cláusula é, na verdade, uma lista, onde cada relação definida é separada por uma vírgula  
+ *Capítulo-alias*  
+ Um alias que se refere à coluna de capítulo anexada ao pai.  
   
 > [!NOTE]
->  A cláusula após a palavra-chave de ACRÉSCIMO é, na verdade, uma lista, onde cada cláusula é separada por uma vírgula e define a outra coluna a ser acrescentado ao pai.  
+>  A cláusula *"pai-coluna* para *filho-Column"* é, na verdade, uma lista, onde cada relação definida é separada por uma vírgula  
+  
+> [!NOTE]
+>  A cláusula após a palavra-chave APPEND é, na verdade, uma lista, em que cada cláusula é separada por uma vírgula e define outra coluna a ser acrescentada ao pai.  
   
 ## <a name="remarks"></a>Comentários  
- Quando você constrói os comandos do provedor da entrada do usuário como parte de um comando de forma, forma tratará o fornecido pelo usuário um comando do provedor como uma cadeia de caracteres opaca e passá-los fielmente ao provedor. Por exemplo, no comando de forma a seguir,  
+ Quando você constrói comandos de provedor da entrada do usuário como parte de um comando de forma, a forma tratará o comando de provedor fornecido pelo usuário como uma cadeia de caracteres opaca e os passará de maneira precisa para o provedor. Por exemplo, no comando de forma a seguir,  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- FORMA irá executar dois comandos: `select * from t1` e (`select * from t2 RELATE k1 TO k2)`. Se o usuário fornece um comando composto que consiste em vários comandos de provedor, separados por ponto e vírgula, forma não é capaz de distinguir a diferença. Portanto, o seguinte comando de forma  
+ A forma executará dois comandos `select * from t1` : e`select * from t2 RELATE k1 TO k2)`(. Se o usuário fornecer um comando composto que consiste em vários comandos de provedor separados por ponto e vírgula, a forma não será capaz de distinguir a diferença. Portanto, no comando de forma a seguir,  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- Executa de forma `select * from t1; drop table t1` e (`select * from t2 RELATE k1 TO k2),` sem perceber que `drop table t1` é uma separado e neste comando perigoso, caso, o provedor. Aplicativos sempre devem validar o entrada do usuário para impedir esses ataques potenciais do hacker.  
+ A forma é `select * from t1; drop table t1` executada e`select * from t2 RELATE k1 TO k2),` (não percebendo que `drop table t1` é um comando de provedor separado e, nesse caso, perigoso. Os aplicativos sempre devem validar a entrada do usuário para evitar que tais ataques de hacker potenciais ocorram.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Operação de comandos não parametrizados](../../../ado/guide/data/operation-of-non-parameterized-commands.md)  
   
@@ -120,7 +120,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [Cláusulas COMPUTE de forma de intervenção](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo de Data Shaping](../../../ado/guide/data/data-shaping-example.md)   
- [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo de formatação de dados](../../../ado/guide/data/data-shaping-example.md)   
+ [Gramática forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)

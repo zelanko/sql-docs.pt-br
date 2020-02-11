@@ -15,29 +15,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999548"
 ---
-# <a name="name-not-found-dialog-box"></a>Caixa de diálogo Nome Não Encontrado
+# <a name="name-not-found-dialog-box"></a>caixa de diálogo Nome Não Encontrado
   Um ou mais nomes de objeto não pôde ser encontrado na caixa de diálogo. Selecione uma opção para continuar.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Corrija essa informação e pesquise novamente**  
+ **Corrigir essas informações e Pesquisar novamente**  
  Selecione para permitir o uso das áreas **Selecionar este tipo de objeto**, **Tipo de objeto**e **Inserir o nome do objeto** .  
   
  **Selecionar este tipo de objeto**  
  Exibe os tipos de objeto selecionados usando o botão **Tipos de Objeto** .  
   
- **Tipos de Objeto**  
+ **Tipos de objeto**  
  Clique para abrir a caixa de diálogo **Selecionar Tipos de Objeto** e selecione os tipos de objeto de uma lista.  
   
- **Inserir o nome do objeto**  
+ **Insira o nome do objeto**  
  Contém o nome do objeto que não foi encontrado. Corrija o nome do objeto ou digite um nome de objeto novo.  
   
- **Remova** *\<nome do objeto >* **da seleção**  
+ **Remover o nome** **do** *objeto>\< *da seleção      
  Selecione para fechar a caixa de diálogo **Nome Não Encontrado** e remover o item da caixa de diálogo **Selecionar Objetos** .  
   
   

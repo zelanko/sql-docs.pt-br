@@ -1,5 +1,5 @@
 ---
-title: Atualizar para o SQL Server 2014 usando o Assistente de instalação (instalação) | Microsoft Docs
+title: Atualizar para o SQL Server 2014 usando o assistente de instalação (instalação) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775382"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Atualizar para o SQL Server 2014 usando o Assistente de Instalação (instalação)
   O Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma única árvore de recursos para a atualização de componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você também pode instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lado a lado com uma versão anterior, ou migrar bancos de dados existentes e parâmetros de configuração de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicá-los a uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Para obter mais informações, consulte estes tópicos:  
+ Para saber mais, consulte esses tópicos:  
   
 -   [Atualizações de versão e edição com suporte](supported-version-and-edition-upgrades.md)  
   
@@ -31,12 +31,12 @@ ms.locfileid: "62775382"
   
 -   [Atualizar uma instância de cluster de failover do SQL Server &#40;instalação&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
   
--   [Instalar o SQL Server 2014 do Prompt de Comando](install-sql-server-from-the-command-prompt.md)  
+-   [Install SQL Server 2014 from the Command Prompt](install-sql-server-from-the-command-prompt.md)  
   
 -   [Usar o Assistente para Copiar Banco de Dados](../../relational-databases/databases/use-the-copy-database-wizard.md)  
   
 > [!NOTE]  
->  Não há suporte para atualização de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em um computador executando o [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1. Para obter mais informações sobre instalações Server Core, consulte [instalar o SQL Server 2014 no Server Core](install-sql-server-on-server-core.md).  
+>  Não há suporte para atualização de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em um computador executando o [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1. Para obter mais informações sobre instalações do Server Core, consulte [instalar SQL Server 2014 no Server Core](install-sql-server-on-server-core.md).  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e execução no compartilhamento remoto, e ser um administrador local.  
@@ -45,16 +45,16 @@ ms.locfileid: "62775382"
   
 -   [Atualizar para o SQL Server 2014](upgrade-sql-server.md)  
   
--   [Requisitos de hardware e software para a instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Verificar parâmetros do Verificador de Configuração do Sistema](check-parameters-for-the-system-configuration-checker.md)  
   
 -   [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
--   [Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server](../sql-server-database-engine-backward-compatibility.md)  
+-   [SQL Server Mecanismo de Banco de Dados compatibilidade com versões anteriores](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  Lembre-se de que você não pode alterar os recursos a serem atualizados, nem adicionar recursos durante a operação de atualização. Para obter mais informações sobre como adicionar recursos a uma instância atualizada do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] depois que a operação de atualização for concluída, consulte [adicionar recursos a uma instância do SQL Server 2014 &#40;instalação&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
+>  Lembre-se de que você não pode alterar os recursos a serem atualizados, nem adicionar recursos durante a operação de atualização. Para obter mais informações sobre como adicionar recursos a uma instância atualizada do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] após a conclusão da operação de atualização, consulte [Adicionar recursos a uma instância do SQL Server 2014 &#40;instalação&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Procedimento  
   
@@ -62,9 +62,9 @@ ms.locfileid: "62775382"
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, vá para a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   
-2.  O Assistente de Instalação inicia o Centro de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para atualizar uma instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clique em **Instalação** na área de navegação esquerda e depois em **Atualizar do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**.  
+2.  O Assistente de Instalação inicia o Centro de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para atualizar uma instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clique **em instalação** na área de navegação à esquerda e, em seguida, clique em **Atualizar [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)],, ou **.  
   
-3.  Na página Chave do Produto, clique em uma opção para indicar se você está atualizando uma edição gratuita do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou se tem uma chave de PID para uma versão de produção do produto. Para obter mais informações, consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md).  
+3.  Na página Chave do Produto, clique em uma opção para indicar se você está atualizando uma edição gratuita do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou se tem uma chave de PID para uma versão de produção do produto. Para obter mais informações, consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [atualizações de versão e edição com suporte](supported-version-and-edition-upgrades.md).  
   
 4.  Na página Termos de Licença, examine o contrato de licença e, se concordar, marque a caixa de seleção **Aceito os termos da licença** e clique em **Avançar**. Para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você também pode habilitar a opção de uso de recursos e enviar relatórios à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62775382"
   
 6.  A página atualização da [!INCLUDE[msCoName](../../includes/msconame-md.md)] será exibida em seguida se a caixa de seleção de atualização da [!INCLUDE[msCoName](../../includes/msconame-md.md)] nas configurações do Painel de Controle\Todos os itens do Painel de Controle\Windows Update\Alterar não estiver marcada. Colocar a marca na página de atualização da [!INCLUDE[msCoName](../../includes/msconame-md.md)] modificará as configurações do computador para incluir as atualizações mais recentes quando você procurar pelo Windows Update.  
   
-7.  Na página Atualizações de Produto, as atualizações mais recentes de produtos disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são exibidas. Se você não desejar incluir as atualizações, desmarque a caixa de seleção **Incluir atualizações de produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Se nenhuma atualização de produto for descoberta, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não exibirá esta página e avançará automaticamente para a página **Instalar Arquivos de Instalação** .  
+7.  Na página Atualizações de Produto, as atualizações mais recentes de produtos disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são exibidas. Se você não desejar incluir as atualizações, desmarque a caixa de seleção **Incluir atualizações de produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Se nenhuma atualização de produto for descoberta, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não exibirá esta página e avançará automaticamente para a página **Instalar Arquivos de Instalação** .  
   
 8.  Na página Instalar Arquivos de Instalação, a Instalação apresenta o andamento do download, da extração e da instalação dos arquivos de Instalação. Se uma atualização para a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for localizada, e for especificada para ser incluída, essa atualização também será instalada.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62775382"
   
      Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], forneça credenciais nos campos na parte inferior da página.  
   
-     **Observação sobre segurança** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Observação de segurança** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "62775382"
   
 -   **Configure a nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** – para reduzir a área da superfície sujeita a ataque de um sistema, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos chave. Para obter mais informações sobre a configuração da área de superfície, consulte o arquivo leiame desta versão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualizar para o SQL Server 2014](upgrade-sql-server.md)   
  [Compatibilidade com versões anteriores](../../getting-started/backward-compatibility.md)  
   

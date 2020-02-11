@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021946"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Outros assinantes não SQL Server
-  Para uma lista de Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , suportados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)], consulte [Non-SQL Server Subscribers](non-sql-server-subscribers.md). Esse tópico inclui informações sobre exigências para drivers ODBC e provedores OLE DB.  
+  Para obter uma lista de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assinantes não compatíveis [!INCLUDE[msCoName](../../../includes/msconame-md.md)]com o, consulte [assinantes não SQL Server](non-sql-server-subscribers.md). Esse tópico inclui informações sobre exigências para drivers ODBC e provedores OLE DB.  
   
 ## <a name="odbc-driver-requirements"></a>Exigências do driver ODBC  
  O driver ODBC:  
   
--   Deve ser compatível com nível 1 do ODBC.  
+-   Deve estar em conformidade com nível 1 do ODBC.  
   
 -   Deve ser isento de threads e para a arquitetura do processador (Intel ou Alpha) e plataforma (32 bit ou 64 bit) na qual o Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é executado.  
   
@@ -40,15 +40,15 @@ ms.locfileid: "63021946"
 ## <a name="replicating-using-ole-db-interfaces"></a>Replicação com o uso de interfaces OLE DB  
  Provedores OLE DB devem oferecer suporte a esses objetos para replicação transacional:  
   
--   Objeto**DataSource**   
+-   Objeto **DataSource**  
   
--   Objeto**Sessão**   
+-   Objeto de **sessão**  
   
--   Objeto**Comando**   
+-   Objeto de **comando**  
   
--   Objeto**Conjunto de linhas**   
+-   Objeto **Rowset**  
   
--   Objeto**Erro**   
+-   Objeto de **erro**  
   
 ### <a name="datasource-object-interfaces"></a>Interfaces de objeto DataSource  
  As interfaces a seguir são exigidas para a conexão com uma fonte de dados:  
@@ -77,7 +77,7 @@ ms.locfileid: "63021946"
   
 -   **ICommand**  
   
--   **ICommandProperties**  
+-   **ICommandproperties**  
   
 -   **ICommandText**  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63021946"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** é necessário criar acessadores de parâmetro. Se o provedor oferece suporte para **IColumnRowset**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa aquela interface para determinar se uma coluna é uma coluna de identidade.  
+ **IAccessor** é necessário para criar acessadores de parâmetro. Se o provedor oferecer **** suporte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IColumnRowset, o usará essa interface para determinar se uma coluna é uma coluna de identidade.  
   
 ### <a name="rowset-object-interfaces"></a>Interfaces de objeto de conjunto de linhas  
  As seguintes interfaces são exigidas:  
@@ -113,7 +113,7 @@ ms.locfileid: "63021946"
   
  Para obter mais informações sobre o provedor OLE DB, consulte a documentação fornecida com seu provedor OLE DB.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)  
   
   

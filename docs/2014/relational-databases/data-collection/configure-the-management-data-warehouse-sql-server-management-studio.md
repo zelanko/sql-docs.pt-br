@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918813"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio)
@@ -59,15 +59,15 @@ ms.locfileid: "62918813"
   
 6.  Repita a etapa 5 até que todas as instâncias do banco de dados que usam o coletor de dados sejam configuradas para carregar os dados para o data warehouse de gerenciamento compartilhado.  
   
-####  <a name="Wizard"></a> Configurar o Assistente de Data Warehouse de Gerenciamento  
- **Página de boas-vindas**  
+####  <a name="Wizard"></a>Configurar o assistente de data warehouse de gerenciamento  
+ **Página inicial**  
   
  A página Bem-vindo é a página inicial do Assistente para Configurar Coleta de Dados. A exibição dessa página é opcional.  
   
- **Não mostrar essa página inicial novamente.**  
+ **Não mostrar esta página inicial novamente.**  
  Selecione para omitir esta página na próxima vez em que você iniciar o Assistente para Configurar Coleta de Dados.  
   
- **Página Armazenamento do Assistente para Configurar Data Warehouse de Gerenciamento**  
+ **Configurar a página de armazenamento do data warehouse de gerenciamento**  
   
  Use esta página para selecionar um servidor de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o data warehouse de gerenciamento. O data warehouse de gerenciamento é um banco de dados relacional que armazenará dados coletados.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62918813"
   
  O opção **Novo** só estará disponível durante a configuração de um conjunto de coleta de dados.  
   
- **Página Mapear Logons e Usuários**  
+ **Página Mapear logons e usuários**  
   
  Use esta página para mapear logons para funções de usuário de banco de dados no data warehouse de gerenciamento.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62918813"
   
  Especifique um logon marcando a caixa de seleção **Mapear** para o logon.  
   
- **Associação à função de banco de dados para:** *\<nome do data warehouse>*  
+ **Associação de função de banco de dados para:**  *\<data warehouse nome>*  
  Selecione a função do data warehouse de gerenciamento para o qual o logon está mapeado marcando a caixa de seleção em uma ou mais da opções a seguir:  
   
 -   **mdw_admin**  
@@ -105,11 +105,11 @@ ms.locfileid: "62918813"
  **Novo Logon**  
  Abra a caixa de diálogo **Logon - Novo** e crie um novo logon para o data warehouse de gerenciamento.  
   
- **Página Concluir o Assistente**  
+ **Concluir a página do assistente**  
   
  Use esta página para verificar e concluir a configuração de coleta de dados. A árvore exibida na janela de visualização mostra quais configurações serão aplicadas, além de quais ações serão executadas quando você clicar em **Concluir**.  
   
- **Página Progresso do Assistente para Configurar Coleta de Dados**  
+ **Página de progresso do assistente para configurar coleta de dados**  
   
  Use esta página para exibir os resultados de cada etapa de configuração.  
   
@@ -133,9 +133,9 @@ ms.locfileid: "62918813"
  **Fechar**  
  Feche o assistente.  
   
-## <a name="see-also"></a>Consulte também  
- [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
- [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_syscollector_enable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_syscollector_disable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
  [Coleta de Dados](data-collection.md)   
  [Gerenciar coleta de dados](manage-data-collection.md)  
   

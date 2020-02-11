@@ -15,14 +15,14 @@ ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98670a6f63392a3f208eb7719b0be52a9422d59a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920253"
 ---
 # <a name="cachesize-property-example-vc"></a>Exemplo da propriedade CacheSize (VC++)
-Este exemplo usa o [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) para mostrar a diferença de desempenho para uma operação executada com e sem um cache de registro de 30.  
+Este exemplo usa a propriedade [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) para mostrar a diferença no desempenho de uma operação executada com e sem um cache de 30 registros.  
   
 ```  
 // CacheSize_Property_Sample.cpp  
@@ -160,6 +160,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade CacheSize (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

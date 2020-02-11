@@ -1,5 +1,5 @@
 ---
-title: Definir a Conexão de servidor SQL para o serviço do SQL Server Agent (SQL Server Management Studio) | Microsoft Docs
+title: Definir a conexão de SQL Server para o serviço de SQL Server Agent (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1d02ef690dc8ce9ecca3f51d86203e306ea5589
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63034386"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Definir a Conexão do SQL Server para o Serviço do SQL Server Agent (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "63034386"
   
      [Segurança](#Security)  
   
--   **Para definir a conexão do SQL Server para o SQL Server Agent, usando:**  
+-   **Para definir a conexão de SQL Server para o SQL Server Agent, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63034386"
   
 -   Ajustar cotas de memória para um processo (SeIncreaseQuotaPrivilege)  
   
- Para obter mais informações sobre as permissões do Windows necessárias para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço do Agent, consulte [selecionar uma conta para o serviço do SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [configurar contas de serviço do Windows e Permissões](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Para obter mais informações sobre as permissões do Windows necessárias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a conta de serviço do Agent, consulte [selecionar uma conta para o serviço de SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   

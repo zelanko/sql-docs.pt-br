@@ -1,5 +1,5 @@
 ---
-title: Criar histórico e relatórios de Status | Microsoft Docs
+title: Criar relatórios de histórico e status | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807500"
 ---
 # <a name="create-history-and-status-reports"></a>Criar histórico e relatórios de status
@@ -27,27 +27,27 @@ ms.locfileid: "62807500"
   
 1.  No Gerenciador de Soluções, selecione o arquivo.  
   
-2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e clique em **histórico**.  
+2.  No menu **arquivo** , aponte para **controle do código-fonte**e clique em **histórico**.  
   
-3.  No **histórico de** \<arquivo ou projeto > caixa de diálogo, clique em **relatório**.  
+3.  Na caixa **de diálogo histórico do** \<arquivo ou do projeto>, clique em **relatório**.  
   
-4.  No **relatório de histórico** caixa de diálogo, selecione as opções apropriadas e, em seguida, clique em **Okey**.  
+4.  Na caixa de diálogo **relatório de histórico** , selecione as opções apropriadas e clique em **OK**.  
   
- Para obter mais informações sobre as opções que você pode especificar ao recuperar o histórico de um arquivo, consulte [exibir o histórico do arquivo](../../2014/database-engine/view-file-history.md).  
+ Para obter mais informações sobre as opções que você pode especificar ao recuperar o histórico de um arquivo, consulte [Exibir histórico de arquivos](../../2014/database-engine/view-file-history.md).  
   
 #### <a name="to-create-a-status-report"></a>Para criar um relatório de status  
   
 1.  No Gerenciador de Soluções, selecione o arquivo.  
   
-2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e clique em **propriedades do SourceSafe**.  
+2.  No menu **arquivo** , aponte para **controle do código-fonte**e clique em **Propriedades do SourceSafe**.  
   
-3.  No **Status do arquivo** caixa de diálogo, clique em **relatório**.  
+3.  Na caixa de diálogo **status do arquivo** , clique em **relatório**.  
   
-4.  No **relatório de arquivo de propriedades** caixa de diálogo, clique nas opções apropriadas e, em seguida, clique em **Okey**.  
+4.  Na caixa de diálogo **relatório de propriedades do arquivo** , clique nas opções apropriadas e, em seguida, clique em **OK**.  
   
- Para obter mais informações sobre as opções que você pode especificar ao recuperar o status do arquivo, consulte [exibir o Status do arquivo](../../2014/database-engine/view-file-status.md).  
+ Para obter mais informações sobre as opções que você pode especificar ao recuperar o status do arquivo, consulte [Exibir status do arquivo](../../2014/database-engine/view-file-status.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir e recuperar informações de versão](../../2014/database-engine/set-and-retrieve-version-information.md)  
   
   

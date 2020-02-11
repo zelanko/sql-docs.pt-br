@@ -1,5 +1,5 @@
 ---
-title: Opções (SQL Server Pesquisador de objetos – comandos) | Microsoft Docs
+title: Opções (Pesquisador de Objetos do SQL Server-comandos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999302"
 ---
-# <a name="options-sql-server-object-explorer-commands"></a>Opções (SQL Server Pesquisador de objetos – comandos)
+# <a name="options-sql-server-object-explorer-commands"></a>Opções (Pesquisador de Objetos do SQL Server-comandos)
   Quando você clica com o botão direito do mouse em uma tabela ou exibição no Pesquisador de Objetos, existem as seguintes duas opções para exibição de linhas na tabela:  
   
 -   **Selecionar 1000 Linhas Superiores**  
@@ -33,16 +33,16 @@ ms.locfileid: "62999302"
  Use a caixa de diálogo **Opções de Script Gerais** para alterar o número de linhas que serão abertas.  
   
 ## <a name="general-scripting-options"></a>Opções de Script Gerais  
- **Valor para Select Top \<n > comando de registro de auditoria**  
+ **Valor do comando selecionar \<n> auditoria de registro Top**  
  Especifica o número de linhas de auditoria a retornar. O padrão é 1000 linhas  
   
- **O valor para editar Top \<n > linhas de comando**  
+ **Valor do comando Editar \<as n> linhas superiores**  
  Especifica o número de linhas a serem retornadas quando você estiver editando linhas em uma tabela. O padrão é 200 linhas.  
   
- **Valor para Select Top \<n > linhas de comando**  
+ **Valor do comando selecionar \<n> linhas superiores**  
  Especifica o número de linhas a serem retornadas especificado no script do Editor de Consultas criado. O padrão é 1000 linhas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

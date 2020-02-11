@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917698"
 ---
 # <a name="database-mail-messaging-objects"></a>Objetos do sistema de mensagens do Database Mail
@@ -32,7 +32,7 @@ ms.locfileid: "62917698"
   
  Esses objetos são a interface para o Database Mail dentro do banco de dados de host de correio. Outros objetos estão instalados para implementar a funcionalidade oferecida pelos objetos listados acima. No entanto, esses objetos são reservados para uso interno.  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|DESCRIÇÃO|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-allitems-transact-sql)|`View`|Lista todas as mensagens submetidas ao Database Mail.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-event-log-transact-sql)|`View`|Lista mensagens sobre o comportamento do [Database Mail External Program](database-mail-external-program.md).|  
@@ -49,7 +49,7 @@ ms.locfileid: "62917698"
   
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Database Mail](database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7b61bd02d44639cb3f5ad540d53ebeebcff4da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832716"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Tarefa do Hive do Azure HDInsight
@@ -37,7 +37,7 @@ Para adicionar uma **Tarefa do Hive do Azure HDInsight**, arraste e solte-a no D
   
 5.  Há duas maneiras de especificar o script do Hive a ser executado:
   
-    1.  **Script embutido**: especifique o campo **Script**, digitando em linha o script a ser executado na caixa de diálogo **Inserir Script**.
+    1.  **Script em linha**: especifique o campo **Script** digitando em linha o script a ser executado na caixa de diálogo **Inserir Script**.
   
     2.  **Arquivo de script**: carregue o arquivo de script para o Armazenamento de Blobs do Azure e especifique o campo **BlobName**. Se o blob não estiver na conta de armazenamento padrão ou no contêiner associado ao cluster HDInsight, os campos **ExternalStorageAccountName** e **ExternalBlobContainer** deverão ser especificados. Para um blob externo, verifique se ele está configurado como acessível ao público.  
   

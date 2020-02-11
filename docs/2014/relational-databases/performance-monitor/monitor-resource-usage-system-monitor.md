@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032090"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitorar o uso de recursos (Monitor do Sistema)
@@ -69,7 +69,7 @@ ms.locfileid: "63032090"
   
 -   Atividade de disco  
   
--   Utilização de processador  
+-   Utilização do processador  
   
 -   Uso de memória  
   
@@ -82,10 +82,10 @@ ms.locfileid: "63032090"
 |Descreve quando usar o Monitor do Sistema e discute a sobrecarga de desempenho quando você usa o Monitor do Sistema.|[Executar o Monitor do Sistema](run-system-monitor.md)|  
 |Descreve como monitorar contadores de disco para determinar a atividade de disco e a quantidade de E/S gerada pelos componentes do SQL Server.|[Monitorar o uso do disco](monitor-disk-usage.md)|  
 |Descreve como monitorar uma instância do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para determinar se as taxas de uso de CPU estão dentro dos intervalos normais.|[Monitorar o uso da CPU](monitor-cpu-usage.md)|  
-|Descreve como monitorar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para confirmar que o uso de memória está dentro de intervalos normais.|[Monitorar o uso da memória](monitor-memory-usage.md)|  
-|Descreve como criar um alerta a ser emitido quando um valor limite de um contador do Monitor do Sistema for atingido.|[Criar um alerta de banco de dados do SQL Server](create-a-sql-server-database-alert.md)|  
+|Descreve como monitorar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para confirmar que o uso de memória está dentro de intervalos normais.|[Monitorar o uso de memória](monitor-memory-usage.md)|  
+|Descreve como criar um alerta a ser emitido quando um valor limite de um contador do Monitor do Sistema for atingido.|[Criar um alerta de Banco de Dados do SQL Server](create-a-sql-server-database-alert.md)|  
 |Descreve como criar gráficos, alertas, logs e relatórios para monitorar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Criar gráficos, alertas, logs e relatórios](create-charts-alerts-logs-and-reports.md)|  
 |Lista os objetos e contadores que o Monitor do Sistema usa para monitorar a atividade em computadores que executem uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Usar objetos do SQL Server](use-sql-server-objects.md)|  
-|Lista os objetos e contadores que o Monitor do Sistema usa para monitorar a atividade de OLTP na memória.|[XTP &#40;OLTP in-memory&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)|  
+|Lista os objetos e contadores que o Monitor do Sistema usa para monitorar a atividade de OLTP na memória.|[&#40;de OLTP na memória&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)|  
   
   

@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033613"
 ---
-# <a name="set-the-polling-interval-for-target-servers"></a>Definir o intervalo de sondagem para servidores de destino
-  Este tópico descreve como definir a frequência com que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent atualiza as informações do servidor mestre para os servidores de destino. Um trabalho é uma série especificada de ações que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executa. Um trabalho multisservidor é um trabalho executado por um servidor mestre em um ou mais servidores de destino.  
+# <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
+  Este tópico descreve como definir a frequência com que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agent atualiza informações do mestre para os servidores de destino. Um trabalho é uma série especificada de ações que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executa. Um trabalho multisservidor é um trabalho executado por um servidor mestre em um ou mais servidores de destino.  
   
 -   **Antes de começar:**  [Segurança](#Security)  
   
--   **Para definir o intervalo de sondagem de servidores de destino usando:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **Para definir o intervalo de sondagem para servidores de destino usando:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Cada servidor de destino pode executar uma instância do mesmo trabalho ao mesmo tempo. Cada servidor de destino sonda o servidor mestre periodicamente, baixa uma cópia dos eventuais trabalhos novos a ele atribuídos e, em seguida, desconecta-se. O servidor de destino executa o trabalho localmente e, depois, reconecta-se ao servidor mestre para carregar o status do resultado do trabalho.  
@@ -38,7 +38,7 @@ ms.locfileid: "63033613"
  Para obter informações detalhadas, consulte [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) e [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
 ##  <a name="SSMS"></a> Usando o SQL Server Management Studio  
- **Para definir o intervalo de sondagem de servidores de destino**  
+ **Para definir o intervalo de sondagem para servidores de destino**  
   
 1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e a expanda.  
   
@@ -57,15 +57,15 @@ ms.locfileid: "63033613"
     2.  Clique em **Estes servidores de destino** se nem todos os servidores de destino compartilharem o mesmo intervalo de sondagem, e selecione cada servidor de destino que usará o intervalo de sondagem que está sendo definido.  
   
 ##  <a name="TSQL"></a> Usando o Transact-SQL  
- **Para definir o intervalo de sondagem de servidores de destino**  
+ **Para definir o intervalo de sondagem para servidores de destino**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do Mecanismo de Banco de Dados e expanda-a.  
   
 2.  Na barra de ferramentas, clique em **Nova Consulta**.  
   
-3.  Na janela de consulta, use o [sp_post_msx_operation &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) procedimento para definir o intervalo de sondagem para servidores de destino armazenado do sistema.  
+3.  Na janela de consulta, use o sp_post_msx_operation &#40;procedimento armazenado do sistema [&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) para definir o intervalo de sondagem para servidores de destino.  
   
-## <a name="see-also"></a>Consulte também  
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+## <a name="see-also"></a>Consulte Também  
+ [dbo. sysdownloadlist &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   
