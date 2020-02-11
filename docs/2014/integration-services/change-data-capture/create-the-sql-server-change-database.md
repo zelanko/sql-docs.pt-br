@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771362"
 ---
 # <a name="create-the-sql-server-change-database"></a>Criar o banco de dados de alteração do SQL Server
@@ -42,7 +42,7 @@ ms.locfileid: "62771362"
  **Banco de Dados de alteração do SQL Server**  
  Esta seção é usada para criar o banco de dados.  
   
-1.  **Alterar banco de dados**: o nome do novo banco de dados de alteração. O nome do banco de dados é o mesmo que o nome que você deu à instância. Este campo somente leitura exibe o caminho completo para o banco de dados.  
+1.  **Banco de Dados de Alteração**: o nome do novo banco de dados de alteração. O nome do banco de dados é o mesmo que o nome que você deu à instância. Este campo somente leitura exibe o caminho completo para o banco de dados.  
   
 2.  **Criar Banco de Dados**: clique em **Criar Banco de Dados** para criar o banco de dados.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62771362"
   
      Depois que você criar o banco de dados, clique em **Avançar** para [Connect to an Oracle Source Database](connect-to-an-oracle-source-database.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como criar a instância de banco de dados de alteração do SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [O Serviço Oracle CDC](the-oracle-cdc-service.md)  
   

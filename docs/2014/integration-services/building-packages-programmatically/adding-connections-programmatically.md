@@ -25,14 +25,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772213"
 ---
 # <a name="adding-connections-programmatically"></a>Adicionando conexões programaticamente
-  A classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> representa conexões físicas com fontes de dados externas. A classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> isola os detalhes de implementação da conexão do tempo de execução. Isso permite que o tempo de execução interaja com cada gerenciador de conexões de uma maneira consistente e previsível. Gerenciadores de conexões contêm um conjunto de propriedades de estoque que todas as conexões têm em comum, como <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Porém, as propriedades <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> são, ordinariamente, as únicas propriedades necessárias para configurar um gerenciador de conexões. Ao contrário de outros paradigmas de programação, em que as classes de conexão expõem métodos como `Open` ou `Connect` para estabelecer fisicamente uma conexão com a fonte de dados, o mecanismo de tempo de execução gerencia todas as conexões para o pacote enquanto ele é executado.  
+  A classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> representa conexões físicas com fontes de dados externas. A classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> isola os detalhes de implementação da conexão do runtime. Isso permite que o runtime interaja com cada gerenciador de conexões de uma maneira consistente e previsível. Gerenciadores de conexões contêm um conjunto de propriedades de estoque que todas as conexões têm em comum, como <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Porém, as propriedades <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> são, ordinariamente, as únicas propriedades necessárias para configurar um gerenciador de conexões. Ao contrário de outros paradigmas de programação, em que as classes de conexão expõem métodos como `Open` ou `Connect` para estabelecer fisicamente uma conexão com a fonte de dados, o mecanismo de tempo de execução gerencia todas as conexões para o pacote enquanto ele é executado.  
   
  A classe <xref:Microsoft.SqlServer.Dts.Runtime.Connections> é uma coleção dos gerenciadores de conexões que foram adicionados ao pacote e estão disponíveis para uso em tempo de execução. É possível adicionar mais gerenciadores de conexões à coleção usando o método <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> da coleção e fornecendo uma cadeia de caracteres que indica o tipo de gerenciador de conexões. O método <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> retorna a instância <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> que foi acrescentada ao pacote.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62772213"
   
  A tabela a seguir lista os gerenciadores de conexão incluídos no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. e a cadeia de caracteres que é usada na instrução `package.Connections.Add("xxx")`. Para saber mais sobre gerenciadores de conexões, consulte [Conexões do SSIS &#40;Integration Services&#41;](../connection-manager/integration-services-ssis-connections.md).  
   
-|Cadeia de caracteres|Gerenciador de conexões|  
+|String|Gerenciador de conexões|  
 |------------|------------------------|  
 |"OLEDB"|Gerenciador de conexões para conexões OLE DB.|  
 |"ODBC"|Gerenciador de conexões para conexões ODBC.|  
@@ -209,10 +209,10 @@ End Class
 ## <a name="external-resources"></a>Recursos externos  
  Artigo técnico, [Connection Strings](https://go.microsoft.com/fwlink/?LinkId=220743) (Cadeias de conexão), em carlprothman.  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
- [Conexões do SSIS &#40;Integration Services&#41;](../connection-manager/integration-services-ssis-connections.md)   
- [Criar Gerenciadores de Conexões](../create-connection-managers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Integration Services &#40;conexões&#41; SSIS](../connection-manager/integration-services-ssis-connections.md)   
+ [Criar gerenciadores de conexões](../create-connection-managers.md)  
   
   

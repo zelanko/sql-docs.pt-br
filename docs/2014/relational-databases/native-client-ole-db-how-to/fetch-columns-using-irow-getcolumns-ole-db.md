@@ -1,5 +1,5 @@
 ---
-title: 'Buscar colunas usando IRow:: Getcolumns (OLE DB) | Microsoft Docs'
+title: 'Buscar colunas usando IRow:: GetColumns (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468492"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Buscar colunas usando IRow::GetColumns (OLE DB)
@@ -26,10 +26,10 @@ ms.locfileid: "62468492"
   
 -   Como buscar um grupo de colunas (em sequência).  
   
--   Como acessar uma coluna duas vezes. Na primeira vez a largura da coluna real é obtida, e depois os dados reais são acessados. Na estrutura DBCOLUMNACCESS, se **pData** for NULL e **cbMaxLen** é 0, a chamada para `IRow` - `>GetColumns()` retorna somente o comprimento de coluna real. Nesse caso, `IRow->GetColumns()` poderá ser chamado novamente na mesma coluna para recuperar os dados reais.  
+-   Como acessar uma coluna duas vezes. Na primeira vez a largura da coluna real é obtida, e depois os dados reais são acessados. Na estrutura DBCOLUMNACCESS, se **pData** for NULL e **cbMaxLen** for 0, a chamada para `IRow` - `>GetColumns()` retornará apenas o comprimento real da coluna. Nesse caso, `IRow->GetColumns()` poderá ser chamado novamente na mesma coluna para recuperar os dados reais.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Para buscar colunas usando IRow::GetColumns  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62468492"
   
 -   Como acessar uma coluna duas vezes - na primeira vez a largura da coluna real é obtida e, em seguida, os dados reais são acessados.  
   
- Na estrutura DBCOLUMNACCESS, se pData for NULL e cbMaxLen for 0, a chamada para IRow -> GetColumns retornará somente o comprimento de coluna real. Neste caso, IRow -> GetColumns poderá ser chamado novamente na mesma coluna para recuperar os dados reais. Este exemplo não tem suporte em IA64.  
+ Na estrutura DBCOLUMNACCESS, se pData for NULL e cbMaxLen for 0, a chamada para IRow->GetColumns retornará somente o comprimento de coluna real. Nesse caso, IRow->GetColumns poderá ser chamado novamente na mesma coluna para recuperar os dados reais. Este exemplo não tem suporte em IA64.  
   
  Este exemplo exige o banco de dados de exemplo AdventureWorks, que pode ser baixado na home page de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês).  
   
@@ -516,7 +516,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções do OLE DB](ole-db-how-to-topics.md)  
   
   

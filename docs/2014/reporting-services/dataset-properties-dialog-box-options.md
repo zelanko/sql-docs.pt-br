@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades do conjunto de dados, opções | Microsoft Docs
+title: Caixa de diálogo Propriedades do conjunto de, opções | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,39 +14,39 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 778365e8fc7f40700b0f8c1683260f15c860a32a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109407"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Opções
-  Selecione **opções** sobre o **DatasetProperties** caixa de diálogo para alterar as opções de dados, como as opções de agrupamento e subtotais, para a consulta. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
+  Selecione **Opções** na caixa de diálogo **datasetproperties** para alterar as opções de dados, como opções de agrupamento e subtotais, para a consulta. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="options"></a>Opções  
  **Ordenação**  
- Selecione uma localidade que determina a sequência de ordenação a ser usada para classificar os dados. **Padrão** indica que o servidor de relatórios deve tentar derivar o valor a partir do provedor de dados quando o relatório é executado. Se o valor não puder ser derivado, o valor padrão será derivado da configuração de localidade do computador.  
+ Selecione uma localidade que determina a sequência de ordenação a ser usada para classificar os dados. **Padrão** indica que o servidor de relatório deve tentar derivar o valor do provedor de dados quando o relatório é executado. Se o valor não puder ser derivado, o valor padrão será derivado da configuração de localidade do computador.  
   
  **Diferenciação de maiúsculas e minúsculas**  
- Selecione um valor que determina a diferenciação de maiúsculas e minúsculas. Esta opção indica se os dados são maiúsculas e minúsculas. Você pode definir a **Distinção de maiúsculas e minúsculas** como **Verdadeiro**, **Falso**ou **Automático**. O valor padrão, **Auto**, indica que o servidor de relatório deve tentar obter o valor do provedor de dados quando o relatório é executado. Se o provedor de dados não der suporte ao tipo de diferenciação de maiúsculas e minúsculas, o relatório será executado como se o valor fosse **False**. Se souber o valor e souber que ele tem suporte, escolha **Verdadeiro**.  
+ Selecione um valor que determina a diferenciação de maiúsculas e minúsculas. Esta opção indica se os dados são maiúsculas e minúsculas. Você pode definir a **diferenciação de maiúsculas e minúsculas** como **true**, **false**ou **auto**. O valor padrão, **auto**, indica que o servidor de relatório deve tentar derivar o valor do provedor de dados quando o relatório é executado. Se o provedor de dados não der suporte ao tipo de diferenciação de maiúsculas e minúsculas, o relatório será executado como se o valor fosse **False**. Se souber o valor e souber que ele tem suporte, escolha **Verdadeiro**.  
   
  **Distinção de acentos**  
- Selecione um valor que determina a sensibilidade de acentuação. A**Sensibilidade de acentuação** indica se os dados são sensíveis à acentuação e podem ser definidos para **Verdadeiro**, **Falso**ou **Automático**. O valor padrão, **Auto**, indica que o servidor de relatório deve tentar obter o valor do provedor de dados quando o relatório é executado. Se o provedor de dados não der suporte o tipo de sensibilidade de acentuação, o relatório executará como se o valor fosse **Falso**. Se souber o valor e souber que ele tem suporte, escolha **Verdadeiro**.  
+ Selecione um valor que determina a sensibilidade de acentuação. A **sensibilidade de acentos** indica se os dados diferenciam acentos e podem ser definidos como **true**, **false**ou **auto**. O valor padrão, **auto**, indica que o servidor de relatório deve tentar derivar o valor do provedor de dados quando o relatório é executado. Se o provedor de dados não der suporte o tipo de sensibilidade de acentuação, o relatório executará como se o valor fosse **Falso**. Se souber o valor e souber que ele tem suporte, escolha **Verdadeiro**.  
   
- **Sensibilidade de Kanatype**  
- Selecione um valor que determina sensibilidade de kanatype. Esta opção indica se os dados são sensíveis ao kanatype; pode ser definido como **Verdadeiro**, **Falso**ou **Automático**. O valor padrão, **Auto**, indica que o servidor de relatório deve tentar obter o valor do provedor de dados quando o relatório é executado. Se o provedor de dados não der suporte ao tipo de sensibilidade de kanatype, o relatório executará como se o valor fosse **Falso**. Se souber o valor e souber que ele tem suporte, escolha **Verdadeiro**.  
+ **Sensibilidade de kanatype**  
+ Selecione um valor que determina sensibilidade de kanatype. Esta opção indica se os dados diferenciam caracteres kana; Ele pode ser definido como **true**, **false**ou **auto**. O valor padrão, **auto**, indica que o servidor de relatório deve tentar derivar o valor do provedor de dados quando o relatório é executado. Se o provedor de dados não der suporte ao tipo de sensibilidade de kanatype, o relatório executará como se o valor fosse **Falso**. Se souber o valor e souber que ele tem suporte, escolha **Verdadeiro**.  
   
- **Distinção de largura**  
- Selecione um valor que determina distinção de largura. Esta opção indica se os dados são sensíveis à largura e pode ser definida como **True**, **False**ou **Auto**. O valor padrão, **Auto**, indica que o servidor de relatório deve tentar obter o valor do provedor de dados quando o relatório é executado. Se o provedor de dados não der suporte ao tipo de distinção de largura, o relatório executará como se o valor fosse **Falso**. Se souber o valor e souber que ele tem suporte, escolha **Verdadeiro**.  
+ **Sensibilidade de largura**  
+ Selecione um valor que determina distinção de largura. Essa opção indica se os dados têm distinção de largura e podem ser definidos como **true**, **false**ou **auto**. O valor padrão, **auto**, indica que o servidor de relatório deve tentar derivar o valor do provedor de dados quando o relatório é executado. Se o provedor de dados não der suporte ao tipo de distinção de largura, o relatório executará como se o valor fosse **Falso**. Se souber o valor e souber que ele tem suporte, escolha **Verdadeiro**.  
   
- **Interprete subtotais como linhas de detalhe**  
- Selecione um valor que indica se deseja que linhas de subtotais sejam interpretadas como linhas de detalhes ao invés de linhas de agregação. O valor padrão, **automática**, indica que as linhas de subtotais devem ser tratadas como linhas de detalhes se o relatório não usar o `Aggregate`função () para acessar os campos no conjunto de dados. Se quiser que as linhas de subtotais sejam interpretadas como linhas de agregação, selecione **Falso**. Se você deseja que as linhas de subtotais sejam interpretadas como linhas de detalhes e você souber que elas não usam o `Aggregate`() de função, escolha **verdadeiro**.  
+ **Interpretar subtotais como linhas de detalhes**  
+ Selecione um valor que indica se deseja que linhas de subtotais sejam interpretadas como linhas de detalhes ao invés de linhas de agregação. O valor padrão, **auto**, indica que as linhas de subtotal devem ser tratadas como linhas de detalhes se o relatório `Aggregate`não usar a função () para acessar os campos no conjunto de dados. Se quiser que as linhas de subtotais sejam interpretadas como linhas de agregação, selecione **Falso**. Se você quiser que as linhas de subtotal sejam interpretadas como linhas de detalhes e souber que elas `Aggregate`não usam a função (), escolha **true**.  
   
-## <a name="see-also"></a>Consulte também  
- [Definir a localidade em um relatório ou caixa de texto &#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)   
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Nome de ordenação do Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
- [Nome de ordenação do SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
- [Função de agregação &#40;relatórios e SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Definir a localidade de um relatório ou caixa de texto &#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)   
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Nome de agrupamento do Windows &#40;&#41;Transact-SQL](/sql/t-sql/statements/windows-collation-name-transact-sql)   
+ [Nome de agrupamento de SQL Server &#40;&#41;Transact-SQL](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
+ [Função de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
   
   

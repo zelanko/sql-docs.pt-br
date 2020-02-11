@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb94a88d749b7d850eee9eff96cd78ef8cf9e08d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913617"
 ---
-# <a name="mssqlserver5512"></a>MSSQLSERVER_5512
+# <a name="mssqlserver_5512"></a>MSSQLSERVER_5512
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|MSSQLSERVER|  
+|Nome do Produto|MSSQLSERVER|  
 |ID do evento|5512|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|FS_TRUNCATEDIR_FAILED|  
 |Texto da mensagem|Erro 0x%x (% ls) encontrado enquanto diretório "%. * ls" estava sendo truncado.|  
@@ -36,6 +36,6 @@ ms.locfileid: "62913617"
  A operação de truncamento falhou.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Para obter a causa do erro, consulte o código de status específico do Windows. Para obter mais informações sobre esse código de status, consulte [eventos e mensagens de erro no Microsoft Support](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
+ Para obter a causa do erro, consulte o código de status específico do Windows. Para obter mais informações sobre esse código de status, consulte [mensagens de evento e de erro em suporte da Microsoft](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
   
   

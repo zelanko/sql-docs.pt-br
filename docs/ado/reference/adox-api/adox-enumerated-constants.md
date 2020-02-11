@@ -1,5 +1,5 @@
 ---
-title: Constantes enumeradas ADOX | Microsoft Docs
+title: Constantes enumeradas do ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,30 +13,30 @@ ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928552"
 ---
 # <a name="adox-enumerated-constants"></a>Constantes enumeradas ADOX
-Para ajudar a depuração, as constantes enumerada do ADOX listam um valor para cada constante. No entanto, esse valor é puramente comunicado e pode mudar de uma versão do ADOX para outro. Seu código deve depender somente o nome, não o valor real de constantes enumeradas.  
+Para auxiliar a depuração, as constantes enumeradas do ADOX listam um valor para cada constante. No entanto, esse valor é puramente consultivo e pode mudar de uma versão do ADOX para outra. Seu código só deve depender do nome, não do valor real, das constantes enumeradas.  
   
- As seguintes constantes enumeradas são definidas.  
+ As constantes enumeradas a seguir são definidas.  
   
-|Enumeração|Descrição|  
+|Enumeração|DESCRIÇÃO|  
 |-----------------|-----------------|  
-|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|Especifica o tipo de ação a ser executada quando **SetPermissions** é chamado.|  
+|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|Especifica o tipo de ação a ser executada quando **SetPermissions** é chamada.|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Especifica se os registros com valores nulos são indexados.|  
-|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|Especifica as características de um **coluna**.|  
-|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|Especifica o tipo de dados de um **campo**, **parâmetro**, ou **propriedade**.|  
-|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|Especifica como objetos herdarão as permissões definidas com **SetPermissions**.|  
-|[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|Especifica o tipo de **chave**: estrangeiras, exclusiva ou primária.|  
-|[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)|Especifica o tipo de objeto de banco de dados para o qual definir permissões ou a propriedade.|  
+|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|Especifica as características de uma **coluna**.|  
+|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|Especifica o tipo de dados de um **campo**, **parâmetro**ou **Propriedade**.|  
+|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|Especifica como os objetos herdarão as permissões definidas com **SetPermissions**.|  
+|[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|Especifica o tipo de **chave**: primária, estrangeira ou exclusiva.|  
+|[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)|Especifica o tipo de objeto de banco de dados para o qual definir permissões ou propriedade.|  
 |[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)|Especifica os direitos ou permissões para um grupo ou usuário em um objeto.|  
-|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|Especifica a regra para seguir quando um **chave** é excluído.|  
+|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|Especifica a regra a ser seguida quando uma **chave** é excluída.|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|Especifica a sequência de classificação para uma coluna indexada.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência da API do ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Extensões ADO para segurança e linguagem de definição de dados (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

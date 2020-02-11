@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d99a357c754add722fb6d5b5d880d1c472a5989
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827935"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Criar InfoSource para os dados da transação
@@ -63,7 +63,7 @@ ms.locfileid: "62827935"
  Exibe o tipo de dados [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da coluna de fluxo de dados.  
   
  **Iobject - Pesquisa**  
- Associar um InfoObject existente à coluna de fluxo de dados na linha atual. Para fazer essa associação, clique em **Pesquisar**e use a caixa de diálogo **Pesquisar InfoObject** para selecionar o InfoObject existente. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up InfoObject](look-up-infoobject.md).  
+ Associar um InfoObject existente à coluna de fluxo de dados na linha atual. Para fazer essa associação, clique em **Pesquisar** e use a caixa de diálogo **Pesquisar InfoObject** para selecionar o InfoObject existente. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up InfoObject](look-up-infoobject.md).  
   
  Depois de selecionar um InfoObject existente, o componente preenche as colunas **InfoObject** e **Tipo** com os valores selecionados.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62827935"
  **Tipo**  
  Exibe o tipo do InfoObject associado à coluna de fluxo de dados. A tabela a seguir lista os valores possíveis do tipo.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |CHA|Características|  
 |UNI|Unidades|  
@@ -91,8 +91,8 @@ ms.locfileid: "62827935"
  **Campo unidade**  
  Especifique as unidades que o InfoObject usará.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar InfoSource](create-infosource.md)   
- [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ajuda F1 do Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

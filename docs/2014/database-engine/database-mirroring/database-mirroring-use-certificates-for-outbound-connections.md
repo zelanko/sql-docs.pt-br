@@ -1,5 +1,5 @@
 ---
-title: Permitir que um ponto de extremidade para usar certificados para conexões de saída (Transact-SQL) de espelhamento de banco de dados | Microsoft Docs
+title: Permitir que um ponto de extremidade de espelhamento de banco de dados Use certificados para conexões de saída (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43a55174bae1bb03034ea005749055701884848f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806869"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-outbound-connections-transact-sql"></a>Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "62806869"
   
 ## <a name="procedure"></a>Procedimento  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>Para configurar as instâncias de servidor para espelhamento de conexões de saída (No HOST_A)  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>Para configurar as instâncias de servidor para espelhamento de conexões de saída (No HOST_A)  
   
 1.  No banco de dados **mestre** , crie o banco de dados chave mestre, se nenhum existir. Para exibir as chaves existentes para um banco de dados, use a exibição do catálogo [sys.symmetric_keys](/sql/relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql) .  
   
@@ -168,18 +168,18 @@ GO
   
  Para obter informações sobre como criar um banco de dados espelho, incluindo um exemplo de Transact-SQL, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
- Para obter um exemplo de Transact-SQL de estabelecimento de uma sessão de modo de alto desempenho, consulte [exemplo: Configurando certificados usando o espelhamento de banco de dados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+ Para obter um exemplo do Transact-SQL de estabelecimento uma sessão de modo de alto desempenho, veja [Exemplo: Configurando o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  A menos que você possa garantir que sua rede está segura, recomendamos o uso de criptografia para conexões de espelhamento de banco de dados.  
   
  Ao copiar um certificado para outro sistema, use um método de cópia seguro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [Exemplo: Configurando certificados usando o espelhamento de banco de dados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
+ [Exemplo: configurando o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Configurar um banco de dados espelho criptografado](set-up-an-encrypted-mirror-database.md)  

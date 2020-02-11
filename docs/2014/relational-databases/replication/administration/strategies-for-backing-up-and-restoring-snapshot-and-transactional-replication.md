@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210778"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional
@@ -117,7 +117,7 @@ ms.locfileid: "68210778"
   
          Para obter mais informações sobre como executar um Agente de Distribuição, consulte [Iniciar e parar um agente de replicação &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Conceitos dos executáveis do agente de replicação](../concepts/replication-agent-executables-concepts.md).  
   
-         Para obter mais informações sobre como verificar comandos, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;programação Transact-SQL de replicação&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [informações de exibição e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Para obter mais informações sobre como verificar comandos, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação Transact-SQL de replicação&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Remova a configuração de replicação do Publicador, Distribuidor e Assinantes e, em seguida, recrie a configuração. Ao recriar as assinaturas, especifique que o Assinante já tem os dados. A restauração está concluída.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68210778"
   
          Para obter mais informações sobre como executar um Agente de Distribuição, consulte [Iniciar e parar um agente de replicação &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Conceitos dos executáveis do agente de replicação](../concepts/replication-agent-executables-concepts.md).  
   
-         Para obter mais informações sobre como verificar comandos, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;programação Transact-SQL de replicação&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [informações de exibição e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Para obter mais informações sobre como verificar comandos, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação Transact-SQL de replicação&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Use o [tablediff utility](../../../tools/tablediff-utility.md) ou outra ferramenta para sincronizar manualmente o Publicador com o Assinante. Isso permitirá a recuperação dos dados do banco de dados de assinatura que não estavam contidos no backup de banco de dados de publicação. Vá para a etapa c.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "68210778"
   
      Para obter mais informações sobre como executar um Agente de Distribuição, consulte [Iniciar e parar um agente de replicação &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Conceitos dos executáveis do agente de replicação](../concepts/replication-agent-executables-concepts.md).  
   
-     Para obter mais informações sobre como verificar comandos, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;programação Transact-SQL de replicação&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [informações de exibição e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Para obter mais informações sobre como verificar comandos, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação Transact-SQL de replicação&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Se você estiver usando assinaturas de atualização em fila, conecte a cada Assinante e exclua todas as linhas da tabela [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) no banco de dados de assinatura. Vá para a etapa 4.  
   
@@ -205,19 +205,19 @@ ms.locfileid: "68210778"
   
     1.  Recrie a publicação no banco de dados **B**. Vá para a etapa b.  
   
-    2.  Recrie a assinatura no banco de dados **B** para a publicação no banco de dados **A**, especificando que a assinatura deverá ser inicializada com um backup (um valor de **inicializar a partir de um backup** para o parâmetro **@sync_type** de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vá para a etapa c.  
+    2.  Recrie a assinatura no banco de dados **B** para a publicação no banco **de dados a**, especificando que a assinatura deve ser inicializada com um backup (um valor de **inicializar com backup** para o **@sync_type** parâmetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vá para a etapa c.  
   
-    3.  Recrie a assinatura no banco de dados **A** para a publicação no banco de dados **B**, especificando que o Assinante já tem os dados (um valor de **suporte para replicação somente** para o parâmetro **@sync_type** de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vá para a etapa 8.  
+    3.  Recrie a assinatura no banco **de** dados a para a publicação no banco de dado **B**, especificando que o Assinante já tem os dados (um valor de suporte **@sync_type** de **replicação somente** para o parâmetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vá para a etapa 8.  
   
 8.  Execute o Agente de Distribuição para sincronizar as assinaturas nos bancos de dados **A** e **B**. Se houver alguma coluna de identidade nas tabelas publicadas, vá para a etapa 9. Caso contrário, vá para a etapa 10.  
   
 9. Após a restauração, o intervalo de identidade atribuído para cada tabela no banco de dados **A** será usado também no banco de dados **B**. Verifique se o banco de dados restaurado **B** recebeu todas as alterações do banco de dados que apresentou falha **B** que foram propagadas para o banco de dados **A** e o banco de dados **C**; e, então, propague novamente o intervalo de identidade para cada tabela.  
   
-    1.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o parâmetro de saída **@request_id** . Vá para a etapa b.  
+    1.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o **@request_id**parâmetro de saída. Vá para a etapa b.  
   
     2.  Por padrão, o Distribution Agent está definido para executar continuamente; portanto, tokens devem ser enviados automaticamente a todos os nós. Se o Distribution Agent não estiver executando em modo contínuo, execute o agente. Para obter mais informações, consulte [Conceitos Executáveis do Agente de Replicação](../concepts/replication-agent-executables-concepts.md) ou [Iniciar e Parar um Agente de Replicação &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Vá para a etapa c.  
   
-    3.  Execute [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), fornecendo o valor de **@request_id** recuperado na etapa b. Espere até que todos os nós indiquem ter recebido a solicitação par. Vá para a etapa d.  
+    3.  Execute [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), fornecendo o **@request_id** valor recuperado na etapa b. Espere até que todos os nós indiquem ter recebido a solicitação par. Vá para a etapa d.  
   
     4.  Use [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) para propagar novamente cada tabela no banco de dados **B** para ter certeza de que um intervalo apropriado seja usado. Vá para a etapa 10.  
   
@@ -229,11 +229,11 @@ ms.locfileid: "68210778"
   
     1.  Pare todas as atividades nas tabelas publicadas na topologia ponto a ponto. Vá para a etapa b.  
   
-    2.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o parâmetro de saída **@request_id** . Vá para a etapa c.  
+    2.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o **@request_id**parâmetro de saída. Vá para a etapa c.  
   
     3.  Por padrão, o Distribution Agent está definido para executar continuamente; portanto, tokens devem ser enviados automaticamente a todos os nós. Se o Distribution Agent não estiver executando em modo contínuo, execute o agente. Vá para a etapa d.  
   
-    4.  Execute [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), fornecendo o valor de **@request_id** recuperado na etapa b. Espere até que todos os nós indiquem ter recebido a solicitação par. Vá para a etapa e.  
+    4.  Execute [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), fornecendo o **@request_id** valor recuperado na etapa b. Espere até que todos os nós indiquem ter recebido a solicitação par. Vá para a etapa e.  
   
     5.  Recrie a assinatura no banco de dados **B** para a publicação no banco de dados **C**, especificando que o Assinante já possui os dados. Vá para a etapa b.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68210778"
   
     1.  No banco de dados **B**, consulte a tabela [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) para recuperar o LSN (número de sequência de log) da mais recente transação que o banco de dados **B** recebeu do banco de dados **C**.  
   
-    2.  Recrie a assinatura no banco de dados **B** para a publicação no banco de dados **C**, especificando que a assinatura deverá ser inicializada baseada no LSN (um valor de **inicializar a partir do lsn** para o parâmetro **@sync_type** de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vá para a etapa b.  
+    2.  Recrie a assinatura no banco de dados **B** para a publicação no banco de dados **C**, especificando que a assinatura deve ser inicializada com base no LSN (um valor de **@sync_type** **inicializar do LSN** para o parâmetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vá para a etapa b.  
   
     3.  Recrie a assinatura no banco de dados **C** para a publicação no banco de dados **B**, especificando que o Assinante já possui os dados. Vá para a etapa 13.  
   
@@ -345,12 +345,12 @@ ms.locfileid: "68210778"
   
 2.  Tenha certeza de que o banco de dados é consistente com o banco de dados de publicação com respeito a configuração de replicação e configurações.  
   
-## <a name="see-also"></a>Consulte também  
- [Backup e Restauração de bancos de dados do SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Fazer backup e restaurar bancos de dados do SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Fazer backup e restaurar bancos de dados replicados](back-up-and-restore-replicated-databases.md)   
  [Configurar Distribuição](../configure-distribution.md)   
  [Publicar dados e objetos de banco de dados](../publish/publish-data-and-database-objects.md)   
- [Assinar publicações](../subscribe-to-publications.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)   
  [Inicializar uma assinatura](../initialize-a-subscription.md)   
  [Sincronizar dados](../synchronize-data.md)  
   

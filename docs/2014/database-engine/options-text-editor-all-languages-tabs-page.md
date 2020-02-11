@@ -1,5 +1,5 @@
 ---
-title: Opções (Editor de texto – todos os idiomas – guias de página) | Microsoft Docs
+title: Opções (página Editor de texto – todos os idiomas – guias) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089911"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Opções (página Editor de Texto – Todos os idiomas – Guias)
@@ -24,18 +24,18 @@ ms.locfileid: "66089911"
  Use a caixa de diálogo **Todos os Idiomas** para definir opções para os editores DMX, MDX e SQL Server Compact. As opções definidas aqui também são aplicadas aos editores de Texto sem formatação, de Transact-SQL e de XML, mas você pode definir opções separadamente para esses editores, expandindo as subpastas para esses idiomas e selecionando as respectivas páginas de opção. Alguns idiomas não dão suporte a todas as opções de tabulação.  
   
 > [!CAUTION]  
->  Se você definir uma opção que use essa caixa de diálogo, mas desejar uma configuração diferente para o editor de Texto sem formatação, de Transact-SQL ou de XML, defina as opções para esses editores depois de aplicar suas seleções na caixa de diálogo **Todos os Idiomas** .  
+>  Se você definir uma opção que use essa caixa de diálogo, mas desejar uma configuração diferente para o editor de Texto sem Formatação, de Transact-SQL ou de XML, defina as opções para esses editores depois de aplicar suas seleções na caixa de diálogo **Todos os Idiomas**.  
   
  A mensagem "As configurações de recuo (ou guia) para formatos de texto individuais estão em conflito entre si" é exibida quando configurações diferentes são selecionadas para editores específicos. Por exemplo, esse lembrete é exibido se a opção **Recuo do bloco** estiver selecionada para **Texto Sem-Formatação**, mas **Nenhum** estiver selecionada para **XML**.  
   
 ## <a name="indenting"></a>Recuo  
- **Nenhum**  
+ **Nenhuma**  
  Quando essa opção estiver selecionada, a nova linha criada ao se pressionar ENTER não ficará recuada. O cursor é colocado na primeira coluna da nova linha.  
   
- **Bloco**  
+ **Impeça**  
  Quando essa opção é selecionada, a nova linha criada ao se pressionar ENTER é recuada automaticamente com a mesma distância em que a linha anterior foi recuada.  
   
- **Smart**  
+ **Inteligente**  
  Quando essa opção é selecionada, a nova linha criada ao se pressionar ENTER é posicionada de acordo com o contexto.  
   
 ## <a name="tabs"></a>Tabulações  

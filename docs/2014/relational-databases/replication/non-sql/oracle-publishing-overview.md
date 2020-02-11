@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558ee09eeb4419bc354ff3ade9d6586877246b33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022256"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview
-  Desde o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], você pode incluir Publicadores Oracle em sua topologia de replicação pelo Oracle versão 9i. Os servidores de publicação podem ser implantados em todos os sistemas operacionais e de hardware com suporte pelo Oracle. O recurso é criado sob a base bem-estabelecida da replicação de instantâneo e da replicação transacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fornecendo desempenho e usabilidade similares.  
+  No [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] em diante, você pode incluir Publicadores Oracle na topologia de replicação, no Oracle versão 9i em diante. Os servidores de publicação podem ser implantados em todos os sistemas operacionais e de hardware com suporte pelo Oracle. O recurso é criado sob a base bem-estabelecida da replicação de instantâneo e da replicação transacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fornecendo desempenho e usabilidade similares.  
   
  A publicação Oracle foi preterida. A replicação heterogênea para assinantes que não são do SQL Server foi preterida. Para mover dados, crie soluções usando a captura de dados de alterações e o [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63022256"
   
  Quando uma publicação Oracle é criada, os gatilhos e as tabelas de rastreamento são criados para cada tabela publicada dentro do banco de dados Oracle. Quando as alterações são feitas nas tabelas publicadas, os gatilhos do banco de dados nas tabelas são acionados e inserem informações nas tabelas de rastreamento de replicação para cada linha modificada. O Agente de Leitor de Log do Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] move em seguida as informações das alterações dos dados, das tabelas de rastreamento para o banco de dados de distribuição no Distribuidor. Para concluir, como em uma replicação transacional padrão o Agente de Distribuição move as alterações do Distribuidor para os Assinantes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar um Publicador Oracle](configure-an-oracle-publisher.md)   
  [Glossário de termos para publicações Oracle](glossary-of-terms-for-oracle-publishing.md)   
  [Replicação de banco de dados heterogênea](heterogeneous-database-replication.md)  

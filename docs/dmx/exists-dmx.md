@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889044"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
@@ -29,9 +29,9 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>Argumentos  
  *subquery*  
- Uma instrução SELECT do formulário selecione * do nome \<da coluna > [onde \<a lista de predicados >].  
+ Uma instrução SELECT do formulário selecione * do nome \<da coluna> [onde \<a lista de predicados>].  
   
-## <a name="result-type"></a>Tipo de Resultado  
+## <a name="result-type"></a>Tipo de resultado  
  Retornará **true** se o conjunto de resultados retornado pela subconsulta contiver pelo menos uma linha; caso contrário, retornará **false**.  
   
 ## <a name="remarks"></a>Comentários  
@@ -53,10 +53,10 @@ WHERE [[Model] = 'Patch kit'
 )  
 ```  
   
- Outra maneira de exibir os mesmos dados retornados por essa consulta é abrir o modelo no Visualizador de associação, clicar com o botão direito do mouse no **Kit de patch**do conjunto = existing, selecionar a opção **Drill-through** e, em seguida, selecionar **somente casos de modelo**.  
+ Outra maneira de exibir os mesmos dados retornados por essa consulta é abrir o modelo no Visualizador de associação, clicar com o botão direito do mouse no **Kit de patch do conjunto = existing**, selecionar a opção **Drill-through** e, em seguida, selecionar **somente casos de modelo**.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Sintaxe de filtro de modelo &#40;e exemplos Analysis Services-Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Sintaxe de filtro de modelo e exemplos &#40;mineração de dados Analysis Services&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   

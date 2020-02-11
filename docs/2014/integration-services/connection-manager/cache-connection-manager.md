@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1026f4c20042a9aec24256238190dd1a230bda42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833586"
 ---
 # <a name="cache-connection-manager"></a>Gerenciador de conexões do cache
@@ -45,7 +45,7 @@ ms.locfileid: "62833586"
   
 -   Altere os metadados para as colunas armazenadas no cache.  
   
--   Atualize o nome do arquivo de cache no tempo de execução usando uma expressão para definir a propriedade ConnectionString. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).  
+-   Atualize o nome do arquivo de cache no runtime usando uma expressão para definir a propriedade ConnectionString. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou programaticamente.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "62833586"
  Para obter informações sobre como configurar um gerenciador de conexões de forma programática, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionar conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Implementar uma Transformação Pesquisa em modo cache cheio usando o Gerenciador de Conexões do Cache](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+ [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
   

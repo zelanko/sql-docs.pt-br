@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110173"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Populando uma tabela com dados hierárquicos existentes
-  Essa tarefa cria uma tabela nova e a popula com os dados da tabela **EmployeeDemo**. Essa tarefa tem as seguintes etapas:  
+  Essa tarefa cria uma nova tabela e a popula com os dados na tabela **EmployeeDemo** . Essa tarefa tem as seguintes etapas:  
   
 -   Crie uma tabela que contenha uma coluna `hierarchyid`. Essa coluna pode substituir as colunas **EmployeeID** e **ManagerID** existentes. Entretanto, você manterá essas colunas. Isso porque os aplicativos existentes podem se referir a essas colunas e, também, para ajudar a compreender os dados depois da transferência. A definição da tabela especifica que **OrgNode** é a chave primária, exigindo que a coluna contenha valores exclusivos. O índice clusterizado da coluna **OrgNode** armazenará a data na sequência **OrgNode** .  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66110173"
   
      `10        4         2`  
   
-3.  Popule a tabela **NewOrg** . Use os métodos GetRoot e ToString para concatenar os **Num** valores para o `hierarchyid` Formatar e, em seguida, atualize o **OrgNode** coluna com os valores hierárquicos resultantes:  
+3.  Preencha a tabela **NewOrg** . Use os métodos GetRoot e ToString para concatenar os valores **num** no `hierarchyid` formato e, em seguida, atualize a coluna **OrgNode** com os valores hierárquicos resultantes:  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -151,7 +151,7 @@ ms.locfileid: "66110173"
   
     ```  
   
-     O **LogicalNode** coluna converte o `hierarchyid` coluna em um formulário de texto mais legível que representa a hierarquia. Nas tarefas restantes, você usará o método `ToString()` para mostrar o formato lógico das colunas `hierarchyid`.  
+     A coluna **LogicalNode** converte a `hierarchyid` coluna em um formulário de texto mais legível que representa a hierarquia. Nas tarefas restantes, você usará o método `ToString()` para mostrar o formato lógico das colunas `hierarchyid`.  
   
 5.  Descarte a tabela temporária, que não será mais necessária:  
   

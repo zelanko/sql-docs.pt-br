@@ -1,5 +1,5 @@
 ---
-title: Elemento FileGroup para o índice (DTA) | Microsoft Docs
+title: Elemento de grupo de arquivos para índice (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63154600"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Elemento de grupo de arquivos para índice (DTA)
@@ -37,9 +37,10 @@ ms.locfileid: "63154600"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
+|**Comprimento e tipo de dados**|
+  `string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Opcional. Pode ser usado uma vez para cada elemento `Index`. Esse elemento não poderá ser usado se os elementos `PartitionScheme` e `PartitionColumn` forem especificados para o elemento `Index`.|  
   
@@ -53,7 +54,7 @@ ms.locfileid: "63154600"
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja [Amostra de arquivo de entrada XML com a configuração especificada pelo usuário &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

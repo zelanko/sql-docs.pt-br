@@ -15,16 +15,16 @@ ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5025bf5eee4b0b65342e7ce47cbbde4ae9ef6b7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106168"
 ---
 # <a name="descriptor-fields"></a>Campos de descritor
-Os descritores de contêm *cabeçalho* e *registro* campos que descrevem completamente a colunas ou parâmetros.  
+Os descritores contêm campos de *cabeçalho* e *registro* que descrevem completamente colunas ou parâmetros.  
   
- Um descritor contém uma única cópia dos campos de cabeçalho a seguir. Alterar um campo de cabeçalho afeta todas as colunas ou parâmetros.  
+ Um descritor contém uma única cópia dos campos de cabeçalho a seguir. A alteração de um campo de cabeçalho afeta todas as colunas ou parâmetros.  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ Os descritores de contêm *cabeçalho* e *registro* campos que descrevem complet
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Um descritor contém zero ou mais registros de descritor. Cada registro descreve uma coluna ou parâmetro, dependendo do tipo de descritor. Quando uma nova coluna ou parâmetro está associado, um novo registro é adicionado ao descritor de. Quando uma coluna ou parâmetro é desvinculado, um registro é removido do descritor. Cada registro contém uma única cópia dos seguintes campos:  
+ Um descritor contém zero ou mais registros de descritor. Cada registro descreve uma coluna ou parâmetro, dependendo do tipo de descritor. Quando uma nova coluna ou parâmetro é associado, um novo registro é adicionado ao descritor. Quando uma coluna ou parâmetro é desassociado, um registro é removido do descritor. Cada registro contém uma única cópia dos seguintes campos:  
   
 |||  
 |-|-|  
@@ -54,9 +54,9 @@ Os descritores de contêm *cabeçalho* e *registro* campos que descrevem complet
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- Muitos atributos de instrução correspondem ao campo de cabeçalho de um descritor. Definir esses atributos por meio de uma chamada para **SQLSetStmtAttr** e definindo o campo de cabeçalho do descritor correspondente chamando **SQLSetDescField** têm o mesmo efeito. O mesmo é verdadeiro para **SQLGetStmtAttr** e **SQLGetDescField**, ambos os quais recuperam as mesmas informações. Chamar as funções de instrução em vez das funções de descritor tem a vantagem de um identificador do descritor não precisa ser recuperado.  
+ Muitos atributos de instrução correspondem ao campo de cabeçalho de um descritor. Definir esses atributos por meio de uma chamada para **SQLSetStmtAttr** e definir o campo de cabeçalho de descritor correspondente chamando **SQLSetDescField** tem o mesmo efeito. O mesmo é verdadeiro para **SQLGetStmtAttr** e **SQLGetDescField**, que recuperam as mesmas informações. Chamar as funções de instrução em vez das funções de descritor tem a vantagem de que um identificador de descritor não precisa ser recuperado.  
   
- Os campos de cabeçalho a seguir podem ser definidos, definindo atributos de instrução:  
+ Os campos de cabeçalho a seguir podem ser definidos definindo atributos de instrução:  
   
 |||  
 |-|-|  
@@ -64,7 +64,7 @@ Os descritores de contêm *cabeçalho* e *registro* campos que descrevem complet
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Contagem de registros](../../../odbc/reference/develop-app/record-count.md)  
   

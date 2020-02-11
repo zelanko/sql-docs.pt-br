@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875718"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperação de bancos de dados relacionados que contêm transação marcada
@@ -61,11 +61,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintaxe Transact-SQL para recuperar a uma marca  
  Quando você assinala uma transação marcada usando uma instrução[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
   
--   Use a cláusula WITH STOPATMARK = **' *`<mark_name>`* '** cláusula para especificar que a transação marcada é o ponto de recuperação.  
+-   Use a cláusula WITH STOPATMARK **=*`<mark_name>`*' '** para especificar que a transação marcada é o ponto de recuperação.  
   
      O STOPATMARK roll-forward até a marca e inclui a transação marcada no roll-forward.  
   
--   Use WITH STOPATMARK = **' *`<mark_name>`* '** cláusula para especificar que o registro de log que está imediatamente antes da marca é o ponto de recuperação.  
+-   Use a cláusula WITH STOPBEFOREMARK **=*`<mark_name>`*' '** para especificar que o registro de log que está imediatamente antes da marca é o ponto de recuperação.  
   
      O STOPATMARK roll-forward até a marca e exclui a transação marcada do roll-forward.  
   
@@ -110,7 +110,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  Recupere cada banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   

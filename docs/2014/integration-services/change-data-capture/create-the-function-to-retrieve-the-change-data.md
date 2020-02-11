@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771432"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
@@ -76,7 +76,7 @@ ms.locfileid: "62771432"
 > [!NOTE]  
 >  Para obter mais informações sobre a sintaxe desse procedimento armazenado e seus parâmetros, consulte [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql).  
   
- O procedimento armazenado sempre gera uma função de invólucro para retornar todas as alterações de cada instância de captura. Se o parâmetro *@supports_net_changes* foi definido quando a instância de captura foi criada, o procedimento armazenado também gerará uma função de wrapper para retornar alterações globais de cada instância de captura de aplicativo.  
+ O procedimento armazenado sempre gera uma função de invólucro para retornar todas as alterações de cada instância de captura. Se o *@supports_net_changes* parâmetro foi definido quando a instância de captura foi criada, o procedimento armazenado também gera uma função de wrapper para retornar as alterações líquidas de cada instância de captura aplicável.  
   
  O procedimento armazenado retorna um conjunto de resultados com duas colunas:  
   
@@ -108,7 +108,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Entendendo e usando as funções criadas pelo procedimento armazenado  
- Para percorrer sistematicamente a linha de tempo dos dados de alteração capturados, as funções de wrapper geradas esperam que o parâmetro *@end_time* de um intervalo seja o parâmetro *@start_time* do intervalo subsequente. Quando essa convenção é seguida, as funções de invólucro geradas podem executar as seguintes tarefas:  
+ Para percorrer sistematicamente a linha do tempo dos dados de alteração capturados, as funções de wrapper *@end_time* geradas esperam que o parâmetro de *@start_time* um intervalo seja o parâmetro para o intervalo subsequente. Quando essa convenção é seguida, as funções de invólucro geradas podem executar as seguintes tarefas:  
   
 -   Mapear os valores de data/hora para os valores LSN usados interiormente.  
   
@@ -126,7 +126,7 @@ deallocate #hfunctions
   
 -   O valor de data/hora inicial e o valor de data/hora final do intervalo. Enquanto as funções de invólucro usam valores de data/hora como os pontos finais do intervalo de consulta, as funções de captura de dados de alteração usam dois valores LSN como os pontos finais.  
   
--   O filtro de linha. Para as funções de wrapper e as funções de captura de dados de alteração, o parâmetro *@row_filter_option* é o mesmo. Para obter mais informações, consulte [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
+-   O filtro de linha. Para as funções de wrapper e as funções de captura de dados de *@row_filter_option* alteração, o parâmetro é o mesmo. Para obter mais informações, consulte [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
  O conjunto de resultados retornado pelas funções de invólucro inclui os seguintes dados:  
   
@@ -134,12 +134,12 @@ deallocate #hfunctions
   
 -   Uma coluna denominada __CDC_OPERATION que usa um campo de um ou dois caracteres para identificar a operação associada à linha. Os valores válidos para esse campo são os seguintes: “I” de inserir, “D” de excluir, “UO” de atualizar valores antigos e “UN” de atualizar valores novos.  
   
--   Os sinalizadores de atualização, quando você os solicita, aparecem como colunas de bit após o código da operação e na ordem especificada no parâmetro *@update_flag_list* . Essas colunas são denominadas com a anexação de '_uflag' ao nome de coluna associado.  
+-   Os sinalizadores de atualização, quando solicitados, que aparecem como colunas de bits após o código da operação e na ordem especificada no *@update_flag_list* parâmetro. Essas colunas são denominadas com a anexação de '_uflag' ao nome de coluna associado.  
   
  Se o pacote chamar uma função de wrapper que consulte todas as alterações, essa função também retornará as colunas __CDC_STARTLSN e \__CDC_SEQVAL. Essas duas colunas se tornam a primeira e a segunda colunas, respectivamente, do conjunto de resultados. A função de invólucro também classifica o conjunto de resultados com base nessas duas colunas.  
   
 ## <a name="writing-your-own-table-value-function"></a>Escrevendo sua própria função do valor de tabela  
- Também é possível usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para escrever sua própria função de wrapper com valor de tabela que chama a função de consulta de captura dos dados de alteração e armazena a função de wrapper com valor de tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como criar uma função Transact-SQL, consulte [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
+ Também é possível usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para escrever sua própria função de wrapper com valor de tabela que chama a função de consulta de captura dos dados de alteração e armazena a função de wrapper com valor de tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como criar uma função Transact-SQL, consulte [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
  O seguinte exemplo define uma função com valor de tabela que recupera alterações de uma tabela Cliente para o intervalo de alteração especificado. Essa função usa funções de captura de dados de alteração para mapear os valores `datetime` para os valores LSN (número de sequência de log) binários usados pelas tabelas de alteração internamente. Esta função também controla diversas condições especiais:  
   
@@ -209,16 +209,16 @@ go
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|LSN associado à transação de confirmação da alteração.<br /><br /> Todas as alterações confirmadas na mesma transação compartilham o mesmo LSN de confirmação. Por exemplo, se uma operação de atualização na tabela de origem modificar duas linhas diferentes, a tabela de alteração conterá quatro linhas (duas com os valores antigos e duas com os valores novos), cada uma com o mesmo valor de **__$start_lsn** .|  
-|**__$seqval**|`binary(10)`|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
-|**__$operation**|`int`|A operação DML (linguagem de manipulação de dados) associada à alteração. Pode ser uma destas opções:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores anteriores à operação de atualização).<br /><br /> 4 = atualizar (valores posteriores à operação de atualização).|  
-|**__$update_mask**|`varbinary(128)`|Uma máscara de bits com base nos ordinais de coluna da tabela de alteração identificando as colunas que foram alteradas. Você poderia examinar este valor se você tivesse que determinar quais colunas foram alteradas.|  
-|**\<colunas da tabela de origem capturada>**|varia|As colunas restantes retornadas pela função são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada originalmente na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
+|**_ _ $ seqval**|`binary(10)`|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
+|**_ de $ operação**|`int`|A operação DML (linguagem de manipulação de dados) associada à alteração. Um dos seguintes pode ser feito:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores anteriores à operação de atualização).<br /><br /> 4 = atualizar (valores posteriores à operação de atualização).|  
+|**_ de $ update_mask**|`varbinary(128)`|Uma máscara de bits com base nos ordinais de coluna da tabela de alteração identificando as colunas que foram alteradas. Você poderia examinar este valor se você tivesse que determinar quais colunas foram alteradas.|  
+|**\<colunas da tabela de origem capturadas>**|varia|As colunas restantes retornadas pela função são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada originalmente na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
   
  Para obter mais informações, veja [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
 ## <a name="next-step"></a>Próxima etapa  
  Após ter criado a função com valor de tabela que consulta a existência de dados de alteração, a próxima etapa será iniciar a criação do fluxo de dados no pacote.  
   
- **Próximo tópico:** [Recuperar e compreender os dados de alterações](retrieve-and-understand-the-change-data.md)  
+ **Próximo tópico:** [recuperar e entender os dados de alteração](retrieve-and-understand-the-change-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Destino do Buffer de anel | Microsoft Docs
+title: Destino do buffer de anéis | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088954"
 ---
 # <a name="ring-buffer-target"></a>Destino de buffer de anel
@@ -25,15 +25,15 @@ ms.locfileid: "66088954"
   
 -   O primeiro modo é basicamente o FIFO (primeiro a entrar, primeiro a sair), no qual o evento mais antigo é descartado quando toda a memória alocada ao destino é usada. Nesse modo (o padrão), a opção occurrence_number é definida como 0.  
   
--   O segundo modo é o FIFO por evento, no qual um número especificado de eventos de cada tipo é mantido. Nesse modo, os eventos mais antigos de cada tipo são descartados quando toda a memória alocada ao destino é usada. Você pode configurar a opção occurrence_number para especificar o número de eventos de cada tipo a ser mantido.  
+-   O segundo modo é o FIFO por evento, no qual um número especificado de eventos de cada tipo é mantido. Nesse modo, os eventos mais antigos de cada tipo são descartados quando toda a memória alocada para o destino é usada. Você pode configurar a opção occurrence_number para especificar o número de eventos de cada tipo a ser mantido.  
   
  A tabela a seguir descreve as opções disponíveis para configurar o destino de buffer de anel.  
   
-|Opção|Valores permitidos|Descrição|  
+|Opção|Valores permitidos|DESCRIÇÃO|  
 |------------|--------------------|-----------------|  
-|max_memory|Qualquer inteiro de 32 bits. Esse valor é opcional.|A quantidade máxima de memória, em kilobytes (KB), para usar. Os eventos existentes são descartados com base no limite atingido primeiro: max_event_limit ou max_memory. O valor máximo é 4194303 KB. Uma consideração cuidadosa deve ser feita antes de definir o tamanho do buffer de anel como limites no intervalo de GB, pois isso pode afetar outros consumidores de memória no SQL Server|  
+|max_memory|Qualquer inteiro de 32 bits. Esse valor é opcional.|A quantidade máxima de memória, em kilobytes (KB), para usar. Os eventos existentes são descartados com base no limite atingido primeiro: max_event_limit ou max_memory. O valor máximo é 4194303 KB. Uma consideração cuidadosa deve ser feita antes de definir o tamanho do buffer de anéis para limites no intervalo de GB, pois ele pode afetar outros consumidores de memória no SQL Server|  
 |max_event_limit|Qualquer inteiro de 32 bits. Esse valor é opcional.|O número máximo de eventos mantidos no ring_buffer. Os eventos existentes são descartados com base no limite atingido primeiro: max_event_limit ou max_memory. Padrão = 1000.|  
-|occurrence_number|Um dos valores seguintes:<br /><br /> 0 (o padrão) = O evento mais antigo é descartado quando toda a memória alocada ao destino é usada.<br /><br /> Qualquer inteiro de 32 bits = o número de eventos de cada tipo a ser mantido antes de ser descartado da base FIFO por evento.<br /><br /> <br /><br /> Esse valor é opcional.|O modo FIFO a ser usado e, se definido com um valor maior que 0, o número preferencial de eventos de cada tipo a ser mantido no buffer.|
+|occurrence_number|Um dos seguintes valores:<br /><br /> 0 (o padrão) = O evento mais antigo é descartado quando toda a memória alocada ao destino é usada.<br /><br /> Qualquer inteiro de 32 bits = o número de eventos de cada tipo a ser mantido antes de ser descartado em uma base FIFO por evento.<br /><br /> <br /><br /> Esse valor é opcional.|O modo FIFO a ser usado e, se definido com um valor maior que 0, o número preferencial de eventos de cada tipo a ser mantido no buffer.|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>Adicionando o destino a uma sessão  
@@ -74,7 +74,7 @@ WHERE xe.name = 'session_name'
 ```
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 - [Destinos de eventos estendidos do SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)
 - [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql?view=sql-server-2016)

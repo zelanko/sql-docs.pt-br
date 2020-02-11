@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d030d4fb12ce9217bbdb88f501a0b0674c5a5828
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206753"
 ---
 # <a name="procedures"></a>Procedimentos
   Um procedimento armazenado é um objeto executável pré-compilado que contém uma ou mais instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Os procedimentos armazenados podem ter parâmetros de entrada e saída, além de gerar saída de um código de retorno de inteiro. Um aplicativo pode enumerar os procedimentos armazenados disponíveis usando funções de catálogo.  
   
- Os aplicativos ODBC cujo destino é o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] só devem usar a execução direta para chamar um procedimento armazenado. Quando conectado a versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver implementa [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) criando um procedimento armazenado temporário, que é chamado em **SQLExecute** . Ele adiciona sobrecarga ter **SQLPrepare** criar um procedimento armazenado temporário que somente chamadas o destino de procedimento armazenado versus diretamente o destino de executar procedimento armazenado. Mesmo quando conectado a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a preparação de uma chamada exige uma viagem de ida e volta adicional na rede e a elaboração de um plano de execução que apenas chama o plano de execução de procedimento armazenado.  
+ Os aplicativos ODBC cujo destino é o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] só devem usar a execução direta para chamar um procedimento armazenado. Quando conectado a versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client implementa a [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) criando um procedimento armazenado temporário, que é então chamado em **SQLExecute**. Ele adiciona sobrecarga para que o **SQLPrepare** crie um procedimento armazenado temporário que só chame o procedimento armazenado de destino em comparação com a execução direta do procedimento armazenado de destino. Mesmo quando conectado a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a preparação de uma chamada exige uma viagem de ida e volta adicional na rede e a elaboração de um plano de execução que apenas chama o plano de execução de procedimento armazenado.  
   
  Os aplicativos ODBC devem usar a sintaxe de ODBC CALL ao executar um procedimento armazenado. O driver é otimizado para usar um mecanismo de chamada de procedimento remoto para chamar o procedimento quando a sintaxe de ODBC CALL é usada. Isso é mais eficiente do que o mecanismo usado para enviar uma instrução EXECUTE [!INCLUDE[tsql](../../../includes/tsql-md.md)] para o servidor.  
   
  Para obter mais informações, consulte [executando procedimentos armazenados](../../native-client-odbc-stored-procedures/running-stored-procedures.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Executar instruções &#40;ODBC&#41;](executing-statements-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Executando instruções &#40;&#41;ODBC](executing-statements-odbc.md)  
   
   

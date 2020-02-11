@@ -1,5 +1,5 @@
 ---
-title: sys.column_store_segments (Transact-SQL) | Microsoft Docs
+title: sys. column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2018
 ms.prod: sql
@@ -20,31 +20,31 @@ ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b8d476e2f21693254eac5fc4712d53ac854e74ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139998"
 ---
-# <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
+# <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-Retorna uma linha para cada segmento de coluna em um índice columnstore. Há um segmento de coluna por coluna por rowgroup. Por exemplo, uma tabela com 10 rowgroups e 34 colunas retorna linhas de 340. 
+Retorna uma linha para cada segmento de coluna em um índice columnstore. Há um segmento de coluna por coluna por rowgroup. Por exemplo, uma tabela com 10 RowGroups e 34 colunas retorna 340 linhas. 
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indica a ID da partição. É exclusivo em um banco de dados.|  
 |**hobt_id**|**bigint**|A ID do heap ou o índice de árvore B (hobt) para a tabela que tem seu índice columnstore.|  
 |**column_id**|**int**|ID da coluna columnstore.|  
-|**segment_id**|**int**|ID do rowgroup. Para compatibilidade com versões anteriores, o nome da coluna continua a ser chamado segment_id, mesmo que isso é a ID do rowgroup. Você pode identificar exclusivamente um segmento usando \<hobt_id partition_id, column_id >, < segment_id >.|  
-|**version**|**int**|Versão de formato do segmento de coluna.|  
-|**encoding_type**|**int**|Tipo de codificação usado para esse segmento:<br /><br /> 1 = VALUE_BASED - não-cadeia de caracteres/binários com nenhum dicionário (muito semelhante a 4 com algumas variações internas)<br /><br /> 2 = VALUE_HASH_BASED - coluna não-cadeia de caracteres/binários com valores comuns em dicionário<br /><br /> 3 = STRING_HASH_BASED - coluna de cadeia de caracteres/binário com valores comuns em dicionário<br /><br /> 4 = STORE_BY_VALUE_BASED - não-cadeia de caracteres/binários com nenhum dicionário<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - cadeia de caracteres/binário com nenhum dicionário<br /><br /> Todas as codificações de tirar proveito da codificação de empacotamento de bit e o comprimento de execução quando possível.|  
+|**segment_id**|**int**|ID do rowgroup. Para compatibilidade com versões anteriores, o nome da coluna continua sendo chamado segment_id embora seja a ID do rowgroup. Você pode identificar exclusivamente um segmento usando \<hobt_id, partition_id, column_id>, <segment_id>.|  
+|**Versão**|**int**|Versão de formato do segmento de coluna.|  
+|**encoding_type**|**int**|Tipo de codificação usado para esse segmento:<br /><br /> 1 = VALUE_BASED-não cadeia de caracteres/binário sem dicionário (muito semelhante a 4 com algumas variações internas)<br /><br /> 2 = VALUE_HASH_BASED-coluna não cadeia de caracteres/binária com valores comuns no dicionário<br /><br /> 3 = STRING_HASH_BASED-cadeia de caracteres/coluna binária com valores comuns no dicionário<br /><br /> 4 = STORE_BY_VALUE_BASED-não cadeia de caracteres/binário sem dicionário<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-cadeia de caracteres/binário sem dicionário<br /><br /> Todas as codificações aproveitam a codificação de bits e de tamanho de execução quando possível.|  
 |**row_count**|**int**|Número de linhas no grupo de linhas.|  
 |**has_nulls**|**int**|1 se o segmento de coluna tiver valores nulos.|  
-|**base_id**|**bigint**|Id do valor base se tipo de codificação 1 estiver sendo usado.  Se o tipo de codificação 1 não está sendo usado, base_id será definido como -1.|  
-|**magnitude**|**float**|Magnitude se o tipo de codificação 1 estiver sendo usado.  Se o tipo de codificação 1 não está sendo usado, magnitude será definido como -1.|  
-|**primary_dictionary_id**|**int**|Um valor de 0 representa o dicionário global. Um valor de -1 indica que não há nenhum dicionário global criado para esta coluna.|  
-|**secondary_dictionary_id**|**int**|Um valor diferente de zero aponta para o dicionário local para esta coluna no segmento atual (ou seja, o grupo de linhas). Um valor de -1 indica que há um dicionário local para este segmento.|  
+|**base_id**|**bigint**|ID do valor de base se o tipo de codificação 1 estiver sendo usado.  Se o tipo de codificação 1 não estiver sendo usado, base_id será definido como-1.|  
+|**magnitude**|**float**|Magnitude se o tipo de codificação 1 estiver sendo usado.  Se o tipo de codificação 1 não estiver sendo usado, a magnitude será definida como-1.|  
+|**primary_dictionary_id**|**int**|Um valor de 0 representa o dicionário global. Um valor de-1 indica que não há nenhum dicionário global criado para esta coluna.|  
+|**secondary_dictionary_id**|**int**|Um valor diferente de zero aponta para o dicionário local para esta coluna no segmento atual (ou seja, o rowgroup). Um valor de-1 indica que não há nenhum dicionário local para este segmento.|  
 |**min_data_id**|**bigint**|Id de dados mínimo no segmento de coluna.|  
 |**max_data_id**|**bigint**|Id de dados máximo no segmento de coluna.|  
 |**null_value**|**bigint**|Valor usado para representar nulos.|  
@@ -67,17 +67,17 @@ GO
 ```  
   
 ## <a name="permissions"></a>Permissões  
- Todas as colunas requerem no mínimo **VIEW DEFINITION** permissão na tabela. As colunas a seguir retornam nulo, a menos que o usuário também tenha **selecionar** permissão: has_nulls, base_id, magnitude, min_data_id, max_data_id e null_value.  
+ Todas as colunas exigem pelo menos a permissão **View definition** na tabela. As colunas a seguir retornam NULL, a menos que o usuário também tenha a permissão **Select** : has_nulls, base_id, magnitude, min_data_id, max_data_id e null_value.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Consultando o catálogo de sistema do SQL Server perguntas Frequentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [Consultando as perguntas frequentes sobre o catálogo do sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [&#41;sys. Columns &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Guia de Índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   

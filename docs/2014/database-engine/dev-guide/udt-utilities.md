@@ -11,19 +11,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637724"
 ---
 # <a name="udt-utilities"></a>Utilitários UDT
   O exemplo Utilitários UDT contém várias funções de utilitário. Elas incluem funções para expor metadados de assembly para Transact-SQL, funções com valor de tabela de fluxo de exemplo para retornar os tipos em um assembly como uma tabela e funções para retornar campos, métodos e propriedades em um tipo de dados definido pelo usuário. As tecnologias demonstradas incluem funções com valor de tabela de fluxo, APIs de reflexão do .NET Framework e invocação de funções com valor de tabela do Transact-SQL.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que está disponível no [site do Codeplex](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -90,7 +91,7 @@ ms.locfileid: "73637724"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Código de exemplo  
+## <a name="sample-code"></a>Exemplo de código  
  As listagens de código deste exemplo são as seguintes.  
   
  C#  
@@ -1596,7 +1597,7 @@ USE AdventureWorks2012;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Cenários de uso e exemplos para a integração do CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Cenários de uso e exemplos de integração do CLR&#41; &#40;Common Language Runtime](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

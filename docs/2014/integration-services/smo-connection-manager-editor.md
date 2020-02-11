@@ -1,5 +1,5 @@
 ---
-title: Editor do Gerenciador de Conexão SMO | Microsoft Docs
+title: Editor do Gerenciador de conexões SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055601"
 ---
 # <a name="smo-connection-manager-editor"></a>Editor do Gerenciador de Conexões SMO
@@ -33,10 +33,10 @@ ms.locfileid: "66055601"
  **Atualizar**  
  Atualize a lista de instâncias [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponíveis que podem ser detectadas na rede.  
   
- **Usar Autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Use a Autenticação do Windows para conectar-se à instância [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] selecionada.  
   
- **Usar Autenticação do SQL Server**  
+ **Usar autenticação SQL Server**  
  Use a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectar-se à instância [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] selecionada.  
   
  **Nome de usuário**  
@@ -48,7 +48,7 @@ ms.locfileid: "66055601"
  **Testar Conexão**  
  Teste a conexão como foi configurada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

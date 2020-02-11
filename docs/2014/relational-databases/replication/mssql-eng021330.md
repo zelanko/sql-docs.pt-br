@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e3640999842c7bd61c368bf967f74183f5d57099
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023387"
 ---
-# <a name="mssqleng021330"></a>MSSQL_ENG021330
+# <a name="mssql_eng021330"></a>MSSQL_ENG021330
     
 ## <a name="message-details"></a>Detalhes da mensagem  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|21330|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
 |Texto da mensagem|Falha ao criar um subdiretório no diretório de trabalho da replicação.(% ls)|  
@@ -38,8 +38,8 @@ ms.locfileid: "63023387"
 ## <a name="user-action"></a>Ação do usuário  
  Certifique-se de que o caminho correto foi especificado para a pasta do instantâneo e que a conta em que o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado no Publicador tem permissões adequadas.  
   
-## <a name="see-also"></a>Consulte também  
- [Especifique o local de instantâneo padrão](snapshot-options.md#snapshot-folder-locations)   
+## <a name="see-also"></a>Consulte Também  
+ [Especificar o local do instantâneo padrão](snapshot-options.md#snapshot-folder-locations)   
  [Referência de erros e eventos &#40;Replicação&#41;](errors-and-events-reference-replication.md)   
  [Inicializar uma assinatura transacional sem um instantâneo](initialize-a-transactional-subscription-without-a-snapshot.md)  
   

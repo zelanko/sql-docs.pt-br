@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211803"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Especificar colunas computadas em uma tabela
@@ -64,9 +64,9 @@ ms.locfileid: "68211803"
     > [!IMPORTANT]  
     >  Quando uma fórmula combina duas expressões de tipos de dados diferentes, as regras de precedência do tipo de dados especificam que o tipo de dados com menor precedência é convertido no tipo de dados de maior precedência. Se a conversão não for uma conversão implícita com suporte, o erro "`Error validating the formula for column column_name.`" será retornado. Use a função CAST ou CONVERT para resolver o conflito de tipo de dados. Por exemplo, se uma coluna de tipo `nvarchar` é combinada com uma coluna de tipo `int`, o tipo inteiro deve ser convertido em `nvarchar`, conforme mostrado nesta fórmula `('Prod'+CONVERT(nvarchar(23),ProductID))`. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-5.  Indique se os dados são persistentes escolhendo **Sim** ou **Não** na lista suspensa da propriedade filho **Is Persisted**.  
+5.  Indique se os dados são persistentes escolhendo **Sim** ou **Não** na lista suspensa da propriedade filho **Is Persisted** .  
   
-6.  No menu **Arquivo** , clique em **Salvar**_table name_.  
+6.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Para adicionar uma definição de coluna computada em uma coluna existente  
   

@@ -18,21 +18,21 @@ ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 201daf29a40d0d7c7a4f49539c75fdc07bad1e31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117758"
 ---
-# <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
+# <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera a senha de uma função de aplicativo no banco de dados atual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [ALTER Application role](../../t-sql/statements/alter-application-role-transact-sql.md) .  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,12 +42,12 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'` É o nome da função de aplicativo. *função* está **sysname**, sem padrão. *função* deve existir no banco de dados atual.  
+`[ @rolename = ] 'role'`É o nome da função de aplicativo. *Role* é **sysname**, sem padrão. a *função* deve existir no banco de dados atual.  
   
-`[ @newpwd = ] 'password'` É a nova senha para a função de aplicativo. *senha* está **sysname**, sem padrão. *senha* não pode ser NULL.  
+`[ @newpwd = ] 'password'`É a nova senha para a função de aplicativo. a *senha* é **sysname**, sem padrão. a *senha* não pode ser nula.  
   
 > [!IMPORTANT]  
->  Não use uma senha NULL. Use uma senha forte. Para saber mais, confira [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  Não use uma senha NULL. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes (a página pode estar em inglês)](../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -65,10 +65,10 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 EXEC sp_approlepassword 'PayrollAppRole', '''B3r12-36';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Funções de Aplicativo](../../relational-databases/security/authentication-access/application-roles.md)   
- [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762416"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anexar e desanexar bancos de dados (SQL Server)
@@ -85,14 +85,14 @@ ms.locfileid: "62762416"
 3.  Desanexe o banco de dados novamente.  
   
 ##  <a name="AttachDb"></a> Anexando um banco de dados  
- Você pode anexar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiado ou desanexado. Quando você anexa um [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] instância de servidor, os arquivos de catálogo são anexados de seus locais anteriores junto com os outros arquivos banco de dados, as mesmas que na [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obter mais informações, veja [Atualizar pesquisa de texto completo](../search/upgrade-full-text-search.md).  
+ Você pode anexar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiado ou desanexado. Quando você anexa uma [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] instância de servidor, os arquivos de catálogo são anexados de seu local anterior junto com os outros arquivos de banco de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]dados, o mesmo que em. Para obter mais informações, veja [Atualizar pesquisa de texto completo](../search/upgrade-full-text-search.md).  
   
  Quando você anexa um banco de dados, todos os arquivos de dados (arquivos MDF e NDF) devem estar disponíveis. Se algum arquivo de dados tiver um caminho diferente de quando o banco de dados foi inicialmente criado ou anexado pela última vez, você deverá especificar o caminho atual do arquivo.  
   
 > [!NOTE]  
 >  Se o arquivo de dados primário que está sendo anexado for somente leitura, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] presumirá que o banco de dados é somente leitura.  
   
- Quando um banco de dados criptografado é anexado primeiro a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o proprietário do banco de dados deve abrir a chave mestra do banco de dados, executando a instrução a seguir: DESCRIPTOGRAFIA OPEN MASTER KEY POR SENHA = **' *`password`* '** . É recomendável que você habilite a descriptografia automática da chave mestra executando a seguinte instrução: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Para obter mais informações, veja [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Quando um banco de dados criptografado é anexado pela primeira [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vez a uma instância do, o proprietário do banco de dados deve abrir a chave mestra do banco de dados executando a seguinte instrução: abrir a descriptografia da chave mestra por senha = **'*`password`*'**. Recomendamos habilitar a descriptografia automática da chave mestra executando a instrução seguinte: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Para obter mais informações, veja [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  O requisito para anexar arquivos de log depende, em parte, de o banco de dados ser de leitura e gravação ou apenas leitura:  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62762416"
   
      Se um banco de dados de leitura e gravação tiver um único arquivo de log e você não especificar um novo local para o arquivo de log, a operação de anexação procurará o arquivo no local antigo. Se for achado, o arquivo de log antigo será usado, independentemente de o banco de dados ter sido desligado corretamente. No entanto, se o arquivo de log antigo não for encontrado e se o banco de dados tiver sido desligado corretamente e não tiver nenhuma cadeia de logs ativa, a operação de anexação tentará criar um novo arquivo de log para o banco de dados.  
   
--   Se o arquivo de dados primário que está sendo anexado for somente leitura, o [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] não é possível atualizar o local de log armazenados no arquivo primário.  
+-   Se o arquivo de dados primário que está sendo anexado for somente leitura [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] , o não poderá atualizar o local do log armazenado no arquivo primário.  
   
   
   
@@ -148,7 +148,7 @@ ms.locfileid: "62762416"
   
 -   [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivos e grupos de arquivos do banco de dados](database-files-and-filegroups.md)  
   
   

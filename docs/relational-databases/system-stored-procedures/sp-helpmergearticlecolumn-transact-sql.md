@@ -16,18 +16,18 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da2eec998176dfd46ab261fa405ecaa4b6e90044
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126438"
 ---
-# <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
+# <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna a lista de colunas na tabela especificada ou artigo de exibição para uma publicação de mesclagem. Como os procedimentos armazenados não têm colunas, esse procedimento armazenado retornará um erro se um procedimento armazenado for especificado como o artigo. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,28 +38,28 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'` É o nome de uma tabela ou exibição que é o artigo do qual recuperar informações. *artigo* é **sysname**, sem padrão.  
+`[ @article = ] 'article'`É o nome de uma tabela ou exibição que é o artigo no qual recuperar informações. o *artigo* é **sysname**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Identifica a coluna.|  
 |**column_name**|**sysname**|É o nome da coluna para uma tabela ou exibição.|  
-|**Publicado**|**bit**|Especifica se o nome da coluna é publicado.<br /><br /> **1** Especifica que a coluna está sendo publicada.<br /><br /> **0** Especifica que não é publicado.|  
+|**Checked**|**bit**|Especifica se o nome da coluna é publicado.<br /><br /> **1** especifica que a coluna está sendo publicada.<br /><br /> **0** especifica que não está publicado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_helpmergearticlecolumn** é usado em replicação de mesclagem.  
+ **sp_helpmergearticlecolumn** é usado na replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **replmonitor** função de banco de dados fixa no banco de dados de distribuição ou a lista de acesso à publicação para a publicação pode executar **sp_helpmergearticlecolumn**.  
+ Somente os membros da função de banco de dados fixa **replmonitor** no banco de dados de distribuição ou na lista de acesso à publicação da publicação podem ser executados **sp_helpmergearticlecolumn**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

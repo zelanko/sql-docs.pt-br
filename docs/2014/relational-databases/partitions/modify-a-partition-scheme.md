@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206569"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar um esquema de partição
@@ -53,7 +53,7 @@ ms.locfileid: "68206569"
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para modificar um esquema de partição:**  
   
- Essa ação específica não pode ser executada com o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para modificar um esquema de partição, primeiro você deve excluir o esquema e depois criar um novo com as propriedades desejadas usando o Assistente para Criar Partição. Para obter mais informações, consulte [criar tabelas particionadas e índices usando o SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) sob **criar tabelas e índices particionados**.  
+ Essa ação específica não pode ser executada com o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para modificar um esquema de partição, primeiro você deve excluir o esquema e depois criar um novo com as propriedades desejadas usando o Assistente para Criar Partição. Para obter mais informações, consulte [criar tabelas e índices particionados usando SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) em **criar tabelas e índices particionados**.  
   
 #### <a name="to-delete-a-partition-scheme"></a>Para excluir um esquema de partição  
   

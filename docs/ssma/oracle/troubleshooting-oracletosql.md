@@ -11,14 +11,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d53620afbe1fffa51ae484beaa2f2520ccb0eecb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266461"
 ---
 # <a name="troubleshooting-oracletosql"></a>Solução de problemas (OracleToSQL)
-Não é incomum enfrentar midway de problemas de migração executando os comandos ou scripts do console.  
+Não é incomum encontrar problemas de migração no centro da execução dos scripts ou comandos do console.  
   
 Os erros corrigível podem estar relacionados a:  
   
@@ -26,13 +26,13 @@ Os erros corrigível podem estar relacionados a:
   
 2.  Procedimento  
   
-3.  Exibir  
+3.  Visualizar  
   
-4.  Disparador  
+4.  Gatilho  
   
 5.  Modificando o tipo de dados  
   
 6.  Alterando as configurações do projeto  
   
-O problema pode ser corrigido usando a interface de usuário do SSMA, abrindo o arquivo de projeto criado por meio do console.  
+Os problemas podem ser corrigidos usando a interface do usuário do SSMA abrindo o arquivo de projeto criado por meio do console.  
   

@@ -1,5 +1,5 @@
 ---
-title: Instalar o SQL Server 2014 do Assistente de instalação (instalação) | Microsoft Docs
+title: Instalar o SQL Server 2014 do assistente de instalação (instalação) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,26 +15,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775746"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Instalar o SQL Server 2014 por meio do Assistente de Instalação (Instalação)
-  Este tópico apresenta um procedimento passo a passo sobre como instalar uma nova instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o assistente para instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Assistente para Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma única árvore de recursos para instalação de todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que você não precise instalá-los individualmente. Para obter mais informações sobre os vários componentes que podem ser instalados, consulte [instalação do SQL Server 2014](installation-for-sql-server.md).  Para obter mais informações sobre como instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes individualmente, veja [instalar o SQL Server 2014](install-sql-server.md).  
+  Este tópico apresenta um procedimento passo a passo sobre como instalar uma nova instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o assistente para instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Assistente para Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma única árvore de recursos para instalação de todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que você não precise instalá-los individualmente. Para obter mais informações sobre vários componentes que podem ser instalados, consulte [instalação para o SQL Server 2014](installation-for-sql-server.md).  Para obter mais informações sobre como instalar os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes individualmente, consulte [instalar o SQL Server 2014](install-sql-server.md).  
   
  Estes tópicos adicionais documentam outras maneiras de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Instalar o SQL Server 2014 do Prompt de comando](install-sql-server-from-the-command-prompt.md).  
+-   [Instale o SQL Server 2014 no prompt de comando](install-sql-server-from-the-command-prompt.md).  
   
 -   [Instalar o SQL Server 2014 usando um arquivo de configuração](install-sql-server-using-a-configuration-file.md)  
   
 -   [Instalar o SQL Server 2014 usando SysPrep](install-sql-server-using-sysprep.md)  
   
--   [Criar um novo Cluster de Failover do SQL Server &#40;instalação&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md).  
+-   [Crie um novo cluster de Failover SQL Server &#40;&#41;de instalação ](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md).  
   
--   [Atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+-   [Atualize para o SQL Server 2014 usando o assistente de instalação &#40;&#41;de ](upgrade-sql-server-using-the-installation-wizard-setup.md)instalação.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], examine os tópicos em [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
@@ -62,9 +62,9 @@ ms.locfileid: "62775746"
   
 8.  Na página Instalar Arquivos de Instalação, a Instalação apresenta o andamento do download, da extração e da instalação dos arquivos de Instalação. Se uma atualização para a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for localizada, e for especificada para ser incluída, essa atualização também será instalada.  
   
-9. Na página Função de Instalação, selecione **Instalação de Recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e clique em **Avançar** para continuar para a página Seleção de Recursos.  
+9. Na página função de instalação, selecione ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação de recurso**e clique em **Avançar** para continuar na página seleção de recursos.  
   
-10. Na página Seleção de Recursos, selecione os componentes para a instalação. Uma descrição de cada grupo de componentes é exibida no painel **Descrição do recurso** depois que você seleciona o nome do recurso. Você pode selecionar qualquer combinação de caixas de seleção. Para obter mais informações, consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+10. Na página Seleção de Recursos, selecione os componentes para a instalação. Uma descrição de cada grupo de componentes é exibida no painel **Descrição do recurso** depois que você seleciona o nome do recurso. Você pode selecionar qualquer combinação de caixas de seleção. Para obter mais informações, consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
      Os pré-requisitos dos recursos selecionados são exibidos no painel **Pré-requisitos dos recursos selecionados** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação instalará os pré-requisitos ainda não instalados na etapa de instalação descrita posteriormente neste procedimento.  
   
@@ -91,13 +91,14 @@ ms.locfileid: "62775746"
   
      Todos os service packs e atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão aplicados a cada componente de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Instâncias instaladas** : a grade mostra as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador em que a Instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     **Instâncias instaladas** – a grade mostra as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instâncias do que estão no computador em que a instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
      O fluxo de trabalho do restante da instalação depende dos recursos especificados para a instalação. Talvez você não veja todas as páginas, dependendo de suas seleções.  
   
 13. Use a página Configuração do Servidor – Contas de Serviço para especificar contas de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação.  
   
-     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](../../sql-server/install/server-configuration-service-accounts.md) e [Configurar contas de serviço e permissões do Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](../../sql-server/install/server-configuration-service-accounts.md) e [Configurar contas de serviço e permissões do Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], forneça credenciais nos campos na parte inferior da página.  
   
@@ -112,12 +113,13 @@ ms.locfileid: "62775746"
   
          Depois que um dispositivo estabelecer uma conexão com êxito com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o mecanismo de segurança será o mesmo para Autenticação do Windows e Modo Misto. Para obter mais informações, consulte [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administradores: você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administradores: você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Use a página Configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Diretórios de Dados para especificar diretórios de instalação não padrão. Para instalar nos diretórios padrão, clique em **Avançar**.  
   
     > [!IMPORTANT]  
-    >  Se você especificar diretórios de instalação diferentes do padrão, assegure que as pastas de instalação sejam exclusivas a esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nenhum dos diretórios nesta caixa de diálogo deve ser compartilhado com diretórios de outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Além disso, haverá falha na instalação do SQL Server com os diretórios de dados na pasta raiz de uma unidade ou um ponto de montagem. Para obter mais informações, consulte [suporte do SQL Server para volumes montados.](https://support.microsoft.com/kb/819546/en-us)  
+    >  Se você especificar diretórios de instalação diferentes do padrão, assegure que as pastas de instalação sejam exclusivas a esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nenhum dos diretórios nesta caixa de diálogo deve ser compartilhado com diretórios de outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Além disso, haverá falha na instalação do SQL Server com os diretórios de dados na pasta raiz de uma unidade ou um ponto de montagem. Para obter mais informações, consulte [SQL Server suporte para volumes montados.](https://support.microsoft.com/kb/819546/en-us)  
   
      Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](../../sql-server/install/database-engine-configuration-data-directories.md).  
   
@@ -130,7 +132,7 @@ ms.locfileid: "62775746"
      Use a página Configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Diretórios de Dados para especificar diretórios de instalação não padrão. Para instalar nos diretórios padrão, clique em **Avançar**.  
   
     > [!IMPORTANT]  
-    >  Se você especificar diretórios de instalação diferentes do padrão, assegure que as pastas de instalação sejam exclusivas a esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nenhum dos diretórios nesta caixa de diálogo deve ser compartilhado com diretórios de outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Além disso, haverá falha na instalação do SQL Server com os diretórios de dados na pasta raiz de uma unidade ou um ponto de montagem. Para obter mais informações, consulte [suporte do SQL Server para volumes montados.](https://support.microsoft.com/kb/819546/en-us)  
+    >  Se você especificar diretórios de instalação diferentes do padrão, assegure que as pastas de instalação sejam exclusivas a esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nenhum dos diretórios nesta caixa de diálogo deve ser compartilhado com diretórios de outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Além disso, haverá falha na instalação do SQL Server com os diretórios de dados na pasta raiz de uma unidade ou um ponto de montagem. Para obter mais informações, consulte [SQL Server suporte para volumes montados.](https://support.microsoft.com/kb/819546/en-us)  
   
      Para obter mais informações, veja [Configuração do Analysis Services – Diretórios de dados](../../sql-server/install/analysis-services-configuration-data-directories.md).  
   
@@ -146,7 +148,7 @@ ms.locfileid: "62775746"
   
 18. Use a página Configuração do Distributed Replay Client para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Client. Usuários que têm permissões administrativas terão acesso ilimitado ao serviço Distributed Replay Client.  
   
-     **Nome do Controlador** é um parâmetro opcional e o valor padrão é \<*blank*>. Digite o nome do controlador com o qual o computador cliente se comunicará para o serviço Distributed Replay Client. Observe o seguinte:  
+     O **nome do controlador** é um parâmetro opcional, e o valor \<padrão é *em branco*>. Digite o nome do controlador com o qual o computador cliente se comunicará para o serviço Distributed Replay Client. Observe o seguinte:  
   
     -   Se você já tiver configurado um controlador, digite o nome do controlador enquanto configura cada cliente.  
   
@@ -166,18 +168,18 @@ ms.locfileid: "62775746"
   
 21. Após a instalação, a página Concluída fornece um link para o arquivo de log de resumo da instalação e outras observações importantes. Para concluir o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Fechar**.  
   
-22. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para saber mais, veja [Exibir e ler arquivos de log da Instalação do SQL Server](view-and-read-sql-server-setup-log-files.md).  
+22. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para obter mais informações, consulte [Exibir e ler SQL Server arquivos de log da instalação](view-and-read-sql-server-setup-log-files.md).  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Configure a nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Para reduzir a área da superfície de um sistema vulnerável a ataques, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos essenciais. Para obter mais informações, consulte [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
+ Para reduzir a área da superfície de um sistema vulnerável a ataques, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos essenciais. Para obter mais informações, consulte [configuração da área da superfície](../../relational-databases/security/surface-area-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Validar uma instalação do SQL Server](validate-a-sql-server-installation.md)   
- [Remover uma instalação do SQL Server 2014](repair-a-failed-sql-server-installation.md)   
- [Exibir e ler arquivos de log da Instalação do SQL Server](view-and-read-sql-server-setup-log-files.md)   
- [Atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;programa de instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Instalar o SQL Server 2014 do Prompt de Comando](install-sql-server-from-the-command-prompt.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Validar uma instalação de SQL Server](validate-a-sql-server-installation.md)   
+ [Descartar uma instalação do SQL Server 2014](repair-a-failed-sql-server-installation.md)   
+ [Exibir e ler SQL Server arquivos de log da instalação](view-and-read-sql-server-setup-log-files.md)   
+ [Atualize para o SQL Server 2014 usando o assistente de instalação &#40;a instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [Install SQL Server 2014 from the Command Prompt](install-sql-server-from-the-command-prompt.md)  
   
   

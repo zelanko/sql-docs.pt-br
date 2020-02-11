@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189825"
 ---
 # <a name="alert-properties-history-page"></a>Propriedades do alerta (página Histórico)
-  Use esta página para exibir e modificar o histórico dos alertas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Use esta página para exibir e modificar o histórico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas do Agent.  
   
 ## <a name="options"></a>Opções  
  **Data do último alerta**  
@@ -32,10 +32,10 @@ ms.locfileid: "68189825"
  **Número de ocorrências**  
  Total de ocorrências do evento desde que o alerta foi criado ou a última vez em que a conta foi zerada.  
   
- **Redefinir conta**  
+ **Redefinir contagem**  
  Reinicie as informações sobre esta página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Alertas](alerts.md)  
   
   

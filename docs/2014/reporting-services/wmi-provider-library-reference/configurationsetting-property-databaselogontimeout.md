@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4920f5ef2282478f4d12a19b0806cf6ff9632cac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097894"
 ---
-# <a name="databaselogontimeout-property-wmi-msreportserverconfigurationsetting"></a>Propriedade DatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting)
+# <a name="databaselogontimeout-property-wmi-msreportserver_configurationsetting"></a>Propriedade DatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting)
   Especifica o número de segundos de espera antes de uma tentativa de logon no banco de dados do servidor de relatório falhar. O valor **0** indica um tempo de espera infinito. Somente leitura.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -45,9 +45,9 @@ public Int32 DatabaseLogonTimeout;
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

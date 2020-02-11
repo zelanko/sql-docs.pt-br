@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637635"
 ---
 # <a name="result-set-sample"></a>Exemplo de conjunto de resultados
@@ -25,10 +25,11 @@ ms.locfileid: "73637635"
   
  A API dessa classe é semelhante a um leitor de dados, exceto pelo fato de que você pode avançar ou recuar no conjunto de resultados e de que outros comandos podem ser emitidos na conexão enquanto o conjunto de resultados está aberto. Esta implementação é altamente simplificada para facilitar a compreensão do exemplo. Uma implementação mais eficiente buscaria várias linhas para evitar um retorno do banco de dados por linha buscada. O uso dessa classe pode ter um volume de memória significativamente menor do que preencher um conjunto de dados com todos os resultados de uma consulta, o que é muito importante para programação do servidor. Esse exemplo também demonstra como usar o atributo "Permitir chamadores parcialmente confiáveis" para indicar que o assembly de conjunto de resultados é uma biblioteca que pode ser chamada com segurança de outros assemblies. Essa abordagem é um pouco mais complexa, mas muito mais segura do que registrar o assembly de chamada por meio de permissão não segura. É mais segura porque, com o registro do assembly de chamada como seguro, o assembly de chamada limita o impacto nos recursos do servidor e evita danos à integridade do servidor.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   
@@ -69,7 +70,7 @@ ms.locfileid: "73637635"
   
 3.  Crie um arquivo de chaves de nome forte executando o seguinte no prompt de comando.  
   
-## <a name="sample-code"></a>Código de exemplo  
+## <a name="sample-code"></a>Exemplo de código  
  As listagens de código deste exemplo são as seguintes.  
   
  Este é o código para a Biblioteca `ResultSet.`  
@@ -1411,7 +1412,7 @@ DROP ASSEMBLY ResultSet;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Cenários de uso e exemplos para a integração do CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Cenários de uso e exemplos de integração do CLR&#41; &#40;Common Language Runtime](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

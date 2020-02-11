@@ -9,10 +9,10 @@ ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 698c78dced26e7981fb7a651c22530909427b796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222559"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Trabalhando com instantâneos (portal da Web)
@@ -76,4 +76,4 @@ Marcar essa opção copiará um instantâneo de relatório gerado com base nas p
 [Trabalhando com relatórios paginados](working-with-paginated-reports-web-portal.md)  
 [Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

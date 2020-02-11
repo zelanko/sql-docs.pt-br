@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c8de3e6903a28ad8358431f5e455df31d3044e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097948"
 ---
-# <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>Método SetServiceState (WMI MSReportServer_ConfigurationSetting)
+# <a name="setservicestate-method-wmi-msreportserver_configurationsetting"></a>Método SetServiceState (WMI MSReportServer_ConfigurationSetting)
   Ativa e desativa o Servidor de Relatório do Windows e os serviços Web.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,7 +41,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
     Boolean EnableWebService, Boolean EnableReportManager, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *EnableWindowsService*  
  Um valor `Boolean` que indica o estado do serviço do Windows. Um valor `true` inicia o serviço Servidor de Relatório do Windows; um valor `false` interrompe o serviço do Windows.  
   
@@ -51,7 +51,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
  *EnableReportManager*  
  Um valor `Boolean` que indica o estado desejado do Gerenciador de Relatórios.  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -60,9 +60,9 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

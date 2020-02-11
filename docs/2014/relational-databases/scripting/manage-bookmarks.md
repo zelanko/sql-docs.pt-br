@@ -13,30 +13,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4403e542125918bb5fd738077ebdcc6182201a12
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242047"
 ---
 # <a name="manage-bookmarks"></a>Gerenciar indicadores
-  Enquanto você estiver trabalhando em um editor de código, a janela **indicadores** permitirá que você crie links para linhas específicas de código em seu documento. Você pode exibir essa janela no menu **Exibir** .  
+  Quando estiver trabalhando em um editor de códigos, a janela **Indicadores** permite criar links com linhas específicas de código dentro de seu documento. Você pode exibir essa janela no menu **Exibir** .  
   
  Para criar e navegar pelos indicadores, clique nos botões localizados na barra de ferramentas **TextEditor** na parte superior da janela **Indicadores** . Você pode adicionar e remover indicadores, pode ativá-los ou desabilitá-los e organizá-los em pastas. Alguns comandos também estão disponíveis no menu de atalho na janela **Indicadores** . Para adicionar ou remover um indicador, posicione o ponto de inserção na linha desejada do Editor e clique em **Alternar um indicador**. Para ativar um indicador, marque sua caixa de seleção na janela **Indicadores** ; para desabilitar (sem remover) um indicador, desmarque sua caixa de seleção.  
   
 ## <a name="text-editor-toolbar"></a>Barra de ferramentas do Editor de Textos  
  Quando um documento de texto é aberto no Editor, os botões abaixo estão habilitados na barra de ferramentas **Editor de Texto** . Para exibir a barra de ferramentas **Editor de Texto** quando estiver no Editor de Consultas, no menu **Exibir** , aponte para **Barras de Ferramentas**e clique em **Editor de Texto**.  
   
- **Ativar/desativar um indicador na linha atual**  
+ **Alternar um indicador na linha atual**  
  Adiciona ou remove um indicador na linha selecionada do documento no Editor ativo. Não altera a linha de código com indicador.  
   
- **Mover o cursor para o indicador anterior**  
+ **Mover o ponto de intercalação para o indicador anterior**  
  Seleciona o indicador anterior que está habilitado na janela **Indicadores** . Quando o primeiro indicador é atingido, ele volta ao último. Conforme necessário, abre o arquivo onde está o indicador selecionado no Editor. Rola esse documento até a linha marcada e coloca o ponto de inserção nesse local.  
   
- **Mover o cursor para o próximo indicador**  
+ **Mover o sinal de intercalação para o próximo indicador**  
  Seleciona o próximo indicador que está habilitado na janela **Indicadores** . Quando o último indicador é atingido, ele volta ao primeiro. Conforme necessário, abre o arquivo onde está o indicador selecionado no Editor. Rola esse documento até a linha marcada e coloca o ponto de inserção nesse local.  
   
- **Limpar todos os indicadores no documento atual**  
+ **Desmarcar todos os indicadores no documento atual**  
  Exibe uma mensagem de confirmação e, então, remove todos os indicadores do documento ativo. Não remove as linhas de código que continham indicadores.  
   
 > [!CAUTION]  
@@ -45,7 +45,7 @@ ms.locfileid: "75242047"
 ## <a name="bookmarks-window"></a>Janela Indicadores  
  Para organizar indicadores, crie pastas de indicadores na janela **Indicadores** . Arraste e solte indicadores nas pastas. Os botões a seguir estão disponíveis na parte superior da janela **Indicadores** .  
   
- **Ativar/desativar um indicador na linha atual.**  
+ **Alternar um indicador na linha atual.**  
  Adiciona ou remove um indicador na linha selecionada do documento no Editor ativo. Não altera a linha de código com indicador.  
   
  **Nova pasta**  
@@ -54,22 +54,22 @@ ms.locfileid: "75242047"
 > [!TIP]  
 >  Em um arquivo de código longo, pode ser útil organizar os indicadores em pastas relacionadas a tarefas. A seleção de uma pasta habilita os botões **Ir para o indicador anterior na pasta** e **Ir para o próximo indicador na pasta** .  
   
- **Mover o cursor para o indicador anterior**  
+ **Mover o ponto de intercalação para o indicador anterior**  
  Seleciona o indicador anterior que está habilitado na janela **Indicadores** . Quando o primeiro indicador é atingido, ele volta ao último. Conforme necessário, abre o arquivo onde está o indicador selecionado no Editor. Rola esse documento até a linha marcada e coloca o ponto de inserção nesse local.  
   
- **Mover o cursor para o próximo indicador**  
+ **Mover o sinal de intercalação para o próximo indicador**  
  Seleciona o próximo indicador que está habilitado na janela **Indicadores** . Quando o último indicador é atingido, ele volta ao primeiro. Conforme necessário, abre o arquivo onde está o indicador selecionado no Editor. Rola esse documento até a linha marcada e coloca o ponto de inserção nesse local.  
   
- **Mover o cursor para o indicador anterior na pasta atual**  
+ **Mover o ponto de intercalação para o indicador anterior na pasta atual**  
  Seleciona o indicador anterior que está habilitado dentro da mesma pasta na janela **Indicadores** . Quando o primeiro indicador é atingido, volta para o último daquela pasta. Conforme necessário, abre o arquivo onde está o indicador selecionado no Editor. Rola esse documento até a linha marcada e coloca o ponto de inserção nesse local.  
   
- **Mover o cursor para o próximo indicador na pasta atual**  
+ **Mover o ponto de intercalação para o próximo indicador na pasta atual**  
  Seleciona o próximo indicador que está habilitado dentro da mesma pasta na janela **Indicadores** . Quando o primeiro indicador é atingido, volta para o primeiro daquela pasta. Conforme necessário, abre o arquivo onde está o indicador selecionado no Editor. Rola esse documento até a linha marcada e coloca o ponto de inserção nesse local.  
   
- **Desabilitar/habilitar todos os indicadores**  
+ **Desabilitar/Habilitar Todos os Indicadores**  
  Desmarca ou habilita as caixas de seleção para todos os indicadores na janela **Indicadores** . Não remove indicadores ou altera as linhas de código que eles marcam.  
   
- **Excluir**  
+ **Delete (excluir)**  
  Remove o indicador atualmente selecionado na janela **Indicadores** e do documento em que está o indicador. Não remove a linha de código que continha o indicador.  
   
  Caixas de seleção de indicadores  
@@ -78,17 +78,17 @@ ms.locfileid: "75242047"
 ## <a name="bookmarks-window-shortcut-menu"></a>Menu de atalho da janela Indicadores  
  Quando você clica com o botão direito do mouse em uma entrada na janela **Indicadores** , os comandos seguintes estão disponíveis no menu de atalho.  
   
- **Excluir**  
+ **Delete (excluir)**  
  Remove o indicador atualmente selecionado na janela **Indicadores** e do documento em que está o indicador. Não remove a linha de código que continha o indicador.  
   
- **Nome**  
+ **Renomear**  
  Permite atribuir um novo nome para exibição para um indicador ou uma pasta.  
   
- **Desabilitar/habilitar indicador**  
+ **Desabilitar/Habilitar Indicador**  
  Limpa ou habilita a caixa de seleção para o indicador selecionado na janela **Indicadores** . Não remove o indicador ou altera a linhas de código que ele marca.  
   
- **Desabilitar/habilitar todos os indicadores**  
+ **Desabilitar/Habilitar Todos os Indicadores**  
  Desmarca ou habilita as caixas de seleção para todos os indicadores na janela **Indicadores** . Não remove indicadores ou altera as linhas de código que eles marcam.  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server Management Studio atalhos de teclado](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87e33ff166f07c10ee8b0b32eac5590f486e70c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483910"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Anotar uma transação (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "65483910"
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>Para anotar uma transação no Explorer  
   
-1.  Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
+1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
   
 2.  Na lista **Versão** , selecione uma versão.  
   
@@ -63,8 +63,8 @@ ms.locfileid: "65483910"
   
 5.  Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
- [Anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#40;de anotações Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
  [Transações &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
   

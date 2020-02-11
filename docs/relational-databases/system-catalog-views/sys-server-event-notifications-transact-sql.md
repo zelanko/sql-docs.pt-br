@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_notifications (Transact-SQL) | Microsoft Docs
+title: sys. server_event_notifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,23 +20,23 @@ ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e3eaa1bdfa45e0c3e0b0412b8852e134c43c3eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124988"
 ---
-# <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
+# <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada objeto de notificação de eventos no nível do servidor.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome da notificação de eventos do servidor. É exclusivo em todas as notificações de eventos no nível do servidor.|  
-|**object_id**|**int**|Número de identificação do objeto. É exclusivo dentro de **mestre** banco de dados.|  
+|**object_id**|**int**|Número de identificação do objeto. É exclusivo no banco de dados **mestre** .|  
 |**parent_class**|**tinyint**|Classe do pai. Sempre é 100 = Servidor.|  
-|**parent_class_desc**|**nvarchar(60)**|Descrição de classe do pai. Sempre é SERVER.|  
+|**parent_class_desc**|**nvarchar (60)**|Descrição de classe do pai. Sempre é SERVER.|  
 |**parent_id**|**int**|Sempre é 0.|  
 |**create_date**|**datetime**|Data de criação.|  
 |**modify_date**|**datetime**|Data em que o objeto foi modificado pela última vez com o uso de uma instrução ALTER.|  
@@ -46,9 +46,9 @@ ms.locfileid: "68124988"
 |**principal_id**|**int**|ID da entidade do servidor à qual isto pertence.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

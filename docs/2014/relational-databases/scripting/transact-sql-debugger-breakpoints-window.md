@@ -13,47 +13,47 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e3cce22873b00e47c5d03d18cbcd58c29399afc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243113"
 ---
 # <a name="breakpoints-window"></a>Janela Pontos de Interrupção
-  A janela **pontos de interrupção** lista todos os pontos de interrupção que são definidos no [!INCLUDE[ssDE](../../includes/ssde-md.md)] editor de consultas atual. Para gerenciar os pontos de interrupção, use a barra de ferramentas da janela **Pontos de Interrupção** . Pontos de interrupção são locais no código onde a execução pausa no modo de depuração de forma que é possível exibir os dados de depuração.  
+  A janela **Pontos de Interrupção** lista todos os pontos de interrupção definidos no atual Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Para gerenciar os pontos de interrupção, use a barra de ferramentas da janela **Pontos de Interrupção** . Pontos de interrupção são locais no código onde a execução pausa no modo de depuração de forma que é possível exibir os dados de depuração.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
- **Para acessar a janela pontos de interrupção**  
+ **Para acessar a janela Pontos de Interrupção**  
   
 -   No menu **Depurar** , clique em **Janelas**e em **Pontos de Interrupção**.  
   
 ## <a name="breakpoints-window-columns"></a>Colunas da Janela Pontos de Interrupção  
  Por padrão, a janela **Pontos de interrupção** lista as colunas a seguir.  
   
- **Nomes**  
+ **Nome**  
  Exibe o nome do ponto de interrupção. Os nomes dos pontos de interrupção são fornecidos pelo depurador. Esse nome inclui o nome da janela do Editor de Consultas do Mecanismo do Banco de Dados que contém o ponto de interrupção e o número da linha do Editor de Consultas onde o ponto de interrupção foi configurado.  
   
- **Problema**  
- Exibe **(nenhuma condição)**. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] não dá suporte a condições de ponto de interrupção de configuração.  
+ **Condição**  
+ Exibe **(nenhuma condição)** . O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] não dá suporte a condições de ponto de interrupção de configuração.  
   
- **Contagem de acesso**  
+ **Contagem de Ocorrências**  
  Exibe**sempre é interrompido**.  
   
  Você pode adicionar e remover as seguintes colunas selecionando-as na lista **Colunas** .  
   
- **Filtro**  
- Exibe **(nenhum)**. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] não dá suporte a filtros de ponto de interrupção de configuração.  
+ **Filter**  
+ Exibe **(nenhum)** . O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] não dá suporte a filtros de ponto de interrupção de configuração.  
   
- **Quando atingido**  
+ **Quando Visitado**  
  Exibe **Interrupção**.  
   
  **Idioma**  
  Exibe **Transact-SQL** para [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Funcionamento**  
+ **Função**  
  Exibe o número da linha onde o ponto de interrupção está definido.  
   
- **Grupo**  
+ **Arquivo**  
  Exibe o nome do arquivo de origem que contém o ponto de interrupção e o número da linha na qual o ponto de interrupção está definido.  
   
  **Endereço**  
@@ -65,10 +65,10 @@ ms.locfileid: "75243113"
 ## <a name="breakpoints-window-toolbar"></a>Barra de ferramentas da janela Pontos de Interrupção  
  Quando a janela atual do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] tem pontos de interrupção ativos, a janela **Pontos de Interrupção** exibe uma barra de ferramentas que pode ser usada para gerenciar os pontos de interrupção.  
   
- **Excluir**  
+ **Delete (excluir)**  
  Exclui o ponto de interrupção selecionado.  
   
- **Excluir todos os pontos de interrupção**  
+ **Excluir Todos os Pontos de Interrupção**  
  Exclui todos os pontos de interrupção exibidos na janela **Pontos de Interrupção** .  
   
  **Desabilitar Todos os Pontos de Interrupção**  
@@ -77,7 +77,7 @@ ms.locfileid: "75243113"
  **Habilitar Todos os Pontos de Interrupção**  
  Habilita todos os pontos de interrupção de forma que eles interrompam a execução de código. Quando todos os pontos de interrupção estão habilitados, este botão se transforma em **Desabilitar Todos os Pontos de Interrupção**.  
   
- **Ir para código-fonte**  
+ **Ir para Código Fonte**  
  Posiciona o cursor na linha do Editor de Consultas que contém o ponto de interrupção selecionado.  
   
  **Colunas**  

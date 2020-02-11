@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830577"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach
@@ -32,7 +32,7 @@ ms.locfileid: "62830577"
   
      Se você não usar uma variável para o argumento Propriedades Estendidas, adicione-a manualmente à expressão que contém a cadeia de conexão.  
   
-3.  Adicione um contêiner Loop Foreach à guia **Fluxo de Controle** . Para obter informações sobre como configurar um Contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](foreach-loop-container.md).  
+3.  Adicione um contêiner Loop Foreach à guia **fluxo de controle** . Para obter informações sobre como configurar o contêiner Loop Foreach, consulte [configurar um contêiner Loop Foreach](foreach-loop-container.md).  
   
 4.  Na página **Coleção** do **Editor de Loop Foreach**, selecione o enumerador de Arquivo Foreach, especifique a pasta na qual as pastas de trabalho do Excel ficam situadas e especifique o filtro de arquivo (geralmente *.xls).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62830577"
   
 8.  Selecione o novo gerenciador de conexões do Excel, clique na propriedade **Expressões** na janela Propriedades e clique nas reticências.  
   
-9. No **Editor de expressões de propriedade**, selecione o `ConnectionString` propriedade e, em seguida, clique no botão de reticências.  
+9. No **Editor de expressões de propriedade**, selecione `ConnectionString` a propriedade e clique nas reticências.  
   
 10. No Construtor de Expressões, digite a expressão a seguir:  
   
@@ -69,11 +69,11 @@ ms.locfileid: "62830577"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para criar um loop através de tabelas do Excel usando o enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach  
   
-1.  Crie um gerenciador de conexões ADO.NET que use o provedor OLE DB do Microsoft Jet para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões** , insira o Excel 8.0 como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](../add-delete-or-share-a-connection-manager-in-a-package.md).  
+1.  Crie um gerenciador de conexões ADO.NET que use o provedor OLE DB do Microsoft Jet para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões** , insira o Excel 8.0 como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [Add, Delete, or Share a Connection Manager in a Package](../add-delete-or-share-a-connection-manager-in-a-package.md).  
   
 2.  Crie uma variável de cadeia que receberá o nome da tabela atual em cada iteração do loop.  
   
-3.  Adicione um contêiner Loop Foreach à guia **Fluxo de Controle** . Para obter informações sobre como configurar um contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](foreach-loop-container.md).  
+3.  Adicione um contêiner Loop Foreach à guia **fluxo de controle** . Para obter informações sobre como configurar o contêiner Loop Foreach, consulte [configurar um contêiner Loop Foreach](foreach-loop-container.md).  
   
 4.  Na página **Coleção** do **Editor de Loop Foreach**, selecione o Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "62830577"
   
 9. Crie tarefas no contêiner Loop Foreach que usam o gerenciador de conexões do Excel para executar as mesmas operações em cada tabela do Excel na pasta de trabalho especificada. Se você usar uma tarefa Script para examinar o nome de tabela enumerado ou para trabalhar com tabelas individualmente, lembre-se de adicionar a variável de cadeia à propriedade ReadOnlyVariables da tarefa Script.  
   
-## <a name="see-also"></a>Consulte também  
- [Importar dados do Excel ou exportar dados para o Excel com o SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurar um contêiner Loop Foreach](foreach-loop-container.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Importar dados do Excel ou exportar dados para o Excel com SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurar um contêiner Loop Foreach](foreach-loop-container.md)   
  [Adicionar ou alterar uma expressão de propriedade](../expressions/add-or-change-a-property-expression.md)   
- [Gerenciador de Conexões do Excel](../connection-manager/excel-connection-manager.md)   
+ [Gerenciador de conexões do Excel](../connection-manager/excel-connection-manager.md)   
  [Origem do Excel](../data-flow/excel-source.md)   
  [Destino do Excel](../data-flow/excel-destination.md)   
- [Trabalhando com arquivos do Excel com a tarefa Script](script-task.md)  
+ [Trabalhar com arquivos do Excel com a tarefa Script](script-task.md)  
   
   

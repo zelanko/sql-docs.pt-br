@@ -14,23 +14,23 @@ ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92b8ca2b8c780e48cd9f3bf815ca86e3bd27081e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135627"
 ---
 # <a name="data-sources"></a>Fontes de dados
-Um *fonte de dados* é simplesmente a origem dos dados. Ele pode ser um arquivo, um determinado banco de dados em um DBMS, ou até mesmo um feed de dados ao vivo. Os dados podem ser localizados no mesmo computador que o programa, ou em outro computador em algum lugar em uma rede. Por exemplo, uma fonte de dados pode ser um DBMS Oracle em execução em um sistema de operacional OS/2®, acessado por® do Novell Netware; um DBMS de DB2 da IBM acessados por meio de um gateway. uma coleção de arquivos do Xbase em um diretório de servidor; ou um arquivo de banco de dados local do Microsoft® Access.  
+Uma *fonte de dados* é simplesmente a fonte dos dados. Ele pode ser um arquivo, um banco de dados específico em um DBMS, ou até mesmo um Live Data feed. Os dados podem estar localizados no mesmo computador que o programa ou em outro computador em algum lugar em uma rede. Por exemplo, uma fonte de dados pode ser um DBMS do Oracle em execução em um sistema operacional do SO/2®, acessado pelo Novell® NetWare; um DBMS do IBM DB2 acessado por meio de um gateway; uma coleção de arquivos Xbase em um diretório de servidor; ou um arquivo de banco de dados local do Microsoft® Access.  
   
- A finalidade de uma fonte de dados é reunir todas as informações técnicas necessárias para acessar os dados, o nome do driver, endereço de rede, software de rede e assim por diante - o em um único lugar e ocultá-lo do usuário. O usuário deve ser capaz de examinar uma lista que inclui a folha de pagamento, inventário e pessoal, escolha a folha de pagamento na lista e ter o aplicativo se conectar aos dados da folha de pagamento, tudo sem saber onde residem os dados de folha de pagamento ou como o aplicativo obteve a ele.  
+ A finalidade de uma fonte de dados é reunir todas as informações técnicas necessárias para acessar os dados-o nome do driver, o endereço de rede, o software de rede, etc., em um único local e ocultá-lo do usuário. O usuário deve ser capaz de examinar uma lista que inclui folha de pagamento, inventário e pessoal, escolher folha de pagamento na lista e fazer com que o aplicativo se conecte aos dados da folha de pagamento, tudo isso sem saber onde residem ou como o aplicativo foi obtido.  
   
- O termo *fonte de dados* não devem ser confundidas com termos semelhantes. Neste manual *DBMS* ou *banco de dados* refere-se a um programa de banco de dados ou o mecanismo. Outra distinção é feita entre *bancos de dados da área de trabalho* projetado para ser executado em computadores pessoais e geralmente deficiente em SQL completo e suporte a transações, e *bancos de dados do servidor,* projetado para ser executado em um cliente / situação do servidor e caracterizados por um mecanismo de banco de dados autônomo e SQL Avançado e suporte a transações. *Banco de dados* também se refere a uma determinada coleção de dados, como uma coleção de arquivos do Xbase em um diretório ou um banco de dados no SQL Server. É geralmente equivalente ao termo *catálogo,* usado em outro local deste manual ou o termo *qualificador* em versões anteriores do ODBC.  
+ O termo *fonte de dados* não deve ser confundido com termos semelhantes. Neste manual, o *DBMS* ou o *banco de dados* refere-se a um mecanismo ou programa de banco de dados. Uma distinção adicional é feita entre *bancos de dados da área de trabalho,* projetada para ser executada em computadores pessoais e, muitas vezes, sem suporte completo a transações e SQL, e bancos de dados de *servidor,* projetados para execução em uma situação de cliente/servidor e caracterizado por um mecanismo de banco de dados autônomo e suporte avançado a transações e SQL. O *banco* de dados também se refere a uma determinada coleção de data, como uma coleção de arquivos Xbase em um diretório ou em uma SQL Server. Geralmente é equivalente ao catálogo de termos *,* usado em outro lugar neste manual ou no *qualificador* de termo em versões anteriores do ODBC.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Tipos de fontes de dados](../../odbc/reference/types-of-data-sources.md)  
   
--   [Usando fontes de dados](../../odbc/reference/using-data-sources.md)  
+-   [Usar fontes de dados](../../odbc/reference/using-data-sources.md)  
   
 -   [Exemplo de fonte de dados](../../odbc/reference/data-source-example.md)

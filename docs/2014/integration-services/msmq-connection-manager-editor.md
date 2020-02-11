@@ -1,5 +1,5 @@
 ---
-title: Editor do Gerenciador de Conexão MSMQ | Microsoft Docs
+title: Editor do Gerenciador de conexões MSMQ | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057638"
 ---
 # <a name="msmq-connection-manager-editor"></a>Editor do Gerenciador de Conexões MSMQ
@@ -41,15 +41,17 @@ ms.locfileid: "66057638"
   
 |Tipo de fila|Exemplo de caminho|  
 |----------------|-----------------|  
-|Público|\<nome do computador>\\<nome da fila\>|  
-|Private|\<nome do computador>\Private$\\<nome da fila\>|  
+|Público|
+  \<nome do computador>\\<nome da fila\>|  
+|Private|
+  \<nome do computador>\Private$\\<nome da fila\>|  
   
  Você pode usar um "." para representar o computador local.  
   
- **Teste**  
+ **Testar**  
  Depois de configurar o Gerenciador de Conexões MSMQ, confirme se a conexão é viável clicando em **Testar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

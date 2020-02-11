@@ -1,5 +1,5 @@
 ---
-title: Atributos de instrução que afetam parâmetros com valor de tabela | Microsoft Docs
+title: Atributos de instrução que afetam os parâmetros com valor de tabela | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19a757f82c2fa2ff2e78453ddf0fea1fbebda3c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626211"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Atributos de instruções que afetam parâmetros com valor de tabela
   A tabela a seguir descreve os atributos em um campo descritor.  
   
-|Nome do atributo|Tipo|Descrição|  
+|Nome do atributo|Type|DESCRIÇÃO|  
 |--------------------|----------|-----------------|  
 |SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|Para obter mais informações sobre SQL_SS_PARAM_FOCUS, consulte [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  
-|SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|Para obter mais informações sobre sql_name_ss_name_scope, consulte [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  
+|SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|Para obter mais informações sobre SQL_SS_NAME_SCOPE, consulte [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  
   
-## <a name="see-also"></a>Consulte também  
- [Parâmetros com valor de tabela &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Parâmetros com valor de tabela &#40;&#41;ODBC](table-valued-parameters-odbc.md)  
   
   

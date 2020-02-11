@@ -1,5 +1,5 @@
 ---
-title: Resultados (página grade) das opções de consulta | Microsoft Docs
+title: Resultados de opções de consulta (página grade) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089012"
 ---
 # <a name="query-options-results-grid-page"></a>Resultados das opções de consultas (Página Grade)
@@ -26,7 +26,7 @@ ms.locfileid: "66089012"
  **Incluir a consulta no conjunto de resultados**  
  Retorna o texto da consulta como parte do conjunto de resultados.  
   
- **Inclua cabeçalhos de coluna ao copiar ou salvar resultados**  
+ **Incluir cabeçalhos de coluna ao copiar ou salvar os resultados**  
  Inclui os cabeçalhos de coluna (títulos) quando os resultados são copiados para a área de transferência ou quando são salvos em um arquivo. Desmarque essa caixa de seleção se você não deseja que os dados de resultados copiados ou salvos contenham apenas os dados e não os cabeçalhos da coluna.  
   
  **Descartar resultados após a execução**  
@@ -35,10 +35,10 @@ ms.locfileid: "66089012"
  **Exibir resultados em uma guia separada**  
  Exibe o conjunto de resultados em uma janela de documentos nova, em vez de na parte inferior da janela de documentos de consulta.  
   
- **Alternar para a guia Resultados após a execução da consulta**  
+ **Alternar para a guia resultados após a execução da consulta**  
  Define automaticamente o foco da tela para o conjunto de resultados.  
   
- **Máximo de Caracteres Recuperados**  
+ **Máximo de caracteres recuperados**  
  **Dados não XML**:  
   
  Digite um número de 1 a 65535 para especificar o número máximo de caracteres que serão exibidos em cada célula.  
@@ -50,7 +50,7 @@ ms.locfileid: "66089012"
   
  Selecione **1 MB**, **2 MB**ou **5 MB**. Selecione **Ilimitado** para recuperar todos os caracteres.  
   
- **Restaurar Padrões**  
+ **Redefinir para padrão**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
   

@@ -12,10 +12,10 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 5e792a15670c50b918eabbf371258aa9b62cab82
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242125"
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
@@ -34,14 +34,14 @@ ms.locfileid: "75242125"
   
 -   Importar valores de domínio de um arquivo do Excel  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a>Pré-requisitos  
+###  <a name="Prerequisites"></a> Pré-requisitos  
  Para alterar um valor de domínio, você deve ter uma base de dados de conhecimento e um domínio aberto na atividade de Gerenciamento de Domínio.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para alterar valores de domínio.  
   
 ##  <a name="Change"></a>Alterar valores de domínio  

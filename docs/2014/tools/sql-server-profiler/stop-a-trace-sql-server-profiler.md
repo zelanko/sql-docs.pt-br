@@ -1,5 +1,5 @@
 ---
-title: Interromper um rastreamento (SQL Server Profiler) | Microsoft Docs
+title: Parar um rastreamento (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a84673b88ce6401986655a16fd407cafea6f3af1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297663"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>Interromper um rastreamento (SQL Server Profiler)
@@ -31,7 +31,7 @@ ms.locfileid: "63297663"
   
 2.  No menu **Arquivo** , clique em **Parar Rastreamento**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Usando dados de tabela aninhada como entrada para um gráfico de precisão | Microsoft Docs
+title: Usando dados de tabela aninhada como uma entrada para um gráfico de precisão | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082728"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Usando dados de uma tabela aninhada como entrada para um gráfico de precisão
@@ -41,9 +41,9 @@ ms.locfileid: "66082728"
   
 2.  Selecione a guia **Gráfico de Precisão da Mineração** e, em seguida, selecione a guia **Seleção de Entrada** .  
   
-3.  Em **Selecionar conjunto de dados a ser usado para o Gráfico de Precisão**, selecione a opção **Especificar um conjunto de dados diferente**.  
+3.  Em **selecionar conjunto de dados a ser usado para o gráfico de precisão**, selecione a opção **especificar um conjunto de dados diferente**.  
   
-4.  Clique no botão Procurar **(...)**  para escolher o conjunto de dados externos de uma lista de exibições da fonte de dados no servidor atual.  
+4.  Clique no botão procurar **(...)** para escolher o conjunto de dados externos em uma lista de exibições da fonte de dados no servidor atual.  
   
 5.  Clique em **Selecionar Tabela de Casos**. Na caixa de diálogo **Selecionar Tabela** , escolha a tabela na exibição da fonte de dados que contém os dados do caso e, em seguida, clique em **OK**.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "66082728"
   
      Se você precisar modificar a relação entre a tabela aninhada e a tabela de casos, clique em **Modificar Junção** para abrir a caixa de diálogo **Criar Relação** .  
   
-## <a name="see-also"></a>Consulte também  
- [Escolher e mapear dados de testes modelo](choose-and-map-model-testing-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Escolher e mapear dados de teste de modelo](choose-and-map-model-testing-data.md)   
  [Aplicar filtros a dados de testes de modelo](apply-filters-to-model-testing-data.md)  
   
   

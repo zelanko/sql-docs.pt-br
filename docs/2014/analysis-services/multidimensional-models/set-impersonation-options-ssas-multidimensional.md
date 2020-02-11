@@ -1,5 +1,5 @@
 ---
-title: Definir opções de representação (SSAS - Multidimensional) | Microsoft Docs
+title: Definir opções de representação (SSAS – multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072956"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Definir opções de representação (SSAS multidimensional)
@@ -37,19 +37,19 @@ ms.locfileid: "66072956"
 3.  Escolha uma opção descrita em [Opções de representação](#bkmk_options) neste tópico.  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>Definir opções de representação no Management Studio  
- No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra a caixa de diálogo **Informações sobre Representação** clicando no botão de reticências ( **...** ) das seguintes propriedades destas caixas de diálogo:  
+ No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra a caixa de diálogo **Informações sobre Representação** clicando no botão de reticências (**...**) das seguintes propriedades destas caixas de diálogo:  
   
--   Caixa de diálogo**Propriedades de Banco de Dados** , por meio da propriedade Informações sobre Representação de Fonte de Dados.  
+-   Caixa de diálogo **Propriedades do banco** de dados, por meio da propriedade informações de representação da fonte.  
   
--   Caixa de diálogo**Propriedades da Fonte de Dados** , por meio da propriedade Informações sobre Representação.  
+-   Caixa de diálogo **Propriedades da fonte de dados** , por meio da propriedade informações de representação.  
   
--   Caixa de diálogo**Propriedades do Assembly** , por meio da propriedade Informações sobre Representação.  
+-   Caixa de diálogo **Propriedades do assembly** , por meio da propriedade informações de representação.  
   
-##  <a name="bkmk_options"></a> Opções de representação  
+##  <a name="bkmk_options"></a>Opções de representação  
  Todas as opções estão disponíveis na caixa de diálogo, mas nem todas as opções são apropriadas para todos os cenários. Use as informações a seguir para determinar a melhor opção para seu cenário.  
   
  **Usar nome de usuário e senha específicos**  
- Selecione esta opção para fazer o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto usar as credenciais de segurança de uma conta de usuário do Windows especificadas neste formato: *\<Nome de domínio >***\\***\<nome da conta de usuário >* .  
+ Selecione esta opção para fazer com [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que o objeto use as credenciais de segurança de uma conta de usuário do Windows especificada neste formato: * \<nome de domínio>***\\*** \<nome da conta de usuário>*.  
   
  Escolha esta opção para usar uma identidade de usuário dedicada e com privilégios mínimos do Windows que você criou especificamente para finalidade de acesso a dados. Por exemplo, se você periodicamente criar uma conta de finalidade geral para recuperar dados usados em relatórios, poderá especificar essa conta aqui.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66072956"
  Para instruções OPENQUERY do DMX, cubos locais e modelos de mineração, as credenciais do usuário atual são usadas mesmo se você escolher uma opção da conta de serviço. A opção da conta de serviço não tem suporte para associações fora de linha.  
   
 > [!NOTE]  
->  Poderão ocorrer erros durante o processamento de um modelo de mineração de dados em um cubo se a conta de serviço não tiver permissões de administrador na instância do Analysis Services. Para obter mais informações, consulte [estrutura de mineração: Problema durante o processamento quando DataSource é um cubo OLAP](https://go.microsoft.com/fwlink/?LinkId=251610).  
+>  Poderão ocorrer erros durante o processamento de um modelo de mineração de dados em um cubo se a conta de serviço não tiver permissões de administrador na instância do Analysis Services. Para obter mais informações, consulte [Mining Structure: Issue while Processing when DataSource is OLAP Cube](https://go.microsoft.com/fwlink/?LinkId=251610)(Estrutura de mineração: problema durante o processamento quando DataSource é um cubo OLAP).  
   
  **Usar as credenciais do usuário atual**  
  Selecione esta opção para fazer com que o objeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use as credenciais de segurança do usuário atual para associações fora de linha, OPENQUERY DMX, cubos locais e modelos de mineração.  
@@ -83,10 +83,10 @@ ms.locfileid: "66072956"
   
  Com a exceção de cubos locais e processamento usando associações fora de linha, esta opção não tem suporte para bancos de dados multidimensionais.  
   
- **Padrão** ou **Herdar**  
+ **Padrão** ou **herdar**  
  A caixa de diálogo usa **Padrão** para as opções de representação definidas no nível de banco de dados e **Herdar** para as opções de representação definidas no nível de fonte de dados.  
   
- **Fontes de dados – opção Herdar**  
+ **Fontes de dados – opção Inherit**  
   
  No nível da fonte de dados, **Herdar** especifica que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve usar a opção de representação do objeto pai. Em um modelo multidimensional, o objeto pai é o banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Escolher a opção **Herdar** permite gerenciar centralmente as configurações de representação para essa e outras fontes de dados que fazem parte do mesmo banco de dados. Para que esta opção seja significativa, escolha um nome de usuário e senha específicos do Windows no nível do banco de dados. Caso contrário, a combinação de **Herdar** na fonte de dados e **Padrão** no banco de dados é equivalente a usar a opção da conta de serviço.  
   
@@ -96,19 +96,19 @@ ms.locfileid: "66072956"
   
 2.  Em **Informações sobre Representação da Fonte de Dados**, especifique um nome de usuário e senha do Windows.  
   
-3.  Clique com o botão direito do mouse em cada fonte de dados e exiba suas propriedades para garantir que cada uma esteja usando a opção **Herdar**.  
+3.  Clique com o botão direito do mouse em cada fonte de dados e exiba suas propriedades para garantir que cada uma esteja usando a opção **Herdar** .  
   
  Para obter mais informações sobre as configurações padrão no nível do banco de dados, consulte [Definir propriedades do Banco de Dados Multidimensional &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md).  
   
  **Bancos de dados – opção padrão**  
   
- Para bancos de dados tabulares **padrão** significa usar a conta de serviço.  
+ Para bancos de dados de tabela, o **padrão** significa usar a conta de serviço.  
   
  Para bancos de dados multidimensionais, **Padrão** significa o uso da conta de serviço e do usuário atual para operações de mineração de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](create-a-data-source-ssas-multidimensional.md)   
- [Definir propriedades de fonte de dados &#40;Multidimensional do SSAS&#41;](set-data-source-properties-ssas-multidimensional.md)   
- [Cenários de implantação do DirectQuery &#40;Tabular do SSAS&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  
+ [Definir propriedades da fonte de dados &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md)   
+ [Cenários de implantação do DirectQuery &#40;SSAS de tabela&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  
   
   

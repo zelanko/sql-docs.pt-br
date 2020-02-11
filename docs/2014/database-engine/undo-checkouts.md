@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773392"
 ---
 # <a name="undo-checkouts"></a>Desfazer check-outs
@@ -39,7 +39,7 @@ ms.locfileid: "62773392"
      **Colunas**  
      Identifique as colunas a serem exibidas e a ordem em que elas são exibidas.  
   
-     **Modo de exibição simples**  
+     **Exibição Simples**  
      Exiba os itens como listas simples com sua conexão de controle do código-fonte.  
   
      **Nome**  
@@ -48,7 +48,7 @@ ms.locfileid: "62773392"
      **Opções**  
      Exibe opções de desfazer check-out específicas de plug-ins de controle do código-fonte quando é clicada a seta à direita do botão.  
   
-     **Sort**  
+     **Classificar**  
      Classifica a ordem das colunas exibidas.  
   
      **Exibição de árvore**  
@@ -57,8 +57,8 @@ ms.locfileid: "62773392"
      **Desfazer check-out**  
      Reverte o check-out, descartando qualquer alteração no arquivo onde foi feito o check-out.  
   
-## <a name="see-also"></a>Consulte também  
- [Fazer Check-Out de arquivos](../../2014/database-engine/check-out-files.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Fazer check-out de arquivos](../../2014/database-engine/check-out-files.md)   
  [Gerenciar check-outs](../../2014/database-engine/manage-checkouts.md)  
   
   

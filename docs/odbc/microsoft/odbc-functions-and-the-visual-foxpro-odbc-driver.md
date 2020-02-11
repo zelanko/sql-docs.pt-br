@@ -1,5 +1,5 @@
 ---
-title: Funções ODBC e o Driver ODBC do Visual FoxPro | Microsoft Docs
+title: Funções ODBC e o driver ODBC do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,25 +21,25 @@ ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2610383df0f3dde453fe3ba40b10dea85582b9c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915760"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Funções ODBC e o Driver ODBC do Visual FoxPro
-Os tópicos nesta seção fornecem um breve resumo de funções API ODBC e quaisquer detalhes do Visual FoxPro específicos.  
+Os tópicos nesta seção fornecem um breve resumo das funções da API ODBC e de quaisquer detalhes específicos do Visual FoxPro.  
   
 > [!NOTE]  
->  Para obter informações gerais sobre as funções ODBC, consulte [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md) no "Guia do programador de ODBC".  
+>  Para obter informações gerais sobre funções ODBC, consulte [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md) no "guia do programador do ODBC".  
   
- As funções da API de ODBC foram divididas em três categorias principais: Principais funções da API de nível, funções de API do nível 1 e funções de API do nível 2.  
+ As funções da API ODBC foram divididas em três categorias principais: funções de API de nível de núcleo, funções de API de nível 1 e funções de API de nível 2.  
   
 > [!NOTE]  
->  Várias das funções se comportam de forma diferente dependendo se a fonte de dados é definida como uma conexão em um diretório de [tabelas livres](../../odbc/microsoft/visual-foxpro-terminology.md) (arquivos. dbf) ou para um Visual FoxPro [banco de dados](../../odbc/microsoft/visual-foxpro-terminology.md) (arquivo. dbc). Determinadas operações têm suporte somente para conexões de banco de dados.  
+>  Várias das funções se comportam de forma diferente, dependendo se a fonte de dados é definida como uma conexão com um diretório de [tabelas livres](../../odbc/microsoft/visual-foxpro-terminology.md) (arquivos. dbf) ou em um [banco de dados](../../odbc/microsoft/visual-foxpro-terminology.md) do Visual FoxPro (arquivo. DBC). Determinadas operações têm suporte apenas para conexões de banco de dados.  
   
-## <a name="core-level-api-support"></a>Suporte de API de nível de núcleo  
- As funções de API de nível de núcleo de ODBC são listadas na tabela a seguir. Todas essas funções têm suporte para o Driver de ODBC do Visual FoxPro.  
+## <a name="core-level-api-support"></a>Suporte à API de nível de núcleo  
+ As funções de API de nível básico do ODBC são listadas na tabela a seguir. Todas essas funções são suportadas pelo driver ODBC do Visual FoxPro.  
   
 |||  
 |-|-|  
@@ -55,8 +55,8 @@ Os tópicos nesta seção fornecem um breve resumo de funções API ODBC e quais
 |[SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)|[SQLSetCursorName](../../odbc/microsoft/sqlsetcursorname-visual-foxpro-odbc-driver.md)|  
 |[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)|[SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)|  
   
-## <a name="level-1-api-support"></a>Suporte de API de nível 1  
- As funções de API do ODBC nível 1 são listadas na tabela a seguir. Todas essas funções são totalmente ou parcialmente suportadas pelo Driver de ODBC do Visual FoxPro.  
+## <a name="level-1-api-support"></a>Suporte à API de nível 1  
+ As funções de API de nível 1 do ODBC são listadas na tabela a seguir. Todas essas funções são totalmente ou parcialmente suportadas pelo driver ODBC do Visual FoxPro.  
   
 |||  
 |-|-|  
@@ -70,7 +70,7 @@ Os tópicos nesta seção fornecem um breve resumo de funções API ODBC e quais
 |[SQLGetStmtOption](../../odbc/microsoft/sqlgetstmtoption-visual-foxpro-odbc-driver.md)|[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)|  
   
 ## <a name="level-2-api-support"></a>Suporte à API de nível 2  
- As seguintes funções de API do ODBC nível 2 têm suporte total ou parcialmente:  
+ As seguintes funções de API de nível 2 do ODBC são totalmente ou parcialmente suportadas:  
   
 -   [SQLDataSources](../../odbc/microsoft/sqldatasources-visual-foxpro-odbc-driver.md)  
   
@@ -90,7 +90,7 @@ Os tópicos nesta seção fornecem um breve resumo de funções API ODBC e quais
   
 -   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) (suporte parcial)  
   
- Não há suporte para as seguintes funções de API do nível 2:  
+ As seguintes funções de API de nível 2 não têm suporte:  
   
 -   SQLBrowseConnect  
   

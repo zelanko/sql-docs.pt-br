@@ -1,5 +1,5 @@
 ---
-title: Escolher tabela de destino para a caixa de diálogo Insert Values (Visual Database Tools) | Microsoft Docs
+title: Caixa de diálogo Escolher tabela de destino para inserir valores (ferramentas de banco de dados Visual) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dc613dd6dcb7e639fff247a84a73812d023fb5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255747"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Caixa de diálogo Escolher Tabela de Destino para Inserir Valores (Visual Database Tools)
@@ -25,7 +25,7 @@ ms.locfileid: "63255747"
   
  Selecione a tabela à qual você deseja adicionar dados, depois clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar consultas Inserir Valores &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

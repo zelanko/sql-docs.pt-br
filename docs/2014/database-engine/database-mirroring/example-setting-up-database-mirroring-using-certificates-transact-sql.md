@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806747"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: configurar espelhamento de banco de dados usando certificados (Transact-SQL)
@@ -257,7 +257,7 @@ ms.locfileid: "62806747"
     ```  
   
     > [!NOTE]  
-    >  Se você pretende executar em modo de alta segurança com failover automático, deixe a segurança da transação configurada como FULL (a configuração padrão) e adicione a testemunha o mais rápido possível após executar o segundo SET PARTNER **' *`partner_server`* '** instrução. Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
+    >  Se você pretende executar em modo de alta segurança com failover automático, deixe a segurança da transação definida como completa (a configuração padrão) e adicione a testemunha assim que possível após a execução da segunda instrução SET Partner **'*`partner_server`*'** . Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -273,8 +273,8 @@ ms.locfileid: "62806747"
   
 -   [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Segurança de transporte para espelhamento de banco de dados e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   

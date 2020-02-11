@@ -14,13 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093955"
 ---
-# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>Modificar aplicativos para esperar valores bigint de sysperfinfo.cntr_value
+# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>Modificar aplicativos para esperar valores bigint de sysperfinfo.cntr_value
   sysperfinfo retorna um `bigint` valor para a coluna cntr_value.  
   
 ## <a name="component"></a>Componente  
@@ -32,8 +32,8 @@ ms.locfileid: "66093955"
 > [!NOTE]  
 >  sysperfinfo é uma exibição de compatibilidade. Em vez disso, você deve usar o gerenciamento dinâmico sys.dm_os_performance_counter.  
   
-## <a name="see-also"></a>Consulte também  
- [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

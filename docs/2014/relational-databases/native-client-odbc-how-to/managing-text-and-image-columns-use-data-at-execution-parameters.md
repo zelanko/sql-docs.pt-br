@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206798"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>Usar parâmetros de dados em execução (ODBC)
@@ -25,7 +25,7 @@ ms.locfileid: "68206798"
   
 1.  Ao chamar [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) para associar um buffer de programa ao parâmetro de instrução:  
   
-    -   Para o último parâmetro, use SQL_LEN_DATA_AT_EXEC (*comprimento*) em que *comprimento* é o comprimento total do `text`, `ntext`, ou `image` dados de parâmetro em bytes.  
+    -   Para o último parâmetro, use SQL_LEN_DATA_AT_EXEC (*Length*), em que *Length* é o comprimento total `text`dos `ntext`dados do `image` parâmetro, ou em bytes.  
   
     -   Use um `rgbValue` (oitavo parâmetro) de um identificador de parâmetro definido por programa.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68206798"
   
 3.  Para cada parâmetro de dados em execução:  
   
-    -   Chame [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para obter a ID de parâmetro definido por programa. Isso retornará SQL_NEED_DATA se houver outro parâmetro de dados em execução.  
+    -   Chame [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para obter o ID de parâmetro definido por programa. Isso retornará SQL_NEED_DATA se houver outro parâmetro de dados em execução.  
   
     -   Chame [SQLPutData](../native-client-odbc-api/sqlputdata.md) uma ou mais vezes para enviar os dados de parâmetro, até que o comprimento seja enviado.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68206798"
 ## <a name="example"></a>Exemplo  
  O exemplo mostra como ler dados de caracteres variáveis do SQL_LONG por meio de SQLParamData e SQLPutData. Este exemplo não tem suporte em IA64.  
   
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks do [Microsoft SQL Server exemplos e projetos da comunidade](https://go.microsoft.com/fwlink/?LinkID=85384) Home Page.) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
@@ -221,7 +221,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciando tópicos de instruções de colunas de texto e imagem &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções sobre como gerenciar colunas de texto e imagem &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

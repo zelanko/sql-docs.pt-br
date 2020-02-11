@@ -13,35 +13,35 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266130"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Criar casos de teste (OracleToSQL)
-Use o Assistente de caso de teste para criar um teste. Este assistente permite criar casos de teste escolhendo testados e verificados os objetos e especificando os parâmetros de testes.  
+Use o assistente de caso de teste para criar um teste. Este assistente permite que você crie casos de teste escolhendo objetos testados e verificados e especificando os parâmetros de teste.  
   
-## <a name="starting-the-test-case-wizard"></a>Iniciando o Assistente de caso de teste  
-Para iniciar o Assistente de caso de teste, clique em **novo caso de teste...**  do **testador** menu.  
+## <a name="starting-the-test-case-wizard"></a>Iniciando o assistente de caso de teste  
+Para iniciar o assistente de caso de teste, clique em **novo caso de teste...** no menu **testador** .  
   
-Quando iniciado, o assistente procura o esquema SSMATESTER_ORACLE no servidor do Oracle de origem. É o esquema de extensão do testador usado para armazenar objetos auxiliares. Se o Assistente de caso de teste não é possível localizar SSMATESTER_ORACLE, ele exibirá uma janela de caixa de diálogo que propõe para criar o esquema. (Essa situação geralmente ocorre durante a primeira execução do SSMA testador).  
+Quando iniciado, o assistente procura SSMATESTER_ORACLE de esquema no servidor Oracle de origem. É o esquema de extensão do testador usado para armazenar objetos auxiliares. Se o assistente de caso de teste não conseguir localizar SSMATESTER_ORACLE, ele exibirá uma janela de diálogo que propõe criar o esquema. (Essa situação geralmente ocorre durante a primeira execução do SSMA Tester.)  
   
-Se você receber a janela de diálogo, clique em **Sim** para criar o esquema SSMATESTER_ORACLE no servidor de origem. Observe que você deve ter privilégios de Oracle para criar um novo usuário e criar objetos no esquema deste usuário.  
+Se você receber a janela de diálogo, clique em **Sim** para criar SSMATESTER_ORACLE esquema no servidor de origem. Observe que você deve ter privilégios Oracle para criar um novo usuário e criar objetos no esquema deste usuário.  
   
-## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Visão geral da criação de casos de teste usando o Assistente  
+## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Visão geral da criação de casos de teste usando o assistente  
 O processo de criação de um caso de teste consiste em cinco etapas:  
   
-1.  [Inicializar casos de teste &#40;OracleToSQL&#41;](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
+1.  [Inicializando casos de teste &#40;OracleToSQL&#41;](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
   
-2.  [Selecionando e Configurando objetos a testar &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+2.  [Selecionando e configurando objetos para testar &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-3.  [Selecionar e configurar os objetos afetados pelo &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+3.  [Selecionando e configurando objetos afetados &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 4.  [Personalizando a ordem das chamadas &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-5.  [Concluir a preparação do caso de teste &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+5.  [Concluindo a preparação do caso de teste &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte também  
-[Testar objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Testando objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

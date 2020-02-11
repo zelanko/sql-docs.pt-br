@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206825"
 ---
 # <a name="using-cursors-odbc"></a>Usando cursores (ODBC)
@@ -34,17 +34,17 @@ ms.locfileid: "68206825"
   
 -   Atualizações posicionadas.  
   
- Os aplicativos ODBC raramente declaram e abrem cursores ou usam qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionada com cursor. O ODBC abre automaticamente um cursor para cada conjunto de resultados retornado de uma instrução SQL. As características dos cursores são controladas por atributos de instrução definidos com [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) antes do SQL de instrução é executada. As funções API ODBC para o processamento de conjuntos de resultados dão suporte à gama completa de funcionalidades de cursor, como buscar, rolar e posicionar atualizações.  
+ Os aplicativos ODBC raramente declaram e abrem cursores ou usam qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionada com cursor. O ODBC abre automaticamente um cursor para cada conjunto de resultados retornado de uma instrução SQL. As características dos cursores são controladas pelos atributos de instrução definidos com [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) antes da execução da instrução SQL. As funções API ODBC para o processamento de conjuntos de resultados dão suporte à gama completa de funcionalidades de cursor, como buscar, rolar e posicionar atualizações.  
   
  Esta é uma comparação de como scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] e aplicativos ODBC funcionam com cursores.  
   
-|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
+|Ação|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBCODBC|  
 |------------|------------------------|----------|  
 |Definir o comportamento do cursor|Especifique por meio de parâmetros DECLARE CURSOR|Definir atributos de cursor usando [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)|  
-|Abrir um cursor|DECLARE CURSOR aberto *cursor_name*|**SQLExecDirect** ou **SQLExecute**|  
+|Abrir um cursor|DECLARAR CURSOR aberto *cursor_name*|**SQLExecDirect** ou **SQLExecute**|  
 |Buscar linhas|FETCH|**SQLFetch** ou [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md)|  
 |Atualização posicionada|Cláusula WHERE CURRENT OF em UPDATE ou DELETE|**SQLSetPos**|  
-|Fechar um cursor|Fechar *cursor_name* DEALLOCATE|[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)|  
+|Fechar um cursor|FECHAR *cursor_name* desalocar|[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)|  
   
  Os cursores de servidor implementados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte à funcionalidade de modelo do cursor ODBC. O driver do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client usa cursores de servidor para dar suporte à funcionalidade da API ODBC.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "68206825"
   
 -   [Propriedades do cursor](properties/cursor-properties.md)  
   
--   [Detalhes de programação de cursor &#40;ODBC&#41;](programming/cursor-programming-details-odbc.md)  
+-   [Detalhes de programação do cursor &#40;&#41;ODBC](programming/cursor-programming-details-odbc.md)  
   
--   [Rolagem e busca de linhas](../native-client-ole-db-rowsets/fetching-rows.md)  
+-   [Rolando e buscando linhas](../native-client-ole-db-rowsets/fetching-rows.md)  
   
--   [Atualizações posicionadas &#40;ODBC&#41;](positioned-updates-odbc.md)  
+-   [Atualizações posicionadas &#40;&#41;ODBC](positioned-updates-odbc.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [CLOSE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/close-transact-sql)   
  [Cursores](../../relational-databases/cursors.md)   

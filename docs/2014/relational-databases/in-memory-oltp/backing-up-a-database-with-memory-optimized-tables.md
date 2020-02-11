@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468322"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Fazendo backup de um banco de dados com tabelas com otimização de memória
@@ -32,14 +32,14 @@ ms.locfileid: "62468322"
 |--------------------------------|------------|  
 |PRECREATED|Somente metadados de arquivo|  
 |UNDER CONSTRUCTION|Somente metadados de arquivo|  
-|Ativa|Metadados de arquivo mais bytes usados|  
+|Ativo|Metadados de arquivo mais bytes usados|  
 |Origem mesclada|Metadados de arquivo mais bytes usados|  
 |Destino de mesclagem|Somente metadados de arquivo|  
 |REQUIRED FOR BACKUP/HA|Metadados de arquivo mais bytes usados|  
 |IN TRANSITION TO TOMBSTONE|Somente metadados de arquivo|  
 |TOMBSTONE|Somente metadados de arquivo|  
   
- O tamanho dos backups de banco de dados com uma ou mais tabelas com otimização de memória normalmente é maior do que o tamanho em memória mas menor do que o do armazenamento em disco. O tamanho adicional dependerá do número de linhas excluídas e do número de pares de arquivo de ponto de verificação nos estados Origem de mesclagem e REQUIRED FOR BACKUP/HA, que dependem indiretamente da carga de trabalho. Para obter descrições dos Estados para pares de arquivos de ponto de verificação, consulte [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ O tamanho dos backups de banco de dados com uma ou mais tabelas com otimização de memória normalmente é maior do que o tamanho em memória mas menor do que o do armazenamento em disco. O tamanho adicional dependerá do número de linhas excluídas e do número de pares de arquivo de ponto de verificação nos estados Origem de mesclagem e REQUIRED FOR BACKUP/HA, que dependem indiretamente da carga de trabalho. Para obter descrições dos Estados dos pares de arquivos de ponto de verificação, consulte [Sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
 ### <a name="estimating-size-of-full-database-backup"></a>Estimando o tamanho do backup de banco de dados completo  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62468322"
   
  O primeiro cenário de carga de trabalho é para (principalmente) inserir. Neste cenário, a maioria dos arquivos de dados estará no estado Ativo, totalmente carregados e com muito poucas linhas excluídas. O tamanho do backup do banco de dados estará próximo do tamanho dos dados na memória.  
   
- É o segundo cenário de carga de trabalho para operações de atualização, exclusão e inserção frequentes: Na pior das hipóteses, cada um dos pares de arquivos de ponto de verificação será 50% carregado, após a contagem das linhas excluídas. Dessa forma, o tamanho do backup de banco de dados terá pelo menos 2 vezes o tamanho dos dados na memória. Além disso, alguns pares de arquivos de ponto de verificação nos estados Origem de mesclagem e Necessário para backup/alta disponibilidade se somarão ao tamanho do backup de banco de dados.  
+ O segundo cenário de carga de trabalho é para operações frequentes de inserção, exclusão e atualização: no pior caso, cada um dos pares de arquivos de ponto de verificação será 50% carregado, após a contabilidade das linhas excluídas. Dessa forma, o tamanho do backup de banco de dados terá pelo menos 2 vezes o tamanho dos dados na memória. Além disso, alguns pares de arquivos de ponto de verificação nos estados Origem de mesclagem e Necessário para backup/alta disponibilidade se somarão ao tamanho do backup de banco de dados.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Backups diferenciais de bancos de dados com tabelas com otimização de memória  
  O armazenamento de tabelas com otimização de memória consiste em dados e arquivos delta, conforme descrito em [Durabilidade de tabelas com otimização de memória](memory-optimized-tables.md). O backup diferencial de um banco de dados com tabelas com otimização de memória contém os seguintes dados:  
@@ -67,7 +67,7 @@ ms.locfileid: "62468322"
   
  Para cargas de trabalho típicas de OLTP, os backups diferenciais serão significativamente menores do que os backups completos de banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Backup, restauração e recuperação de tabelas com otimização de memória](restore-and-recovery-of-memory-optimized-tables.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93a39c50ea81be98e723101d1d1dc076d5569171
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 06e5403a9e490677e1cb5f88eb20ed8ffb967e15
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72797723"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939598"
 ---
 # <a name="sql-server-data-files-in-azure"></a>Arquivos de dados do SQL Server no Azure
   SQL Server arquivos de dados no Azure habilita o suporte nativo para SQL Server arquivos de banco de dados armazenados como BLOBs do Azure. Ele permite que você crie um banco de dados no SQL Server em execução no local ou em uma máquina virtual no Azure com um local de armazenamento dedicado para seus dados no armazenamento de BLOBs do Azure. Esse aprimoramento simplifica especialmente a movimentação de bancos de dados entre computadores usando operações de anexação e desanexação. Além disso, ele fornece um local de armazenamento alternativo para os arquivos de backup do banco de dados, permitindo que você restaure de ou para o armazenamento do Azure. Em virtude disso, ele permite várias soluções híbridas ao fornecer vários benefícios para virtualização de dados, movimentação de dados, segurança e disponibilidade, baixo custo e facilidade de manutenção, o que proporciona alta disponibilidade e dimensionamento elástico.  
@@ -30,7 +30,7 @@ ms.locfileid: "72797723"
   
 ## <a name="benefits-of-using-sql-server-data-files-in-azure"></a>Benefícios do uso de SQL Server arquivos de dados no Azure  
   
--   **Benefícios da migração fácil e rápida:** esse recurso simplifica o processo de migração movendo um banco de dados de cada vez entre computadores locais, e também entre ambientes locais e de nuvem, sem nenhuma alteração do aplicativo. Em virtude disso, ele oferece suporte a uma migração incremental, preservando sua infraestrutura existente local. Além disso, ter acesso a um armazenamento de dados centralizado simplifica a lógica do aplicativo quando um aplicativo precisa ser executado em vários locais em um ambiente local. Em alguns casos, pode ser necessário configurar rapidamente os centros de computação em locais dispersos geograficamente, que coletam dados de várias origens diferentes. Ao usar esse novo aprimoramento, em vez de mover dados de um local para outro, você pode armazenar vários bancos de dado como BLOBs do Azure e, em seguida, executar scripts Transact-SQL para criar bancos de dados nos computadores locais ou máquinas virtuais.  
+-   **Benefícios da migração fácil e rápida:** esse recurso simplifica o processo de migração movendo um banco de dados de cada vez entre computadores locais e também entre ambientes locais e de nuvem, sem nenhuma alteração de aplicativo. Em virtude disso, ele oferece suporte a uma migração incremental, preservando sua infraestrutura existente local. Além disso, ter acesso a um armazenamento de dados centralizado simplifica a lógica do aplicativo quando um aplicativo precisa ser executado em vários locais em um ambiente local. Em alguns casos, pode ser necessário configurar rapidamente os centros de computação em locais dispersos geograficamente, que coletam dados de várias origens diferentes. Ao usar esse novo aprimoramento, em vez de mover dados de um local para outro, você pode armazenar vários bancos de dado como BLOBs do Azure e, em seguida, executar scripts Transact-SQL para criar bancos de dados nos computadores locais ou máquinas virtuais.  
   
 -   **Benefícios de armazenamento ilimitado e de custo:** Esse recurso permite que você tenha armazenamento ilimitado fora do local no Azure, aproveitando os recursos de computação locais. Ao usar o Azure como um local de armazenamento, você pode se concentrar facilmente na lógica do aplicativo sem a sobrecarga do gerenciamento de hardware. Se você perder um nó de computação no local, poderá configurar um novo sem nenhuma movimentação de dados.  
   
@@ -87,18 +87,18 @@ ON
   
 -   Além disso, recomendamos que você continue a implementar as práticas tradicionais de segurança locais para seus bancos de dados.  
   
-### <a name="installation-prerequisites"></a>Pré-requisitos para instalação  
+### <a name="installation-prerequisites"></a>Pré-requisitos da instalação  
  Os seguintes são pré-requisitos de instalação ao armazenar SQL Server arquivos de dados no Azure.  
   
--   **SQL Server local:** o SQL Server 2014 inclui esse recurso. Para saber como baixar o SQL Server 2014, consulte [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   **SQL Server local:** SQL Server versão 2014 inclui esse recurso. Para saber como baixar o SQL Server 2014, consulte [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 -   SQL Server em execução em uma máquina virtual do Azure: se você estiver instalando o SQL Server em uma máquina virtual do Azure, instale o SQL Server 2014 ou atualize a instância existente. Da mesma forma, você também pode criar uma nova máquina virtual no Azure usando a imagem da plataforma SQL Server 2014. Para saber como baixar o SQL Server 2014, consulte [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 ###  <a name="bkmk_Limitations"></a> Limitações  
   
--   Na versão atual desse recurso, não há suporte para armazenar dados de `FileStream` no armazenamento do Azure. Você pode armazenar dados de `Filestream` em um banco de dado local integrado do armazenamento do Azure, mas não pode mover dados FILESTREAM entre computadores usando o armazenamento do Azure. Para os dados do `FileStream`, recomendamos que você continue usando as técnicas tradicionais para mover os arquivos (.mdf, .ldf) associados ao Filestream entre computadores diferentes.  
+-   Na versão atual desse recurso, não há suporte `FileStream` para armazenamento de dados no armazenamento do Azure. Você pode armazenar `Filestream` dados em um banco de dado local integrado do armazenamento do Azure, mas não pode mover dados FILESTREAM entre computadores usando o armazenamento do Azure. Para os dados do `FileStream`, recomendamos que você continue usando as técnicas tradicionais para mover os arquivos (.mdf, .ldf) associados ao Filestream entre computadores diferentes.  
   
--   Atualmente, essa nova melhoria não dá suporte a mais de uma instância do SQL Server acessando os mesmos arquivos de banco de dados no Armazenamento do Azure ao mesmo tempo. Se o Servera estiver online com um arquivo de banco de dados ativo e se ServerB for iniciado de forma acidental, e também tiver um Database que aponta para o mesmo arquivo, o segundo servidor falhará ao iniciar o banco de dado com um código de erro **5120 não será possível abrir o arquivo físico "%.\*ls ". Erro do sistema operacional% d: "% ls"** .  
+-   Atualmente, essa nova melhoria não dá suporte a mais de uma instância do SQL Server acessando os mesmos arquivos de banco de dados no Armazenamento do Azure ao mesmo tempo. Se o Servidor A estiver online com um arquivo de banco de dados ativo e o Servidor B for iniciado por acidente e também tiver um banco de dados que aponta para o mesmo arquivo de dados, o segundo servidor não iniciará o banco de dados com um código de erro **5120 Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"** .  
   
 -   Apenas arquivos .mdf, .ldf e .ndf podem ser armazenados no Armazenamento do Azure usando o recurso Arquivos de Dados do SQL Server no Azure.  
   
@@ -106,9 +106,9 @@ ON
   
 -   Cada blob pode ser até no máximo 1 TB de tamanho. Isso cria um limite superior para dados do banco de dados individual e arquivos de log que podem ser armazenados no Armazenamento do Azure.  
   
--   Não é possível armazenar dados OLTP in-memory no Blob do Azure usando o recurso Arquivos de Dados do SQL Server no Armazenamento do Azure. Isso ocorre porque o OLTP na memória tem uma dependência de `FileStream` e, na versão atual desse recurso, não há suporte para armazenar dados de `FileStream` no armazenamento do Azure.  
+-   Não é possível armazenar dados OLTP in-memory no Blob do Azure usando o recurso Arquivos de Dados do SQL Server no Armazenamento do Azure. Isso ocorre porque o OLTP na memória tem uma dependência de `FileStream` e, na versão atual desse recurso, não há suporte `FileStream` para armazenamento de dados no armazenamento do Azure.  
   
--   Ao usar SQL Server arquivos de dados no recurso do Azure, SQL Server executa todas as comparações de caminho de arquivo ou URL usando o conjunto de agrupamentos no banco de dados `master`.  
+-   Ao usar SQL Server arquivos de dados no recurso do Azure, SQL Server executa todas as comparações de caminho de arquivo ou URL `master` usando o conjunto de agrupamentos no banco de dados.  
   
 -   Os `AlwaysOn Availability Groups` têm suporte contanto que você não adicione novos arquivos de banco de dados ao banco de dados primário. Se uma operação de banco de dados exigir que um novo arquivo seja criado no banco de dados primário, primeiro desabilite os grupos de disponibilidade AlwaysOn no nó secundário. Em seguida, execute a operação de banco de dados no banco de dados primário e faça o backup do banco de dados no nó primário. Em seguida, restaure o banco de dados para o nó secundário e habilite os grupos de disponibilidade AlwaysOn no nó secundário. Observe que as instâncias de cluster de failover do AlwaysOn não têm suporte ao usar o SQL Server arquivos de dados no recurso do Azure.  
   
@@ -148,7 +148,7 @@ ON
      Resolução: verifique se você criou uma assinatura de acesso compartilhado no contêiner corretamente. Examine as instruções fornecidas na lição 2 em [tutorial: SQL Server arquivos de dados no serviço de armazenamento do Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 -   *A credencial do SQL Server não foi criada corretamente.*    
-    Resolução: verifique se você usou "Assinatura de Acesso Compartilhado" para o campo **Identidade** e se criou um segredo corretamente. Examine as instruções fornecidas na lição 3 em [tutorial: SQL Server arquivos de dados no serviço de armazenamento do Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+    Resolução: Verifique se você usou “Assinatura de Acesso Compartilhado” para o campo **Identity** e criou um segredo corretamente. Examine as instruções fornecidas na lição 3 em [tutorial: SQL Server arquivos de dados no serviço de armazenamento do Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  **Erros de blob de concessão:**  
   
@@ -160,10 +160,10 @@ ON
     Resolução: examine as instruções fornecidas na lição 4 em [tutorial: SQL Server arquivos de dados no serviço de armazenamento do Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 2.  *Erros ao executar a instrução Alter*   
-    Resolução: execute a instrução Alter Database mudar quando o banco de dados estiver online. Ao copiar os arquivos de dados no Armazenamento do Azure, sempre crie um blob de páginas, não um blob de blocos. Caso contrário, ALTER Database falhará. Examine as instruções fornecidas na lição 7 em [tutorial: SQL Server arquivos de dados no serviço de armazenamento do Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+    Resolução: execute a instrução Alterar Banco de Dados quando o banco de dados estiver online. Ao copiar os arquivos de dados no Armazenamento do Azure, sempre crie um blob de páginas, não um blob de blocos. Caso contrário, ALTER Database falhará. Examine as instruções fornecidas na lição 7 em [tutorial: SQL Server arquivos de dados no serviço de armazenamento do Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Código de erro 5120 Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"*    
-    Resolução: atualmente, essa nova melhoria não dá suporte a mais de uma instância do SQL Server que acessa os mesmos arquivos de banco de dados no Armazenamento do Azure ao mesmo tempo. Se o Servera estiver online com um arquivo de banco de dados ativo e se ServerB for iniciado de forma acidental, e também tiver um Database que aponta para o mesmo arquivo, o segundo servidor falhará ao iniciar o banco de dado com um código de erro *5120 não será possível abrir o arquivo físico "%.\*ls ". Erro do sistema operacional% d: "% ls"* .  
+3.  *Código de erro 5120 não é possível abrir o arquivo físico "%. \*ls ". Erro do sistema operacional% d: "% ls"*   
+    Resolução: Atualmente, essa nova melhoria não dá suporte a mais de uma instância do SQL Server acessando os mesmos arquivos de banco de dados no Armazenamento do Azure ao mesmo tempo. Se o Servidor A estiver online com um arquivo de banco de dados ativo e o Servidor B for iniciado por acidente e também tiver um banco de dados que aponta para o mesmo arquivo de dados, o segundo servidor não iniciará o banco de dados com um código de erro *5120 Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"* .  
   
      Para resolver esse problema, primeiro determine se você precisa que o ServerA acesse o arquivo de banco de dados no Armazenamento do Azure. Se não precisar, basta remover as conexões entre o ServerA e os arquivos de banco de dados no Armazenamento do Azure. Para fazer isso, siga estas etapas:  
   
@@ -175,5 +175,5 @@ ON
   
     4.  Defina o banco de dados como online.  
   
-## <a name="see-also"></a>Consulte também  
- [Tutorial: SQL Server arquivos de dados no serviço de armazenamento do Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tutorial: Arquivos de dados do SQL Server no serviço de Armazenamento do Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

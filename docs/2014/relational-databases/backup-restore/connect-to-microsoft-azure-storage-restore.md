@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6fbb57fe629797e34cc7c61f224d65d46d4e66cd
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154770"
 ---
-# <a name="connect-to-azure-storage-restore"></a>Conectar-se ao armazenamento do Azure (restaurar)
-  A caixa de diálogo permite que você especifique a conexão com as informações da conta de armazenamento do Azure para recuperar o armazenamento de arquivos na conta de armazenamento do Azure. Depois de especificar as informações necessárias, clique em **conectar** para estabelecer a conexão com o armazenamento do Azure.  
+# <a name="connect-to-azure-storage-restore"></a>Conectar a um Armazenamento do Microsoft Azure (restaurar)
+  A caixa de diálogo permite que você especifique as informações da conexão com a conta de armazenamento do Azure a fim de recuperar o armazenamento de arquivos nessa conta de armazenamento do Azure. Depois de especificar as informações necessárias, clique em **Conectar** para estabelecer a conexão com o Armazenamento do Azure.  
   
 ## <a name="azure-storage-account"></a>Conta de Armazenamento do Azure  
  **Conta de armazenamento**  
@@ -30,7 +30,7 @@ ms.locfileid: "70154770"
  Especifique a chave de acesso da conta de armazenamento do Azure.  
   
  Caixa de seleção**Usar pontos de extremidade seguros (HTTPS)**  
- Selecione esta opção para estabelecer uma conexão segura com o armazenamento do Azure-recomendado.  
+ Selecione esta opção para estabelecer uma conexão segura com o Armazenamento do Azure – recomendado.  
   
  Caixa de seleção**Salvar chave de conta**  
  Marque esta caixa de seleção se desejar que o SQL Server se lembre da chave de acesso para essa conta de armazenamento.  

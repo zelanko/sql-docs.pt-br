@@ -1,5 +1,5 @@
 ---
-title: Integration Services Server (SSIS) | Microsoft Docs
+title: Servidor Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02966721d1fdfd1c1d3051510e0dd68ed26dcbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771726"
 ---
 # <a name="integration-services-ssis-server"></a>Servidor do Integration Services (SSIS)
@@ -41,7 +41,7 @@ ms.locfileid: "62771726"
   
 -   **Banco de dados SSISDB**  
   
-     O `SSISDB` banco de dados aparece sob o **bancos de dados** nó no Pesquisador de objetos. Você pode consultar as exibições e chamar os procedimentos armazenados que gerenciam o servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e os objetos que estão armazenados no servidor.  
+     O `SSISDB` banco de dados é exibido sob o nó **databases** no objeto Explore. Você pode consultar as exibições e chamar os procedimentos armazenados que gerenciam o servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e os objetos que estão armazenados no servidor.  
   
 -   **Catálogos do Integration Services**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62771726"
   
 -   [Exibir a lista de pacotes no servidor do Integration Services](view-the-list-of-packages-on-the-integration-services-server.md)  
   
--   [Implantar projetos no Servidor do Integration Services](../deploy-projects-to-integration-services-server.md)  
+-   [Implantar projetos no servidor do Integration Services](../deploy-projects-to-integration-services-server.md)  
   
 -   [Executar um pacote no servidor SSIS usando o SQL Server Management Studio](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   

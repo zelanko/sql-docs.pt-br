@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96604a09811626a304502dc05ef4f7e9edcd0359
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771224"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Como editar as propriedades de instância CDC
@@ -34,11 +34,11 @@ ms.locfileid: "62771224"
   
 5.  No editor de Properties, edite as propriedades nas guias a seguir:  
   
-    -   **Oracle**: Use a guia **Oracle** no editor de Propriedades para fazer alterações na descrição fornecida na página Create CDC database no assistente de Nova Instância e fazer alterações nas informações de conexão de banco de dados de mineração de logs do Oracle.  
+    -   **Oracle**: use a guia **Oracle** no editor de Propriedades para fazer alterações na descrição fornecida na página Create CDC database no assistente de Nova Instância e fazer alterações nas informações de conexão de banco de dados de mineração de logs do Oracle.  
   
          Para obter mais informações sobre o que você pode editar nessa guia, consulte [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md).  
   
-    -   **Tabelas**: Use a guia **Tables** para fazer alterações às tabelas e colunas selecionadas do banco de dados de origem Oracle.  
+    -   **Tables**: use a guia **Tables** para fazer alterações às tabelas e colunas selecionadas do banco de dados de origem Oracle.  
   
          Para obter mais informações sobre o que você pode editar nessa guia, consulte Edit [Edit Tables](edit-tables.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62771224"
   
          Para obter mais informações sobre o que você pode fazer nessa guia, consulte [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md).  
   
-    -   **Avançado**: Use a guia **Advanced** para acrescentar propriedades especiais à instância de CDC.  
+    -   **Advanced**: use a guia **Advanced** para acrescentar propriedades especiais à instância de CDC.  
   
          Para obter mais informações sobre o que você pode fazer nessa guia, consulte [Edit the Advanced Properties](edit-the-advanced-properties.md).  
   

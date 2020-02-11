@@ -1,5 +1,5 @@
 ---
-title: Exibir ou alterar os locais padrão de dados e arquivos de Log (SQL Server Management Studio) | Microsoft Docs
+title: Exibir ou alterar os locais padrão de arquivos de dados e de log (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808704"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Exibir ou alterar os locais padrão de arquivos de log e de dados (SQL Server Management Studio)
@@ -29,11 +29,11 @@ ms.locfileid: "62808704"
   
      [Recomendações](#Recommendations)  
   
--   **Para exibir ou alterar os dados e log de arquivo locais padrão, usando:**  
+-   **Para exibir ou alterar os locais padrão dos dados e do arquivos de log usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **Acompanhamento:**  [Alterar os locais padrão](#FollowUp)  
+-   **Acompanhamento:**  [alterando os locais padrão](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -54,11 +54,11 @@ ms.locfileid: "62808704"
   
 3.  Em **Locais padrão de banco de dados**, exiba os locais atuais padrão dos novos arquivos de dados e novos arquivos de log. Para alterar um local padrão, digite um novo nome de caminho padrão no campo **Dados** ou **Log** ou clique no botão Procurar para localizar e selecionar um nome de caminho.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de alterar os locais padrão  
+##  <a name="FollowUp"></a>Acompanhamento: depois de alterar os locais padrão  
  Você deve parar e iniciar o serviço do SQL Server para concluir a alteração.  
   
-## <a name="see-also"></a>Consulte também  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+## <a name="see-also"></a>Consulte Também  
+ [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Criar um banco de dados](../../relational-databases/databases/create-a-database.md)  
   
   

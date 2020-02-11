@@ -1,5 +1,5 @@
 ---
-title: Executar consultas de tópicos de instruções (ODBC) | Microsoft Docs
+title: Tópicos de instruções sobre como executar consultas (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200382"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Tópicos de instruções sobre a execução de consultas (ODBC)
@@ -24,15 +24,15 @@ ms.locfileid: "63200382"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Use uma instrução &#40;ODBC&#41;](use-a-statement-odbc.md)  
+-   [Usar uma instrução &#40;&#41;ODBC](use-a-statement-odbc.md)  
   
--   [Definir opções de Cursor &#40;ODBC&#41;](set-cursor-options-odbc.md)  
+-   [Definir opções de cursor &#40;&#41;ODBC](set-cursor-options-odbc.md)  
   
--   [Executar uma instrução diretamente &#40;ODBC&#41;](execute-a-statement-directly-odbc.md)  
+-   [Executar uma instrução diretamente &#40;&#41;ODBC](execute-a-statement-directly-odbc.md)  
   
--   [Preparar e executar uma instrução &#40;ODBC&#41;](prepare-and-execute-a-statement-odbc.md)  
+-   [Preparar e executar uma instrução &#40;&#41;ODBC](prepare-and-execute-a-statement-odbc.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre ODBC](../odbc-how-to-topics.md)  
   
   
