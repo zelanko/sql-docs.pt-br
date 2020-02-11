@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702044"
 ---
 # <a name="merging-partitions-xmla"></a>Mesclando partições (XMLA)
-  Se partições tiverem o mesmo design de agregação e a estrutura, você pode mesclar a partição usando o [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) no XML for Analysis (XMLA). A mesclagem de partições é uma ação importante a ser executada quando você gerencia partições, principalmente as partições que contêm dados históricos divididos por data.  
+  Se as partições tiverem o mesmo design e estrutura de agregação, você poderá mesclar a partição usando o comando [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) no XML for Analysis (XMLA). A mesclagem de partições é uma ação importante a ser executada quando você gerencia partições, principalmente as partições que contêm dados históricos divididos por data.  
   
  Por exemplo, um cubo financeiro pode usar duas partições:  
   
@@ -34,19 +34,19 @@ ms.locfileid: "62702044"
  Ambas as partições utilizam configurações de armazenamento diferentes, mas usam o mesmo design de agregação. Em vez de processar o cubo nos anos de dados históricos no final do ano, você pode usar o comando `MergePartitions` para mesclar a partição do ano atual com a partição dos anos anteriores. Isso preservará os dados de agregação sem exibir um processamento completo do cubo potencialmente demorado.  
   
 ## <a name="specifying-partitions-to-merge"></a>Especificando partições para mesclagem  
- Quando o `MergePartitions` comando é executado, os dados de agregação armazenados nas partições de origem especificadas na [código-fonte](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) propriedade é adicionada à partição de destino especificada no [destino](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) propriedade.  
+ Quando o `MergePartitions` comando é executado, os dados de agregação armazenados nas partições de origem especificadas na propriedade [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) são adicionados à partição de destino especificada na propriedade [target](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) .  
   
 > [!NOTE]  
 >  A propriedade `Source` pode conter mais de uma referência de objeto de partição. No entanto, a propriedade `Target` não pode.  
   
- Para que sejam mescladas com êxito, as partições especificadas em `Source` e em `Target` devem estar contidas no mesmo grupo de medidas e usar o mesmo design de agregação. Caso contrário, ocorre um erro.  
+ Para que sejam mescladas com êxito, as partições especificadas em `Source` e em `Target` devem estar contidas no mesmo grupo de medidas e usar o mesmo design de agregação. Caso contrário, ocorrerá um erro.  
   
  As partições especificadas em `Source` serão excluídas depois que o comando `MergePartitions` for concluído com êxito.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="description"></a>Descrição  
- O exemplo a seguir mescla todas as partições na **Customer Counts** grupo de medidas da **Adventure Works** cubo a **Adventure Works DW** exemplo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de banco de dados para o **Customers_2004** partição.  
+### <a name="description"></a>DESCRIÇÃO  
+ O exemplo a seguir mescla todas as partições no grupo de medidas **Customer** Counts do cubo **Adventure Works** no banco de dados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exemplo do **Adventure Works DW** na partição **Customers_2004** .  
   
 ### <a name="code"></a>Código  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62702044"
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo com XMLA no Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

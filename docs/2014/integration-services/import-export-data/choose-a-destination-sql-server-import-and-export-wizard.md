@@ -13,27 +13,27 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768019"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Escolher um destino (Assistente de Importação e Exportação do SQL Server)
-  Use o **escolher um destino** página para especificar o destino dos dados que você deseja copiar.  
+  Use a página **escolher um destino** para especificar o destino dos dados que você deseja copiar.  
   
- Para obter mais informações sobre este assistente, consulte [Assistente de Importação e Exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente, bem como as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Para obter mais informações sobre este assistente, consulte [Assistente de Importação e Exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções de inicialização do assistente, bem como as permissões necessárias para executar o assistente com êxito, consulte [executar o assistente de importação e exportação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  O objetivo do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Opções estáticas  
  **Destino**  
- Escolha o provedor de dados que corresponde ao formato de armazenamento do destino. Pode haver mais de um provedor disponível para sua fonte de dados. Por exemplo, com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] você pode usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, o .NET Framework Data Provider para SQL Server ou o Microsoft OLE DB Provider para SQL Server.  
+ Escolha o provedor de dados que corresponde ao formato de armazenamento do destino. Pode haver mais de um provedor disponível para sua fonte de dados. Por exemplo, com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o, você [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar o Native Client, o .NET Framework provedor de dados para SQL Server ou o provedor de OLE DB da Microsoft para SQL Server.  
   
 > [!NOTE]  
 >  Para salvar dados em um destino ODBC, selecione o Provedor de dados do .NET Framework para ODBC.  
   
- O **fonte de dados** propriedade tem um número variável de opções que mudam de acordo com os provedores instalados no computador. As tabelas a seguir listam as opções de alguns destinos usados com frequência. Para outros provedores, consulte a documentação específica do provedor.  
+ A propriedade **fonte de dados** tem um número variável de opções, que mudam dependendo dos provedores instalados no computador. As tabelas a seguir listam as opções para alguns destinos usados com frequência. Para outros provedores, consulte a documentação específica do provedor.  
   
 ## <a name="dynamic-options"></a>Opções dinâmicas  
  As seções a seguir mostram as opções disponíveis para várias fontes de dados. Nem todos os destinos disponíveis no menu suspenso Destino são listados aqui.  
@@ -42,10 +42,10 @@ ms.locfileid: "62768019"
  **Nome do servidor**  
  Digite o nome do servidor que receberá os dados ou escolha um servidor da lista.  
   
- **Usar Autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Especifique se o pacote deve usar a Autenticação do Microsoft Windows para fazer login no banco de dados. A Autenticação do Windows é recomendada para obter melhor segurança.  
   
- **Usar Autenticação do SQL Server**  
+ **Usar autenticação SQL Server**  
  Especifique se o pacote deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para fazer login no banco de dados. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será preciso fornecer um nome de usuário e uma senha.  
   
  **Nome de usuário**  
@@ -55,13 +55,13 @@ ms.locfileid: "62768019"
  Forneça uma senha para estabelecer conexão de banco de dados quando estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Backup de banco de dados**  
- Selecione na lista de bancos de dados na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou crie um novo banco de dados clicando **New**.  
+ Selecione a partir da lista de bancos de dados na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou crie um novo, clicando em **novo**.  
   
  **Atualizar**  
  Restaure a lista de bancos de dados disponíveis clicando em **Atualizar**.  
   
- **Nova**  
- Criar um novo banco de dados de destino usando o **criar banco de dados** caixa de diálogo.  
+ **Novo**  
+ Crie um novo banco de dados de destino usando a caixa de diálogo **criar banco** de dados.  
   
 ### <a name="destination--flat-file-destination"></a>Destino = Destino de Arquivos Simples  
  **Nome do arquivo**  
@@ -79,12 +79,12 @@ ms.locfileid: "62768019"
  **Página de código**  
  Especifique a página de códigos da linguagem que deseja usar.  
   
- **Formato**  
+ **Ao**  
  Indique se será usada formatação delimitada, de largura fixa ou irregular à direita.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|Delimitado|As colunas são separadas por um delimitador, especificado na **colunas** página.|  
+|Delimitado|As colunas são separadas por um delimitador, especificado na página **colunas** .|  
 |Largura fixa|As colunas têm uma largura fixa.|  
 |Irregular à direita|Nos arquivos irregulares à direita, todas as colunas têm uma largura fixa, com exceção da última, que é delimitada pelo delimitador de linha.|  
   
@@ -97,13 +97,13 @@ ms.locfileid: "62768019"
 ### <a name="destination--microsoft-excel"></a>Destino = Microsoft Excel  
   
 > [!NOTE]  
->  Selecione **o Microsoft Excel** apenas se você quiser se conectar a uma fonte de dados que usa o Excel 2003 ou versões anteriores. Para se conectar a uma fonte de dados que usa o Excel 2007, selecione **Microsoft Office 12.0 Access Database Engine OLE DB Provider**, clique em **propriedades**e, em seguida, na **todos os** guia das **Propriedades de vínculo de dados** caixa de diálogo, para **propriedades estendidas**, insira `Excel 12.0`.  
+>  Selecione **Microsoft Excel** somente se você quiser se conectar a uma fonte de dados que usa o Excel 2003 ou anterior. Para se conectar a uma fonte de dados que usa o Excel 2007, selecione **Microsoft Office 12,0 acesso mecanismo de banco de dados provedor de OLE DB**, clique em **Propriedades**e, em seguida, na guia **tudo** da caixa de diálogo Propriedades do link `Excel 12.0`de **dados** , para **Propriedades estendidas**, digite.  
   
  **Caminho de arquivo do Excel**  
- Especifique o nome de arquivo e caminho da pasta de trabalho no qual armazenar os dados (por exemplo, C:\MyData.xls, \\\Sales\Database\Northwind.xls). Ou, clique em **procurar** para localizar uma pasta de trabalho.  
+ Especifique o caminho e o nome do arquivo para a pasta de trabalho na qual armazenar os dados (por exemplo \\, C:\MyData.xls, \Sales\Database\Northwind.xls). Ou clique em **procurar** para localizar uma pasta de trabalho.  
   
  **Procurar**  
- Localize uma pasta de trabalho do Excel usando o **abrir** caixa de diálogo.  
+ Localize uma pasta de trabalho do Excel usando a caixa de diálogo **abrir** .  
   
  **Versão do Excel**  
  Selecione a versão do Excel que será usada pela pasta de trabalho de destino.  
@@ -114,21 +114,21 @@ ms.locfileid: "62768019"
 ### <a name="destination--microsoft-access"></a>Destino = Microsoft Access  
   
 > [!NOTE]  
->  Selecione **Microsoft Access** apenas se você quiser se conectar a um banco de dados que usa o Access 2003 ou versões anteriores. Para conectar a um banco de dados que usa o Access 2007, selecione **Microsoft Office 12.0 Access Database Engine OLE DB Provider**.  
+>  Selecione **Microsoft Access** somente se você quiser se conectar a um banco de dados que usa o Access 2003 ou anterior. Para se conectar a um banco de dados que usa o Access 2007, selecione **Microsoft Office mecanismo de banco de dados o provedor de OLE DB de acesso 12,0**.  
   
  **Nome do arquivo**  
- Especifique o nome de arquivo e caminho para o arquivo de banco de dados no qual armazenar os dados (por exemplo, C:\MyData.mdb, \\\Sales\Database\Northwind.mdb). Ou, clique em **procurar** para localizar um arquivo de banco de dados.  
+ Especifique o caminho e o nome de arquivo para o arquivo de banco de dados no qual deseja armazená-los \\(por exemplo, C:\MyData.mdb, \Sales\Database\Northwind.mdb). Ou clique em **procurar** para localizar um arquivo de banco de dados.  
   
  **Procurar**  
- Navegue até o arquivo de banco de dados usando o **abrir** caixa de diálogo.  
+ Navegue até o arquivo de banco de dados usando a caixa de diálogo **abrir** .  
   
  **Nome de usuário**  
  Especifique um nome de usuário válido para estabelecer conexão com o banco de dados quando houver um arquivo de informações do grupo de trabalho associado ao banco de dados.  
   
  **Senha**  
- Forneça a senha do usuário para estabelecer conexão quando o arquivo de informações do grupo de trabalho estiver associado ao banco de dados. No entanto, se o banco de dados estiver protegido com uma única senha para todos os usuários, você deve fornecer esse valor na **propriedades de vínculo de dados** caixa de diálogo que é acessada a partir de **avançado** botão.  
+ Forneça a senha do usuário para estabelecer conexão quando o arquivo de informações do grupo de trabalho estiver associado ao banco de dados. No entanto, se o banco de dados estiver protegido com uma única senha para todos os usuários, você deverá fornecer esse valor na caixa de diálogo **Propriedades do vínculo de dados** , que é acessada no botão **avançado** .  
   
  **Avançado**  
- Especifique as opções avançadas, como a senha do banco de dados ou um arquivo de informações do grupo de trabalho não padrão, usando a caixa de diálogo **Propriedades de Vínculo de Dados**. Para obter mais informações sobre as propriedades do provedor OLE DB, pesquise na seção acesso a dados das [biblioteca MSDN](https://go.microsoft.com/fwlink/?linkid=62553).  
+ Especifique as opções avançadas, como a senha do banco de dados ou um arquivo de informações do grupo de trabalho não padrão, usando a caixa de diálogo **Propriedades de Vínculo de Dados**. Para obter mais informações sobre as propriedades do provedor de OLE DB, pesquise na seção de acesso a dados da [biblioteca MSDN](https://go.microsoft.com/fwlink/?linkid=62553).  
   
   

@@ -20,21 +20,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ea64e16f1469c12461a559c3f102094615fa12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950457"
 ---
-# <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
+# <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cria uma credencial de proxy para **xp_cmdshell**.  
   
 > [!NOTE]  
->  **xp_cmdshell** é desabilitada por padrão. Para habilitar **xp_cmdshell**, consulte [opção de configuração de servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  o **xp_cmdshell** está desabilitado por padrão. Para habilitar **xp_cmdshell**, consulte [xp_cmdshell opção de configuração de servidor](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- NULL  
+ NULO  
  Especifica que a credencial de proxy deveria ser excluída.  
   
  *account_name*  
@@ -57,17 +57,17 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Comentários  
- A credencial de proxy será chamada **xp_cmdshell_proxy_account # # # #** .  
+ A credencial de proxy será chamada **# #xp_cmdshell_proxy_account # #**.  
   
- Quando ele é executado usando a opção de NULL, **sp_xp_cmdshell_proxy_account** exclui a credencial de proxy.  
+ Quando é executado usando a opção NULL, **sp_xp_cmdshell_proxy_account** exclui a credencial de proxy.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-the-proxy-credential"></a>A. Criando a credencial de proxy  
- O seguinte exemplo mostra como criar uma credencial de proxy para uma conta de Windows chamada de `ADVWKS\Max04` `ds35efg##65` de senha.  
+### <a name="a-creating-the-proxy-credential"></a>a. Criando a credencial de proxy  
+ O seguinte exemplo mostra como criar uma credencial de proxy para uma conta de Windows chamada de `ADVWKS\Max04``ds35efg##65` de senha.  
   
 ```  
 EXEC sp_xp_cmdshell_proxy_account 'ADVWKS\Max04', 'ds35efg##65';  
@@ -82,8 +82,8 @@ EXEC sp_xp_cmdshell_proxy_account NULL;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [xp_cmdshell &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de xp_cmdshell](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
