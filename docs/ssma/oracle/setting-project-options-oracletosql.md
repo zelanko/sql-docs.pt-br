@@ -1,5 +1,5 @@
 ---
-title: Definir as opções de projeto (OracleToSQL) | Microsoft Docs
+title: Configurando opções de projeto (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,23 +13,23 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266526"
 ---
 # <a name="setting-project-options-oracletosql"></a>Definir opções do projeto (OracleToSQL)
-Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão do objeto, o carregamento do objeto, configurações de migração de dados e interface do usuário. Antes de converter objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou migrar os dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verifique se as opções de configuração são adequadas para o projeto.  
+Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão de objetos, o carregamento de objetos, a interface do usuário e as configurações de migração de dados. Antes de converter objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o, verifique se as opções de configuração são apropriadas para o projeto.  
   
-O SSMA permite configurar opções padrão para todos os projetos. Essas opções são aplicadas a qualquer novo projeto criado por você. Em seguida, você pode personalizar as opções para cada projeto.  
+O SSMA permite que você configure opções padrão para todos os projetos. Essas opções são aplicadas a qualquer novo projeto que você criar. Em seguida, você pode personalizar as opções para cada projeto.  
   
-## <a name="configuration-options-and-modes"></a>Modos e opções de configuração  
-O SSMA tem cinco conjuntos de configurações do projeto:  
+## <a name="configuration-options-and-modes"></a>Opções de configuração e modos  
+O SSMA tem cinco conjuntos de configurações de projeto:  
   
--   Informações do projeto  
+-   Informações do Projeto  
   
--   Geral (conversão ou migração, carregando objetos)  
+-   Geral (conversão, migração, carregamento de objetos)  
   
 -   Synchronization  
   
@@ -47,9 +47,9 @@ Ele também tem quatro modos para definir essas configurações:
   
 -   Personalizado  
   
-O modo padrão é recomendado para a maioria dos usuários. O modo otimista mantém mais da sintaxe do Oracle atual e é mais fácil de ler. No entanto, a manter a sintaxe atual pode não ser precisa. Se a sintaxe do Oracle deve ser convertida para equivalentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxe, o modo completo executa a conversão mais completa, mas o código resultante pode ser mais difícil de ler. No modo personalizado, você deve definir as opções.  
+O modo padrão é recomendado para a maioria dos usuários. O modo otimista mantém mais da sintaxe atual do Oracle e é mais fácil de ler. No entanto, manter a sintaxe atual pode não ser precisa. Se a sintaxe do Oracle precisar ser convertida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em sintaxe equivalente, o modo completo executará a conversão mais completa, mas o código resultante poderá ser mais difícil de ler. No modo personalizado, você define as opções.  
   
-Para obter mais informações sobre as configurações e como as configurações são aplicadas em cada modo, consulte os tópicos a seguir:  
+Para obter mais informações sobre as configurações e como as configurações são aplicadas em cada modo, consulte os seguintes tópicos:  
   
 -   [Configurações do projeto &#40;conversão&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   
@@ -57,48 +57,48 @@ Para obter mais informações sobre as configurações e como as configurações
   
 -   [Configurações do projeto&#40;sincronização&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)  
   
--   [Configurações do projeto &#40;interface gráfica do usuário&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)  
+-   [Configurações do projeto &#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)  
   
 -   [Configurações do projeto &#40;mapeamento de tipo&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)  
   
 ## <a name="setting-project-options"></a>Definir opções do projeto  
-No SSMA, você pode configurar as configurações padrão para todos os projetos. Essas configurações são salvas no arquivo de configuração do SSMA e aplicadas a qualquer novo projeto criado por você.  
+No SSMA, você pode definir as configurações padrão para todos os projetos. Essas configurações são salvas no arquivo de configuração do SSMA e aplicadas a qualquer novo projeto que você criar.  
   
 **Para definir opções de projeto padrão**  
   
-1.  Sobre o **ferramentas** menu, clique em **configurações do projeto padrão**.  
+1.  No menu **ferramentas** , clique em **configurações de projeto padrão**.  
   
-2.  No **configurações de projeto padrão** caixa de diálogo, use um dos procedimentos a seguir:  
+2.  Na caixa de diálogo **configurações padrão do projeto** , use um dos seguintes procedimentos:  
   
-    -   Selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibida ou alterada de **versão de destino de migração** lista suspensa clique **geral** na parte inferior do painel esquerdo e, em seguida, selecione conversão ou Migração.  
+    -   Selecione o tipo de projeto de migração para o qual as configurações devem ser exibidas ou alteradas na lista suspensa **versão de destino de migração** clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione conversão ou migração.  
   
-    -   Para selecionar um modo predefinido, nos **modo** caixa de lista suspensa, selecione **padrão**, **Optimistic**, ou **completo**.  
+    -   Para selecionar um modo predefinido, na caixa suspensa **modo** , selecione **padrão**, **otimista**ou **completo**.  
   
     -   Para especificar configurações personalizadas, selecione ou insira as novas configurações ou valores.  
   
-3.  Clique em **Okey** para salvar as configurações.  
+3.  Clique em **OK** para salvar as configurações.  
   
-Você também pode personalizar configurações para o projeto atual. Essas configurações são salvas no arquivo de projeto atual.  
+Você também pode personalizar as configurações para o projeto atual. Essas configurações são salvas no arquivo de projeto atual.  
   
-**Para personalizar as configurações para o projeto atual**  
+**Para personalizar as configurações do projeto atual**  
   
-1.  Sobre o **ferramentas** menu, clique em **configurações do projeto**.  
+1.  No menu **ferramentas** , clique em **configurações do projeto**.  
   
-2.  No **configurações do projeto** caixa de diálogo, use um dos procedimentos a seguir:  
+2.  Na caixa de diálogo **configurações do projeto** , use um dos seguintes procedimentos:  
   
-    -   Para selecionar um modo predefinido, nos **modo** caixa de lista suspensa, selecione **padrão**, **Optimistic**, ou **completo**.  
+    -   Para selecionar um modo predefinido, na caixa suspensa **modo** , selecione **padrão**, **otimista**ou **completo**.  
   
-    -   Para especificar um modo personalizado, na **modo** caixa, selecione **personalizado**e, em seguida, selecione as configurações de projeto apropriado.  
+    -   Para especificar um modo personalizado, na caixa **modo** , selecione **personalizado**e, em seguida, selecione as configurações de projeto apropriadas.  
   
-3.  Clique em **Okey** para salvar as configurações.  
+3.  Clique em **OK** para salvar as configurações.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-A próxima etapa da migração depende de suas necessidades de projeto:  
+A próxima etapa na migração depende de suas necessidades de projeto:  
   
--   Para personalizar o mapeamento de tipos de dados de origem e destino, consulte [mapeamento Oracle e tipos de dados do SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
+-   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [mapeando os tipos de dados Oracle e SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
--   Caso contrário, você pode converter as definições de objeto de banco de dados Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definições de objeto. Para obter mais informações, consulte [converter esquemas do Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
+-   Caso contrário, você pode converter as definições de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados Oracle em definições de objeto. Para obter mais informações, consulte [convertendo esquemas Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
-## <a name="see-also"></a>Consulte também  
-[Mapeamento de Oracle e tipos de dados do SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Mapeamento de tipos de dados Oracle e SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
   

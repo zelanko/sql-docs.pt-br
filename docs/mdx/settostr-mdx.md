@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3965c3cc8ea2a2f2de292ca0c75e49c957e04f02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036974"
 ---
 # <a name="settostr-mdx"></a>SetToStr (MDX)
@@ -32,7 +32,7 @@ SetToStr(Set_Expression)
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
 ## <a name="remarks"></a>Comentários  
- Essa função é usada para transferir uma representação de cadeia de caracteres de um conjunto para análise de uma função externa. A cadeia de caracteres retornada é colocada entre chaves {}, com cada item no conjunto de separados por vírgula.  
+ Essa função é usada para transferir uma representação de cadeia de caracteres de um conjunto para análise de uma função externa. A cadeia de caracteres retornada é colocada entre chaves {}, com cada item no conjunto separado por uma vírgula.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna uma cadeia de caracteres que contém todos os membros da hierarquia de atributo Geography.Country.  
@@ -43,7 +43,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

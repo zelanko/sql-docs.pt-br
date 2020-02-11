@@ -18,22 +18,22 @@ ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094822"
 ---
-# <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
+# <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exibe as expressões de condição que foram executadas as políticas, os destinos das expressões, o resultado de cada execução e os detalhes sobre erros, se houver. A tabela a seguir descreve as colunas na exibição  syspolicy_execution_history_details.  
   
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|Identificador deste registro. Cada registro representa a tentativa para avaliar ou obrigar uma expressão de condição em uma política. Se aplicado a vários destinos, cada condição terá um registro de detalhe para cada destino.|  
-|history_id|**bigint**|Identificador do evento de histórico. Cada evento de histórico representa um tentativa para executar uma política. Como uma condição pode ter várias expressões de condição e vários destinos, um history_id pode criar vários registros de detalhe. Use a coluna history_id para unir esta exibição para o [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) exibição.|  
+|history_id|**bigint**|Identificador do evento de histórico. Cada evento de histórico representa um tentativa para executar uma política. Como uma condição pode ter várias expressões de condição e vários destinos, um history_id pode criar vários registros de detalhe. Use a coluna history_id para adicionar essa exibição à exibição de [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) .|  
 |target_query_expression|**nvarchar(max)**|Destino da política e da exibição syspolicy_policy_execution_history.|  
 |execution_date|**datetime**|Data e hora em que este registro de detalhe foi criado.|  
 |result|**bit**|Êxito ou falha deste destino e a avaliação de expressão de condição:<br /><br /> 0 (êxito) ou 1 (falha).|  
@@ -68,7 +68,7 @@ WHERE PolHistDet.result = 0 ;
 ## <a name="permissions"></a>Permissões  
  Requer a associação à função PolicyAdministratorRole no banco de dados msdb.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Exibições de Gerenciamento Baseado em Políticas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 296163b64d565ae3a65a16f1dbbf002bfc464bee
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153965"
 ---
 # <a name="ado-net-source"></a>Origem do ADO NET
   A origem do ADO NET recebe dados de um provedor de .NET e os disponibiliza para o fluxo de dados.  
   
- Você pode usar a fonte ADO.NET para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], confira [Diretrizes gerais e limitações (Banco de dados SQL do Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Você pode usar a origem do ADO NET para se [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]conectar ao. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], confira [Diretrizes gerais e limitações (Banco de dados SQL do Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Suporte do tipo de dados  
  A fonte converte qualquer tipo de dados que não é mapeado para um tipo de dados específico do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um tipo de dados DT_NTEXT do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Essa conversão ocorre mesmo que o tipo de dados seja `System.Object`.  
@@ -69,7 +69,7 @@ ms.locfileid: "70153965"
 > [!NOTE]  
 >  Se você usar uma instrução SQL para executar um procedimento armazenado e o pacote falhar com o seguinte erro, você poderá resolver o erro adicionando a instrução `SET FMTONLY OFF` antes da instrução exec.  
 >   
->  **Não é possível encontrar a coluna <nome_da_coluna> na fonte de dados.**  
+>  **Não é possível encontrar a coluna <column_name> no DataSource.**  
   
  A fonte ADO.NET usa um gerenciador de conexões do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] para se conectar a uma fonte de dados, e o gerenciador de conexões especifica o provedor .NET. Para obter mais informações, consulte [Gerenciador de conexões ADO.NET](../connection-manager/ado-net-connection-manager.md).  
   
@@ -85,9 +85,9 @@ ms.locfileid: "70153965"
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Destino DataReader](datareader-destination.md)   
- [Destino do ADO NET](ado-net-destination.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Destino do DataReader](datareader-destination.md)   
+ [Destino ADO NET](ado-net-destination.md)   
  [Fluxo de Dados](data-flow.md)  
   
   

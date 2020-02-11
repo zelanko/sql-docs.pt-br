@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783386"
 ---
 # <a name="view-the-job-history"></a>View the Job History
-  Este tópico descreve como exibir o histórico de trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o SQL Server Management Objects.  
+  Este tópico descreve como exibir o log [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de histórico de trabalhos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]usando [!INCLUDE[tsql](../../includes/tsql-md.md)], ou SQL Server Management Objects.  
   
 -   **Antes de começar:**  
   
      [Segurança](#Security)  
   
--   **Para exibir o log do histórico de trabalhos usando:**  
+-   **Para exibir o log de histórico do trabalho usando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72783386"
   
 5.  Para atualizar o histórico do trabalho, clique em **Atualizar**. Para exibir menos linhas, clique no botão **Filtro** e insira parâmetros de filtro.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-the-job-history-log"></a>Para exibir o log de histórico do trabalho  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72783386"
     GO  
     ```  
   
- Para obter mais informações, [consulte &#40;Transact-SQL&#41;sp_help_jobhistory](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
+ Para obter mais informações, consulte [sp_help_jobhistory &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
   
 ##  <a name="SMO"></a>Usando SQL Server Management Objects  
  **Para exibir o log de histórico do trabalho**  

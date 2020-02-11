@@ -1,5 +1,5 @@
 ---
-title: Criar etiquetas de endereçamento no Microsoft Word usando dados do Visual FoxPro | Microsoft Docs
+title: Criando etiquetas de endereçamento no Microsoft Word usando dados do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,43 +17,43 @@ ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73880171493555a7d30e5c0c5419d02338961e9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096522"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Criar rótulos de correspondência no Microsoft Word usando dados do Visual FoxPro
-Você pode usar dados do Visual FoxPro em um Microsoft Word para documentos do Windows 95 ou Windows 98. Por exemplo, talvez você queira criar etiquetas de endereçamento a partir das informações de cliente armazenadas em uma tabela do Visual FoxPro.  
+Você pode usar dados do Visual FoxPro em um documento do Microsoft Word para Windows 95 ou Windows 98. Por exemplo, talvez você queira criar etiquetas de endereçamento das informações do cliente armazenadas em uma tabela do Visual FoxPro.  
   
 ### <a name="to-create-mailing-labels"></a>Para criar etiquetas de endereçamento  
   
 1.  No Microsoft Word, crie um novo documento em branco.  
   
-2.  No menu Ferramentas, escolha a mala direta.  
+2.  No menu ferramentas, escolha mala direta.  
   
 3.  No auxiliar de mala direta, escolha criar e, em seguida, selecione etiquetas de endereçamento.  
   
-4.  No documento principal, escolha a janela ativa.  
+4.  Em documento principal, escolha janela ativa.  
   
-5.  Em fonte de dados, optar por obter dados e, em seguida, selecione Abrir fonte de dados.  
+5.  Em fonte de dados, escolha obter dados e, em seguida, selecione abrir fonte de dados.  
   
-6.  Na caixa de diálogo Abrir fonte de dados, escolha MS Query.  
+6.  Na caixa de diálogo abrir fonte de dados, escolha MS Query.  
   
-7.  Na caixa de diálogo Selecionar fonte de dados, selecione uma fonte de dados do Visual FoxPro e, em seguida, clique em usar.  
+7.  Na caixa de diálogo selecionar fonte de dados, selecione uma fonte de dados do Visual FoxPro e clique em usar.  
   
-8.  Se o banco de dados acessado por sua fonte de dados incluir tabelas, selecione uma tabela da caixa de diálogo Adicionar tabelas. Microsoft Query exibe a tabela adicionada na metade superior do designer de consulta.  
+8.  Se o banco de dados acessado pela sua fonte de dado incluir tabelas, selecione uma tabela na caixa de diálogo adicionar tabelas. O Microsoft Query exibe a tabela adicionada na metade superior do designer de consulta.  
   
-9. Selecione campos para a sua consulta arrastando-os da tabela para a inferior metade do designer.  
+9. Selecione os campos para sua consulta arrastando-os da tabela para a metade inferior do designer.  
   
-10. No menu Arquivo, escolha retornar dados para o Microsoft Word. Microsoft Query fecha, e os dados que você selecionou estão disponíveis para uso no seu documento de mala direta.  
+10. No menu arquivo, escolha retornar dados para o Microsoft Word. O Microsoft Query fecha e os dados selecionados estão disponíveis para uso em seu documento de mala direta.  
   
-11. No documento principal, escolha a instalação.  
+11. Em documento principal, escolha instalação.  
   
-12. Na caixa de diálogo Opções de rótulo, selecione as informações de impressora e o rótulo que deseja e, em seguida, clique Okey.  
+12. Na caixa de diálogo opções de rótulo, selecione as informações de impressora e rótulo desejadas e clique em OK.  
   
-13. Na caixa de diálogo Criar etiquetas, selecione os campos que você deseja imprimir as etiquetas de endereçamento e, em seguida, clique em Okey.  
+13. Na caixa de diálogo Criar rótulos, selecione os campos que você deseja imprimir nos rótulos de endereçamento e clique em OK.  
   
-14. No auxiliar de mala direta, a mesclagem de dados com o documento, clique em Mesclar.  
+14. No auxiliar de mala direta, em mesclar os dados com o documento, clique em mesclar.  
   
-15. Na caixa de diálogo de mesclagem, selecione as opções que você deseja e, em seguida, clique em Mesclar.
+15. Na caixa de diálogo mesclar, selecione as opções desejadas e clique em mesclar.

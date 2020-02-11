@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211691"
 ---
 # <a name="user-defined-functions"></a>Funções definidas pelo usuário
@@ -39,7 +39,7 @@ ms.locfileid: "68211691"
   
  [Tarefas relacionadas](#Tasks)  
   
-##  <a name="Benefits"></a> Benefícios da função definida pelo usuário  
+##  <a name="Benefits"></a>Benefícios da função definida pelo usuário  
  Os benefícios de usar funções definidas pelo usuário em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são:  
   
 -   Eles permitem programação modular.  
@@ -59,7 +59,7 @@ ms.locfileid: "68211691"
 > [!NOTE]  
 >  As funções definidas pelo usuário [!INCLUDE[tsql](../../includes/tsql-md.md)] em consultas só podem ser executadas em um único thread (plano de execução serial).  
   
-##  <a name="FunctionTypes"></a> Tipos de funções  
+##  <a name="FunctionTypes"></a>Tipos de funções  
  Função escalar  
  As funções escalares definidas pelo usuário retornam um valor único de dados do tipo definido na cláusula RETURNS. Para uma função escalar embutida, não há um corpo de função; o valor escalar é o resultado de uma única instrução. Para uma função escalar de várias instruções, o corpo da função, definido em um bloco BEGIN...END, contém uma série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , que retornam o valor único. O tipo de retorno pode ser qualquer tipo de dados, exceto `text`, `ntext`, `image`, `cursor`e `timestamp`.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68211691"
  Funções de sistema  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas funções de sistema que você pode usar para executar uma variedade de operações. Elas não podem ser modificadas. Para obter mais informações, consulte [Funções internas &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [Funções armazenadas do sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql) e [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).  
   
-##  <a name="Guidelines"></a> Diretrizes  
+##  <a name="Guidelines"></a>Diretrizes  
  Erros de [!INCLUDE[tsql](../../includes/tsql-md.md)] que levam ao cancelamento de uma instrução e continuam com a instrução seguinte no módulo (como gatilhos ou procedimentos armazenados) tratados de modo diferente em uma função. Nas funções, esses erros fazem com que a execução da função seja interrompida. Em troca, isso faz com que a instrução que chamou a função seja cancelada.  
   
  As instruções em um bloco BEGIN... END não podem ter nenhum efeito colateral. Os efeitos colaterais da função são as alterações permanentes realizada no estado de um recurso que tem um escopo fora da função como uma modificação em uma tabela do banco de dados. As únicas alterações que podem ser feitas pelas instruções na função são alterações em objetos locais à função, como cursores ou variáveis locais. As modificações em tabelas de banco de dados, operações em cursores que não são locais à função, envio de e-mail, tentativa de modificação em catálogo e geração de um conjunto de resultados retornados ao usuário são exemplos de ações que não devem ser realizadas em uma função.  
@@ -79,7 +79,7 @@ ms.locfileid: "68211691"
   
  O número de vezes em que uma função especificada em uma consulta é realmente executada pode variar entre os planos de execução desenvolvidos pelo otimizador. Um exemplo é a função chamada por uma subconsulta em uma cláusula WHERE. O número de vezes em que a subconsulta e sua função são executadas pode variar com os caminhos de acesso diferentes escolhidos pelo otimizador.  
   
-##  <a name="ValidStatements"></a> Instruções válidas em uma função  
+##  <a name="ValidStatements"></a>Instruções válidas em uma função  
  Os tipos de instruções que são válidos em uma função incluem:  
   
 -   As instruções DECLARE podem ser usadas para definir variáveis de dados e cursores que são locais à função.  
@@ -120,7 +120,7 @@ ms.locfileid: "68211691"
   
  Para obter uma lista das funções internas do sistema determinísticas e não determinísticas, consulte [Funções determinísticas e não determinísticas](../user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-##  <a name="SchemaBound"></a> Funções associadas a esquema  
+##  <a name="SchemaBound"></a>Funções associadas a esquema  
  CREATE FUNCTION dá suporte à cláusula SCHEMABINDING que associa a função ao esquema de qualquer objeto que ela referencia, como tabelas, exibições e demais funções definidas pelo usuário. Uma tentativa para alterar ou descartar qualquer objeto referenciado por uma função associada a esquema falhará.  
   
  Essas condições devem ser cumpridas antes de especificar SCHEMABINDING em CREATE FUNCTION:  
@@ -133,7 +133,7 @@ ms.locfileid: "68211691"
   
  Você pode usar ALTER FUNCTION para remover a associação a esquema. A instrução ALTER FUNCTION deve redefinir a função sem especificar WITH SCHEMABINDING.  
   
-##  <a name="Parameters"></a> Especificando parâmetros  
+##  <a name="Parameters"></a>Especificando parâmetros  
  Uma função definida pelo usuário usa parâmetros de entrada zero ou mais e retorna um valor escalar ou uma tabela. A função pode ter um máximo de 1024 parâmetros de entrada. Quando um parâmetro da função tiver um valor padrão, a palavra-chave DEFAULT deve ser especificada quando a função for chamada para obter o valor padrão. Esse comportamento é diferente dos parâmetros com valores padrão nos procedimentos armazenados definidos pelo usuário nos quais a omissão de parâmetro também implica o valor padrão. Funções definidas pelo usuário não dão suporte aos parâmetros de saída.  
   
 ##  <a name="Tasks"></a> Tarefas relacionadas  

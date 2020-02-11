@@ -1,5 +1,5 @@
 ---
-title: XQueries que envolvem ordem | Microsoft Docs
+title: XQueries envolvendo a ordem | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,22 +17,22 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946118"
 ---
 # <a name="xqueries-involving-order"></a>XQueries que envolvem ordem
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Bancos de dados relacionais não têm um conceito de sequência. Por exemplo, você não pode fazer uma solicitação como "Obtenha o primeiro cliente do banco de dados". No entanto, você pode consultar um documento XML e recuperar o primeiro \<Customer > elemento. Então, você sempre recuperará o mesmo cliente.  
+  Bancos de dados relacionais não têm um conceito de sequência. Por exemplo, você não pode fazer uma solicitação como "Obtenha o primeiro cliente do banco de dados". No entanto, você pode consultar um documento XML e recuperar \<o primeiro elemento de> do cliente. Então, você sempre recuperará o mesmo cliente.  
   
  Este tópico ilustra consultas baseadas na sequência em que os nós aparecem no documento.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>A. Recuperar as etapas de fabricação no segundo local do centro de trabalho de um produto  
+### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>a. Recuperar as etapas de fabricação no segundo local do centro de trabalho de um produto  
  Para um modelo de produto específico, a consulta a seguir recupera as etapas de produção no segundo centro de trabalho em uma sequência de locais de centro de trabalho no processo de produção.  
   
 ```sql
@@ -61,13 +61,13 @@ WHERE ProductModelID=7
   
 -   As expressões nas chaves são substituídas pelo resultado de sua avaliação. Para obter mais informações, consulte [construção XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md).  
   
--   **@\*** recupera todos os atributos do segundo local de centro de trabalho.  
+-   **@\*** Recupera todos os atributos do segundo local do centro de trabalho.  
   
--   A iteração FLWOR (para... RETURN) recupera todos os <`step`> elementos filho do segundo trabalho center local.  
+-   A iteração FLWOR (para... RETORNAR) recupera todos os <`step`> elementos filho do segundo local do centro de trabalho.  
   
--   O [função SQL: Column (XQuery)](../xquery/xquery-extension-functions-sql-column.md) inclui o valor relacional no XML que está sendo construído.  
+-   A [função SQL: Column () (XQuery)](../xquery/xquery-extension-functions-sql-column.md) inclui o valor relacional no XML que está sendo construído.  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <ManuStep ProdModelID="7" ProductModelName="HL Touring Frame">  
@@ -81,7 +81,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- A consulta anterior recupera apenas os nós de texto. Se você quiser que todo o <`step`> elemento retornado em vez disso, remova o **String ()** função da consulta:  
+ A consulta anterior recupera apenas os nós de texto. Se você quiser que todo o `step` <> elemento retornado, remova a função **String ()** da consulta:  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Localizar todos os materiais e ferramentas usados no segundo local do centro de trabalho na fabricação de um produto  
  Para um modelo de produto específico, a consulta a seguir recupera as ferramentas e os materiais usados no segundo centro de trabalho na sequência de locais de centro de trabalho no processo de produção.  
@@ -115,11 +115,11 @@ where ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   A consulta constrói o < Loca`tion`> elemento e recupera seu atributo de valores do banco de dados.  
+-   A consulta constrói o elemento <localizável`tion`> e recupera seus valores de atributo do banco de dados.  
   
 -   Ela usa duas iterações FLWOR (for...return): uma para recuperar ferramentas e outra para recuperar o material usado.  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -137,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Recuperar as descrições dos dois primeiros recursos do produto no catálogo de produtos  
- Para um modelo de produto específico, a consulta recupera as primeiras duas descrições do <`Features`> elemento no catálogo de modelo do produto.  
+ Para um modelo de produto específico, a consulta recupera as duas primeiras descrições de recursos do `Features` elemento <> no catálogo de modelos do produto.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,11 +157,11 @@ where ProductModelID=19
   
  Observe o seguinte na consulta anterior:  
   
- O corpo da consulta constrói XML que inclui o <`ProductModel`> elemento que tem os atributos ProductModelID e ProductModelName.  
+ O corpo da consulta constrói XML que inclui o elemento `ProductModel` <> que tem os atributos ProductModelID e ProductModelName.  
   
--   A consulta usa um loop FOR... RETURN para recuperar as descrições de recurso de modelo de produto. O **Position ()** função é usada para recuperar os primeiros dois recursos.  
+-   A consulta usa um para... Loop de retorno para recuperar as descrições de recursos do modelo de produto. A função **Position ()** é usada para recuperar os dois primeiros recursos.  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
@@ -181,7 +181,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. Localizar as duas primeiras ferramentas usadas no primeiro local do centro de trabalho no processo de fabricação do produto  
- Para um modelo de produto, a consulta recupera as duas primeiras ferramentas no primeiro centro de trabalho na sequência de locais de centro de trabalho no processo de produção. A consulta é especificada em relação a instruções de fabricação armazenadas na **instruções** coluna o **productmodel** tabela.  
+ Para um modelo de produto, a consulta recupera as duas primeiras ferramentas no primeiro centro de trabalho na sequência de locais de centro de trabalho no processo de produção. A consulta é especificada em relação às instruções de fabricação armazenadas na coluna **instruções** da tabela **Production. ProductModel** .  
   
 ```sql
 SELECT Instructions.query('  
@@ -204,7 +204,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -217,7 +217,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. Localizar as duas últimas etapas de fabricação no primeiro local do centro de trabalho no processo de fabricação de um produto específico  
- A consulta usa o **Last ()** função para recuperar as duas últimas etapas de fabricação.  
+ A consulta usa a função **Last ()** para recuperar as duas últimas etapas de fabricação.  
   
 ```sql
 SELECT Instructions.query('   
@@ -234,7 +234,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```xml
 <LastTwoManuSteps>  
@@ -245,9 +245,9 @@ where ProductModelID=7
 </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [Construção XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
+ [Construção XML &#40;&#41;XQuery](../xquery/xml-construction-xquery.md)  
   
   

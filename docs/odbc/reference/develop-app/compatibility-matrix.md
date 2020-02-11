@@ -19,54 +19,54 @@ ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 273633532b9b9247ea7aa12fe90bfcc3c6f6bb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083271"
 ---
 # <a name="compatibility-matrix"></a>Matriz de compatibilidade
 A tabela a seguir descreve a compatibilidade dos tipos de aplicativos e drivers definidos anteriormente nesta seção.  
   
-|Tipo de aplicativo<br /><br /> e versão|ODBC de 32 bits<br /><br /> *2. x* driver|ODBC *3.x*<br /><br /> Driver|Driver ODBC 3.8|ISO e abra grupo compatível com o driver|  
+|Tipo de aplicativo<br /><br /> e versão|ODBC de 32 bits<br /><br /> Driver *2. x*|ODBC *3. x*<br /><br /> Driver|Driver ODBC 3,8|ISO e abrir o driver em conformidade com o grupo|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |aplicativo de 16 bits, qualquer versão|Compatível|Compatível|Compatível|Compatível|  
-|Puro *2.x* aplicativo|Compatível|Compatível|Compatível|Não compatível com [3]|  
-|Puro *2.x* recompilado aplicativo|Compatível|Compatível com [1]|Compatível com [1]|Não compatível com [3]|  
-|Puro *2.x* aplicativo Unicode|Compatível|Compatível com [1]|Compatível com [1]|Não compatível com [3]|  
-|Aplicativo puro Open Group e compatível com ISO|Não é compatível|Compatível com [2]|Compatível com [2]|Compatível com [2]|  
-|Aplicativo 3.0 puro|Não é compatível|Compatível|Compatível|Não compatível com [4]|  
-|Aplicativo de 3,5 puro|Não é compatível|Compatível|Compatível|Não compatível com [4]|  
-|Aplicativo puro de 3,8 (ou superior)|Não compatível com [5]|Não compatível com [5]|Compatível|Não compatível com [4]|  
-|Aplicativo substituído|Compatível|Compatível|Compatível|Não compatível com [3]|  
+|Aplicativo puro *2. x*|Compatível|Compatível|Compatível|Não compatível [3]|  
+|Aplicativo recompilado de *2. x* puro|Compatível|Compatível [1]|Compatível [1]|Não compatível [3]|  
+|Aplicativo Unicode puro *2. x*|Compatível|Compatível [1]|Compatível [1]|Não compatível [3]|  
+|Aplicativo puro de Open Group e ISO-compliant|Não compatível|Compatível [2]|Compatível [2]|Compatível [2]|  
+|Aplicativo puro 3,0|Não compatível|Compatível|Compatível|Não compatível [4]|  
+|Aplicativo puro 3,5|Não compatível|Compatível|Compatível|Não compatível [4]|  
+|Aplicativo puro 3,8 (ou superior)|Não compatível [5]|Não compatível [5]|Compatível|Não compatível [4]|  
+|Aplicativo substituído|Compatível|Compatível|Compatível|Não compatível [3]|  
   
- [1], o aplicativo deve recompilar usando cabeçalhos ODBC 3.5 (ou superior) com a opção de UNICODE (se for um aplicativo Unicode) e configure ODBCVER para 0x0250.  
+ [1] o aplicativo deve recompilar usando cabeçalhos ODBC 3,5 (ou superior) com a opção UNICODE (se for um aplicativo Unicode) e deve definir ODBCVER como 0x0250.  
   
- [2], o aplicativo deve compilar o uso de cabeçalhos ODBC 3.5 (ou superior) e vincular com o Gerenciador de Driver ODBC. Ele também deve definir o sinalizador de cabeçalho ODBC_STD.  
+ [2] o aplicativo deve compilar usando os cabeçalhos ODBC 3,5 (ou superior) e vincular com o Gerenciador de driver ODBC. Ele também deve definir o sinalizador de cabeçalho ODBC_STD.  
   
- [3] essa configuração potencialmente pode não funcionar porque há recursos do ODBC *2.x* que não estão com os padrões, como marcadores.  
+ [3] essa configuração pode potencialmente falhar ao funcionar porque há recursos no ODBC *2. x* que não estão nos padrões, como indicadores.  
   
- [4] esta configuração potencialmente pode não funcionar porque há recursos do ODBC *3.x* que não estão com os padrões, como marcadores.  
+ [4] essa configuração pode potencialmente falhar ao funcionar porque há recursos no ODBC *3. x* que não estão nos padrões, como indicadores.  
   
- [5] essa configuração pode potencialmente falhar porque há recursos que não estão no ODBC 2.x ou 3.x drivers, como específicos de driver no ODBC 3.8 [tipos de dados C em ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
+ [5] essa configuração pode potencialmente falhar porque há recursos no ODBC 3,8 que não estão em drivers ODBC 2. x ou 3. x, como [tipos de dados C específicos do driver no ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
 ## <a name="driver-manager-compatibility"></a>Compatibilidade do Gerenciador de driver  
- Um aplicativo ODBC 3.0 que deve funcionar com todas as versões do Gerenciador de Driver deve fazer o seguinte na inicialização:  
+ Um aplicativo ODBC 3,0 que deve operar com todas as versões do Gerenciador de driver deve fazer o seguinte na inicialização:  
   
--   Alocar um identificador de ambiente.  
+-   Aloque um identificador de ambiente.  
   
--   Defina o atributo de ambiente de SQL_ATTR_ODBC_VERSION como SQL_OV_ODBC3_80. Se o Gerenciador de Driver retornará SQL_ERROR, o Gerenciador de Driver é anterior ao 3.8. Redefina SQL_ATTR_ODBC_VERSION como SQL_OV_ODBC3 ou SQL_OV_ODBC2, conforme apropriado, para corresponder ao Gerenciador de Driver.  
+-   Defina o atributo de ambiente SQL_ATTR_ODBC_VERSION como SQL_OV_ODBC3_80. Se o Gerenciador de driver retornar SQL_ERROR, o Gerenciador de driver será mais antigo que 3,8. Redefina SQL_ATTR_ODBC_VERSION para SQL_OV_ODBC3 ou SQL_OV_ODBC2, conforme apropriado, para corresponder ao Gerenciador de driver.  
   
--   Alocar um identificador de conexão.  
+-   Aloque um identificador de conexão.  
   
--   Fazer uma conexão.  
+-   Faça uma conexão.  
   
--   Chame SQLGetInfo para SQL_DRIVER_ODBC_VER determinar a versão do driver. Se o driver é um driver de ODBC 3.8, você pode usar tipos do C específicos do driver. Caso contrário, não use tipos de dados C específicos do driver.  
+-   Chame SQLGetInfo para SQL_DRIVER_ODBC_VER para determinar a versão do driver. Se o driver for um driver ODBC 3,8, você poderá usar tipos C específicos do driver. Caso contrário, não use tipos de dados C específicos do driver.  
   
- Observe que um aplicativo de 3. x recompilado ODBC pode usar recursos de ODBC 3.8 diferentes tipos de C específicos do driver sem especificar SQL_OV_ODBC3_80 para SQL_ATTR_ODBC_VERSION. Isso é semelhante a um aplicativo recompilado ODBC 2.x usando os recursos do ODBC 3. x.  
+ Observe que um aplicativo ODBC 3. x recompilado pode usar recursos ODBC 3,8 diferentes de tipos C específicos do driver sem especificar SQL_OV_ODBC3_80 para SQL_ATTR_ODBC_VERSION. Isso é semelhante a um aplicativo ODBC 2. x recompilado usando os recursos do ODBC 3. x.  
   
-## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>Usando SQLCancelHandle de um aplicativo compatível com todos os gerenciadores de Driver  
- Porque [função SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) não tem suporte em gerenciadores de Driver que foram lançadas antes do Windows 7, um aplicativo não pode ser carregado em versões anteriores do Windows se chama **SQLCancelHandle** diretamente. Para trabalhar com todas as versões do Driver de gerentes e usar **SQLCancelHandle** em novas versões do Windows, um aplicativo deve chamar **SQLCancelHandle** indiretamente usando **LoadLibrary** e **GetProcAddress.**  
+## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>Usando SQLCancelHandle em um aplicativo compatível com todos os gerenciadores de driver  
+ Como a [função SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) não tem suporte em gerenciadores de driver que foram lançados antes do Windows 7, um aplicativo não poderá ser carregado em versões anteriores do Windows se ele chamar **SQLCancelHandle** diretamente. Para trabalhar com todas as versões dos gerenciadores de drivers e usar o **SQLCancelHandle** em novas versões do Windows, um aplicativo deve chamar **SQLCancelHandle** indiretamente usando **LoadLibrary** e **GetProcAddress.**  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Novidades no ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

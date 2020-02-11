@@ -1,5 +1,5 @@
 ---
-title: Valor de exemplo da propriedade (VB) | Microsoft Docs
+title: Exemplo da propriedade Value (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ebc1b9fcd12f17679787985d5653de01ebbdd435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938789"
 ---
 # <a name="value-property-example-vb"></a>Exemplo da propriedade Value (VB)
-Este exemplo demonstra a [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade com [campo](../../../ado/reference/ado-api/field-object.md) e [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objetos exibindo valores de campo e propriedade para o ***funcionários*** tabela.  
+Este exemplo demonstra a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) com objetos de [campo](../../../ado/reference/ado-api/field-object.md) e [Propriedade](../../../ado/reference/ado-api/property-object-ado.md) exibindo valores de campo e propriedade para a tabela ***Employees*** .  
   
 ```  
 'BeginValueVB  
@@ -100,7 +100,7 @@ End Sub
 'EndValueVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Propriedade Value (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

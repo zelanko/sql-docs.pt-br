@@ -13,26 +13,26 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 9ae4a5009c33067dcb5db2d26ff3e287b31b8768
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71118123"
 ---
 # <a name="query-options-pages-f1-help"></a>Ajuda F1 de páginas de Opções de Consulta
 
 Esta seção contém os tópicos de ajuda F1 das páginas de **Opções de Consulta** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
-[Página geral de opções &#40;de execução de Analysis Services consulta&#41;](analysis-services-query-execution-options-general-page.md)
+[Analysis Services opções de execução de consulta &#40;página Geral&#41;](analysis-services-query-execution-options-general-page.md)
 
-[Página geral de &#40;resultados de consulta do Analysis Services&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
+[Analysis Services resultados da consulta &#40;página Geral&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
 
-[Página avançada de &#40;execução de opções de consulta&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
+[Execução de opções de consulta &#40;página avançado&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
 
-[Página ANSI de &#40;execução de opções de consulta&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)
+[Execução de opções de consulta &#40;página ANSI&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)
 
-[Página geral de &#40;execução de opções de consulta&#41;](../../2014/database-engine/query-options-execution-general-page.md)
+[Execução de opções de consulta &#40;página Geral&#41;](../../2014/database-engine/query-options-execution-general-page.md)
   
-[Página grade de &#40;resultados de opções de consulta&#41;](../../2014/database-engine/query-options-results-grid-page.md)
+[Resultados das opções de consulta &#40;página de grade&#41;](../../2014/database-engine/query-options-results-grid-page.md)
 
-[Página de texto &#40;de resultados de opções de consulta&#41;](../../2014/database-engine/query-options-results-text-page.md)
+[Resultados das opções de consulta &#40;página de texto&#41;](../../2014/database-engine/query-options-results-text-page.md)

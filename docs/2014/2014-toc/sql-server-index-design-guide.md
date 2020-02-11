@@ -11,17 +11,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68475978"
 ---
 # <a name="sql-server-index-design-guide"></a>Guia de criação de índice do SQL Server
 
   Os índices criados inadequadamente e a falta de índices são as principais fontes de gargalos do aplicativo de banco de dados. A criação eficiente de índices é muito importante para alcançar um bom desempenho de banco de dados e de aplicativo. Este guia de criação de índice do SQL Server contém informações e práticas recomendadas para ajudar você a criar índices efetivos para atender às necessidades de seu aplicativo.  
   
-**Aplica-se a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , a menos que indicado em contrário.  
+**Aplica-se a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] menos que indicado o contrário.  
   
  Este guia presume que o leitor tenha uma compreensão geral dos tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma descrição geral dos tipos de índices, consulte [Tipos de índice](../relational-databases/indexes/indexes.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68475978"
   
 5.  Determine o melhor local de armazenamento para o índice. Um índice não clusterizado pode ser armazenado no mesmo grupo de arquivos que a tabela subjacente ou em um grupo de arquivos diferente. O local de armazenamento de índices pode melhorar o desempenho de consulta aumentando desempenho de E/S do disco. Por exemplo, o armazenamento de um índice não clusterizado em um grupo de arquivos que está em um disco diferente do grupo de arquivos de tabela pode melhorar o desempenho porque vários discos podem ser lidos ao mesmo tempo.  
   
-     Alternativamente, os índices clusterizados e não clusterizados podem usar um esquema de partição em vários grupos de arquivos. O particionamento facilita o gerenciamento de tabelas ou índices grandes permitindo o acesso ou o gerenciamento de subconjuntos de dados de forma rápida e eficaz, enquanto mantém a integridade geral da coleção. Para obter mais informações, consulte [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Quando você pensar em particionamento, determine se o índice deve ser alinhado; isto é, particionado essencialmente da mesma maneira que a tabela ou particionado de forma independente.  
+     Alternativamente, os índices clusterizados e não clusterizados podem usar um esquema de partição em vários grupos de arquivos. O particionamento facilita o gerenciamento de tabelas ou índices grandes permitindo o acesso ou o gerenciamento de subconjuntos de dados de forma rápida e eficaz, enquanto mantém a integridade geral da coleção. Para saber mais, confira [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Quando você pensar em particionamento, determine se o índice deve ser alinhado; isto é, particionado essencialmente da mesma maneira que a tabela ou particionado de forma independente.  
   
 ##  <a name="General_Design"></a> Diretrizes para criação de índice geral  
 
@@ -75,7 +75,7 @@ ms.locfileid: "68475978"
 
  Quando você projeta um índice, considere as seguintes diretrizes para banco de dados:  
   
--   Números grandes de índices em uma tabela afetam o desempenho das instruções INSERT, UPDATE, DELETE e MERGE porque todos os índices precisam ser ajustados adequadamente à medida que os dados são alterados em uma tabela. Por exemplo, se uma coluna for usada em vários índices e você executar uma instrução UPDATE que modifica os dados dessa coluna, cada índice que contém essa coluna deverá ser atualizado, bem como a coluna na tabela base subjacente (heap ou índice clusterizado).  
+-   Um grande número de índices em uma tabela afeta o desempenho das instruções INSERIR, ATUALIZAR, EXCLUIR e MESCLAR, já que todos os índices devem ser ajustados adequadamente como dados nas alterações da tabela. Por exemplo, se uma coluna for usada em vários índices e você executar uma instrução UPDATE que modifica os dados dessa coluna, cada índice que contém essa coluna deverá ser atualizado, bem como a coluna na tabela base subjacente (heap ou índice clusterizado).  
   
     -   Evite tabelas fortemente atualizadas em cima desindexações e mantenha os índices estreitos, ou seja, com o mínimo de colunas possível.  
   
@@ -180,7 +180,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  O plano de execução a seguir, dessa consulta, mostra que o otimizador de consultas usou um operador SORT para retornar o conjunto de resultados na ordem especificada pela cláusula ORDER BY.  
   
- ![Plano de execução mostra que um operador de classificação é usado.](media/indexsort1.gif "Plano de execução mostra que um operador de classificação é usado.")  
+ ![O plano de execução mostra um operador SORT usado.](media/indexsort1.gif "O plano de execução mostra um operador SORT usado.")  
   
  Se um índice for criado com colunas de chave correspondentes às da cláusula ORDER BY da consulta, o operador SORT poderá ser eliminado do plano de consulta, e este se tornará mais eficaz.  
   
@@ -192,13 +192,13 @@ ON Purchasing.PurchaseOrderDetail
   
  Depois que a consulta for novamente executada, o plano de execução a seguir mostra que o operador SORT foi eliminado e que o índice não clusterizado recentemente criado é utilizado.  
   
- ![O plano de execução mostra que um operador de classificação não é usado](media/insertsort2.gif "O plano de execução mostra que um operador de classificação não é usado")  
+ ![O plano de execução mostra um operador SORT não usado](media/insertsort2.gif "O plano de execução mostra um operador SORT não usado")  
   
  O [!INCLUDE[ssDE](../includes/ssde-md.md)] pode se mover para qualquer direção de forma igualmente eficaz. Um índice definido como `(RejectedQty DESC, ProductID ASC)` ainda pode ser usado em uma consulta na qual a direção de classificação das colunas da cláusula ORDER BY é invertida. Por exemplo, uma consulta com a cláusula ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` pode utilizar o índice.  
   
  A ordem de classificação só pode ser especificada para colunas de chave. A exibição de catálogo [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) e a função INDEXKEY_PROPERTY relatam se a coluna de índice está armazenada em ordem crescente ou decrescente.  
   
- ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link voltar ao início") [Neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [neste guia](#Top)  
   
 ##  <a name="Clustered"></a> Diretrizes de design de índices clusterizados  
 
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Pode ser usado em consultas de intervalo.  
   
- Se o índice clusterizado não for criado com a propriedade Unique, o [!INCLUDE[ssDE](../includes/ssde-md.md)] adicionará automaticamente uma coluna uniquifier de 4 bytes à tabela. Quando necessário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] adiciona automaticamente um valor uniquifier a uma linha para tornar cada chave exclusiva. Essa coluna e seus valores são usados internamente e não podem ser vistos ou avaliados por usuários.  
+ Se o índice clusterizado não for criado com a propriedade UNIQUE, o [!INCLUDE[ssDE](../includes/ssde-md.md)] adicionará automaticamente uma coluna uniquifier de 4 bytes à tabela. Quando necessário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] adiciona automaticamente um valor uniquifier a uma linha para tornar cada chave exclusiva. Essa coluna e seus valores são usados internamente e não podem ser vistos ou avaliados por usuários.  
   
 ### <a name="clustered-index-architecture"></a>Arquitetura de índice clusterizado  
 
@@ -233,15 +233,15 @@ ON Purchasing.PurchaseOrderDetail
 
  Antes de criar índices clusterizados, entenda como seus dados serão acessados. Considere utilizar um índice clusterizado para consultas que façam o seguinte:  
   
--   Retornam um intervalo de valores usando os operadores como BETWEEN, >, >=, < e <=.  
+-   Retornam um intervalo de valores usando operadores como ENTRE, >, >=, < e <=.  
   
      Depois que a linha com o primeiro valor for encontrada usando o índice cluster, garante-se que as linhas com valores indexados subsequentes estejam fisicamente adjacentes. Por exemplo, se uma consulta recuperar registros entre um intervalo de números de ordem de vendas, um índice clusterizado na coluna `SalesOrderNumber` poderá localizar rapidamente a linha que contém o número de ordem de vendas inicial e em seguida recuperará todas as linhas sucessivas na tabela, até que o último número de ordem de vendas seja alcançado.  
   
 -   Retornam grandes conjuntos de resultados.  
   
--   Use cláusulas JOIN. Normalmente elas são colunas de chave estrangeira.  
+-   Use as cláusulas JUNTAR; normalmente existem colunas de chave estrangeira.  
   
--   Use cláusulas ORDER BY ou GROUP BY.  
+-   Use as cláusulas CLASSIFICAR POR ou AGRUPAR POR.  
   
      Um índice nas colunas especificadas na cláusula ORDER BY ou GROUP BY pode eliminar a necessidade de o [!INCLUDE[ssDE](../includes/ssde-md.md)] classificar os dados, pois as linhas já estão classificadas. Isso melhora o desempenho da consulta.  
   
@@ -273,7 +273,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Chaves largas são uma combinação de várias colunas ou de várias colunas de tamanho grande. Os valores de chave do índice clusterizado são usados por todos os índices não clusterizados como chaves de pesquisa. Qualquer índice não clusterizado definido na mesma tabela será significativamente maior porque as entradas de índice não clusterizado contêm a chave de cluster e também as colunas de chave definidas para aquele índice não clusterizado.  
   
- ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link voltar ao início") [Neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [neste guia](#Top)  
   
 ##  <a name="Nonclustered"></a> Diretrizes de criação de índice não clusterizado  
 
@@ -301,7 +301,7 @@ ON Purchasing.PurchaseOrderDetail
   
  A ilustração a seguir mostra a estrutura de um índice não clusterizado em uma única partição.  
   
- ![Níveis de um índice] não clusterizado (media/bokind1.gif "Níveis de um índice") não clusterizado  
+ ![Níveis de um índice não clusterizado](media/bokind1.gif "Níveis de um índice não clusterizado")  
   
 ### <a name="database-considerations"></a>Considerações sobre banco de dados  
 
@@ -453,7 +453,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Você terá que determinar se os ganhos no desempenho de consulta superam o efeito no desempenho durante a modificação de dados, e em requisitos adicionais de espaço em disco.  
   
- ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link voltar ao início") [Neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [neste guia](#Top)  
   
 ##  <a name="Unique"></a> Diretrizes de design de índice exclusivo  
 
@@ -479,7 +479,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Um índice não clusterizado exclusivo pode conter colunas não chave incluídas. Para obter mais informações, consulte [Índice com colunas incluídas](#Included_Columns).  
   
- ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link voltar ao início") [Neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [neste guia](#Top)  
   
 ##  <a name="Filtered"></a> Diretrizes de criação de índice filtrado  
 
@@ -626,12 +626,12 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  A movimentação da conversão de dados da esquerda para a direita de um operador de comparação pode alterar o significado da conversão. No exemplo anterior, quando o operador CONVERT foi adicionado à direita, a comparação mudou de uma comparação de número inteiro para uma comparação `varbinary`.  
   
- ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link voltar ao início") [Neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [neste guia](#Top)  
   
 ##  <a name="Additional_Reading"></a> Leitura adicional  
 
  [Melhorando o desempenho com exibições indexadas do SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Tabelas e índices particionados](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

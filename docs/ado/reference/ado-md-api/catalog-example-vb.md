@@ -15,14 +15,14 @@ ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9b0886302a48f7b9b3ee8e261014c0784d51fc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930412"
 ---
 # <a name="catalog-example-vb"></a>Exemplo de catálogo (VB)
-Esse projeto de Visual Basic cria um novo cubo usando a linguagem MDX. Em seguida, ele documenta a estrutura de um cubo em um documento do Word.  
+Este projeto de Visual Basic cria um novo cubo usando MDX. Em seguida, ele documenta a estrutura de um cubo em um documento do Microsoft Word.  
   
 ```  
 Private Sub cmdCreateDocForCube_Click()  

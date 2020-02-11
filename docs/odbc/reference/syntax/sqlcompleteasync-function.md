@@ -15,26 +15,26 @@ ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5e50e8128bb80b290e7610d9cc846dd3e148e398
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118626"
 ---
 # <a name="sqlcompleteasync-function"></a>Função SQLCompleteAsync
-**Conformidade com**  
- Versão introduzida: ODBC 3.8  
+**Conformidade**  
+ Versão introduzida: ODBC 3,8  
   
- Conformidade com padrões: Nenhum  
+ Conformidade com padrões: nenhuma  
   
  **Resumo**  
- **SQLCompleteAsync** pode ser usado para determinar quando uma função assíncrona é concluída usando qualquer processamento baseado em notificação ou sondagem. Para obter mais informações sobre as operações assíncronas, consulte [execução assíncrona](../../../odbc/reference/develop-app/asynchronous-execution.md).  
+ **SQLCompleteAsync** pode ser usado para determinar quando uma função assíncrona é concluída usando o processamento baseado em notificação ou sondagem. Para obter mais informações sobre operações assíncronas, consulte [execução assíncrona](../../../odbc/reference/develop-app/asynchronous-execution.md).  
   
- **SQLCompleteAsync** é implementada somente no Gerenciador de Driver ODBC.  
+ **SQLCompleteAsync** é implementado apenas no Gerenciador de driver ODBC.  
   
- No modo de processamento assíncrono de notificação com base **SQLCompleteAsync** deve ser chamado depois que o Gerenciador de Driver gera o objeto de evento usado para notificação. **SQLCompleteAsync** conclusão assíncrona processamento e a função assíncrona irá gerar um código de retorno.  
+ No modo de processamento assíncrono baseado em notificação, **SQLCompleteAsync** deve ser chamado depois que o Gerenciador de driver gerar o objeto de evento usado para notificação. **SQLCompleteAsync** conclui o processamento assíncrono e a função assíncrona irá gerar um código de retorno.  
   
- No modo de processamento assíncrono de sondagem com base **SQLCompleteAsync** é uma alternativa a chamar a função assíncrona original, sem a necessidade de especificar os argumentos na chamada de função assíncrona original. **SQLCompleteAsync** pode ser usado independentemente se a biblioteca de cursores ODBC está habilitada.  
+ No modo de processamento assíncrono baseado em sondagem, **SQLCompleteAsync** é uma alternativa para chamar a função assíncrona original, sem a necessidade de especificar os argumentos na chamada de função assíncrona original. **SQLCompleteAsync** pode ser usado independentemente se a biblioteca de cursores ODBC está habilitada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,32 +48,32 @@ SQLRETURN SQLCompleteAsync(
   
 ## <a name="arguments"></a>Argumentos  
  *HandleType*  
- [Entrada] O tipo do identificador no qual concluir assíncrona de processamento. Os valores válidos são SQL_HANDLE_DBC ou SQL_HANDLE_STMT.  
+ Entrada O tipo do identificador no qual concluir o processamento assíncrono. Os valores válidos são SQL_HANDLE_DBC ou SQL_HANDLE_STMT.  
   
  *Handle*  
- [Entrada] O identificador no qual concluir assíncrona de processamento. Se *manipular* não é um identificador válido do tipo especificado por *HandleType*, **SQLCompleteAsync** retorne SQL_INVALID_HANDLE.  
+ Entrada O identificador no qual concluir o processamento assíncrono. Se o *identificador* não for um identificador válido do tipo especificado por *HandleType*, **SQLCompleteAsync** retornará SQL_INVALID_HANDLE.  
   
- Se *manipular* não é um identificador válido do tipo especificado por *HandleType*, **SQLCompleteAsync** retorne SQL_INVALID_HANDLE.  
+ Se o *identificador* não for um identificador válido do tipo especificado por *HandleType*, **SQLCompleteAsync** retornará SQL_INVALID_HANDLE.  
   
  *AsyncRetCodePtr*  
- [Saída] Ponteiro para um buffer que conterá o código de retorno da API assíncrona. Se *AsyncRetCodePtr* for NULL, **SQLCompleteAsync** retornará SQL_ERROR.  
+ Der Ponteiro para um buffer que conterá o código de retorno da API assíncrona. Se *AsyncRetCodePtr* for nulo, **SQLCompleteAsync** retornará SQL_ERROR.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_ERROR, SQL_NO_DATA ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Se **SQLCompleteAsync** retorna SQL_SUCCESS, um aplicativo deve obter o código de retorno da função assíncrona do buffer apontado por *AsyncRetCodePtr*. O SQLSTATE associado, se houver, pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e um identificador de instrução ou uma *HandleType* de SQL _ HANDLE_DBC e um identificador de conexão. Esses registros de diagnóstico estão associados com a função assíncrona, não desta **SQLCompleteAsync** função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Se **SQLCompleteAsync** retornar SQL_SUCCESS, um aplicativo deverá obter o código de retorno da função assíncrona do buffer apontado por *AsyncRetCodePtr*. O SQLSTATE associado, se houver, pode ser obtido chamando **SQLGetDiagRec** com um *handletype* de SQL_HANDLE_STMT e um identificador de instrução ou um *HandleType* de SQL_HANDLE_DBC e um identificador de conexão. Esses registros de diagnóstico são associados à função assíncrona, não esta função **SQLCompleteAsync** .  
   
- **SQLCompleteAsync** retorna um código diferente de SQL_SUCCESS para indicar que **SQLCompleteAsync** não é chamado. **SQLCompleteAsync** não postará nesse caso, qualquer registro de diagnóstico. Códigos de retorno possíveis são:  
+ **SQLCompleteAsync** retorna um código diferente de SQL_SUCCESS para indicar que **SQLCompleteAsync** não é chamado corretamente. O **SQLCompleteAsync** não publicará nenhum registro de diagnóstico nesse caso. Os códigos de retorno possíveis são:  
   
--   SQL_INVALID_HANDLE: O identificador é indicado por *HandleType* e *manipular* não é um identificador válido.  
+-   SQL_INVALID_HANDLE: o identificador indicado por *HandleType* e *identificador* não é um identificador válido.  
   
--   SQL_ERROR: *AsyncRetCodePtr* é NULL ou processamento assíncrono não está habilitado no identificador.  
+-   SQL_ERROR: *AsyncRetCodePtr* é nulo ou o processamento assíncrono não está habilitado no identificador.  
   
--   SQL_NO_DATA: No modo de notificação, uma operação assíncrona não está em andamento ou o Gerenciador de Driver não notificou o aplicativo. No modo de sondagem, uma operação assíncrona não está em andamento.  
+-   SQL_NO_DATA: no modo de notificação, uma operação assíncrona não está em andamento ou o Gerenciador de driver não notificou o aplicativo. No modo de sondagem, uma operação assíncrona não está em andamento.  
   
 ## <a name="comments"></a>Comentários  
- No modo de processamento assíncrono de sondagem com base *AsyncRetCodePtr* pode ser SQL_STILL_EXECUTING quando **SQLCompleteAsync** retorna SQL_SUCCESS. Aplicativo deve manter sondagem até *AsyncRetCodePtr* não é SQL_STILL_EXECUTING. No modo de processamento assíncrono de notificação com base *AsyncRetCodePtr* nunca será SQL_STILL_EXECUTING.  
+ No modo de processamento assíncrono baseado em sondagem, *AsyncRetCodePtr* pode ser SQL_STILL_EXECUTING quando **SQLCompleteAsync** retorna SQL_SUCCESS. O aplicativo deve continuar sondando até que *AsyncRetCodePtr* não seja SQL_STILL_EXECUTING. No modo de processamento assíncrono baseado em notificação, o *AsyncRetCodePtr* nunca será SQL_STILL_EXECUTING.  
   
-## <a name="see-also"></a>Consulte também  
- [Execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+## <a name="see-also"></a>Consulte Também  
+ [Execução assíncrona (Método de Sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

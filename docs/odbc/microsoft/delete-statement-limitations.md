@@ -14,15 +14,15 @@ ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb2587f733f5042436144f7865627fee576e3d9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096310"
 ---
 # <a name="delete-statement-limitations"></a>Limitações da instrução DELETE
-Não há suporte para a instrução DELETE para o driver do Microsoft Excel ou texto. Observe que a instrução INSERT tem suporte para o driver de texto.  
+A instrução DELETE não tem suporte para o Microsoft Excel ou o driver de texto. Observe que a instrução INSERT tem suporte para o driver de texto.  
   
- O driver do dBASE não oferece suporte a uma tabela para remover valores de "excluído" de remessa.  
+ O driver do dBASE não oferece suporte a empacotamento de uma tabela para remover valores "excluídos".  
   
- Para o driver do Paradox excluir uma linha de uma tabela, a tabela deve ter um índice exclusivo (chave primária do Paradox).
+ Para que o driver do Paradox exclua uma linha de uma tabela, a tabela deve ter um índice exclusivo (chave primária do Paradox).

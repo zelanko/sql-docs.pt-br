@@ -1,5 +1,5 @@
 ---
-title: Alterações de comportamento | Microsoft Docs
+title: Alterações comportamentais | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,35 +15,35 @@ ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc9f8dcc3782204c8bf1c9add1200e451edcf127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103872"
 ---
 # <a name="behavioral-changes"></a>Alterações comportamentais
-Alterações de comportamento são essas alterações para o qual o *sintaxe* da interface permanece a mesma, mas o *semântica* foram alterados. Para que essas alterações, a funcionalidade usada no ODBC 2. *x* se comporta de forma diferente do que a mesma funcionalidade em ODBC 3. *x*.  
+Alterações comportamentais são aquelas alterações para as quais a *sintaxe* da interface permanece a mesma, mas a *semântica* mudou. Para essas alterações, a funcionalidade usada no ODBC 2. *x* se comporta de forma diferente da mesma funcionalidade no ODBC 3. *x*.  
   
- Se um aplicativo exibe o ODBC 2. *x* comportamento ou o ODBC 3. *x* comportamento é determinado pelo atributo SQL_ATTR_ODBC_VERSION ambiente. Esse valor de 32 bits é definido como SQL_OV_ODBC2 exibem o ODBC 2. *x* comportamento e SQL_OV_ODBC3 exibem o ODBC 3. *x* comportamento.  
+ Se um aplicativo exibe ODBC 2. comportamento *x* ou ODBC 3. o comportamento *x* é determinado pelo atributo de ambiente SQL_ATTR_ODBC_VERSION. Esse valor de 32 bits é definido como SQL_OV_ODBC2 para exibir ODBC 2. comportamento *x* e SQL_OV_ODBC3 para exibir o ODBC 3. comportamento *x* .  
   
- O atributo de ambiente SQL_ATTR_ODBC_VERSION é definido por uma chamada para **SQLSetEnvAttr**. Depois que um aplicativo chama **SQLAllocHandle** para alocar um identificador de ambiente, ele deve chamar**SQLSetEnvAttr** imediatamente para definir o comportamento que ele exibe. (Como resultado, há um novo estado de ambiente para descrever o identificador de ambiente em um alocados, mas automáticas sem versão, estado.) Para obter mais informações, consulte [apêndice b: Tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ O atributo de ambiente SQL_ATTR_ODBC_VERSION é definido por uma chamada para **SQLSetEnvAttr**. Depois que um aplicativo chama **SQLAllocHandle** para alocar um identificador de ambiente, ele deve chamar**SQLSetEnvAttr** imediatamente para definir o comportamento que ele exibe. (Como resultado, há um novo estado de ambiente para descrever o identificador de ambiente em um estado alocado, mas sem versão). Para obter mais informações, consulte o [Apêndice B: tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Um aplicativo declara que comportamento ele exibe um com o atributo de ambiente SQL_ATTR_ODBC_VERSION, mas o atributo não tem efeito sobre a conexão do aplicativo com um ODBC 2. *x* ou o ODBC 3. *x* driver. ODBC 3. *x* aplicativo pode se conectar a qualquer um uma ODBC 2. *x* ou 3. *x* driver, independentemente da configuração do atributo ambiente.  
+ Um aplicativo informa o comportamento que ele exibe com o atributo de ambiente SQL_ATTR_ODBC_VERSION, mas o atributo não tem nenhum efeito sobre a conexão do aplicativo com um ODBC 2. *x* ou ODBC 3. Driver *x* . Um ODBC 3. o aplicativo *x* pode se conectar a um ODBC 2. *x* ou 3. *x* , independentemente da configuração do atributo de ambiente.  
   
- ODBC 3. *x* aplicativos nunca devem chamar **SQLAllocEnv**. Como resultado, se o Gerenciador de Driver recebe uma chamada para **SQLAllocEnv**, ele reconhece o aplicativo como um ODBC 2. *x* aplicativo.  
+ ODBC 3. os aplicativos *x* nunca devem chamar **SQLAllocEnv**. Como resultado, se o Gerenciador de driver receber uma chamada para **SQLAllocEnv**, ele reconhecerá o aplicativo como ODBC 2. *x* aplicativo.  
   
- O atributo SQL_ATTR_ODBC_VERSION afeta três diferentes aspectos de um ODBC 3. *x* comportamento do driver:  
+ O atributo SQL_ATTR_ODBC_VERSION afeta três aspectos diferentes de um ODBC 3. comportamento do driver *x* :  
   
 -   SQLSTATEs  
   
--   Tipos de dados para data, hora e carimbo de hora  
+-   Tipos de dados de Date, time e timestamp  
   
--   O *CatalogName* argumento **SQLTables** aceita padrões de pesquisa em ODBC 3. *x*, mas não no ODBC 2. *x*  
+-   O argumento *CatalogName* em **SQLTables** aceita padrões de pesquisa no ODBC 3. *x*, mas não no ODBC 2. *x*  
   
- Não afeta a configuração do atributo ambiente SQL_ATTR_ODBC_VERSION **SQLSetParam** ou **SQLBindParam**. **SQLColAttribute** também não é afetado por esse bit. Embora **SQLColAttribute** retorna atributos que são afetados pela versão do ODBC (tipo de data, precisão, escala e comprimento), o comportamento desejado é determinado pelo valor da *FieldIdentifier*argumento. Quando *FieldIdentifier* é igual a SQL_DESC_TYPE, **SQLColAttribute** retorna o ODBC 3. *x* códigos de data, hora e carimbo de hora; quando *FieldIdentifier* é igual a SQL_COLUMN_TYPE, **SQLColAttribute** retorna o ODBC 2. *x* códigos de data, hora e carimbo de hora.  
+ A configuração do atributo de ambiente SQL_ATTR_ODBC_VERSION não afeta **SQLSetParam** ou **SQLBindParam**. **SQLColAttribute** também não é afetado por esse bit. Embora **SQLColAttribute** retorne atributos que são afetados pela versão do ODBC (tipo de data, precisão, escala e comprimento), o comportamento pretendido é determinado pelo valor do argumento *FieldIdentifier* . Quando *FieldIdentifier* é igual a SQL_DESC_TYPE, **SQLCOLATTRIBUTE** retorna o ODBC 3. códigos *x* para Date, time e timestamp; Quando *FieldIdentifier* é igual a SQL_COLUMN_TYPE, **SQLCOLATTRIBUTE** retorna o ODBC 2. códigos *x* para Date, time e timestamp.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
--   [Mapeamentos SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
+-   [Mapeamentos de SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
 -   [Alterações de tipo de dados datetime](../../../odbc/reference/develop-app/datetime-data-type-changes.md)

@@ -1,5 +1,5 @@
 ---
-title: Remodelagem | Microsoft Docs
+title: Reshaping | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,16 @@ ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 213ed5f05133733b8336f184599ca8ef3e4028a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924359"
 ---
 # <a name="reshaping"></a>Remodelagem
-Um **conjunto de registros** criado por uma cláusula de uma forma de comando pode ser atribuído uma *alias* nome (normalmente com a palavra-chave). O alias de um moldado **Recordset** pode ser referenciada em um comando completamente diferente. Ou seja, você pode reutilizar, ou *remodelar*, anteriormente moldado **conjunto de registros** em um novo comando de forma. Para dar suporte a esse recurso, o ADO oferece uma propriedade, [remodelar nome](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
+Um **conjunto de registros** criado por uma cláusula de um comando Shape pode ser atribuído a um nome de *alias* (normalmente com a palavra-chave as). O alias de um **conjunto de registros** moldado pode ser referenciado em um comando completamente diferente. Ou seja, você pode reutilizar ou *remodelar*um conjunto de **registros** moldado anteriormente em um comando de nova forma. Para dar suporte a esse recurso, o ADO fornece uma propriedade, [reformando o nome](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
   
- Remodelagem tem duas funções principais. A primeira é associar um existente **conjunto de registros** com um novo pai **conjunto de registros**.  
+ A remodelagem tem duas funções principais. A primeira é associar um conjunto de **registros** existente a um novo **conjunto de registros**pai.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -36,10 +36,10 @@ rs2.Open "SHAPE {select * from Employees} " & _
          "APPEND (chapOrders RELATE EmployeeID to EmployeeID)", cn  
 ```  
   
- A segunda função é permitir o acesso não dividido em capítulos filho existentes **conjunto de registros** objetos, usando a sintaxe "forma \<recordset remodelar nome >".  
+ A segunda função é habilitar o acesso não-capítulo a objetos existentes do **conjunto de registros** filho, usando a sintaxe \<"nome da forma de remodelação do conjunto de registros da forma>".  
   
 > [!NOTE]
->  Não é possível acrescentar colunas a um existente **conjunto de registros**, reformatar um parametrizada **conjunto de registros** ou o **Recordset** objetos em qualquer cláusula de computação intermediária ou executar agregar operações em qualquer **conjunto de registros** entre o **conjunto de registros** sendo reformatado. O **conjunto de registros** sendo reformatado e a nova forma de comando devem usar o mesmo [Conexão](../../../ado/reference/ado-api/connection-object-ado.md).  
+>  Não é possível acrescentar colunas a um **conjunto de registros**existente, remodelar um **conjunto de registros** com parâmetros ou os objetos **RECORDSET** em qualquer cláusula de computação intermediária ou executar operações de agregação em qualquer descendente de **conjunto** de registros do **conjunto de registros** que está sendo remodelado. O **conjunto de registros** que está sendo remodelado e o comando de nova forma devem usar a mesma [conexão](../../../ado/reference/ado-api/connection-object-ado.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de data shaping](../../../ado/guide/data/data-shaping-example.md)

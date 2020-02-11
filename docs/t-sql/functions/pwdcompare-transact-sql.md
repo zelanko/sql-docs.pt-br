@@ -20,10 +20,10 @@ ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73168771"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73168771"
 
   Obtém o valor hash de uma senha e compara-o com o de uma senha existente. PWDCOMPARE pode ser usado para procurar senhas de logon em branco do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou senhas fracas comuns.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  Retorna 1 se o hash da *clear_text_password* corresponde ao parâmetro *password_hash*, e 0 se ele não existe.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A função PWDCOMPARE não é uma ameaça contra a força de hashes de senha porque o mesmo teste pode ser executado por meio de tentativa de logon usando a senha fornecida como o primeiro parâmetro.  
   
  Não é possível usar **PWDCOMPARE** com as senhas de usuários de bancos de dados independentes. Não há banco de dados independente equivalente.  
@@ -72,7 +72,7 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-identifying-logins-that-have-no-passwords"></a>A. Identificando logons que não têm nenhuma senha  
+### <a name="a-identifying-logins-that-have-no-passwords"></a>a. Identificando logons que não têm nenhuma senha  
  O exemplo a seguir identifica logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não têm nenhuma senha.  
   
 ```  

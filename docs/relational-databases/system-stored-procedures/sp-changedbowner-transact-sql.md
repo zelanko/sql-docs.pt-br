@@ -18,21 +18,21 @@ ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126457"
 ---
-# <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
+# <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera o proprietário do banco de dados atual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) .  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,11 +43,11 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @loginame=] '*login*'  
- É a ID de logon do novo proprietário do banco de dados atual. *login* está **sysname**, sem padrão. *login* deve ser um já existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou usuário do Windows. *logon* se não é possível tornar o proprietário do banco de dados atual se já tiver acesso ao banco de dados por meio de uma conta de segurança do usuário existente no banco de dados. Para evitar isso, descarte primeiro o usuário do banco de dados atual.  
+ [ @loginame= ] '*logon*'  
+ É a ID de logon do novo proprietário do banco de dados atual. o *logon* é **sysname**, sem padrão. o *logon* deve ser um logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já existente ou um usuário do Windows. o *logon* não poderá se tornar o proprietário do banco de dados atual se ele já tiver acesso ao banco de dados por meio de uma conta de segurança de usuário existente no banco de dados. Para evitar isso, descarte primeiro o usuário do banco de dados atual.  
   
  [ @map= ] *remap_alias_flag*  
- O *remap_alias_flag* parâmetro é preterido porque foram removidos aliases de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usando o *remap_alias_flag* parâmetro não causa um erro, mas não tem nenhum efeito.  
+ O parâmetro *remap_alias_flag* foi preterido porque os aliases de logon foram removidos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. O uso do parâmetro *remap_alias_flag* não causa um erro, mas não tem nenhum efeito.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -57,9 +57,9 @@ sp_changedbowner [ @loginame = ] 'login'
   
  O proprietário dos banco de dados do sistema mestre, modelo ou tempdb não pode ser alterado.  
   
- Para exibir uma lista de válidos *login* valores, execute o procedimento armazenado sp_helplogins.  
+ Para exibir uma lista de valores de *logon* válidos, execute o procedimento armazenado sp_helplogins.  
   
- Execução de sp_changedbowner somente com o *login* propriedade de banco de dados de alterações de parâmetro *login*.  
+ A execução de sp_changedbowner apenas com o parâmetro *login* altera a propriedade do banco de dados para *logon*.  
   
  É possível alterar o proprietário de qualquer protegível usando a instrução ALTER AUTHORIZATION. Para obter mais informações, confira [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
@@ -73,13 +73,13 @@ sp_changedbowner [ @loginame = ] 'login'
 EXEC sp_changedbowner 'Albert';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [sp_dropalias &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpdb](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helplogins](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

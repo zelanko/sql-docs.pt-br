@@ -1,5 +1,5 @@
 ---
-title: sys.schemas (Transact-SQL) | Microsoft Docs
+title: sys. Schemas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f5a0707c599b70ec3c006b00eacb5f8c1a8a87b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018344"
 ---
-# <a name="schemas-catalog-views---sysschemas"></a>Esquemas exibições - do catálogo sys. schemas
+# <a name="schemas-catalog-views---sysschemas"></a>Exibições de catálogo de esquemas-sys. schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contém uma linha para cada esquema de banco de dados.  
@@ -35,27 +35,27 @@ ms.locfileid: "68018344"
 > [!NOTE]  
 >  Esquemas de banco de dados são diferentes de esquemas XML, que são usados para definir o modelo de conteúdo de documentos XML.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do esquema. É exclusiva no banco de dados.|  
 |**schema_id**|**int**|ID do esquema. É exclusiva no banco de dados.|  
 |**principal_id**|**int**|ID da entidade proprietária do esquema.|  
   
 ## <a name="remarks"></a>Comentários  
-Esquemas de banco de dados atuam como namespaces ou contêineres para objetos, como tabelas, exibições, procedimentos e funções, que podem ser encontrados na **sys. Objects** exibição do catálogo.  
+Os esquemas de banco de dados atuam como namespaces ou contêineres para objetos, como tabelas, exibições, procedimentos e funções, que podem ser encontrados na exibição de catálogo **Sys. Objects** .  
 
-Cada esquema tem um proprietário. O proprietário é uma segurança [principal](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Cada esquema tem um proprietário. O proprietário é uma [entidade](../../relational-databases/security/authentication-access/principals-database-engine.md)de segurança.
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Entidades](../../relational-databases/security/authentication-access/principals-database-engine.md)
 
 [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
 
-[Exibições do catálogo de esquemas &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
+[Exibições de catálogo de esquemas &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
 
-[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+[sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

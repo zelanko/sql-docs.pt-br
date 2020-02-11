@@ -1,5 +1,5 @@
 ---
-title: Exemplo de propriedades de nome (VB) e atributos | Microsoft Docs
+title: Exemplo de propriedades Attributes e Name (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b591da347e71b4dcb2df070df4368f825354f90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920589"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Exemplos das propriedades Attributes e Name (VB)
-Este exemplo exibe o valor de [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propriedade para [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), [campo](../../../ado/reference/ado-api/field-object.md), e [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objetos. Ele usa o [nome](../../../ado/reference/ado-api/name-property-ado.md) propriedade para exibir o nome de cada **campo** e **propriedade** objeto.  
+Este exemplo exibe o valor da propriedade [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) para objetos [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Field](../../../ado/reference/ado-api/field-object.md)e [Property](../../../ado/reference/ado-api/property-object-ado.md) . Ele usa a propriedade [Name](../../../ado/reference/ado-api/name-property-ado.md) para exibir o nome de cada **campo** e objeto de **Propriedade** .  
   
 ```  
 ' BeginAttributesVB  
@@ -126,9 +126,9 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Propriedade Name (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
  [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

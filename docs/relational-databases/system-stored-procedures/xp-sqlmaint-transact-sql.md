@@ -18,21 +18,21 @@ ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091915"
 ---
-# <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
+# <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Chamadas a **sqlmaint** utility com uma cadeia de caracteres que contém **sqlmaint**comutadores. O **sqlmaint** utilitário executa um conjunto de operações de manutenção em um ou mais bancos de dados.  
+  Chama o utilitário **sqlmaint** com uma cadeia de caracteres que contém os comutadores **sqlmaint**. O utilitário **sqlmaint** executa um conjunto de operações de manutenção em um ou mais bancos de dados.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,15 +43,15 @@ xp_sqlmaint 'switch_string'
   
 ## <a name="arguments"></a>Argumentos  
  **'** *switch_string* **'**  
- É uma cadeia de caracteres que contém o **sqlmaint** opções do utilitário. As opções e seus valores devem ser separados por um espaço.  
+ É uma cadeia de caracteres que contém as opções do utilitário **sqlmaint** . As opções e seus valores devem ser separados por um espaço.  
   
- O **-?** switch não é válido para **xp_sqlmaint**.  
+ O **-?** a opção não é válida para **xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- nenhuma. Retorna um erro se o **sqlmaint** utilitário falhar.  
+ Nenhum. Retornará um erro se o utilitário **sqlmaint** falhar.  
   
 ## <a name="remarks"></a>Comentários  
- Se esse procedimento for chamado por um usuário feito logon com a autenticação do SQL Server, o **- U "***login_id***"** e **-P "***senha***"** switches são pré-anexados *switch_string* antes da execução. Se o usuário fizer logon com a autenticação do Windows, *switch_string* é passado sem alteração **sqlmaint**.  
+ Se esse procedimento for chamado por um usuário conectado com SQL Server autenticação, as opções **-U "***login_id***"** e **-P "***senha***"** serão precedidas para *switch_string* antes da execução. Se o usuário estiver conectado com a autenticação do Windows, *switch_string* será passado sem alterar para **sqlmaint**.  
   
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  
@@ -70,8 +70,8 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Utilitário Sqlmaint](../../tools/sqlmaint-utility.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Utilitário sqlmaint](../../tools/sqlmaint-utility.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

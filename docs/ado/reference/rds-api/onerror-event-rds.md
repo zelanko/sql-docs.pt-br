@@ -1,5 +1,5 @@
 ---
-title: Evento onError (RDS) | Microsoft Docs
+title: Evento OnError (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f6a1a532b092acb6c23faf4282d40100cc579c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963840"
 ---
 # <a name="onerror-event-rds"></a>Evento onError (RDS)
-O **onError** eventos é chamado sempre que ocorrer um erro durante uma operação.  
+O evento **OnError** é chamado sempre que ocorrer um erro durante uma operação.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,24 +33,24 @@ O **onError** eventos é chamado sempre que ocorrer um erro durante uma operaç�
 onError SCode, Description, Source, CancelDisplay  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *SCode*  
  Um inteiro que indica o código de status do erro.  
   
  *Descrição*  
- Um **cadeia de caracteres** que indica uma descrição do erro.  
+ Uma **cadeia de caracteres** que indica uma descrição do erro.  
   
- *Source*  
- Um **cadeia de caracteres** que indica que a consulta ou o comando que causou o erro.  
+ *Origem*  
+ Uma **cadeia de caracteres** que indica a consulta ou o comando que causou o erro.  
   
  *CancelDisplay*  
- Um **Boolean** valor, que, se definido como **verdadeiro**, que impede o erro seja exibido em uma caixa de diálogo.  
+ Um valor **booliano** , que se definido como **true**, que impede que o erro seja exibido em uma caixa de diálogo.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo de modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo do modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)
 
 

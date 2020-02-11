@@ -11,22 +11,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4106de497a43404cb44606259d53beb1ed8f5a58
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797447"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Definir configurações da propriedade HealthCheckTimeout
   A configuração HealthCheckTimeout é usada para especificar o tempo, em milissegundos, que a DLL de recursos do SQL Server deve aguardar por informações retornadas pelo procedimento armazenado [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) antes de relatar a FCI (Instância de Cluster de Failover) AlwaysOn como sem resposta. As alterações feitas nas configurações de tempo limite entram em vigor imediatamente e não requerem uma reinicialização do recurso do SQL Server.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Limits), [Security](#Security)  
+-   **Antes de começar:**  [limitações e restrições](#Limits), [segurança](#Security)  
   
--   **To Configure the HeathCheckTimeout setting, using:**  [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **Para definir a configuração HeathCheckTimeout, usando:**  [PowerShell](#PowerShellProcedure), [Gerenciador de cluster de failover](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Limits"></a> Limitações e Restrições  
+###  <a name="Limits"></a> Limitações e restrições  
  O valor padrão dessa propriedade é 60.000 milissegundos (60 segundos). O valor mínimo é 15.000 milissegundos (15 segundos).  
   
 ###  <a name="Security"></a> Segurança  
@@ -42,7 +42,7 @@ ms.locfileid: "72797447"
   
 2.  Importe o módulo `FailoverClusters` para habilitar cmdlets de cluster.  
   
-3.  Use o cmdlet `Get-ClusterResource` para localizar o recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, use `Set-ClusterParameter` cmdlet para definir a propriedade **HealthCheckTimeout** para a instância de cluster de failover.  
+3.  Use o `Get-ClusterResource` cmdlet para localizar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recurso e, em `Set-ClusterParameter` seguida, use o cmdlet para definir a propriedade **HealthCheckTimeout** para a instância de cluster de failover.  
   
 > [!TIP]  
 >  Sempre que você abrir uma nova janela do PowerShell, deverá importar o módulo `FailoverClusters`.  
@@ -64,8 +64,8 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 -   [Comandos de recursos de cluster e cmdlets equivalentes no Windows PowerShell](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-##  <a name="WSFC"></a> Usando o snap-in Gerenciador de Cluster de Failover  
- **Para definir a configuração HealthCheckTimeout**  
+##  <a name="WSFC"></a>Usando o snap-in Gerenciador de Cluster de Failover  
+ **Para definir a configuração de HealthCheckTimeout**  
   
 1.  Abra o snap-in Gerenciador de Cluster de Failover.  
   
@@ -75,8 +75,8 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 4.  Selecione a guia **Propriedades** , insira o valor desejado para a propriedade **HealthCheckTimeout** e clique em **OK** para aplicar a alteração.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
- Usando a instrução [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] , você pode especificar o valor da propriedade HealthCheckTimeOut.  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+ Usando a instrução [ALTER Server Configuration](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] , você pode especificar o valor da propriedade HealthCheckTimeOut.  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  O exemplo a seguir define a opção HealthCheckTimeout como 15.000 milissegundos (15 segundos).  
@@ -87,4 +87,4 @@ SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
+ [Política de failover para instâncias de cluster de failover](failover-policy-for-failover-cluster-instances.md)  

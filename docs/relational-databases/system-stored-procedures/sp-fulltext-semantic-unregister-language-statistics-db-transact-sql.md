@@ -18,10 +18,10 @@ ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909135"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72909135"
   
  Essa instrução não desanexa o banco de dados ou remove o arquivo de banco de dados físico do sistema de arquivos. Depois de cancelar o registro do banco de dados, você pode desanexá-lo e excluir o arquivo de banco de dados físico.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ GO
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-set"></a>Conjunto de resultados  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Quando o registro de um banco de dados de estatísticas de idioma semântico é cancelado, todos os metadados associados a ele também são removidos.  
@@ -61,7 +61,7 @@ GO
  Para obter mais informações, veja [Instalar e configurar a pesquisa semântica](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## <a name="metadata"></a>Metadados  
- Para obter informações sobre o Estatísticas Semânticas de Idioma banco de dados instalado em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte a exibição de catálogo [Sys &#40;.&#41;fulltext_semantic_language_statistics_database Transact-SQL](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+ Para obter informações sobre o Estatísticas Semânticas de Idioma banco de dados instalado em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]uma instância do, consulte a exibição de catálogo [sys. fulltext_semantic_language_statistics_database &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
 ## <a name="security"></a>Segurança  
   
@@ -69,7 +69,7 @@ GO
  Requer as permissões CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra como cancelar o registro do banco de dados Estatísticas Semânticas de Idioma chamando **sp_fulltext_semantic_unregister_language_statistics_db**.  
+ O exemplo a seguir mostra como cancelar o registro do banco de dados do Estatísticas Semânticas de Idioma chamando **sp_fulltext_semantic_unregister_language_statistics_db**.  
   
 ```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  

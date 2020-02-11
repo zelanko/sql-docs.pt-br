@@ -15,14 +15,14 @@ ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c511e9328bb64928a027df5f9ff72bf93da17a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931883"
 ---
 # <a name="openschema-method-example-vc"></a>Exemplo do método OpenSchema (VC++)
-Este exemplo usa o [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) método para exibir o nome e tipo de cada tabela na ***Pubs*** banco de dados.  
+Este exemplo usa o método [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) para exibir o nome e o tipo de cada tabela no banco de dados ***pubs*** .  
   
 ```  
 // OpenSchemaMethodExample.cpp  
@@ -193,5 +193,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)

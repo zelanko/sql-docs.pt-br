@@ -20,10 +20,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73593759"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "73593759"
 
 Envia as chaves de criptografia de colunas, definidas no banco de dados, para o enclave seguro do lado do servidor usado com o [Always Encrypted com Secure enclaves](../security/encryption/always-encrypted-enclaves.md).
 
-`sp_enclave_send_keys` só envia as chaves que são habilitadas para enclave e criptografar colunas que usam criptografia aleatória e têm índices. Para uma consulta de usuário comum, um driver de cliente fornece o enclave com as chaves necessárias para cálculos na consulta. `sp_enclave_send_keys` envia todas as chaves de criptografia de coluna definidas no banco de dados e usadas para índices com colunas criptografadas. 
+`sp_enclave_send_keys`Só envia as chaves que são habilitadas para enclave e criptografar colunas que usam criptografia aleatória e têm índices. Para uma consulta de usuário comum, um driver de cliente fornece o enclave com as chaves necessárias para cálculos na consulta. `sp_enclave_send_keys`envia todas as chaves de criptografia de coluna definidas no banco de dados e usadas para índices com colunas criptografadas. 
 
-`sp_enclave_send_keys` fornece uma maneira fácil de enviar chaves para o enclave e popular o cache de chave de criptografia de coluna para operações de indexação subsequentes. Use `sp_enclave_send_keys` para habilitar:
+`sp_enclave_send_keys`fornece uma maneira fácil de enviar chaves para o enclave e popular o cache de chave de criptografia de coluna para operações de indexação subsequentes. Use `sp_enclave_send_keys` para habilitar:
 - Um DBA para recriar ou alterar índices ou estatísticas em colunas de banco de dados criptografadas, se o DBA não tiver acesso às chaves mestras de coluna. Consulte [invocar operações de indexação usando chaves de criptografia de coluna em cache](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys).
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] para concluir a recuperação de índices em colunas criptografadas. Consulte [recuperação de banco de dados](../security/encryption/always-encrypted-enclaves.md#database-recovery).
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]para concluir a recuperação de índices em colunas criptografadas. Consulte [recuperação de banco de dados](../security/encryption/always-encrypted-enclaves.md#database-recovery).
 - Um aplicativo que usa .NET Framework Provedor de Dados para SQL Server carregar dados em massa em colunas criptografadas.
 
 Para invocar `sp_enclave_send_keys`com êxito, você precisa se conectar ao banco de dados com os cálculos de Always Encrypted e enclave habilitados para a conexão de banco de dados. Você também precisa ter acesso às chaves mestras de coluna, proteger as chaves de criptografia de coluna, você vai enviar e precisar de permissões para acessar os metadados de chave Always Encrypted no banco de dados. 
@@ -51,7 +51,7 @@ sp_enclave_send_keys
 
 Este procedimento armazenado não tem argumentos.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Este procedimento armazenado não tem nenhum valor de retorno.
   
@@ -61,7 +61,7 @@ Este procedimento armazenado não tem conjuntos de resultados.
   
 ## <a name="permissions"></a>Permissões
 
- Exigir as permissões de `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` e `VIEW ANY COLUMN MASTER KEY DEFINITION` no banco de dados.  
+ Exigir as `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` permissões `VIEW ANY COLUMN MASTER KEY DEFINITION` e no banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -69,9 +69,9 @@ Este procedimento armazenado não tem conjuntos de resultados.
 EXEC sp_enclave_send_keys;  
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Always Encrypted com enclaves seguros](../security/encryption/always-encrypted-enclaves.md) 
  
-- [Criar e usar índices em colunas usando Always Encrypted com Secure enclaves](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
+- [Criar e usar índices em colunas usando o Always Encrypted com enclaves seguros](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
-- [Tutorial: criar e usar índices em colunas habilitadas para enclave usando criptografia aleatória](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
+- [Tutorial: Criar e usar índices em colunas habilitadas para enclave com criptografia aleatória](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

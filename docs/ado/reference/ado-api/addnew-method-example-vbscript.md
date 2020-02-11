@@ -15,18 +15,18 @@ ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921287"
 ---
 # <a name="addnew-method-example-vbscript"></a>Exemplo do método AddNew (VBScript)
-Este exemplo usa o [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método para criar um novo registro com o nome especificado.  
+Este exemplo usa o método [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) para criar um novo registro com o nome especificado.  
   
- Use o exemplo a seguir em um Active Server Page (ASP). Use **localizar** para localizar o arquivo Adovbs.inc e coloque-o no diretório que você planeja usar. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **AddNewVBS.asp**. Você pode exibir o resultado em qualquer navegador do cliente.  
+ Use o exemplo a seguir em uma página de Active Server (ASP). Use **Localizar** para localizar o arquivo Adovbs. Inc e colocá-lo no diretório que você planeja usar. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **AddNewVBS. asp**. Você pode exibir o resultado em qualquer navegador cliente.  
   
- Para utilizar o exemplo, adicione um novo registro no formato HTML. Clique em **adicionar novo**. Consulte a [excluir exemplo do método](../../../ado/reference/ado-api/delete-method-example-vbscript.md) para remover registros indesejados.  
+ Para exercitar o exemplo, adicione um novo registro no formulário HTML. Clique em **Adicionar novo**. Consulte o [exemplo do método Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) para remover registros indesejados.  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -212,6 +212,6 @@ End Sub
 <!-- EndAddNewVBS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -11,23 +11,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251319"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Implantar e executar pacotes SSIS usando procedimentos armazenados
   Quando configura um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para usar o modelo de implantação de projeto, você pode usar procedimentos armazenados no catálogo do [!INCLUDE[ssIS](../includes/ssis-md.md)] para implantar o projeto e executar os pacotes. Para obter informações sobre o modelo de implantação de projeto, consulte [Implantação de projetos e pacotes](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
- Você também pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para implantar o projeto e executar os pacotes. Para obter mais informações, consulte os tópicos na seção **Consulte também** .  
+ Você também pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para implantar o projeto e executar os pacotes. Para obter mais informações, consulte os tópicos na seção **Consulte também**.  
   
 > [!TIP]
 >  Você pode facilmente gerar as instruções Transact-SQL para os procedimentos armazenados listados no procedimento abaixo, com exceção de catalog.deploy_project, fazendo o seguinte:  
 > 
 >  1.  No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda o nó **Catálogos do Integration Services** no Pesquisador de Objetos e navegue até o pacote que deseja executar.  
 > 2.  Clique com o botão direito do mouse no pacote e clique em **Executar**.  
-> 3.  Conforme necessário, defina valores de parâmetros, propriedades do gerenciador de conexões e opções na guia **Avançado** , como nível de log.  
+> 3.  Conforme necessário, defina valores de parâmetros, propriedades do gerenciador de conexões e opções na guia **Avançado**, como nível de log.  
 > 
 >      Para obter mais informações sobre os níveis de log, veja [Habilitar o log para a execução do pacote no servidor SSIS](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md).  
 > 4.  Antes de clicar em **OK** para executar o pacote, clique em **Script**. O Transact-SQL é exibido em uma janela do Editor de Consultas no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -36,9 +36,9 @@ ms.locfileid: "72251319"
   
 1.  Chame [catalog.deploy_project &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) para implantar o projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote para o servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Para recuperar o conteúdo binário do arquivo de implantação de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projeto, para o parâmetro *\@project_stream* , use uma instrução SELECT com a função OPENROWSET e o provedor de conjunto de linhas em massa. O conjuntos de linhas BULK permite a você ler dados de um arquivo. O argumento SINGLE_BLOB do provedor de conjuntos de linhas BULK retorna o conteúdo do arquivo de dados como uma única linha, um conjunto de linhas de coluna única do tipo varbinary(max). Para obter mais informações, consulte [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Para recuperar o conteúdo binário do arquivo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de implantação do projeto, para o * \@parâmetro project_stream* , use uma instrução SELECT com a função OPENROWSET e o provedor de conjunto de linhas em massa. O conjuntos de linhas BULK permite a você ler dados de um arquivo. O argumento SINGLE_BLOB do provedor de conjuntos de linhas BULK retorna o conteúdo do arquivo de dados como uma única linha, um conjunto de linhas de coluna única do tipo varbinary(max). Para obter mais informações, consulte [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     No exemplo a seguir, o projeto SSISPackages_ProjectDeployment é implantado na pasta Pacotes SSIS no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Os dados binários são lidos do arquivo de projeto (SSISPackage_ProjectDeployment. ispac) e armazenados no parâmetro *\@ProjectBinary* do tipo varbinary (max). O valor do parâmetro *\@ProjectBinary* é atribuído ao parâmetro *\@project_stream*.  
+     No exemplo a seguir, o projeto SSISPackages_ProjectDeployment é implantado na pasta Pacotes SSIS no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Os dados binários são lidos do arquivo de projeto (SSISPackage_ProjectDeployment. ispac) e armazenados no parâmetro * \@ProjectBinary* do tipo varbinary (max). O * \@* valor do parâmetro ProjectBinary é atribuído ao parâmetro * \@project_stream* .  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  
@@ -97,7 +97,7 @@ ms.locfileid: "72251319"
   
 -   Crie um objeto de servidor vinculado. Para obter mais informações, consulte [Criar servidores vinculados &#40;Mecanismo de Banco de Dados do SQL Server&#41;](../database-engine/sql-server-database-engine-overview.md).  
   
-     Na página **Opções do Servidor** da caixa de diálogo **Propriedades do Servidor Vinculado** , defina **RPC** e **RPC Out** como **True**. Além disso, defina **Habilitar Promoção de Transações Distribuídas para RPC** como **False**.  
+     Na página **Opções do Servidor** da caixa de diálogo **Propriedades do Servidor Vinculado**, defina **RPC** e **RPC Out** como **True**. Além disso, defina **Habilitar Promoção de Transações Distribuídas para RPC** como **False**.  
   
 -   Habilite parâmetros dinâmicos para o provedor selecionado para o servidor vinculado expandindo o nó **Provedores** sob **Servidores Vinculados** no Pesquisador de Objetos, clicando com o botão direito do mouse no provedor e clicando em **Propriedades**. Selecione **Habilitar** ao lado de **Parâmetro dinâmico**.  
   
@@ -122,9 +122,9 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Implantar projetos no Servidor do Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
- [Executar um pacote nas Ferramentas de Dados do SQL Server](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Implantar projetos no Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+ [Executar um pacote no SQL Server Data Tools](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
  [Executar um pacote no servidor SSIS usando o SQL Server Management Studio](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
   

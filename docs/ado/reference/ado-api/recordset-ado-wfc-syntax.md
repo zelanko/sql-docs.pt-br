@@ -14,14 +14,14 @@ ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58e0cde8798f73257a54be5cc95f64474334a153
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931384"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Conjunto de registros (ADO – Sintaxe WFC)
-## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>pacote com. ms. wfc. Data  
   
 ### <a name="constructors"></a>Construtores  
   
@@ -134,8 +134,8 @@ public com.ms.wfc.data.Fields getFields()
 public AdoProperties getProperties()  
 ```  
   
-### <a name="events"></a>Events  
- Para obter mais informações sobre eventos ADO/WFC, consulte [instanciação de evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+### <a name="events"></a>Eventos  
+ Para obter mais informações sobre eventos ADO/WFC, consulte [a instanciação do evento ADO por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnEndOfRecordset(RecordsetEventHandler handler)  
@@ -162,5 +162,5 @@ public void addOnWillMove(RecordsetEventHandler handler)
 public void removeOnWillMove(RecordsetEventHandler handler)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

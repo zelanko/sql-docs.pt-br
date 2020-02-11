@@ -15,17 +15,17 @@ ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a7cdfd5b91caa52b3c2de3d0775ecf7d706b1a73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963232"
 ---
 # <a name="url-property-example-vbscript"></a>Exemplo da propriedade URL (VBScript)
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O código a seguir demonstra como definir a **URL** propriedade no lado do cliente para especificar um arquivo. ASP que por sua vez manipula o envio das alterações à fonte de dados.  
+ O código a seguir demonstra como definir a propriedade **URL** no lado do cliente para especificar um arquivo. asp que, por sua vez, manipula o envio de alterações na fonte de dados.  
   
 ```  
 <!-- BeginURLClientVBS -->  
@@ -100,7 +100,7 @@ End Sub
 <!-- EndURLClientVBS -->  
 ```  
   
- O código do lado do servidor que existe no **URLServerVBS.asp** envia atualizada **Recordset** à fonte de dados.  
+ O código do lado do servidor que existe em **URLServerVBS. asp** envia o **conjunto de registros** atualizado para a fonte de dados.  
   
 ```  
 <!-- BeginURLServerVBS -->  
@@ -138,7 +138,7 @@ End Sub
 <!-- EndURLServerVBS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)
 
 

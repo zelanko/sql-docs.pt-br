@@ -20,18 +20,18 @@ ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 79fc54e65b6e014575b5942a573c4077e8a9c5d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041813"
 ---
-# <a name="set-contextinfo-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
+# <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Associa até 128 bytes de informações binárias à sessão ou conexão atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
  **@** *binary_var*  
  É uma variável **varbinary** ou **binary** que mantém um valor de contexto a ser associado à sessão ou conexão atual.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O modo preferido de recuperar as informações de contexto para a sessão atual é usar a função CONTEXT_INFO. As informações de contexto de sessão também são armazenadas nas colunas **context_info** nas seguintes exibições de sistema:  
   
 -   **sys.dm_exec_requests**  
@@ -64,7 +64,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-setting-context-information-by-using-a-constant"></a>A. Definindo informações de contexto com o uso de uma constante  
+### <a name="a-setting-context-information-by-using-a-constant"></a>a. Definindo informações de contexto com o uso de uma constante  
  O exemplo a seguir demonstra `SET CONTEXT_INFO` definindo o valor e exibindo os resultados. Observe que consultar `sys.dm_exec_sessions` requer as permissões SELECT e VIEW SERVER STATE, enquanto que usar a função CONTEXT_INFO não requer.  
   
 ```  

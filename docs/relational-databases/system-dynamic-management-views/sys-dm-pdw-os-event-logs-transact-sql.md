@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs
+title: sys. dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,31 +13,31 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 819b38bce871bd1a43b3d259d23b2c95fb6dfdd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086208"
 ---
-# <a name="sysdmpdwoseventlogs-transact-sql"></a>sys.dm_pdw_os_event_logs (Transact-SQL)
+# <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys. dm_pdw_os_event_logs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Contém informações sobre o evento do Windows diferentes logs em nós diferentes.  
+  Contém informações sobre os diferentes logs de eventos do Windows em nós diferentes.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|Esse log é de um nó de dispositivo.<br /><br /> pdw_node_id e nome_registo formam a chave para esta exibição.||  
-|nome_registo|**nvarchar(255)**|Nome de log de eventos do Windows.<br /><br /> pdw_node_id e nome_registo formam a chave para esta exibição.||  
-|log_source|**nvarchar(255)**|Nome de origem de log de eventos do Windows.||  
-|event_id|**int**|ID do evento. Não é exclusivo.||  
-|event_type|**nvarchar(255)**|Tipo de evento, identificando a gravidade.|'Informações', 'Aviso', 'Error'|  
+|pdw_node_id|**int**|Nó do dispositivo do qual este log se encontra.<br /><br /> pdw_node_id e log_name formate a chave para essa exibição.||  
+|log_name|**nvarchar (255)**|Nome do log de eventos do Windows.<br /><br /> pdw_node_id e log_name formate a chave para essa exibição.||  
+|log_source|**nvarchar (255)**|Nome de origem do log de eventos do Windows.||  
+|event_id|**int**|ID do evento. Não exclusivo.||  
+|event_type|**nvarchar (255)**|Tipo do evento, identificando a severidade.|' Informações ', ' aviso ', ' erro '|  
 |event_message|**nvarchar(4000)**|Detalhes do evento.||  
-|generate_time|**datetime**|Tempo que o evento foi criado.||  
-|write_time|**datetime**|Na verdade, o evento foi gravado no log de tempo.||  
+|generate_time|**datetime**|Hora em que o evento foi criado.||  
+|write_time|**datetime**|Hora em que o evento foi realmente gravado no log.||  
   
- Para obter informações sobre o máximo de linhas mantido por esta exibição, consulte a seção de metadados na [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) tópico. 
+ Para obter informações sobre o máximo de linhas retidas por essa exibição, consulte a seção de metadados no tópico [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) . 
   
-## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse e Parallel Data Warehouse exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

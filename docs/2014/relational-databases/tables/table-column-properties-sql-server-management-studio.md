@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211794"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriedades da coluna de tabela (SQL Server Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "68211794"
  **Geral**  
  Expande para mostrar **Nome**, **Permitir Nulos**, **Tipo de Dados**, **Valor Padrão ou Associação**, **Comprimento**, **Precisão**e **Escala**.  
   
- **Name**  
+ **Nome**  
  Exibe o nome da coluna selecionada.  
   
  **Permitir Nulos**  
@@ -87,18 +87,18 @@ ms.locfileid: "68211794"
 > [!NOTE]  
 >  Para alterar o valor mostrado para a propriedade **Especificação de texto completo** , é necessário expandir e editar a propriedade filho **É texto completo indexado** .  
   
--   **É texto completo indexado** Indica se essa coluna é texto completo indexado. Essa propriedade só poderá ser definida como **Sim** se o tipo de dados para essa coluna for pesquisável com texto completo e se a tabela à qual essa coluna pertence tiver um índice de texto completo especificado para isso. Para editar a propriedade, clique no valor correspondente, expanda a lista suspensa e escolha um valor.  
+-   **É indexado com texto completo** Indica se esta coluna é indexada com texto completo. Essa propriedade só poderá ser definida como **Sim** se o tipo de dados para essa coluna for pesquisável com texto completo e se a tabela à qual essa coluna pertence tiver um índice de texto completo especificado para isso. Para editar a propriedade, clique no valor correspondente, expanda a lista suspensa e escolha um valor.  
   
--   **Coluna de tipo texto completo** Exibe o nome da coluna, na qual a coluna é de texto completo indexado. Essa propriedade deve ser definida, se a propriedade **Tipo de dados** para a coluna for **imagem** ou **varbinary**. A coluna nomeada na propriedade deve ser de tipo **[n]char, [n]varchar** ou **xml**e a lista suspensa para a propriedade só deve conter colunas que tiverem um desses três tipos de dados. Linhas na coluna nomeada pela propriedade indicam o tipo de documento das linhas correspondentes na coluna pesquisável de texto completo. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
+-   **Coluna de tipo de texto completo** Exibe o nome da coluna na qual esta coluna é indexada com texto completo. Essa propriedade deve ser definida, se a propriedade **Tipo de dados** para a coluna for **imagem** ou **varbinary**. A coluna nomeada na propriedade deve ser de tipo **[n]char, [n]varchar** ou **xml**e a lista suspensa para a propriedade só deve conter colunas que tiverem um desses três tipos de dados. Linhas na coluna nomeada pela propriedade indicam o tipo de documento das linhas correspondentes na coluna pesquisável de texto completo. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
--   **Idioma** Indica o idioma do separador de palavras usado para indexar a coluna. O valor armazenado na propriedade é o identificador de localidade para o separador de palavras. Para obter mais informações sobre os separadores de palavras e LCIDs, consulte os Separadores de Palavras e os Lematizadores. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
+-   **Idioma** do Indica o idioma do separador de palavras usado para indexar a coluna. O valor armazenado na propriedade é o identificador de localidade para o separador de palavras. Para obter mais informações sobre os separadores de palavras e LCIDs, consulte os Separadores de Palavras e os Lematizadores. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
- **Semântica Estatística**  
+ **Semântica estatística**  
  Especifique se habilitará a semântica estatística da coluna selecionada. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](../search/semantic-search-sql-server.md).  
   
  Se você selecionar um **Idioma** antes de selecionar **Semântica Estatística**, e o idioma selecionado não tiver um Modelo de Idioma Semântico associado, a caixa de seleção **Semântica Estatística** será definida como **Não** e não poderá ser modificada. Se você selecionar **Sim** na opção **Semântica Estatística** antes de selecionar um **Idioma**, os idiomas disponíveis na coluna **Idioma** serão restringidos a esses para os quais o Modelo de Idioma Semântico oferece suporte.  
   
- **Tem Assinante Não SQL Server**  
+ **Tem assinante não SQL Server**  
  Indicar se a coluna está sendo replicada para um assinante que não é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Especificação de identidade**  
@@ -107,7 +107,7 @@ ms.locfileid: "68211794"
 > [!NOTE]  
 >  Para alterar o valor mostrado para a propriedade **Especificação de identidade** , é necessário expandir e editar a propriedade filho **É identidade** .  
   
--   **É identidade** Indica se a coluna é ou não uma coluna de identidade. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
+-   **É identidade** Indica se esta coluna é uma coluna de identidade ou não. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
 -   **Semente de identidade** Exibe o valor de semente especificado durante a criação desta coluna de identidade. Esse valor é atribuído à primeira linha da tabela. Se essa célula for deixada em branco, o valor 1 será atribuído como padrão. Para editar essa propriedade, digite o valor novo diretamente.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68211794"
  **Não para replicação**  
  Indica se os valores de identidade originais são preservados durante a replicação. Para obter mais informações sobre replicação veja CREATE TABLE. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
- **Replicado**  
+ **Replicados**  
  Mostra se essa coluna é replicada em outro local.  
   
  **RowGuid**  
@@ -132,6 +132,7 @@ ms.locfileid: "68211794"
  Mostra o tamanho em bytes permitido pelo tipo de dados de coluna. Por exemplo, um tipo de dados nchar pode ter um comprimento de 10 (número de caracteres), mas teria um tamanho de 20 para conjuntos de caracteres de Unicode.  
   
 > [!NOTE]  
->  O comprimento de um tipo de dados **(max)** varia para cada linha. **sp_help** retorna (-1) como o comprimento de colunas **(max)** . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exibe -1 como o tamanho de coluna.  
+>  O comprimento de um tipo de dados **(max)** varia para cada linha. **sp_help** retorna (-1) como o comprimento de colunas **(max)** . 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exibe -1 como o tamanho de coluna.  
   
   

@@ -18,25 +18,25 @@ ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e2a80729738986d69f2eb78b16d119072d6e9e11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094750"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **systranschemas** tabela é usada para controlar as alterações de esquema em artigos publicados em publicações de instantâneo e transacionais. Essa tabela é armazenada nos bancos de dados de assinatura e publicação.  
+  A tabela **systranschemas** é usada para acompanhar as alterações de esquema nos artigos publicados em publicações transacionais e de instantâneo. Essa tabela é armazenada nos bancos de dados de assinatura e publicação.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**tabid**|**int**|Identifica o artigo de tabela em que a alteração de esquema ocorreu.|  
-|**startlsn**|**binary**|Valor LSN no início da alteração de esquema.|  
+|**registrou startlsn**|**binary**|Valor LSN no início da alteração de esquema.|  
 |**endlsn**|**binary**|Valor LSN no fim da alteração de esquema.|  
-|**typeid**|**int**|Tipo de alteração de esquema.|  
+|**identificação**|**int**|Tipo de alteração de esquema.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -16,26 +16,26 @@ ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d65a5330ea83b955629cd9de9684ecc47906ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920089"
 ---
 # <a name="charset-property-ado"></a>Propriedade Charset (ADO)
-Indica o caractere definido na qual o conteúdo de um texto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) deve ser convertido para o armazenamento em buffer interno do **Stream** objeto.  
+Indica o conjunto de caracteres no qual o conteúdo de um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) de texto deve ser convertido para armazenamento no buffer interno do objeto de **fluxo** .  
   
-## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
- Define ou retorna um **cadeia de caracteres** valor que especifica o caractere definido na qual o conteúdo do **Stream** será convertido. O valor padrão é **Unicode**. Os valores permitidos são típicas cadeias de caracteres passadas pela interface como nomes de conjunto de caracteres de Internet (por exemplo, "iso-8859-1", "Windows-1252" e assim por diante). Para obter uma lista dos nomes de conjunto de caracteres que são conhecidos por um sistema, consulte as subchaves da HKEY_CLASSES_ROOT\MIME\Database\Charset no registro do Windows.  
+## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
+ Define ou retorna um valor de **cadeia de caracteres** que especifica o conjunto de caracteres no qual o conteúdo do **fluxo** será traduzido. O valor padrão é **Unicode**. Os valores permitidos são cadeias de caracteres típicas passadas pela interface como nomes de conjunto de caractere da Internet (por exemplo, "ISO-8859-1", "Windows-1252" e assim por diante). Para obter uma lista dos nomes de conjunto de caracteres que são conhecidos por um sistema, consulte as subchaves de HKEY_CLASSES_ROOT \MIME\Database\Charset no registro do Windows.  
   
 ## <a name="remarks"></a>Comentários  
- Em um texto **Stream** do objeto, dados de texto são armazenados no conjunto de caracteres especificado pela **Charset** propriedade. O padrão é Unicode. O **Charset** propriedade é usada para a conversão de dados que entram as **Stream** ou próximos da **Stream**. Por exemplo, se o **Stream** contém dados de ISO-8859-1 e que os dados são copiados para um BSTR, o **Stream** objeto converterá os dados em Unicode. O inverso também é verdadeiro.  
+ Em um objeto de **fluxo** de texto, os dados de texto são armazenados no conjunto de caracteres especificado pela propriedade **charset** . O padrão é Unicode. A propriedade **charset** é usada para converter dados que entram no **fluxo** ou saindo do **fluxo**. Por exemplo, se o **fluxo** contiver dados ISO-8859-1 e esses dados forem copiados para um BSTR, o objeto de **fluxo** converterá os dados em Unicode. O inverso também é verdadeiro.  
   
- Para que a abertura **Stream**, atual [posição](../../../ado/reference/ado-api/position-property-ado.md) deve ser no início do **Stream** (0) para poder definir **Charset**.  
+ Para um **fluxo**aberto, a [posição](../../../ado/reference/ado-api/position-property-ado.md) atual deve estar no início do **fluxo** (0) para poder definir **charset**.  
   
- **Charset** é usado apenas com texto **Stream** objetos ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) é **adTypeText**). Essa propriedade será ignorada se **tipo** é **adTypeBinary**.  
+ O conjunto de **caracteres** é usado somente com objetos de **fluxo** de texto (o[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) é **adTypeText**). Essa propriedade será ignorada se o **tipo** for **adTypeBinary**.  
   
- Para obter um exemplo de código, consulte [etapa 4: Preencha a caixa de texto de detalhes](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
+ Para obter um exemplo de código, consulte [etapa 4: popular a caixa de texto detalhes](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

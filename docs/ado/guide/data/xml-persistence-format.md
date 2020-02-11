@@ -13,16 +13,16 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e2d1c30546a8466ba9950f31cffdfb9447bd89ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923385"
 ---
 # <a name="xml-persistence-format"></a>Formato de persistência XML
-ADO usa codificação UTF-8 para o fluxo XML que ele persiste.  
+O ADO usa a codificação UTF-8 para o fluxo XML que ele mantém.  
   
- O formato XML do ADO é dividido em duas seções, uma seção de esquema seguida a seção de dados. O exemplo a seguir é um arquivo XML de exemplo para a tabela Shippers (transportadores) do banco de dados Northwind. Várias partes do XML são discutidas, o exemplo a seguir.  
+ O formato ADO XML é dividido em duas seções, uma seção de esquema seguida da seção de dados. Este é um arquivo XML de exemplo para a tabela transportadoras do banco de dados Northwind. Várias partes do XML são discutidas seguindo o exemplo.  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -64,11 +64,11 @@ xmlns:z="#RowsetSchema">
 </xml>  
 ```  
   
- O esquema mostra as declarações de namespaces, a seção do esquema e a seção de dados. A seção do esquema contém definições de linha, CódigoDaTransportadora, CompanyName e telefone.  
+ O esquema mostra as declarações de namespaces, a seção de esquema e a seção de dados. A seção de esquema contém definições para Row, transportadora, CompanyName e Phone.  
   
- Definições de esquema estão em conformidade com o [especificação W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) e pode ser totalmente validada (embora a validação não ocorrerá no Internet Explorer 5). Dados XML são, atualmente, o formato de esquema com suporte apenas para persistência de conjunto de registros.  
+ As definições de esquema estão em conformidade com a [especificação de dados XML do W3C](http://www.w3.org/TR/1998/NOTE-XML-data/) e podem ser totalmente validadas (embora a validação não ocorra no Internet Explorer 5). XML-os dados atualmente são o único formato de esquema com suporte para persistência de conjunto de registros.  
   
- A seção de dados tem três linhas que contém informações sobre Shippers (transportadores). Para um conjunto de linhas vazio, a seção de dados pode estar vazia, mas o \<: dados do rs > marcas devem estar presentes. Sem dados, você poderia escrever a forma abreviada de marca simplesmente \<: dados do rs / >. Qualquer marca prefixada com "rs" indica que ele está no namespace definido pelo urn: schemas-microsoft-com:rowset.  
+ A seção de dados tem três linhas que contêm informações sobre transportadoras. Para um conjunto de linhas vazio, a seção de dados pode estar vazia \<, mas as marcas RS: data> devem estar presentes. Sem dados, você pode escrever a tag de forma abreviada \<como simplesmente RS: data/>. Qualquer marca prefixada com "RS" indica que está no namespace definido por urn: schemas-microsoft-com: Rowset.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -20,20 +20,20 @@ ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e324b1f49bd6f8d0cad15ac2bcde73f558220330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121453"
 ---
 # <a name="sqlconfigdriver-function"></a>Função SQLConfigDriver
-**Conformidade com**  
- Versão introduzida: ODBC 2.5  
+**Conformidade**  
+ Versão introduzida: ODBC 2,5  
   
  **Resumo**  
- **SQLConfigDriver** carrega a DLL de instalação do driver apropriado e chama o **ConfigDriver** função.  
+ **SQLConfigDriver** carrega a DLL de configuração de driver apropriada e chama a função **ConfigDriver** .  
   
- A funcionalidade do **SQLConfigDriver** também podem ser acessados com [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ A funcionalidade do **SQLConfigDriver** também pode ser acessada com [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,69 +51,69 @@ BOOL SQLConfigDriver(
   
 ## <a name="arguments"></a>Argumentos  
  *hwndParent*  
- [Entrada] Identificador de janela pai. A função não exibirá nenhuma caixa de diálogo se o identificador for nulo.  
+ Entrada Identificador de janela pai. A função não exibirá nenhuma caixa de diálogo se o identificador for nulo.  
   
  *fRequest*  
- [Entrada] Tipo de solicitação. *Frequentes* deve conter um dos seguintes valores:  
+ Entrada Tipo de solicitação. *fRequest* deve conter um dos seguintes valores:  
   
- ODBC_CONFIG_DRIVER: Altera o tempo limite usado pelo driver de pooling de conexão.  
+ ODBC_CONFIG_DRIVER: altera o tempo limite do pool de conexões usado pelo driver.  
   
- ODBC_INSTALL_DRIVER: Instala um novo driver.  
+ ODBC_INSTALL_DRIVER: instala um novo driver.  
   
  ODBC_REMOVE_DRIVER: Remove um driver existente.  
   
- Essa opção também pode ser específicos do driver, caso em que o *frequentes* para a primeira opção deve iniciar de ODBC_CONFIG_DRIVER_MAX + 1. O *frequentes* para qualquer opção adicional também deve iniciar de um valor maior que ODBC_CONFIG_DRIVER_MAX + 1.  
+ Essa opção também pode ser específica do driver; nesse caso, o *fRequest* da primeira opção deve começar de ODBC_CONFIG_DRIVER_MAX + 1. O *fRequest* para qualquer opção adicional também deve começar com um valor maior que ODBC_CONFIG_DRIVER_MAX + 1.  
   
  *lpszDriver*  
- [Entrada] O nome do driver como registrado nas informações do sistema.  
+ Entrada O nome do driver conforme registrado nas informações do sistema.  
   
  *lpszArgs*  
- [Entrada] Uma cadeia de caracteres terminada em nulo que contém os argumentos para um determinado de driver *frequentes*.  
+ Entrada Uma cadeia de caracteres terminada em nulo que contém argumentos para um *fRequest*específico do driver.  
   
  *lpszMsg*  
- [Saída] Uma cadeia terminada em nulo que contém uma mensagem de saída da configuração do driver.  
+ Der Uma cadeia de caracteres terminada em nulo que contém uma mensagem de saída da configuração do driver.  
   
  *cbMsgMax*  
- [Entrada] Comprimento de *lpszMsg.*  
+ Entrada Comprimento de *lpszMsg.*  
   
  *pcbMsgOut*  
- [Saída] Número total de bytes disponíveis para retornar na *lpszMsg*. Se o número de bytes disponíveis para retornar for maior que ou igual a *cbMsgMax*, a mensagem de saída na *lpszMsg* será truncado com *cbMsgMax* menos a terminação null caractere. O *pcbMsgOut* argumento pode ser um ponteiro nulo.  
+ Der Número total de bytes disponíveis para retornar em *lpszMsg*. Se o número de bytes disponíveis para retornar for maior ou igual a *cbMsgMax*, a mensagem de saída em *lpszMsg* será truncada para *cbMsgMax* menos o caractere de terminação nula. O argumento *pcbMsgOut* pode ser um ponteiro nulo.  
   
-## <a name="returns"></a>Retorna  
- A função retorna TRUE se for bem-sucedida, FALSO se ele falhar.  
+## <a name="returns"></a>Retornos  
+ A função retornará TRUE se for bem-sucedida, FALSE se falhar.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLConfigDriver** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLConfigDriver** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Descrição|  
+|*\*pfErrorCode*|Erro|DESCRIÇÃO|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Comprimento de buffer inválido|O *lpszMsg* argumento era inválido.|  
-|ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O *hwndParent* argumento era inválido.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo de solicitação inválido|O *frequentes* argumento não era um dos seguintes:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> O *frequentes* argumento era uma opção específica do driver que era menor ou igual a ODBC_CONFIG_DRIVER_MAX.|  
-|ODBC_ERROR_INVALID_NAME|Nome inválido de driver ou conversor|O *lpszDriver* argumento era inválido. Ele não pôde ser encontrado no registro.|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|Pares de valor de palavra-chave inválido|O *lpszArgs* argumento continha um erro de sintaxe.|  
-|ODBC_ERROR_REQUEST_FAILED|*Solicitar* falhou|O instalador não foi possível executar a operação solicitada pelo *frequentes* argumento. A chamada para **ConfigDriver** falhou.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Não foi possível carregar a biblioteca de instalação do driver ou conversor|Não foi possível carregar a biblioteca de instalação do driver.|  
-|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não foi possível executar a função devido à falta de memória.|  
+|ODBC_ERROR_GENERAL_ERR|Erro geral do instalador|Ocorreu um erro para o qual não havia nenhum erro do instalador específico.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Comprimento de buffer inválido|O argumento *lpszMsg* era inválido.|  
+|ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O argumento *hwndParent* era inválido.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo de solicitação inválido|O argumento *fRequest* não era um dos seguintes:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> O argumento *fRequest* era uma opção específica de driver que era menor ou igual a ODBC_CONFIG_DRIVER_MAX.|  
+|ODBC_ERROR_INVALID_NAME|Nome de driver ou tradutor inválido|O argumento *lpszDriver* era inválido. Ele não foi encontrado no registro.|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|Pares de palavra-chave-valor inválidos|O argumento *lpszArgs* continha um erro de sintaxe.|  
+|ODBC_ERROR_REQUEST_FAILED|Falha na *solicitação*|O instalador não pôde executar a operação solicitada pelo argumento *fRequest* . Falha na chamada para **ConfigDriver** .|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Não foi possível carregar a biblioteca de instalação do driver ou do Tradutor|Não foi possível carregar a biblioteca de instalação do driver.|  
+|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não pôde executar a função devido à falta de memória.|  
   
 ## <a name="comments"></a>Comentários  
- **SQLConfigDriver** permite que um aplicativo chamar um driver **ConfigDriver** rotina sem precisar saber o nome e carregar a DLL de instalação específicas do driver. Um programa de instalação chama essa função após a instalação do driver que dll foi instalado. O programa de chamada deve estar ciente de que essa função pode não estar disponível para todos os drivers. Nesse caso, o programa de chamada deve continuar sem erro.  
+ O **SQLConfigDriver** permite que um aplicativo chame a rotina **ConfigDriver** de um driver sem precisar saber o nome e carregar a DLL de instalação específica do driver. Um programa de instalação chama essa função depois que a DLL de instalação do driver é instalada. O programa de chamada deve estar ciente de que essa função pode não estar disponível para todos os drivers. Nesse caso, o programa de chamada deve continuar sem erros.  
   
 ## <a name="driver-specific-options"></a>Opções específicas do driver  
- Um aplicativo pode solicitar recursos específicos do driver expostos pelo driver usando o *frequentes* argumento. O *frequentes* para a primeira opção serão ODBC_CONFIG_DRIVER_MAX + 1, e as opções adicionais serão incrementadas em 1 desse valor. Quaisquer argumentos exigidos pelo driver para essa função deve ser fornecida em uma cadeia de caracteres terminada em nulo passado a *lpszArgs* argumento. Drivers de fornecer tal funcionalidade devem manter uma tabela de opções específicas do driver. As opções devem ser totalmente documentadas na documentação do driver. Os autores de aplicativos que usam as opções específicas do driver devem estar cientes de que esse uso tornará o aplicativo menos interoperável.  
+ Um aplicativo pode solicitar recursos específicos do driver expostos pelo driver usando o argumento *fRequest* . O *fRequest* da primeira opção será ODBC_CONFIG_DRIVER_MAX + 1, e as opções adicionais serão incrementadas em 1 a partir desse valor. Todos os argumentos exigidos pelo driver para essa função devem ser fornecidos em uma cadeia de caracteres terminada em nulo passada no argumento *lpszArgs* . Os drivers que fornecem essa funcionalidade devem manter uma tabela de opções específicas de driver. As opções devem ser totalmente documentadas na documentação do driver. Os gravadores de aplicativos que usam opções específicas de driver devem estar cientes de que esse uso tornará o aplicativo menos interoperável.  
   
-## <a name="setting-connection-pooling-timeout"></a>Tempo limite do pool de Conexão de configuração  
- Propriedades de tempo limite de pool de Conexão pode ser definida quando você definir a configuração do driver. **SQLConfigDriver** é chamado com um *frequentes* de ODBC_CONFIG_DRIVER e *lpszArgs* definido como **CPTimeout**. **CPTimeout** determina o período de tempo que uma conexão pode permanecer no pool de conexão sem que está sendo usado. Quando o tempo limite expira, a conexão é fechada e removido do pool. O tempo limite padrão é 60 segundos.  
+## <a name="setting-connection-pooling-timeout"></a>Definindo o tempo limite do pooling de conexão  
+ As propriedades de tempo limite do pooling de conexão podem ser definidas quando você define a configuração do driver. **SQLConfigDriver** é chamado com um *fRequest* de ODBC_CONFIG_DRIVER e *lpszArgs* definido como **CPTimeout**. **CPTimeout** determina o período de tempo que uma conexão pode permanecer no pool de conexões sem ser usada. Quando o tempo limite expira, a conexão é fechada e removida do pool. O tempo limite padrão é de 60 segundos.  
   
- Quando **SQLConfigDriver** for chamado com *frequentes* definido como ODBC_INSTALL_DRIVER ou ODBC_REMOVE_DRIVER, o Gerenciador de Driver carrega a DLL de instalação do driver apropriado e chama o  **ConfigDriver** função. Quando **SQLConfigDriver** for chamado com um *frequentes* de ODBC_CONFIG_DRIVER, todo o processamento é executado no instalador do ODBC, para que a DLL de instalação do driver não precisa ser carregado.  
+ Quando **SQLConfigDriver** é chamado com *fRequest* definido como ODBC_INSTALL_DRIVER ou ODBC_REMOVE_DRIVER, o Gerenciador de driver carrega a DLL de configuração de driver apropriada e chama a função **ConfigDriver** . Quando **SQLConfigDriver** é chamado com um *fRequest* de ODBC_CONFIG_DRIVER, todo o processamento é executado no ODBC Installer, para que a DLL de instalação do driver não precise ser carregada.  
   
 ## <a name="messages"></a>Mensagens  
- Uma rotina de instalação do driver pode enviar uma mensagem de texto para um aplicativo como cadeias de caracteres terminada em nulo na *lpszMsg* buffer. A mensagem será truncada para *cbMsgMax* menos o caractere nulo de terminação, o **ConfigDriver** funcionará se ele é maior que ou igual a *cbMsgMax* caracteres.  
+ Uma rotina de instalação de driver pode enviar uma mensagem de texto a um aplicativo como cadeias de caracteres de terminação nula no buffer *lpszMsg* . A mensagem será truncada para *cbMsgMax* menos o caractere de terminação nula pela função **ConfigDriver** se for maior ou igual a caracteres *cbMsgMax* .  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
-|Adicionar, modificar ou remover um driver|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)(na configuração de DLL)|  
+|Adicionando, modificando ou removendo um driver|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)(na DLL de instalação)|  
 |Removendo a fonte de dados padrão|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|

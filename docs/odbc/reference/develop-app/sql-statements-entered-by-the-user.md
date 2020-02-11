@@ -15,14 +15,14 @@ ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 78a1653df60b21cde772cbe32a688b3fdef80a42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086070"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Instruções SQL inseridas pelo usuário
-Aplicativos que realizam análises ad hoc normalmente também é permitir que o usuário inserir instruções SQL diretamente. Por exemplo:  
+Os aplicativos que executam a análise ad hoc também permitem que o usuário insira instruções SQL diretamente. Por exemplo:  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -48,4 +48,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- Essa abordagem simplifica a codificação de aplicativo; o aplicativo se baseia no usuário para criar a instrução SQL e na fonte de dados para verificar a validade da instrução. Porque é difícil escrever uma interface gráfica do usuário que expõe adequadamente as complicações do SQL, simplesmente solicitar que o usuário insira o texto da instrução SQL pode ser uma alternativa melhor. No entanto, isso exige que o usuário conhecer não apenas SQL, mas também o esquema da fonte de dados que está sendo consultada. Alguns aplicativos fornecem uma interface gráfica do usuário pelo qual o usuário pode criar uma instrução SQL básica e também fornecem uma interface de texto com a qual o usuário pode modificar.
+ Essa abordagem simplifica a codificação de aplicativos; o aplicativo depende do usuário para criar a instrução SQL e na fonte de dados para verificar a validade da instrução. Como é difícil escrever uma interface gráfica do usuário que exponha adequadamente as complexidades do SQL, simplesmente pedir ao usuário que insira o texto da instrução SQL pode ser uma alternativa preferida. No entanto, isso exige que o usuário saiba não apenas o SQL, mas também o esquema da fonte de dados que está sendo consultada. Alguns aplicativos fornecem uma interface gráfica do usuário pela qual o usuário pode criar uma instrução SQL básica e também fornecer uma interface de texto com a qual o usuário pode modificá-la.

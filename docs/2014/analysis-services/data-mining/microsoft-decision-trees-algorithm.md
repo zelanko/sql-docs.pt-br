@@ -1,5 +1,5 @@
 ---
-title: Algoritmo de árvores de decisão da Microsoft | Microsoft Docs
+title: Algoritmo árvores de decisão da Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a9adfe74aef16e475d06eddfbe08852f7618518
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084108"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algoritmo Árvores de Decisão da Microsoft
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] árvores de decisão é um algoritmo de classificação e regressão fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para uso em modelagens de previsão de atributos discretos e contínuos.  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo árvores de decisão é um algoritmo de classificação e regressão [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornecido pelo para uso em modelagem preditiva de atributos discretos e contínuos.  
   
  No caso dos atributos discretos, o algoritmo faz previsões fundadas nas relações entre colunas de entrada em um conjunto de dados. Ele usa os valores, conhecidos como estados, dessas colunas para prever os estados de uma coluna que você define como previsível. Especificamente, o algoritmo identifica as colunas de entrada que são correlacionadas com a coluna previsível. Por exemplo, em um cenário em que se deseja prever a tendência dos clientes em adquirir uma bicicleta, se 9 de 10 clientes jovens comprarem uma bicicleta, mas apenas 2 de 10 clientes mais velhos fizerem o mesmo, o algoritmo infere que idade é um bom indicador para a compra de bicicletas. A árvore de decisão faz previsões com base nesta tendência para obter um resultado específico.  
   
@@ -45,38 +45,38 @@ ms.locfileid: "66084108"
   
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa a *seleção de recurso* para guiar a seleção dos atributos mais úteis. A seleção de recurso é usada por todos os algoritmos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para melhorar o desempenho e a qualidade da análise. A seleção de recurso é importante para impedir que atributos sem-importância usem tempo do processador. Se você usar muitas entradas ou atributos previsíveis ao criar um modelo de mineração de dados, o modelo poderá demorar muito tempo para processar ou ainda esgotar a memória. Os métodos usados para determinar a divisão da árvore incluem medidas padrão da indústria para *entropia* e redes Bayesianas *.* Para obter mais informações sobre os métodos usados para selecionar atributos significativos e depois classificá-los, consulte [Seleção de recursos &#40;Mineração de dados&#41;](feature-selection-data-mining.md).  
   
- Um problema comum em modelos de mineração de dados é que eles se tornam muito sensíveis a pequenas diferenças nos dados de treinamento, nesse caso, ele deve ser *referimos* ou *muito treinados*. Um modelo sobrecarregado não pode ser generalizado para outros conjuntos de dados. Para evitar a superajuste de um determinado conjunto de dados, o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa técnicas para controlar o crescimento da árvore. Para obter uma explicação mais detalhada de como funciona o algoritmo de Árvores de Decisão [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consulte [Referência técnica do algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm-technical-reference.md).  
+ Um problema comum nos modelos de Data Mining é que o modelo se torna muito sensível a pequenas diferenças nos dados de treinamento. nesse caso, disse-se que ele é *superajustado* ou *supertreinado*. Um modelo sobrecarregado não pode ser generalizado para outros conjuntos de dados. Para evitar a superajuste de um determinado conjunto de dados, o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa técnicas para controlar o crescimento da árvore. Para obter uma explicação mais detalhada de como funciona o algoritmo de Árvores de Decisão [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consulte [Referência técnica do algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm-technical-reference.md).  
   
 ### <a name="predicting-discrete-columns"></a>Prevendo colunas discretas  
  A forma como o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] cria uma árvore para uma coluna previsível discreta pode ser mostrada usando um histograma. O diagrama a seguir mostra um histograma que esboça uma coluna previsível, Compradores de bicicleta, em comparação com uma coluna de entrada, Idade. O histograma mostra que a idade de uma pessoa ajuda a distinguir se ela comprará uma bicicleta.  
   
- ![Histograma do algoritmo Microsoft Decision Trees](../media/dt-histogram.gif "histograma do algoritmo árvores de decisão da Microsoft")  
+ ![Histograma do algoritmo Árvores de Decisão da Microsoft](../media/dt-histogram.gif "Histograma do algoritmo Árvores de Decisão da Microsoft")  
   
  A correlação que é mostrada no diagrama faz com que o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] crie um novo nó no modelo.  
   
- ![Nó de árvore de decisão](../media/dt-tree.gif "nó da árvore de decisão")  
+ ![Nó da árvore de decisão](../media/dt-tree.gif "Nó da árvore de decisão")  
   
  À medida que o algoritmo acrescenta novos nós em um modelo, uma estrutura de árvore é formada. O nó superior da árvore indica a divisão da coluna previsível para a média da população de clientes. Como o modelo continua crescendo, o algoritmo considera todas as colunas.  
   
 ### <a name="predicting-continuous-columns"></a>Prevendo colunas contínuas  
  Quando o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] cria uma árvore com base em uma coluna previsível contínua, cada nó contém uma fórmula de regressão. Uma divisão ocorre em um ponto de não linearidade na fórmula de regressão. Por exemplo, considere o seguinte diagrama:  
   
- ![Várias linhas de regressão mostrando não linearidade](../media/regression-tree1.gif "várias linhas de regressão mostrando não linearidade")  
+ ![Várias linhas de regressão mostrando não linearidade](../media/regression-tree1.gif "Várias linhas de regressão mostrando não linearidade")  
   
  O diagrama contém dados que podem ser modelados usando uma única linha ou usando duas linhas conectadas. Porém, uma única linha não representaria os dados de forma satisfatória. Mas, se você usar duas linhas, o modelo terá um desempenho muito melhor ao aproximar dados. O ponto onde duas linhas se encontram é o ponto de não linearidade e é onde o nó de um modelo de árvore de decisão se dividiria. Por exemplo, o nó que corresponde ao ponto de não linearidade no gráfico anterior poderia ser representado pelo diagrama a seguir. As duas equações representam as equações de regressão para as duas linhas.  
   
- ![Equação que representa um ponto de não linearidade](../media/regression-tree2.gif "equação que representa um ponto de não linearidade")  
+ ![Equação que representa um ponto de não linearidade](../media/regression-tree2.gif "Equação que representa um ponto de não linearidade")  
   
 ## <a name="data-required-for-decision-tree-models"></a>Dados necessários para modelos de árvore de decisão  
  Ao preparar dados para usar em um modelo de árvore de decisão, você deve saber os requisitos do algoritmo específico, incluindo a quantidade de dados necessária e como eles são usados.  
   
  Os requisitos para um modelo de árvore de decisão são os seguintes:  
   
--   **Uma única coluna de chave** Cada modelo deve conter uma coluna de texto ou numérica que identifique unicamente cada registro. Não são permitidas chaves compostas.  
+-   **Uma única coluna de chave** Cada modelo deve conter uma coluna numérica ou de texto que identifique exclusivamente cada registro. Não são permitidas chaves compostas.  
   
--   **Uma coluna previsível** Requer, pelo menos, uma coluna previsível. Você pode incluir vários atributos previsíveis em um modelo, e o atributo previsível pode ser de diferentes tipos, tanto numérico como discreto. Porém, o aumento no número de atributos previsíveis pode aumentar o tempo de processamento.  
+-   **Uma coluna previsível** Requer pelo menos uma coluna previsível. Você pode incluir vários atributos previsíveis em um modelo, e o atributo previsível pode ser de diferentes tipos, tanto numérico como discreto. Porém, o aumento no número de atributos previsíveis pode aumentar o tempo de processamento.  
   
--   **Colunas de entrada** Requer colunas de entrada que podem ser discretas ou contínuas. O aumento no número de atributos de entrada afeta o tempo de processamento.  
+-   **Colunas de entrada** Requer colunas de entrada, que podem ser discretas ou contínuas. O aumento no número de atributos de entrada afeta o tempo de processamento.  
   
  Para obter informações mais detalhadas sobre os tipos de conteúdo e de dados com suporte pelos modelos de árvore de decisão, consulte a seção Requisitos de [Referência técnica do algoritmo de árvore de decisão da Microsoft](microsoft-decision-trees-algorithm-technical-reference.md).  
   
@@ -100,10 +100,10 @@ ms.locfileid: "66084108"
   
 -   Dá suporte ao uso de modelos de mineração OLAP e à criação de dimensões de mineração de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Referência técnica do algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Referência técnica do algoritmo árvores de decisão da Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services de mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

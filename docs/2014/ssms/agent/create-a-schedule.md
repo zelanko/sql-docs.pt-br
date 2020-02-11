@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a00b07bb54d30d4e1db49cf2db70dec8286b27e0
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798287"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
@@ -64,7 +64,7 @@ ms.locfileid: "72798287"
   
     -   Para que a agenda seja executada somente uma vez, clique em **Uma vez**. Para definir a agenda **Uma vez** , conclua o grupo **Ocorrência única** na caixa de diálogo.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-schedule"></a>Para criar uma agenda  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72798287"
     GO  
     ```  
   
- Para obter mais informações, [consulte &#40;Transact-SQL&#41;sp_add_schedule](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql).  
+ Para obter mais informações, consulte [sp_add_schedule &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql).  
   
 ##  <a name="SMO"></a>Usando SQL Server Management Objects  
  **Para criar uma agenda**  

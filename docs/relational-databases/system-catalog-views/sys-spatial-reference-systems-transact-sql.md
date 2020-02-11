@@ -1,5 +1,5 @@
 ---
-title: sys.spatial_reference_systems (Transact-SQL) | Microsoft Docs
+title: sys. spatial_reference_systems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,23 +22,23 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6ffd36516fecba70618c79a7bbd0415f6bb2cb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073256"
 ---
-# <a name="sysspatialreferencesystems-transact-sql"></a>sys.spatial_reference_systems (Transact-SQL)
+# <a name="sysspatial_reference_systems-transact-sql"></a>sys.spatial_reference_systems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Lista os sistemas de referência espaciais (SRIDs) com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |spatial_reference_id|**int**|O SRID com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |authority_name|**nvarchar(128)**|A autoridade do SRID.|  
-|authorized_spatial_reference_id|**int**|O SRID especificado pela autoridade indicada em **authority_name**.|  
+|authorized_spatial_reference_id|**int**|O SRID fornecido pela autoridade chamada em **authority_name**.|  
 |well_known_text|**nvarchar(4000)**|A representação WKT do SRID.|  
 |unit_of_measure|**nvarchar(128)**|O nome da unidade de medida.|  
 |unit_conversion_factor|**float**|O comprimento da unidade de medida em metros.|  

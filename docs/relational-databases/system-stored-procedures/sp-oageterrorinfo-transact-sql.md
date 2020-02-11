@@ -18,18 +18,18 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107910"
 ---
-# <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
+# <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Obtém informações sobre erro de Automação OLE.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,19 +44,19 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 ## <a name="arguments"></a>Argumentos  
  *objecttoken*  
- É o token de objeto de um objeto OLE que foi criado anteriormente usando **sp_OACreate** ou é NULL. Se *objecttoken* é especificado, serão retornadas informações de erro para esse objeto. Se o NULL for especificado, serão retornadas as informações de erro para o lote inteiro.  
+ É o token do objeto de um objeto OLE criado anteriormente usando **sp_OACreate** ou é nulo. Se *objecttoken* for especificado, as informações de erro para esse objeto serão retornadas. Se o NULL for especificado, serão retornadas as informações de erro para o lote inteiro.  
   
- _código-fonte_ **saída**  
- É a origem das informações de erro. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
+ __ **saída** de origem  
+ É a origem das informações de erro. Se especificado, ele deve ser uma variável **Char**, **nchar**, **varchar**ou **nvarchar** local. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- _Descrição_ **saída**  
- É a descrição do erro. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
+ __ **saída** da descrição  
+ É a descrição do erro. Se especificado, ele deve ser uma variável **Char**, **nchar**, **varchar**ou **nvarchar** local. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- _HelpFile_ **saída**  
- É o arquivo de ajuda para o objeto OLE. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
+ __ **saída** de ArquivoDeAjuda  
+ É o arquivo de ajuda para o objeto OLE. Se especificado, ele deve ser uma variável **Char**, **nchar**, **varchar**ou **nvarchar** local. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- _helpid_ **saída**  
- É a ID de contexto do arquivo de ajuda. Se for especificado, ele deve ser um local **int** variável.  
+ **saída** da _HelpID_  
+ É a ID de contexto do arquivo de ajuda. Se especificado, ele deve ser uma variável **int** local.  
   
 > [!NOTE]  
 >  Os parâmetros deste procedimento armazenado são especificados por posição, não por nome.  
@@ -64,38 +64,38 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha) que é o valor inteiro do HRESULT retornado pelo objeto de Automação OLE.  
   
- Para obter mais informações sobre códigos de retorno HRESULT, consulte [OLE automação códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obter mais informações sobre códigos de retorno HRESULT, consulte [códigos de retorno de automação OLE e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se nenhum parâmetro de saída for especificado, as informações de erro serão retornadas ao cliente como um conjunto de resultados.  
   
-|Nomes de coluna|Tipo de dados|Descrição|  
+|Nomes de coluna|Tipo de dados|DESCRIÇÃO|  
 |------------------|---------------|-----------------|  
-|**Erro**|**binary(4)**|Representação binária do número do erro.|  
-|**Source**|**nvarchar(nn)**|A origem do erro.|  
-|**Descrição**|**nvarchar(nn)**|Descrição do erro.|  
-|**Helpfile**|**nvarchar(nn)**|Arquivo de ajuda para a origem.|  
+|**Erro**|**Binary (4)**|Representação binária do número do erro.|  
+|**Origem**|**nvarchar (nn)**|A origem do erro.|  
+|**Descrição**|**nvarchar (nn)**|Descrição do erro.|  
+|**HelpFile**|**nvarchar (nn)**|Arquivo de ajuda para a origem.|  
 |**HelpID**|**int**|ID de contexto de ajuda do arquivo de origem da Ajuda.|  
   
 ## <a name="remarks"></a>Comentários  
- Procedimento armazenado de cada chamada para uma automação OLE (exceto **sp_OAGetErrorInfo**) redefine as informações de erro; portanto, **sp_OAGetErrorInfo** obtém informações de erro somente para o OLE mais recente Chamada de procedimento armazenado de automação. Observe que, como **sp_OAGetErrorInfo** não redefine as informações de erro, ele pode ser chamado várias vezes para obter as mesmas informações de erro.  
+ Cada chamada para um procedimento armazenado de automação OLE (exceto **sp_OAGetErrorInfo**) redefine as informações de erro; Portanto, **sp_OAGetErrorInfo** Obtém informações de erro apenas para a chamada de procedimento armazenado de automação OLE mais recente. Observe que, como **sp_OAGetErrorInfo** não redefine as informações de erro, ele pode ser chamado várias vezes para obter as mesmas informações de erro.  
   
  A tabela a seguir lista os erros de Automação OLE e suas causas comuns.  
   
 |Erro e HRESULT|Causa comum|  
 |-----------------------|------------------|  
-|**Tipo de variável incorreto (0x80020008)**|Tipo de dados de um [!INCLUDE[tsql](../../includes/tsql-md.md)] valor passado como um parâmetro de método não correspondeu a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] tipo de dados do parâmetro de método ou um valor NULL foi passado como um parâmetro de método.|  
+|**Tipo de variável incorreto (0x80020008)**|O tipo de dados [!INCLUDE[tsql](../../includes/tsql-md.md)] de um valor passado como um parâmetro de método não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] correspondeu ao tipo de dados do parâmetro Method ou um valor nulo foi passado como um parâmetro de método.|  
 |**Nome desconhecido (0x8002006)**|A propriedade ou o nome de método especificado não foi localizado para o objeto especificado.|  
-|**Cadeia de caracteres de classe inválida (0x800401f3)**|ProgID ou CLSID especificado não foi registrado como um objeto OLE em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Servidores de automação OLE personalizados devem ser registrados antes de serem instanciados usando **sp_OACreate**. Isso pode ser feito usando o utilitário Regsvr32.exe para servidores em processo (. dll), ou o **/REGSERVER** opção de linha de comando para servidores de local (.exe).|  
+|**Cadeia de caracteres de classe inválida (0x800401f3)**|ProgID ou CLSID especificado não foi registrado como um objeto OLE em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os servidores de automação OLE personalizados devem ser registrados antes de poderem ser instanciados usando **sp_OACreate**. Isso pode ser feito usando o utilitário regsvr32. exe para servidores em processo (. dll) ou a opção de linha de comando **/RegServer** para servidores locais (. exe).|  
 |**Execução do servidor falhou (0x80080005)**|O objeto OLE especificado foi registrado como um servidor OLE local (arquivo .exe), mas o arquivo .exe não pôde ser localizado ou iniciado.|  
 |**O módulo especificado não pôde ser localizado (0x8007007e)**|O objeto OLE especificado foi registrado como um servidor OLE em processo (arquivo .dll), mas o arquivo .dll não pôde ser localizado ou carregado.|  
-|**Incompatibilidade de (tipos 0x80020005)**|O tipo de dados de uma variável local [!INCLUDE[tsql](../../includes/tsql-md.md)] usado para armazenar um valor de propriedade retornado ou um valor de retorno do método não correspondeu ao tipo de dados [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] do valor de retorno da propriedade ou do método. Ou, o valor de retorno de uma propriedade ou de um método foi solicitado, mas não é retornado.|  
-|**Tipo de dados ou o valor do parâmetro 'context' de sp_OACreate é inválido. (0x8004275B)**|O valor do parâmetro de contexto deve ser um destes: 1, 4 ou 5.|  
+|**Incompatibilidade de tipos (0x80020005)**|O tipo de dados de uma variável local [!INCLUDE[tsql](../../includes/tsql-md.md)] usado para armazenar um valor de propriedade retornado ou um valor de retorno do método não correspondeu ao tipo de dados [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] do valor de retorno da propriedade ou do método. Ou, o valor de retorno de uma propriedade ou de um método foi solicitado, mas não é retornado.|  
+|**DataType ou Value do parâmetro ' Context ' de sp_OACreate é inválido. (0x8004275B)**|O valor do parâmetro de contexto deveria ser: 1, 4 ou 5.|  
   
- Para obter mais informações sobre como processar códigos de retorno HRESULT, consulte [OLE automação códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obter mais informações sobre o processamento de códigos de retorno HRESULT, consulte [códigos de retorno de automação OLE e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **sysadmin** função de servidor fixa ou permissão de execução diretamente nesse procedimento armazenado. `Ole Automation Procedures` configuração deve estar **habilitado** usar qualquer procedimento de sistema relacionado à automação OLE.  
+ Requer a associação na função de servidor fixa **sysadmin** ou a permissão execute diretamente neste procedimento armazenado. `Ole Automation Procedures`a configuração deve ser **habilitada** para usar qualquer procedimento do sistema relacionado à automação OLE.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir exibe informações sobre erro de Automação OLE.  
@@ -121,8 +121,8 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [OLE procedimentos armazenados de automação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
- [Script de exemplo de automação](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Procedimentos armazenados de automação OLE &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Script de exemplo de automação OLE](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

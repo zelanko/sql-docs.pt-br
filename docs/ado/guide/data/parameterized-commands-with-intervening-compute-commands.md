@@ -1,5 +1,5 @@
 ---
-title: Comandos com os comandos de computação intermediários parametrizados | Microsoft Docs
+title: Comandos com parâmetros com comandos de computação intermediários | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924721"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandos parametrizados com comandos COMPUTE de intervenção
-Uma forma com parâmetros típica comando APPEND tem uma cláusula que cria um pai **conjunto de registros** com um comando de consulta e outra cláusula que cria um filho **Recordset** com um comando de consulta parametrizada - ou seja, um comando que contém um espaço reservado de parâmetro (um ponto de interrogação, "?"). Em forma resultante **Recordset** tem dois níveis, no qual o pai ocupa o nível superior e o filho ocupa um nível inferior.  
+Um comando típico de acrescentar forma com parâmetros tem uma cláusula que cria um **conjunto de registros** pai com um comando de consulta e outra cláusula que cria um **conjunto de registros** filho com um comando de consulta parametrizada, ou seja, um comando que contém um espaço reservado de parâmetro (um ponto de interrogação, "?"). O conjunto de **registros** moldado resultante tem dois níveis, nos quais o pai ocupa o nível superior e o filho ocupa o nível inferior.  
   
- A cláusula que cria o filho **Recordset** pode agora ser um número arbitrário de forma aninhada comandos de computação, em que o comando mais profundamente aninhado contém a consulta parametrizada. Em forma resultante **conjunto de registros** tem vários níveis, na qual o pai ocupa o nível superior, o filho ocupa o nível mais baixo e um número arbitrário de **conjunto de registros**s gerado pelo comandos de computação de forma ocupam os níveis intermediários.  
+ A cláusula que cria o **conjunto de registros** filho agora pode ser um número arbitrário de comandos de computação de forma aninhada, em que o comando aninhado mais profundamente contém a consulta parametrizada. O conjunto de **registros** moldado resultante tem vários níveis, nos quais o pai ocupa o nível superior, o filho ocupa o nível lowermost e um número arbitrário de **conjuntos de registros**s gerados pelos comandos de computação de forma ocupam os níveis intermediários.  
   
- O uso típico para esse recurso é invocar a função de agregação e as capacidades de agrupamento dos shapeCOMPUTE comandos para criar de intervenção **conjunto de registros** objetos analíticos informações sobre o filho **conjunto de registros** . Além disso, como esse é um comando de forma com parâmetros, cada vez que uma coluna de capítulo do pai é acessada, um novo filho **Recordset** podem ser recuperadas. Como os níveis intermediários são derivados do filho, eles também serão ser recalculados.  
+ O uso típico para esse recurso é invocar a função de agregação e agrupar capacidades de comandos shapeCOMPUTE para criar objetos de **conjunto de registros** intermediários com informações analíticas sobre o **conjunto de registros**filho. Além disso, como esse é um comando de forma com parâmetros, cada vez que uma coluna de capítulo do pai é acessada, um novo **conjunto de registros** filho pode ser recuperado. Como os níveis intermediários são derivados do filho, eles também serão recomputados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de data shaping](../../../ado/guide/data/data-shaping-example.md)

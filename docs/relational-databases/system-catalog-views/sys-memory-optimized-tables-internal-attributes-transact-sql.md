@@ -21,31 +21,31 @@ author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68102382"
 ---
-# <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
+# <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Contém uma linha para cada tabela com otimização de memória interna usada para armazenar as tabelas com otimização de memória do usuário. Cada tabela de usuário corresponde a uma ou mais tabelas internas. Uma única tabela é usada para o armazenamento dos principais dados. Tabelas internas adicionais são usadas para dar suporte a recursos como temporal, índice columnstore e armazenamento fora de linha (LOB) para tabelas com otimização de memória.
  
-| Nome da coluna  | Tipo de dados  | Descrição |
+| Nome da coluna  | Tipo de dados  | DESCRIÇÃO |
 | :------ |:----------| :-----|
 |object_id  |**int**|       ID da tabela de usuário. Tabelas internas com otimização de memória que existem para dar suporte a uma tabela de usuário (como armazenamento fora de linha ou linhas excluídas no caso de combinações de Hk/Columnstore) têm o mesmo object_id como pai. |
 |xtp_object_id  |**bigint**|    ID de objeto OLTP in-memory correspondente à tabela interna com otimização de memória usada para dar suporte à tabela de usuário. Ela é exclusiva no banco de dados e pode mudar com o tempo de vida do objeto. 
 |type|  **int** |   Tipo de tabela interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
-|type_desc| **nvarchar(60)**|   Descrição do tipo<br/><br/>DELETED_ROWS_TABLE -> Linhas de acompanhamento de tabela interna excluídas de um índice columnstore<br/>USER_TABLE -> Tabela contendo os dados do usuário em linha<br/>DICTIONARIES_TABLE -> Dicionários para um índice columnstore<br/>SEGMENTS_TABLE -> Segmentos compactados para um índice columnstore<br/>ROW_GROUPS_INFO_TABLE -> Metadados sobre grupos de linhas compactados de um índice columnstore<br/>INTERNAL OFF-ROW DATA TABLE -> Tabela interna usada para o armazenamento de uma coluna fora da linha. Nesse caso, minor_id reflete column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Parte final mais acessada da tabela de histórico baseada em disco. Linhas inseridas no histórico de linhas são inseridas primeiro nessa tabela interna com otimização de memória. Há uma tarefa em segundo plano que move as linhas de forma assíncrona desta tabela interna para a tabela de histórico baseada em disco. |
+|type_desc| **nvarchar (60)**|   Descrição do tipo<br/><br/>DELETED_ROWS_TABLE -> Linhas de acompanhamento de tabela interna excluídas de um índice columnstore<br/>USER_TABLE -> Tabela contendo os dados do usuário em linha<br/>DICTIONARIES_TABLE -> Dicionários para um índice columnstore<br/>SEGMENTS_TABLE -> Segmentos compactados para um índice columnstore<br/>ROW_GROUPS_INFO_TABLE -> Metadados sobre grupos de linhas compactados de um índice columnstore<br/>INTERNAL OFF-ROW DATA TABLE -> Tabela interna usada para o armazenamento de uma coluna fora da linha. Nesse caso, minor_id reflete column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Parte final mais acessada da tabela de histórico baseada em disco. Linhas inseridas no histórico de linhas são inseridas primeiro nessa tabela interna com otimização de memória. Há uma tarefa em segundo plano que move as linhas de forma assíncrona desta tabela interna para a tabela de histórico baseada em disco. |
 |minor_id|  **int**|    0 indica um usuário ou uma tabela interna<br/><br/>Não 0 indica a ID de uma coluna armazenada fora de linha. Junções com column_id em sys.columns.<br/><br/>Cada coluna armazenada fora de linha tem uma linha correspondente nesta exibição do sistema.|
 
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-all-columns-that-are-stored-off-row"></a>A. Retornando todas as colunas armazenadas fora de linha
+### <a name="a-returning-all-columns-that-are-stored-off-row"></a>a. Retornando todas as colunas armazenadas fora de linha
 
 O seguinte script T-SQL ilustra uma tabela com várias colunas LOB não grandes e uma única coluna LOB:
 
@@ -97,7 +97,7 @@ WHERE moa.type=5;
 
 ### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C. Retornando o consumo de memória de índices columnstore em tabelas com otimização de memória
 
-Use a seguinte consulta para mostrar o consumo de memória de índices columnstore em tabelas com otimização de memória:
+Use a consulta a seguir para mostrar o consumo de memória de índices columnstore em tabelas com otimização de memória:
 
 ```Transact-SQL
 SELECT
@@ -113,7 +113,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-Use a seguinte consulta dividem o consumo de memória entre as estruturas internas usadas para índices columnstore em tabelas com otimização de memória:
+Use a seguinte consulta dividir o consumo de memória entre estruturas internas usadas para índices columnstore em tabelas com otimização de memória:
 
 ```Transact-SQL
 SELECT

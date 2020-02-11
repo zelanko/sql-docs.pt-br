@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106127"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Criar um novo relatório de nível (Construtor de Relatórios e SSRS)
@@ -52,7 +52,7 @@ ms.locfileid: "66106127"
   
      A figura a seguir mostra como pode ser a aparência da região de dados renderizada quando você visualizar o relatório.  
   
-     ![Relatório agrupado renderizado](../media/tablereportrendered.gif "Relatório agrupado renderizado")  
+     ![Relatório agrupado renderizado.](../media/tablereportrendered.gif "Relatório agrupado renderizado.")  
   
 3.  Em um relatório de nível, você não precisa da primeira coluna que mostra a instância de grupo. Em vez disso, copie o valor na célula de cabeçalho do grupo, exclua a coluna do grupo e cole na primeira caixa de texto na linha de cabeçalho do grupo. Para remover a coluna de grupo, clique com o botão direito do mouse na coluna de grupo ou na célula e clique em **Excluir Colunas**. A figura a seguir mostra como pode ser a aparência da região de dados na superfície de design.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66106127"
   
     2.  No painel Propriedades, em **Alinhamento**, expanda as propriedades para **Preenchimento**.  
   
-    3.  Para **esquerda**, digite um valor de preenchimento novo, como `.5in`. O preenchimento recua o texto na célula pelo valor que você especificar. O preenchimento padrão é 2 pontos. Os valores válidos para as propriedades de preenchimento são um número de zero ou um número maior, positivo, seguido por um designador de tamanho.  
+    3.  Para **esquerda**, digite um novo valor de preenchimento, como `.5in`. O preenchimento recua o texto na célula pelo valor que você especificar. O preenchimento padrão é 2 pontos. Os valores válidos para as propriedades de preenchimento são um número de zero ou um número maior, positivo, seguido por um designador de tamanho.  
   
          Os designadores de tamanho são:  
   
@@ -78,11 +78,11 @@ ms.locfileid: "66106127"
   
      Sua região de dados será semelhante ao exemplo a seguir.  
   
-     ![Região de dados para o relatório de nível](../media/steppedreportdataregion.gif "Região de dados para o relatório de nível")  
+     ![Região de dados para relatório de nível](../media/steppedreportdataregion.gif "Região de dados para relatório de nível")  
   
      **Região de dados para layout de relatório de nível**  
   
-     Na guia **Página Inicial** , clique em **Executar**. O relatório exibe o grupo com os níveis de recuo para os valores do grupo filho.  
+     Na guia **início** , clique em **executar**. O relatório exibe o grupo com os níveis de recuo para os valores do grupo filho.  
   
 ### <a name="to-create-a-stepped-report-with-multiple-groups"></a>Para criar um relatório de nível com vários grupos  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66106127"
     1.  No painel Grupos de Linha, clique com o botão direito do mouse no grupo, clique em **Adicionar Grupo**e escolha o tipo de grupo que deseja adicionar.  
   
         > [!NOTE]  
-        >  Há várias maneiras para acrescentar grupos a uma região de dados. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+        >  Há várias maneiras para acrescentar grupos a uma região de dados. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
     2.  Na caixa de diálogo **Grupo Tablix** , digite um nome.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66106127"
   
 3.  Altere o preenchimento da célula que exibe os dados do grupo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   

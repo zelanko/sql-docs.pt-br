@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
+title: sys. sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 693c449679433b733cfc3a45e2bbedf3f1d92185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106516"
 ---
-# <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
+# <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Desabilita a captura de dados de alteração para a tabela de origem especificada e a instância de captura no banco de dados atual. A captura de dados de alteração não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,17 +46,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @source_schema = ] 'source\_schema'` É o nome do esquema no qual a tabela de origem está contida. *source_schema* está **sysname**, sem padrão, e não pode ser NULL.  
+`[ @source_schema = ] 'source\_schema'`É o nome do esquema no qual a tabela de origem está contida. *source_schema* é **sysname**, sem padrão, e não pode ser nulo.  
   
  *source_schema* deve existir no banco de dados atual.  
   
-`[ @source_name = ] 'source\_name'` É o nome da tabela de origem do qual alteração captura de dados deve ser desabilitada. *source_name* está **sysname**, sem padrão, e não pode ser NULL.  
+`[ @source_name = ] 'source\_name'`É o nome da tabela de origem da qual a captura de dados de alteração deve ser desabilitada. *source_name* é **sysname**, sem padrão, e não pode ser nulo.  
   
  *source_name* deve existir no banco de dados atual.  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'` É o nome da instância de captura para desabilitar para a tabela de origem especificado. *capture_instance* está **sysname** e não pode ser NULL.  
+`[ @capture_instance = ] 'capture\_instance' | 'all'`É o nome da instância de captura a ser desabilitada para a tabela de origem especificada. *capture_instance* é **sysname** e não pode ser nulo.  
   
- Quando 'all'é especificado, todas as instâncias de captura definidas para *source_name* estão desabilitados.  
+ Quando ' all' é especificado, todas as instâncias de captura definidas para *source_name* são desabilitadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -65,10 +65,10 @@ sys.sp_cdc_disable_table
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- **sp_cdc_disable_table** descartes do change data capture alterar tabela e funções do sistema associadas com a instância de captura e a tabela de origem especificada. Exclui qualquer linha associada com a instância de captura especificada da tabelas de sistema do change data capture e define o **is_tracked_by_cdc** coluna para a entrada de tabela na [sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) exibição do catálogo como 0.  
+ **Sys. sp_cdc_disable_table** descarta a tabela de alteração da captura de dados de alterações e as funções do sistema associadas à tabela de origem e à instância de captura especificadas. Ele exclui todas as linhas associadas à instância de captura especificada das tabelas do sistema de captura de dados de alterações e define a coluna **is_tracked_by_cdc** para a entrada de tabela na exibição de catálogo [Sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) como 0.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **db_owner** função fixa de banco de dados.  
+ Requer associação na função de banco de dados fixa **db_owner** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir desabilita a captura de dados de alteração na tabela `HumanResources.Employee`.  
@@ -82,7 +82,7 @@ EXECUTE sys.sp_cdc_disable_table
     @capture_instance = N'HumanResources_Employee';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2175b8b07fcea8dc61ab0c47a4d85fcdb94dd7d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931573"
 ---
 # <a name="property-visual-c-syntax-index-with-import"></a>Propriedade (Visual C++ índice de sintaxe com #import)
@@ -42,5 +42,5 @@ void PutValue( const _variant_t & pval );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

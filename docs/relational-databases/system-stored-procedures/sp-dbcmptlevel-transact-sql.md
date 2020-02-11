@@ -18,21 +18,21 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108214"
 ---
-# <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
+# <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Define certos comportamentos de banco de dados como sendo compatíveis com a versão especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [nível de compatibilidade de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use o [nível de compatibilidade de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,9 +43,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] name` É o nome do banco de dados para o qual o nível de compatibilidade deve ser alterado. Os nomes de banco de dados devem obedecer às regras para identificadores. *nome da* está **sysname**, com um padrão NULL.  
+`[ @dbname = ] name`É o nome do banco de dados para o qual o nível de compatibilidade deve ser alterado. Os nomes de banco de dados devem obedecer às regras para identificadores. o *nome* é **sysname**, com um padrão de NULL.  
   
-`[ @new_cmptlevel = ] version` É a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com que o banco de dados é compatível. *versão* está **tinyint**, com um padrão NULL. O valor deve ser um dos seguintes:  
+`[ @new_cmptlevel = ] version`É a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a qual o banco de dados deve ser tornado compatível. a *versão* é **tinyint**, com um padrão de NULL. O valor deve ser um dos seguintes:  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -61,20 +61,20 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Se nenhum parâmetro for especificado ou se o *nome* parâmetro não for especificado, **sp_dbcmptlevel** retornará um erro.  
+ Se nenhum parâmetro for especificado ou se o parâmetro *Name* não for especificado, **sp_dbcmptlevel** retornará um erro.  
   
- Se *nome* for especificado sem *versão*, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retorna uma mensagem que exibe o nível de compatibilidade atual do banco de dados especificado.  
+ Se *Name* for especificado sem *version*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará uma mensagem exibindo o nível de compatibilidade atual do banco de dados especificado.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter uma descrição de níveis de compatibilidade, consulte [nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Para obter uma descrição dos níveis de compatibilidade, consulte [nível de compatibilidade de ALTER DATABASE &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="permissions"></a>Permissões  
- Somente o proprietário do banco de dados, os membros do **sysadmin** função de servidor fixa e o **db_owner** função de banco de dados fixa (se você estiver alterando o banco de dados atual) pode executar este procedimento.  
+ Somente o proprietário do banco de dados, os membros da função de servidor fixa **sysadmin** e a função de banco de dados fixa **db_owner** (se você estiver alterando o banco de dados atual) podem executar este procedimento.  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Palavras-chave reservadas &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
+ [Palavras-chave reservadas &#40;&#41;Transact-SQL](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797806"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar em caminhos do SQL Server PowerShell
@@ -25,14 +25,14 @@ ms.locfileid: "72797806"
   
  O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa um subconjunto de cmdlets do provedor, mostrados na tabela a seguir:  
   
-|Cmdlet|Alias canônico|Alias de cmd|Alias de shell do UNIX|Descrição|  
+|cmdlet|Alias canônico|Alias de cmd|Alias de shell do UNIX|DESCRIÇÃO|  
 |------------|---------------------|---------------|----------------------|-----------------|  
-|**Get-Location**|**gl**|**pwd**|**pwd**|Obtém o nó atual.|  
-|`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Altera o nó atual.|  
-|**Get-ChildItem**|**gci**|**dir**|**ls**|Lista os objetos armazenados no nó atual.|  
+|**Obter local**|**gl**|**pwd**|**pwd**|Obtém o nó atual.|  
+|`Set-Location`|**SL**|**CD, chdir**|**CD, chdir**|Altera o nó atual.|  
+|**Get-ChildItem**|**gci**|**comando**|**ls**|Lista os objetos armazenados no nó atual.|  
 |**Get-Item**|**gi**|||Retorna as propriedades do item atual.|  
-|**Rename-Item**|**rni**|**rn**|**ren**|Renomeia um objeto.|  
-|**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|Remove um objeto.|  
+|**Renomear-item**|**rni**|**RN**|**Outlook**|Renomeia um objeto.|  
+|**Remover item**|**referencia**|**del, RD**|**RM, rmdir**|Remove um objeto.|  
   
 > [!IMPORTANT]  
 >  Alguns identificadores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (nomes de objeto) contêm caracteres não suportados pelos nomes de caminho do Windows PowerShell. Para obter mais informações sobre como usar os nomes que contêm esses caracteres, consulte [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "72797806"
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Retorna o nome do computador local. Se você usou o SMO ou o WMI para se conectar às instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] em outros computadores, esses computadores também estarão listados.|  
 |SQLSERVER:\SQL\\*ComputerName*|A lista de instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] no computador.|  
-|SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*|A lista de tipos de objeto de nível superior na instância, como Pontos de Extremidade, Certificados e Bancos de Dados.|  
+|SqlServer: \ SQL\\*ComputerName*\\*InstanceName*|A lista de tipos de objeto de nível superior na instância, como Pontos de Extremidade, Certificados e Bancos de Dados.|  
 |Nó da classe de objeto, como Bancos de Dados|A lista de objetos desse tipo, como a lista de bancos de dados: master, model, AdventureWorks20008R2.|  
 |Nó do nome de objeto, como AdventureWorks2012|A lista de tipos de objeto contida no objeto. Por exemplo, um banco de dados poderia listar tipos de objeto, como tabelas e exibições.|  
   
@@ -130,8 +130,8 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Provedor do SQL Server PowerShell](sql-server-powershell-provider.md)   
- [Trabalhar com caminhos do SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Provedor de SQL Server PowerShell](sql-server-powershell-provider.md)   
+ [Trabalhar com caminhos de SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
  [Converter URNs em caminhos de provedor SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

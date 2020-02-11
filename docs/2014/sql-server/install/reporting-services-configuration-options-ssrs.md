@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1b54661c47ff40af595be55d444f6c0ffb4bc2cd
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952121"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Opções de configuração do Reporting Services (SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "71952121"
   
  Em alguns casos, se um certificado SSL estiver instalado no computador e estiver associado a um caractere curinga forte, a Instalação criará as URLs do Reporting Services usando o prefixo HTTPS. Para obter mais informações sobre como os certificados são mapeados para URLs de Reporting Services, consulte [Configurando um servidor de relatório para conexões de protocolo SSL (SSL)](https://go.microsoft.com/fwlink/?LinkId=199089) (https://go.microsoft.com/fwlink/?LinkId=199089) em manuais online do SQL Server.  
   
- Para obter as informações mais recentes sobre [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e a instalação e a configuração desta versão, consulte [informações adicionais de instalação](https://go.microsoft.com/fwlink/?LinkId=207425) (https://go.microsoft.com/fwlink/?LinkId=207425).  
+ Para obter as informações mais recentes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sobre o e a instalação e configuração desta versão, consulte [informações adicionais](https://go.microsoft.com/fwlink/?LinkId=207425) dehttps://go.microsoft.com/fwlink/?LinkId=207425)instalação (.  
   
 ## <a name="options"></a>Opções  
   
@@ -48,14 +48,14 @@ ms.locfileid: "71952121"
 #### <a name="install-only"></a>Instalar somente  
  Instala os arquivos de programas do servidor de relatório, cria a conta do serviço Servidor de Relatório e registra o provedor WMI (Instrumentação de Gerenciamento do Windows) do servidor de relatório. Essa opção de instalação é chamada de instalação "somente arquivos". Selecione-a se você não quiser usar a configuração padrão. Se não for possível instalar a configuração padrão ou se você estiver instalando um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que inclua o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], essa será a única opção disponível. Para obter mais informações sobre uma instalação somente de arquivos, consulte [instalação somente de arquivos (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093).  
   
- Depois que a Instalação for concluída, você deverá criar o banco de dados do servidor de relatório e configurar o servidor de relatório antes que ele possa ser usado. Para configurar um servidor de relatório e criar o banco de dados, use a ferramenta Gerenciador de Configurações do Reporting Services. Para obter mais informações, consulte [como criar um banco de dados do servidor de relatório (configuração do Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) e [Configurar uma conexão de banco de dados do servidor de relatório](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
+ Depois que a Instalação for concluída, você deverá criar o banco de dados do servidor de relatório e configurar o servidor de relatório antes que ele possa ser usado. Para configurar um servidor de relatório e criar o banco de dados, use a ferramenta Gerenciador de Configurações do Reporting Services. Para obter mais informações, consulte [como: criar um banco de dados do servidor de relatório (configuração do Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) e [Configurar uma conexão de banco de dados do servidor de relatório](https://go.microsoft.com/fwlink/?LinkId=199095) (.https://go.microsoft.com/fwlink/?LinkId=199095)  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Modo do SharePoint do Reporting Services  
   
 #### <a name="install-only"></a>Instalar somente  
  Instala os arquivos de programa do servidor de relatório e os cmdlets do PowerShell. Depois que a instalação for concluída, você precisará iniciar os serviços do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e criar um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte o seguinte:  
   
--   [Instalando o servidor de relatório do modo do SharePoint Reporting Services para Power View e alertas de dados](https://go.microsoft.com/fwlink/?LinkId=207543) (https://go.microsoft.com/fwlink/?LinkId=207543).  
+-   [Instalando o servidor de relatório do modo SharePoint Reporting Services para Power View e alertas de dados](https://go.microsoft.com/fwlink/?LinkId=207543) (https://go.microsoft.com/fwlink/?LinkId=207543).  
   
 -   [Instale Reporting Services modo do SharePoint como um farm de servidores único](https://go.microsoft.com/fwlink/?LinkId=207544) (https://go.microsoft.com/fwlink/?LinkId=207544).  
   
@@ -72,10 +72,10 @@ ms.locfileid: "71952121"
   
 -   Baixar e instalar o suplemento. Para obter mais informações, consulte [onde encontrar o suplemento de Reporting Services para produtos do SharePoint](https://go.microsoft.com/fwlink/?LinkID=208634) (https://go.microsoft.com/fwlink/?LinkID=208634).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar Gerenciador de Configurações do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=199096)   
  [Criar um banco de dados do servidor de relatório (configuração do Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094)   
- [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)   
+ [Atualizar e migrar Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)   
  [Instalação de prompt de comando de modo do SharePoint do Reporting Services e modo nativo](https://go.microsoft.com/fwlink/?LinkId=217620)  
   
   

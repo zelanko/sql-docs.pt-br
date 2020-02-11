@@ -24,23 +24,23 @@ ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120260"
 ---
-# <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
+# <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o texto da instrução SQL do identificador SQL especificado.  
   
 > [!IMPORTANT]  
->  Esse recurso será removido em uma versão futura do Microsoft SQL Server. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use sys.dm_exec_sql_text. Para obter mais informações, consulte [DM exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  Esse recurso será removido em uma versão futura do Microsoft SQL Server. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use sys.dm_exec_sql_text. Para obter mais informações, consulte [Sys. dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,28 +51,28 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="arguments"></a>Argumentos  
  *SqlHandle*  
- É o valor do identificador. *SqlHandle* está **varbinary(64)** sem nenhum padrão.  
+ É o valor do identificador. *SqlHandle* é **varbinary (64)** sem padrão.  
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|ID do banco de dados. Para instruções SQL preparadas e ad hoc, a ID do banco de dados no qual as instruções foram compiladas.|  
 |objectid|**int**|ID do objeto do banco de dados. É NULL para instruções SQL ad hoc.|  
-|number|**smallint**|Indica o número do grupo e se os procedimentos estão agrupados.<br /><br /> 0 = Entradas não são procedimentos.<br /><br /> NULL = Instruções SQL ad hoc.|  
+|número|**smallint**|Indica o número do grupo e se os procedimentos estão agrupados.<br /><br /> 0 = Entradas não são procedimentos.<br /><br /> NULL = Instruções SQL ad hoc.|  
 |encrypted|**bit**|Indica se o objeto está criptografado.<br /><br /> 0 = não criptografado<br /><br /> 1 = Criptografado|  
 |text|**text**|É o texto da instrução SQL. É NULL para objetos criptografados.|  
   
 ## <a name="remarks"></a>Comentários  
- Você pode obter um identificador SQL válido da coluna sql_handle dos [. DM exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) exibição de gerenciamento dinâmico.  
+ Você pode obter um identificador SQL válido na coluna sql_handle da exibição de gerenciamento dinâmico do [Transact-SQL&#41;do &#40;dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
   
- Se você passar um identificador que não existe no cache, fn_get_sq**l** retorna um conjunto de resultados vazio. Se você passar um identificador inválido, o lote parará e uma mensagem de erro será retornada.  
+ Se você passar um identificador que não existe mais no cache, fn_get_sq**l** retornará um conjunto de resultados vazio. Se você passar um identificador inválido, o lote parará e uma mensagem de erro será retornada.  
   
- O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] não é possível armazenar em cache alguns [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, como instruções de cópia em massa e instruções com literais de cadeia de caracteres que são maiores que 8 KB. Identificadores para essas instruções não podem ser recuperados usando fn_get_sql.  
+ O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] não pode armazenar [!INCLUDE[tsql](../../includes/tsql-md.md)] em cache algumas instruções, como instruções de cópia em massa e instruções com literais de cadeia de caracteres maiores que 8 KB. Identificadores para essas instruções não podem ser recuperados usando fn_get_sql.  
   
- O **texto** coluna do conjunto de resultados é filtrada para texto que pode conter senhas. Para obter mais informações relacionadas à segurança de procedimentos armazenados que não são monitorados, consulte [filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md).  
+ A coluna de **texto** do conjunto de resultados é filtrada para texto que pode conter senhas. Para obter mais informações sobre procedimentos armazenados relacionados à segurança que não são monitorados, consulte [filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md).  
   
- A função fn_get_sql retorna informações semelhantes para o [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) comando. Veja, a seguir, exemplos de quando a função fn_get_sql pode ser usada, porque o DBCC INPUTBUFFER não pode ser usado:  
+ A função fn_get_sql retorna informações que são semelhantes ao comando [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) . Veja, a seguir, exemplos de quando a função fn_get_sql pode ser usada, porque o DBCC INPUTBUFFER não pode ser usado:  
   
 -   Quando eventos têm mais de 255 caracteres.  
   
@@ -93,9 +93,9 @@ SELECT * FROM sys.fn_get_sql(@Handle);
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

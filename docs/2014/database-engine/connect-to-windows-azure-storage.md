@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154299"
 ---
 # <a name="connect-to-azure-storage"></a>Conectar-se a um Armazenamento do Azure
-  Use a caixa de diálogo **conexão de armazenamento do Azure** para especificar uma conta de armazenamento e validar sua conexão com o Azure.  
+  Use a caixa de diálogo **Conexão de Armazenamento do Microsoft Azure** para especificar uma conta de armazenamento e validar sua conexão com o Azure.  
   
 ## <a name="options"></a>Opções  
- Especifique as seguintes informações sobre sua conta do Azure e clique em **Avançar** para continuar.  
+ Especifique as informações a seguir sobre sua conta do Azure e clique em **Avançar** para continuar.  
   
 1.  **Conta de Armazenamento** – Especifique o nome da conta de armazenamento.  
   

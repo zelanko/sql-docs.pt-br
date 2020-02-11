@@ -15,13 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797880"
 ---
-# <a name="get-help-sql-server-powershell"></a>Obter Ajuda do SQL Server PowerShell
+# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Há várias origens de informações sobre como usar o provedor e os cmdlets do provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell. Isso inclui a ajuda que está disponível no ambiente Windows PowerShell.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
@@ -30,7 +30,7 @@ ms.locfileid: "72797880"
  Para obter uma visão geral do provedor e os cmdlets do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , veja [SQL Server PowerShell](../powershell/sql-server-powershell.md).  
   
 ### <a name="help-in-the-windows-powershell-environment"></a>Ajude no ambiente de Windows PowerShell  
- Use o cmdlet **Get-Help** para obter ajuda no ambiente Windows PowerShell. **Get-Help** fornece ajuda básica para a linguagem Windows PowerShell e os diversos cmdlets e provedores disponíveis no Windows PowerShell.  
+ Use o cmdlet **Get-Help** para obter ajuda no ambiente Windows PowerShell. **Get-Help** fornece ajuda básica para a linguagem do Windows PowerShell e os vários cmdlets e provedores disponíveis no Windows PowerShell.  
   
  Para obter mais informações sobre os modos você pode usar **Get-Help**, veja [Get-Help: Obtendo Ajuda](https://go.microsoft.com/fwlink/?LinkId=102136).  
   
@@ -42,14 +42,14 @@ ms.locfileid: "72797880"
   
  A entrada *-Query* ou *-QueryFromFile* pode conter:  
   
--   Variáveis e comandos do**sqlcmd** . Para obter informações sobre essas variáveis e comandos, consulte a seção Comentários de [sqlcmd Utility](../tools/sqlcmd-utility.md).  
+-   comandos e variáveis **sqlcmd** . Para obter informações sobre essas variáveis e comandos, consulte a seção Comentários de [sqlcmd Utility](../tools/sqlcmd-utility.md).  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] . Para obter mais informações sobre a linguagem [!INCLUDE[tsql](../includes/tsql-md.md)], veja [Referência de Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference).  
+-   Instruções[!INCLUDE[tsql](../includes/tsql-md.md)] . Para obter mais informações sobre a linguagem [!INCLUDE[tsql](../includes/tsql-md.md)], veja [Referência de Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference).  
   
 -   Instruções XQuery. Para obter mais informações sobre a linguagem XQuery com suporte no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], veja [Referência de linguagem XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 ## <a name="get-help-for-a-sql-server-cmdlet"></a>Obtenha Ajuda para um cmdlet de SQL Server  
- **Para obter Ajuda para um cmdlet**  
+ **Para obter ajuda para um cmdlet**  
   
 -   Execute Get-Help especificando o nome do cmdlet e o nível de ajuda a ser retornada.  
   
@@ -101,7 +101,7 @@ Get-Help SQLServer
 ```  
   
 ## <a name="list-methods-and-properties"></a>Listar métodos e propriedades  
- **Para listar os métodos e propriedades para um nó em um caminho de provedor do SQL Server**  
+ **Para listar os métodos e as propriedades de um nó em um caminho do provedor de SQL Server**  
   
 1.  O CD para um nó no caminho do SQL Server ou crie uma variável definida para esse local.  
   
@@ -122,6 +122,6 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Provedor do SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Provedor de SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
  [Usar cmdlets do Mecanismo de Banco de Dados](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

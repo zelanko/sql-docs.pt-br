@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135130"
 ---
 # <a name="using-tuple-expressions"></a>Usando expressões de tupla
@@ -36,15 +36,15 @@ ms.locfileid: "68135130"
   
 -   Se a hierarquia mencionada implicitamente tiver um membro padrão, o membro padrão será adicionado à tupla.  
   
--   Se a hierarquia mencionada implicitamente não tem nenhum membro padrão, o **(All)** membro da hierarquia padrão será usado.  
+-   Se a hierarquia mencionada implicitamente não tiver nenhum membro padrão, o membro **(All)** da hierarquia padrão será usado.  
   
 -   Se a hierarquia mencionada implicitamente não tiver nenhum membro padrão, o primeiro membro do nível mais alto da hierarquia será utilizado.  
   
 ## <a name="one-member-tuples"></a>Tuplas de um membro  
  Se a expressão de tupla tiver um único membro, o MDX converterá o membro em uma tupla de um membro para avaliar a expressão. Em outras palavras, fornecer a expressão de membro `[Measures].[TestMeasure]` em vez de uma expressão de tupla é funcionalmente equivalente à expressão de tupla `( [Measures].[TestMeasure] ).`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

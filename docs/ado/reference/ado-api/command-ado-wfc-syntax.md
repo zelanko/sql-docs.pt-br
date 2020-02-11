@@ -14,14 +14,14 @@ ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4722316cc92567000294c57089afd8840bea1bcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919824"
 ---
 # <a name="command-ado---wfc-syntax"></a>Comando (ADO – Sintaxe WFC)
-## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>pacote com. ms. wfc. Data  
   
 ### <a name="constructor"></a>Construtor  
   
@@ -44,7 +44,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- O **executeUpdate** método é um método de caso especial que chama o ADO subjacente **executar** método com determinados parâmetros. O **executeUpdate** método não oferece suporte para o retorno de uma **conjunto de registros** objeto, portanto, o **executar** desse método *opções* parâmetro é modificado com **AdoEnums.ExecuteOptions.NORECORDS**. Após o **execute** método é concluído, ele é atualizado *RecordsAffected* parâmetro é passado de volta para o **executeUpdate** método, que, por fim, é retornado como um **int**.  
+ O método **ExecuteUpdate** é um método de caso especial que chama o método de **execução** ADO subjacente com determinados parâmetros. O método **ExecuteUpdate** não dá suporte ao retorno de um objeto **Recordset** , portanto, o parâmetro *Options* do método **Execute** é modificado com **AdoEnums. executeoptions. nograves**. Depois que o método **Execute** é concluído, seu parâmetro *RecordsAffected* atualizado é passado de volta para o método **ExecuteUpdate** , que finalmente é retornado como um **int**.  
   
 ### <a name="properties"></a>Propriedades  
   
@@ -69,5 +69,5 @@ public com.ms.wfc.data.Parameters getParameters()
 public AdoProperties getProperties()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
