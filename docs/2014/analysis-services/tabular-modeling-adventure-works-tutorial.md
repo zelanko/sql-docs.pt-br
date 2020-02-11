@@ -1,5 +1,5 @@
 ---
-title: (Tutorial do Adventure Works) de modelagem de tabela | Microsoft Docs
+title: Modelagem de tabela (tutorial do Adventure Works) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af4d5dfa6d59338fb9640143b387b78421375e05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067798"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modelagem de tabela (Tutorial do Adventure Works)
@@ -35,18 +35,19 @@ ms.locfileid: "66067798"
   
 -   Como criar partições que dividem dados de tabela em partes lógicas menores que podem ser processadas independentemente de outras partições.  
   
--   Como proteger dados e objetos de modelo criando funções com membros de usuário.  
+-   Como proteger os dados e objetos de modelo criando funções com membros de usuário.  
   
 -   Como implantar um modelo tabular em uma área restrita ou instância de produção do Analysis Services em execução no modo Tabular.  
   
 ## <a name="tutorial-scenario"></a>Cenário do tutorial  
- Este tutorial baseia-se na [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde emprega 500 funcionários. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  
+ Este tutorial baseia-se na [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde emprega 500 funcionários. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  
   
  Para respaldar melhor as necessidades de análise de dados das equipes de vendas e de marketing e da gerência sênior, você fica encarregado de criar um modelo de tabela para que os usuários analisem dados de vendas pela Internet no banco de dados de exemplo AdventureWorksDW.  
   
- Para concluir o tutorial e o modelo de tabela Adventure Works Internet Sales, você deve concluir várias lições. Em cada lição, há várias tarefas; a execução de cada uma delas na ordem é necessária para concluir a lição. Embora em uma lição específica possa haver várias tarefas que geram um resultado semelhante, no entanto, o modo como você conclui cada tarefa é ligeiramente diferente. Isso acontece para mostrar que geralmente há mais de uma maneira de concluir uma tarefa específica e para desafiá-lo a usar as habilidades adquiridas nas tarefas anteriores.  
+ Para concluir o tutorial e o modelo de tabela Adventure Works Internet Sales, você deve concluir várias lições. Em cada lição há um número de tarefas; é necessário concluir todas as tarefas na ordem certa para concluir a lição. Embora em uma lição específica possa haver várias tarefas que geram um resultado semelhante, no entanto, o modo como você conclui cada tarefa é ligeiramente diferente. Isso acontece para mostrar que geralmente há mais de uma maneira de concluir uma tarefa específica e para desafiá-lo a usar as habilidades adquiridas nas tarefas anteriores.  
   
- A finalidade das lições é conduzi-lo pelo processo de criação de um modelo tabular básico executado no modo Em Memória usando muitos dos recursos incluídos em [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Como cada lição é criada após a lição anterior, você deve concluir as lições na ordem. Depois que você tiver concluído todas as lições, terá criado e implantado o modelo de tabela de exemplo Adventure Works Internet Sales em um servidor do Analysis Services.  
+ A finalidade das lições é conduzi-lo pelo processo de criação de um modelo tabular básico executado no modo Em Memória usando muitos dos recursos incluídos em [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Já que cada lição faz uso do conteúdo da lição anterior, você deve concluir as lições em ordem. Depois que você tiver concluído todas as lições, terá criado e implantado o modelo de tabela de exemplo Adventure Works Internet Sales em um servidor do Analysis Services.  
   
 > [!NOTE]  
 >  Este tutorial não fornece lições ou informações sobre como gerenciar um banco de dados modelo de tabela implantado usando o SQL Server Management Studio ou usando um aplicativo cliente de relatórios para se conectar a um modelo implantado para procurar dados de modelo.  
@@ -58,19 +59,20 @@ ms.locfileid: "66067798"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   Banco de dados de exemplo AdventureWorksDW Este banco de dados de exemplo inclui os dados necessários para concluir este tutorial. Para baixar o banco de dados de exemplo, consulte [ https://go.microsoft.com/fwlink/?LinkID=335807 ](https://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Banco de dados de exemplo AdventureWorksDW Esse banco de dados de exemplo inclui os dados necessários para concluir este tutorial. Para baixar o banco de dados de [https://go.microsoft.com/fwlink/?LinkID=335807](https://go.microsoft.com/fwlink/?LinkID=335807)exemplo, consulte.  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 ou posterior (para uso com o recurso Analisar no Excel na lição 11)  
+-   
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 ou posterior (para uso com o recurso Analisar no Excel na lição 11)  
   
 ## <a name="lessons"></a>Lições  
  Este tutorial inclui as seguintes lições:  
   
-|Lição|Tempo estimado para concluir|  
+|Lição|Tempo estimado para conclusão|  
 |------------|--------------------------------|  
 |[Lição 1: Criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
 |[Lição 2: Adicionar dados](lesson-2-add-data.md)|20 minutos|  
 |[Lição 3: Renomear colunas](rename-columns.md)|20 minutos|  
-|[Lição 4: Marcar como tabela de data](lesson-3-mark-as-date-table.md)|3 minutos|  
+|[Lição 4: Marcar como Tabela de Data](lesson-3-mark-as-date-table.md)|3 minutos|  
 |[Lição 5: Criar relações](lesson-4-create-relationships.md)|10 minutos|  
 |[Lição 6: Criar colunas calculadas](lesson-5-create-calculated-columns.md)|15 minutos|  
 |[Lição 7: Criar medidas](lesson-6-create-measures.md)|30 minutos|  
@@ -87,12 +89,12 @@ ms.locfileid: "66067798"
   
  Este tutorial inclui as seguintes lições suplementares:  
   
-|Lição|Tempo estimado para concluir|  
+|Lição|Tempo estimado para conclusão|  
 |------------|--------------------------------|  
 |[Implementar a segurança dinâmica usando filtros de linha](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 minutos|  
-|[Configurar propriedades de relatório para relatórios do Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)configurar propriedades de relatório para relatórios do Power View|30 minutos|  
+|[Configurar Propriedades de relatório para relatórios de Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) Configurar propriedades de relatório para relatórios de Power View|30 minutos|  
   
 ## <a name="next-step"></a>Próxima etapa  
- Para começar o tutorial, vá para a primeira lição: [Lição 1: Criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md).  
+ Para iniciar o tutorial, vá para a primeira lição: [Lição 1: Criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md).  
   
   

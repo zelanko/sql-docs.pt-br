@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62651485"
 ---
 # <a name="create-nonclustered-indexes"></a>Criar índices não clusterizados
@@ -45,7 +45,7 @@ ms.locfileid: "62651485"
 ###  <a name="Implementations"></a> Implementações comuns  
  Os índices não clusterizados são implementados das seguintes maneiras:  
   
--   **Restrições UNIQUE**  
+-   **Restrições EXCLUSIVAs**  
   
      Quando se cria uma restrição UNIQUE, é criado, por padrão, um índice não clusterizado exclusivo para impor uma restrição UNIQUE por padrão. Você pode especificar um índice clusterizado exclusivo caso ainda não exista um índice clusterizado na tabela. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62651485"
   
 3.  Clique com o botão direito do mouse na tabela na qual você deseja criar um índice não clusterizado e selecione **Design**.  
   
-4.  No menu **Designer de Tabela** , clique em **Índices/Chaves**.  
+4.  No menu **Designer de tabela** , clique em **índices/chaves**.  
   
 5.  Na caixa de diálogo **Índices/Chaves** , clique em **Adicionar**.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "62651485"
   
 7.  Na grade, selecione **Criar como Clusterizado**e escolha **Não** na lista suspensa, à direita da propriedade.  
   
-8.  Clique em **Fechar**.  
+8.  Clique em **fechar**  
   
-9. No menu **Arquivo** , clique em **Salvar**_table_name_.  
+9. No menu **arquivo** , clique em **salvar**_table_name_.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Para criar um índice não clusterizado usando o Pesquisador de Objetos  
   

@@ -1,5 +1,5 @@
 ---
-title: Definir referência de moeda Local (Assistente de Business Intelligence) | Microsoft Docs
+title: Definir referência de moeda local (Assistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082175"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Definir Referência de Moeda Local (Assistente de Business Intelligence)
@@ -27,20 +27,20 @@ ms.locfileid: "66082175"
   
 ## <a name="options"></a>Opções  
  **Identificadores da tabela de fatos**  
- Selecione para especificar um atributo que forneça identificadores de moedas locais em uma dimensão de moedas referenciada pela tabela de fatos que contém as medidas selecionadas na página **Selecionar Medidas** . (Uma moeda de dimensão de uma dimensão cuja `Type` estiver definida como *moeda*.)  
+ Selecione para especificar um atributo que forneça identificadores de moedas locais em uma dimensão de moedas referenciada pela tabela de fatos que contém as medidas selecionadas na página **Selecionar Medidas** . (Uma dimensão de moeda em uma `Type` cuja propriedade é definida como *moeda*.)  
   
- Use esta opção quando a própria transação determinar a moeda local daquela transação. Por exemplo, nos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados de exemplo -[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], o grupo de medidas Vendas pela Internet tem uma relação de dimensão regular com a dimensão de moeda. A tabela de fatos desse grupo de medidas contém uma coluna de chave estrangeira que faz referência aos identificadores de moedas na tabela de dimensões daquela dimensão.  
+ Use esta opção quando a própria transação determinar a moeda local daquela transação. Por exemplo [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , no banco de dados de[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]exemplo –, o grupo de medidas Vendas pela Internet tem uma relação de dimensão regular com a dimensão moeda. A tabela de fatos desse grupo de medidas contém uma coluna de chave estrangeira que faz referência aos identificadores de moedas na tabela de dimensões daquela dimensão.  
   
- **Dimensão de moeda e atributo referenciados pelos dados de fato**  
- Selecione o atributo de moeda dentro de uma dimensão de moedas cujos membros representam identificadores de moedas locais. (Atributo de moeda é um cuja `Type` estiver definida como *moeda*.)  
+ **Dimensão e atributo de moeda referenciados pelos dados de fato**  
+ Selecione o atributo de moeda dentro de uma dimensão de moedas cujos membros representam identificadores de moedas locais. (Um atributo de moeda é aquele `Type` cuja propriedade é definida como *Currency*.)  
   
 > [!NOTE]  
 >  Esta opção não estará disponível se a opção **Identificadores da tabela de fatos** não estiver selecionada.  
   
- **Atributos na tabela de dimensões**  
+ **Atributos da tabela de dimensões**  
  Selecione para especificar um atributo de uma dimensão relacionada ao grupo de medidas que contém identificadores de moedas locais.  
   
- Use esta opção quando a relação entre uma transação e outra entidade corporativa, como um local, determinar a moeda local daquela transação. Por exemplo, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados de exemplo -[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], o grupo de medidas relatórios financeiros tem uma relação de dimensão referenciada com a dimensão moeda por meio da dimensão organização. Isto é, a tabela de fatos do grupo de medidas Relatório Financeiro contém uma coluna de chave estrangeira que faz referência a membros na tabela de dimensões daquela dimensão. A tabela de dimensões da dimensão Organização, por sua vez, contém uma coluna de chave estrangeira que faz referência aos identificadores de moedas na tabela de dimensões Moeda.  
+ Use esta opção quando a relação entre uma transação e outra entidade corporativa, como um local, determinar a moeda local daquela transação. Por exemplo, no banco [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de dados de[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]exemplo –, o grupo de medidas relatório financeiro tem uma relação de dimensão referenciada com a dimensão moeda por meio da dimensão organização. Isto é, a tabela de fatos do grupo de medidas Relatório Financeiro contém uma coluna de chave estrangeira que faz referência a membros na tabela de dimensões daquela dimensão. A tabela de dimensões da dimensão Organização, por sua vez, contém uma coluna de chave estrangeira que faz referência aos identificadores de moedas na tabela de dimensões Moeda.  
   
  **Atributo de dimensão que faz referência à moeda**  
  Selecione o atributo dentro de uma dimensão cujos membros fazem referência a identificadores de moeda local.  
@@ -48,9 +48,9 @@ ms.locfileid: "66082175"
 > [!NOTE]  
 >  Esta opção não estará disponível se a opção **Atributos da tabela de dimensões** não estiver selecionada.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

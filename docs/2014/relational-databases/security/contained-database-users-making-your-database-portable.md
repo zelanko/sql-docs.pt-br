@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655449"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuários de bancos de dados independentes - Tornando seu banco de dados portátil
@@ -34,7 +34,7 @@ ms.locfileid: "62655449"
 ## <a name="contained-database-user-model"></a>Modelo de usuário de banco de dados independente  
  O logon no banco de dados mestre não está presente no modelo de usuário de banco de dados independente. Em vez disso, o processo de autenticação ocorre no banco de dados do usuário e o usuário no banco de dados não tem um logon associado no banco de dados mestre. O modelo de usuário de banco de dados independente dá suporte à autenticação do Windows (em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e à autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Para se conectar como um usuário de banco de dados independente, a cadeia de conexão sempre deve conter um parâmetro para o banco de dados do usuário para que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] saiba qual banco de dados é responsável por gerenciar o processo de autenticação. A atividade do usuário de banco de dados independente está limitada ao banco de dados responsável pela autenticação. Portanto, ao se conectar como um usuário de banco de dados independente, a conta de usuário do banco de dados deve ser criada independentemente em cada banco de dados de que o usuário precisará. Para alterar os bancos de dados, os usuários [!INCLUDE[ssSDS](../../includes/sssds-md.md)] devem criar uma nova conexão. Os usuários de bancos de dados independentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão alterar bancos de dados se um usuário idêntico estiver presente em outro banco de dados.  
   
- Para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], nenhuma alteração é necessária na cadeia de conexão ao alternar do modelo tradicional para o modelo de usuário de banco de dados independente. Para conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o nome do banco de dados deve ser adicionado à cadeia de conexão se não ainda estiver presente.  
+ Para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], nenhuma alteração é necessária na cadeia de conexão ao alternar do modelo tradicional para o modelo de usuário de banco de dados independente. Para conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o nome do banco de dados deve ser adicionado à cadeia de conexão se não ainda estiver presente.  
   
 > [!IMPORTANT]  
 >  Ao usar o modelo tradicional, as funções de nível de servidor e permissões de nível de servidor podem limitar o acesso a todos os bancos de dados. Ao usar o modelo de banco de dados independente, os proprietários e os usuários do banco de dados a permissão ALTER ANY USER podem conceder acesso ao banco de dados. Isso reduz o controle de acesso dos logons do servidor com privilégios altos e expande o controle de acesso para incluir os usuários do banco de dados com privilégios altos.  
@@ -51,7 +51,7 @@ ms.locfileid: "62655449"
   
 -   [Firewall de banco de dados SQL do Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [Como definir as configurações do firewall (Banco de Dados SQL do Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [Como: definir as configurações do firewall (Banco de Dados SQL do Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule &#40;Banco de Dados SQL do Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62655449"
   
 -   Use senhas com a mesma força que normalmente usaria para logons.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bancos de dados independentes](../databases/contained-databases.md)   
  [Práticas recomendadas de segurança com bancos de dados independentes](../databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)  

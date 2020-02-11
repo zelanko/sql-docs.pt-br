@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6a8625af05b13331d513608bc20eb8dd9678d01a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714573"
 ---
 # <a name="using-url-access-in-a-web-application"></a>Usando o acesso à URL em um aplicativo Web
@@ -78,9 +78,9 @@ http://server/reportserver?/SampleReports/Territory Sales
 Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Integrando o Reporting Services em aplicativos](../application-integration/integrating-reporting-services-into-applications.md)   
- [Integrando o Reporting Services usando o acesso à URL](integrating-reporting-services-using-url-access.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Integrando Reporting Services em aplicativos](../application-integration/integrating-reporting-services-into-applications.md)   
+ [Integrando Reporting Services usando o acesso à URL](integrating-reporting-services-using-url-access.md)   
  [Usando o acesso à URL em um aplicativo do Windows](integrating-reporting-services-using-url-access-windows-application.md)   
  [Acesso à URL &#40;SSRS&#41;](../url-access-ssrs.md)  
   

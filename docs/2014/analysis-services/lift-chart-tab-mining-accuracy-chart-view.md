@@ -1,5 +1,5 @@
 ---
-title: Guia gráficos (exibição de gráfico de precisão de mineração) de comparação de precisão | Microsoft Docs
+title: Guia gráfico de comparação de precisão (exibição de gráfico de exatidão de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078097"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Guia do gráfico de comparação de precisão (Exibição de gráfico de precisão de mineração)
@@ -39,12 +39,12 @@ ms.locfileid: "66078097"
   
  O gráfico de ganho não estará disponível se uma coluna previsível contínua for selecionada na guia **Mapeamento de Coluna** .  
   
- **Copiar**  
+ **Copy**  
  Copiar o gráfico para a área de transferência.  
   
-## <a name="see-also"></a>Consulte também  
- [Designer do gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Teste e validação de tarefas e instruções &#40;mineração de dados&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Designer de gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Tarefas de teste e validação e instruções &#40;mineração de dados&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Teste e validação &#40;mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Localize a caixa de diálogo de tabela (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Localizar tabela (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081077"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Localizar Tabela (Analysis Services - Dados Multidimensionais)
@@ -35,15 +35,15 @@ ms.locfileid: "66081077"
 -   Clicando com o botão direito do mouse na tela de fundo do painel **Exibição da Fonte de Dados** na página **Estrutura de Mineração** do **Designer de Modelo de Mineração de Dados** e selecionando **Localizar Tabela**.  
   
 ## <a name="options"></a>Opções  
- **Selecione uma tabela da exibição da fonte de dados**  
+ **Selecionar uma tabela na exibição da fonte de dados**  
  Selecione a tabela a ser localizada no painel **Exibição da Fonte de Dados** . Esta opção exibe uma grade de objetos disponíveis e seus tipos que correspondem ao filtro definido em **Filtro** (ou todas as tabelas caso **Filtro** não esteja definido) e que ainda não foram mostrados no diagrama atual.  
   
  **Filter**  
  Digite o filtro usado para restringir os objetos listados e clique no botão para filtrar as tabelas listadas em **Selecionar uma tabela na exibição da fonte de dados**.  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo de propriedades do assembly &#40;Analysis Services - dados multidimensionais&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
- [Modo de exibição da fonte de dados &#40;guia estrutura da dimensão, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Modo de exibição da fonte de dados &#40;guia estrutura do cubo, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo Propriedades do assembly &#40;Analysis Services de dados multidimensionais&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
+ [Exibição da fonte de dados &#40;guia estrutura da dimensão, designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Exibição da fonte de dados &#40;guia estrutura do cubo, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

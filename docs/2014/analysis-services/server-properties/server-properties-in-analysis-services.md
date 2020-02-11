@@ -1,5 +1,5 @@
 ---
-title: Configurar propriedades de servidor no Analysis Services | Microsoft Docs
+title: Configurar propriedades do servidor no Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068897"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurar propriedades de servidor no Analysis Services
@@ -32,15 +32,15 @@ ms.locfileid: "66068897"
   
  Este tópico contém as seguintes seções:  
   
- [Configurar propriedades de servidor (instância)](#bkmk_config)  
+ [Configurar propriedades do servidor (instância)](#bkmk_config)  
   
- [Referência de propriedades de servidor](#bkmk_ref)  
+ [Referência de propriedade de servidor](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a> Configurar propriedades de servidor (instância)  
+##  <a name="bkmk_config"></a>Configurar propriedades de servidor (instância)  
  As páginas de propriedades no SQL Server Management Studio contêm um subconjunto das propriedades disponíveis, enquanto mostrando só essas propriedades que são ser modificadas mais provável. O conjunto cheio de propriedades pode ser localizado no arquivo msmdsrv.ini.  
   
 > [!NOTE]  
->  Este tópico não documenta as propriedades de configuração de implantação no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter mais informações sobre a configuração de implantação, consulte [especificando as definições de configuração para implantação de solução](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
+>  Este tópico não documenta as propriedades de configuração de implantação no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter mais informações sobre a configuração de implantação, consulte [especificando definições de configuração para a implantação da solução](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Exibir ou definir as propriedades de configuração no Management Studio  
   
@@ -72,18 +72,18 @@ ms.locfileid: "66068897"
   
 4.  Após salvar o arquivo, reinicie o serviço.  
   
-##  <a name="bkmk_ref"></a> Referência à propriedade de servidor  
+##  <a name="bkmk_ref"></a>Referência de propriedade de servidor  
  As propriedades de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são importantes para o ajuste refinado do sistema. Por exemplo, para tornar o comportamento das consultas consistente com seus requisitos, você pode definir as propriedades pertinentes.  
   
  Os tópicos seguintes explicam as várias propriedades de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Propriedades gerais](general-properties.md)|As propriedades gerais são básicas e avançadas e, incluem propriedades que definem o diretório de dados, diretório de backup e outros comportamentos do servidor.|  
 |[Propriedades de mineração de dados](data-mining-properties.md)|As propriedades de mineração de dados que controlam quais algoritmos são habilitados e quais são desabilitados. Por padrão, todos os algoritmos são habilitados.|  
 |DSO|DSO não tem mais suporte. Propriedades DSO são ignoradas.|  
 |[Propriedades de recurso](feature-properties.md)|As propriedades do recurso pertencem aos recursos de produtos, a maioria delas avançadas, inclusive propriedades que controlam vínculos entre instâncias do servidor.|  
-|[Propriedades de armazenamento de arquivos](filestore-properties.md)|As propriedades de repositório de arquivos são apenas para uso avançado. Elas incluem configurações de gerenciamento de memória avançadas.|  
+|[Propriedades FileStore](filestore-properties.md)|As propriedades de repositório de arquivos são apenas para uso avançado. Elas incluem configurações de gerenciamento de memória avançadas.|  
 |[Propriedades do gerenciador de bloqueio](lock-manager-properties.md)|As propriedades do gerenciador de bloqueio definem os comportamentos do servidor em relação aos bloqueios e aos tempos limite. A maioria dessas propriedades é apenas para uso avançado.|  
 |[Propriedades do log](log-properties.md)|As propriedades de log controlam onde e como os eventos são registrados no servidor. Isso inclui log de erros, log de exceções, flight recorder, log de consultas e rastreamentos.|  
 |[Propriedades de memória](memory-properties.md)|As propriedades de memória controlam como o servidor usa a memória. Eles são principalmente para uso avançado.|  
@@ -92,7 +92,7 @@ ms.locfileid: "66068897"
 |[Propriedades de segurança](security-properties.md)|A seção de segurança contém propriedades básicas e avançadas que definem as permissões de acesso. Isso inclui configurações que pertencem a administradores e usuários.|  
 |[Propriedades de pool de threads](thread-pool-properties.md)|As propriedades de pool de threads controlam quantos threads o servidor cria. Essas são principalmente propriedades avançadas.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciamento de instância do Analysis Services](../instances/analysis-services-instance-management.md)   
  [Especificando definições de configuração para implantação de solução](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   

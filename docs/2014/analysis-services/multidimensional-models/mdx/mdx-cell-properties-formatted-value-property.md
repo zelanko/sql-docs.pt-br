@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE e FORMAT_STRING em FORMATED_VALUE | Microsoft Docs
+title: IDIOMA e FORMAT_STRING em FORMATED_VALUE | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074394"
 ---
-# <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE e FORMAT_STRING em FORMATED_VALUE
+# <a name="language-and-format_string-on-formated_value"></a>LANGUAGE e FORMAT_STRING em FORMATED_VALUE
   A propriedade FORMATTED_VALUE é criada com base nas interações das propriedades VALUE, FORMAT_STRING e LANGUAGE da célula. Este tópico explica como essas propriedades interagem para criar a propriedade FORMATTED_VALUE.  
   
-## <a name="value-formatstring-language-properties"></a>Propriedades VALUE, FORMAT_STRING, LANGUAGE  
+## <a name="value-format_string-language-properties"></a>Propriedades VALUE, FORMAT_STRING, LANGUAGE  
  A tabela a seguir explica o que são essas propriedades, para ajudá-lo na preparação para o uso combinado delas.  
   
  VALUE  
@@ -32,7 +32,7 @@ ms.locfileid: "66074394"
  LANGUAGE  
  A especificação de localidade a ser aplicada junto com FORMAT_STRING para gerar uma versão localizada de FORMATTED_VALUE  
   
-## <a name="formattedvalue-constructed"></a>FORMATTED_VALUE construída  
+## <a name="formatted_value-constructed"></a>FORMATTED_VALUE construída  
  A propriedade FORMATTED_VALUE é construída com o uso do valor da propriedade VALUE e a aplicação do modelo de formato especificado na propriedade FORMAT_STRING para esse valor. Além disso, sempre que o valor de formatação for um `named formatting literal`, a especificação da propriedade LANGUAGE modifica a saída de FORMAT_STRING para seguir o uso do idioma da formatação nomeada. Os literais de formatação nomeada são definidos de modo que possam ser localizados. Por exemplo, `"General Date"` é uma especificação que pode ser localizada, em oposição ao seguinte modelo `"YYYY-MM-DD hh:nn:ss",` , que declara que a data deve ser apresentada conforme o definido pelo modelo, independentemente da especificação de idioma.  
   
  Se houver um conflito entre o modelo FORMAT_STRING e a especificação LANGUAGE, FORMAT_STRING substituirá LANGUAGE. Por exemplo, se FORMAT_STRING="$ #0" e LANGUAGE=1034 (Spain), e VALUE=123.456, D_VALUE="$ 123" em vez de FORMATTED_VALUE="€ 123", o formato esperado estará em Euros, porque o valor do modelo do formato substitui o idioma especificado.  
@@ -85,7 +85,7 @@ ms.locfileid: "66074394"
 |E|5,04E+03|FORMAT_STRING é definido como `Scientific` e LANGUAGE é definido explicitamente como `1034,` , por isso a `,` (vírgula) é o separador decimal.|  
 |F|50,40%|FORMAT_STRING é definido como `Percent` e LANGUAGE é definido como `1033`, herdados do valor de localidade do sistema, por isso o `.` (ponto) é o separador decimal.<br /><br /> Observe que VALUE foi alterado de 5040 para 0.5040|  
 |G|50,40%|FORMAT_STRING é definido como `Percent`, herdado de F, e LANGUAGE é definido explicitamente como `1034` , por isso a `,` (vírgula) é o separador decimal.<br /><br /> Observe que VALUE foi herdado do valor F.|  
-|H|Não |FORMAT_STRING é definido como `YES/NO`, VALUE é definido como 0 e LANGUAGE é definido explicitamente como `1034`; como não há nenhuma diferença entre English NO e Spanish NO, o usuário não vê diferença em FORMATTED_VALUE.|  
+|H|Não|FORMAT_STRING é definido como `YES/NO`, VALUE é definido como 0 e LANGUAGE é definido explicitamente como `1034`; como não há nenhuma diferença entre English NO e Spanish NO, o usuário não vê diferença em FORMATTED_VALUE.|  
 |I|SI|FORMAT_STRING é definido como `YES/NO`, VALUE é definido como 59 e LANGUAGE é definido explicitamente como `1034`; conforme definido para a formatação YES/NO, qualquer valor diferente de zero (0) é um YES e como o idioma é definido como Spanish, FORMATTED_VALUE é SI.|  
 |J|Desativado|FORMAT_STRING é definido como `ON/OFF`, VALUE é definido como 0 e LANGUAGE é definido explicitamente como `1034`; conforme definido para a formatação ON/OFF, qualquer valor equivalente a zero (0) é um OFF e, como o idioma está definido para Spanish, FORMATTED_VALUE é Desativado.|  
 |K|Ativado|FORMAT_STRING é definido como `ON/OFF`, VALUE é definido como -312 e LANGUAGE é definido explicitamente como `1034`; conforme definido para a formatação ON/OFF, qualquer valor diferente de zero (0) é um ON e como o idioma é definido como Spanish, FORMATTED_VALUE é Ativado.|  
@@ -128,12 +128,12 @@ ms.locfileid: "66074394"
   
 |Membro|FORMATTED_VALUE|Explicação|  
 |------------|----------------------|-----------------|  
-|A|3/12/1959 6:30:00 AM|FORMAT_STRING é definido implicitamente como `General Date` pela expressão CDate() e LANGUAGE é definido como `1033` (English), herdado do valor de localidade do sistema|  
+|Um|3/12/1959 6:30:00 AM|FORMAT_STRING é definido implicitamente como `General Date` pela expressão CDate() e LANGUAGE é definido como `1033` (English), herdado do valor de localidade do sistema|  
 |B|Quinta-feira, 12 de março de 1959|FORMAT_STRING é definido explicitamente como `Long Date` e LANGUAGE é `1033` (English), herdado do valor de localidade do sistema.|  
 |C|12/03/1959 6:30:00|FORMAT_STRING é definido explicitamente para `General Date` e LANGUAGE é explicitamente `1034` (Spanish).<br /><br /> Observe que o mês e o dia são alternados quando comparados com o estilo de formatação dos EUA|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING é definido explicitamente para `Long Date` e LANGUAGE é explicitamente `1034` (Spanish).<br /><br /> Observe que o mês e o dia da semana estão em espanhol|  
 |E|1959/03/12 6:30:00|FORMAT_STRING é definido explicitamente para `General Date` e LANGUAGE é explicitamente `1041` (japonês).<br /><br /> Observe que a data agora está formatada como Ano/Mês/Dia Hora:Minutos:Segundos|  
-|F|1959年3月12日|FORMAT_STRING é definido explicitamente para `Long Date` e LANGUAGE é explicitamente `1041` (japonês).|  
+|F|1959 年 3 月 12 日|FORMAT_STRING é definido explicitamente para `Long Date` e LANGUAGE é explicitamente `1041` (japonês).|  
 |G|6:30:00 AM|FORMAT_STRING é definido explicitamente como `Long Time` e LANGUAGE é `1033` (English), herdado do valor de localidade do sistema.|  
 |H|06:30|FORMAT_STRING é definido explicitamente como `Short Time` e LANGUAGE é `1033` (English), herdado do valor de localidade do sistema.|  
 |I|6:30:00|FORMAT_STRING é definido explicitamente para `Long Time` e LANGUAGE é definido explicitamente como `1034` (Spanish).|  
@@ -141,9 +141,9 @@ ms.locfileid: "66074394"
 |K|6:30:00|FORMAT_STRING é definido explicitamente para `Long Time` e LANGUAGE é explicitamente `1041` (Japanese).|  
 |L|06:30|FORMAT_STRING é definido explicitamente para `Short Time` e LANGUAGE é explicitamente `1041` (Japanese).|  
   
-## <a name="see-also"></a>Consulte também  
- [Conteúdo de FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
- [Usando propriedades da célula &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
+## <a name="see-also"></a>Consulte Também  
+ [FORMAT_STRING conteúdo &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
+ [Usando propriedades de célula &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
  [Criando e usando valores de propriedade &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   

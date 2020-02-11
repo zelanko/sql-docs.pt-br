@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b5d1a63937a11da4703ec4ef0338dee89a5c33f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667301"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>Monitorando a replicação com o monitor do sistema
@@ -29,19 +29,19 @@ ms.locfileid: "62667301"
 |Agente|Objeto de desempenho|Contador|Descrição|  
 |-----------|------------------------|-------------|-----------------|  
 |Todos os agentes|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Agentes de replicação|Executando|O número de agentes de replicação que estão sendo executados no momento.|  
-|Snapshot Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantâneo da replicação|Instantâneo: Cmds entregues/s|O número de comandos por segundo entregues ao Distribuidor.|  
-|Snapshot Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantâneo da replicação|Instantâneo: Trans. entregues/s|O número de transações por segundo entregues ao Distribuidor.|  
-|Agente de Leitor de Log|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Leitor de log de replicação|Leitor de log: Cmds entregues/s|O número de comandos por segundo entregues ao Distribuidor.|  
-|Agente de Leitor de Log|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Leitor de log de replicação|Leitor de log: Trans. entregues/s|O número de transações por segundo entregues ao Distribuidor.|  
-|Agente de Leitor de Log|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Leitor de log de replicação|Leitor de log: Latência de entrega|O período de tempo atual, em milissegundos, passado desde quando as transações foram aplicadas no Publicador até sua entrega no Distribuidor.|  
-|Agente de Distribuição|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replicação Dist.|Dist: Cmds entregues/s|O número de comandos por segundo entregues ao Assinante.|  
-|Agente de Distribuição|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replicação Dist.|Dist: Trans. entregues/s|O número de transações por segundo entregues ao Assinante.|  
-|Agente de Distribuição|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replicação Dist.|Dist: Latência de entrega|O período de tempo atual, em milissegundos, passado desde quando as transações foram entregues ao Distribuidor até sua aplicação no Assinante.|  
+|Snapshot Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantâneo da replicação|Instantâneo: Cmds/s entregues|O número de comandos por segundo entregues ao Distribuidor.|  
+|Snapshot Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantâneo da replicação|Instantâneo: Trans/s entregues|O número de transações por segundo entregues ao Distribuidor.|  
+|Agente de Leitor de Log|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Logreader de replicação|Logreader: Cmds/s entregues|O número de comandos por segundo entregues ao Distribuidor.|  
+|Agente de Leitor de Log|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Logreader de replicação|Logreader: Trans/s entregues|O número de transações por segundo entregues ao Distribuidor.|  
+|Agente de Leitor de Log|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Logreader de replicação|Logreader: latência de entrega|O período de tempo atual, em milissegundos, passado desde quando as transações foram aplicadas no Publicador até sua entrega no Distribuidor.|  
+|Agente de Distribuição|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Dist. de replicação|Dist: Cmds/s entregues|O número de comandos por segundo entregues ao Assinante.|  
+|Agente de Distribuição|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Dist. de replicação|Dist: Trans/s entregues|O número de transações por segundo entregues ao Assinante.|  
+|Agente de Distribuição|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Dist. de replicação|Dist: latência de entrega|O período de tempo atual, em milissegundos, passado desde quando as transações foram entregues ao Distribuidor até sua aplicação no Assinante.|  
 |Merge Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Mesclagem da replicação|Conflitos/s|O número de conflitos por segundo ocorridos durante o processo de mesclagem.|  
 |Merge Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Mesclagem da replicação|Alterações baixadas/s|O número de linhas por segundo replicadas do Publicador ao Assinante.|  
 |Merge Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Mesclagem da replicação|Alterações Carregadas/s|O número de linhas por segundo replicadas do Assinante ao Publicador.|  
   
-## <a name="see-also"></a>Consulte também  
- [Monitoramento &#40;replicação&#41;](../monitoring-replication.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Monitoramento &#40;Replicação&#41;](../monitoring-replication.md)  
   
   

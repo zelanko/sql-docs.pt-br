@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 411901f318d08109d6f7c7ce724d76e1039dfa7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080507"
 ---
 # <a name="importing-ssas"></a>Importando (SSAS)
@@ -26,13 +26,13 @@ ms.locfileid: "66080507"
  **Detalhes**  
  Exibe as informações a seguir de cada operação de importação de dados.  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Item de trabalho**|Exibe o nome da tabela ou exibição que está sendo importada.|  
 |**Status**|Indica se a tabela ou exibição foi importada com êxito e o número de linhas que foram importadas.|  
 |**Mensagem**|Se a importação da tabela ou exibição falhar, exibirá um link para mais informações. Estas informações são exibidas na janela Detalhes.<br /><br /> Para tentar importar a tabela ou exibição novamente, feche o assistente e execute-o novamente.|  
   
- **Parar importação**  
+ **Parar Importação**  
  Clique para parar a operação de importação antes da sua conclusão. As tabelas e exibições que já foram importadas serão exibidas no designer do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] . As tabelas e exibições que ainda não foram importadas não serão importadas.  
   
   

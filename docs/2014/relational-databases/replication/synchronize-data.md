@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745487"
 ---
 # <a name="synchronize-data"></a>Sincronizar dados
@@ -68,7 +68,7 @@ ms.locfileid: "62745487"
   
 -   Manipuladores de lógica de negócios possuem suporte para replicação de mesclagem. Usando a estrutura dos manipuladores de lógica de negócios, você pode escrever um assembly de código gerenciado durante o processo de sincronização de mesclagem. O assembly inclui lógica comercial que pode responder a uma série de condições durante a sincronização: alterações de dados, conflitos e erros. Para obter mais informações, consulte [Executar lógica de negócios durante a sincronizações de mesclagem](merge/execute-business-logic-during-merge-synchronization.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Detectar e resolver conflitos de replicação de mesclagem](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

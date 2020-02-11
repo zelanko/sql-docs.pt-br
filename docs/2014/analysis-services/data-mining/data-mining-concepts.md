@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4217c455433f2fec4ebbe64b77346c54a6d47827
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085067"
 ---
 # <a name="data-mining-concepts"></a>Conceitos de mineração de dados
@@ -36,15 +36,15 @@ ms.locfileid: "66085067"
   
  Esses padrões e tendências podem ser coletados e definidos como um *modelo de mineração de dados*. Os modelos de mineração podem ser se aplicados a cenários específicos, como:  
   
--   **Previsão**: Estimando vendas, prevendo cargas de servidor ou tempo de inatividade do servidor  
+-   **Previsão**: estimando vendas, prevendo cargas de servidor ou tempo de inatividade do servidor  
   
--   **Risco e probabilidade**: Escolhendo os melhores clientes para malas diretas, determinando o ponto equilibrado provável para cenários de risco, atribuindo probabilidades a diagnósticos ou outros resultados  
+-   **Risco e probabilidade**: escolhendo os melhores clientes para correspondências direcionadas, determinando o ponto de interrupção provável para cenários de risco, atribuindo probabilidades a diagnósticos ou outros resultados  
   
--   **Recomendações**: Determinando quais produtos são mais prováveis de serem vendidos juntos, gerando recomendações  
+-   **Recomendações**: Determinando quais produtos provavelmente serão vendidos juntos, gerando recomendações  
   
--   **Localizando sequências**: Analisando seleções de cliente em um carrinho de compras, prevendo os próximos eventos prováveis  
+-   **Localizando sequências**: analisando seleções de clientes em um carrinho de compras, prevendo eventos próximos prováveis  
   
--   **Agrupando**: Separando clientes ou eventos em cluster de itens relacionados, analisando e prevendo afinidades  
+-   **Agrupamento**: separando clientes ou eventos no cluster de itens relacionados, analisando e prevendo afinidades  
   
  A criação de um modelo de mineração representa apenas uma parte de um processo maior que inclui desde perguntas sobre dados e criação de um modelo até respostas para as perguntas feitas e implantação do modelo em um ambiente de trabalho. Esse processo pode ser definido usando as seis etapas básicas a seguir:  
   
@@ -52,17 +52,17 @@ ms.locfileid: "66085067"
   
 2.  [Preparando dados](#PreparingData)  
   
-3.  [Explorando dados](#ExploringData)  
+3.  [Exploração de dados](#ExploringData)  
   
-4.  [Criando modelos](#BuildingModels)  
+4.  [Criação de modelos](#BuildingModels)  
   
-5.  [Explorando e validando modelos](#ValidatingModels)  
+5.  [Explorando e Validando modelos](#ValidatingModels)  
   
 6.  [Implantando e atualizando modelos](#DeployingandUpdatingModels)  
   
- O diagrama a seguir descreve as relações entre cada etapa do processo e as tecnologias no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você pode usar para concluir cada etapa.  
+ O diagrama a seguir descreve as relações entre cada etapa no processo e as tecnologias no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você pode usar para concluir cada etapa.  
   
- ![As principais etapas do processo de mineração de dados](../media/data-mining-process.gif "as principais etapas do processo de mineração de dados")  
+ ![Etapas principais no processo de mineração de dados](../media/data-mining-process.gif "Etapas principais no processo de mineração de dados")  
   
  O processo ilustrado no diagrama é cíclico, ou seja, criar um modelo de mineração de dados é um processo dinâmico e repetitivo. Depois de explorar os dados, você pode descobrir que eles são insuficientes para criar modelos de mineração apropriados e que você terá, portanto, que obter mais dados. Ou você pode criar vários modelos e, depois, perceber que os modelos não respondem adequadamente o problema definido e que você deverá redefinir o problema. Talvez seja necessário atualizar os modelos depois de eles serem implantados, pois haverá mais dados disponíveis. Cada etapa do processo pode precisar ser repetida muitas vezes para criar um bom modelo.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "66085067"
   
  Para obter um exemplo de como as ferramentas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser aplicadas a um cenário de negócios, consulte [Tutorial de mineração de dados básico](../../tutorials/basic-data-mining-tutorial.md).  
   
-##  <a name="DefiningTheProblem"></a> Definindo o problema  
+##  <a name="DefiningTheProblem"></a>Definindo o problema  
  A primeira etapa do processo de mineração de dados, como destacado no diagrama a seguir, é definir claramente o problema e considerar maneiras de os dados serem utilizados para fornecer respostas para ele.  
   
- ![Primeira etapa de mineração de dados: definindo o problema](../media/dmprocess-defining.gif "primeira etapa de mineração de dados: definindo o problema")  
+ ![Primeira etapa de mineração de dados: definindo o problema](../media/dmprocess-defining.gif "Primeira etapa de mineração de dados: definindo o problema")  
   
  Essa etapa inclui a análise dos requisitos de negócio, a definição do escopo do problema, a definição das métricas usadas para avaliar o modelo e, por fim, a definição de objetivos específicos para o projeto de mineração de dados. Essas tarefas podem ser traduzidas em perguntas, como:  
   
@@ -93,10 +93,10 @@ ms.locfileid: "66085067"
   
  Também é necessário considerar a forma como os resultados do modelo podem ser incorporados em KPIs (indicadores chave de desempenho) usados para avaliar o progresso dos negócios.  
   
-##  <a name="PreparingData"></a> Preparando dados  
+##  <a name="PreparingData"></a>Preparando dados  
  A segunda etapa do processo de mineração de dados, como destacado no diagrama a seguir, é consolidar e limpar os dados identificados na etapa [Definindo o problema](#DefiningTheProblem) .  
   
- ![Segunda etapa de mineração de dados: preparação de dados](../media/dmprocess-preparing.gif "segunda etapa de mineração de dados: preparação de dados")  
+ ![Segunda etapa de mineração de dados: preparando dados](../media/dmprocess-preparing.gif "Segunda etapa de mineração de dados: preparando dados")  
   
  Os dados podem estar espalhados pela empresa e armazenados em diferentes formatos ou podem conter inconsistência, como entradas ausentes ou incorretas. Por exemplo, os dados podem mostrar que um cliente comprou um produto antes desse produto ser efetivamente colocado a venda no mercado ou que o cliente faz compras regularmente em uma loja localizada a 3.000 quilômetros da casa dele.  
   
@@ -108,12 +108,12 @@ ms.locfileid: "66085067"
   
 -   [Data Quality Services](../../data-quality-services/data-quality-services.md)  
   
- É importante saber que os dados usados na mineração de dados não precisam estar armazenados em um cubo OLAP (processamento analítico online) nem mesmo em um banco de dados relacional, apesar de ambos poderem ser usados como fontes de dados. Você pode conduzir a mineração de dados usando qualquer fonte de dados definida como uma fonte de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Isso inclui arquivos de texto, pasta de trabalho do Excel e dados de outros provedores externos. Para obter mais informações, consulte [fontes de dados com suporte &#40;Multidimensional do SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ É importante saber que os dados usados na mineração de dados não precisam estar armazenados em um cubo OLAP (processamento analítico online) nem mesmo em um banco de dados relacional, apesar de ambos poderem ser usados como fontes de dados. Você pode conduzir a mineração de dados usando qualquer fonte de dados definida como uma fonte de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Isso inclui arquivos de texto, pasta de trabalho do Excel e dados de outros provedores externos. Para obter mais informações, consulte [fontes de dados com suporte &#40;&#41;multidimensional do SSAS ](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
-##  <a name="ExploringData"></a> Explorando dados  
+##  <a name="ExploringData"></a>Explorando dados  
  A terceira etapa do processo de mineração de dados, como destacado no diagrama a seguir, é explorar os dados preparados.  
   
- ![Terceira etapa de mineração de dados: exploração de dados](../media/dmprocess-exploring.gif "terceira etapa de mineração de dados: exploração de dados")  
+ ![Terceira etapa de mineração de dados: explorando dados](../media/dmprocess-exploring.gif "Terceira etapa de mineração de dados: explorando dados")  
   
  Você deve compreender os dados para tomar decisões apropriadas ao criar os modelos de mineração. As técnicas de exploração incluem cálculos dos valores máximos e mínimos, cálculos das médias e dos desvios padrões e análise da distribuição dos dados. Por exemplo, ao analisar os valores máximos, mínimos e médios, você pode determinar que os dados não são representativos para seus clientes ou processos de negócio e que você deve obter mais dados equilibrados ou revisar as suposições que determinam suas expectativas. Os desvios padrão e outros valores de distribuição podem fornecer informações útil sobre a estabilidade e precisão dos resultados. Um desvio padrão muito grande indica que incluir mais dados pode ser útil para melhorar o modelo. Os dados que desviam muito de uma distribuição padrão podem estar distorcidos ou representar uma imagem precisa do problema real, dificultando, porém, o ajuste de um modelo aos dados.  
   
@@ -125,42 +125,45 @@ ms.locfileid: "66085067"
   
  Observe que, ao criar um modelo, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria automaticamente resumos estatísticos de dados do modelo, que podem ser consultados para uso em relatórios ou para análises detalhadas. Para obter mais informações, consulte [Consultas de mineração de dados](data-mining-queries.md).  
   
-##  <a name="BuildingModels"></a> Criando modelos  
+##  <a name="BuildingModels"></a>Criando modelos  
  A quarta etapa do processo de mineração de dados, como destacado no diagrama a seguir, é criar o modelo ou modelos de mineração. Você usará o conhecimento obtido na etapa [Explorando dados](#ExploringData) para ajudá-lo a definir e criar os modelos.  
   
- ![Quarta etapa de mineração de dados: Criando modelos de mineração](../media/dmprocess-building.gif "quarta etapa de mineração de dados: Criando modelos de mineração")  
+ ![Quarta etapa de mineração de dados: criando modelos de mineração](../media/dmprocess-building.gif "Quarta etapa de mineração de dados: criando modelos de mineração")  
   
  Você define as colunas de dados que você deseja usar ao criar uma estrutura de mineração. A estrutura de mineração é vinculada à origem dos dados, mas realmente não contém nenhum dado até que seja processada. Ao processar a estrutura de mineração, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gera agregações e outras informações estatísticas que podem ser usadas para análise. Essas informações podem ser usadas por qualquer modelo de mineração com base na estrutura. Para obter mais informações sobre como as estruturas de mineração estão relacionadas aos modelos de mineração, veja [Arquitetura lógica &#40;Analysis Services – Mineração de dados&#41;](logical-architecture-analysis-services-data-mining.md).  
   
- Antes de a estrutura e o modelo serem processados, também o modelo de mineração de dados é apenas um contêiner que especifica as colunas usadas para entrada, o atributo que você está prevendo e os parâmetros que indicam ao algoritmo como os dados devem ser processados. O processamento de um modelo é geralmente chamado de *treinamento*. Treinamento refere-se ao processo de aplicação de um algoritmo matemático específico aos dados na estrutura com a finalidade de extrair padrões. Os padrões que você localiza no processo de treinamento dependem da seleção de dados de treinamento, o algoritmo que você escolheu e como você configurou o algoritmo. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] contém muitos algoritmos diferentes, cada um adequado a um tipo diferente de tarefa e cada um criando um tipo diferente de modelo. Para obter uma lista dos algoritmos incluídos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [Algoritmos de mineração de dados &#40;Analysis Services – Mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
+ Antes de a estrutura e o modelo serem processados, também o modelo de mineração de dados é apenas um contêiner que especifica as colunas usadas para entrada, o atributo que você está prevendo e os parâmetros que indicam ao algoritmo como os dados devem ser processados. O processamento de um modelo é geralmente chamado de *treinamento*. Treinamento refere-se ao processo de aplicação de um algoritmo matemático específico aos dados na estrutura com a finalidade de extrair padrões. Os padrões que você localiza no processo de treinamento dependem da seleção de dados de treinamento, o algoritmo que você escolheu e como você configurou o algoritmo. 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] contém muitos algoritmos diferentes, cada um adequado a um tipo diferente de tarefa e cada um criando um tipo diferente de modelo. Para obter uma lista dos algoritmos incluídos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [Algoritmos de mineração de dados &#40;Analysis Services – Mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
  Você também pode usar parâmetros para ajustar cada algoritmo e aplicar filtros aos dados de treinamento para usar apenas um subconjunto de dados, criando diferentes resultados. Depois de passar os dados pelo modelo, o objeto do modelo de mineração conterá resumos e padrões que poderão ser consultados ou usados para previsão.  
   
- É possível definir um novo modelo usando o Assistente de Mineração de Dados do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou a linguagem DMX (Data Mining Extensions). Para obter mais informações sobre como usar o Assistente de Mineração de Dados, consulte [Assistente de Mineração de Dados &#40;Analysis Services – Mineração de dados &#41;](data-mining-wizard-analysis-services-data-mining.md). Para obter mais informações sobre como usar DMX, consulte [Referência de Data Mining Extensions &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
+ É possível definir um novo modelo usando o Assistente de Mineração de Dados do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ou a linguagem DMX (Data Mining Extensions). Para obter mais informações sobre como usar o Assistente de Mineração de Dados, consulte [Assistente de Mineração de Dados &#40;Analysis Services – Mineração de dados &#41;](data-mining-wizard-analysis-services-data-mining.md). Para obter mais informações sobre como usar DMX, consulte [Referência de Data Mining Extensions &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
   
  É importante lembrar-se de que sempre que os dados mudarem, será necessário atualizar a estrutura e o modelo de mineração. Quando você atualiza uma estrutura de mineração reprocessando-a, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recupera dados da origem, incluindo quaisquer dados novos caso a origem seja atualizada dinamicamente, e repopula a estrutura de mineração. Se você tiver modelos com base na estrutura, poderá optar pela atualização dos modelos com base na estrutura, o que significa que eles serão retreinados nos novos dados, ou poderá manter o modelo como está. Para obter mais informações, consulte [Requisitos e considerações sobre processamento &#40;Mineração de dados&#41;](processing-requirements-and-considerations-data-mining.md).  
   
-##  <a name="ValidatingModels"></a> Explorando e validando modelos  
+##  <a name="ValidatingModels"></a>Explorando e Validando modelos  
  A quinta etapa do processo de mineração de dados, como destacado no diagrama a seguir, é explorar os modelos de mineração criados e testar a eficiência deles.  
   
- ![Quinta etapa de mineração de dados: validando modelos de mineração](../media/dmprocess-validating.gif "quinta etapa de mineração de dados: validando modelos de mineração")  
+ ![Quinta etapa de mineração de dados: validando modelos de mineração](../media/dmprocess-validating.gif "Quinta etapa de mineração de dados: validando modelos de mineração")  
   
  Antes de implantar um modelo em um ambiente de produção, você provavelmente o testará para avaliar o desempenho. Além disso, ao criar um modelo, você normalmente cria vários modelos com diferentes configurações e os testa para verificar qual deles gera os melhores resultados para seu problema e seus dados.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece ferramentas que o ajudam a separar seus dados em conjuntos de dados de teste e de treinamento, de forma que você possa avaliar com precisão o desempenho de todos os modelos nos mesmos dados. Você usa o conjunto de dados de treinamento para criar um modelo e o conjunto de dados de teste para testar a precisão do modelo ao criar consultas de previsão. No [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], esse particionamento pode ser feito automaticamente durante a criação do modelo de mineração de dados. Para obter mais informações, consulte [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md).  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece ferramentas que o ajudam a separar seus dados em conjuntos de dados de teste e de treinamento, de forma que você possa avaliar com precisão o desempenho de todos os modelos nos mesmos dados. Você usa o conjunto de dados de treinamento para criar um modelo e o conjunto de dados de teste para testar a precisão do modelo ao criar consultas de previsão. No [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], esse particionamento pode ser feito automaticamente durante a criação do modelo de mineração de dados. Para obter mais informações, consulte [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md).  
   
  É possível explorar as tendências e os padrões que os algoritmos descobrem usando os visualizações no Designer de Mineração de Dados do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Para obter mais informações, consulte [Visualizadores do Modelo de Mineração de Dados](data-mining-model-viewers.md). Você também pode testar como os modelos criam previsões usando ferramentas do designer, como o gráfico de comparação de precisão e a matriz de classificação. Para verificar se o modelo é específico para seus dados ou se pode ser usado para fazer deduções na população geral, você pode usar a técnica estatística chamada *validação cruzada* para criar, automaticamente, subconjuntos de dados e testar modelos em cada subconjunto. Para obter mais informações, consulte [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md).  
   
  Se nenhum dos modelos criados na etapa [Criando modelos](#BuildingModels) tiver um bom desempenho, você poderá retornar a uma etapa anterior no processo e redefinir o problema ou investigar novamente os dados no conjunto de dados original.  
   
-##  <a name="DeployingandUpdatingModels"></a> Implantando e atualizando modelos  
+##  <a name="DeployingandUpdatingModels"></a>Implantando e atualizando modelos  
  A última etapa do processo de mineração de dados, como destacado no diagrama a seguir, é implantar os modelos que tiveram o melhor desempenho em um ambiente de produção.  
   
- ![Sexta etapa de mineração de dados: Implantando modelos de mineração](../media/dmprocess-deploying.gif "sexta etapa de mineração de dados: Implantando modelos de mineração")  
+ ![Sexta etapa de mineração de dados: implantando modelos de mineração](../media/dmprocess-deploying.gif "Sexta etapa de mineração de dados: implantando modelos de mineração")  
   
  Depois que os modelos de mineração existirem em um ambiente de produção, será possível realizar várias tarefas de acordo com suas necessidades. Estas são algumas tarefas que você poderá realizar:  
   
--   Use os modelos para criar previsões, que poderão ser usadas para tomar decisões comerciais. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece a linguagem DMX, que pode ser usada para criar consultas de previsão, e o Construtor de Consultas de Previsão para ajudá-lo a criar as consultas. Para obter mais informações, consulte [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
+-   Use os modelos para criar previsões, que poderão ser usadas para tomar decisões comerciais. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece a linguagem DMX, que pode ser usada para criar consultas de previsão, e o Construtor de Consultas de Previsão para ajudá-lo a criar as consultas. Para obter mais informações, consulte [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
   
 -   Crie consultas de conteúdo para recuperar estatísticas, regras ou fórmulas do modelo. Para obter mais informações, consulte [Consultas de mineração de dados](data-mining-queries.md).  
   
@@ -174,7 +177,7 @@ ms.locfileid: "66085067"
   
 -   A atualização dinâmica dos modelos, à medida que a organização gera mais dados, e alterações constantes para melhorar a eficiência da solução devem fazer parte da sua estratégia de implantação. Para obter mais informações, consulte [Gerenciamento de soluções de mineração de dados e objetos](management-of-data-mining-solutions-and-objects.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Soluções de mineração de dados](data-mining-solutions.md)   
  [Ferramentas de mineração de dados](data-mining-tools.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Atributos (guia estrutura da dimensão, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Atributos (guia estrutura da dimensão, designer de dimensão) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064396"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Atributos (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
@@ -24,7 +24,7 @@ ms.locfileid: "66064396"
   
  Para criar um atributo, arraste uma coluna do painel **Exibição da Fonte de Dados** para o painel **Atributos** no modo de lista, de árvore ou de exibição. Para remover um atributo, selecione **Excluir** no menu de atalhos.  
   
- **Para exibir o painel atributos**  
+ **Para exibir o painel Atributos**  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e então abra a dimensão desejada.  
   
@@ -55,25 +55,25 @@ ms.locfileid: "66064396"
  **Usage**  
  Define o uso do atributo selecionado. Clique na seta para baixo para selecionar entre as seguintes possibilidades:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|Regular|Identifica um atributo regular.|  
-|Chave|Identifica o atributo de chave para a dimensão. Isto corresponde aos membros folha da dimensão. Pode haver somente um atributo de chave por dimensão. Para modificar, clique no botão de reticências ( **...** ) próximo à propriedade **KeyColumns** no painel **Propriedades** .|  
+|Regular |Identifica um atributo regular.|  
+|Chave|Identifica o atributo de chave para a dimensão. Isto corresponde aos membros folha da dimensão. Pode haver somente um atributo de chave por dimensão. Para modificar, clique no botão de reticências (**...**) próximo à propriedade **KeyColumns** no painel **Propriedades** .|  
 |Pai|Denota o atributo pai para uma relação pai-filho. O atributo filho nesta relação deve sempre ser o atributo de chave.|  
 |AccountType|Denota um atributo de tipo de conta. Isto é usado pelo servidor ou mecanismo quando a função de agregação para uma medida é definida como "por conta".|  
   
  **Tipo**  
  Define o tipo do atributo. Clique na seta para baixo para selecionar entre as seguintes possibilidades.  
   
- **Coluna de chave**  
+ **Coluna de Chave**  
  Exibe o tipo de dados das colunas subjacentes. Ao criar um novo atributo, clique na seta para baixo para selecionar entre as possibilidades disponíveis.  
   
- **Coluna de nome**  
+ **Nome de Coluna**  
  Exibe o local da coluna subjacente. Ao criar um novo atributo, clique na seta para baixo para selecionar entre **Igual à chave** e **Separar coluna**. Se **Separar coluna** for escolhido, a propriedade **NameColumn** no painel **Propriedades** definirá a coluna que armazena o nome a usar para o atributo.  
   
-## <a name="see-also"></a>Consulte também  
- [Estrutura da dimensão &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Hierarquias &#40;guia estrutura da dimensão, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barra de ferramentas &#40;guia estrutura da dimensão, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Estrutura de dimensão &#40;designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Hierarquias &#40;guia estrutura da dimensão, designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barra de ferramentas &#40;guia estrutura da dimensão, designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

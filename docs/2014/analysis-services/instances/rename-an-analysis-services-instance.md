@@ -1,5 +1,5 @@
 ---
-title: Renomear uma instância do Analysis Services | Microsoft Docs
+title: Renomear uma instância de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079617"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Renomear uma instância do Analysis Services
-  Você pode renomear uma instância existente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o **renomear instância** caixa de diálogo.  
+  Você pode renomear uma instância [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente do usando a caixa de diálogo **renomear instância** .  
   
 > [!IMPORTANT]  
 >  Na renomeação da instância, a ferramenta Renomeação de Instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executada com privilégios elevados, atualizando o nome do serviço Windows, contas de segurança e entradas do Registro associados com essa instância. Para garantir a execução dessas ações, execute essa ferramenta como um administrador do sistema local.  
@@ -35,7 +35,7 @@ ms.locfileid: "66079617"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Para renomear uma instância do Analysis Services  
   
-1.  Inicie o **renomeação de instância** ferramenta **asinstancerename.exe**, de C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
+1.  Inicie a ferramenta de **renomeação da instância** , **asinstancerename. exe**, de C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
   
 2.  Na caixa de diálogo **Renomear Instância** , na lista **Instância a ser renomeada** , selecione a instância que você deseja renomear.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "66079617"
   
      A atualização de um logon de banco de dados ou de permissões de arquivo será necessária se você tiver usado uma conta virtual para provisionar o serviço. Contas virtuais se baseiam no nome de instância; portanto, se você renomear a instância, a conta virtual também será atualizada ao mesmo tempo. Isso significa que qualquer logon anterior ou permissões criadas para a instância anterior não serão mais válidas.  
   
-     O exemplo a seguir ilustra esse cenário. Suponha que você instalou um servidor de modo de tabela como uma instância denominada "Tabelar" usando a conta virtual padrão, resultando na configuração a seguir:  
+     O exemplo a seguir ilustra esse cenário. Suponha que você instalou um servidor de modo de tabela como uma instância chamada "tabular" usando a conta virtual padrão, resultando na seguinte configuração:  
   
-    1.  Nome da instância = \<server > \TABULAR  
+    1.  Nome da instância \<= servidor> \tabular  
   
     2.  Nome de serviço = MSOLAP$TABULAR  
   
@@ -67,12 +67,12 @@ ms.locfileid: "66079617"
   
      Agora suponha que você renomeie a instância como "TAB2". Como resultado da alteração de nome, sua configuração teria a seguinte aparência agora:  
   
-    1.  Instance name = \<server>\TAB2  
+    1.  Nome da instância \<= servidor> \tab2  
   
     2.  Nome de serviço = MSOLAP$TAB2  
   
     3.  Conta virtual = NT Service\ MSOLAP$TAB2  
   
-     Como você pode ver, as permissões de banco de dados e arquivos que anteriormente foram concedidas ao "NT Service \ MSOLAP$ TABULAR" não são mais válidas. Para garantir que as tarefas e operações executadas pelo serviço de executam como antes, você faria agora precisa conceder permissões de banco de dados e arquivo novo ao "NT Service \ MSOLAP$TAB2".  
+     Como você pode ver, as permissões de banco de dados e arquivo que foram concedidas anteriormente para "NT Service \ MSOLAP $ TABULAr" não são mais válidas. Para garantir que as tarefas e operações executadas pelo serviço sejam executadas como antes, agora você precisará conceder novas permissões de banco de dados e arquivo ao "NT Service \ MSOLAP $ TAB2".  
   
   

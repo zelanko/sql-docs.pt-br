@@ -1,5 +1,5 @@
 ---
-title: Remoto de processamento (Analysis Services) | Microsoft Docs
+title: Processamento remoto (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073212"
 ---
 # <a name="remote-processing-analysis-services"></a>Processamento remoto (Analysis Services)
@@ -31,7 +31,8 @@ ms.locfileid: "66073212"
 -   Resolva quaisquer erros de processamento local existentes antes de tentar o processamento remoto. Verifique que quando a solicitação de processamento for local, os dados possam ser recuperados com êxito da fonte de dados relacional externa. Consulte [Definir opções de representação &#40;SSAS – Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md) para obter instruções sobre como especificar as credenciais usadas para recuperar os dados.  
   
 ## <a name="on-demand-remote-processing"></a>O processamento remoto sob demanda  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aceita solicitações de processamento de contas de usuário ou aplicativo que têm permissões de administrador [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se você é um administrador, verifique se você pode se conectar à instância remota e processar o banco de dados manualmente pela conexão remota.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aceita solicitações de processamento de contas de usuário ou aplicativo que têm permissões de administrador [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se você é um administrador, verifique se você pode se conectar à instância remota e processar o banco de dados manualmente pela conexão remota.  
   
 1.  No computador que será usado para agendar o processamento, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e conecte-se à instância remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -48,9 +49,9 @@ ms.locfileid: "66073212"
   
  Use os links a seguir para definir permissões:  
   
--   [Configurar o SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
+-   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
--   [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) sugere as funções de servidor fixas alternativas se a concessão de permissões **sysadmin** não for possível.  
+-   [SQL Server Agent componentes](../../ssms/agent/sql-server-agent.md#Components) sugere funções de servidor fixas alternativas se a concessão de permissões **sysadmin** não for possível.  
   
  Depois que as permissões de conta são configuradas, continue com estas etapas.  
   
@@ -90,11 +91,11 @@ ms.locfileid: "66073212"
   
 2.  Como etapa final, modifique o trabalho para ser executado em uma agenda que você definir, adicionando quaisquer alertas ou notificações necessários para administrar o trabalho. Você também poderá refinar o script de processamento ou criar várias etapas do trabalho para processar objetos independentemente.  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components)   
- [Agendar tarefas administrativas do SSAS com o SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Processamento em lotes &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
- [Processamento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)   
- [Processando objetos &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
+## <a name="see-also"></a>Consulte Também  
+ [Componentes do SQL Server Agent](../../ssms/agent/sql-server-agent.md#Components)   
+ [Agendar tarefas administrativas do SSAS com SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+ [Analysis Services de &#40;de processamento em lotes&#41;](batch-processing-analysis-services.md)   
+ [Processamento de objeto de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)   
+ [Processando objetos &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

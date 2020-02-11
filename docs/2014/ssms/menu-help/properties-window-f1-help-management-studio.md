@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661753"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ajuda F1 da janela Propriedades (Management Studio)
@@ -51,7 +51,7 @@ ms.locfileid: "62661753"
  **Painel de descrição**  
  O painel de descrição é exibido na parte inferior da janela **Propriedades** e mostra o tipo e uma descrição curta da propriedade. Você pode ativar e desativar a descrição da propriedade usando o comando **Descrição** no menu de atalho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar a janela Propriedades no Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ajuda de F1 do Assistente do Business Intelligence | Microsoft Docs
+title: Ajuda F1 do assistente de Business Intelligence | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088396"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Ajuda F1 do Assistente de Business Intelligence
@@ -46,59 +46,59 @@ ms.locfileid: "66088396"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Escolher aprimoramento &#40;Assistente de Business Intelligence&#41;](choose-enhancement-business-intelligence-wizard.md)  
+-   [Escolha o assistente de aprimoramento &#40;Business Intelligence&#41;](choose-enhancement-business-intelligence-wizard.md)  
   
--   [Escolher cálculos de tempo &#40;Assistente de Business Intelligence&#41;](choose-time-calculations-business-intelligence-wizard.md)  
+-   [Escolha cálculos de tempo &#40;assistente de Business Intelligence&#41;](choose-time-calculations-business-intelligence-wizard.md)  
   
--   [Definir escopo de cálculos &#40;Assistente de Business Intelligence&#41;](define-scope-of-calculations-business-intelligence-wizard.md)  
+-   [Definir o escopo de cálculos &#40;assistente de Business Intelligence&#41;](define-scope-of-calculations-business-intelligence-wizard.md)  
   
--   [Definir inteligência de conta &#40;dimensão&#41; &#40;Assistente de Business Intelligence&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
+-   [Definir &#40;de inteligência de conta&#41; &#40;assistente de Business Intelligence&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
   
--   [Configurar atributos de dimensão &#40;Assistente de Business Intelligence&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
+-   [Configurar atributos de dimensão &#40;assistente de Business Intelligence&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
   
--   [Definir inteligência de conta &#40;Assistente de Business Intelligence&#41;](define-account-intelligence-business-intelligence-wizard.md)  
+-   [Definir inteligência de conta &#40;assistente de Business Intelligence&#41;](define-account-intelligence-business-intelligence-wizard.md)  
   
--   [Definir opções de inteligência de dimensão &#40;Assistente de Business Intelligence&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
+-   [Definir opções de inteligência de dimensão &#40;assistente de Business Intelligence&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
   
--   [Definir inteligência de dimensão &#40;Assistente de Business Intelligence&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
+-   [Definir a inteligência de dimensão &#40;assistente de Business Intelligence&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
   
--   [Especificar um operador unário &#40;dimensão&#41; &#40;Assistente de Business Intelligence&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
+-   [Especifique um operador unário &#40;a dimensão&#41; &#40;assistente de Business Intelligence&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
   
--   [Especificar um operador unário &#40;Assistente de Business Intelligence&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
+-   [Especifique um operador unário &#40;assistente de Business Intelligence&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
   
--   [Criar uma fórmula de membro personalizado &#40;dimensão&#41; &#40;Assistente de Business Intelligence&#41;](create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
+-   [Criar uma fórmula de membro personalizado &#40;dimensão&#41; &#40;assistente de Business Intelligence&#41;](create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
   
--   [Criar uma fórmula de membro personalizado &#40;Assistente de Business Intelligence&#41;](create-a-custom-member-formula-business-intelligence-wizard.md)  
+-   [Criar uma fórmula de membro personalizado &#40;assistente de Business Intelligence&#41;](create-a-custom-member-formula-business-intelligence-wizard.md)  
   
--   [Especificar a ordenação de atributos &#40;dimensão&#41; &#40;Assistente de Business Intelligence&#41;](specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
+-   [Especificar a ordenação de atributos &#40;dimensão&#41; &#40;assistente de Business Intelligence&#41;](specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
   
--   [Especificar a ordenação de atributos &#40;Assistente de Business Intelligence&#41;](specify-attribute-ordering-business-intelligence-wizard.md)  
+-   [Especificar a ordenação de atributos &#40;assistente de Business Intelligence&#41;](specify-attribute-ordering-business-intelligence-wizard.md)  
   
--   [Habilitar write-back de dimensão &#40;dimensão&#41; &#40;Assistente de Business Intelligence&#41;](enable-dimension-writeback-dimension-business-intelligence-wizard.md)  
+-   [Habilitar o Write-back de dimensão &#40;dimensão&#41; &#40;assistente de Business Intelligence&#41;](enable-dimension-writeback-dimension-business-intelligence-wizard.md)  
   
--   [Habilitar write-back de dimensão &#40;Assistente de Business Intelligence&#41;](enable-dimension-writeback-business-intelligence-wizard.md)  
+-   [Habilitar o Write-back de dimensão &#40;assistente de Business Intelligence&#41;](enable-dimension-writeback-business-intelligence-wizard.md)  
   
--   [Definir comportamento Semiaditivo &#40;Assistente de Business Intelligence&#41;](define-semiadditive-behavior-business-intelligence-wizard.md)  
+-   [Definir comportamento semiaditivo &#40;assistente de Business Intelligence&#41;](define-semiadditive-behavior-business-intelligence-wizard.md)  
   
--   [Definir opções de conversão de moeda &#40;Assistente de Business Intelligence&#41;](set-currency-conversion-options-business-intelligence-wizard.md)  
+-   [Definir opções de conversão de moeda &#40;assistente de Business Intelligence&#41;](set-currency-conversion-options-business-intelligence-wizard.md)  
   
--   [Selecionar membros do &#40;Assistente de Business Intelligence&#41;](select-members-business-intelligence-wizard.md)  
+-   [Selecione Membros &#40;assistente de Business Intelligence&#41;](select-members-business-intelligence-wizard.md)  
   
--   [Selecione o tipo de conversão &#40;Assistente de Business Intelligence&#41;](select-conversion-type-business-intelligence-wizard.md)  
+-   [Selecione o tipo de conversão &#40;assistente de Business Intelligence&#41;](select-conversion-type-business-intelligence-wizard.md)  
   
--   [Definir referência de moeda Local &#40;Assistente de Business Intelligence&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
+-   [Definir referência de moeda local &#40;assistente de Business Intelligence&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
   
--   [Especificar moedas de relatório &#40;Assistente de Business Intelligence&#41;](specify-reporting-currencies-business-intelligence-wizard.md)  
+-   [Especifique as moedas de relatório &#40;assistente de Business Intelligence&#41;](specify-reporting-currencies-business-intelligence-wizard.md)  
   
--   [Definir conversão de moeda &#40;Assistente de Business Intelligence&#41;](define-currency-conversion-business-intelligence-wizard.md)  
+-   [Definir conversão de moeda &#40;assistente de Business Intelligence&#41;](define-currency-conversion-business-intelligence-wizard.md)  
   
--   [Selecione uma caixa de diálogo de coluna &#40;Assistente de Business Intelligence&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
+-   [Caixa de diálogo Selecionar uma coluna &#40;assistente de Business Intelligence&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
   
--   [Concluindo o Assistente de &#40;Assistente de Business Intelligence&#41;](completing-the-wizard-business-intelligence-wizard.md)  
+-   [Concluindo o assistente &#40;Business Intelligence&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services assistentes &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

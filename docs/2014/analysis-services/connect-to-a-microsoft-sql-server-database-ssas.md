@@ -1,5 +1,5 @@
 ---
-title: Se conectar a um banco de dados do Microsoft SQL Server (SSAS) | Microsoft Docs
+title: Conectar-se a um banco de dados Microsoft SQL Server (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cc3530c7bc316c0dbdc3271d456d4f7adf05038a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087216"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>Conectar a um banco de dados Microsoft SQL Server (SSAS)
@@ -36,14 +36,14 @@ ms.locfileid: "66087216"
   
  Você pode usar um ponto (.), (local) ou localhost para indicar o servidor local.  
   
- **Usar Autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Especifique se a Autenticação do Windows será usada para estabelecer conexão com uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  O modo de Autenticação do Windows habilita um usuário a se conectar por meio de uma conta de usuário do Windows. Sempre que for possível, use a Autenticação do Windows.  
   
  Quando a Autenticação do Windows é usada, as credenciais do usuário atual são usadas na visualização e filtragem de dados na janela Propriedades de Tabela e no Assistente de Importação. Essas credenciais não são usadas para importar ou atualizar dados; em vez disso, utiliza-se as credenciais do Windows especificadas na página Informações sobre Representação.  
   
- **Usar Autenticação do SQL Server**  
+ **Usar autenticação SQL Server**  
  Especifique se a Autenticação do SQL Server será usada para estabelecer conexão com uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Com a Autenticação do SQL Server, o próprio SQL Server executa a autenticação verificando se foi configurada uma conta de logon do SQL Server e se a senha especificada corresponde a uma senha registrada anteriormente.  

@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo Propriedades do modo de exibição (SSAS) da fonte de dados | Microsoft Docs
+title: Caixa de diálogo Propriedades da exibição da fonte de dados (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b8c46cc7bb06a66c358c0be4adc9be050774172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082498"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Caixa de diálogo Propriedades da Exibição da Fonte de Dados (SSAS)
@@ -27,10 +27,10 @@ ms.locfileid: "66082498"
 |Termo|Definição|  
 |----------|----------------|  
 |**Nome**|Exibe o nome da exibição da fonte de dados.|  
-|**ID**|Exibe o identificador da exibição da fonte de dados.|  
+|**SESSÃO**|Exibe o identificador da exibição da fonte de dados.|  
 |**Descrição**|Exibe a descrição da exibição da fonte de dados.|  
-|**Criar Carimbo de Data/Hora**|Exibe a data e a hora de criação da exibição da fonte de dados.|  
-|**Última Atualização de Esquema**|Exibe a data e a hora da última atualização dos metadados da exibição da fonte de dados.|  
+|**Criar carimbo de data/hora**|Exibe a data e a hora de criação da exibição da fonte de dados.|  
+|**Última atualização de esquema**|Exibe a data e a hora da última atualização dos metadados da exibição da fonte de dados.|  
 |**Fonte de dados primária**|Exibe o nome da fonte de dados primária associada à exibição da fonte de dados.|  
   
   

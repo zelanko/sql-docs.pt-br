@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721008"
 ---
 # <a name="rename-a-stored-procedure"></a>Renomear um procedimento armazenado
@@ -45,7 +45,7 @@ ms.locfileid: "62721008"
   
 -   Renomear uma procedimento armazenado não alterará o nome do objeto correspondente na coluna de definição da exibição de catálogo **sys.sql_modules** . Assim, é recomendável não renomear esse tipo de objeto. Em vez disso, remova-o e recrie o procedimento armazenado com seu nome novo.  
   
--   A alteração do nome ou definição de um procedimento pode causar falha em objetos dependentes que não são atualizados para refletir as alterações que tenham sido feitas no procedimento. Para obter mais informações, veja [Exibir as dependências de um procedimento armazenado](view-the-dependencies-of-a-stored-procedure.md).  
+-   A alteração do nome ou definição de um procedimento pode causar falha em objetos dependentes que não são atualizados para refletir as alterações que tenham sido feitas no procedimento. Para obter mais informações, consulte [exibir as dependências de um procedimento armazenado](view-the-dependencies-of-a-stored-procedure.md).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -54,17 +54,17 @@ ms.locfileid: "62721008"
  Exige a permissão CREATE PROCEDURE no banco de dados e a permissão ALTER no esquema em que o procedimento está sendo criado, ou exige a associação na função de banco de dados fixa **db_ddladmin** .  
   
  ALTER PROCEDURE  
- Exige a permissão ALTER no procedimento, ou exige a associação na função de banco de dados fixa **db_ddladmin** .  
+ Requer a permissão ALTER no procedimento, ou requer a associação na função de banco de dados fixa **db_ddladmin**.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-rename-a-stored-procedure"></a>Para renomear um procedimento armazenado  
   
-1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda essa instância.  
+1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
 2.  Expanda **Bancos de Dados**, expanda o banco de dados ao qual pertence o procedimento e expanda **Programação**.  
   
-3.  [Determinar as dependências do procedimento armazenado](view-the-dependencies-of-a-stored-procedure.md).  
+3.  [Determine as dependências do procedimento armazenado](view-the-dependencies-of-a-stored-procedure.md).  
   
 4.  Expanda **Procedimentos Armazenados**, clique com o botão direito do mouse no procedimento a ser renomeado e clique em **Renomear**.  
   
@@ -110,9 +110,9 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [CRIAR procedimento &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-procedure-transact-sql)   
  [Criar um procedimento armazenado](../stored-procedures/create-a-stored-procedure.md)   
  [Modificar um procedimento armazenado](../stored-procedures/modify-a-stored-procedure.md)   
  [Excluir um procedimento armazenado](../stored-procedures/delete-a-stored-procedure.md)   

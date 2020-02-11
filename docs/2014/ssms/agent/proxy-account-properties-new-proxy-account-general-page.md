@@ -1,5 +1,5 @@
 ---
-title: Propriedades da conta proxy e a nova conta Proxy (página geral) | Microsoft Docs
+title: Propriedades da conta proxy e nova conta proxy (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650197"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Propriedades de conta proxy e nova conta proxy (página Geral)
-  Use essa página para exibir ou alterar as propriedades de uma conta proxy do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Use esta página para exibir ou alterar as propriedades de uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta proxy do Agent.  
   
 ## <a name="options"></a>Opções  
  **Nome do proxy**  
@@ -38,13 +38,13 @@ ms.locfileid: "62650197"
  **Descrição**  
  Digite a descrição para o proxy.  
   
- **Ativo nos seguintes subsistemas**  
+ **Ativo para os seguintes subsistemas**  
  Selecione os subsistemas para os quais a conta proxy tem acesso.  
   
  **Reatribuir etapas de trabalho para**  
  Selecione o proxy para o qual reatribuir etapas de trabalho. Essa lista está habilitada quando você revogar o acesso a um subsistema para o qual proxy tinha acesso anteriormente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um proxy do SQL Server Agent](create-a-sql-server-agent-proxy.md)  
   
   

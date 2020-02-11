@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667242"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitore programaticamente a replicação
@@ -58,47 +58,47 @@ ms.locfileid: "62667242"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Para monitorar Publicador, publicações e assinatura a partir do Distribuidor  
   
-1.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql). Isso retornará informações para todos os Publicadores que usarem esse Distribuidor. Para limitar o conjunto de resultados a um único Publicador, especifique **@publisher** .  
+1.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql). Isso retornará informações para todos os Publicadores que usarem esse Distribuidor. Para limitar o conjunto de resultados a um único Publicador **@publisher**, especifique.  
   
-2.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). Isso retornará informações para todas as publicações que usarem esse Distribuidor. Para limitar o conjunto de resultados a um único Publicador, publicação ou banco de dados publicado, especifique **@publisher** , **@publication** ou **@publisher_db** , respectivamente.  
+2.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). Isso retornará informações para todas as publicações que usarem esse Distribuidor. Para limitar o conjunto de resultados a um único Publicador, publicação ou banco de dados **@publisher**publicado **@publication**, especifique **@publisher_db**, ou, respectivamente.  
   
-3.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql). Isso retornará informações para todas as assinaturas que usarem esse Distribuidor. Para limitar o conjunto de resultados às assinaturas pertencentes a um único Publicador, publicação ou banco de dados publicado, especifique **@publisher** , **@publication** ou **@publisher_db** , respectivamente.  
+3.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql). Isso retornará informações para todas as assinaturas que usarem esse Distribuidor. Para limitar o conjunto de resultados às assinaturas que pertencem a um único Publicador, publicação ou banco de dados publicado **@publisher**, **@publication**especifique, **@publisher_db**ou, respectivamente.  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>Para monitorar os comandos transacionais que estão esperando para serem aplicados no Assinante.  
   
-1.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql). Isso retornará informações de monitoração para todos os comandos pendentes, de todas as assinaturas que usam esse Distribuidor. Para limitar o conjunto de resultados aos comandos pendentes das assinaturas pertencentes a um único Publicador, publicação ou banco de dados publicado, especifique **@publisher** , **@subscriber** , **@publication** ou **@publisher_db** , respectivamente.  
+1.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql). Isso retornará informações de monitoração para todos os comandos pendentes, de todas as assinaturas que usam esse Distribuidor. Para limitar o conjunto de resultados aos comandos pendentes para as assinaturas que pertencem a um único Publicador, Assinante, publicação ou banco **@publisher**de **@subscriber**dados **@publication**publicado, **@publisher_db**especifique,, ou, respectivamente.  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>Para monitorar as alterações de mesclagem a espera de serem carregadas ou baixadas  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Isso retornará um conjunto de resultados que mostra informações sobre as alterações esperando para ser replicadas nos Assinantes. Para limitar o conjunto de resultados às mudanças pertencentes a um único Publicador, publicação ou artigo, especifique **@publication** ou **@article** , respectivamente.  
+1.  No Publicador do banco de dados de publicação, execute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Isso retornará um conjunto de resultados que mostra informações sobre as alterações esperando para ser replicadas nos Assinantes. Para limitar o conjunto de resultados às alterações que pertencem a uma única publicação ou artigo, **@publication** especifique **@article**ou, respectivamente.  
   
-2.  Em um Assinante, no banco de dados da assinatura, execute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Isso retornará um conjunto de resultados que mostra informações sobre as alterações esperando para ser replicadas no Publicador. Para limitar o conjunto de resultados às mudanças pertencentes a um único Publicador, publicação ou artigo, especifique **@publication** ou **@article** , respectivamente.  
+2.  Em um Assinante, no banco de dados da assinatura, execute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Isso retornará um conjunto de resultados que mostra informações sobre as alterações esperando para ser replicadas no Publicador. Para limitar o conjunto de resultados às alterações que pertencem a uma única publicação ou artigo, **@publication** especifique **@article**ou, respectivamente.  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>Para monitorar sessões do Merge Agent  
   
 1.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql). Isso retornará informações de monitoração, inclusive **Session_id**, em todas as sessões do Merge Agent de todas as assinaturas que usam esse Distribuidor. Você também pode obter o **Session_id** consultando a tabela do sistema [MSmerge_sessions](/sql/relational-databases/system-tables/msmerge-sessions-transact-sql) .  
   
-2.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql). Especifique um valor de **Session_id** da etapa 1 para **@session_id** . Isso exibirá informações de monitoramento detalhadas sobre a sessão.  
+2.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql). Especifique um valor de **Session_id** da etapa 1 para **@session_id**. Isso exibirá informações de monitoramento detalhadas sobre a sessão.  
   
 3.  Repita a etapa 2 para cada sessão que interessar.  
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>Para monitorar sessões do Merge Agent para assinatura pull do Assinante  
   
-1.  No Assinante, no banco de dados da assinatura, execute [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql). Para uma assinatura determinada, especifique **@publisher** , **@publication** e o nome do banco de dados de publicação para **@publisher_db** . Isso retornará informações de monitoração das últimas cinco sessões do Merge Agent para essa assinatura. Observe que o valor de **Session_id** para as sessões que interessarem, no conjunto de resultados.  
+1.  No Assinante, no banco de dados da assinatura, execute [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql). Para uma determinada assinatura, especifique **@publisher**, **@publication**e o nome do banco de dados de publicação **@publisher_db**para. Isso retornará informações de monitoração das últimas cinco sessões do Merge Agent para essa assinatura. Observe que o valor de **Session_id** para as sessões que interessarem, no conjunto de resultados.  
   
-2.  No Assinante, no banco de dados da assinatura, execute [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql). Especifique um valor de **Session_id** da etapa 1 para **@session_id** . Isso exibirá informações de monitoramento detalhadas sobre a sessão.  
+2.  No Assinante, no banco de dados da assinatura, execute [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql). Especifique um valor de **Session_id** da etapa 1 para **@session_id**. Isso exibirá informações de monitoramento detalhadas sobre a sessão.  
   
 3.  Repita a etapa 2 para cada sessão que interessar.  
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>Para exibir e modificar as métricas de limite do monitor para uma publicação  
   
-1.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). Isso retornará o conjunto de limites de monitoramento, para todas as publicações que usam esse Distribuidor. Para limitar o conjunto de resultados e monitorar os limites das publicações pertencentes a um único Publicador, a um banco de dados publicado ou a uma única publicação, especifique **@publisher** , **@publisher_db** ou **@publication** , respectivamente. Observe o valor de **Metric_id** para qualquer limite que deva ser alterado. Para obter mais informações, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+1.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). Isso retornará o conjunto de limites de monitoramento, para todas as publicações que usam esse Distribuidor. Para limitar o conjunto de resultados para monitorar os limites para publicações que pertencem a um único Publicador ou banco de dados publicado ou a **@publisher**uma **@publisher_db**única publicação **@publication**, especifique, ou, respectivamente. Observe o valor de **Metric_id** para qualquer limite que deva ser alterado. Para obter mais informações, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 2.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql). Especifique o seguinte, quando necessário:  
   
-    -   O valor **Metric_id** obtido na etapa 1 para **@metric_id** .  
+    -   O valor **Metric_id** obtido na etapa 1 para **@metric_id**.  
   
-    -   Um valor novo para a métrica de limite do monitor para **@value** .  
+    -   Um novo valor para a métrica de limite de **@value**monitor para.  
   
     -   O valor **1** para **@shouldalert** , para ser registrado um alerta, quando esse limite for atingido, ou o valor **0** , se não for necessário um alerta.  
   
@@ -128,15 +128,15 @@ ms.locfileid: "62667242"
   
 5.  Usando a id de sessão obtida na etapa 3, chame um dos métodos seguintes para retornar informações sobre os detalhes de uma sessão em particular:  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -Retorna uma matriz de <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> objetos para fornecido *sessionID*.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A>-Retorna uma matriz de <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> objetos para a *SessionID*fornecida.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -Retorna um <xref:System.Data.DataSet> objeto com informações especificado *sessionID*.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A>-Retorna um <xref:System.Data.DataSet> objeto com informações para a *SessionID*especificada.  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>Para monitorar as propriedades de replicação para todas as publicações em um Distribuidor  
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationMonitor>.  
   
 3.  Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criada na etapa 1.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "62667242"
   
 2.  Consiga um objeto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> em um desses modos.  
   
-    -   Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Defina a propriedade <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> para o Publicador e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criada na etapa 1. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, o nome do Publicador estava definido incorretamente ou a publicação não existe.  
+    -   Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor>. Defina a propriedade <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> para o Publicador e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criada na etapa 1. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, o nome do Publicador estava definido incorretamente ou a publicação não existe.  
   
     -   Do <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> acessado por meio da propriedade <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> de um objeto existente <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> .  
   
@@ -212,7 +212,7 @@ ms.locfileid: "62667242"
   
 2.  Consiga um objeto <xref:Microsoft.SqlServer.Replication.PublicationMonitor> em um desses modos.  
   
-    -   Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> para a publicação e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criado na etapa 1. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de publicação foram definidas incorretamente ou a publicação não existe.  
+    -   Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> para a publicação e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criado na etapa 1. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de publicação foram definidas incorretamente ou a publicação não existe.  
   
     -   Do <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> acessado por meio da propriedade <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> de um objeto existente <xref:Microsoft.SqlServer.Replication.PublisherMonitor> .  
   
@@ -242,7 +242,7 @@ ms.locfileid: "62667242"
   
 2.  Consiga um objeto <xref:Microsoft.SqlServer.Replication.PublicationMonitor> em um desses modos.  
   
-    -   Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> para a publicação e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criado na etapa 1. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de publicação foram definidas incorretamente ou a publicação não existe.  
+    -   Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> para a publicação e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criado na etapa 1. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de publicação foram definidas incorretamente ou a publicação não existe.  
   
     -   Do <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> acessado por meio da propriedade <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> de um objeto existente <xref:Microsoft.SqlServer.Replication.PublisherMonitor> .  
   
@@ -256,7 +256,7 @@ ms.locfileid: "62667242"
   
 2.  Consiga um objeto <xref:Microsoft.SqlServer.Replication.PublicationMonitor> em um desses modos.  
   
-    -   Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> para a publicação e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criado na etapa 1. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de publicação foram definidas incorretamente ou a publicação não existe.  
+    -   Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> para a publicação e defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> como <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criado na etapa 1. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de publicação foram definidas incorretamente ou a publicação não existe.  
   
     -   Do <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> acessado por meio da propriedade <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> de um objeto existente <xref:Microsoft.SqlServer.Replication.PublisherMonitor> .  
   
@@ -266,15 +266,22 @@ ms.locfileid: "62667242"
   
     -   *metricID* - um valor <xref:System.Int32> que representa a métrica de limite de monitoração da tabela a seguir:  
   
-        |Valor|Descrição|  
+        |Valor|DESCRIÇÃO|  
         |-----------|-----------------|  
-        |1|`expiration` - monitora a expiração iminente de assinaturas para publicações transacionais.|  
-        |2|`latency` - monitora o desempenho de assinaturas para publicações transacionais.|  
-        |4|`mergeexpiration` - monitora a expiração iminente de assinaturas para publicações de mesclagem.|  
-        |5|`mergeslowrunduration`- monitora a duração de sincronizações de mesclagem em conexões da baixa largura da banda (discadas).|  
-        |6|`mergefastrunduration` - monitora a duração de sincronizações de mesclagem em conexões da alta largura da banda (LAN).|  
-        |7|`mergefastrunspeed` - monitora a taxa de sincronizações de mesclagem em conexões de alta largura da banda (LAN).|  
-        |8|`mergeslowrunspeed` - monitora a taxa de sincronizações de mesclagem em conexões de baixa largura da banda (discadas).|  
+        |1|
+  `expiration` - monitora a expiração iminente de assinaturas para publicações transacionais.|  
+        |2|
+  `latency` - monitora o desempenho de assinaturas para publicações transacionais.|  
+        |4|
+  `mergeexpiration` - monitora a expiração iminente de assinaturas para publicações de mesclagem.|  
+        |5|
+  `mergeslowrunduration`- monitora a duração de sincronizações de mesclagem em conexões da baixa largura da banda (discadas).|  
+        |6|
+  `mergefastrunduration` - monitora a duração de sincronizações de mesclagem em conexões da alta largura da banda (LAN).|  
+        |7|
+  `mergefastrunspeed` - monitora a taxa de sincronizações de mesclagem em conexões de alta largura da banda (LAN).|  
+        |8|
+  `mergeslowrunspeed` - monitora a taxa de sincronizações de mesclagem em conexões de baixa largura da banda (discadas).|  
   
     -   *enable* - <xref:System.Boolean> valor que indica se a métrico está habilitado para a publicação.  
   

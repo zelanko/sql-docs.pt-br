@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667414"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Adicionar e remover Publicadores do Replication Monitor
@@ -46,7 +46,7 @@ ms.locfileid: "62667414"
   
 2.  Na caixa de diálogo **Adicionar Publicador** , clique em **Adicionar**e, então, clique em **Adicionar um Editor Oracle**.  
   
-3.  Na caixa de diálogo **Conectar ao Servidor** , digite o nome do Distribuidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associado ao Editor Oracle, e, então, selecione o tipo de autenticação. Se você selecionar **Autenticação do SQL Server**, digite um logon e senha. As credenciais que você especificar serão salvas pelo Replication Monitor para usar ao conectar-se a esse servidor no futuro. A conta do Windows ou o logon do SQL Server especificado deve ser um membro da função de servidor fixa **sysadmin** ou membro da função de banco de dados fixa **replmonitor** no banco de dados de distribuição.  
+3.  Na caixa de diálogo **Conectar ao Servidor**, digite o nome do Distribuidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associado ao Editor Oracle e então selecione o tipo de autenticação. Se você selecionar **Autenticação do SQL Server**, digite um logon e senha. As credenciais que você especificar serão salvas pelo Replication Monitor para usar ao conectar-se a esse servidor no futuro. A conta do Windows ou o logon do SQL Server especificado deve ser um membro da função de servidor fixa **sysadmin** ou membro da função de banco de dados fixa **replmonitor** no banco de dados de distribuição.  
   
 4.  Clique em **Conectar**.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62667414"
   
 2.  Clique com o botão direito do mouse no grupo do Publicador e, então, clique em **Remover**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar Distribuição](../configure-distribution.md)   
  [Monitorando a Replicação](../monitoring-replication.md)  
   

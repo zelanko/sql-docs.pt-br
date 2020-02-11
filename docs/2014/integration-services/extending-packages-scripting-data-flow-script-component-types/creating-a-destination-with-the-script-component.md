@@ -17,16 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 206a91032b0eb2e1928846ebcdbfcb97f04ba12c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768952"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Criando um destino com o componente Script
   Você usa um componente de destino no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para salvar dados recebidos de fontes upstream e transformações em uma fonte de dados. Em geral, o componente de destino se conecta à fonte de dados através de um gerenciador de conexões existente.  
   
- Para obter uma visão geral do componente Script, consulte [estendendo o fluxo de dados com o componente Script] (... / extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
+ Para obter uma visão geral do componente Script, consulte [estendendo o fluxo de dados com o componente Script] (.. /extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
   
  O componente Script e o código de infraestrutura gerado para você simplificam significativamente o processo de desenvolvimento de um componente de fluxo de dados personalizado. No entanto, para entender como funciona o componente Script, talvez seja útil ler as etapas de como desenvolver componentes de fluxo de dados personalizados na seção [Desenvolvendo um componente de fluxo de dados personalizado](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) e, especialmente, [Desenvolvendo um componente de destino personalizado](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62768952"
 ### <a name="configuring-inputs-and-input-columns"></a>Configurando entradas e colunas de entrada  
  Um componente de destino tem uma entrada e nenhuma saída.  
   
- Na página **Colunas de Entrada** do **Editor de Transformação Scripts**, a lista de colunas mostra as colunas disponíveis da saída do componente upstream no fluxo de dados. Selecione as colunas a serem salvas.  
+ Na página **colunas de entrada** do **Editor de transformação scripts**, a lista coluna mostra as colunas disponíveis da saída do componente upstream no fluxo de dados. Selecione as colunas a serem salvas.  
   
  Para obter mais informações sobre a página **Colunas de Entrada** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Colunas de Entrada&#41;](../script-transformation-editor-input-columns-page.md).  
   
@@ -66,9 +66,9 @@ ms.locfileid: "62768952"
  Para obter mais informações sobre a página **Entradas e Saídas** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Entradas e Saídas&#41;](../script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Adicionando variáveis  
- Se você quiser usar variáveis existentes em seu script, você pode adicioná-las a `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade a **Script** página da **Editor de transformação scripts**.  
+ Se você quiser usar variáveis existentes em seu script, poderá adicioná-las nos campos de `ReadOnlyVariables` propriedade `ReadWriteVariables` e na página **script** do **Editor de transformação scripts**.  
   
- Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências ( **...** ) botão ao lado de `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade e, em seguida, selecionar as variáveis na **selecionar variáveis** caixa de diálogo.  
+ Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar várias variáveis clicando no botão de reticências (**...**) ao lado `ReadOnlyVariables` dos `ReadWriteVariables` campos de propriedade e e selecionando as variáveis na caixa de diálogo **Selecionar variáveis** .  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62768952"
 ### <a name="understanding-the-auto-generated-code"></a>Compreendendo o código gerado automaticamente  
  Quando você abre o VSTA IDE depois de criar e configurar um componente de destino, a classe `ScriptMain` editável aparece no editor de códigos com um stub para o método `ProcessInputRow`. A classe `ScriptMain` é onde você escreverá seu código personalizado, e `ProcessInputRow` é o método mais importante em um componente de destino.  
   
- Se você abrir o **Explorador de projeto** janela no VSTA, você pode ver que o componente Script também gerou somente leitura `BufferWrapper` e `ComponentWrapper` itens de projeto. A classe `ScriptMain` herda da classe `UserComponent` no item de projeto `ComponentWrapper`.  
+ Se você abrir a janela **Explorador de projeto** no VSTA, poderá ver que o componente script também gerou itens de projeto e `BufferWrapper` `ComponentWrapper` somente leitura. A classe `ScriptMain` herda da classe `UserComponent` no item de projeto `ComponentWrapper`.  
   
  Em tempo de execução, o mecanismo de fluxo de dados invoca o método `ProcessInput` na classe `UserComponent`, que substitui o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> da classe pai <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. O método `ProcessInput`, por sua vez, executa um loop nas linhas do buffer de entrada e chama o método `ProcessInputRow` uma vez para cada linha.  
   
@@ -101,14 +101,14 @@ ms.locfileid: "62768952"
  Os exemplos a seguir demonstram o código que é exigido na classe `ScriptMain` para criar um componente de destino.  
   
 > [!NOTE]
->  Esses exemplos usam o **Person. address** na tabela a `AdventureWorks` banco de dados de exemplo e passam a primeira e a quarta colunas, o **int * AddressID*** e **nvarchar (30) Cidade**colunas de, pelo fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
+>  Esses exemplos usam a tabela **Person. Address** no banco `AdventureWorks` de dados de exemplo e passam sua primeira e quarta colunas, as colunas **int * AddressID*** e **nvarchar (30) City** , por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
   
 ### <a name="adonet-destination-example"></a>Exemplo de destino ADO.NET  
  Esse exemplo demonstra um componente de destino que usa um gerenciador de conexões existente do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] para salvar dados do fluxo de dados em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Se você quiser executar esse código de exemplo, configure o pacote e o componente desta forma:  
   
-1.  Criar uma [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexão que usa o `SqlClient` provedor para conectar-se para o `AdventureWorks` banco de dados.  
+1.  Crie um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexões que use `SqlClient` o provedor para se conectar `AdventureWorks` ao banco de dados.  
   
 2.  Crie uma tabela de destino executando o seguinte comando [!INCLUDE[tsql](../../includes/tsql-md.md)] no banco de dados `AdventureWorks`:  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62768952"
   
 3.  Adicione um novo componente Script à superfície do designer de Fluxo de Dados e configure-o como um destino.  
   
-4.  Conecte a saída de uma origem ou transformação upstream para o componente de destino no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Você pode conectar uma origem diretamente a um destino, sem transformações.) Essa saída deve fornecer dados a partir o **Person. address** tabela da `AdventureWorks` banco de dados de exemplo que contém pelo menos as **AddressID** e **Cidade** colunas.  
+4.  Conecte a saída de uma origem ou transformação upstream para o componente de destino no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Você pode conectar uma fonte diretamente a um destino sem nenhuma transformação.) Essa saída deve fornecer dados da tabela **Person. Address** do banco de `AdventureWorks` dados de exemplo que contém pelo menos as colunas **AddressID** e **City** .  
   
 5.  Abra o **Editor de Transformação Scripts**. Na página **Colunas de Entrada**, selecione as colunas de entrada **AddressID** e **City**.  
   
@@ -236,11 +236,11 @@ public class ScriptMain:
   
 2.  Adicione um novo componente Script à superfície do designer de Fluxo de Dados e configure-o como um destino.  
   
-3.  Conecte a saída de uma origem ou transformação upstream para o componente de destino no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Você pode conectar uma origem diretamente a um destino, sem transformações.) Essa saída deve fornecer dados a partir o **Person. address** tabela da `AdventureWorks` banco de dados de exemplo e deve conter pelo menos as **AddressID** e **Cidade** colunas.  
+3.  Conecte a saída de uma origem ou transformação upstream para o componente de destino no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Você pode conectar uma fonte diretamente a um destino sem nenhuma transformação.) Essa saída deve fornecer dados da tabela **Person. Address** do banco de `AdventureWorks` dados de exemplo e deve conter pelo menos as colunas **AddressID** e **City** .  
   
 4.  Abra o **Editor de Transformação Scripts**. Na página **Colunas de Entrada**, selecione as colunas **AddressID** e **City**.  
   
-5.  Na página **Entradas e Saídas**, renomeie a entrada com um nome mais descritivo, como **MyAddressInput**.  
+5.  Na página **entradas e saídas** , renomeie a entrada com um nome mais descritivo, como **MyAddressInput**.  
   
 6.  Na página **Gerenciadores de Conexões**, adicione ou crie o gerenciador de conexões de Arquivos Simples com um nome descritivo como **MyFlatFileDestConnectionManager**.  
   
@@ -349,10 +349,10 @@ public class ScriptMain:
 }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
- [Criando uma origem com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criando uma fonte com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   
  [Desenvolvendo um componente de destino personalizado](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - Editar filtro | Microsoft Docs
+title: Filtro de SQL Server Profiler de edição | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089777"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - Editar Filtro
@@ -25,8 +25,8 @@ ms.locfileid: "66089777"
 > [!NOTE]  
 >  Para colunas de dados do tipo cadeia de caracteres, os critérios de filtro exibirão um valor de cadeia de caracteres LIKE ou NOT LIKE.  
   
-## <a name="see-also"></a>Consulte também  
- [Filtrar eventos em um rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Filtrar eventos em um &#40;de rastreamento SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [Filtrar eventos com base na hora de término do evento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
  [Filtrar eventos com base na hora de início do evento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
  [Filtrar um rastreamento](../relational-databases/sql-trace/filter-a-trace.md)   

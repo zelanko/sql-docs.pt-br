@@ -1,5 +1,5 @@
 ---
-title: Excluir relações (SSAS Tabular) | Microsoft Docs
+title: Excluir relações (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067333"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>Excluir relações (SSAS tabular)
-  É possível excluir relações existentes usando o designer de modelos na Exibição de Diagrama ou usando a caixa de diálogos Gerenciar Relações. Para obter informações sobre como as relações são usadas em modelos tabulares, consulte [Relações &#40;SSAS de Tabela&#41;](relationships-ssas-tabular.md).  
+  É possível excluir relações existentes usando o designer de modelos na Exibição de Diagrama ou usando a caixa de diálogos Gerenciar Relações. Para obter informações sobre como as relações são usadas em modelos tabulares, consulte [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
   
 ## <a name="considerations-for-deleting-relationships"></a>Considerações para excluir relações  
  Lembre-se destes problemas quando decidir excluir uma relação:  
@@ -51,8 +51,8 @@ ms.locfileid: "66067333"
   
 4.  Na caixa de diálogo **Gerenciar Relações** , clique em **Fechar**.  
   
-## <a name="see-also"></a>Consulte também  
- [Relações &#40;SSAS de Tabela&#41;](relationships-ssas-tabular.md)   
- [Criar uma relação entre duas tabelas &#40;SSAS de Tabela&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Relações &#40;SSAS de tabela&#41;](relationships-ssas-tabular.md)   
+ [Crie uma relação entre duas tabelas &#40;SSAS de tabela&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

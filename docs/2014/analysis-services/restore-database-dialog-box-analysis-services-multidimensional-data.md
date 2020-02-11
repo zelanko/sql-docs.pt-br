@@ -1,5 +1,5 @@
 ---
-title: Restaurar a caixa de diálogo de banco de dados (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Restore Database (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070259"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Restaurar Banco de Dados (Analysis Services - Dados multidimensionais)
@@ -28,7 +28,7 @@ ms.locfileid: "66070259"
 > [!NOTE]  
 >  Após restaurar um banco de dados existente, o usuário que o restaurou poderá perder o acesso ao banco de dados restaurado. Essa perda de acesso pode ocorrer se, no momento da execução do backup, o usuário não for membro da função de servidor, nem membro da função de banco de dados com permissões de Controle total (Administrador).  
   
- **Para exibir a caixa de diálogo restaurar banco de dados**  
+ **Para exibir a caixa de diálogo Restaurar Banco de Dados**  
   
 -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na pasta **Bancos de Dados** de uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou em um banco de dados em **Pesquisador de Objetos**e então clique em **Restaurar**.  
   
@@ -41,8 +41,8 @@ ms.locfileid: "66070259"
  **Partições**  
  Use esta página para restaurar partições locais a locais especificados e restaurar partições remotas de arquivos de backup remotos. Para obter mais informações sobre essa página, consulte [Partições &#40;caixa de diálogo Restaurar Banco de Dados&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Backup e restauração de bancos de dados do Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

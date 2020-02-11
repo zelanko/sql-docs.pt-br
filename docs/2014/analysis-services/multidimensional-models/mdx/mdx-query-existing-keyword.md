@@ -1,5 +1,5 @@
 ---
-title: Palavra-chave EXISTING (MDX) | Microsoft Docs
+title: Palavra-chave EXISTing (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073973"
 ---
 # <a name="existing-keyword-mdx"></a>Palavra-chave EXISTING (MDX)
@@ -39,7 +39,7 @@ Existing Set_Expression
  Por padrão, são avaliados conjuntos no contexto do cubo que contém os membros do conjunto. A palavra-chave `Existing` força a avaliação de um conjunto especificado no contexto atual.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir retorna a contagem dos revendedores cujas vendas caíram ao longo do período anterior, com base em valores de Estado do membro, selecionados pelo usuário, avaliados usando a função `Aggregate`. A palavra-chave [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) e [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) são usadas para retornar valores por queda de vendas por categorias de produto na dimensão Produto. O `Existing` força a palavra-chave set no `Filter` função a ser avaliada no contexto atual, ou seja, para os membros Washington e Oregon da hierarquia de atributo estado-província.  
+ O exemplo a seguir retorna a contagem dos revendedores cujas vendas caíram ao longo do período anterior, com base em valores de Estado do membro, selecionados pelo usuário, avaliados usando a função `Aggregate`. A palavra-chave [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) e [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) são usadas para retornar valores por queda de vendas por categorias de produto na dimensão Produto. A `Existing` palavra-chave força o conjunto `Filter` na função a ser avaliada no contexto atual, ou seja, para os membros Washington e Oregon da hierarquia de atributo State-província.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -76,14 +76,14 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Count &#40;Set&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
- [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx)   
- [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)   
- [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)   
- [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [Referência da Função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+## <a name="see-also"></a>Consulte Também  
+ [Contagem &#40;definida&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
+ [AddCalculatedMembers&#41;MDX &#40;](/sql/mdx/addcalculatedmembers-mdx)   
+ [&#41;&#40;MDX de agregação](/sql/mdx/aggregate-mdx)   
+ [Filtrar &#40;&#41;MDX](/sql/mdx/filter-mdx)   
+ [Propriedades &#40;MDX&#41;](/sql/mdx/properties-mdx)   
+ [DrilldownLevel&#41;MDX &#40;](/sql/mdx/drilldownlevel-mdx)   
+ [Hierarquiar &#40;&#41;MDX](/sql/mdx/hierarchize-mdx)   
+ [Referência de função MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)  
   
   

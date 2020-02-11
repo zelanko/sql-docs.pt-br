@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084945"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tarefas e instruções de consulta de Data Mining
@@ -25,11 +25,11 @@ ms.locfileid: "66084945"
 ## <a name="creating-queries-with-prediction-query-builder"></a>Criando consultas com o Construtor de Consultas de Previsão  
  O Construtor de Consultas de Previsão é fornecido no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] como uma maneira de criar consultas em modelos de mineração de dados de forma gráfica. Os tópicos a seguir explicam como você pode selecionar um modelo, especificar uma fonte de dados, personalizar as previsões e salvar a saída.  
   
--   [Criar uma consulta de previsão usando o Construtor de Consultas de previsão](create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [Criar uma consulta de previsão usando o construtor de consultas de previsão](create-a-prediction-query-using-the-prediction-query-builder.md)  
   
 -   [Criar uma consulta Singleton no Designer de Mineração de Dados](create-a-singleton-query-in-the-data-mining-designer.md)  
   
--   [Criar uma consulta de previsão usando o Construtor de Consultas de previsão](create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [Criar uma consulta de previsão usando o construtor de consultas de previsão](create-a-prediction-query-using-the-prediction-query-builder.md)  
   
 -   [Exibir e salvar os resultados de uma consulta de previsão](view-and-save-the-results-of-a-prediction-query.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66084945"
 ## <a name="using-other-data-mining-query-tools"></a>Usando outras ferramentas de consulta de mineração de dados  
  Além de usar o Construtor de Consultas de Previsão, você pode digitar uma consulta diretamente no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando o DMX ou o XMLA. Você também pode criar consultas de previsão de forma programática e enviá-las a um servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Os tópicos a seguir fornecem mais informações sobre como criar e trabalhar com consultas de previsão fora do Construtor de Consultas de Previsão.  
   
- [Criar uma consulta de previsão Singleton a partir de um modelo](create-a-singleton-prediction-query-from-a-template.md)  
+ [Criar uma consulta de previsão singleton a partir de um modelo](create-a-singleton-prediction-query-from-a-template.md)  
  Descreve como usar as ferramentas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar e executar uma consulta de previsão.  
   
  [Criar uma consulta de previsão singleton a partir de um modelo](create-a-singleton-prediction-query-from-a-template.md)  
@@ -54,11 +54,11 @@ ms.locfileid: "66084945"
  [Criar uma consulta de conteúdo em um modelo de mineração](create-a-content-query-on-a-mining-model.md)  
  Descreve como criar consultas que retornam informações detalhadas armazenadas no modelo de mineração, usando conjuntos de linhas do esquema de mineração de dados.  
   
- [Criar uma consulta de mineração de dados usando XML/A](create-a-data-mining-query-by-using-xmla.md)  
+ [Criar uma consulta de mineração de dados usando XMLA](create-a-data-mining-query-by-using-xmla.md)  
  Descreve como criar uma consulta no conteúdo do modelo de mineração usando os modelos XMLA do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- [Referência à linguagem de consulta e expressão &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Procedimentos armazenados da mineração de dados &#40;Analysis Services – Mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de linguagem de consulta e expressão &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+ [Procedimentos armazenados de mineração de dados &#40;Analysis Services&#41;de mineração de dados](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Definir chaves primárias lógicas em uma exibição de fonte de dados (Analysis Services) | Microsoft Docs
+title: Definir chaves primárias lógicas em uma exibição da fonte de dados (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f3fa1ce62b3c7402e1f938bea8e400173ef79f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075643"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Definir chaves primárias lógicas em uma exibição da fonte de dados (Analysis Services)
@@ -36,7 +36,7 @@ ms.locfileid: "66075643"
   
 2.  No Gerenciador de Soluções, expanda a pasta **Exibições da Fonte de Dados** e clique duas vezes na exibição da fontes de dados.  
   
-     Para localizar uma tabela ou exibição, use a opção **Localizar Tabela** clicando no menu **Exibição da Fonte de Dados**  ou clicando com o botão direito do mouse em qualquer área dos painéis **Tabelas** ou **Diagrama** .  
+     Para localizar uma tabela ou exibição, você pode usar a opção **Localizar tabela** clicando no menu **exibição da fonte de dados** ou clicando com o botão direito do mouse em uma área aberta dos painéis **tabelas** ou **diagrama** .  
   
 3.  No painel **Tabelas** ou **Diagrama** , clique com o botão direito do mouse na coluna ou nas colunas que você quer usar para definir uma chave primária lógica e clique em **Definir Chave Primária Lógica**.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "66075643"
   
      Observe que, depois que você define a chave, agora um ícone de chave identifica as colunas de chave primária.  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
  [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

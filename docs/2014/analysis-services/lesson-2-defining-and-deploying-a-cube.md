@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Definindo e implantando um cubo | Microsoft Docs'
+title: 'Lição 2: definindo e implantando um cubo | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078942"
 ---
-# <a name="lesson-2-defining-and-deploying-a-cube"></a>Lição 2: Definir e implantar um cubo
-  Depois de definir uma exibição da fonte de dados em seu projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você estará pronto para definir um cubo inicial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+# <a name="lesson-2-defining-and-deploying-a-cube"></a>Lição 2: Definindo e implantando um cubo
+  Depois de definir uma exibição da fonte de dados [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em seu projeto, você estará pronto para definir [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] um cubo inicial.  
   
  Você pode definir um cubo e suas dimensões em uma etapa usando o Assistente para Cubos. Como alternativa, você pode definir uma ou mais dimensões e depois usar o Assistente para Cubos para definir um cubo que use aquelas dimensões. Se você estiver criando uma solução complexa, normalmente começará definindo as dimensões. Para obter mais informações, consulte [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md) ou [Cubos em modelos multidimensionais](multidimensional-models/cubes-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
+>  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo que acompanham este tutorial.  
   
  Esta lição contém as seguintes tarefas:  
   
@@ -48,13 +48,13 @@ ms.locfileid: "66078942"
 ## <a name="next-lesson"></a>Próxima lição  
  [Lição 3: Modificando medidas, atributos e hierarquias](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Cenário do Tutorial do Analysis Services](analysis-services-tutorial-scenario.md)   
- [Modelagem multidimensional &#40;Tutorial da Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Cenário do tutorial de Analysis Services](analysis-services-tutorial-scenario.md)   
+ [Modelagem multidimensional &#40;tutorial do Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Cubos em modelos multidimensionais](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [Criar projetos do Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Implantar projetos do Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Configurar propriedades do projeto de Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [Compilar projetos de Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Implantar projetos de Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

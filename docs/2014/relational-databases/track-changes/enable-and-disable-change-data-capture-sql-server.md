@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670572"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar e desabilitar o Change Data Capture (SQL Server)
@@ -48,7 +48,7 @@ GO
 ```  
   
 ## <a name="disable-change-data-capture-for-a-database"></a>Desabilitar o Change Data Capture para um banco de dados  
- Um membro do `sysadmin` função de servidor fixa pode executar o procedimento armazenado [sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) no contexto do banco de dados para desabilitar o change data capture para um banco de dados. Não é necessário desabilitar tabelas individuais antes de desabilitar o banco de dados. A desabilitação do banco de dados removerá todos os metadados de Change Data Capture associados, inclusive o usuário e o esquema `cdc` e os trabalhos de Change Data Capture. No entanto, qualquer função associada criada pelo Change Data Capture não será removida automaticamente e deverá ser excluída explicitamente. Para determinar se um banco de dados está habilitado, consulte a coluna `is_cdc_enabled` na exibição de catálogo sys.databases.  
+ Um membro da função `sysadmin` de servidor fixa pode executar o procedimento armazenado [sys. sp_cdc_disable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) no contexto do banco de dados para desabilitar o Change Data Capture para um banco de dado. Não é necessário desabilitar tabelas individuais antes de desabilitar o banco de dados. A desabilitação do banco de dados removerá todos os metadados de Change Data Capture associados, inclusive o usuário e o esquema `cdc` e os trabalhos de Change Data Capture. No entanto, qualquer função associada criada pelo Change Data Capture não será removida automaticamente e deverá ser excluída explicitamente. Para determinar se um banco de dados está habilitado, consulte a coluna `is_cdc_enabled` na exibição de catálogo sys.databases.  
   
  Se um banco de dados habilitado do Change Data Capture for descartado, os trabalhos de Change Data Capture serão removidos automaticamente.  
   
@@ -74,11 +74,11 @@ GO
   
  `Columns in the source table to be captured`.  
   
- Por padrão, todas as colunas na tabela de origem são identificadas como colunas capturadas. Se for necessário rastrear apenas um subconjunto das colunas, por questões de privacidade ou desempenho, use o parâmetro *@captured_column_list* para especificar o subconjunto de colunas.  
+ Por padrão, todas as colunas na tabela de origem são identificadas como colunas capturadas. Se apenas um subconjunto de colunas precisar ser acompanhado, por exemplo, por motivos de privacidade ou desempenho, *@captured_column_list* use o parâmetro para especificar o subconjunto de colunas.  
   
  `A filegroup to contain the change table.`  
   
- Por padrão, a tabela de alteração está localizada no grupo de arquivos padrão do banco de dados. Proprietários de banco de dados que queiram controlar o posicionamento de tabelas de alterações individuais podem usar o parâmetro *@filegroup_name* para especificar determinado grupo de arquivos para a tabela de alterações associada à instância de captura. O grupo de arquivos nomeado já deve existir. Geralmente, é recomendável que tabelas de alterações sejam colocadas em um grupo de arquivos separado das tabelas de origem. Consulte a `Enable a Table Specifying Filegroup Option` modelo para obter um exemplo que mostra o uso do *@filegroup_name* parâmetro.  
+ Por padrão, a tabela de alteração está localizada no grupo de arquivos padrão do banco de dados. Proprietários de banco de dados que desejam controlar o posicionamento de tabelas de *@filegroup_name* alteração individuais podem usar o parâmetro para especificar um grupo de arquivos específico para a tabela de alteração associada à instância de captura. O grupo de arquivos nomeado já deve existir. Geralmente, é recomendável que tabelas de alterações sejam colocadas em um grupo de arquivos separado das tabelas de origem. Consulte o `Enable a Table Specifying Filegroup Option` modelo para ver um exemplo que mostra o *@filegroup_name* uso do parâmetro.  
   
 ```sql  
 -- =========  
@@ -100,7 +100,7 @@ GO
   
  O propósito da função nomeada é controlar o acesso aos dados de alteração. A função especificada pode ser uma função de servidor fixa existente ou uma função de banco de dados. Se a função especificada ainda não existir, uma função de banco de dados com esse nome será criada automaticamente. Os membros da função `sysadmin` ou `db_owner` têm acesso completo aos dados nas tabelas de alterações. Todos os outros usuários devem ter a permissão SELECT em todas as colunas capturadas da tabela de origem. Além disso, quando uma função é especificada, os usuários que não são membros da função `sysadmin` ou `db_owner` também devem ser membros da função especificada.  
   
- Se você não quiser usar uma função associada, defina explicitamente o parâmetro *@role_name* como NULL. Consulte o modelo `Enable a Table Without Using a Gating Role` para obter um exemplo de como habilitar uma tabela sem uma função associada.  
+ Se você não quiser usar uma função de retenção, defina explicitamente o *@role_name* parâmetro como NULL. Consulte o modelo `Enable a Table Without Using a Gating Role` para obter um exemplo de como habilitar uma tabela sem uma função associada.  
   
 ```sql  
 -- =========  
@@ -121,9 +121,9 @@ GO
   
  Uma instância de captura sempre incluirá uma função com valor de tabela para retornar todas as entradas de tabela de alterações que ocorreram dentro de um intervalo definido. Essa função é denominada com a anexação do nome da instância de captura para "cdc.fn_cdc_get_all_changes_". Para obter mais informações, veja [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql).  
   
- Se o parâmetro *@supports_net_changes* for definido como 1, uma função de alterações globais também será gerada para a instância de captura. Essa função retorna apenas uma alteração para cada linha distinta alterada no intervalo especificado na chamada. Para obter mais informações, veja [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
+ Se o parâmetro *@supports_net_changes* for definido como 1, uma função de alterações líquidas também será gerada para a instância de captura. Essa função retorna apenas uma alteração para cada linha distinta alterada no intervalo especificado na chamada. Para obter mais informações, veja [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
- Para dar suporte às consultas de entradas, a tabela de origem deve ter uma chave primária ou índice exclusivo para identificar linhas. Se um índice exclusivo for usado, o nome do índice deverá ser especificado com o uso do parâmetro *@index_name* . As colunas definidas na chave primária ou índice exclusivo deverão ser incluídas na lista de colunas de origem a serem capturadas.  
+ Para dar suporte às consultas de entradas, a tabela de origem deve ter uma chave primária ou índice exclusivo para identificar linhas. Se um índice exclusivo for usado, o nome do índice deverá ser especificado usando o *@index_name* parâmetro. As colunas definidas na chave primária ou índice exclusivo deverão ser incluídas na lista de colunas de origem a serem capturadas.  
   
  Consulte o modelo `Enable a Table for All and Net Changes Queries` para obter um exemplo que demonstra a criação de uma instância de captura com ambas as funções de consulta.  
   
@@ -142,7 +142,7 @@ GO
 ```  
   
 > [!NOTE]
->  Se a captura de dados de alterações for habilitada em uma tabela com a chave primária existente e o parâmetro *@index_name* não for usado para identificar um índice exclusivo alternativo, o recurso captura de dados de alterações usará a chave primária. Alterações subsequentes à chave primária não serão permitidas sem a desabilitação primeiro do Change Data Capture para a tabela. Isso é verdadeiro quer o suporte para consultas de alterações globais tenha sido solicitado ou não durante a configuração do Change Data Capture. Se não houver nenhuma chave primária em uma tabela quando ela for habilitada para o Change Data Capture, a adição subsequente de uma chave primária será ignorada pelo Change Data Capture. Como o Change Data Capture não usará uma chave primária criada após a habilitação da tabela, a chave e as colunas de chave poderão ser removidas sem restrições.  
+>  Se a captura de dados de alterações estiver habilitada em uma tabela com uma chave primária *@index_name* existente e o parâmetro não for usado para identificar um índice exclusivo alternativo, o recurso de captura de dados de alterações usará a chave primária. Alterações subsequentes à chave primária não serão permitidas sem a desabilitação primeiro do Change Data Capture para a tabela. Isso é verdadeiro quer o suporte para consultas de alterações globais tenha sido solicitado ou não durante a configuração do Change Data Capture. Se não houver nenhuma chave primária em uma tabela quando ela for habilitada para o Change Data Capture, a adição subsequente de uma chave primária será ignorada pelo Change Data Capture. Como o Change Data Capture não usará uma chave primária criada após a habilitação da tabela, a chave e as colunas de chave poderão ser removidas sem restrições.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>Desabilitar o Change Data Capture para uma tabela  
  Os membros da função de banco de dados fixa `db_owner` poderão remover uma instância de captura para tabelas de origem individuais usando o procedimento armazenado `sys.sp_cdc_disable_table`. Para determinar se uma tabela de origem está habilitada atualmente para Change Data Capture, examine a coluna `is_tracked_by_cdc` na exibição de catálogo `sys.tables`. Se não houver tabelas habilitadas para o banco de dados após a desabilitação, os trabalhos do Change Data Capture também serão removidos.  
@@ -164,7 +164,7 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Controle de alterações de dados &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [Trabalhar com dados de alterações &#40;SQL Server&#41;](work-with-change-data-sql-server.md)   

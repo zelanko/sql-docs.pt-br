@@ -24,28 +24,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085935"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Procurar um modelo usando a Exibição de Árvore da Microsoft
-  O Visualizador de Árvore da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe árvores de decisão criadas com o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo Árvores de Decisão [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de árvore de decisão híbrido que oferece suporte tanto à classificação quanto regressão. Portanto, você também pode usar esse visualizador para exibir modelos com base no algoritmo Regressão Linear [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é usado para modelagem preditiva de atributos discretos e contínuos. Para obter mais informações sobre esse algoritmo, consulte [Referência técnica do algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm.md).  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizador de árvore [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no exibe árvores de decisão que são criadas [!INCLUDE[msCoName](../../includes/msconame-md.md)] com o algoritmo árvores de decisão. O algoritmo Árvores de Decisão [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de árvore de decisão híbrido que oferece suporte tanto à classificação quanto regressão. Portanto, você também pode usar esse visualizador para exibir modelos com base no algoritmo Regressão Linear [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é usado para modelagem preditiva de atributos discretos e contínuos. Para obter mais informações sobre esse algoritmo, consulte [Referência técnica do algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm.md).  
   
 > [!NOTE]  
 >  Para exibir informações detalhadas sobre as equações usadas no modelo e os padrões identificados, use o Visualizador de Árvore de Conteúdo Genérica da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de Dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_TabsPanes"></a> Guias do Visualizador  
+##  <a name="BKMK_TabsPanes"></a>Guias do Visualizador  
  Quando você navega em um modelo de mineração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ele é exibido na guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados no visualizador adequado ao modelo. O Visualizador de Árvores [!INCLUDE[msCoName](../../includes/msconame-md.md)] inclui as seguintes guias e painéis:  
   
--   [Árvore de Decisão](#BKMK_DecisionTree)  
+-   [Árvore de decisão](#BKMK_DecisionTree)  
   
--   [Rede de Dependências](#BKMK_DependencyNetwork)  
+-   [Rede de dependências](#BKMK_DependencyNetwork)  
   
--   [Legenda de Mineração](#BKMK_MiningLegend)  
+-   [Legenda de mineração](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a> Árvore de Decisão  
+###  <a name="BKMK_DecisionTree"></a>Árvore de decisão  
  Quando você criar um modelo de árvore de decisão, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará uma árvore separada para cada atributo previsível. Você pode ver uma árvore individual selecionando-a na lista **Árvore** da guia **Árvore de Decisão** do visualizador.  
   
  Uma árvore de decisão é composta por várias divisões, com a divisão mais importante, conforme determinado pelo algoritmo, à esquerda do visualizador no nó **Todas** . Divisões adicionais ocorrem à direita. A divisão do nó **Todas** é o mais importante porque contém a divisão mais importante, gerando condições no conjunto de dados, gerando, portanto, a primeira divisão.  
@@ -73,9 +73,9 @@ ms.locfileid: "66085935"
   
  Você também pode copiar a imagem da exibição em árvore para a Área de Transferência para que possa colá-la em documentos ou em um software de manipulação de imagens. Use **Copiar Exibição de Gráfico** para copiar apenas a seção da árvore visível no visualizador ou use **Copiar Gráfico Inteiro** para copiar todos os nós expandidos na árvore.  
   
- [Voltar ao Início](#BKMK_TabsPanes)  
+ [Voltar ao início](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a> Rede de Dependências  
+###  <a name="BKMK_DependencyNetwork"></a>Rede de dependências  
  A **Rede de Dependências** exibe as dependências entre os atributos de entrada e os atributos previsíveis no modelo. O controle deslizante à esquerda do visualizador funciona como um filtro vinculado aos pontos fortes das dependências. Se você abaixar o controle deslizante, apenas os links mais importantes serão mostrados no visualizador.  
   
  Quando você selecionar um nó, o visualizador destacará as dependências específicas ao nó. Por exemplo, se você escolher um nó previsível, o visualizador também realçará cada nó que ajuda a prever o nó previsível.  
@@ -84,9 +84,9 @@ ms.locfileid: "66085935"
   
  A legenda na parte inferior do visualizador vincula os nós de cores ao tipo de dependência no gráfico. Por exemplo, quando você seleciona um nó previsível, ele fica sombreado na cor turquesa e os nós que preveem o nó selecionado são sombreados em laranja.  
   
- [Voltar ao Início](#BKMK_TabsPanes)  
+ [Voltar ao início](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a> Legenda de Mineração  
+###  <a name="BKMK_MiningLegend"></a>Legenda de mineração  
  A **Legenda de Mineração** exibe as informações a seguir quando você seleciona um nó no modelo de árvore de decisão:  
   
 -   O número de casos no nó, divididos em estados do atributo previsível.  
@@ -101,13 +101,13 @@ ms.locfileid: "66085935"
   
  Você pode encaixar e trabalhar com a **Legenda de Mineração** da mesma maneira que trabalha com o Gerenciador de Soluções.  
   
- [Voltar ao Início](#BKMK_TabsPanes)  
+ [Voltar ao início](#BKMK_TabsPanes)  
   
-## <a name="see-also"></a>Consulte também  
- [Referência técnica do algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmo árvores de decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](../mining-model-viewers-data-mining-model-designer.md)   
+ [Tarefas e instruções do Visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
  [Ferramentas de mineração de dados](data-mining-tools.md)   
- [Visualizadores do modelo de Mineração de dados](data-mining-model-viewers.md)  
+ [Visualizadores do Modelo de Mineração de Dados](data-mining-model-viewers.md)  
   
   

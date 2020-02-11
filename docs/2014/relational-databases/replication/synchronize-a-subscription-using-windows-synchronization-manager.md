@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745755"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows (Gerenciador de Sincronização do Windows)
   O Gerenciador de Sincronização[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows só poderá ser usado para sincronizar assinaturas para publicações do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução no mesmo computador que o Gerenciador de Sincronização (ele também pode ser usado para sincronizar arquivos offline e páginas da Web). Para usar o Gerenciador de Sincronização:  
   
-1.  Habilite a sincronização de assinatura pull com o Gerenciador de Sincronização do Windows na caixa de diálogo **Propriedades de Assinatura – \<Assinante>: \<SubscriptionDatabase>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md).  
+1.  Habilite a sincronização de assinatura pull com o Gerenciador de Sincronização do Windows na caixa de diálogo **Propriedades de Assinatura – \<Subscriber>: \<SubscriptionDatabase>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md).  
   
 2.  Acesse o Gerenciador de Sincronização através do menu **Iniciar** no Windows.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62745755"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Para habilitar a sincronização de assinaturas pull com o Gerenciador de Sincronização do Windows  
   
-1.  Na página **Geral** da caixa de diálogo **Propriedades da Assinatura – \<Assinante>: \<SubscriptionDatabase>** , selecione um valor de **Habilitar** para a opção **Usar Gerenciador de Sincronização do Windows**.  
+1.  Na página **Geral** da caixa de diálogo **Propriedades de Assinatura – \<Subscriber>: \<SubscriptionDatabase>** , selecione um valor de **Habilitar** para a opção **Usar Gerenciador de Sincronização do Windows**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62745755"
   
     -   Clique em **Iniciar**, aponte para **Programas** ou **Todos os Programas**, aponte para **Acessórios**e, então, clique em **Sincronizar**.  
   
-    -   Clique em **Iniciar**e, então, clique em **Executar** No **executados** caixa de diálogo, digite `mobsync.exe` no **aberto** campo e, em seguida, clique em **Okey**.  
+    -   Clique em **Iniciar**e, então, clique em **Executar** Na caixa de diálogo **executar** , digite `mobsync.exe` no campo **abrir** e, em seguida, clique em **OK**.  
   
 2.  Na caixa de diálogo **Itens a Serem Sincronizados** , selecione as assinaturas a serem sincronizadas. As assinaturas são listadas sob as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62745755"
   
     -   **Informações do Servidor Web** (para assinatura de mesclagem em Assinantes que usam SQL Server 2005 ou posterior)  
   
-    -   **Outro**  
+    -   **Outros**  
   
      É recomendável usar a Autenticação do Windows para todas as conexões. Para obter mais informações sobre as permissões que são exigidas pelo Distribution Agent e pelo Merge Agent, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -116,6 +116,6 @@ ms.locfileid: "62745755"
 > [!NOTE]  
 >  As edições serão aplicadas apenas se fizerem parte da linha escolhida para resolução. Por exemplo, se você fizer edições no **Publicador**e, em seguida, clicar em **Aceitar Assinante**, as edições serão descartadas.  
   
-## <a name="see-also"></a>Consulte também  
- [Resolução interativa de conflitos](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

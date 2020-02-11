@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075581"
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensões vinculadas
@@ -31,7 +31,7 @@ ms.locfileid: "66075581"
 >  Como a atualização não está disponível, a maioria dos desenvolvedores do Analysis Services copiam as dimensões em vez de vinculá-las. Você pode copiar dimensões entre projetos dentro da mesma solução. Para obter mais informações, consulte [Atualização de uma dimensão vinculada no SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
 ## <a name="prerequisites"></a>Prerequisites  
- O banco de dados de origem que fornece a dimensão e o banco de dados atual que o usam deve estar na mesma versão e nível de compatibilidade. Para obter mais informações, consulte [definir o nível de compatibilidade de um banco de dados Multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ O banco de dados de origem que fornece a dimensão e o banco de dados atual que o usam deve estar na mesma versão e nível de compatibilidade. Para obter mais informações, consulte [definir o nível de compatibilidade de um banco de dados multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  O banco de dados de origem deve estar implantado e online. Os servidores que publicam ou consomem objetos vinculados devem ser configurados para permitir a operação (consulte abaixo).  
   
@@ -55,14 +55,14 @@ ms.locfileid: "66075581"
   
 4.  Na página **Concluindo o Assistente** , você pode visualizar os objetos vinculados. Se você vincular uma dimensão e já existir outra com o mesmo nome, será adicionado um número ordinal (começando com "1" para o primeiro nome duplicado). Quando você concluir o assistente, a dimensão será adicionada à pasta **Dimensões** .  
   
-##  <a name="bkmk_CreateNew"></a> Criar uma nova conexão de fonte de dados com um banco de dados do Analysis Services  
+##  <a name="bkmk_CreateNew"></a>Criar uma nova conexão de fonte de dados para um Analysis Services  
  Use o assistente Nova Fonte de Dados para adicionar as informações de conexão do seu projeto sobre o banco de dados do Analysis Services que fornece a dimensão. Você pode iniciar o assistente clicando em **Nova Fonte de Dados** , na página Selecionar Fonte de Dados do assistente Objetos Vinculados.  
   
 1.  No Assistente para Fonte de Dados, na página Selecione como definir a conexão, clique em **Novo**.  
   
 2.  No Gerenciador de Conexões, verifique se o provedor é definido como **OLE DB Nativo\Provedor Microsoft OLE DB para Analysis Services 11.0**.  
   
-3.  Insira o nome do servidor (use *nome_do_servidor*\\*instancename* para uma instância nomeada)<sup>1</sup> ou tipo **localhost** para Conecte-se a um servidor do Analysis Services que está em execução no mesmo computador.  
+3.  Insira o nome do servidor (use *ServerName*\\*InstanceName* para uma instância nomeada)<sup>1</sup> ou digite **localhost** para se conectar a um Analysis Services Server em execução no mesmo computador.  
   
 4.  Use a autenticação do Windows na conexão.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "66075581"
 7.  Na página Informações sobre Representação, clique em **Usar a conta de serviço**. Clique em **Avançar**e conclua o Assistente. A conexão que você acaba de definir será selecionada no Assistente para Objetos Vinculados.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Não é possível alterar a estrutura de uma dimensão vinculada, portanto, você não pode exibi-la com a guia **Estrutura da Dimensão** do Designer de Dimensão. Depois de processar a dimensão vinculada, você pode exibi-la com a guia **Navegador** . Você também pode alterar seu nome e criar uma tradução para o nome.  
+ Não é possível alterar a estrutura de uma dimensão vinculada, portanto, você não pode exibi-la com a guia **Estrutura da Dimensão** do Designer de Dimensão. Depois de processar a dimensão vinculada, você pode exibi-la com a guia **navegador** . Você também pode alterar seu nome e criar uma tradução para o nome.  
   
-## <a name="see-also"></a>Consulte também  
- [Definir nível de banco de dados Multidimensional a de compatibilidade &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Definir o nível de compatibilidade de um banco de dados multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Grupos de medidas vinculados](linked-measure-groups.md)   
  [Relações de dimensão](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   

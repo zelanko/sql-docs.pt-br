@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Naive Bayes | Microsoft Docs
+title: Algoritmo Bayes do Microsoft Naive | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1290e92ecd49a95f250574fb8778a8aa27eb2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083874"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algoritmo Naïve Bayes da Microsoft
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bayesiana ingênua é um algoritmo de classificação com base em teoremas Bayes e fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para uso na modelagem de previsão. O nome naïve no nome Naïve Bayes foi atribuído pelo fato de o algoritmo usar técnicas Bayesianas, mas não considerar dependências que possam existir. Portanto, suas suposições são consideradas ingênuas.  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Naive Bayes é um algoritmo de classificação baseado em Bayes ' theorems e fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para uso na modelagem preditiva. O nome naïve no nome Naïve Bayes foi atribuído pelo fato de o algoritmo usar técnicas Bayesianas, mas não considerar dependências que possam existir. Portanto, suas suposições são consideradas ingênuas.  
   
  Esse algoritmo é computacionalmente menos intenso de que outros algoritmos da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e, portanto, é útil para gerar modelos de mineração rapidamente para descobrir as relações entre as colunas de entrada e as colunas previsíveis. Você pode usar esse algoritmo para realizar exploração de dados iniciais, e em seguida, aplicar os resultados para criar modelos de mineração adicionais com outros algoritmos que são computacionalmente mais intensos e mais precisos.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66083874"
   
  Para entender como isso funciona, use o Visualizador do Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (conforme mostrado no gráfico a seguir) para explorar visualmente como o algoritmo distribui estados.  
   
- ![Distribuição de naive bayes de estados](../media/naive-bayes.gif "distribuição de Naive bayes de estados")  
+ ![Distribuição de naive bayes de estados](../media/naive-bayes.gif "Distribuição de naive bayes de estados")  
   
  Aqui, o Visualizador Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] lista cada coluna de entrada no conjunto de dados e mostra como os estados de cada coluna são distribuídos, uma vez proporcionado cada estado da coluna previsível.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66083874"
   
  Os requisitos para um modelo Naive Bayes são os seguintes:  
   
--   **Uma única coluna de chave** Cada modelo deve conter uma coluna de texto ou numérica que identifique unicamente cada registro. Chaves compostas não são permitidas.  
+-   **Uma única coluna de chave** Cada modelo deve conter uma coluna numérica ou de texto que identifique exclusivamente cada registro. Chaves compostas não são permitidas.  
   
--   **Colunas de entrada** em um modelo Naive Bayes, todas as colunas devem ser discretas ou diferenciadas colunas. Para obter informações sobre como diferenciar colunas, consulte [métodos de discretização &#40;mineração de dados&#41;](discretization-methods-data-mining.md).  
+-   **Colunas de entrada** Em um modelo Naive Bayes, todas as colunas devem ser de colunas discretas ou discretizado. Para obter informações sobre colunas discretização, consulte [métodos de discretização &#40;mineração de dados&#41;](discretization-methods-data-mining.md).  
   
      Além disso, também é importante assegurar que os atributos de entrada sejam independentes uns dos outros. Isto é particularmente importante quando você usa o modelo para previsão.  
   
@@ -65,14 +65,14 @@ ms.locfileid: "66083874"
   
      De maneira recíproca, a capacidade de o algoritmo identificar correlações entre variáveis é útil quando você está explorando um modelo ou conjunto de dados, para identificar relações entre entradas.  
   
--   **Pelo menos uma coluna previsível** O atributo previsível deve conter valores discretos ou diferenciados.  
+-   **Pelo menos uma coluna previsível** O atributo previsível deve conter valores discretos ou discretizados.  
   
      Os valores da coluna previsível podem ser tratados como entradas. Esta prática pode ser útil quando você está explorando um novo conjunto de dados, para localizar relações entre as colunas.  
   
 ## <a name="viewing-the-model"></a>Exibindo o modelo  
  Para explorar o modelo, você pode usar o **Visualizador Naive Bayes da Microsoft**. O visualizador mostra a você como os atributos de entrada se relacionam com o atributo previsível. Ele também fornece um perfil detalhado para cada clusters, uma lista dos atributos que distinguem cada um dos clusters e as características de todo o conjunto de dados de treinamento. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador Naïve Bayes da Microsoft](browse-a-model-using-the-microsoft-naive-bayes-viewer.md).  
   
- Para obter mais detalhes, você pode navegar pelo modelo no [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md). Para obter mais informações sobre o tipo de informação armazenada no modelo, consulte [Conteúdo do modelo de mineração para modelos Naïve Bayes &#40;Analysis Services – Mineração de dados&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md).  
+ Para obter mais detalhes, você pode navegar pelo modelo no [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md). Para obter mais informações sobre o tipo de informação armazenada no modelo, consulte [Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md).  
   
 ## <a name="making-predictions"></a>Fazendo previsões  
  Depois que o modelo tiver sido treinado, os resultados serão armazenados como um conjunto de padrões, que você poderá explorar ou usar para realizar previsões.  
@@ -91,11 +91,11 @@ ms.locfileid: "66083874"
   
 -   Suporta o uso de modelos de mineração OLAP.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Seleção de recursos &#40;Mineração de dados&#41;](feature-selection-data-mining.md)   
- [Exemplos de consulta de modelo Naïve Bayes](naive-bayes-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Seleção de recursos &#40;mineração de dados&#41;](feature-selection-data-mining.md)   
+ [Exemplos de consulta de modelo do Naive Bayes](naive-bayes-model-query-examples.md)   
+ [Conteúdo do modelo de mineração para modelos Naive Bayes &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Referência técnica do algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

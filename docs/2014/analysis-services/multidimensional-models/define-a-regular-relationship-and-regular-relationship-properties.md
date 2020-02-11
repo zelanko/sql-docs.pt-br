@@ -1,5 +1,5 @@
 ---
-title: Definir uma relação Regular e propriedades de relação Regular | Microsoft Docs
+title: Definir uma relação regular e propriedades de relação regular | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c13fecba6b36a5a3ac6ac0c37f94416b612c69f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075746"
 ---
 # <a name="define-a-regular-relationship-and-regular-relationship-properties"></a>Definir uma relação regular e as propriedades da relação regular

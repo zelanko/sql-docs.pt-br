@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42538053b80565005e86e82a32b6c04bae1aa360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721482"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Recursos preteridos em Replicação do Microsoft SQL Server
@@ -24,12 +24,12 @@ ms.locfileid: "62721482"
   
 ## <a name="items-deprecated-in-sql-server-2014"></a>Itens preteridos no SQL Server 2014  
   
-|Recurso|Descrição|  
+|Recurso|DESCRIÇÃO|  
 |-------------|-----------------|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|A replicação terá suporte se cada ponto de extremidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esteja entre as duas versões principais da versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consequentemente, o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] não oferece suporte a replicação para ou do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|A replicação terá suporte se cada ponto de extremidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esteja entre as duas versões principais da versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consequentemente, o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] não oferece suporte a replicação para ou do [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compatibilidade com versões anteriores de replicação](replication-backward-compatibility.md)  
   
   

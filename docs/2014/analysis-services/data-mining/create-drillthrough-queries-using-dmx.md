@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085235"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>Criar consultas de detalhamento usando DMX
@@ -43,8 +43,8 @@ WHERE [Model Region] = 'M200 Pacific'
   
  Note que, neste exemplo, um alias foi usado para renomear a coluna de estrutura. Se você não atribuir um alias à coluna de estrutura, a coluna será retornada com o nome 'Expression'. Este é o comportamento padrão para todas as colunas sem nome.  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas de detalhamento &#40;Mineração de dados&#41;](drillthrough-queries-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Consultas de detalhamento &#40;mineração de dados&#41;](drillthrough-queries-data-mining.md)   
  [Detalhamento em estruturas de mineração](drillthrough-on-mining-structures.md)  
   
   

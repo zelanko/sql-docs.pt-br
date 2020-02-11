@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721788"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -35,7 +35,7 @@ ms.locfileid: "62721788"
  [Configurar Distribuição](../configure-distribution.md)  
  Os tópicos desta seção mostram como usar o RMO para configurar a publicação e a distribuição.  
   
- [Create a Publication](../publish/create-a-publication.md)  
+ [Criar uma publicação](../publish/create-a-publication.md)  
  Os tópicos desta seção mostram como usar o RMO para criar, excluir e modificar publicações e artigos.  
   
  [Assinar publicações](../subscribe-to-publications.md)  
@@ -63,7 +63,7 @@ ms.locfileid: "62721788"
   
 1.  Inicie o Visual Studio.  
   
-2.  No menu **Arquivo**, clique em **NewProject.** A caixa de diálogo **Novo Projeto** será exibida.  
+2.  No menu **Arquivo**, clique em **NewProject.** A caixa de diálogo **Novo Projeto** aparecerá.  
   
 3.  Na caixa de diálogo **Tipos de Projeto**, selecione **Projetos do Visual C#** . No painel **Modelos**, selecione **Aplicativos do Windows**.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62721788"
   
 1.  Inicie o Visual Studio.  
   
-2.  No menu **Arquivo**, selecione **Novo Projeto**. A caixa de diálogo **Novo Projeto** será exibida.  
+2.  No menu **Arquivo**, selecione **Novo Projeto**. A caixa de diálogo **Novo Projeto** aparecerá.  
   
 3.  No painel Tipos de Projeto, selecione **Visual Basic**. No painel Modelos, selecione **Aplicativos do Windows**.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "62721788"
   
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)   
  [Conceitos de programação da replicação](replication-programming-concepts.md)  
   

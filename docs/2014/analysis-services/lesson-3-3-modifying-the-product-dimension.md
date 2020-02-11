@@ -1,5 +1,5 @@
 ---
-title: Modificando a dimensão de produto | Microsoft Docs
+title: Modificando a dimensão Produto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078837"
 ---
 # <a name="modifying-the-product-dimension"></a>Modificando a dimensão Produto
@@ -29,7 +29,7 @@ ms.locfileid: "66078837"
   
 2.  Na parte inferior do painel de diagrama, clique com o botão direito do mouse no cabeçalho da tabela **Product** e clique em **Novo Cálculo Nomeado**.  
   
-3.  No **criar cálculo nomeado** caixa de diálogo, digite `ProductLineName` no **nome da coluna** caixa.  
+3.  Na caixa de diálogo **criar cálculo nomeado** , digite `ProductLineName` a caixa **nome da coluna** .  
   
 4.  Na caixa **Expressão** , digite ou copie e cole a seguinte instrução **CASE** :  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66078837"
   
      Essa instrução **CASE** cria nomes amigáveis para cada linha de produto no cubo.  
   
-5.  Clique em **Okey** para criar o `ProductLineName` cálculo nomeado. Talvez você precise esperar um pouco.  
+5.  Clique em **OK** para criar `ProductLineName` o cálculo nomeado. Talvez você precise esperar um pouco.  
   
 6.  No menu **Arquivo** , clique em **Salvar Tudo**.  
   
@@ -57,21 +57,21 @@ ms.locfileid: "66078837"
   
 2.  No painel **Atributos** da guia **Estrutura da Dimensão** , selecione **Linha de Produto**.  
   
-3.  Na janela Propriedades no lado direito da tela, clique o **NameColumn** propriedade de campo na parte inferior da janela e, em seguida, clique no botão Procurar ( **...** ) para abrir o **nome da coluna** caixa de diálogo. (Talvez seja necessário clicar na guia **Propriedades** à direita da tela para abrir a janela Propriedades.)  
+3.  Na janela Propriedades no lado direito da tela, clique no campo de propriedade **NameColumn** na parte inferior da janela e, em seguida, clique no botão procurar (**...**) para abrir a caixa de diálogo **coluna de nome** . (Talvez seja necessário clicar na guia **Propriedades** à direita da tela para abrir a janela Propriedades.)  
   
-4.  Selecione `ProductLineName` na parte inferior a **coluna de origem** e, em seguida, clique **Okey**.  
+4.  Selecione `ProductLineName` na parte inferior da lista **coluna de origem** e clique em **OK**.  
   
-     O campo NameColumn agora contém o texto **Product.ProductLineName (WChar)** . Os membros da hierarquia do atributo **Product Line** agora exibirão o nome completo da linha de produto, em vez do nome abreviado.  
+     O campo NameColumn agora contém o texto **Product.ProductLineName (WChar)**. Os membros da hierarquia do atributo **Product Line** agora exibirão o nome completo da linha de produto, em vez do nome abreviado.  
   
-5.  No painel **Atributos** da guia **Estrutura da Dimensão** , selecione **Chave do Produto (Product Key)** .  
+5.  No painel **Atributos** da guia **Estrutura da Dimensão** , selecione **Chave do Produto (Product Key)**.  
   
-6.  Na janela Propriedades, clique o **NameColumn** propriedade de campo e, em seguida, clique no botão Procurar ( **...** ) para abrir o **nome da coluna** caixa de diálogo.  
+6.  No janela Propriedades, clique no campo de propriedade **NameColumn** e, em seguida, clique no botão procurar (**...**) para abrir a caixa de diálogo **coluna de nome** .  
   
 7.  Selecione **EnglishProductName** na lista **Coluna de origem** e clique em **OK**.  
   
-     O campo NameColumn agora contém o texto **Product.EnglishProductName (WChar)** .  
+     O campo NameColumn agora contém o texto **Product.EnglishProductName (WChar)**.  
   
-8.  Na janela Propriedades, role para cima, clique no **nome** campo de propriedade e, em seguida, digite `Product Name`.  
+8.  No janela Propriedades, role para cima, clique no campo de propriedade **nome** e digite `Product Name`.  
   
 ## <a name="creating-a-hierarchy"></a>Criando uma hierarquia  
   
@@ -79,13 +79,13 @@ ms.locfileid: "66078837"
   
 1.  Arraste o atributo **Product Line** do painel **Atributos** até o painel **Hierarquias** .  
   
-2.  Arraste o **nome do modelo** de atributos da **atributos** painel no  **\<novo nível >** célula a **hierarquias** painel, sob o **linha de produtos** nível.  
+2.  Arraste o atributo **nome do modelo** do painel **atributos** para o ** \<novo nível>** célula no painel **hierarquias** , abaixo do nível de linha de **produto** .  
   
-3.  Arraste o `Product Name` de atributos do **atributos** painel no  **\<novo nível >** célula o **hierarquias** painel, sob o  **Nome do modelo** nível. (Você renomeou Product Key para Product Name na seção anterior.)  
+3.  Arraste o `Product Name` atributo do painel **atributos** para o ** \<novo nível>** célula no painel **hierarquias** , sob o nível **nome do modelo** . (Você renomeou Product Key para Product Name na seção anterior.)  
   
-4.  No **hierarquias** painel da **estrutura da dimensão** guia, clique no título dos **hierarquia** hierarquia, clique em **Renomear** e, em seguida, digite `Product Model Lines`.  
+4.  No painel **hierarquias** da guia **estrutura da dimensão** , clique com o botão direito do mouse na barra de título da hierarquia **hierarquia** , clique em **renomear**e digite `Product Model Lines`.  
   
-     O nome da hierarquia agora é `Product Model Lines`.  
+     O nome da hierarquia agora `Product Model Lines`é.  
   
 5.  No menu **Arquivo** , clique em **Salvar Tudo**.  
   
@@ -95,55 +95,55 @@ ms.locfileid: "66078837"
   
 1.  No painel **Atributos** , selecione os seguintes atributos pressionando e mantendo a tecla CTRL pressionada enquanto clica em cada um deles:  
   
-    -   **Classe**  
+    -   **Classes**  
   
     -   **Color**  
   
-    -   **Days To Manufacture**  
+    -   **Dias para fabricação**  
   
-    -   **Reorder Point**  
+    -   **Ponto de reordenação**  
   
-    -   **Safety Stock Level**  
+    -   **Nível de estoque de segurança**  
   
     -   **Tamanho**  
   
-    -   **Size Range**  
+    -   **Intervalo de tamanho**  
   
     -   **Estilo**  
   
     -   **Weight**  
   
-2.  No **AttributeHierarchyDisplayFolder** campo de propriedade na janela Propriedades, digite `Stocking`.  
+2.  No campo de propriedade **AttributeHierarchyDisplayFolder** na janela Propriedades, digite `Stocking`.  
   
      Você acaba de agrupar esses atributos em uma única pasta de exibição.  
   
 3.  No painel **Atributos** , selecione os seguintes atributos:  
   
-    -   **Preço do Revendedor**  
+    -   **Preço do vendedor**  
   
-    -   **Preço da Lista**  
+    -   **Preço da lista**  
   
-    -   **Custo Padrão**  
+    -   **Custo padrão**  
   
-4.  No **AttributeHierarchyDisplayFolder** célula da propriedade na janela Propriedades, digite `Financial`.  
+4.  Na célula da propriedade **AttributeHierarchyDisplayFolder** na janela Propriedades, digite `Financial`.  
   
      Você acaba de agrupar esses atributos em uma segunda pasta de exibição.  
   
 5.  No painel **Atributos** , selecione os seguintes atributos:  
   
-    -   **Data de Término**  
+    -   **Data de término**  
   
     -   **Data de Início**  
   
     -   **Status**  
   
-6.  No **AttributeHierarchyDisplayFolder** célula da propriedade na janela Propriedades, digite `History`.  
+6.  Na célula da propriedade **AttributeHierarchyDisplayFolder** na janela Propriedades, digite `History`.  
   
      Você acaba de agrupar esses atributos em uma terceira pasta de exibição.  
   
-7.  Selecione o `Product Model Lines` hierarquia na **hierarquias** painel e, em seguida, altere o **AllMemberName** propriedade na janela Propriedades para `All Products`.  
+7.  Selecione a `Product Model Lines` hierarquia no painel **hierarquias** e altere a propriedade **membroname** no janela Propriedades para `All Products`.  
   
-8.  Clique em uma área aberta do **hierarquias** painel e, em seguida, altere o **AttributeAllMemberName** propriedade na parte superior da janela de propriedades para `All Products`.  
+8.  Clique em uma área aberta do painel **hierarquias** e altere a propriedade **AttributeAllMemberName** na parte superior da janela Propriedades para `All Products`.  
   
      Clicar em uma área aberta permite que você modifique propriedades da própria dimensão Produto. Você também pode clicar em **Produto** na parte superior da lista de atributos no painel **Atributos** .  
   
@@ -158,7 +158,7 @@ ms.locfileid: "66078837"
   
 2.  No diagrama, clique com o botão direito do mouse no atributo **Nome do Modelo** e clique em **Nova Relação de Atributo**.  
   
-3.  Na caixa de diálogo **Criar Relação de Atributo**, o **Atributo de Origem** é **Model Name**. Defina o **Atributo Relacionado** como **Linha de Produto**.  
+3.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Model Name**. Defina o **Atributo Relacionado** como **Linha de Produto**.  
   
      Na lista **Tipo de relação** , deixe o tipo de relação definido como **Flexível** porque as relações entre os membros podem mudar com o passar do tempo. Por exemplo, um modelo de produto pode ser movido para uma linha de produto diferente.  
   
@@ -174,16 +174,16 @@ ms.locfileid: "66078837"
   
 2.  Depois de receber a mensagem **Implantação Concluída com Êxito** , clique na guia **Navegador** do **Designer de Dimensão** da dimensão **Produto** e clique no botão Reconectar na barra de ferramentas do designer.  
   
-3.  Verifique `Product Model Lines` está selecionado na **hierarquia** lista e, em seguida, expanda `All Products`.  
+3.  Verifique se `Product Model Lines` está selecionado na lista **hierarquia** e, em seguida, `All Products`expanda.  
   
-     Observe que o nome da **todos os** membro é exibido como `All Products`. Isso ocorre porque você alterou o **AllMemberName** propriedade para a hierarquia para `All Products` anteriormente nesta lição. Além disso, os membros do nível **Linha de Produto** agora têm nomes amigáveis, em vez de abreviações de apenas uma letra.  
+     Observe que o nome do membro **All** é exibido como `All Products`. Isso ocorre porque você alterou a propriedade de todos os **Membros** da hierarquia `All Products` para a anterior na lição. Além disso, os membros do nível **Linha de Produto** agora têm nomes amigáveis, em vez de abreviações de apenas uma letra.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Modificando a dimensão de data](lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Criar hierarquias definidas pelo usuário](multidimensional-models/user-defined-hierarchies-create.md)   
- [Configurar o nível &#40;All&#41; para hierarquias de atributo](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurar o &#40;todo o nível de&#41; para hierarquias de atributo](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

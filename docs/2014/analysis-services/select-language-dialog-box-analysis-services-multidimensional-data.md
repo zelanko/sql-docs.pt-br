@@ -1,5 +1,5 @@
 ---
-title: Selecione a caixa de diálogo de idioma (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Selecionar idioma (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbe0f137f029fb364adafd6f3959c7e22984b73f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069507"
 ---
 # <a name="select-language-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Selecionar Idioma (Analysis Services - Dados Multidimensionais)
@@ -34,9 +34,9 @@ ms.locfileid: "66069507"
  **Selecione um idioma para a nova tradução.**  
  Selecione o idioma para a nova tradução na lista de idiomas disponíveis. Os idiomas já selecionados não aparecem na lista.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Traduções &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Detalhes de conversão &#40;guia traduções, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Traduções &#40;o designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Detalhes da tradução &#40;guia Traduções, designer de dimensão&#41; &#40;Analysis Services-dados multidimensionais&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

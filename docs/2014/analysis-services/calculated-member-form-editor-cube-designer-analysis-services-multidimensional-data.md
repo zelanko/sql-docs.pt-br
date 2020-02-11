@@ -1,5 +1,5 @@
 ---
-title: Editor de formulário de membro (guia cálculos, Designer de cubo) calculado (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Editor de formulário de membro calculado (guia cálculos, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088366"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Membro Calculado (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Formulário de Membro Calculado** na guia **Cálculos** do Designer de Cubo para criar ou modificar um membro calculado.  
   
- **Observação** este painel é exibido apenas na exibição de formulário.  
+ **Observação** Esse painel é exibido apenas na exibição de formulário.  
   
 ## <a name="options"></a>Opções  
  **Nome**  
  Digite o nome do membro calculado.  
   
- **Propriedades pai**  
+ **Propriedades Pai**  
  Expanda para exibir as opções **Hierarquia pai**, **Membro pai**e **Alterar** .  
   
  **Hierarquia pai**  
@@ -37,9 +37,9 @@ ms.locfileid: "66088366"
  **Membro pai**  
  Selecione o membro abaixo do qual o membro calculado deve ser exibido.  
   
- **Observação** esta opção estará disponível se **Hierarquia pai** especificar uma hierarquia diferente de MEASURES.  
+ **Observação** Essa opção estará disponível se **hierarquia pai** especificar uma hierarquia diferente de medidas.  
   
- **Alteração**  
+ **Alterar**  
  Selecione para exibir a caixa de diálogo **Selecionar Membro Pai** e escolher um membro para **Membro pai**. Para obter mais informações sobre a caixa de diálogo **Selecionar Membro Pai**, consulte [Caixa de diálogo Selecionar Membro Pai &#40;Analysis Services – Dados Multidimensionais&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Expression**  
@@ -50,10 +50,10 @@ ms.locfileid: "66088366"
 > [!NOTE]  
 >  É recomendável que essa expressão avalie para uma cadeia de caracteres ou para um valor numérico.  
   
- **Propriedades Adicionais**  
+ **Propriedades adicionais**  
  Expanda para exibir as opções **Cadeia de formato**, **Visível**, **Comportamento não vazio**, **Expressões de Cores**e **Expressões de Fonte** .  
   
- **Cadeia de caracteres de formato**  
+ **Cadeia de formato**  
  Digite a cadeia de formato MDX usada para formatar o valor retornado pelo membro calculado ou selecione uma cadeia de formato predefinida.  
   
  Para obter mais informações sobre cadeias de formato MDX, consulte [Conteúdo FORMAT_STRING &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).  
@@ -65,9 +65,9 @@ ms.locfileid: "66088366"
  Selecione o nome da medida usada para resolver consultas NÃO VAZIAS em MDX para o membro calculado. Se a propriedade **Comportamento Não Vazio** estiver em branco, o membro calculado deverá ser avaliado repetidamente para determinar se um membro está vazio. Se a propriedade **Comportamento Não Vazio** contiver o nome de uma medida, o membro calculado será tratado como vazio se a medida especificada estiver vazia.  
   
 > [!WARNING]  
->  Essa propriedade é preterida. Evite configurá-la. Ver [Deprecated Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) para obter detalhes.  
+>  Essa propriedade é preterida. Evite configurá-la. Consulte [recursos de Analysis Services preteridos no SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) para obter detalhes.  
   
- **Expressões de cores**  
+ **Expressões de Cores**  
  Expanda para exibir as opções **Cor de primeiro plano** e **Cor de fundo** .  
   
  **Cor de primeiro plano**  
@@ -84,7 +84,7 @@ ms.locfileid: "66088366"
   
  Clique no botão de seleção de cor para exibir a caixa de diálogo **Cor** e inserir o valor de RGB (Vermelho-Verde-Azul) para uma cor especificada na expressão MDX. Para obter mais informações sobre valores RGB, consulte [Conteúdo de FORE_COLOR e BACK_COLOR &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).  
   
- **Expressões de fonte**  
+ **Expressões de Fonte**  
  Expanda para exibir as opções **Nome da fonte**, **Tamanho da fonte**e **Sinalizadores de fonte** .  
   
  **Nome da fonte**  
@@ -108,15 +108,15 @@ ms.locfileid: "66088366"
   
  Clique no botão de seleção de fonte para exibir a caixa de diálogo **Fonte** e inserir os valores de propriedades para uma fonte especificada na expressão MDX. Para obter mais informações sobre valores de propriedades, consulte [Criando e usando valores de propriedade &#40;MDX&#41;](creating-and-using-property-values-mdx.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Criar membros calculados](multidimensional-models/create-calculated-members.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Cálculos de &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de ferramentas &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organizador de script &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Ferramentas de cálculo de &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulário de conjunto nomeado &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de scripts &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Cálculos &#40;designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de ferramentas &#40;guia cálculos, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Guia cálculos do organizador de script &#40;, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Ferramentas de cálculo &#40;guia cálculos, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulário de conjunto nomeado &#40;guia cálculos, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de script &#40;guia cálculos, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

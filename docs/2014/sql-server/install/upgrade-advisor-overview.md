@@ -1,5 +1,5 @@
 ---
-title: Visão geral do Supervisor de atualização | Microsoft Docs
+title: Visão geral do supervisor de atualização | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c78630764a26bb8fe281446c1bb997f18d965db7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091603"
 ---
 # <a name="upgrade-advisor-overview"></a>Visão geral do Supervisor de Atualização
@@ -39,10 +39,10 @@ ms.locfileid: "66091603"
   
 -   Tópicos da Ajuda do Supervisor de Atualização  
   
- Ao usar o Supervisor de Atualização pela primeira vez, execute o Assistente para Análise do Supervisor de Atualização para analisar um servidor. Quando o assistente concluir a análise, clique em **Iniciar relatório** no assistente ou retorne à página inicial do Supervisor de atualização. Ali, execute o Visualizador de Relatórios do Supervisor de Atualização para exibir o relatório. O relatório contém links para informações que lhe ajudarão a resolver problemas conhecidos.  
+ Ao usar o Supervisor de Atualização pela primeira vez, execute o Assistente para Análise do Supervisor de Atualização para analisar um servidor. Quando o assistente concluir a análise, clique em **Iniciar relatório** no assistente ou retorne à página inicial do supervisor de atualização. Ali, execute o Visualizador de Relatórios do Supervisor de Atualização para exibir o relatório. O relatório contém links para informações que lhe ajudarão a resolver problemas conhecidos.  
   
 ## <a name="upgrade-advisor-analysis-wizard"></a>Assistente para Análise do Supervisor de Atualização  
- Para executar uma análise, clique em **iniciar o Assistente para análise Supervisor de atualização** na página inicial do Supervisor de atualização. O Assistente para Análise do Supervisor de Atualização reúne informações sobre o computador, as instâncias e os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os arquivos de rastreamento que você deseja analisar. Depois que todas as informações foram coletadas e confirmadas, o Assistente para Análise do Supervisor de Atualização analisa os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para executar uma análise, clique em **iniciar o assistente de análise do supervisor de atualização** na página inicial do supervisor de atualização. O Assistente para Análise do Supervisor de Atualização reúne informações sobre o computador, as instâncias e os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os arquivos de rastreamento que você deseja analisar. Depois que todas as informações foram coletadas e confirmadas, o Assistente para Análise do Supervisor de Atualização analisa os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Sempre que você executa o Assistente para Análise do Supervisor de Atualização, é gerado um relatório separado, e os relatórios existentes para componentes selecionadas não são substituídos. Entretanto, o visualizador de relatórios exibe apenas os cinco relatórios mais recentes.  
@@ -71,15 +71,15 @@ ms.locfileid: "66091603"
  O Supervisor de Atualização não analisa procedimentos armazenados criptografados, códigos em procedimentos armazenados estendidos e código fonte em uma linguagem diferente de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="upgrade-advisor-report-viewer"></a>Visualizador de Relatórios do Supervisor de Atualização  
- Para exibir um relatório do Supervisor de atualização, clique em **iniciar o Visualizador de relatórios de Supervisor de atualização** na página inicial do Supervisor de atualização. Quando o Visualizador de Relatórios do Supervisor de Atualização for iniciado, os relatórios no diretório padrão serão carregados. Relatórios não são exibidos se o Visualizador de relatórios do Supervisor de atualização não localizar todos os relatórios no diretório padrão. Se não houver relatórios no diretório padrão, você poderá executar o Assistente para Análise do Supervisor de Atualização para criar um relatório ou carregar um relatório existente de outro servidor ou de um subdiretório.  
+ Para exibir um relatório do supervisor de atualização, clique em **iniciar o Visualizador de relatórios do supervisor** de atualização na página inicial do supervisor de atualização. Quando o Visualizador de Relatórios do Supervisor de Atualização for iniciado, os relatórios no diretório padrão serão carregados. Os relatórios não serão exibidos se o Visualizador de relatórios do supervisor de atualização não encontrar nenhum relatório no diretório padrão. Se não houver relatórios no diretório padrão, você poderá executar o Assistente para Análise do Supervisor de Atualização para criar um relatório ou carregar um relatório existente de outro servidor ou de um subdiretório.  
   
- O Supervisor de Atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não substitui relatórios existentes. Entretanto, o visualizador de relatórios exibe apenas os cinco relatórios mais recentes. Para exibir um relatório anterior, selecione o relatório a partir de **relatório** caixa de listagem suspensa. O carimbo de data/hora indica a data e a hora em que o relatório foi gerado.  
+ O Supervisor de Atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não substitui relatórios existentes. Entretanto, o visualizador de relatórios exibe apenas os cinco relatórios mais recentes. Para exibir um relatório anterior, selecione o relatório na caixa de listagem suspensa **relatório** . O carimbo de data/hora indica a data e a hora em que o relatório foi gerado.  
   
  Quando arquivos XML do Assistente para Análise do Supervisor de Atualização são localizados no Visualizador de Relatórios do Supervisor de Atualização, é exibido um relatório para cada componente. O relatório contém todos os problemas conhecidos, detectáveis e não, que você precisa solucionar. Para cada problema, há um ícone indicando a importância, um rótulo informando quando o problema deve ser solucionado e uma breve descrição. Quando você expandir um problema, verá uma descrição completa, um link para os detalhes do problema e um link para o arquivo da Ajuda. As informações de cada problema são projetadas para fornecer detalhes suficientes para que você possa solucionar o problema.  
   
- A maioria dos componentes tem problemas que não podem ser detectados. Para exibir esses problemas, expanda o **outros problemas de atualização** para o componente de item e, em seguida, clique no link para exibir informações adicionais sobre os problemas na documentação. Para obter mais informações sobre problemas de compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte os Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A maioria dos componentes tem problemas que não podem ser detectados. Para exibir esses problemas, expanda o item **outros problemas de atualização** para o componente e, em seguida, clique no link para exibir informações adicionais sobre os problemas na documentação. Para obter mais informações sobre problemas de compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte os Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhando com o Supervisor de Atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

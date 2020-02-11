@@ -1,5 +1,5 @@
 ---
-title: 'Lição 3: Processando a estrutura de mineração de comprador de bicicleta | Microsoft Docs'
+title: 'Lição 3: processando a estrutura de mineração do comprador de bicicletas | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655791"
 ---
-# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lição 3: Como processar a estrutura de mineração de Comprador de Bicicleta
-  Nesta lição, você usará a inserção em instrução e a exibição vTargetMail do [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] banco de dados de exemplo para processar as estruturas de mineração e modelos de mineração que você criou na [lição 1: Criando a estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) e [lição 2: Adicionando modelos de mineração à estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lição 3: Processando a estrutura de mineração Comprador de Bicicleta
+  Nesta lição, você usará a instrução INSERT INTO e a exibição vTargetMail do banco de [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] dados de exemplo para processar as estruturas de mineração e os modelos de mineração criados na [lição 1: criando a estrutura de mineração de compradores de bicicletas](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) e a [lição 2: adicionando modelos de mineração à estrutura de mineração de compradores de bicicletas](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- Ao processar uma estrutura de mineração, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lê os dados de origem e compila as estruturas que dão suporte a modelos de mineração. Ao processar um modelo de mineração, os dados definidos pela estrutura de mineração são passados pelo algoritmo de mineração de dados escolhido. O algoritmo procura tendências e padrões e, depois, armazena as informações no modelo de mineração. Portanto, o modelo de mineração na verdade não contém os dados de origem, e sim as informações que foram descobertas pelo algoritmo. Para obter mais informações sobre como processar modelos de mineração, consulte [considerações e requisitos de processamento de &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Ao processar uma estrutura de mineração, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lê os dados de origem e compila as estruturas que dão suporte a modelos de mineração. Ao processar um modelo de mineração, os dados definidos pela estrutura de mineração são passados pelo algoritmo de mineração de dados escolhido. O algoritmo procura tendências e padrões e, depois, armazena as informações no modelo de mineração. Portanto, o modelo de mineração na verdade não contém os dados de origem, e sim as informações que foram descobertas pelo algoritmo. Para obter mais informações sobre o processamento de modelos de mineração, consulte [requisitos e considerações de processamento &#40;&#41;de mineração de dados ](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
- Você precisará reprocessar uma estrutura de mineração somente se você alterar uma coluna de estrutura ou alterar os dados de origem. Adicionando-se um modelo de mineração a uma estrutura de mineração que já foi processada, é possível usar a instrução INSERT INTO MINING MODEL para treinar o novo modelo de mineração.  
+ Você precisará reprocessar uma estrutura de mineração somente se alterar uma coluna de estrutura ou alterar os dados de origem. Adicionando-se um modelo de mineração a uma estrutura de mineração que já foi processada, é possível usar a instrução INSERT INTO MINING MODEL para treinar o novo modelo de mineração.  
   
 ## <a name="train-structure-template"></a>Treinar modelo de estrutura  
- Para treinar a estrutura de mineração e modelos de mineração associados, use o [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrução. O código na instrução pode ser dividido nas seguintes partes:  
+ Para treinar a estrutura de mineração e seus modelos de mineração associados, use a instrução [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) . O código na instrução pode ser dividido nas seguintes partes:  
   
 -   Identificando a estrutura de mineração  
   
@@ -63,7 +63,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY([<datasource>],'<SELECT statement>')  
 ```  
   
- Nesta lição, use `OPENQUERY` para definir os dados de origem. Para obter informações sobre outros métodos de definição da consulta de origem, consulte [ &#60;consulta de fonte de dados&#62;](/sql/dmx/source-data-query).  
+ Nesta lição, use `OPENQUERY` para definir os dados de origem. Para obter informações sobre outros métodos de definição da consulta de origem, consulte [&#60;&#62;de consulta de dados de origem ](/sql/dmx/source-data-query).  
   
 ## <a name="lesson-tasks"></a>Tarefas da lição  
  Você executará a seguinte tarefa nesta lição:  
@@ -74,7 +74,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>Para processar a estrutura de mineração utilizando INSERT INTO  
   
-1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+1.  No Pesquisador de **objetos**, clique com o botão [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]direito do mouse na instância do, aponte para **nova consulta**e clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   
@@ -168,15 +168,15 @@ OPENQUERY([<datasource>],'<SELECT statement>')
         FROM dbo.vTargetMail')  
     ```  
   
-6.  Sobre o **arquivo** menu, clique em **salvar DMXQuery1.dmx como**.  
+6.  No menu **arquivo** , clique em **salvar DMXQuery1. DMX como**.  
   
-7.  No **Salvar como** caixa de diálogo, navegue até a pasta apropriada e nomeie o arquivo `Process Bike Buyer Structure.dmx`.  
+7.  Na caixa de diálogo **salvar como** , navegue até a pasta apropriada e nomeie o arquivo `Process Bike Buyer Structure.dmx`.  
   
-8.  Na barra de ferramentas, clique o **Execute** botão.  
+8.  Na barra de ferramentas, clique no botão **executar** .  
   
  Na próxima lição, você explorará o conteúdo dos modelos de mineração adicionados à estrutura de mineração nesta lição.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 4: Procurar os modelos de mineração de comprador de bicicleta](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Lição 4: Explorando modelos de mineração Comprador de Bicicleta](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
   
   

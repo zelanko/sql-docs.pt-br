@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782785"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
@@ -33,7 +33,7 @@ ms.locfileid: "72782785"
   
      [Segurança](#Security)  
   
--   **Para alterar a associação de uma categoria de trabalho usando:**  
+-   **Para alterar a associação de uma categoria de trabalho, usando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -62,9 +62,9 @@ ms.locfileid: "72782785"
   
 6.  Para adicionar um trabalho à categoria, na grade principal, marque a caixa de seleção na coluna **Selecionar** correspondente ao trabalho. Para remover um trabalho da categoria, desmarque a caixa. Quando terminar, clique em **OK**.  
   
-7.  Feche a caixa de diálogo **Gerenciar Categorias de Trabalho**_server_name_ .  
+7.  Feche a caixa de diálogo **gerenciar categorias de trabalho**_server_name_ .  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Para alterar a associação de uma categoria de trabalho  
   
@@ -84,7 +84,7 @@ ms.locfileid: "72782785"
     GO  
     ```  
   
- Para obter mais informações, [consulte &#40;Transact-SQL&#41;sp_update_job](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
+ Para obter mais informações, consulte [sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
 ##  <a name="SMO"></a>Usando SQL Server Management Objects  
  **Para alterar a associação de uma categoria de trabalho**  

@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62695654"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>Propriedades do trabalho: novo trabalho (página Etapas)
-  Use essa página para exibir e organizar etapas de trabalho para um trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Use esta página para exibir e organizar etapas de trabalho para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um trabalho do Agent.  
   
 ## <a name="options"></a>Opções  
  **Lista de etapas de trabalho**  
@@ -32,10 +32,10 @@ ms.locfileid: "62695654"
  **Iniciar etapa**  
  Selecione a etapa a ser iniciada com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent quando o trabalho começar.  
   
- **Nova**  
+ **Novo**  
  Crie uma etapa de trabalho nova abaixo da etapa de trabalho selecionada.  
   
- **Insert (inserir)**  
+ **Inserido**  
  Crie uma etapa de trabalho nova acima da etapa de trabalho selecionada.  
   
  **Editar**  
@@ -44,7 +44,7 @@ ms.locfileid: "62695654"
  **Delete (excluir)**  
  Exclua a etapa de trabalho selecionada. Quando etapas de trabalho são excluídas seu log de saída é excluído automaticamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementar trabalhos](implement-jobs.md)  
   
   

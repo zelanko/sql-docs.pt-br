@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721041"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompilar um procedimento armazenado
-  Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três maneiras de fazer isso: `WITH RECOMPILE` opção na definição do procedimento ou quando o procedimento é chamado, o `RECOMPILE` dica de consulta em instruções individuais ou usando o `sp_recompile` procedimento armazenado do sistema. Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
+  Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três maneiras de fazer isso: `WITH RECOMPILE` opção na definição do procedimento ou quando o procedimento é chamado, a `RECOMPILE` dica de consulta em instruções individuais ou usando o procedimento armazenado `sp_recompile` do sistema. Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
   
  **Neste tópico**  
   
@@ -49,20 +49,20 @@ ms.locfileid: "62721041"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece recompilação no nível da instrução de procedimentos. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recompila procedimentos armazenados, apenas a instrução que causou a recompilação é compilada, e não o procedimento completo.  
   
--   Se certas consultas em um procedimento usarem valores atípicos ou temporários regularmente, o desempenho do procedimento poderá ser melhorado com o uso da dica de consulta RECOMPILE nessas consultas. Como apenas as consultas que usam a dica de consulta serão recompiladas, em vez de o procedimento completo, o comportamento de recompilação no nível da instrução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]será imitado. Além de usar os valores de parâmetro atuais do procedimento, a dica de consulta RECOMPILE também usa os valores de todas as variáveis locais no procedimento armazenado quando você compila a instrução. Para obter mais informações, veja [Dica de consulta (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).  
+-   Se certas consultas em um procedimento usarem valores atípicos ou temporários regularmente, o desempenho do procedimento poderá ser melhorado com o uso da dica de consulta RECOMPILE nessas consultas. Como apenas as consultas que usam a dica de consulta serão recompiladas, em vez de o procedimento completo, o comportamento de recompilação no nível da instrução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será imitado. Além de usar os valores de parâmetro atuais do procedimento, a dica de consulta RECOMPILE também usa os valores de todas as variáveis locais no procedimento armazenado quando você compila a instrução. Para obter mais informações, veja [Dica de consulta (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- `WITH RECOMPILE` Opção  
+ `WITH RECOMPILE`Option  
  Se a opção for usada quando a definição de procedimento for criada, serão necessárias as permissões CREATE PROCEDURE no banco de dados e ALTER no esquema no qual o procedimento está sendo criado.  
   
  Se essa opção for usada em uma instrução EXECUTE, as permissões de EXECUTE serão necessárias no procedimento. As permissões não são necessárias na instrução EXECUTE em si, mas permissões de execução são necessárias no procedimento referenciado na instrução EXECUTE. Para obter mais informações, veja [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
- `RECOMPILE` Dica de consulta  
+ `RECOMPILE`Dica de consulta  
  Esse recurso é usado quando o procedimento é criado e a dica é incluída em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no procedimento. Portanto, isso requer a permissão CREATE PROCEDURE no banco de dados e a permissão ALTER no esquema no qual o procedimento está sendo criado.  
   
- `sp_recompile` Procedimento armazenado do sistema  
+ `sp_recompile`Procedimento armazenado do sistema  
  Exige a permissão ALTER no procedimento especificado.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
@@ -113,7 +113,7 @@ GO
   
 ```  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>Para recompilar um procedimento armazenado usando sp_recompile  
+#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Para recompilar um procedimento armazenado usando sp_recompile  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -131,7 +131,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um procedimento armazenado](../stored-procedures/create-a-stored-procedure.md)   
  [Modificar um procedimento armazenado](../stored-procedures/modify-a-stored-procedure.md)   
  [Renomear um procedimento armazenado](rename-a-stored-procedure.md)   

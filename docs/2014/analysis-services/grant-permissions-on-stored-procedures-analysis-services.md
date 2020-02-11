@@ -1,5 +1,5 @@
 ---
-title: Conceder permissões nos procedimentos armazenados (Analysis Services) | Microsoft Docs
+title: Conceder permissões em procedimentos armazenados (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080727"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Conceder permissões nos procedimentos armazenados (Analysis Services)
   Os procedimentos armazenados, ou assemblies, no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] são rotinas externas, escritas em uma linguagem de programação [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET, que estende os recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Os assemblies permitem que o desenvolvedor aproveite a integração em qualquer idioma, a manipulação de exceções, o suporte ao controle de versões, o suporte à implantação e o suporte à depuração.  
   
- Você deve ser um Administrador do Servidor para registrar um assembly. Ver [conceder permissões de administrador do servidor &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Você deve ser um Administrador do Servidor para registrar um assembly. Consulte [conceder permissões de administrador do servidor &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 ## <a name="security-context-for-stored-procedure-execution"></a>Contexto de segurança para a execução do procedimento armazenado  
  Qualquer usuário pode chamar um procedimento armazenado. Dependendo da configuração do procedimento armazenado, ele pode ser executado no contexto do usuário chamando o procedimento ou no contexto de um usuário anônimo. Como um usuário anônimo não tem contexto de segurança, use esse recurso junto com a configuração da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para permitir o acesso anônimo.  
@@ -29,13 +29,13 @@ ms.locfileid: "66080727"
   
  A seguir são apresentados os conjuntos de permissões usados para executar procedimentos armazenados:  
   
--   **Seguro** conjunto de permissões com a segurança, um procedimento armazenado não é possível acessar os recursos protegidos no [!INCLUDE[msCoName](../includes/msconame-md.md)] do .NET Framework. Esse conjunto de permissões somente é usado para cálculos. Esse é o conjunto de permissões mais seguro; as informações não vazam para for a do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], as permissões não podem ser elevadas e o risco de ataques de violação de dados é minimizado.  
+-   **Seguro** Com o conjunto de permissões seguro, um procedimento armazenado não pode acessar os recursos protegidos [!INCLUDE[msCoName](../includes/msconame-md.md)] no .NET Framework. Esse conjunto de permissões somente é usado para cálculos. Esse é o conjunto de permissões mais seguro; as informações não vazam para for a do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], as permissões não podem ser elevadas e o risco de ataques de violação de dados é minimizado.  
   
--   **Acesso externo** conjunto de permissões com o acesso externo, um procedimento armazenado pode acessar recursos externos usando código gerenciado. A definição de um procedimento armazenado para esse conjunto de permissões não causará erros de programação que poderiam levar à instabilidade do servidor. No entanto, esse conjunto de permissões pode provocar o vazamento de informações para fora do servidor, e a possibilidade de uma elevação na permissão e de ataques de violação de dados.  
+-   **Acesso externo** Com o conjunto de permissões de acesso externo, um procedimento armazenado pode acessar recursos externos usando código gerenciado. A definição de um procedimento armazenado para esse conjunto de permissões não causará erros de programação que poderiam levar à instabilidade do servidor. No entanto, esse conjunto de permissões pode provocar o vazamento de informações para fora do servidor, e a possibilidade de uma elevação na permissão e de ataques de violação de dados.  
   
--   **Unrestricted** conjunto de permissões com o irrestrito, um procedimento armazenado pode acessar recursos externos por meio de qualquer código. Com esse conjunto de permissões, não há garantias de segurança ou confiabilidade para procedimentos armazenados.  
+-   **Irrestrito** Com o conjunto de permissões irrestrito, um procedimento armazenado pode acessar recursos externos usando qualquer código. Com esse conjunto de permissões, não há garantias de segurança ou confiabilidade para procedimentos armazenados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciamento de assemblies de modelo multidimensional](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

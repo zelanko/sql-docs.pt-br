@@ -1,5 +1,5 @@
 ---
-title: Modificação de dados (MDX) | Microsoft Docs
+title: Modificando dados (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81d1df159944b96d0945bb45d2c331922d0f46e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074226"
 ---
 # <a name="modifying-data-mdx"></a>Modificando dados (MDX)
@@ -35,7 +35,7 @@ ms.locfileid: "66074226"
   
  Para obter mais informações, consulte [Usando write-backs de cubo &#40;MDX&#41;](mdx-data-modification-using-cube-writebacks.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

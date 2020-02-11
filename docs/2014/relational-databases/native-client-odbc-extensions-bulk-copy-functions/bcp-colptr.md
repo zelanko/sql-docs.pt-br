@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 269ab3c748557d1d2870195524310f2371b79c52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689146"
 ---
-# <a name="bcpcolptr"></a>bcp_colptr
+# <a name="bcp_colptr"></a>bcp_colptr
   Define o endereço de dados variáveis do programa da cópia atual no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -50,26 +50,26 @@ idxServerCol
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *pData*  
- É um ponteiro para os dados a serem copiados. Se o tipo de dados associado é o tipo de valor grande (por exemplo, SQLTEXT ou SQLIMAGE), *pData* pode ser NULL. Um valor nulo *pData* indica valores de dados longos serão enviados para o SQL Server em partes usando [bcp_moretext](bcp-moretext.md).  
+ É um ponteiro para os dados a serem copiados. Se o tipo de dados associado for um tipo de valor grande (como SQLTEXT ou SQLIMAGE), *pData* poderá ser NULL. Um *pData* nulo indica que valores de dados longos serão enviados para SQL Server em partes usando [bcp_moretext](bcp-moretext.md).  
   
- Se *pData* é definido como NULL e a coluna correspondente ao campo associado não é um tipo de valor grande **bcp_colptr** falhar.  
+ Se *pData* for definido como NULL e a coluna correspondente ao campo associado não for um tipo de valor grande, **bcp_colptr** falhará.  
   
- Para obter mais informações sobre tipos de valor grande, consulte [bcp_bind](bcp-bind.md) **.**  
+ Para obter mais informações sobre tipos de valor grande, consulte [bcp_bind](bcp-bind.md)**.**  
   
  *idxServerCol*  
  É a posição ordinal da coluna na tabela do banco de dados na qual os dados são copiados. A primeira coluna em uma tabela é a coluna 1. A posição ordinal de uma coluna é relatada por [SQLColumns](../native-client-odbc-api/sqlcolumns.md).  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Comentários  
- O **bcp_colptr** função permite que você altere o endereço dos dados de origem para uma determinada coluna ao copiar dados para o SQL Server com [bcp_sendrow](bcp-sendrow.md).  
+ A função **bcp_colptr** permite que você altere o endereço dos dados de origem de uma determinada coluna ao copiar dados para SQL Server com [bcp_sendrow](bcp-sendrow.md).  
   
- Inicialmente, o ponteiro para dados de usuário é definido por uma chamada para **bcp_bind**. Se o endereço de dados da variável de programa é alterado entre chamadas para **bcp_sendrow**, você pode chamar **bcp_colptr** para redefinir o ponteiro para os dados. A próxima chamada para **bcp_sendrow** envia os dados endereçados pela chamada para **bcp_colptr**.  
+ Inicialmente, o ponteiro para os dados do usuário é definido por uma chamada para **bcp_bind**. Se o endereço de dados da variável do programa for alterado entre as chamadas para **bcp_sendrow**, você poderá chamar **bcp_colptr** para redefinir o ponteiro para os dados. A próxima chamada para **bcp_sendrow** envia os dados endereçados pela chamada para **bcp_colptr**.  
   
- Deve haver um separado **bcp_colptr** chamada para cada coluna na tabela cujos dados de endereço que você deseja modificar.  
+ Deve haver uma chamada **bcp_colptr** separada para cada coluna na tabela cujo endereço de dados você deseja modificar.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de cópia em massa](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

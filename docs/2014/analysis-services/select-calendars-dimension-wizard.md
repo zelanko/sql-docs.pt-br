@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069686"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Selecionar Calendários (Assistente para Dimensões)
@@ -58,7 +58,7 @@ ms.locfileid: "66069686"
   
  A tabela a seguir lista as opções disponíveis para a semana por padrão mensal.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Semana 445**|O primeiro mês do trimestre tem 4 semanas, o segundo mês do trimestre tem 4 semanas e o terceiro mês do trimestre tem 5 semanas.|  
 |**Semana 454**|O primeiro mês do trimestre tem 4 semanas, o segundo mês do trimestre tem 5 semanas e o terceiro mês do trimestre tem 4 semanas.|  
@@ -82,9 +82,9 @@ ms.locfileid: "66069686"
  **Calendário ISO 8601**  
  Selecione para criar uma hierarquia de tempo baseada no calendário ISO 8601.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de dimensão](dimension-wizard-f1-help.md)   
- [Dimensões &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente para dimensões](dimension-wizard-f1-help.md)   
+ [Dimensões &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

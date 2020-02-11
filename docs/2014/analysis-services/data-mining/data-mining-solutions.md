@@ -14,27 +14,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084886"
 ---
 # <a name="data-mining-solutions"></a>Soluções de mineração de dados
   Uma solução de mineração de dados é uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém um ou mais projetos de mineração de dados.  
   
- Os tópicos desta seção fornecem informações sobre como projetar e implementar uma solução de mineração de dados integrada usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter uma visão geral do processo de design de mineração de dados e as ferramentas relacionadas, consulte [Data Mining Concepts](data-mining-concepts.md).  
+ Os tópicos nesta seção fornecem informações sobre como projetar e implementar uma solução de Data Mining integrada usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o. Para obter uma visão geral do processo de design de mineração de dados e as ferramentas relacionadas, consulte [Data Mining Concepts](data-mining-concepts.md).  
   
  Para obter mais informações sobre os tipos de projetos que são úteis para mineração de dados, consulte [Projetos relacionados a soluções de mineração de dados](data-mining-solutions.md).  
   
- [Relacional versus Soluções multidimensionais](#bkmk_RelMD)  
+ [Relacional versus soluções multidimensionais](#bkmk_RelMD)  
   
  [Implantando soluções de mineração de dados](#bkmk_Deploy)  
   
- [Passo a passo de solução](#bkmk_Walkthru)  
+ [Orientações da solução](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a> Relacional versus Soluções multidimensionais  
- Uma solução de mineração de dados pode ser com base em dados multidimensionais-ou seja, um cubo existente – ou em dados puramente relacionais, como as tabelas e exibições em um data warehouse, ou em arquivos de texto, do Excel pastas de trabalho ou outras fontes de dados externas.  
+##  <a name="bkmk_RelMD"></a>Relacional versus soluções multidimensionais  
+ Uma solução de Data Mining pode ser baseada em dados multidimensionais, ou seja, um cubo existente ou dados puramente relacionais, como as tabelas e exibições em uma data warehouse, ou em arquivos de texto, pastas de trabalho do Excel ou outras fontes de dados externas.  
   
 -   Você pode criar objetos de mineração de dados dentro de uma solução de banco de dados multidimensional existente.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66084886"
   
      Este é o método preferido para criar modelos de mineração de dados, já que processar e consultar é geralmente mais rápido em fontes de dados relacionais. Você também pode facilmente mover e fazer backup de modelos entre servidores usando os comandos EXPORT e IMPORT.  
   
-##  <a name="bkmk_Deploy"></a> Implantando soluções de mineração de dados  
+##  <a name="bkmk_Deploy"></a>Implantando soluções de mineração de dados  
  A instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o qual você implanta a solução deve estar sendo executada em um modo que dá suporte a objetos multidimensionais e objetos de mineração de dados; ou seja, você não pode implantar objetos de mineração de dados em uma instância que hospeda modelos de tabela ou dados PowerPivot.  
   
  Portanto, quando você cria uma solução de mineração de dados no Visual Studio, use o modelo **Projeto Multidimensional e de Mineração de Dados do Analysis Services**.  
@@ -53,7 +53,7 @@ ms.locfileid: "66084886"
   
  Para obter mais informações sobre como implantar soluções relacionais e multidimensionais, consulte [Implantação de soluções de mineração de dados](deployment-of-data-mining-solutions.md).  
   
-##  <a name="bkmk_Walkthru"></a> Passo a passo de solução  
+##  <a name="bkmk_Walkthru"></a>Instruções da solução  
  Fornece uma visão geral de como criar soluções de mineração de dados usando o Assistente de Mineração de Dados.  
   
  [Criar uma estrutura de mineração relacional](create-a-relational-mining-structure.md)  
@@ -65,26 +65,26 @@ ms.locfileid: "66084886"
 ## <a name="in-this-section"></a>Nesta seção  
  [Projetos de mineração de dados](data-mining-projects.md)  
   
- [Processando objetos de Mineração de dados](processing-data-mining-objects.md)  
+ [Processando objetos de mineração de dados](processing-data-mining-objects.md)  
   
- [Projetos relacionados a soluções de Mineração de dados](data-mining-solutions.md)  
+ [Projetos relacionados a soluções de mineração de dados](data-mining-solutions.md)  
   
  [Implantação de soluções de mineração de dados](deployment-of-data-mining-solutions.md)  
   
 ## <a name="related-tasks-and-topics"></a>Tarefas e tópicos relacionados  
  Depois de você ter criado uma solução de mineração de dados básica, incluindo fontes de dados e uma estrutura de mineração, pode criar a solução adicionando novos modelos, testando e comparando modelos, criando previsões e experimentando com subconjuntos de dados.  
   
- Para obter mais informações, consulte os seguintes links:  
+ Para obter mais informações, consulte os links a seguir:  
   
 |Tarefas|Tópicos|  
 |-----------|------------|  
-|Teste os modelos que você criou, valide a qualidade de seus dados de treinamento e crie gráficos que representam a precisão de modelos de mineração de dados.|[Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)|  
-|Treine o modelo populando a estrutura e os modelos relacionados com os dados. Atualize e estenda modelos com novos dados.|[Processando objetos de Mineração de dados](processing-data-mining-objects.md)|  
+|Teste os modelos que você criou, valide a qualidade de seus dados de treinamento e crie gráficos que representam a precisão de modelos de mineração de dados.|[Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)|  
+|Treine o modelo populando a estrutura e os modelos relacionados com os dados. Atualize e estenda modelos com novos dados.|[Processando objetos de mineração de dados](processing-data-mining-objects.md)|  
 |Personalize um modelo de mineração aplicando filtros aos dados de treinamento, escolhendo um algoritmo diferente ou definindo parâmetros de algoritmo avançados.|[Personalizar os modelos de mineração e a estrutura](customize-mining-models-and-structure.md)|  
-|Personalize um modelo de mineração aplicando filtros aos dados usados no treinamento do modo.|[Adicionar Modelos de Mineração a uma estrutura &#40;Analysis Services – Data Mining&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Personalize um modelo de mineração aplicando filtros aos dados usados no treinamento do modo.|[Adicionar modelos de mineração a uma estrutura &#40;mineração de dados Analysis Services&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Atualize e gerencie as soluções de mineração de dados.|Link TBD|  
   
-## <a name="see-also"></a>Consulte também  
- [Tutoriais de Data Mining &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tutoriais de mineração de dados &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
   
   

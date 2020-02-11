@@ -1,5 +1,5 @@
 ---
-title: (Analysis Services - dados multidimensionais) do Designer de cubo | Microsoft Docs
+title: Designer de cubo (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086613"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Designer de Cubo (Analysis Services - Dados Multidimensionais)
@@ -32,19 +32,19 @@ ms.locfileid: "66086613"
   
 |Tab|Definição|  
 |---------|----------------|  
-|**Estrutura do cubo**|Use esta guia para criar e modificar medidas e grupos de medidas, adicionar dimensões de cubos e exibir os objetos incluídos no cubo a partir da exibição da fonte de dados associada. Para obter mais informações sobre essa guia, consulte [Estrutura do Cubo &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Uso da dimensão**|Use esta guia para criar e modificar relações entre dimensões de cubo e grupos de medidas incluídos no cubo. Para obter mais informações sobre essa guia, consulte [Uso da Dimensão &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Estrutura do Cubo**|Use esta guia para criar e modificar medidas e grupos de medidas, adicionar dimensões de cubos e exibir os objetos incluídos no cubo a partir da exibição da fonte de dados associada. Para obter mais informações sobre essa guia, consulte [Estrutura do Cubo &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Uso da Dimensão**|Use esta guia para criar e modificar relações entre dimensões de cubo e grupos de medidas incluídos no cubo. Para obter mais informações sobre essa guia, consulte [Uso da Dimensão &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Cálculos**|Use esta guia para criar e modificar cálculos, incluindo membros calculados, conjuntos nomeados e comandos de script MDX incluídos no cubo. Para obter mais informações sobre essa guia, consulte [Cálculos &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md).|  
 |**KPIs**|Use esta guia para criar e modificar KPIs incluídas no cubo. Para obter mais informações sobre essa guia, consulte [KPIs &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Ações**|Use esta guia para criar e modificar ações, inclusive ações de extração de detalhes e ações de relatório, incluídas no cubo. Para obter mais informações sobre essa guia, consulte [Ações &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](actions-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Partições**|Use esta guia para criar e modificar partições, incluindo configurações de cache pró-ativo para grupos de medidas e partições, incluídas no cubo. Para obter mais informações sobre essa guia, consulte [Partições &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Perspectivas**|Use esta guia para criar e modificar perspectivas incluídas no cubo. Para obter mais informações sobre essa guia, consulte [Perspectivas &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Traduções**|Use esta guia para criar e modificar traduções de grupos de medidas, medidas, dimensões de cubos, perspectivas, KPIs, ações, conjuntos nomeados e membros calculados incluídos no cubo. Para obter mais informações sobre essa guia, consulte [Traduções &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](translations-cube-designer-analysis-services-multidimensional-data.md).|  
+|**perspectivas**|Use esta guia para criar e modificar perspectivas incluídas no cubo. Para obter mais informações sobre essa guia, consulte [Perspectivas &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Translations**|Use esta guia para criar e modificar traduções de grupos de medidas, medidas, dimensões de cubos, perspectivas, KPIs, ações, conjuntos nomeados e membros calculados incluídos no cubo. Para obter mais informações sobre essa guia, consulte [Traduções &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](translations-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Navegador**|Use esta guia para procurar dados e metadados para o cubo. Para obter mais informações sobre essa guia, consulte [Navegador &#40;Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](browser-cube-designer-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Consulte também  
- [Objetos de cubo &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Objetos de cubo &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubos em modelos multidimensionais](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

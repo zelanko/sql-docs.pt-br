@@ -19,16 +19,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086546"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversões de moeda (Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  Somente multidimensional  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** Somente multidimensional  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa uma combinação de recursos, orientada por scripts de linguagem Multidimensional Expressions (MDX), para dar suporte em conversão de moedas, em cubos, com suporte para várias moedas.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa uma combinação de recursos, orientada por scripts de linguagem Multidimensional Expressions (MDX), para dar suporte em conversão de moedas, em cubos, com suporte para várias moedas.  
   
 ## <a name="currency-conversion-terminology"></a>Terminologia de conversão de moedas  
  A seguinte terminologia é usada no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para descrever a funcionalidade de conversão de moedas:  
@@ -105,9 +106,9 @@ ms.locfileid: "66086546"
   
 |||||  
 |-|-|-|-|  
-|Direção da taxa de câmbio|**Muitos para um**|**Um para muitos**|**Muitos para muitos**|  
-|**n moeda corrente em 1 moeda de amostra**|Multiplique a medida a ser convertida pela medida de taxa de câmbio para a moeda local para converter a medida em uma moeda corrente.|Divida a medida a ser convertida pela medida da taxa de câmbio da moeda de relatório para converter a medida em uma moeda de relatório.|Multiplique a medida a ser convertida pela medida de taxa de câmbio para a moeda local para converter a medida na moeda corrente, então, divida a medida convertida pela medida de taxa de câmbio para a moeda de relatório para converter a medida na moeda de relatório.|  
-|**n moeda de amostra em 1 moeda corrente**|Divida a medida a ser convertida pela medida de taxa de cambo para a moeda local para converter a medida na moeda corrente.|Multiplique a medida a ser convertida pela medida de taxa de câmbio para a moeda de relatório para converter a medida na moeda de relatório.|Divida a medida a ser convertida pela medida de taxa de câmbio para a moeda local para converter a medida na moeda corrente, então, multiplique a medida convertida pela medida de taxa de câmbio para a moeda de relatório para converter a medida na moeda de relatório.|  
+|Direção da taxa de câmbio|**Muitos para um**|**Um-para-muitos**|**Muitos para muitos**|  
+|**n moeda corrente para 1 moeda de exemplo**|Multiplique a medida a ser convertida pela medida de taxa de câmbio para a moeda local para converter a medida em uma moeda corrente.|Divida a medida a ser convertida pela medida da taxa de câmbio da moeda de relatório para converter a medida em uma moeda de relatório.|Multiplique a medida a ser convertida pela medida de taxa de câmbio para a moeda local para converter a medida na moeda corrente, então, divida a medida convertida pela medida de taxa de câmbio para a moeda de relatório para converter a medida na moeda de relatório.|  
+|**n moeda de exemplo para 1 moeda corrente**|Divida a medida a ser convertida pela medida de taxa de cambo para a moeda local para converter a medida na moeda corrente.|Multiplique a medida a ser convertida pela medida de taxa de câmbio para a moeda de relatório para converter a medida na moeda de relatório.|Divida a medida a ser convertida pela medida de taxa de câmbio para a moeda local para converter a medida na moeda corrente, então, multiplique a medida convertida pela medida de taxa de câmbio para a moeda de relatório para converter a medida na moeda de relatório.|  
   
  Você escolhe a direção de taxa de câmbio na página **Definir opções de conversão de moeda** do Assistente de Business Intelligence. Para obter mais informações sobre a direção de conversão de configuração, consulte [Definir opções de conversão de moeda &#40;Assistente de Business Intelligence&#41;](set-currency-conversion-options-business-intelligence-wizard.md).  
   
@@ -125,7 +126,7 @@ ms.locfileid: "66086546"
 ### <a name="conversion-types"></a>Tipos de conversão  
  O Assistente de Business Intelligence oferece suporte para três tipos diferentes de conversão de moedas:  
   
--   **Um para muitos**  
+-   **Um-para-muitos**  
   
      As transações são armazenadas na tabela de fatos na moeda corrente e, então, convertidas em uma ou mais moedas de relatório.  
   
@@ -184,7 +185,7 @@ ms.locfileid: "66086546"
   
  Você pode alterar os comandos de script contidos em uma conversão de moeda conforme necessário. Se você substituir a conversão de moedas, porém, suas alterações serão perdidas.  
   
-## <a name="see-also"></a>Consulte também  
- [Cenários de globalização para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Cenários de globalização para Analysis Services Multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
   

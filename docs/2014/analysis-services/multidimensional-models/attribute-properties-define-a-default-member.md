@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077415"
 ---
 # <a name="define-a-default-member"></a>Definir um membro padrão
@@ -33,17 +33,17 @@ ms.locfileid: "66077415"
  Se nenhum membro padrão for especificado para uma hierarquia de atributo e essa hierarquia de atributo for agregável (a propriedade `IsAggregatable` do atributo for definida como `True`), o membro (All) será o membro padrão. Se nenhum membro padrão for especificado e a hierarquia de atributo não for agregável (a propriedade `IsAggregatable` do atributo for definida como `False`), o membro padrão será selecionado no nível mais alto da hierarquia de atributo.  
   
 ## <a name="specifying-the-default-member"></a>Especificando o membro padrão  
- Cada atributo em uma dimensão no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tem um membro padrão, que pode ser especificada usando o `DefaultMember` propriedade para um atributo. Essa configuração será usada para avaliar expressões se não houver um atributo incluído em uma consulta. Se a consulta especificar a hierarquia de uma dimensão, os membros padrão dos atributos da hierarquia serão ignorados. Se uma consulta não especificar uma hierarquia em uma dimensão, o `DefaultMember` configurações para atributos de dimensão entrem em vigor.  
+ Cada atributo em uma dimensão no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tem um membro padrão, que você pode especificar usando a `DefaultMember` propriedade de um atributo. Essa configuração será usada para avaliar expressões se não houver um atributo incluído em uma consulta. Se a consulta especificar a hierarquia de uma dimensão, os membros padrão dos atributos da hierarquia serão ignorados. Se uma consulta não especificar uma hierarquia em uma dimensão, as `DefaultMember` configurações para atributos de dimensão entrarão em vigor.  
   
- Se o `DefaultMember` configuração de um atributo estiver em branco e sua `IsAggregatable` estiver definida como `True`, o membro padrão será o membro All. Se o `IsAggregatable` estiver definida como `False`, o membro padrão será o primeiro membro do primeiro nível visível.  
+ Se a `DefaultMember` configuração de um atributo estiver em branco e `IsAggregatable` sua propriedade for definida `True`como, o membro padrão será o membro todos. Se a `IsAggregatable` propriedade for definida como `False`, o membro padrão será o primeiro membro do primeiro nível visível.  
   
- O `DefaultMember` configuração para um atributo se aplica a toda hierarquia na qual o atributo participa. Não é possível usar configurações diferentes para hierarquias diferentes em uma dimensão. Por exemplo, se o membro [1998] for o membro padrão do atributo [Ano], essa configuração será válida para todas as hierarquias da dimensão. O `DefaultMember` configuração nesse caso, não pode ser [1998] em uma hierarquia e [1997] em uma hierarquia diferente.  
+ A `DefaultMember` configuração de um atributo se aplica a todas as hierarquias nas quais o atributo participa. Não é possível usar configurações diferentes para hierarquias diferentes em uma dimensão. Por exemplo, se o membro [1998] for o membro padrão do atributo [Ano], essa configuração será válida para todas as hierarquias da dimensão. A `DefaultMember` configuração nesse caso não pode ser [1998] em uma hierarquia e [1997] em uma hierarquia diferente.  
   
- Se você definir um membro padrão para um determinado nível de uma hierarquia que não é agregada naturalmente, defina os membros padrão de todos os níveis acima desse nível da hierarquia. Por exemplo, na hierarquia todos-países-clima, você não pode definir um membro padrão para cada clima a menos que você defina um membro padrão para países. Se ele não for criado, ocorrerão erros de consulta-tempo.  
+ Se você definir um membro padrão para um determinado nível de uma hierarquia que não é agregada naturalmente, defina os membros padrão de todos os níveis acima desse nível da hierarquia. Por exemplo, na hierarquia todos os países-clima, você não pode definir um membro padrão para o clima, a menos que você defina um membro padrão para países. Se ele não for criado, ocorrerão erros de consulta-tempo.  
   
- Quando os níveis de uma hierarquia agregam-se naturalmente, você pode definir um membro padrão para qualquer atributo da hierarquia sem relação com os demais atributos da mesma. Por exemplo, na hierarquia de país-província-cidade, você pode definir um membro padrão para cidade, como [Cidade]. [São Paulo] sem definir o membro padrão para o estado ou país.  
+ Quando os níveis de uma hierarquia agregam-se naturalmente, você pode definir um membro padrão para qualquer atributo da hierarquia sem relação com os demais atributos da mesma. Por exemplo, na hierarquia país-província-cidade, você pode definir um membro padrão para cidade, como [cidade]. [Montreal] sem definir o membro padrão para o estado ou para o país.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar o nível &#40;All&#41; para hierarquias de atributo](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar o &#40;todo o nível de&#41; para hierarquias de atributo](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

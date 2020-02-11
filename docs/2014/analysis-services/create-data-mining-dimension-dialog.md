@@ -1,5 +1,5 @@
 ---
-title: Criar caixa de diálogo de dimensão de mineração de dados | Microsoft Docs
+title: Caixa de diálogo Criar dimensão de mineração de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 801dbaaa8f267c2936f86644cc4a7ad3de6549a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086955"
 ---
 # <a name="create-data-mining-dimension-dialog"></a>Diálogo para criar dimensão de mineração de dados
@@ -29,11 +29,11 @@ ms.locfileid: "66086955"
  **Nome da dimensão**  
  Digite um nome para a nova dimensão.  
   
- **Criar cubo**  
+ **Criar Cubo**  
  Selecione para criar um cubo com base no modelo de mineração a ser criado. Após selecionar esta opção, você pode digitar um nome para o cubo.  
   
-## <a name="see-also"></a>Consulte também  
- [Exibição de estrutura de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exibição de estrutura de mineração &#40;designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Criar uma dimensão de mineração de dados](data-mining/create-a-data-mining-dimension.md)  
   
   

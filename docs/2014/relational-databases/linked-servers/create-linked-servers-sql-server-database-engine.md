@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743482"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
@@ -35,9 +35,9 @@ ms.locfileid: "62743482"
 ##  <a name="Security"></a> Segurança  
   
 ### <a name="permissions"></a>Permissões  
- Ao usar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, requer `ALTER ANY LINKED SERVER` permissão no servidor ou associação a **setupadmin** função de servidor fixa. Ao usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] requer `CONTROL SERVER` permissão ou associação na **sysadmin** função de servidor fixa.  
+ Ao usar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, é `ALTER ANY LINKED SERVER` necessária a permissão no servidor ou associação na função de servidor fixa **setupadmin** . Ao usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o `CONTROL SERVER` requer permissão ou associação na função de servidor fixa **sysadmin** .  
   
-##  <a name="Procedures"></a> Como criar um servidor vinculado  
+##  <a name="Procedures"></a>Como criar um servidor vinculado  
  Você pode usar qualquer um dos itens a seguir:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
@@ -70,7 +70,7 @@ ms.locfileid: "62743482"
      **Cadeia de caracteres do provedor**  
      Digite o identificador programático exclusivo (PROGID) do provedor OLE DB que corresponde à fonte de dados. Para obter exemplos de cadeias de caracteres de provedor válidas, consulte [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   
-     **Local**  
+     **Location**  
      Digite o nome do local do banco de dados conforme interpretado pelo provedor OLE DB.  
   
      **Catálogo**  
@@ -88,15 +88,15 @@ ms.locfileid: "62743482"
      **Logon local**  
      Especifique o logon local que pode se conectar ao servidor vinculado. O logon local pode ser um logon que usa a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um logon de Autenticação do Windows. Use essa lista para restringir a conexão a logons específicos ou permitir alguns logons para serem conectados como um logon diferente.  
   
-     **Impersonate**  
+     **Representam**  
      Passe o nome de usuário e senha do logon local para o servidor vinculado. Para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um logon com exatamente o mesmo nome e senha deve existir no servidor remoto. Para logons de Windows, o logon deve ser um logon válido no servidor vinculado.  
   
      Para usar representação, a configuração deve satisfazer o requisito para delegação.  
   
-     **Usuário Remoto**  
+     **Usuário remoto**  
      Use o usuário remoto para mapear usuários não definidos em **Logon local**. O **Usuário Remoto** deve ser um logon de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no servidor remoto.  
   
-     **Senha Remota**  
+     **Senha remota**  
      Especifique a senha do Usuário Remoto.  
   
      **Adicionar**  
@@ -105,42 +105,42 @@ ms.locfileid: "62743482"
      **Remover**  
      Remova um logon local existente.  
   
-     **Não serão feitas**  
+     **Não ser feita**  
      Especifique que uma conexão não será feita para logons não definidos na lista.  
   
-     **Serão feitas sem usar um contexto de segurança**  
+     **Ser feita sem usar um contexto de segurança**  
      Especifique que uma conexão será feita sem usar um contexto de segurança para logons não definidos na lista.  
   
-     **Serão feitas usando um contexto de segurança atual do logon**  
+     **Ser feita usando o contexto de segurança atual do logon**  
      Especifique que uma conexão será feita usando o contexto de segurança atual do logon para logons não definidos na lista. Se conectado ao servidor local que usa Autenticação do Windows, suas credenciais do Windows serão usadas para conectar-se ao servidor remoto. Se conectado ao servidor local que usa a Autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nome de logon e senha serão usados para conectar-se ao servidor remoto. Nesse caso um logon com exatamente o mesmo nome e senha deve existir no servidor remoto.  
   
-     **Serão feitas usando este contexto de segurança**  
+     **Ser feita usando este contexto de segurança**  
      Especifique que uma conexão será feita usando o logon e senha especificados nas caixas **Logon Remoto** e **Com senha** para logons não definidos na lista. O usuário remoto deve ser um logon de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no servidor remoto.  
   
 5.  Opcionalmente, para exibir ou especificar opções de servidor, clique na página **Opções de Servidor**  .  
   
-     **Compatível com Ordenação**  
+     **Compatível com agrupamento**  
      Afeta a execução da Consulta Distribuída nos servidores vinculados. Se essa opção estiver definida como true, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presumirá que todos os caracteres no servidor vinculado são compatíveis com o servidor local, no que diz respeito ao conjunto de caracteres e à sequência da ordenação (ou ordem de classificação). Isso permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envie comparações sobre colunas de caracteres ao provedor. Se essa opção não estiver definida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre avaliará comparações sobre colunas de caracteres localmente.  
   
      Essa opção deve ser definida somente se você tiver certeza de que a fonte de dados correspondente ao servidor vinculado tem o mesmo conjunto de caracteres e ordem de classificação do servidor local.  
   
-     **Acesso aos Dados**  
+     **Acesso a dados**  
      Habilita e desabilita um servidor vinculado para o acesso às consultas distribuídas.  
   
      **RPC**  
      Habilita o RPC a partir do servidor especificado.  
   
-     **RPC Out**  
+     **Saída de RPC**  
      Habilita o RPC para o servidor especificado.  
   
-     **Usar Ordenação Remota**  
+     **Usar agrupamento remoto**  
      Determina se a ordenação de uma coluna remota ou de um servidor local será usada.  
   
      Se true, a ordenação de colunas remotas será usada para as fontes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a ordenação especificada no nome da ordenação será usada para fontes de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Se false, as consultas distribuídas sempre usarão a ordenação padrão do servidor local, enquanto que o nome da ordenação e a ordenação de colunas remotas serão ignorados. O padrão é falso.  
+     Se false, as consultas distribuídas sempre usarão a ordenação padrão do servidor local, enquanto que o nome da ordenação e a ordenação de colunas remotas serão ignorados. O padrão é false.  
   
-     **Nome da Ordenação**  
+     **Nome do agrupamento**  
      Especifica o nome da ordenação usado pela fonte de dados remota se o uso da ordenação remota for true e a fonte de dados não for uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome deve ser uma das ordenações que têm suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Use essa opção ao acessar uma origem de dados OLE DB diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas cuja ordenação coincide com uma das ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -157,7 +157,7 @@ ms.locfileid: "62743482"
   
      Se 0, use o valor **sp_configure** padrão da opção [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) .  
   
-     **Habilitar Promoção de Transações Distribuídas**  
+     **Habilitar promoção de transações distribuídas**  
      Use esta opção para proteger as ações de um procedimento servidor a servidor por meio de uma transação do MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ). Quando esta opção for TRUE, chamar um procedimento remoto armazenado irá iniciar uma transação distribuída e inscrever a transação com o MS DTC. Para obter mais informações, consulte [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql).  
   
 6.  Clique em **OK**.  
@@ -166,7 +166,8 @@ ms.locfileid: "62743482"
   
 -   Para exibir as opções que o provedor torna disponível, clique na página **Opções de Provedores** .  
   
-     Todos os provedores não têm as mesmas opções disponíveis. Por exemplo, alguns tipos de dados têm índices disponíveis e outros talvez não tenham. Use essa caixa de diálogo para ajudar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a entender os recursos do provedor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala alguns provedores de dados comuns; porém, quando o produto que fornece os dados muda, o provedor instalado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode não oferecer suporte a todos os recursos mais novos. A melhor fonte de informações sobre os recursos do produto que fornece os dados é a documentação desse produto:  
+     Todos os provedores não têm as mesmas opções disponíveis. Por exemplo, alguns tipos de dados têm índices disponíveis e outros talvez não tenham. Use essa caixa de diálogo para ajudar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a entender os recursos do provedor. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala alguns provedores de dados comuns; porém, quando o produto que fornece os dados muda, o provedor instalado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode não oferecer suporte a todos os recursos mais novos. A melhor fonte de informações sobre os recursos do produto que fornece os dados é a documentação desse produto:  
   
      **Parâmetro dinâmico**  
      Indica que o provedor permite a sintaxe de marcador de parâmetro '?' para consultas parametrizadas. Defina essa opção apenas se o provedor der suporte à interface **ICommandWithParameters** e a um '?' como o marcador de parâmetro. Definir essa opção permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execute consultas com parâmetros em relação ao provedor. A capacidade de executar consultas parametrizadas em relação ao provedor pode resultar em um melhor desempenho para determinadas consultas.  
@@ -177,19 +178,22 @@ ms.locfileid: "62743482"
      **Somente nível zero**  
      Somente as interfaces OLE DB de nível 0 são invocadas em relação ao provedor.  
   
-     **Permitir inprocess**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que seja criada uma instância do servidor como um servidor em processo. Quando essa opção não é definida, o comportamento padrão é criar uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Criando uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protege o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de erros no provedor. Quando uma instância é criada no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ela atualiza ou insere colunas longas de referência (`text`, `ntext`ou `image`) que não são permitidas.  
+     **Permitir inprocesso**  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que seja criada uma instância do servidor como um servidor em processo. Quando essa opção não é definida, o comportamento padrão é criar uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Criando uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protege o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de erros no provedor. Quando uma instância é criada no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ela atualiza ou insere colunas longas de referência (`text`, `ntext`ou `image`) que não são permitidas.  
   
      **Atualizações não transacionadas**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite atualizações, até mesmo se a **ITransactionLocal** não estiver disponível. Se essa opção estiver habilitada, atualizações em relação ao provedor não serão recuperáveis porque o provedor não possui suporte para transações.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]permite atualizações, mesmo se **ITransactionLocal** não estiver disponível. Se essa opção estiver habilitada, atualizações em relação ao provedor não serão recuperáveis porque o provedor não possui suporte para transações.  
   
      **Índice como caminho de acesso**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta usar índices do provedor para buscar dados. Por padrão, os índices são usados apenas para metadados e não são abertos  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta usar índices do provedor para buscar dados. Por padrão, os índices são usados apenas para metadados e não são abertos  
   
-     **Proibir acesso ad hoc**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permite acesso ad hoc pelas funções OPENROWSET e OPENDATASOURCE ao provedor OLE DB. Quando essa opção não é definida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também não permite acesso ad hoc.  
+     **Não permitir acesso ad hoc**  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permite acesso ad hoc pelas funções OPENROWSET e OPENDATASOURCE ao provedor OLE DB. Quando essa opção não é definida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também não permite acesso ad hoc.  
   
-     **Oferece suporte ao operador 'Like'**  
+     **Dá suporte ao operador ' like '**  
      Indica que o provedor oferece suporte a consultas que usam a palavra-chave LIKE.  
   
 ###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
@@ -220,7 +224,7 @@ ms.locfileid: "62743482"
   
     ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: Etapas a serem executadas depois de criar um servidor vinculado  
+##  <a name="FollowUp"></a>Acompanhamento: etapas a serem executadas após a criação de um servidor vinculado  
   
 #### <a name="to-test-the-linked-server"></a>Para testar o servidor vinculado  
   
@@ -246,7 +250,7 @@ ms.locfileid: "62743482"
   
      Quando NULL é retornado para o logon do servidor vinculado, ele indica que o logon não existe no servidor vinculado. Esses logons não poderão usar o servidor vinculado, a menos que o servidor vinculado seja configurado para passar um contexto de segurança diferente ou o servidor vinculado aceite conexões anônimas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
  [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  

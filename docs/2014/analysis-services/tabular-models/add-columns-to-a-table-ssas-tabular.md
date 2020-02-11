@@ -1,5 +1,5 @@
 ---
-title: Adicionar colunas a uma tabela (SSAS Tabular) | Microsoft Docs
+title: Adicionar colunas a uma tabela (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067764"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Adicionar colunas a uma tabela (SSAS tabular)
@@ -61,8 +61,8 @@ ms.locfileid: "66067764"
   
 2.  Clique na célula superior, digite um nome e, em seguida, pressione ENTER.  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo Editar Propriedades da Tabela &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [Alterar os mapeamentos de tabela, coluna ou filtro de linha &#40;SSAS Tabular&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo Editar propriedades da tabela &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
+ [Alterar os mapeamentos de tabela, coluna ou filtro de linha &#40;SSAS tabular&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

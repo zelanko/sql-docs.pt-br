@@ -1,5 +1,5 @@
 ---
-title: Estrutura de tarefas e instruções de mineração | Microsoft Docs
+title: Tarefas e instruções da estrutura de mineração | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 991185cbf8545fab21270d77ab90267c09380566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083437"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tarefas e instruções da estrutura de mineração
@@ -36,7 +36,7 @@ ms.locfileid: "66083437"
   
 -   [Alterar as propriedades de uma estrutura de mineração](change-the-properties-of-a-mining-structure.md)  
   
--   [Editar a exibição da fonte de dados usada para a estrutura de mineração](edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Editar a exibição da fonte de dados usada para a Estrutura de Mineração](edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Processar uma estrutura de mineração](process-a-mining-structure.md)  
   

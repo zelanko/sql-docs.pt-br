@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de membros (Analysis Services - dados multidimensionais) filtro | Microsoft Docs
+title: Caixa de diálogo Filtrar Membros (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00725279ef55d2cd69662d30e16c1bdc0954adae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081162"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Filtrar Membros (Analysis Services - Dados Multidimensionais)
@@ -28,12 +28,12 @@ ms.locfileid: "66081162"
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Expressão de filtro**|Exibe uma grade de propriedades, operadores e valores usados para construir uma expressão de filtro. Observe que depois que uma linha é adicionada, ela não pode ser removida. Você deve fechar e reabrir a caixa de diálogo para especificar uma nova expressão de filtro. A grade contém as seguintes colunas:<br /><br /> **Propriedade**: Selecione a propriedade do membro a ser usada para a expressão de filtro.<br /><br /> **Operador**: Selecione o operador a ser usado para a expressão de filtro.<br /><br /> **Valor**: Digite o valor da propriedade selecionada em **Propriedade** para avaliação usando o operador especificado em **Operador**.|  
+|**Expressão do filtro...**|Exibe uma grade de propriedades, operadores e valores usados para construir uma expressão de filtro. Observe que depois que uma linha é adicionada, ela não pode ser removida. Você deve fechar e reabrir a caixa de diálogo para especificar uma nova expressão de filtro. A grade contém as seguintes colunas:<br /><br /> **Propriedade**: selecione a propriedade do membro a ser usada para a expressão de filtro.<br /><br /> **Operador**: selecione o operador a ser usado para a expressão de filtro.<br /><br /> **Valor**: digite o valor da propriedade selecionada em **Propriedade** a ser avaliada usando o operador especificado em **operador**.|  
 |**Painel de teste**|Quando **Teste** é clicado, este painel exibe os membros retornados pela expressão de filtro. Se nenhum membro que usa os critérios especificados em **Expressão de filtro**for retornado, será exibida uma advertência.|  
 |**Testar**|Clique para testar os critérios especificados em **Expressão de filtro**.|  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Navegador &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Navegador &#40;designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Opções (resultados SQL Server – resultados da consulta para a página de grade) | Microsoft Docs
+title: Opções (página resultados da consulta-SQL Server-resultados em grade) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b67926706674abb116b4f3075089853e6fbb665e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089306"
 ---
-# <a name="options-query-results-sql-server-results-to-grid-page"></a>Opções (resultados SQL Server – resultados da consulta para a página de grade)
-  Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de grade. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para alterar as opções das consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou clique com o botão direito do mouse na janela Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e selecione **Opções de Consulta**. No painel esquerdo da caixa de diálogo **Opções de Consulta**, abaixo de **Resultados**, clique em **Grade**.  
+# <a name="options-query-results-sql-server-results-to-grid-page"></a>Opções (página resultados da consulta-SQL Server-resultados em grade)
+  Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de grade. As alterações nessas opções são aplicadas somente a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] novas consultas. Para alterar as opções das consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou clique com o botão direito do mouse na janela Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e selecione **Opções de Consulta**. No painel esquerdo da caixa de diálogo **Opções de Consulta**, abaixo de **Resultados**, clique em **Grade**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Incluir a consulta no conjunto de resultados**  
  Retorna o texto da consulta como parte da saída da consulta.  
   
- **Inclua cabeçalhos de coluna ao copiar ou salvar resultados**  
+ **Incluir cabeçalhos de coluna ao copiar ou salvar os resultados**  
  Marque essa caixa de seleção para incluir cabeçalhos de coluna quando os resultados forem copiados para a área de transferência ou salvos em um arquivo. Desmarque essa caixa de seleção se desejar que os dados de resultados copiados ou salvos contenham apenas os dados e não os cabeçalhos da coluna.  
   
  **Descartar resultados após a execução**  
@@ -35,10 +35,10 @@ ms.locfileid: "66089306"
  **Exibir resultados em uma guia separada**  
  Marque essa caixa de seleção para exibir o conjunto de resultados em uma guia, em vez de exibi-lo na parte inferior da janela do documento de consulta.  
   
- **Alternar para a guia Resultados após a execução da consulta**  
+ **Alternar para a guia resultados após a execução da consulta**  
  Clique para ajustar automaticamente o foco da tela ao painel de resultados após a execução de uma consulta.  
   
- **Máximo de Caracteres Recuperados**  
+ **Máximo de caracteres recuperados**  
  **Dados não XML**:  
   
  Digite um número de 1 a 65535 para especificar o número máximo de caracteres que serão exibidos em cada célula.  
@@ -50,7 +50,7 @@ ms.locfileid: "66089306"
   
  Selecione **1 MB**, **2 MB**ou **5 MB**. Selecione **Ilimitado** para recuperar todos os caracteres.  
   
- **Restaurar Padrões**  
+ **Redefinir para padrão**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
   

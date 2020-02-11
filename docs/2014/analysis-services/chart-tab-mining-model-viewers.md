@@ -1,5 +1,5 @@
 ---
-title: Gráfico de guia (visualizadores do modelo de mineração) | Microsoft Docs
+title: Guia gráfico (visualizadores do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088183"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Guia Gráficos (Visualizadores do Modelo de Mineração)
   Use o painel **Gráfico** para exibir os dados históricos usados ao treinar um modelo de série temporal, junto com os valores previstos. O eixo vertical do gráfico representa o valor da série e o eixo horizontal representa o tempo. Previsões futuras serão representadas por uma linha pontilhada.  
   
- **Para obter mais informações:** [Algoritmo MTS](data-mining/microsoft-time-series-algorithm.md), [procurar um modelo usando o visualizador MTS](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **Para obter mais informações:** [algoritmo do Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md), [procurar um modelo usando o Visualizador do Microsoft Time Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>Opções  
- **Atualizar conteúdo do Visualizador**  
+ **Atualizar conteúdo do visualizador**  
  Recarregue o modelo de mineração no visualizador.  
   
  **Modelo de mineração**  
@@ -37,19 +37,19 @@ ms.locfileid: "66088183"
  **Ampliar**  
  Amplie a imagem do gráfico.  
   
- **Reduza a imagem**  
+ **Reduzir**  
  Reduza a imagem do gráfico.  
   
  **Dimensionar diagrama para ajustar à janela**  
  Reduza o gráfico até que ele se ajuste totalmente na tela.  
   
- **Abs**  
+ **ABS**  
  Alterne entre duas exibições de gráfico: na exibição padrão, os números são mostrados em relação à distribuição global (como percentual). Se você clicar em **Abs**, os números serão mostrados como valores absolutos.  
   
- **Copiar os gráficos na área de transferência**  
+ **Copiar os gráficos para a área de transferência**  
  Copie todo o gráfico para a área de transferência.  
   
- **Mostrar desvios**  
+ **Mostrar Desvios**  
  Selecione esta opção para adicionar barras de erro ao gráfico. Barras de erros representam a variância das previsões e, portanto, só aparecem nos valores previstos.  
   
  **Etapas de previsão**  
@@ -58,9 +58,9 @@ ms.locfileid: "66088183"
  **Seleção de série**  
  Abra uma caixa de diálogo da qual você poderá selecionar séries para incluir no visualizador.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining/data-mining-model-viewers.md)  
   
   

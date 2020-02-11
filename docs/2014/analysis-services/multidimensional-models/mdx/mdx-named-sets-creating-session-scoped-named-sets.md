@@ -1,5 +1,5 @@
 ---
-title: Criando no escopo da sessão conjuntos nomeados (MDX) | Microsoft Docs
+title: Criando conjuntos nomeados no escopo da sessão (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074052"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Criando conjuntos nomeados no escopo da sessão (MDX)
-  Para criar um conjunto nomeado que esteja disponível por meio de uma sessão da linguagem MDX, use a instrução [CREATE SET](/sql/mdx/mdx-data-definition-create-set). Um conjunto nomeado criado com a instrução CREATE SET não será removido até que a sessão MDX seja encerrada.  
+  Para criar um conjunto nomeado que esteja disponível por meio de uma sessão da linguagem MDX, use a instrução [CREATE SET](/sql/mdx/mdx-data-definition-create-set) . Um conjunto nomeado criado com a instrução CREATE SET não será removido até que a sessão MDX seja encerrada.  
   
  Como discutido neste tópico, a sintaxe da palavra-chave WITH é direta e fácil usar.  
   
@@ -52,7 +52,7 @@ create Session set [Store].[SetCities_2_3] as
 select SetCities_2_3 on 0 from [Store]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Criando conjuntos nomeados no escopo da consulta &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criando conjuntos nomeados com escopo de consulta &#40;&#41;MDX](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

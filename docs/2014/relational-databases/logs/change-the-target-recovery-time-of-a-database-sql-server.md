@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743212"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Alterar o tempo de recuperação de destino de um banco de dados (SQL Server)
@@ -23,7 +23,7 @@ ms.locfileid: "62743212"
 > [!NOTE]  
 >  O limite superior especificado para um determinado banco de dados pela sua configuração de tempo de recuperação de destino poderá ser excedido se uma transação de longa execução provocar tempos excessivos de UNDO.  
   
--   **Antes de começar:**  [Limitações e Restrições](#Restrictions), [Segurança](#Security)  
+-   **Antes de começar:**  [limitações e restrições](#Restrictions), [segurança](#Security)  
   
 -   **Para alterar o tempo de recuperação de destino usando:**  [SQL Server Management Studio](#SSMSProcedure) ou [Transact-SQL](#TsqlProcedure)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62743212"
   
 2.  Use a instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options), da seguinte maneira:  
   
-     TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ {segundos | ALGUNS  
   
      *target_recovery_time*  
      Quando maior que 0 (o padrão), especifica o limite superior do tempo de recuperação para o banco de dados especificado no caso de uma falha.  
@@ -74,7 +74,7 @@ ms.locfileid: "62743212"
     ALTER DATABASE AdventureWorks2012 SET TARGET_RECOVERY_TIME = 60 SECONDS;  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pontos de verificação de banco de dados &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
   

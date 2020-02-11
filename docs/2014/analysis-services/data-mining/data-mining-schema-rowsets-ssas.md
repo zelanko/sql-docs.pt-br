@@ -1,5 +1,5 @@
 ---
-title: Consultando os conjuntos de linhas de esquema de mineração de dados (Analysis Services - mineração de dados) | Microsoft Docs
+title: Consultando os conjuntos de linhas do esquema de mineração de dados (Analysis Services-Mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084904"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Consultando os conjuntos de linhas de esquema de mineração de dados (Analysis Services - Mineração de Dados)
@@ -33,7 +33,7 @@ ms.locfileid: "66084904"
 ## <a name="list-of-data-mining-schema-rowsets"></a>Lista de conjuntos de linhas de esquema de mineração de dados  
  A tabela a seguir lista os conjuntos de linhas de esquema de mineração de dados que podem ser úteis para consultas e monitoramentos.  
   
-|Nome do conjunto de linhas|Descrição|  
+|Nome do conjunto de linhas|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS|Lista todos os modelos de mineração no contexto atual.<br /><br /> As informações incluem a data de criação, os parâmetros usados para criar o modelo e o tamanho do treinamento definido.|  
 |DMSCHEMA_MINING_COLUMNS|Lista todas as colunas usadas nos modelos de mineração no contexto atual.<br /><br /> As informações incluem o mapeamento para a coluna de origem de estrutura de mineração, o tipo de dados, a precisão e as funções de previsão que podem ser usadas com a coluna.|  
@@ -51,7 +51,7 @@ ms.locfileid: "66084904"
 ## <a name="examples"></a>Exemplos  
  A seção a seguir fornece alguns exemplos de consultas nos conjuntos de linhas de esquema de mineração de dados.  
   
-### <a name="example-1-list-data-mining-services"></a>Exemplo 1: Lista os serviços de mineração de dados  
+### <a name="example-1-list-data-mining-services"></a>Exemplo 1: lista de serviços de mineração de dados  
  A consulta a seguir retorna uma lista dos serviços de mineração disponíveis no servidor atual, indicando que os algoritmos estão habilitados. As colunas fornecidas para cada serviço de mineração incluem os sinalizadores de modelagem e os tipos de conteúdo que podem ser usados em cada algoritmo, o GUID para cada serviço e todos os limites de previsão que podem ter sido adicionados a cada serviço.  
   
 ```  
@@ -59,7 +59,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Exemplo 2: Lista de parâmetros do modelo de mineração  
+### <a name="example-2-list-mining-model-parameters"></a>Exemplo 2: lista de parâmetros de modelo de mineração  
  O exemplo a seguir retorna os parâmetros usados para criar um modelo de mineração específico:  
   
 ```  
@@ -68,7 +68,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>Exemplo 3: Lista todos os conjuntos de linhas  
+### <a name="example-3-list-all-rowsets"></a>Exemplo 3: lista de todos os conjuntos de linhas  
  O exemplo a seguir retorna uma lista abrangente dos conjuntos de linhas disponíveis no servidor atual:  
   
 ```  
@@ -76,7 +76,7 @@ SELECT *
 FROM $system.DBSCHEMA_TABLES  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos de solução de problemas (Analysis Services - mineração de dados)](https://msdn.microsoft.com/library/cc645881.aspx)  
+## <a name="see-also"></a>Consulte Também  
+ [Conceitos da solução de problemas (Analysis Services - Mineração de Dados)](https://msdn.microsoft.com/library/cc645881.aspx)  
   
   

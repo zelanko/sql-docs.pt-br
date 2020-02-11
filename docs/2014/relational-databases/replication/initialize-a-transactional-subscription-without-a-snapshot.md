@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721147"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar uma assinatura transacional sem um instantâneo
@@ -46,7 +46,7 @@ ms.locfileid: "62721147"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Habilitar a inicialização com um backup para publicações transacionais &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Programação Transact-SQL de replicação:  [Inicializar uma assinatura transacional de um backup &#40;Programação de Transact-SQL de Replicação&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
+-   Programação Transact-SQL de replicação: [Inicializar uma assinatura transacional de um backup &#40;programação Transact-SQL de replicação&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
 >  Se uma assinatura for inicializada sem usar um instantâneo, a em que o serviço do SQL Server será executado no Publicador deverá ter permissões para gravação na pasta do instantâneo no Distribuidor. Para obter mais informações sobre permissões, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "62721147"
   
  Para inicializar uma assinatura com um método alternativo, consulte [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Inicializar uma assinatura](initialize-a-subscription.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Inicializar uma Assinatura](initialize-a-subscription.md)  
   
   

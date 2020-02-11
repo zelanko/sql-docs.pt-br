@@ -1,5 +1,5 @@
 ---
-title: Opções (página do Editor de texto – todos os idiomas – geral) | Microsoft Docs
+title: Opções (página Editor de texto – todos os idiomas – geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089245"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Opções (página Editor de texto – Todos os idiomas – Geral)
@@ -42,7 +42,7 @@ ms.locfileid: "66089245"
  **Habilitar espaço virtual**  
  Posiciona comentários em um ponto consistente próximo ao seu código. Quando essa caixa de seleção é marcada, você pode posicionar o cursor além do último caractere na linha. Quando você digita, tabulações ou espaços são adicionados automaticamente para completar a linha para o ponto de inserção.  
   
- **Quebra automática de linha**  
+ **Quebra automática de palavra**  
  Exiba na próxima linha qualquer parte de uma linha que ultrapasse horizontalmente a área do editor visível. Marcar essa caixa de seleção habilita a opção **Exibir marcas visuais nas quebras automáticas de linha** .  
   
  **Mostrar glifos visuais para quebra automática de linha**  
@@ -51,7 +51,7 @@ ms.locfileid: "66089245"
 > [!NOTE]  
 >  Essas setas indicadoras não são adicionadas ao seu código e não aparecem na impressão. Eles são somente para referência. Esse recurso não está disponível em todos os tipos de editores.  
   
- **Aplicar comandos Recortar/copiar a linhas em branco quando não houver nenhuma seleção**  
+ **Aplicar comandos Recortar/Copiar a linhas em branco quando não houver seleção**  
  Defina o comportamento do editor ao colocar o ponto de inserção em uma linha em branco, não selecione nada e clique em **Copiar** ou **Recortar**.  
   
  Quando essa caixa de seleção está marcada, a linha em branco é copiada ou recortada. Se você clicar em **Colar**, uma nova linha em branco será inserida.  
@@ -67,7 +67,7 @@ ms.locfileid: "66089245"
 > [!NOTE]  
 >  Esses números de linha não são adicionados ao seu código e não aparecem na impressão. Eles são somente para referência.  
   
- **Habilitar navegação de URL com clique simples**  
+ **Habilitar navegação de URL com um só clique**  
  Altera o cursor para um símbolo de mão apontando ao passar sobre uma URL no editor. Você pode clicar no URL para exibir a página indicada em seu navegador da Web.  
   
  **Barra de navegação**  

@@ -1,5 +1,5 @@
 ---
-title: Opções (página de formatação do Editor de texto – XML –) | Microsoft Docs
+title: Opções (página Editor de texto – XML – formatação) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089853"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Opções (página Editor de texto – XML – Formatação)
@@ -42,14 +42,14 @@ Esta caixa de diálogo permite que você especifique as configurações de forma
 ```  
   
 ## <a name="auto-reformat"></a>Reformatação Automática  
- **Colar da área de transferência.**  
+ **Ao colar da área de transferência.**  
  Reformata o texto XML colado da área de transferência.  
   
- **Após a conclusão de marca de fim**  
+ **Ao concluir a marca final**  
  Reformata o elemento quando a marca final é concluída.  
   
 ## <a name="mixed-content"></a>Conteúdo Misto  
- **Formate conteúdo misto por padrão.**  
+ **Formatar conteúdo misto por padrão.**  
  Tenta reformatar conteúdo misto, exceto quando o conteúdo encontra-se em um escopo `xml:space="preserve"`. Esse é o padrão.  
   
  Se um elemento contiver uma mistura de texto e marcação, os conteúdos serão considerados de conteúdo misto. A seguir há um exemplo de um elemento com conteúdo misto.  
@@ -60,7 +60,7 @@ Esta caixa de diálogo permite que você especifique as configurações de forma
   <file readOnly="false">test2.txt</file>  
 ```  
   
- \</dir>  
+ \<>/dir  
   
-## <a name="see-also"></a>Consulte também  
- [Editor XML &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de XML &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

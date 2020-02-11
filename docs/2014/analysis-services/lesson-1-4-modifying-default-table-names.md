@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079227"
 ---
 # <a name="modifying-default-table-names"></a>Modificando nomes de tabela padrão
@@ -33,11 +33,11 @@ ms.locfileid: "66079227"
   
      É mais fácil alterar as propriedades de cada tabela na exibição da fonte de dados quando a janela Propriedades permanece aberta. Caso não configure a janela para permanecer aberta usando o botão **Ocultar Automaticamente** , a janela fechará ao clicar em um objeto diferente no painel **Diagrama** .  
   
-3.  Alterar o **FriendlyName** propriedade para o **FactInternetSales** objeto *`InternetSales`* .  
+3.  Altere a propriedade **FriendlyName** do objeto **FactInternetSales** para *`InternetSales`*.  
   
      Quando você clicar fora da célula da propriedade **FriendlyName** , a alteração será aplicada. Na próxima lição, você definirá um grupo de medidas com base nessa tabela de fatos. O nome da tabela de fatos será InternetSales em vez de FactInternetSales devido à alteração feita nessa lição.  
   
-4.  Clique em **DimProduct** no painel **Tabelas** . Na janela Propriedades, altere o **FriendlyName** propriedade *`Product`* .  
+4.  Clique em **DimProduct** no painel **Tabelas** . No janela Propriedades, altere a propriedade **FriendlyName** para *`Product`*.  
   
 5.  Altere a propriedade **FriendlyName** de cada tabela restante na exibição da fonte de dados da mesma forma para remover o prefixo "**Dim**".  
   
@@ -48,8 +48,8 @@ ms.locfileid: "66079227"
 ## <a name="next-lesson"></a>Próxima lição  
  [Lição 2: Definindo e implantando um cubo](lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de fontes de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exibições da fonte de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Alterar propriedades em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

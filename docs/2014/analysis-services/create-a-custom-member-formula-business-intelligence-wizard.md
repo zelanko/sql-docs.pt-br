@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087002"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Criar uma Fórmula de Membro Personalizado (Assistente de Business Intelligence)
-  Use o **criar uma fórmula de membro personalizado** página para associar atributos na dimensão especificada a fórmula colunas-colunas de membro personalizado que contêm instruções MDX (Multidimensional Expressions) que definem valores de membros Esse atributo.  
+  Use a página **criar uma fórmula de membro personalizado** para associar atributos na dimensão especificada com colunas de fórmula de membro personalizado-colunas que contêm instruções MDX que definem valores de membro para esse atributo.  
   
 ## <a name="options"></a>Opções  
- **Atributo**  
+ **Attribute**  
  Selecione o atributo a ser associado a uma fórmula de membro personalizado.  
   
- **Coluna de Origem**  
- Clique no botão Procurar ( **...** ) para abrir o **selecionar uma coluna** caixa de diálogo e selecione a coluna de fórmula de membro personalizado a ser associado com o atributo.  
+ **Coluna de origem**  
+ Clique no botão procurar (**...**) para abrir a caixa de diálogo **selecionar uma coluna** e selecione a coluna fórmula de membro personalizado a ser associada ao atributo.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

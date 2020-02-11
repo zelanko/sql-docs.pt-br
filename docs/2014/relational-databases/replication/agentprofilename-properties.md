@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721830"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>Propriedades de &lt;AgentProfileName&gt;
@@ -40,7 +40,7 @@ ms.locfileid: "62721830"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [Agente de Mesclagem de Replicação](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [Agente de Leitor de Fila de Replicação](agents/replication-queue-reader-agent.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62721830"
  **Mostrar apenas os parâmetros usados neste perfil**  
  Desmarque para mostrar todos os parâmetros válidos para um determinado agente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com perfis do Agente de Replicação](agents/work-with-replication-agent-profiles.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)   
  [Perfis do agente de replicação](agents/replication-agent-profiles.md)  

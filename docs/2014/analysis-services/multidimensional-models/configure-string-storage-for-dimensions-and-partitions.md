@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076539"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar o armazenamento de cadeia de caracteres para dimensões e partições
@@ -24,9 +24,9 @@ ms.locfileid: "66076539"
   
  Os valores válidos para essa propriedade incluem os seguintes:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**1050**|Especifica a arquitetura de armazenamento de cadeias de caracteres padrão, sujeita a um tamanho de arquivo máximo de 4 GB por repositório.|  
+|**1.050**|Especifica a arquitetura de armazenamento de cadeias de caracteres padrão, sujeita a um tamanho de arquivo máximo de 4 GB por repositório.|  
 |**1100**|Especifica um maior armazenamento de cadeias de caracteres, dá suporte a até quatro bilhões de cadeias de caracteres exclusivas por repositório.|  
   
 > [!IMPORTANT]  
@@ -34,15 +34,15 @@ ms.locfileid: "66076539"
   
  Este tópico contém as seguintes seções:  
   
--   [Sobre repositórios de cadeias de caracteres](#bkmk_background)  
+-   [Sobre armazenamentos de cadeia de caracteres](#bkmk_background)  
   
 -   [Pré-requisitos](#bkmk_prereq)  
   
--   [Etapa 1: Definir a propriedade StringStoreCompatiblityLevel no SQL Server Data Tools](#bkmk_step1)  
+-   [Etapa 1: definir a propriedade StringStoreCompatiblityLevel no SQL Server Data Tools](#bkmk_step1)  
   
--   [Etapa 2: Os objetos de processo](#bkmk_step2)  
+-   [Etapa 2: processar os objetos](#bkmk_step2)  
   
-##  <a name="bkmk_background"></a> Sobre repositórios de cadeias de caracteres  
+##  <a name="bkmk_background"></a>Sobre armazenamentos de cadeia de caracteres  
  A configuração do armazenamento de cadeias de caracteres é opcional, o que significa que até mesmo novos bancos de dados criados usam a arquitetura de repositório de cadeias de caracteres padrão que está sujeita ao tamanho de arquivo máximo de 4 GB. O uso de uma maior arquitetura de armazenamento de cadeia de caracteres tem um impacto pequeno mas notável no desempenho. Você deve usá-la apenas se seus arquivos de armazenamento de cadeias de caracteres estiverem próximos ou no limite máximo de 4 GB.  
   
 > [!NOTE]  
@@ -59,9 +59,9 @@ ms.locfileid: "66076539"
   
  Dimensões e partições devem usar o armazenamento MOLAP  
   
- O nível de compatibilidade do banco de dados deve ser definido como 1100. Se você criar ou implantar um banco de dados usando o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou uma versão posterior do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o nível de compatibilidade do banco de dados já estará definido como 1100. Se você mover um banco de dados criado em uma versão anterior do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o ssSQL11 ou posterior, deverá atualizar o nível de compatibilidade. Para bancos de dados que você está movendo, mas não reimplantando, você poderá usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para definir o nível de compatibilidade. Para obter mais informações, consulte [definir o nível de compatibilidade de um banco de dados Multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ O nível de compatibilidade do banco de dados deve ser definido como 1100. Se você criar ou implantar um banco de dados usando o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou uma versão posterior do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o nível de compatibilidade do banco de dados já estará definido como 1100. Se você mover um banco de dados criado em uma versão anterior do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o ssSQL11 ou posterior, deverá atualizar o nível de compatibilidade. Para bancos de dados que você está movendo, mas não reimplantando, você poderá usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para definir o nível de compatibilidade. Para obter mais informações, consulte [definir o nível de compatibilidade de um banco de dados multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a> Etapa 1: Definir a propriedade StringStoreCompatiblityLevel no SQL Server Data Tools  
+##  <a name="bkmk_step1"></a>Etapa 1: definir a propriedade StringStoreCompatiblityLevel no SQL Server Data Tools  
   
 1.  Usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto que contém as dimensões ou as partições que você deseja modificar.  
   
@@ -79,17 +79,17 @@ ms.locfileid: "66076539"
   
 8.  Salve o arquivo.  
   
-##  <a name="bkmk_step2"></a> Etapa 2: Os objetos de processo  
+##  <a name="bkmk_step2"></a>Etapa 2: processar os objetos  
  A nova arquitetura de armazenamento será usada depois que você processar os objetos. O processamento dos objetos também prova que você resolveu o problema de restrição de armazenamento com êxito porque o erro que relatava uma condição de estouro do repositório de cadeias de caracteres não deve mais ocorrer.  
   
 -   No Gerenciador de Soluções, clique com o botão direito do mouse na dimensão que você acabou de modificar e selecione **Processar**.  
   
  Você deve usar a opção Processar Completo em cada objeto que esteja usando a nova arquitetura de repositório de cadeias de caracteres. Antes de processar, execute uma análise de impacto na dimensão para verificar se objetos dependentes também requerem reprocessamento.  
   
-## <a name="see-also"></a>Consulte também  
- [Ferramentas e abordagens para processamento &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [Processando opções e configurações &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
- [Modos e processamento de armazenamento de partição](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ferramentas e abordagens para o processamento de &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [Opções de processamento e configurações &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
+ [Processamento e modos de armazenamento de partição](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Armazenamento de dimensões](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

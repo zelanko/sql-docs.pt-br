@@ -1,5 +1,5 @@
 ---
-title: Referência técnica (Data Mining Add-ins para Excel) | Microsoft Docs
+title: Referência técnica (suplementos de mineração de dados para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066222"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>Referência técnica (Suplementos de Mineração de Dados para Excel)
@@ -30,18 +30,18 @@ ms.locfileid: "66066222"
   
  Se você usa os assistentes no Cliente de Mineração de Dados para Excel, pode modificar os parâmetros de algoritmo e definir opções avançadas para personalizar a forma como o algoritmo processa dados.  
   
--   [Parâmetros do algoritmo &#40;suplementos de mineração de dados do SQL Server&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
+-   [Parâmetros de algoritmo &#40;SQL Server suplementos de mineração de dados&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
- **Ajuda do Assistente de configuração**  
+ **Ajuda do assistente de configuração**  
   
  O assistente de configuração é executado na primeira vez que você abre os suplementos, para ajudá-lo a se conectar a um servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se você tiver dificuldade em alguma etapa, consulte este tópico para obter ajuda adicional.  
   
--   [Utilitário de configuração do servidor &#40;Data Mining Add-ins para Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [Utilitário de configuração do servidor &#40;suplementos de mineração de dados para Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Algoritmos de mineração de dados &#40;suplementos de mineração de dados do SQL Server&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
+ [Algoritmos de mineração de dados &#40;SQL Server suplementos de mineração de dados&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
- [Utilitário de configuração do servidor &#40;Data Mining Add-ins para Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+ [Utilitário de configuração do servidor &#40;suplementos de mineração de dados para Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
   

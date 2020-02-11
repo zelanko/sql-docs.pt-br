@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d55bd667909721a68d51bcd1db7128b809118843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755286"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>Opção de configuração de servidor XPs SMO e DMO
@@ -29,7 +29,7 @@ ms.locfileid: "62755286"
 |0|Os SMO XPs não estão disponíveis.|  
 |1|Os SMO XPs estão disponíveis. Esse é o padrão.|  
   
- A configuração é efetuada imediatamente.  
+ A configuração entra em vigor imediatamente.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir habilita os procedimentos armazenados estendidos do SMO.  
@@ -45,7 +45,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Guia de Programação do SMO &#40;SQL Server Management Objects&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

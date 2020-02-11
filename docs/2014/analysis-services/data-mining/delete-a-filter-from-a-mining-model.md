@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084726"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Excluir um filtro de um modelo de mineração
@@ -38,7 +38,7 @@ ms.locfileid: "66084726"
   
 4.  Na caixa de diálogo **Filtro de Modelos** , clique com o botão direito do mouse na linha da grade que contém a condição a excluir.  
   
-5.  Selecione **Excluir**.  
+5.  Selecione **excluir**.  
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>Para desmarcar o filtro em um modelo de mineração na caixa de diálogo Editor de Filtro  
   
@@ -54,13 +54,13 @@ ms.locfileid: "66084726"
   
 1.  No Gerenciador de Soluções, clique no modelo de mineração que contém o filtro.  
   
-2.  No **propriedades** janela, clique com botão direito do texto do filtro na `Filter` propriedade e selecione **Selecionar tudo**.  
+2.  Na janela **Propriedades** , clique com o botão direito do mouse no texto `Filter` do filtro na propriedade e selecione **selecionar tudo**.  
   
 3.  Pressione a tecla Backspace ou Delete.  
   
-## <a name="see-also"></a>Consulte também  
- [Detalhar dados do caso a partir do modelo de mineração](drill-through-to-case-data-from-a-mining-model.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Detalhar os dados de caso de um modelo de mineração](drill-through-to-case-data-from-a-mining-model.md)   
  [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)   
- [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-models-analysis-services-data-mining.md)  
+ [Filtros para modelos de mineração &#40;mineração de dados Analysis Services&#41;](mining-models-analysis-services-data-mining.md)  
   
   

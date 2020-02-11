@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4346b7752c9d4ace22a50cb1b4768c0c7d5df1fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676519"
 ---
 # <a name="snapshot-folder"></a>Pasta do Instantâneo
@@ -25,14 +25,14 @@ ms.locfileid: "62676519"
  A pasta de instantâneo é simplesmente um diretório que você designou como um compartilhamento, agentes que leem essa pasta e gravam nela devem ter permissões suficientes para acessá-la. Para obter mais informações sobre como proteger a pasta adequadamente, consulte [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md) (Proteger a pasta de instantâneo). Antes de implementar replicação, teste se os agentes de replicação poderão se conectar à pasta de instantâneo. Faça logon na conta que será usada por cada agente e depois tente acessar a pasta de instantâneo.  
   
 ## <a name="options"></a>Opções  
- **Snapshot folder**  
+ **Pasta do instantâneo**  
  Insira o caminho para a pasta onde você quer arquivos de instantâneo sejam armazenados.  
   
 > [!NOTE]  
 >  A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use um compartilhamento de rede como um local de pasta de instantâneo. Caminhos locais (os que iniciam com uma letra da unidade, como C:\\) não são acessíveis a agentes em outros computadores.  
   
-## <a name="see-also"></a>Consulte também  
- [Locais da pasta de instantâneos alternativos](alternate-snapshot-folder-locations.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Locais de pastas de instantâneos alternativos](alternate-snapshot-folder-locations.md)   
  [Configurar Distribuição](configure-distribution.md)   
  [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md)   
  [Exibir e modificar propriedades de Publicador e Distribuidor](view-and-modify-distributor-and-publisher-properties.md)   

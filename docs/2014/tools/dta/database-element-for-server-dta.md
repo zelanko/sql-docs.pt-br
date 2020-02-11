@@ -1,5 +1,5 @@
 ---
-title: Elemento de banco de dados do servidor (DTA) | Microsoft Docs
+title: Elemento de banco de dados para servidor (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661828"
 ---
 # <a name="database-element-for-server-dta"></a>Elemento de banco de dados para servidor (DTA)
@@ -35,10 +35,10 @@ ms.locfileid: "62661828"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Nenhum.|  
-|Valor padrão|Nenhuma.|  
+|Valor padrão|Nenhum.|  
 |Ocorrência|Exigido uma ou mais vezes por elemento `Server`.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -52,9 +52,9 @@ ms.locfileid: "62661828"
  Esse elemento tem o nome **DatabaseDetailsTypecomplexType** no Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. Não confunda este elemento do `Database` com aquele cujo pai raiz é o elemento `Configuration`. Para obter mais informações, veja [Elemento Database para configuração &#40;DTA&#41;](database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Exemplo  
- Para um exemplo de uso de `Database` elemento, consulte [elemento de servidor &#40;DTA&#41;](server-element-dta.md).  
+ Para obter um exemplo de uso `Database` do elemento, consulte [elemento de servidor &#40;DTA&#41;](server-element-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

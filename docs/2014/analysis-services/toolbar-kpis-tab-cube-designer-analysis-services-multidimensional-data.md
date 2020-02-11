@@ -1,5 +1,5 @@
 ---
-title: Barra de ferramentas (guia KPIs, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Barra de ferramentas (guia KPIs, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066006"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -24,10 +24,10 @@ ms.locfileid: "66066006"
  **Adicionar Business Intelligence**  
  Clique para exibir o **Assistente de Business Intelligence** e adicionar recursos de Business Intelligence ao cubo.  
   
- **Processar**  
+ **Processo**  
  Clique para exibir a caixa de diálogo **Processar** e processar o cubo.  
   
- **Reconnect**  
+ **Reconectar**  
  Clique para reconectar a guia **KPIs** com a instância e o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém o cubo, se a sessão da guia **KPIs** for desconectada devido a perda ou tempo limite da conexão.  
   
  **Novo KPI**  
@@ -42,13 +42,13 @@ ms.locfileid: "66066006"
 > [!NOTE]  
 >  Esta opção é habilitada apenas na exibição de formulário.  
   
- **Mover para Cima**  
+ **Mover para cima**  
  Clique para mover o KPI selecionado no painel **Organizador de KPIs** uma posição para cima.  
   
 > [!NOTE]  
 >  Esta opção é habilitada apenas na exibição de formulário.  
   
- **Mover para Baixo**  
+ **Mover para baixo**  
  Clique para mover o KPI selecionado no painel **Organizador de KPIs** uma posição para baixo.  
   
 > [!NOTE]  
@@ -57,10 +57,10 @@ ms.locfileid: "66066006"
  **Exibição de formulário**  
  Selecione para usar a guia **KPIs** em exibição de formulário.  
   
- **Exibição de navegador**  
+ **Exibição de Navegador**  
  Selecione para usar a guia **KPIs** na exibição de navegador.  
   
- **Verificar sintaxe**  
+ **Verificar Sintaxe**  
  Clique para verificar a sintaxe do KPI selecionado no painel **Organizador de KPIs** .  
   
 > [!NOTE]  

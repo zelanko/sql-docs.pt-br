@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73340613b14c8f0e90340b589c8b97bad7cd5599
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070648"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Locais de Processamento e Armazenamento (Assistente para Partições)
@@ -34,11 +34,11 @@ ms.locfileid: "66070648"
 > [!NOTE]  
 >  Ocorrerá um erro se você selecionar uma fonte de dados na qual a propriedade `Initial Catalog` da cadeia de conexão não está definida como um banco de dados correto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou se o banco de dados especificado na propriedade `Initial Catalog` da cadeia de conexão não oferecer suporte a partições remotas (ou seja, a propriedade `MasterDatasourceID` do banco de dados especificado não está definida como um valor válido).  
   
- **Nova**  
+ **Novo**  
  Cria uma nova fonte de dados que representa a instância remota do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] responsável por processar a partição.  
   
 ## <a name="storage-location-options"></a>Opções do local de armazenamento  
- **Local padrão do servidor**  
+ **Local do servidor padrão**  
  Torna a pasta de dados da instância atual do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o local de armazenamento dos dados de agregação e de indexação da partição.  
   
  **Pasta especificada**  
@@ -47,9 +47,9 @@ ms.locfileid: "66070648"
  **...**  
  Exibe a caixa de diálogo **Procurar Pasta Remota** na qual é possível selecionar uma pasta para a opção **Pasta especificada**.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de partição &#40;Analysis Services - dados multidimensionais&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Procurar pasta remota caixa de diálogo &#40;Analysis Services - dados multidimensionais&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente para partições &#40;Analysis Services de dados multidimensionais&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Partições &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Caixa de diálogo Procurar pasta remota &#40;Analysis Services-dados multidimensionais&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
   

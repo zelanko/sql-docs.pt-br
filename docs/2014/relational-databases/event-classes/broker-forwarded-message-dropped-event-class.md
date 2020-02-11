@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf6e9bb278417d69be0ec0a99cb1c47d88ffddff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62664022"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>classe de evento Broker:Forwarded Message Dropped
@@ -26,7 +26,7 @@ ms.locfileid: "62664022"
   
 ## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Forwarded Message Dropped  
   
-|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|`nvarchar`|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BigintData1|`bigint`|Número de sequência da mensagem.|52|Não|  
@@ -48,21 +48,21 @@ ms.locfileid: "62664022"
 |ObjectId|`int`|O valor de vida útil da mensagem encaminhada.|22|Não|  
 |ObjectName|`nvarchar`|O ID da mensagem encaminhada.|34|Não|  
 |OwnerName|`nvarchar`|O identificador da instância do agente de destino da mensagem.|37|Não|  
-|RoleName|`nvarchar`|A função do identificador de conversa. Um dos seguintes:<br /><br /> Initiator. Este Broker iniciou a conversa.<br /><br /> Target. Este Broker é o destino da conversa.|38|Não|  
+|RoleName|`nvarchar`|A função do identificador de conversa. Um destes:<br /><br /> Initiator. Este Broker iniciou a conversa.<br /><br /> Target. Este Broker é o destino da conversa.|38|Não|  
 |ServerName|`nvarchar`|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |Severity|`int`|Número de severidade do texto no evento.|29|Não|  
 |SPID|`int`|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |StartTime|`datetime`|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
 |Estado|`int`|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
-|Êxito|`int`|O tempo em que a mensagem esteve ativa. Quando este valor é maior ou igual à vida útil, a mensagem é removida.|23|Não|  
+|Sucesso|`int`|O tempo em que a mensagem esteve ativa. Quando este valor é maior ou igual à vida útil, a mensagem é removida.|23|Não|  
 |TargetLoginName|`nvarchar`|O endereço de rede para o qual a mensagem deveria ser encaminhada.|42|Não|  
-|TargetUserName|`nvarchar`|O nome do serviço que iniciou a mensagem.|39|Não|  
+|TargetUserName|`nvarchar`|O nome do serviço que iniciou a mensagem.|11,8|Não|  
 |TextData|`ntext`|Descrição do motivo pelo qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] removeu a mensagem.|1|Sim|  
-|Transaction ID|`bigint`|ID da transação atribuída pelo sistema.|4|Não|  
+|ID da transação|`bigint`|ID da transação atribuída pelo sistema.|4|Não|  
   
  A coluna TextData desse evento contém uma descrição do motivo que levou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a remover a mensagem.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

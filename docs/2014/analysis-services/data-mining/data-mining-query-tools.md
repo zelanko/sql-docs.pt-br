@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084977"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfaces de Consulta de Mineração de Dados
@@ -40,11 +40,11 @@ ms.locfileid: "66084977"
   
 -   [Modelos DMX](#bkmk_Templates)  
   
--   [Integration Services](#bkmk_SSIS)  
+-   [Serviços de Integração](#bkmk_SSIS)  
   
  [Interfaces de programação de aplicativo](#bkmk_API)  
   
-##  <a name="bkmk_Tools"></a> Ferramentas de consulta de mineração de dados  
+##  <a name="bkmk_Tools"></a>Ferramentas de consulta de mineração de dados  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece as seguintes ferramentas que podem ser usadas para criar consultas de previsão, consultas de conteúdo e consultas de definição de dados em objetos de mineração de dados:  
   
 -   Construtor de Consultas de Previsão  
@@ -55,16 +55,17 @@ ms.locfileid: "66084977"
   
 -   Componentes de mineração de dados do Integration Services  
   
-###  <a name="bkmk_Builder"></a> Construtor de Consultas de Previsão  
+###  <a name="bkmk_Builder"></a>Construtor de Consultas de previsão  
  O Construtor de Consultas de Previsão está incluído na guia **Previsão do Modelo de Mineração** do Designer de Data Mining, que esta disponível no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Quando você utiliza o construtor de consultas, é possível usar ferramentas gráficas para selecionar um modelo de mineração, adicionar novo caso de dados e funções de predição. O construtor de consultas de previsão inclui um editor de texto que você pode usar para modificar a consulta manualmente e um simples **resultados** painel para exibir os resultados da consulta.  
+ Quando você utiliza o construtor de consultas, é possível usar ferramentas gráficas para selecionar um modelo de mineração, adicionar novo caso de dados e funções de predição. O Construtor de Consultas de previsão inclui um editor de texto que você pode usar para modificar a consulta manualmente e um painel de **resultados** simples para exibir os resultados da consulta.  
   
-###  <a name="bkmk_QueryEditor"></a> Editor de Consultas  
- Editor de consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece ferramentas que você pode usar para compilar e executar consultas DMX. É possível conectar-se a uma instância do SQL Server Analysis Services e, em seguida, selecionar um banco de dados, colunas de estrutura de mineração e um modelo de mineração. O **Gerenciador de Metadados** contém uma lista de funções de previsão que você pode procurar.  
+###  <a name="bkmk_QueryEditor"></a>Editor de consultas  
+ O editor de consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no fornece ferramentas que você pode usar para compilar e executar consultas DMX. É possível conectar-se a uma instância do SQL Server Analysis Services e, em seguida, selecionar um banco de dados, colunas de estrutura de mineração e um modelo de mineração. O **Gerenciador de Metadados** contém uma lista de funções de previsão que você pode procurar.  
   
-###  <a name="bkmk_Templates"></a> Modelos DMX  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece modelos de consulta interativa DMX que você poderá usar para criar consultas DMX. Se você não vir a lista de modelos, clique em **Exibição** na barra de ferramentas e selecione **Explorador de Modelos**. Para ver todos os modelos do Analysis Services, incluindo modelos para DMX, MDX e XMLA, clique no ícone do cubo.  
+###  <a name="bkmk_Templates"></a>Modelos DMX  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece modelos de consulta interativa DMX que você poderá usar para criar consultas DMX. Se você não vir a lista de modelos, clique em **Exibição** na barra de ferramentas e selecione **Explorador de Modelos**. Para ver todos os modelos do Analysis Services, incluindo modelos para DMX, MDX e XMLA, clique no ícone do cubo.  
   
  Para criar uma consulta usando um modelo, você pode arrastar o modelo em uma janela de consulta aberta ou pode clicar duas vezes no modelo para abrir uma nova conexão e um novo painel de consulta.  
   
@@ -73,15 +74,15 @@ ms.locfileid: "66084977"
 > [!WARNING]  
 >  O Suplemento de Mineração de Dados para o Microsoft Office Excel também contém vários modelos, junto com um construtor de consultas interativo que pode ajudá-lo a compor instruções DMX complexas. Para usar os modelos, clique em **Consulta**e **Avançado** no Cliente de Mineração de Dados.  
   
-###  <a name="bkmk_SSIS"></a> Componentes de mineração de dados do Integration Services  
- É possível também incluir consultas de previsão como parte de um pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . As tarefas e transformações no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a seguir fornecem suporte para a criação e execução de consultas de previsão de DMX e instruções DMX.  
+###  <a name="bkmk_SSIS"></a>Integration Services componentes de mineração de dados  
+ Você também pode incluir consultas de previsão como parte de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacote. As tarefas e transformações no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a seguir fornecem suporte para a criação e execução de consultas de previsão de DMX e instruções DMX.  
   
-|Componente|Descrição|  
+|Componente|DESCRIÇÃO|  
 |---------------|-----------------|  
 |Tarefa Consulta de Mineração de dados|Executa consultas DMX e outras instruções DMX como parte de um fluxo de controle.<br /><br /> O editor de tarefa fornece o Construtor de Consulta de Previsão e uma caixa de texto para modificar a consulta DMX manualmente. Porém, o editor de tarefa não pode validar a consulta em objetos em uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Portanto, é melhor criar uma consulta dentro do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e, em seguida, colar o texto da instrução ou consulta no editor de tarefa.|  
 |Transformação Consulta de Mineração de Dados|Executa uma consulta de previsão dentro de um fluxo de dados, usando os dados fornecidos por uma fonte de fluxo de dados.<br /><br /> O editor de tarefa fornece o Construtor de Consulta de Previsão e uma caixa de texto para modificar a consulta DMX manualmente.<br /><br /> A transformação somente pode ser usada para criar consultas que usam dados no fluxo de dados; ou seja, consultas que usam a sintaxe PREDICTION JOIN. Este componente não pode ser usado para executar consultas de conteúdo ou outros tipos de instruções DMX.|  
   
-##  <a name="bkmk_API"></a> Interfaces de programação de aplicativo  
+##  <a name="bkmk_API"></a>Interfaces de programação de aplicativo  
  Você pode criar aplicativos personalizados que executam consultas em relação a modelos de mineração de dados usando uma variedade de linguagens de programação, em combinação com protocolos de servidor como OLE DB ou cliente ADOMD do Analysis Services. Para obter mais informações, consulte [Programação de Data Mining](../dev-guide/data-mining-programming.md).  
   
  Porém, o XMLA constitui o formato de mensagem subjacente para todas as interações com um servidor do Analysis Service. Dentro de uma mensagem de XMLA, as consultas são representadas de maneira diferente dependendo se você está enviando uma consulta de previsão com base em DMX, uma consulta de conteúdo ou uma consulta que recupera metadados modelo usando os conjuntos de linhas de esquema de mineração de dados.  
@@ -90,12 +91,12 @@ ms.locfileid: "66084977"
   
 -   Para recuperar o **conteúdo modelo** e os **metadados modelo**, como o número de clusters, os atributos usados em árvores de decisão, a data de processamento do modelo e os parâmetros de algoritmo usados ao criar o modelo, você pode usar o método [Método Discover &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) e especificar um dos conjuntos de linhas de esquema de mineração de dados no cabeçalho [Elemento RequestType &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla). Para restringir o escopo da consulta, insira critérios como restrições dentro do elemento [Elemento RestrictionList &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla).  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência de&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Soluções de mineração de dados](data-mining-solutions.md)   
- [Compreendendo a instrução DMX Select](/sql/dmx/understanding-the-dmx-select-statement)   
+ [Compreendendo a instrução DMX SELECT](/sql/dmx/understanding-the-dmx-select-statement)   
  [Estrutura e uso de consultas de previsão DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
- [Criar uma consulta de previsão usando o construtor de consultas de previsão](create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [Criar uma consulta de previsão usando o Construtor de Consultas de previsão](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Criar uma consulta DMX no SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

@@ -13,21 +13,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155082"
 ---
 # <a name="back-up-database-general-page"></a>Backup do banco de dados (página Geral)
-  Use a página **Geral** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar as configurações de uma operação de backup de banco de dados.  
+  Use a página **geral** da caixa de diálogo **backup de banco de dados** para exibir ou modificar as configurações de uma operação de backup de banco de dados.  
   
  Para obter mais informações sobre os conceitos básicos de backup, veja [Visão geral de Backup &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
 > [!NOTE]  
 >  Ao especificar uma tarefa de backup usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é possível gerar o script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondente clicando no botão **Script** e selecionando um destino para o script.  
   
- **Para usar o SQL Server Management Studio para criar um backup**  
+ **Para usar SQL Server Management Studio para criar um backup**  
   
 -   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -42,13 +42,13 @@ ms.locfileid: "70155082"
   
 ## <a name="options"></a>Opções  
   
-### <a name="source"></a>Source  
+### <a name="source"></a>Fonte  
  As opções do painel **Origem** identificam o banco de dados e especificam o tipo de backup e o componente para a operação de backup.  
   
- **Banco de dados**  
+ **Backup de banco de dados**  
  Selecione o banco de dados do qual fazer backup.  
   
- **Modelo de recuperação**  
+ **modelo de recuperação**  
  Exiba o modelo de recuperação (SIMPLE, FULL ou BULK_LOGGED) exibido para o banco de dados selecionado.  
   
  **Tipo de backup**  
@@ -56,12 +56,12 @@ ms.locfileid: "70155082"
   
 |Tipo de backup|Disponível para|Restrições|  
 |-----------------|-------------------|------------------|  
-|Full|Bancos de dados, arquivos e grupos de arquivos|No banco de dados **mestre** , só backups completos são possíveis.<br /><br /> No Modelo de Recuperação Simples, backups de arquivos e grupos de arquivos estão disponíveis apenas para grupos de arquivos somente leitura.|  
+|Completo|Bancos de dados, arquivos e grupos de arquivos|No banco de dados **mestre** , só backups completos são possíveis.<br /><br /> No Modelo de Recuperação Simples, backups de arquivos e grupos de arquivos estão disponíveis apenas para grupos de arquivos somente leitura.|  
 |Diferencial|Bancos de dados, arquivos e grupos de arquivos|No Modelo de Recuperação Simples, backups de arquivos e grupos de arquivos estão disponíveis apenas para grupos de arquivos somente leitura.|  
 |Log de Transações|Logs de transações|Os backups de log de transações não estão disponíveis no Modelo de Recuperação Simples.|  
   
- **Copiar Somente Backup**  
- Selecione para criar um backup somente cópia. Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+ **Copiar somente backup**  
+ Selecione para criar um backup somente cópia. Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
 > [!NOTE]  
 >  Quando a opção **Diferencial** está selecionada, você não pode criar um backup somente cópia.  
@@ -73,10 +73,10 @@ ms.locfileid: "70155082"
   
 |||  
 |-|-|  
-|**Banco de dados**|Especifica que seja feito backup do banco de dados inteiro.|  
-|**Arquivos e grupos de arquivos**|Especifica que seja feito backup dos arquivos e/ou grupos de arquivos especificados.<br /><br /> Selecione essa opção para abrir a caixa de diálogo **Selecionar Arquivos e Grupos de Arquivos** . Após selecionar os grupos de arquivos ou arquivos dos quais deseja fazer backup e clicar em **Ok**, suas seleções serão exibidas na caixa **Arquivos e grupos de arquivos** .|  
+|**Backup de banco de dados**|Especifica que seja feito backup do banco de dados inteiro.|  
+|**Arquivos e grupos de arquivo**|Especifica que seja feito backup dos arquivos e/ou grupos de arquivos especificados.<br /><br /> Selecione essa opção para abrir a caixa de diálogo **Selecionar Arquivos e Grupos de Arquivos** . Após selecionar os grupos de arquivos ou arquivos dos quais deseja fazer backup e clicar em **Ok**, suas seleções serão exibidas na caixa **Arquivos e grupos de arquivos** .|  
   
-### <a name="destination"></a>Destino  
+### <a name="destination"></a>Destination  
  As opções do painel **Destino** permitem especificar o tipo de dispositivo de backup para a operação de backup e encontrar um dispositivo de backup lógico ou físico existente.  
   
 > [!NOTE]  
@@ -96,7 +96,7 @@ ms.locfileid: "70155082"
  **Adicionar**  
  Adiciona um arquivo ou dispositivo à lista **Fazer backup em** . Você pode fazer backup em até 64 dispositivos simultaneamente em um disco local ou remoto. Para especificar um arquivo em um disco remoto, use o nome UNC totalmente qualificado. Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
- **Removerr**  
+ **Remover**  
  Remove um ou mais dispositivos atualmente selecionados na lista **Fazer backup em** .  
   
  **Conteúdo**  
@@ -104,7 +104,7 @@ ms.locfileid: "70155082"
   
  Se você selecionar a URL como destino de backup, as seguintes opções serão exibidas:  
   
- **Nome do Arquivo**  
+ **Nome do arquivo**  
  Especifique o nome do arquivo de backup.  
   
  **Credencial do SQL**  
@@ -117,9 +117,9 @@ ms.locfileid: "70155082"
  Especifique o nome do contêiner de Armazenamento do Microsoft Azure  
   
  **Prefixo da URL:**  
- Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. É recomendável não editar as informações neste campo, a menos que você esteja usando um domínio que use um formato diferente de **\<conta de armazenamento>.blob.core.windows.net**.  
+ Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. Recomendamos que você não edite as informações nesse campo, a menos que esteja usando um domínio que use um formato diferente da ** \<conta de armazenamento>. blob.Core.Windows.net**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Definir um dispositivo de backup lógico para um arquivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

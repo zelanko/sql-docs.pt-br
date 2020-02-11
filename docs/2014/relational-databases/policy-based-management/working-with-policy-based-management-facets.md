@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037eb57f53bf583195efdf1f91fcd55f94ebaddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676910"
 ---
 # <a name="working-with-policy-based-management-facets"></a>Trabalhando com facetas do Gerenciamento Baseado em Políticas
@@ -33,11 +33,11 @@ ms.locfileid: "62676910"
  Os procedimentos deste tópico exigem a associação à função PolicyAdministratorRole no banco de dados msdb.  
   
 ## <a name="viewing-and-copying-facet-states"></a>Exibindo e copiando estados da faceta  
- [Exibir as facetas de Gerenciamento Baseado em Políticas em um objeto do SQL Server](view-the-policy-based-management-facets-on-a-sql-server-object.md)  
+ [Exibir as facetas do gerenciamento baseado em políticas em um objeto do SQL Server](view-the-policy-based-management-facets-on-a-sql-server-object.md)  
   
- [Copiar um estado de faceta do Gerenciamento Baseado em Políticas para um arquivo XML](copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
+ [Copiar um estado de faceta do gerenciamento baseado em políticas para um arquivo XML](copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](administer-servers-by-using-policy-based-management.md)  
   
   

@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: daa5635fc64e46dd8b6ccf6b9ab4cf38dc5d492d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735889"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Método SetDefaults (classe ServerSettings)
-  Define todos os valores padrão para a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com a opção de substituir dados existentes.  
+  Define todos os valores padrão para a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com a opção de substituir os dados existentes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,12 +40,12 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Um [classe ServerSettings](serversettings-class.md) objeto que representa um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância do cliente.  
+ *objeto*  
+ Um objeto de [classe ServerSettings](serversettings-class.md) que representa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uma instância de cliente.  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
 |*OverwriteAll*|Um valor booliano, que especifica se deve-se substituir valores existentes na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: `true` para substituir dados existentes, ou `false`, se os dados existentes não precisarem ser substituídos.|  
   
@@ -54,7 +54,7 @@ OverwriteAll
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurando protocolos de rede de servidor e Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667811"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir a latência e validar as conexões para a replicação transacional
@@ -88,7 +88,7 @@ ms.locfileid: "62667811"
   
 3.  Clique em **Inserir Rastreador**.  
   
-4.  Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Editor para Distribuidor**, **Distribuidor para Editor**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
+4.  Exiba o tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para Distribuidor**, **Distribuidor para Assinante**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Para exibir informações sobre um token de rastreamento previamente inserido  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62667811"
   
 3.  Selecione uma opção de tempo na lista suspensa **Tempo inserido** .  
   
-4.  Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Editor para Distribuidor**, **Distribuidor para Editor**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
+4.  Exiba o tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para Distribuidor**, **Distribuidor para Assinante**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
   
     > [!NOTE]  
     >  Informações de token de rastreamento são retidas para o mesmo período de tempo que outros dados históricos, os quais são governados pelo período de retenção de histórico do banco de dados de distribuição. Para obter informações sobre como alterar as propriedades do banco de dados de distribuição, consulte [Exibir e modificar as propriedades do Distribuidor e do Publicador](../view-and-modify-distributor-and-publisher-properties.md).  
@@ -111,21 +111,21 @@ ms.locfileid: "62667811"
   
 2.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Verifique se a assinatura existe e se o status é ativo.  
   
-3.  No Publicador do banco de dados de publicação, execute [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql), especificando **@publication** . Observe o valor do parâmetro de saída **@tracer_token_id** .  
+3.  No Publicador do banco de dados de publicação, execute [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql), especificando **@publication**. Observe o valor do parâmetro **@tracer_token_id** de saída.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Para determinar a latência e validar as conexões para uma publicação transacional  
   
 1.  Publique um token de rastreamento na publicação usando o procedimento anterior.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), especificando **@publication** . Isso retorna uma lista de todos os tokens de rastreamento publicados na publicação. Observe o **tracer_id** desejado no conjunto de resultados.  
+2.  No Publicador do banco de dados de publicação, execute [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), especificando **@publication**. Isso retorna uma lista de todos os tokens de rastreamento publicados na publicação. Observe o **tracer_id** desejado no conjunto de resultados.  
   
-3.  No Publicador do banco de dados de publicação, execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql), especificando **@publication** e a ID do token de rastreamento da etapa 2 para **@tracer_id** . Isso retorna informações de latência para o token de rastreamento selecionado.  
+3.  No Publicador do banco de dados de publicação, execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql), especificando **@publication** e a ID do token de rastreamento da etapa 2 para **@tracer_id**. Isso retorna informações de latência para o token de rastreamento selecionado.  
   
 #### <a name="to-remove-tracer-tokens"></a>Para remover tokens de rastreamento  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), especificando **@publication** . Isso retorna uma lista de todos os tokens de rastreamento publicados na publicação. Observe o **tracer_id** a ser excluído pelo token de rastreamento no conjunto de resultados.  
+1.  No Publicador do banco de dados de publicação, execute [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), especificando **@publication**. Isso retorna uma lista de todos os tokens de rastreamento publicados na publicação. Observe o **tracer_id** a ser excluído pelo token de rastreamento no conjunto de resultados.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql), especificando **@publication** e a ID de rastreamento a ser excluída da etapa 2 para **@tracer_id** .  
+2.  No Publicador do banco de dados de publicação, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql), especificando **@publication** e a ID de rastreamento a ser excluída da etapa 2 para **@tracer_id**.  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Esse exemplo publica um registro dos tokens de rastreamento, e usa o ID retornado do token de rastreamento publicado, para exibir as informações da latência.  
@@ -138,25 +138,25 @@ ms.locfileid: "62667811"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades de publicação na etapa 3 foram definidas incorretamente ou a publicação não existe.  
   
-5.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A>. Esse método insere um token de rastreamento no log de transações da publicação.  
+5.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> . Esse método insere um token de rastreamento no log de transações da publicação.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Para determinar a latência e validar as conexões para uma publicação transacional  
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> ; e, defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades do monitor da publicação na etapa 3 foram definidas incorretamente ou a publicação não existe.  
   
-5.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Converta o objeto <xref:System.Collections.ArrayList> retornado em uma matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
+5.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Converta o objeto <xref:System.Collections.ArrayList> retornado em uma matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
 6.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> . Passe um valor de <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> para um token de rastreamento da etapa 5. Isso retorna as informações da latência para o token de rastreamento selecionado como um objeto <xref:System.Data.DataSet> . Se todas as informações do token de rastreamento forem retornadas, a conexão entre o Publicador e o Distribuidor e a conexão entre o Distribuidor e o Assinante serão efetivas e a topologia de replicação estará funcionando.  
   
@@ -164,13 +164,13 @@ ms.locfileid: "62667811"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> ; e, defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto. Se esse método retornar `false`, as propriedades do monitor da publicação na etapa 3 foram definidas incorretamente ou a publicação não existe.  
   
-5.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Converta o objeto <xref:System.Collections.ArrayList> retornado em uma matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
+5.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Converta o objeto <xref:System.Collections.ArrayList> retornado em uma matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
 6.  Chame o método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> . Passe um dos seguintes valores:  
   

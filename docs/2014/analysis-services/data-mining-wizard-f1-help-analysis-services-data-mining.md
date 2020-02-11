@@ -1,5 +1,5 @@
 ---
-title: Ajuda F1 do Assistente de mineração de dados (Analysis Services - mineração de dados) | Microsoft Docs
+title: Ajuda F1 do assistente de mineração de dados (Analysis Services-Mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086296"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Ajuda F1 do assistente de mineração de dados(Analysis Services – Mineração de dados)
@@ -56,28 +56,28 @@ ms.locfileid: "66086296"
   
  Depois de criar a estrutura de mineração e um modelo de mineração opcional, você pode usar o **Designer de Mineração de Dados** para modificar suas propriedades.  
   
-## <a name="see-also"></a>Consulte também  
- [Assistente de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
- [Designer de Mineração de Dados](data-mining/data-mining-designer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Assistente de mineração de dados &#40;Analysis Services Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Designer de mineração de dados](data-mining/data-mining-designer.md)   
  [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)   
- [Selecione o método de definição &#40;Assistente de mineração de dados&#41;](select-the-definition-method-data-mining-wizard.md)   
- [Criar a estrutura de mineração de dados &#40;Assistente de mineração de dados&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [Selecionar exibição da fonte de dados &#40;Assistente de mineração de dados&#41;](select-data-source-view-data-mining-wizard.md)   
- [Procurar exibição da fonte de dados &#40;Assistente de mineração de dados&#41;](browse-data-source-view-data-mining-wizard.md)   
- [Especificar tipos de tabela &#40;Assistente de mineração de dados&#41;](specify-table-types-data-mining-wizard.md)   
- [Especificar os dados de treinamento &#40;Assistente de mineração de dados&#41;](specify-the-training-data-data-mining-wizard.md)   
- [Sugerir colunas relacionadas &#40;Assistente de mineração de dados&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Selecionar a dimensão do cubo de origem &#40;Assistente de mineração de dados&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
- [Selecione a chave do caso &#40;Assistente de mineração de dados&#41;](select-the-case-key-data-mining-wizard.md)   
- [Selecione colunas de nível de caso &#40;Assistente de mineração de dados&#41;](select-case-level-columns-data-mining-wizard.md)   
- [Especificar o uso de colunas do modelo de mineração &#40;Assistente de mineração de dados&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
- [Selecione uma dimensão de grupo de medidas &#40;adicionar novo Assistente de tabela aninhada&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
- [Selecione a chave de tabela aninhada &#40;adicionar novo Assistente de tabela aninhada&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
- [Selecione as colunas da tabela aninhada &#40;adicionar novo Assistente de tabela aninhada&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
- [Especificar conteúdo e o tipo de dados da coluna &#40;Assistente de mineração de dados&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
- [Fatiar cubo de origem &#40;Assistente de mineração de dados&#41;](slice-source-cube-data-mining-wizard.md)   
- [Concluindo o Assistente de &#40;Assistente de mineração de dados&#41;](completing-the-wizard-data-mining-wizard.md)   
- [Especifique o conteúdo da coluna e tipo de dados &#40;Assistente de mineração de dados&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
- [Criar conjunto de testes &#40;Assistente de mineração de dados&#41;](create-testing-set-data-mining-wizard.md)  
+ [Selecione o método de definição &#40;assistente de mineração de dados&#41;](select-the-definition-method-data-mining-wizard.md)   
+ [Criar a estrutura de mineração de dados &#40;assistente de mineração de dados&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [Selecione exibição da fonte de dados &#40;assistente de mineração de dados&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Procurar exibição da fonte de dados &#40;assistente de mineração de dados&#41;](browse-data-source-view-data-mining-wizard.md)   
+ [Especificar tipos de tabela &#40;assistente de mineração de dados&#41;](specify-table-types-data-mining-wizard.md)   
+ [Especifique os dados de treinamento &#40;assistente de mineração de dados&#41;](specify-the-training-data-data-mining-wizard.md)   
+ [Sugerir colunas relacionadas &#40;assistente de mineração de dados&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Selecione a dimensão do cubo de origem &#40;assistente de mineração de dados&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
+ [Selecione a chave de caso &#40;assistente de mineração de dados&#41;](select-the-case-key-data-mining-wizard.md)   
+ [Selecione colunas de nível de caso &#40;assistente de mineração de dados&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [Especificar o uso de coluna do modelo de mineração &#40;assistente de mineração de dados&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
+ [Selecione uma dimensão de grupo de medidas &#40;assistente para Adicionar nova tabela aninhada&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
+ [Selecione a chave de tabela aninhada &#40;assistente para Adicionar nova tabela aninhada&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
+ [Selecione as colunas da tabela aninhada &#40;assistente Adicionar nova tabela aninhada&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
+ [Especifique o tipo de conteúdo e de dados da coluna &#40;assistente de mineração de dados&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
+ [Cubo de origem de fatia &#40;assistente de mineração de dados&#41;](slice-source-cube-data-mining-wizard.md)   
+ [Concluindo o assistente &#40;assistente de mineração de dados&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [Especifique o conteúdo da coluna e o tipo de dados &#40;assistente de mineração de dados&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
+ [Criar conjunto de teste &#40;assistente de mineração de dados&#41;](create-testing-set-data-mining-wizard.md)  
   
   

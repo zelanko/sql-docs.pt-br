@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo fonte (Analysis Services - dados multidimensionais) de partição | Microsoft Docs
+title: Caixa de diálogo origem da partição (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2102d28a61a99ed9ed6786dd8f2dee196066045c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072144"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Origem da Partição (Analysis Services - Dados Multidimensionais)
@@ -30,11 +30,11 @@ ms.locfileid: "66072144"
   
 |Opção|Definição|  
 |------------|----------------|  
-|**Tipo de associação**|Selecione o tipo de associação a ser usado para a origem da partição especificada. As seguintes opções estão disponíveis:<br /><br /> **Associação de tabela**: Selecione para exibir o painel **Detalhes de Associação de Tabela** e indicar que a partição está associada ao conteúdo de uma tabela em uma fonte de dados ou exibição da fonte de dados. Para obter mais informações sobre o painel **Detalhes de Associação de Tabela**, consulte [Detalhes de Associação de Tabela &#40;Caixa de diálogo Fonte da Partição&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md).<br /><br /> **Detalhe**: Selecione para exibir o painel **Detalhes de Associação de Consulta** e indicar que a partição está associada ao conteúdo de uma consulta executada em uma fonte de dados. Para obter mais informações sobre o painel **Detalhes de Associação de Consulta**, consulte [Detalhes de Associação de Consulta &#40;Caixa de diálogo Fonte da Partição&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md).|  
-|**Detail**|Exibe a caixa de diálogo **Detalhes de Associação de Tabela** ou **Detalhes de Associação de Consulta** , dependendo do valor da opção **Tipo de Associação** .|  
+|**Tipo de associação**|Selecione o tipo de associação a ser usado para a origem da partição especificada. As seguintes opções estão disponíveis:<br /><br /> **Associação de tabela**: Selecione para exibir o painel **detalhes da Associação de tabela** e indicar que a partição está associada ao conteúdo de uma tabela em uma fonte de dados ou exibição da fonte de dados. Para obter mais informações sobre o painel **Detalhes de Associação de Tabela**, consulte [Detalhes de Associação de Tabela &#40;Caixa de diálogo Fonte da Partição&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md).<br /><br /> **Detalhe**: Selecione para exibir o painel **detalhes da Associação de consulta** e indicar que a partição está associada ao conteúdo de uma consulta executada em uma fonte de dados. Para obter mais informações sobre o painel **Detalhes de Associação de Consulta**, consulte [Detalhes de Associação de Consulta &#40;Caixa de diálogo Fonte da Partição&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md).|  
+|**Detalhes**|Exibe a caixa de diálogo **Detalhes de Associação de Tabela** ou **Detalhes de Associação de Consulta** , dependendo do valor da opção **Tipo de Associação** .|  
   
-## <a name="see-also"></a>Consulte também  
- [Partições &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Partições &#40;designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Editor de transformação auditoria | Microsoft Docs
+title: Editor de transformação Auditoria | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061415"
 ---
 # <a name="audit-transformation-editor"></a>Editor de Transformação Auditoria
-  A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  
+  A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  
   
  Para saber mais sobre Auditar Transformação, consulte [Audit Transformation](data-flow/transformations/audit-transformation.md).  
   
@@ -33,19 +34,19 @@ ms.locfileid: "66061415"
  **Tipo de auditoria**  
  Selecione uma variável de sistema disponível para fornecer as informações de auditoria.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**GUID de instância de execução**|Insira o GUID que identifica com exclusividade a instância de execução do pacote.|  
-|**ID do Pacote**|Insira o GUID que identifica com exclusividade o pacote.|  
+|**GUID da instância de execução**|Insira o GUID que identifica com exclusividade a instância de execução do pacote.|  
+|**ID do pacote**|Insira o GUID que identifica com exclusividade o pacote.|  
 |**Nome do pacote**|Insira o nome do pacote.|  
-|**ID da Versão**|Insira o GUID que identifica com exclusividade a versão do pacote.|  
-|**Hora de início de execução**|Insira a hora de início de execução do pacote.|  
+|**ID da versão**|Insira o GUID que identifica com exclusividade a versão do pacote.|  
+|**Hora de início da execução**|Insira a hora de início de execução do pacote.|  
 |**Nome do computador**|Insira o nome do computador no qual o pacote foi inicializado.|  
 |**Nome de usuário**|Insira o nome de logon do usuário que inicializou o pacote.|  
 |**Nome da tarefa**|Insira o nome da tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
-|**ID da Tarefa**|Insira o GUID que identifica com exclusividade a tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
+|**ID da tarefa**|Insira o GUID que identifica com exclusividade a tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

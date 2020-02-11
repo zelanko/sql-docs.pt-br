@@ -1,5 +1,5 @@
 ---
-title: Descartar a caixa de diálogo de aviso (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo ignorar aviso (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3450713f3b621e960e443062323c3074b2698b07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081638"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Descartar Aviso (Analysis Services - Dados multidimensionais)
@@ -35,7 +35,7 @@ ms.locfileid: "66081638"
  **Comentários (opcional)**  
  Digite uma explicação de por que você está ignorando o aviso. O comentário aparecerá na coluna **Comentário** da tabela **Avisos Ignorados** na guia **Avisos** do Designer de Banco de Dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Avisos &#40;Designer de banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Avisos &#40;designer de banco de dados&#41; &#40;Analysis Services-&#41;multidimensional](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

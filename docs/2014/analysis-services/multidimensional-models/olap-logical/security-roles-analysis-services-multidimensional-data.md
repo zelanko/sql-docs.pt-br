@@ -1,5 +1,5 @@
 ---
-title: Funções de segurança (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Funções de segurança (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62725250"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Funções de Segurança (Analysis Services - Dados Multidimensionais)
-  As funções são usadas no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para gerenciar a segurança de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos e dados. Em termos básicos, uma função associa os identificadores de segurança (SIDs) dos usuários e grupos do Microsoft Windows que têm direitos de acesso e permissões específicas para objetos gerenciados por uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dois tipos de funções são fornecidos no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+  As funções são usadas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no para gerenciar a [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] segurança de objetos e dados. Em termos básicos, uma função associa os identificadores de segurança (SIDs) dos usuários e grupos do Microsoft Windows que têm direitos de acesso e permissões específicas para objetos gerenciados por uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dois tipos de funções são fornecidos no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   A função do servidor, uma função fixa que fornece acesso de administrador a uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 -   As funções de banco de dados, funções definidas por administradores para controlar o acesso a objetos e dados para usuários não administradores.  
   
- Segurança no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] segurança é gerenciada por meio de funções e permissões. As funções são grupos de usuários. Os usuários, também chamados de membros, podem ser adicionados ou removidos das funções. Permissões para objetos são especificadas por funções e todos os membros em uma função podem usar os objetos para o qual tem permissão. Todos os membros em uma função têm permissões iguais para os objetos. As permissões são específicas dos objetos. Cada objeto tem um conjunto de permissões concedidas para esse objeto; diferentes conjuntos de permissões podem ser concedidos para um objeto. Cada permissão, do conjunto de permissões do objeto, tem uma única função atribuída a ele.  
+ A segurança [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] na segurança é gerenciada usando funções e permissões. As funções são grupos de usuários. Os usuários, também chamados de membros, podem ser adicionados ou removidos das funções. Permissões para objetos são especificadas por funções e todos os membros em uma função podem usar os objetos para o qual tem permissão. Todos os membros em uma função têm permissões iguais para os objetos. As permissões são específicas dos objetos. Cada objeto tem um conjunto de permissões concedidas para esse objeto; diferentes conjuntos de permissões podem ser concedidos para um objeto. Cada permissão, do conjunto de permissões do objeto, tem uma única função atribuída a ele.  
   
 ## <a name="role-and-role-member-objects"></a>Objetos da função e de membro da função  
  Uma função é um objeto contendo um conjunto de usuários (membros). Uma definição de Função estabelece a associação de usuários no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Como as permissões são atribuídas por função, um usuário deve ser um membro de uma função antes de acessar qualquer objeto.  
@@ -64,7 +64,7 @@ ms.locfileid: "62725250"
   
  A classe <xref:Microsoft.AnalysisServices.Permission> é uma classe abstrata. Portanto, você deve usar as classes derivadas para definir permissões para os objetos correspondentes. Para cada objeto, é definida uma classe derivada da permissão.  
   
-|Object|Classe|  
+|Objeto|Classe|  
 |------------|-----------|  
 |<xref:Microsoft.AnalysisServices.Database>|<xref:Microsoft.AnalysisServices.DatabasePermission>|  
 |<xref:Microsoft.AnalysisServices.DataSource>|<xref:Microsoft.AnalysisServices.DataSourcePermission>|  
@@ -77,13 +77,26 @@ ms.locfileid: "62725250"
   
 |Ação|Valores|Explicação|  
 |------------|------------|-----------------|  
-|Process|{`true`, `false`}<br /><br /> Padrão=`false`|Se `true`, os membros podem processar o objeto e qualquer objeto contido no objeto.<br /><br /> As permissões de processo não se aplicam aos modelos de mineração. Permissões <xref:Microsoft.AnalysisServices.MiningModel> sempre são herdadas de <xref:Microsoft.AnalysisServices.MiningStructure>.|  
-|ReadDefinition|{`None`, `Basic`, `Allowed`}<br /><br /> Padrão=`None`|Especifica se membros podem ler a definição de dados (ASSL) associada ao objeto.<br /><br /> Se `Allowed`, os membros podem ler o ASSL associado ao objeto.<br /><br /> `Basic` e `Allowed` são herdados por objetos contidos no objeto. `Allowed` substitui `Basic` e `None`.<br /><br /> `Allowed` é necessário para DISCOVER_XML_METADATA em um objeto. `Basic` é necessário para criar objetos vinculados e cubos locais.|  
-|leitura|{`None`, `Allowed`}<br /><br /> Padrão =`None` (exceto para DimensionPermission, onde padrão=`Allowed`)|Especifica se membros têm acesso de leitura a conjuntos de linhas do esquema e conteúdo de dados.<br /><br /> `Allowed` concede acesso de leitura em um banco de dados, que permite que você descubra um banco de dados.<br /><br /> `Allowed` em um cubo concede acesso de leitura nos conjuntos de linhas do esquema e acesso ao conteúdo do cubo (a menos que restringido por <xref:Microsoft.AnalysisServices.CellPermission> e <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> `Allowed` em uma dimensão concede permissão de leitura em todos os atributos na dimensão (a menos que restringidos por <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). A permissão de leitura é usada para herança estática para o <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. `None` em uma dimensão oculta a dimensão e concede acesso ao membro padrão apenas para atributos agregáveis; ocorrerá um erro se a dimensão contiver um atributo não agregável.<br /><br /> `Allowed` em um <xref:Microsoft.AnalysisServices.MiningModelPermission> concede permissões de visualização de objetos em conjuntos de linhas de esquema e executar associações previsíveis.<br /><br /> **NoteAllowed** é necessária para ler ou gravar em qualquer objeto no banco de dados.|  
-|Gravação|{`None`, `Allowed`}<br /><br /> Padrão=`None`|Especifica se membros têm acesso de gravação aos dados do objeto pai.<br /><br /> O acesso aplica-se às subclasses <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube> e <xref:Microsoft.AnalysisServices.MiningModel>. Ele não se aplica às subclasses de banco de dados <xref:Microsoft.AnalysisServices.MiningStructure> que geram um erro de validação.<br /><br /> `Allowed` em um <xref:Microsoft.AnalysisServices.Dimension> concede permissão de gravação em todos os atributos na dimensão.<br /><br /> `Allowed` em um <xref:Microsoft.AnalysisServices.Cube> concede permissão de gravação nas células do cubo para partições definidas como Type=write-back.<br /><br /> `Allowed` em um <xref:Microsoft.AnalysisServices.MiningModel> concede permissão para modificar o conteúdo modelo.<br /><br /> `Allowed` em um <xref:Microsoft.AnalysisServices.MiningStructure> não tem nenhum significado específico em [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. **Observação:**  Gravação não pode ser definida como `Allowed` , a menos que uma leitura também é definida como `Allowed`|  
-|Administrar **Observação:**  Somente nas permissões de banco de dados|{`true`, `false`}<br /><br /> Padrão=`false`|Especifica se membros podem administrar um banco de dados.<br /><br /> `true` concede acesso de membros a todos os objetos em um banco de dados.<br /><br /> Um membro pode ter permissões Administrador para um banco de dados específico, mas não para outros.|  
+|Processo|{`true`, `false`}<br /><br /> Padrão=`false`|Se `true`, os membros podem processar o objeto e qualquer objeto contido no objeto.<br /><br /> As permissões de processo não se aplicam aos modelos de mineração. Permissões <xref:Microsoft.AnalysisServices.MiningModel> sempre são herdadas de <xref:Microsoft.AnalysisServices.MiningStructure>.|  
+|ReadDefinition|{`None`, `Basic`, `Allowed`}<br /><br /> Padrão=`None`|Especifica se membros podem ler a definição de dados (ASSL) associada ao objeto.<br /><br /> Se `Allowed`, os membros podem ler o ASSL associado ao objeto.<br /><br /> 
+  `Basic` e `Allowed` são herdados por objetos contidos no objeto. 
+  `Allowed` substitui `Basic` e `None`.<br /><br /> 
+  `Allowed` é necessário para DISCOVER_XML_METADATA em um objeto. 
+  `Basic` é necessário para criar objetos vinculados e cubos locais.|  
+|Ler|{`None`, `Allowed`}<br /><br /> Padrão =`None` (exceto para DimensionPermission, onde padrão=`Allowed`)|Especifica se membros têm acesso de leitura a conjuntos de linhas do esquema e conteúdo de dados.<br /><br /> `Allowed`fornece acesso de leitura em um banco de dados, que permite descobrir um banco de dados.<br /><br /> 
+  `Allowed` em um cubo concede acesso de leitura nos conjuntos de linhas do esquema e acesso ao conteúdo do cubo (a menos que restringido por <xref:Microsoft.AnalysisServices.CellPermission> e <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> 
+  `Allowed` em uma dimensão concede permissão de leitura em todos os atributos na dimensão (a menos que restringidos por <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). A permissão de leitura é usada para herança estática para o <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. 
+  `None` em uma dimensão oculta a dimensão e concede acesso ao membro padrão apenas para atributos agregáveis; ocorrerá um erro se a dimensão contiver um atributo não agregável.<br /><br /> 
+  `Allowed` em um <xref:Microsoft.AnalysisServices.MiningModelPermission> concede permissões de visualização de objetos em conjuntos de linhas de esquema e executar associações previsíveis.<br /><br /> **NoteAllowed** é necessário para ler ou gravar em qualquer objeto no banco de dados.|  
+|Gravar|{`None`, `Allowed`}<br /><br /> Padrão=`None`|Especifica se membros têm acesso de gravação aos dados do objeto pai.<br /><br /> O acesso aplica-se às subclasses <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube> e <xref:Microsoft.AnalysisServices.MiningModel>. Ele não se aplica às subclasses de banco de dados <xref:Microsoft.AnalysisServices.MiningStructure> que geram um erro de validação.<br /><br /> 
+  `Allowed` em um <xref:Microsoft.AnalysisServices.Dimension> concede permissão de gravação em todos os atributos na dimensão.<br /><br /> 
+  `Allowed` em um <xref:Microsoft.AnalysisServices.Cube> concede permissão de gravação nas células do cubo para partições definidas como Type=write-back.<br /><br /> 
+  `Allowed` em um <xref:Microsoft.AnalysisServices.MiningModel> concede permissão para modificar o conteúdo modelo.<br /><br /> 
+  `Allowed` em um <xref:Microsoft.AnalysisServices.MiningStructure> não tem nenhum significado específico em [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. **Observação:**  A gravação não pode ser `Allowed` definida para a menos que Read também seja definido como`Allowed`|  
+|Administrar **Observação:** somente nas permissões de banco de dados|{`true`, `false`}<br /><br /> Padrão=`false`|Especifica se membros podem administrar um banco de dados.<br /><br /> 
+  `true` concede acesso de membros a todos os objetos em um banco de dados.<br /><br /> Um membro pode ter permissões Administrador para um banco de dados específico, mas não para outros.|  
   
-## <a name="see-also"></a>Consulte também  
- [Autorizando o acesso a objetos e operações &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Autorizar o acesso a objetos e operações &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   

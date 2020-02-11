@@ -1,5 +1,5 @@
 ---
-title: 'Novo Agendamento de Trabalho: Propriedades da agenda de trabalho | Microsoft Docs'
+title: 'Nova agenda de trabalho: Propriedades da agenda de trabalho | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704621"
 ---
-# <a name="new-job-schedule-job-schedule-properties"></a>Novo Agendamento de Trabalho: Propriedades do Agendamento de Trabalho
+# <a name="new-job-schedule-job-schedule-properties"></a>Nova agenda de trabalho: propriedades da agenda de trabalho
   Use essa página para exibir e alterar as propriedades da agenda.  
   
 ## <a name="options"></a>Opções  
@@ -30,20 +30,20 @@ ms.locfileid: "62704621"
  **Trabalhos na agenda**  
  Exiba os trabalhos que usam a agenda.  
   
- **Tipo de agenda**  
+ **Tipo de agendamento**  
  Selecione o tipo de agenda.  
   
  **Enabled**  
  Marque para habilitar ou desabilitar a agenda.  
   
 ## <a name="recurring-schedule-types-options"></a>Opções de tipos de agenda recorrentes  
- **Ocorre**  
+ **Ocorra**  
  Selecione o intervalo no qual a agenda ocorre periodicamente.  
   
  **Repete-se a cada**  
  Selecione o número de dias ou semanas entre ocorrências periódicas da agenda. Essa opção não está disponível para agendas que ocorrem mensalmente.  
   
- **Segunda-feira**  
+ **Monday**  
  Defina o trabalho para ocorrer em uma segunda-feira. Disponível somente para agendamentos semanais recorrentes.  
   
  **Terça-feira**  
@@ -55,22 +55,22 @@ ms.locfileid: "62704621"
  **Quinta-feira**  
  Defina o trabalho para ocorrer em uma quinta-feira. Disponível somente para agendamentos semanais recorrentes.  
   
- **Sexta-feira**  
+ **Às**  
  Defina o trabalho para ocorrer em uma sexta-feira. Disponível somente para agendamentos semanais recorrentes.  
   
  **Sábado**  
  Defina o trabalho para ocorrer em um sábado. Disponível somente para agendamentos semanais recorrentes.  
   
- **Domingo**  
+ **Sunday**  
  Defina o trabalho para ocorrer em um domingo. Disponível somente para agendamentos semanais recorrentes.  
   
- **Day**  
+ **Diário**  
  Selecione o dia do mês que a agenda ocorre. Disponível somente para agendas mensais recorrentes.  
   
  **de cada**  
  Selecione o número de meses entre ocorrências da agenda. Disponível somente para agendas mensais recorrentes.  
   
- **O**  
+ **O parâmetro**  
  Especifique uma agenda durante um dia específico da semana em uma semana específica durante o mês. Disponível somente para agendas mensais recorrentes.  
   
  **Ocorre uma vez em**  
@@ -95,8 +95,8 @@ ms.locfileid: "62704621"
  **Hora**  
  Selecione a hora para que o trabalho seja executado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e anexar agendas a trabalhos](create-and-attach-schedules-to-jobs.md)   
- [Agendar um trabalho](schedule-a-job.md)  
+ [Schedule a Job](schedule-a-job.md)  
   
   

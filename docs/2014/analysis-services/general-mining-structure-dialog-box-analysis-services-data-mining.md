@@ -1,5 +1,5 @@
 ---
-title: Geral (caixa de diálogo de estrutura de mineração) (Analysis Services - mineração de dados) | Microsoft Docs
+title: Geral (caixa de diálogo estrutura de mineração) (Analysis Services-Mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26d4cacc826750b74dd8bb5aa14f270e643edc44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081063"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Geral (Caixa de diálogo Estrutura de Mineração) (Analysis Services – Mineração de Dados)
@@ -27,14 +27,14 @@ ms.locfileid: "66081063"
 |Termo|Definição|  
 |----------|----------------|  
 |**Nome**|Exibe o nome da estrutura de mineração.|  
-|**ID**|Exibe o identificador da estrutura de mineração.|  
+|**SESSÃO**|Exibe o identificador da estrutura de mineração.|  
 |**Descrição**|Exibe a descrição da estrutura de mineração.|  
-|**Criar Carimbo de Data/Hora**|Exibe a data e hora em que foi criada a estrutura de mineração.|  
-|**Última Atualização de Esquema**|Exibe a data e a hora em que os metadados da estrutura de mineração foram atualizados pela última vez.|  
+|**Criar carimbo de data/hora**|Exibe a data e hora em que foi criada a estrutura de mineração.|  
+|**Última atualização de esquema**|Exibe a data e a hora em que os metadados da estrutura de mineração foram atualizados pela última vez.|  
 |**Estado**|Exibe o estado de processamento da estrutura de mineração. Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
-|**Último processamento**|Exibe a data e a hora em que a estrutura de mineração foi processada pela última vez.|  
+|**Último Processamento**|Exibe a data e a hora em que a estrutura de mineração foi processada pela última vez.|  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

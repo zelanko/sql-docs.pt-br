@@ -1,5 +1,5 @@
 ---
-title: Script organizador (guia cálculos, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Organizador de script (guia cálculos, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069930"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de Script (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -44,20 +44,20 @@ ms.locfileid: "66069930"
   
 |Opção|Definição|  
 |------------|----------------|  
-|**Novo membro calculado**|Selecione para exibir o **Editor de Formulário de Membro Calculado** e criar um novo membro calculado. Para obter mais informações sobre o **Editor de Formulário de Membro Calculado**, consulte [Editor de Formulário de Membro Calculado &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Novo conjunto nomeado**|Selecione para exibir o painel **Editor de Formulário de Conjunto Nomeado** e criar um novo conjunto nomeado. Para obter mais informações sobre o **Editor de Formulário de Conjunto Nomeado**, consulte [Editor de Formulário de Conjunto Nomeado &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Novo comando de Script**|Selecione para exibir o **Editor de Scripts** e criar um novo comando de script. Para obter mais informações sobre o **Editor de Scripts**, consulte [Editor de Scripts &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Mover para Cima**|Selecione para mover o cálculo selecionado uma posição acima.<br /><br /> Observação: Essa opção é desabilitada se o cálculo selecionado não pode ser movido ainda mais.|  
-|**Mover para Baixo**|Selecione para mover o cálculo selecionado uma posição abaixo.<br /><br /> Observação: Essa opção é desabilitada se o cálculo selecionado não pode ser movido ainda mais.|  
+|**Novo Membro Calculado**|Selecione para exibir o **Editor de Formulário de Membro Calculado** e criar um novo membro calculado. Para obter mais informações sobre o **Editor de Formulário de Membro Calculado**, consulte [Editor de Formulário de Membro Calculado &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Novo Conjunto Nomeado**|Selecione para exibir o painel **Editor de Formulário de Conjunto Nomeado** e criar um novo conjunto nomeado. Para obter mais informações sobre o **Editor de Formulário de Conjunto Nomeado**, consulte [Editor de Formulário de Conjunto Nomeado &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Novo Comando de Script**|Selecione para exibir o **Editor de Scripts** e criar um novo comando de script. Para obter mais informações sobre o **Editor de Scripts**, consulte [Editor de Scripts &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Mover para cima**|Selecione para mover o cálculo selecionado uma posição acima.<br /><br /> Observação: esta opção será desabilitada se o cálculo selecionado não puder mais ser movido.|  
+|**Mover para baixo**|Selecione para mover o cálculo selecionado uma posição abaixo.<br /><br /> Observação: esta opção será desabilitada se o cálculo selecionado não puder mais ser movido.|  
 |**Delete (excluir)**|Selecione para excluir o cálculo selecionado.|  
   
-## <a name="see-also"></a>Consulte também  
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de ferramentas &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Ferramentas de cálculo de &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulário de membro calculado &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulário de conjunto nomeado &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de scripts &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Cálculos de &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de ferramentas &#40;guia cálculos, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Ferramentas de cálculo &#40;guia cálculos, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulário de membro calculado &#40;guia cálculos, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulário de conjunto nomeado &#40;guia cálculos, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de script &#40;guia cálculos, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Cálculos &#40;designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

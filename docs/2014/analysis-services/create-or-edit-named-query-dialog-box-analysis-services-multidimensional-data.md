@@ -1,5 +1,5 @@
 ---
-title: Criar ou editar a caixa de diálogo de consulta nomeada (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo criar ou editar consulta nomeada (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f01b0bbf3d1ddc54ea4db2b771723e12d168d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086806"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Criar/Editar Consulta Nomeada (Analysis Services - Dados Multidimensionais)
@@ -47,30 +47,30 @@ ms.locfileid: "66086806"
  **Descrição**  
  Digite a descrição opcional da consulta.  
   
- **Fonte de dados**  
+ **Fonte de Dados**  
  Especifica a fonte de dados para a consulta.  
   
  **Definição de consulta**  
  A definição da consulta fornece uma barra de ferramentas e painéis onde definir e testar a consulta, dependendo da exibição selecionada.  
   
- **Barra de Ferramentas**  
+ **Barra de ferramentas**  
  Use a barra de ferramentas para gerenciar conjuntos de dados, selecionar painéis para exibição e controlar várias funções de consulta.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Alternar para construtor de consultas genérico**|Selecione para exibir apenas as opções disponíveis para a exibição Construtor de Consultas Genérico. Apenas as seguintes opções são exibidas:<br />**Painel SQL**<br />**Painel de resultados**<br />**Barra de Ferramentas**, contendo apenas **Alternar para o Construtor de Consultas VDT** e **Executar**<br /><br /> <br /><br /> Observação: Essa opção é exibida somente se **alternar para construtor de consultas VDT** está selecionado.|  
-|**Alternar para construtor de consultas VDT**|Selecione para exibir todas as opções disponíveis para a exibição Construtor de Consultas VDT (Visual Database Tools).<br /><br /> Observação: Essa opção é exibida somente se **alternar para construtor de consultas genérico** está selecionado.|  
-|**Painel Mostrar/Ocultar Diagrama**|Mostra ou oculta o painel **Diagrama**.<br /><br /> **Observação** essa opção será exibida apenas se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
-|**Painel Mostrar/Ocultar Grade**|Mostra ou oculta o painel **Grade**.<br /><br /> Observação: Essa opção é exibida somente se **alternar para construtor de consultas VDT** está selecionado.|  
-|**Painel Mostrar/Ocultar SQL**|Mostra ou oculta o painel **SQL**.<br /><br /> Observação: Essa opção é exibida somente se **alternar para construtor de consultas VDT** está selecionado.|  
-|**Mostrar/ocultar painel resultado**|Mostra ou oculta o painel **Resultado**.<br /><br /> Observação: Essa opção é exibida somente se **alternar para construtor de consultas VDT** está selecionado.|  
+|**Alternar para Construtor de Consultas Genérico**|Selecione para exibir apenas as opções disponíveis para a exibição Construtor de Consultas Genérico. Apenas as seguintes opções são exibidas:<br />**Painel SQL**<br />**Painel de resultados**<br />**Barra de ferramentas**, contendo apenas o **Switch para VDT Construtor de consultas** e **executar**<br /><br /> <br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Alternar para o Construtor de Consultas VDT**|Selecione para exibir todas as opções disponíveis para a exibição Construtor de Consultas VDT (Visual Database Tools).<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas Genérico** estiver selecionado.|  
+|**Mostrar/Ocultar Painel de diagrama**|Mostra ou oculta o painel **Diagrama**.<br /><br /> **Observação** Essa opção só será exibida se **a opção Alternar para VDT Construtor de consultas** estiver selecionada.|  
+|**Mostrar/Ocultar Painel de grade**|Mostra ou oculta o painel **Grade**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Mostrar/Ocultar Painel SQL**|Mostra ou oculta o painel **SQL**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Mostrar/Ocultar Painel Resultado**|Mostra ou oculta o painel **Resultado**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Executar**|Executa a consulta. Os resultados são exibidos no painel **Resultado**.|  
-|**Verificar SQL**|Verifica a instrução SQL na consulta.<br /><br /> Observação: Essa opção é exibida somente se **alternar para construtor de consultas VDT** está selecionado.|  
-|**Classificar em Ordem Crescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem crescente.<br /><br /> Observação: Essa opção é exibida somente se **alternar para construtor de consultas VDT** está selecionado.|  
-|**Classificar em Ordem Decrescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem decrescente.<br /><br /> Observação: Essa opção é exibida somente se **alternar para construtor de consultas VDT** está selecionado.|  
-|**Remover Filtro**|Remove critérios de classificação, se aplicável, para a linha selecionada no painel **Grade**.<br /><br /> Observação: Essa opção é exibida somente se **alternar para construtor de consultas VDT** está selecionado.|  
-|**Usar Agrupar Por**|Adiciona a funcionalidade de agrupamento à consulta.<br /><br /> Observação: Essa opção é exibida somente se **alternar para construtor de consultas VDT** está selecionado.|  
-|**Adicionar Tabela**|Exibe a caixa de diálogo **Adicionar Tabela** para adicionar uma nova tabela ou exibição à consulta. Para obter mais informações sobre a caixa de diálogo **Adicionar Tabela**, consulte [Caixa de diálogo Adicionar Tabela &#40;Analysis Services – Dados Multidimensionais&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Observação: Essa opção é exibida somente se **alternar para construtor de consultas VDT** está selecionado.|  
+|**Verificar SQL**|Verifica a instrução SQL na consulta.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Classificação crescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem crescente.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Classificação decrescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem decrescente.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Remover filtro**|Remove critérios de classificação, se aplicável, para a linha selecionada no painel **Grade**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Usar agrupar por**|Adiciona a funcionalidade de agrupamento à consulta.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Adicionar tabela**|Exibe a caixa de diálogo **Adicionar Tabela** para adicionar uma nova tabela ou exibição à consulta. Para obter mais informações sobre a caixa de diálogo **Adicionar Tabela**, consulte [Caixa de diálogo Adicionar Tabela &#40;Analysis Services – Dados Multidimensionais&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
   
  **Painel de diagrama**  
  Exibe os objetos referenciados pela consulta como um diagrama. O diagrama mostra as tabelas incluídas na consulta e como elas estão unidas. Marque ou desmarque a caixa de seleção próxima a uma coluna em uma tabela para adicioná-la ou removê-la da saída da consulta.  
@@ -85,7 +85,7 @@ ms.locfileid: "66086806"
 > [!IMPORTANT]  
 >  A caixa de diálogo não oferece suporte para alteração de tipos de consulta.  
   
- **Painel de grade**  
+ **Painel Grade**  
  Exibe os objetos referenciados pela consulta em uma grade. Você pode usar este painel para adicionar e remover colunas da consulta e alterar as configurações de cada coluna.  
   
 > [!NOTE]  
@@ -100,8 +100,8 @@ ms.locfileid: "66086806"
  **Painel de resultados**  
  Exibe os resultados da consulta quando você clica em **Executar** no painel **Barra de Ferramentas** .  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

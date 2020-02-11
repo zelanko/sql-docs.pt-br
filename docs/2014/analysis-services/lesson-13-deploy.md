@@ -1,5 +1,5 @@
 ---
-title: 'Lição 14: Implantar | Microsoft Docs'
+title: 'Lição 14: implantar | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079139"
 ---
 # <a name="lesson-14-deploy"></a>Lição 14: Implantar
   Nesta lição, você configurará propriedades de implantação; especificando uma instância de servidor de implantação do Analysis Services executada no modo de Tabela e um nome para o modelo que você está implantando. Você implantará o modelo nessa instância. Depois de implantado, os usuários podem se conectar ao modelo usando um aplicativo cliente de relatório. Para saber mais, consulte [Implantação de uma solução de modelo de tabela &#40;SSAS Tabular&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
- Tempo estimado para concluir esta lição: **5 minutos**  
+ Tempo estimado para conclusão desta lição: **5 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 13: Analisar no Excel](lesson-12-analyze-in-excel.md).  
+ Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 13: Analisar no Excel](lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Implantar o modelo  
   
@@ -36,16 +36,16 @@ ms.locfileid: "66079139"
     > [!IMPORTANT]  
     >  Você deve ter permissões de Administrador em uma instância do Analysis Services para implantá-la.  
   
-3.  Verifique se o **modo de consulta** estiver definida como **in-memory**.  
+3.  Verifique se a propriedade **modo de consulta** está definida como **na memória**.  
   
     > [!NOTE]  
     >  Não há suporte para o modelo criado por meio deste tutorial no modo DirectQuery.  
   
-4.  No **banco de dados** propriedade, tipo `Adventure Works Internet Sales Model`.  
+4.  Na propriedade de **banco** de dados `Adventure Works Internet Sales Model`, digite.  
   
-5.  No **cubo** propriedade Name, digite `Adventure Works Internet Sales Model`.  
+5.  Na propriedade nome do **cubo** , digite `Adventure Works Internet Sales Model`.  
   
-6.  Verifique as seleções e clique em **OK**.  
+6.  Verifique suas seleções e então clique em **OK**.  
   
 #### <a name="to-deploy-the-adventure-works-internet-sales-tabular-model"></a>Para implantar o modelo de tabela de vendas pela Internet da Adventure Works.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "66079139"
      A caixa de diálogo Implantar aparecerá com o status de implantação dos metadados e cada tabela incluída no modelo.  
   
 ## <a name="conclusion"></a>Conclusão  
- Parabéns! Você é terminou de criar e implantar seu primeiro modelo de tabela do Analysis Services. Este tutorial ajudou você a concluir as tarefas mais comuns da criação de um modelo de tabela. Agora que o Modelo de Vendas pela Internet do Adventure Works está implantado, você pode usar o SQL Server Management Studio para gerenciar o modelo; crie scripts de processo e um plano de backup. Os usuários podem se conectar ao modelo usando um aplicativo cliente de relatório como o Microsoft Excel ou o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
+ Parabéns! Você é terminou de criar e implantar seu primeiro modelo de tabela do Analysis Services. Este tutorial ajudou a orientá-lo a concluir as tarefas mais comuns na criação de um modelo tabular. Agora que o Modelo de Vendas pela Internet do Adventure Works está implantado, você pode usar o SQL Server Management Studio para gerenciar o modelo; crie scripts de processo e um plano de backup. Os usuários podem se conectar ao modelo usando um aplicativo cliente de relatório como o Microsoft Excel ou o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
   
 ## <a name="additional-resources"></a>Recursos adicionais  
  Para saber mais sobre as propriedades do modelo de tabela que dão suporte aos relatórios do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], consulte [Propriedades de relatório do Power View &#40;SSAS Tabular&#41;](tabular-models/properties-ssas-tabular.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modo DirectQuery &#40;SSAS de tabela&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS de Tabela&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Bancos de dados de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
+ [Configurar propriedades de implantação e modelagem de dados padrão &#40;SSAS tabular&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Bancos de dados de modelo de tabela &#40;SSAS de tabela&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

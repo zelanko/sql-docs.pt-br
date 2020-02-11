@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62f8fc247986609e3822168bff5aace34f3d1aa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085455"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Criar uma nova estrutura de mineração OLAP
-  Você pode usar o Assistente de Mineração de Dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar uma estrutura de mineração que usa dados de um modelo multidimensional. Modelos de mineração baseados em cubos OLAP podem usar a coluna e os valores de tabelas de fatos, dimensões e grupos de medidas como atributos para análise.  
+  Você pode usar o assistente de mineração de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dados no para criar uma estrutura de mineração que usa dados de um modelo multidimensional. Modelos de mineração baseados em cubos OLAP podem usar a coluna e os valores de tabelas de fatos, dimensões e grupos de medidas como atributos para análise.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Para criar uma nova estrutura de mineração OLAP  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66085455"
   
      Por exemplo, se estiver tentando identificar agrupamentos de clientes, poderá escolher a dimensão Cliente; se estiver tentando analisar compras em transações, poderá escolher a dimensão Detalhes do Pedido de Vendas pela Internet. Você não está restrito a usar somente os dados desta dimensão, mas ela deve conter atributos importantes a serem usados na análise.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 6.  Na página **Selecionar a Chave do Caso** , em **Atributos**, selecione o atributo que será a chave da estrutura de mineração e clique em **Avançar**.  
   
      O atributo que você costuma usar como chave na estrutura de mineração também é uma chave da dimensão e será pré-selecionado.  
   
-7.  Na página **Selecionar Colunas de Nível de Caso** , em **Atributos e Medidas Relacionados**, selecione os atributos e as medidas que contêm valores a serem adicionados à estrutura de mineração como dados de caso. Clique em **Avançar**.  
+7.  Na página **Selecionar Colunas de Nível de Caso** , em **Atributos e Medidas Relacionados**, selecione os atributos e as medidas que contêm valores a serem adicionados à estrutura de mineração como dados de caso. Clique em **Próximo**.  
   
 8.  Na página **Especificar Uso de Colunas do Modelo de Mineração** , em **Estrutura do modelo de mineração**, primeiro defina a coluna previsível e depois escolha colunas para usar como entradas.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66085455"
   
      Note que as colunas designadas como chaves não podem ser usadas para entrada nem previsão.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 9. Na página **Especificar Uso de Colunas do Modelo de Mineração** , você também pode adicionar e remover tabelas aninhadas da estrutura de mineração, usando **Adicionar Tabelas Aninhadas** e **Tabelas Aninhadas**.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "66085455"
   
      Se você adicionar dados aninhados, especifique duas colunas adicionais:  
   
-    -   A chave da tabela aninhada: Isso deve ser pré-selecionada na página de **selecionar chave de tabela aninhada**.  
+    -   A chave da tabela aninhada: ela deve ser pré-selecionada na página **Selecionar Chave de Tabela Aninhada**.  
   
-    -   Os atributos ou atributos usados para análise: A página **selecionar colunas de tabela aninhada**, fornece uma lista de medidas e atributos na seleção da tabela aninhada.  
+    -   Os atributos usados para análise: a página **Selecionar Colunas de Tabela Aninhada**fornece uma lista de medidas e atributos na seleção da tabela aninhada.  
   
         -   Para cada atributo incluído no modelo, marque a caixa na coluna esquerda.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66085455"
   
         -   Se quiser incluir a coluna como um dos atributos previsíveis do modelo, selecione **Prever**.  
   
-        -   Qualquer item incluído na estrutura, mas não especificado como uma entrada ou atributo previsível, é adicionado à estrutura com o sinalizador `Ignore`; isso significa que os dados são processados quando você cria o modelo, mas não são usado na análise, e estão disponíveis apenas para detalhamento. Isso pode ser útil se você deseja incluir detalhes como nomes de clientes, mas não quiser usá-los na análise.  
+        -   Qualquer item incluído na estrutura, mas não especificado como uma entrada ou atributo previsível, é adicionado à estrutura com o sinalizador `Ignore`; isso significa que os dados são processados quando você cria o modelo, mas não são usado na análise, e estão disponíveis apenas para detalhamento. Isso pode ser útil se você quiser incluir detalhes como nomes de clientes, mas não quiser usá-los na análise.  
   
      Clique em **Concluir** para fechar a parte do assistente que trabalha com tabelas aninhadas. Você pode repetir o processo para adicionar varias colunas aninhadas.  
   
@@ -89,27 +89,27 @@ ms.locfileid: "66085455"
     > [!NOTE]  
     >  Os modelos de mineração OLAP não permitem o uso do recurso **Detectar** para detectar automaticamente se uma coluna contém dados contínuos ou distintos.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 11. Na página **Dividir Cubo de Origem** , é possível filtrar os dados usados para criar a estrutura de mineração.  
   
      A divisão do cubo lhe permite restringir os dados que são usados para criar o modelo. Por exemplo, você pode criar modelos separados para cada região dividindo a hierarquia Geografia e  
   
-    -   **Dimensão**: Escolha uma dimensão relacionada na lista suspensa.  
+    -   **Dimensão**: escolha uma dimensão relacionada na lista suspensa.  
   
-    -   **Hierarquia**:  Selecione o nível da hierarquia de dimensão na qual você deseja aplicar o filtro. Por exemplo, se estiver dividindo pela dimensão [Geografia], você escolherá um nível de hierarquia como [Nome do País da Região].  
+    -   **Hierarquia**: selecione o nível da hierarquia de dimensão no qual você deseja aplicar o filtro. Por exemplo, se estiver dividindo pela dimensão [Geografia], você escolherá um nível de hierarquia como [Nome do País da Região].  
   
-    -   **Operador**: Escolha um operador na lista.  
+    -   **Operador**: escolha um operador na lista.  
   
-    -   **Expressão de filtro**: Digite um valor ou expressão para servir como a condição de filtro ou use a lista suspensa para selecionar um valor na lista de membros no nível da hierarquia especificado.  
+    -   **Expressão de filtro**: digite um valor ou expressão para servir como a condição de filtro ou use a lista suspensa para selecionar um valor da lista de membros no nível especificado da hierarquia.  
   
          Por exemplo, se você selecionar [Geografia] como a dimensão e [Nome do País da Região] como o nível de hierarquia, a lista suspensa conterá todos os países válidos que você pode usar como uma condição de filtro. Você pode fazer várias seleções. Como resultado, os dados na estrutura de mineração serão limitados a dados de cubo destas áreas geográficas.  
   
-    -   **Parâmetros**: Ignore esta caixa de seleção. Esta caixa de diálogo oferece suporte a vários cenários de filtragem de cubo e esta opção não é relevante para criar uma estrutura de mineração.  
+    -   **Parâmetros**: ignore essa caixa de seleção. Esta caixa de diálogo oferece suporte a vários cenários de filtragem de cubo e esta opção não é relevante para criar uma estrutura de mineração.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
-12. Na página **Dividir os dados em conjuntos de treinamento e teste** , especifique um percentual dos dados da estrutura de mineração a ser reservado para teste ou especifique o número máximo de casos de teste. Clique em **Avançar**.  
+12. Na página **Dividir os dados em conjuntos de treinamento e teste** , especifique um percentual dos dados da estrutura de mineração a ser reservado para teste ou especifique o número máximo de casos de teste. Clique em **Próximo**.  
   
      Se você especificar ambos os valores, os limites serão combinados para usar o que for o mais baixo.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66085455"
   
      **Criar cubo usando a dimensão do modelo de mineração**: Marque essa caixa de seleção e forneça um nome para o novo cubo. Quando você usa esta opção, um novo cubo é criado, contendo as dimensões existentes, que foram usadas para criar a estrutura, e a nova dimensão de mineração de dados, contendo os resultados do modelo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções da estrutura de mineração](mining-structure-tasks-and-how-tos.md)  
   
   

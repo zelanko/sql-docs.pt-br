@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721400"
 ---
-# <a name="sql-server-replication-distributor-properties"></a>Propriedades do distribuidor de replicação do SQL Server
-Este tópico discute as propriedades encontradas nos **gerais**, **Publicadores**, e **banco de dados de distribuição** páginas dentro a **propriedades do distribuidor**  janela. 
+# <a name="sql-server-replication-distributor-properties"></a>Propriedades do distribuidor Replicação do SQL Server
+Este tópico discute as propriedades encontradas nas páginas **geral**, **editores**e banco de **dados de distribuição** na janela **Propriedades do distribuidor** . 
 
 ## <a name="general"></a>Geral
   A página **Geral** da caixa de diálogo **Propriedades do Distribuidor** permite adicionar e excluir bancos de dados de distribuição e definir propriedades do banco de dados de distribuição.  
@@ -36,7 +36,7 @@ Este tópico discute as propriedades encontradas nos **gerais**, **Publicadores*
   
  Clique no botão de propriedades ( **...** ) na grade de propriedades de **Bancos de dados** para iniciar a caixa de diálogo **Propriedades do Banco de Dados de Distribuição** .  
   
- **Nova**  
+ **Novo**  
  Clique para criar um novo banco de dados de distribuição.  
   
  **Delete (excluir)**  
@@ -54,7 +54,7 @@ Este tópico discute as propriedades encontradas nos **gerais**, **Publicadores*
  Selecione os servidores que têm permissão para usar esse Distribuidor. Clique no botão **(...)** próximo ao Publicador para exibir e definir propriedades adicionais.  
   
  **Adicionar**  
- Se o servidor que você deseja permitir não estiver na lista, clique em **Adicionar** para adicionar um Editor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um Editor Oracle à lista de Publicadores disponíveis. Se o servidor que você adicionar for o primeiro a usar esse Distribuidor como remoto, você será solicitado a fornecer uma senha de vínculo administrativo.  
+ Se o servidor que você deseja permitir não estiver listado, clique em **Adicionar** para adicionar um Publicador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um Publicador Oracle à lista de Publicadores disponíveis. Se o servidor que você adicionar for o primeiro a usar esse Distribuidor como remoto, você será solicitado a fornecer uma senha de vínculo administrativo.  
   
  **Senha de vínculo administrativo**  
  Use para especificar ou atualizar a senha para a conexão que a replicação faz entre o Publicador e o Distribuidor remoto, usando o logon: **distributor_admin** .  
@@ -90,10 +90,10 @@ Este tópico discute as propriedades encontradas nos **gerais**, **Publicadores*
 -   O agente se conecta ao Publicador usando as credenciais especificadas na caixa de diálogo **Propriedades do Publicador** , disponível na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor** .    
 -   O agente se conecta ao Assinante usando as credenciais especificadas para o Agente de Distribuição no Assistente para Nova Assinatura.  
   
- Para obter mais informações, consulte  \\[Replication Agent Security Model](security/replication-agent-security-model.md). 
+ Para obter mais informações, \\consulte [Replication Agent Security Model](security/replication-agent-security-model.md). 
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar Distribuição](configure-distribution.md)   
  [Exibir e modificar propriedades de Publicador e Distribuidor](view-and-modify-distributor-and-publisher-properties.md)   
 

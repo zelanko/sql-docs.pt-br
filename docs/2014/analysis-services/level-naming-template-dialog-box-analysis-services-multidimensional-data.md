@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo (Analysis Services - dados multidimensionais) do modelo de nomeação de nível | Microsoft Docs
+title: Caixa de diálogo modelo de nomeação de nível (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,25 +15,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: febaae6051e8428d3fed2bb6533ce2c4d972950f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078055"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Modelo de Nomeação de Nível (Analysis Services - Dados Multidimensionais)
-  Use a caixa de diálogo **Modelo de Nomeação de Nível** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para construir o modelo de nomeação de nível para um atributo pai em uma dimensão. Para obter mais informações sobre modelos de nomeação de nível, consulte [Elemento NamingTemplate &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl). Você pode exibir o **modelo de nomeação de nível** caixa de diálogo clicando no botão de reticências ( **...** ) na `NamingTemplate` o valor de uma tradução de um atributo no **detalhes de conversão** painel no **traduções** guia de **Designerdedimensão**.  
+  Use a caixa de diálogo **Modelo de Nomeação de Nível** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para construir o modelo de nomeação de nível para um atributo pai em uma dimensão. Para obter mais informações sobre modelos de nomeação de nível, consulte [Elemento NamingTemplate &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl). Você pode exibir a caixa de diálogo **modelo de nomeação de nível** clicando no botão de reticências (**...**) no `NamingTemplate` valor de uma tradução para um atributo no painel **detalhes da conversão** na guia **traduções** do **Designer de dimensão**.  
   
 ## <a name="options"></a>Opções  
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Definir o modelo de nível**|Exibe uma grade na qual é possível projetar a hierarquia de níveis no atributo pai. A grade contém as seguintes colunas:<br /><br /> **Nível**: Exibe a posição ordinal do nível para o qual o nome especificado em **Nome** é usado. Para adicionar um novo modelo de nomeação para um nível, selecione **Nome** na linha que contém um asterisco (\*) em **Nível**.<br /><br /> **Nome**: Contém o modelo de nomeação usado para o nível indicado em **Nível**. Para adicionar um espaço reservado para a posição ordinal do nível no modelo de nomeação, adicione um único asterisco (*). Para adicionar um asterisco como parte do nome criado pelo modelo de nomeação, adicione dois asteriscos (\*\*).|  
-|**Limpar Tudo**|Selecione para remover todas as linhas em **Definir o modelo de nível**.|  
+|**Definir o modelo de nível**|Exibe uma grade na qual é possível projetar a hierarquia de níveis no atributo pai. A grade contém as seguintes colunas:<br /><br /> **Nível**: exibe a posição ordinal do nível para o qual o nome especificado em **nome** é usado. Para adicionar um novo modelo de nomeação para um nível, selecione **Nome** na linha que contém um asterisco (\*) em **Nível**.<br /><br /> **Nome**: contém o modelo de nomenclatura usado para o nível indicado em **nível**. Para adicionar um espaço reservado para a posição ordinal do nível no modelo de nomeação, adicione um único asterisco (*). Para adicionar um asterisco como parte do nome criado pelo modelo de nomeação, adicione dois asteriscos (\*\*).|  
+|**Apagar tudo**|Selecione para remover todas as linhas em **Definir o modelo de nível**.|  
 |**Resultado**|Exibe o modelo de nomeação de nível construído pela caixa de diálogo.|  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Traduções &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Traduções &#40;o designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

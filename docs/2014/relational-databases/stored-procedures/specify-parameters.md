@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736359"
 ---
 # <a name="specify-parameters"></a>Especificar parâmetros
@@ -63,10 +63,10 @@ GO
  A nomeação explícita dos parâmetros e a atribuição dos valores apropriados a cada parâmetro em uma chamada de procedimento permitem o fornecimento dos parâmetros em qualquer ordem. Por exemplo, se o procedimento **my_proc** espera três parâmetros com os nomes **\@first**, **\@second** e **\@third**, os valores passados ao procedimento podem ser atribuídos aos nomes de parâmetros, como: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  Se um valor de parâmetro for fornecido no formato **\@parameter =** _value_, todos os parâmetros subsequentes deverão ser fornecidos dessa maneira. Se os valores de parâmetros não forem passados no formato **\@parameter =** _value_, os valores deverão ser fornecidos na mesma ordem (da esquerda para a direita) em que os parâmetros serão listados na instrução CREATE PROCEDURE.  
+>  Se um valor de parâmetro for fornecido no formato ** \@parâmetro =**_valor_, todos os parâmetros subsequentes deverão ser fornecidos dessa maneira. Se os valores de parâmetro não forem passados no formato ** \@Parameter =**_Value_, os valores deverão ser fornecidos na ordem idêntica (da esquerda para a direita), pois os parâmetros são listados na instrução CREATE PROCEDURE.  
 > 
 > [!WARNING]
->  Qualquer parâmetro passado no formato **\@parameter =** _value_, com o parâmetro digitado incorretamente, fará com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gere um erro e impedirá a execução do procedimento.  
+>  Qualquer parâmetro passado no formato ** \@Parameter =**_valor_ com o parâmetro grafado incorretamente fará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com que o gere um erro e impeça a execução do procedimento.  
   
 ## <a name="specifying-parameter-data-types"></a>Especificando tipos de dados de parâmetros  
  Parâmetros devem ser definidos com um tipo de dados quando são declarados em uma instrução CREATE PROCEDURE. O tipo de dados de um parâmetro determina o tipo e o intervalo dos valores aceitos pelo parâmetro quando o procedimento é chamado. Por exemplo, se você definir um parâmetro com um tipo de dados `tinyint`, somente valores numéricos no intervalo entre 0 e 255 serão aceitos quando passados para esse parâmetro. Um erro será retornado se um procedimento for executado com um valor incompatível com o tipo de dados.  
@@ -126,7 +126,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Embora seja possível omitir os parâmetros para os quais foram fornecidos padrões, a lista de parâmetros só poderá ser truncada. Por exemplo, se um procedimento tiver cinco parâmetros, o quarto e o quinto parâmetros poderão ser omitidos. Entretanto, o quarto parâmetro não poderá ser ignorado desde que o quinto parâmetro seja incluído, a menos que os parâmetros sejam fornecidos no formato **\@parameter =** _value_.  
+ Embora seja possível omitir os parâmetros para os quais foram fornecidos padrões, a lista de parâmetros só poderá ser truncada. Por exemplo, se um procedimento tiver cinco parâmetros, o quarto e o quinto parâmetros poderão ser omitidos. No entanto, o quarto parâmetro não pode ser ignorado, desde que o quinto parâmetro seja incluído, a menos que os parâmetros sejam fornecidos no formato ** \@parâmetro =**_valor_.  
   
 ## <a name="specifying-parameter-direction"></a>Especificando a direção do parâmetro  
  A direção de um parâmetro é de entrada, em que um valor é passado para o corpo do procedimento armazenado, ou de saída, em que o procedimento retorna um valor ao programa de chamada. O padrão é um parâmetro de entrada.  
@@ -164,10 +164,10 @@ GO
   
 ```  
   
- Execute `usp_GetList` para retornar uma lista de produtos (bicicletas) da [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] que custam menos que $ 700. Os parâmetros OUTPUT **\@cost** e **\@compareprices** são usados com linguagem de controle de fluxo para retornar uma mensagem na janela **Mensagens**.  
+ Execute `usp_GetList` para retornar uma lista de produtos (bicicletas) da [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] que custam menos que $ 700. Os parâmetros ** \@** de saída cost e ** \@ComparePrices** são usados com linguagem de controle de fluxo para retornar uma mensagem na janela **mensagens** .  
   
 > [!NOTE]  
->  A variável OUTPUT deve ser definida durante a criação do procedimento e também durante o uso da variável. O nome de parâmetro e o nome de variável não precisam coincidir. Porém, o tipo de dados e o posicionamento do parâmetro devem ser correspondentes (a menos que **\@listprice=** _variable_ seja usado).  
+>  A variável OUTPUT deve ser definida durante a criação do procedimento e também durante o uso da variável. O nome de parâmetro e o nome de variável não precisam coincidir. No entanto, o tipo de dados e o posicionamento do parâmetro devem corresponder (a menos que ** \@ListPrice =** _Variable_ seja usado).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -202,7 +202,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

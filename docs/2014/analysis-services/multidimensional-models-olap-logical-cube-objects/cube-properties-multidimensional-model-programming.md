@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727642"
 ---
 # <a name="cube-properties"></a>Propriedades do cubo
@@ -44,9 +44,9 @@ ms.locfileid: "62727642"
 > [!NOTE]  
 >  Algumas propriedades são definidas automaticamente na criação do cubo e não podem ser alteradas.  
   
- Para obter mais informações sobre como definir as propriedades do cubo, consulte [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
+ Para obter mais informações sobre como definir propriedades de cubo, consulte [Designer de cubo &#40;Analysis Services&#41;de dados multidimensionais ](../cube-designer-analysis-services-multidimensional-data.md).  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |`AggregationPrefix`|Especifica o prefixo comum usado para nomes de agregação.|  
 |`Collation`|Especifica o identificador de localidade (LCID) e o sinalizador de comparação, separados por um sublinhado: por exemplo, Latin1_General_C1_AS.|  
@@ -58,19 +58,19 @@ ms.locfileid: "62727642"
 |`Language`|Especifica o identificador de idioma padrão do cubo.|  
 |`Name`|Especifica o nome amigável do cubo.|  
 |`ProactiveCaching`|Define configurações de cache pró-ativas para o cubo.|  
-|`ProcessingMode`|Indica se a indexação e a agregação devem ocorrer durante ou após o processamento. As opções são **regular** ou `lazy`.|  
+|`ProcessingMode`|Indica se a indexação e a agregação devem ocorrer durante ou após o processamento. As opções **** são regular `lazy`ou.|  
 |`ProcessingPriority`|Determina a prioridade de processamento do cubo durante as operações em segundo plano, como agregações lentas e indexação. O valor padrão é **0**.|  
-|`ScriptCacheProcessingMode`|Indica se o cache de script deve ser criado durante ou após o processamento. As opções são **regular** e `lazy`.|  
-|`ScriptErrorHandlingMode`|Determina o tratamento de erros. As opções são `IgnoreNone` ou `IgnoreAll`|  
+|`ScriptCacheProcessingMode`|Indica se o cache de script deve ser criado durante ou após o processamento. As opções **** são regular `lazy`e.|  
+|`ScriptErrorHandlingMode`|Determina o tratamento de erros. As opções `IgnoreNone` são ou`IgnoreAll`|  
 |`Source`|Mostra a exibição da fonte de dados usada para o cubo.|  
 |`StorageLocation`|Especifica o local de armazenamento do sistema de arquivos para o cubo. Se nenhum for especificado, o local será herdado do banco de dados que contém o objeto de cubo.|  
-|`StorageMode`|Especifica o modo de armazenamento para o cubo. Os valores são `MOLAP`, `ROLAP`, ou `HOLAP``.`|  
+|`StorageMode`|Especifica o modo de armazenamento para o cubo. Os valores `MOLAP`são `ROLAP`, ou`HOLAP``.`|  
 |`Visible`|Determina a visibilidade do cubo.|  
   
 > [!NOTE]  
->  Para obter mais informações sobre como definir valores para a propriedade ErrorConfiguration ao trabalhar com valores nulos e outros problemas de integridade de dados, consulte [Handling Data Integrity Issues in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Para obter mais informações sobre como definir valores para a Propriedade ErrorConfiguration ao trabalhar com valores nulos e outros problemas de integridade de dados, consulte [tratamento de problemas de integridade de dados no Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cache pró-ativo &#40;partições&#41;](partitions-proactive-caching.md)  
   
   

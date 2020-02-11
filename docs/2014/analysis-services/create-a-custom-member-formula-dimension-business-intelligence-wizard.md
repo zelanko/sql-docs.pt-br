@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3976d9bd4c6f76e9bb970bce280c1e2da0d6fe22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086947"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>Criar uma Fórmula de Membro Personalizado (Dimensão) (Assistente do Business Intelligence)
-  Use o **criar uma fórmula de membro personalizado** página para selecionar uma dimensão ao qual o Assistente de Business Intelligence associará atributos fórmula colunas-colunas de membro personalizado que contêm expressões multidimensionais (MDX) instruções que definem valores de membro para o atributo.  
+  Use a página **criar uma fórmula de membro personalizado** para selecionar uma dimensão à qual o assistente de Business Intelligence associará atributos a colunas de fórmula de membro personalizado-colunas que contêm instruções MDX (Multidimensional Expressions) que definem valores de membro para esse atributo.  
   
 ## <a name="options"></a>Opções  
- **Dimension**  
+ **Dimensão**  
  Selecione a dimensão à qual o Assistente para Dimensões associará atributos contidos na dimensão com fórmulas de membro personalizado.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

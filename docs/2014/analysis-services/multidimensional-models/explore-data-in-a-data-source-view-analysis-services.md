@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: debf1257667ea3aa3380117bbbc4c31399283252
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075127"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Explorar dados em uma exibição da fonte de dados (Analysis Services)
@@ -38,17 +38,17 @@ ms.locfileid: "66075127"
   
 3.  Clique com o botão direito do mouse na tabela, exibição ou consulta nomeada que contém os dados que você deseja exibir e, em seguida, clique em **Explorar Dados**.  
   
-     Os dados fonte subjacente da tabela, exibição ou consulta nomeada na exibição da fonte de dados são consultas e os resultados aparecem na **explorar \<nome do objeto > tabela** guia.  
+     A fonte de dados subjacente à tabela, exibição ou consulta nomeada na exibição da fonte de dados são consultas e os resultados são exibidos na **guia \<explorar o nome do objeto> tabela** .  
   
-4.  Sobre o **explorar \<nome do objeto > tabela** barra de ferramentas, clique no **opções de amostragem** ícone.  
+4.  Na barra de ferramentas **explorar \<o nome do objeto> tabela** , clique no ícone **Opções de amostragem** .  
   
      A caixa de diálogo **Opções de Exploração de Dados** é aberta. Nela você pode especificar o método de amostragem (menos ou mais registros que o tamanho de amostragem padrão de 5000 linhas) ou a contagem de exemplo.  
   
 5.  Clique em **OK** ou em **Cancelar** , conforme apropriado.  
   
-6.  Para criar nova amostra dos dados, clique em **criar nova amostra dos dados** sobre o **explorar \<nome do objeto > tabela** barra de ferramentas.  
+6.  Para reamostrar os dados, clique em **reamostrar dados** na barra de ferramentas **explorar \<o nome do objeto> tabela** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)  
   
   

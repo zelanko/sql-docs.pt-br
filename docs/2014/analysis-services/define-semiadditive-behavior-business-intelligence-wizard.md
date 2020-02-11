@@ -1,5 +1,5 @@
 ---
-title: Definir comportamento Semiaditivo (Assistente de Business Intelligence) | Microsoft Docs
+title: Definir comportamento semiaditivo (Assistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081998"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Definir Comportamento Semiaditivo (Assistente de Business Intelligence)
@@ -29,7 +29,7 @@ ms.locfileid: "66081998"
  **Desativar comportamento semiaditivo**  
  Desabilita comportamento semiaditivo em todas as medidas contidas pelo cubo.  
   
- **O assistente detectou a \<nome da dimensão > dimensão de conta, que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
+ **O assistente detectou \<o nome da dimensão> dimensão de conta, que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
  Habilita comportamento semiaditivo para dimensões de conta que contêm membros semiaditivos. A seleção dessa opção configura a função de agregação de todas as medidas do grupo de medidas que faz referência à dimensão de conta para `ByAccount`.  
   
  Para obter mais informações sobre dimensões de conta, consulte [Criar uma Conta de Finanças de dimensão de tipo pai-filho](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).  
@@ -37,13 +37,13 @@ ms.locfileid: "66081998"
  **Definir comportamento semiaditivo para membros individuais**  
  Habilita comportamento semiaditivo e especifica a função de agregação semiaditiva para medidas específicas. A função de agregação aplica-se a todas as dimensões que são referenciadas pelo grupo de medidas que contém a medida.  
   
- **Medidas**  
+ **medidas**  
  Exibe o nome de uma medida contida pelo cubo.  
   
  **Função semiaditiva**  
  Selecione a função de agregação da medida selecionada. A tabela a seguir lista as funções de agregação disponíveis.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**AverageOfChildren**|Agregada retornando a média dos filhos da medida.|  
 |`ByAccount`|Agregada pela função de agregação associada ao tipo de conta especificado de um atributo em uma dimensão de conta.|  
@@ -55,15 +55,15 @@ ms.locfileid: "66081998"
 |**LastNonEmpty**|Agregado ao retornar o último membro não vazio da medida em uma dimensão de tempo.|  
 |`Max`|Agregada com a função `Max`.|  
 |`Min`|Agregada com a função `Min`.|  
-|**Nenhum**|Nenhuma agregação executada.|  
+|**Nenhuma**|Nenhuma agregação executada.|  
 |`Sum`|Agregada com a função `Sum`.|  
   
 > [!NOTE]  
 >  Seleções feitas para essa opção serão aplicadas apenas se **Definir comportamento semiaditivo para membros individuais** estiver selecionada.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

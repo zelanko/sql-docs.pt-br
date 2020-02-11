@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783236"
 ---
 # <a name="altering-memory-optimized-tables"></a>Alterando tabelas com otimização de memória
@@ -63,13 +63,13 @@ ms.locfileid: "72783236"
     select @permissions  
     ```  
   
-4.  Crie uma cópia da tabela e copie os dados da tabela original na cópia da tabela. A cópia pode ser criada usando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)]<sup>1</sup>.  
+4.  Crie uma cópia da tabela e copie os dados da tabela original na cópia da tabela. A cópia pode ser criada usando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>.  
   
     ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     Se houver memória suficiente disponível, `T_copy` poderá ser uma tabela com otimização de memória, o que torna a cópia de dados mais rápida. <sup>2</sup>  
+     Se houver memória suficiente disponível, `T_copy` o poderá ser uma tabela com otimização de memória, o que torna a cópia de dados mais rápida. <sup>2</sup>  
   
 5.  Descarte os objetos associados ao esquema que fazem referência à tabela original.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72783236"
   
 10. Inicie a carga de trabalho em `T`.  
   
- <sup>1</sup> observe que `T_copy` é persistido no disco neste exemplo. Se um backup de `T` estiver disponível, `T_copy` poderá ser uma tabela temporária ou não durável.  
+ <sup>1</sup> Observe que `T_copy` é persistido no disco neste exemplo. Se um backup de `T` estiver disponível, `T_copy` poderá ser uma tabela temporária ou não durável.  
   
  <sup>2</sup> deve haver memória suficiente para `T_copy`. A memória não é liberada imediatamente em `DROP TABLE`. Se `T_copy` tiver otimização de memória, haverá necessidade de memória suficiente para duas cópias adicionais de `T`. Se `T_copy` for uma tabela baseada em disco, haverá necessidade de memória suficiente apenas para uma cópia adicional de `T`, devido ao coletor de lixo que precisa ser atualizado depois de descartar a versão antiga de `T`.  
   

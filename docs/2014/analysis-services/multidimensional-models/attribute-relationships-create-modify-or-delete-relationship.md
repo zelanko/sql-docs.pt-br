@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e22807ed64cce3bc6f7c186978d4c9ee82c51d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077087"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>Criar, modificar ou excluir uma relação de atributo
@@ -59,7 +59,7 @@ ms.locfileid: "66077087"
   
 3.  Na caixa de diálogo **Excluir Objetos** , clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Relações de Atributo](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

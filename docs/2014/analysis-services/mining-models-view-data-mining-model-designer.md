@@ -1,5 +1,5 @@
 ---
-title: (Designer de modelo de mineração de dados) de exibição de modelos de mineração | Microsoft Docs
+title: Exibição de modelos de mineração (Designer de modelo de mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b698a6c216d4179de414f236fb7d41d6366e470d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077653"
 ---
 # <a name="mining-models-view-data-mining-model-designer"></a>Exibição dos Modelos de Mineração (Designer do Modelo de Mineração de Dados)
@@ -24,12 +24,12 @@ ms.locfileid: "66077653"
   
  A exibição da **Modelos de Mineração** tem as seguintes ferramentas e caixas de diálogo:  
   
--   [Caixa de diálogo de parâmetros do algoritmo &#40;modo de exibição de modelos de mineração&#41;](algorithm-parameters-dialog-box-mining-models-view.md)  
+-   [Caixa de diálogo parâmetros de algoritmo &#40;exibição de modelos de mineração&#41;](algorithm-parameters-dialog-box-mining-models-view.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exibição de estrutura de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Designer do gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Construtor de consultas de previsão &#40;mineração de dados&#41;](prediction-query-builder-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibição de estrutura de mineração &#40;designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Designer de gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](prediction-query-builder-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Conectar-se ao banco de dados Teradata (SSAS) | Microsoft Docs
+title: Conectar-se a um banco de dados Teradata (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc6712598452b1957857509e6b3ff6f659a16c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087184"
 ---
 # <a name="connect-to-a-teradata-database-ssas"></a>Conectar a um banco de dados Teradata (SSAS)

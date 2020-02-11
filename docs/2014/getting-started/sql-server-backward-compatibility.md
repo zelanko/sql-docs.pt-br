@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088512"
 ---
 # <a name="sql-server-backward-compatibility"></a>Compatibilidade com versões anteriores do SQL Server
@@ -22,14 +22,14 @@ ms.locfileid: "66088512"
   
  Os recursos incluídos nesta área de tópico incluem programabilidade de dados, ferramentas de configuração de área da superfície, instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , serviços do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e outras amplas alterações de funcionalidade.  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Recursos preteridos do SQL Server no SQL Server 2014](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|Recursos preteridos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesta versão. Este tópico abrange a configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a funcionalidade de Instalação.|  
-|[Recursos descontinuados do SQL Server no SQL Server 2014](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|Funcionalidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] descontinuada nesta versão. Este tópico abrange a configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a funcionalidade de Instalação.|  
+|[Recursos do SQL Server obsoletos no SQL Server 2014](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|Recursos preteridos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesta versão. Este tópico abrange a configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a funcionalidade de Instalação.|  
+|[Recursos do SQL Server descontinuados no SQL Server 2014](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|Funcionalidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] descontinuada nesta versão. Este tópico abrange a configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a funcionalidade de Instalação.|  
 |[Alterações recentes em recursos do SQL Server no SQL Server 2014](../../2014/getting-started/breaking-changes-to-sql-server-features-in-sql-server-2014.md)|Alterações que podem exigir alterações em aplicativos. Este tópico abrange a configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a funcionalidade de Instalação.|  
-|[Alterações de comportamento em recursos do SQL Server no SQL Server 2014](../../2014/getting-started/behavior-changes-to-sql-server-features-in-sql-server-2014.md)|Alterações comportamentais em recursos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesta versão. Este tópico abrange a configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a funcionalidade de Instalação.|  
+|[Alterações no comportamento de recursos do SQL Server no SQL Server 2014](../../2014/getting-started/behavior-changes-to-sql-server-features-in-sql-server-2014.md)|Alterações comportamentais em recursos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesta versão. Este tópico abrange a configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a funcionalidade de Instalação.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compatibilidade com versões anteriores](../../2014/getting-started/backward-compatibility.md)  
   
   

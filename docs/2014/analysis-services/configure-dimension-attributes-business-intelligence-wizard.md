@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087445"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Configurar Atributos de Dimensão (Assistente de Business Intelligence)
@@ -27,7 +27,7 @@ ms.locfileid: "66087445"
  Exibe o tipo de dimensão selecionado.  
   
 > [!NOTE]  
->  Essa opção não está disponível porque o `Type` propriedade da dimensão não pode ser alterada para um valor diferente de *conta* para dimensões de conta.  
+>  Esta opção não está disponível porque a `Type` propriedade da dimensão não pode ser alterada para um valor diferente de *conta* para dimensões de conta.  
   
  **Atributos de dimensão**  
  Exibe os tipos de atributos válidos que podem ser mapeados para os atributos de dimensão existentes na dimensão.  
@@ -35,10 +35,10 @@ ms.locfileid: "66087445"
  **Incluir**  
  Selecione uma caixa de seleção para incluir o tipo de atributo correspondente na dimensão.  
   
- **Tipo de atributo**  
+ **Tipo de Atributo**  
  Lista os tipos de atributos que podem ser mapeados para os atributos de dimensão existentes na dimensão.  
   
- **Atributo de dimensão**  
+ **Atributo de Dimensão**  
  Selecione o atributo de dimensão que deve ser mapeado para o tipo de atributo correspondente.  
   
  **Definir medidas como semiaditivas com base no tipo de conta**  
@@ -47,9 +47,9 @@ ms.locfileid: "66087445"
 > [!NOTE]  
 >  Essa opção não será exibida se o Assistente de Business Intelligence tiver sido iniciado no Designer de Dimensão ou clicando com o botão direito do mouse em uma dimensão no Gerenciador de Soluções no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

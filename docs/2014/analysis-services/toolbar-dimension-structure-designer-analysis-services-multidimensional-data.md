@@ -1,5 +1,5 @@
 ---
-title: Barra de ferramentas (guia estrutura da dimensão, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Barra de ferramentas (guia estrutura da dimensão, designer de dimensão) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066047"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
@@ -24,7 +24,7 @@ ms.locfileid: "66066047"
  **Adicionar Business Intelligence**  
  Exibe o **Assistente de Business Intelligence** para adicionar recursos de business intelligence.  
   
- **Processar**  
+ **Processo**  
  Exibe a caixa de diálogo **Processo** para processar o objeto.  
   
  **Exibir atributos como**  
@@ -34,7 +34,7 @@ ms.locfileid: "66066047"
   
      Exibe uma lista de atributos para a dimensão atual. Esse é o padrão.  
   
--   trEE  
+-   Árvore  
   
      Exibe uma árvore de atributos para a dimensão atual, com propriedades de membros de um determinado atributo exibido como uma nota subordinada desse atributo.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "66066047"
   
  Clique na seta para baixo para selecionar entre as três opções.  
   
- **Excluir seleção**  
+ **Excluir Seleção**  
  Exclui o objeto atualmente selecionado.  
   
- **Mostrar tabela**  
+ **Mostrar Tabela**  
  Exibe a caixa de diálogo **Mostrar Tabela** para mostrar uma tabela no painel **Exibição da Fonte de Dados** .  
   
- **Ocultar tabela**  
+ **Ocultar Tabela**  
  Clique para ocultar a tabela selecionada no painel **Exibição da Fonte de Dados** .  
   
 > [!NOTE]  

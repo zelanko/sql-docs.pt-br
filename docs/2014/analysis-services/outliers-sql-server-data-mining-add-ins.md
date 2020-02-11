@@ -1,5 +1,5 @@
 ---
-title: Exceções (SQL Server Data Mining Add-ins) | Microsoft Docs
+title: Exceções (SQL Server suplementos de mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3043c8f63433396f059f5c456512ad4ba2bffd93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072142"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>Exceções (Suplementos de Mineração de Dados do SQL Server)
-  ![Assistente de exceções na faixa de opções mineração de dados](media/dmc-outliers.gif "Assistente de exceções na faixa de opções mineração de dados")  
+  ![Assistente de Exceções na faixa de opções Mineração de Dados](media/dmc-outliers.gif "Assistente de Exceções na faixa de opções Mineração de Dados")  
   
- Uma *outlier* significa um valor de dados que é problemático por qualquer um dos seguintes motivos:  
+ Uma *exceção* significa um valor de dados que é problemático por qualquer um dos seguintes motivos:  
   
 -   O valor está fora do intervalo esperado.  
   
@@ -40,19 +40,19 @@ ms.locfileid: "66072142"
  O Cliente de Mineração de Dados para Excel o ajuda a detectar esses dados e atualiza ou elimina os valores. Por exemplo, você pode substituir exceções por uma média aritmética ou excluir linhas que contenham valores potencialmente errados.  
   
 ## <a name="handling-outliers"></a>Manipulando exceções  
- O **remover exceções** assistente oferece várias ferramentas para manipular exceções corretamente:  
+ O assistente para **remover exceções** oferece várias ferramentas para lidar com exceções adequadamente:  
   
 -   Primeiro, você pode explorar os dados para entender melhor a distribuição dos valores e a relação das exceções para outros dados.  
   
-     Por exemplo, você pode usar o **explorar dados** tarefa para examinar e corrigir os valores. O **remover exceções** assistente também exibe um gráfico, uma linha ou um gráfico de barras, para ajudá-lo a entender a distribuição de todos os valores.  
+     Por exemplo, você pode usar a tarefa **explorar dados** para revisar e corrigir os valores. O assistente para **remover exceções** também exibe um gráfico, uma linha ou um gráfico de barras, para ajudá-lo a entender a distribuição de todos os valores.  
   
--   Em seguida, você pode usar o **exceções** Assistente para remover ou alterar exceções. O método usado depende se os valores são discretos ou contínuos.  
+-   Em seguida, você pode usar o assistente de **exceções** para remover ou alterar exceções. O método usado depende se os valores são discretos ou contínuos.  
   
      O assistente exibe valores discretos em um gráfico de barras, no qual cada barra representa um valor específico, e a altura da barra indica o número de casos de cada valor. Ao deslizar o controle de limite no gráfico, você pode remover barras que representam grupos de valores potencial ou extremamente incorretos.  
   
 -   O assistente exibe valores contínuos em um gráfico de barras ou linha. No gráfico de linha, o valor é representado no eixo x e a contagem de valores no eixo y.  
   
-     Você pode controlar se deseja remover ou manter valores nas extremidades baixos e altas do gráfico alterando a **mínimo** e **máximo** valores ou deslizando as barras. À medida que você altera as configurações de valores mínimo e máximo, os dados que serão suprimidos são mostrados pelo sombreamento no grafo.  
+     Você pode controlar se deseja remover ou manter os valores nas extremidades inferior e superior do gráfico, alterando os valores **mínimo** e **máximo** , ou deslizando as barras. À medida que você altera as configurações de valores mínimo e máximo, os dados que serão suprimidos são mostrados pelo sombreamento no grafo.  
   
  Depois que você tiver selecionado com quais exceções trabalhar, informe ao assistente como manipular as exceções. Você pode excluir as linhas que contêm os valores de exceção ou especificar um valor de substituição, como um valor médio, nulo ou outro de sua escolha.  
   
@@ -60,30 +60,30 @@ ms.locfileid: "66072142"
   
 ### <a name="using-the-outlier-wizard"></a>Usando o Assistente de Exceções  
   
-1.  No **Data Mining** faixa de opções, clique em **limpar dados**e selecione **exceções**.  
+1.  Na faixa de opções **mineração de dados** , clique em **limpar dados**e selecione **exceções**.  
   
-2.  No **Selecionar fonte de dados** caixa de diálogo, selecione uma tabela de dados do Excel ou um intervalo de células e clique em **próxima**.  
+2.  Na caixa de diálogo **selecionar dados de origem** , selecione uma tabela de dados do Excel ou um intervalo de células e clique em **Avançar**.  
   
     > [!WARNING]  
-    >  Não é possível usar o **exceções** assistente em dados externos, a menos que você copiá-lo para o Excel pela primeira vez.  
+    >  Você não pode usar o assistente de **exceções** em dados externos, a menos que você o copie para o Excel primeiro.  
   
-3.  No **Selecionar coluna** caixa de diálogo, selecione uma **único** coluna.  
+3.  Na caixa de diálogo **Selecionar coluna** , selecione uma **única** coluna.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
-4.  No **especificar limites** caixa de diálogo caixa, examine a distribuição de dados.  
+4.  Na caixa de diálogo **especificar limites** , examine a distribuição de dados.  
   
     -   Se a coluna contiver valores discretos, o assistente exibirá um histograma contendo a contagem de cada valor discreto.  
   
-         Supondo que as exceções são valores raros, você pode filtrá-los fora, alterando a **mínimo** valor.  
+         Supondo que as exceções sejam raras, você pode filtrá-las alterando o valor **mínimo** .  
   
-    -   Se a coluna contiver dados numéricos, você pode clicar na **exibir como discreto** botão ou o **exibir como numérico** botão para alternar entre a exibição dos valores em um gráfico de barras ou linha.  
+    -   Se a coluna contiver dados numéricos, você poderá clicar no botão **Exibir como discreto** ou **Exibir como botão numérico** para alternar entre a exibição dos valores em um gráfico de barras ou em um gráfico de linhas.  
   
-5.  No **especificar limites** caixa de diálogo, escolha o intervalo de dados que você deseja manter digitando um valor mínimo e máximo ou arrastando as barras de controle deslizante. Clique em **Avançar**.  
+5.  Na caixa de diálogo **especificar limites** , escolha o intervalo de dados que você deseja manter digitando um valor mínimo e máximo ou arrastando as barras de controle deslizante. Clique em **Próximo**.  
   
-6.  No **manipulação de exceção** diálogo caixa, especifique se deseja que os valores sejam excluídos ou substituídos e clique em **próxima**.  
+6.  Na caixa de diálogo **tratamento** de exceções, especifique se deseja que os valores sejam excluídos ou substituídos e clique em **Avançar**.  
   
-7.  No **Selecionar destino** caixa de diálogo, especifique onde deseja que os novos dados a serem salvos.  
+7.  Na caixa de diálogo **Selecionar destino** , especifique onde você deseja que os novos dados sejam salvos.  
   
 ### <a name="related-options"></a>Opções relacionadas  
  O assistente fornece as seguintes opções:  
@@ -91,10 +91,10 @@ ms.locfileid: "66072142"
 |**Opções**|**Comentário**|  
 |-----------------|-----------------|  
 |**Selecionar coluna**|Você pode trabalhar somente com uma coluna por vez.|  
-|**Especificar tratamento de limites**|Defina um limite usando **mínimo** para excluir os valores que são encontrados em menos linhas do que o valor de limite.<br /><br /> Inicialmente, o valor em **mínimo** é igual ao valor com o menor número de linhas, e você não pode fazer com que o mínimo menor que esse valor.|  
-|**Manipulação de exceções**|Se você decidir excluir exceções, poderá alterar os dados na planilha atual ou criar uma cópia dos dados em uma nova planilha.|  
+|**Especificar tratamento de limites**|Defina um limite usando o **mínimo** para excluir valores que são encontrados em menos linhas do que o valor do limite.<br /><br /> Inicialmente, o valor no **mínimo** é igual ao valor com menos linhas, e você não pode tornar o mínimo menor que esse valor.|  
+|**Manipulação de Exceções**|Se você decidir excluir exceções, poderá alterar os dados na planilha atual ou criar uma cópia dos dados em uma nova planilha.|  
   
-## <a name="see-also"></a>Consulte também  
- [Explorar dados &#40;suplementos de mineração de dados do SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Explorar dados &#40;SQL Server suplementos de mineração de dados&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
   

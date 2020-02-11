@@ -1,5 +1,5 @@
 ---
-title: (Mineração de dados) de tipos de conteúdo | Microsoft Docs
+title: Tipos de conteúdo (mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -27,14 +27,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085657"
 ---
 # <a name="content-types-data-mining"></a>Tipos de conteúdo (mineração de dados)
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode definir o tipo de dados físico para uma coluna em uma estrutura de mineração e um tipo de conteúdo lógico para a coluna quando usada em um modelo.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode definir o tipo de dados físico para uma coluna em uma estrutura de mineração e um tipo de conteúdo lógico para a coluna quando usado em um modelo,  
   
  O *tipo de dados* determina como os algoritmos processarão os dados nessas colunas quando você criar modelos de mineração. A definição do tipo de dados de uma coluna dá ao algoritmo informações sobre o tipo de dados nas colunas e como processar os dados. Cada tipo de dados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a um ou mais tipos de conteúdo de mineração de dados.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66085657"
  A lista a seguir descreve os tipos de conteúdo usados na mineração de dados e identifica os tipos de dados que oferecem suporte para cada tipo.  
   
 ## <a name="discrete"></a>Discreto  
- *Discreto* significa que a coluna contém um número finito de valores sem continuidade entre eles. Por exemplo, uma coluna de gênero é uma coluna típica do atributo discreto, pois os dados representam um número específico de categorias.  
+ *Discreto* significa que a coluna contém um número finito de valores sem continuidade entre valores. Por exemplo, uma coluna de gênero é uma coluna típica do atributo discreto, pois os dados representam um número específico de categorias.  
   
  Os valores em uma coluna de atributo discreto não podem envolver ordenação, mesmo que os valores sejam numéricos. Além disso, mesmo que os valores usados na coluna discreta sejam numéricos, não será possível calcular valores fracionários. Os códigos de área de telefone são um bom exemplo de dados numéricos discretos.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66085657"
  O tipo de conteúdo `Continuous` é suportado pelos seguintes tipos de dados: `Date`, `Double` e `Long`.  
   
 ## <a name="discretized"></a>Discretizado  
- *Discretização* é o processo que coloca valores de um conjunto contínuo de dados em buckets de modo a ter um número limitado de valores possíveis. É possível discretizar apenas dados numéricos.  
+ *Discretização* é o processo de colocar valores de um conjunto contínuo de dados em buckets para que haja um número limitado de valores possíveis. É possível discretizar apenas dados numéricos.  
   
  Assim, o tipo de conteúdo *discretized* indica que a coluna contém valores que representam grupos ou recipientes de valores que são derivados de uma coluna contínua. Os blocos são tratados como valores ordenados e discretos.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66085657"
   
  Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: `Double`, `Long` e `Date`.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Tabela  
  O tipo de conteúdo *table* indica que a coluna contém outra tabela de dados, com uma ou mais colunas e uma ou mais linhas. Para uma linha específica da tabela de casos, essa coluna pode conter diversos valores, todos relacionados ao registro de casos pai. Por exemplo, se a tabela de casos principal contiver uma lista de clientes, você poderá ter várias colunas contendo tabelas aninhadas, como uma coluna **ProductsPurchased** , onde a tabela aninhada lista os produtos comprados por esse cliente no passado, e a coluna **Hobbies** que lista os interesses do cliente.  
   
  O tipo de dados dessa coluna é sempre `Table`.  
@@ -101,7 +101,7 @@ ms.locfileid: "66085657"
   
  Esse tipo de conteúdo é suportado por todos os tipos mineração de dados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. No entanto, a maioria dos algoritmos trata valores cíclicos como valores discretos e não executa processamento especial.  
   
-## <a name="ordered"></a>Ordered  
+## <a name="ordered"></a>Encomendado  
  O tipo de conteúdo *Ordered* também indica que a coluna contém valores que definem uma sequência ou ordem. No entanto, nesse tipo de conteúdo, os valores usados na ordenação não implicam nenhuma relação de distância ou magnitude entre os valores do conjunto. Por exemplo, se a coluna de atributo ordenada contiver informações sobre os níveis de habilidades em ordem de classificação de um a cinco, não há informações insinuadas na distância entre os níveis de habilidades, um nível de habilidades de cinco não é necessariamente cinco vezes melhor que um nível de habilidades de nível um.  
   
  As colunas de atributo ordenada são consideradas discretas em termos de tipo de conteúdo.  
@@ -111,10 +111,10 @@ ms.locfileid: "66085657"
 ## <a name="classified"></a>Classificados  
  Além dos tipos de conteúdo anteriores, usados normalmente com todos os modelos, você pode usar colunas classificadas para definir os tipos de conteúdo para alguns tipos de dados. Para obter mais informações sobre as colunas classificadas, consulte [Colunas classificadas &#40;Mineração de dados&#41;](classified-columns-data-mining.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de conteúdo &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Tipos de dados &#40;Mineração de dados&#41;](data-types-data-mining.md)   
- [Tipos de dados &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
+## <a name="see-also"></a>Consulte Também  
+ [Tipos de conteúdo &#40;&#41;DMX](/sql/dmx/content-types-dmx)   
+ [Tipos de dados &#40;mineração de dados&#41;](data-types-data-mining.md)   
+ [Tipos de dados &#40;&#41;DMX](/sql/dmx/data-types-dmx)   
  [Alterar as propriedades de uma estrutura de mineração](change-the-properties-of-a-mining-structure.md)   
  [Colunas da estrutura de mineração](mining-structure-columns.md)  
   

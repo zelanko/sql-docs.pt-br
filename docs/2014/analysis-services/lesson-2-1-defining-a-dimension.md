@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079092"
 ---
 # <a name="defining-a-dimension"></a>Definindo uma dimensão
@@ -35,37 +35,37 @@ ms.locfileid: "66079092"
   
 5.  Na lista **Tabela principal** , selecione **Date**.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 7.  Na página **Selecionar Atributos de Dimensão** , marque as caixas de seleção dos seguintes atributos:  
   
-    -   **Chave de Data**  
+    -   **Chave de data**  
   
-    -   **Chave Alternativa de Data Completa**  
+    -   **Chave alternativa de data completa**  
   
-    -   **Nome do Mês em Inglês**  
+    -   **Nome do mês Inglês**  
   
-    -   **Calendar Quarter**  
+    -   **Trimestre do calendário**  
   
-    -   **Calendar Year**  
+    -   **Ano civil**  
   
-    -   **Calendar Semester**  
+    -   **Semestre civil**  
   
-8.  Altere a configuração da coluna **Tipo de Atributo** do atributo **Full Date Alternate Key** de **Regular** para **Date**. Para fazer isso, clique em **Regular** na coluna **Tipo de Atributo** . Em seguida, clique na seta para expandir as opções. Em seguida, clique em **Data** > **Calendário** > **Data**. Clique em **OK**. Repita essas etapas para alterar o tipo de atributo dos atributos da seguinte maneira:  
+8.  Altere a configuração da coluna **Tipo de Atributo** do atributo **Full Date Alternate Key** de **Regular** para **Date**. Para fazer isso, clique em **Regular** na coluna **Tipo de Atributo** . Em seguida, clique na seta para expandir as opções. Em seguida, clique**em data do****calendário** > de **Data** > . Clique em **OK**. Repita essas etapas para alterar o tipo de atributo dos atributos da seguinte maneira:  
   
-    -   **English Month Name** para **Month**  
+    -   **Nome do mês Inglês** para **mês**  
   
-    -   **Calendar Quarter** para **Quarter**  
+    -   **Calendário trimestre** a **trimestre**  
   
-    -   **Ano Civil** para **Ano**  
+    -   **Ano civil** para **ano**  
   
-    -   **Calendar Semester** para **Half Year**  
+    -   **Semestre do calendário** ao **semestre**  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 10. Na página **Concluindo o Assistente** , no painel Visualização, é possível ver a dimensão **Data** e seus atributos.  
   
-11. Clique em **Concluir** para concluir o assistente.  
+11. Clique em **Concluir** para finalizar o assistente.  
   
      No Gerenciador de Soluções, no projeto Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , a dimensão Data é exibida na pasta **Dimensões** . No centro do ambiente de desenvolvimento, o Designer de Dimensão exibe a dimensão Data.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66079092"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definindo um cubo](lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Criar uma dimensão usando uma tabela existente](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [Criar uma dimensão usando o Assistente para Dimensões](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  

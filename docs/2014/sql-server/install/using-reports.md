@@ -36,22 +36,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091226"
 ---
 # <a name="using-reports"></a>Usando relatórios
-  Um relatório único é gerado para cada componente e, se necessário, para cada instância analisada pelo Assistente para Análise do Supervisor de Atualização em um servidor. O relatório fornece detalhes sobre problemas conhecidos que podem afetar uma atualização. Ele também fornece links para informações e ações sugeridas para solucionar os problemas identificados.  
+  Um relatório único é gerado para cada componente e, se necessário, para cada instância analisada pelo Assistente para Análise do Supervisor de Atualização em um servidor. O relatório fornece detalhes sobre problemas conhecidos que podem afetar uma atualização. Ele também fornece links para informações e ações sugeridas para resolver os problemas identificados.  
   
 > [!NOTE]  
->  Se o Visualizador de relatórios do Supervisor de atualização não localizar todos os relatórios no diretório de relatórios padrão, você pode carregar um relatório de um diretório diferente usando o **abrir relatório** link.  
+>  Se o Visualizador de relatórios do supervisor de atualização não encontrar relatórios no diretório de relatórios padrão, você poderá carregar um relatório de um diretório diferente usando o link **abrir relatório** .  
   
 ## <a name="viewing-reports"></a>Exibindo relatórios  
- O Visualizador de Relatórios do Supervisor de Atualização é usado para exibir relatórios do Supervisor de Atualização. Para exibir relatórios, na página inicial do Supervisor de atualização, clique em **iniciar o Visualizador de relatórios de Supervisor de atualização**.  
+ O Visualizador de Relatórios do Supervisor de Atualização é usado para exibir relatórios do Supervisor de Atualização. Para exibir relatórios, na página inicial do supervisor de atualização, clique em **Iniciar Visualizador de relatórios do supervisor de atualização**.  
   
- Depois de carregar um relatório no servidor, você pode selecionar um componente para o qual deseja verificar os problemas de atualização. Você pode aplicar um filtro a partir de **filtrar por** caixa para ver o seguinte:  
+ Depois de carregar um relatório no servidor, você pode selecionar um componente para o qual deseja verificar os problemas de atualização. Você pode aplicar um filtro da caixa **Filtrar por** para ver o seguinte:  
   
 -   Todos os problemas  
   
@@ -65,27 +65,27 @@ ms.locfileid: "66091226"
   
 -   Problemas não resolvidos  
   
- Se o relatório tiver mais de 20 problemas, você pode mover para o grupo anterior ou seguinte de problemas clicando **próximos 20** ou **20 anteriores** na parte superior ou inferior da lista de problemas.  
+ Se o relatório tiver mais de 20 problemas, você poderá ir para o grupo de problemas seguinte ou anterior clicando em **avançar 20** ou **20** na parte superior ou inferior da lista de problemas.  
   
- Você pode exibir até cinco relatórios salvos selecionando os relatórios a partir de **relatório** caixa de listagem suspensa. Os relatórios são listados pelo carimbo de data/hora de quando foram gerados.  
+ Você pode exibir até cinco relatórios salvos selecionando os relatórios na caixa de listagem suspensa **relatório** . Os relatórios são listados pelo carimbo de data/hora de quando foram gerados.  
   
 ## <a name="report-format"></a>Formato de relatório  
  O visualizador de relatórios exibe os problemas em três colunas. Cada problema pode ser recolhido para que você possa ocultar a descrição ou exibir apenas informações fundamentais.  
   
- A primeira coluna é o **importância** coluna. Os ícones indicam a importância de cada problema. Um círculo vermelho com um X indica problemas importantes ou que podem impedir a atualização; um triângulo amarelo com um ponto de exclamação indica problemas com avisos ou informações. A segunda coluna, **quando corrigir**, indica quando você deve solucionar o problema. Você pode classificar o relatório pela **importância** ou **quando corrigir** coluna. A terceira coluna, **descrição**, lista o título do problema.  
+ A primeira coluna é a coluna **importância** . Os ícones indicam a importância de cada problema. Um círculo vermelho com um X indica problemas importantes ou que podem impedir a atualização; um triângulo amarelo com um ponto de exclamação indica problemas com avisos ou informações. A segunda coluna, **quando corrigir**, indica quando você deve resolver o problema. Você pode classificar o relatório sobre a coluna **importância** ou **quando corrigir** . A terceira coluna, **Descrição**, lista o título do problema.  
   
- É possível expandir um problema para exibir informações adicionais, um link para informações detalhadas sobre como solucionar o problema e um link para exibir detalhes do problema. Ao clicar no link para acessar informações detalhadas do problema, o tópico da Ajuda com informações sobre o problema e instruções para solucioná-lo é exibido. Depois de corrigir um problema ou para gerenciar seus itens de ação, você pode marcar como concluído, selecionando o **esse problema foi resolvido** caixa de seleção. Se você quiser remover os problemas resolvidos da lista de problemas de atualização, clique em **Refresh**. O problema não seja exibido novamente até que você execute o Assistente de análise do Supervisor de atualização no mesmo componente ou aplica a **problemas resolvidos** filtrar a partir de **filtrar por** opção.  
+ É possível expandir um problema para exibir informações adicionais, um link para informações detalhadas sobre como solucionar o problema e um link para exibir detalhes do problema. Ao clicar no link para acessar informações detalhadas do problema, o tópico da Ajuda com informações sobre o problema e instruções para solucioná-lo é exibido. Depois de corrigir um problema, ou de gerenciar seus itens de ação, você pode marcar problemas como concluídos marcando a caixa de seleção **este problema foi resolvido** . Se você quiser remover os problemas resolvidos da lista de problemas de atualização, clique em **Atualizar**. O problema não é exibido novamente até que você execute o assistente de análise do supervisor de atualização no mesmo componente ou aplique o filtro **problemas resolvidos** da opção **Filtrar por** .  
   
 ## <a name="report-files"></a>Arquivos de relatório  
- O Assistente de análise do Supervisor de atualização cria relatórios em Meus documentos\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports diretório e cria um subdiretório para cada servidor que você analisa. Os arquivos de relatório estão no formato XML e seguem uma convenção de nomenclatura específica. Quando você inicia o Visualizador de Relatórios do Supervisor de Atualização, os arquivos de relatório do diretório padrão são exibidos. Se você copiar arquivos de relatório para essa pasta, eles deverão seguir a mesma convenção de nomenclatura ou o visualizador de relatórios não irá exibi-los automaticamente.  
+ O assistente de análise do supervisor de atualização cria relatórios no\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório meus documentos upgrade Advisor\110\Reports e cria um subdiretório para cada servidor que você analisa. Os arquivos de relatório estão no formato XML e seguem uma convenção de nomenclatura específica. Quando você inicia o Visualizador de Relatórios do Supervisor de Atualização, os arquivos de relatório do diretório padrão são exibidos. Se você copiar arquivos de relatório para essa pasta, eles deverão seguir a mesma convenção de nomenclatura ou o visualizador de relatórios não irá exibi-los automaticamente.  
   
  Se você quiser compartilhar a informações com outras pessoas, poderá enviar-lhes o relatório XML. Se preferir usar outro aplicativo, basta exportar o relatório para um arquivo CSV que pode ser usado para criar uma planilha, um arquivo de texto ou uma mensagem de email.  
   
-## <a name="see-also"></a>Consulte também  
- [Como: Exibir um relatório do Supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
- [Como: Exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Como: Filtrar relatórios](../../../2014/sql-server/install/how-to-filter-reports.md)   
- [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Como exibir um relatório do supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+ [Como: exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Como filtrar relatórios](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [Resolvendo problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

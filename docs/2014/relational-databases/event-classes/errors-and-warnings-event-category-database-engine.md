@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b86b68b0e7273a275c8dd1bd00fe99a7c462a27d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662622"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Categoria de eventos de erros e de avisos (Mecanismo de Banco de Dados)
@@ -28,7 +28,7 @@ ms.locfileid: "62662622"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento Attention](attention-event-class.md)|Indica que ocorreu um evento **Atenção** .|  
 |[Classe de evento Background Job Error](background-job-error-event-class.md)|Indica que uma tarefa em segundo plano terminou de forma anormal.|  
@@ -46,7 +46,7 @@ ms.locfileid: "62662622"
 |[Classe de evento Sort Warnings](sort-warnings-event-class.md)|Indica que operações de classificação não cabem na memória.|  
 |[Classe de evento User Error Message](user-error-message-event-class.md)|Exibe mensagens de erro que são vistas pelo usuário.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Alterar a diferenciação de uma coluna em um modelo de mineração | Microsoft Docs
+title: Alterar o discretização de uma coluna em um modelo de mineração | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085902"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Alterar a diferenciação de uma coluna em um modelo de mineração
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discretiza automaticamente valores-ou seja, ele agrupamentos de dados numéricos na coluna determinados cenários. Por exemplo, se seus dados contêm dados numéricos contínuos e você cria um modelo de árvore de decisão, cada coluna de dados contínuos é compartimentalizada automaticamente, dependendo da distribuição dos dados. Para controlar o modo como os dados são diferenciados, altere as propriedades na coluna da estrutura de mineração que controla como os dados são usados no modelo.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]discretiza valores automaticamente – ou seja, ele faz a trificação de dados em uma coluna numérica em determinados cenários. Por exemplo, se seus dados contêm dados numéricos contínuos e você cria um modelo de árvore de decisão, cada coluna de dados contínuos é compartimentalizada automaticamente, dependendo da distribuição dos dados. Para controlar o modo como os dados são diferenciados, altere as propriedades na coluna da estrutura de mineração que controla como os dados são usados no modelo.  
   
  Para obter informações gerais sobre como definir as propriedades em um modelo de mineração, consulte [Colunas do modelo de mineração](mining-model-columns.md).  
   
@@ -39,14 +39,14 @@ ms.locfileid: "66085902"
   
 ### <a name="to-change-the-discretization-method"></a>Para alterar o método de diferenciação  
   
-1.  No **propriedades de mineração** , clique na caixa de texto ao lado **conteúdo**e selecione `Discretized` na lista suspensa.  
+1.  Na janela **Propriedades de mineração** , clique na caixa de texto ao lado de **conteúdo**e `Discretized` selecione na lista suspensa.  
   
      A janela <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> e <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> agora estão habilitadas.  
   
-2.  No **propriedades** , clique na caixa de texto ao lado <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> e selecione um dos seguintes valores: `Automatic`, `EqualAreas`, ou `Cluster`.  
+2.  Na janela **Propriedades** , clique na caixa de texto ao lado <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> de e selecione um dos seguintes valores: `Automatic`, `EqualAreas`ou `Cluster`.  
   
     > [!NOTE]  
-    >  Se o uso da coluna for definido como `Ignore`, o **propriedades** janela para a coluna está em branco.  
+    >  Se o uso da coluna for definido `Ignore`como, a janela **Propriedades** da coluna ficará em branco.  
   
      O novo valor entrará em vigor quando você selecionar um elemento diferente no designer.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66085902"
     > [!NOTE]  
     >  Se alterar essas propriedades, a estrutura deve ser reprocessada juntamente com quaisquer modelos no quais você queira usar a nova configuração.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)  
   
   

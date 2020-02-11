@@ -1,5 +1,5 @@
 ---
-title: Gerenciando serviços de tópicos de instruções (SQL Server Configuration Manager) | Microsoft Docs
+title: Tópicos de instruções sobre gerenciamento de serviços (SQL Server Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e376b59404b6666a142c66cb96265fd66076ea3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064639"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>Tópicos de instruções sobre gerenciamento de serviços (SQL Server Configuration Manager)
@@ -24,17 +24,17 @@ ms.locfileid: "66064639"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Conectar-se a um outro computador &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-connect-to-another-computer.md)  
+-   [Conectar a outro computador &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-connect-to-another-computer.md)  
   
 -   [Definir uma instância do SQL Server para iniciar automaticamente &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
 -   [Impedir a inicialização automática de uma instância do SQL Server &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
--   [Alterar a conta de inicialização do serviço SQL Server &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
+-   [Altere a conta de inicialização do serviço para SQL Server &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
   
 -   [Configurar opções de inicialização do servidor &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-configure-server-startup-options.md)  
   
--   [Alterar a senha das contas usadas pelo SQL Server &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+-   [Altere a senha das contas usadas pelo SQL Server &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
 -   [Configurar logs de erros do SQL Server](configure-windows/scm-services-configure-sql-server-error-logs.md)  
   

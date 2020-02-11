@@ -1,5 +1,5 @@
 ---
-title: Selecione uma fonte de dados (Assistente para objetos vinculados) | Microsoft Docs
+title: Selecionar uma fonte de dados (Assistente para objetos vinculados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a103e3e81283badbee236d2c38e2809d36664d9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069758"
 ---
 # <a name="select-a-data-source-linked-object-wizard"></a>Selecionar uma Fonte de Dados (Assistente para Objetos Vinculados)

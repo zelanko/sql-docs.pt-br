@@ -1,5 +1,5 @@
 ---
-title: Definir comportamento Semiaditivo | Microsoft Docs
+title: Definir comportamento semiaditivo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075535"
 ---
 # <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo
@@ -48,11 +48,11 @@ ms.locfileid: "66075535"
   
 -   Primeiro Filho Não Vazio  
   
--   None  
+-   Nenhum  
   
- Essa opção não altera as medidas com uma função de agregação regular: `Sum`, `Min`, `Max`, `Count`, ou `Distinct``Count`.  
+ Essa opção não altera as medidas com uma função de agregação `Sum`regular `Min`: `Max`, `Count`,, `Distinct``Count`ou.  
   
- **O assistente detectou a ' conta "dimensão de conta, que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
+ **O assistente detectou a dimensão de conta ' account ', que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
  Faz com que o sistema configure todas as medidas de um grupo de medidas de uma dimensão por uma dimensão do tipo Conta para a função de agregação Por Conta e o servidor agregará os membros da dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.  
   
 > [!NOTE]  
@@ -66,11 +66,11 @@ ms.locfileid: "66075535"
   
  Para cada medida, você pode selecionar um dos tipos de funcionalidade semiaditiva descritos na tabela a seguir.  
   
-|Função semiaditiva|Descrição|  
+|Função semiaditiva|DESCRIÇÃO|  
 |---------------------------|-----------------|  
 |Average of Children|A agregação de um membro é a média de seus filhos.|  
 |ByAccount|O sistema lê o comportamento de semiaditivo especificado para o tipo de conta.|  
-|Count|A agregação é uma contagem de membros.|  
+|Contagem|A agregação é uma contagem de membros.|  
 |Contagem Distinta|A agregação é uma contagem de membros exclusivos.|  
 |First Child|O valor do membro é avaliado como o valor de seu primeiro filho juntamente com a dimensão de tempo.|  
 |FirstNonEmpty|O valor do membro é avaliado como o valor de seu primeiro filho juntamente com a dimensão que contém dados.|  
@@ -78,7 +78,7 @@ ms.locfileid: "66075535"
 |LastNonEmpty|O valor do membro é avaliado como o valor de seu último filho juntamente com a dimensão que contém dados.|  
 |Max|A função de agregação máxima é aplicada.|  
 |Mín|A função de agregação mínima é aplicada.|  
-|None|Nenhuma agregação é aplicada.|  
+|Nenhum|Nenhuma agregação é aplicada.|  
 |SUM|A função de soma padrão é aplicada.|  
   
  Qualquer comportamento semiaditivo existente será substituído quando você concluir o assistente.  

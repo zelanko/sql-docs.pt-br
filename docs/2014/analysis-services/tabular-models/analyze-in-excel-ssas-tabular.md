@@ -1,5 +1,5 @@
 ---
-title: Analisar no Excel (SSAS Tabular) | Microsoft Docs
+title: Analisar no Excel (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067685"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analisar no Excel (SSAS tabular)
@@ -38,7 +38,7 @@ ms.locfileid: "66067685"
   
  Ao usar o recurso Analisar no Excel, por padrão, a conta de usuário atualmente conectada é o usuário efetivo. Esta conta é geralmente um Administrador sem restrições de exibição para objetos modelo ou dados. Porém, você pode especificar um nome de usuário ou função efetivo diferente. Isto permite que você navegue em um projeto de modelo no Excel dentro do contexto de um usuário ou função específico. Especificar o usuário efetivo inclui as opções a seguir:  
   
- **Usuário do Windows atual**  
+ **Usuário atual do Windows**  
  Usa a conta de usuário com a qual você está conectado atualmente.  
   
  **Outro usuário do Windows**  
@@ -53,11 +53,11 @@ ms.locfileid: "66067685"
   
 |**Tópico**|**Descrição**|  
 |---------------|---------------------|  
-|[Analisar um modelo de tabela no Excel &#40;SSAS de Tabela&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|Esse tópico descreve como usar o recurso Analisar no Excel no designer de modelo para abrir o Excel, criar uma conexão da fonte de dados para o banco de dados de workspace modelo e adicionar uma Tabela Dinâmica à planilha.|  
+|[Analisar um modelo de tabela no Excel &#40;SSAS de tabela&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|Esse tópico descreve como usar o recurso Analisar no Excel no designer de modelo para abrir o Excel, criar uma conexão da fonte de dados para o banco de dados de workspace modelo e adicionar uma Tabela Dinâmica à planilha.|  
   
-## <a name="see-also"></a>Consulte também  
- [Analisar um modelo de tabela no Excel &#40;SSAS de Tabela&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
- [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)   
- [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analisar um modelo de tabela no Excel &#40;SSAS de tabela&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
+ [Funções &#40;SSAS de tabela&#41;](roles-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS de tabela&#41;](perspectives-ssas-tabular.md)  
   
   

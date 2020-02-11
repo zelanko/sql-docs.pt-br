@@ -1,5 +1,5 @@
 ---
-title: Selecionar tabelas e exibições (Feeds de dados) (SSAS) | Microsoft Docs
+title: Selecionar tabelas e exibições (feeds de dados) (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82fcf08a84a06d33c33a520ce351f6c685092a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069276"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>Selecionar tabelas e exibições (feeds de dados) (SSAS)
@@ -42,10 +42,10 @@ ms.locfileid: "66069276"
  **Detalhes do Filtro**  
  Exibe o filtro de importação de dados na caixa de diálogo **Detalhes do filtro** quando um filtro é aplicado aos dados sendo importados. Para obter mais informações, consulte [Detalhes do filtro &#40;SSAS&#41;](filter-details-ssas.md).  
   
- **Visualizar e filtrar**  
+ **Visualização e Filtro**  
  Exibe a caixa de diálogo **Visualizar Tabela Selecionada**, que é usada para aplicar um filtro aos dados que estão sendo importados. Para obter mais informações, consulte [Visualizar Tabela Selecionada &#40;SSAS&#41;](preview-selected-table-ssas.md).  
   
- **Selecionar tabelas relacionadas**  
+ **Selecionar Tabelas Relacionadas**  
  Selecione as tabelas relacionadas às tabelas e exibições que você selecionou.  
   
   

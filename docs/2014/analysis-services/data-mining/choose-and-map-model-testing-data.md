@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81f206f33bdf3dbdf9d74b8de1010c6998d6bdcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085756"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Escolher e mapear dados de testes modelo
@@ -43,13 +43,13 @@ ms.locfileid: "66085756"
   
  Este tópico descreve como escolher e mapear dados de testes:  
   
- [Selecione tabelas de entrada para testar a precisão de um modelo de mineração](#bkmk_SelectInputs)  
+ [Selecionar tabelas de entrada para testar a precisão de um modelo de mineração](#bkmk_SelectInputs)  
   
- [Mapeie colunas modelo para as colunas nos dados de testes](#bkmk_MapColumns)  
+ [Mapear colunas de modelo para as colunas nos dados de teste](#bkmk_MapColumns)  
   
- [Altere a forma como colunas nos dados de testes são mapeadas para o modelo](#bkmk_ChangeMappings)  
+ [Alterar a forma como as colunas nos dados de teste são mapeadas para o modelo](#bkmk_ChangeMappings)  
   
-##  <a name="bkmk_SelectInputs"></a> Para selecionar tabelas de entrada para testar a exatidão de um modelo de mineração  
+##  <a name="bkmk_SelectInputs"></a>Para selecionar tabelas de entrada para testar a precisão de um modelo de mineração  
   
 1.  No Designer de Mineração de Dados do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique duas vezes na estrutura de mineração que contém os modelos com os quais deseja fazer o gráfico.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66085756"
   
 5.  Clique na guia **Gráfico de Comparação de Precisão** ou na guia **Matriz de Classificação** para criar automaticamente o gráfico usando os dados de teste recém-especificados.  
   
-##  <a name="bkmk_MapColumns"></a> Para mapear colunas modelo para as colunas nos dados de testes  
+##  <a name="bkmk_MapColumns"></a>Para mapear colunas de modelo para as colunas nos dados de teste  
   
 1.  Clique duas vezes na estrutura de mineração que contém os modelos que você deseja incluir no gráfico, para abrir a estrutura e seus modelos no Designer de Mineração de Dados.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66085756"
   
 3.  Na guia **Seleção de Entrada** , em **Selecionar conjunto de dados a ser usado para Gráfico de Precisão**, selecione **Especificar um conjunto de dados diferente**.  
   
-4.  Clique no botão Procurar **(...)**  para abrir uma caixa de diálogo e criar a definição do conjunto de dados externa.  
+4.  Clique no botão procurar **(...)** para abrir uma caixa de diálogo e criar a definição do conjunto de dados externos.  
   
 5.  Na caixa de diálogo **Selecionar Estrutura de Mineração** , selecione a estrutura de mineração que contém os modelos com os quais deseja trabalhar e, em seguida, clique em **OK**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66085756"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_ChangeMappings"></a> Para modificar a forma como dados de entrada são mapeados para o modelo  
+##  <a name="bkmk_ChangeMappings"></a>Para modificar a maneira como os dados de entrada são mapeados para o modelo  
   
 1.  No Designer do Data Mining, clique duas vezes na estrutura que contém os modelos com os quais deseja criar o gráfico.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66085756"
   
 4.  Em **Selecionar conjunto de dados a ser usado para o Gráfico de Precisão**, selecione a opção **Especificar um conjunto de dados diferente**.  
   
-5.  Clique no botão Procurar **(...)**  para abrir uma caixa de diálogo e criar a definição da fonte de dados externa.  
+5.  Clique no botão procurar **(...)** para abrir uma caixa de diálogo e criar a definição da fonte de dados externa.  
   
 6.  Na caixa de diálogo **Especificar Mapeamento de Coluna** , clique em **Selecionar Tabela de Casos**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66085756"
   
 8.  Se a tabela necessária não estiver disponível, feche a caixa de diálogo e crie uma nova exibição da fonte de dados que contenha a tabela. Para obter informações sobre como criar uma exibição de fonte de dados, consulte [Definindo uma exibição da fonte de dados &#40;Analysis Services&#41;](../multidimensional-models/defining-a-data-source-view-analysis-services.md).  
   
-9. Se o modelo de mineração tiver uma tabela aninhada, clique em **Selecionar Tabela Aninhada** e selecione a tabela aninhada na lista de tabelas na exibição da fonte de dados. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. Se o modelo de mineração tiver uma tabela aninhada, clique em **Selecionar Tabela Aninhada**e selecione a tabela aninhada na lista de tabelas na exibição da fonte de dados. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 10. Selecione a linha de junção do mapeamento que você quer modificar e, depois, **Modificar Conexões**.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66085756"
   
      Os mapeamentos das novas colunas são exibidos na caixa de diálogo **Especificar Mapeamento de Coluna** . Você pode remover um mapeamento selecionando a linha entre as colunas e pressionando a tecla DELETE. Você também pode criar uma nova conexão selecionando uma coluna na tabela **Estrutura de Mineração** e arrastando-a para a coluna correspondente na tabela **Tabelas SelectInput** .  
   
-## <a name="see-also"></a>Consulte também  
- [Tarefas de teste e validação e instruções &#40;Mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tarefas de teste e validação e instruções &#40;mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7b82b3450727d36a36186453e366625ebecbde2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721386"
 ---
 # <a name="define-filters"></a>Definir Filtros
@@ -28,13 +28,13 @@ ms.locfileid: "62721386"
  **Operador**  
  Selecione um operador para o filtro, como **Menor que ou Igual a**.  
   
- **Value**  
+ **Valor**  
  Insira um valor para o filtro. A maioria dos operadores só exige um valor na primeira coluna **Valor** , mas os operadores **Entre** e **Não Entre** requerem um valor em ambas as coluna **Valor** .  
   
- **Liberada**  
+ **Limpar**  
  Clique nesse botão para limpar todos os filtros anteriormente definidos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visualizador de Conflitos de Replicação da Microsoft &#40;replicação de mesclagem&#41;](microsoft-replication-conflict-viewer-merge-replication.md)   
  [Visualizador de Conflitos de Replicação da Microsoft &#40;replicação transacional&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
   

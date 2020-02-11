@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754548"
 ---
 # <a name="mirroring-states-sql-server"></a>Estados de espelhamento (SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "62754548"
   
  Os estados possíveis de espelhamento de banco de dados são:  
   
-|estado de espelhamento|Descrição|  
+|estado de espelhamento|DESCRIÇÃO|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. O servidor principal está enviando registros de log para o servidor espelho, que está aplicando as alterações ao banco de dados espelho para rolá-lo adiante.<br /><br /> No início de uma sessão de espelhamento de banco de dados, o banco de dados está no estado SYNCHRONIZING. O servidor principal está servindo o banco de dados e o espelho está tentando manter-se atualizado.|  
 |SYNCHRONIZED|Quando o servidor espelho torna-se suficientemente atualizado com relação ao servidor principal, o estado de espelhamento muda para SYNCHRONIZED. O banco de dados permanece nesse estado enquanto o servidor principal continua enviando alterações para o servidor espelho e o servidor espelho continua aplicando as alterações ao banco de dados espelho.<br /><br /> Se a segurança da transação for definida como FULL, suporte ao failover automático e ao failover manual no estado SYNCHRONIZED, não haverá perda de dados após um failover.<br /><br /> Se a segurança da transação for off, sempre será possível alguma perda de dados, mesmo no estado SYNCHRONIZED.|  
@@ -41,7 +41,7 @@ ms.locfileid: "62754548"
 |PENDING_FAILOVER|Esse estado é encontrado apenas no servidor principal após um failover ter começado, mas o servidor não tiver feito a transição para a função espelho.<br /><br /> Quando o failover é iniciado, o banco de dados principal vai para o estado PENDING_FAILOVER, termina rapidamente quaisquer conexões de usuário e assume em seguida a função espelho.|  
 |DISCONNECTED|O parceiro perdeu comunicação com o outro parceiro.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Convenções de sintaxe SMO | Microsoft Docs
+title: Convenções de sintaxe do SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655349"
 ---
 # <a name="smo-syntax-conventions"></a>Convenções de sintaxe de SMO
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Convenções tipográficas do Management Objects (SMO) são baseadas nas usadas em [!INCLUDE[msCoName](../../includes/msconame-md.md)] materiais de referência do Visual Studio .NET.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]As convenções tipográficas do SMO (Management Objects) baseiam- [!INCLUDE[msCoName](../../includes/msconame-md.md)] se nas usadas nos materiais de referência do Visual Studio .net.  
   
 |Convenção|Usado para|  
 |----------------|--------------|  
-|UPPERCASE|Instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], nomes de macro e termos usados no nível do sistema operacional; nomes de arquivo em texto.|  
-|monospace|Exemplos de linhas de comando e código de programa.|  
-|*italic*|Variáveis, fórmulas ou termos definidos em texto. Em sintaxe, letras em itálico indicam espaços reservados para obter informações fornecidas.|  
-|**bold**|Objetos, eventos, métodos ou propriedades SMO; termos de programação em texto.|  
+|LETRAS MAIÚSCULAS|Instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], nomes de macro e termos usados no nível do sistema operacional; nomes de arquivo em texto.|  
+|com espaçamento uniforme|Exemplos de linhas de comando e código de programa.|  
+|*itálico*|Variáveis, fórmulas ou termos definidos em texto. Em sintaxe, letras em itálico indicam espaços reservados para obter informações fornecidas.|  
+|**negrito**|Objetos, eventos, métodos ou propriedades SMO; termos de programação em texto.|  
   
   

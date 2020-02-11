@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c77f6ce464540cd74f67af73d63a20f5d94fdfc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721848"
 ---
 # <a name="configure-distribution-wizard"></a>Assistente para Configurar a Distribuição
@@ -28,7 +28,7 @@ ms.locfileid: "62721848"
 -   [Publicadores](publishers.md)  
 -   [Senha do Distribuidor](distributor-password.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar Distribuição](configure-distribution.md)   
  [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md)   
 

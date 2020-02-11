@@ -1,5 +1,5 @@
 ---
-title: Determinando o número de buckets correta para índices de Hash | Microsoft Docs
+title: Determinando a contagem de buckets correta para os índices de hash | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754238"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinando o número de buckets correto para índices de hash não clusterizados
@@ -24,7 +24,7 @@ ms.locfileid: "62754238"
   
  Para obter mais informações sobre índices de hash não clusterizados, consulte [Hash Indexes](hash-indexes.md) and [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- Uma tabela de hash é alocada para cada índice de hash em uma tabela com otimização de memória. O tamanho da tabela de hash alocada para um índice é especificado o `BUCKET_COUNT` parâmetro no [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) ou [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). O número de buckets será arredondado internamente até a próxima potência de dois. Por exemplo, especificar um número de buckets 300.000 resultará em um número real de buckets 524.288.  
+ Uma tabela de hash é alocada para cada índice de hash em uma tabela com otimização de memória. O tamanho da tabela de hash alocada para um índice é especificado pelo `BUCKET_COUNT` parâmetro em [CREATE TABLE &#40;transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) ou [criar tipo &#40;&#41;do Transact-SQL ](/sql/t-sql/statements/create-type-transact-sql). O número de buckets será arredondado internamente até a próxima potência de dois. Por exemplo, especificar um número de buckets 300.000 resultará em um número real de buckets 524.288.  
   
  Para obter links para um artigo e vídeo sobre contas buckets, consulte [Como determinar a contagem de buckets correta para índices de hash (OLTP na memória)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
@@ -63,7 +63,7 @@ FROM
  Para o índice de exemplo em (SpecialOfferID, ProductID), isso resulta em 121317/484 = 251. Isso significa que valores de chave de índice têm uma média de 251 e, portanto, devem ser um índice não clusterizado.  
   
 ## <a name="troubleshooting-the-bucket-count"></a>Solucionando problemas no número de buckets  
- Para solucionar problemas de contagem de bucket em tabelas com otimização de memória, use [DM db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) para obter estatísticas sobre os buckets vazios e o comprimento das cadeias de linha. A consulta a seguir pode ser usada para obter estatísticas sobre todos os índices de hash no banco de dados atual. A consulta poderá levar alguns minutos para ser executada se houver grandes tabelas no banco de dados.  
+ Para solucionar problemas de contagem de buckets em tabelas com otimização de memória, use [Sys. dm_db_xtp_hash_index_stats &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) para obter estatísticas sobre os buckets vazios e o comprimento das cadeias de linhas. A consulta a seguir pode ser usada para obter estatísticas sobre todos os índices de hash no banco de dados atual. A consulta poderá levar alguns minutos para ser executada se houver grandes tabelas no banco de dados.  
   
 ```sql  
 SELECT   
@@ -139,9 +139,9 @@ GO
   
 -   IX_Status: 50 por cento dos buckets estão vazios, o que é bom. Porém, o comprimento médio da cadeia é muito alto (65.536). Isso indica um grande número de valores duplicados. Portanto, usar um índice de hash não clusterizado não é apropriado nesse caso. Deve-se utilizar índice não clusterizado.  
   
--   IX_OrderSequence: 0 por cento dos buckets estão vazios, o que é muito baixa. Além disso, o comprimento médio de cadeia é 8. Como os valores nesse índice são exclusivos, isso significa que, em média, 8 valores são mapeados para cada bucket. O número de buckets deve ser aumentado. Como a chave de índice tem 262.144 valores exclusivos, o número de buckets deve ser pelo menos 262.144. Se é esperado um futuro crescimento, o número deve ser mais alto.  
+-   IX_OrderSequence: 0 por cento dos buckets estão vazios, um valor muito baixo. Além disso, o comprimento médio de cadeia é 8. Como os valores nesse índice são exclusivos, isso significa que, em média, 8 valores são mapeados para cada bucket. O número de buckets deve ser aumentado. Como a chave de índice tem 262.144 valores exclusivos, o número de buckets deve ser pelo menos 262.144. Se é esperado um futuro crescimento, o número deve ser mais alto.  
   
--   Índice de chave primária (... PK uma de SalesOrder): 36 por cento dos buckets estão vazios, o que é bom. Além disso, o comprimento médio da cadeia é 1, o que também é bom. Nenhuma alteração necessária.  
+-   Índice de chave primária (PK__SalesOrder...): 36 por cento dos buckets estão vazios, o que é bom. Além disso, o comprimento médio da cadeia é 1, o que também é bom. Nenhuma alteração necessária.  
   
  Para obter mais informações sobre como solucionar problemas nos índices de hash com otimização de memória, consulte [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   
@@ -177,7 +177,7 @@ GO
 -   Se as verificações de índice completo forem as operações essenciais para o desempenho predominantes, use um número de buckets próximo ao número real de valores de chave de índice.  
   
 ### <a name="big-tables"></a>Tabelas grandes  
- Para tabelas grandes, a utilização de memória pode se tornar um problema. Por exemplo, com uma tabela de 250 milhões de linhas que tem 4 índices de hash, cada um com uma contagem de bucket de um bilhão, a sobrecarga das tabelas de hash é de 4 índices * 1 bilhão de buckets \* 8 bytes = 32 gigabytes de utilização de memória. Ao escolher um número de buckets equivalente a 250 milhões para cada um dos índices, a sobrecarga total das tabelas de hash será de 8 gigabytes. Observe que isso está além do uso de memória de 8 bytes cada índice adiciona a cada linha individual, que é 8 gigabytes neste cenário (4 índices \* 8 bytes \* 250 milhões de linhas).  
+ Para tabelas grandes, a utilização de memória pode se tornar um problema. Por exemplo, com uma tabela de linha de 250 milhões que tem quatro índices de hash, cada um com um número de buckets de 1.000.000.000, a sobrecarga para as tabelas de hash \* é 4 índices * 1.000.000.000 buckets 8 bytes = 32 gigabytes de utilização de memória. Ao escolher um número de buckets equivalente a 250 milhões para cada um dos índices, a sobrecarga total das tabelas de hash será de 8 gigabytes. Observe que isso é além dos 8 bytes de uso de memória que cada índice adiciona a cada linha individual, que é 8 gigabytes nesse cenário (4 índices \* 8 bytes \* 250 milhões linhas).  
   
  As verificações completas de tabelas em geral não estão no caminho essencial para o desempenho para cargas de trabalho do OLTP. Consequentemente, a escolha é entre a utilização de memória versus o desempenho da pesquisa de ponto e as operações de inserção:  
   
@@ -185,7 +185,7 @@ GO
   
 -   Ao otimizar o desempenho para pesquisas de ponto, um número de buckets duas ou três vezes maior do que o número de valores de índice exclusivo seria apropriado. Um número maior de buckets significaria uma maior utilização de memória e a necessidade de mais tempo para realizar uma verificação de índice completo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices em tabelas com otimização de memória](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778917"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementando Colunas LOB em uma tabela com otimização de memória
-  Tabelas com otimização de memória não têm armazenamento de objeto fora de linha ou grande (LOB) (essa limitação foi removida no SQL Server 2016 e superior - consulte [tipos de dados com suporte para OLTP na memória](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), e o limite de tamanho de linha é 8060 bytes. O armazenamento de valores altos de binário ou cadeia de caracteres pode ser feito de duas maneiras:  
+  As tabelas com otimização de memória não têm armazenamento de LOB (objeto fora de linha ou grande) (essa limitação foi removida no SQL Server 2016 e superior-consulte [tipos de dados com suporte para OLTP na memória](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)) e o limite de tamanho de linha é de 8060 bytes. O armazenamento de valores altos de binário ou cadeia de caracteres pode ser feito de duas maneiras:  
   
 -   Divida os valores LOB em várias linhas.  
   
@@ -100,7 +100,7 @@ COMMIT
 END  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Migrando para OLTP na memória](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

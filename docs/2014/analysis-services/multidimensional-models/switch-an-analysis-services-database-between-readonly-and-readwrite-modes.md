@@ -1,5 +1,5 @@
 ---
-title: Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite | Microsoft Docs
+title: Alternar um banco de dados Analysis Services entre os modos ReadOnly e ReadWrite | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072893"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite
-  Frequentemente, há situações quando um administrador de banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) quer alterar o modo leitura/gravação de um banco de dados tabular ou multidimensional. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como compartilhar o banco de dados entre um pool de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servidores para uma melhor experiência de usuário.  
+  Frequentemente, há situações quando um administrador de banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) quer alterar o modo leitura/gravação de um banco de dados tabular ou multidimensional. Essas situações geralmente são orientadas pelas necessidades comerciais, como o compartilhamento do banco de dados entre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] um pool de servidores para uma melhor experiência do usuário.  
   
  Um modo de banco de dados pode ser alternado de várias formas. Este documento explica os cenários comuns a seguir:  
   
@@ -38,24 +38,24 @@ ms.locfileid: "66072893"
   
 1.  Localize o banco de dados a ser alternado no painel esquerdo ou direito do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  O banco de dados com o botão direito e selecione **propriedades**. Localize a pasta do banco de dados e anote o local. Um local de armazenamento de banco de dados vazio indica que a pasta de banco de dados está localizada na pasta de dados do servidor.  
+2.  Clique com o botão direito do mouse no banco de dados e selecione **Propriedades**. Localize a pasta do banco de dados e anote o local. Um local de armazenamento de banco de dados vazio indica que a pasta de banco de dados está localizada na pasta de dados do servidor.  
   
     > [!IMPORTANT]  
     >  Assim que o banco de dados for desanexado, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] já não pode lhe ajudar a obter o local do banco de dados.  
   
-3.  O banco de dados com o botão direito e selecione **desanexar...**  
+3.  Clique com o botão direito do mouse no banco de dados e selecione **desanexar...**  
   
 4.  Atribua uma senha ao banco de dados a ser desanexado e clique em **OK** para executar o comando Desanexar.  
   
-5.  Localize o **bancos de dados** pasta no painel esquerdo ou direito de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+5.  Localize a pasta **bancos de dados** no painel esquerdo ou direito de. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
-6.  Clique com botão direito do **bancos de dados** pasta e selecione **anexar...**  
+6.  Clique com o botão direito do mouse na pasta **bancos de dados** e selecione **anexar..** .  
   
-7.  Na caixa de texto **pasta** , digite o local original da pasta do banco de dados. Como alternativa, você pode usar o botão Procurar ( **...** ) para localizar a pasta do banco de dados.  
+7.  Na caixa de texto **pasta** , digite o local original da pasta do banco de dados. Como alternativa, você pode usar o botão procurar (**...**) para localizar a pasta do banco de dados.  
   
 8.  Selecione o modo leitura/gravação do banco de dados.  
   
-9. Digite a senha que foi usada na etapa 3 e clique em **Okey** para executar o comando anexar.  
+9. Digite a senha que foi usada na etapa 3 e clique em **OK** para executar o comando attach.  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>Para alternar o modo leitura/gravação em um banco de dados usando o AMO de maneira programática  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66072893"
   
 1.  Localize o banco de dados a ser alternado no painel esquerdo ou direito do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  O banco de dados com o botão direito e selecione **propriedades**. Localize a pasta do banco de dados e anote o local. Um local de armazenamento de banco de dados vazio indica que a pasta de banco de dados está localizada na pasta de dados do servidor.  
+2.  Clique com o botão direito do mouse no banco de dados e selecione **Propriedades**. Localize a pasta do banco de dados e anote o local. Um local de armazenamento de banco de dados vazio indica que a pasta de banco de dados está localizada na pasta de dados do servidor.  
   
     > [!IMPORTANT]  
     >  Assim que o banco de dados for desanexado, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] já não pode lhe ajudar a obter o local do banco de dados.  
@@ -166,15 +166,15 @@ ms.locfileid: "66072893"
   
 2.  Execute o comando XMLA.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Anexar e desanexar bancos de dados do Analysis Services](attach-and-detach-analysis-services-databases.md)   
+ [Anexar e desanexar bancos de dados Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Local de armazenamento do banco de dados](database-storage-location.md)   
- [Banco de dados ReadWriteModes](database-readwritemodes.md)   
- [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [ReadWriteModes do banco de dados](database-readwritemodes.md)   
+ [Anexar elemento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
  [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
- [Elemento ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [Elemento ReadWritemode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
  [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

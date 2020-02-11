@@ -1,5 +1,5 @@
 ---
-title: Verifique se todos os grupos de arquivos são graváveis durante o processo de atualização | Microsoft Docs
+title: Verificar se todos os grupos de filesão graváveis durante o processo de atualização | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 758207977c8ddf92d6696dda71a8943e6a596d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091192"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>Verificar se todos os grupos de arquivos podem ser gravados durante o processo de atualização
@@ -29,8 +29,8 @@ ms.locfileid: "66091192"
 ## <a name="corrective-action"></a>Ação corretiva  
  Use ALTER DATABASE para definir o grupo de arquivos como READ_WRITE.  
   
-## <a name="see-also"></a>Consulte também  
- [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Espaço de cubo | Microsoft Docs
+title: Espaço do cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074707"
 ---
 # <a name="cube-space"></a>Espaço de cubo
@@ -55,7 +55,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Note que 0 é usado para designar o eixo da coluna, que é a forma abreviada de eixo (0) – que é o eixo da coluna.  
   
- A consulta anterior somente retorna células para membros de cada hierarquia de atributo na consulta que existe um com o outro. A consulta anterior também pode ser escrita usando a nova * variante dos [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) função.  
+ A consulta anterior somente retorna células para membros de cada hierarquia de atributo na consulta que existe um com o outro. A consulta anterior também pode ser escrita usando a nova * variante da função [ \* (de interjunção) (MDX)](/sql/mdx/crossjoin-mdx) .  
   
 ```  
 SELECT   
@@ -78,7 +78,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Os valores das células retornadas serão idênticos, apesar de os metadados no conjunto de resultados serem diferentes. Por exemplo, com a consulta anterior, a hierarquia País foi movida para o eixo do slicer (na cláusula WHERE) e, portanto, não aparece explicitamente no conjunto de resultados.  
   
- Cada uma dessas três consultas anteriores demonstra o efeito do comportamento Autoexists no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Cada uma dessas três consultas anteriores demonstra o efeito do comportamento de existência automática no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>Hierarquias definidas pelo usuário e espaço do cubo  
  Os exemplos anteriores deste tópico definem posições no espaço do cubo, usando hierarquias de atributo. Porém, você também pode definir uma posição no espaço do cubo usando hierarquias definidas pelo usuário que foram definidas com base em hierarquias de atributo em uma dimensão. Uma hierarquia definida pelo usuário é uma hierarquia das hierarquias de atributo planejada para facilitar a procura de dados de cubo pelos usuários.  
@@ -98,7 +98,7 @@ WHERE Measures.[Internet Sales Amount]
   
  Na consulta anterior, a hierarquia Geografia do Cliente definida pelo usuário dentro da dimensão Cliente é usada para definir a posição no espaço do cubo que foi anteriormente definida usando uma hierarquia de atributo. A posição idêntica no espaço do cubo pode ser definida usando hierarquias de atributo ou hierarquias definidas pelo usuário.  
   
-##  <a name="AttribRelationships"></a> Relações de atributo e espaço de cubo  
+##  <a name="AttribRelationships"></a>Relações de atributo e espaço de cubo  
  Definindo relações de atributo entre atributos relacionados aprimora o desempenho da consulta (facilitando a criação de agregações apropriadas) e afeta o membro de uma hierarquia de atributo relacionada que aparece com um membro de hierarquia de atributo. Por exemplo, quando você define uma tupla que inclui um membro da hierarquia de atributo Cidade e a tupla não define explicitamente o membro da hierarquia de atributo País, você poderia esperar que o membro padrão da hierarquia de atributo País seria o membro relacionado da hierarquia de atributo País. Porém, isso só ocorrerá se uma relação de atributo estiver definida entre a hierarquia de atributo Cidade e a hierarquia de atributo País.  
   
  O exemplo a seguir retorna o membro de uma hierarquia de atributo relacionada que não está explicitamente incluído na consulta.  
@@ -112,7 +112,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Observe que o `WITH` palavra-chave é usada com o [CurrentMember (MDX)](/sql/mdx/current-mdx) e [Name (MDX)](/sql/mdx/members-string-mdx) funções para criar um membro calculado para uso na consulta. Para obter mais informações, consulte [A consulta MDX básica &#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Observe que a `WITH` palavra-chave é usada com as funções [CurrentMember (MDX)](/sql/mdx/current-mdx) e [nome (MDX)](/sql/mdx/members-string-mdx) para criar um membro calculado para uso na consulta. Para obter mais informações, consulte [A consulta MDX básica &#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
  Na consulta anterior, o nome do membro da hierarquia de atributo País que está associado a cada membro da hierarquia de atributo Estado é retornado. O membro País esperado é exibido (porque uma relação de atributo está definida entre os atributos Cidade e País). Porém, se nenhuma relação de atributo estivesse definida entre hierarquias de atributo na mesma dimensão, o membro (All) seria retornado, conforme ilustrado na consulta a seguir.  
   
@@ -128,13 +128,13 @@ FROM [Adventure Works]
   
 ## <a name="calculation-context"></a>Contexto de cálculo  
   
-## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Conceitos principais em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tuplas](tuples.md)   
  [Autoexists](autoexists.md)   
- [Trabalhando com membros, tuplas e conjuntos &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Trabalhando com membros, tuplas e conjuntos &#40;&#41;MDX](working-with-members-tuples-and-sets-mdx.md)   
  [Totais visuais e totais não visuais](visual-totals-and-non-visual-totals.md)   
- [Referência da linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Referência de expressões multidimensionais &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Referência de linguagem MDX &#40;&#41;MDX](/sql/mdx/mdx-language-reference-mdx)   
+ [Expressões multidimensionais &#40;referência de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

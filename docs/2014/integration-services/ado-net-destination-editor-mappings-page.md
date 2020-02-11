@@ -1,5 +1,5 @@
 ---
-title: Editor de destino do ADO NET (página mapeamentos) | Microsoft Docs
+title: Editor de destino ADO NET (página Mapeamentos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061753"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>Editor de Destino ADO NET (Página Mapeamentos)
@@ -45,8 +45,8 @@ ms.locfileid: "66061753"
  **Coluna de Destino**  
  Visualize cada coluna de destino disponível, esteja ela mapeada ou não.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de Destino ADO NET &#40;página Gerenciador de Conexões&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Editor de Destino ADO NET &#40;Página Saída de Erro&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de destino ADO NET &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [Editor de destino ADO NET &#40;página saída de erro&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

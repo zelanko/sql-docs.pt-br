@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755603"
 ---
 # <a name="connect-to-server-analysis-services"></a>Conectar ao servidor (Analysis Services)
-  Use essa caixa de diálogo para exibir ou especificar opções ao se conectar com o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Use esta caixa de diálogo para exibir ou especificar opções ao [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]se conectar ao.  
   
 ## <a name="options"></a>Opções  
  **Tipo de servidor**  
@@ -30,13 +30,13 @@ ms.locfileid: "62755603"
  Selecione a instância do servidor com a qual se conectar. Por padrão, é exibida a instância de servidor usada na última conexão.  
   
  **Autenticação**  
- Os modos de autenticação a seguir têm suporte ao se conectar a uma instância do Analysis Services: [!INCLUDE[msCoName](../includes/msconame-md.md)] Autenticação do Windows.  
+ Os modos de autenticação a seguir recebem suporte na conexão com uma instância do Analysis Services: Autenticação do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
  **Modo de Autenticação do Windows (Autenticação do Windows)**  
- O modo de**Autenticação do Windows** permite que um usuário se conecte por meio de uma conta de usuário do Windows.  
+ O modo de **autenticação do Windows** permite que um usuário se conecte por meio de uma conta de usuário do Windows.  
   
  **Nome de usuário**  
- Essa opção não está disponível nesta versão. Digite o nome do usuário com o qual se conectar. Essa opção estará disponível somente se você decidiu conectar-se usando a **Autenticação do Windows**.  
+ Essa opção não está disponível nesta versão. Digite o nome do usuário com o qual se conectar. Essa opção só estará disponível se você tiver optado por conectar-se usando a **autenticação do Windows**.  
   
  **Senha**  
  Essa opção não está disponível nesta versão. Digite a senha do logon. Essa opção poderá ser editada somente se você decidiu conectar-se usando a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

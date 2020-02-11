@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678714"
 ---
 # <a name="workload-element-dta"></a>Elemento de carga de trabalho (DTA)
@@ -36,7 +36,7 @@ ms.locfileid: "62678714"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
@@ -57,7 +57,7 @@ ms.locfileid: "62678714"
  É preciso especificar uma carga de trabalho para cada sessão de ajuste.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir especifica o **MyDatabase.MyDBOwner.TuningTable001** tabela de rastreamento para o `Workload` elemento. A **TuningTable001** foi criada usando-se do modelo de ajuste com o SQL Server Profiler e salvando a saída do rastreamento como tabela.  
+ O exemplo de código a seguir especifica a tabela de rastreamento **MyDatabase. MyDBOwner. TuningTable001** para o `Workload` elemento. A **TuningTable001** foi criada usando-se do modelo de ajuste com o SQL Server Profiler e salvando a saída do rastreamento como tabela.  
   
 ```  
 <DTAXML ...>  
@@ -81,7 +81,7 @@ ms.locfileid: "62678714"
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

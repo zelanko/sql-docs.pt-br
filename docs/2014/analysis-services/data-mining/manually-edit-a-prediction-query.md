@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084206"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Editar manualmente uma consulta de previsão
@@ -42,9 +42,9 @@ ms.locfileid: "66084206"
     > [!NOTE]  
     >  Se a consulta criada for inválida, a janela Resultados não exibirá um erro e não exibirá nenhum resultado. Clique no botão **Design** ou selecione **Design** ou **Consulta** no menu **Modelo de Mineração** para corrigir o problema e executar a consulta novamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Consultas de mineração de dados](data-mining-queries.md)   
- [Construtor de Consultas de previsão &#40;Mineração de Dados&#41;](../prediction-query-builder-data-mining.md)   
- [Lição 6: Criando e trabalhando com previsões &#40;Tutorial de mineração de dados básicos&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](../prediction-query-builder-data-mining.md)   
+ [Lição 6: Criando e trabalhando com previsões &#40;tutorial de mineração de dados básico&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Navegador KPI (guia KPIs, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Navegador KPI (guia KPIs, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079497"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Navegador KPI (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
-  Use o painel **Navegador de KPI** na guia **KPIs** do Designer de Cubo para exibir e testar os resultados dos KPIs (indicadores chave de desempenho). Os KPIs devem ser implantados primeiro em uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] antes da navegação.  
+  Use o painel **Navegador de KPI** na guia **KPIs** do Designer de Cubo para exibir e testar os resultados dos KPIs (indicadores chave de desempenho). Os KPIs devem primeiro ser implantados em uma [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância antes da navegação.  
   
 > [!NOTE]  
 >  Esse painel é exibido apenas na exibição do navegador.  
@@ -29,25 +29,25 @@ ms.locfileid: "66079497"
  **Grade de subcubo**  
  Use para definir um subcubo e restringir os resultados dos KPIs a serem exibidos no painel **Resultados** . A grade contém as seguintes colunas:  
   
- **Dimension**  
+ **Dimensão**  
  Selecione a dimensão à qual esse filtro se aplica.  
   
- **Hierarchy**  
+ **Hierarquia**  
  Selecione a hierarquia à qual esse filtro se aplica.  
   
  **Operador**  
  Selecione o operador que define como a expressão na **Expressão de Filtro** é aplicada à hierarquia selecionada. A tabela a seguir descreve os operadores disponíveis.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Equal**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
-|**Não é igual**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
-|**Entrada**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
+|**Iguais**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
+|**Diferente de**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
+|**No**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Não está em**|Os resultados são restringidos aos membros excluídos pelo conjunto nomeado escolhido na **Expressão de Filtro**.|  
-|**Contém**|Os resultados são restringidos aos membros cujos nomes contêm a sequência de caracteres na **Expressão de Filtro**.|  
-|**Começa com**|Os resultados são restringidos aos membros cujos nomes começam com a sequência de caracteres na **Expressão de Filtro**.|  
-|**Intervalo (inclusivo)**|Os resultados são restringidos ao intervalo escolhido na **Expressão de Filtro**.|  
-|**Intervalo (exclusivo)**|Os resultados são restringidos aos membros excluídos pelo intervalo escolhido na **Expressão de Filtro**.|  
+|**Terá**|Os resultados são restringidos aos membros cujos nomes contêm a sequência de caracteres na **Expressão de Filtro**.|  
+|**Começa Com**|Os resultados são restringidos aos membros cujos nomes começam com a sequência de caracteres na **Expressão de Filtro**.|  
+|**Intervalo (Inclusivo)**|Os resultados são restringidos ao intervalo escolhido na **Expressão de Filtro**.|  
+|**Intervalo (Exclusivo)**|Os resultados são restringidos aos membros excluídos pelo intervalo escolhido na **Expressão de Filtro**.|  
 |**MDX**|Os resultados são restringidos à expressão MDX definida na **Expressão de Filtro**.|  
   
  **Expressão de filtro**  
@@ -59,25 +59,25 @@ ms.locfileid: "66079497"
  **Grade de resultados**  
  Exibe o valor avaliado, a meta, o status e a tendência dos KPIs, com base no filtro definido na **Grade de filtro**. A grade contém as seguintes colunas:  
   
- **Exibir estrutura**  
+ **Exibir Estrutura**  
  Exibe os KPIs contidos pelo cubo, organizados hierarquicamente de acordo com os valores da **Pasta de exibição** ou **KPI Pai** de cada KPI.  
   
- **Value**  
+ **Valor**  
  Exibe o valor do KPI.  
   
- **Meta**  
+ **Goal**  
  Exibe o valor da meta do KPI.  
   
  **Status**  
  Exibe o gráfico de status do KPI.  
   
- **Trend**  
+ **Tendência**  
  Exibe o gráfico de tendências do KPI.  
   
  **Weight**  
  Exibe o fator de peso do KPI.  
   
- **(Descrição)**  
+ **Ndescrição**  
  Exibirá um ícone de informações se uma descrição for fornecida para um KPI.  
   
  Focalize o mouse sobre o ícone de informações para exibir uma Dica de Ferramenta contendo a descrição do KPI.  
@@ -85,7 +85,7 @@ ms.locfileid: "66079497"
 > [!NOTE]  
 >  Se ocorrer um erro ao calcular um KPI na instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , essa opção exibirá informações associadas ao erro.  
   
-## <a name="see-also"></a>Consulte também  
- [KPIs &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [KPIs &#40;designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
   
   

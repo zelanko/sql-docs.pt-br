@@ -1,5 +1,5 @@
 ---
-title: Modificar a exibição de resultados de rastreamento | Microsoft Docs
+title: Modificar o modo de exibição de resultados de rastreamento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089436"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificar a exibição dos resultados de rastreamento
@@ -36,7 +36,7 @@ ms.locfileid: "66089436"
   
 8.  [Alterar as configurações de exibição](#ChangeDisplay)  
   
-##  <a name="AddRemoveColumns"></a> Adicionar ou remover colunas  
+##  <a name="AddRemoveColumns"></a>Adicionar ou remover colunas  
   
 1.  Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66089436"
   
 5.  Clique em **OK**.  
   
-##  <a name="ChangeColumns"></a> Criar, editar ou excluir colunas mescladas  
+##  <a name="ChangeColumns"></a>Criar, editar ou excluir colunas mescladas  
   
 #### <a name="to-create-merged-columns"></a>Para criar colunas mescladas  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66089436"
   
 3.  Na caixa de diálogo **Escolher Colunas** , marque o nome da coluna mesclada que você quer excluir e clique em **Excluir**.  
   
-##  <a name="SortResults"></a> Classificar os resultados  
+##  <a name="SortResults"></a>Classificar os resultados  
   
 #### <a name="to-sort-the-results-in-ascending-or-descending-order"></a>Para classificar os resultados em ordem crescente ou decrescente  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66089436"
   
      Se você agrupou colunas, classificar a coluna só classificará os dados dentro do grupo.  
   
-##  <a name="GroupResults"></a> Agrupar resultados  
+##  <a name="GroupResults"></a>Resultados do grupo  
   
 #### <a name="to-group-the-results-by-a-single-column"></a>Para agrupar os resultados por uma única coluna  
   
@@ -145,10 +145,10 @@ ms.locfileid: "66089436"
   
 4.  Clique em **OK**.  
   
-##  <a name="AggregateResults"></a> Agregar resultados  
+##  <a name="AggregateResults"></a>Agregar resultados  
  Eventos Estendidos dão suporte a cinco funções de agregação:  
   
--   Sum  
+-   SUM  
   
 -   Mín  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66089436"
   
 -   Média  
   
--   Count  
+-   Contagem  
   
  Sum, Min, Max e Average podem ser usados somente com as colunas numéricas disponíveis. Count é o número de valores não nulos que existem para a coluna selecionada no grupo.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "66089436"
   
 7.  Clique em **OK**.  
   
-##  <a name="Filter"></a> Filtrar resultados  
+##  <a name="Filter"></a>Filtrar resultados  
  Você pode aplicar filtros para refinar os resultados do rastreamento que são exibidos na janela de rastreamento. O filtro de exibição inclui um filtro de hora e um filtro avançado. Use o filtro de hora para filtrar os resultados de rastreamento por carimbo de data/hora de evento e use o filtro avançado para construir condições de filtro usando os campos de eventos e ações. Há uma relação AND lógica entre os filtros Hora e Avançado.  
   
 #### <a name="to-create-a-filter"></a>Para criar um filtro  
@@ -210,7 +210,7 @@ ms.locfileid: "66089436"
   
 -   Se não houver nem o campo nem a ação, NULL será exibido.  
   
-##  <a name="Search"></a> Pesquisar texto nas colunas  
+##  <a name="Search"></a>Pesquisar texto em colunas  
   
 1.  Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
@@ -227,9 +227,9 @@ ms.locfileid: "66089436"
   
     -   **Colunas da tabela**. Use esta opção para procurar todas as colunas visíveis na janela de rastreamento.  
   
-    -   **Detalhes**. Use esta opção para procurar todas as colunas (promovida e não promovida) na janela de rastreamento que foram selecionadas antes de abrir o **localizar nos eventos estendidos** caixa de diálogo.  
+    -   **Detalhes**. Use esta opção para pesquisar todas as colunas (promovidas e não promovidas) na janela de rastreamento que foram selecionadas antes de abrir a caixa de diálogo **Localizar em eventos estendidos** .  
   
-    -   **\<Nome da coluna de evento >**. Use esta opção para procurar uma coluna de evento específica na lista suspensa.  
+    -   **Nome da coluna de evento>. \< ** Use esta opção para procurar uma coluna de evento específica na lista suspensa.  
   
 5.  Use as opções a seguir para especificar como você quer definir a pesquisa:  
   
@@ -237,13 +237,13 @@ ms.locfileid: "66089436"
   
     2.  **Coincidir palavra inteira**. Use esta opção para exibir somente os resultados da pesquisa para o texto que você inseriu que corresponde palavras completas.  
   
-    3.  **Pesquisar para cima**. Use esta opção para pesquisar do local do seu cursor para o início dos resultados.  
+    3.  **Pesquisar**. Use esta opção para pesquisar do local do seu cursor para o início dos resultados.  
   
-    4.  **Usar**. Use esta opção para interpretar os caracteres especiais e as expressões regulares que você inseriu na caixa **Localizar** . Caracteres especiais incluem os caracteres curinga (*) e (?) para representar um ou mais caracteres. Expressões regulares são notações especiais usadas para definir padrões de texto de pesquisa.  
+    4.  **Use**o. Use esta opção para interpretar os caracteres especiais e as expressões regulares que você inseriu na caixa **Localizar** . Caracteres especiais incluem os caracteres curinga (*) e (?) para representar um ou mais caracteres. Expressões regulares são notações especiais usadas para definir padrões de texto de pesquisa.  
   
 6.  Clique em **Localizar Próximo** para procurar o próximo texto que você inseriu na caixa **Localizar** .  
   
-##  <a name="ChangeDisplay"></a> Alterar as configurações de exibição  
+##  <a name="ChangeDisplay"></a>Alterar as configurações de exibição  
  Você pode salvar informações de coluna (ordem de coluna, coluna de mesclagem e largura de coluna) e informações de filtro de um resultado de rastreamento em um arquivo de configuração de exibição de Eventos Estendidos (arquivo .viewsetting). Após salvar o arquivo, você pode aplicá-lo aos seus resultados de rastreamento para alterar a exibição.  
   
 #### <a name="to-change-the-display-settings"></a>Para alterar as configurações de exibição  
@@ -259,8 +259,8 @@ ms.locfileid: "66089436"
   
     -   **Salvar como**. Salve as colunas e informações de filtro de um resultado de rastreamento em um arquivo .viewsetting.  
   
-    -   **Abrir**. Abra um arquivo .viewsetting existente.  
+    -   **Abra**o. Abra um arquivo .viewsetting existente.  
   
-    -   **Abrir recente**. Abra um arquivo .viewsetting salvo recentemente.  
+    -   **Abra recente**. Abra um arquivo .viewsetting salvo recentemente.  
   
   

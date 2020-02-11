@@ -21,23 +21,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727185"
 ---
 # <a name="managing-transactions-xmla"></a>Gerenciando transações (XMLA)
-  Cada comando XML for Analysis (XMLA) enviado a uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado dentro do contexto de uma transação na sessão implícita ou explícita atual. Para gerenciar cada uma dessas transações, você deve usar o [BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla), [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla), e [RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla) comandos. Ao usar esses comandos, você poderá criar transações implícitas ou explícitas, alterar a contagem de referência de transação, além de iniciar, confirmar ou reverter transações.  
+  Cada comando XML for Analysis (XMLA) enviado para uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado dentro do contexto de uma transação na sessão implícita ou explícita atual. Para gerenciar cada uma dessas transações, use os comandos [BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla), [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)e [RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla) . Ao usar esses comandos, você poderá criar transações implícitas ou explícitas, alterar a contagem de referência de transação, além de iniciar, confirmar ou reverter transações.  
   
 ## <a name="implicit-and-explicit-transactions"></a>Transações implícitas e explícitas  
  Uma transação é implícita ou explícita:  
   
- **transação implícita**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma *implícita* transação para um XMLA comando se o `BeginTransaction` comando não especifica o início de uma transação. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre confirma uma transação implícita se o comando é bem-sucedido, e reverte uma transação implícita se o comando falha.  
+ **Transação implícita**  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Cria uma transação *implícita* para um comando XMLA se o `BeginTransaction` comando não especificar o início de uma transação. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre confirma uma transação implícita se o comando é bem-sucedido, e reverte uma transação implícita se o comando falha.  
   
- **transação explícita**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma *explícita* transação se a `BeginTransaction` comando inicia uma transação. No entanto, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também confirmará uma transação explícita se um comando `CommitTransaction` for enviado e reverterá uma transação explícita se um comando `RollbackTransaction` for enviado.  
+ **Transação explícita**  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Cria uma transação *explícita* se o `BeginTransaction` comando iniciar uma transação. No entanto, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também confirmará uma transação explícita se um comando `CommitTransaction` for enviado e reverterá uma transação explícita se um comando `RollbackTransaction` for enviado.  
   
  Além disso, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reverterá transações implícitas e explícitas se a sessão atual terminar antes da conclusão da transação ativa.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62727185"
   
  No entanto, o comando `RollbackTransaction` reverte a transação ativa a despeito do valor atual da contagem de referência de transação. Em outras palavras, um único comando `RollbackTransaction` reverte a transação ativa, não importando quantos comandos `BeginTransaction` ou comandos `CommitTransaction` tenham sido enviados e define a contagem de referência de transação como zero.  
   
-## <a name="beginning-a-transaction"></a>A partir de uma transação  
+## <a name="beginning-a-transaction"></a>Iniciando uma transação  
  O comando `BeginTransaction` inicia uma transação explícita na sessão atual e incrementa a contagem de referência de transação para a sessão atual em um. Todos os comandos subsequentes serão considerados como da transação ativa, até que comandos `CommitTransaction` suficientes sejam enviados para a confirmação da transação ativa ou até que um único comando `RollbackTransaction` seja enviado para reverter a transação ativa.  
   
 ## <a name="committing-a-transaction"></a>Confirmando uma transação  
@@ -57,7 +57,7 @@ ms.locfileid: "62727185"
 ## <a name="rolling-back-a-transaction"></a>Revertendo uma transação  
  O comando `RollbackTransaction` comando reverte os resultados de comandos executados após a execução do comando `BeginTransaction` na sessão atual. O comando `RollbackTransaction` reverte a transação ativa, a despeito da contagem de referência de transação atual, e define a contagem de referência de transação como zero. Se não houver transação ativa (em outras palavras, se a contagem de referência de transação da sessão atual já tiver sido definida como zero), um comando `RollbackTransaction` resultará em um erro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo com XMLA no Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

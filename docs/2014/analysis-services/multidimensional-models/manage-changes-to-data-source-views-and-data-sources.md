@@ -1,5 +1,5 @@
 ---
-title: Gerenciar alterações em exibições da fonte de dados e fontes de dados | Microsoft Docs
+title: Gerenciar alterações em exibições de fonte de dados e fontes de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac551a708433e973ada499f0e7504bc75516e756
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074765"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>Gerenciar alterações em exibições da fonte de dados e em fontes de dados
@@ -29,7 +29,7 @@ ms.locfileid: "66074765"
   
  Por outro lado, se você alterar a cadeia de conexão da fonte de dados para um banco de dados diferente daquele usado na geração anterior, nenhum erro será gerado. O novo banco de dados será usado e nenhuma alteração será feita no banco de dados anterior.  
   
-## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre a geração com incremento](understanding-incremental-generation.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Entendendo a geração com incremento](understanding-incremental-generation.md)  
   
   

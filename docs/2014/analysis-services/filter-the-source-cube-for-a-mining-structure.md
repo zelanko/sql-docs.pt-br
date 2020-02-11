@@ -16,42 +16,42 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081146"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrar o cubo de origem para uma estrutura de mineração
-  Quando você cria uma estrutura de mineração se baseia nos dados em um modelo multidimensional (um cubo OLAP), você pode *fatia* a estrutura de mineração com base no cubo. A divisão permite criar subconjuntos de dados, como um tipo de filtro nos dados que são usados para treinar o modelo de mineração.  
+  Ao criar uma estrutura de mineração baseada em dados em um modelo multidimensional (um cubo OLAP), você pode *dividir* o cubo no qual a estrutura de mineração se baseia. A divisão permite criar subconjuntos de dados, como um tipo de filtro nos dados que são usados para treinar o modelo de mineração.  
   
 ### <a name="to-slice-a-cube"></a>Para fatiar um cubo  
   
-1.  No Designer de mineração de dados do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], selecione o **estrutura de mineração** guia ou o **modelos de mineração** guia.  
+1.  No designer de mineração de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]dados no, selecione a guia **estrutura de mineração** ou a guia **modelos de mineração** .  
   
-2.  Sobre o **modelo de mineração** menu, selecione **definir fatia do cubo da estrutura de mineração**.  
+2.  No menu **modelo de mineração** , selecione **definir fatia de cubo de estrutura de mineração**.  
   
-     O **fatiar cubo** caixa de diálogo é aberta.  
+     A caixa de diálogo **cubo de fatia** é aberta.  
   
-3.  No **dimensão** coluna das **fatiar cubo** caixa de diálogo, selecione a dimensão que você deseja filtrar.  
+3.  Na coluna **dimensão** da caixa de diálogo **cubo de fatia** , selecione a dimensão que você deseja filtrar.  
   
-4.  Selecione um nível de uma hierarquia, usando a lista na **hierarquia** coluna.  
+4.  Selecione um nível de hierarquia, usando a lista na coluna **hierarquia** .  
   
-5.  Selecione um operador na lista de **operador** coluna, a ser usado para criar a condição de filtro.  
+5.  Selecione um operador da lista na coluna **operador** para usar na criação da condição de filtro.  
   
-6.  Clique na caixa de **filtro** coluna.  
+6.  Clique na caixa na coluna **filtro** .  
   
      A caixa de diálogo que é aberta contém todos os membros no nível especificado da hierarquia.  
   
 7.  Selecione o membro ou membros aos quais você pretende aplicar o filtro.  
   
-8.  Clique em **Okey** na caixa de diálogo de membro.  
+8.  Clique em **OK** na caixa de diálogo membro.  
   
-9. Clique em **Okey** na **fatiar cubo** caixa de diálogo.  
+9. Clique em **OK** na caixa de diálogo **cubo de fatia** .  
   
      O cubo de origem agora é filtrado do modo definido pela fatia de cubo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções da estrutura de mineração](data-mining/mining-structure-tasks-and-how-tos.md)   
  [Criar uma nova estrutura de mineração OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   

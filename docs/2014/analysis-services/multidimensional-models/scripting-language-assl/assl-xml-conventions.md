@@ -1,5 +1,5 @@
 ---
-title: Convenções de XML do ASSL | Microsoft Docs
+title: ASSL convenções XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736389"
 ---
 # <a name="assl-xml-conventions"></a>Convenções de XML do ASSL
@@ -36,9 +36,9 @@ ms.locfileid: "62736389"
   
  Para representar a hierarquia de objeto, a ASSL usa as seguintes convenções XML:  
   
--   Todos os objetos e propriedades são representadas como elementos, com exceção de atributos XML padrão como 'XML: lang'.  
+-   Todos os objetos e propriedades são representados como elementos, exceto os atributos XML padrão, como ' XML: lang '.  
   
--   Nomes de elementos e valores de enumeração seguem a convenção de nomenclatura do Microsoft .NET Framework do Pascal casing sem sublinhados.  
+-   Os nomes de elemento e os valores de enumeração seguem a convenção de nomenclatura do Microsoft .NET Framework de combinação de maiúsculas e minúsculas de Pascal sem sublinhados.  
   
 -   Os valores de maiúsculas e minúsculas é preservado. Os valores para enumerações também apresentam diferenciação de maiúsculas e minúsculas.  
   
@@ -121,10 +121,10 @@ ms.locfileid: "62736389"
  O Analysis Services usa os seguintes tipos de dados XSD (linguagem de definição de esquema XML) padrão:  
   
  `Int`  
- Um valor inteiro no intervalo de-231 até 231-1.  
+ Um valor inteiro no intervalo de-231 a 231-1.  
   
  `Long`  
- Um valor inteiro no intervalo de -263 até 263-1.  
+ Um valor inteiro no intervalo de-263 a 263-1.  
   
  `String`  
  Um valor de cadeia de caracteres em conformidade com as seguintes regras globais:  
@@ -135,10 +135,10 @@ ms.locfileid: "62736389"
   
 -   O espaço em branco interno é preservado.  
   
- As propriedades `Name` e `ID` têm limitações especiais de caracteres válidos em elementos de cadeia de caracteres. Para obter mais informações sobre `Name` e `ID` convenções, consulte [objetos e características de objeto ASSL](assl-objects-and-object-characteristics.md).  
+ As propriedades `Name` e `ID` têm limitações especiais de caracteres válidos em elementos de cadeia de caracteres. Para obter informações adicionais `Name` sobre `ID` convenções e, consulte [objetos e características do objeto ASSL](assl-objects-and-object-characteristics.md).  
   
  `DateTime`  
- Um `DateTime` estrutura do .NET Framework. Um valor `DateTime` não pode ser NULL. A data mais antiga suportada pelo tipo de dados `DataTime` é 1º de janeiro de 1601, disponível a programadores como `DateTime.MinValue`. A data mais antiga suportada indica que um valor `DateTime` está ausente.  
+ Uma `DateTime` estrutura da .NET Framework. Um valor `DateTime` não pode ser NULL. A data mais antiga suportada pelo tipo de dados `DataTime` é 1º de janeiro de 1601, disponível a programadores como `DateTime.MinValue`. A data mais antiga suportada indica que um valor `DateTime` está ausente.  
   
  `Boolean`  
  Uma enumeração só com dois valores, como {verdadeiro, falso} ou {0, 1}.  
@@ -151,7 +151,7 @@ ms.locfileid: "62736389"
 |`Boolean`|Falso|  
 |`String`|"" (cadeia de caracteres vazia)|  
 |`Integer` ou `Long`|0 (zero)|  
-|`Timestamp`|12:00:00 AM, 1/1/0001 (correspondente a um .NET Frameworks `System.DateTime` com 0 tiques)|  
+|`Timestamp`|12:00:00 AM, 1/1/0001 (correspondente a um .NET Framework `System.DateTime` com 0 tiques)|  
   
  Um elemento que está presente mas vazio será interpretado como tendo um valor de uma cadeia de caracteres nula, e não como o valor padrão.  
   
@@ -178,6 +178,6 @@ ms.locfileid: "62736389"
   
  `</Dimension>`  
   
- Para obter mais informações sobre padrões herdados, consulte [objetos e características de objeto ASSL](assl-objects-and-object-characteristics.md).  
+ Para obter mais informações sobre padrões herdados, consulte [objetos ASSL e características de objeto](assl-objects-and-object-characteristics.md).  
   
   

@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745517"
 ---
-# <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (API de procedimento armazenado estendido)
+# <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone (API de procedimento armazenado estendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  Envia uma mensagem de conclusão de resultado para o cliente.  
   
@@ -58,21 +58,21 @@ count
  *srvproc*  
  É um ponteiro para a estrutura SRV_PROC que é o identificador de uma conexão de cliente específica (neste caso, o identificador que recebeu a solicitação de linguagem). A estrutura contém informações que a biblioteca de APIs de procedimento armazenado estendido usa para gerenciar a comunicação e os dados entre o aplicativo e o cliente.  
   
- *status*  
+ *Estado*  
  É um campo de 2 bytes para vários sinalizadores *status* . Vários sinalizadores podem ser definidos usando os operadores lógicos AND e OR com valores de sinalizador *status* . A seguinte tabela lista os possíveis sinalizadores *status* .  
   
-|Sinalizador de status|Descrição|  
+|Sinalizador de status|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |SRV_DONE_COUNT|O parâmetro *count* contém uma contagem válida.|  
 |SRV_DONE_ERROR|O comando do cliente atual recebeu um erro.|  
   
- *info*  
+ *detalhes*  
  É um campo reservado de 2 bytes. Defina o valor como 0.  
   
  *contagem*  
  É um campo de 4 bytes usado para indicar uma contagem do conjunto de resultados atual. Se o sinalizador SRV_DONE_COUNT for definido no campo *status* , *count* manterá uma contagem válida.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SUCCEED ou FAIL  
   
 ## <a name="remarks"></a>Comentários  

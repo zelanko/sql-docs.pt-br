@@ -1,5 +1,5 @@
 ---
-title: Previsão de assistente (Data Mining Add-ins para Excel) | Microsoft Docs
+title: Assistente de previsão (suplementos de mineração de dados para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081030"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Assistente de Previsão (Suplementos de Mineração de Dados para Excel)
-  ![Assistente para associação na faixa de opções mineração de dados](media/dmc-forecast.gif "Assistente para associação na faixa de opções mineração de dados")  
+  ![Assistente para Associação na faixa de opções Mineração de Dados](media/dmc-forecast.gif "Assistente para Associação na faixa de opções Mineração de Dados")  
   
  O assistente de Previsão o ajuda a prever valores em uma série temporal. O assistente de previsão utiliza o algoritmo Série Temporal da [!INCLUDE[msCoName](../includes/msconame-md.md)] ou MTS, que é um algoritmo de regressão para uso na previsão de colunas contínuas, como vendas de produto.  
   
@@ -29,19 +29,19 @@ ms.locfileid: "66081030"
   
  Você pode criar previsões de um modelo de previsão sem fornecer novos dados de entrada.  
   
- O [previsão de &#40;ferramentas de análise de tabela para Excel&#41; ](forecast-table-analysis-tools-for-excel.md) ferramenta, o **analisar** faixa de opções, também permite criar modelos de previsão, mas é menos personalizável e só podem usar dados nas tabelas do Excel.  
+ A [previsão &#40;ferramentas de análise de tabela para&#41;](forecast-table-analysis-tools-for-excel.md) ferramenta do Excel, na faixa de quadro **analisar** , também permite que você crie modelos de previsão, mas é menos personalizável e só pode usar dados em tabelas do Excel.  
   
 ## <a name="using-the-forecast-wizard"></a>Usando o Assistente de Previsão  
   
-1.  No **Data Mining** faixa de opções, clique em **previsão**.  
+1.  Na faixa de faixas de **mineração de dados** , clique em **previsão**.  
   
-2.  No **Selecionar fonte de dados**, escolha a tabela do Excel, intervalo ou fonte de dados externa para usar como entradas.  
+2.  Em **selecionar dados de origem**, escolha a tabela do Excel, o intervalo ou a fonte de dados externa para usar como entradas.  
   
      Se você usar uma fonte de dados externa, poderá definir a exibição personalizada ou as consultas e salvá-la como uma fonte de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-3.  Sobre o **Forecasting** página, para **carimbo de data / hora**, selecione uma coluna que contém o valor numérico exclusivo (Isso inclui os valores de data e hora) que pode ser usado como a série de casos. A fonte de dados deve ser classificada em ordem crescente por essa coluna.  
+3.  Na página **previsão** , para carimbo de data/ **hora**, selecione uma coluna que contenha um valor numérico exclusivo (isso inclui valores de dados e de hora) que podem ser usados como a série de casos. A fonte de dados deve ser classificada em ordem crescente por essa coluna.  
   
-     Se seus dados não tiverem uma coluna desse tipo, você pode usar a opção \<nenhum carimbo de data / hora >. O assistente adicionará uma coluna de ordem exclusiva para os dados de entrada; em virtude disso, você deverá assegurar que os dados sejam classificados da maneira desejada antes de executar o assistente e escolher essa opção.  
+     Se os dados não tiverem essa coluna, você poderá usar a opção \<sem carimbo de data/hora>. O assistente adicionará uma coluna de ordem exclusiva para os dados de entrada; em virtude disso, você deverá assegurar que os dados sejam classificados da maneira desejada antes de executar o assistente e escolher essa opção.  
   
 4.  Opcionalmente, você pode clicar em **parâmetros** e personalizar o comportamento do modelo de mineração.  
   
@@ -53,26 +53,26 @@ ms.locfileid: "66081030"
   
     -   ARTXP e ARIMA combinados  
   
-     Para obter informações sobre as diferenças, consulte [Microsoft tempo Series Algorithm Technical Reference](data-mining/microsoft-time-series-algorithm-technical-reference.md).  
+     Para obter informações sobre as diferenças, consulte [referência técnica do algoritmo do Microsoft Time Series](data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
      Você também pode adicionar dicas de periodicidade, especificar opções de atenuação e personalizar opções de regressão para o modelo.  
   
-5.  Sobre o **concluir** página, forneça um nome descritivo para o conjunto de dados e o modelo e defina as seguintes opções que controlam como você trabalha com o modelo finalizado:  
+5.  Na página **concluir** , forneça um nome descritivo para seu conjunto de dados e modelo e defina as seguintes opções que controlam como você trabalha com o modelo concluído:  
   
-    -   **Procurar modelo**. Quando essa opção é selecionada, assim que o assistente tiver concluído o processamento do modelo, ele abre uma **procurar** janela para ajudá-lo a explorar os resultados. O conteúdo do visualizador depende do tipo de modelo que você criou. Para obter mais informações, consulte [procurando um modelo de previsão](browsing-a-forecasting-model.md).  
+    -   **Procurar modelo**. Quando essa opção é selecionada, assim que o assistente termina de processar o modelo, ele abre uma janela de **procura** para ajudá-lo a explorar os resultados. O conteúdo do visualizador depende do tipo de modelo que você criou. Para obter mais informações, consulte [navegando em um modelo de previsão](browsing-a-forecasting-model.md).  
   
-    -   **Habilitar o detalhamento**. Selecione esta opção para visualizar os dados subjacentes do modelo finalizado. Essa opção estará disponível somente se você criar um modelo de Árvore de Decisão.  
+    -   **Habilitar detalhamento**. Selecione esta opção para visualizar os dados subjacentes do modelo finalizado. Essa opção estará disponível somente se você criar um modelo de Árvore de Decisão.  
   
-    -   **Usar modelo temporário**. Se você selecionar esta opção, o modelo não será salvo no servidor. Os modelos temporários serão excluídos quando você fechar o Excel.  
+    -   **Use o modelo temporário**. Se você selecionar esta opção, o modelo não será salvo no servidor. Os modelos temporários serão excluídos quando você fechar o Excel.  
   
 ### <a name="requirements"></a>Requisitos  
- Os dados devem incluir pelo menos uma coluna que possa ser usada como a série temporal. Os valores nesta coluna devem ser exclusivos e contínuos - isto é, não deve haver nenhum intervalo. Antes de executar o assistente, classifique os dados pela coluna da série temporal em ordem crescente.  
+ Os dados devem incluir pelo menos uma coluna que possa ser usada como a série temporal. Os valores nesta coluna devem ser exclusivos e contínuos, ou seja, não deve haver intervalos. Antes de executar o assistente, classifique os dados pela coluna da série temporal em ordem crescente.  
   
  Se os dados não incluírem uma coluna de data ou hora, você poderá atribuir uma série numérica arbitrária ou deixar o assistente criar uma. Se você permitir que o assistente crie a coluna da ordem de série, verifique se as outras colunas são classificadas na ordem desejada antes de iniciar o assistente.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)   
- [Previsão &#40;ferramentas de análise de tabela para Excel&#41;](forecast-table-analysis-tools-for-excel.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criando um modelo de mineração de dados](creating-a-data-mining-model.md)   
+ [Previsão de &#40;ferramentas de análise de tabela para Excel&#41;](forecast-table-analysis-tools-for-excel.md)   
  [Procurando um modelo de previsão](browsing-a-forecasting-model.md)  
   
   

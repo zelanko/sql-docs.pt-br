@@ -1,5 +1,5 @@
 ---
-title: Concluindo o Assistente (Assistente de Design de agregação) | Microsoft Docs
+title: Concluindo o assistente (Assistente de design de agregação) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd8a149582c15cfb9b216bf478d23e7d4de16a0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087724"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>Concluindo o Assistente (Assistente de Design de Agregação)
@@ -29,11 +29,11 @@ ms.locfileid: "66087724"
  **Implantar e processar agregações agora**  
  Conclua o assistente, atribua o design de agregação às partições selecionadas e implante e processe as partições selecionadas.  
   
- **Salvar as agregações mas não processá-los**  
+ **Salvar as agregações mas não processá-las**  
  Conclua o assistente e atribua o design de agregação às partições selecionadas mas não implante nem processe as partições selecionadas.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de Design de agregação](aggregation-design-wizard-f1-help.md)   
- [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de design de agregação](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services assistentes &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

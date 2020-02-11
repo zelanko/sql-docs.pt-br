@@ -22,17 +22,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6310453e1257aaee1a02f035c7213ef4fe6131af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704772"
 ---
 # <a name="monitor-job-activity"></a>Monitorar Atividade do Trabalho
   É possível monitorar a atividade atual de todos os trabalhos definidos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Monitor de Atividade do Trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="sql-server-agent-sessions"></a>Sessões do SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent cria uma nova sessão toda vez que o serviço é iniciado. Quando uma nova sessão é criada, a tabela **sysjobactivity** do banco de dados **msdb** é preenchida com todos os trabalhos definidos existentes. Essa tabela preserva a última atividade dos trabalhos quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é reiniciado. Cada sessão registra a atividade normal de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent do começo ao fim do trabalho. Informações sobre essas sessões são armazenadas na tabela **syssessions** do banco de dados **msdb** .  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent cria uma nova sessão toda vez que o serviço é iniciado. Quando uma nova sessão é criada, a tabela **sysjobactivity** do banco de dados **msdb** é preenchida com todos os trabalhos definidos existentes. Essa tabela preserva a última atividade dos trabalhos quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é reiniciado. Cada sessão registra a atividade normal de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent do começo ao fim do trabalho. Informações sobre essas sessões são armazenadas na tabela **syssessions** do banco de dados **msdb** .  
   
 ## <a name="job-activity-monitor"></a>Monitor de Atividade do Trabalho  
  O Monitor de Atividade do Trabalho permite exibir a tabela **sysjobactivity** usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. É possível visualizar todos os trabalhos no servidor ou definir filtros para limitar o número de trabalhos exibidos. Você também pode classificar as informações do trabalho, clicando no título de uma coluna na grade do **Atividade de Trabalho do Agente** . Por exemplo, selecionando o título de coluna **Última Execução** , é possível exibir os trabalhos na ordem em que foram executados pela última vez. Clicando novamente no cabeçalho da coluna, os trabalhos são classificados em ordem crescente ou decrescente segundo as datas de suas últimas execuções.  
@@ -58,12 +59,12 @@ ms.locfileid: "62704772"
 |||  
 |-|-|  
 |**Descrição**|**Tópico**|  
-|Descreve como exibir o estado de tempo de execução de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Exibir Atividade do Trabalho](view-job-activity.md)|  
+|Descreve como exibir o estado de runtime de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Exibir Atividade do Trabalho](view-job-activity.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir atividade do trabalho](view-job-activity.md)   
- [dbo.sysjobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
- [dbo.syssessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
- [sp_help_jobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
+ [dbo. sysjobactivity &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
+ [dbo. syssessions &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_help_jobactivity](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

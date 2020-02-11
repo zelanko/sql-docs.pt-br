@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663479"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Classe de evento CPU Threshold Exceeded
@@ -29,17 +29,17 @@ ms.locfileid: "62663479"
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>Colunas de dados de CPU Threshold Exceeded  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|`int`|Uso de CPU em milissegundos.|18|Sim|  
 |EventClass|`int`|214|27|Não|  
 |EventSubClass|`int`|Violação de limite da CPU.|21|Sim|  
 |GroupID|`int`|ID do grupo onde a violação ocorreu.|66|Sim|  
 |OwnerID|`int`|SPID do processo que causou a violação.|58|Sim|  
-|SPID|`int`|ID do processo de servidor que dispara este evento.<br /><br /> Observação: Isso pode ser diferente do verdadeiro SPID do usuário se um thread de sistema validar o uso de CPU como uma tarefa em segundo plano.|12|Sim|  
+|SPID|`int`|ID do processo de servidor que dispara este evento.<br /><br /> Observação: poderá ser diferente do verdadeiro SPID do usuário se um thread de sistema validar o uso da CPU como uma tarefa em segundo plano.|12|Sim|  
 |StartTime|`datetime`|A hora em que esse evento foi disparado.|14|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

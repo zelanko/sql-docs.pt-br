@@ -1,5 +1,5 @@
 ---
-title: Tarefas e instruções modelo de mineração | Microsoft Docs
+title: Tarefas e instruções do modelo de mineração | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083493"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Tarefas e instruções do modelo de mineração
@@ -35,7 +35,7 @@ ms.locfileid: "66083493"
   
 -   [Alterar a diferenciação de uma coluna em um modelo de mineração](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Exibir ou alterar sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md)  
+-   [Exibir ou alterar sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)  
   
 -   [Especificar uma coluna para usar como regressor em um modelo](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66083493"
   
 -   [Criar uma dimensão de mineração de dados](create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções da estrutura de mineração](mining-structure-tasks-and-how-tos.md)   
- [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
+ [Modelos de mineração &#40;Analysis Services de mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
  [Conceitos de mineração de dados](data-mining-concepts.md)  
   
   

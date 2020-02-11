@@ -1,5 +1,5 @@
 ---
-title: Propriedades (SSAS Tabular) do projeto | Microsoft Docs
+title: Propriedades do projeto (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a050c8eecadec138341ffe2f64a791eb198beebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066738"
 ---
 # <a name="project-properties-ssas-tabular"></a>Propriedades de projetos (SSAS tabular)
@@ -25,44 +25,44 @@ ms.locfileid: "66066738"
   
  Seções neste tópico:  
   
--   [Propriedades de projeto](#bkmk_proj_properties)  
+-   [Propriedades do Projeto](#bkmk_proj_properties)  
   
--   [Para definir as configurações de propriedades Opções de implantação e servidor de implantação](#bkmk_conf_proj_settings)  
+-   [Para configurar as configurações de propriedade Opções de Implantação e Servidor de Implantação](#bkmk_conf_proj_settings)  
   
-##  <a name="bkmk_proj_properties"></a> Propriedades de projeto  
+##  <a name="bkmk_proj_properties"></a>Propriedades do projeto  
  **Opções de implantação**  
   
-|Propriedade|Configuração padrão|Descrição|  
+|Propriedade|Configuração padrão|DESCRIÇÃO|  
 |--------------|---------------------|-----------------|  
-|**Opção de Processamento**|**Default**|Por padrão, o Analysis Services determinará o tipo de processamento necessário quando as alterações em objetos forem implantadas. Geralmente, resulta em tempo menor de implantação. No entanto, você também pode optar pelo processamento completo ou por não fazer o processamento a cada implantação.|  
-|**Implantação Transacional**|**False**|Especifica se a implantação do modelo é transacional ou não. Por padrão, a implantação de todos os objetos ou dos objetos alterados não é transacional com o processamento desses objetos implantados. A implantação pode ser bem-sucedida e persistir mesmo em caso de falha do processamento. É possível alterar esse padrão para incorporar a implantação e o processamento em uma única transação.|  
-|**Modo de Consulta**|**Na Memória**|Especifica a origem da qual os resultados da consulta são retornados. Para obter mais informações, consulte [Modo DirectQuery &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md).|  
+|**Opção de processamento**|**Default**|Por padrão, o Analysis Services determinará o tipo de processamento necessário quando as alterações em objetos forem implantadas. Geralmente, resulta em tempo menor de implantação. No entanto, você também pode optar pelo processamento completo ou por não fazer o processamento a cada implantação.|  
+|**Implantação transacional**|**Falso**|Especifica se a implantação do modelo é transacional ou não. Por padrão, a implantação de todos os objetos ou dos objetos alterados não é transacional com o processamento desses objetos implantados. A implantação pode ser bem-sucedida e persistir mesmo em caso de falha do processamento. É possível alterar esse padrão para incorporar a implantação e o processamento em uma única transação.|  
+|**Modo de consulta**|**Em Memória**|Especifica a origem da qual os resultados da consulta são retornados. Para obter mais informações, consulte [Modo DirectQuery &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md).|  
   
- **Servidor de Implantação**  
+ **Servidor de implantação**  
   
-|Propriedade|Configuração padrão|Descrição|  
+|Propriedade|Configuração padrão|DESCRIÇÃO|  
 |--------------|---------------------|-----------------|  
 |**Servidor**|**localhost**|Especifica uma instância do Analysis Services. Por padrão, os modelos são implantados na instância padrão do Analysis Services no computador local. É possível alterar essas configuração para especificar uma instância nomeada no computador local ou uma instância em qualquer outro computador remoto no qual você tenha permissão para criar objetos do Analysis Services. Geralmente, as permissões de administrador.<br /><br /> A configuração padrão para essa propriedade pode ser alterada usando a propriedade Servidor de Implantação Padrão na página Implantação nas configurações do Analysis Server na caixa de diálogo Ferramentas\Opções. Para obter mais informações, consulte [Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS de Tabela&#41;](properties-ssas-tabular.md).|  
-|**Edição**|**Desenvolvedor**|Especifica a edição do servidor do Analysis Services para o qual o modelo será implantado. A edição do servidor define vários recursos que podem ser incorporados no projeto.|  
-|**Backup de banco de dados**|**Modelo**|Especifica o nome do banco de dados do Analysis Services no qual os objetos modelo serão instanciados na implantação. Esse nome será especificado em uma conexão de dados ou em um arquivo .rsds de conexão de dados. É recomendável que o nome reflita o tipo de análise que será executada por meio do modelo, por exemplo, AdventureWorksSalesModel.<br /><br /> **\*\* Importante \* \***  para impedir nomes duplicados para modelos implantados, você deve alterar a **banco de dados** configuração de nome de propriedade para refletir o propósito do modelo. Quando os usuários se conectarem ao modelo como uma fonte de dados, este é o nome que eles verão.|  
-|**Nome do Cubo**|**Modelo**|Especifica o nome do cubo de banco de dados como mostrado em uma conexão de dados de cliente de relatório.|  
+|**Versão**|**Desenvolvedor**|Especifica a edição do servidor do Analysis Services para o qual o modelo será implantado. A edição do servidor define vários recursos que podem ser incorporados no projeto.|  
+|**Backup de banco de dados**|**Deprecia**|Especifica o nome do banco de dados do Analysis Services no qual os objetos modelo serão instanciados na implantação. Esse nome será especificado em uma conexão de dados ou em um arquivo .rsds de conexão de dados. É recomendável que o nome reflita o tipo de análise que será executada por meio do modelo, por exemplo, AdventureWorksSalesModel.<br /><br /> ** \* Importante \* \* ** Para evitar nomes duplicados para modelos implantados, você deve alterar a configuração do nome da Propriedade do **banco de dados** para refletir a finalidade do modelo. Quando os usuários se conectarem ao modelo como uma fonte de dados, este é o nome que eles verão.|  
+|**Nome do cubo**|**Deprecia**|Especifica o nome do cubo de banco de dados como mostrado em uma conexão de dados de cliente de relatório.|  
 |**Versão**|**11.0**|A versão da instância do Analysis Services no qual o projeto será implantado.|  
   
- **Opções de DirectQuery**  
+ **Opções do DirectQuery**  
   
-|Propriedade|Configuração padrão|Descrição|  
+|Propriedade|Configuração padrão|DESCRIÇÃO|  
 |--------------|---------------------|-----------------|  
-|**Configurações da representação**|**Default**|Especifica as credenciais que são usadas para conectar-se a fontes de dados para um modelo executando em Modo DirectQuery. Estas credenciais são diferentes de credenciais de representação que são usados no modo Na Memória padrão. Para obter mais informações, consulte [Representação &#40;SSAS de Tabela&#41;](impersonation-ssas-tabular.md).|  
+|**Configurações de representação**|**Default**|Especifica as credenciais que são usadas para conectar-se a fontes de dados para um modelo executando em Modo DirectQuery. Estas credenciais são diferentes de credenciais de representação que são usados no modo Na Memória padrão. Para obter mais informações, consulte [Representação &#40;SSAS de Tabela&#41;](impersonation-ssas-tabular.md).|  
   
-###  <a name="bkmk_conf_proj_settings"></a> Para definir as configurações de propriedades Opções de implantação e servidor de implantação  
+###  <a name="bkmk_conf_proj_settings"></a>Para configurar opções de implantação e configurações de Propriedade do servidor de implantação  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], no **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e clique em **Propriedades**.  
   
 2.  Na janela **Propriedades** , clique em uma propriedade e digite um valor ou clique na seta para baixo para selecionar uma opção de configuração.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS de Tabela&#41;](properties-ssas-tabular.md)   
- [Propriedades de modelo &#40;SSAS de Tabela&#41;](model-properties-ssas-tabular.md)   
- [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar propriedades de implantação e modelagem de dados padrão &#40;SSAS tabular&#41;](properties-ssas-tabular.md)   
+ [Propriedades de modelo &#40;SSAS de tabela&#41;](model-properties-ssas-tabular.md)   
+ [Implantação de solução de modelo de tabela &#40;SSAS de tabela&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

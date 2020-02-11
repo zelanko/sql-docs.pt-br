@@ -1,5 +1,5 @@
 ---
-title: Perspectivas (SSAS Tabular) | Microsoft Docs
+title: Perspectivas (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcd6e438327d88b79a88b5026f28e24e19fffb5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066876"
 ---
 # <a name="perspectives-ssas-tabular"></a>Perspectivas (SSAS tabular)
@@ -37,17 +37,17 @@ ms.locfileid: "66066876"
   
  As perspectivas não se destinam a serem usadas como um mecanismo de segurança, mas como uma ferramenta para fornecer uma melhor experiência. Toda a segurança de uma determinada perspectiva é herdada do modelo subjacente. As perspectivas não podem fornecer acesso a objetos de modelo aos quais o usuário ainda não tem acesso. A segurança para o banco de dados modelo deve ser resolvida antes que o acesso a objetos no modelo possa ser fornecido por meio de uma perspectiva. As funções de segurança podem ser usadas para proteger metadados e dados do modelo. Para obter mais informações, consulte [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md).  
   
-##  <a name="bkmk_testpersp"></a> Testando perspectivas  
+##  <a name="bkmk_testpersp"></a>Testando perspectivas  
  Ao criar um modelo, você pode usar o recurso Analisar no Excel no designer de modelo para testar a eficácia das perspectivas que você definiu. No menu **Modelo** no designer de modelo, quando você clica em **Analisar no Excel**, antes de o Excel abrir, a caixa de diálogo **Escolher Credenciais e Perspectiva** é aberta. Nesta caixa de diálogo, você pode especificar o usuário atual, um nome de usuário diferente, uma função e uma perspectiva que você usará para se conectar ao banco de dados do workspace modelo como uma fonte de dados e exibir os dados.  
   
 ##  <a name="bkmk_related_tasks"></a> Tarefas relacionadas  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Criar e gerenciar perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)|Descreve como criar e gerenciar perspectivas usando a caixa de diálogo Perspectivas no designer de modelo.|  
+|[Criar e gerenciar perspectivas &#40;SSAS de tabela&#41;](perspectives-ssas-tabular.md)|Descreve como criar e gerenciar perspectivas usando a caixa de diálogo Perspectivas no designer de modelo.|  
   
-## <a name="see-also"></a>Consulte também  
- [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)   
- [Hierarquias &#40;SSAS de Tabela&#41;](hierarchies-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções &#40;SSAS de tabela&#41;](roles-ssas-tabular.md)   
+ [Hierarquias &#40;SSAS de tabela&#41;](hierarchies-ssas-tabular.md)  
   
   

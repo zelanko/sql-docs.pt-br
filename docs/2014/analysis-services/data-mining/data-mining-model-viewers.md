@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 659b8c0afd91a60389a2cacf9a3063ff65164dd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085053"
 ---
 # <a name="data-mining-model-viewers"></a>Visualizadores do Modelo de Mineração de Dados
-  Após treinar em um modelo de mineração de dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode explorar o modelo para procurar tendências interessantes. Como os resultados dos modelos de mineração são complexos e de difícil entendimento quando em um formato bruto, muitas vezes a verificação visual dos dados é a maneira mais fácil de interpretar as regras e as relações que os algoritmos identificam nos dados.  
+  Depois de treinar um modelo de Data Mining [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]no, você pode explorar o modelo para procurar tendências interessantes. Como os resultados dos modelos de mineração são complexos e de difícil entendimento quando em um formato bruto, muitas vezes a verificação visual dos dados é a maneira mais fácil de interpretar as regras e as relações que os algoritmos identificam nos dados.  
   
  Cada algoritmo usado para criar um modelo retorna um tipo de resultado diferente. Portanto, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um visualizador separado para cada algoritmo. Quando você navega em um modelo de mineração no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o modelo é exibido na guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados, usando o visualizador adequado ao modelo.  
   
@@ -45,14 +45,14 @@ ms.locfileid: "66085053"
   
      Na esquerda, o visualizador genérico exibe uma lista dos nós no modelo. Você pode clicar em um nó para exibir seu conteúdo no painel direito.  
   
- ![Visão geral do designer de modelo de mineração](../media/generic-mining-model-tab1.gif "visão geral do designer de modelo de mineração")  
+ ![Visão geral do designer de modelo de mineração](../media/generic-mining-model-tab1.gif "Visão geral do designer de modelo de mineração")  
   
 ## <a name="more-about-the-microsoft-generic-content-tree-viewer"></a>Mais sobre o Visualizador de árvore de conteúdo genérica da Microsoft  
  Cada modelo pode ser exibido com o [Visualizador de Árvore de Conteúdo Genérico da Microsoft &#40;Mineração de dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md). Este visualizador apresenta o conteúdo do modelo de mineração de acordo com um formato de tabela de HTML padrão. No entanto, a disposição dos nós e o conteúdo de cada nó difere enormemente, dependendo do algoritmo usado para gerar os resultados.  
   
  Enquanto os visualizadores personalizados são projetados para explorar e compreender o modelo, o visualizador genérico é mais útil quando você já compreende o modelo e deseja extrair estatísticas ou regras a partir de um nó específico. Por exemplo, você usaria o visualizador genérico quando desejasse exibir informações detalhadas sobre os padrões e as estatísticas que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] capturou durante a análise, como a probabilidade de um nó, ou uma fórmula de regressão.  
   
- Você também pode escrever *consultas de conteúdo* usando DMX para obter todas as informações que são apresentadas neste visualizador. Para obter mais informações, consulte [Consultas de conteúdo &#40;Mineração de dados&#41;](content-queries-data-mining.md).  
+ Você também pode escrever *consultas de conteúdo* usando DMX para obter todas as informações que são apresentadas neste visualizador. Para obter mais informações, consulte [Consultas de conteúdo &#40;Data Mining&#41;](content-queries-data-mining.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos a seguir descrevem em mais detalhe cada um dos visualizadores, e como interpretar as informações neles.  
@@ -81,8 +81,8 @@ ms.locfileid: "66085053"
  [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
  Descreve as informações detalhadas disponíveis no visualizador genérico de todos os modelos de mineração de dados e fornece exemplos de como interpretar as informações para cada algoritmo.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Designer de Mineração de dados](data-mining-designer.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Designer](data-mining-designer.md)  
   
   

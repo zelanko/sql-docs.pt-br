@@ -1,5 +1,5 @@
 ---
-title: Mining Model Content para modelos de regressão logística (Analysis Services - mineração de dados) | Microsoft Docs
+title: Conteúdo do modelo de mineração para modelos de regressão logística (Analysis Services-Mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083618"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de regressão logística (Analysis Services – Mineração de Dados)
@@ -31,7 +31,7 @@ ms.locfileid: "66083618"
   
  Porém, em um modelo de regressão logística, o nó que representa a camada oculta está vazio e não tem nenhum filho. Sendo assim, o modelo contém nós que representam saídas individuais (NODE_TYPE = 23) e entradas individuais (NODE_TYPE = 21), mas não nós ocultos individuais.  
   
- ![estrutura do conteúdo do modelo de regressão logística](../media/skt-modelcontentstructure-logregc.gif "estrutura do conteúdo do modelo de regressão logística")  
+ ![estrutura de conteúdo do modelo de regressão logística](../media/skt-modelcontentstructure-logregc.gif "estrutura de conteúdo do modelo de regressão logística")  
   
  Por padrão, um modelo de regressão logística é exibido no **Visualizador de Rede Neural da Microsoft**. Com esse visualizador personalizado, você pode filtrar os atributos de entrada e seus valores e visualizar, graficamente, como eles afetam as saídas. As dicas de ferramentas no visualizador mostram a probabilidade e a comparação de precisão associadas a cada par de valores de entrada e saída. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Rede Neural da Microsoft](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66083618"
  NODE_TYPE  
  Um modelo de regressão logística gera os seguintes tipos de nó:  
   
-|ID do tipo de nó|Descrição|  
+|ID do tipo de nó|DESCRIÇÃO|  
 |------------------|-----------------|  
 |1|Modelo.|  
 |17|Nó do organizador para a sub-rede.|  
@@ -140,7 +140,7 @@ ms.locfileid: "66083618"
  A probabilidade de que o nó seja alcançado a partir do nó pai. Em modelos de regressão logística, sempre 0.  
   
  NODE_DISTRIBUTION  
- Uma tabela aninhada que contém informações estatísticas para o nó. Para obter informações detalhadas sobre o conteúdo dessa tabela para cada tipo de nó, consulte a seção Entendendo a tabela NODE_DISTRIBUTION no [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Uma tabela aninhada que contém informações estatísticas para o nó. Para obter informações detalhadas sobre o conteúdo dessa tabela para cada tipo de nó, consulte a seção Entendendo a tabela NODE_DISTRIBUTION no [Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
  NODE_SUPPORT  
  Em modelos de regressão logística, sempre 0.  
@@ -167,7 +167,7 @@ ms.locfileid: "66083618"
  MSOLAP_NODE_SHORT_CAPTION  
  Em modelos de regressão logística, sempre em branco.  
   
-##  <a name="bkmk_NodeIDs"></a> Usando nomes e IDs de nós  
+##  <a name="bkmk_NodeIDs"></a>Usando nomes e IDs de nós  
  A nomenclatura dos nós em um modelo de regressão logística fornece mais informações sobre os tipos de relações entre os nós no modelo. A tabela a seguir mostra as convenções para as IDs atribuídas aos nós em cada camada.  
   
 |Tipo de nó|Convenção da ID de nó|  
@@ -183,9 +183,9 @@ ms.locfileid: "66083618"
   
  Você pode usar essas IDs para determinar como os atributos de saída são relacionados a atributos específicos da camada de entrada exibindo a tabela NODE_DISTRIBUTION no nó de saída. Cada linha nessa tabela contém uma ID que indica um nó de atributo de entrada específico. A tabela NODE_DISTRIBUTION também contém o coeficiente para o par de entrada-saída.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmo Regressão Logística da Microsoft](microsoft-logistic-regression-algorithm.md)   
- [Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmo de regressão logística da Microsoft](microsoft-logistic-regression-algorithm.md)   
+ [Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services&#41;de mineração de dados](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de regressão logística](logistic-regression-model-query-examples.md)   
  [Referência técnica do algoritmo Regressão Logística da Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

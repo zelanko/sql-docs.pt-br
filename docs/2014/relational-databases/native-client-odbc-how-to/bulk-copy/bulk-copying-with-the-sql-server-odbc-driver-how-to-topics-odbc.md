@@ -14,30 +14,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688877"
 ---
-# <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Tópicos de instruções sobre cópia em massa com o SQL Server driver ODBC (ODBC)
+# <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Tópicos de instrução sobre cópia em massa com o driver ODBC do SQL Server (ODBC)
   Quando usado com Microsoft SQL Server 2005, o driver ODBC SQL Server dá suporte às mesmas funções de cópia em massa com suporte da API DB-Library.  
   
- Para obter informações sobre uma alteração significativa na cópia em massa a partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], consulte [executando &#40;operações&#41;de cópia em massa ODBC](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Para obter informações sobre uma alteração significativa na cópia em massa [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]a partir do, consulte [executando operações de cópia em massa &#40;&#41;ODBC ](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Cópia em massa sem um arquivo &#40;de formato ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
+-   [Cópia em massa sem um arquivo de formato &#40;&#41;ODBC](bulk-copy-without-a-format-file-odbc.md)  
   
--   [Cópia em massa de um conjunto &#40;de resultados SELECT ODBC&#41;](bulk-copy-a-select-result-set-odbc.md)  
+-   [Cópia em massa de um conjunto de resultados selecionado &#40;&#41;ODBC](bulk-copy-a-select-result-set-odbc.md)  
   
--   [Criar um arquivo &#40;de formato de cópia em massa ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)  
+-   [Criar um arquivo de formato de cópia em massa &#40;&#41;ODBC](create-a-bulk-copy-format-file-odbc.md)  
   
--   [Cópia em massa usando um arquivo &#40;de formato ODBC&#41;](bulk-copy-by-using-a-format-file-odbc.md)  
+-   [Cópia em massa usando um arquivo de formato &#40;&#41;ODBC](bulk-copy-by-using-a-format-file-odbc.md)  
   
--   [Copiar Dados em massa de variáveis &#40;do programa ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
+-   [Copiar Dados em massa de variáveis de programa &#40;ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre ODBC](../odbc-how-to-topics.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Excluir uma biblioteca de feeds de dados do PowerPivot | Microsoft Docs
+title: Excluir uma biblioteca de feeds de dados PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f2e12e536cfaf91bab25e958ba279b072b39259
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071479"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>Excluir uma biblioteca de feeds de dados PowerPivot
@@ -30,11 +30,11 @@ ms.locfileid: "66071479"
   
 3.  Em Administração de Site, clique em **Bibliotecas e listas do site**.  
   
-4.  Clique em **personalizar "\<nome da sua biblioteca >"**  
+4.  Clique em **Personalizar\<"nome da biblioteca>"**  
   
 5.  Em Permissões e Gerenciamento, clique em **Excluir esta biblioteca**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Feeds de dados PowerPivot](power-pivot-data-feeds.md)  
   
   

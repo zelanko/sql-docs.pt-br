@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083109"
 ---
 # <a name="process-a-mining-structure"></a>Processar uma estrutura de mineração
@@ -28,7 +28,7 @@ ms.locfileid: "66083109"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   XMLA: Comando de processo  
+-   XMLA: comando Process  
   
  Para obter informações sobre como processar modelos individuais, consulte [Processar um modelo de mineração](process-a-mining-model.md).  
   
@@ -38,15 +38,15 @@ ms.locfileid: "66083109"
   
      Caso faça alterações na estrutura, você receberá uma solicitação para implantar a estrutura novamente antes de processar os modelos. Clique em **Sim**.  
   
-2.  Clique em **executados** na **processando estrutura de mineração - \<estrutura >** caixa de diálogo.  
+2.  Clique em **executar** na caixa de diálogo **processando estrutura de mineração \<– estrutura>** .  
   
      A caixa de diálogo **Andamento do Processo** é aberta para exibir os detalhes sobre o processamento do modelo.  
   
 3.  Clique em **Fechar** na caixa de diálogo **Andamento do Processo** após os modelos completarem seu processamento.  
   
-4.  Clique em **feche** na **processando estrutura de mineração - \<estrutura >** caixa de diálogo.  
+4.  Clique em **fechar** na caixa de diálogo **processando estrutura de mineração \<– estrutura>** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções da estrutura de mineração](mining-structure-tasks-and-how-tos.md)  
   
   

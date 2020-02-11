@@ -1,5 +1,5 @@
 ---
-title: Definir as dimensões do banco de dados | Microsoft Docs
+title: Definir dimensões de banco de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075607"
 ---
 # <a name="define-database-dimensions"></a>Definir as dimensões do banco de dados
-  Use o Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para configurar a dimensão de um banco de dados existente em um projeto ou banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você pode usar o Designer de Dimensão para fazer o seguinte:  
+  Use o designer de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] dimensão no para configurar uma dimensão de banco [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de dados existente em um projeto ou banco de dados. Você pode usar o Designer de Dimensão para fazer o seguinte:  
   
 -   Configurar as propriedades do nível de dimensão.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "66075607"
   
  O Designer de Dimensão tem três guias diferentes que são descritas na tabela a seguir.  
   
-|Tab|Descrição|  
+|Tab|DESCRIÇÃO|  
 |---------|-----------------|  
-|**Estrutura da Dimensão**|Use esta guia para trabalhar com a estrutura de uma dimensão para examinar ou criar o esquema de exibição de fonte de dados para uma dimensão, para trabalhar com atributos e para organizar atributos em hierarquias definidas pelo usuário.|  
-|**Relações de atributo**|Use essa guia para criar, modificar ou excluir as relações de atributo de uma dimensão.|  
-|**Traduções**|Use essa guia para adicionar e editar conversões de metadados de dimensão em linguagens diferentes.|  
+|**Estrutura da dimensão**|Use esta guia para trabalhar com a estrutura de uma dimensão-para examinar ou criar o esquema de exibição da fonte de dados para uma dimensão, para trabalhar com atributos e para organizar atributos em hierarquias definidas pelo usuário.|  
+|**Relações de Atributo**|Use essa guia para criar, modificar ou excluir as relações de atributo de uma dimensão.|  
+|**Translations**|Use essa guia para adicionar e editar conversões de metadados de dimensão em linguagens diferentes.|  
 |**Navegador**|Use essa guia para examinar os membros de uma dimensão processada e para revisar as conversões de metadados de dimensão.|  
   
  Os tópicos a seguir descrevem as tarefas que você pode executar no Designer de Dimensão.  

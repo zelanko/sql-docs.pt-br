@@ -1,5 +1,5 @@
 ---
-title: Propriedades de rede | Microsoft Docs
+title: Propriedades da rede | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -36,16 +36,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 882b5fc60020423e19f68fda40273b7c944bd4f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068881"
 ---
 # <a name="network-properties"></a>Propriedades de rede
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor listadas nas tabelas a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** Modo de servidor multidimensional e Tabular  
+ **Aplica-se a:** Modo de servidor multidimensional e tabular  
   
 ## <a name="general"></a>Geral  
  `ListenOnlyOnLocalConnections`  
@@ -55,7 +56,7 @@ ms.locfileid: "66068881"
  `IPV4Support`  
  Uma propriedade de inteiro de 32 bits assinada que define o suporte ao protocolo IPv4. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |*0*|IPv4 desabilitado; os clientes não podem se conectar.|  
 |*1*|(Padrão) IPv4 necessário; servidor não será iniciado se não puder escutar IPv4.|  
@@ -64,7 +65,7 @@ ms.locfileid: "66068881"
  `IPV6Support`  
  Uma propriedade de inteiro de 32 bits assinada que define o suporte ao protocolo IPv6. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |*0*|IPv6 desabilitado; os clientes não podem se conectar.|  
 |*1*|(Padrão) IPv6 necessário; servidor não será iniciado se não for possível escutar IPv6|  
@@ -82,14 +83,14 @@ ms.locfileid: "66068881"
  `ServerSendTimeout`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="requests"></a>Solicitações  
+## <a name="requests"></a>Requests  
  `EnableBinaryXML`  
  Uma propriedade Booleana que especifica se o servidor reconhecerá solicitações xml em formato binário.  
   
  `EnableCompression`  
  Uma propriedade Booleana que especifica se a compressão está habilitada para solicitações.  
   
-## <a name="responses"></a>Responses  
+## <a name="responses"></a>Respostas  
  `CompressionLevel`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -142,8 +143,8 @@ ms.locfileid: "66068881"
  `SocketOptions\ SendBufferSize`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar propriedades de servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar propriedades do servidor no Analysis Services](server-properties-in-analysis-services.md)   
+ [Determinar o modo de servidor de uma instância de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

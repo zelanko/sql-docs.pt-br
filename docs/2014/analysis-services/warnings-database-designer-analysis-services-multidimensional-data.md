@@ -1,5 +1,5 @@
 ---
-title: Avisos (Designer de banco de dados) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Warnings (Database Designer) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065434"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Avisos (Designer de Banco de Dados) (Analysis Services - Dados multidimensionais)
-  Use a guia **Avisos** para exibir e ignorar regras globalmente e para exibir e reabilitar instâncias específicas de avisos ignorados. O **avisos** guia exibe duas grades: **Regras de aviso de design** e **avisos ignorados**.  
+  Use a guia **Avisos** para exibir e ignorar regras globalmente e para exibir e reabilitar instâncias específicas de avisos ignorados. A guia **Avisos** exibe duas grades: **Regras de Aviso de Design** e **Avisos Ignorados**.  
   
- **Para exibir a guia avisos**  
+ **Para exibir a guia Avisos**  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66065434"
  **Descrição**  
  Exibe o nome da regra. As regras são agrupadas por categoria.  
   
- **Importância**  
+ **Porta**  
  Exibe a importância atribuída à regra.  
   
  **Comentários**  
@@ -56,20 +56,20 @@ ms.locfileid: "66065434"
  **Descrição**  
  Exibe o nome da regra.  
   
- **Importância**  
+ **Porta**  
  Exibe a importância atribuída à regra.  
   
  **Comentários**  
  Exibe o comentário que foi digitado quando o aviso foi ignorado. Você pode adicionar ou modificar um comentário aqui.  
   
- **Habilitar novamente**  
+ **Reabilitar**  
  Reabilita os avisos selecionados.  
   
 > [!NOTE]  
 >  Se um objeto tiver um aviso, mas o objeto estiver em um estado inválido ou tiver sido manualmente removido do projeto, um ícone de erro aparecerá próximo ao aviso na lista. Para ignorar o aviso, selecione-o e clique em **Reabilitar**.  
   
-## <a name="see-also"></a>Consulte também  
- [Ignorar a caixa de diálogo de aviso &#40;Analysis Services - dados multidimensionais&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
- [Geral &#40;Designer de banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo ignorar aviso &#40;Analysis Services de dados multidimensionais&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
+ [Geral &#40;designer de banco de dados&#41; &#40;Analysis Services-dados multidimensionais&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   
   
