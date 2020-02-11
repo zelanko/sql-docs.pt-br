@@ -1,5 +1,5 @@
 ---
-title: Perspectivas (Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Perspectivas (Designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bc2e3bd77b0a5a7454bd136b7a0dc485180ba28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072019"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>Perspectivas (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -25,13 +25,13 @@ ms.locfileid: "66072019"
  A guia **Perspectivas** contém os seguintes painéis:  
   
 ## <a name="panes"></a>Painéis  
- **Barra de Ferramentas**  
+ **Barra de ferramentas**  
  Use a barra de ferramentas para executar ações comuns na guia.  
   
- **Detalhes da perspectiva**  
+ **Detalhes da Perspectiva**  
  Use o painel **Detalhes da Perspectiva** para criar e modificar perspectivas do cubo selecionado.  
   
-## <a name="see-also"></a>Consulte também  
- [Perspectivas](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
+## <a name="see-also"></a>Consulte Também  
+ [perspectivas](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Opções (Designers de tabela e página de Designers de banco de dados) | Microsoft Docs
+title: Opções (designers – página designers de tabela e banco de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283655"
 ---
-# <a name="options-designers-table-and-database-designers-page"></a>Opções (Designers de tabela e página de Designers de banco de dados)
+# <a name="options-designers-table-and-database-designers-page"></a>Opções (designers – página designers de tabela e banco de dados)
   Use esta página para determinar o comportamento padrão do designer. Para acessar as configurações, no menu **Ferramentas** , clique em **Opções**, expanda  a pasta **Designers** e clique em **Designer de Tabela**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
@@ -73,7 +73,7 @@ ms.locfileid: "63283655"
   
      Mostra apenas o cabeçalho da tabela com seu nome.  
   
--   **Personalizar**  
+-   **Custom**  
   
      Permite que você escolha quais colunas deseja exibir.  
   

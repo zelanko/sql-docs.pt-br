@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843089"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transações em tabelas com otimização de memória
@@ -70,7 +70,7 @@ ms.locfileid: "62843089"
 ### <a name="transaction-lifetime"></a>Tempo de vida da transação  
  As falhas mencionadas na tabela anterior podem ocorrer em pontos diferentes durante a transação. A figura a seguir ilustra as fases de uma transação que acessa tabelas com otimização de memória.  
   
- ![Tempo de vida de uma transação. ](../../2014/database-engine/media/hekaton-transactions.gif "Tempo de vida de uma transação.")  
+ ![Tempo de vida de uma transação.](../../2014/database-engine/media/hekaton-transactions.gif "Tempo de vida de uma transação.")  
 Tempo de vida de uma transação que acessa tabelas com otimização de memória.  
   
 #### <a name="regular-processing"></a>Processamento regular  
@@ -82,7 +82,7 @@ Tempo de vida de uma transação que acessa tabelas com otimização de memória
   
  Esse erro sempre condena a transação (mesmo que XACT_ABORT esteja como OFF), o que significa que a transação será revertida quando a sessão do usuário termina. As transações condenadas não podem ser confirmadas e somente dão suporte a operações de leitura que não são gravadas no log e não acessam tabelas com otimização de memória.  
   
-#####  <a name="cd"></a> Dependências de confirmação  
+#####  <a name="cd"></a>Dependências de confirmação  
  Durante o processamento regular, uma transação pode ler as linhas gravadas por outras transações que estão na fase de validação ou confirmação, mas que ainda não foram confirmadas. As linhas são visíveis, pois a hora de término lógica das transações foi atribuída no início da fase de validação.  
   
  Se uma transação ler essas linhas não confirmadas, ela obterá uma dependência de confirmação nessa transação. Isso tem duas consequências importantes:  
@@ -131,7 +131,7 @@ Tempo de vida de uma transação que acessa tabelas com otimização de memória
   
 -   As tabelas com otimização de memória não oferecem suporte a bloqueio. Os bloqueios explícitos por meio de dicas de bloqueio (como TABLOCK, XLOCK, ROWLOCK) não têm suporte com tabelas com otimização de memória.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compreendendo transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
   

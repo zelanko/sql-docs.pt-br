@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084126"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referência técnica do algoritmo de associação da Microsoft
@@ -42,11 +42,11 @@ ms.locfileid: "66084126"
  Também é possível criar modelos de associação para atributos numéricos. Se os atributos forem contínuos, os números poderão ser *discretizados ou* agrupados em buckets. Os valores diferenciados podem ser tratados como Boolianos ou como pares atributo-valor.  
   
 ### <a name="support-probability-and-importance"></a>Suporte, probabilidade e importância  
- *Suporte*, que às vezes é conhecido como *frequência*, significa o número de casos que contém o item de destino ou a combinação de itens. Somente os itens que têm, no mínimo, a quantia especificada de suporte podem ser incluídos no modelo.  
+ *Suporte*, que, às vezes, é referido como *frequência*, significa o número de casos que contêm o item de destino ou a combinação de itens. Somente os itens que têm, no mínimo, a quantia especificada de suporte podem ser incluídos no modelo.  
   
  Um *conjunto de itens frequente* refere-se a uma coleção de itens na qual a combinação de itens também dá suporte além do limite definido pelo parâmetro MINIMUM_SUPPORT. Por exemplo, se o conjunto de itens for {A,B,C} e o valor de MINIMUM_SUPPORT for 10, cada item A, B e C deve ser encontrado pelo menos em 10 casos para ser incluído no modelo, e a combinação de itens {A,B,C} também deve ser encontrada, no mínimo, em 10 casos.  
   
- **Observação** Você também pode controlar o número de conjuntos de itens em um modelo de mineração especificando o tamanho máximo de um conjunto de itens, sendo que tamanho significa o número de itens.  
+ **Observação** Você também pode controlar o número de conjuntos de itens em um modelo de mineração especificando o comprimento máximo de um conjunto, em que Length significa o número de itens.  
   
  Por padrão, o suporte para qualquer item ou conjunto de itens em particular representa uma contagem dos casos que contêm esse item (ou itens). No entanto, também é possível expressar MINIMUM_SUPPORT como uma porcentagem do total de casos no conjunto de dados, basta digitar o número como um valor decimal menor que 1. Por exemplo, se você especificar MINIMUM_SUPPORT com um valor de 0,03, significa que pelo menos 3% do total de casos do conjunto de dados deve conter esse item ou conjunto de itens para inclusão no modelo. Faça testes com seu modelo para determinar se faz mais sentido usar a contagem ou a porcentagem.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "66084126"
  O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] dá suporte a vários parâmetros que afetam o comportamento, o desempenho e a precisão do modelo de mineração resultante.  
   
 ### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
- É possível alterar os parâmetros de um modelo de mineração a qualquer momento com o uso do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você pode também alterar os parâmetros programaticamente usando o <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> coleção em AMO ou usando o [elemento MiningModels &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) em XMLA. A tabela a seguir descreve cada parâmetro.  
+ É possível alterar os parâmetros de um modelo de mineração a qualquer momento com o uso do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você também pode alterar parâmetros programaticamente usando <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> a coleção no amo ou usando o [elemento MiningModels &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) no XMLA. A tabela a seguir descreve cada parâmetro.  
   
 > [!NOTE]  
->  Você não pode alterar os parâmetros em um modelo existente usando uma instrução DMX; Você deve especificar os parâmetros na instrução DMX CREATE MODEL ou ALTER STRUCTURE... ADD MODEL ao criar o modelo.  
+>  Você não pode alterar os parâmetros em um modelo existente usando uma instrução DMX; Você deve especificar os parâmetros no modelo de criação DMX ou ALTER STRUCTURE... Adicionar modelo ao criar o modelo.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Especifica o número de máximo de conjuntos de itens que será produzido. Se não for especificado um número, valor padrão será usado.  
@@ -153,7 +153,7 @@ ms.locfileid: "66084126"
 ### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] dá suporte a colunas de entrada e colunas previsíveis específicas listadas na tabela a seguir. Para obter mais informações sobre o significado de tipos de conteúdo em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](content-types-data-mining.md).  
   
-|coluna|Tipos de conteúdo|  
+|Coluna|Tipos de conteúdo|  
 |------------|-------------------|  
 |Atributo de entrada|Cíclico, discreto, diferenciado, chave, tabela e ordenado|  
 |Atributo previsível|Cíclico, Discreto, Diferenciado, Tabela e Ordenado|  
@@ -161,9 +161,9 @@ ms.locfileid: "66084126"
 > [!NOTE]  
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmo Associação da Microsoft](microsoft-association-algorithm.md)   
- [Exemplos de consulta de um modelo de associação](association-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de associação &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmo de associação da Microsoft](microsoft-association-algorithm.md)   
+ [Exemplos de consulta de modelo de associação](association-model-query-examples.md)   
+ [Conteúdo do modelo de mineração para modelos de associação &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

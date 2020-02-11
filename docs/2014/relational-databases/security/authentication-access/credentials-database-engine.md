@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d42f93735723c81baf837736bfabcda2b1707aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011834"
 ---
 # <a name="credentials-database-engine"></a>Credenciais (Mecanismo de Banco de Dados)
@@ -35,10 +35,10 @@ ms.locfileid: "63011834"
   
  Credenciais de sistema são criadas automaticamente e associadas a pontos de extremidade específicos. Nomes para credenciais de sistema iniciam com dois sinais de hash (##).  
   
- Para obter mais informações sobre credenciais, consulte o [sys. Credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) exibição do catálogo.  
+ Para obter mais informações sobre credenciais, consulte a exibição do catálogo [Sys. Credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) .  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Criar uma credencial](../authentication-access/create-a-credential.md) [criar CREDENCIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+ [Criar uma](../authentication-access/create-a-credential.md) credencial criar credencial [&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
  [Protegendo o SQL Server](../securing-sql-server.md)  
   

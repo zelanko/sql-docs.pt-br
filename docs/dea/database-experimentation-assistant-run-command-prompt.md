@@ -2,7 +2,7 @@
 title: Executar Assistente para Experimentos de Banco de Dados em um prompt de comando
 description: Executar Assistente para Experimentos de Banco de Dados em um prompt de comando
 ms.custom: seo-lt-2019
-ms.date: 11/22/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f5a0f7441dd17aec2587c772a678a3681fd3b423
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: 8055ae8b66c2f2b59f18b0ee40dcac8753c0eb7c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317726"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831755"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Executar Assistente para Experimentos de Banco de Dados em um prompt de comando
 
@@ -75,6 +75,6 @@ Para iniciar uma nova análise de rastreamento, em um prompt de comando, execute
 
 `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - Para obter mais informações sobre como usar o DEA, consulte [visão geral do assistente para experimentos de banco de dados](database-experimentation-assistant-overview.md).

@@ -12,10 +12,10 @@ ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75558161"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Tipos de dados SQL Server e SSIS com suporte para domínios do DQS
@@ -33,9 +33,9 @@ ms.locfileid: "75558161"
 |Tipo de dados de domínio DQS|Tipo de dados do SQL Server com suporte|  
 |--------------------------|------------------------------------|  
 |Data|date|  
-|Decimal|decimal<br /><br /> flutuante<br /><br /> money<br /><br /> numeric<br /><br /> real<br /><br /> smallmoney|  
-|Número inteiro|bigint<br /><br /> int<br /><br /> smallint<br /><br /> tinyint|  
-|Cadeia de caracteres|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
+|Decimal|decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> numeric<br /><br /> real<br /><br /> SMALLMONEY|  
+|Integer|BIGINT<br /><br /> INT<br /><br /> SMALLINT<br /><br /> tinyint|  
+|String|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  
   
  O restante dos tipos de dados do SQL Server não tem suporte no DQS. Para obter informações sobre todos os tipos de dados do SQL Server, consulte [Tipos de dados &#40;Transact-SQL&#41;](../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -46,8 +46,8 @@ ms.locfileid: "75558161"
 |--------------------------|------------------------------|  
 |Data|DT_DATE|  
 |Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
-|Número inteiro|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
-|Cadeia de caracteres|DT_STR<br /><br /> DT_WSTR|  
+|Integer|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
+|String|DT_STR<br /><br /> DT_WSTR|  
   
  O restante dos tipos de dados do SSIS não tem suporte no DQS. Para obter informações sobre todos os tipos de dados do SSIS, consulte [Integration Services Data Types](../integration-services/data-flow/integration-services-data-types.md).  
   

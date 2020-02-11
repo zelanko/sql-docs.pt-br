@@ -1,5 +1,5 @@
 ---
-title: Perfis de atributo (Visualizador do modelo de mineração) da guia | Microsoft Docs
+title: Guia perfis de atributo (Visualizador do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063166"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>Guia Perfis de Atributo (Visualizador do Modelo de Mineração)
   Utilize a guia **Perfis de Atributo** para ver como a distribuição de valores de entrada em um estado de modelo Naive Bayes contribui para cada estado do atributo de resultado. A distribuição de valores é mostrada como um histograma colorido, todas as distribuições apresentadas em um formato de tabela, para facilitar a comparação de valores.  
   
- **Para obter mais informações:** [Algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md), [procurar um modelo usando o visualizador Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Para obter mais informações:** [Microsoft Naive Bayes Algorithm](data-mining/microsoft-naive-bayes-algorithm.md), [procurar um modelo usando o Microsoft Naive Bayes Viewer](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opções  
- **Atualizar conteúdo do Visualizador**  
+ **Atualizar conteúdo do visualizador**  
  Recarregue o modelo de mineração no visualizador.  
   
  **Modelo de mineração**  
@@ -34,28 +34,28 @@ ms.locfileid: "66063166"
  **Visualizador**  
  Escolha um visualizador a ser utilizado para explorar o modelo de mineração selecionado. Você pode escolher um visualizador personalizado fornecido para cada modelo de mineração ou o Visualizador de Conteúdo de Mineração da [!INCLUDE[msCoName](../includes/msconame-md.md)] . Você também pode usar os visualizadores de plug-in se estiverem disponíveis.  
   
- **Mostrar legenda**  
+ **Mostrar Legenda**  
  Selecione esta opção para exibir uma chave que corresponde a cada valor em **States** a uma das cores usadas no gráfico de distribuição.  
   
- **Barras de histograma**  
+ **Barras de Histograma**  
  Selecione quantas barras deseja incluir no histograma. Caso haja mais barras do que você opte por exibir, as barras de maior importância serão retidas e as restantes serão agrupadas em **Outras**.  
   
  **Previsível**  
  Selecione uma coluna previsível a partir do modelo de mineração.  
   
- **Perfis de Atributo**  
+ **Perfis de atributo**  
  A tabela contém as seguintes colunas:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Atributos**|Lista as colunas do modelo de mineração contidas no modelo de mineração.|  
 |**Estados**|Uma coluna opcional que descreve qual estado a cor da linha de atributos correspondente representa. Some ou remova usando a caixa de seleção **Mostrar Legenda** .|  
-|**População**|Exibe a distribuição do atributo por todo o conjunto de dados.|  
-|**Coluna para os estados do atributo previsível**|Exibe uma coluna para cada estado da coluna previsível em relação a cada linha correspondente a um atributo de entrada no modelo.|  
+|**Média**|Exibe a distribuição do atributo por todo o conjunto de dados.|  
+|**Coluna para os estados de atributo previsível**|Exibe uma coluna para cada estado da coluna previsível em relação a cada linha correspondente a um atributo de entrada no modelo.|  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining/data-mining-model-viewers.md)  
   
   

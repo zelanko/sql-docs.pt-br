@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 94ad81913071a3bbd4aad33515c27c68b9e268e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482669"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Permissões de objeto de modelo (Serviços de Dados Mestre)
@@ -27,16 +27,16 @@ ms.locfileid: "65482669"
   
  Para determinar a segurança atribuída em cada valor de atributo individual, permissões de objeto modelo são combinadas com permissões de membro de hierarquia, que determinam os membros que um usuário pode acessar.  
   
- Para fornecer um acesso de usuário a uma área funcional diferente de **Explorer**, o usuário deve ser um administrador de modelo, que também envolve a atribuição de permissões de objeto de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+ Para conceder a um usuário acesso a uma área funcional diferente do **Explorer**, o usuário deve ser um administrador de modelo, que também envolve a atribuição de permissões de objeto de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
- As permissões de objeto de modelo são atribuídas na interface do usuário do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], na área funcional **Permissões para Usuário e Grupo** da guia **Modelos**. Nesta guia, o modelo é representado como uma estrutura de árvore. Quando você atribui uma permissão a um objeto na árvore, todos os objetos abaixo herdam a permissão. Você pode substituir essa herança atribuindo permissões aos objetos individuais.  
+ As permissões de objeto de modelo são [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] atribuídas na interface do usuário, na área funcional **permissões de usuário e grupo** na guia **modelos** . Nessa guia, o modelo é representado como uma estrutura de árvore. Quando você atribui uma permissão a um objeto na árvore, todos os objetos abaixo herdam a permissão. Você pode substituir essa herança atribuindo permissões aos objetos individuais.  
   
- Você pode atribuir **somente leitura**, **atualização**, ou **Deny** permissão a objetos de modelo. Se você não atribuir nenhuma permissão na guia **Modelos** , o usuário não poderá exibir modelos nem dados no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+ Você pode atribuir permissão **somente leitura**, **Atualizar**ou **negar** a objetos de modelo. Se você não atribuir nenhuma permissão na guia **Modelos** , o usuário não poderá exibir modelos nem dados no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="best-practice"></a>Prática recomendada  
- Em geral, você deve atribuir **atualização** permissão para o objeto de modelo e, em seguida, atribuir explicitamente permissão aos objetos subjacentes. Se você não atribuir permissão a objetos subjacentes, as permissões serão herdadas e o usuário será um administrador.  
+## <a name="best-practice"></a>Melhor prática  
+ Em geral, você deve atribuir a permissão **Atualizar** ao objeto de modelo e atribuir explicitamente permissão a objetos abaixo. Se você não atribuir permissão a objetos subjacentes, as permissões serão herdadas e o usuário será um administrador.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Permissões de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-permissions-master-data-services.md)   
  [Permissões de área funcional &#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   

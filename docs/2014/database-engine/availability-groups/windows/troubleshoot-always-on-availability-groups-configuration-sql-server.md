@@ -1,5 +1,5 @@
 ---
-title: Solucionar problemas de configuração de grupos de disponibilidade do AlwaysOn (SQL Server) | Microsoft Docs
+title: Solucionar problemas de configuração de Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1756c80b86ec9b8c16792bf488cc1d3d19b590d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813159"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Solucionar problemas de configuração de grupos de disponibilidade AlwaysOn (SQL Server)
   Este tópico fornece informações para ajudar a solucionar problemas típicos ao configurar instâncias de servidor para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Os problemas de configuração típicos incluem: o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] está desabilitado, as contas estão configuradas incorretamente, o ponto de extremidade de espelhamento de banco de dados não existe, o ponto de extremidade está inacessível (Erro 1418 do SQL Server), o acesso à rede não existe e falha no comando de junção de banco de dados (Erro 35250 do SQL Server).  
   
 > [!NOTE]  
->  Verifique se você está atendendo aos pré-requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter mais informações, consulte [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+>  Verifique se você está atendendo aos pré-requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter mais informações, consulte [pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
  **Neste tópico:**  
   
-|`Section`|Descrição|  
+|Seção|DESCRIÇÃO|  
 |-------------|-----------------|  
-|[Grupos de disponibilidade AlwaysOn não está habilitado.](#IsHadrEnabled)|Se uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não estiver habilitada para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a instância não dará suporte à criação de grupo de disponibilidade e não poderá hospedar nenhuma réplica de disponibilidade.|  
+|[Os grupos de disponibilidade AlwaysOn não estão habilitados](#IsHadrEnabled)|Se uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não estiver habilitada para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a instância não dará suporte à criação de grupo de disponibilidade e não poderá hospedar nenhuma réplica de disponibilidade.|  
 |[Contas](#Accounts)|Discute os requisitos para configurar corretamente as contas nas quais o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será executado.|  
 |[Pontos de extremidade](#Endpoints)|Discute como diagnosticar problemas com o ponto de extremidade de espelhamento de banco de dados de uma instância de servidor.|  
 |[Nome do sistema](#SystemName)|Resume as alternativas para especificar o nome do sistema de uma instância do servidor em uma URL de ponto de extremidade.|  
@@ -42,7 +42,7 @@ ms.locfileid: "62813159"
 |[Tarefas relacionadas](#RelatedTasks)|Contém uma lista de tópicos orientados para tarefas nos Manuais Online do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que são particularmente relevantes para solucionar problemas de configuração de grupos de disponibilidade.|  
 |[Conteúdo relacionado](#RelatedContent)|Contém uma lista de recursos relevantes que são externos aos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   
-##  <a name="IsHadrEnabled"></a> Grupos de disponibilidade AlwaysOn não está habilitado.  
+##  <a name="IsHadrEnabled"></a>Grupos de Disponibilidade AlwaysOn não está habilitado  
  O recurso do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] deve estar habilitado em cada uma das instâncias do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="Accounts"></a> Contas  
@@ -52,11 +52,11 @@ ms.locfileid: "62813159"
   
     1.  Se os parceiros forem executados como a mesma conta de usuário do domínio, os logons de usuário corretos existirão automaticamente em ambos os bancos de dados **master** . Isso simplifica a configuração de segurança do banco de dados e é recomendado.  
   
-    2.  Se duas instâncias do servidor forem executadas como contas diferentes, o logon de cada conta deverá ser criado no banco de dados **master** na instância do servidor remoto e esse logon deverá receber permissões CONNECT para se conectar ao ponto de extremidade de espelhamento do banco de dados dessa instância do servidor. Para obter mais informações, consulte[configurar contas de logon para espelhamento de banco de dados ou grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  
+    2.  Se duas instâncias do servidor forem executadas como contas diferentes, o logon de cada conta deverá ser criado no banco de dados **master** na instância do servidor remoto e esse logon deverá receber permissões CONNECT para se conectar ao ponto de extremidade de espelhamento do banco de dados dessa instância do servidor. Para obter mais informações, consulte[Configurar contas de logon para espelhamento de banco de dados ou Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
 2.  Se o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver sendo executado como uma conta interna, como Sistema Local, Serviço Local ou Serviço de Rede ou uma conta que não pertença ao domínio, você deverá usar certificados para autenticação de ponto de extremidade. Se suas contas de serviço estiverem usando contas de domínio no mesmo domínio, você poderá escolher conceder acesso de CONNECT a cada conta de serviço em todos os locais de réplica ou usar certificados. Para obter mais informações, veja [Usar certificados para um ponto de extremidade do espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Pontos de extremidade  
+##  <a name="Endpoints"></a> Endpoints  
  Os pontos de extremidade devem ser configurados corretamente.  
   
 1.  Verifique se cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vai hospedar uma réplica de disponibilidade (cada *local de réplica*) tem um ponto de extremidade de espelhamento de banco de dados. Para determinar se existe um ponto de extremidade de espelhamento do banco de dados em determinada instância do servidor, use a exibição de catálogo [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql). Para obter mais informações, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) ou [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -132,12 +132,12 @@ ms.locfileid: "62813159"
   
 ||Ligado...|Ação|Comentários|Link|  
 |------|---------|------------|--------------|----------|  
-|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Réplica primária atual|Verifique se o ouvinte do grupo de disponibilidade está online.|**Para verificar se o ouvinte está online:**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **Para reiniciar um ouvinte offline:**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
-|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Réplica primária atual|Verifique se READ_ONLY_ROUTING_LIST contém somente instâncias de servidor que hospedem uma réplica secundária legível.|**Para identificar réplicas secundárias legíveis:** sys.availability_replicas (coluna**secondary_role_allow_connections_desc** )<br /><br /> **Para exibir uma lista de roteamento somente leitura:** sys.availability_read_only_routing_lists<br /><br /> **Para alterar uma lista de roteamento somente leitura:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
-|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Cada réplica em read_only_routing_list|Verifique se o firewall do Windows não está bloqueando a porta READ_ONLY_ROUTING_URL.|-|[Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Cada réplica em read_only_routing_list|No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager, verifique se:<br /><br /> A conectividade remota do SQL Server está habilitada.<br /><br /> TCP/IP está habilitado.<br /><br /> Os endereços IP estão configurados corretamente.|-|[Exibir ou alterar as propriedades de servidor &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configurar um servidor para escuta em uma porta TCP específica &#40;SQL Server Configuration Manager&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Cada réplica em read_only_routing_list|Verifique se READ_ONLY_ROUTING_URL (TCP<strong>:// *`system-address`* :</strong>*porta*) contém o nome correto de domínio totalmente qualificado (FQDN) e o número de porta.|-|[Calculando read_only_routing_url de AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
-|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Sistema cliente|Verifique se o driver cliente dá suporte a roteamento somente leitura.|-|[Conectividade de cliente AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)|  
+|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Réplica primária atual|Verifique se o ouvinte do grupo de disponibilidade está online.|**Para verificar se o ouvinte está online:**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **Para reiniciar um ouvinte offline:**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Réplica primária atual|Verifique se READ_ONLY_ROUTING_LIST contém somente instâncias de servidor que hospedem uma réplica secundária legível.|**Para identificar réplicas secundárias legíveis:** sys.availability_replicas (coluna**secondary_role_allow_connections_desc** )<br /><br /> **Para exibir uma lista de roteamento somente leitura:** sys.availability_read_only_routing_lists<br /><br /> **Para alterar uma lista de roteamento somente leitura:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Cada réplica em read_only_routing_list|Verifique se o firewall do Windows não está bloqueando a porta READ_ONLY_ROUTING_URL.|-|[Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
+|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Cada réplica em read_only_routing_list|No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager, verifique se:<br /><br /> A conectividade remota do SQL Server está habilitada.<br /><br /> TCP/IP está habilitado.<br /><br /> Os endereços IP estão configurados corretamente.|-|[Exibir ou alterar as propriedades de servidor &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configurar um servidor para escuta em uma porta TCP específica &#40;SQL Server Configuration Manager&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
+|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Cada réplica em read_only_routing_list|Verifique se a READ_ONLY_ROUTING_URL (TCP<strong>://*`system-address`*:</strong>*Port*) contém o FQDN (nome de domínio totalmente qualificado) e o número da porta corretos.|-|[Calculando read_only_routing_url de AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![Caixa de seleção](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Sistema cliente|Verifique se o driver cliente dá suporte a roteamento somente leitura.|-|[Conectividade de Cliente AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62813159"
   
 -   [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [Solucionar problemas de uma operação de adição de arquivos com falha &#40;grupos de disponibilidade AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Solucionar problemas de uma operação de adição de arquivo com falha &#40;Grupos de Disponibilidade AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 -   [Gerenciamento de logons e trabalhos para os bancos de dados de um grupo de disponibilidade &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
   
@@ -161,11 +161,11 @@ ms.locfileid: "62813159"
   
 -   [Cluster de failover Get-ClusterLog do cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [Blog da equipe do AlwaysOn do SQL Server: O Team Blog oficial do SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog da equipe do AlwaysOn do SQL Server: blog oficial da equipe do SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
- [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Segurança de transporte para espelhamento de banco de dados e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Configuração de rede do cliente](../../configure-windows/client-network-configuration.md)   
- [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

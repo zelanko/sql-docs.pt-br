@@ -17,13 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922431"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e restauração: Interoperabilidade e coexistência (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e restauração: interoperabilidade e coexistência (SQL Server)
   Este tópico descreve considerações de backup e restauração para vários recursos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Estes recursos incluem: restauração de arquivo e inicialização de banco de dados; restauração online e índices desabilitados; espelhamento de banco de dados; restauração por etapas e índices de texto completo.  
   
  **Neste tópico:**  
@@ -48,7 +48,7 @@ ms.locfileid: "62922431"
   
  Se um problema for encontrado durante a inicialização do banco de dados, a recuperação falhará, e o banco de dados será marcado como SUSPECT. Se o problema puder ser isolado a um arquivo ou arquivos, o administrador do banco de dados poderá colocar os arquivos offline e tentar reinicializar o banco de dados. Para colocar um arquivo offline, você pode usar a seguinte instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) :  
   
- ALTER DATABASE *database_name* MODIFY FILE (NAME **=' *`filename`* '** , OFFLINE)  
+ ALTER DATABASE *database_name* modificar arquivo (nome **= '*`filename`*'**, offline)  
   
  Se a inicialização tiver êxito, qualquer grupo de arquivos que contiver um arquivo offline permanecerá offline.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62922431"
  Esta seção é relevante apenas para bancos de dados modelo completo que têm vários grupos de arquivos.  
   
 > [!NOTE]  
->  O recurso de espelhamento de banco de dados será removido em uma versão futura do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
+>  O recurso de espelhamento de banco de dados será removido em uma versão futura do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] em vez disso.  
   
  O espelhamento de banco de dados é uma solução para aumentar a disponibilidade do banco de dados. O espelhamento é implementado por base de banco de dados e só funciona com bancos de dados que usam o modelo de recuperação completa. Para obter mais informações, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62922431"
 >  Para distribuir cópias de um subconjunto dos grupos de arquivos em um banco de dados, use a replicação: replique somente os objetos nos grupos de arquivos que você quer copiar em outros servidores. Para obter mais informações sobre a replicação transacional, veja [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).  
   
 ### <a name="creating-the-mirror-database"></a>Criando o banco de dados espelho  
- O banco de dados espelho é criado pela restauração, WITH NORECOVERY, de backups do banco de dados principal no servidor espelho. A restauração deve manter o mesmo nome do banco de dados. Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+ O banco de dados espelho é criado pela restauração, WITH NORECOVERY, de backups do banco de dados principal no servidor espelho. A restauração deve manter o mesmo nome do banco de dados. Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
  Você pode criar o banco de dados espelho usando uma sequência de restauração por etapas, onde houver suporte. Porém, você não pode iniciar o espelhamento enquanto não restaurar todos os grupos de arquivos e, normalmente, os backups de log restaurados para trazer o banco de dados espelho o mais próximo possível do banco de dados principal. Para obter mais informações, veja [Restaurações por etapas &#40;SQL Server&#41;](piecemeal-restores-sql-server.md).  
   
@@ -129,9 +129,9 @@ ms.locfileid: "62922431"
   
 -   [Fazer backup e restaurar índices e catálogos de texto completo](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Backup e Restauração de bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Fazer backup e restaurar bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Fazer backup e restaurar bancos de dados replicados](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [Secundárias ativas: Backup em réplicas secundárias &#40;grupos de disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

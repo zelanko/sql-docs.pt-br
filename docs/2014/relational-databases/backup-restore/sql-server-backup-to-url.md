@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232320"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
@@ -41,7 +41,7 @@ ms.locfileid: "75232320"
   
 -   [Restaurando do armazenamento do Azure usando o SQL Server Management Studio](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a>Segurança  
+###  <a name="security"></a> Segurança  
  Veja a seguir as considerações e os requisitos de segurança ao fazer backup ou restauração dos serviços de armazenamento de BLOBs do Azure.  
   
 -   Ao criar um contêiner para o serviço de armazenamento de BLOBs do Azure, recomendamos que você defina o acesso como **particular**. A definição do acesso como privado restringe o acesso a usuários ou contas capazes de fornecer as informações necessárias para realizar a autenticação na conta do Azure.  
@@ -65,7 +65,7 @@ ms.locfileid: "75232320"
   
  **Blob:** Um arquivo de qualquer tipo e tamanho. Há dois tipos de BLOBs que podem ser armazenados no serviço de armazenamento de BLOBs do Azure: blobs de bloco e de página. O backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa Blobs de página. Os BLOBs são endereçáveis usando o seguinte formato de URL\<: conta de armazenamento https://\<>. blob.Core.Windows.NET/\<contêiner>/blob>  
   
- ![Armazenamento de BLOBs do Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "Armazenamento do Blobs do Azure")  
+ ![Armazenamento de Blobs do Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "Armazenamento do Blobs do Azure")  
   
  Para obter mais informações sobre o serviço de armazenamento de BLOBs do Azure, consulte [como usar o serviço de armazenamento de BLOBs do Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "75232320"
   
  Para obter informações, em outros exemplos em que as credenciais são usadas, consulte [criar um proxy de SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
-###  <a name="limitations"></a>Limitações  
+###  <a name="limitations"></a> Limitações  
   
 -   Não há suporte para backup em armazenamento premium.  
   
@@ -233,13 +233,13 @@ ms.locfileid: "75232320"
   
  Quando você selecionar URL como destino, determinadas opções na página **Opções de Mídia** serão desabilitadas.  Os tópicos a seguir têm mais informações na caixa de diálogo Backup de Banco de Dados:  
   
- [&#41;de backup do banco de dados &#40;geral](../../integration-services/general-page-of-integration-services-designers-options.md)  
+ [Fazer backup do banco de dados &#40;página Geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
  [Página fazer backup do banco de dados &#40;opções de mídia&#41;](back-up-database-media-options-page.md)  
   
- [Página backup do banco de dados &#40;opções de backup&#41;](back-up-database-backup-options-page.md)  
+ [Fazer backup do banco de dados &#40;página Opções de Backup&#41;](back-up-database-backup-options-page.md)  
   
- [Criar credencial-autenticar no armazenamento do Azure](create-credential-authenticate-to-azure-storage.md)  
+ [Criar credencial - autenticar no Armazenamento do Azure](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a>SQL Server Backup para URL usando o assistente de plano de manutenção  
  Semelhante à tarefa de backup descrita anteriormente, o assistente de plano de manutenção no SQL Server Management Studio foi aprimorado para incluir a **URL** como uma das opções de destino e outros objetos de suporte necessários para fazer backup no armazenamento do Azure, como a credencial SQL. Para obter mais informações, consulte a seção **Definir tarefas de Backup** em [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
@@ -253,11 +253,11 @@ ms.locfileid: "75232320"
   
 3.  Em seguida, o SQL Server se conecta ao armazenamento do Azure usando as informações de credencial do SQL fornecidas e abre a caixa de diálogo **localizar arquivo de backup no Azure** . Os arquivos de backup que residem no armazenamento são exibidos nessa página. Selecione o arquivo que deseja usar para restaurar e clique em **OK**. Isso o levará de volta para a caixa de diálogo **selecionar dispositivos de backup** e clicar em **OK** nessa caixa de diálogo o levará de volta para a caixa de diálogo de **restauração** principal, na qual você poderá concluir a restauração.  Para obter mais informações, consulte os seguintes tópicos:  
   
-     [&#41;página Geral do banco de dados de restauração &#40;](restore-database-general-page.md)  
+     [Restaurar banco de dados &#40;página Geral&#41;](restore-database-general-page.md)  
   
      [Página restaurar arquivos de &#40;de banco de dados&#41;](restore-database-files-page.md)  
   
-     [Página restaurar opções de &#40;de banco de dados&#41;](restore-database-options-page.md)  
+     [Restaurar banco de dados &#40;página Opções&#41;](restore-database-options-page.md)  
   
 ##  <a name="Examples"></a>Exemplos de código  
  Esta seção contém os seguintes exemplos:  
@@ -802,4 +802,4 @@ ms.locfileid: "75232320"
   
 ## <a name="see-also"></a>Consulte Também  
  [Práticas recomendadas e solução de problemas de backup de SQL Server para URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [Backup e restauração de bancos de dados do sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
+ [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   

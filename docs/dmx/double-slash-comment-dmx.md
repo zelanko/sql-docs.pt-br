@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7f6e05ac728f6e1a9dda94dfcb07d26309b3e1f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061671"
 ---
-# <a name="double-slash-comment-dmx"></a>Barras duplas (comentário) (DMX)
+# <a name="double-slash-comment-dmx"></a>Barra dupla (comentário) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Indica uma cadeia de caracteres de texto que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não deve executar. É possível aninhar comentários em uma instrução DMX (Data Mining Extensions), incluí-los no final de uma linha de código ou inseri-los em uma linha separada.  
@@ -27,7 +27,7 @@ ms.locfileid: "68061671"
 // Comment_Text   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Comment_Text*  
  Cadeia de caracteres que contém o texto do comentário.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68061671"
   
  Não há comprimento máximo para comentários.  
   
- Para obter mais informações sobre como usar tipos diferentes de comentários em DMX, consulte [comentários &#40;DMX&#41;](../dmx/comments-dmx.md).  
+ Para obter mais informações sobre como usar diferentes tipos de comentários no DMX, consulte [comentários &#40;&#41;DMX ](../dmx/comments-dmx.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Barra estrela &#40;comentário&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
- [– &#40;Comentário&#41; &#40;DMX&#41; resumo](../dmx/comment-dmx-summary.md)   
- [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Barra em estrela &#40;comentário&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
+ [--Comentário de &#40;&#41; &#40;Resumo de&#41; do DMX](../dmx/comment-dmx-summary.md)   
+ [Referência de operador de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operadores &#40;&#41;DMX](../dmx/operators-dmx.md)  
   
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2a9f40c2d1566a1f8ca5f054467f61da1920e5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62805932"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>Configurar o data warehouse a partir do ponto de controle do utilitário (Utilitário do SQL Server)
@@ -26,14 +26,14 @@ ms.locfileid: "62805932"
   
 -   Nome do UMDW: Sysutility_mdw.  
   
--   Frequência de carregamento do conjunto de coleta: Cada 15 minutos.  
+-   Frequência de carregamento do conjunto de coleta: a cada 15 minutos.  
   
- O diretório do UMDW é configurável: \<Unidade do sistema >: \Program Files\Microsoft SQL Server\MSSQL10_50. < UCP_Name > \MSSQL\Data\\, onde \<unidade do sistema > normalmente é o C:\ Dirigir. O arquivo de log Sysutility_mdw_\<GUID>_LOG, está localizado no mesmo diretório.  
+ O diretório do UMDW é configurável: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, where \<System drive> normalmente é a unidade C:\. O arquivo de log Sysutility_mdw_\<GUID>_LOG, está localizado no mesmo diretório.  
   
 > [!NOTE]  
 >  O local do arquivo UMDW (sysutility_mdw) pode ser alterado usando-se desanexar/anexar ou ALTER DATABASE. É recomendável usar ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos e tarefas do utilitário do SQL Server](sql-server-utility-features-and-tasks.md)  
   
   

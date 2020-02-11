@@ -1,5 +1,5 @@
 ---
-title: 'Lição 4: Criar um banco de dados no armazenamento do Azure | Microsoft Docs'
+title: 'Lição 4: criar um banco de dados no armazenamento do Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175633"
 ---
-# <a name="lesson-4-create-a-database-in-azure-storage"></a>Lição 4: Criar um banco de dados no armazenamento do Azure
+# <a name="lesson-4-create-a-database-in-azure-storage"></a>Lição 4: Criar um banco de dados no Armazenamento do Azure
   Nesta lição, você aprenderá a criar um banco de dados usando o recurso arquivos de SQL Server Data no Azure. Observe que antes desta lição, você deverá concluir as lições 1, 2 e 3. A lição 3 é uma etapa muito importante, pois você precisa armazenar as informações sobre seu contêiner de armazenamento do Azure e seu nome de política associado e a chave SAS no repositório de credenciais de SQL Server antes da lição 4.  
   
  Para cada contêiner de armazenamento usado por um arquivo de dados ou de log, você deve criar uma Credencial do SQL Server cujo nome corresponda ao caminho do contêiner. Em seguida, você pode criar um novo banco de dados no armazenamento do Azure  
@@ -77,7 +77,7 @@ ms.locfileid: "70175633"
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  Copie o **nome da conta de armazenamento** e os valores de **chave de acesso primário** para a janela de diálogo **conectar ao armazenamento do Azure** no SSMS. Em seguida, clique em **conectar**. Isso colocará as informações sobre contêineres da conta de armazenamento no SSMS, conforme mostrado na seguinte captura de tela:  
+    2.  Copie o **nome da conta de armazenamento** e os valores de **chave de acesso primário** para a janela de diálogo **conectar ao armazenamento do Azure** no SSMS. Em seguida, clique em **Conectar**. Isso colocará as informações sobre contêineres da conta de armazenamento no SSMS, conforme mostrado na seguinte captura de tela:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
@@ -111,6 +111,6 @@ ms.locfileid: "70175633"
   
  **Próxima lição:**  
   
- [Lição 5. &#40;Criptografar opcionalmente&#41; seu banco de dados usando TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [Lição 5. &#40;opcional&#41; criptografar seu banco de dados usando TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

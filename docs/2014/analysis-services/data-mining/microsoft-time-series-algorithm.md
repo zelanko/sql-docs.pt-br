@@ -1,5 +1,5 @@
 ---
-title: Algoritmo MTS | Microsoft Docs
+title: Algoritmo do Microsoft Time Series | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083764"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MTS fornece algoritmos de regressão que são otimizados para previsão de valores contínuos, como vendas de produtos, ao longo do tempo. Enquanto outros algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como árvores de decisão, requerem colunas adicionais de novas informações como entrada para prever uma tendência; um modelo de série temporal não requer isso. Um modelo de série temporal pode prever tendências baseadas somente no conjunto de dados original, usado para criar o modelo. Também é possível adicionar novos dados ao modelo quando fizer uma previsão e incorporar automaticamente os novos dados na análise de tendência.  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series fornece algoritmos de regressão que são otimizados para a previsão de valores contínuos, como vendas de produtos, ao longo do tempo. Enquanto outros algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como árvores de decisão, requerem colunas adicionais de novas informações como entrada para prever uma tendência; um modelo de série temporal não requer isso. Um modelo de série temporal pode prever tendências baseadas somente no conjunto de dados original, usado para criar o modelo. Também é possível adicionar novos dados ao modelo quando fizer uma previsão e incorporar automaticamente os novos dados na análise de tendência.  
   
  O diagrama a seguir mostra um modelo típico de previsão de vendas de um produto, em quatro regiões diferentes de vendas no decorrer do tempo. O modelo exibido no diagrama mostra as vendas efetuadas em cada região, plotadas como vermelhas, amarelas, roxas e azuis. A linha para cada região tem duas partes:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66083764"
   
  A combinação de dados de origem e dos dados de previsão é chamada de uma *série*.  
   
- ![Um exemplo de uma série de tempo](../media/time-series.gif "um exemplo de uma série de tempo")  
+ ![Um exemplo de série temporal](../media/time-series.gif "Um exemplo de série temporal")  
   
  Um recurso importante do algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) é sua capacidade de executar previsão cruzada. Se você treinar o algoritmo com duas séries separadas, mas relacionadas, será possível usar o modelo resultante para prever o resultado de uma série com base no comportamento da outra série. Por exemplo, as vendas observadas de um produto podem influenciar nas vendas previstas de outro produto. A previsão cruzada também é útil para criar um modelo geral que possa ser aplicado a várias séries. Por exemplo, as previsões para uma região específica são instáveis, porque a série não possui dados de boa qualidade. Você poderia treinar um modelo geral em uma média de todas as quatro regiões e, em seguida, aplicar o modelo à série individual para criar previsões mais estáveis para cada região.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66083764"
  A empresa planeja, a cada trimestre, atualizar o modelo com dados recentes de vendas bem como as previsões relativas às tendências recentes do modelo. Para corrigir lojas que não efetuam atualizações de dados de vendas de modo preciso ou consistente, eles criarão um modelo de previsão geral e usarão isso para criar previsões para todas as regiões.  
   
 ## <a name="how-the-algorithm-works"></a>Como o algoritmo funciona  
- Na [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MST usava um único algoritmo ARTXP. O algoritmo ARTXP foi otimizado para previsões a curto prazo e, portanto, previu o próximo valor provável em uma série. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series usa tanto o algoritmo ARTXP como um segundo algoritmo ARIMA. O algoritmo ARIMA foi otimizado para previsão a longo prazo. Para obter uma explicação detalhada sobre a implementação dos algoritmos ARTXP e ARIMA, consulte [Referência técnica do algoritmo MTS](microsoft-time-series-algorithm-technical-reference.md).  
+ No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de série temporal usou um único algoritmo, ARTxp. O algoritmo ARTXP foi otimizado para previsões de curto prazo e, portanto, previsto o próximo valor provável em uma série. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]do, [!INCLUDE[msCoName](../../includes/msconame-md.md)] o algoritmo de série temporal usa o algoritmo ARTXP e um segundo algoritmo, ARIMA. O algoritmo ARIMA é otimizado para previsão de longo prazo. Para obter uma explicação detalhada sobre a implementação dos algoritmos ARTXP e ARIMA, consulte [Referência técnica do algoritmo MTS](microsoft-time-series-algorithm-technical-reference.md).  
   
  Por padrão, o algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) usa uma combinação de algoritmos quando analisa padrões e realiza previsões. O algoritmo treina dois modelos separados nos mesmos dados: um modelo usa o algoritmo ARTXP e um modelo usa o algoritmo ARIMA. O algoritmo combina os resultados dos dois modelos para produzir a melhor previsão para um número variável de frações de tempo. Como o ARTXP é melhor para previsões de curto prazo, ele é mais ponderado no início de uma série de previsões. No entanto, como as frações de tempo que você está prevendo estão mais adiante no futuro, o ARIMA é mais ponderado.  
   
- Você também pode controlar a combinação de algoritmos para favorecer a previsão na série temporal a curto como a longo prazo. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard, você pode especificar que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] uso de algoritmo de série temporal, uma das seguintes configurações:  
+ Você também pode controlar a combinação de algoritmos para favorecer a previsão na série temporal a curto como a longo prazo. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] do padrão, você pode especificar que [!INCLUDE[msCoName](../../includes/msconame-md.md)] o algoritmo de série temporal use uma das seguintes configurações:  
   
 -   Use o ARTXP somente para previsão a curto prazo.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66083764"
   
 -   Use a combinação padrão dos dois algoritmos.  
   
- A partir [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], você pode personalizar como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series combina os modelos para previsão. Quando você usa um modelo combinado, o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series combina os dois algoritmos do seguinte modo:  
+ A partir [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]do, você pode personalizar como [!INCLUDE[msCoName](../../includes/msconame-md.md)] o algoritmo Time Series combina os modelos de previsão. Quando você usa um modelo combinado, o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series combina os dois algoritmos do seguinte modo:  
   
 -   Somente o ARTXP é usado sempre para efetuar as primeiras previsões.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "66083764"
   
  Os requisitos para um modelo de série temporal são os seguintes:  
   
--   **Uma única coluna key time** Cada modelo deve conter uma coluna numérica ou de data que é usada como a série de casos, que define as frações de tempo que o modelo usará. O tipo de dados para a coluna Key Time pode ser do tipo de data e hora ou numérico. Entretanto, a coluna deve conter valores contínuos e os valores devem ser exclusivos para cada série. A série temporal para o modelo de série temporal não pode ser armazenada em duas colunas, como uma coluna de Ano e uma coluna de Mês.  
+-   **Uma única coluna Key Time** Cada modelo deve conter uma coluna numérica ou de data que é usada como a série de casos, que define as frações de tempo que o modelo usará. O tipo de dados para a coluna Key Time pode ser do tipo de data e hora ou numérico. Entretanto, a coluna deve conter valores contínuos e os valores devem ser exclusivos para cada série. A série temporal para o modelo de série temporal não pode ser armazenada em duas colunas, como uma coluna de Ano e uma coluna de Mês.  
   
--   **Uma coluna previsível** Cada modelo deve conter pelo menos uma coluna previsível em torno da qual o algoritmo criará o modelo de série temporal. O tipo de dados na coluna previsível deve ter valores contínuos. Por exemplo, você pode prever como atributos numéricos, como renda, vendas ou tempo, mudam com o decorrer do tempo. Entretanto, não é possível usar uma coluna que contenha valores discretos, como status de compra ou nível de educação, como a coluna previsível.  
+-   **Uma coluna previsível** Cada modelo deve conter pelo menos uma coluna previsível em volta da qual o algoritmo criará o modelo de série temporal. O tipo de dados na coluna previsível deve ter valores contínuos. Por exemplo, você pode prever como atributos numéricos, como renda, vendas ou tempo, mudam com o decorrer do tempo. Entretanto, não é possível usar uma coluna que contenha valores discretos, como status de compra ou nível de educação, como a coluna previsível.  
   
--   **Uma coluna da chave da série opcional** Cada modelo pode ter uma coluna da chave adicional que contém valores exclusivos que identificam uma série. A coluna da chave da série opcional deve conter valores exclusivos. Por exemplo, um único modelo pode conter vendas para muitos modelos de produto, contanto que haja somente um registro para cada nome de produto para cada fração de tempo.  
+-   **Uma coluna de chave da série opcional** Cada modelo pode ter uma coluna de chave adicional que contém valores exclusivos que identificam uma série. A coluna da chave da série opcional deve conter valores exclusivos. Por exemplo, um único modelo pode conter vendas para muitos modelos de produto, contanto que haja somente um registro para cada nome de produto para cada fração de tempo.  
   
  Você pode definir dados de entrada para o modelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series de várias maneiras diferentes. Entretanto, como o formato dos casos de entrada afeta a definição do modelo de mineração, você deverá considerar suas necessidades comerciais e preparar os dados devidamente. Os dois exemplos a seguir ilustram como os dados de entrada afetam o modelo. Nos dois exemplos, o modelo de mineração concluído contém padrões para quatro séries distintas:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66083764"
   
 |TimeID|Produto|Sales|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|Um|1\.000|600|  
+|1/2001|Um|1000|600|  
 |2/2001|Um|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
@@ -114,15 +114,15 @@ ms.locfileid: "66083764"
   
  A coluna Sales descreve os lucros brutos do produto especificado relativos a um dia e a coluna Volume descreve a quantidade residual do produto especificado contida no armazém. Essas duas colunas contêm os dados que são usados para treinar o modelo. Tanto Sales quanto Volume podem ser atributos previsíveis para cada série na coluna Product.  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Exemplo 2: Conjunto de dados de série temporal com cada série na coluna separada  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Exemplo 2: Conjunto de dados de série temporal com cada série em uma coluna separada  
  Embora este exemplo use basicamente os mesmos dados de entrada, que o primeiro exemplo, esses dados são estruturados de modo diferente, conforme mostrado na tabela seguinte:  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
 |------------|--------------|---------------|--------------|---------------|  
-|1/2001|1\.000|600|500|900|  
+|1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- Nessa tabela, a coluna TimeID ainda contém a série temporal do modelo da série temporal, no qual você designa como a coluna key time. Entretanto, as colunas anteriores de Sales e Volume agora estão divididas em duas colunas e cada uma delas é precedida pelo nome do produto. Como resultado, existe somente uma única entrada para cada dia na coluna TimeID. Isso cria um modelo de série temporal que contém quatro colunas previsíveis: A_Sales, A_Volume, B_Sales e B_Volume.  
+ Nessa tabela, a coluna TimeID ainda contém a série temporal do modelo da série temporal, no qual você designa como a coluna key time. Entretanto, as colunas anteriores de Sales e Volume agora estão divididas em duas colunas e cada uma delas é precedida pelo nome do produto. Como resultado, existe somente uma única entrada para cada dia na coluna TimeID. Isto cria um modelo de série temporal que contém quatro colunas previsíveis: A_Sales, A_Volume, B_Sales e B_Volume.  
   
  Além disso, como você separou os produtos em colunas diferentes, não é necessário especificar uma coluna de chave de série adicional. Todas as colunas no modelo são uma coluna de série de casos ou uma coluna previsível.  
   
@@ -152,11 +152,11 @@ ms.locfileid: "66083764"
   
 -   Dá suporte ao detalhamento.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Procurar um modelo usando o Visualizador MTS](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Referência técnica do algoritmo MTS](microsoft-time-series-algorithm-technical-reference.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Procurar um modelo usando o Visualizador do Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Referência técnica do algoritmo do Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de série temporal](time-series-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de série temporal &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

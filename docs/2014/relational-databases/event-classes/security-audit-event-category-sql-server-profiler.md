@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f2f854c7a6dbd0d1ab569f87bf053a5b9f45058
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044198"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Categoria de evento de auditoria de segurança (SQL Server Profiler)
@@ -28,7 +28,7 @@ ms.locfileid: "63044198"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento Audit Add DB User](audit-add-db-user-event-class.md)|Indica que um logon foi adicionado ou removido como um usuário de banco de dados para um banco de dados.|  
 |[Classe de evento Audit Add Login to Server Role](audit-add-login-to-server-role-event-class.md)|Indica que um logon foi adicionado ou removido de uma função de servidor fixa.|  
@@ -50,7 +50,7 @@ ms.locfileid: "63044198"
 |[Classe de evento Audit Database Operation](audit-database-operation-event-class.md)|Indica que ocorreram várias operações, como notificação de consulta de ponto de verificação ou assinatura.|  
 |[Classe de evento Audit Database Principal Impersonation](audit-database-principal-impersonation-event-class.md)|Indica que uma representação ocorreu no escopo do banco de dados.|  
 |[Classe de evento Audit Database Principal Management](audit-database-principal-management-event-class.md)|Indica que entidades foram criadas, alteradas ou descartadas de um banco de dados.|  
-|[Classe de evento Audit Database Scope GDR](audit-database-scope-gdr-event-class.md)|Indica que um GRANT, REVOKE ou DENY foi emitido para uma permissão de instrução por um usuário no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Classe de evento Audit Database Scope GDR](audit-database-scope-gdr-event-class.md)|Indica que uma concessão, REVOGAção ou NEGAção foi emitida para uma permissão de instrução por um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]usuário no.|  
 |[Classe de evento Audit DBCC](audit-dbcc-event-class.md)|Indica que um comando DBCC foi emitido.|  
 |[Classe de evento Audit Fulltext](audit-fulltext-event-class.md)|Indica que ocorreu um evento de texto completo.|  
 |[Classe de evento Audit Login Change Password](audit-login-change-password-event-class.md)|Indica que um usuário alterou sua senha de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

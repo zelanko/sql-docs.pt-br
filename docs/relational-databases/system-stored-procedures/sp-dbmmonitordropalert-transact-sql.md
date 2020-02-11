@@ -19,18 +19,18 @@ ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4776e043505c787e74c9cecf766325d189c4f702
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108121"
 ---
-# <a name="spdbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
+# <a name="sp_dbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ignora o aviso quanto a uma métrica de desempenho especificada, definindo o limite como NULL.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,9 +56,9 @@ sp_dbmmonitordropalert database_name
 |5|Período de retenção|Metadados que controlam quanto tempo as linhas na tabela de status de espelhamento de banco de dados são preservadas.|  
   
 > [!NOTE]  
->  Este procedimento descarta os limites de aviso, independentemente se eles foram especificados usando **sp_dbmmonitorchangealert** ou Monitor de espelhamento de banco de dados.  
+>  Esse procedimento descarta os limites de aviso, independentemente de eles terem sido especificados usando **sp_dbmmonitorchangealert** ou monitor de espelhamento de banco de dados.  
   
- Para obter informações sobre as IDs de eventos que correspondem aos avisos, consulte [alertas em métricas de desempenho de espelhamento e os limites de aviso de uso &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Para obter informações sobre as IDs de evento correspondentes aos avisos, consulte [usar limites de aviso e alertas sobre métricas de desempenho de espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhum  
@@ -82,7 +82,7 @@ EXEC sp_dbmmonitordropalert AdventureWorks2012, 5;
 EXEC sp_dbmmonitordropalert AdventureWorks2012 ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)  
   

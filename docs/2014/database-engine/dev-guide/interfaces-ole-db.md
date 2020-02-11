@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781311"
 ---
 # <a name="interfaces-ole-db"></a>Interfaces (OLE DB)
-  Além das principais interfaces OLE DB fornecido pelo Microsoft Data Access Components (MDAC), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client implementa as seguintes interfaces OLE DB adicionais:  
+  Além das interfaces de OLE DB de núcleo fornecidas pelo MDAC (Microsoft Data Access Components), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo implementa as seguintes interfaces de OLE DB adicionais:  
   
 -   [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62781311"
   
 -   [IColumnsRowset](../../relational-databases/native-client-ole-db-interfaces/icolumnsrowset.md)  
   
--   [ICommand &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/icommand-ole-db.md)  
+-   [OLE DB ICommand &#40;&#41;](../../relational-databases/native-client-ole-db-interfaces/icommand-ole-db.md)  
   
 -   [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62781311"
   
 -   [ISQLServerErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Server Native Client &#40;OLE DB&#41; referência](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server Native Client &#40;OLE DB referência de&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
   
