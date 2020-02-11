@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72807eca5fb43c81bf51c20a93cd69f4d618c241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068613"
 ---
 # <a name="specify-a-unary-operator-dimension-business-intelligence-wizard"></a>Especificar um Operador Unário (Dimensão) (Assistente de Business Intelligence)
@@ -26,12 +26,12 @@ ms.locfileid: "66068613"
 >  Essa página não será exibida se o Assistente de Business Intelligence tiver sido iniciado no Designer de Dimensão ou clicando com o botão direito do mouse em uma dimensão no Gerenciador de Soluções no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="options"></a>Opções  
- **Dimension**  
+ **Dimensão**  
  Selecione a dimensão que contém um atributo pai e à qual o assistente aplicará operadores unários.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

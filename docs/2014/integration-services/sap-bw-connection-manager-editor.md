@@ -1,5 +1,5 @@
 ---
-title: Editor do Gerenciador de Conexão do SAP BW | Microsoft Docs
+title: SAP BW o editor do Gerenciador de conexões | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056279"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Editor do Gerenciador de Conexões de SAP BW
@@ -112,7 +112,7 @@ ms.locfileid: "66056279"
  **Testar Conexão**  
  Teste a conexão usando os valores que você forneceu. Depois de clicar em **Testar Conexão**, uma caixa de mensagem aparecerá e indicará se a conexão foi bem-sucedida ou falhou.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
   
   

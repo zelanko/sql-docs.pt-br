@@ -29,10 +29,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089b2b006d0159c63e480c8627762ac37dec98b8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247085"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de dados XPath (SQLXML 4.0)
@@ -90,12 +90,12 @@ ms.locfileid: "75247085"
 |Tipo de dados XDR|Equivalente<br /><br /> tipos de dados XPath|Conversão do SQL Server usada|  
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|N/D|NoneEmployeeID|  
-|Booliano|Booliano|CONVERT(bit, EmployeeID)|  
+|booleano|booleano|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|número|CONVERT(float(53), EmployeeID)|  
-|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|cadeia de caracteres|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/D (não há nenhum tipo de dados no XPath equivalente ao tipo de dados XDR fixed14.4)|CONVERT(money, EmployeeID)|  
-|date|cadeia de caracteres|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|time<br /><br /> time.tz|cadeia de caracteres|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  As conversões de data e hora são projetadas para funcionar se o valor é armazenado no banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]usando o tipo de dado **DateTime** ou uma **cadeia de caracteres**. Observe que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de dados **DateTime** não usa o **fuso horário** e tem uma precisão menor do que o tipo de dados **tempo** XML. Para incluir o tipo de dados **timezone** ou a precisão adicional, armazene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os dados no usando um tipo de **cadeia de caracteres** .  
   
@@ -134,7 +134,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-convert-a-data-type-in-an-xpath-query"></a>R. Converter um tipo de dados em uma consulta do XPath  
+### <a name="a-convert-a-data-type-in-an-xpath-query"></a>a. Converter um tipo de dados em uma consulta do XPath  
  Na consulta XPath a seguir especificada em um esquema XSD anotado, a consulta seleciona todos os nós de **funcionário** com o valor de atributo **EmployeeID** de e-1, em que "E-" é o prefixo especificado usando a anotação **SQL: id-prefix** .  
   
  `Employee[@EmployeeID="E-1"]`  

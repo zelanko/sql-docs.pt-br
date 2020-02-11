@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468603"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Acessando tabelas com otimização de memória usando Transact-SQL interpretado
@@ -53,13 +53,13 @@ ms.locfileid: "62468603"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- Ao acessar uma tabela com otimização de memória em uma transação explícita ou implícita, usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado, você deve incluir uma dica de tabela em nível de isolamento como SNAPSHOT, REPEATABLEREAD ou SERIALIZABLE, ou então você pode usar MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Para obter mais informações, consulte [diretrizes para níveis de isolamento da transação com tabelas com otimização de memória](memory-optimized-tables.md) e [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+ Ao acessar uma tabela com otimização de memória em uma transação explícita ou implícita, usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado, você deve incluir uma dica de tabela em nível de isolamento como SNAPSHOT, REPEATABLEREAD ou SERIALIZABLE, ou então você pode usar MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Para obter mais informações, consulte [diretrizes para níveis de isolamento de transação com tabelas com otimização de memória](memory-optimized-tables.md) e [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  Uma dica de tabela de nível de isolamento não é necessária para tabelas com otimização de memória acessadas por consultas executadas no modo de confirmação automática.  
   
-## <a name="see-also"></a>Consulte também  
- [Suporte ao Transact-SQL para OLTP na memória](transact-sql-support-for-in-memory-oltp.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Suporte a Transact-SQL para OLTP na memória](transact-sql-support-for-in-memory-oltp.md)   
  [Migrando para OLTP na memória](migrating-to-in-memory-oltp.md)  
   
   

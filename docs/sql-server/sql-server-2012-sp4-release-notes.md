@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 6fba15e73edf14b9bb794012c8fe56ec8264a5b2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73632958"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de versão do SQL Server 2012 Service Pack
@@ -177,7 +177,7 @@ Os detalhes de erro internos conterão uma mensagem semelhante à seguinte:
 **Solução alternativa:** instalar o pacote do instalador do PowerPivot para SharePoint 2013 (**spPowerPivot.msi**) no SharePoint Server 2013. O pacote do instalador está disponível como parte do feature pack do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . O feature pack pode ser baixado do centro de download [!INCLUDE[msCoName](../includes/msconame-md.md)] em [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>As planilhas do Power View em uma pasta de trabalho do PowerPivot são excluídas depois de uma atualização de dados agendada  
-**Problema:** no suplemento PowerPivot para SharePoint, o uso da **Atualização de Dados Agendada** em uma pasta de trabalho com o Power View excluirá as planilhas do Power View.  
+**Problema**: no suplemento PowerPivot para SharePoint, o uso da **Atualização de Dados Agendada** em uma pasta de trabalho com o Power View excluirá as planilhas do Power View.  
   
 **Solução alternativa**: para usar a **Atualização de Dados Agendada** com as pastas de trabalho do Power View, crie uma pasta de trabalho do PowerPivot que seja apenas o modelo de dados. Crie uma pasta de trabalho separada com planilhas do Excel e do Power View que se vinculem à pasta de trabalho PowerPivot com o modelo de dados. Apenas a pasta de trabalho PowerPivot com o modelo de dados deve ser agendada para atualização.  
   

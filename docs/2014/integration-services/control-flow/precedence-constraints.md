@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831690"
 ---
 # <a name="precedence-constraints"></a>Restrições de precedência
@@ -50,7 +50,8 @@ ms.locfileid: "62831690"
 -   Especifique se a restrição de precedência é avaliada isoladamente ou junto com outras restrições aplicáveis ao executável restrito.  
   
 ## <a name="evaluation-operations"></a>Operações de avaliação  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece as operações de avaliação a seguir:  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece as operações de avaliação a seguir:  
   
 -   Uma restrição que usa somente o resultado da execução do executável de precedência para determinar se o executável restrito será executado. O resultado da execução do executável de precedência pode ser conclusão, sucesso ou falha. Essa é a operação padrão.  
   
@@ -60,7 +61,8 @@ ms.locfileid: "62831690"
   
 -   Uma expressão ou restrição que usa os resultados da execução do executável de precedência ou os resultados de retorno da avaliação da expressão.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] O Designer usa cores para identificar o tipo de restrição de precedência. A restrição Bem-sucedida é verde, a restrição Falha é vermelha, e a restrição Conclusão é azul. Para exibir rótulos de texto no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer que mostrem o tipo de restrição, você deve configurar os recursos de acessibilidade do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer.  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] O Designer usa cores para identificar o tipo de restrição de precedência. A restrição Bem-sucedida é verde, a restrição Falha é vermelha, e a restrição Conclusão é azul. Para exibir rótulos de texto no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer que mostrem o tipo de restrição, você deve configurar os recursos de acessibilidade do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer.  
   
  A expressão deve ser uma expressão válida do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] e pode incluir funções, operadores e, variáveis do sistema e personalizadas. Para obter informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) e [Manipuladores de Eventos do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
@@ -97,7 +99,7 @@ ms.locfileid: "62831690"
 ## <a name="related-content"></a>Conteúdo relacionado  
  Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar expressões a restrições de precedência](../add-expressions-to-precedence-constraints.md)   
  [Várias restrições de precedência](../multiple-precedence-constraints.md)  
   

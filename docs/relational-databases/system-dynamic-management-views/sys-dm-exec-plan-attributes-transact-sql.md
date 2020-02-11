@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68255607"
 ---
-# <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
+# <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha por atributo de plano para o plano especificado pelo identificador de plano. Você pode usar esta função com valor de tabela para obter detalhes sobre um plano específico, como os valores chave de cache ou o número atual de execuções simultâneas do plano.  
   
 > [!NOTE]  
->  Algumas das informações retornadas por essa função é mapeada para o [syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) exibição de compatibilidade com versões anteriores.
+>  Algumas das informações retornadas por essa função são mapeadas para a exibição de compatibilidade com versões anteriores [Sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
 
 ## <a name="syntax"></a>Sintaxe  
 ```  
@@ -40,26 +40,26 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>Argumentos  
  *plan_handle*  
- Identifica exclusivamente um plano de consulta de um lote que foi executado e cujo plano reside no cache de plano. *plan_handle* está **varbinary(64)** . O identificador de plano pode ser obtido de [DM exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) exibição de gerenciamento dinâmico.  
+ Identifica exclusivamente um plano de consulta de um lote que foi executado e cujo plano reside no cache de plano. *plan_handle* é **varbinary (64)**. O identificador de plano pode ser obtido na exibição de gerenciamento dinâmico [Sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) .  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|atributo|**varchar(128)**|O nome do atributo associado com este plano. A tabela imediatamente abaixo deste lista os atributos possíveis, seus tipos de dados e suas descrições.|  
+|atributo|**varchar (128)**|O nome do atributo associado com este plano. A tabela imediatamente abaixo dessa lista os possíveis atributos, seus tipos de dados e suas descrições.|  
 |value|**sql_variant**|Valor do atributo que é associado ao plano.|  
 |is_cache_key|**bit**|Indica se o atributo é usado como parte da chave de consulta de cache para o plano.|  
 
-Na tabela acima, **atributo** pode ter os seguintes valores:
+Na tabela acima, o **atributo** pode ter os seguintes valores:
 
-|attribute|Tipo de dados|Descrição|  
+|Atributo|Tipo de dados|DESCRIÇÃO|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Indica os valores de opção com os quais o plano foi compilado.|  
-|objectid|**int**|Uma das chaves principais usadas para pesquisar um objeto no cache. Esse é o objeto ID armazenada na [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) para objetos de banco de dados (procedimentos, exibições, gatilhos e assim por diante). Para planos do tipo "Adhoc" ou "Preparado", é um hash interno do texto de lote.|  
+|objectid|**int**|Uma das chaves principais usadas para pesquisar um objeto no cache. Essa é a ID de objeto armazenada em [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) para objetos de banco de dados (procedimentos, exibições, gatilhos e assim por diante). Para planos do tipo "Adhoc" ou "Preparado", é um hash interno do texto de lote.|  
 |dbid|**int**|É o identificador do banco de dados que contém a entidade à qual o plano se refere.<br /><br /> Para planos ad hoc ou preparados, é o identificador do banco de dados da partir do qual o lote é executado.|  
-|dbid_execute|**int**|Para objetos de sistema armazenados na **recurso** de banco de dados, a ID de banco de dados do qual o plano armazenado em cache é executado. 0 para todos os outros casos.|  
+|dbid_execute|**int**|Para objetos do sistema armazenados no banco de dados de **recursos** , a ID do banco de dados do qual o plano armazenado em cache é executado. 0 para todos os outros casos.|  
 |user_id|**int**|Um valor de -2 indica que o lote enviado não depende da resolução de nome implícita e pode ser compartilhado entre usuários diferentes. Este é o método preferencial. Qualquer outro valor representa a identificação do usuário que submete a consulta no banco de dados.| 
-|language_id|**smallint**|A identificação de idioma da conexão que criou o objeto de cache. Para obter mais informações, consulte [sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|language_id|**smallint**|A identificação de idioma da conexão que criou o objeto de cache. Para obter mais informações, consulte [Sys. syslanguages &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|O formato de data da conexão que criou o objeto de cache. Para obter mais informações, veja [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Primeiro valor de data. Para obter mais informações, veja [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|Bits de status interno que fazem parte da chave de consulta do cache.|  
@@ -80,16 +80,16 @@ Na tabela acima, **atributo** pode ter os seguintes valores:
   
 ## <a name="permissions"></a>Permissões  
 
-Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="set-options"></a>Opções de configuração  
- Cópias do mesmo plano compilado podem diferir somente pelo valor de **set_options** coluna. Indica que conexões diferentes estão usando conjuntos diferentes de opções SET para a mesma consulta. Usar conjuntos diferentes de opções não é desejável, porque podem causar compilações extras, baixa reutilização de plano e inflação de cache do plano, devido a várias cópias de planos no cache.  
+ As cópias do mesmo plano compilado podem diferir somente pelo valor na coluna **set_options** . Indica que conexões diferentes estão usando conjuntos diferentes de opções SET para a mesma consulta. Usar conjuntos diferentes de opções não é desejável, porque podem causar compilações extras, baixa reutilização de plano e inflação de cache do plano, devido a várias cópias de planos no cache.  
   
 ### <a name="evaluating-set-options"></a>Avaliando opções de configuração  
- Para converter o valor retornado em **set_options** para as opções com a qual o plano foi compilado, subtraia os valores do **set_options** valor, começando com o maior valor possível, até que você chegar a 0. Cada valor subtraído corresponde a uma opção que foi usada no plano de consulta. Por exemplo, se o valor em **set_options** for 251, as opções que o plano foi compilado com serão ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), Plan(2) paralela e ANSI_PADDING (1).  
+ Para converter o valor retornado em **set_options** às opções com as quais o plano foi compilado, subtraia os valores do valor de **set_options** , começando com o maior valor possível, até chegar a 0. Cada valor subtraído corresponde a uma opção que foi usada no plano de consulta. Por exemplo, se o valor em **set_options** for 251, as opções com as quais o plano foi compilado são ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), plano paralelo (2) e ANSI_PADDING (1).  
   
 |Opção|Valor|  
 |------------|-----------|  
@@ -103,21 +103,21 @@ Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `V
 |ANSI_NULL_DFLT_ON|128|  
 |ANSI_NULL_DFLT_OFF|256|  
 |NoBrowseTable<br /><br /> Indica que o plano não usa uma tabela de trabalho para implementar uma operação de FOR BROWSE.|512|  
-|TriggerOneRow<br /><br /> Indica que o plano contém uma única otimização de linha para tabelas delta de gatilho AFTER.|1024|  
-|ResyncQuery<br /><br /> Indica que a consulta foi submetida através de procedimentos armazenados do sistema interno.|2048|  
+|TriggerOneRow<br /><br /> Indica que o plano contém uma única otimização de linha para tabelas delta de gatilho AFTER.|1.024|  
+|ResyncQuery<br /><br /> Indica que a consulta foi submetida através de procedimentos armazenados do sistema interno.|2.048|  
 |ARITH_ABORT|4096|  
 |NUMERIC_ROUNDABORT|8192|  
 |DATEFIRST|16384|  
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indica que a opção de banco de dados PARAMETERIZATION foi definida como FORCED quando o plano foi compilado.|131072|  
-|ROWCOUNT|**Aplica-se a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Aplica-se a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Cursores  
  Cursores inativos são colocados em cache em um plano compilado de forma que a memória usada para armazenar o cursor pode ser usada de novo por usuários simultâneos de cursores. Por exemplo, suponha que um lote declara e usa um cursor sem desalocá-lo. Se houver dois usuários executando o mesmo lote, haverá dois cursores ativos. Quando os cursores são desalocados (potencialmente em lotes diferentes), a memória usada para armazenar o cursor é gravada em cache e não é liberada. Esta lista de cursores inativos é mantida no plano compilado. Na próxima vez que um usuário executar o lote, a memória de cursor em cache será usada novamente e inicializada adequadamente como um cursor ativo.  
   
 ### <a name="evaluating-cursor-options"></a>Avaliando opções de cursor  
- Para converter o valor retornado em **required_cursor_options** e **acceptable_cursor_options** para as opções com a qual o plano foi compilado, subtraia os valores do valor da coluna, começando com o maior valor possível, até chegar a 0. Cada valor subtraído corresponde a uma opção cursor que foi usada no plano de consulta.  
+ Para converter o valor retornado em **required_cursor_options** e **acceptable_cursor_options** às opções com as quais o plano foi compilado, subtraia os valores do valor da coluna, começando com o maior valor possível, até chegar a 0. Cada valor subtraído corresponde a uma opção cursor que foi usada no plano de consulta.  
   
 |Opção|Valor|  
 |------------|-----------|  
@@ -132,15 +132,15 @@ Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `V
 |KEYSET|128|  
 |DYNAMIC|256|  
 |SCROLL_LOCKS|512|  
-|OPTIMISTIC|1024|  
-|STATIC|2048|  
+|OPTIMISTIC|1.024|  
+|STATIC|2.048|  
 |FAST_FORWARD|4096|  
 |IN PLACE|8192|  
 |FOR *select_statement*|16384|  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. Retornando os atributos de um plano específico  
+### <a name="a-returning-the-attributes-for-a-specific-plan"></a>a. Retornando os atributos de um plano específico  
  O exemplo a seguir retorna todos os atributos de um plano específico. A exibição de gerenciamento dinâmico  `sys.dm_exec_cached_plans` é consultada primeiro para obter o identificador para o plano especificado. Na segunda consulta, substitua o `<plan_handle>` por  um valor de identificador de plano da primeira consulta.  
   
 ```sql  
@@ -166,12 +166,12 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

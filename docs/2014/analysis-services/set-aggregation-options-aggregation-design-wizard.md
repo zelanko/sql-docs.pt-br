@@ -1,5 +1,5 @@
 ---
-title: Definir opções de agregação (Assistente de Design de agregação) | Microsoft Docs
+title: Definir opções de agregação (Assistente de design de agregação) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068806"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Definir Opções de Agregação (Assistente de Design de Agregação)
@@ -32,7 +32,7 @@ ms.locfileid: "66068806"
  **Eu clicar em Parar**  
  Limite o design de agregação clicando em **Parar** durante o processo de design.  
   
- **Não criar agregações (% 0)**  
+ **Não criar agregações (0%)**  
  Especifique que o design de agregação não contém nenhuma agregação. Use essa opção para limpar um design de agregação existente para uma partição, grupo de medidas ou cubo.  
   
  **Iniciar**  
@@ -41,11 +41,11 @@ ms.locfileid: "66068806"
  **Parar**  
  Encerra o processo de design de agregação.  
   
- **Redefinir**  
+ **Definido**  
  Redefine todas as opções de agregação dessa página para os valores padrão.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de Design de agregação](aggregation-design-wizard-f1-help.md)   
- [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de design de agregação](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services assistentes &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

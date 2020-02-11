@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee7d1aba2b468c8aa0420bbacc76aea652ae7556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828653"
 ---
 # <a name="ado-net-custom-properties"></a>Propriedades personalizadas do ADO NET
@@ -26,9 +26,9 @@ ms.locfileid: "62828653"
   
 |Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
-|CommandTimeOut|Cadeia de caracteres|Um valor que especifica quanto segundos faltam para que o comando SQL expire. Um valor de 0 indica que o comando nunca expirará.|  
-|SqlCommand|Cadeia de caracteres|A instrução SQL usada pela origem do ADO NET para extrair dados.<br /><br /> Quando o pacote é carregado, é possível atualizar esta propriedade de forma dinâmica com a instrução SQL que será usada pela origem do ADO NET. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) e [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).|  
-|AllowImplicitStringConversion|Booliano|Um valor que indica se o seguinte acontece:<br /><br /> Nenhuma geração de erro de validação se não houver correspondência entre tipos de metadados externos e tipos de coluna de saída que são cadeias de caracteres (DT_WSTR ou DT_NTEXT).<br /><br /> Conversão implícita de tipos de metadados externos para tipo de dados de cadeia de caracteres usado pela coluna de saída.<br /><br /> <br /><br /> O valor padrão é TRUE.<br /><br /> Para obter mais informações, consulte [ADO NET Source](ado-net-source.md).|  
+|CommandTimeOut|String|Um valor que especifica quanto segundos faltam para que o comando SQL expire. Um valor de 0 indica que o comando nunca expirará.|  
+|SqlCommand|String|A instrução SQL usada pela origem do ADO NET para extrair dados.<br /><br /> Quando o pacote é carregado, é possível atualizar esta propriedade de forma dinâmica com a instrução SQL que será usada pela origem do ADO NET. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) e [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).|  
+|AllowImplicitStringConversion|Boolean|Um valor que indica se o seguinte acontece:<br /><br /> Nenhuma geração de erro de validação se não houver correspondência entre tipos de metadados externos e tipos de coluna de saída que são cadeias de caracteres (DT_WSTR ou DT_NTEXT).<br /><br /> Conversão implícita de tipos de metadados externos para tipo de dados de cadeia de caracteres usado pela coluna de saída.<br /><br /> <br /><br /> O valor padrão é TRUE.<br /><br /> Para obter mais informações, consulte [ADO NET Source](ado-net-source.md).|  
   
  A saída e as colunas de saída da origem do ADO NET não têm nenhuma propriedade personalizada.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "62828653"
 |--------------|---------------|-----------------|  
 |BatchSize|Integer|O número de linhas em um lote enviado ao servidor. O valor **0** indica que o tamanho do lote corresponde ao tamanho do buffer interno. O valor padrão dessa propriedade é **0**.|  
 |CommandTimeOut|Integer|O número máximo de segundos em que o comando SQL pode ser executado antes que o tempo limite seja excedido. O valor **0** indica que não há limite de tempo. O valor padrão dessa propriedade é **0**.|  
-|TableOrViewName|Cadeia de caracteres|O nome da tabela ou exibição de destino.|  
+|TableOrViewName|String|O nome da tabela ou exibição de destino.|  
   
  Para obter mais informações, consulte [ADO NET Destination](ado-net-destination.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades comuns](../common-properties.md)  
   
   

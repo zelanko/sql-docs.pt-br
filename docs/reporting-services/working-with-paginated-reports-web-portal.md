@@ -9,10 +9,10 @@ ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222656"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Trabalhando com relatórios paginados (portal da Web)
@@ -56,7 +56,7 @@ Na tela de propriedades, você pode alterar o **nome** a e **descrição** do re
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
   
 Você pode modificar os parâmetros existentes de um relatório paginado. Para adicionar um novo parâmetro, você deve editar o relatório no Construtor de Relatórios ou no SQL Server Data Tools.  
   
@@ -193,4 +193,4 @@ Selecione para alterar a maneira como a segurança é definida para o item atual
 [Portal da Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

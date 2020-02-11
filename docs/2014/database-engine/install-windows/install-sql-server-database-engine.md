@@ -1,5 +1,5 @@
 ---
-title: Sobre o mecanismo de banco de dados do SQL Server | Microsoft Docs
+title: Sobre o Mecanismo de Banco de Dados de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779357"
 ---
 # <a name="about-the-sql-server-database-engine"></a>Sobre o Mecanismo de Banco de Dados do SQL Server
   O componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é o principal serviço para armazenamento, processamento e proteção de dados. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos mais exigentes aplicativos de consumo de dados em sua empresa.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a até 50 instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em um único computador. Para criar um típico [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação, consulte [instalar o SQL Server 2014 do Assistente de instalação do &#40;instalação&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a até 50 instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em um único computador. Para criar uma instalação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] típica, consulte [instalar SQL Server 2014 no assistente de instalação &#40;&#41;de ](install-sql-server-from-the-installation-wizard-setup.md)instalação.  
   
- **Importante** Para instalações locais, é necessário executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
+ **Importante** Para instalações locais, você deve executar a instalação como administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
   
- Os seguintes recursos são instalados quando você seleciona o **Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** na página Componentes a Serem Instalados do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Os recursos a seguir são instalados quando você seleciona ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo de banco de dados** na página componentes a serem instalados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assistente de instalação:  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -58,11 +59,11 @@ ms.locfileid: "62779357"
 > [!NOTE]  
 >  Por padrão, os bancos de dados de exemplo e o código de exemplo não são instalados como parte da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para instalar bancos de dados e código de exemplo, veja o [site CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Soluções de alta disponibilidade &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;programa de instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Atualize para o SQL Server 2014 usando o assistente de instalação &#40;a instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

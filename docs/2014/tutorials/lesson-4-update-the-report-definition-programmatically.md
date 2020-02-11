@@ -1,5 +1,5 @@
 ---
-title: 'Lição 4: Atualizar a definição de relatório programaticamente | Microsoft Docs'
+title: 'Lição 4: atualizar a definição de relatório programaticamente | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137463"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>Lição 4: Atualizar a definição do relatório programaticamente
@@ -22,7 +22,7 @@ ms.locfileid: "63137463"
   
 ### <a name="to-update-the-report-definition"></a>Para atualizar a definição do relatório  
   
-1.  Substitua o código para o método UpdateReportDefinition() no arquivo Program.cs (Module1.vb para [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) com o código a seguir:  
+1.  Substitua o código do método UpdateReportDefinition () no arquivo Program.cs (Module1. vb para [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) pelo seguinte código:  
   
     ```csharp  
     private void UpdateReportDefinition()  
@@ -88,9 +88,9 @@ ms.locfileid: "63137463"
     ```  
   
 ## <a name="next-lesson"></a>Próxima lição  
- Na próxima lição, você salvará a definição do relatório atualizada no servidor de relatório. Confira a [Lição 5: Publicar a definição de relatório no servidor de relatório](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ Na próxima lição, você salvará a definição do relatório atualizada no servidor de relatório. Consulte [lição 5: publicar a definição de relatório no servidor de relatório](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Atualizando relatórios usando classes geradas do esquema RDL &#40;tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

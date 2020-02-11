@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63075179"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilação nativa de tabelas e procedimentos armazenados
@@ -46,7 +46,7 @@ where description = 'XTP Native DLL'
 >  Durante a inicialização do banco de dados, o SQL Server compila DLLs para todas as tabelas necessárias para a recuperação de banco de dados. Se uma tabela foi descartada logo antes de uma reinicialização do banco de dados, ainda pode haver resíduos da tabela nos arquivos do ponto de verificação ou no log de transações, de modo que a DLL para a tabela pode ser recompilada durante a inicialização do banco de dados. Após a reinicialização, a DLL será descarregada e os arquivos serão removidos pelo processo normal de limpeza.  
   
 ## <a name="native-compilation-of-tables"></a>Compilação nativa de tabelas  
- Criando uma tabela com otimização de memória usando o `CREATE TABLE` instrução resulta nas informações da tabela que está sendo escritas para os metadados do banco de dados e as estruturas de tabela e índice criadas na memória. A tabela também será compilada em uma DLL.  
+ A criação de uma tabela com otimização de `CREATE TABLE` memória usando a instrução resulta na gravação das informações de tabela nos metadados do banco de dados e nas estruturas de tabela e índice criadas na memória. A tabela também será compilada em uma DLL.  
   
  Considere o script de exemplo a seguir, que cria um banco de dados e uma tabela com otimização de memória:  
   
@@ -115,12 +115,12 @@ go
  A compilação nativa de tabelas e procedimentos armazenados usa o compilador OLTP na memória. Esse compilador gera arquivos que são gravados no disco e carregados na memória. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa os seguintes mecanismos para limitar o acesso a esses arquivos.  
   
 ### <a name="native-compiler"></a>Compilador nativo  
- O executável do compilador, bem como os binários e os arquivos de cabeçalho necessários à compilação nativa são instalados como parte da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na pasta MSSQL\Binn\Xtp. Portanto, se a instância padrão for instalada em C:\Program Files, os arquivos do compilador serão instalados em C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
+ O executável do compilador, bem como os binários e os arquivos de cabeçalho necessários à compilação nativa são instalados como parte da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na pasta MSSQL\Binn\Xtp. Portanto, se a instância padrão for instalada em c:\Program Files, os arquivos do compilador serão instalados em\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]c:\Arquivos de programas \MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
   
  Para limitar o acesso ao compilador, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use listas de controle de acesso (ACLs) para restringir o acesso aos arquivos binários. Todos os binários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são protegidos contra a modificação ou violação através de ACLs. As ACLs do compilador nativo também limitam o uso do compilador; somente os administradores de sistema e de conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm permissões de leitura e execução nos arquivos do compilador nativo.  
   
 ### <a name="files-generated-by-a-native-compilation"></a>Arquivos gerados por uma compilação nativa  
- Os arquivos gerados quando uma tabela ou um procedimento armazenado é compilado são arquivos DLL e intermediários que incluem arquivos com as seguintes extensões: .c, .obj, .xml, e .pdb. Os arquivos gerados são salvos em uma subpasta da pasta de dados padrão. A subpasta é chamada Xtp. Ao instalar a instância padrão com a pasta de dados padrão, os arquivos gerados são colocados em C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\DATA\Xtp.  
+ Os arquivos gerados quando uma tabela ou um procedimento armazenado é compilado são arquivos DLL e intermediários que incluem arquivos com as seguintes extensões: .c, .obj, .xml, e .pdb. Os arquivos gerados são salvos em uma subpasta da pasta de dados padrão. A subpasta é chamada Xtp. Ao instalar a instância padrão com a pasta de dados padrão, os arquivos gerados são colocados em c:\Arquivos\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de programas \MSSQL12. MSSQLSERVER\MSSQL\DATA\Xtp.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] evita a violação das DLLs geradas de três maneiras:  
   
@@ -132,8 +132,8 @@ go
   
  Nenhuma interação do usuário é necessária para gerenciar esses arquivos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criará e removerá os arquivos conforme necessário.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas com otimização de memória](memory-optimized-tables.md)   
- [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
+ [Procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)  
   
   

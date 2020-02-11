@@ -16,26 +16,26 @@ ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12d960e8fcd5e1f27ea8198ce52e080f6fddf7c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921414"
 ---
-# <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
-Especifica quais campos podem ser usados para detectar conflitos durante uma atualização otimista de uma linha da fonte de dados com um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+# <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
+Especifica quais campos podem ser usados para detectar conflitos durante uma atualização otimista de uma linha da fonte de dados com um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
- Usar essas constantes com a **conjunto de registros** "**critérios de atualização**" propriedade dinâmica, que é referenciada no [índice de propriedade dinâmica do ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) e documentadas no [ Microsoft Cursor Service para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentação.  
+ Use essas constantes com a propriedade dinâmica "**Atualizar critérios**" do **conjunto de registros** , que é referenciada no índice de [propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) e documentada no [serviço de cursor da Microsoft para obter OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentação.  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
-|**adCriteriaAllCols**|1|Detecta conflitos se qualquer coluna da linha de código-fonte de dados tiver sido alterada.|  
-|**adCriteriaKey**|0|Detecta conflitos se a coluna de chave dos dados de linha de origem tiver sido alterada, que significa que a linha foi excluída.|  
-|**adCriteriaTimeStamp**|3|Detecta conflitos se o carimbo de hora dos dados de linha de origem tiver sido alterada, que significa que a linha tiver sido acessada após o **Recordset** foi obtido.|  
-|**adCriteriaUpdCols**|2|Detecta conflitos se qualquer uma das colunas da fonte de dados de linhas que correspondem aos campos atualizados dos **Recordset** foram alteradas.|  
+|**adCriteriaAllCols**|1|Detecta conflitos se qualquer coluna da linha de fonte de dados tiver sido alterada.|  
+|**adCriteriaKey**|0|Detecta conflitos se a coluna de chave da linha de fonte de dados foi alterada, o que significa que a linha foi excluída.|  
+|**adCriteriaTimeStamp**|3|Detecta conflitos se o carimbo de data/hora da linha da fonte de dados foi alterado, o que significa que a linha foi acessada depois que o **conjunto de registros** foi obtido.|  
+|**adCriteriaUpdCols**|2|Detecta conflitos se qualquer uma das colunas da linha de fonte de dados que correspondem aos campos atualizados do **conjunto de registros** tiver sido alterada.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Pacote: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125785"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
@@ -28,7 +28,7 @@ Expression1 XOR Expression2
   
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Expression1*  
  Uma linguagem MDX válida que retorna um valor numérico.  
   
@@ -36,19 +36,19 @@ Expression1 XOR Expression2
  Uma expressão MDX válida que retorna um valor numérico.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor booliano que retorna **verdadeira** se apenas um argumento é avaliado como **verdadeiro**; caso contrário, **false**.  
+ Um valor booliano que retornará **true** se um e apenas um argumento for avaliado como **true**; caso contrário, **false**.  
   
 ## <a name="remarks"></a>Comentários  
- O **XOR** operador trata ambos os parâmetros como valores boolianos (zero, 0, como **falso**; caso contrário, **verdadeiro**) antes do operador realizar a exclusão lógica. A tabela a seguir ilustra como o **XOR** operador realizar a exclusão lógica.  
+ O operador **XOR** trata os parâmetros como valores Boolianos (zero, 0, como **false**; caso contrário, **true**) antes que o operador execute a exclusão lógica. A tabela a seguir ilustra como o operador **XOR** executa a exclusão lógica.  
   
 |*Expression1*|*Expression2*|Valor retornado|  
 |-------------------|-------------------|------------------|  
-|**true**|**true**|**false**|  
-|**true**|**false**|**true**|  
-|**false**|**true**|**true**|  
-|**false**|**false**|**false**|  
+|**true**|**true**|**for**|  
+|**true**|**for**|**true**|  
+|**for**|**true**|**true**|  
+|**for**|**for**|**for**|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

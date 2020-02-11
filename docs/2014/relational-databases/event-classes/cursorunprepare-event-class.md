@@ -15,20 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aac3a20511012e0a058fff6988c793c4f51d594d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663390"
 ---
 # <a name="cursorunprepare-event-class"></a>classe de evento CursorUnprepare
-  A classe de evento **CursorUnprepare** fornece informações sobre eventos do cursor despreparado que ocorrem em cursores de API (Interface de programação de aplicativo). Os eventos do cursor despreparado ocorrem quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] descarta um plano de execução.  
+  A classe de evento **CursorUnprepare** fornece informações sobre eventos de despreparação de cursor que ocorrem em cursores de API (interface de programação de aplicativo). Os eventos de despreparação do cursor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] ocorrem quando o descarta um plano de execução.  
   
  Inclua a classe de evento **CursorUnprepare** nos rastreamentos que registram o desempenho dos cursores. Quando a classe de evento **CursorUnprepare** é incluída no rastreamento, a quantidade de sobrecarga criada depende da frequência de uso dos cursores em relação ao banco de dados durante o rastreamento. Se os cursores forem usados extensivamente, o rastreamento pode diminuir significativamente o desempenho.  
   
 ## <a name="cursorunprepare-event-class-data-columns"></a>Colunas de dados da classe de evento CursorUnprepare  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo em vez do nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
@@ -37,11 +37,11 @@ ms.locfileid: "62663390"
 |**EventClass**|**int**|Tipo de evento registrado = 77.|27|Não|  
 |**EventSequence**|**int**|Sequência de lote da classe de evento **CursorUnprepare** .|51|Não|  
 |**GroupID**|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
-|**Handle**|**Int**|Identifica o identificador preparado que está sendo despreparado.|33|Sim|  
+|**Handle**|**Inteiro**|Identifica o identificador preparado que está sendo despreparado.|33|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LoginName**|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no formato DOMÍNIO/nomedousuário).|11|Sim|  
-|**LoginSid**|**image**|SID (identificador de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSid**|**imagem**|SID (identificador de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição do catálogo **Sys. server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**RequestID**|**int**|Identificação de solicitação que despreparou o cursor.|49|Sim|  
@@ -52,7 +52,7 @@ ms.locfileid: "62663390"
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |**XactSequence**|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

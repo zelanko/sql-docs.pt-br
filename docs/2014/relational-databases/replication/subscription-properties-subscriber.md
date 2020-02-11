@@ -1,5 +1,5 @@
 ---
-title: Propriedades de assinatura de replicação do SQL Server - assinante | Microsoft Docs
+title: Replicação do SQL Server Propriedades de assinatura-assinante | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250267"
 ---
-# <a name="sql-server-replication-subscription-properties"></a>Propriedades de assinatura de replicação do SQL Server 
-Esta seção fornece informações sobre o **propriedades da assinatura** caixa de diálogo. 
+# <a name="sql-server-replication-subscription-properties"></a>Propriedades da assinatura Replicação do SQL Server 
+Esta seção fornece informações sobre a caixa de diálogo **Propriedades da assinatura** . 
 
 ## <a name="publisher-properties"></a>Propriedades do publicador 
   A caixa de diálogo **Propriedades da Assinatura** no Publicador permite exibir e definir propriedades para assinaturas push. Você também pode exibir algumas propriedades de assinaturas pull, mas a caixa de diálogo **Propriedades da Assinatura** no Assinante exibe propriedades adicionais e permite que elas sejam modificadas.  
@@ -52,7 +52,7 @@ Esta seção fornece informações sobre o **propriedades da assinatura** caixa 
   
 ### <a name="options-for-merge-subscriptions"></a>Opções para assinaturas de mesclagem  
  **Definição de partição (HOST_NAME)**  
- Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas, se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de assinatura** e **Prioridade**  
  Exibe se a assinatura é uma assinatura de cliente ou servidor (isso não pode ser alterado depois que a assinatura tiver sido criada). Assinaturas de Servidor podem republicar dados para outros Assinantes e podem ter atribuição de prioridade para resolução de conflito.  
@@ -110,7 +110,7 @@ Esta seção fornece informações sobre o **propriedades da assinatura** caixa 
   
 ### <a name="options-for-merge-subscriptions"></a>Opções para assinaturas de mesclagem  
  **Definição de partição (HOST_NAME)**  
- Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas, se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de assinatura** e **Prioridade**  
  Exibe se a assinatura é uma assinatura de cliente ou servidor (isso não pode ser alterado depois que a assinatura tiver sido criada). Assinaturas de Servidor podem republicar dados para outros Assinantes e podem ter atribuição de prioridade para resolução de conflito.  
@@ -118,7 +118,7 @@ Esta seção fornece informações sobre o **propriedades da assinatura** caixa 
  Se você selecionou um tipo de assinatura de servidor no Assistente para Nova Assinatura, o Assinante receberá uma prioridade que será usada durante resolução de conflito  
   
  **Resolver conflitos interativamente**  
- Determina se o Resolver Interativo deve usar a interface do usuário para resolver conflitos durante a sincronização de mesclagem. Isso requer um valor de **Habilitar** para **Usar Gerenciador de Sincronização do Windows**. Para obter mais informações, consulte [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Determina se o Resolver Interativo deve usar a interface do usuário para resolver conflitos durante a sincronização de mesclagem. Isso requer um valor de **Habilitar** para **Usar Gerenciador de Sincronização do Windows**. Para obter mais informações, consulte [Resolução de conflito interativo](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Sincronização da Web**  
  **Usar Sincronização da Web** determina se deve ser feita a conexão com um IIS (Serviços de Informações da Internet) da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para sincronizar a assinatura. Essa opção só estará disponível se a publicação estiver habilitada para sincronização da Web. Para obter mais informações, consulte [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
@@ -131,7 +131,7 @@ Esta seção fornece informações sobre o **propriedades da assinatura** caixa 
   
  Para obter mais informações sobre a configuração, consulte [Configure Web Synchronization](configure-web-synchronization.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)   
  [Exibir e modificar propriedades de assinatura push](view-and-modify-push-subscription-properties.md)   
  [Assinar publicações](subscribe-to-publications.md)  

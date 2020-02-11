@@ -19,10 +19,10 @@ ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dd242370cc3d2c200e4d8b3983d47e396be3004a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106656"
 ---
 # <a name="sql-server-profiler-stored-procedures-transact-sql"></a>Procedimentos armazenados do SQL Server Profiler (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68106656"
   
  Para obter um exemplo de como usar procedimentos armazenados de rastreamento, veja [Criar um rastreamento &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de classe de evento do SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -18,18 +18,18 @@ ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f0cb7f631b75be4e8b2f4063b03aca1895ba6900
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997339"
 ---
-# <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
+# <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exclui o histórico de execução de políticas no Gerenciamento Baseado em Políticas. Você pode usar este procedimento armazenado para excluir o histórico de execução de uma política específica ou de todas as políticas e excluir o histórico de execução antes de uma data específica.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,9 +40,9 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @policy_id = ] policy_id` É o identificador da política para o qual você deseja excluir o histórico de execução. *policy_id* está **int**e é necessária. Pode ser NULL.  
+`[ @policy_id = ] policy_id`É o identificador da política para a qual você deseja excluir o histórico de execução. *policy_id* é **int**e é obrigatório. Pode ser NULL.  
   
-`[ @oldest_date = ] 'oldest_date'` É a data mais antiga para a qual você deseja manter o histórico de execução. Qualquer histórico de execução anterior a essa data será excluído. *oldest_date* está **datetime**e é necessária. Pode ser NULL.  
+`[ @oldest_date = ] 'oldest_date'`É a data mais antiga para a qual você deseja manter o histórico de execução da política. Qualquer histórico de execução anterior a essa data será excluído. *oldest_date* é **DateTime**e é obrigatório. Pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -50,7 +50,7 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ## <a name="remarks"></a>Comentários  
  Você deve executar sp_syspolicy_delete_policy_execution_history no contexto do banco de dados de sistema msdb.  
   
- Para obter valores para *policy_id*, e para exibir as datas de histórico de execução, você pode usar a consulta a seguir:  
+ Para obter valores para *policy_id*e exibir datas do histórico de execução, você pode usar a seguinte consulta:  
   
 ```  
 SELECT a.name AS N'policy_name', b.policy_id, b.start_date, b.end_date  
@@ -61,19 +61,19 @@ ON a.policy_id = b.policy_id
   
  O comportamento a seguir será aplicado se você especificar NULL para obter um ou ambos valores:  
   
--   Para excluir todo o histórico de execução política, especifique NULL para ambos *policy_id* e para *oldest_date*.  
+-   Para excluir todo o histórico de execução de política, especifique NULL para *policy_id* e para *oldest_date*.  
   
--   Para excluir todos os histórico de execução de uma política específica, especifique um identificador de política para *policy_id*, e especifique NULL como *oldest_date*.  
+-   Para excluir todo o histórico de execução de política de uma política específica, especifique um identificador de política para *policy_id*e especifique NULL como *oldest_date*.  
   
--   Para excluir o histórico de execução de todas as políticas antes de uma data específica, especifique NULL para *policy_id*e especifique uma data para *oldest_date*.  
+-   Para excluir o histórico de execução de política para todas as políticas antes de uma data específica, especifique NULL para *policy_id*e especifique uma data para *oldest_date*.  
   
- Para arquivar o histórico de execução de política, você pode abrir o log Histórico de Política no Pesquisador de Objetos e exportar o histórico de execução para um arquivo. Para acessar o log de histórico de política, expanda **Management**, clique com botão direito **gerenciamento de política**e, em seguida, clique em **Exibir histórico**.  
+ Para arquivar o histórico de execução de política, você pode abrir o log Histórico de Política no Pesquisador de Objetos e exportar o histórico de execução para um arquivo. Para acessar o log de histórico de política, expanda **Gerenciamento**, clique com o botão direito do mouse em **Gerenciamento de política**e clique em **Exibir histórico**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possível elevação de credenciais: Os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que podem afetar a operação da instância da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente a usuários que são confiáveis com o controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo seguinte exclui o histórico de execução de política anterior a uma data específica de uma política com ID 7.  
@@ -85,9 +85,9 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_execution_history @policy_id = 7
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados de gerenciamento baseado em políticas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_purge_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Procedimentos armazenados do gerenciamento baseado em políticas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syspolicy_set_config_history_retention](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syspolicy_purge_history](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   
   

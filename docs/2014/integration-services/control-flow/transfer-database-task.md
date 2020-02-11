@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830145"
 ---
 # <a name="transfer-database-task"></a>Tarefa Transferir Banco de Dados
@@ -32,7 +32,7 @@ ms.locfileid: "62830145"
 ## <a name="transfer-of-databases-between-versions-of-sql-server"></a>Transferência de banco de dados entre versões do SQL Server  
  A tarefa Transferir Banco de Dados pode transferir um banco de dados entre instâncias de versões diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  A tarefa Transferir Banco de Dados não informa o progresso incremental da transferência de mensagem de erro; informa somente conclusão 0% e 100 %.  
   
 ## <a name="execution-value"></a>Valor de execução  
@@ -71,9 +71,9 @@ ms.locfileid: "62830145"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da Tarefa Transferir Banco de Dados &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da tarefa Transferir Banco de dados &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da Tarefa Transferir Banco de Dados &#40;Página Bancos de Dados&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Editor da tarefa Transferir Banco de dados &#40;página bancos de dados&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

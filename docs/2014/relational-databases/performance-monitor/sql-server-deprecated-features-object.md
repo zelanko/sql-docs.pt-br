@@ -16,23 +16,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206959"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
-  O objeto SQLServer:Recursos Preteridos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um contador para monitorar recursos designados como preteridos. Em cada caso, o contador fornece uma contagem de uso que lista o número de vezes em que o recurso preterido foi encontrado desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  O objeto SQLServer:Recursos Preteridos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um contador para monitorar recursos designados como preteridos. Em cada caso, o contador fornece uma contagem de uso que lista o número de vezes em que o recurso preterido foi encontrado desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  A tabela a seguir descreve as instâncias de contadores dos Recursos Preteridos do SQL Server.  
   
-|Instâncias do contador de Recursos Preteridos do SQL Server|Descrição|  
+|Instâncias do contador de Recursos Preteridos do SQL Server|DESCRIÇÃO|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|Um identificador que não contém nenhum caractere diferente de # foi encontrado. Use pelo menos um caractere adicional. Ocorre uma vez por compilação.|  
-|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substituir por `SELECT column_list FROM`  *\< nome_da_função >* `()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
+|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substituir por `SELECT column_list FROM` * \<>* `()`function_name. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
 |'\@' e nomes que começam com '\@\@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Foi encontrado um identificador que começava com \@ ou \@\@. Não use \@ nem \@\@ ou nomes que comecem com \@\@ como identificadores. Ocorre uma vez por compilação.|  
-|ADDING TAPE DEVICE|O recurso preterido sp_addumpdevice'`tape`' foi encontrado. Use sp_addumpdevice'`disk`' em vez disso. Ocorre uma vez por uso.|  
+|ADDING TAPE DEVICE|O recurso preterido sp_addumpdevice`tape`' ' foi encontrado. Em vez disso`disk`, use sp_addumpdevice ' '. Ocorre uma vez por uso.|  
 |Permissão ALL|Número total de vezes que a sintaxe GRANT ALL, DENY ALL ou REVOKE ALL foi encontrada. Modifique a sintaxe para negar permissões específicas. Ocorre uma vez por consulta.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Número total de horas que a opção TORN_PAGE_DETECTION do recurso preterido de ALTER DATABASE foi usada desde a inicialização da instância de servidor. Em seu lugar, use a sintaxe PAGE_VERIFY. Ocorre uma vez por uso em uma instrução DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|As sintaxes de recurso preterido ALTER LOGIN WITH SET CREDENCIAL ou ALTER LOGIN WITH NO CREDENTIAL foram encontradas. Em seu lugar, use as sintaxes ADD ou DROP CREDENCIAL. Ocorre uma vez por compilação.|  
@@ -112,14 +112,14 @@ ms.locfileid: "68206959"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Referencias a sys.numbered_procedure_parameters preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
 |numbered_procedures|Referencias a sys.numbered_procedures preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
-|RAISEERROR em estilo antigo|A sintaxe RAISERROR preterida (formato: Sintaxe de cadeia de inteiros RAISERROR) foi encontrada. Reescreva a instrução usando a sintaxe RAISERROR atual. Ocorre uma vez por compilação.|  
+|RAISEERROR em estilo antigo|A sintaxe preterida RAISERROR (Formato: cadeia de inteiros RAISERROR) foi encontrada. Reescreva a instrução usando a sintaxe RAISERROR atual. Ocorre uma vez por compilação.|  
 |OLEDB para conexões ad hoc|SQLOLEDB não é um provedor com suporte. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para conexões ad hoc.|  
 |PERMISSIONS|Foram encontradas referencias à função intrínseca PERMISSIONS. Consulte sys.fn_my_permissions. Ocorre uma vez por consulta.|  
 |ProcNums|A sintaxe ProcNums preterida foi encontrada. Reescreva as instruções para remover as referências. Ocorre uma vez por compilação.|  
 |READTEXT|A sintaxe READTEXT foi encontrada. Reescreva os aplicativos para usar o tipo de dados `varchar(max)` e as sintaxes de tipos de dados removidas `text`. Ocorre uma vez por consulta.|  
-|RESTORE DATABASE ou LOG WITH DBO_ONLY|A RESTORE ... WITH DBO_ONLY foi encontrada. Use RESTORE ... RESTRICTED_USER.|  
-|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|A RESTORE ... WITH MEDIAPASSWORD foi encontrada. WITH MEDIAPASSWORD fornece pouca segurança e deve ser removida.|  
-|RESTORE DATABASE ou LOG WITH PASSWORD|A RESTORE ... WITH PASSWORD foi encontrada. WITH PASSWORD fornece pouca segurança e deve ser removida.|  
+|RESTORE DATABASE ou LOG WITH DBO_ONLY|A restauração... COM a sintaxe DBO_ONLY foi encontrada. Usar restaurar... RESTRICTED_USER em vez disso.|  
+|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|A restauração... COM a sintaxe MEDIAPASSWORD foi encontrada. WITH MEDIAPASSWORD fornece pouca segurança e deve ser removida.|  
+|RESTORE DATABASE ou LOG WITH PASSWORD|A restauração... A sintaxe de senha foi encontrada. WITH PASSWORD fornece pouca segurança e deve ser removida.|  
 |Retornando resultados de gatilho|Este evento ocorre uma vez por invocação de gatilho. Reescreva o gatilho de forma a não retornar conjuntos de resultados.|  
 |ROWGUIDCOL|A sintaxe ROWGUIDCOL foi encontrada. Reescreva as instruções para usar a sintaxe $rowguid. Ocorre uma vez por compilação.|  
 |SET ANSI_NULLS OFF|A sintaxe SET ANSI_NULLS OFF foi encontrada. Remova esta sintaxe preterida. Ocorre uma vez por compilação.|  
@@ -162,7 +162,7 @@ ms.locfileid: "68206959"
 |sp_control_dbmasterkey_password|O procedimento armazenado sp_control_dbmasterkey_password não verifica se uma chave mestra existe. Isso é permitido para compatibilidade com versões anteriores, mas exibe um aviso. Este comportamento é preterido. Em uma versão futura, deverá existir uma chave mestra e a senha usada no procedimento armazenado sp_control_dbmasterkey_password deverá ser a mesma senha usada para criptografar a chave mestra do banco de dados.|  
 |sp_create_removable|O procedimento sp_create_removable foi encontrado. Em vez disso, use CREATE DATABASE. Ocorre uma vez por consulta.|  
 |sp_db_vardecimal_storage_format|O uso do formato de armazenamento `vardecimal` foi encontrado. Em vez disso, use a compactação de dados.|  
-|sp_dbcmptlevel|O procedimento sp_dbcmptlevel foi encontrado. Use ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Ocorre uma vez por consulta.|  
+|sp_dbcmptlevel|O procedimento sp_dbcmptlevel foi encontrado. Usar ALTER DATABASE... Em vez disso, defina COMPATIBILITY_LEVEL. Ocorre uma vez por consulta.|  
 |sp_dbfixedrolepermission|O procedimento sp_dbfixedrolepermission foi encontrado. Não use. Ocorre uma vez por consulta.|  
 |sp_dboption|O procedimento sp_dboption foi encontrado. Em vez disso, use ALTER DATABASE e DATABASEPROPERTYEX. Ocorre uma vez por compilação.|  
 |sp_dbremove|O procedimento sp_dbremove foi encontrado. Em vez disso, use DROP DATABASE. Ocorre uma vez por consulta.|  
@@ -259,16 +259,16 @@ ms.locfileid: "68206959"
 |XMLDATA|A sintaxe FOR XML foi encontrada. Use a geração de XSD para os modos RAW e AUTO. Não há nenhuma substituição para o modo explícito. Ocorre uma vez por compilação.|  
 |XP_API|Uma instrução de procedimento armazenado estendido foi encontrada. Não use.|  
 |xp_grantlogin|O procedimento xp_grantlogin foi encontrado. Em vez disso, use CREATE LOGIN. Ocorre uma vez por compilação.|  
-|xp_loginconfig|O procedimento xp_loginconfig foi encontrado. Em vez disso, use o argumento IsIntegratedSecurityOnly de SERVERPROPERTY. Ocorre uma vez por consulta.|  
+|xp_loginConfig|O procedimento xp_loginconfig foi encontrado. Em vez disso, use o argumento IsIntegratedSecurityOnly de SERVERPROPERTY. Ocorre uma vez por consulta.|  
 |xp_revokelogin|O procedimento xp_revokelogin foi encontrado. Em vez disso, use ALTER LOGIN DISABLE ou DROP LOGIN. Ocorre uma vez por compilação.|  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos do mecanismo de banco de dados preteridos no SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Recursos preteridos Mecanismo de Banco de Dados no SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Recursos de pesquisa de texto completo preteridos no SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
- [Classe de evento Deprecation Announcement](../event-classes/deprecation-announcement-event-class.md)   
- [Classe de evento Deprecation Final Support](../event-classes/deprecation-final-support-event-class.md)   
- [Funcionalidade do mecanismo de banco de dados descontinuada no SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Pesquisa de texto completo recursos descontinuados no SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
+ [Classe de evento reprovation Announcement](../event-classes/deprecation-announcement-event-class.md)   
+ [Classe de evento reprovation final support](../event-classes/deprecation-final-support-event-class.md)   
+ [Funcionalidade de Mecanismo de Banco de Dados descontinuada no SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Recursos de pesquisa de texto completo descontinuados no SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Usar objetos do SQL Server](use-sql-server-objects.md)  
   
   

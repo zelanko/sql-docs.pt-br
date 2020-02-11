@@ -16,19 +16,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952490"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gerenciador de Configurações do Reporting Services (Modo Nativo).
-  Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no Modo Nativo. Se você instalou um servidor de relatório usando a opção de instalação somente arquivos, deverá usar o Gerenciador de Configuração para configurar o servidor antes de poder usá-lo. Se você instalou um servidor de relatório usando a opção de instalação de configuração padrão, poderá usar o Gerenciador de Configurações para verificar ou modificar as configurações que foram especificadas durante a instalação. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pode ser usado para configurar uma instância local ou remota do servidor de relatório.  
+  Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no Modo Nativo. Se você instalou um servidor de relatório usando a opção de instalação somente arquivos, deverá usar o Gerenciador de Configuração para configurar o servidor antes de poder usá-lo. Se você instalou um servidor de relatório usando a opção de instalação de configuração padrão, poderá usar o Gerenciador de Configurações para verificar ou modificar as configurações que foram especificadas durante a instalação. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager pode ser usado para configurar uma instância de servidor de relatório local ou remota.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
   
 > [!NOTE]  
->  A partir da versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não foi desenvolvido para gerenciar servidores de relatório no modo do SharePoint. O modo do SharePoint é gerenciado e configurado por meio de scripts da Administração Central do SharePoint e do PowerShell. Para obter informações, consulte [Reporting Services instalação &#40;do modo SharePoint SharePoint 2010 e&#41;SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+>  A partir da versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não foi desenvolvido para gerenciar servidores de relatório no modo do SharePoint. O modo do SharePoint é gerenciado e configurado por meio de scripts da Administração Central do SharePoint e do PowerShell. Para obter informações, consulte [Reporting Services instalação do modo sharepoint &#40;sharepoint 2010 e sharepoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
  **Nesta seção:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "71952490"
  [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  Descreve como configurar uma conta do usuário para processar relatórios no modo autônomo.  
   
- [Configurar um servidor de relatório para entrega &#40;de email Configuration Manager do SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  Descreve como configurar um servidor de relatório para dar suporte à distribuição de relatório por email.  
   
  [Configurar uma implantação de expansão do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
@@ -59,7 +59,7 @@ ms.locfileid: "71952490"
  [Gerenciar um servidor de relatórios de Modo Nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
  Fornece instruções passo a passo para tarefas comuns.  
   
- [Gerenciador de Configurações do Reporting Services F1 tópicos &#40;de ajuda do modo nativo do SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Gerenciador de Configurações do Reporting Services F1 tópicos de ajuda &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  Fornece tópicos de ajuda para as páginas da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  **Neste tópico:**  
@@ -70,7 +70,7 @@ ms.locfileid: "71952490"
   
 -   [Para iniciar o Gerenciador de Configurações do Reporting Services](#bkmk_start_configuration_manager)  
   
-##  <a name="bkmk_scenarios"></a> Cenários para usar o Gerenciador de Configuração do Reporting Services.  
+##  <a name="bkmk_scenarios"></a>Cenários a serem usados Gerenciador de Configurações do Reporting Services  
  Você pode usar a ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para executar as seguintes tarefas:  
   
 -   Configurar a conta de serviço do Servidor de Relatório. A conta é configurada inicialmente durante a instalação, mas pode ser modificada usando a ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se você atualizar a senha ou quiser usar uma conta diferente.  
@@ -79,15 +79,17 @@ ms.locfileid: "71952490"
   
 -   Crie e configure o banco de dados de servidor de relatório. O servidor de relatório é um servidor sem monitoração de estado que requer um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenamento interno. Você pode usar a ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para criar e configurar uma conexão ao banco de dados do servidor de relatório. Você também pode selecionar um banco de dados de servidor de relatório existente que já tenha o conteúdo você deseja usar.  
   
--   Configure uma implantação de expansão no modo Nativo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece suporte a uma topologia de implantação que permite que várias instâncias do servidor de relatório usem um único banco de dados de servidor de relatório compartilhado. Para fazer uma implantação de expansão de servidor de relatório, use a ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para conectar cada servidor de relatório ao banco de dados de servidor de relatório compartilhado.  
+-   Configure uma implantação de expansão no modo Nativo. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece suporte a uma topologia de implantação que permite que várias instâncias do servidor de relatório usem um único banco de dados de servidor de relatório compartilhado. Para fazer uma implantação de expansão de servidor de relatório, use a ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para conectar cada servidor de relatório ao banco de dados de servidor de relatório compartilhado.  
   
 -   Faça backup, restaure ou substitua a chave simétrica que é usada para criptografar cadeias de caracteres e credenciais de conexões armazenadas. Você deve ter uma cópia de backup da chave simétrica caso altere a conta de serviço ou mova um banco de dados do servidor de relatório para outro computador.  
   
 -   Configure a conta de execução autônoma. Essa conta é usada para conexões remotas durante operações agendadas ou quando as credenciais de usuário não estão disponíveis.  
   
--   Configure o email do servidor de relatório. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email do servidor de relatório que usa o protocolo SMTP para entregar relatórios ou notificação de processamento de relatórios a uma caixa de correio eletrônica. Você pode usar o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para especificar qual servidor ou gateway SMTP na sua rede será usado para entrega de e-mail.  
+-   Configure o email do servidor de relatório. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email do servidor de relatório que usa o protocolo SMTP para entregar relatórios ou notificação de processamento de relatórios a uma caixa de correio eletrônica. Você pode usar o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para especificar qual servidor ou gateway SMTP na sua rede será usado para entrega de e-mail.  
   
- A ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não o ajuda a gerenciar o conteúdo do servidor de relatório, habilitar recursos adicionais ou conceder acesso ao servidor. A implantação completa requer que você também use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar recursos adicionais ou modificar valores padrão, e o Gerenciador de Relatórios para conceder acesso do usuário ao servidor.  
+ A ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não o ajuda a gerenciar o conteúdo do servidor de relatório, habilitar recursos adicionais ou conceder acesso ao servidor. A implantação completa requer que você também [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] use o para habilitar recursos adicionais ou modificar valores padrão e Report Manager para conceder acesso de usuário ao servidor.  
   
 ##  <a name="bkmk_requirements"></a> Requisitos  
  O Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é específico da versão. O Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalada com esta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser usado para configurar uma versão anterior do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se você estiver executando versões mais antigas e mais novas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lado a lado no mesmo computador, deverá usar o Gerenciador de Configurações do Reporting Services fornecido com cada versão para configurar cada instância.  
@@ -104,7 +106,7 @@ ms.locfileid: "71952490"
   
  A ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado automaticamente quando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-##  <a name="bkmk_start_configuration_manager"></a> Para iniciar o Gerenciador de Configuração do Reporting Services  
+##  <a name="bkmk_start_configuration_manager"></a>Para iniciar o Gerenciador de Configurações do Reporting Services  
   
 #### <a name="to-start-reporting-services-configuration"></a>Para iniciar a Configuração do Reporting Services  
   
@@ -128,10 +130,10 @@ ms.locfileid: "71952490"
   
 6.  Clique em **Conectar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
- [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar uma conexão de banco de dados do servidor de relatório &#40;Configuration Manager SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
   

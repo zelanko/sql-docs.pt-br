@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a83df9dde4ada571b0fc39f6ac8e45c49d9ac17
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73777902"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Metadados adicionais de parâmetros com valor de tabela
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Para recuperar metadados para um parâmetro com valor de tabela, um aplicativo chama SQLProcedureColumns. Para um parâmetro com valor de tabela, SQLProcedureColumns retorna uma única linha. Duas colunas adicionais específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME, foram adicionadas para fornecer informações de esquema e de catálogo para tipos de tabela associados a parâmetros com valor de tabela. Em conformidade com a especificação ODBC, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME aparecem antes de todas as colunas específicas do driver adicionadas em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e depois de todas as colunas exigidas pelo próprio ODBC.  
+  Para recuperar metadados para um parâmetro com valor de tabela, um aplicativo chama SQLProcedureColumns. Para um parâmetro com valor de tabela, SQLProcedureColumns retorna uma única linha. Duas colunas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]específicas adicionais, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME, foram adicionadas para fornecer informações de esquema e de catálogo para tipos de tabela associados a parâmetros com valor de tabela. Em conformidade com a especificação ODBC, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME aparecem antes de todas as colunas específicas do driver adicionadas em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]versões anteriores do e depois de todas as colunas exigidas pelo próprio ODBC.  
   
  A tabela a seguir lista as colunas significativas para parâmetros com valor de tabela.  
   
@@ -32,16 +32,16 @@ ms.locfileid: "73777902"
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint não NULL|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128) não NULL|O nome do tipo do parâmetro com valor de tabela.|  
-|COLUMN_SIZE|Integer|NULL|  
+|COLUMN_SIZE|Integer|NULO|  
 |BUFFER_LENGTH|Integer|0|  
-|DECIMAL_DIGITS|Smallint|NULL|  
-|NUM_PREC_RADIX|Smallint|NULL|  
+|DECIMAL_DIGITS|Smallint|NULO|  
+|NUM_PREC_RADIX|Smallint|NULO|  
 |NULLABLE|Smallint não NULL|SQL_NULLABLE|  
-|REMARKS|Varchar|NULL|  
-|COLUMN_DEF|WVarchar(4000)|NULL|  
+|COMENTÁRIOS|Varchar|NULO|  
+|COLUMN_DEF|WVarchar(4000)|NULO|  
 |SQL_DATA_TYPE|Smallint não NULL|SQL_SS_TABLE|  
-|SQL_DATETIME_SUB|Smallint|NULL|  
-|CHAR_OCTET_LENGTH|Integer|NULL|  
+|SQL_DATETIME_SUB|Smallint|NULO|  
+|CHAR_OCTET_LENGTH|Integer|NULO|  
 |ORDINAL_POSITION|Integer não NULL|A posição ordinal do parâmetro.|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128) não NULL|O catálogo que contém a definição de tipo do tipo de tabela do parâmetro com valor de tabela.|  
@@ -53,7 +53,7 @@ ms.locfileid: "73777902"
   
  Quando SQL_SOPT_SS_NAME_SCOPE for definido como SQL_SS_NAME_SCOPE_TABLE, as consultas a servidores vinculados irão falhar. As chamadas para SQLColumns ou SQLPrimaryKeys com um catálogo que contém um componente de servidor falharão.  
   
-## <a name="see-also"></a>Consulte também  
- [Parâmetros &#40;com valor de tabela ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Parâmetros com valor de tabela &#40;&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

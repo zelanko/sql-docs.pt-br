@@ -1,5 +1,5 @@
 ---
-title: Outros detalhes de programação de Driver do Access | Microsoft Docs
+title: Outros detalhes de programação de driver de acesso | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 806e981ea897f3482c88808212dce1d0f5a02829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002301"
 ---
 # <a name="other-access-driver-programming-details"></a>Outros detalhes de programação do driver do Access
 > [!NOTE]  
->  Esta seção fornece informações específicas de Driver de acesso sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado no [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Esta seção fornece informações específicas do driver de acesso sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [SQLColAttributes (Driver do Access)](../../odbc/microsoft/sqlcolattributes-access-driver.md)  
   
@@ -51,4 +51,4 @@ ms.locfileid: "68002301"
   
 -   [Encryption (Driver do Access)](../../odbc/microsoft/encryption-access-driver.md)  
   
--   [Usando o atributo de cadeia de conexão ExtendedAnsiSQL (Driver do Access)](../../odbc/microsoft/using-the-extendedansisql-connection-string-attribute-access-driver.md)
+-   [Usar o atributo de cadeia de conexão ExtendedAnsiSQL (Driver do Access)](../../odbc/microsoft/using-the-extendedansisql-connection-string-attribute-access-driver.md)

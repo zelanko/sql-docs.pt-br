@@ -1,5 +1,5 @@
 ---
-title: Conectar a um servidor de serviços de integração remota (serviço SSIS) | Microsoft Docs
+title: Conectar-se a um servidor de Integration Services remoto (serviço SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,27 +16,27 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060421"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Conectar-se a um servidor remoto do Integration Services (serviço SSIS)
     
 > [!IMPORTANT] 
-> Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
+> Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]dá suporte ao serviço para compatibilidade com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
  Para se conectar a uma instância do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um servidor remoto, a partir do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou de outro aplicativo de gerenciamento, é necessário um conjunto específico de direitos no servidor para os usuários do aplicativo.  
   
 > [!IMPORTANT] 
-> Para gerenciar pacotes armazenados em um servidor remoto, você não precisa conectar-se à instância do serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] naquele servidor remoto. Em vez disso, edite o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de forma que o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exiba os pacotes armazenados no servidor remoto. Para obter mais informações, consulte [Configurando o Serviço Integration Services &#40;Serviço SSIS#41;](service/integration-services-service-ssis-service.md).  
+> Para gerenciar pacotes armazenados em um servidor remoto, você não precisa conectar-se à instância do serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] naquele servidor remoto. Em vez disso, edite o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de forma que o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exiba os pacotes armazenados no servidor remoto. Para obter mais informações, consulte [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
   
 ## <a name="connecting-to-integration-services-on-a-remote-server"></a>Conectando-se ao Integration Services em um servidor remoto  
   
 #### <a name="to-connect-to-integration-services-on-a-remote-server"></a>Para se conectar ao Integration Services em um servidor remoto  
   
-1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Selecione **Arquivo**, **Conectar Pesquisador de Objetos** para exibir a caixa de diálogo **Conectar ao Servidor** .  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66060421"
   
 2.  Na página **Aplicativos** da caixa de diálogo **Propriedades de Configuração de COM Distribuída** , selecione SQL Server Integration Services 11.0 e clique em **Propriedades**.  
   
-3.  Selecione a página **Segurança** .  
+3.  Escolha a página **Segurança** .  
   
 4.  Use as duas caixas de diálogo separadas para configurar as **Permissões de acesso** e as **Permissões de Inicialização**. Você não pode distinguir entre acesso remoto e local – as permissões de Acesso incluem acesso local e remoto e as permissões de Inicialização incluem inicialização local e remota.  
   
@@ -99,13 +99,13 @@ ms.locfileid: "66060421"
  Se você estiver trabalhando em uma conta local do Windows em um computador cliente, só poderá se conectar ao serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um computador remoto se houver uma conta local com o mesmo nome e senha e os direitos apropriados no computador remoto.  
   
 ## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>Por padrão, o serviço SSIS não oferece suporte para delegação  
-Por padrão, o serviço [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não oferece suporte para delegação de credenciais ou o que às vezes é conhecido como salto duplo. Nesse cenário, você está trabalhando em um computador cliente, o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] está em execução em um segundo computador e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução em um terceiro computador. Primeiro, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] passa com sucesso as credenciais do computador cliente para o segundo computador no qual o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] está em execução. Em seguida, no entanto, o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não pode delegar suas credenciais do segundo computador para o terceiro computador no qual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução.
+Por padrão, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o serviço não oferece suporte à delegação de credenciais ou às vezes chamado de salto duplo. Nesse cenário, você está trabalhando em um computador cliente, o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] está em execução em um segundo computador e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução em um terceiro computador. Primeiro, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] passa com sucesso as credenciais do computador cliente para o segundo computador no qual o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] está em execução. Em seguida, no entanto, o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não pode delegar suas credenciais do segundo computador para o terceiro computador no qual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução.
 
 Você pode habilitar a delegação de credenciais concedendo o direito **Confiar neste usuário para delegação a qualquer serviço (apenas Kerberos)** para a conta de serviço do SQL Server, que inicia o serviço do Integration Services (ISServerExec.exe) como um processo filho. Antes de conceder esse direito, considere se ele atende aos requisitos de segurança de sua organização.
 
 Para obter mais informações, consulte [Getting Cross Domain Kerberos and Delegation working with SSIS Package (Obtendo entre Kerberos do domínio e delegação de trabalhar com o pacote do SSIS)](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/).
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar um Firewall do Windows para acesso ao serviço SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
   
   
