@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104844"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Especificar um intervalo do eixo (Construtor de Relatórios e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66104844"
 > [!NOTE]  
 >  O eixo de categoria geralmente é o eixo horizontal ou o eixo x. No entanto, para os gráficos de barras, o eixo de categoria é o vertical ou eixo y.  
   
- Um exemplo de um gráfico que especifica intervalos de eixos diferentes está disponível como um relatório de exemplo. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Relatórios de exemplo do Construtor de Relatórios e do Designer de Relatórios](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Um exemplo de um gráfico que especifica intervalos de eixos diferentes está disponível como um relatório de exemplo. Para obter mais informações sobre como baixar este relatório de exemplo e [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]outros, consulte [Construtor de relatórios e Report Designer relatórios de exemplo](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "66104844"
   
 1.  Clique com o botão direito do mouse no eixo da categoria e clique em **Propriedades do Eixo**. A caixa de diálogo **Propriedades do Eixo** é aberta.  
   
-2.  Na **opções de eixo**, defina `Interval` à **1**. Cada rótulo do grupo de categorias é exibido. Para mostrar cada rótulo de outro grupo de categorias no eixo x, digite **2**.  
+2.  Em **Opções de eixo**, `Interval` defina como **1**. Cada rótulo do grupo de categorias é exibido. Para mostrar cada rótulo de outro grupo de categorias no eixo x, digite **2**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66104844"
   
 1.  Clique com o botão direito do mouse no eixo do gráfico que deseja alterar e clique em **Propriedades do Eixo**. A caixa de diálogo **Propriedades do Eixo** é aberta.  
   
-2.  Na **opções de eixo**, defina `Interval` à **automática**. O gráfico exibirá o número ideal de rótulos de categorias que podem se ajustar ao longo do eixo.  
+2.  Em **Opções de eixo**, `Interval` defina como **automático**. O gráfico exibirá o número ideal de rótulos de categoria que podem se ajustar ao longo do eixo.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   

@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245960"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
@@ -31,9 +31,9 @@ ms.locfileid: "75245960"
 
   Retorna o consumo de CPU, E/S e consumo de memória para um banco de dados [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Existe uma linha para cada 15 segundos, mesmo se não houver nenhuma atividade no banco de dados. Os dados históricos são mantidos por aproximadamente uma hora.  
   
-|Colunas|Tipo de Dados|Descrição|  
+|Colunas|Tipo de Dados|DESCRIÇÃO|  
 |-------------|---------------|-----------------|  
-|end_time|**horário**|Hora UTC que indica o término do intervalo de relatório atual.|  
+|end_time|**datetime**|Hora UTC que indica o término do intervalo de relatório atual.|  
 |avg_cpu_percent|**decimal (5, 2)**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
 |avg_data_io_percent|**decimal (5, 2)**|Média de utilização de e/s de dados em porcentagem do limite da camada de serviço. Para bancos de dados de hiperescala, consulte [data e/s em estatísticas de utilização de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal (5, 2)**|Média de gravações do log de transações (em MBps) como percentual do limite da camada de serviço.|  
@@ -41,12 +41,12 @@ ms.locfileid: "75245960"
 |xtp_storage_percent|**decimal (5, 2)**|Utilização de armazenamento para OLTP na memória em porcentagem do limite da camada de serviço (no final do intervalo de relatórios). Isso inclui a memória usada para o armazenamento dos seguintes objetos OLTP na memória: tabelas com otimização de memória, índices e variáveis de tabela. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retornará 0 se o OLTP na memória não for usado no banco de dados.|  
 |max_worker_percent|**decimal (5, 2)**|Máximo de trabalhos simultâneos (solicitações) em porcentagem do limite da camada de serviço do banco de dados.|  
 |max_session_percent|**decimal (5, 2)**|Máximo de sessões simultâneas em porcentagem do limite da camada de serviço do banco de dados.|  
-|dtu_limit|**inteiro**|Configuração de DTU máxima do banco de dados atual para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em vCore, essa coluna é nula.|
+|dtu_limit|**int**|Configuração de DTU máxima do banco de dados atual para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em vCore, essa coluna é nula.|
 |cpu_limit|**decimal (5, 2)**|Número de vCores para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em DTU, essa coluna é nula.|
 |avg_instance_cpu_percent|**decimal (5, 2)**|Uso médio de CPU do banco de dados como uma porcentagem do processo do BD SQL.|
 |avg_instance_memory_percent|**decimal (5, 2)**|Uso médio de memória do banco de dados como uma porcentagem do processo do BD SQL.|
 |avg_login_rate_percent|**decimal (5, 2)**|Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|
-|replica_role|**inteiro**|Representa a função da réplica atual com 0 como primário, 1 como secundário e 2 como encaminhador (primário do secundário geográfico). Você verá "1" quando conectado com a intenção ReadOnly a todos os secundários legíveis. Se estiver se conectando a um secundário geográfico sem especificar a intenção ReadOnly, você deverá ver "2" (conectando-se ao encaminhador).|
+|replica_role|**int**|Representa a função da réplica atual com 0 como primário, 1 como secundário e 2 como encaminhador (primário do secundário geográfico). Você verá "1" quando conectado com a intenção ReadOnly a todos os secundários legíveis. Se estiver se conectando a um secundário geográfico sem especificar a intenção ReadOnly, você deverá ver "2" (conectando-se ao encaminhador).|
 |||
   
 > [!TIP]  

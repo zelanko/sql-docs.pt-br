@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a10d92d8492f9f07f18d2edccd7f3074b7c584c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105086"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Função Var (Construtor de Relatórios e SSRS)
@@ -30,15 +30,16 @@ ms.locfileid: "66105086"
 Var(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *Expressão*  
+#### <a name="parameters"></a>parâmetros  
+ *expressão*  
  (`Integer` ou `Float`) A expressão na qual executar a agregação.  
   
  *escopo*  
  (`String`) Opcional. Uma constante que é o nome de um conjunto de dados, grupo ou região de dados que contém os itens de relatório aos quais a função de agregação deve ser aplicada. Se *scope* não estiver especificado, será usado o escopo atual.  
   
  *recursivos*  
- (**Enumerated Type**) Opcional. `Simple` (padrão) ou `RdlRecursive`. Especifica se a agregação deve ser executada recursivamente.  
+ (**Enumerated Type**) Opcional. 
+  `Simple` (padrão) ou `RdlRecursive`. Especifica se a agregação deve ser executada recursivamente.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  Retorna um `Decimal` para expressões decimais e um `Double` para todas as outras expressões.  
@@ -54,7 +55,7 @@ Var(expression, scope, recursive)
   
 -   *Scope* para agregações aninhadas não pode ser o nome de um conjunto de dados.  
   
--   *Expressão* não deve conter `First`, `Last`, `Previous`, ou `RunningValue` funções.  
+-   A *expressão* não deve `First`conter `Last`funções `Previous`,, `RunningValue` ou.  
   
 -   *Expression* não deve conter agregações aninhadas que especifiquem *recursive*.  
   
@@ -69,7 +70,7 @@ Var(expression, scope, recursive)
 =Var(Fields!LineTotal.Value, "Order")  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   

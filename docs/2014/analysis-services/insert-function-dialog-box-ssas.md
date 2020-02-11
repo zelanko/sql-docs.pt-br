@@ -1,5 +1,5 @@
 ---
-title: Inserir caixa de diálogo de função (SSAS) | Microsoft Docs
+title: Caixa de diálogo Inserir função (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080406"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Caixa de diálogo Inserir Função (SSAS)
@@ -24,9 +24,9 @@ ms.locfileid: "66080406"
   
 |||  
 |-|-|  
-|Item|Descrição|  
-|**Selecione uma categoria**|Se você souber o tipo de função de que precisa, escolha uma categoria na lista; ou selecione **Tudo** para exibir uma lista alfabética de funções.|  
-|**Selecione uma função**|Exibe uma lista das funções na categoria selecionada.|  
+|Item|DESCRIÇÃO|  
+|**Selecionar uma categoria**|Se você souber o tipo de função de que precisa, escolha uma categoria na lista; ou selecione **Tudo** para exibir uma lista alfabética de funções.|  
+|**Definir uma função**|Exibe uma lista das funções na categoria selecionada.|  
 |**Descrição**|Exibe uma descrição do que a função faz, junto com os argumentos obrigatórios ou opcionais, como nomes de coluna e expressões.|  
   
 ## <a name="function-categories"></a>Categorias de função  
@@ -38,18 +38,18 @@ ms.locfileid: "66080406"
   
  Filtrar  
   
- Logical  
+ Lógico  
   
  Matemática e Trigonometria  
   
  Estatística  
   
- Text  
+ Texto  
   
 ## <a name="measures-and-formulas"></a>Medidas e fórmulas  
  A caixa de diálogo **Inserir Função** está disponível apenas quando você está criando uma fórmula. Você pode criar cálculos em uma coluna calculada, ou em uma Tabela Dinâmica ou um Gráfico Dinâmico. As fórmulas que você cria expressamente para uso em uma Tabela Dinâmica também são chamadas de *medidas*. Para obter mais informações, consulte [Criar uma coluna calculada &#40;SSAS Tabular&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) e [Criar e gerenciar medidas &#40;SSAS Tabular&#41;](tabular-models/measures-ssas-tabular.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Cálculos &#40;SSAS de Tabela&#41;](tabular-models/calculations-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Cálculos &#40;SSAS de tabela&#41;](tabular-models/calculations-ssas-tabular.md)  
   
   

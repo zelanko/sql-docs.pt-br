@@ -1,5 +1,5 @@
 ---
-title: Usando o WQL linguagens e de scripts com o provedor WMI para gerenciamento de configuração | Microsoft Docs
+title: Usando WQL e linguagens de script com o provedor WMI para gerenciamento de configuração | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc9994d4429e82f2bdd4f40797df1c5f628c6500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195829"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider-for-configuration-management"></a>Usando as linguagens WQL e de scripts com o provedor WMI para gerenciamento de configuração
@@ -32,12 +32,12 @@ ms.locfileid: "68195829"
   
 -   Usando uma linguagem de scripts, como o VBScript.  
   
- Como alternativa, os serviços e configurações de rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser gerenciados via programação usando objetos gerenciados WMI no SMO. Para obter mais informações sobre a programação de WMI objetos gerenciados, consulte [gerenciamento de serviços e configurações de rede usando o provedor de WMI](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md).  
+ Como alternativa, os serviços e configurações de rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser gerenciados via programação usando objetos gerenciados WMI no SMO. Para obter mais informações sobre como programar objetos gerenciados por WMI, consulte [Gerenciando serviços e configurações de rede usando o provedor WMI](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md).  
   
- O Provedor WMI para Gerenciamento de Configuração pode ser acessado usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager e o Console de Gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Para obter mais informações sobre como acessar o provedor WMI de uma interface de usuário, consulte [Gerenciando tópicos de instruções de serviços &#40;SQL Server Configuration Manager&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md).  
+ O Provedor WMI para Gerenciamento de Configuração pode ser acessado usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager e o Console de Gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Para obter mais informações sobre como acessar o provedor WMI de uma interface do usuário, consulte [Tópicos de instruções sobre como gerenciar serviços &#40;SQL Server Configuration Manager&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Acessar o provedor WMI para gerenciamento de configuração usando o WQL](access-wmi-provider-for-configuration-management-using-wql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Acessar o provedor WMI para gerenciamento de configuração usando WQL](access-wmi-provider-for-configuration-management-using-wql.md)   
  [Modificar as propriedades avançadas do serviço do SQL Server usando o VBScript](access-wmi-provider-for-configuration-management-using-vbscript.md)  
   
   

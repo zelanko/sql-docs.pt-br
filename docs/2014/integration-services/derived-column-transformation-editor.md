@@ -1,5 +1,5 @@
 ---
-title: Derivado de Editor de transformação de coluna | Microsoft Docs
+title: Editor de transformação coluna derivada | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059565"
 ---
 # <a name="derived-column-transformation-editor"></a>Editor de Transformação Colunas Derivadas
@@ -27,13 +27,13 @@ ms.locfileid: "66059565"
  Para saber mais sobre a transformação Coluna Derivada, consulte [Transformação Coluna Derivada](data-flow/transformations/derived-column-transformation.md).  
   
 ## <a name="options"></a>Opções  
- **Variáveis e Colunas**  
+ **Variáveis e colunas**  
  Crie uma expressão que use uma variável ou uma coluna de entrada arrastando a variável ou coluna da lista de variáveis e colunas disponíveis para uma linha de tabela existente no painel abaixo, ou para uma linha nova no final da lista.  
   
  **Funções e operadores**  
  Crie uma expressão que use uma função ou um operador para avaliar dados de entrada e dados de saída diretos arrastando funções e operadores da lista para o painel abaixo.  
   
- **Nome de Coluna Derivada**  
+ **Nome da coluna derivada**  
  Forneça um nome de coluna derivada. O padrão é uma lista numerada de colunas derivadas; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
  **Coluna Derivada**  
@@ -44,10 +44,10 @@ ms.locfileid: "66059565"
   
  O valor dessa propriedade pode ser especificado com uma expressão de propriedades.  
   
- **Tópicos relacionados:** [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operadores &#40;Expressão SSIS&#41;](expressions/operators-ssis-expression.md) e [Funções &#40;Expressão SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Tópicos relacionados**: [Integration Services &#40;&#41; expressões do ssis](expressions/integration-services-ssis-expressions.md), [operadores &#40;expressão do SSIS&#41;](expressions/operators-ssis-expression.md)e [funções &#40;expressão SSIS](expressions/functions-ssis-expression.md)&#41;  
   
- **Tipo de Dados**  
- Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** avaliará a expressão automaticamente e definirá o tipo de dados adequadamente. O valor desta coluna é somente leitura. Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ **Tipo de dados**  
+ Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** avaliará a expressão automaticamente e definirá o tipo de dados adequadamente. O valor desta coluna é somente leitura. Para obter mais informações, consulte [Integration Services tipos de dados](data-flow/integration-services-data-types.md).  
   
  **Comprimento**  
  Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** avaliará a expressão automaticamente e definirá a largura de coluna para os dados da cadeia de caracteres. O valor desta coluna é somente leitura.  
@@ -58,13 +58,13 @@ ms.locfileid: "66059565"
  **Escala**  
  Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** automaticamente definirá a escala dos dados numéricos com base no tipo de dados. O valor desta coluna é somente leitura.  
   
- **Página de Código**  
+ **Página de código**  
  Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** automaticamente definirá a página de código para o tipo de dados DT_STR. Será possível atualizar a **Página de Código**.  
   
  **Configurar saída de erro**  
  Especifique como tratar os erros usando a caixa de diálogo [Configurar Saída de Erro](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Derivar valores de coluna por meio da transformação Coluna Derivada](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   

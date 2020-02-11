@@ -1,5 +1,5 @@
 ---
-title: Alterar tabela, coluna ou mapeamentos de filtro de linha (SSAS Tabular) | Microsoft Docs
+title: Alterar os mapeamentos de tabela, coluna ou filtro de linha (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dfee215fef54f942bc7b47cff684cc35c509075c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067642"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Alterar os mapeamentos de tabela, coluna ou filtro de linha (SSAS tabular)
@@ -39,11 +39,11 @@ ms.locfileid: "66067642"
   
          Se o número de valores for extremamente grande, os itens individuais poderão não ser mostrados na lista. Em vez disso, você verá a mensagem "Itens demais para mostrar".  
   
-    -   Clique em **Filtros de Número** ou em **Filtros de Texto** (dependendo do tipo de coluna) e clique nos comandos de operador de comparação (como Igual a) ou clique em Filtro Personalizado. Na caixa de diálogo **Filtro Personalizado** , crie o filtro e clique em **OK**.  
+    -   Clique em **filtros de número** ou filtros de **texto** (dependendo do tipo de coluna) e, em seguida, clique nos comandos do operador de comparação (como igual a) ou clique em filtro personalizado. Na caixa de diálogo **Filtro Personalizado** , crie o filtro e clique em **OK**.  
   
          Se você cometer um erro e precisa recomeçar, clique em **Limpar Filtros de Linha**.  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo Editar Propriedades da Tabela &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo Editar propriedades da tabela &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

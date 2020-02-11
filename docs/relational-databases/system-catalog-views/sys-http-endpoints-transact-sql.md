@@ -1,5 +1,5 @@
 ---
-title: sys.http_endpoints (Transact-SQL) | Microsoft Docs
+title: sys. http_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,21 +20,21 @@ ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 41ca717399a3cd86f2137de6ae474d89e3eb819e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122728"
 ---
-# <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
+# <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada ponto de extremidade criado no servidor que usa o protocolo HTTP.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**< colunas herdadas >**||Herda colunas de [Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**site**|**nvarchar(128)**|Nome do computador host do site, como especificado na opção SITE =.|  
+|**< colunas herdadas>**||Herda colunas de [pontos sys. end&#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**locais**|**nvarchar(128)**|Nome do computador host do site, como especificado na opção SITE =.|  
 |**url_path**|**nvarchar(4000)**|Parte apenas do caminho da URL para este ponto de extremidade HTTP, como especificado pela opção PATH=.|  
 |**is_clear_port_enabled**|**bit**|1 = Limpar porta é habilitado por meio da opção PORT = CLEAR.|  
 |**clear_port**|**int**|Número de porta especificado na opção CLEAR PORT =.<br /><br /> NULL = Não especificado.|  
@@ -51,9 +51,9 @@ ms.locfileid: "68122728"
 |**is_compression_enabled**|**bit**|1 = A opção COMPRESSION = ENABLED é definida.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Exibições do catálogo de pontos de extremidade &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   

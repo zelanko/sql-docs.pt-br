@@ -20,18 +20,18 @@ ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d5e0a10b8c530494fa3c026be0d36fde066a97c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053674"
 ---
 # <a name="sqlpostinstallererror-function"></a>Função SQLPostInstallerError
-**Conformidade com**  
- Versão introduzida: ODBC 3.0  
+**Conformidade**  
+ Versão introduzida: ODBC 3,0  
   
  **Resumo**  
- **SQLPostInstallerError** fornece um mecanismo para uma biblioteca de instalação de driver ou conversor para relatar erros para o **ConfigDriver**, **ConfigDSN**, e **ConfigTranslator**  funções para a fila de erros do instalador. Os aplicativos não usam essa API; eles usam **SQLInstallerError** para recuperar o erro.  
+ O **SQLPostInstallerError** fornece um mecanismo para uma biblioteca de instalação de driver ou tradutor para relatar erros para as funções **ConfigDriver**, **ConfigDSN**e **ConfigTranslator** para a fila de erros do instalador. Os aplicativos não usam essa API; Eles usam **SQLInstallerError** para recuperar o erro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,21 +44,21 @@ RETCODE SQLPostInstallerError(
   
 ## <a name="arguments"></a>Argumentos  
  *fErrorCode*  
- [Entrada] Código de erro do instalador.  
+ Entrada Código de erro do instalador.  
   
  *szErrorMsg*  
- [Entrada] Texto da mensagem de erro.  
+ Entrada Texto da mensagem de erro.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SQL_SUCCESS ou SQL_ERROR.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- **SQLPostInstallerError** não poste os valores de erro para si mesmo. Se o erro foi lançado com êxito para a fila de erros do instalador (usando recuperáveis **SQLInstallerError**), SQL_SUCCESS é retornado. SQL_ERROR será retornado se o valor de *dwErrorCode* argumento não é um dos códigos de erro de instalador especificado.  
+## <a name="diagnostics"></a>Diagnósticos  
+ **SQLPostInstallerError** não publica valores de erro para si mesmo. Se o erro foi Postado com êxito na fila de erros do instalador (recuperável usando **SQLInstallerError**), SQL_SUCCESS será retornado. SQL_ERROR será retornado se o valor no argumento *dwErrorCode* não for um dos códigos de erro do instalador especificados.  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
-|Adicionar, modificar ou remover um driver|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)|  
-|Adicionar, modificar ou remover fontes de dados|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
-|Definir uma opção de tradução|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|
+|Adicionando, modificando ou removendo um driver|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)|  
+|Adicionando, modificando ou removendo fontes de dados|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
+|Configurando uma opção de conversão|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|

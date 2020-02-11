@@ -1,5 +1,5 @@
 ---
-title: SQLColAttributes (Driver do dBASE) | Microsoft Docs
+title: SQLColAttributes (driver do dBASE) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: ed44de2b-0b01-4dce-a340-f5eb3aac30b7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66a37f3c9ceccdf3fb226ea423552886d36ed99f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67903971"
 ---
 # <a name="sqlcolattributes-dbase-driver"></a>SQLColAttributes (Driver do dBASE)
 > [!NOTE]  
->  Este tópico fornece informações específicas do Driver do dBASE. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas do driver do dBASE. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|attribute|Comentários|  
+|Atributo|Comentários|  
 |---------------|--------------|  
-|SQL_COLUMN_DISPLAY_SIZE|Para dados LONGVARBINARY SQL_COLUMN_DISPLAY_SIZE é o comprimento máximo da coluna, não o comprimento máximo da coluna vezes 2.|  
-|SQL_OWNER_NAME|Uma cadeia de caracteres vazia ("") será retornado nessa coluna porque não há suporte para o nome do proprietário.|  
+|SQL_COLUMN_DISPLAY_SIZE|Para dados LONGVARBINARY, SQL_COLUMN_DISPLAY_SIZE é o comprimento máximo da coluna, não o comprimento máximo da coluna vezes 2.|  
+|SQL_OWNER_NAME|Uma cadeia de caracteres vazia ("") é retornada nesta coluna porque não há suporte para o nome do proprietário.|  
 |SQL_QUALIFIER_NAME|O caminho para um diretório é retornado.|  
-|SQL_COLUMN_SEARCHABLE|Colunas LONGVARBINARY e LONGVARCHAR são relatadas como SQL_UNSEARCHABLE.<br /><br /> Binário de comprimento fixo e comprimento variável e tipos de dados de caracteres são pesquisáveis, mesmo que LONGVARBINARY e LONGVARCHAR não são.|  
+|SQL_COLUMN_SEARCHABLE|As colunas LONGVARBINARY e LONGVARCHAR são relatadas como SQL_UNSEARCHABLE.<br /><br /> Os tipos de dados Binary e Character de comprimento fixo e variável são pesquisáveis, mesmo que LONGVARBINARY e LONGVARCHAR não estejam.|  
   
 > [!NOTE]  
->  As opções acima não é uma lista completa de atributos retornados pelas **SQLColAttributes**.
+>  O acima não é uma lista completa dos atributos retornados por **SQLColAttributes**.

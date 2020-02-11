@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107703"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Imprimir relatórios (Construtor de Relatórios e SSRS)
@@ -46,10 +46,10 @@ ms.locfileid: "66107703"
  Descreve como imprimir relatórios exportados para outro aplicativo.  
   
  [Imprimir um relatório &#40;Construtor de Relatórios e SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- Fornece instruções passo a passo sobre como imprimir um relatório, como controlar as margens em uma página e como especificar o tamanho do papel para os relatórios que serão renderizados por renderizadores de quebra de página não flexíveis: PDF, Imagem ou Impressão.  
+ Fornece instruções passo a passo sobre como imprimir um relatório, como controlar as margens em uma página e como especificar o tamanho do papel para os relatórios que serão renderizados por renderizadores de quebra de página não flexível: PDF, imagem ou impressão.  
   
-## <a name="see-also"></a>Consulte também  
- [Exportando relatórios &#40;relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  

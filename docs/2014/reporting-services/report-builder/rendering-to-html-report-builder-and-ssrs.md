@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107717"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Renderizando para HTML (Construtor de Relatórios e SSRS)
@@ -26,15 +26,15 @@ ms.locfileid: "66107717"
   
  Em alguns cenários, parâmetros de relatório podem ser usados para iniciar ataques de injeção de script durante a renderização de relatórios em HTML. Para obter mais informações sobre como proteger relatórios, consulte [Protegendo Relatórios e Recursos](../security/secure-reports-and-resources.md).  
   
- Para obter mais informações sobre navegadores, consulte [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
+ Para obter mais informações sobre navegadores, consulte [planejamento para Reporting Services e suporte ao navegador de Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> Renderizando em MHTML  
+##  <a name="RenderingMHTML"></a>Renderização em MHTML  
  A extensão de renderização HTML também pode renderizar relatórios em MHTML (encapsulamento MIME de documentos HTML agregados). O MHTML estende o HTML para inserir objetos codificados, como imagens, no documento HTML. Usando a extensão de renderização MHTML, você pode inserir recursos, como imagens, documentos ou outros arquivos binários, como estruturas MIME, no relatório HTML, em um único arquivo. Os relatórios MHTML também são úteis para serem inseridos em mensagens de email, pois todos os recursos estão incluídos no relatório. Embora na verdade seja a extensão de renderização HTML que renderiza o MHTML, esse recurso também pode ser referido como a extensão de renderização MHTML.  
   
-##  <a name="BrowserSupport"></a> Suporte do navegador  
+##  <a name="BrowserSupport"></a>Suporte a navegador  
  Essa extensão de renderização oferece suporte às seguintes versões de navegador:  
   
 -   Internet Explorer 5.5 e posterior  
@@ -45,7 +45,7 @@ ms.locfileid: "66107717"
   
  Devido a considerações de navegador cruzadas, o relatório renderizado pode variar ligeiramente do navegador para navegador. Por exemplo, a caixa de texto contém uma propriedade chamada WritingMode. O Firefox não oferece suporte a essa propriedade.  
   
-##  <a name="HTMLSpecificRenderingRules"></a> HTML - Regras específicas de renderização  
+##  <a name="HTMLSpecificRenderingRules"></a>Regras de renderização específicas de HTML  
  As seguintes regras específicas de HTML são aplicadas ao renderizar:  
   
 -   O processador cria uma estrutura de tabela HTML para conter todos os itens em cada coleção de `ReportItems`, se houver mais de uma.  
@@ -80,7 +80,7 @@ ms.locfileid: "66107717"
 ### <a name="hyperlinks-and-drillthrough"></a>Hyperlinks e detalhamento  
  Os hiperlinks e links de detalhamento são renderizados como hiperlinks em itens de relatório usando as marcações de âncora HTML (\<a>) ao redor do item no qual elas estão definidas.  
   
-### <a name="search"></a>Pesquisa  
+### <a name="search"></a>Search  
  O recurso Pesquisar permite que os usuários procurem uma cadeia de caracteres de texto no relatório.  
   
  Uma funcionalidade adicional de pesquisa e localização é fornecida pelo controle Web Forms do ReportViewer.  
@@ -88,7 +88,7 @@ ms.locfileid: "66107717"
 ##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
  Você pode alterar algumas configurações padrão para este processador, incluindo qual modo deve ser renderizado, alterando as configurações de informações de dispositivo: Para obter mais informações, consulte [Configurações de informações do dispositivo HTML](../html-device-information-settings.md).  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   

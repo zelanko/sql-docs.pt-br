@@ -1,5 +1,5 @@
 ---
-title: Conformidade de Interface de núcleo | Microsoft Docs
+title: Conformidade da interface principal | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,56 +15,56 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02e8aabf808ebf11f2e241fc7d330f794dbb0112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002112"
 ---
 # <a name="core-interface-conformance"></a>Conformidade de interface de núcleo
-Todos os drivers ODBC devem apresentar pelo menos nível de núcleo conformidade de interface. Como os recursos no nível de núcleo são aquelas necessárias para aplicativos interoperáveis mais genéricos, o driver pode trabalhar com esses aplicativos. Os recursos no nível de núcleo também correspondem aos recursos definidos na especificação de CLI ISO e para os recursos definidos na especificação de CLI de grupo aberto. Um driver ODBC do nível de núcleo compatível com o interface permite que o aplicativo faça o seguinte:  
+Todos os drivers ODBC devem apresentar pelo menos a conformidade da interface de nível de núcleo. Como os recursos no nível de núcleo são aqueles exigidos pela maioria dos aplicativos interoperáveis genéricos, o driver pode trabalhar com tais aplicativos. Os recursos no nível de núcleo também correspondem aos recursos definidos na especificação CLI ISO e aos recursos não-opcional definidos na especificação CLI do grupo aberto. Um driver ODBC compatível com a interface de nível de núcleo permite que o aplicativo faça todos os seguintes procedimentos:  
   
--   Alocar e liberar todos os tipos de identificadores, chamando **SQLAllocHandle** e **SQLFreeHandle**.  
+-   Aloque e libere todos os tipos de identificadores chamando **SQLAllocHandle** e **SQLFreeHandle**.  
   
--   Usar todas as formas dos **SQLFreeStmt** função.  
+-   Use todas as formas da função **SQLFreeStmt** .  
   
--   Associar colunas do conjunto de resultados, chamando **SQLBindCol**.  
+-   Associe as colunas do conjunto de resultados, chamando **SQLBindCol**.  
   
--   Lidar com parâmetros dinâmicos, incluindo matrizes de parâmetros de entrada somente na direção, chamando **SQLBindParameter** e **SQLNumParams**. (Parâmetros na direção de saída são recursos 203 na [conformidade de Interface nível 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Manipule parâmetros dinâmicos, incluindo matrizes de parâmetros, somente na direção de entrada, chamando **SQLBindParameter** e **SQLNumParams**. (Os parâmetros na direção de saída são o recurso 203 na [conformidade da interface de nível 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
 -   Especifique um deslocamento de ligação.  
   
--   Use a caixa de diálogo de dados em execução, que envolvem chamadas para **SQLParamData** e **SQLPutData**.  
+-   Use a caixa de diálogo dados em execução, envolvendo chamadas para **SQLParamData** e **SQLPutData**.  
   
--   Gerenciar cursores e nomes de cursor chamando **SQLCloseCursor**, **SQLGetCursorName**, e **SQLSetCursorName**.  
+-   Gerencie cursores e nomes de cursor, chamando **SQLCloseCursor**, **SQLGetCursorName**e **SQLSetCursorName**.  
   
--   Obter acesso a descrição (metadados) de conjuntos de resultados, chamando **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, e **SQLRowCount** . (Uso dessas funções na coluna número 0 para recuperar metadados de indicador é recurso 204 no [conformidade de Interface nível 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Obter acesso à descrição (metadados) dos conjuntos de resultados, chamando **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**e **SQLRowCount**. (O uso dessas funções na coluna número 0 para recuperar os metadados do indicador é o recurso 204 na [conformidade da interface nível 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
--   Consultar o dicionário de dados, chamando as funções de catálogo **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**, e **SQLTables**.  
+-   Consulte o dicionário de dados, chamando as funções de catálogo **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**e **SQLTables**.  
   
-     O driver não é necessário para dar suporte a nomes de várias partes de tabelas de banco de dados e exibições. (Para obter mais informações, consulte o recurso de 101 na [conformidade de Interface nível 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md) e o recurso 201 na [conformidade de Interface nível 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).) No entanto, alguns recursos da especificação SQL-92, como nomes de índices e qualificação de coluna são sintaticamente comparáveis à nomenclatura de várias partes. A lista de presente de recursos de ODBC não se destina a apresentar novas opções para esses aspectos do SQL-92.  
+     O driver não é necessário para dar suporte a nomes com diversas tabelas e exibições de banco de dados. (Para obter mais informações, consulte o recurso 101 em conformidade com a [interface de nível 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md) e o recurso 201 em conformidade com a [interface de nível 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).) No entanto, determinados recursos da especificação SQL-92, como a qualificação de coluna e os nomes de índices, são sintaticamente comparáveis à nomenclatura de várias partes. A lista atual de recursos ODBC não se destina a apresentar novas opções nesses aspectos do SQL-92.  
   
--   Gerenciar fontes de dados e conexões, chamando **SQLConnect**, **SQLDataSources**, **SQLDisconnect**, e **SQLDriverConnect**. Obter informações sobre drivers, independentemente de qual ODBC nível eles suportam, chamando **SQLDrivers**.  
+-   Gerencie fontes de dados e conexões chamando **SQLConnect**, **SQLDataSources**, **SQLDisconnect**e **SQLDriverConnect**. Obtenha informações sobre drivers, não importa em que nível ODBC eles oferecem suporte, chamando **SQLDrivers**.  
   
--   Preparar e executar instruções SQL, chamando **SQLExecDirect**, **SQLExecute**, e **SQLPrepare**.  
+-   Preparar e executar instruções SQL, chamando **SQLExecDirect**, **SQLExecute**e **SQLPrepare**.  
   
--   Buscar uma linha de um conjunto de resultados ou várias linhas, apenas, da direção para frente chamando **SQLFetch** ou chamando **SQLFetchScroll** com o *FetchOrientation* argumento Defina como SQL_FETCH_NEXT.  
+-   Busque uma linha de um conjunto de resultados ou várias linhas, somente na direção de encaminhamento, chamando **SQLFetch** ou chamando **SQLFetchScroll** com o argumento *FetchOrientation* definido como SQL_FETCH_NEXT.  
   
--   Obter uma coluna não associada em partes, chamando **SQLGetData**.  
+-   Obtenha uma coluna desassociada em partes, chamando **SQLGetData**.  
   
--   Obter os valores atuais de todos os atributos, chamando **SQLGetConnectAttr**, **SQLGetEnvAttr**, e **SQLGetStmtAttr**e defina todos os atributos para seus valores padrão e definir certos atributos a valores não padrão chamando **SQLSetConnectAttr**, **SQLSetEnvAttr**, e **SQLSetStmtAttr**.  
+-   Obtenha os valores atuais de todos os atributos, chamando **SQLGetConnectAttr**, **SQLGetEnvAttr**e **SQLGetStmtAttr**, e defina todos os atributos para seus valores padrão e defina determinados atributos como valores não padrão chamando **SQLSetConnectAttr**, **SQLSetEnvAttr**e **SQLSetStmtAttr**.  
   
--   Manipular determinados campos de descritores, chamando **SQLCopyDesc**, **SQLGetDescField**, **SQLGetDescRec**, **SQLSetDescField**, e **SQLSetDescRec**.  
+-   Manipule determinados campos de descritores chamando **SQLCopyDesc**, **SQLGetDescField**, **SQLGetDescRec**, **SQLSetDescField**e **SQLSetDescRec**.  
   
--   Obter informações de diagnóstico, chamando **SQLGetDiagField** e **SQLGetDiagRec**.  
+-   Obtenha informações de diagnóstico chamando **SQLGetDiagField** e **SQLGetDiagRec**.  
   
--   Detectar recursos de driver, chamando **SQLGetFunctions** e **SQLGetInfo**. Além disso, detectar o resultado de qualquer substituições de texto feitas para uma instrução SQL antes de serem enviado à fonte de dados, chamando **SQLNativeSql**.  
+-   Detectar recursos de driver, chamando **SQLGetFunctions** e **SQLGetInfo**. Além disso, detecte o resultado de qualquer substituição de texto feita em uma instrução SQL antes que ela seja enviada para a fonte de dados, chamando **SQLNativeSql**.  
   
--   Use a sintaxe da **SQLEndTran** para confirmar uma transação. Um driver de nível de núcleo não precisa suportar transações true; Portanto, o aplicativo não é possível especificar SQL_ROLLBACK nem SQL_AUTOCOMMIT_OFF para o atributo de conexão SQL_ATTR_AUTOCOMMIT. (Para obter mais informações, consulte o recurso 109 no [conformidade de Interface nível 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Use a sintaxe de **SQLEndTran** para confirmar uma transação. Um driver de nível básico não precisa dar suporte a transações verdadeiras; Portanto, o aplicativo não pode especificar SQL_ROLLBACK nem SQL_AUTOCOMMIT_OFF para o atributo de conexão SQL_ATTR_AUTOCOMMIT. (Para obter mais informações, consulte o recurso 109 em conformidade com a [interface de nível 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
--   Chame **SQLCancel** para cancelar a caixa de diálogo de dados em execução e, em ambientes com vários threads, para cancelar uma função ODBC executando em outro thread. Conformidade de interface de nível de núcleo não exige suporte para a execução assíncrona de funções, nem o uso de **SQLCancel** para cancelar uma função ODBC em execução assíncrona. Nem a plataforma nem o driver ODBC precisa ser multithread para o driver realizar atividades independentes ao mesmo tempo. No entanto, em ambientes com vários threads, o driver ODBC deve ser thread-safe. Serialização solicitações do aplicativo é uma maneira de acordo com as conformidades para implementar essa especificação, mesmo que ele pode criar problemas graves de desempenho.  
+-   Chame **SQLCancel** para cancelar a caixa de diálogo de dados em execução e, em ambientes multithread, para cancelar uma função ODBC em execução em outro thread. A conformidade da interface de nível básico não exige suporte para a execução assíncrona de funções, nem o uso de **SQLCancel** para cancelar uma função ODBC executada de forma assíncrona. Nem a plataforma nem o driver ODBC precisam ser multithread para que o driver realize atividades independentes ao mesmo tempo. No entanto, em ambientes multithread, o driver ODBC deve ser thread-safe. A serialização de solicitações do aplicativo é uma maneira compatível de implementar essa especificação, embora possa criar sérios problemas de desempenho.  
   
--   Obter a coluna de identificação de linha SQL_BEST_ROWID de tabelas, chamando **SQLSpecialColumns**. (208 de recursos é suporte para SQL_ROWVER [conformidade de Interface nível 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Obtenha a SQL_BEST_ROWID coluna de identificação de linha de tabelas, chamando **SQLSpecialColumns**. (O suporte para SQL_ROWVER é o recurso 208 na [conformidade da interface nível 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
     > [!IMPORTANT]  
-    >  Drivers ODBC deve implementar as funções em nível de conformidade de interface de núcleo.
+    >  Os drivers ODBC devem implementar as funções no nível de conformidade da interface principal.

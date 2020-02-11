@@ -1,5 +1,5 @@
 ---
-title: Recuperar informações de conjunto de resultados (ODBC) | Microsoft Docs
+title: Recuperar informações do conjunto de resultados (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a39a6715a9ba8ab08d846aabb96e5b0665a2aa43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200295"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>Recuperar informações do conjunto de resultados (ODBC)
@@ -28,14 +28,14 @@ ms.locfileid: "63200295"
   
 2.  Para cada coluna no conjunto de resultados:  
   
-    -   Chame [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) para obter informações sobre a coluna de resultados.  
+    -   Chame [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) para obter informações sobre a coluna de resultado.  
   
      Ou  
   
-    -   Chame [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) para obter informações específicas do descritor sobre a coluna de resultado.  
+    -   Chame [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) para obter informações de descritor específicas sobre a coluna de resultado.  
   
-## <a name="see-also"></a>Consulte também  
- [Tópicos explicativos de resultados de processamento &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)   
- [Determinando as características de um conjunto de resultados &#40;ODBC&#41;](../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções sobre o processamento de resultados &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)   
+ [Determinando as características de um conjunto de resultados &#40;&#41;ODBC](../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
   

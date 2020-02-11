@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093556"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>Visão geral da documentação de instalação do SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "66093556"
   
      Descreve as opções para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [Instalar os recursos de BI do SQL Server 2014](install-sql-server-business-intelligence-features.md)  
+-   [Install SQL Server 2014 BI Features](install-sql-server-business-intelligence-features.md)  
   
      Descreve as opções para instalar os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que são parte da plataforma Microsoft BI e que incluem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], e vários aplicativos cliente usados para criação ou funcionamento com dados analíticos.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "66093556"
   
  Se você estiver instalando um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , revise o seguinte:  
   
--   [Instâncias de Cluster de Failover do AlwaysOn (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   [Instâncias de cluster de failover do AlwaysOn (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
--   [Before Installing Failover Clustering](../failover-clusters/install/before-installing-failover-clustering.md).  
+-   [Antes de instalar o clustering de failover](../failover-clusters/install/before-installing-failover-clustering.md).  
   
   

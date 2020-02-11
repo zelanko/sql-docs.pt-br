@@ -16,16 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637793"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Requisitos do sistema do SQL Server Native Client
   Para usar recursos de acesso a dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o MARS, você precisa ter este software instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client em seu cliente.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client em seu cliente.  
   
 -   Uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em seu servidor.  
   
@@ -34,8 +35,8 @@ ms.locfileid: "73637793"
 > [!NOTE]  
 >  Certifique-se de que tenha efetuado logon com privilégios de administrador antes de instalar esse software.  
   
-## <a name="operating-system-requirements"></a>Requisitos do sistema operacional  
- Para obter uma lista de sistemas operacionais que dão suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consulte [políticas de suporte para SQL Server Native Client](applications/support-policies-for-sql-server-native-client.md).  
+## <a name="operating-system-requirements"></a>Requisitos de sistema operacional  
+ Para obter uma lista de sistemas operacionais que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte a cliente nativo, consulte [políticas de suporte para SQL Server Native Client](applications/support-policies-for-sql-server-native-client.md).  
   
 ## <a name="sql-server-requirements"></a>Requisitos do SQL Server  
  Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para acessar dados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você precisa ter uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada.  
@@ -62,23 +63,23 @@ ms.locfileid: "73637793"
   
  Não há controle `DataTypeCompatibility` para ODBC.  
   
- IDBInfo:: getpalavra-chave sempre retornará uma lista de palavras-chave que corresponde à versão do servidor na conexão e não é afetada pelo `DataTypeCompatibility`.  
+ IDBInfo:: getpalavra-chave sempre retornará uma lista de palavras-chave que corresponde à versão do servidor na conexão e não é `DataTypeCompatibility`afetada pelo.  
   
 |Tipo de dados|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC e<br /><br /> Aplicativos OLE DB do SQL Server Native Client com DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|image|  
+|varbinary(max)|varbinary|varbinary|Imagem|  
 |varchar(max)|varchar|varchar|Texto|  
-|nvarchar(max)|nvarchar|nvarchar|Ntext|  
-|XML|XML|XML|Ntext|  
-|CLR UDT (> 8 KB)|udt|varbinary|image|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
+|Xml|Xml|Xml|Ntext|  
+|CLR UDT (> 8 KB)|udt|varbinary|Imagem|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  
   
-## <a name="see-also"></a>Consulte também  
-   de [programação de SQL Server Native Client](sql-server-native-client-programming.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Programação de SQL Server Native Client](sql-server-native-client-programming.md)   
  [Instalando o SQL Server Native Client](applications/installing-sql-server-native-client.md)  
   
   

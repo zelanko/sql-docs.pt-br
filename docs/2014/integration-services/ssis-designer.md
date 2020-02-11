@@ -18,14 +18,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea0776247555b9a5b63e2bbaa9ae9243abf6863c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766420"
 ---
 # <a name="ssis-designer"></a>Designer SSIS
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] é uma ferramenta gráfica que pode ser usada para criar e manter pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] está disponível no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] como parte de um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] é uma ferramenta gráfica que pode ser usada para criar e manter pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] está disponível no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] como parte de um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Você pode utilizar o Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] para executar as seguintes tarefas:  
   
@@ -41,14 +43,16 @@ ms.locfileid: "62766420"
   
  O diagrama a seguir exibe o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer e a janela **Caixa de Ferramentas** .  
   
- ![Captura de tela do Designer SSIS e da Caixa de Ferramentas](media/denali-designerandtoolbox.gif "Captura de tela do Designer SSIS e da Caixa de Ferramentas")  
+ ![Instantâneo do designer de SSIS e da caixa de ferramentas](media/denali-designerandtoolbox.gif "Instantâneo do designer de SSIS e da caixa de ferramentas")  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui caixas de diálogo e janelas adicionais para proporcionar maior funcionalidade aos pacotes e o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fornece janelas e caixas de diálogo para configurar o ambiente de desenvolvimento e trabalhar com pacotes. Para obter mais informações, consulte [Interface do usuário do Integration Services](integration-services-user-interface.md).  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui caixas de diálogo e janelas adicionais para proporcionar maior funcionalidade aos pacotes e o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fornece janelas e caixas de diálogo para configurar o ambiente de desenvolvimento e trabalhar com pacotes. Para obter mais informações, consulte [Interface do usuário do Integration Services](integration-services-user-interface.md).  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer não tem dependência do serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o serviço que gerencia e monitora pacotes, e não é necessário que o serviço esteja sendo executado para criar ou modificar pacotes no [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. Entretanto, se você parar o serviço enquanto o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer estiver aberto, não poderá mais abrir as caixas de diálogo que o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer fornece e poderá receber a mensagem de erro "RPC server is unavailable". Para redefinir o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer e continuar a trabalhar com o pacote, você deve fechar o designer, sair do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]e reabrir o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e o pacote.  
+ 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer não tem dependência do serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o serviço que gerencia e monitora pacotes, e não é necessário que o serviço esteja sendo executado para criar ou modificar pacotes no [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. Entretanto, se você parar o serviço enquanto o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer estiver aberto, não poderá mais abrir as caixas de diálogo que o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer fornece e poderá receber a mensagem de erro "RPC server is unavailable". Para redefinir o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer e continuar a trabalhar com o pacote, você deve fechar o designer, sair do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]e reabrir o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e o pacote.  
   
 ## <a name="undo-and-redo"></a>Desfazer e refazer  
- É possível desfazer e refazer até 20 ações no [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. Para um pacote, a opção desfazer/refazer está disponível nas guias **Fluxo de Controle**, **Fluxo de Dados**, **Manipuladores de Eventos**e **Parâmetros** , bem como na janela **Variáveis** . Para um projeto, a opção desfazer/refazer está disponível na janela **Parâmetros do Projeto** .  
+ É possível desfazer e refazer até 20 ações no [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. Para um pacote, a opção desfazer/refazer está disponível nas guias **Fluxo de Controle**, **Fluxo de Dados**, **Manipuladores de Eventos** e **Parâmetros**, bem como na janela **Variáveis**. Para um projeto, a opção desfazer/refazer está disponível na janela **Parâmetros do Projeto** .  
   
  Não é possível desfazer/refazer alterações na nova **Caixa de Ferramentas do SSIS**.  
   
@@ -57,17 +61,18 @@ ms.locfileid: "62766420"
  Para desfazer uma ação, clique no botão desfazer de barra de ferramentas, item de menu **Editar/Desfazer** ou pressione CTRL+Z. Para refazer uma ação, clique no botão refazer da barra de ferramentas, item de menu **Editar/Refazer** ou pressione CTRL+Y. Você pode desfazer e refazer várias ações, clicando na seta ao lado do botão de barra de ferramentas, realçando várias ações na lista suspensa e clicando na lista.  
   
 ## <a name="parts-of-the-ssis-designer"></a>Partes do Designer SSIS  
- [!INCLUDE[ssIS](../includes/ssis-md.md)] tem cinco guias permanentes: para a criação de fluxos de controle de pacotes, de fluxos de dados, de parâmetros e de manipuladores de eventos e uma guia para a exibição do conteúdo de um pacote. Em tempo de execução, será mostrada uma sexta guia que exibe o progresso da execução de um pacote enquanto ele é executado, bem como os resultados da execução após o término.  
+ 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] tem cinco guias permanentes: para a criação de fluxos de controle de pacotes, de fluxos de dados, de parâmetros e de manipuladores de eventos e uma guia para a exibição do conteúdo de um pacote. Em tempo de execução, será mostrada uma sexta guia que exibe o progresso da execução de um pacote enquanto ele é executado, bem como os resultados da execução após o término.  
   
  Além disso, o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer inclui a área Gerenciadores de Conexões para adicionar e configurar os gerenciadores de conexões usados por um pacote para se conectar com os dados.  
   
 ### <a name="control-flow-tab"></a>Guia Fluxo de Controle  
- Você pode criar o fluxo de controle em um pacote na superfície de design da guia **Fluxo de Controle** . Arraste itens da **Caixa de Ferramentas** para a superfície de design e conecte-os em um fluxo de controle clicando no ícone do item e arrastando a seta de um item para outro.  
+ Você constrói o fluxo de controle em um pacote na superfície de design da guia **fluxo de controle** . Arraste os itens da caixa de **ferramentas** para a superfície de design e conecte-os em um fluxo de controle clicando no ícone do item e arrastando a seta de um item para outro.  
   
  Para obter mais informações, consulte [Control Flow](control-flow/control-flow.md).  
   
 ### <a name="data-flow-tab"></a>Guia Fluxo de Dados  
- Se um pacote contém uma tarefa de fluxo de dados, você pode adicionar fluxos de dados a ele. Você pode criar fluxos de dados em um pacote na superfície de design da guia **Fluxo de Dados** . Arraste itens da **Caixa de Ferramentas** para a superfície de design e conecte-os em um fluxo de dados clicando no ícone do item e arrastando a seta de um item para outro.  
+ Se um pacote contém uma tarefa de fluxo de dados, você pode adicionar fluxos de dados a ele. Você constrói os fluxos de dados em um pacote na superfície de design da guia **fluxo de dados** . Arraste os itens da caixa de **ferramentas** para a superfície de design e conecte-os a um fluxo de dados clicando no ícone do item e arrastando a seta de um item para outro.  
   
  Para obter mais informações, consulte [Data Flow](data-flow/data-flow.md).  
   
@@ -80,7 +85,7 @@ ms.locfileid: "62766420"
 >  Os parâmetros estão disponíveis apenas para projetos desenvolvidos para o modelo de implantação de projeto. Portanto, você só verá a guia Parâmetros para pacotes que fazem parte de um projeto configurado para usar o modelo de implantação de projeto.  
   
 ### <a name="event-handlers-tab"></a>Guia Manipuladores de Eventos  
- Você pode criar os eventos em um pacote na superfície de design da guia **Manipuladores de Eventos** . Na guia **Manipuladores de Eventos** , selecione o pacote ou o objeto do pacote para o qual deseja criar um manipulador de eventos e selecione o evento a ser associado ao manipulador de eventos. Um manipulador de eventos tem um fluxo de controle e fluxos de dados opcionais.  
+ Você constrói os eventos em um pacote na superfície de design da guia **manipuladores de eventos** . Na guia **manipuladores de eventos** , selecione o pacote ou o objeto de pacote para o qual você deseja criar um manipulador de eventos e, em seguida, selecione o evento a ser associado ao manipulador de eventos. Um manipulador de eventos tem um fluxo de controle e fluxos de dados opcionais.  
   
  Para obter mais informações, consulte [Add an Event Handler to a Package](../../2014/integration-services/add-an-event-handler-to-a-package.md).  
   
@@ -96,7 +101,8 @@ ms.locfileid: "62766420"
 >  Para habilitar ou desabilitar a exibição de mensagens na guia **Progresso** , marque ou desmarque a opção **Depurar Relatório do Progresso** no menu **SSIS** .  
   
 ##### <a name="connection-managers-area"></a>Área Gerenciadores de Conexões  
- Você adiciona e modifica os gerenciadores de conexões que um pacote usa na área **Gerenciadores de conexões** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui gerenciadores de conexões para conexão a várias fontes de dados, como arquivos de texto, bancos de dados OLE DB e provedores .NET.  
+ Você adiciona e modifica os gerenciadores de conexões que um pacote usa na área **Gerenciadores de conexões** . 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui gerenciadores de conexões para conexão a várias fontes de dados, como arquivos de texto, bancos de dados OLE DB e provedores .NET.  
   
  Para obter mais informações, consulte [Conexões do Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md) e [Criar gerenciadores de conexões](../../2014/integration-services/create-connection-managers.md).  
   
@@ -104,7 +110,7 @@ ms.locfileid: "62766420"
   
 -   [Copiar pacotes nas Ferramentas de Dados do SQL Server](create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Interface do usuário do Integration Services](integration-services-user-interface.md)  
   
   

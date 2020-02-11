@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070007"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Agendar uma atualização de dados (PowerPivot para SharePoint)
   Você pode agendar a atualização de dados para obter atualizações automáticas para dados PowerPivot dentro de uma pasta de trabalho do Excel publicada em um site do SharePoint.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 2010  
   
  **Neste tópico:**  
   
@@ -32,9 +32,9 @@ ms.locfileid: "66070007"
   
  [Visão geral de atualização de dados](#intro)  
   
- [Habilitar e agendar atualização de dados](#drenablesched)  
+ [Habilitar e agendar a atualização de dados](#drenablesched)  
   
- [Verifique se a atualização de dados](#drverify)  
+ [Verificar a atualização de dados](#drverify)  
   
 > [!NOTE]  
 >  A atualização de dados PowerPivot é executada por instâncias de servidor do Analysis Services no farm do SharePoint. Ela não está relacionada ao recurso de atualização de dados fornecido nos Serviços do Excel. O recurso Agendar atualização de dados do PowePivot não atualizará os dados que não sejam do PowerPivot.  
@@ -51,9 +51,9 @@ ms.locfileid: "66070007"
  O check in da pasta de trabalho deve ser feito quando a operação de atualização for concluída. Um bloqueio na pasta de trabalho é colocado no arquivo ao final da atualização de dados, quando o arquivo é salvo, em vez de quando a atualização é iniciada.  
   
 > [!NOTE]  
->  O servidor não bloqueia a pasta de trabalho enquanto a atualização de dados está em andamento. Porém, ele bloqueia o arquivo ao término da atualização de dados para fins de verificação do arquivo atualizado. Se, neste momento, ocorrer o check-out do arquivo para outro usuário, os dados atualizados serão descartados. Da mesma forma, se for realizado o check-in do arquivo, mas ele for significativamente diferente da cópia recuperada pelo servidor no início da atualização dos dados, os dados atualizados serão descartados.  
+>  O servidor não bloqueia a pasta de trabalho enquanto a atualização de dados está em andamento. Porém, ele bloqueia o arquivo ao término da atualização de dados para fins de verificação do arquivo atualizado. Se, no momento, o check-out do arquivo for outro usuário, os dados atualizados serão descartados. Da mesma forma, se o check-in do arquivo for feito, mas for significativamente diferente da cópia recuperada pelo servidor no início da atualização de dados, os dados atualizados serão descartados.  
   
-##  <a name="intro"></a> Visão geral de atualização de dados  
+##  <a name="intro"></a>Visão geral da atualização de dados  
  Dados PowerPivot em uma pasta de trabalho do Excel podem derivar de várias fontes de dados externas, incluindo bancos de dados externos ou arquivos de dados que você acessa de servidores remotos ou de compartilhamentos de arquivos de rede. Para pastas de trabalho PowerPivot que contêm dados importados de fontes de dados conectadas ou externas, você pode configurar a atualização de dados para agendar uma importação automática de dados atualizados dessas fontes originais.  
   
  Uma fonte de dados externa é acessada por uma cadeia de conexão inserida, URL ou caminho UNC que você especificou quando importou os dados originais para a pasta de trabalho usando o aplicativo cliente PowerPivot. As informações de conexão originais que são armazenadas na pasta de trabalho PowerPivot são reutilizadas para operações de atualização de dados subsequentes. Embora você possa substituir as credenciais usadas para conectar-se a fontes de dados, não é possível substituir cadeias de caracteres de conexão para atualizar dados; são utilizadas apenas as informações de conexão.  
@@ -72,7 +72,7 @@ ms.locfileid: "66070007"
   
  A criação de agendas granulares para fontes de dados individuais permite a você coincidir a agenda de atualização com flutuações nas fontes de dados externas. Por exemplo, se uma fonte de dados externa contiver dados transacionais que são gerados ao longo do dia, você poderá criar uma agenda de atualização de dados individual para essa fonte de dados para obter as informações atualizadas toda noite.  
   
-##  <a name="drenablesched"></a> Habilitar e agendar atualização de dados  
+##  <a name="drenablesched"></a>Habilitar e agendar atualização de dados  
  Use as instruções a seguir para agendar a atualização de dados para dados do PowerPivot em uma pasta de trabalho do Excel que é publicada em uma biblioteca do SharePoint.  
   
 1.  Na biblioteca que contém a pasta de trabalho, selecione a pasta de trabalho e clique na seta para baixo para exibir uma lista de comandos.  
@@ -88,9 +88,9 @@ ms.locfileid: "66070007"
   
 5.  Em Hora de Início Mais Antiga, escolha uma das seguintes opções:  
   
-    1.  **Depois do horário comercial** especifica um período de processamento fora do expediente, quando é mais provável que os servidores do banco de dados tenham dados atuais que foram gerados no horário comercial.  
+    1.  **Após o horário comercial** , especifique um período de processamento fora do horário em que os servidores de banco de dados têm mais probabilidade de ter dados atuais que foram gerados durante o dia útil.  
   
-    2.  **A hora de início mais antiga específica** equivale ao primeiro período de tempo do dia, em hora e minutos, no qual a solicitação de atualização de dados foi adicionada a uma fila de processo. Você pode especificar os minutos em intervalos de 15 minutos. A configuração aplica-se tanto ao dia atual quanto a datas futuras. Por exemplo, se você especificar um valor de 6:30. e a hora atual for 16:30, a solicitação de atualização será adicionada à fila no dia corrente porque 16:30 é posterior à 6:30.  
+    2.  A **hora de início mais antiga específica** é a hora e minutos da primeira hora do dia em que a solicitação de atualização de dados é adicionada a uma fila de processo. Você pode especificar os minutos em intervalos de 15 minutos. A configuração aplica-se tanto ao dia atual quanto a datas futuras. Por exemplo, se você especificar um valor de 6:30. e a hora atual for 16:30, a solicitação de atualização será adicionada à fila no dia corrente porque 16:30 é posterior à 6:30.  
   
      A hora de início mais antiga define quando uma solicitação é adicionada à fila de processo. O processamento real ocorre quando o servidor tem recursos adequados para começar o processamento de dados. A hora de processamento real será registrada no histórico de atualização de dados quando o processamento for concluído.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66070007"
   
     3.  Escolha **Conecte-se usando as credenciais salvas no Serviço de Repositório Seguro** se souber a ID de um aplicativo de destino que contém as credenciais previamente armazenados que você deseja usar.  
   
-     Para obter mais informações sobre essas opções, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) e [configurar o PowerPivot conta autônoma de dados de atualização &#40;PowerPivot para SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+     Para obter mais informações sobre essas opções, consulte [configurar credenciais armazenadas para a atualização de dados PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) e [Configurar a conta de atualização de dados autônoma do PowerPivot &#40;PowerPivot para SharePoint ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)&#41;.  
   
 9. Em Fontes de Dados, marque a caixa de seleção **Todas as fontes de dados** se desejar que a atualização de dados consulte novamente todas as fontes de dados originais.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66070007"
   
     -   A fonte de dados deve estar disponível no momento em que ocorre a atualização de dados e no local indicado. Se a fonte de dados original estiver em uma unidade de disco local da pessoa que criou a pasta de trabalho, você deverá excluir essa fonte de dados da operação de atualização de dados ou encontrar uma forma de publicar essa fonte de dados em um local acessível por uma conexão de rede. Se você transferir uma fonte de dados para um local de rede, abra a pasta de trabalho no [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] e atualize as informações de conexão da fonte de dados. Isso é necessário para restabelecer as informações de conexão que são armazenadas na pasta de trabalho PowerPivot.  
   
-    -   A fonte de dados precisa ser acessada usando as informações de credenciais que foram inseridas na pasta de trabalho PowerPivot ou que foram especificadas na agenda. As informações de credenciais inseridas são armazenadas na pasta de trabalho PowerPivot quando você importa dados usando o PowerPivot para Excel. Informações de credenciais inseridas são frequentemente SSPI=IntegratedSecurity ou SSPI=TrustedConnection, o que significa o uso das credenciais do usuário atual para conexão à fonte de dados. Se você desejar anular as informações de credenciais em sua agenda de atualização de dados, poderá especificar credenciais armazenadas, predefinidas. Para obter mais informações, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+    -   A fonte de dados precisa ser acessada usando as informações de credenciais que foram inseridas na pasta de trabalho PowerPivot ou que foram especificadas na agenda. As informações de credenciais inseridas são armazenadas na pasta de trabalho PowerPivot quando você importa dados usando o PowerPivot para Excel. Informações de credenciais inseridas são frequentemente SSPI=IntegratedSecurity ou SSPI=TrustedConnection, o que significa o uso das credenciais do usuário atual para conexão à fonte de dados. Se você desejar anular as informações de credenciais em sua agenda de atualização de dados, poderá especificar credenciais armazenadas, predefinidas. Para obter mais informações, consulte [configurar credenciais armazenadas para a atualização de dados PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
     -   A atualização de dados deve ter êxito para todas as fontes de dados especificadas. Caso contrário, os dados atualizados serão descartados e você ficará com a última versão salva da pasta de trabalho. Exclua qualquer fonte de dados duvidosa.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070007"
   
 11. Clique em **OK** para salvar sua agenda.  
   
-##  <a name="drverify"></a> Verifique se a atualização de dados  
+##  <a name="drverify"></a>Verificar atualização de dados  
  A melhor forma de verificar a atualização de dados é executar logo a atualização de dados e depois analisar a página de histórico para verificar se ela foi concluída com êxito. Quando a caixa de seleção **Também atualizar o mais rápido possível** é marcada na sua agenda, isso permite verificar que a atualização de dados é operacional.  
   
  Você pode exibir o registro atual e anterior de operações de atualização de dados na página Histórico de Atualização de Dados da pasta de trabalho. Essa página só aparecerá se a atualização de dados tiver sido agendada para uma pasta de trabalho. Se não houver agenda de atualização de dados, a página de definição de agenda aparecerá.  
@@ -158,9 +158,9 @@ ms.locfileid: "66070007"
 > [!NOTE]  
 >  Os administradores do SharePoint podem ajudá-lo a solucionar problemas de atualização de dados exibindo os relatórios de atualização de dados consolidados no Painel de Gerenciamento do PowerPivot na Administração Central. Para obter mais informações, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Atualização de dados do PowerPivot com SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
- [Exibir histórico de atualização de dados &#40;PowerPivot para SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
- [Configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Atualização de dados PowerPivot com o SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [Exibir o histórico de atualização de dados &#40;PowerPivot para SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
+ [Configurar credenciais armazenadas para a atualização de dados do PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
   

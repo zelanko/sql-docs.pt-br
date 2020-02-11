@@ -24,10 +24,10 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902807"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67902807"
 
   Cria um objeto que envia informações sobre um banco de dados ou evento de servidor para um serviço do Service Broker. As notificações de evento são criadas somente com instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -100,7 +100,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] inclui um tipo de mensagem e contrato específicos para notificações de eventos. Portanto, um serviço de inicialização do Service Broker não precisa ser criado porque já existe um serviço que especifica o seguinte nome de contrato: `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  O serviço de destino que recebe as notificações de eventos deve honrar esse contrato preexistente.  
@@ -132,7 +132,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 >   
 >  Para copiar e executar esses exemplos, é necessário substituir esse GUID pelo GUID do seu computador e pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conforme explicado na seção Argumentos acima, você pode adquirir **'** _broker\_instance\_specifier_ **'** consultando a coluna service_broker_guid da exibição de catálogo sys.databases.  
   
-### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Criando uma notificação de eventos no escopo do servidor  
+### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>a. Criando uma notificação de eventos no escopo do servidor  
  O exemplo a seguir cria os objetos obrigatórios para configurar um serviço de destino usando o [!INCLUDE[ssSB](../../includes/sssb-md.md)]. O serviço de destino faz referência ao tipo de mensagem e ao contrato do serviço de inicialização específico para notificações de eventos. Em seguida, uma notificação de evento é criada nesse serviço de destino, que envia uma notificação sempre que um evento de rastreamento `Object_Created` acontece na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```sql  

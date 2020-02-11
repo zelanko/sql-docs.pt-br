@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Escrever instruções Transact-SQL | Microsoft Docs'
+title: 'Tutorial: Escrevendo instruções Transact-SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211194"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Como escrever instruções Transact-SQL
+# <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Gravando instruções Transact-SQL
   Bem-vindo ao tutorial Escrevendo Instruções [!INCLUDE[tsql](../includes/tsql-md.md)] . Esse tutorial foi planejado para usuários que desconhecem como escrever instruções SQL. Ele irá ajudar usuários iniciantes revisando algumas das instruções básicas sobre como criar tabelas e inserir dados. Este tutorial usa a [!INCLUDE[tsql](../includes/tsql-md.md)], a implementação [!INCLUDE[msCoName](../includes/msconame-md.md)] do SQL standard. Esse tutorial foi planejado como uma rápida introdução à linguagem [!INCLUDE[tsql](../includes/tsql-md.md)] , e não como substituição para uma classe [!INCLUDE[tsql](../includes/tsql-md.md)] . As instruções nesse tutorial são intencionalmente simples, e não tem a intenção de representar a complexidade encontrada em um banco de dados de produção típico.  
   
 > [!NOTE]  
@@ -35,13 +35,13 @@ ms.locfileid: "68211194"
   
  Este tutorial divide-se em três lições:  
   
- [Lição 1: Criar objetos de bancos de dados](lesson-1-creating-database-objects.md)  
+ [Lição 1: criando Objetos de Banco de Dados](lesson-1-creating-database-objects.md)  
  Nesta lição, você irá criar um banco de dados; criar uma tabela no banco de dados; inserir dados em uma tabela; atualizar e ler dados.  
   
- [Lição 2: Configurar permissões em objetos de banco de dados](lesson-2-configuring-permissions-on-database-objects.md)  
+ [Lição 2: configurando permissões em objetos de banco de dados](lesson-2-configuring-permissions-on-database-objects.md)  
  Nesta lição, você criará um logon e um usuário. Você também criará uma exibição e um procedimento armazenado e, então, concederá a permissão de usuário ao procedimento armazenado.  
   
- [Lição 3: Excluir objetos de bancos de dados](lesson-3-1-deleting-database-objects.md)  
+ [Lição 3: excluindo objetos de banco de dados](lesson-3-1-deleting-database-objects.md)  
  Nesta lição, você removerá o acesso aos dados; excluirá dados de uma tabela; deletará a tabela e, por fim, excluirá o banco de dados.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -56,6 +56,6 @@ ms.locfileid: "68211194"
 -   Internet Explorer 6 ou posterior.  
   
 > [!NOTE]  
->  Ao examinar os tutoriais, recomendamos que você adicione a **próxima** e **Previous** botões na barra de ferramentas do Visualizador de documento.  
+>  Ao examinar os tutoriais, recomendamos que você adicione os botões **Avançar** e **anterior** à barra de ferramentas do Visualizador de documentos.  
   
   

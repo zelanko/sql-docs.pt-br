@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criar relatórios principais e de detalhamento (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b074195ecda842e0270f3cadce790be30fdce7cc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892381"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
   Este tutorial ensina como criar dois tipos de relatório: um relatório detalhado e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. A ilustração a seguir mostra os relatórios que você criará.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
@@ -27,9 +27,9 @@ ms.locfileid: "68892381"
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
- **No relatório detalhado, você aprenderá a:**  
+ **No relatório detalhado você aprenderá como:**  
   
-1.  [Criar um relatório de matriz de detalhamento e um conjunto de relatórios do assistente de tabela ou matriz](#DMatrixAndDataset)  
+1.  [Criar um relatório de matriz de detalhamento e um conjunto de dados no Assistente de Tabela ou Matriz](#DMatrixAndDataset)  
   
     1.  [Especificar uma conexão de dados](#DConnection)  
   
@@ -39,21 +39,21 @@ ms.locfileid: "68892381"
   
     4.  [Adicionar subtotais e totais](#DTotals)  
   
-    5.  [Escolher um estilo](#DStyle)  
+    5.  [Escolha um estilo](#DStyle)  
   
 2.  [Formatar dados como moeda](#DFormat)  
   
 3.  [Adicionar colunas para mostrar valores de vendas em minigráficos](#DSparkline)  
   
-4.  [Adicionar título de relatório com nome de categoria de produto](#DReportTitle)  
+4.  [Adicionar título de relatório com nome da categoria do produto](#DReportTitle)  
   
-5.  [Atualizar propriedades do parâmetro](#DParameter)  
+5.  [Atualizar propriedades de parâmetros](#DParameter)  
   
 6.  [Salvar o relatório em uma biblioteca do SharePoint](#DSave)  
   
- **No relatório principal, você aprenderá a:**  
+ **No relatório principal, você aprenderá como:**  
   
-1.  [Criar o relatório de matriz principal e o conjunto de relatórios do assistente de tabela ou matriz](#MMatrixAndDataset)  
+1.  [Criar o relatório de matriz principal e o conjunto de dados no Assistente de Tabela ou Matriz](#MMatrixAndDataset)  
   
     1.  [Especificar uma conexão de dados](#MConnection)  
   
@@ -63,15 +63,15 @@ ms.locfileid: "68892381"
   
     4.  [Adicionar subtotais e totais](#MTotals)  
   
-    5.  [Escolher um estilo](#MStyle)  
+    5.  [Escolha um estilo](#MStyle)  
   
 2.  [Remover a linha de total geral](#MGrandTotal)  
   
-3.  [Configurar ação da caixa de texto para detalhamento](#MDrillthrough)  
+3.  [Configurar ação de caixa de texto para detalhamento](#MDrillthrough)  
   
 4.  [Substituir valores numéricos por indicadores](#MIndicators)  
   
-5.  [Atualizar propriedades do parâmetro](#MParameter)  
+5.  [Atualizar propriedades de parâmetros](#MParameter)  
   
 6.  [Adicionar um título de relatório](#MTitle)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68892381"
 ## <a name="requirements"></a>Requisitos  
  Este tutorial exige acesso ao cubo Vendas da Contoso. Esse requisito se aplica aos relatórios detalhados e principal. Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="DMatrixAndDataset"></a> 1. Criar um relatório detalhado no Assistente de Tabela ou Matriz  
+##  <a name="DMatrixAndDataset"></a>1. criar um relatório detalhado do assistente de tabela ou matriz  
  Na caixa de diálogo Introdução, crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**. Há dois modos disponíveis no assistente: design de relatório e design de conjunto de dados compartilhado. Neste tutorial, você usará o modo design de relatório.  
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
@@ -97,20 +97,20 @@ ms.locfileid: "68892381"
   
 3.  No painel direito, verifique se a opção **Assistente de Tabela ou Matriz** está selecionada.  
   
-##  <a name="DConnection"></a> 1a. Especificar uma conexão de dados  
+##  <a name="DConnection"></a>1a. Especificar uma conexão de dados  
  Uma conexão de dados contém as informações necessárias para estabelecer conexões com uma fonte de dados externa, como um cubo do Analysis Services ou um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para especificar uma conexão de dados, você pode usar uma fonte de dados compartilhada do servidor de relatório ou criar uma fonte de dados inserida que será usada somente neste relatório. Neste tutorial, você usará uma fonte de dados inserida. Para saber mais sobre como usar uma fonte de dados compartilhada, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Para criar uma fonte de dados inserida  
   
 1.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados**e clique em **Avançar**. A página **Escolher uma conexão com uma fonte de dados** é aberta.  
   
-2.  Clique em **Novo**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
+2.  Clique em **Nova**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
 3.  Em **Nome**, digite **Detalhes de Vendas Online e do Revendedor** como o nome da fonte de dados.  
   
 4.  Em **Selecione um tipo de conexão**, selecione **Microsoft SQL Server Analysis Services**e clique em **Compilar**.  
   
-5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
 6.  Em **Nome do servidor**, digite o nome de um servidor em que uma instância do Analysis Services está instalada.  
   
@@ -137,23 +137,23 @@ ms.locfileid: "68892381"
   
 12. Para verificar se é possível se conectar à fonte de dados, clique em **Testar Conexão**.  
   
-     A mensagem **Conexão criada com êxito** será exibida.  
+     A conexão da mensagem **criada com êxito** é exibida.  
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Clique em **Avançar**.  
+14. Clique em **Próximo**.  
   
-##  <a name="DMDXQuery"></a> 1b. Criar uma consulta MDX  
+##  <a name="DMDXQuery"></a>1B. Criar uma consulta MDX  
  Em um relatório, é possível usar um conjunto de dados compartilhado que tenha uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente em seu relatório. Neste tutorial, você criará um conjunto de dados inserido.  
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na página **Criar uma consulta**, no painel Metadados, clique no botão **(…)** .  
+1.  Na página **Criar uma consulta**, no painel Metadados, clique no botão **(…)**.  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
     > [!TIP]  
-    >  Se não desejar criar a consulta MDX manualmente, clique no ícone ![Alternar para modo de Design](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Alternar para modo de Design"), ative/desative o designer de consultas para o modo de Consulta, cole o MDX concluído no designer de consultas e vá para a etapa 6 em [Para criar o conjunto de dados](#DSkip).  
+    >  Se não desejar criar a consulta MDX manualmente, clique no ícone ![Alternar para modo de Design](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Alterna para o modo de design"), ative/desative o designer de consultas para o modo de Consulta, cole o MDX concluído no designer de consultas e vá para a etapa 6 em [Para criar o conjunto de dados](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -167,7 +167,7 @@ ms.locfileid: "68892381"
   
 5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online**, em **Revendedor**e em **OK**.  
   
-     A consulta agora inclui um filtro para incluir apenas estes canais: Online e revendedor.  
+     A consulta agora inclui um filtro para incluir apenas estes canais: Online e Revendedor.  
   
 6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** (abaixo de **Nome do Canal**).  
   
@@ -208,11 +208,11 @@ ms.locfileid: "68892381"
   
 5.  Arraste a medida Valor das Vendas até o painel de dados e coloque-a à direita de Nome da Subcategoria do Produto.  
   
-6.  Na barra de ferramentas do designer de consultas, clique em **Executar (!)** .  
+6.  Na barra de ferramentas do designer de consultas, clique em **executar (!)**.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
-##  <a name="DLayout"></a> 1c. Organizar dados em grupos  
+##  <a name="DLayout"></a>1C. Organizar dados em grupos  
  Quando você seleciona os campos nos quais agrupar os dados, cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -236,9 +236,9 @@ ms.locfileid: "68892381"
   
      As etapas 4 e 5 especificam os dados a serem exibidos na matriz.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
-##  <a name="DTotals"></a> 1d. Adicionar subtotais e totais  
+##  <a name="DTotals"></a>1D. Adicionar subtotais e totais  
  Depois de criar grupos, é possível adicionar e formatar linhas onde os valores de agregação dos campos serão exibidos. Também é possível escolher mostrar todos os dados ou permitir que um usuário expanda e recolha dados agrupados de forma interativa.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para adicionar subtotais e totais  
@@ -247,22 +247,22 @@ ms.locfileid: "68892381"
   
      O painel Visualizar do assistente exibe uma matriz com quatro linhas.  
   
-2.  Clique em **Avançar**.  
+2.  Clique em **Próximo**.  
   
-##  <a name="DStyle"></a> 1e. Escolha um estilo  
+##  <a name="DStyle"></a>1e. Escolha um estilo  
  Um estilo especifica um estilo de fonte, um conjunto de cores e um estilo de borda.  
   
 #### <a name="to-specify-a-style"></a>Para especificar um estilo  
   
 1.  Na página **escolher um estilo** , no painel estilos, selecione Slate.  
   
-2.  Clique em **Finalizar**.  
+2.  Clique em **Concluir**.  
   
      A tabela é adicionada à superfície de design.  
   
-3.  Para visualizar o relatório, clique em **Executar (!)** .  
+3.  Para visualizar o relatório, clique em **Executar (!)**.  
   
-##  <a name="DFormat"></a> 2. Formatar dados como moeda  
+##  <a name="DFormat"></a>2. formatar dados como moeda  
  Aplique a formatação de moeda aos campos de valor de vendas no relatório detalhado.  
   
 #### <a name="to-format-data-as-currency"></a>Para formatar dados como moeda  
@@ -273,7 +273,7 @@ ms.locfileid: "68892381"
   
 3.  Na guia **Início** , no grupo **Número** , clique em **Moeda**.  
   
-##  <a name="DSparkline"></a> 3. Adicionar colunas para mostrar valores de vendas em minigráficos  
+##  <a name="DSparkline"></a>3. adicionar colunas para mostrar valores de vendas em minigráficos  
  Em vez de mostrar vendas e devoluções de vendas como valores de moeda, o relatório mostra os valores em um minigráfico.  
   
 #### <a name="to-add-sparklines-to-columns"></a>Para adicionar minigráficos a colunas  
@@ -306,7 +306,7 @@ ms.locfileid: "68892381"
   
 13. Para visualizar o relatório, clique em **Executar**.  
   
-##  <a name="DReportTitle"></a> 4. Adicionar título de relatório com nome da categoria do produto  
+##  <a name="DReportTitle"></a>4. adicionar título de relatório com nome de categoria de produto  
  Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório ou, se o relatório não usar um cabeçalho, em uma caixa de texto na parte superior do corpo do relatório. Neste tutorial, você usará a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
   
 #### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
@@ -315,7 +315,7 @@ ms.locfileid: "68892381"
   
 2.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-3.  Digite **Vendas e Devoluções por Categoria:** .  
+3.  Digite **Vendas e Devoluções por Categoria:**.  
   
 4.  Clique com o botão direito do mouse em **Criar Espaço Reservado**.  
   
@@ -333,7 +333,7 @@ ms.locfileid: "68892381"
   
  O título do relatório inclui o nome da primeira categoria de produto. Posteriormente, depois que você executar esse relatório como um relatório detalhado, o nome da categoria do produto será alterado dinamicamente para refletir o nome da categoria do produto que foi clicada no relatório principal.  
   
-##  <a name="DParameter"></a> 5. Atualizar propriedades de parâmetros  
+##  <a name="DParameter"></a>5. atualizar propriedades do parâmetro  
  Por padrão, os parâmetros estão visíveis, o que não é apropriado para este relatório. Você atualizará as propriedades dos parâmetros do relatório detalhado.  
   
 #### <a name="to-hide-a-parameter"></a>Para ocultar um parâmetro  
@@ -356,7 +356,7 @@ ms.locfileid: "68892381"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="DSave"></a> 6. Salvar o relatório em uma biblioteca do SharePoint  
+##  <a name="DSave"></a>6. salvar o relatório em uma biblioteca do SharePoint  
  É possível salvar o relatório em um biblioteca do SharePoint, em um servidor de relatório ou no computador. Se você salvar o relatório no computador, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como partes do relatório e sub-relatórios, não estarão disponíveis. Neste tutorial, você salvará o relatório em uma biblioteca do SharePoint.  
   
 #### <a name="to-save-the-report"></a>Para salvar o relatório  
@@ -376,9 +376,9 @@ ms.locfileid: "68892381"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  Clique em **Salvar**.  
+4.  Clique em **Save** (Salvar).  
   
-     **Sites e Servidores Recentes** lista as bibliotecas no site do SharePoint.  
+     **Sites e servidores recentes** lista as bibliotecas no site do SharePoint.  
   
 5.  Navegue para a biblioteca onde você salvará o relatório.  
   
@@ -387,10 +387,10 @@ ms.locfileid: "68892381"
     > [!NOTE]  
     >  Você salvará o relatório principal no mesmo local. Se desejar salvar os relatórios principal e de detalhamento em sites ou bibliotecas diferentes, você deverá atualizar o caminho da ação **Ir para o relatório** no relatório principal.  
   
-7.  Clique em **Salvar**.  
+7.  Clique em **Save** (Salvar).  
   
-##  <a name="MMatrixAndDataset"></a> 1. Criar um novo relatório do assistente de tabela ou matriz  
- Na caixa de diálogo **Introdução** , crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**.  
+##  <a name="MMatrixAndDataset"></a>1. criar um novo relatório por meio do assistente de tabela ou matriz  
+ Na caixa de diálogo **introdução** , crie um relatório de matriz usando o **Assistente de tabela ou matriz**.  
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
   
@@ -398,22 +398,22 @@ ms.locfileid: "68892381"
   
 2.  Na caixa de diálogo **Introdução** , verifique se a opção **Novo Relatório** está selecionada e clique em **Assistente de Tabela ou Matriz**.  
   
-##  <a name="MConnection"></a> 1a. Especificar uma conexão de dados  
+##  <a name="MConnection"></a>1a. Especificar uma conexão de dados  
  Você adicionará uma fonte de dados inserida ao relatório principal.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Para criar uma fonte de dados inserida  
   
 1.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados**e clique em **Avançar**.  
   
-2.  Clique em **Novo**.  
+2.  Clique em **Nova**.  
   
 3.  Em **Nome**, digite **Principal de Vendas Online e do Revendedor** como o nome da fonte de dados.  
   
 4.  Em **Selecione um tipo de conexão**, selecione **Microsoft SQL Server Analysis Services**e clique em **Compilar**.  
   
-5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  Em **Nome do servidor**, digite o nome de um servidor em que uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] está instalada.  
+6.  Em **nome do servidor**, digite o nome de um servidor em que uma [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância do está instalada.  
   
 7.  Em **Selecionar ou inserir um nome de banco de dados**, selecione o cubo Contoso.  
   
@@ -435,19 +435,19 @@ ms.locfileid: "68892381"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Clique em **Avançar**.  
+14. Clique em **Próximo**.  
   
-##  <a name="MMDXQuery"></a> 1b. Criar uma consulta MDX  
+##  <a name="MMDXQuery"></a>1B. Criar uma consulta MDX  
  Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o designer de consulta para criar filtros, parâmetros e membros calculados como também o próprio conjunto de dados.  
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na página **Criar uma consulta**, no painel Metadados, na seção de cubo, clique nas reticências **(…)** .  
+1.  Na página **Criar uma consulta**, no painel Metadados, na seção de cubo, clique nas reticências **(…)**.  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
     > [!TIP]  
-    >  Se não desejar criar a consulta MDX manualmente, clique no ícone ![Alternar para modo de Design](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Alternar para modo de Design"), ative/desative o designer de consultas para o modo de Consulta, cole o MDX concluído no designer de consultas e vá para a etapa 5 em [Para criar o conjunto de dados](#MSkip).  
+    >  Se não desejar criar a consulta MDX manualmente, clique no ícone ![Alternar para modo de Design](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Alterna para o modo de design"), ative/desative o designer de consultas para o modo de Consulta, cole o MDX concluído no designer de consultas e vá para a etapa 5 em [Para criar o conjunto de dados](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -461,9 +461,9 @@ ms.locfileid: "68892381"
   
 5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online** , em **Revendedor**e em **OK**.  
   
-     A consulta agora inclui um filtro para incluir apenas estes canais: Online e revendedor.  
+     A consulta agora inclui um filtro para incluir apenas estes canais: Online e Revendedor.  
   
-6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** , abaixo de **Nome do Canal**.  
+6.  Expanda a dimensão região de vendas e arraste grupo região de vendas para a coluna **hierarquia** , abaixo do **nome do canal**.  
   
 7.  Abra a lista **Expressão de Filtro** , expanda **Toda a Região de Vendas**, clique em **América do Norte**e em **OK**.  
   
@@ -507,7 +507,7 @@ ms.locfileid: "68892381"
   
 5.  Clique com o botão direito do mouse em **Membros Calculados**e clique em **Novo Membro Calculado**.  
   
-6.  No painel Metadados, expanda **Medidas**e Vendas.  
+6.  No painel metadados, expanda **medidas**e, em seguida, vendas.  
   
 7.  Arraste a medida Valor das Vendas até a caixa **Expressão** , digite o caractere de subtração (-), arraste a medida Valor de Devolução das Vendas até a caixa **Expressão** e coloque-a após o caractere de subtração.  
   
@@ -529,13 +529,13 @@ ms.locfileid: "68892381"
   
 4.  Em Membros Calculados, arraste Vendas Líquidas até o painel de dados e coloque-o à direita de `Net QTY`.  
   
-5.  Na barra de ferramentas do designer de consultas, clique em **Executar (!)** .  
+5.  Na barra de ferramentas do designer de consultas, clique em **executar (!)**.  
   
      Revise o conjunto de resultados da consulta.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
-##  <a name="MLayout"></a> 1c. Organizar dados em grupos  
+##  <a name="MLayout"></a>1C. Organizar dados em grupos  
  Quando seleciona os campos nos quais agrupar os dados, você cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -546,7 +546,8 @@ ms.locfileid: "68892381"
   
 3.  Arraste `Net_QTY` até **Valores**.  
   
-     `Net_QTY` é agregado automaticamente pela função Sum, a agregação padrão para campos numéricos. O valor é `[Sum(Net_QTY)]`.  
+     
+  `Net_QTY` é agregado automaticamente pela função Sum, a agregação padrão para campos numéricos. O valor é `[Sum(Net_QTY)]`.  
   
      Para exibir outras funções de agregação disponíveis, abra a lista suspensa. Não altere a função de agregação.  
   
@@ -554,29 +555,29 @@ ms.locfileid: "68892381"
   
      As etapas 3 e 4 especificam os dados a serem exibidos na matriz.  
   
-##  <a name="MTotals"></a> 1d. Adicionar subtotais e totais  
+##  <a name="MTotals"></a>1D. Adicionar subtotais e totais  
  Você pode mostrar subtotais e totais gerais em relatórios. Os dados no relatório principal são exibidos como um indicador; você removerá o total geral depois de concluir o assistente.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Para adicionar subtotais e totais gerais  
   
 1.  Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
-     O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Ao executar o relatório, cada linha será exibida da seguinte forma: A primeira linha é o grupo de colunas, a segunda linha contém os cabeçalhos de coluna, a terceira linha contém os dados de categoria`[Sum(Net_ QTY)]` de `[Sum(Net_Sales)]`produto (e, e a quarta linha contém os totais.  
+     O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Quando você executar o relatório, cada linha será exibida da seguinte maneira: a primeira linha é o grupo de colunas, a segunda linha contém os títulos das colunas, a terceira linha contém os dados da categoria do produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e a quarta linha contém os totais.  
   
-2.  Clique em **Avançar**.  
+2.  Clique em **Próximo**.  
   
-##  <a name="MStyle"></a> 1e. Escolha um estilo  
+##  <a name="MStyle"></a>1e. Escolha um estilo  
  Aplique o estilo Ardósia ao relatório. Esse é o mesmo estilo usado pelo relatório detalhado.  
   
 #### <a name="to-specify-a-style"></a>Para especificar um estilo  
   
 1.  Na página **escolher um estilo** , no painel estilos, selecione Slate.  
   
-2.  Clique em **Finalizar**.  
+2.  Clique em **Concluir**.  
   
 3.  Para visualizar o relatório, clique em **Executar**.  
   
-##  <a name="MGrandTotal"></a> 2. Remover a linha de total geral  
+##  <a name="MGrandTotal"></a>2. remover a linha de total geral  
  Os valores de dados são mostrados como estados do indicador, inclusive o totais dos grupos de colunas. Remova a linha que exibe o total geral.  
   
 #### <a name="to-remove-the-grand-total-row"></a>Para remover a linha de total geral  
@@ -587,7 +588,7 @@ ms.locfileid: "68892381"
   
 3.  Para visualizar o relatório, clique em **Executar**.  
   
-##  <a name="MDrillthrough"></a> 3. Configurar ação de caixa de texto para detalhamento  
+##  <a name="MDrillthrough"></a>3. Configurar ação da caixa de texto para detalhamento  
  Para habilitar o detalhamento, especifique uma ação em uma caixa de texto no relatório principal.  
   
 #### <a name="to-enable-an-action"></a>Para habilitar uma ação  
@@ -596,9 +597,9 @@ ms.locfileid: "68892381"
   
 2.  Clique com o botão direito do mouse na célula que contém Product_Category_Name e clique em **Propriedades da Caixa de Texto**.  
   
-3.  Clique na guia **Ação** .  
+3.  Clique na guia **Ações**.  
   
-4.  Selecione **Ir para relatório**.  
+4.  Selecione **ir para o relatório.**  
   
 5.  Em **Especificar um relatório**, clique em **Procurar**e localize o relatório de detalhamento chamado ResellerVSOnlineDrillthrough.  
   
@@ -631,7 +632,7 @@ ms.locfileid: "68892381"
   
  Os nomes das categorias de produto estão no formato de link comum (azul e sublinhado).  
   
-##  <a name="MIndicators"></a> 4. Substituir valores numéricos por indicadores  
+##  <a name="MIndicators"></a>4. substituir valores numéricos por indicadores  
  Use indicadores para mostrar o estado de quantidades e vendas dos canais Online e de Revendedor.  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>Para adicionar um indicador para valores de QTD Líquida  
@@ -644,7 +645,7 @@ ms.locfileid: "68892381"
   
 4.  Clique no tipo **3 Sinais** e em **OK**.  
   
-5.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)** . Selecione `Net_QTY`.  
+5.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)**. Selecione `Net_QTY`.  
   
 6.  Repita as etapas 2 a 5 para a célula `[Sum(Net QTY)]` no grupo de linhas `[Product_Category_Name]` dentro de **Total**.  
   
@@ -656,13 +657,13 @@ ms.locfileid: "68892381"
   
 3.  Clique no tipo **3 Sinais** e em **OK**.  
   
-4.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)** . Selecione `Net_Sales`.  
+4.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)**. Selecione `Net_Sales`.  
   
 5.  Repita as etapas 1 a 4 para a célula `[Sum(Net_Sales)]` no grupo de linhas `[Product_Category_Name]` dentro de **Total**.  
   
 6.  Para visualizar o relatório, clique em **Executar**.  
   
-##  <a name="MParameter"></a> 5. Atualizar propriedades de parâmetros  
+##  <a name="MParameter"></a>5. atualizar propriedades do parâmetro  
  Por padrão, os parâmetros estão visíveis, o que não é apropriado para este relatório. Você atualizará as propriedades dos parâmetros para tornar os parâmetros internos.  
   
 #### <a name="to-make-the-parameter-internal"></a>Para tornar o parâmetro interno  
@@ -677,14 +678,14 @@ ms.locfileid: "68892381"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="MTitle"></a> 6. Adicionar um título de relatório  
+##  <a name="MTitle"></a>6. adicionar um título de relatório  
  Adicione um título ao relatório principal.  
   
 #### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Vendas de 2009 na Categoria de Produto: Categoria Online e Revendedor:** .  
+2.  Digite **Vendas de Categorias de Produtos de 2009: Categoria Online e Revendedor:**.  
   
 3.  Selecione o texto que você digitou.  
   
@@ -692,7 +693,7 @@ ms.locfileid: "68892381"
   
 5.  Para visualizar o relatório, clique em **Executar**.  
   
-##  <a name="MSave"></a> 7. Salvar o relatório principal em uma biblioteca do SharePoint  
+##  <a name="MSave"></a>7. salvar o relatório principal em uma biblioteca do SharePoint  
  Salve o relatório principal em uma biblioteca do SharePoint.  
   
 #### <a name="to-save-the-report"></a>Para salvar o relatório  
@@ -716,9 +717,9 @@ ms.locfileid: "68892381"
     > [!IMPORTANT]  
     >  Salve o relatório principal no mesmo local onde você salvou o relatório detalhado. Para salvar os relatórios principal e de detalhamento em sites ou bibliotecas diferentes, confirme se a ação **Ir para o relatório** no relatório principal aponta para o local correto do relatório de detalhamento.  
   
-7.  Clique em **Salvar**.  
+7.  Clique em **Save** (Salvar).  
   
-##  <a name="MRunReports"></a> 8. Executar os relatórios principal e de detalhamento  
+##  <a name="MRunReports"></a>8. executar os relatórios principal e de detalhamento  
  Execute o relatório principal e clique nos valores da coluna de categorias de produto para executar o relatório detalhado.  
   
 #### <a name="to-run-the-reports"></a>Para executar os relatórios  
@@ -737,7 +738,7 @@ ms.locfileid: "68892381"
   
 5.  Opcionalmente, explore outras categorias de produto clicando nos respectivos nomes.  
   
-## <a name="see-also"></a>Consulte também  
- [TUTORIAIS &#40;Construtor de relatórios&#41;](report-builder-tutorials.md)  
+## <a name="see-also"></a>Consulte Também  
+ [TUTORIAIS &#40;Construtor de Relatórios&#41;](report-builder-tutorials.md)  
   
   

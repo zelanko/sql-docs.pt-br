@@ -1,5 +1,5 @@
 ---
-title: Recuperação de dados de tipo de informações com SQLGetTypeInfo | Microsoft Docs
+title: Recuperando informações de tipo de dados com SQLGetTypeInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4f336a7ebfaf5e76ac464944900231c452809f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020551"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Recuperar informações de tipo de dados com SQLGetTypeInfo
-Como os mapeamentos de tipos de dados SQL subjacentes para identificadores de tipo ODBC são aproximados, o ODBC fornece uma função (**SQLGetTypeInfo**) por meio do qual um driver pode completamente descrevem cada tipo de dados SQL na fonte de dados. Essa função retorna um conjunto de resultados, cada linha que descreve as características de um tipo de dados único, como nome, identificador de tipo, precisão, escala e nulidade.  
+Como os mapeamentos de tipos de dados SQL subjacentes para identificadores de tipo ODBC são aproximados, o ODBC fornece uma função (**SQLGetTypeInfo**) por meio da qual um driver pode descrever completamente cada tipo de dados SQL na fonte de dados. Essa função retorna um conjunto de resultados, cada linha que descreve as características de um único tipo de dados, como nome, identificador de tipo, precisão, escala e nulidade.  
   
- Em geral, essas informações são usadas por aplicativos genéricos que permitem ao usuário criar e alterar as tabelas. Tal aplicativos chamam **SQLGetTypeInfo** para recuperar as informações de tipo de dados e, em seguida, apresentar alguns ou todos eles para o usuário. Tais aplicativos precisam estar ciente das duas coisas:  
+ Essas informações geralmente são usadas por aplicativos genéricos que permitem ao usuário criar e alterar tabelas. Esses aplicativos chamam **SQLGetTypeInfo** para recuperar as informações de tipo de dados e, em seguida, apresentar algumas ou todas elas ao usuário. Esses aplicativos precisam estar cientes de duas coisas:  
   
--   Mais de um tipo de dados SQL pode mapear para um identificador de tipo único, que pode tornar difícil determinar qual tipo de dados para usar. Para resolver isso, o conjunto de resultados é ordenado pela primeira vez pelo identificador de tipo e depois pela proximidade com a definição do identificador de tipo. Além disso, a tipos de dados definidos pelo código-fonte de dados têm precedência sobre os tipos de dados definidos pelo usuário. Por exemplo, suponha que uma fonte de dados define os tipos de dados inteiro e um CONTADOR para ser o mesmo, exceto que o CONTADOR é incremento automático. Vamos supor também que o tipo definido pelo usuário WHOLENUM é um sinônimo de inteiro. Cada um desses tipos é mapeado para SQL_INTEGER. No **SQLGetTypeInfo** conjunto de resultados, inteiro aparece primeiro, seguido por WHOLENUM e, em seguida, o CONTADOR. WHOLENUM aparece após inteiro porque ele é definido pelo usuário, mas antes de CONTADOR porque ele mais se aproxima a definição do SQL_INTEGER identificador de tipo.  
+-   Mais de um tipo de dados SQL pode ser mapeado para um único identificador de tipo, o que pode dificultar a determinação do tipo de dados a ser usado. Para resolver isso, o conjunto de resultados é ordenado primeiro pelo identificador de tipo e segundo por proximidade com a definição do identificador de tipo. Além disso, os tipos de dados definidos pela fonte de dados têm precedência sobre os tipos de dados definidos pelo usuário. Por exemplo, suponha que uma fonte de dados defina os tipos de dados INTEGER e COUNTER como o mesmo, exceto que o contador é incrementado automaticamente. Suponha também que o tipo definido pelo usuário WHOLENUM é um sinônimo de inteiro. Cada um desses tipos é mapeado para SQL_INTEGER. No conjunto de resultados **SQLGetTypeInfo** , Integer aparece primeiro, seguido por WHOLENUM e, em seguida, Counter. WHOLENUM aparece depois de INTEGER porque é definido pelo usuário, mas antes do contador porque ele corresponde mais próximo à definição do identificador de tipo de SQL_INTEGER.  
   
--   ODBC não define os nomes de tipo de dados para uso em **CREATE TABLE** e **ALTER TABLE** instruções. Em vez disso, o aplicativo deve usar o nome retornado na coluna de TYPE_NAME do conjunto de resultados retornado por **SQLGetTypeInfo**. A razão para isso é que embora a maior parte do SQL não varia muito entre DBMSs, nomes de tipo de dados podem variar muito. Em vez de forçar os drivers para analisar as instruções SQL e substitua os nomes de tipo de dados padrão com nomes de tipo de dados específicos de DBMS, ODBC requer aplicativos para usar os nomes específicos de DBMS em primeiro lugar.  
+-   O ODBC não define nomes de tipos de dados para uso em instruções **CREATE TABLE** e **ALTER TABLE** . Em vez disso, o aplicativo deve usar o nome retornado na coluna TYPE_NAME do conjunto de resultados retornado por **SQLGetTypeInfo**. O motivo disso é que, embora a maior parte do SQL não varie muito em DBMSs, os nomes de tipos de dados variam enormemente. Em vez de forçar os drivers a analisar instruções SQL e substituir nomes de tipo de dados padrão por nomes de tipo de dados específicos do DBMS, o ODBC requer que os aplicativos usem os nomes específicos do DBMS em primeiro lugar.  
   
- Observe que **SQLGetTypeInfo** não necessariamente descreve todos os tipos de dados, um aplicativo pode se deparar. Em particular, os conjuntos de resultados podem conter tipos de dados não é diretamente compatível com a fonte de dados. Por exemplo, os tipos de dados das colunas em conjuntos de resultados retornados pelas funções de catálogo são definidos pelo ODBC e esses tipos de dados talvez não tenha suporte pela fonte de dados. Para determinar as características dos tipos de dados em um conjunto de resultados, um aplicativo chama **SQLColAttribute**.
+ Observe que o **SQLGetTypeInfo** não descreve necessariamente todos os tipos de dados que um aplicativo pode encontrar. Em particular, os conjuntos de resultados podem conter tipos de dados não suportados diretamente pela fonte de dados. Por exemplo, os tipos de dados das colunas nos conjuntos de resultados retornados pelas funções de catálogo são definidos pelo ODBC e esses tipos de dados podem não ser suportados pela fonte de dados. Para determinar as características dos tipos de dados em um conjunto de resultados, um aplicativo chama **SQLColAttribute**.

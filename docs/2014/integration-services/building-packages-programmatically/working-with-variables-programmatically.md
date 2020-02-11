@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4833ee0dd6514b6a05118b80b756c5fd2de069a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836774"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabalhando com variáveis programaticamente
@@ -44,9 +44,9 @@ ms.locfileid: "62836774"
   
 -   Crie expressões que incluam valores de variáveis.  
   
--   Você pode criar variáveis personalizadas para todos os tipos de contêineres: pacotes, contêineres **Loop Foreach**, contêineres **Loop For**, contêineres de **Sequência**, TaskHosts e manipuladores de eventos. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
+-   Você pode criar variáveis personalizadas para todos os tipos de contêineres: pacotes, contêineres **Loop Foreach**, contêineres **Loop For**, contêineres de **Sequência**, TaskHosts e manipuladores de eventos. Para obter mais informações, consulte [Integration Services &#40;&#41; as variáveis do SSIS](../integration-services-ssis-variables.md) e [usar variáveis em pacotes](../use-variables-in-packages.md).  
   
-## <a name="scope"></a>Scope  
+## <a name="scope"></a>Escopo  
  Cada contêiner tem sua própria coleção <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Quando uma nova variável é criada, ela fica dentro do escopo de seu contêiner pai. Como o contêiner de pacote está no topo da hierarquia de contêineres, as variáveis com escopo de pacote funcionam como variáveis globais e ficam visíveis para todos os contêineres de pacote. A coleção de variáveis para o contêiner também pode ser acessada pelos filhos do contêiner através da coleção <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, usando o nome da variável ou o índice da variável na coleção.  
   
  Como a visibilidade de uma variável tem um escopo de cima para baixo, as variáveis declaradas no nível do pacote são visíveis para todos os contêineres do pacote. Portanto, a coleção <xref:Microsoft.SqlServer.Dts.Runtime.Variables> em um contêiner inclui todas as variáveis que pertencem a seu pai além de suas próprias variáveis.  
@@ -158,7 +158,7 @@ End Module
  Observe que todas as variáveis com escopo no namespace **System** estão disponíveis para o pacote. Para obter mais informações, consulte [Variáveis de sistema](../system-variables.md).  
   
 ## <a name="namespaces"></a>Namespaces  
- O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) fornece dois namespaces padrão em que as variáveis residem; os namespaces **User** e **System**. Por padrão, qualquer variável personalizada criada pelo desenvolvedor é adicionada ao namespace **User**. As variáveis de sistema residem no namespace **System**. Você pode criar namespaces adicionais, além do namespace **User** para manter variáveis personalizadas e você pode alterar o nome do namespace **User**, mas não pode adicionar ou modificar variáveis no namespace **System** nem atribuir variáveis do sistema a outro namespace.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) fornece dois namespaces padrão onde as [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variáveis residem; Namespaces de **usuário** e **sistema** . Por padrão, qualquer variável personalizada criada pelo desenvolvedor é adicionada ao namespace **User**. As variáveis de sistema residem no namespace **System**. Você pode criar namespaces adicionais, além do namespace **User** para manter variáveis personalizadas e você pode alterar o nome do namespace **User**, mas não pode adicionar ou modificar variáveis no namespace **System** nem atribuir variáveis do sistema a outro namespace.  
   
  As variáveis de sistema que estão disponíveis diferem dependendo do tipo de contêiner. Para uma lista das variáveis de sistema disponíveis para pacotes, contêineres, tarefas e manipuladores de eventos, consulte [System Variables](../system-variables.md).  
   
@@ -228,9 +228,9 @@ End Module
 ## <a name="configuration-files"></a>Arquivos de configuração  
  Se um arquivo de configuração incluir uma variável personalizada, a variável poderá ser atualizada em tempo de execução. Isso significa que quando o pacote é executado, o valor da variável originalmente no pacote é substituído por um novo valor do arquivo de configuração. Essa técnica de substituição é útil quando um pacote é implantado em vários servidores que requerem valores de variável diferentes. Por exemplo, uma variável pode especificar o número de vezes que um contêiner **Loop Foreach** repete seu fluxo de trabalho ou então listar os recipientes para os quais um manipulador de eventos envia email quando um erro é gerado ou alterar o número de erros que podem ocorrer antes de o pacote falhar. Essas variáveis são fornecidas dinamicamente em arquivos de configuração para cada ambiente. Portanto, somente as variáveis de leitura/gravação são permitidas em arquivos de configuração. Para obter mais informações, consulte [Criar configurações de pacote](../create-package-configurations.md).  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../use-variables-in-packages.md)  
   

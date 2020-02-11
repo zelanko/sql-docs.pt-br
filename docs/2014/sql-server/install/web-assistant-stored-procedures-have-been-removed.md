@@ -1,5 +1,5 @@
 ---
-title: Os procedimentos armazenados do Assistente Web foram removidos | Microsoft Docs
+title: Os procedimentos armazenados do assistente da Web foram removidos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8bca81e9e02cf7f2bfed14b05a5842ca52a6d44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091039"
 ---
 # <a name="web-assistant-stored-procedures-have-been-removed"></a>Foram removidos procedimentos armazenados do Assistente da Web
@@ -23,7 +23,7 @@ ms.locfileid: "66091039"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  Os procedimentos armazenados do Assistente da Web **sp_makewebtask**, **sp_dropwebtask**, **sp_runwebtask**e **sp_enumcodepages** foram removidos.  
   
 ## <a name="corrective-action"></a>Ação corretiva  

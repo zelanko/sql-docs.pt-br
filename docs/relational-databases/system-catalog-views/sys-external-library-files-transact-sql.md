@@ -19,22 +19,22 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7af0a7fcb639ae3beab6216e77f9b7b95a398da
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68471092"
 ---
-# <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (Transact-SQL)  
+# <a name="sysexternal_library_files-transact-sql"></a>sys.external_library_files (Transact-SQL)  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Lista uma linha para cada arquivo que compõe uma biblioteca externa.
 
-|Nome da coluna |Tipo de dados |Descrição|
+|Nome da coluna |Tipo de dados |DESCRIÇÃO|
 |------|------|-----|
-|external_library_id | int |ID do objeto da biblioteca externa. |
-|content |varbinary(max) |Conteúdo do artefato do arquivo da biblioteca externa. |
-|plataforma |TINYINT |ID da plataforma de host na qual o SQL Server está instalado. |
+|external_library_id | INT |ID do objeto da biblioteca externa. |
+|conteúdo |varbinary(max) |Conteúdo do artefato do arquivo da biblioteca externa. |
+|plataforma |tinyint |ID da plataforma de host na qual o SQL Server está instalado. |
 |platform_desc | nvarchar(60) |Nome da plataforma do host. Os valores válidos são ' WINDOWS ', ' LINUX '. |
 
 ### <a name="see-also"></a>Confira também  

@@ -1,5 +1,5 @@
 ---
-title: Herdado de transações | Microsoft Docs
+title: Transações herdadas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058061"
 ---
 # <a name="inherited-transactions"></a>Transações herdadas
@@ -37,13 +37,13 @@ ms.locfileid: "66058061"
   
  Os pacotes e tarefas têm os seguintes atributos de transação:  
   
--   **TransactionOption** é definida como **Required** nos pacotes A e C  
+-   **TransactionOption** está definido como **Required** nos pacotes A e C  
   
--   **TransactionOption** é definida como **Com Suporte** nos pacotes B e D, e nas tarefas Executar Pacote B, Executar Pacote C e Executar Pacote F.  
+-   **TransactionOption** está definido como **com suporte** nos pacotes B e D e, nas tarefas, execute o pacote b, execute o pacote D e execute o pacote F.  
   
--   **TransactionOption** é definida como **NotSupported** no pacote E e nas tarefas Executar Pacote C e Executar Pacote E.  
+-   **TransactionOption** está definido como **sem suporte** no pacote e, nas tarefas, execute o pacote C E execute o pacote e.  
   
- ![Fluxo de transações herdadas](media/mw-dts-executepack.gif "Flow of inherited transactions")  
+ ![Fluxo de transações herdadas](media/mw-dts-executepack.gif "Fluxo de transações herdadas")  
   
  Só pacotes B, D e F podem herdar transações de seus pacotes pai.  
   

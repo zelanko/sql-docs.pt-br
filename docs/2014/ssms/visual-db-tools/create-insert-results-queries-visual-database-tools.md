@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63031961"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Criar consultas Inserir Resultados (Visual Database Tools)
@@ -76,15 +76,15 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     >  O Designer de Consulta e Exibição não pode determinar antecipadamente quais tabelas e exibições podem ser atualizadas. Portanto, a lista **Nome de Tabela** na caixa de diálogo **Escolher Tabela para Inserir a Partir da Consulta** mostra todas as tabelas e exibições disponíveis na conexão de dados que você estiver consultando, mesmo aquelas para as quais não é possível copiar linhas.  
   
-4.  No retângulo que representa a tabela ou o objeto com valor de tabela, escolha os nomes das colunas cujo conteúdo você quer copiar. Para copiar linhas inteiras, escolha  **\* (todas as colunas)** .  
+4.  No retângulo que representa a tabela ou o objeto com valor de tabela, escolha os nomes das colunas cujo conteúdo você quer copiar. Para copiar linhas inteiras, escolha ** \* (todas as colunas)**.  
   
      O Designer de Consulta e Exibição adiciona as colunas escolhidas à coluna **Coluna** do painel Critérios.  
   
-5.  Na coluna **Acrescentar** do painel Critérios, selecione uma coluna de destino na tabela de destino para cada coluna que você está copiando. Escolher *tablename.\**  se você estiver copiando linhas inteiras. As colunas na tabela de destino devem ter os mesmos tipos de dados (ou compatíveis) que as colunas na tabela de origem.  
+5.  Na coluna **Acrescentar** do painel Critérios, selecione uma coluna de destino na tabela de destino para cada coluna que você está copiando. Escolha *TableName.\* * se você estiver copiando linhas inteiras. As colunas na tabela de destino devem ter os mesmos tipos de dados (ou compatíveis) que as colunas na tabela de origem.  
   
 6.  Se você quiser copiar as linhas em uma ordem específica, selecione a ordem de classificação. Para obter detalhes, consulte [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md).  
   
-7.  Especifique as linhas a serem copiadas inserindo critérios de pesquisa na coluna **Filtro**. Para obter detalhes, consulte [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  
+7.  Especifique as linhas a serem copiadas inserindo critérios de pesquisa na coluna **Filtro** . Para obter detalhes, consulte [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  
   
      Se você não especificar um critério de pesquisa, todas as linhas da tabela de origem serão copiadas na tabela de destino.  
   
@@ -95,7 +95,7 @@ WHERE (pub_id = '0766')
   
  Quando você executa uma consulta Inserir Resultados, nenhum resultado é relatado no [Painel de Resultados](results-pane-visual-database-tools.md). Em vez disso, será exibida uma mensagem indicando o total de linhas copiadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de consultas &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
  [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Atualizar para outra edição do SQL Server 2014 (instalação) | Microsoft Docs
+title: Atualizar para uma edição diferente do SQL Server 2014 (instalação) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774570"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Atualizar para outra edição do SQL Server 2014 (instalação)
   A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à atualização de edição entre várias edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre os caminhos de atualização de edição com suporte, consulte [Atualizações de versão e edição com suporte](supported-version-and-edition-upgrades.md). Antes de você iniciar a atualização de edição de uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], revise os tópicos seguintes:  
   
--   [Recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+-   [Recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 -   [Edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)  
   
 -   [Computar limites de capacidade por edição do SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
--   [Requisitos de hardware e software para a instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente clusterizado:** Executar a atualização de edição em um de nós do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster é suficiente. Esse nó pode ser ativo ou passivo, e o mecanismo não aciona os recursos offline durante a atualização da edição. Após a atualização da edição, será necessário reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou executar o failover em um nó diferente.  
+>  **em um ambiente clusterizado: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** Executar a atualização de edição em um dos nós [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do cluster é suficiente. Esse nó pode ser ativo ou passivo, e o mecanismo não aciona os recursos offline durante a atualização da edição. Após a atualização da edição, será necessário reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou executar o failover em um nó diferente.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura no compartilhamento remoto.  
@@ -49,7 +49,7 @@ ms.locfileid: "62774570"
   
 4.  O Verificador de Configuração do Sistema executa uma operação de descoberta no computador. Para continuar, clique em **OK**.  
   
-5.  Na página Chave do Produto, selecione um botão de opção para indicar se você está atualizando para uma edição gratuita do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou se tem uma chave de PID para uma versão de produção do produto. Para obter mais informações, consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md).  
+5.  Na página Chave do Produto, selecione um botão de opção para indicar se você está atualizando para uma edição gratuita do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou se tem uma chave de PID para uma versão de produção do produto. Para obter mais informações, consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [atualizações de versão e edição com suporte](supported-version-and-edition-upgrades.md).  
   
 6.  Na página Termos de Licença, leia o contrato de licença e marque a caixa de seleção para aceitar os termos e as condições de licença. Para continuar, clique em **Avançar**. Para finalizar a Instalação, clique em **Cancelar**.  
   
@@ -73,13 +73,13 @@ ms.locfileid: "62774570"
   
  Além das etapas anteriores, pode ser necessário fazer o seguinte se você atualizou a partir do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]:  
   
--   Os usuários que foram provisionados no [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] permanecem provisionados após a atualização. Especificamente, o grupo BUILTIN\Users permanece provisionado. Desabilite, remova ou provisione essas contas novamente, conforme necessário. Para obter mais informações, veja [Configurar contas de serviço e permissões do Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Os usuários que foram provisionados no [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] permanecem provisionados após a atualização. Especificamente, o grupo BUILTIN\Users permanece provisionado. Desabilite, remova ou provisione essas contas novamente, conforme necessário. Para obter mais informações, consulte [Configurar contas de serviço e permissões do Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 -   Os tamanhos e o modo de recuperação para os bancos de dados de sistemas model e tempdb permanecem inalterados após a atualização. Reconfigure essas configurações, conforme necessário. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 -   Os bancos de dados modelo permanecem no computador após a atualização.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualizar para o SQL Server 2014](upgrade-sql-server.md)   
  [Compatibilidade com versões anteriores](../../getting-started/backward-compatibility.md)  
   

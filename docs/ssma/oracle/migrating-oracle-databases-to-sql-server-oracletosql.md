@@ -1,5 +1,5 @@
 ---
-title: Migrando do Oracle bancos de dados para o SQL Server (OracleToSQL) | Microsoft Docs
+title: Migrando bancos de dados Oracle para SQL Server (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 04/22/2018
@@ -11,45 +11,45 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e1021643d503e1ca77f120b81046b3773f8ff458
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68259107"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>Migração de bancos de dados Oracle para o SQL Server (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA (Migration Assistant) para Oracle é um ambiente abrangente que ajuda você a migrar rapidamente bancos de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], BD SQL do Azure ou Azure SQL Data Warehouse. Usando o SSMA para Oracle, você pode examinar os objetos de banco de dados e dados, avaliar os bancos de dados para a migração, migrar objetos de banco de dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], BD SQL do Azure ou SQL Data Warehouse do Azure, e, em seguida, migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], BD SQL do Azure ou dados do SQL Azure Data warehouse. Observe que você não pode migrar esquemas SYS e sistema Oracle.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Assistente de Migração (SSMA) para Oracle é um ambiente abrangente que ajuda você a migrar rapidamente bancos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dados Oracle para o, o BD SQL do Azure ou o Azure SQL data warehouse. Usando o SSMA para Oracle, você pode examinar os objetos e os dados do banco de dados, avaliar os bancos de dado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migração, migrar objetos de banco de dados para o, o BD [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL do azure ou o Azure SQL data warehouse e, em seguida, migrar dados para o, o BD SQL do azure ou o Azure SQL data warehouse. Observe que você não pode migrar esquemas SYS e do sistema Oracle.
   
-## <a name="recommended-migration-process"></a>Recomendado o processo de migração  
-Para migrar com êxito a objetos e dados de bancos de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], BD SQL do Azure ou SQL Data Warehouse do Azure, use o seguinte processo:
+## <a name="recommended-migration-process"></a>Processo de migração recomendado  
+Para migrar com êxito objetos e dados de bancos de dados Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o, o BD SQL do Azure ou o Azure SQL data warehouse, use o seguinte processo:
   
-1.  [Criar um novo projeto SSMA](working-with-ssma-projects-oracletosql.md).  
+1.  [Crie um novo projeto do SSMA](working-with-ssma-projects-oracletosql.md).  
   
-    Depois de criar o projeto, você pode definir opções de mapeamento de tipo, migração e conversão de projeto. Para obter informações sobre as configurações do projeto, consulte [definir opções do projeto &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md). Para obter informações sobre como personalizar mapeamentos de tipo de dados, consulte [mapeamento Oracle e tipos de dados do SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
+    Depois de criar o projeto, você pode definir opções de conversão de projeto, migração e mapeamento de tipo. Para obter informações sobre configurações de projeto, consulte [definindo opções de projeto &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md). Para obter informações sobre como personalizar mapeamentos de tipo de dados, consulte [mapeando os tipos de dados Oracle e SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
-2.  [Conectar-se ao servidor de banco de dados Oracle](connecting-to-oracle-database-oracletosql.md).  
+2.  [Conecte-se ao servidor de banco de dados Oracle](connecting-to-oracle-database-oracletosql.md).  
   
-3.  [Conectar a uma instância do SQL Server](connecting-to-sql-server-oracletosql.md).  
+3.  [Conecte-se a uma instância do SQL Server](connecting-to-sql-server-oracletosql.md).  
   
-4.  [Mapear esquemas de banco de dados Oracle para esquemas de banco de dados do SQL Server](mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md).  
+4.  [Mapeie esquemas de banco de dados Oracle para SQL Server esquemas de banco de dados](mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md).  
   
-5.  Opcionalmente, [crie relatórios de avaliação](assessing-oracle-schemas-for-conversion-oracletosql.md) avaliar os objetos de banco de dados para a conversão e estimar o tempo de conversão.  
+5.  Opcionalmente, [Crie relatórios de avaliação](assessing-oracle-schemas-for-conversion-oracletosql.md) para avaliar objetos de banco de dados para conversão e estimar o tempo de conversão.  
   
-6.  [Converter esquemas de banco de dados Oracle para esquemas SQL Server](converting-oracle-schemas-oracletosql.md).  
+6.  [Converta esquemas de banco de dados Oracle em esquemas de SQL Server](converting-oracle-schemas-oracletosql.md).  
   
-7.  [Carregar os objetos de banco de dados convertidos no SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md).  
+7.  [Carregue os objetos de banco de dados convertidos em SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
-    Você pode fazer isso em uma das seguintes maneiras:  
+    Você pode fazer isso de uma das seguintes maneiras:  
   
-    -   Salvar um script e executá-lo em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   Salve um script e execute-o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no.  
   
     -   Sincronize os objetos de banco de dados.  
   
-8.  [Migrar dados para o SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md).  
+8.  [Migre dados para SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md).  
   
 9. Se necessário, atualize os aplicativos de banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
-[Instalar o SSMA para Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
-[Introdução ao SSMA para Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Instalação do SSMA para Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
+[Introdução com o SSMA para Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   

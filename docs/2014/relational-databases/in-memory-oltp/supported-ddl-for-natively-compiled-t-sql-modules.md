@@ -1,5 +1,5 @@
 ---
-title: Suporte para construções em procedimentos armazenados compilados nativamente | Microsoft Docs
+title: Construções com suporte em procedimentos armazenados compilados nativamente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467870"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>Construções com suporte em procedimentos armazenados compilados de modo nativo
@@ -44,7 +44,7 @@ ms.locfileid: "62467870"
   
 -   Permissões GRANT e DENY em tabelas e procedimentos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)  
   
   

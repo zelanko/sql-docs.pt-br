@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo colunas (Analysis Services - dados multidimensionais) da chave | Microsoft Docs
+title: Caixa de diálogo colunas de chave (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079471"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Colunas de Chave (Analysis Services - Dados multidimensionais)
   Use a caixa de diálogo **Colunas de Chave** para alterar a propriedade **KeyColumns** de um atributo. Para obter mais informações, consulte [Modificar a propriedade KeyColumn de um atributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
- **Para exibir a caixa de diálogo colunas de chave**  
+ **Para exibir a caixa de diálogo Colunas de Chave**  
   
 -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], selecione um atributo e, na janela **Propriedades** , clique no botão de reticências (**...**) associado à propriedade **KeyColumns** desse atributo.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66079471"
   
  Para remover uma coluna de chave da lista **Colunas de Chave** , selecione a coluna e clique no botão **\<** .  
   
- **Para cima**  
+ **Operante**  
  Clique para mover a coluna selecionada em **Colunas de Chave** uma posição acima.  
   
 > [!NOTE]  
 >  Esta opção só será habilitada se a lista contiver mais de uma coluna e uma coluna estiver selecionada.  
   
- **Para baixo**  
+ **Ligou**  
  Clique para mover a coluna selecionada em **Colunas de Chave** uma posição abaixo.  
   
 > [!NOTE]  
@@ -60,7 +60,7 @@ ms.locfileid: "66079471"
  **<**  
  Clique para remover a coluna selecionada das colunas listadas em **Colunas de Chave**.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

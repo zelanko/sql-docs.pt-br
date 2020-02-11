@@ -1,5 +1,5 @@
 ---
-title: Reproduzir opções (SQL Server Profiler) | Microsoft Docs
+title: Opções de reprodução (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63025740"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Opções de repetição (SQL Server Profiler)
@@ -46,7 +46,7 @@ ms.locfileid: "63025740"
  **Repetir eventos na ordem em que foram rastreados**  
  Permite-lhe usar métodos de depuração, como cada etapa de cada rastreamento. Se esta opção não estiver selecionada, a repetição não garantirá que os eventos sejam repetidos em uma ordem consistente com a que foram capturados originalmente.  
   
- **Repetir eventos usando vários threads**  
+ **Reproduzir eventos usando vários threads**  
  Otimiza o desempenho e desabilita a depuração. Os eventos são repetidos na ordem em que foram registrados para uma ID de processo do servidor (SPID) específica, mas não se garante a ordem dos SPIDs.  
   
  **Exibir resultados da repetição**  
@@ -77,9 +77,9 @@ ms.locfileid: "63025740"
 ## <a name="about-the-health-monitor"></a>Sobre o Health Monitor  
  O Health Monitor é um thread de aplicativo que monitora os processos simulados envolvidos na repetição de um rastreamento e encerra os processos que se encontram bloqueados na repetição. Na guia **Opções de Repetição Avançadas** da caixa de diálogo **Configuração de Repetição** , é possível especificar o tempo, em segundos, que o Health Monitor deve esperar antes de encerrar um processo bloqueado (**Intervalo de espera do Health Monitor**). Se você definir esse intervalo como 0, o Health Monitor nunca encerrará os processos que causam bloqueios no rastreamento de repetição.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Repetir rastreamentos](replay-traces.md)   
- [Replay Requirements](replay-requirements.md)   
+ [Requisitos para reprodução](replay-requirements.md)   
  [Considerações para reproduzir rastreamentos &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

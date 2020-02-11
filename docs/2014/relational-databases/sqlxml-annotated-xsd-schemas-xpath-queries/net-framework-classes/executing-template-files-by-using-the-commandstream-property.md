@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f0d753c7e56f4ae90a2b156ee8d521518d0029a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010908"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Executando os arquivos de modelo usando a propriedade CommandStream
-  Este exemplo ilustra como os arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando a propriedade CommandStream do objeto SqlXmlCommand. Neste aplicativo, um FileStreamobject é aberto para um arquivo de comando, e o fluxo de arquivos é atribuído como o CommandStream que é executado.  
+  Este exemplo ilustra como os arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando a propriedade CommandStream do objeto SqlXmlCommand. Nesse aplicativo, um filestreamobject é aberto para um arquivo de comando e o fluxo de arquivos é atribuído como o CommandStream que é executado.  
   
- No exemplo a seguir, a propriedade CommandType é especificada como SqlXmlCommandType.Template (não como TemplateFile).  
+ No exemplo a seguir, a propriedade CommandType é especificada como SqlXmlCommandType. Template (não como TemplateFile).  
   
  Este é o modelo XML de exemplo:  
   

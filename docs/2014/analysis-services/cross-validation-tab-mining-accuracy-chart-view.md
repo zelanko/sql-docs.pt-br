@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086616"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Guia da validação cruzada (Exibição do gráfico de precisão de mineração)
   A validação cruzada permite dividir uma estrutura de mineração em seções cruzadas e interativamente treinar e testar modelos com cada seção cruzada. Você especifica um número de partições para dividir e colocar os dados; cada partição, por sua vez, é usada como dados de teste, enquanto os dados restantes são usados para treinar o novo modelo. O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gera um conjunto de métricas de precisão padrão para cada modelo. Comparando as métricas dos modelos geradas para cada seção cruzada, é possível obter uma boa noção da confiabilidade do modelo em relação a todo conjunto de dados.  
   
- Para obter mais informações, consulte [Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
+ Para obter mais informações, consulte [Validação cruzada &#40;Analysis Services – Mineração de dados&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  A validação cruzada não pode ser usada com modelos que foram criados usando os algoritmos [!INCLUDE[msCoName](../includes/msconame-md.md)] MTS ou o [!INCLUDE[msCoName](../includes/msconame-md.md)] MSC. Se você executar o relatório em uma estrutura de mineração que contenha estes tipos de modelos, os modelos não serão incluídos no relatório.  
@@ -42,7 +42,7 @@ ms.locfileid: "66086616"
 -   Clique em **Obter Resultados** para exibir os resultados de validação cruzada.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Número de partições**  
+ **Contagem de dobras**  
  Especifique o número de dobras ou partições para criar. O valor mínimo é 2, significando que a metade do conjunto de dados é usada para testar e metade para treinar.  
   
  O valor máximo é 10 para estruturas de mineração da sessão.  
@@ -52,12 +52,12 @@ ms.locfileid: "66086616"
 > [!NOTE]  
 >  À medida que você aumenta o número de partições, o tempo necessário para realizar a validação cruzada também aumenta em n. Você poderá enfrentar problemas de desempenho se o número de casos for grande e o valor de **Número de Partições** também for alto.  
   
- **Máx. de casos**  
+ **Máximo de casos**  
  Especificar o número máximo de casos para usar para validação cruzada. O número de casos em qualquer dobra em particular é igual ao valor de **Máx. de Casos** dividido pelo valor de **Número de Partições** .  
   
  Se você usar **0**, todas os casos nos dados de origem serão usados para validação cruzada.  
   
- Não há valor padrão.  
+ Não há um valor padrão.  
   
 > [!NOTE]  
 >  Ao aumentar o número de casos, o tempo de processamento também aumentara.  
@@ -74,7 +74,7 @@ ms.locfileid: "66086616"
   
  Desabilitado para modelos de clustering.  
   
- **Limite**  **de Destino**  
+ ******Limite** de destino    
  Especifique um valor entre 0 e 1 que indica a condição acima do estado previsível em que a probabilidade da previsão é considerada para estar correta. O valor pode ser definido em acréscimos de 0,1.  
   
  O padrão é `null`, indicando que a previsão mais provável é contada como correta.  
@@ -82,7 +82,7 @@ ms.locfileid: "66086616"
 > [!NOTE]  
 >  Embora você possa definir o valor como 0,0, usando este valor ira aumentar o tempo de processamento sem resultados significativos de rendimento.  
   
- **Obter resultados**  
+ **Obter Resultados**  
  Clique para começar a validação cruzada do modelo usando os parâmetros especificados.  
   
  O modelo é dividido no número especificado de dobras e um modelo separado é testado para cada dobra. Portanto, pode levar algum tempo para a validação cruzada retornar os resultados.  
@@ -96,12 +96,12 @@ ms.locfileid: "66086616"
   
  Por exemplo, suponha que três previsões são feitas para um determinado estado de destino, e as probabilidades de cada previsão são 0,05, 0,15 e 0,8. Se você definir o limite de 0,5, só uma previsão será contada como estando correta. Se você definir o **Limite** **do Destino** como 0,10, serão contadas duas previsões como estando corretas.  
   
- Quando **alvo** **limite** está definido como `null`, que é o valor padrão, a previsão mais provável para cada caso é contada como correta. No exemplo a pouco citado, 0,05, 0,15 e 0,8 são as probabilidades para previsões em três casos diferentes. Embora as probabilidades sejam muito diferentes, cada previsão será contada como correta, porque cada caso gera somente uma previsão e essas são as melhores previsões para esses casos.  
+ Quando o **limite** de **destino** é `null`definido como, que é o valor padrão, a previsão mais provável para cada caso é contada como correta. No exemplo a pouco citado, 0,05, 0,15 e 0,8 são as probabilidades para previsões em três casos diferentes. Embora as probabilidades sejam muito diferentes, cada previsão será contada como correta, porque cada caso gera somente uma previsão e essas são as melhores previsões para esses casos.  
   
-## <a name="see-also"></a>Consulte também  
- [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)   
- [Validação cruzada &#40;Analysis Services – Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Teste e validação &#40;mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)   
+ [&#40;de validação cruzada Analysis Services&#41;de mineração de dados](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Medidas no relatório de validação cruzada](data-mining/measures-in-the-cross-validation-report.md)   
- [Procedimentos armazenados da mineração de dados &#40;Analysis Services – Mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimentos armazenados de mineração de dados &#40;Analysis Services&#41;de mineração de dados](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727951"
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
@@ -59,7 +59,7 @@ ms.locfileid: "73727951"
 ## <a name="model-example"></a>Exemplo de modelo  
  No exemplo a seguir, os objetos no modelo Product agrupam logicamente os dados relativos aos produtos.  
   
- ![Exemplo de dados mestres de modelo de produto](../master-data-services/media/mds-conc-model.gif "Exemplo de dados mestres de modelo de produto")  
+ ![Exemplo de dados mestre de modelo de produto](../master-data-services/media/mds-conc-model.gif "Exemplo de dados mestre de modelo de produto")  
   
  Outros modelos comuns são:  
   
@@ -69,12 +69,12 @@ ms.locfileid: "73727951"
   
 -   Geografia, que pode incluir entidades tais como códigos postais, cidades, municípios, estados, províncias, regiões, territórios, países e continentes.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Criar um modelo para organizar seus dados mestre.|[Criar um modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|Alterar o nome de um modelo existente.|[Editar Modelo &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
+|Alterar o nome de um modelo existente.|[Editar &#40;de Master Data Services de modelo&#41;](../master-data-services/edit-model-master-data-services.md)|  
 |Excluir um modelo existente.|[Excluir um modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  

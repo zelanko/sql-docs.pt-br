@@ -1,5 +1,5 @@
 ---
-title: 'Lição 3: Gravar um backup de banco de dados completo no serviço de armazenamento de BLOBs do Azure | Microsoft Docs'
+title: 'Lição 3: gravar um backup de banco de dados completo no serviço de armazenamento de BLOBs do Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153471"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>Lição 3: Gravar um backup de banco de dados completo no serviço de armazenamento de BLOBs do Azure
+# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>Lição 3: Gravar um backup de banco de dados completo no Serviço de Armazenamento de Blobs do Azure
   Esta lição demonstra o uso da instrução TSQL para executar um backup de banco de dados completo no serviço de armazenamento de BLOBs do Azure.  
   
 ## <a name="perform-a-full-database-backup-to-the-azure-blob-storage-service"></a>Executar um backup de banco de dados completo para o serviço de armazenamento de BLOBs do Azure  
@@ -44,6 +44,6 @@ ms.locfileid: "70153471"
 5.  No Pesquisador de Objetos, conecte-se ao armazenamento do Azure. Procurar o contêiner e os arquivos de backup recém-criados.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 4: Execute uma restauração de um backup](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)de banco de dados completo.  
+ [Lição 4: executar uma restauração de um backup de banco de dados completo](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md).  
   
   

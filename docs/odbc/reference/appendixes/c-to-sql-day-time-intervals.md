@@ -1,5 +1,5 @@
 ---
-title: 'C para SQL: Intervalos de tempo do dia | Microsoft Docs'
+title: 'C to SQL: intervalos de tempo de dia | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3a4df236273b5afcaba78052ac236669bb133f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019367"
 ---
-# <a name="c-to-sql-day-time-intervals"></a>C para SQL: Intervalos de dia-horário
-Os identificadores para os tipos de dados do ODBC C de intervalo de tempo do dia são:  
+# <a name="c-to-sql-day-time-intervals"></a>C para SQL: intervalos de tempo-dia
+Os identificadores para os tipos de dados ODBC C de intervalo de tempo de dia são:  
   
  SQL_C_INTERVAL_DAY  
   
@@ -45,24 +45,24 @@ Os identificadores para os tipos de dados do ODBC C de intervalo de tempo do dia
   
  SQL_C_INTERVAL_MINUTE_TO_SECOND  
   
- A tabela a seguir mostra o ODBC do SQL para o qual o intervalo de dados C pode ser convertido de tipos de dados. Para obter uma explicação das colunas e os termos na tabela, consulte [conversão de dados do C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ A tabela a seguir mostra os tipos de dados ODBC do SQL para os quais os dados do intervalo C podem ser convertidos. Para obter uma explicação das colunas e dos termos na tabela, consulte [convertendo dados de C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
 |Identificador de tipo SQL|Teste|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|Comprimento de bytes da coluna > = comprimento de byte do caractere<br /><br /> Comprimento de bytes da coluna < caracteres de comprimento de bytes [a]<br /><br /> Valor de dados não é um literal de intervalo válido|n/d<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR[a]<br /><br /> SQL_WVARCHAR[a]<br /><br /> SQL_WLONGVARCHAR[a]|Comprimento de caracteres da coluna > = comprimento de caracteres de dados<br /><br /> Comprimento de caracteres da coluna < caracteres de comprimento de dados [a]<br /><br /> Valor de dados não é um literal de intervalo válido|n/d<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b] SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b] SQL_NUMERIC[b]<br /><br /> SQL_DECIMAL[b]|Conversão de um único campo de intervalo não resultou em truncamento de dígitos inteiros<br /><br /> Conversão resultou em truncamento de dígitos inteiros|n/d<br /><br /> 22003|  
-|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Valor de dados foi convertido sem truncamento de todos os campos<br /><br /> Um ou mais campos de valor de dados foram truncados durante conversão|n/d<br /><br /> 22015|  
+|SQL_CHAR [a]<br /><br /> SQL_VARCHAR [a]<br /><br /> SQL_LONGVARCHAR [a]|Comprimento de byte de coluna >= comprimento de byte de caractere<br /><br /> Comprimento de byte de coluna < comprimento de byte de caractere [a]<br /><br /> O valor dos dados não é um literal de intervalo válido|n/d<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Comprimento de caractere de coluna >= comprimento de caractere de dados<br /><br /> Comprimento de caracteres de coluna < comprimento de caractere de dados [a]<br /><br /> O valor dos dados não é um literal de intervalo válido|n/d<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|A conversão de um intervalo de campo único não resultou no truncamento de dígitos inteiros<br /><br /> A conversão resultou em truncamento de dígitos inteiros|n/d<br /><br /> 22003|  
+|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|O valor dos dados foi convertido sem truncamento de nenhum campo<br /><br /> Um ou mais campos de valor de dados foram truncados durante a conversão|n/d<br /><br /> 22015|  
   
- [a] tipos de dados de intervalo de todos os C podem ser convertido em um tipo de dados de caractere.  
+ [a] todos os tipos de dados de intervalo de C podem ser convertidos em um tipo de dados de caractere.  
   
- [b] se o campo de tipo na estrutura de intervalo é, de modo que o intervalo é de um único campo (SQL_DAY, SQL_HOUR, SQL_MINUTE ou SQL_SECOND), o intervalo de tipo C pode ser convertido em qualquer numérico exato (SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT SQL_DECIMAL ou SQL_NUMERIC).  
+ [b] se o campo de tipo na estrutura de intervalo for de tal forma que o intervalo seja um único campo (SQL_DAY, SQL_HOUR, SQL_MINUTE ou SQL_SECOND), o tipo de intervalo C poderá ser convertido em qualquer numérico exato (SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT , SQL_DECIMAL ou SQL_NUMERIC).  
   
- A conversão de padrão de um tipo de intervalo de C é o intervalo de tempo-dia tipo SQL correspondente.  
+ A conversão padrão de um tipo de intervalo C é para o tipo SQL de intervalo de tempo de dia correspondente.  
   
- O driver ignora o valor de comprimento/indicador ao converter dados do tipo de dados de intervalo de C e pressupõe que o tamanho do buffer de dados é o tamanho do tipo de dados C de intervalo. O valor de comprimento/indicador é passado a *StrLen_or_Ind* argumento na **SQLPutData** e no buffer especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**. O buffer de dados é especificado com o *DataPtr* argumento **SQLPutData** e o *ParameterValuePtr* argumento em **SQLBindParameter**.  
+ O driver ignora o valor de comprimento/indicador ao converter dados do tipo de dados do intervalo C e pressupõe que o tamanho do buffer de dados é o tamanho do tipo de dados do intervalo C. O valor de comprimento/indicador é passado no argumento *StrLen_or_Ind* em **SQLPutData** e no buffer especificado com o argumento *StrLen_or_IndPtr* em **SQLBindParameter**. O buffer de dados é especificado com o argumento *DataPtr* em **SQLPutData** e o argumento *ParameterValuePtr* em **SQLBindParameter**.  
   
- O exemplo a seguir demonstra como enviar dados de intervalo C armazenados na estrutura de SQL_INTERVAL_STRUCT em uma coluna de banco de dados. A estrutura de intervalo contém um intervalo de DAY_TO_SECOND. ele será armazenado em uma coluna de banco de dados do tipo SQL_INTERVAL_DAY_TO_MINUTE.  
+ O exemplo a seguir demonstra como enviar dados de intervalo C armazenados na estrutura de SQL_INTERVAL_STRUCT para uma coluna de banco de dados. A estrutura do intervalo contém um intervalo de DAY_TO_SECOND; Ele será armazenado em uma coluna de banco de dados do tipo SQL_INTERVAL_DAY_TO_MINUTE.  
   
 ```  
 SQL_INTERVAL_STRUCT is;  

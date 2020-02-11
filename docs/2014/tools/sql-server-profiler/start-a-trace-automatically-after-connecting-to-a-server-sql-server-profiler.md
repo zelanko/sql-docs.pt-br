@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: facde89ad6b476fa01b34badce10dd3cae52ecac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186124"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Iniciar um rastreamento automaticamente após a conexão com um servidor (SQL Server Profiler)
@@ -26,14 +26,14 @@ ms.locfileid: "68186124"
   
 ### <a name="to-start-a-trace-automatically-after-connecting-to-a-server-with-sql-server-profiler"></a>Para iniciar um rastreamento automaticamente após a conexão com um servidor de SQL Server Profiler  
   
-1.  No menu **Ferramentas**, clique em **Opções**.  
+1.  No menu **Ferramentas** , clique em **Opções**.  
   
 2.  Marque a caixa de seleção **Iniciar rastreamento imediatamente após estabelecer a conexão** .  
   
 > [!NOTE]  
 >  Se **Iniciar rastreamento imediatamente após estabelecer a conexão**estiver selecionado, a caixa de diálogo **Propriedades do Rastreamento**não será exibida e o rastreamento será iniciado. Para editar propriedades de rastreamento, você deve, primeiro, desativar essa configuração.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

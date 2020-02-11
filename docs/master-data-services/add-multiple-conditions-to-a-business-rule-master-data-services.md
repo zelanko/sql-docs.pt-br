@@ -13,10 +13,10 @@ ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728803"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Adicionar várias condições a uma regra de negócio (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73728803"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73728803"
   
 2.  Na barra de menus, aponte para **Gerenciar** e clique em **Regras de Negócios**.  
   
-3.  Na página **Regras de Negócio/** , na lista suspensa **Modelo** , selecione um modelo.  
+3.  Na página **regras de negócios/** , na lista suspensa **modelo** , selecione um modelo.  
   
 4.  Na lista suspensa **Entidade** , escolha uma entidade.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73728803"
   
 12. Preencha quaisquer campos obrigatórios.  
   
-13. Clique em **Salvar**. Uma nova linha será adicionada à grade **Se** .  
+13. Clique em **Save** (Salvar). Uma nova linha será adicionada à grade **Se** .  
   
 14. Como opção, para adicionar mais condições, complete as etapas 8 a 13.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73728803"
     > [!TIP]  
     >  Você pode selecionar várias condições e clicar com o botão direito para agrupá-las dentro de um operador lógico, ou para desagrupar condições dentro de um operador lógico específico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Alterar o nome de uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  

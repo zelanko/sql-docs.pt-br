@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244819"
 ---
 # <a name="add-transact-sql-snippets"></a>Adicionar snippets de Transact-SQL
@@ -32,17 +32,17 @@ ms.locfileid: "75244819"
   
 #### <a name="adding-a-snippet-folder"></a>Adicionando uma pasta de snippets  
   
-1.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 2.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
-3.  Clique no botão **Adicionar**.  
+3.  Clique no botão **Adicionar** .  
   
 4.  Navegue até a pasta que contém seus snippets de código e clique no botão **Selecionar Pasta** .  
   
 #### <a name="importing-a-snippet"></a>Importando um snippet  
   
-1.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 2.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "75244819"
     </CodeSnippets>  
     ```  
   
-2.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+2.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 3.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
@@ -111,6 +111,6 @@ ms.locfileid: "75244819"
 5.  Navegue até a pasta que contém TryCatch.snippet, clique no arquivo TryCatch.snippet e clique em **Abrir** . Você não deve ter um snippet TryCatch na pasta **Meus Snippets de Código** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Inserir trechos Transact-SQL com surround](insert-surround-with-transact-sql-snippets.md)  
+ [Inserir snippets Transact-SQL com Surround](insert-surround-with-transact-sql-snippets.md)  
   
   

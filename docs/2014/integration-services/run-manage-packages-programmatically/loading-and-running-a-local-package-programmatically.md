@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766888"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Carregando e executando um pacote local programaticamente
@@ -59,7 +59,7 @@ ms.locfileid: "62766888"
   
 2.  No menu **Projeto**, clique em **Adicionar Referência** e adicione uma referência a **Microsoft.SqlServer.ManagedDTS.dll**. Clique em **OK**.  
   
-3.  Usar o Visual Basic `Imports` instrução ou o c# `using` instrução de importação a **SQLServer** namespace.  
+3.  Use a instrução `Imports` Visual Basic ou a instrução `using` C# para importar o namespace **Microsoft. SqlServer. Dts. Runtime** .  
   
 4.  Adicione o código a seguir na rotina principal. O aplicativo de console completo deve ter a aparência do exemplo a seguir.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62766888"
   
 5.  Execute o projeto. O código de exemplo executa o pacote de exemplo CalculatedColumns que é instalado com os exemplos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O resultado da execução do pacote é exibido na janela de console.  
   
-### <a name="sample-code"></a>Código de exemplo  
+### <a name="sample-code"></a>Exemplo de código  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  
@@ -136,7 +136,7 @@ namespace RunFromClientAppCS
   
 3.  Execute o projeto. O código de exemplo executa o pacote de exemplo CalculatedColumns que é instalado com os exemplos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O resultado da execução do pacote é exibido na janela de console, junto com eventuais erros.  
   
-### <a name="sample-code"></a>Código de exemplo  
+### <a name="sample-code"></a>Exemplo de código  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  
@@ -223,9 +223,9 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compreender as diferenças entre execução local e remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Carregar e executar um pacote remoto programaticamente](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [Carregar a saída de um pacote local](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

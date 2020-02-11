@@ -1,5 +1,5 @@
 ---
-title: Parametrizar a caixa de diálogo | Microsoft Docs
+title: Caixa de diálogo Parametrizar | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056868"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
@@ -29,7 +29,7 @@ ms.locfileid: "66056868"
  **Usar parâmetro existente**  
  Selecione esta opção para associar a propriedade da tarefa a um parâmetro existente e, em seguida, selecione o parâmetro na lista suspensa.  
   
- **Não usar parâmetros**  
+ **Não usar parâmetro**  
  Selecione esta opção para remover uma referência a um parâmetro. O parâmetro não é excluído.  
   
  **Criar novo parâmetro**  
@@ -41,13 +41,13 @@ ms.locfileid: "66056868"
  **Descrição**  
  Especifique a descrição para o parâmetro.  
   
- **Value**  
+ **Valor**  
  Especifique o valor padrão para o parâmetro. Isto também é conhecido como o padrão de design que pode ser substituído posteriormente no momento da implantação.  
   
  **Escopo**  
  Especifique o escopo do parâmetro selecionando a opção **Projeto** ou **Pacote** . Os parâmetros do projeto são usados para fornecer uma entrada externa que o projeto recebe para um ou mais pacotes no projeto. Os parâmetros do pacote permitem modificar a execução do pacote sem a necessidade de editar e reimplantar o pacote.  
   
- **Confidencial**  
+ **Diferencia**  
  Especifique se o parâmetro é confidencial marcando ou desmarcando a caixa de seleção. Valores de parâmetros confidenciais são criptografados no catálogo e aparecem como um valor NULL quando exibidos com o Transact-SQL ou o SQL Server Management Studio.  
   
  **Necessário**  

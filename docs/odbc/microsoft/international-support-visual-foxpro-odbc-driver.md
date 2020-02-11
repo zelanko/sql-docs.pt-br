@@ -1,5 +1,5 @@
 ---
-title: Suporte internacional (Driver ODBC do Visual FoxPro) | Microsoft Docs
+title: Suporte internacional (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,25 +19,25 @@ ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e987c224f2d716fcab3bf898b1cb276e922e48ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085501"
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>Suporte internacional (Driver ODBC do Visual FoxPro)
-O Driver ODBC do Microsoft Visual FoxPro dá suporte a:  
+O driver ODBC do Microsoft Visual FoxPro oferece suporte a:  
   
--   Conjuntos de caracteres de byte duplo (DBCS)  
+-   DBCS (conjuntos de caracteres de byte duplo)  
   
 -   Várias sequências de agrupamento  
   
- Uma sequência de agrupamento define a *ordem de classificação* para dados armazenados em uma tabela do Visual FoxPro ou banco de dados. Por padrão, o driver está configurado para usar as sequências de agrupamento que dão suporte a versão de idioma do seu sistema operacional.  
+ Uma sequência de agrupamento define a *ordem de classificação* dos dados armazenados em uma tabela ou banco de dado do Visual FoxPro. Por padrão, o driver é configurado para usar as sequências de agrupamento que dão suporte à versão de idioma do seu sistema operacional.  
   
- Para obter uma lista de sequências de agrupamento com suporte, consulte [definir COLLATE](../../odbc/microsoft/set-collate-command.md).  
+ Para obter uma lista de sequências de agrupamento com suporte, consulte [set COLLATE](../../odbc/microsoft/set-collate-command.md).  
   
 ## <a name="locale"></a>localidade  
- O conjunto de informações que corresponde a um determinado idioma e país/região. Uma localidade indica as configurações específicas, como separadores decimais e ordem de classificação de caractere e formatos de hora e data.  
+ O conjunto de informações que corresponde a um determinado idioma e país/região. Uma localidade indica configurações específicas, como separadores decimais, formatos de data e hora e ordem de classificação de caracteres.  
   
 ## <a name="sort-order"></a>ordem de classificação  
- Ordens de classificação incorporam as regras de classificação diferentes *localidade*s, permitindo que você classificar corretamente os dados nesses idiomas. No Visual FoxPro, a ordem de classificação atual determina os resultados das comparações de expressão de caractere e a ordem na qual os registros aparecem no indexadas ou tabelas de classificados.
+ As ordens de classificação incorporam as regras de classificação de diferentes *locais*, permitindo que você classifique os dados nesses idiomas corretamente. No Visual FoxPro, a ordem de classificação atual determina os resultados das comparações de expressão de caractere e a ordem na qual os registros aparecem em tabelas indexadas ou classificadas.

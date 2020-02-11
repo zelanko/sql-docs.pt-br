@@ -14,47 +14,47 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091328"
 ---
-# <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>Funções definidas pelo usuário não são permitidas no system_function_schema
-  O Supervisor de atualização detectou funções definidas pelo usuário que são propriedade do usuário não documentado **system_function_schema**. Você não pode criar uma função de sistema definida pelo usuário especificando esse usuário. O **system_function_schema** nome de usuário não existe e a ID de usuário que está associado com esse nome (UID = 4) é reservada para o **sys** esquema e restrita para uso interno apenas.  
+# <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>Funções definidas pelo usuário não são permitidas no system_function_schema
+  O supervisor de atualização detectou funções definidas pelo usuário que são de Propriedade do usuário não documentado **system_function_schema**. Você não pode criar uma função de sistema definida pelo usuário especificando esse usuário. O nome de usuário **system_function_schema** não existe e a ID de usuário que está associada a esse nome (UID = 4) é reservada para o esquema **Sys** e é restrita somente ao uso interno.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  O armazenamento de objeto de sistema mudou da seguinte maneira:  
   
--   Objetos de sistema são armazenados em somente leitura **recurso** de banco de dados e direcionar atualizações de objeto do sistema não são permitidas.  
+-   Os objetos do sistema são armazenados no banco de dados de **recursos** somente leitura e as atualizações diretas do objeto do sistema não são permitidas.  
   
-     Objetos do sistema aparecem logicamente na **sys** esquema de cada banco de dados. Isso mantém a habilidade para invocar funções de sistema de qualquer banco de dados especificando um nome de função de uma parte. Por exemplo, a instrução `SELECT * FROM fn_helpcollations()` pode ser executada de qualquer banco de dados.  
+     Os objetos do sistema aparecem logicamente no esquema **Sys** de cada banco de dados. Isso mantém a habilidade para invocar funções de sistema de qualquer banco de dados especificando um nome de função de uma parte. Por exemplo, a instrução `SELECT * FROM fn_helpcollations()` pode ser executada de qualquer banco de dados.  
   
--   O usuário não documentado **system_function_schema** foi removido.  
+-   A **system_function_schema** de usuário não documentada foi removida.  
   
--   O usuário associado à ID **system_function_schema** (UID = 4) é reservada para o **sys** esquema e restrita para uso interno apenas.  
+-   A ID de usuário associada a **system_function_schema** (UID = 4) é reservada para o esquema **Sys** e é restrita somente ao uso interno.  
   
  Essas alterações têm o seguinte efeito em funções de sistema definidas pelo usuário:  
   
--   Instruções do Data Definition Language (DDL) que referenciam **system_function_schema** falhará. Por exemplo, a instrução `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... não terá êxito.  
+-   Instruções DDL (linguagem de definição de dados) que fazem referência a **system_function_schema** falharão. Por exemplo, a instrução `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... Não terá sucesso.  
   
--   Depois de atualizar para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], objetos existentes que são de propriedade **system_function_schema** estão contidas no apenas o **sys** esquema do **mestre** banco de dados. Como objetos do sistema não podem ser modificados, essas funções nunca podem ser alteradas ou descartadas do **mestre** banco de dados. Além disso, essas funções não podem ser invocadas a partir de outros bancos de dados pela especificação apenas de um nome de função de uma parte.  
+-   Depois de atualizar para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o, os objetos existentes que pertencem a **system_function_schema** estão contidos apenas no esquema **Sys** do banco de dados **mestre** . Como os objetos do sistema não podem ser modificados, essas funções nunca podem ser alteradas ou removidas do banco de dados **mestre** . Além disso, essas funções não podem ser invocadas a partir de outros bancos de dados pela especificação apenas de um nome de função de uma parte.  
   
 ## <a name="corrective-action"></a>Ação corretiva  
  Antes da atualização, faça o seguinte:  
   
-1.  Alterar a propriedade das funções existentes definidas pelo usuário para **dbo** usando o **sp_changeobjectowner** procedimento armazenado do sistema.  
+1.  Altere a propriedade das funções definidas pelo usuário existentes para **dbo** usando o procedimento armazenado do sistema **sp_changeobjectowner** .  
   
 2.  Considere renomear a função de forma que ela não use o prefixo ‘fn_’. Isso evitará potenciais conflitos de nome com atuais ou futuras funções de sistema.  
   
 3.  Adicione uma cópia das funções modificadas a todos os bancos de dados que as usam.  
   
-4.  Substitua referências a **system_function_schema** com **dbo** em todos os scripts que contêm instruções DDL de funções definidas pelo usuário.  
+4.  Substitua referências a **system_function_schema** com **dbo** em todos os scripts que contêm instruções DDL da função definida pelo usuário.  
   
-5.  Modifique os scripts que invocam essas funções para usar qualquer nome de duas partes dbo **.** _function_name_, ou o nome de três partes _database_name_ **.** dbo. *function_name*.  
+5.  Modifique os scripts que chamam essas funções para usar o nome dbo de duas partes **.** _function_name_ou o nome de três partes _database_name_**.** dbo. *function_name*.  
   
  Para obter mais informações, consulte os seguintes tópicos dos Manuais Online do SQL Server:  
   
@@ -64,9 +64,9 @@ ms.locfileid: "66091328"
   
 -   ‘Banco de dados Recurso’  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)   
- [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Remover instruções que modificam objetos do sistema](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
  [Remover instruções que descartam objetos do sistema](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_test_connection (Transact-SQL) | Microsoft Docs
+title: sys. sp_rda_test_connection (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,13 +17,13 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305158"
 ---
-# <a name="syssp_rda_test_connection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
+# <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Testa a conexão de SQL Server para o servidor remoto do Azure e relata problemas que podem impedir a migração de dados.  
@@ -42,41 +42,41 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @database_name = N'*db_name*'  
+ @database_name= N '*db_name*'  
  O nome do banco de dados de SQL Server habilitado para Stretch. Esse parâmetro é opcional.  
   
- @server_address = N'*azure_server_fully_qualified_address*'  
+ @server_address= N '*azure_server_fully_qualified_address*'  
  O endereço totalmente qualificado do servidor do Azure.  
   
--   Se você fornecer um valor para **\@database_name**, mas o banco de dados especificado não estiver habilitado para Stretch, você precisará fornecer um valor para **\@server_address**.  
+-   Se você fornecer um valor para ** \@database_name**, mas o banco de dados especificado não estiver habilitado para Stretch, você precisará fornecer um valor para ** \@server_address**.  
   
--   Se você fornecer um valor para **\@database_name**e o banco de dados especificado estiver habilitado para Stretch, você não precisará fornecer um valor para **\@server_address**. Se você fornecer um valor para **\@server_address**, o procedimento armazenado o ignorará e usará o servidor do Azure existente já associado ao banco de dados habilitado para Stretch.  
+-   Se você fornecer um valor para ** \@database_name**e o banco de dados especificado estiver habilitado para Stretch, você não precisará fornecer um valor para ** \@server_address**. Se você fornecer um valor para ** \@server_address**, o procedimento armazenado o ignorará e usará o servidor do Azure existente já associado ao banco de dados habilitado para Stretch.  
   
- @azure_username = N'*azure_username*  
+ @azure_username= N '*azure_username*  
  O nome de usuário para o servidor remoto do Azure.  
   
- @azure_password = N'*azure_password*'  
+ @azure_password= N '*azure_password*'  
  A senha do servidor remoto do Azure.  
   
- @credential_name = N'*credential_name*'  
+ @credential_name= N '*credential_name*'  
  Em vez de fornecer um nome de usuário e senha, você pode fornecer o nome de uma credencial armazenada no banco de dados habilitado para Stretch.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- No caso de **sucesso**, sp_rda_test_connection retorna o erro 14855 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) com severidade EX_INFO e um código de retorno de êxito.  
+ No caso de **sucesso**, sp_rda_test_connection retorna o erro 14855 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) com EX_INFO de severidade e um código de retorno de sucesso.  
   
- Em caso de **falha**, sp_rda_test_connection retorna o erro 14856 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED) com severidade EX_USER e um código de retorno de erro.  
+ Em caso de **falha**, sp_rda_test_connection retorna o erro 14856 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED) com EX_USER de severidade e um código de retorno de erro.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|link_state|int|Um dos valores a seguir, que correspondem aos valores de **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|Um dos valores a seguir, que correspondem aos valores anteriores para **link_state**.<br /><br /> -ÍNTEGRO<br />     O entre SQL Server e o servidor remoto do Azure está íntegro.<br />-   ERROR_AZURE_FIREWALL<br />     O Firewall do Azure está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.<br />-   ERROR_NO_CONNECTION<br />     SQL Server não pode estabelecer uma conexão com o servidor remoto do Azure.<br />-   ERROR_AUTH_FAILURE<br />     Uma falha de autenticação está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.<br />-ERRO<br />     Um erro que não é um problema de autenticação, um problema de conectividade ou um problema de firewall está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.|  
-|error_number|int|O número do erro. Se não houver nenhum erro, esse campo será nulo.|  
+|link_state|INT|Um dos valores a seguir, que correspondem aos valores de **link_state_desc**.<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
+|link_state_desc|varchar (32)|Um dos valores a seguir, que correspondem aos valores anteriores para **link_state**.<br /><br /> -ÍNTEGRO<br />     O entre SQL Server e o servidor remoto do Azure está íntegro.<br />-ERROR_AZURE_FIREWALL<br />     O Firewall do Azure está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.<br />-ERROR_NO_CONNECTION<br />     SQL Server não pode estabelecer uma conexão com o servidor remoto do Azure.<br />-ERROR_AUTH_FAILURE<br />     Uma falha de autenticação está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.<br />-ERRO<br />     Um erro que não é um problema de autenticação, um problema de conectividade ou um problema de firewall está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.|  
+|error_number|INT|O número do erro. Se não houver nenhum erro, esse campo será nulo.|  
 |error_message|nvarchar(1024)|A mensagem de erro. Se não houver nenhum erro, esse campo será nulo.|  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissões db_owner.  
+ Requer db_owner permissões.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -92,7 +92,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*número de erro relacionado a \<connection >*|*mensagem de erro relacionada a \<connection >*|  
+|2|ERROR_NO_CONNECTION|*\<número de erro relacionado à conexão>*|*\<mensagem de erro relacionada à conexão>*|  
   
 ### <a name="check-the-azure-firewall"></a>Verificar o Firewall do Azure  
   
@@ -108,7 +108,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*número de erro relacionado a \<Firewall >*|*mensagem de erro relacionada a \<Firewall >*|  
+|1|ERROR_AZURE_FIREWALL|*\<número de erro relacionado ao firewall>*|*\<mensagem de erro relacionada ao firewall>*|  
   
 ### <a name="check-authentication-credentials"></a>Verificar credenciais de autenticação  
   
@@ -124,7 +124,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*número de erro relacionado a \<authentication >*|*mensagem de erro relacionada a \<authentication >*|  
+|3|ERROR_AUTH_FAILURE|*\<número de erro relacionado à autenticação>*|*\<mensagem de erro relacionada à autenticação>*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>Verificar o status do servidor remoto do Azure  
   
@@ -143,6 +143,6 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|0|HEALTHY|NULL|NULL|  
+|0|HEALTHY|NULO|NULO|  
   
   

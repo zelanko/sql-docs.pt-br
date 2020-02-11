@@ -18,10 +18,10 @@ ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305057"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72305057"
 
   Concede permissão para uma entidade de banco de dados msdb usar um perfil de Database Mail. A entidade de segurança do banco de dados deve ser mapeada para um usuário de autenticação SQL Server, um usuário do Windows ou um grupo do Windows.
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,25 +41,25 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @principal_id = ] principal_id` a ID do usuário do banco de dados ou da função no banco de dados **msdb** para a associação. *principal_id* é **int**, com um padrão de NULL. O *principal_id* ou *principal_name* deve ser especificado. Um *principal_id* de **0** torna esse perfil um perfil público, concedendo acesso a todas as entidades de segurança no banco de dados.  
+`[ @principal_id = ] principal_id`A ID do usuário do banco de dados ou da função no banco de dados **msdb** para a associação. *principal_id* é **int**, com um padrão de NULL. O *principal_id* ou *principal_name* deve ser especificado. Um *principal_id* de **0** torna esse perfil um perfil público, concedendo acesso a todas as entidades de segurança no banco de dados.  
   
-`[ @principal_name = ] 'principal_name'` o nome do usuário do banco de dados ou da função no banco de dados **msdb** para a associação. *principal_name* é **sysname**, com um padrão de NULL. O *principal_id* ou *principal_name* deve ser especificado. Uma *principal_name* de **' Public '** torna esse perfil um perfil público, concedendo acesso a todas as entidades no banco de dados.  
+`[ @principal_name = ] 'principal_name'`O nome do usuário ou da função do banco de dados no banco de dados **msdb** para a associação. *principal_name* é **sysname**, com um padrão de NULL. O *principal_id* ou *principal_name* deve ser especificado. Uma *principal_name* de **' Public '** torna esse perfil um perfil público, concedendo acesso a todas as entidades no banco de dados.  
   
-`[ @profile_id = ] profile_id` a ID do perfil para a associação. *profile_id* é **int**, com um padrão de NULL. O *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_id = ] profile_id`A ID do perfil para a associação. *profile_id* é **int**, com um padrão de NULL. O *profile_id* ou *profile_name* deve ser especificado.  
   
-`[ @profile_name = ] 'profile_name'` o nome do perfil para a associação. *profile_name* é **sysname**, sem padrão. O *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_name = ] 'profile_name'`O nome do perfil para a associação. *profile_name* é **sysname**, sem padrão. O *profile_id* ou *profile_name* deve ser especificado.  
   
-`[ @is_default = ] is_default` especifica se esse perfil é o perfil padrão para a entidade de segurança. Uma entidade de segurança deve ter exatamente um perfil padrão. *is_default* é **bit**, sem padrão.  
+`[ @is_default = ] is_default`Especifica se esse perfil é o perfil padrão para a entidade de segurança. Uma entidade de segurança deve ter exatamente um perfil padrão. *is_default* é **bit**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
- Para tornar um perfil público, especifique um **\@principal_id** de **0** ou uma **\@principal_name** do **público**. Um perfil público está disponível para todos os usuários no banco de dados **msdb** , embora os usuários também devam ser membros de **DatabaseMailUserRole** para executar **sp_send_dbmail**.  
+## <a name="remarks"></a>Comentários  
+ Para tornar um perfil público, especifique um ** \@principal_id** de **0** ou um ** \@principal_name** de **público**. Um perfil público está disponível para todos os usuários no banco de dados **msdb** , embora os usuários também devam ser membros de **DatabaseMailUserRole** para executar **sp_send_dbmail**.  
   
- Um usuário de banco de dados pode ter somente um perfil padrão. Quando **\@is_default** for '**1**' e o usuário já estiver associado a um ou mais perfis, o perfil especificado se tornará o perfil padrão para o usuário. O perfil que anteriormente era o padrão permanecerá associado ao usuário, mas deixará de ser o perfil padrão.  
+ Um usuário de banco de dados pode ter somente um perfil padrão. Quando ** \@is_default** for '**1**' e o usuário já estiver associado a um ou mais perfis, o perfil especificado se tornará o perfil padrão para o usuário. O perfil que anteriormente era o padrão permanecerá associado ao usuário, mas deixará de ser o perfil padrão.  
   
- Quando **\@is_default** for '**0**' e nenhuma outra associação existir, o procedimento armazenado retornará um erro.  
+ Quando ** \@is_default** for '**0**' e nenhuma outra associação existir, o procedimento armazenado retornará um erro.  
   
  O procedimento armazenado **sysmail_add_principalprofile_sp** está no banco de dados **msdb** e pertence ao esquema **dbo** . O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
@@ -67,9 +67,9 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  As permissões de execução para este procedimento assumem como padrão os membros da função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
- **A. criando uma associação, configurando o perfil padrão**  
+ **A. Criando uma associação, definindo o perfil padrão**  
   
- O exemplo a seguir cria uma associação entre o perfil chamado `AdventureWorks Administrator Profile` e o usuário do banco de dados **msdb** `ApplicationUser`. O perfil é o perfil padrão para o usuário.  
+ O exemplo a seguir cria uma associação entre o perfil `AdventureWorks Administrator Profile` chamado e o usuário `ApplicationUser`do banco de dados **msdb** . O perfil é o perfil padrão para o usuário.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -78,9 +78,9 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
- **B. criando um perfil do perfil público padrão**  
+ **B. Tornando um perfil o perfil público padrão**  
   
- O exemplo a seguir torna o perfil `AdventureWorks Public Profile` perfil público padrão para usuários no banco de dados **msdb** .  
+ O exemplo a seguir torna o `AdventureWorks Public Profile` perfil o perfil público padrão para usuários no banco de dados **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -89,9 +89,9 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Objetos de configuração do Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail procedimentos &#40;armazenados TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail objetos de configuração](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

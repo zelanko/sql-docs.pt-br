@@ -14,23 +14,23 @@ ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f67d313f5a1261dba1f88e9ef3a70d30c1cd503
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019180"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Restrições do calendário gregoriano
-Tipos de dados de data e a data e hora e os campos à direita dos tipos de dados de intervalo, devem estar em conformidade com as restrições do calendário gregoriano. Essas restrições são da seguinte maneira:  
+Os tipos de dados Date e DateTime, e os campos à direita dos tipos de dados Interval, devem estar em conformidade com as restrições do calendário gregoriano. Essas restrições são as seguintes:  
   
--   O valor do campo de mês deve estar entre 1 e 12, inclusive.  
+-   O valor do campo mês deve estar entre 1 e 12, inclusive.  
   
--   O valor do campo dia deve ser no intervalo entre 1 e o número de dias no mês. O número de dias do mês é determinado a partir de valores dos campos de ano e meses e pode ser 28, 29, 30 ou 31. (O número de dias no mês também pode depender se ele é um ano bissexto.)  
+-   O valor do campo dia deve estar no intervalo entre 1 e o número de dias do mês. O número de dias no mês é determinado dos valores dos campos year e months e pode ser 28, 29, 30 ou 31. (O número de dias no mês também pode depender se é um ano bissexto.)  
   
 -   O valor do campo de hora deve estar entre 0 e 23, inclusive.  
   
--   O valor do campo minuto deve estar entre 0 e 59, inclusive.  
+-   O valor do campo de minuto deve estar entre 0 e 59, inclusive.  
   
--   Para o campo de segundos à direita dos tipos de dados de intervalo, o valor do campo de segundos deve estar entre 0 e 59.9 (*n*), inclusive, onde *n* é o número de dígitos na precisão de frações de segundo.  
+-   Para o campo segundos à direita dos tipos de dados de intervalo, o valor do campo segundos deve estar entre 0 e 59,9 (*n*), inclusive, em que *n* é o número de dígitos na precisão de segundos fracionários.  
   
--   Para o campo de segundos à direita dos tipos de dados de data e hora, o valor do campo de segundos deve estar entre 0 e 61.9 (*n*), inclusive, onde *n* Especifica o número de dígitos "9" e o valor de *n*  é a precisão de frações de segundo. (O intervalo de segundos permite até dois segundos intercalares para manter a sincronização de tempo de sidereal).
+-   Para o campo segundos à direita dos tipos de dados DateTime, o valor do campo segundos deve estar entre 0 e 61,9 (*n*), inclusive, em que *n* especifica o número de dígitos "9" e o valor de *n* é a precisão de segundos fracionários. (O intervalo de segundos permite que até dois segundos bissextos mantenham a sincronização do tempo de Sidereal.)

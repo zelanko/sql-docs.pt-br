@@ -1,5 +1,5 @@
 ---
-title: Editor de origem do ADO NET (página Gerenciador de Conexão) | Microsoft Docs
+title: Editor de origem ADO NET (página Gerenciador de conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061685"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Editor de origem ADO NET (Página Gerenciador de Conexões)
@@ -24,7 +24,7 @@ ms.locfileid: "66061685"
   
  Para obter mais informações sobre a origem ADO NET, consulte [ADO NET Source](data-flow/ado-net-source.md).  
   
- **Para abrir a página Gerenciador de Conexões**  
+ **Para abrir a página Gerenciador de conexões**  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que tenha a origem ADO NET.  
   
@@ -36,19 +36,19 @@ ms.locfileid: "66061685"
  **Gerenciador de conexões ADO.NET**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Configurar Gerenciador de Conexões ADO NET** .  
   
  **Modo de acesso aos dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |Tabela ou exibição|Recupere os dados de uma tabela ou visualize na fonte de dados [!INCLUDE[vstecado](../includes/vstecado-md.md)] .|  
 |Comando SQL|Recupere os dados da fonte de dados [!INCLUDE[vstecado](../includes/vstecado-md.md)] usando uma consulta SQL.|  
   
  **Visualização**  
- Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A**visualização** pode exibir até 200 linhas.  
+ Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A **Visualização** pode exibir até 200 linhas.  
   
 > [!NOTE]  
 >  Quando você visualiza os dados, as colunas com um tipo de dado CLR definido pelo usuário não contêm dados. Em vez disso, o valor \<valor muito grande para ser exibido> ou System.Byte[] é exibido. O primeiro é exibido quando a fonte de dados é acessada usando o provedor [!INCLUDE[vstecado](../includes/vstecado-md.md)] , o último ao usar o provedor Native Client do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -56,22 +56,22 @@ ms.locfileid: "66061685"
 ## <a name="data-access-mode-dynamic-options"></a>Opções dinâmicas de modo de acesso aos dados  
   
 ### <a name="data-access-mode--table-or-view"></a>Modo de acesso aos dados = Tabela ou exibição  
- **Nome da tabela ou da exibição**  
+ **Nome da tabela ou exibição**  
  Selecione o nome da tabela ou da exibição na lista de tabelas ou exibições disponíveis na fonte de dados.  
   
 ### <a name="data-access-mode--sql-command"></a>Modo de acesso aos dados = Comando SQL  
  **Texto do comando SQL**  
  Digite o texto de uma consulta SQL, crie a consulta clicando em **Construir Consulta**ou localize o arquivo que contém o texto da consulta clicando em **Procurar**.  
   
- **Construir consulta**  
+ **Compilar consulta**  
  Use a caixa de diálogo **Construtor de Consultas** para construir a consulta SQL visualmente.  
   
  **Procurar**  
  Use a caixa de diálogo **Abrir** para localizar o arquivo com contém o texto da consulta SQL.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de Origem ADO NET &#40;Página Colunas&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [Editor de Origem ADO NET &#40;Página Saída de Erro&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Editor de origem ADO NET &#40;página colunas&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Editor de origem ADO NET &#40;página saída de erro&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gerenciador de conexões ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

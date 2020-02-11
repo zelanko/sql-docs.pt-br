@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774964"
 ---
 # <a name="upgrade-database-engine"></a>Atualizar o Mecanismo de Banco de Dados
@@ -37,13 +37,13 @@ ms.locfileid: "62774964"
 -   Tarefas posteriores à atualização e considerações.  
   
 ## <a name="known-upgrade-issues"></a>Problemas de atualização conhecidos  
- Antes de atualizar o [!INCLUDE[ssDE](../../includes/ssde-md.md)], analise o tópico [Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server](../sql-server-database-engine-backward-compatibility.md). Para obter mais informações sobre cenários de atualização compatíveis e problemas conhecidos de atualização, consulte [Versões com Suporte e Atualizações de Edição](supported-version-and-edition-upgrades.md). Para obter conteúdo de compatibilidade com versões anteriores para outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Compatibilidade com Versões Anteriores](../../getting-started/backward-compatibility.md).  
+ Antes de atualizar o [!INCLUDE[ssDE](../../includes/ssde-md.md)], revise [SQL Server Database Engine Backward Compatibility](../sql-server-database-engine-backward-compatibility.md). Para obter mais informações sobre cenários de atualização compatíveis e problemas conhecidos de atualização, consulte [Versões com Suporte e Atualizações de Edição](supported-version-and-edition-upgrades.md). Para obter conteúdo de compatibilidade com versões anteriores para outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Backward Compatibility](../../getting-started/backward-compatibility.md).  
   
 > [!IMPORTANT]  
 >  Antes de atualizar de uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra, verifique se há suporte à funcionalidade usada atualmente na edição para a qual está atualizando.  
   
 > [!NOTE]  
->  Quando você atualiza [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, escolha entre Enterprise Edition: Licenciamento baseado em núcleo e Enterprise Edition. Estas edições Enterprise só diferem com relação aos modos de licenciamento. Para saber mais, confira [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Quando você atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de uma versão anterior da edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, escolha entre Enterprise Edition: Licenciamento baseado em núcleo e Enterprise Edition. Estas edições Enterprise só diferem com relação aos modos de licenciamento. Para obter mais informações, consulte [computação Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Lista de verificação anterior à atualização  
  O programa de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de uma versão anterior. Também é possível migrar bancos de dados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A migração pode ser feita de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra no mesmo computador ou de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em outro computador. As opções de migração incluem o uso do Assistente para Copiar Banco de Dados, a funcionalidade de backup e restauração, o uso do Assistente para Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e de métodos de importação/exportação em massa.  
@@ -62,7 +62,7 @@ ms.locfileid: "62774964"
   
 -   Analise o tópico [Usar o Distributed Replay Utility para preparar para atualizações](../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md).  
   
--   Analise o tópico [Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server](../sql-server-database-engine-backward-compatibility.md).  
+-   Analise os [SQL Server Database Engine Backward Compatibility](../sql-server-database-engine-backward-compatibility.md).  
   
 -   Analise o tópico [Migrar planos de consulta](change-the-database-compatibility-mode-and-use-the-query-store.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62774964"
   
 -   Execute os comandos DBCC (Database Console Commands) apropriados nos bancos de dados a serem atualizados para verificar se eles se encontram em um estado consistente.  
   
--   Calcule o espaço em disco necessário para atualizar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , além dos bancos de dados de usuários. Para obter o espaço em disco necessário pelos componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Requisitos de Hardware e Software para Instalar o SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+-   Calcule o espaço em disco necessário para atualizar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , além dos bancos de dados de usuários. Para obter o espaço em disco necessário pelos componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   Verifique se os bancos de dados do sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existentes - master, model, msdb e tempdb - estão configurados para crescimento automático e verifique se eles têm espaço suficiente no disco rígido.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62774964"
  Você pode atualizar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] por meio do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Nível de compatibilidade do banco de dados após a atualização  
- Os níveis de compatibilidade do `tempdb`, `model`, `msdb` e **recurso** bancos de dados são definidos como 120 depois da atualização. O banco de dados do sistema `master` mantém o nível de compatibilidade anterior à atualização.  
+ Os níveis de compatibilidade dos `tempdb`bancos `model`de `msdb` dados de **recursos** , e são definidos como 120 após a atualização. O banco de dados do sistema `master` mantém o nível de compatibilidade anterior à atualização.  
   
  Se o nível de compatibilidade de um banco de dados de usuário era 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade era 90 antes da atualização, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -124,7 +124,8 @@ ms.locfileid: "62774964"
   
 -   Preencha novamente catálogos de texto completo para garantir a consistência semântica em resultados da consulta.  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala novos separadores de palavras para uso pela Pesquisa semântica e de texto completo. Os separadores de palavras são usados na indexação e na consulta. Se você não recriar os catálogos de texto completo, seus resultados da pesquisa poderão ser inconsistentes. Se você emitir uma consulta de texto completo que procura uma frase que é interrompida diferentemente pelo separador de palavras em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o separador de palavras atual, um documento ou linha contendo a frase talvez não seja recuperada. Isso ocorre porque as frases indexadas foram quebradas usando uma lógica diferente da usada pela consulta. A solução é preencher novamente (recompilar) os catálogos de texto completo com os novos separadores de palavras de forma que os comportamentos de tempo de indexação e de consulta sejam idênticos.  
+     
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala novos separadores de palavras para uso pela Pesquisa semântica e de texto completo. Os separadores de palavras são usados na indexação e na consulta. Se você não recriar os catálogos de texto completo, seus resultados da pesquisa poderão ser inconsistentes. Se você emitir uma consulta de texto completo que procura uma frase que é interrompida diferentemente pelo separador de palavras em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o separador de palavras atual, um documento ou linha contendo a frase talvez não seja recuperada. Isso ocorre porque as frases indexadas foram quebradas usando uma lógica diferente da usada pela consulta. A solução é preencher novamente (recompilar) os catálogos de texto completo com os novos separadores de palavras de forma que os comportamentos de tempo de indexação e de consulta sejam idênticos.  
   
      Para obter mais informações, consulte [sp_fulltext_catalog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql).  
   
@@ -134,7 +135,7 @@ ms.locfileid: "62774964"
   
      O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] altera o modo como as consultas em tabelas e índices particionados são processadas. As consultas em objetos particionados que usam a dica USE PLAN para um plano gerado pelo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] podem conter um plano que não pode ser usado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Recomenda-se os seguintes procedimentos após a atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-     **Quando a dica USE PLAN é especificada diretamente em uma consulta:**  
+     **Quando a dica USE PLAN for especificada diretamente em uma consulta:**  
   
     1.  Remova a dica USE PLAN da consulta.  
   
@@ -142,7 +143,7 @@ ms.locfileid: "62774964"
   
     3.  Se o otimizador não selecionar um plano apropriado, ajuste a consulta e considere a especificação da dica USE PLAN com o plano de consulta desejado.  
   
-     **Quando a dica USE PLAN é especificada em um guia de plano:**  
+     **Quando a dica USE PLAN for especificada em uma guia de plano:**  
   
     1.  Use a função sys.fn_validate_plan_guide para verificar a validade da guia de plano. Como alternativa, é possível verificar se existem planos inválidos por meio do evento Guia de Plano sem Êxito no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
@@ -162,7 +163,7 @@ EXEC sp_fulltext_service 'pause_indexing', 1;
 EXEC sp_fulltext_service 'pause_indexing', 0;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualizações de versão e edição com suporte](supported-version-and-edition-upgrades.md)   
  [Trabalhar com várias versões e instâncias do SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Compatibilidade com versões anteriores](../../getting-started/backward-compatibility.md)   

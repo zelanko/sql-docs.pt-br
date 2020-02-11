@@ -1,5 +1,5 @@
 ---
-title: Atualizar sintaxe de token em etapas de trabalho do SQL Server Agent | Microsoft Docs
+title: Atualizar a sintaxe de token em etapas de trabalho SQL Server Agent | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091673"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>Atualizar sintaxe de token em etapas de trabalho do SQL Server Agent
@@ -26,12 +26,12 @@ ms.locfileid: "66091673"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-## <a name="description"></a>Descrição  
- Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usa parênteses, por exemplo, $(DATE), em vez de colchetes, como [DATE].  
+## <a name="description"></a>DESCRIÇÃO  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agent usa parênteses, como $ (Date), em vez de colchetes, como [data].  
   
  Para obter mais informações, consulte "Usando tokens em etapas de trabalho” nos Manuais Online do  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Problemas de atualização do SQL Server Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

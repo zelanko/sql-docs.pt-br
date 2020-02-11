@@ -1,5 +1,5 @@
 ---
-title: Opções (Editor de texto - página de Transact-SQL – geral) | Microsoft Docs
+title: Opções (página Editor de texto – Transact-SQL – geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089165"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>Opções (Editor de texto - página de Transact-SQL – geral)
-  Use a caixa de diálogo de opções **Geral** para alterar o comportamento de edição geral do Editor de Consultas do [!INCLUDE[ssDE](../includes/ssde-md.md)] , que é usado para editar scripts [!INCLUDE[tsql](../includes/tsql-md.md)] . Para exibir essas configurações, clique em **Opções** , no menu **Ferramentas** , expanda a subpasta **Transact-SQL** e clique em **Geral**.  
+# <a name="options-text-editor---transact-sql--general-page"></a>Opções (página Editor de texto – Transact-SQL – geral)
+  Use a caixa de diálogo de opções **Geral** para alterar o comportamento de edição geral do Editor de Consultas do [!INCLUDE[ssDE](../includes/ssde-md.md)] , que é usado para editar scripts [!INCLUDE[tsql](../includes/tsql-md.md)] . Para exibir essas configurações, clique em **Opções** no menu **Ferramentas**, expanda a subpasta **Transact-SQL** e clique em **Geral**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Definindo as opções em vários locais  
- As opções do Editor de Consultas do [!INCLUDE[ssDE](../includes/ssde-md.md)] também podem ser definidas na caixa de diálogo **Todos os Idiomas - Geral** . Ao usar as caixas de diálogo **Todos os Idiomas** para definir diferentes opções para os outros editores do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como o DMX ou MDX, você deverá redefinir as opções do Editor de Consultas do [!INCLUDE[ssDE](../includes/ssde-md.md)] usando essa caixa de diálogo.  
+ As opções para [!INCLUDE[ssDE](../includes/ssde-md.md)] o editor de consultas também podem ser definidas na caixa de diálogo **todos os idiomas geral** . Se você usar as caixas de diálogo **todos os idiomas** para definir opções diferentes para [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] os outros editores, como os editores DMX ou MDX, você deverá redefinir [!INCLUDE[ssDE](../includes/ssde-md.md)] as opções do editor de consultas usando essa caixa de diálogo.  
   
 ## <a name="statement-completion"></a>Conclusão de instrução  
  **Listar membros automaticamente**  
@@ -41,13 +41,13 @@ ms.locfileid: "66089165"
  **Habilitar espaço virtual**  
  Quando esta caixa de seleção está marcada, você pode clicar em qualquer ponto além do final de uma linha de código e digitar. Marque esta caixa de seleção para posicionar comentários em um ponto consistente próximo ao código. Marcar essa caixa de seleção desabilita a caixa de seleção **Quebra automática de linha** .  
   
- **Quebra automática de linha**  
+ **Quebra automática de palavra**  
  Quando esta caixa de seleção estiver marcada, qualquer parte de uma linha que se estenda horizontalmente além da área do editor será automaticamente exibida na próxima linha. Marcar essa caixa de seleção habilita a caixa de seleção **Mostrar glifos visuais para quebra automática de linha** e desabilita a caixa de seleção **Habilitar espaço virtual** .  
   
  **Mostrar glifos visuais para quebra automática de linha**  
  Quando esta caixa de seleção está marcada, um indicador de seta de retorno é exibido no local em que uma linha longa é quebrada para a linha seguinte.  
   
- **Aplicar comandos Recortar/copiar a linhas em branco quando não houver nenhuma seleção**  
+ **Aplicar comandos Recortar/Copiar a linhas em branco quando não houver seleção**  
  Esta caixa de seleção define o comportamento do editor quando você coloca o ponto de inserção em uma linha em branco, não seleciona nada e clica em **Copiar** ou **Recortar**.  
   
  Quando essa caixa de seleção está marcada, a linha em branco é copiada ou recortada. Se você clicar em **Colar**, uma nova linha em branco será inserida.  
@@ -63,7 +63,7 @@ ms.locfileid: "66089165"
 > [!NOTE]  
 >  Esses números de linha não são adicionados ao seu código e não aparecem na impressão. Eles são somente para referência.  
   
- **Habilitar navegação de URL com clique simples**  
+ **Habilitar navegação de URL com um só clique**  
  Quando esta caixa de seleção estiver marcada, o cursor mudará para um símbolo de mão de apontamento ao passar sobre uma URL no editor. Você pode clicar no URL para exibir a página indicada em seu navegador da Web.  
   
  **Barra de navegação**  

@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Criando o projeto e pacote básico | Microsoft Docs'
+title: 'Lição 1: criando o projeto e o pacote básico | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767498"
 ---
-# <a name="lesson-1-creating-the-project-and-basic-package"></a>Lição 1: Como criar o projeto e o pacote básico
+# <a name="lesson-1-creating-the-project-and-basic-package"></a>Lição 1: Criando o projeto e pacote básico
   Nessa lição, você criará um pacote ETL simples que extrai dados de uma fonte exclusiva de arquivo simples, transforma os dados usando dois componentes de transformação pesquisa e grava esses dados na tabela de fatos **FactCurrency** no **AdventureWorksDW2012**. Como parte dessa lição, você irá aprender como criar novos pacotes, adicionar e configurar fonte de dados, e conexões de destino, e trabalhar com novos fluxos de controle e componentes de fluxo.  
   
 > [!IMPORTANT]  
->  Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar **AdventureWorksDW2012**, consulte [amostras de produto do Microsoft SQL Server: Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples).  
+>  Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar o **AdventureWorksDW2012**, consulte [Microsoft SQL Server exemplos de produtos: Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples).  
   
 ## <a name="understanding-the-package-requirements"></a>Compreendendo os requisitos de pacote  
  Este tutorial requer o Microsoft SQL Server Data Tools.  
@@ -60,43 +60,43 @@ ms.locfileid: "62767498"
 ### <a name="looking-at-the-destination"></a>Olhando o destino  
  O destino final dos dados de origem é a tabela de fatos **FactCurrency** no **AdventureWorksDW**. A tabela de fatos **FactCurrency** tem quatro colunas e relacionamentos com duas tabelas de dimensões, como mostrado na tabela a seguir.  
   
-|Nome da coluna|Tipo de dados|Tabela de pesquisa|Coluna de Pesquisa|  
+|Nome da coluna|Tipo de Dados|Tabela de pesquisa|coluna de pesquisa|  
 |-----------------|---------------|------------------|-------------------|  
-|AverageRate|float|None|None|  
+|AverageRate|FLOAT|Nenhum|Nenhum|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|float|None|None|  
+|EndOfDayRate|FLOAT|Nenhum|Nenhum|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Mapeando fontes de dados compatíveis com o destino  
  Uma análise dos formatos de dados de origem e destino indicam que as pesquisas serão necessárias para os valores **CurrencyKey** e **DateKey** . As transformações que executarão essas pesquisas obterão os valores **CurrencyKey** e **DateKey** usando as chaves alternativas das tabelas de dimensões **DimCurrency** e **DimDate** .  
   
 |Coluna de Arquivos Simples|Nome da tabela|Nome da coluna|Tipo de Dados|  
 |----------------------|----------------|-----------------|---------------|  
-|0|FactCurrency|AverageRate|float|  
+|0|FactCurrency|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|date|  
-|3|FactCurrency|EndOfDayRate|float|  
+|3|FactCurrency|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Tarefas da lição  
  Esta lição contém as seguintes tarefas:  
   
 -   [Etapa 1: Criando um novo projeto do Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Etapa 2: Adicionando e configurando um gerenciador de conexões de arquivo simples](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Etapa 2: adicionando e configurando um gerenciador de conexões de arquivo simples](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Etapa 3: Adicionando e configurando um Gerenciador de Conexão do OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Etapa 3: adicionando e configurando um gerenciador de conexões OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 -   [Etapa 4: Adicionando uma tarefa de fluxo de dados ao pacote](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Etapa 5: Adicionando e configurando a fonte de arquivo simples](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Etapa 6: Adicionando e configurando a transformação pesquisa](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Etapa 6: Adicionando e configurando a transformação Pesquisa](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 -   [Etapa 7: Adicionando e configurando o destino OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Etapa 8: Tornando o pacote da lição 1 mais fácil de entender](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Etapa 8: Tornando o pacote da Lição 1 mais fácil de compreender](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Etapa 9: Testando o pacote de Tutorial da lição 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Etapa 9: Testando o pacote de tutorial da Lição 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
  [Etapa 1: Criando um novo projeto do Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  

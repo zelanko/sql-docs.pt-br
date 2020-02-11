@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088147"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Lista de verificação de preparação para mineração de dados
@@ -34,23 +34,23 @@ ms.locfileid: "66088147"
   
 -   Você pode mapear novos dados de entrada para os resultados esperados?  
   
- **Eu sei o significado, tipos de dados e distribuição dos dados de entrada.**  
+ **Eu sei o significado, os tipos de dados e a distribuição dos dados de entrada.**  
  Dedique algum tempo para explorar e entender os dados de origem. É importante que as pessoas que examinam o modelo entendam o tipo de dados de entrada que foi usado e saibam como interpretar os tipos de dados e a variabilidade, bem como o equilíbrio e a qualidade.  
   
 -   Qual é a quantidade de dados que você tem? Há dados suficientes para modelar?  
   
-     Ele não precisa ser um enorme - menor e com balanceamento de pode ser melhor.  
+     Ele não precisa ser um grande volume-menor e equilibrado pode ser melhor.  
   
 -   Os dados são de várias origens ou uma única origem?  
   
 -   Os dados já foram processados e limpos? Existem mais dados de entrada disponíveis?  
   
--   Você sabe como eles foram manipulados antes de você o recebeu - como dados talvez foram truncados, resumidos ou convertidos?  
+-   Você sabe como ele foi manipulado antes de você ter recebido-como os dados podem ter sido truncados, resumidos ou convertidos?  
   
 -   Os dados de entrada têm alguns resultados de exemplo que podem ser usados para treinamento?  
   
- **Entendo que o nível de integridade de dados, que temos e o nível que precisamos.**  
- Dados incorretos podem afetar a qualidade do modelo ou impedir que o modelo seja até mesmo criado. Você deve ter um bom entendimento da distribuição e do significado dos dados, e como eles chegaram a esse estado. Você precisará entender se for possível ou apropriado simplificar os dados rotulando, truncando tipos de dados numéricos ou resumindo.  
+ **Eu compreendo o nível de integridade de dados que temos e o nível precisamos.**  
+ Dados incorretos podem afetar a qualidade do modelo ou impedir que o modelo seja até mesmo criado. Você deve ter um bom entendimento da distribuição e do significado dos dados, e como eles chegaram a esse estado. Você precisará entender se é possível ou apropriado simplificar os dados através de rótulos, truncando tipos de dados numéricos ou resumindo.  
   
 -   Rótulos de dados: estão claros e corretos?  
   
@@ -70,8 +70,8 @@ ms.locfileid: "66088147"
   
 -   Se você combinou conjuntos de dados, verificou se há várias colunas que representam os mesmos dados?  
   
- **Eu sei onde são armazenados os dados de origem, onde ele veio e como eles são processados. O processo pode ser repetido com facilidade, se necessário.**  
- Conjuntos de dados únicos são bons para experiências, mas se você quiser mover o modelo em produção, convém pensar com antecedência sobre como o processo de limpeza pode ser aplicado aos dados operacionais. Além disso, se você tiver dados operacionais, você precisa saber como ele pode ter sido alterado antes de você acertou-você precisará saber como ele foi arredondado ou resumido, certamente.  
+ **Eu sei onde os dados de origem são armazenados, de onde eles vieram e como eles são processados. O processo pode ser facilmente repetido, se necessário.**  
+ Conjuntos de dados únicos são bons para experimentos, mas se você quiser mover o modelo para produção, convém pensar com antecedência como o processo de limpeza pode ser aplicado aos dados operacionais. Além disso, se você tiver dados operacionais, precisará saber como ele pode ter sido alterado antes de tê-lo-você precisará saber como ele foi arredondado, ou resumido, certamente.  
   
 -   Você deseja ser capaz de repetir a experiência?  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66088147"
   
      Qual unidade você deseja usar nos resultados?  
   
--   É possível definir uma unidade básica (por exemplo, dia / hora / min / chamada de instrução) para todos os dados de entrada?  
+-   É possível definir uma unidade básica (por exemplo, dia/hora/min/chamada de instrução) para todos os dados de entrada?  
   
      Você deseja fazer rollup para unidades maiores?  
   
@@ -103,14 +103,14 @@ ms.locfileid: "66088147"
   
 -   Você decidiu usar uma semente para o modelo?  
   
- **Podemos ter o conhecimento de domínio para validar os resultados ou ter acesso a especialistas no assunto que podem aconselhar.**  
- Reserve um tempo para validar as variáveis, o modelo e os resultados. Obtenha a ajuda de especialistas para avaliar as interações e os resultados. No entanto, não deixe suposições substituírem a evidência. Esteja aberto a novas e inesperadas descobertas.  
+ **Temos o conhecimento do domínio para validar os resultados ou temos acesso aos especialistas de assunto que podem aconselhar.**  
+ Reserve um tempo para validar as variáveis, o modelo e os resultados. Obtenha a ajuda de especialistas para avaliar as interações e os resultados. No entanto, não deixe as suposições anularem evidências. Esteja aberto a novas e inesperadas descobertas.  
   
 -   O conhecimento de domínio está disponível para ajudar a filtrar dados e reduzir o ruído de entrada?  
   
 -   Os especialistas de domínio podem ajudar a entender e interpretar os resultados e sugerir melhorias?  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolhendo os dados para a mineração de dados](choosing-data-for-data-mining.md)  
   
   

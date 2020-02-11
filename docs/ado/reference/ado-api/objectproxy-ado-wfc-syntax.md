@@ -1,5 +1,5 @@
 ---
-title: ObjectProxy (ADO – sintaxe WFC) | Microsoft Docs
+title: Objectproxy (ADO – sintaxe WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,21 +14,21 @@ ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917952"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO – Sintaxe WFC)
-Uma **ObjectProxy** objeto representa um servidor e é retornado pela **createObject** método da [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto. A classe ObjectProxy tem um método, **chamar**, que pode invocar um método no servidor e retornar um objeto resultante dessa invocação.  
+Um objeto **objectproxy** representa um servidor e é retornado pelo método **CreateObject** do objeto [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) . A classe objectproxy tem um método, **Call**, que pode invocar um método no servidor e retornar um objeto resultante dessa invocação.  
   
- **pacote com.ms.wfc.data**  
+ **pacote com. ms. wfc. Data**  
   
 ## <a name="methods"></a>Métodos  
   
-### <a name="call-method-adowfc-syntax"></a>Método de chamada (sintaxe do ADO/WFC)  
- Invoca um método no servidor representadas pela ObjectProxy. Opcionalmente, os argumentos de método podem ser passados como uma matriz de objetos.  
+### <a name="call-method-adowfc-syntax"></a>Método Call (sintaxe ADO/WFC)  
+ Invoca um método no servidor representado pelo objectproxy. Opcionalmente, argumentos de método podem ser passados como uma matriz de objetos.  
   
 #### <a name="syntax"></a>Sintaxe  
   
@@ -37,16 +37,16 @@ public Object ObjectProxy.( String method )
 public Object ObjectProxy.( String method, Object[] args)  
 ```  
   
-#### <a name="returns"></a>Retorna  
- Object  
+#### <a name="returns"></a>Retornos  
+ Objeto  
  Um objeto resultante da invocação do método.  
   
-#### <a name="parameters"></a>Parâmetros  
- *ObjectProxy*  
- Uma **ObjectProxy** objeto que representa o servidor.  
+#### <a name="parameters"></a>parâmetros  
+ *Objectproxy*  
+ Um objeto **objectproxy** que representa o servidor.  
   
- *Método*  
+ *forma*  
  Uma cadeia de caracteres que contém o nome do método a ser invocado no servidor.  
   
- *args*  
- Opcional. Uma matriz de objetos que são argumentos para o método no servidor. Tipos de dados Java são automaticamente convertidos para tipos de dados adequados para uso no servidor.
+ *argumento*  
+ Opcional. Uma matriz de objetos que são argumentos para o método no servidor. Os tipos de dados Java são convertidos automaticamente em tipos de dados adequados para uso no servidor.

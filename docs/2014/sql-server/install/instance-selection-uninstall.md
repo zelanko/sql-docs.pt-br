@@ -1,5 +1,5 @@
 ---
-title: Seleção de instância (desinstalação) | Microsoft Docs
+title: Seleção de instância (desinstalar) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6de0fbb9f2e6a5ee621c24c4832a13b900919048
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094224"
 ---
 # <a name="instance-selection-uninstall"></a>Seleção de instância (desinstalação)
-  Na seleção de instância - página desinstalar, use a caixa de lista suspensa para especificar a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para desinstalar.  
+  Na página seleção de instância – desinstalar, use a caixa suspensa para especificar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser desinstalada.  
   
 ## <a name="options"></a>Opções  
  Você pode especificar uma instância inteira do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou especificar que apenas os recursos compartilhados e as Ferramentas de Gerenciamento são desinstalados.  

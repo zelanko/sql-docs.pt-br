@@ -1,5 +1,5 @@
 ---
-title: 'Como fazer: Inserir linhas na coluna de Geografia (ODBC) | Microsoft Docs'
+title: 'Como: inserir linhas na coluna de Geografia (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206813"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Como fazer: Inserir linhas em coluna de geografia (ODBC)
-  Este exemplo insere duas linhas em uma tabela com uma coluna de geografia de WellKnownBinary (WKB) que usa duas associações diferentes (SQLCCHAR e SQLCBINARY). Em seguida, ele seleciona uma linha dessa tabela e usa:: stastext () para exibi-lo. O WKB é 0x01010000000700ECFAD03A4C4001008000B5DF07C0 e o aplicativo imprime no console: POINT (56.4595-2.9842).  
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Como inserir linhas em coluna de geografia (ODBC)
+  Este exemplo insere duas linhas em uma tabela com uma coluna de geografia de WellKnownBinary (WKB) que usa duas associações diferentes (SQLCCHAR e SQLCBINARY). Em seguida, o exemplo seleciona uma linha daquela tabela e usa ::STAsText() para exibi-la. WKB é 0x01010000000700ECFAD03A4C4001008000B5DF07C0 e o aplicativo imprime no console: POINT(56.4595 -2.9842).  
   
  Este exemplo não exige uma fonte de dados ODBC, mas executa, por padrão, na instância local do SQL Server.  
   
  Este exemplo não funcionará com nenhuma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Para obter mais informações sobre armazenamento espacial, consulte [dados espaciais &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
+ Para obter mais informações sobre o armazenamento espacial, consulte [dados espaciais &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Exemplo  
  A primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria uma tabela usada por este exemplo.  

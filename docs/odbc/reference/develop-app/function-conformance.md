@@ -1,5 +1,5 @@
 ---
-title: Função conformidade | Microsoft Docs
+title: Conformidade da função | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,78 +16,78 @@ ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 45eb427b660496430334633b5d43ee8989211c0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069749"
 ---
 # <a name="function-conformance"></a>Conformidade de função
-A tabela a seguir indica o nível de conformidade de cada função ODBC, que isso é bem definido.  
+A tabela a seguir indica o nível de conformidade de cada função ODBC, em que isso é bem definido.  
   
-|Função|nível de conformidade|  
+|Função|Compatibilidade com nível|  
 |--------------|-----------------------|  
-|**SQLAllocHandle**|Core|  
-|**SQLBindCol**|Core|  
-|**SQLBindParameter**|Core [1]|  
+|**SQLAllocHandle**|Núcleo|  
+|**SQLBindCol**|Núcleo|  
+|**SQLBindParameter**|Núcleo [1]|  
 |**SQLBrowseConnect**|Nível 1|  
 |**SQLBulkOperations**|Nível 1|  
-|**SQLCancel**|Core [1]|  
-|**SQLCloseCursor**|Core|  
-|**SQLColAttribute**|Core [1]|  
+|**SQLCancel**|Núcleo [1]|  
+|**SQLCloseCursor**|Núcleo|  
+|**SQLColAttribute**|Núcleo [1]|  
 |**SQLColumnPrivileges**|Nível 2|  
-|**SQLColumns**|Core|  
-|**SQLConnect**|Core|  
-|**SQLCopyDesc**|Core|  
-|**SQLDataSources**|Core|  
-|**SQLDescribeCol**|Core [1]|  
+|**SQLColumns**|Núcleo|  
+|**SQLConnect**|Núcleo|  
+|**SQLCopyDesc**|Núcleo|  
+|**SQLDataSources**|Núcleo|  
+|**SQLDescribeCol**|Núcleo [1]|  
 |**SQLDescribeParam**|Nível 2|  
-|**SQLDisconnect**|Core|  
-|**SQLDriverConnect**|Core|  
-|**SQLDrivers**|Core|  
-|**SQLEndTran**|Core [1]|  
-|**SQLExecDirect**|Core|  
-|**SQLExecute**|Core|  
-|**SQLFetch**|Core|  
-|**SQLFetchScroll**|Core [1]|  
+|**SQLDisconnect**|Núcleo|  
+|**SQLDriverConnect**|Núcleo|  
+|**SQLDrivers**|Núcleo|  
+|**SQLEndTran**|Núcleo [1]|  
+|**SQLExecDirect**|Núcleo|  
+|**SQLExecute**|Núcleo|  
+|**SQLFetch**|Núcleo|  
+|**SQLFetchScroll**|Núcleo [1]|  
 |**SQLForeignKeys**|Nível 2|  
-|**SQLFreeHandle**|Core|  
-|**SQLFreeStmt**|Core|  
-|**SQLGetConnectAttr**|Core|  
-|**SQLGetCursorName**|Core|  
-|**SQLGetData**|Core|  
-|**SQLGetDescField**|Core|  
-|**SQLGetDescRec**|Core|  
-|**SQLGetDiagField**|Core|  
-|**SQLGetDiagRec**|Core|  
-|**SQLGetEnvAttr**|Core|  
-|**SQLGetFunctions**|Core|  
-|**SQLGetInfo**|Core|  
-|**SQLGetStmtAttr**|Core|  
-|**SQLGetTypeInfo**|Core|  
+|**SQLFreeHandle**|Núcleo|  
+|**SQLFreeStmt**|Núcleo|  
+|**SQLGetConnectAttr**|Núcleo|  
+|**SQLGetCursorName**|Núcleo|  
+|**SQLGetData**|Núcleo|  
+|**SQLGetDescField**|Núcleo|  
+|**SQLGetDescRec**|Núcleo|  
+|**SQLGetDiagField**|Núcleo|  
+|**SQLGetDiagRec**|Núcleo|  
+|**SQLGetEnvAttr**|Núcleo|  
+|**SQLGetFunctions**|Núcleo|  
+|**SQLGetInfo**|Núcleo|  
+|**SQLGetStmtAttr**|Núcleo|  
+|**SQLGetTypeInfo**|Núcleo|  
 |**SQLMoreResults**|Nível 1|  
-|**SQLNativeSql**|Core|  
-|**SQLNumParams**|Core|  
-|**SQLNumResultCols**|Core|  
-|**SQLParamData**|Core|  
-|**SQLPrepare**|Core|  
+|**SQLNativeSql**|Núcleo|  
+|**SQLNumParams**|Núcleo|  
+|**SQLNumResultCols**|Núcleo|  
+|**SQLParamData**|Núcleo|  
+|**SQLPrepare**|Núcleo|  
 |**SQLPrimaryKeys**|Nível 1|  
 |**SQLProcedureColumns**|Nível 1|  
 |**SQLProcedures**|Nível 1|  
-|**SQLPutData**|Core|  
-|**SQLRowCount**|Core|  
-|**SQLSetConnectAttr**|Core [2]|  
-|**SQLSetCursorName**|Core|  
-|**SQLSetDescField**|Core [1]|  
-|**SQLSetDescRec**|Core|  
-|**SQLSetEnvAttr**|Core [2]|  
+|**SQLPutData**|Núcleo|  
+|**SQLRowCount**|Núcleo|  
+|**SQLSetConnectAttr**|Núcleo [2]|  
+|**SQLSetCursorName**|Núcleo|  
+|**SQLSetDescField**|Núcleo [1]|  
+|**SQLSetDescRec**|Núcleo|  
+|**SQLSetEnvAttr**|Núcleo [2]|  
 |**SQLSetPos**|Nível 1 [1]|  
-|**SQLSetStmtAttr**|Core [2]|  
-|**SQLSpecialColumns**|Core [1]|  
-|**SQLStatistics**|Core|  
+|**SQLSetStmtAttr**|Núcleo [2]|  
+|**SQLSpecialColumns**|Núcleo [1]|  
+|**SQLStatistics**|Núcleo|  
 |**SQLTablePrivileges**|Nível 2|  
-|**SQLTables**|Core|  
+|**SQLTables**|Núcleo|  
   
- [1] recursos significativos dessa função estão disponíveis somente em níveis mais altos de conformidade.  
+ [1] recursos significativos dessa função estão disponíveis apenas em níveis de conformidade mais altos.  
   
- [2] definir certos atributos como valores não padrão depende do nível de conformidade. Para obter mais informações, consulte a próxima seção, [conformidade com o atributo](../../../odbc/reference/develop-app/attribute-conformance.md).
+ [2] a configuração de determinados atributos para valores não padrão depende do nível de conformidade. Para obter mais informações, consulte a próxima seção, [conformidade do atributo](../../../odbc/reference/develop-app/attribute-conformance.md).

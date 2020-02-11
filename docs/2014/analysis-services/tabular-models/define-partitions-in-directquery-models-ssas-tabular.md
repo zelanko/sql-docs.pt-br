@@ -1,5 +1,5 @@
 ---
-title: Partições e modo DirectQuery (SSAS Tabular) | Microsoft Docs
+title: Partições e modo DirectQuery (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067306"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partições e modo DirectQuery (SSAS tabular)
   Esta seção explica como as partições são usadas em modelos DirectQuery. Para obter mais informações gerais sobre partições em modelos de tabela, consulte [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md).  
   
- Para obter instruções sobre como alterar a partição que é usada, ou exibir informações sobre a partição, consulte [alterar a partição DirectQuery &#40;SSAS de tabela&#41;](../change-the-directquery-partition-ssas-tabular.md).  
+ Para obter instruções sobre como alterar a partição usada ou exibir informações sobre a partição, consulte [alterar a partição do DirectQuery &#40;&#41;de tabela do SSAS ](../change-the-directquery-partition-ssas-tabular.md).  
   
 ## <a name="using-partitions-in-directquery-mode"></a>Usando partições no modo DirectQuery  
  Para cada tabela, você deve especificar uma única partição para usar como a fonte de dados DirectQuery.  Se houver várias partições, quando você alternar o modelo para habilitar o modo DirectQuery, por padrão a primeira partição que foi criada na tabela será sinalizada como a partição DirectQuery. Você pode alterar isso posteriormente usando o Gerenciador de Partições no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -42,12 +42,12 @@ ms.locfileid: "66067306"
   
  Há duas opções de processamento para a partição DirectQuery. Para definir essa propriedade, use o **Gerenciador de Partições** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e selecione a propriedade **Opção de Processamento** . A tabela a seguir lista os valores desta propriedade e descreve os efeitos de cada valor quando combinados com a propriedade DirectQueryUsage na cadeia de conexão:  
   
-|**DirectQueryUsage** propriedade|Propriedade**Opção de Processamento**|Observações|  
+|Propriedade **DirectQueryUsage**|Propriedade de **opção de processamento**|Observações|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|Nunca processar esta partição|Quando o modelo só estiver usando o DirectQuery, o processamento nunca será necessário.<br /><br /> Em modelos híbridos, você pode configurar a partição DirectQuery para nunca ser processada. Por exemplo, se você estiver operando em um conjunto de dados muito grande e não desejar adicionar os resultados completos ao cache, poderá especificar que a partição DirectQuery inclua a união de resultados para todas as outras partições na tabela e que nunca processe a união. As consultas destinadas à fonte relacional não serão afetadas e as consultas em dados armazenados em cache combinarão dados das outras partições|  
-|InMemory com DirectQuery|Permitir que a partição seja processada|Se o modelo estiver usando o modo híbrido, você deve usar a mesma partição para consultas na memória e consultas na fonte de dados DirectQuery.|  
+|Inmemory com DirectQuery|Permitir que a partição seja processada|Se o modelo estiver usando o modo híbrido, você deve usar a mesma partição para consultas na memória e consultas na fonte de dados DirectQuery.|  
   
-## <a name="see-also"></a>Consulte também  
- [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Partições &#40;SSAS de tabela&#41;](partitions-ssas-tabular.md)  
   
   

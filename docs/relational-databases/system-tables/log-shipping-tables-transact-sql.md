@@ -1,5 +1,5 @@
 ---
-title: Tabelas (Transact-SQL) para envio de logs | Microsoft Docs
+title: Tabelas de envio de logs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f36b2f6f52b87fb844bbe9ccb5604f2c4056b15d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095728"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>Tabelas de envio de logs (Transact-SQL)

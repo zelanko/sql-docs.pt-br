@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 410cb4de6b89052493618404df3e595fd6999936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107575"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Usando Meus Relatórios (Construtor de Relatórios e SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66107575"
 ## <a name="searching-my-reports"></a>Pesquisando em Meus Relatórios  
  Quando você pesquisa em um banco de dados do servidor de relatório, o conteúdo da sua pasta Meus Relatórios é incluído na pesquisa, enquanto o conteúdo das outras pastas Meus Relatórios é excluído. Os resultados da pesquisa listam apenas os relatórios para os quais você tem acesso.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

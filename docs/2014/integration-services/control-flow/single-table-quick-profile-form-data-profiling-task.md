@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5cd76f42424836114bc5b8ed32862d5e1d84869e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830178"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Single Table Quick Profile Form (Data Profiling Task)
@@ -33,10 +33,10 @@ ms.locfileid: "62830178"
  **Tabela ou Exibição**  
  Selecione uma tabela ou exibição existente no banco de dados com o qual o gerenciador de conexões selecionado se conecta.  
   
- **Computar**  
+ **Computação**  
  Selecione quais perfis devem ser computados.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Perfil Razão Nula de Coluna**|Compute um perfil Razão Nula de Coluna usando as configurações padrão para todas as colunas aplicáveis na tabela ou exibição selecionada.<br /><br /> Este perfil informa a porcentagem de valores nulos na coluna selecionada. Este perfil pode ajudar a identificar problemas em seus dados, como uma inesperada razão alta de valores nulos em uma coluna. Para obter mais informações sobre as configurações para este perfil, consulte [Opções da solicitação do perfil Razão Nula de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-null-ratio-profile-request-options-data-profiling-task.md).|  
 |**Perfil Estatísticas de Coluna**|Compute um perfil Estatísticas de Coluna usando as configurações padrão para todas as colunas aplicáveis na tabela ou exibição selecionada.<br /><br /> Este perfil informa estatísticas como mínimo, máximo, média e desvio padrão para colunas numéricas, além de mínimo e máximo para colunas `datetime`. Este perfil pode ajudá-lo a identificar problemas em seus dados, como datas inválidas. Para obter mais informações sobre as configurações para este perfil, consulte [Opções da solicitação do perfil de Estatísticas de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-statistics-profile-request-options-data-profiling-task.md).|  
@@ -51,7 +51,7 @@ ms.locfileid: "62830178"
 > [!NOTE]  
 >  O tipo de perfil Valor Inclusão não está disponível no **Formulário de Perfil Rápido de Tabela Única**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)   
  [Editor da tarefa Criação de Perfil de Dados &#40;Página Solicitações de Perfil&#41;](data-profiling-task-editor-profile-requests-page.md)  
   

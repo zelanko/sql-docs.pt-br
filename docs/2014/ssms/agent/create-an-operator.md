@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136425"
 ---
-# <a name="create-an-operator"></a>Criar um operador
-  Este tópico descreve como configurar um usuário para receber notificações sobre trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="create-an-operator"></a>Create an Operator
+  Este tópico descreve como configurar um usuário para receber notificações sobre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalhos do Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
   
  **Neste tópico**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63136425"
   
      [Segurança](#Security)  
   
--   **Para criar um operador usando:**  
+-   **Para criar um operador, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,11 +45,12 @@ ms.locfileid: "63136425"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
+-   As opções pager e **net send** serão removidas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Agent em uma versão futura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
 -   Observe que o SQL Server Agent deve ser configurado para usar o Database Mail a fim de enviar notificações por pager ou email a operadores. Para obter mais informações, consulte [Atribuir alertas a um operador](assign-alerts-to-an-operator.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -71,7 +72,7 @@ ms.locfileid: "63136425"
      **Nome**  
      Altera o nome do operador.  
   
-     **Habilitado**  
+     **Enabled**  
      Habilita o operador. Quando não estiver habilitado, nenhuma notificação será enviada ao operador.  
   
      **Nome de email**  
@@ -80,19 +81,19 @@ ms.locfileid: "63136425"
      **Endereço de net send**  
      Especifique o endereço a ser usado para **net send**.  
   
-     **Nome de e-mail de pager**  
+     **Nome do email do pager**  
      Especifica o endereço de email a ser usado para o pager do operador.  
   
-     **Agenda em serviço do pager**  
+     **Agenda de imposto do pager**  
      Marca as horas em que o pager está ativo.  
   
-     **Segunda-feira - Domingo**  
+     **Segunda-feira-domingo**  
      Selecione os dias em que o pager está ativo.  
   
      **Início do dia útil**  
      Selecione a hora do dia depois da qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envia mensagens ao pager.  
   
-     **Término do dia útil**  
+     **Fim do dia útil**  
      Selecione a hora do dia depois da qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para de enviar mensagens ao pager.  
   
      As opções a seguir estão disponíveis na página **Notificações** da caixa de diálogo **Novo Operador** :  
@@ -109,7 +110,7 @@ ms.locfileid: "63136425"
      **Lista de trabalhos**  
      Lista os trabalhos na instância.  
   
-     **Email**  
+     **Mensagens**  
      Notifique este operador por email.  
   
      **Pager**  
@@ -147,6 +148,6 @@ ms.locfileid: "63136425"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_add_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql).  
+ Para obter mais informações, consulte [sp_add_operator &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql).  
   
   

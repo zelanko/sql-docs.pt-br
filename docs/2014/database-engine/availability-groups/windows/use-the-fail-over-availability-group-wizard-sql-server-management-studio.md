@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787954"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Grupo de Disponibilidade de Failover (SQL Server Management Studio)
@@ -33,24 +33,24 @@ ms.locfileid: "62787954"
 
 
   
--   **[!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] páginas:**  
+-   **[!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]Pages**  
   
-     [Página Selecionar Nova Réplica Primária](#SelectNewPrimaryReplica) (posteriormente neste tópico)  
+     [Página Selecionar nova réplica primária](#SelectNewPrimaryReplica) (mais adiante neste tópico)  
   
-     [Página Conectar à Réplica](#ConnectToReplica) (posteriormente neste tópico)  
+     [Página conectar à réplica](#ConnectToReplica) (mais adiante neste tópico)  
   
-     [Página Confirmar Potencial Perda de Dados](#ConfirmPotentialDataLoss) (posteriormente neste tópico)  
+     [Página confirmar potencial perda de dados](#ConfirmPotentialDataLoss) (mais adiante neste tópico)  
   
-     [Página de resumo &#40;assistentes de grupo de disponibilidade do AlwaysOn&#41;](summary-page-always-on-availability-group-wizards.md)  
+     [Página de resumo &#40;assistentes do grupo de disponibilidade AlwaysOn&#41;](summary-page-always-on-availability-group-wizards.md)  
   
-     [Página de progresso &#40;assistentes de grupo de disponibilidade do AlwaysOn&#41;](progress-page-always-on-availability-group-wizards.md)  
+     [Página de progresso &#40;assistentes do grupo de disponibilidade AlwaysOn&#41;](progress-page-always-on-availability-group-wizards.md)  
   
-     [Página de resultados de &#40;assistentes de grupo de disponibilidade do AlwaysOn&#41;](results-page-always-on-availability-group-wizards.md)  
+     [Página de resultados &#40;assistentes do grupo de disponibilidade AlwaysOn&#41;](results-page-always-on-availability-group-wizards.md)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Antes de seu primeiro failover manual planejado, consulte a seção "Antes de começar" em [Executar um failover manual planejado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
- Antes do primeiro failover forçado, confira as seções "Antes de começar" e "Acompanhamento: tarefas essenciais após um failover forçado" em [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+ Antes do primeiro failover forçado, consulte as seções "Antes de começar" e "Acompanhamento: tarefas essenciais depois de um failover forçado" em [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62787954"
   
 4.  As informações apresentadas pela página **Introdução** variarão de acordo com a elegibilidade de qualquer réplica secundária para um failover planejado. Se esta página informar "**Faça um failover planejado para este grupo de disponibilidade**", você poderá fazer o failover do grupo de disponibilidade sem perda de dados.  
   
-5.  Na página **Selecionar Nova Réplica Primária** , você pode exibir o status da réplica primária atual e do quórum WSFC, antes de escolher a réplica secundária que se tornará a nova réplica primária (o *destino de failover*). Em um failover manual planejado, selecione uma réplica secundária cujo valor de **Prontidão de Failover** é "**Sem perda de dados**". Em um failover forçado, para todos os destinos possíveis de failover, este valor será "**Perda de dados, Avisos (***#***)** ", em que *#* indica o número de avisos que existem para uma réplica secundária específica. Para exibir os avisos de um destino de failover específico, clique em seu valor de "Prontidão de Failover".  
+5.  Na página **Selecionar Nova Réplica Primária** , você pode exibir o status da réplica primária atual e do quórum WSFC, antes de escolher a réplica secundária que se tornará a nova réplica primária (o *destino de failover*). Em um failover manual planejado, selecione uma réplica secundária cujo valor de **Prontidão de Failover** é "**Sem perda de dados**". Para um failover forçado, para todos os destinos de failover possíveis, esse valor será "**perda de dados, avisos***#***()**", *#* em que indica o número de avisos existentes para uma determinada réplica secundária. Para exibir os avisos de um destino de failover específico, clique em seu valor de "Prontidão de Failover".  
   
      Para obter mais informações, consulte [Página Selecionar Nova Réplica Primária](#SelectNewPrimaryReplica), posteriormente neste tópico.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62787954"
   
      Para obter mais informações, consulte [Página Resultados &#40;Assistentes do Grupo de Disponibilidade AlwaysOn&#41;](results-page-always-on-availability-group-wizards.md).  
   
-11. Após um failover forçado, confira a seção "Acompanhamento: após um failover forçado" em [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+11. Após um failover forçado, consulte a seção “Acompanhamento: após um failover forçado” em [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>Ajuda para páginas que são exclusivas deste assistente  
  Esta seção descreve as páginas que são exclusivas do [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)].  
@@ -121,7 +121,7 @@ ms.locfileid: "62787954"
  **Status do Quorum**  
  Exibe o status do quorum WSFC da réplica de disponibilidade:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Quorum normal**|O cluster foi iniciado com quorum normal.|  
 |**Quorum forçado**|O cluster foi iniciado com quorum forçado.|  
@@ -139,7 +139,7 @@ ms.locfileid: "62787954"
  **Modo de Disponibilidade**  
  Exibe o modo de disponibilidade da instância de servidor:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Confirmação síncrona**|No modo de confirmação síncrona, antes de confirmar transações, uma réplica primária de confirmação síncrona espera que uma réplica secundária de confirmação síncrona confirme que concluiu a proteção do log. O modo de confirmação síncrona garante que, quando um determinado banco de dados secundário é sincronizado com o banco de dados primário, as transações confirmadas sejam totalmente protegidas.|  
 |**Confirmação assíncrona**|No modo de confirmação assíncrona, a réplica primária confirma as transações sem esperar a confirmação de que uma réplica secundária de confirmação assíncrona protegeu o log. O modo de confirmação assíncrona minimiza a latência de transações nos bancos de dados secundários, mas permite que elas atrasem os bancos de dados primários, possibilitando a perda de dados.|  
@@ -149,9 +149,9 @@ ms.locfileid: "62787954"
  **Modo de Failover**  
  Exibe o modo de failover da instância de servidor:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Automatic**|Uma réplica secundária configurada para failover automático também oferece suporte a failover manual planejado sempre que a réplica secundária é sincronizada com a réplica primária.|  
+|**Automático**|Uma réplica secundária configurada para failover automático também oferece suporte a failover manual planejado sempre que a réplica secundária é sincronizada com a réplica primária.|  
 |**Manual**|Existem dois tipos de failover manual: planejado (sem perda de dados) e forçado (com possível perda de dados). Em uma réplica secundária específica, há suporte para somente um desses tipos, dependendo do modo de disponibilidade e, no modo de confirmação síncrono, o estado de sincronização da réplica secundária. Para determinar qual forma de failover manual tem suporte em uma determinada réplica secundária, consulte a coluna **Prontidão de Failover** desta grade.|  
   
  Para obter mais informações, consulte [Failover e modos de failover &#40;Grupos de Disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
@@ -159,7 +159,7 @@ ms.locfileid: "62787954"
  **Prontidão de Failover**  
  Exibe a prontidão de failover da réplica secundária:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Sem perda de dados**|Há suporte para esta réplica secundária no failover planejado. Este valor só ocorre quando uma réplica secundária no modo de confirmação síncrona está sincronizada com a réplica primária.|  
 |**Perda de dados, Avisos (** *#* **)**|Há suporte para esta réplica secundária no failover forçado (com possível perda de dados). Este valor ocorre sempre que a réplica secundária não está sincronizada com a réplica primária. Clique no link de avisos de perda de dados referente às informações sobre a possível perda de dados.|  
@@ -199,10 +199,10 @@ ms.locfileid: "62787954"
  **Cancelar**  
  Clique para cancelar o assistente. Na página **Conectar a Réplica** , o cancelamento do assistente faz com que ele seja fechado sem executar nenhuma ação.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md)   
- [Failover e modos de Failover &#40;grupos de disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Modos de disponibilidade (Grupos de Disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md)   
+ [Failover e modos de failover &#40;Grupos de Disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Executar um failover manual planejado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   
  [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  

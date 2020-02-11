@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c4da45e57342288cc23a9783709666f4c02d0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049997"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Recuperar-se de uma falha na instância do cluster de failover
@@ -29,7 +29,7 @@ ms.locfileid: "63049997"
   
 -   [Recuperar de uma falha de software](#Scenario2)  
   
-##  <a name="Scenario1"></a> Recuperar de uma falha irreparável  
+##  <a name="Scenario1"></a>Recuperar de uma falha irreparável  
  Use as seguintes etapas para recuperar-se de uma falha irreparável. A falha pode ser causada, por exemplo, por uma falha em um controlador de disco ou no sistema operacional. Nesse caso, a falha é gerada por um problema de hardware no Nó 1 de um cluster de dois nós.  
   
 1.  Após a falha no Nó 1, a FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] executa failover no Nó 2.  
@@ -44,9 +44,9 @@ ms.locfileid: "63049997"
   
 6.  Verifique se as contas de administradoras são as mesmas em todos os nós do cluster.  
   
-7.  Execute a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para adicionar o Nó 1 à FCI. Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+7.  Execute a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para adicionar o Nó 1 à FCI. Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de Failover SQL Server &#40;instalação&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-##  <a name="Scenario2"></a> Recuperar-se de uma falha reparável  
+##  <a name="Scenario2"></a>Recuperar de uma falha de reparável  
  Execute as seguintes etapas ara recuperar-se de uma falha reparável. Nesse caso, a falha é causada porque o Nó 1 está desativado ou offline, mas não irreparavelmente danificado. Ela pode ser causada por uma falha do sistema operacional, falha de hardware ou falha na própria instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 1.  Após a falha no Nó 1, a FCI executa failover no Nó 2.  

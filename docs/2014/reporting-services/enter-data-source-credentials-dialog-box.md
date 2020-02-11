@@ -1,5 +1,5 @@
 ---
-title: Inserir caixa de diálogo de credenciais de fonte de dados | Microsoft Docs
+title: Caixa de diálogo Inserir credenciais da fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e7fa4658b0a784b854023975234218d1a58f936c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109242"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>Caixa de diálogo Inserir Credenciais da Fonte de Dados
-  Use a caixa de diálogo **Inserir Credenciais da Fonte de Dados** para fornecer suas credenciais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para que você possa recuperar dados da fonte de dados.  
+  Use a caixa de diálogo **Inserir credenciais da fonte** de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para fornecer suas credenciais para que você possa recuperar dados da fonte de dados.  
   
 ## <a name="options"></a>Opções  
  **Nome de usuário**  
@@ -30,8 +30,8 @@ ms.locfileid: "66109242"
  **Senha**  
  Digite a senha para fazer logon na fonte de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Ajuda F1 do Designer de Relatórios](tools/report-designer-f1-help.md)  
   
   

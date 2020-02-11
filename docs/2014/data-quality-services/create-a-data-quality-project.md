@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f341d13995cd7a13a06e0ad7b9b380ebd0184f7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480948"
 ---
 # <a name="create-a-data-quality-project"></a>Criar um projeto de qualidade de dados
@@ -35,9 +35,9 @@ ms.locfileid: "65480948"
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_kb_operator no banco de dados DQS_MAIN para criar um projeto de qualidade de dados.  
   
-##  <a name="Create"></a> Criar um projeto de qualidade de dados  
+##  <a name="Create"></a>Criar um projeto de qualidade de dados  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Novo projeto de qualidade de dados**.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "65480948"
   
     4.  Na área **Selecionar Atividade** , clique em uma atividade que você deseja executar usando este projeto de qualidade de dados:  
   
-        -   **Limpeza**: selecione esta atividade para limpar os dados de origem.  
+        -   **Limpeza**: Selecione essa atividade para limpar os dados de origem.  
   
-        -   **Correspondência**: selecione esta atividade para fazer a correspondência. Esta atividade só estará disponível se a base de dados de conhecimento selecionada para o projeto de qualidade de dados contiver uma política de correspondência.  
+        -   **Correspondência**: Selecione esta atividade para executar a correspondência. Esta atividade só estará disponível se a base de dados de conhecimento selecionada para o projeto de qualidade de dados contiver uma política de correspondência.  
   
 4.  Clique em **Criar** para criar um projeto de qualidade de dados.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após criar um projeto de qualidade de dados  
+##  <a name="FollowUp"></a>Acompanhamento: depois de criar um projeto de qualidade de dados  
  Depois que você criar um projeto de qualidade de dados, verá um assistente que deverá ser usado para executar a atividade selecionada: limpeza ou correspondência. Para obter mais informações sobre a limpeza e correspondência de atividades, consulte [Limpeza de dados](../../2014/data-quality-services/data-cleansing.md) e [Correspondência de dados](../../2014/data-quality-services/data-matching.md).  
   
   

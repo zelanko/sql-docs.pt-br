@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1036cbe649a2448b3eb4838621ec8be0590b1c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745557"
 ---
-# <a name="srvrpcnumber-extended-stored-procedure-api"></a>srv_rpcnumber (API de procedimento armazenado estendido)
+# <a name="srv_rpcnumber-extended-stored-procedure-api"></a>srv_rpcnumber (API de procedimento armazenado estendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  Retorna o componente de número da chamada do procedimento armazenado remoto atual.  
   
@@ -48,13 +48,13 @@ srvproc
  *srvproc*  
  É um ponteiro para a estrutura SRV_PROC que é o identificador de uma conexão de cliente específica (neste caso, o identificador que recebeu o procedimento armazenado remoto). A estrutura contém informações que a biblioteca de APIs de procedimento armazenado estendido usa para gerenciar a comunicação e os dados entre o aplicativo e o cliente.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  O componente de número do procedimento armazenado remoto atual. Se o cliente não usar um componente de número ao executar o procedimento armazenado remoto ou se não houver procedimento armazenado remoto atual, ele retornará - 1.  
   
 ## <a name="remarks"></a>Comentários  
  Esta função retorna apenas o componente de número do procedimento armazenado remoto. Ela não inclui os especificadores opcionais para proprietário, nome do procedimento armazenado remoto e nome do banco de dados.  
   
 > [!IMPORTANT]  
->  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   
