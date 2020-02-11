@@ -1,5 +1,5 @@
 ---
-title: Modificar os servidores de destino associados a um trabalho do SQL Server Agent Master | Microsoft Docs
+title: Modificar o (s) servidor (es) de destino associado a um trabalho mestre de SQL Server Agent | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62654053"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modificar o servidor de destino associado a um trabalho mestre do SQL Server Agent
@@ -28,7 +28,7 @@ ms.locfileid: "62654053"
   
      [Segurança](#Security)  
   
--   **Para modificar o servidor de destino associado a um trabalho mestre do SQL Server Agent, usando:**  
+-   **Para modificar os servidores de destino associados a um trabalho de SQL Server Agent mestre, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62654053"
   
 4.  Clique com o botão direito do mouse no trabalho em que você quer modificar o servidor de destino e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Trabalho -** _job_name_, em **Selecionar uma página**, selecione **Destinos**. Para obter mais informações sobre as opções disponíveis nessa página, consulte [propriedades do trabalho: Novo trabalho de &#40;tem como alvo a página&#41;](job-properties-new-job-targets-page.md).  
+5.  Na caixa de diálogo **Propriedades do Trabalho -**_job_name_, em **Selecionar uma página**, selecione **Destinos**. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: nova página de destinos de &#40;de trabalho&#41;](job-properties-new-job-targets-page.md).  
   
 6.  Quando terminar, clique em **OK**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62654053"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_delete_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql).  
+ Para obter mais informações, consulte [sp_delete_jobserver &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql).  
   
 #### <a name="to-associate-a-target-server-with-the-current-sql-server-agent-master-job"></a>Para associar um servidor de destino ao trabalho mestre atual do SQL Server Agent.  
   
@@ -105,6 +105,6 @@ ms.locfileid: "62654053"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql).  
+ Para obter mais informações, consulte [sp_add_jobserver &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql).  
   
   
