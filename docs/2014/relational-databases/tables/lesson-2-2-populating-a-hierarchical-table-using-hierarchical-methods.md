@@ -15,22 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110057"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Preenchendo uma tabela hierárquica utilizando métodos hierárquicos
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tem oito funcionários que trabalham no departamento de Marketing. A hierarquia dos funcionários é assim:  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]tem 8 funcionários trabalhando no departamento de marketing. A hierarquia dos funcionários é assim:  
   
- **Davi**, **EmployeeID** 6, é o Gerente de Marketing. Três especialistas em Marketing são subordinados a **Davi**:  
+ **David**, **EmployeeID** 6, é gerente de marketing. Três especialistas em Marketing são subordinados a **Davi**:  
   
--   **Sara**, **EmployeeID** 46  
+-   **Sariya**, **EmployeeID** 46  
   
--   **Bruno**, **EmployeeID** 271  
+-   **João**, **EmployeeID** 271  
   
--   **Julieta**, **EmployeeID** 119  
+-   **Jill**, **EmployeeID** 119  
   
  A Assistente de Marketing **Valentina** , (**EmployeeID** 269), é subordinada a **Sara**, e a Assistente de Marketing **Marina** , (**EmployeeID** 272), é subordinada a **Bruno**.  
   
@@ -64,7 +64,8 @@ ms.locfileid: "66110057"
   
 ### <a name="to-insert-a-subordinate-employee"></a>Para inserir um funcionário subordinado  
   
-1.  **Sara** é subordinada a **Davi**. Para inserir **Sariya** nó, você deve criar um apropriado **OrgNode** valor de tipo de dados `hierarchyid`. O código a seguir cria uma variável do tipo de dados `hierarchyid` e a popula com o valor OrgNode de raiz da tabela. Em seguida, usa essa variável com o método [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) para inserir a linha que é um nó subordinado. `GetDescendant` usa dois argumentos. Analise as seguintes opções para os valores de argumento:  
+1.  **Sariya** relata a **David**. Para inserir o nó **de Sariya** , você deve criar um valor de **OrgNode** apropriado do `hierarchyid`tipo de dados. O código a seguir cria uma variável do tipo de dados `hierarchyid` e a popula com o valor OrgNode de raiz da tabela. Em seguida, usa essa variável com o método [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) para inserir a linha que é um nó subordinado. 
+  `GetDescendant` usa dois argumentos. Analise as seguintes opções para os valores de argumento:  
   
     -   Se o pai for o NULL, o `GetDescendant` retornará NULL.  
   

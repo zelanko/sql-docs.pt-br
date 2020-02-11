@@ -1,5 +1,5 @@
 ---
-title: Propriedade Index | Microsoft Docs
+title: Propriedade index | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,43 +16,43 @@ ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932432"
 ---
 # <a name="index-property"></a>Propriedade Index
-Indica o nome do índice atualmente em vigor para um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Indica o nome do índice atualmente em vigor para um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
-## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
- Define ou retorna um **cadeia de caracteres** valor, que é o nome do índice.  
+## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
+ Define ou retorna um valor de **cadeia de caracteres** , que é o nome do índice.  
   
 ## <a name="remarks"></a>Comentários  
- O índice nomeado pelos **índice** propriedade deve ter sido declarada anteriormente na tabela base subjacente a **Recordset** objeto. Ou seja, o índice deve ter sido declarado por meio de programação como um ADOX [índice](../../../ado/reference/adox-api/index-object-adox.md) objeto, ou quando a tabela base foi criada.  
+ O índice nomeado pela propriedade **index** deve ter sido declarado anteriormente na tabela base subjacente ao objeto **Recordset** . Ou seja, o índice deve ter sido declarado programaticamente como um objeto de [índice](../../../ado/reference/adox-api/index-object-adox.md) ADOX ou quando a tabela base foi criada.  
   
- Se o índice não pode ser definido, ocorrerá um erro de tempo de execução. O **índice** propriedade não pode ser definida nas seguintes condições:  
+ Ocorrerá um erro de tempo de execução se não for possível definir o índice. A propriedade **index** não pode ser definida nas seguintes condições:  
   
--   Dentro de um [eventos WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) ou **RecordsetChangeComplete** manipulador de eventos.  
+-   Dentro de um manipulador de eventos [WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) ou **RecordsetChangeComplete** .  
   
--   Se o **conjunto de registros** ainda está executando uma operação (que pode ser determinado com a [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade).  
+-   Se o **conjunto de registros** ainda estiver executando uma operação (que pode ser determinada pela propriedade [State](../../../ado/reference/ado-api/state-property-ado.md) ).  
   
--   Se um filtro tiver sido definido na **conjunto de registros** com o [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade.  
+-   Se um filtro tiver sido definido no **conjunto de registros** com a propriedade [Filter](../../../ado/reference/ado-api/filter-property.md) .  
   
- O **índice** propriedade sempre pode ser definida com êxito se o **conjunto de registros** for fechada, mas o **Recordset** não será aberto com êxito, ou o índice não será utilizável, se a provedor subjacente não oferece suporte a índices.  
+ A propriedade **index** sempre poderá ser definida com êxito se o **conjunto de registros** estiver fechado, mas o **conjunto de registros** não será aberto com êxito ou o índice não poderá ser usado se o provedor subjacente não oferecer suporte a índices.  
   
- Se o índice pode ser definido, pode alterar a posição da linha atual. Isso fará com que uma atualização para o [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propriedade e será acionado a **eventos WillChangeRecordset**, **RecordsetChangeComplete**, [eventos WillMove ](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md), e [MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md) eventos.  
+ Se o índice puder ser definido, a posição da linha atual poderá ser alterada. Isso causará uma atualização para a propriedade [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e acionará os eventos **WillChangeRecordset**, **RecordsetChangeComplete**, [WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)e [MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md) .  
   
- Se o índice pode ser definido e o [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) é de propriedade **adLockPessimistic** ou **adLockOptimistic**, em seguida, implícito [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) operação é executada. Isso libera os grupos afetados e atuais. Qualquer filtro existente é liberado, e a posição da linha atual é alterada para a primeira linha da reordenados **conjunto de registros**.  
+ Se o índice puder ser definido e a propriedade [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) for **adLockPessimistic** ou **adLockOptimistic**, uma operação [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) implícita será executada. Isso libera os grupos atuais e afetados. Qualquer filtro existente é liberado e a posição da linha atual é alterada para a primeira linha do **conjunto de registros**reordenado.  
   
- O **índice** propriedade é usada em conjunto com o [busca](../../../ado/reference/ado-api/seek-method.md) método. Se o provedor subjacente não dá suporte a **índice** propriedade e, portanto, o **busca** método, considere o uso a [localizar](../../../ado/reference/ado-api/find-method-ado.md) método em vez disso. Determinar se o **conjunto de registros** objeto dá suporte a índices com o [suporta](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** método.  
+ A propriedade **index** é usada em conjunto com o método [Seek](../../../ado/reference/ado-api/seek-method.md) . Se o provedor subjacente não oferecer suporte à propriedade **index** e, portanto, o método **Seek** , considere usar o método [Find](../../../ado/reference/ado-api/find-method-ado.md) em vez disso. Determine se o objeto **Recordset** dá suporte a índices com o método de [suporte](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** .  
   
- Interna **índice** propriedade não está relacionada a dinâmica [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriedade, embora ambos lidam com índices.  
+ A propriedade de **índice** interna não está relacionada à propriedade de [otimização](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dinâmica, embora ambas lidam com índices.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo da propriedade Index (VB) e do método Seek](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo do método Seek e da propriedade index (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Método Seek](../../../ado/reference/ado-api/seek-method.md)
