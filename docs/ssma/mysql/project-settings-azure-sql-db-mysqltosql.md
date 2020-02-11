@@ -1,5 +1,5 @@
 ---
-title: Configurações (BD SQL do Azure) do projeto (MySQLToSQL) | Microsoft Docs
+title: Configurações do projeto (banco de BD SQL do Azure) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,35 +10,35 @@ ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e4cf080d7a3bcb2d121a58a57be9f3fd41a4c18a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67908827"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>Configurações do projeto (BD SQL do Azure) (MySQLToSQL)
-As configurações do projeto do SQL Azure permitem que você configurar o sufixo do banco de dados do SQL Azure a serem adicionados na caixa de diálogo de conexão e também permite implementar o mecanismo de pulsação na conexão do SQL Azure.  
+As configurações do projeto SQL Azure permitem configurar o sufixo do banco de dados SQL Azure a ser adicionado na caixa de diálogo de conexão e também permitir a implementação do mecanismo de pulsação na conexão SQL Azure.  
   
-O painel do SQL Azure está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo.  
+O painel de SQL Azure está disponível nas caixas de diálogo **configurações do projeto** e **configurações do projeto padrão** .  
   
--   Use a caixa de diálogo de configurações do projeto para definir opções de configuração para o projeto atual. Para acessar as configurações do SQL Azure, nos **ferramentas** menu, selecione **configurações do projeto**, clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione **SQL Azure**.  
+-   Use a caixa de diálogo Configurações do projeto para definir opções de configuração para o projeto atual. Para acessar as configurações de SQL Azure, no menu **ferramentas** , selecione **configurações do projeto**, clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione **SQL Azure**.  
   
--   Use a caixa de diálogo de configurações de projeto padrão para definir opções de configuração para todos os projetos. Para acessar as configurações do SQL Azure, no **ferramentas** menu, selecione **DefaultProject configurações**, selecione o tipo de projeto de migração como SQL Azure da **versão de destino de migração** drop para baixo até o acesso as configurações no painel do SQL Azure, clique em **gerais** na parte inferior do painel esquerdo e, em seguida, selecione **SQL Azure**.  
+-   Use a caixa de diálogo Configurações de projeto padrão para definir opções de configuração para todos os projetos. Para acessar as configurações de SQL Azure, no menu **ferramentas** , selecione **configurações de defaultproject**, selecione tipo de projeto de migração como SQL Azure na lista suspensa **versão de destino de migração** para acessar as configurações no painel SQL Azure, clique em **geral** na parte inferior do painel esquerdo e selecione **SQL Azure**.  
   
 ## <a name="options"></a>Opções  
   
 ## <a name="connectivity"></a>Conectividade  
 **Intervalo de pulsação**  
   
-Especifica um intervalo de tempo a ser usado para o mecanismo de pulsação para manter a conexão do SQL Azure ativo no ' minutos: formato de segundos.  
+Especifica um intervalo de tempo a ser usado para o mecanismo de pulsação para manter a conexão de SQL Azure ativada no formato ' minutes: segundos '.  
   
-**Valor padrão**:' 4:45 '  
+**Valor padrão**: ' 4:45 '  
   
-O valor deve ser especificado em Estou: formato dos ss (por exemplo, ' 4:45 ' ou ' 0:50 ').  
+O valor deve ser especificado no formato ' m:SS ' (por exemplo, ' 4:45 ' ou ' 0:50 ').  
   
-**Sufixo de servidor do SQL Azure**  
+**Sufixo de servidor SQL Azure**  
   
-Especifica o sufixo do servidor do SQL Azure  
+Especifica o sufixo do servidor SQL Azure  
   
-**Valor padrão**: 'database.windows.net'.  
+**Valor padrão**: ' Database.Windows.net '.  
   

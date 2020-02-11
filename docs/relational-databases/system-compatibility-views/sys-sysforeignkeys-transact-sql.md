@@ -21,10 +21,10 @@ ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: acbf543abeb8e35adb506e1fb381d2fa2018f113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053455"
 ---
 # <a name="syssysforeignkeys-transact-sql"></a>sys.sysforeignkeys (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68053455"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|ID da restrição FOREIGN KEY.|  
 |**fkeyid**|**int**|ID de objeto da tabela com a restrição FOREIGN KEY.|  
@@ -44,8 +44,8 @@ ms.locfileid: "68053455"
 |**rkey**|**smallint**|ID da coluna referenciada.|  
 |**keyno**|**smallint**|Posição da coluna na lista de colunas de referência.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Exibições de compatibilidade &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Exibições de compatibilidade &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

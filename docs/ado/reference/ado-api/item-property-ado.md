@@ -1,5 +1,5 @@
 ---
-title: Item de propriedade (ADO) | Microsoft Docs
+title: Propriedade Item (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -46,14 +46,14 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918361"
 ---
 # <a name="item-property-ado"></a>Propriedade Item (ADO)
-Indica um membro específico de uma coleção por nome ou número ordinal.  
+Indica um membro específico de uma coleção, por nome ou número ordinal.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,21 +64,21 @@ Set object = collection.Item ( Index )
 ## <a name="return-value"></a>Valor retornado  
  Retorna uma referência de objeto.  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *Index*  
- Um **Variant** expressão que é avaliada para o nome ou para o número ordinal de um objeto em uma coleção.  
+ Uma expressão **Variant** que é avaliada como o nome ou o número ordinal de um objeto em uma coleção.  
   
 ## <a name="remarks"></a>Comentários  
- Use o **Item** propriedade para retornar um objeto específico em uma coleção. Se **Item** não é possível localizar um objeto na coleção correspondente para o *índice* argumento, um erro ocorre. Além disso, algumas coleções não dão suporte a objetos nomeados; para essas coleções, você deve usar referências de número ordinal.  
+ Use a propriedade **Item** para retornar um objeto específico em uma coleção. Se o **Item** não conseguir localizar um objeto na coleção correspondente ao argumento de *índice* , ocorrerá um erro. Além disso, algumas coleções não oferecem suporte a objetos nomeados; para essas coleções, você deve usar referências de número ordinal.  
   
- O **Item** é a propriedade padrão para todas as coleções; portanto, as formas de sintaxe a seguir são intercambiáveis:  
+ A propriedade **Item** é a propriedade padrão para todas as coleções; Portanto, as seguintes formas de sintaxe são intercambiáveis:  
   
 ```  
 collection.Item (Index)  
 collection (Index)  
 ```  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
   
 ||||  
 |-|-|-|  
@@ -90,6 +90,6 @@ collection (Index)
 |[Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Coleção Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Coleção Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo da propriedade item (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo da Propriedade Item (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Exemplo da propriedade Item (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

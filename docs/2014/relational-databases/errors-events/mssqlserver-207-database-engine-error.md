@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915046"
 ---
-# <a name="mssqlserver207"></a>MSSQLSERVER_207
+# <a name="mssqlserver_207"></a>MSSQLSERVER_207
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|207|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SQ_BADCOL|  
 |Texto da mensagem|Nome de coluna inválido '%.*ls'.|  
@@ -53,7 +53,7 @@ ms.locfileid: "62915046"
   
     1.  FROM  
   
-    2.  ON  
+    2.  ATIVADO  
   
     3.  JOIN  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62915046"
   
     8.  SELECT  
   
-    9. DISTINCT  
+    9. DISTINTO  
   
     10. ORDER BY  
   
@@ -117,7 +117,7 @@ ms.locfileid: "62915046"
   
 -   A cláusula WHEN NOT MATCHED BY SOURCE na instrução MERGE faz referência a um valor que pode ser acessado. Modifique a instrução MERGE de forma que pelo menos uma linha seja retornada pela tabela de origem na cláusula WHEN NOT MATCHED BY SOURCE. Por exemplo, talvez você precise adicionar ou revisar a condição da pesquisa especificada para a cláusula. Como alternativa, é possível modificar a cláusula para especificar um valor que não faz referência à tabela de origem. Por exemplo, `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   
  [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   

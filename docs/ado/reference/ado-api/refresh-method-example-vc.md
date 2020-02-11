@@ -1,5 +1,5 @@
 ---
-title: Exemplo do método (VC + +) Refresh | Microsoft Docs
+title: Exemplo do método Refresh (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58bc25f41171e4258347522efe7a02f2620cfd82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917269"
 ---
 # <a name="refresh-method-example-vc"></a>Exemplo do método Refresh (VC++)
-Este exemplo demonstra como usar o [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) método para atualizar o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção para um procedimento armazenado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
+Este exemplo demonstra o uso do método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) para atualizar a coleção de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) para um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) de procedimento armazenado.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -233,7 +233,7 @@ Authors with 25 percent royalty
   899-46-2035, Anne Ringer  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Método Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

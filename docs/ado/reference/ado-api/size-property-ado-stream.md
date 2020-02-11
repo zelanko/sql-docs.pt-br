@@ -1,5 +1,5 @@
 ---
-title: Propriedade (ADO Stream) size | Microsoft Docs
+title: Propriedade Size (fluxo ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,26 +16,26 @@ ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e52d05cdbc0fe0ca397c3a7b417fec72703b8e1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916937"
 ---
 # <a name="size-property-ado-stream"></a>Propriedade Size (Fluxo do ADO)
-Indica o tamanho do fluxo no número de bytes.  
+Indica o tamanho do fluxo em número de bytes.  
   
 ## <a name="return-values"></a>Valores de retorno  
- Retorna um **longo** valor que especifica o tamanho do fluxo no número de bytes. O valor padrão é o tamanho do fluxo ou -1 se o tamanho do fluxo não for conhecido.  
+ Retorna um valor **longo** que especifica o tamanho do fluxo em número de bytes. O valor padrão é o tamanho do fluxo, ou-1 se o tamanho do fluxo não for conhecido.  
   
 ## <a name="remarks"></a>Comentários  
- **Tamanho** pode ser usado apenas com aberto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
+ O **tamanho** pode ser usado somente com objetos de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) aberto.  
   
 > [!NOTE]
->  Qualquer número de bits pode ser armazenado em uma **Stream** objeto, limitado apenas pelos recursos do sistema. Se o **Stream** contém bits maior do que pode ser representado por uma **longo** valor, **tamanho** será truncado e, portanto, não representar com exatidão o comprimento do **Stream**.  
+>  Qualquer número de bits pode ser armazenado em um objeto de **fluxo** , limitado apenas por recursos do sistema. Se o **fluxo** contiver mais bits do que pode ser representado por um valor **longo** , o **tamanho** será truncado e, portanto, não representará com precisão o comprimento do **fluxo**.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade Size (Parâmetro ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

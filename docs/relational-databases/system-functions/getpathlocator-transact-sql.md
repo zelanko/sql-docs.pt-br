@@ -1,5 +1,5 @@
 ---
-title: GetPathLocator (Transact-SQL) | Microsoft Docs
+title: Função getpathlocator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4cec490522f8bacc774213ec1af5cce1af0eefef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910249"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
@@ -38,9 +38,9 @@ GetPathLocator(filenamespace_path)
   
 ## <a name="arguments"></a>Argumentos  
  *filenamespace_path*  
- Um caminho de namespace na FileTable. O caminho do namespace é do tipo **nvarchar (max)** .  
+ Um caminho de namespace na FileTable. O caminho do namespace é do tipo **nvarchar (max)**.  
   
- Quando o banco de dados pertence a um grupo de disponibilidade Always On, o **GetPathLocator** função aceita o nome de rede virtual (VNN) ou o nome do computador.  
+ Quando o banco de dados pertence a um grupo de disponibilidade Always On, a função **função getpathlocator** aceita o VNN (nome da rede virtual) ou o nome do computador.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **hierarchyid**  
@@ -49,9 +49,9 @@ GetPathLocator(filenamespace_path)
  Para obter mais informações, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 ## <a name="examples"></a>Exemplos  
- Você pode usar o **GetPathLocator** funcionar quando você estiver migrando arquivos de um servidor de arquivos para uma FileTable. Neste cenário, você deseja mover os arquivos para a FileTable e, em seguida, substituir o caminho UNC original de cada arquivo com o caminho UNC da FileTable. Para obter um exemplo completo, consulte [carregar arquivos em FileTables](../../relational-databases/blob/load-files-into-filetables.md).  
+ Você pode usar a função **função getpathlocator** ao migrar arquivos de um servidor de arquivos para uma filetable. Neste cenário, você deseja mover os arquivos para a FileTable e, em seguida, substituir o caminho UNC original de cada arquivo com o caminho UNC da FileTable. Para obter um exemplo completo, consulte [carregar arquivos em Filetables](../../relational-databases/blob/load-files-into-filetables.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com diretórios e caminhos em FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

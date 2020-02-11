@@ -15,26 +15,26 @@ ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051126"
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequências de escape no ODBC
-Um número de recursos de linguagem, como junções externas e chamadas de função escalar, normalmente é implementado pelos DBMSs. No entanto, as sintaxes para esses recursos costumam ser específicos de DBMS, mesmo quando as sintaxes padrão são definidas por vários órgãos de padrões. Por isso, o ODBC define sequências de escape que contêm as sintaxes padrão para os seguintes recursos de idioma:  
+Vários recursos de linguagem, como junções externas e chamadas de função escalar, são normalmente implementados por DBMSs. No entanto, as sintaxes para esses recursos tendem a ser específicas do DBMS, mesmo quando as sintaxes padrão são definidas por vários órgãos de padrões. Por isso, o ODBC define as sequências de escape que contêm as sintaxes padrão para os seguintes recursos de idioma:  
   
--   Literais de intervalo de data, hora, carimbo de hora e data e hora  
+-   Literais data, time, timestamp e DateTime Interval  
   
--   Funções escalares como numérico, cadeia de caracteres e funções de conversão de tipo de dados  
+-   Funções escalares, como funções numéricas, de cadeia de caracteres e de conversão de tipo de dados  
   
--   COMO o caractere de escape de predicado  
+-   Caractere de escape de predicado LIKE  
   
 -   Junções externas  
   
 -   Chamadas de procedimento  
   
- A sequência de escape usada pelo ODBC é o seguinte:  
+ A sequência de escape usada pelo ODBC é a seguinte:  
   
 ```  
   
@@ -43,20 +43,20 @@ Um número de recursos de linguagem, como junções externas e chamadas de funç
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A sequência de escape é reconhecida e analisada por drivers, que substituem as sequências de escape com gramática específica do DBMS. Para obter mais informações sobre a sintaxe de sequência de escape, consulte [sequências de Escape de ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) no Apêndice c: Gramática SQL.  
+ A sequência de escape é reconhecida e analisada por drivers, que substituem as seqüências de escape por gramática específica do DBMS. Para obter mais informações sobre a sintaxe de sequência de escape, consulte [sequências de escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) no Apêndice C: gramática SQL.  
   
 > [!NOTE]  
->  No ODBC 2. *x*, essa era a sintaxe padrão da sequência de escape: **– (\*fornecedor (** _nome do fornecedor_ **), produto (** _nome do produto_ **)** _extensão_  **\*) –**  
+>  No ODBC 2. *x*, essa foi a sintaxe padrão da sequência de escape: **--(\*fornecedor (**_nome do fornecedor_**),**___extensão_ **** ** \*** do produto (nome do produto))--  
 >   
->  Essa sintaxe, além de uma sintaxe abreviada foi definida no formato: **{** _extensão_ **}**  
+>  Além dessa sintaxe, uma sintaxe abreviada foi definida no formato: **{**_Extension_**}**  
 >   
->  Em ODBC 3. *x*, a forma longa da sequência de escape foi preterida e a forma abreviada é usada exclusivamente.  
+>  No ODBC 3. *x*, a forma longa da sequência de escape foi preterida e a forma abreviada é usada exclusivamente.  
   
- Como as sequências de escape são mapeadas pelo driver para sintaxes de DBMS específico, um aplicativo pode usar a sequência de escape ou a sintaxe específica de DBMS. No entanto, os aplicativos que usam a sintaxe específica de DBMS não será interoperáveis. Ao usar a sequência de escape, aplicativos assegure-se de que o atributo da instrução SQL_ATTR_NOSCAN está desativado, que é o padrão. Caso contrário, a sequência de escape será enviada diretamente para a fonte de dados, onde ele normalmente causará um erro de sintaxe.  
+ Como as sequências de escape são mapeadas pelo driver para sintaxes específicas do DBMS, um aplicativo pode usar a sequência de escape ou a sintaxe específica do DBMS. No entanto, os aplicativos que usam a sintaxe específica do DBMS não serão interoperáveis. Ao usar a sequência de escape, os aplicativos devem verificar se o atributo da instrução SQL_ATTR_NOSCAN está desativado, o que é por padrão. Caso contrário, a sequência de escape será enviada diretamente para a fonte de dados, onde geralmente causará um erro de sintaxe.  
   
- Drivers de suportam a apenas essas sequências de escape que eles podem mapear para recursos de linguagem subjacente. Por exemplo, se a fonte de dados não oferece suporte a junções externas, nem será o driver. Para determinar se há suporte para quais sequências de escape, um aplicativo chama **SQLGetTypeInfo** e **SQLGetInfo**. Para obter mais informações, consulte a próxima seção, [data, hora e literais de carimbo de hora](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
+ Os drivers dão suporte apenas às sequências de escape que eles podem mapear para os recursos de linguagem subjacente. Por exemplo, se a fonte de dados não oferecer suporte a junções externas, nenhum será o driver. Para determinar quais sequências de escape têm suporte, um aplicativo chama **SQLGetTypeInfo** e **SQLGetInfo**. Para obter mais informações, consulte a próxima seção, [data, hora e literais de carimbo](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)de hora.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Data, hora e literais de carimbo de data/hora](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
   

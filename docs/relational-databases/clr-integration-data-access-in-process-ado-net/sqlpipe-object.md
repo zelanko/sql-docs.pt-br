@@ -15,10 +15,10 @@ ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ecc3f87313b6ddcd48b7b0e527ba4effd58e624
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913555"
 ---
 # <a name="sqlpipe-object"></a>Objeto SqlPipe
@@ -30,7 +30,7 @@ ms.locfileid: "67913555"
  No caso dos objetos de banco de dados CLR (common language runtime) executados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível enviar resultados ao pipe conectado usando os métodos **Send** do objeto **SqlPipe** . Acesse a propriedade **Pipe** do objeto **SqlContext** para obter o objeto **SqlPipe** . A classe **SqlPipe** é conceitualmente semelhante à classe **Response** localizada no ASP.NET. Para obter mais informações, consulte a documentação de referência da classe SqlPipe no .NET Framework SDK (Software Development Kit).  
   
 ## <a name="returning-tabular-results-and-messages"></a>Retornando resultados tabulares e mensagens  
- A **SqlPipe** tem um método **Send** com três sobrecargas. São eles:  
+ A **SqlPipe** tem um método **Send** com três sobrecargas. Eles são:  
   
 -   `void Send(string message)`  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67913555"
  **SendResultsStart** usa um **SqlDataRecord** como uma entrada. Ele marca o começo de um conjunto de resultados e usa os metadados de registro para criar os metadados que descrevem o conjunto de resultados. Ele não envia o valor do registro com **SendResultsStart**. Todas as linhas subsequentes, enviadas com **SendResultsRow**, devem corresponder àquela definição de metadados.  
   
 > [!NOTE]  
->  Depois de chamar o método **SendResultsStart** apenas **SendResultsRow** e **SendResultsEnd** podem ser chamados. Chamar qualquer outro método na mesma instância de **SqlPipe** resulta em um **InvalidOperationException**. **SendResultsEnd** define **SqlPipe** de volta ao estado original no qual outros métodos podem ser chamados.  
+>  Depois de chamar o método **SendResultsStart** apenas **SendResultsRow** e **SendResultsEnd** podem ser chamados. Chamar qualquer outro método na mesma instância de **SqlPipe** resulta em um **InvalidOperationException**. **SendResultsEnd** define **SqlPipe** de volta para o estado inicial no qual outros métodos podem ser chamados.  
   
 ### <a name="example"></a>Exemplo  
  O procedimento armazenado **uspGetProductLine** retorna o nome, o número do produto, a cor e o preço de tabela de todos os produtos de uma linha de produtos específica. Esse procedimento armazenado aceita correspondências exatas para *prodLine*.  
@@ -139,7 +139,7 @@ End Class
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
  [Procedimentos armazenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensões específicas em processo do SQL Server para o ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
