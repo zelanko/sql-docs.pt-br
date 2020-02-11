@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689024"
 ---
-# <a name="bcpgettypename"></a>bcp_gettypename
+# <a name="bcp_gettypename"></a>bcp_gettypename
   Retorna o nome do tipo SQL para um token do tipo BCP especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -46,10 +46,10 @@ fIsMaxType
  *token*  
  Um valor que indica um token do tipo BCP.  
   
- *field*  
+ *campo*  
  Indica se o token solicitado é do tipo max.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  Uma cadeia de caracteres que contém o nome do tipo SQL que corresponde ao tipo BCP. Se um for especificado um tipo BCP inválido, uma cadeia de caracteres vazia será retornada.  
   
 ## <a name="remarks"></a>Comentários  
@@ -59,44 +59,44 @@ fIsMaxType
   
 |Nome do tipo BCP|MaxType|Saída|  
 |-------------------|-------------|------------|  
-|`SQLDECIMAL`|Qualquer|**decimal**|  
-|`SQLNUMERIC`|Qualquer|**numeric**|  
-|`SQLINT1`|Qualquer|**tinyint**|  
-|`SQLINT2`|Qualquer|**smallint**|  
-|`SQLINT4`|Qualquer|**int**|  
-|`SQLMONEY`|Qualquer|**money**|  
-|`SQLFLT8`|Qualquer|**float**|  
-|`SQLDATETIME`|Qualquer|**datetime**|  
-|`SQLBITN`|Qualquer|**bit-null**|  
-|`SQLBIT`|Qualquer|**bit**|  
+|`SQLDECIMAL`|Você pode usar o|**decimal**|  
+|`SQLNUMERIC`|Você pode usar o|**numeric**|  
+|`SQLINT1`|Você pode usar o|**tinyint**|  
+|`SQLINT2`|Você pode usar o|**smallint**|  
+|`SQLINT4`|Você pode usar o|**int**|  
+|`SQLMONEY`|Você pode usar o|**money**|  
+|`SQLFLT8`|Você pode usar o|**float**|  
+|`SQLDATETIME`|Você pode usar o|**datetime**|  
+|`SQLBITN`|Você pode usar o|**bit-null**|  
+|`SQLBIT`|Você pode usar o|**bit**|  
 |`SQLBIGCHAR`|Não|**char**|  
 |`SQLCHARACTER`|Não|**char**|  
 |`SQLBIGVARCHAR`|Não|**varchar**|  
 |`SQLVARCHAR`|Não|**varchar**|  
-|`SQLTEXT`|Qualquer|**text**|  
+|`SQLTEXT`|Você pode usar o|**text**|  
 |`SQLBIGBINARY`|Não|**binary**|  
-|`SQLBINARY`|Não|**Binary**|  
-|`SQLBIGVARBINARY`|Não|**varbinary**|  
-|`SQLVARBINARY`|Não|**varbinary**|  
-|`SQLIMAGE`|Qualquer|**Image**|  
-|`SQLINTN`|Qualquer|**int-null**|  
-|`SQLDATETIMN`|Qualquer|**datetime-null**|  
-|`SQLMONEYN`|Qualquer|**money-null**|  
-|`SQLFLTN`|Qualquer|**float-null**|  
-|`SQLAOPSUM`|Qualquer|**Sum**|  
-|`SQLAOPAVG`|Qualquer|**Avg**|  
-|`SQLAOPCNT`|Qualquer|**Count**|  
-|`SQLAOPMIN`|Qualquer|**Min**|  
-|`SQLAOPMAX`|Qualquer|**Max**|  
-|`SQLDATETIM4`|Qualquer|**smalldatetime**|  
-|`SQLMONEY4`|Qualquer|**Smallmoney**|  
-|`SQLFLT4`|Qualquer|**Real**|  
-|`SQLUNIQUEID`|Qualquer|**uniqueidentifier**|  
+|`SQLBINARY`|Não|**Binário**|  
+|`SQLBIGVARBINARY`|Não|**Varbinary**|  
+|`SQLVARBINARY`|Não|**Varbinary**|  
+|`SQLIMAGE`|Você pode usar o|**Imagem**|  
+|`SQLINTN`|Você pode usar o|**int-null**|  
+|`SQLDATETIMN`|Você pode usar o|**datetime-null**|  
+|`SQLMONEYN`|Você pode usar o|**money-null**|  
+|`SQLFLTN`|Você pode usar o|**float-null**|  
+|`SQLAOPSUM`|Você pode usar o|**Quantia**|  
+|`SQLAOPAVG`|Você pode usar o|**Média**|  
+|`SQLAOPCNT`|Você pode usar o|**Contar**|  
+|`SQLAOPMIN`|Você pode usar o|**Min**|  
+|`SQLAOPMAX`|Você pode usar o|**Maximizar**|  
+|`SQLDATETIM4`|Você pode usar o|**smalldatetime**|  
+|`SQLMONEY4`|Você pode usar o|**Smallmoney**|  
+|`SQLFLT4`|Você pode usar o|**Real**|  
+|`SQLUNIQUEID`|Você pode usar o|**uniqueidentifier**|  
 |`SQLNCHAR`|Não|**Nchar**|  
 |`SQLNVARCHAR`|Não|**Nvarchar**|  
-|`SQLNTEXT`|Qualquer|**Ntext**|  
-|`SQLVARIANT`|Qualquer|**sql_variant**|  
-|`SQLINT8`|Qualquer|**Bigint**|  
+|`SQLNTEXT`|Você pode usar o|**Ntext**|  
+|`SQLVARIANT`|Você pode usar o|**sql_variant**|  
+|`SQLINT8`|Você pode usar o|**Bigint**|  
 |`SQLCHARACTER`|Sim|**varchar(max)**|  
 |`SQLBIGCHAR`|Sim|**varchar(max)**|  
 |`SQLBIGVARCHAR`|Sim|**varchar(max)**|  
@@ -107,15 +107,15 @@ fIsMaxType
 |`SQLVARBINARY`|Sim|**varbinary(max)**|  
 |`SQLNCHAR`|Sim|**nvarchar(max)**|  
 |`SQLNVARCHAR`|Sim|**nvarchar(max)**|  
-|`SQLXML`|Sim|**Xml**|  
-|`SQLUDT`|Qualquer|**Udt**|  
+|`SQLXML`|Sim|**XML**|  
+|`SQLUDT`|Você pode usar o|**UDT**|  
   
-## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Suporte de bcp_gettypename a recursos aprimorados de data e hora  
- Os valores de parâmetro de token para tipos de data/hora são descritos na coluna "Tipo em SQLNCLI. h" da tabela no [alterações de cópia em massa para tipos aprimorada de data e hora &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). O valor retornado está na linha correspondente da coluna "Tipo de armazenamento de arquivo" coluna.  
+## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Suporte de bcp_gettypename a recursos aprimorados de data e hora  
+ Os valores de parâmetro de token para tipos de data/hora são descritos na coluna "Type in sqlncli. h" da tabela em [alterações de cópia em massa para tipos de data e hora aprimorados &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). O valor retornado está na linha correspondente da coluna "Tipo de armazenamento de arquivo" coluna.  
   
- Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de cópia em massa](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

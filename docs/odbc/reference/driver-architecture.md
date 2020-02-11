@@ -1,5 +1,5 @@
 ---
-title: Arquitetura de driver | Microsoft Docs
+title: Arquitetura do driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd9bbb74d77a0b56b6b1f1aa5d8f1a6b5e97f5aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915472"
 ---
 # <a name="driver-architecture"></a>Arquitetura do driver
-Arquitetura do driver se enquadra em duas categorias, dependendo de quais instruções SQL de processos de software:  
+A arquitetura do driver se enquadra em duas categorias, dependendo de qual software processa as instruções SQL:  
   
--   **Drivers baseados em arquivo** o driver acessa os dados físicos diretamente. Nesse caso, o driver atua como o driver e a fonte de dados; ou seja, ele processa chamadas ODBC e instruções SQL. Por exemplo, drivers do dBASE são drivers baseados em arquivo, pois dBASE não fornece que um mecanismo de banco de dados autônomo, o driver pode usar. É importante observar que os desenvolvedores de drivers baseados em arquivo devem escrever seus próprios mecanismos de banco de dados.  
+-   **Drivers baseados em arquivo** O driver acessa os dados físicos diretamente. Nesse caso, o driver atua como o driver e a fonte de dados; ou seja, ele processa chamadas ODBC e instruções SQL. Por exemplo, os drivers do dBASE são drivers baseados em arquivo porque o dBASE não fornece um mecanismo de banco de dados autônomo que o driver pode usar. É importante observar que os desenvolvedores de drivers baseados em arquivo devem gravar seus próprios mecanismos de banco de dados.  
   
--   **Drivers baseados em DBMS** o driver acessa os dados físicos por meio de um mecanismo de banco de dados separado. Nesse caso, o driver processa somente as chamadas ODBC; ele passa instruções SQL para o mecanismo de banco de dados para processamento. Por exemplo, drivers do Oracle são drivers baseados em DBMS porque Oracle tem um mecanismo de banco de dados autônomo que usa o driver. Em que reside o mecanismo de banco de dados é irrelevante. Ele pode residir no mesmo computador que o driver ou um computador diferente na rede; ele ainda pode ser acessado por meio de um gateway.  
+-   **Drivers baseados em DBMS** O driver acessa os dados físicos por meio de um mecanismo de banco de dados separado. Nesse caso, o driver processa apenas chamadas ODBC; Ele passa instruções SQL para o mecanismo de banco de dados para processamento. Por exemplo, os drivers do Oracle são drivers baseados em DBMS porque a Oracle tem um mecanismo de banco de dados autônomo que o driver usa. O local em que o mecanismo de banco de dados reside não é material. Ele pode residir no mesmo computador que o driver ou em um computador diferente na rede; Ele pode até ser acessado por meio de um gateway.  
   
- Arquitetura do driver é geralmente interessante apenas para gravadores de driver; ou seja, a arquitetura do driver geralmente não faz diferença para o aplicativo. No entanto, a arquitetura pode afetar se um aplicativo pode usar o SQL específicas do DBMS. Por exemplo, o Microsoft Access fornece um mecanismo de banco de dados autônomo. Se um driver do Microsoft Access for baseados em DBMS, acessa os dados por meio desse mecanismo – o aplicativo pode passar instruções de SQL do Microsoft Access para o mecanismo para processamento.  
+ A arquitetura do driver geralmente é interessante apenas para os gravadores de driver; ou seja, a arquitetura do driver geralmente não faz nenhuma diferença para o aplicativo. No entanto, a arquitetura pode afetar se um aplicativo pode usar o SQL específico do DBMS. Por exemplo, o Microsoft Access fornece um mecanismo de banco de dados autônomo. Se um driver do Microsoft Access for baseado em DBMS, ele acessará os dados por meio desse mecanismo. o aplicativo pode passar instruções SQL do Microsoft Access para o mecanismo para processamento.  
   
- No entanto, se o driver for baseado em arquivo, ou seja, ele contém um mecanismo de proprietário que acessa o arquivo. mdb do Microsoft® Access diretamente - qualquer tentativa de passar instruções SQL específicas da Microsoft Access para o mecanismo é provavelmente resultará em erros de sintaxe. O motivo é que o mecanismo de proprietário é provavelmente, implementarão somente ODBC SQL.  
+ No entanto, se o driver for baseado em arquivo – ou seja, ele conterá um mecanismo proprietário que acessa o arquivo. mdb do Microsoft® Access diretamente-qualquer tentativa de passar instruções SQL específicas do Microsoft Access para o mecanismo provavelmente resultará em erros de sintaxe. O motivo é que o mecanismo proprietário provavelmente implementará somente o ODBC SQL.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Drivers baseados em arquivo](../../odbc/reference/file-based-drivers.md)  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761595"
 ---
 # <a name="create-tables-database-engine"></a>Criar tabelas (Mecanismo de Banco de Dados)
@@ -31,7 +31,7 @@ ms.locfileid: "62761595"
   
      [Segurança](#Security)  
   
--   **Para criar uma tabela, usando:**  
+-   **Para criar uma tabela usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62761595"
   
      Para obter mais informações sobre esquemas, consulte [Create a Database Schema](../security/authentication-access/create-a-database-schema.md).  
   
-9. No menu **Arquivo** , escolha **Salvar** *table name*.  
+9. No menu **arquivo** , escolha **salvar** *nome da tabela*.  
   
 10. Na caixa de diálogo **Escolher Nome** , digite um nome para a tabela e clique em **OK**.  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63125991"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renomear uma instância do cluster de failover do SQL Server
@@ -29,7 +29,8 @@ ms.locfileid: "63125991"
   
  Antes de começar o processo de renomeação, revise os itens a seguir.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não dá suporte à renomeação de servidores envolvidos na replicação, exceto no caso de uso de envio de logs com a replicação. O servidor secundário no envio de logs poderá ser renomeado se o servidor primário for permanentemente perdido. Para obter mais informações, veja [Replicação e envio de logs &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não dá suporte à renomeação de servidores envolvidos na replicação, exceto no caso de uso de envio de logs com a replicação. O servidor secundário no envio de logs poderá ser renomeado se o servidor primário for permanentemente perdido. Para obter mais informações, veja [Replicação e envio de logs &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
 -   Quando você renomear um servidor virtual que está configurado para usar espelhamento de banco de dados, deverá desativar o espelhamento de banco de dados antes da operação de renomeação e, em seguida, restabelecer o espelhamento do banco de dados com o novo nome do servidor virtual. Os metadados do espelhamento de banco de dados não serão atualizados automaticamente para refletir o novo nome do servidor virtual.  
   
@@ -63,19 +64,19 @@ ms.locfileid: "63125991"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Considerações adicionais depois da operação de renomeação  
  Depois de renomearmos o nome de rede do cluster de failover, precisamos verificar e executar as instruções a seguir para habilitar todos os cenários no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Depois de alterar o nome da rede de um [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] usando a ferramenta Administrador de Cluster do Windows, a atualização futura de instância de cluster de failover ou operação de desinstalação poderá falhar. Para resolver esse problema, atualize o **ClusterName** entrada de registro seguindo as instruções na seção de resolução [isso](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002).  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Depois de alterar o nome de rede de [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] uma instância de cluster de failover usando a ferramenta Administrador de cluster do Windows, a atualização futura ou a operação de desinstalação poderá falhar. Para resolver esse problema, atualize a [entrada do registro](https://go.microsoft.com/fwlink/?LinkId=244002) **ClusterName** seguindo as instruções na seção de resolução destehttps://go.microsoft.com/fwlink/?LinkId=244002)(.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Serviço de agente:** Verificar e executar as ações adicionais abaixo para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] serviço de agente:  
+ Serviço do agente: ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** Verifique e execute as ações adicionais abaixo para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o serviço do Agent:  
   
 -   Corrija as configurações do Registro se o SQL Agent estiver configurado para encaminhamento de evento. Para obter mais informações, consulte [Designar um servidor de encaminhamento de eventos &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
--   Corrija o servidor mestre (MSX) e os nomes de instância de servidores de destino (TSX) quando os nomes dos computadores e da rede de cluster forem renomeados. Para mais informações, consulte os seguintes tópicos:  
+-   Corrija o servidor mestre (MSX) e os nomes de instância de servidores de destino (TSX) quando os nomes dos computadores e da rede de cluster forem renomeados. Para obter mais informações, consulte estes tópicos:  
   
-    -   [Remover vários servidores de destino de um servidor mestre](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Defect Multiple Target Servers from a Master Server](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Criar um ambiente multisservidor](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   Reconfigure o envio de logs para que o nome de servidor atualizado seja usado para fazer backup e restaurar logs. Para mais informações, consulte os seguintes tópicos:  
+-   Reconfigure o envio de logs para que o nome de servidor atualizado seja usado para fazer backup e restaurar logs. Para obter mais informações, consulte estes tópicos:  
   
     -   [Configurar o envio de logs &#40;SQL Server&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   
@@ -83,7 +84,7 @@ ms.locfileid: "63125991"
   
 -   Atualize o Jobsteps que depende do nome do servidor. Para obter mais informações, consulte [Gerenciar etapas de trabalho](../../../ssms/agent/manage-job-steps.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Renomear um computador que hospeda uma instância autônoma do SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

@@ -11,16 +11,16 @@ ms.assetid: ee9cd360-07e5-4f8a-804b-ad95aecae3e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33aa08b86767b855b3c5cfc70ceaef785c419aef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002205"
 ---
 # <a name="constructing-sql-statements"></a>Construir instruções SQL
-Instruções SQL podem ser construídas em uma das três maneiras: embutido em código durante o desenvolvimento, construídas em tempo de execução, ou inserido diretamente pelo usuário.  
+As instruções SQL podem ser construídas de uma das três maneiras: embutidas em código durante o desenvolvimento, construídas em tempo de execução ou inseridas diretamente pelo usuário.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Instruções SQL embutidas em código](../../../odbc/reference/develop-app/hard-coded-sql-statements.md)  
   

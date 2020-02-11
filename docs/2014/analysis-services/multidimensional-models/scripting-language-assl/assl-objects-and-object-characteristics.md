@@ -1,5 +1,5 @@
 ---
-title: Objetos e características de objeto ASSL | Microsoft Docs
+title: Objetos ASSL e características de objeto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,17 +20,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736610"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Objetos e características de objeto ASSL
   Os objetos da ASSL (Analysis Services Scripting Language) seguem diretrizes específicas a respeito de grupos de objetos, herança, nomenclatura, expansão e processamento.  
   
 ## <a name="object-groups"></a>Grupos de objetos  
- Todos os objetos do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] possuem uma representação XML. Os objetos estão divididos em dois grupos:  
+ Todos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] os objetos têm uma representação XML. Os objetos estão divididos em dois grupos:  
   
  **Objetos principais**  
  Os objetos principais podem ser criados, alterados e excluídos de forma independente. Entre eles, estão incluídos:  
@@ -63,7 +63,8 @@ ms.locfileid: "62736610"
   
 -   `LastSchemaUpdate`  
   
--   `LastProcessed` (onde apropriado)  
+-   
+  `LastProcessed` (onde apropriado)  
   
 > [!NOTE]  
 >  A classificação de um objeto como um objeto principal afeta a forma como uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tratará esse objeto e como ele será manipulado na linguagem de definição de objeto. No entanto, essa classificação não garante que as ferramentas de desenvolvimento e de gerenciamento do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] permitirão a criação, a modificação ou a exclusão independente desses objetos.  
@@ -75,7 +76,7 @@ ms.locfileid: "62736610"
   
 -   Atributos  
   
--   Medidas  
+-   medidas  
   
 -   Colunas do modelo de mineração  
   
@@ -86,11 +87,11 @@ ms.locfileid: "62736610"
 ## <a name="object-expansion"></a>Expansão de objetos  
  A restrição `ObjectExpansion` pode ser usada para controlar o grau de expansão do XML ASSL retornado pelo servidor. As opções dessa restrição estão relacionadas na tabela a seguir.  
   
-|Valor de enumeração|Permitido para \<Alter >|Descrição|  
+|Valor de enumeração|Permitido para \<ALTER>|DESCRIÇÃO|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|não|Retorna somente o nome, a ID e o carimbo de data/hora do objeto solicitado e de todos os objetos principais contidos de forma recursiva.|  
 |*ObjectProperties*|sim|Expande o objeto solicitado e os objetos secundários contidos, mas não retorna objetos principais contidos.|  
-|*ExpandObject*|não|Igual a *ObjectProperties*, mas também retorna o nome, a ID e o carimbo de data/hora para os principais objetos contidos.|  
+|*Expandobject*|não|Igual a *ObjectProperties*, mas também retorna o nome, a ID e o carimbo de data/hora para os principais objetos contidos.|  
 |*ExpandFull*|sim|Expande completamente o objeto solicitado e todos os objetos recursivamente.|  
   
  Esta seção de referência de ASSL descreve a representação *ExpandFull* . Todos os outros níveis de `ObjectExpansion` derivam desse nível.  

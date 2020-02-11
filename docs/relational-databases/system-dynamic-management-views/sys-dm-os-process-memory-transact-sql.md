@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_process_memory (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_process_memory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,25 +21,25 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fcbab4d5dc1bbc86fe9083e9c3407749040a0023
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265699"
 ---
-# <a name="sysdmosprocessmemory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
+# <a name="sysdm_os_process_memory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  A maioria das alocações de memória atribuídas ao espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é controlada por meio de interfaces que permitem o rastreamento e a contabilidade dessas alocações. Porém, poderiam ser executadas alocações de memória no espaço de endereçamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ignora rotinas de administração de memória internas. Os valores são obtidos por chamadas ao sistema operacional de base. Eles não são manipulados por métodos internos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto nos ajustes para bloqueada ou as alocações de página grande.  
+  A maioria das alocações de memória atribuídas ao espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é controlada por meio de interfaces que permitem o rastreamento e a contabilidade dessas alocações. Porém, poderiam ser executadas alocações de memória no espaço de endereçamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ignora rotinas de administração de memória internas. Os valores são obtidos por chamadas ao sistema operacional de base. Eles não são manipulados por métodos internos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto quando eles se ajustam a alocações de página grandes ou bloqueadas.  
   
- Todos os valores retornados que indicam tamanhos de memória são exibidos em kilobytes (KB). A coluna **total_virtual_address_space_reserved_kb** é uma duplicata de **virtual_memory_in_bytes** da **DM os_sys_info**.  
+ Todos os valores retornados que indicam tamanhos de memória são exibidos em kilobytes (KB). A coluna **total_virtual_address_space_reserved_kb** é uma duplicata de **virtual_memory_in_bytes** de **Sys. dm_os_sys_info**.  
   
  A tabela a seguir fornece um quadro completo do espaço de endereçamento de processos.  
   
 > [!NOTE]  
->  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_process_memory**.  
+>  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_os_process_memory**.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**physical_memory_in_use_kb**|**bigint**|Indica o conjunto de trabalho do processo em KB, conforme relatado pelo sistema operacional, assim como alocações rastreadas por meio de APIs de página grande. Não permite valor nulo.|  
 |**large_page_allocations_kb**|**bigint**|Especifica a memória física alocada com o uso de APIs de página grande. Não permite valor nulo.|  
@@ -47,23 +47,23 @@ ms.locfileid: "68265699"
 |**total_virtual_address_space_kb**|**bigint**|Indica o tamanho total da parte de modo de usuário do espaço de endereço virtual. Não permite valor nulo.|  
 |**virtual_address_space_reserved_kb**|**bigint**|Indica o espaço total do endereço virtual reservado pelo processo. Não permite valor nulo.|  
 |**virtual_address_space_committed_kb**|**bigint**|Indica o espaço de endereço virtual reservado que foi confirmado ou mapeado para páginas físicas. Não permite valor nulo.|  
-|**virtual_address_space_available_kb**|**bigint**|Indica o espaço de endereço virtual atualmente livre. Não permite valor nulo.<br /><br /> **Observação:** Regiões livres menores que a granularidade de alocação podem existir. Essas regiões não estão disponível para alocações.|  
+|**virtual_address_space_available_kb**|**bigint**|Indica o espaço de endereço virtual atualmente livre. Não permite valor nulo.<br /><br /> **Observação:** Regiões livres que são menores do que a granularidade de alocação podem existir. Essas regiões não estão disponível para alocações.|  
 |**page_fault_count**|**bigint**|Indica o número de falhas de página incorridas pelo processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não permite valor nulo.|  
 |**memory_utilization_percentage**|**int**|Especifica a porcentagem de memória confirmada que está no conjunto de trabalho. Não permite valor nulo.|  
 |**available_commit_limit_kb**|**bigint**|Indica a quantidade de memória disponível para ser confirmada pelo processo. Não permite valor nulo.|  
 |**process_physical_memory_low**|**bit**|Indica que o processo está respondendo a uma notificação de memória física baixa. Não permite valor nulo.|  
 |**process_virtual_memory_low**|**bit**|Indica que uma condição de memória virtual baixa foi detectada. Não permite valor nulo.|  
-|**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões  
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é necessária a permissão VIEW SERVER STATE no servidor.  
   
-Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Sistema operacional SQL Server relacionados exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

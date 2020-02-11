@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067452"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Caixa de diálogo Verificar Restrição (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63067452"
 >  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
   
 ## <a name="options"></a>Opções  
- **Restrições de Verificação Selecionadas**  
+ **Restrições de verificação selecionadas**  
  Lista as restrições de verificação disponíveis. Para exibir as propriedades de uma restrição, selecione-a na lista.  
   
  **Adicionar**  
@@ -38,7 +38,7 @@ ms.locfileid: "63067452"
  **Categoria Geral**  
  Expanda para mostrar o campo de propriedade **Expressão** .  
   
- **Expressão**  
+ **Expression**  
  Exibe a expressão para a restrição de verificação selecionada. Para nova restrições, você deve digitar a expressão antes de sair dessa caixa. Você também pode editar restrições de verificação existentes. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
  **Categoria de identidade**  
@@ -48,22 +48,22 @@ ms.locfileid: "63067452"
  Mostra o nome da restrição de verificação selecionada. Para alterar o nome dessa restrição, digite o texto diretamente no campo de propriedade.  
   
  **Descrição**  
- Descrevendo a restrição de verificação. Você pode editar a descrição digitando no campo de propriedade ou clicar no botão de reticências ( **…** ), que aparece à direita do campo de propriedade, bem como editar a descrição na caixa de diálogo **Propriedade de Descrição**.  
+ Descrevendo a restrição de verificação. Você pode editar a descrição digitando no campo de propriedade ou clicar no botão de reticências (**…**), que aparece à direita do campo de propriedade, bem como editar a descrição na caixa de diálogo **Propriedade de Descrição**.  
   
  **Categoria do Designer de Tabelas**  
  Expanda para mostrar as propriedades de **Verificar Dados Existentes ao Criar ou Habilitar Novamente**, **Impor para Inserir e Atualizar**e **Impor Replicação**.  
   
- **Check Existing Data On Creation or Re-Enabling**  
+ **Verificar dados existentes ao criar ou habilitar novamente**  
  Especifica se todos os dados preexistentes (dados existentes na tabela antes de a restrição ser criada) são verificados em relação à restrição.  
   
- **Impor para Inserir e Atualizar**  
+ **Impor para inserções e atualizações**  
  Especifica se a restrição é imposta quando os dados são inseridos ou atualizados na tabela.  
   
  **Impor para Replicação**  
  Indica se é para impor a restrição quando um agente de replicação executar uma inserção ou atualização nesta tabela.  
   
-## <a name="see-also"></a>Consulte também  
- [As restrições UNIQUE e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
- [Índices e teclas de caixa de diálogo &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Restrições exclusivas e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Caixa de diálogo índices e chaves &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

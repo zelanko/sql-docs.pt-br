@@ -1,5 +1,5 @@
 ---
-title: '- (Negativo) (DMX) | Microsoft Docs'
+title: '- Seriamente (DMX) | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1a4975e762d698d6f1097372b392a09d9fceb85e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008264"
 ---
 # <a name="--negative-dmx"></a>- (Negativo) (DMX)
@@ -27,16 +27,16 @@ ms.locfileid: "68008264"
 - Numeric_Expression  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Numeric_Expression*  
  Expressão DMX (Data Mining Extensions) válida que retorna um valor numérico.  
   
 ## <a name="return-value"></a>Valor retornado  
  Valor que tem o tipo de dados do parâmetro especificado.  
   
-## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência de operador de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operadores &#40;&#41;DMX](../dmx/operators-dmx.md)   
  [Operadores unários &#40;DMX&#41;](../dmx/operators-unary.md)  
   
   

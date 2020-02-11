@@ -13,27 +13,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d98be02727582d4f9201ec7f47c3cdb8db5a56b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761922"
 ---
-# <a name="mssqlserver845"></a>MSSQLSERVER_845
+# <a name="mssqlserver_845"></a>MSSQLSERVER_845
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|845|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|BUFLATCH_TIMEOUT|  
 |Texto da mensagem|Tempo limite excedido ao aguardar pelo tipo de fechamento de buffer %d para página %S_PGID, da ID de banco de dados %d.|  
   
 ## <a name="explanation"></a>Explicação  
- Ocorreu uma falha; um processo estava aguardando para adquirir uma trava, mas o tempo limite expirou. Isso pode ocorrer se uma operação de E/S levar muito tempo para ser concluída, geralmente porque outras tarefas estão bloqueando os processos do sistema. Em algumas instâncias, esse erro pode ser o resultado de um problema de hardware.  
+ Um processo estava aguardando a aquisição de uma trava, mas ele aguardou até o tempo limite expirar e não foi capaz de adquiri-la. Isso pode ocorrer se uma operação de E/S levar muito tempo para ser concluída, geralmente porque outras tarefas estão bloqueando os processos do sistema. Em algumas instâncias, esse erro pode ser o resultado de um problema de hardware.  
   
 ## <a name="user-action"></a>Ação do usuário  
  Executar as seguintes tarefas pode evitar esse erro:  

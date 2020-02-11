@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 690b52fceb74269501880565bab65b020206fa61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761523"
 ---
 # <a name="delete-primary-keys"></a>Excluir chaves primárias
@@ -62,7 +62,7 @@ ms.locfileid: "62761523"
     > [!NOTE]  
     >  Para desfazer essa ação, feche a tabela sem salvar as alterações. A exclusão de uma chave primária não pode ser desfeita sem perder todas as outras alterações feitas na tabela.  
   
-3.  No menu **Arquivo** , clique em **Salvar**_table name_.  
+3.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

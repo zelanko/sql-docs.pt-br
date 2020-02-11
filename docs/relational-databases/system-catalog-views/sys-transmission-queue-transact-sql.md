@@ -1,5 +1,5 @@
 ---
-title: sys.transmission_queue (Transact-SQL) | Microsoft Docs
+title: sys. transmission_queue (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bd461a677a7bfab145846baaf09c0a8a62d6f8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022601"
 ---
-# <a name="systransmissionqueue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
+# <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Esta exibição do catálogo contém uma linha para cada mensagem na fila de transmissão, como mostra a tabela a seguir:  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**conversation_handle**|**uniqueidentifier**|Identificador da conversa à qual pertence essa mensagem. Não é NULLABLE.|  
 |**to_service_name**|**nvarchar(256)**|Nome do serviço a que se destina essa mensagem. É NULLABLE.|  
@@ -48,6 +48,6 @@ ms.locfileid: "68022601"
 |**priority**|**tinyint**|O nível de prioridade atribuído a essa mensagem. Não é NULLABLE.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
   

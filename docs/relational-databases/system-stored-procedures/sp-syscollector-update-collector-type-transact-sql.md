@@ -19,18 +19,18 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010545"
 ---
-# <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
+# <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Atualiza um tipo de coletor para um item de coleta. Dado o nome e a GUID de um tipo de coletor, atualiza a configuração do tipo de coletor, inclusive a coleção e o pacote de carregamento, o esquema de parâmetros e o esquema do formatador de parâmetros.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,21 +44,21 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @collector_type_uid = ] 'collector_type_uid'` É o GUID para o tipo de coletor. *collector_type_uid* está **uniqueidentifier**, e se for NULL, ele será automaticamente criado e retornado como OUTPUT.  
+`[ @collector_type_uid = ] 'collector_type_uid'`É o GUID para o tipo de coletor. *collector_type_uid* é **uniqueidentifier**e, se for NULL, ele será criado automaticamente e retornado como saída.  
   
-`[ @name = ] 'name'` É o nome do tipo de coletor. *nome da* está **sysname** e deve ser especificado.  
+`[ @name = ] 'name'`É o nome do tipo de coletor. o *nome* é **sysname** e deve ser especificado.  
   
-`[ @parameter_schema = ] 'parameter_schema'` É o esquema XML para esse tipo de coletor. *parameter_schema* está **xml** e pode ser necessário para determinados tipos de coletor. Se não for necessário, esse argumento poderá ser NULL.  
+`[ @parameter_schema = ] 'parameter_schema'`É o esquema XML para esse tipo de coletor. *parameter_schema* é o **XML** e pode ser exigido por determinados tipos de coletor. Se não for necessário, esse argumento poderá ser NULL.  
   
-`[ @collection_package_id = ] collection_package_id` É um identificador exclusivo local que aponta para o [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta do pacote de coleta. *collection_package_id* está **uniqueidentifer** e é necessária. Para obter o valor de *collection_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
+`[ @collection_package_id = ] collection_package_id`É um identificador local exclusivo que aponta para o [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote de coleta usado pelo conjunto de coleta. *collection_package_id* é **uniqueidentifier** e é necessário. Para obter o valor de *collection_package_id*, consulte a exibição do sistema dbo. syscollector_collector_types no banco de dados msdb.  
   
-`[ @upload_package_id = ] upload_package_id` É um identificador exclusivo local que aponta para o [!INCLUDE[ssIS](../../includes/ssis-md.md)] carregar pacote usado pelo conjunto de coleta. *upload_package_id* está **uniqueidentifier** e é necessária. Para obter o valor de *upload_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
+`[ @upload_package_id = ] upload_package_id`É um identificador local exclusivo que aponta para o [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote de carregamento usado pelo conjunto de coleta. *upload_package_id* é **uniqueidentifier** e é obrigatório. Para obter o valor de *upload_package_id*, consulte a exibição do sistema dbo. syscollector_collector_types no banco de dados msdb.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **dc_admin** (com permissão EXECUTE) a função de banco de dados fixa.  
+ Requer associação na função de banco de dados fixa **dc_admin** (com permissão de execução).  
   
 ## <a name="example"></a>Exemplo  
  Esse exemplo atualiza o tipo de coletor de Consulta T-SQL Genérico. (No exemplo, o esquema padrão do tipo de coletor de Consulta T-SQL Genérico é usado.)  
@@ -100,8 +100,8 @@ EXEC sp_syscollector_update_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
   
   

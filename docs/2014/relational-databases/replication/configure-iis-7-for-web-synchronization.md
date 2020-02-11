@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721528"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar o IIS 7 para sincronização da Web
@@ -28,11 +28,11 @@ ms.locfileid: "62721528"
  Para obter uma visão geral de todo o processo de configuração, consulte [Configurar Sincronização da Web](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Certifique-se de que seu aplicativo use apenas versões [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou posteriores e que as versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] não estejam instaladas no servidor IIS. Versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem causar erros, tais como: "O formato de uma mensagem durante a sincronização da Web era inválido. Verifique se os componentes de replicação estão adequadamente configurados no servidor Web".  
+>  Certifique-se de que seu aplicativo use apenas versões [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou posteriores e que as versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] não estejam instaladas no servidor IIS. Versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem provocar erros, como: "Formato inválido de uma mensagem durante a sincronização da Web. Verifique se os componentes de replicação estão adequadamente configurados no servidor Web".  
   
  Para usar a sincronização da Web, é necessário configurar o IIS 7 concluindo as etapas a seguir. Cada etapa é descrita em detalhes neste tópico.  
   
-1.  Instale e configure o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener no computador que está executando o IIS.  
+1.  Instale e configure o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ouvinte de replicação no computador que está executando o IIS.  
   
 2.  Configure o protocolo SSL. O SSL é necessário para a comunicação entre o IIS e todos os assinantes.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62721528"
   
 ## <a name="installing-the-sql-server-replication-listener"></a>Instalando o SQL Server Replication Listener  
 
-Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assistente para Configurar Sincronização da Web do IIS versão 5 e 6 não está disponível com o IIS versão 7.0 e superior. **A partir do SQL Server 2012, para usar o componente de sincronização da Web no servidor IIS, você deve instalar o SQL Server com replicação. Essa pode ser a edição gratuita do SQL Server Express.**
+Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assistente para Configurar Sincronização da Web do IIS versão 5 e 6 não está disponível com o IIS versão 7.0 e superior. **A partir do SQL Server 2012, para usar o componente de sincronização da Web no servidor IIS, você deve instalar o SQL Server com replicação. Essa pode ser a edição gratuita SQL Server Express.**
   
 #### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>Para instalar e configurar o SQL Server Replication Listener  
   
@@ -54,7 +54,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 4.  Registre replisapi.dll:  
   
-    1.  Clique em **Iniciar**e em **Executar**. No **aberto** , digite `cmd`e, em seguida, clique em **Okey**.  
+    1.  Clique em **Iniciar** e em **Executar**. Na caixa **abrir** , digite `cmd`e clique em **OK**.  
   
     2.  No diretório criado na etapa 1, execute o comando a seguir:  
   
@@ -64,27 +64,27 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 6.  Crie um diretório virtual em IIS. O diretório virtual deve ser criado no site criado na etapa 4 e deve ser mapeado para o diretório que foi criado na etapa 1. Seja o mais restritivo possível ao atribuir a esse diretório. Você deve selecionar pelo menos as permissões de **Leitura** e **Execução** .  
   
-    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , no painel **Conexões** , clique com o botão direito em **Site Padrão**e selecione **Adicionar Diretório virtual**.  
+    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, no painel **Conexões** , clique com o botão direito em **Site Padrão**e selecione **Adicionar Diretório virtual**.  
   
-    2.  Para **Alias**, insira `SQLReplication`.  
+    2.  Para **alias**, insira `SQLReplication`.  
   
     3.  Para **Caminho físico**, insira **\<unidade>:\Inetpub\SQLReplication\\** e, em seguida, clique em **OK**.  
   
 7.  Configure o IIS para habilitar a execução de replisapi.dll.  
   
-    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , clique em **Site Padrão**.  
+    1.  No **Gerenciador do serviços de informações da Internet (IIS)**, clique em **site padrão**.  
   
     2.  No painel central, clique em **Mapeamentos do Manipulador**.  
   
     3.  No painel **Ações** , clique em **Adicionar Mapeamento de Módulo**.  
   
-    4.  Para **solicitar** caminho, digite `replisapi.dll`.  
+    4.  Para caminho de **solicitação** , `replisapi.dll`insira.  
   
     5.  Na lista suspensa **Módulo** , selecione **IsapiModule**.  
   
     6.  Para **Executável**, insira **\<unidade>:\Inetpub\SQLReplication\replisapi.dll**.  
   
-    7.  Para **nome**, insira `Replisapi`.  
+    7.  Para **Nome**, insira `Replisapi`.  
   
     8.  Clique no botão **Restrições da Solicitação** , clique na guia **Acesso** e clique em **Executar**.  
   
@@ -101,7 +101,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 #### <a name="to-configure-iis-authentication"></a>Para configurar a Autenticação IIS  
   
-1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , clique em **Site Padrão**.  
+1.  No **Gerenciador do serviços de informações da Internet (IIS)**, clique em **site padrão**.  
   
 2.  No painel do meio, clique duas vezes em **Autenticação**.  
   
@@ -129,7 +129,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 #### <a name="to-require-ssl-security-for-a-web-site"></a>Para exigir segurança de SSL para um site  
   
-1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , expanda o nó do servidor local e clique no **Site Padrão** (ou no seu site de sincronização da Web se ele for diferente do site padrão).  
+1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, expanda o nó do servidor local e clique no **Site Padrão** (ou no seu site de sincronização da Web se ele for diferente do site padrão).  
   
 2.  No painel do meio, clique duas vezes em **Configurações de SSL**.  
   
@@ -137,7 +137,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 #### <a name="to-create-a-self-signed-certificate-for-testing"></a>Para criar um certificado autoassinado para testes  
   
-1.  Em **Gerenciador dos Serviços de Informações da Internet (IIS)** , clique no nó do servidor local e, em seguida, no painel central, clique duas vezes em **Certificados de Servidor**.  
+1.  Em **Gerenciador dos Serviços de Informações da Internet (IIS)**, clique no nó do servidor local e, em seguida, no painel central, clique duas vezes em **Certificados de Servidor**.  
   
 2.  No painel **Ações** , clique em **Criar Certificado Autoassinado**.  
   
@@ -157,9 +157,9 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 1.  No **Noternet Noformation Services (IIS) Manager**, clique em **Site Padrão.**  
   
-2.  No painel **Ações**, clique em **Procurar \*:443(https)** .  
+2.  No painel **Ações**, clique em **Procurar \*:443(https)**.  
   
-3.  O Internet Explorer será aberto e exibirá uma mensagem informando que "Há um problema com o certificado de segurança deste site". Este aviso informa que o certificado associado não foi emitido por uma CA reconhecida e talvez não seja confiável. Esse é um aviso esperado, portanto, clique em **Continuar neste site (não recomendado)** .  
+3.  O Internet Explorer será aberto e exibirá uma mensagem informando que "Há um problema com o certificado de segurança deste site". Este aviso informa que o certificado associado não foi emitido por uma CA reconhecida e talvez não seja confiável. Esse é um aviso esperado, portanto, clique em **Continuar neste site (não recomendado)**.  
   
 4.  Se for solicitado a **Conectar ao host local**, digite um nome de usuário e senha para continuar. Você deve ver a página padrão do site.  
   
@@ -170,7 +170,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
  Além de realizar as etapas a seguir, certifique-se de que os logons necessários estão na lista de acesso à publicação (PAL). Para obter mais informações sobre a PAL, consulte [Secure the Publisher](security/secure-the-publisher.md) (Proteger o publicador).  
   
- **Importante** a conta criada nesta seção é a conta que se conectará ao Publicador e ao Distribuidor durante a sincronização. Essa conta deve ser adicionada como uma conta de logon do SQL no servidor de distribuição e de publicação.  
+ **Importante** A conta criada nesta seção é a conta que se conectará ao Publicador e ao distribuidor durante a sincronização. Essa conta deve ser adicionada como uma conta de logon do SQL no servidor de distribuição e de publicação.  
   
  A conta usada para o SQL Server Replication Listener deve ter permissões conforme descrito no tópico Segurança do Agente de Mesclagem, na seção "Conectar-se ao Publicador ou ao Distribuidor".  
   
@@ -188,7 +188,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 1.  Crie uma conta local no computador que está executando o IIS:  
   
-    1.  Abra o **Server Manager**. No menu Iniciar, clique com o botão direito do mouse em **Computador**e clique em **Gerenciar**.  
+    1.  Abra **Gerenciador do servidor**. No menu Iniciar, clique com o botão direito do mouse em **Computador**e clique em **Gerenciar**.  
   
     2.  No **Server Manager**, expanda **Configuração**e, em seguida, expanda **Usuários Locais e Grupos**.  
   
@@ -196,7 +196,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     4.  Digite um nome de usuário e uma senha forte. Limpe **O usuário deve alterar a senha no próximo logon**.  
   
-    5.  Clique em **Criar**e depois em **Fechar**.  
+    5.  Clique em **Criar** e, em seguida, clique em **Fechar**.  
   
 2.  Adicione a conta ao grupo IIS_IUSRS:  
   
@@ -218,7 +218,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     2.  Na guia **Segurança** , clique em **Editar**.  
   
-    3.  Na caixa de diálogo **Permissões para \<foldername>** , clique em **Adicionar** para adicionar a conta criada na etapa 1.  
+    3.  Na caixa de diálogo **Permissões para \<foldername>**, clique em **Adicionar** para adicionar a conta criada na etapa 1.  
   
     4.  Verifique se **Deste local** exibe o nome do computador local (não um domínio). Se esse campo não exibir o nome do computador local, clique em **Locais**. Na caixa de diálogo **Locais** , selecione o computador local e clique em **OK**.  
   
@@ -226,9 +226,9 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     6.  Selecione qualquer usuário ou grupo que não requeira acesso ao diretório, clique em **Remover**e clique em **OK**.  
   
-4.  Crie um pool de aplicativos no **Gerenciador dos Serviços de Informação de Internet (IIS)** :  
+4.  Crie um pool de aplicativos no **Gerenciador dos Serviços de Informação de Internet (IIS)**:  
   
-    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , no painel **Conexões** , expanda o nó do servidor local.  
+    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, no painel **Conexões** , expanda o nó do servidor local.  
   
     2.  Clique com o botão direito do mouse em **Pools de Aplicativos**e clique em **Adicionar Pool de Aplicativos**.  
   
@@ -239,7 +239,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 5.  Associe a conta com o pool de aplicativos:  
   
-    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , expanda o nó do servidor local e clique em **Pool de Aplicativos**.  
+    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, expanda o nó do servidor local e clique em **Pool de Aplicativos**.  
   
     2.  Clique com o botão direito do mouse no pool de aplicativos que você criou e clique em **Definir Padrões do Pool de Aplicativos**.  
   
@@ -255,7 +255,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 6.  Associe o pool de aplicativos ao site de replicação:  
   
-    1.  Em **Gerenciador dos Serviços de Informações da Internet (IIS)** , expanda o nó do servidor local e clique no **Site Padrão** (ou no seu site de sincronização da Web se ele for diferente do site padrão).  
+    1.  Em **Gerenciador dos Serviços de Informações da Internet (IIS)**, expanda o nó do servidor local e clique no **Site Padrão** (ou no seu site de sincronização da Web se ele for diferente do site padrão).  
   
     2.  No painel **Ações** , sob **Gerenciar Site**, clique em **Configurações Avançadas**.  
   
@@ -272,7 +272,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 1.  Certifique-se de que as configurações de rede local (LAN) no Assinante estão corretas:  
   
-    1.  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, no menu **Ferramentas** , clique em **Opções da Internet**.  
+    1.  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, no menu **ferramentas** , clique em **Opções da Internet**.  
   
     2.  Na guia **Conexões** , clique em **Configurações da LAN**.  
   
@@ -280,7 +280,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     4.  Se um servidor proxy for usado, clique em **Usar um servidor proxy para a rede local** e **Ignorar servidor proxy para endereços locais**e clique em **OK**.  
   
-2.  No Assinante, no Internet Explorer, conecte-se ao servidor em modo de diagnóstico adicionando `?diag` ao endereço para o replisapi.dll. Por exemplo: **https://server.domain.com/directory/replisapi.dll?diag** .  
+2.  No Assinante, no Internet Explorer, conecte-se ao servidor em modo de diagnóstico adicionando `?diag` ao endereço para o replisapi.dll. Por exemplo: **https://server.domain.com/directory/replisapi.dll?diag**.  
   
     > [!NOTE]  
     >  No exemplo anterior, **server.domain.com** deve ser substituído pelo nome exato de **Emitido para** listado na seção **Certificados de Servidor** no Gerenciador do IIS.  
@@ -307,7 +307,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
     > [!NOTE]  
     >  Os certificados serão instalados para os usuários. Esse processo deve ser executado para cada usuário que sincronizará com o IIS.  
   
-4.  Na caixa de diálogo **Conectar a \<ServerName>** , especifique o logon e a senha que o Agente de Mesclagem usará para se conectar ao IIS. Essas credenciais também serão especificadas no Assistente para Nova Assinatura.  
+4.  Na caixa de diálogo **Conectar a \<ServerName>**, especifique o logon e a senha que o Agente de Mesclagem usará para se conectar ao IIS. Essas credenciais também serão especificadas no Assistente para Nova Assinatura.  
   
 5.  Na janela do Internet Explorer chamada **Informação diagnóstica do SQL Websync**, verifique se o valor em cada coluna **Status** na página é **ÊXITO**.  
   
@@ -317,8 +317,8 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     2.  Conecte ao servidor em modo diagnóstico. Se o certificado estiver instalado corretamente, a caixa de diálogo **Alerta de Segurança** não aparecerá. Se a caixa de diálogo aparecer, o Merge Agent apresentará falha quando tentar se conectar ao computador que está executando o IIS. Você deve certificar-se de que o certificado para o servidor que você está acessando foi adicionado ao repositório de certificados no Assinante como um certificado confiável. Para obter mais informações sobre exportação de certificados, consulte a documentação do IIS.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sincronização da Web para replicação de mesclagem](web-synchronization-for-merge-replication.md)   
- [Configurar a Sincronização da Web](configure-web-synchronization.md)  
+ [Configurar sincronização da Web](configure-web-synchronization.md)  
   
   

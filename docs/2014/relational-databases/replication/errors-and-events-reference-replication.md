@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721322"
 ---
 # <a name="errors-and-events-reference-replication"></a>Referência de erros e eventos (replicação)
   Esta seção da documentação contém informações sobre causa e resolução de diversos erros relacionados à replicação.  
   
-|Erro|Message|  
+|Erro|Mensagem|  
 |-----------|-------------|  
 |[MSSQL_ENG002601](mssql-eng002601.md)|Não é possível inserir uma linha de chave duplicada no objeto '%.*ls' com o índice exclusivo '%.\*ls'.|  
 |[MSSQL_ENG002627](mssql-eng002627.md)|Violação da restrição %ls '%.*ls'. Não é possível inserir uma chave duplicada no objeto '%.\*ls'.|  
@@ -76,7 +76,7 @@ ms.locfileid: "62721322"
 |MSSQL_ENG021642. Consulte [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Publicadores heterogêneos requerem um servidor vinculado. Já existe um servidor vinculado nomeado '%s'. Remova o servidor vinculado ou escolha um nome de publicador diferente.|  
 |MSSQL_ENG021663. Consulte [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Não foi encontrada nenhuma chave primária válida para a tabela de origem [% s].[% s].|  
 |MSSQL_ENG021684. Consulte [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|As permissões associadas com o logon de administrador para o publicador Oracle '% s' não é suficiente.|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|'%s'' deve ser um logon válido do Windows no formato: 'MACHINE\Login' ou 'DOMAIN\Login'. Consulte a documentação de '%s'.|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' deve ser um logon válido do Windows na forma: 'MACHINE\Login' ou 'DOMAIN\Login'. Consulte a documentação de '%s'.|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|O trabalho do agente '%s' deve ser adicionado via '%s' antes de continuar. Consulte a documentação de '%s'.|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|O processo não pôde executar '%1' em '%2'.|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|O processo de mesclagem não pôde alterar o histórico de geração no '%1'. Ao solucionar o problema, reinicie a sincronização com o log de histórico detalhado e especifique um arquivo de saída no qual será realizada a gravação.|  

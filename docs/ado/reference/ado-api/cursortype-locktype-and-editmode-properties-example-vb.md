@@ -1,5 +1,5 @@
 ---
-title: CursorType, LockType, EditMode exemplo das propriedades e (VB) | Microsoft Docs
+title: Exemplo das propriedades CursorType, LockType e EditMode (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919279"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType, EditMode exemplo das propriedades e (VB)
-Este exemplo demonstra a configuração de [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propriedades antes de abrir um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele também mostra o valor de [EditMode](../../../ado/reference/ado-api/editmode-property.md) propriedade sob várias condições. A função EditModeOutput é necessária executar este procedimento.  
+# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Exemplo das propriedades CursorType, LockType e EditMode (VB)
+Este exemplo demonstra como definir as propriedades [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) antes de abrir um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele também mostra o valor da propriedade [EditMode](../../../ado/reference/ado-api/editmode-property.md) em várias condições. A função EditModeOutput é necessária para que este procedimento seja executado.  
   
 ```  
 'BeginEditModeVB  
@@ -122,7 +122,7 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [Propriedade EditMode](../../../ado/reference/ado-api/editmode-property.md)   

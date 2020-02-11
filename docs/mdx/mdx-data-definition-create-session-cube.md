@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038365"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Definição de dados MDX – CREATE SESSION CUBE
@@ -101,13 +101,13 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  O nome da dimensão no cubo de sessão.  
   
- DE \<dim da cláusula >  
+ DA \<cláusula dim from>  
  Especificação válida somente para definição de dimensão derivada.  
   
  NOT_RELATED_TO_FACTS  
  Especificação válida somente para definição de dimensão derivada.  
   
- \<tipo de nível >  
+ \<tipo de nível>  
  Especificação válida somente para definição de dimensão derivada.  
   
 ## <a name="remarks"></a>Comentários  
@@ -124,7 +124,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
   
 -   Eliminar dimensões que existem no cubo de origem.  
   
--   Adicionar ou eliminar hierarquias a partir de uma dimensão.  
+-   Adicionar ou eliminar hierarquias de uma dimensão.  
   
 -   Eliminar grupos de medidas ou medidas específicas.  
   
@@ -198,8 +198,8 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
    )  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instrução CREATE GLOBAL CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
+ [CRIAR instrução de cubo GLOBAL &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

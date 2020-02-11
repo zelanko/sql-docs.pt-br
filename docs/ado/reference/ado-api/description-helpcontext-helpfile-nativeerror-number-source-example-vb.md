@@ -21,14 +21,14 @@ ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90673f82643ae24d242879fb19b748d5d1e3cc43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919039"
 ---
-# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Descrição, HelpContext, HelpFile, NativeError, número, código-fonte e exemplo de propriedades de SQLState (VB)
-Neste exemplo dispara um erro, intercepta e exibe a [descrição](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [ Número](../../../ado/reference/ado-api/number-property-ado.md), [código-fonte](../../../ado/reference/ado-api/source-property-ado-error.md), e [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) propriedades resultantes [erro](../../../ado/reference/ado-api/error-object.md) objeto.  
+# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Exemplo das propriedades Description, HelpContext, ArquivoDeAjuda, NativeError, Number, Source e SQLState (VB)
+Este exemplo dispara um erro, intercepta-o e exibe as propriedades [Description](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [ArquivoDeAjuda](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [Number](../../../ado/reference/ado-api/number-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-error.md)e [SQLSTATE](../../../ado/reference/ado-api/sqlstate-property.md) do objeto de [erro](../../../ado/reference/ado-api/error-object.md) resultante.  
   
 ```  
 'BeginDescriptionVB  
@@ -74,12 +74,12 @@ End Sub
 'EndDescriptionVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedade Description](../../../ado/reference/ado-api/description-property.md)   
- [Objeto Error](../../../ado/reference/ado-api/error-object.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Propriedade de descrição](../../../ado/reference/ado-api/description-property.md)   
+ [Objeto de erro](../../../ado/reference/ado-api/error-object.md)   
  [Propriedades HelpContext, HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Propriedades HelpContext, HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Propriedade NativeError (ADO)](../../../ado/reference/ado-api/nativeerror-property-ado.md)   
  [Propriedade Number (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Propriedade Source (Erro ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [Propriedade Source (erro ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Propriedade SQLState](../../../ado/reference/ado-api/sqlstate-property.md)

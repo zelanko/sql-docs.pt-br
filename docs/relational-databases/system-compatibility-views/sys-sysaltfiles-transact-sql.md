@@ -21,10 +21,10 @@ ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 891e88761cac47be83fb69debbbc5e4cb6c401c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006964"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
@@ -35,21 +35,21 @@ ms.locfileid: "68006964"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**fileid**|**smallint**|Número de identificação do arquivo. Esse número é exclusivo para cada banco de dados.|  
-|**groupid**|**smallint**|Número de identificação do grupo de arquivos.|  
-|**size**|**int**|Tamanho do arquivo, em páginas de 8 kilobytes (KB).|  
-|**maxsize**|**int**|Tamanho de arquivo máximo, em páginas de 8 KB.<br /><br /> 0 = Sem crescimento.<br /><br /> -1 = Arquivo crescerá até que o disco esteja completo.<br /><br /> 268435456 = Arquivo de log crescerá a um tamanho máximo de 2 TB.<br /><br /> Observação: Bancos de dados que são atualizados com um tamanho de arquivo de log ilimitado informarão -1 para o tamanho máximo do arquivo de log.|  
-|**growth**|**int**|Tamanho de crescimento do banco de dados.<br /><br /> 0 = Sem crescimento. Pode ser o número de páginas ou a porcentagem do tamanho de arquivo, dependendo do valor de status. Se **status** for 0x100000, **crescimento** é a porcentagem do arquivo tamanho; caso contrário, ele é o número de páginas.|  
-|**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**FileID**|**smallint**|Número de identificação do arquivo. Esse número é exclusivo para cada banco de dados.|  
+|**GroupId**|**smallint**|Número de identificação do grupo de arquivos.|  
+|**tamanho**|**int**|Tamanho do arquivo, em páginas de 8 kilobytes (KB).|  
+|**MaxSize**|**int**|Tamanho de arquivo máximo, em páginas de 8 KB.<br /><br /> 0 = Sem crescimento.<br /><br /> -1 = Arquivo crescerá até que o disco esteja completo.<br /><br /> 268435456 = Arquivo de log crescerá a um tamanho máximo de 2 TB.<br /><br /> Observação: os bancos de dados que são atualizados com um tamanho de arquivo de log ilimitado relatarão-1 para o tamanho máximo do arquivo de log.|  
+|**growth**|**int**|Tamanho de crescimento do banco de dados.<br /><br /> 0 = Sem crescimento. Pode ser o número de páginas ou a porcentagem do tamanho de arquivo, dependendo do valor de status. Se o **status** for 0x100000, o **crescimento** será a porcentagem do tamanho do arquivo; caso contrário, é o número de páginas.|  
+|**Estado**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**perf**|**int**|Reservado.|  
-|**dbid**|**smallint**|Número de identificação do banco de dados ao qual este arquivo pertence.|  
+|**DBID**|**smallint**|Número de identificação do banco de dados ao qual este arquivo pertence.|  
 |**name**|**sysname**|Nome lógico do arquivo.|  
-|**filename**|**nvarchar(260)**|Nome do dispositivo físico. Isso inclui o caminho completo do arquivo.|  
+|**nome do arquivo**|**nvarchar(260)**|Nome do dispositivo físico. Isso inclui o caminho completo do arquivo.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Exibições de compatibilidade &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Exibições de compatibilidade &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

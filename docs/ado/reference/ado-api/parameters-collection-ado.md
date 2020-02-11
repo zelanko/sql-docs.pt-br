@@ -18,31 +18,31 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e062c67f0dedf55d63a076725b46d4405918741
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917703"
 ---
 # <a name="parameters-collection-ado"></a>Coleção Parameters (ADO)
-Contém todos os [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objetos de uma [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
+Contém todos os objetos de [parâmetro](../../../ado/reference/ado-api/parameter-object.md) de um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) .  
   
 ## <a name="remarks"></a>Comentários  
- Um **comando** objeto tem um **parâmetros** coleção composta por **parâmetro** objetos.  
+ Um objeto de **comando** tem uma coleção de **parâmetros** composta de objetos de **parâmetro** .  
   
- Usando o [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) método em um **comando** do objeto **parâmetros** coleção recupera informações de parâmetro de provedor para o procedimento armazenado ou uma consulta parametrizada especificado na **comando** objeto. Alguns provedores não têm suporte para chamadas de procedimento armazenado ou consultas parametrizadas; chamar o **Refresh** método na **parâmetros** coleção ao usar esse provedor será retornado um erro.  
+ O uso do método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) em uma coleção de **parâmetros** do objeto de **comando** recupera as informações de parâmetro do provedor para o procedimento armazenado ou a consulta parametrizada especificada no objeto **Command** . Alguns provedores não dão suporte a chamadas de procedimento armazenado ou consultas parametrizadas; chamar o método **Refresh** na coleção **Parameters** ao usar um provedor como esse retornará um erro.  
   
- Se você não tiver definido sua própria **parâmetro** objetos e você acessar a **parâmetros** coleção antes de chamar o **atualizar** método, ADO chamará automaticamente a método e popular a coleção para você.  
+ Se você não tiver definido seus próprios objetos de **parâmetro** e acessar a coleção de **parâmetros** antes de chamar o método **Refresh** , o ADO chamará automaticamente o método e preencherá a coleção para você.  
   
- Você pode minimizar as chamadas para o provedor para melhorar o desempenho se você souber as propriedades dos parâmetros associados com o procedimento armazenado ou consulta parametrizada que você deseja chamar. Usar o [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) método para criar **parâmetro** objetos com as configurações de propriedade apropriada e o uso de [Append](../../../ado/reference/ado-api/append-method-ado.md) método para adicioná-los para o  **Parâmetros** coleção. Isso lhe permite definir e retornar valores de parâmetro sem a necessidade de chamar o provedor para obter as informações de parâmetro. Se você estiver escrevendo um provedor que não fornece informações de parâmetro, você deve preencher manualmente a **parâmetros** coleção usando esse método para ser capaz de usar parâmetros em todos os. Use o [excluir](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) método para remover **parâmetro** objetos o **parâmetros** coleção, se necessário.  
+ Você pode minimizar as chamadas para o provedor para melhorar o desempenho se souber as propriedades dos parâmetros associados ao procedimento armazenado ou à consulta parametrizada que deseja chamar. Use o método [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) para criar objetos de **parâmetro** com as configurações de propriedade apropriadas e use o método [Append](../../../ado/reference/ado-api/append-method-ado.md) para adicioná-los à coleção de **parâmetros** . Isso permite que você defina e retorne valores de parâmetro sem precisar chamar o provedor para as informações de parâmetro. Se você estiver gravando em um provedor que não fornece informações de parâmetro, você deve preencher manualmente a coleção de **parâmetros** usando esse método para poder usar parâmetros. Use o método [delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) para remover objetos de **parâmetro** da coleção **Parameters** , se necessário.  
   
- Os objetos na **parâmetros** coleção de uma **conjunto de registros** vá fora do escopo (portanto, tornando-se indisponível) quando o **Recordset** está fechado.  
+ Os objetos na coleção de **parâmetros** de um **conjunto de registros** saem do escopo (portanto, ficando indisponíveis) quando o **conjunto de registros** é fechado.  
   
- Ao chamar um procedimento armazenado com **comando**, o parâmetro de valor de retorno/saída de um procedimento armazenado é recuperado da seguinte maneira:  
+ Ao chamar um procedimento armazenado com o **comando**, o parâmetro valor de retorno/saída de um procedimento armazenado é recuperado da seguinte maneira:  
   
-1.  Ao chamar um procedimento armazenado que não tem parâmetros, o **atualizar** método na **parâmetros** coleção deve ser chamada antes de chamar o **Execute** método no **Comando** objeto.  
+1.  Ao chamar um procedimento armazenado que não tem parâmetros, o método **Refresh** na coleção **Parameters** deve ser chamado antes de chamar o método **Execute** no objeto **Command** .  
   
-2.  Ao chamar um procedimento armazenado com parâmetros e acrescentando explicitamente um parâmetro para o **parâmetros** coleção com **Append**, o parâmetro de valor/saída de retorno deve ser acrescentado à **Parâmetros** coleção. O valor de retorno deve ser anexado pela primeira vez para o **parâmetros** coleção. Use **Append** para adicionar os outros parâmetros para o **parâmetros** coleção na ordem de definição. Por exemplo, o procedimento armazenado SPWithParam tem dois parâmetros. O primeiro parâmetro, *InParam*, é um parâmetro de entrada definido como adVarChar (20) e o segundo parâmetro, *OutParam*, é um parâmetro de saída definido como adVarChar (20). Você pode recuperar o parâmetro de valor de retorno/saída com o código a seguir.  
+2.  Ao chamar um procedimento armazenado com parâmetros e acrescentar explicitamente um parâmetro à coleção de **parâmetros** com **Append**, o parâmetro de saída/valor de retorno deve ser anexado à coleção de **parâmetros** . O valor de retorno deve primeiro ser acrescentado à coleção de **parâmetros** . Use **Append** para adicionar os outros parâmetros à coleção de **parâmetros** na ordem de definição. Por exemplo, o procedimento armazenado SPWithParam tem dois parâmetros. O primeiro parâmetro, *InParam*, é um parâmetro de entrada definido como adVarChar (20), e o segundo parâmetro, *OutParam*, é um parâmetro de saída definido como adVarChar (20). Você pode recuperar o parâmetro de saída/valor de retorno com o código a seguir.  
   
     ```vb
     ' Open Connection Conn  
@@ -63,7 +63,7 @@ Contém todos os [parâmetro](../../../ado/reference/ado-api/parameter-object.md
   
     ```  
   
-3.  Ao chamar um procedimento armazenado com parâmetros e configuração dos parâmetros ao chamar o **Item** método o **parâmetros** o parâmetro de valor/saída de retorno do procedimento armazenado de coleção, pode ser recuperada do **parâmetros** coleção. Por exemplo, o procedimento armazenado SPWithParam tem dois parâmetros. O primeiro parâmetro, *InParam*, é um parâmetro de entrada definido como adVarChar (20) e o segundo parâmetro, *OutParam*, é um parâmetro de saída definido como adVarChar (20). Você pode recuperar o parâmetro de valor de retorno/saída com o código a seguir.  
+3.  Ao chamar um procedimento armazenado com parâmetros e configurar os parâmetros chamando o método **Item** na coleção **Parameters** , o parâmetro valor de retorno/saída do procedimento armazenado pode ser recuperado da coleção de **parâmetros** . Por exemplo, o procedimento armazenado SPWithParam tem dois parâmetros. O primeiro parâmetro, *InParam*, é um parâmetro de entrada definido como adVarChar (20), e o segundo parâmetro, *OutParam*, é um parâmetro de saída definido como adVarChar (20). Você pode recuperar o parâmetro de saída/valor de retorno com o código a seguir.  
   
     ```vb
     ' Open Connection Conn  
@@ -82,9 +82,9 @@ Contém todos os [parâmetro](../../../ado/reference/ado-api/parameter-object.md
   
  Esta seção contém o tópico a seguir.  
   
--   [Eventos, métodos e propriedades de coleção de parâmetros](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Propriedades, métodos e eventos da coleção Parameters](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Método append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Método Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)

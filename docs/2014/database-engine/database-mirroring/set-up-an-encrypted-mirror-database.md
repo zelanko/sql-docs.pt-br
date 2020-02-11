@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a74adba783f1a52bdd404e11f0f747234c47f4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754378"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>Configurar um banco de dados espelho criptografado
@@ -33,7 +33,7 @@ Para habilitar a descriptografia automática da chave mestra do banco de dados d
 
 <!-- Note: We cannot append '?view=sql-server-2016' to these, even tho in theory we might want to. -->
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
 

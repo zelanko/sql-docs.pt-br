@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211868"
 ---
 # <a name="modify-statistics"></a>Modificar estatísticas
@@ -29,7 +29,7 @@ ms.locfileid: "68211868"
   
      [Segurança](#Security)  
   
--   **Para modificar as estatísticas usando:**  
+-   **Para modificar estatísticas usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68211868"
 7.  Clique em **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
- **Para modificar as estatísticas**  
+ **Para modificar estatísticas**  
   
  Esta tarefa não pode ser executada usando instruções Transact-SQL. Para modificar as estatísticas usando Transact-SQL, primeiro você deve excluir a estatística existente e depois recriá-la com novos atributos.  
   

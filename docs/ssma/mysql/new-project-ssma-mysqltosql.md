@@ -10,35 +10,35 @@ ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4ef40fbc5acafeaaba76953940f763c663cb121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67908852"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Novo projeto (SSMA) (MySQLToSQL)
-Use o **novo projeto** caixa de diálogo para criar um novo projeto SSMA. Para acessar o **novo projeto** caixa de diálogo do **arquivo** menu, clique em **novo projeto**.  
+Use a caixa de diálogo **novo projeto** para criar um novo projeto do SSMA. Para acessar a caixa de diálogo **novo projeto** , no menu **arquivo** , clique em **novo projeto**.  
   
 ## <a name="options"></a>Opções  
-**Name**  
+**Nome**  
   
 Insira o nome do projeto. O SSMA acrescentará a extensão de arquivo.  
   
-**Local**  
+**Location**  
   
-Digite ou navegue até a pasta ou o local de rede para salvar o projeto.  
+Insira ou navegue até o local da pasta ou da rede para salvar o projeto.  
   
-**MigrateTo**  
+**Migrar para**  
   
-Selecione uma da versão do banco de dados de destino abaixo lista:  
+Selecione uma das versões de banco de dados de destino na lista abaixo:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

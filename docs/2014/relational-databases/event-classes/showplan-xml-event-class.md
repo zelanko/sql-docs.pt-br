@@ -15,22 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c025a899b426de714fb522218467e8d4cf805b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691869"
 ---
 # <a name="showplan-xml-event-class"></a>classe de evento Showplan XML
-  A classe de evento Showplan XML ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. Inclua a classe do evento Showplan XML para identificar os operadores de plano de execução. Essa classe de evento armazena cada evento como um documento XML bem definido.  
+  A classe de evento Showplan XML ocorre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o executa uma instrução SQL. Inclua a classe do evento Showplan XML para identificar os operadores de plano de execução. Essa classe de evento armazena cada evento como um documento XML bem definido.  
   
  Quando a classe de evento Showplan XML estiver incluída em um rastreamento, a quantidade de sobrecarga será um obstáculo significativo ao desempenho. O Showplan XML armazena um plano de consulta que é criado quando a consulta é otimizada. Para minimizar a sobrecarga gerada, limite o uso dessa classe de evento para rastreamentos que monitorem problemas específicos em breves períodos de tempo.  
   
- Os documentos Showplan XML têm um esquema associado a eles. Esse esquema pode ser encontrado no [Site da Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740)ou como parte da instalação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Os documentos Showplan XML têm um esquema associado a eles. Esse esquema pode ser encontrado no [site da Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740)ou como parte de sua [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação.  
   
 ## <a name="showplan-xml-event-class-data-columns"></a>Colunas de dados da classe de evento Showplan XML  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|`image`|Custo estimado da consulta.|2|Não|  
@@ -60,7 +60,7 @@ ms.locfileid: "62691869"
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|`bigint`|Token usado para descrever a transação atual.|50|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Referência de operadores físicos e lógicos de plano de execução](../showplan-logical-and-physical-operators-reference.md)  

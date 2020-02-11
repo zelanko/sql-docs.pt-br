@@ -16,14 +16,14 @@ ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918276"
 ---
 # <a name="loadfromfile-method-ado"></a>Método LoadFromFile (ADO)
-Carrega o conteúdo de um arquivo existente em uma [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  
+Carrega o conteúdo de um arquivo existente em um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,20 +32,20 @@ Carrega o conteúdo de um arquivo existente em uma [Stream](../../../ado/referen
 Stream.LoadFromFileFileName  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *FileName*  
- Um **cadeia de caracteres** que contém o nome de um arquivo a ser carregado no valor de **Stream**. *Nome de arquivo* pode conter qualquer caminho válido e o nome no formato UNC. Se o arquivo especificado não existir, ocorrerá um erro de tempo de execução.  
+#### <a name="parameters"></a>parâmetros  
+ *Nome do arquivo*  
+ Um valor de **cadeia de caracteres** que contém o nome de um arquivo a ser carregado no **fluxo**. O *nome de arquivo* pode conter qualquer caminho e nome válidos no formato UNC. Se o arquivo especificado não existir, ocorrerá um erro em tempo de execução.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método pode ser usado para carregar o conteúdo de um arquivo local em um **Stream** objeto. Isso pode ser usado para carregar o conteúdo de um arquivo local em um servidor.  
+ Esse método pode ser usado para carregar o conteúdo de um arquivo local em um objeto de **fluxo** . Isso pode ser usado para carregar o conteúdo de um arquivo local em um servidor.  
   
- O **Stream** objeto já deve estar aberto antes de chamar **LoadFromFile**. Esse método não altera a associação de uma a **Stream** do objeto; ainda será associado ao objeto especificado pela URL ou **registro** com a qual o **Stream** foi originalmente aberto.  
+ O objeto de **fluxo** já deve estar aberto antes de chamar **loaddofile**. Esse método não altera a associação do objeto de **fluxo** ; Ele ainda será associado ao objeto especificado pela URL ou pelo **registro** com o qual o **fluxo** foi aberto originalmente.  
   
- **LoadFromFile** substitui o conteúdo atual dos **Stream** objeto com os dados lidos do arquivo. Quaisquer bytes existentes na **Stream** são substituídos pelos conteúdos do arquivo. Quaisquer bytes restantes e anteriormente existentes seguindo as [EOS](../../../ado/reference/ado-api/eos-property.md) criados pelo **LoadFromFile**, são truncados.  
+ **Loaddofile** substitui o conteúdo atual do objeto de **fluxo** por dados lidos do arquivo. Todos os bytes existentes no **fluxo** são substituídos pelo conteúdo do arquivo. Todos os bytes anteriores e restantes existentes após o [EOS](../../../ado/reference/ado-api/eos-property.md) criado por **LoadFromFile**serão truncados.  
   
- Após uma chamada para **LoadFromFile**, a posição atual está definida para o início da **Stream** ([posição](../../../ado/reference/ado-api/position-property-ado.md) é 0).  
+ Após uma chamada para **LoadFromFile**, a posição atual é definida como o início do **fluxo** (a[posição](../../../ado/reference/ado-api/position-property-ado.md) é 0).  
   
- Como 2 bytes podem ser adicionados para o início do fluxo para a codificação, é possível que o tamanho do fluxo não exatamente corresponder o tamanho do arquivo do qual ele foi carregado.  
+ Como 2 bytes podem ser adicionados ao início do fluxo para codificação, o tamanho do fluxo pode não corresponder exatamente ao tamanho do arquivo do qual ele foi carregado.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

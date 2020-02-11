@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e2b3318b9aae0412e827875af35cbdf0477e059f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736276"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>Método SetNumericalValue (classe ServerNetworkProtocolProperty)
@@ -40,12 +40,12 @@ NumValue
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Um [classe ServerNetworkProtocolProperty] servernetworkprotocolproperty-class.md) que representa um atributo do protocolo de rede na instância do objeto [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *objeto*  
+ Um objeto [ServerNetworkProtocolProperty Class] ServerNetworkProtocolProperty-class.md) que representa um atributo do protocolo de rede na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
 |*NumValue*|Um valor `uint32` que especifica o novo valor da propriedade atual.|  
   
@@ -54,7 +54,7 @@ NumValue
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurando protocolos de rede de servidor e Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   
