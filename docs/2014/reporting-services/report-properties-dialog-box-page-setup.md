@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades de configuração de página de relatório | Microsoft Docs
+title: Caixa de diálogo Propriedades do relatório, Configurar página | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104383"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Caixa de diálogo Propriedades do Relatório, Configurar Página
-  Selecione **Configurar página** sobre o **propriedades do relatório**, caixa de diálogo para definir opções de página para todo o relatório.  
+  Selecione **configuração de página** na caixa de diálogo **Propriedades do relatório**para definir as opções de página para todo o relatório.  
   
 ## <a name="options"></a>Opções  
  **Polegadas**  
@@ -45,19 +45,19 @@ ms.locfileid: "66104383"
  **Height**  
  Exibe a altura do tamanho de papel selecionado na lista **Tipo de papel** .  
   
- **Top**  
+ **Início**  
  Define a distância entre a parte superior do relatório e a parte superior da primeira linha do relatório.  
   
- **parte inferior**  
+ **Inferior**  
  Define a distância entre a parte inferior do relatório e a parte inferior da última linha do relatório.  
   
- **Left**  
+ **Mantida**  
  Define a distância entre a borda esquerda do relatório e a borda esquerda das linhas do relatório.  
   
  **Certo**  
  Define a distância entre a borda direita do relatório e a borda direita das linhas do relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Dicas de design de relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-design/report-design-tips-report-builder-and-ssrs.md)  
   

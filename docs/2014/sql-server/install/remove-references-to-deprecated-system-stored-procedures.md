@@ -1,5 +1,5 @@
 ---
-title: Remover referências a procedimentos armazenados substituídos do sistema | Microsoft Docs
+title: Remover referências a procedimentos armazenados do sistema preteridos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093110"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Remover referências a procedimentos armazenados do sistema obsoletos
@@ -26,7 +26,7 @@ ms.locfileid: "66093110"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
   
 ### <a name="documented-system-stored-procedures"></a>Procedimentos armazenados do sistema documentados  
  Os seguintes procedimentos armazenados do sistema documentados foram removidos:  
@@ -101,8 +101,8 @@ ms.locfileid: "66093110"
 ### <a name="undocmented-system-stored-procedures"></a>Procedimentos armazenados do sistema Undocmented  
  Você pode criar procedimentos armazenados CLR com funcionalidade equivalente para substituir procedimentos armazenados do sistema não documentados. Para obter mais informações, consulte o tópico ‘Procedimentos armazenados CLR’ nos Manuais Online do SQL Server.  
   
-## <a name="see-also"></a>Consulte também  
- [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

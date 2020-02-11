@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be4fd9dc72a32c65465e3d226850eb18a494e783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103062"
 ---
 # <a name="update-a-resource-report-manager"></a>Atualizar um recurso (Gerenciador de Relatórios)
@@ -43,9 +43,9 @@ ms.locfileid: "66103062"
   
  Se o recurso que você está atualizando possuir uma imagem usada em um relatório, será necessário atualizar o relatório para visualizar a imagem atualizada.  
   
-## <a name="see-also"></a>Consulte também  
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../contents-page-report-manager.md)   
- [Página Carregar Arquivo &#40;Gerenciador de Relatórios&#41;](../upload-file-page-report-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Página de conteúdo &#40;Report Manager&#41;](../contents-page-report-manager.md)   
+ [&#40;Report Manager de carregamento da página de arquivos&#41;](../upload-file-page-report-manager.md)   
  [Carregar arquivos em uma pasta](upload-files-to-a-folder.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../report-manager-f1-help.md)  
   

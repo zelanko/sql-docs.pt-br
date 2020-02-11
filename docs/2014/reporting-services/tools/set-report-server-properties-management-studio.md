@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c6dd1e22f90b834f5683a53d7b206dd1c8ad46e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099509"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Definir propriedades do servidor de relatório (Management Studio)
-  Você pode definir as propriedades do sistema do servidor de relatório no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar recursos ou definir padrões de servidor.  
+  Você pode definir as propriedades do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] servidor de relatório no para habilitar recursos ou definir padrões do servidor.  
   
 ### <a name="to-open-the-advanced-server-properties-page"></a>Para abrir a página Propriedades Avançadas do Servidor  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66099509"
   
 2.  Clique com o botão direito do mouse no nó do servidor de relatório e selecione **Propriedades**. Clique em **Avançado** para abrir a página de propriedades. Consulte [Propriedades do Servidor &#40;página Avançado&#41; – Reporting Services](server-properties-advanced-page-reporting-services.md) para obter uma descrição de cada propriedade.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conectar-se a um servidor de relatório no Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Propriedades do sistema do servidor de relatório](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   

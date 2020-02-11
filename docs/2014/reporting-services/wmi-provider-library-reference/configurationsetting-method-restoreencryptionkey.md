@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4cb556e127fa23f5b16506abdcc8e04ed433878
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098132"
 ---
-# <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Método RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting)
+# <a name="restoreencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Método RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Reaplica a chave de criptografia especificada para o banco de dados do servidor de relatório.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,8 +41,8 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
             string Password, out Int32 HRESULT, out string[] ExtendedErrors);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- *KeyFile[]*  
+## <a name="parameters"></a>parâmetros  
+ *KeyFile []*  
  [fora] Uma matriz que contém a chave de criptografia criptografada.  
   
  *Comprimento*  
@@ -51,7 +51,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  *Senha*  
  Uma cadeia de caracteres usada para criptografar a chave de criptografia.  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
  *ExtendedErrors[]*  
@@ -66,9 +66,9 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  O método é mais efetivo quando chamado após o método [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) , que desmarca a lista de chaves de criptografia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

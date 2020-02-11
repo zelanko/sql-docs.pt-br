@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105220"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Função Lookup (Construtor de Relatórios e SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66105220"
 Lookup(source_expression, destination_expression, result_expression, dataset)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *source_expression*  
  (`Variant`) Uma expressão que é avaliada no escopo atual e que especifica o nome ou chave para procurar. Por exemplo, `=Fields!ProdID.Value`.  
   
@@ -38,7 +38,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) Uma expressão que é avaliada para cada linha em um conjunto de dados e que especifica o nome ou a chave para correspondência. Por exemplo, `=Fields!ProductID.Value`.  
   
  *result_expression*  
- (`Variant`) Uma expressão avaliada para a linha do conjunto de dados em que *source_expression* = *destination_expression*e que especifica o valor a ser recuperado. Por exemplo, `=Fields!ProductName.Value`.  
+ (`Variant`) Uma expressão que é avaliada para a linha no conjunto de linhas em que *source_expression* = *destination_expression*e que especifica o valor a ser recuperado. Por exemplo, `=Fields!ProductName.Value`.  
   
  *conjunto de dados*  
  Uma constante que especifica o nome do conjunto de dados no relatório. Por exemplo, "Produtos".  
@@ -49,7 +49,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="remarks"></a>Comentários  
  Use `Lookup` para recuperar o valor do conjunto de dados especificado para um par de nome/valor onde há uma relação de 1 para 1. Por exemplo, para um campo de ID em uma tabela, você pode usar `Lookup` para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados.  
   
- `Lookup` faz o seguinte:  
+ `Lookup`o faz o seguinte:  
   
 -   Avalia a expressão de origem no escopo atual.  
   
@@ -59,11 +59,12 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Retorna o valor da expressão resultante.  
   
- Para recuperar diversos valores para um único nome ou campo de chave em que há uma relação um para muitos, use [Função LookupSet &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-lookupset-function.md). Para chamar `Lookup` para um conjunto de valores, use [função Multilookup &#40;construtor de relatórios e SSRS&#41;](report-builder-functions-lookup-function.md).  
+ Para recuperar diversos valores para um único nome ou campo de chave em que há uma relação um para muitos, use [Função LookupSet &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-lookupset-function.md). Para chamar `Lookup` um conjunto de valores, use a [função multilookup &#40;Construtor de relatórios e o SSRS&#41;](report-builder-functions-lookup-function.md).  
   
- As seguintes restrições são aplicadas:  
+ As restrições a seguir se aplicam:  
   
--   `Lookup` é avaliado depois que todas as expressões de filtro são aplicadas.  
+-   
+  `Lookup` é avaliado depois que todas as expressões de filtro são aplicadas.  
   
 -   Só um nível de pesquisa tem suporte. Uma expressão de origem, destino ou resultado não pode incluir uma referência a uma função de pesquisa.  
   
@@ -71,7 +72,8 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Expressões de origem, destino e resultado não podem incluir referências a variáveis de relatório ou grupo.  
   
--   `Lookup` não pode ser usado como uma expressão para os seguintes itens de relatório:  
+-   
+  `Lookup` não pode ser usado como uma expressão para os seguintes itens de relatório:  
   
     -   Cadeias de conexão dinâmicas para uma fonte de dados.  
   
@@ -96,7 +98,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 =Lookup(Fields!ProductID.Value, Fields!ID.Value, Fields!Name.Value, "Product")  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   

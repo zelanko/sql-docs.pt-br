@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5751941cb8912c527798c9aff5aaac1b46767fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103076"
 ---
 # <a name="upload-files-to-a-folder"></a>Carregar arquivos em uma pasta
@@ -39,29 +39,29 @@ ms.locfileid: "66103076"
   
  Visualmente, os arquivos carregados em um banco de dados do servidor de relatório são representados na hierarquia de pastas com os seguintes ícones.  
   
- ![Ícone Relatório](../media/hlp-16doc.gif "Ícone Relatório")  
+ ![Ícone de relatório](../media/hlp-16doc.gif "ícone de relatório")  
 ícone de relatório  
   
  ![Ícone de modelo](../media/model-icon.gif "Ícone de modelo")  
 ícone de modelo de relatório  
   
- ![Ícone Recurso genérico](../media/hlp-16file.gif "Ícone Recurso genérico")  
+ ![ícone de recurso genérico](../media/hlp-16file.gif "ícone de recurso genérico")  
 ícone de recurso genérico  
   
  Ao ser carregado, o arquivo sempre é colocado na pasta que está selecionada atualmente. Você pode navegar até a pasta na qual deseja incluir o item primeiro ou carregar um arquivo e, em seguida, movê-lo para um local final posteriormente.  
   
  Para carregar um arquivo, use o Gerente de Relatórios. O carregamento de arquivos em um servidor de relatório depende das tarefas que fazem parte de sua atribuição de função. Se a segurança padrão for usada, os administradores locais poderão adicionar itens a um servidor de relatório. Se Meus Relatórios estiver habilitado, qualquer usuário que tiver uma pasta Meus Relatórios terá permissão para carregar itens nessa pasta. Se atribuições de função personalizadas forem utilizadas, a atribuição de função deve incluir tarefas que ofereçam suporte para o gerenciamento de pastas.  
   
-|Para fazer isso|Inclua estas tarefas|  
+|Para fazer isto|Inclua estas tarefas|  
 |----------------|-------------------------|  
 |Carregar um arquivo .rdl em uma pasta|Gerenciar relatórios|  
 |Carregar qualquer arquivo como um objeto binário|Gerenciar recursos|  
 |Exibir o conteúdo de uma pasta|Exibir recursos, exibir relatórios|  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de relatórios &#40;modo nativo do SSRS&#41;]... / relatório-manager-ssrs-native-mode.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Report Manager &#40;modo nativo do SSRS&#41;].. /report-manager-ssrs-native-mode.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tarefas e permissões](../security/tasks-and-permissions.md)   
- [Carregar um arquivo ou relatório &#40;Gerenciador de Relatórios&#41;](../reports/upload-a-file-or-report-report-manager.md)  
+ [Carregar um &#40;de arquivo ou relatório Report Manager&#41;](../reports/upload-a-file-or-report-report-manager.md)  
   
   

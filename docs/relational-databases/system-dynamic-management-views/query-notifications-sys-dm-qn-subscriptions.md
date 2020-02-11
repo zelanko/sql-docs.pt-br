@@ -1,5 +1,5 @@
 ---
-title: DM qn_subscriptions (Transact-SQL) | Microsoft Docs
+title: sys. dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,30 +19,30 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061918"
 ---
-# <a name="query-notifications---sysdmqnsubscriptions"></a>Consultar notificações - DM qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>Notificações de consulta-sys. dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre as assinaturas de notificações de consulta ativa no servidor. Você pode usar essa exibição para verificar assinaturas ativas no servidor ou em um banco de dados especificado, ou verificar um principal de servidor especificado.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|ID de uma assinatura.|  
+|**sessão**|**int**|ID de uma assinatura.|  
 |**database_id**|**int**|ID do banco de dados no qual a consulta de notificação foi executada. Esse banco de dados armazena informações relativas a essa assinatura.|  
-|**sid**|**varbinary(85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
+|**SIDs**|**varbinary(85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
 |**object_id**|**int**|ID da tabela interna que armazena informações sobre parâmetros de assinatura.|  
-|**created**|**datetime**|Data e hora em que a assinatura foi criada.|  
-|**timeout**|**int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: O tempo real do disparo pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorre após o tempo limite especificado, mas antes que a assinatura seja acionada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garante que o disparo ocorra no momento em que a alteração foi feita.|  
-|**status**|**int**|Indica o status da assinatura. Veja a tabela abaixo dos comentários para obter a lista de códigos.|  
+|**criação**|**datetime**|Data e hora em que a assinatura foi criada.|  
+|**cedido**|**int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: a hora de acionamento real pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorrer após o tempo limite especificado, mas antes de a assinatura ser acionada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o acionamento ocorrerá no momento em que a alteração foi feita.|  
+|**Estado**|**int**|Indica o status da assinatura. Veja a tabela abaixo dos comentários para obter a lista de códigos.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  
   
-|De|Para|Em|type|  
+|De|Para|Por|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Muitos para um|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Muitos para um|  
@@ -52,12 +52,12 @@ ms.locfileid: "68061918"
   
  Os códigos de status a seguir indicam que uma assinatura foi acionada devido a uma alteração:  
   
-|Código|Status secundário|Info|  
+|Código|Status secundário|Informações|  
 |----------|------------------|----------|  
 |65798|Assinatura acionada porque os dados foram alterados|Assinatura disparada por inserção|  
 |65799|Assinatura acionada porque os dados foram alterados|Excluir|  
-|65800|Assinatura acionada porque os dados foram alterados|Atualização|  
-|65801|Assinatura acionada porque os dados foram alterados|Mesclagem|  
+|65800|Assinatura acionada porque os dados foram alterados|Atualizar|  
+|65801|Assinatura acionada porque os dados foram alterados|Mesclar|  
 |65802|Assinatura acionada porque os dados foram alterados|Truncar tabela|  
 |66048|Assinatura acionada porque o tempo limite expirou|Modo de informações indefinido|  
 |66315|Assinatura acionada porque os objetos foram alterados|objeto ou usuário removido|  
@@ -69,7 +69,7 @@ ms.locfileid: "68061918"
   
  Os códigos de status a seguir indicam que uma assinatura não pôde ser criada:  
   
-|Código|Status secundário|Info|  
+|Código|Status secundário|Informações|  
 |----------|------------------|----------|  
 |132609|A criação de assinatura falhou porque não há suporte à instrução|Consulta muito complexa|  
 |132610|A criação de assinatura falhou porque não há suporte à instrução|Instrução inválida para assinatura|  
@@ -80,7 +80,7 @@ ms.locfileid: "68061918"
   
  Os códigos de status a seguir são usados internamente e são classificados como modos de check kill e init:  
   
-|Código|Status secundário|Info|  
+|Código|Status secundário|Informações|  
 |----------|------------------|----------|  
 |198656|Usado internamente: modos check kill e init|Modo de informações indefinido|  
 |198928|Assinatura destruída|Assinatura acionada porque o banco de dados foi anexado|  
@@ -98,7 +98,7 @@ ms.locfileid: "68061918"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-return-active-query-notification-subscriptions-for-the-current-user"></a>A. Retornar assinaturas ativas de notificação de consulta para o usuário atual  
+### <a name="a-return-active-query-notification-subscriptions-for-the-current-user"></a>a. Retornar assinaturas ativas de notificação de consulta para o usuário atual  
  O exemplo a seguir retorna assinaturas ativas de notificação de consulta para o usuário atual. Se o usuário tiver permissões VIEW SERVER STATE, todas as assinaturas ativas no servidor serão retornadas.  
   
 ```  
@@ -130,9 +130,9 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições de gerenciamento dinâmico relacionadas às notificações de consulta &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [Exibições de gerenciamento dinâmico relacionadas a notificações de consulta &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

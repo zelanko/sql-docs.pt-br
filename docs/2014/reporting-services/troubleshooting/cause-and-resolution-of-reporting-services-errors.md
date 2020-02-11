@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa98b9f760485b80f4fa4ac74f3b8008dc3bbec3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099375"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Causa e resolução de erros do Reporting Services
@@ -26,17 +26,17 @@ ms.locfileid: "66099375"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Erro|Message|  
+|Erro|Mensagem|  
 |-----------|-------------|  
-|[rsAccessedDenied - Erro do Reporting Services](rsaccesseddenied-reporting-services-error.md)|As permissões concedidas ao usuário 'meudomínio\minhaConta' são insuficientes para a execução dessa operação. (rsAccessDenied) (ReportingServicesLibrary).|  
-|[rsInternalError - Erro do Reporting Services](rsinternalerror-reporting-services-error.md)|Um erro interno ocorreu no servidor de relatório. Consulte o log de erros para obter mais detalhes.|  
-|[rsModelGenerationError - Erro do Reporting Services](rsmodelgenerationerror-reporting-services-error.md)|Erro ao gerar modelo. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
-|[rsProcessingError - Erro do Reporting Services](rsprocessingerror-reporting-services-error.md)|Ocorreram erros em processamento de relatório.|  
-|[rsServerConfigurationError - Erro do Reporting Services](rsserverconfigurationerror-reporting-services-error.md)|O servidor de relatório encontrou um erro de configuração.|  
-|[rrRenderingError - Erro do Reporting Services](rrrenderingerror-reporting-services-error.md)|Ocorreu um erro na renderização do relatório. (rrRenderingError) %1.|  
+|[rsAccessedDenied – Erro do Reporting Services](rsaccesseddenied-reporting-services-error.md)|As permissões concedidas ao usuário 'meudomínio\minhaConta' são insuficientes para a execução dessa operação. (rsAccessDenied) (ReportingServicesLibrary).|  
+|[rsInternalError – Erro do Reporting Services](rsinternalerror-reporting-services-error.md)|Um erro interno ocorreu no servidor de relatório. Consulte o log de erros para obter mais detalhes.|  
+|[rsModelGenerationError – Erro do Reporting Services](rsmodelgenerationerror-reporting-services-error.md)|Erro ao gerar modelo. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
+|[rsProcessingError – Erro do Reporting Services](rsprocessingerror-reporting-services-error.md)|Ocorreram erros em processamento de relatório.|  
+|[rsServerConfigurationError – Erro do Reporting Services](rsserverconfigurationerror-reporting-services-error.md)|O servidor de relatório encontrou um erro de configuração.|  
+|[rrRenderingError – Erro do Reporting Services](rrrenderingerror-reporting-services-error.md)|Ocorreu um erro na renderização do relatório. (rrRenderingError) %1.|  
 |[Serviço Windows Servidor de Relatório &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|O serviço Servidor de Relatórios do Windows (MSSQLSERVER) não pode estabelecer conexão com o banco de dados do servidor de relatórios.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](errors-and-events-reference-reporting-services.md)  
   

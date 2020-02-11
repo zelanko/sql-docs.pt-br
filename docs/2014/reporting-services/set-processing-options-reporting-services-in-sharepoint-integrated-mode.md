@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d64015e0b1756033f3a3a0b7caf90262d7d43f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101343"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Definir opções de processamento (Reporting Services no modo integrado do SharePoint)
@@ -30,13 +30,14 @@ ms.locfileid: "66101343"
 -   Um histórico de relatórios é uma coleção de cópias de um relatório executadas anteriormente. É possível usar o histórico de relatórios para manter ao longo do tempo um registro de um relatório. Um histórico de relatórios não se destina a relatórios que contenham dados confidenciais ou pessoais. Por este motivo, um histórico de relatórios pode incluir somente os relatórios que consultem uma fonte de dados utilizando um conjunto único de credenciais (armazenadas ou usadas para a execução de um relatório de forma autônoma) disponível para todos os usuários que executem um relatório.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] com o SharePoint utiliza recursos de gerenciamento de inserção e extração de conteúdo do SharePoint para salvar atualizações em tipos de conteúdo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . isso inclui a criação de instantâneos de relatórios. Portanto, se você ativou o controle de versões em uma biblioteca de documentos, verá a versão de relatório atualizada quando um novo instantâneo de histórico de relatórios for criado. Esse é um efeito colateral de atualizar instantâneos. Quando um instantâneo é atualizado, ele faz com que a propriedade LastExecution do relatório se altere, e isso causa uma alteração na versão do relatório.  
+    >  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] com o SharePoint utiliza recursos de gerenciamento de inserção e extração de conteúdo do SharePoint para salvar atualizações em tipos de conteúdo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . isso inclui a criação de instantâneos de relatórios. Portanto, se você ativou o controle de versões em uma biblioteca de documentos, verá a versão de relatório atualizada quando um novo instantâneo de histórico de relatórios for criado. Esse é um efeito colateral de atualizar instantâneos. Quando um instantâneo é atualizado, ele faz com que a propriedade LastExecution do relatório se altere, e isso causa uma alteração na versão do relatório.  
   
 -   Você pode especificar valores de tempo limite para definir limites para o uso dos recursos do sistema.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo do SharePoint|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Modo do SharePoint|  
   
  **Neste tópico:**  
   
@@ -46,11 +47,11 @@ ms.locfileid: "66101343"
   
 -   [Para definir valores de tempo limite de processamento](#bkmk_set_processing)  
   
--   [Para definir opções e limites de histórico de relatórios](#bkmk_set_report_history)  
+-   [Para definir as opções e os limites do histórico de relatórios](#bkmk_set_report_history)  
   
--   [Definir tempo limite de banco de dados](#bkmk_set_database_timeout)  
+-   [Definir tempo limite do banco de dados](#bkmk_set_database_timeout)  
   
-##  <a name="bkmk_set_data_refresh"></a> Para definir opções de atualização de dados  
+##  <a name="bkmk_set_data_refresh"></a>Para definir opções de atualização de dados  
   
 1.  Aponte para um relatório na biblioteca.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "66101343"
   
 7.  Em **Opções de Instantâneo de Dados**, selecione **Criar ou atualizar o instantâneo quando esta página for salva** se você quiser criar imediatamente dados de instantâneo para serem usados com o relatório, sem aguardar o processamento de dados agendado.  
   
-##  <a name="bkmk_set_report_caching"></a> Para definir opções de cache de relatório  
+##  <a name="bkmk_set_report_caching"></a>Para definir opções de cache de relatório  
   
 1.  Aponte para um relatório na biblioteca.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "66101343"
   
     -   Crie uma agenda compartilhada para limpar o cache em um horário especificado por você.  
   
-##  <a name="bkmk_set_processing"></a> Para definir valores de tempo limite de processamento  
+##  <a name="bkmk_set_processing"></a>Para definir valores de tempo limite de processamento  
   
 1.  Aponte para um relatório na biblioteca.  
   
@@ -90,7 +91,7 @@ ms.locfileid: "66101343"
   
 3.  Em **Tempo Limite de Processamento**, selecione **Usar a configuração padrão do site** se você quiser usar o valor especificado no nível do servidor de relatório. Caso contrário, selecione **Não especificar tempo limite para processamento de relatório** ou **Limitar o processamento de relatórios em segundos** se quiser substituir esse valor para que não haja tempo limite ou para que haja outros valores de tempo limite.  
   
-##  <a name="bkmk_set_report_history"></a> Para definir opções e limites de histórico de relatórios  
+##  <a name="bkmk_set_report_history"></a>Para definir as opções e os limites do histórico de relatórios  
   
 1.  Aponte para um relatório na biblioteca.  
   
@@ -100,12 +101,12 @@ ms.locfileid: "66101343"
   
 4.  Em **Limites de Instantâneo de Histórico**, selecione **Usar a configuração padrão do site** se desejar usar o valor especificado no nível do servidor de relatório. Caso contrário, selecione **Não limitar o número de instantâneos** ou **Limitar o número de instantâneos** para especificar um valor personalizado.  
   
-##  <a name="bkmk_set_database_timeout"></a> Definir tempo limite de banco de dados  
+##  <a name="bkmk_set_database_timeout"></a>Definir tempo limite do banco de dados  
   
 1.  Use o Windows PowerShell para definir o tempo limite de banco de dados de um servidor de relatório do SharePoint. Para obter mais informações, confira a seção "Obter e definir Propriedades do banco de dados do aplicativo de serviço de relatório" de [Cmdlets do PowerShell para o modo do SharePoint do Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Definir propriedades de processamento de relatórios](report-server/set-report-processing-properties.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Definir as propriedades do processamento de relatórios](report-server/set-report-processing-properties.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Definindo valores de tempo limite para processamento de relatórios e conjuntos de dados compartilhados &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102587"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir e fechar um relatório (Gerenciador de Relatórios)
@@ -32,7 +32,7 @@ ms.locfileid: "66102587"
   
 3.  Para exibir um relatório, clique em um nome ou ícone de relatório. O ícone a seguir indica um relatório:  
   
-     ![Ícone Relatório](../media/hlp-16doc.gif "Ícone Relatório")  
+     ![Ícone de relatório](../media/hlp-16doc.gif "ícone de relatório")  
   
      Alguns relatórios exigem que você forneça um nome de usuário e uma senha ou um valor de parâmetro  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66102587"
   
      O fechamento de um relatório não o remove do cache de navegador. Para isso, é necessário fechar o navegador para desconectar o relatório.  
   
-## <a name="see-also"></a>Consulte também  
- [Pesquisando relatórios e outros itens &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../contents-page-report-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Procurando relatórios e outros itens &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [Página de conteúdo &#40;Report Manager&#41;](../contents-page-report-manager.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Gerenciamento de conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

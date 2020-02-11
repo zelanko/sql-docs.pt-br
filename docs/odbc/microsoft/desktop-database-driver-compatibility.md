@@ -1,5 +1,5 @@
 ---
-title: Compatibilidade de Driver de banco de dados da área de trabalho | Microsoft Docs
+title: Compatibilidade de driver de banco de dados desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31263162526b6bd2e0a116a473f09f9e2caeba94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077280"
 ---
 # <a name="desktop-database-driver-compatibility"></a>Compatibilidade de driver de banco de dados de área de trabalho
-O Unicode é um método de codificação de caracteres de software trata todos os caracteres como tendo uma largura fixa de dois bytes. Esse método é usado como uma alternativa para codificação de caracteres ANSI do Windows, que, porque ele representa os caracteres em um byte, é limitada a 256 caracteres. Porque o Unicode pode representar mais de 65.000 caracteres, que inclui muitos idiomas cujos caracteres não são representados na codificação ANSI.  
+Unicode é um método de codificação de caracteres de software que trata todos os caracteres como tendo uma largura fixa de dois bytes. Esse método é usado como uma alternativa à codificação de caracteres ANSI do Windows, que, por representar caracteres em um byte, é limitado a 256 caracteres. Como o Unicode pode representar mais de 65.000 caracteres, ele acomoda muitas linguagens cujos caracteres não são representados na codificação ANSI.  
   
- O Gerenciador de Driver ODBC 3.5 (ou posterior) está habilitado para Unicode. Isso afeta duas áreas principais: chamadas de função e tipos de dados de cadeia de caracteres. Os argumentos de cadeia de caracteres de função do Gerenciador de Driver mapas e dados de cadeia de caracteres, conforme exigido pelo aplicativo e do driver, ambos os quais podem ser habilitado para Unicode ou ANSI habilitados.  
+ O Gerenciador de driver do ODBC 3,5 (ou posterior) está habilitado para Unicode. Isso afeta duas áreas principais: chamadas de função e tipos de dados de cadeia de caracteres. O Gerenciador de driver mapeia os argumentos da cadeia de caracteres da função e os dados de cadeia de caracteres conforme exigido pelo aplicativo e Driver, ambos podem ser habilitados para Unicode ou habilitados para ANSI.  
   
- O Gerenciador de Driver ODBC 3.5 (ou posterior) suporta o uso de um driver de Unicode com um aplicativo Unicode e um aplicativo ANSI. Ele também suporta o uso de um driver de ANSI com um aplicativo ANSI. O Gerenciador de Driver fornece o mapeamento de Unicode para ANSI limitado para um aplicativo Unicode trabalhando com um driver de ANSI. Isso permite o acesso a bancos de dados Jet 3.5 e suporte de todos os tipos de arquivo ISAM existentes.  
+ O Gerenciador de driver do ODBC 3,5 (ou posterior) dá suporte ao uso de um driver Unicode com um aplicativo Unicode e um aplicativo ANSI. Ele também dá suporte ao uso de um driver ANSI com um aplicativo ANSI. O Gerenciador de driver fornece mapeamento limitado de Unicode para ANSI para um aplicativo Unicode que funcione com um driver ANSI. Isso permite o acesso aos bancos de dados Jet 3,5 e ao suporte de todos os tipos de arquivo ISAM existentes.  
   
- Quando um aplicativo ANSI usa o Driver de banco de dados ODBC Desktop 4.0 e acessa o Microsoft Access 4.0 ou posterior, o driver expõe o tipo de dados como SQL_CHAR, SQL_VARCHAR ou SQL_LONGVARCHAR, embora o Jet 4.0 suporta a versão ampla. Não há suporte para versões mais antigas do Jet SQL_WCHAR, SQL_WVARCHAR e SQL_WLONGVARCHAR. Essa restrição também se aplica nos casos em que os antigos formatos são usados com o mecanismo de banco de dados do Jet 4.0.  
+ Quando um aplicativo ANSI usa o driver de banco de dados da área de trabalho do ODBC 4,0 e acessa o Microsoft Access 4,0 ou posterior, o driver expõe o tipo de dado como SQL_CHAR, SQL_VARCHAR ou SQL_LONGVARCHAR mesmo que o Jet 4,0 dê suporte à versão ampla. As versões mais antigas do Jet não dão suporte a SQL_WCHAR, SQL_WVARCHAR e SQL_WLONGVARCHAR. Essa restrição também se aplica nos casos em que os formatos antigos são usados com o Mecanismo de Banco de Dados Jet 4,0.  
   
- Para obter mais informações sobre problemas de Unicode com ODBC, consulte [Unicode](../../odbc/reference/develop-app/unicode.md) em considerações de programação.
+ Para obter mais informações sobre problemas de Unicode com o ODBC, consulte [Unicode](../../odbc/reference/develop-app/unicode.md) em considerações de programação.

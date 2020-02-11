@@ -1,5 +1,5 @@
 ---
-title: Configuração do Distributed Replay Client | Microsoft Docs
+title: Distributed Replay a configuração do cliente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095483"
 ---
 # <a name="distributed-replay-client-configuration"></a>Configuração do Distributed Replay Client
@@ -23,8 +23,8 @@ ms.locfileid: "66095483"
  Usuários que têm permissões administrativas terão acesso ilimitado ao serviço Distributed Replay Client.  
   
 ## <a name="options"></a>Opções  
- **Nome do controlador**  
- Este é um parâmetro opcional e o valor padrão é \< *em branco*>.  
+ **Nome do Controlador**  
+ Esse é um parâmetro opcional, e o valor padrão é \< *em branco*>.  
   
  Digite o nome do controlador com o qual o computador cliente se comunicará para o serviço Distributed Replay Client. Observe o seguinte:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66095483"
   
  O diretório de trabalho padrão é \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
   
- **Diretório de resultado**  
+ **Diretório de Resultado**  
  Especifique o diretório de resultado para o serviço Distributed Replay Client.  
   
  O diretório de resultado padrão é \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  

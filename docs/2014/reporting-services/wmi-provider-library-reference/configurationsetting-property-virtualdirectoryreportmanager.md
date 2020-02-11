@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 555f3e8d88554737a618b6acea76cc8907474ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097381"
 ---
-# <a name="virtualdirectoryreportmanager-property-wmi-msreportserverconfigurationsetting"></a>Propriedade VirtualDirectoryReportManager (WMI MSReportServer_ConfigurationSetting)
+# <a name="virtualdirectoryreportmanager-property-wmi-msreportserver_configurationsetting"></a>Propriedade VirtualDirectoryReportManager (WMI MSReportServer_ConfigurationSetting)
   Retorna o diretório virtual para o aplicativo do gerenciador de relatórios. Somente leitura.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,9 +39,9 @@ public string VirtualDirectoryReportManager;
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

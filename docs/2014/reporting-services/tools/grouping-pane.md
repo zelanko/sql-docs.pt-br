@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 476815dc8378c1e8ca790091021c1bd3ec95ba9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100267"
 ---
 # <a name="grouping-pane"></a>Painel Agrupamento
@@ -32,7 +32,7 @@ ms.locfileid: "66100267"
   
  O painel Agrupamento oferece suporte aos seguintes modos:  
   
--   **Padrão.** Use o modo padrão para adicionar, editar ou excluir grupos. É possível adicionar grupos pai, filho e detalhados, arrastando campos do painel de dados do relatório e os inserindo na hierarquia de grupo. Para adicionar um grupo adjacente, você deve usar o atalho **Adicionar Grupo** . Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Os.** Use o modo padrão para adicionar, editar ou excluir grupos. É possível adicionar grupos pai, filho e detalhados, arrastando campos do painel de dados do relatório e os inserindo na hierarquia de grupo. Para adicionar um grupo adjacente, você deve usar o atalho **Adicionar Grupo** . Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de relatórios e SSRS&#41;](../report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
 -   **Avançado**. Use o **modo Avançado** para exibir todos os membros dos grupos de linhas e de colunas e definir propriedades em membros estáticos. Quando você cria grupos ou adiciona totais, as propriedades que controlam a forma como a região de dados Tablix processa linhas e colunas em todas as páginas de relatório são definidas automaticamente. Para ajustar essas propriedades manualmente, você deve defini-las no membro Tablix. Para obter mais informações, consulte [Controlando a exibição da região de dados Tablix em uma página do relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66100267"
  No modo Avançado, é possível exibir todos os membros estáticos e dinâmicos de um grupo. Quando você seleciona um membro, a janela Propriedades exibe as propriedades do **Membro Tablix**selecionado no momento.  
   
 > [!NOTE]  
->  Para alternar **Modo Avançado**, clique com o botão direito do mouse na seta para baixo ao lado do painel Grupos de Colunas e clique em **Modo Avançado**.  
+>  Para ativar/desativar o **Modo Avançado**, clique com o botão direito do mouse na seta para baixo ao lado do painel Grupos de Colunas e clique em **Modo Avançado**.  
   
  Na maior parte dos casos, as propriedades que controlam a exibição das linhas e das colunas dos grupos estáticos e dinâmicos são definidas automaticamente quando você cria um grupo ou adiciona totais. Para editar os valores padrão, você deve selecionar o membro do grupo no painel Grupos de Linhas ou Grupos de Colunas e alterar os valores da propriedade na janela Propriedades. As seguintes propriedades estão disponíveis:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66100267"
   
 -   **HideIfNoRows**. Booliano. Somente para membros estáticos. Se definido, Hidden e ToggleItem serão ignorados. Oculte esse membro caso a região de dados Tablix não contenha nenhuma linha de dados.  
   
--   **KeepTogether**.  
+-   **ManterJunto**.  
   
 -   `KeepWithGroup`. Booliano. Somente para membros de linha estáticos. Sempre que possível, mantenha a linha com o membro dinâmico irmão anterior ou seguinte, caso não esteja oculto.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "66100267"
   
 -   **Estático** Indica um membro estático com uma célula de cabeçalho.  
   
--   **(Estático)** Indica um membro estático sem uma célula de cabeçalho, conhecido como estático oculto.  
+-   **(Estático)** Indica um membro estático sem célula de cabeçalho, conhecido como static oculto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

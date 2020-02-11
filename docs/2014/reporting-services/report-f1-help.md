@@ -1,5 +1,5 @@
 ---
-title: Ajuda de F1 de relatório | Microsoft Docs
+title: Ajuda F1 do relatório | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1da03094a3c01d3d0c3c7aab3a277be8ae83a6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104587"
 ---
 # <a name="report-f1-help"></a>Ajuda F1 de relatório
@@ -25,7 +25,7 @@ ms.locfileid: "66104587"
   
  Para acessar esses tópicos na caixa de diálogo **Propriedades do Relatório** , clique em **Ajuda**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Relatórios do Reporting Services &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
   

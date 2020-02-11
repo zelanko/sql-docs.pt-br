@@ -1,5 +1,5 @@
 ---
-title: Selecione uma instância preparada | Microsoft Docs
+title: Selecionar uma instância preparada | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4df53093cf7d7dff00a8a5e16fb4bef58442213
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092389"
 ---
 # <a name="select-a-prepared-instance"></a>Selecionar uma instância preparada
@@ -24,7 +24,7 @@ ms.locfileid: "66092389"
  A caixa **Selecionar uma ID de instância** lista as instâncias preparadas que você pode concluir. Selecione uma instância preparada que você deseja concluir.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Selecione uma Id de instância**  
+ **Selecione uma ID de instância**  
  A lista inclui todas as instâncias preparadas que você pode concluir no computador em que a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada. Selecione uma instância preparada que você deseja concluir.  
   
  **Instâncias instaladas**  

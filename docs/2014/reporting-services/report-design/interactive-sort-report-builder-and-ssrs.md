@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 02735bafde927ba110de6465c5380987ddb6b5f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105616"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Classificação interativa (Construtor de Relatórios e SSRS)
@@ -29,13 +29,13 @@ ms.locfileid: "66105616"
   
 -   **O que classificar:** linhas ou colunas?  
   
--   **Pelo que classificar:** um campo que é exibido em uma coluna de tabela? Um campo que não é exibido?  
+-   **Classificar pelo quê:** um campo exibido em uma coluna de tabela? Um campo que não é exibido?  
   
--   **Em que contexto classificar:** por exemplo, é possível classificar linhas associadas a grupos de linhas; colunas associadas a grupos de colunas; linhas detalhadas; grupos filho em um grupo pai ou grupos pai e filho juntos.  
+-   **Em que contexto classificar:** por exemplo, é possível classificar linhas associadas a grupos; colunas associadas a grupos de colunas; linhas detalhadas; grupos filho em um grupo pai ou grupos pai e filho juntos.  
   
--   **A qual caixa de texto adicionar o botão de classificação:** no cabeçalho da coluna ou no cabeçalho da linha de grupo?  
+-   **A qual caixa de texto adicionar o botão de classificação:** ao cabeçalho de coluna ou ao cabeçalho da linha do grupo?  
   
--   **Sincronizar ou não a classificação de várias regiões de dados:** é possível criar um relatório para quando o usuário alternar a ordem de classificação; as demais regiões de dados com o mesmo ancestral também são classificadas.  
+-   **Sincronizar ou não a classificação em várias regiões de dados:** é possível criar um relatório para quando o usuário alternar a ordem de classificação; as demais regiões de dados com o mesmo ancestral também são classificadas.  
   
  Para obter instruções passo a passo, consulte [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66105616"
   
  Para isso, você deve refazer a tabela para agrupar uma expressão que combina vários campos. Por exemplo, em um conjunto de dados com contagens de inventário, caso a tabela original seja agrupada por tamanho e por cor, você pode especificar um único grupo com uma expressão formada por tamanho e cor. Para obter mais informações, consulte [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Adicionar classificação interativa a uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  

@@ -1,5 +1,5 @@
 ---
-title: Relatório de Log de execução do servidor e a exibição do ExecutionLog3 | Microsoft Docs
+title: Log de execução do servidor de relatório e a exibição ExecutionLog3 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103466"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Log de execução do servidor de relatório e a exibição ExecutionLog3
@@ -108,7 +108,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  A tabela a seguir descreve os dados capturados no log de execução de relatório  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |InstanceName|Nome da instância de servidor de relatório que manipulou a solicitação. Se seu ambiente tiver mais de um servidor de relatório, você poderá analisar a distribuição de InstanceName para monitorar e determinar se o balanceador da carga de rede distribui solicitações pelos servidores de relatório conforme esperado.|  
 |ItemPath|Caminho onde um relatório ou item de relatório é armazenado.|  
@@ -116,14 +116,14 @@ select * from ExecutionLog3 order by TimeStart DESC
 |ExecutionID|O identificador interno associado a uma solicitação. Solicitações nas mesmas sessões de usuário compartilham a mesma id de execução.|  
 |RequestType|Valores possíveis:<br />**Interativo**<br />**Assinatura**<br /><br /> <br /><br /> A análise dos dados de log filtrados por RequestType=Subscription e classificados por TimeStart pode revelar períodos de uso de assinatura pesados e talvez você queira modificar algumas assinaturas de relatório para um horário diferente.|  
 |Formatar|Formato de renderização.|  
-|Parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
-|ItemAction|Valores possíveis:<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **FindString**<br /><br /> **Executar**<br /><br /> **RenderEdit**|  
+|parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
+|ItemAction|Valores possíveis:<br /><br /> **Render**<br /><br /> **Classificar**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Executados**<br /><br /> **RenderEdit**|  
 |TimeStart|Horas de início e parada que indicam a duração de um processo de relatório.|  
 |TimeEnd||  
 |TimeDataRetrieval|Número de milissegundos gastos na recuperação dos dados.|  
 |TimeProcessing|Número de milissegundos gastos no processamento do relatório.|  
 |TimeRendering|Número de milissegundos gastos na renderização do relatório.|  
-|`Source`|Fonte da execução de relatório. Valores possíveis:<br /><br /> **Live**<br /><br /> **Cache**: Indica uma execução em cache, por exemplo, conjunto de dados de consultas não são executadas ao vivo.<br /><br /> **Instantâneo**<br /><br /> **Histórico**<br /><br /> **AdHoc** : Indica um relatório gerado dinamicamente modelo com base em relatório detalhado ou um construtor de relatórios que é visualizado em um cliente utilizando o servidor de relatório para processamento e renderização.<br /><br /> **Sessão**: Indica uma solicitação de acompanhamento em uma sessão já estabelecida.  Por exemplo, a solicitação inicial é exibir página 1 e a solicitação de acompanhamento é exportar para o Excel com o estado de sessão atual.<br /><br /> **RDCE**:  Indica uma extensão de personalização de definição de relatório. Uma extensão personalizada RDCE pode personalizar uma definição de relatório dinamicamente antes de ela ser passada ao mecanismo de processamento mediante a execução do relatório.|  
+|Fonte|Fonte da execução de relatório. Valores possíveis:<br /><br /> **Live**<br /><br /> **Cache**: indica uma execução em cache, por exemplo, as consultas de conjunto de consulta não são executadas ao vivo.<br /><br /> **Instantâneo**<br /><br /> **Histórico**<br /><br /> **Adhoc** : indica um relatório de detalhamento baseado em modelo de relatório gerado dinamicamente ou um relatório Construtor de relatórios que é visualizado em um cliente que utiliza o servidor de relatório para processamento e renderização.<br /><br /> **Sessão**: indica uma solicitação de acompanhamento dentro de uma sessão já estabelecida.  Por exemplo, a solicitação inicial é exibir página 1 e a solicitação de acompanhamento é exportar para o Excel com o estado de sessão atual.<br /><br /> **RDCE**: indica uma extensão de personalização de definição de relatório. Uma extensão personalizada RDCE pode personalizar uma definição de relatório dinamicamente antes de ela ser passada ao mecanismo de processamento mediante a execução do relatório.|  
 |Status|Status (rsSuccess ou um código de erro; se vários erros ocorrerem, só o primeiro erro será registrado).|  
 |ByteCount|Tamanho de relatórios renderizados em bytes.|  
 |RowCount|Número de linhas retornadas pelas consultas.|  
@@ -222,13 +222,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- O exemplo a seguir descreve algumas das propriedades que você verá no campo AdditionalInfo:  
+ Veja a seguir uma descrição de algumas das propriedades que você verá no campo AdditionalInfo:  
   
--   **ProcessingEngine**: 1=SQL Server 2005, 2=O novo Mecanismo de Processamento sob Demanda. Se a maioria de seus relatórios ainda estiver mostrando o valor 1, você poderá investigar como reprojetá-los para que utilizem o mecanismo de processamento sob demanda mais novo e eficiente.  
+-   **ProcessingEngine**: 1 = SQL Server 2005, 2 = o novo mecanismo de processamento sob demanda. Se a maioria de seus relatórios ainda estiver mostrando o valor 1, você poderá investigar como reprojetá-los para que utilizem o mecanismo de processamento sob demanda mais novo e eficiente.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: O número de milissegundos gastos na execução de operações de escala relacionadas no mecanismo de processamento. O valor 0 indica que nenhuma hora adicional foi gasta em operações de escala; indica também que a solicitação não estava sob pressão de memória.  
+-   **Redimensiontime**: o número de milissegundos gasto na execução de operações relacionadas à escala no mecanismo de processamento. O valor 0 indica que nenhuma hora adicional foi gasta em operações de escala; indica também que a solicitação não estava sob pressão de memória.  
   
     ```  
     <ScalabilityTime>  
@@ -236,7 +236,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: Uma estimativa da quantidade máxima de memória, em quilobytes, consumida por cada componente durante uma solicitação específica.  
+-   **EstimatedMemoryUsageKB**: uma estimativa da quantidade de pico de memória, em quilobytes, consumida por cada componente durante uma solicitação específica.  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -244,7 +244,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**: Os tipos de extensões de dados ou fontes de dados usados no relatório. O número é uma contagem do número de ocorrências da fonte de dados específica.  
+-   **Dataextension**: os tipos de extensões de dados ou fontes de dados usados no relatório. O número é uma contagem do número de ocorrências da fonte de dados específica.  
   
     ```  
     <DataExtension>  
@@ -252,7 +252,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**o valor está em milissegundos. Esses dados podem ser usados para diagnosticar problemas de desempenho. A hora necessária para recuperar imagens de um servidor Web externo pode tornar lenta a execução de relatório geral. Adicionado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **ExternalImages** O valor está em milissegundos. Esses dados podem ser usados para diagnosticar problemas de desempenho. A hora necessária para recuperar imagens de um servidor Web externo pode tornar lenta a execução de relatório geral. Adicionado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <ExternalImages>  
@@ -262,7 +262,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Conexões**: Uma estrutura em vários níveis. Adicionado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Conexões**: uma estrutura de vários níveis. Adicionado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <Connections>  
@@ -307,7 +307,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  A tabela a seguir descreve os dados capturados no log de execução de relatório  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |InstanceName|Nome da instância de servidor de relatório que manipulou a solicitação.|  
 |ReportPath|A estrutura de caminho para o relatório.  Por exemplo, um relatório chamado "test", que está na pasta raiz do Gerenciador de Relatórios, teria um ReportPath "/test".<br /><br /> Um relatório chamado "test", salvo na pasta "samples" do Gerenciador de Relatórios, terá o ReportPath "/Samples/test/"|  
@@ -315,14 +315,14 @@ select * from ExecutionLog2 order by TimeStart DESC
 |ExecutionID||  
 |RequestType|Tipo de solicitação (usuário ou sistema).|  
 |Formatar|Formato de renderização.|  
-|Parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
+|parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
 |ReportAction|Valores possíveis: Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
 |TimeStart|Horas de início e parada que indicam a duração de um processo de relatório.|  
 |TimeEnd||  
 |TimeDataRetrieval|Número de milissegundos gastos na recuperação dos dados, no processamento do relatório e na renderização do relatório.|  
 |TimeProcessing||  
 |TimeRendering||  
-|`Source`|Fonte da execução de relatório (1=Ativo, 2=Cache, 3=Instantâneo, 4=Histórico).|  
+|Fonte|Fonte da execução de relatório (1=Ativo, 2=Cache, 3=Instantâneo, 4=Histórico).|  
 |Status|Status (rsSuccess ou um código de erro; se vários erros ocorrerem, só o primeiro erro será registrado).|  
 |ByteCount|Tamanho de relatórios renderizados em bytes.|  
 |RowCount|Número de linhas retornadas pelas consultas.|  
@@ -339,25 +339,25 @@ select * from ExecutionLog order by TimeStart DESC
   
  A tabela a seguir descreve os dados capturados no log de execução de relatório  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |InstanceName|Nome da instância de servidor de relatório que manipulou a solicitação.|  
 |ReportID|Identificador do relatório.|  
 |UserName|Identificador do usuário.|  
 |RequestType|Valores possíveis:<br /><br /> True = Uma solicitação de assinatura<br /><br /> False = Uma solicitação interativa|  
 |Formatar|Formato de renderização.|  
-|Parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
+|parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
 |TimeStart|Horas de início e parada que indicam a duração de um processo de relatório.|  
 |TimeEnd||  
 |TimeDataRetrieval|Número de milissegundos gastos na recuperação dos dados, no processamento do relatório e na renderização do relatório.|  
 |TimeProcessing||  
 |TimeRendering||  
-|`Source`|Fonte da execução de relatório. Valores possíveis: (1=Live, 2=Cache, 3=Snapshot, 4=History, 5=Adhoc, 6=Session, 7=RDCE).|  
+|Fonte|Fonte da execução de relatório. Valores possíveis: (1=Ativo, 2=Cache, 3=Instantâneo, 4=Histórico, 5=Adhoc, 6=Sessão, 7=RDCE).|  
 |Status|Valores possíveis: rsSuccess, rsProcessingAborted ou um código de erro. Se vários erros ocorrerem, só o primeiro erro será registrado.|  
 |ByteCount|Tamanho de relatórios renderizados em bytes.|  
 |RowCount|Número de linhas retornadas pelas consultas.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  

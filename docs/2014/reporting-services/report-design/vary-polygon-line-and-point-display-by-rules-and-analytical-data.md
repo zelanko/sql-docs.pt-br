@@ -1,5 +1,5 @@
 ---
-title: Variam de polígono, linha e exibição de ponto por regras e dados analíticos (construtor de relatórios e SSRS) | Microsoft Docs
+title: Variar a exibição de polígono, linha e ponto por regras e dados analíticos (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104616"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variar a exibição de polígono, linha e ponto por regras e dados analíticos (Construtor de Relatórios e SSRS)
@@ -100,7 +100,7 @@ ms.locfileid: "66104616"
 ##  <a name="Distribution"></a> Compreendendo opções de distribuição  
  Para criar uma distribuição de valores, você pode dividir os dados em intervalos. Especifique o tipo de distribuição, o número de subintervalos e os valores de intervalo mínimo e máximo.  
   
- Na lista a seguir, suponha que você tenha três elementos de mapa e seis valores analíticos relacionados que variam de 1 a 9999 com os seguintes valores: 1, 10, 200, 2000, 4777, 8999.  
+ Na lista a seguir, vamos supor que você tenha três elementos de mapa e seis valores analíticos relacionados que variam de 1 a 9999 com os valores seguintes: 1, 10, 200, 2000, 4777, 8999.  
   
 -   **EqualInterval** . Crie intervalos que dividam os dados em intervalos iguais. Para o exemplo, os três intervalos seriam 0-2999, 3000-5999, 6000-8999. Subintervalo 1: 1, 10, 200, 500. Subintervalo 2: 4777. Subintervalo 3: 8999. Esse método não considera o modo como os dados são distribuídos. Valores muito grandes ou muito pequenos podem afetar os resultados da distribuição.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66104616"
   
 -   **Ideal.** Crie intervalos que ajustem automaticamente a distribuição para criar subintervalos equilibrados. O número de subintervalos é determinado pelo algoritmo.  
   
--   **Personalizado.** Especifique seu próprio número de intervalos para controlar a distribuição de valores. Para os dados de exemplo, você pode especificar 3 intervalos: 1-2, 3-8, 9.  
+-   **Personalizado.** Especifique seu próprio número de intervalos para controlar a distribuição de valores. Para os dados do exemplo, você pode especificar 3 intervalos: 1-2, 3-8, 9.  
   
  Os valores de distribuição são usados pelas regras para variar os valores de exibição do elemento do mapa.  
   
@@ -121,14 +121,14 @@ ms.locfileid: "66104616"
   
  As tabelas a seguir mostram exemplos de formatos diferentes que você pode usar.  
   
-|Palavra-chave e formato|Descrição|Exemplo do que é exibido como texto na legenda|  
+|Palavra-chave e formato|DESCRIÇÃO|Exemplo do que é exibido como texto na legenda|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|Exibe a moeda do valor total sem casas decimais|$ 400|  
 |`#FROMVALUE {C2}`|Exibe a moeda do valor total com até duas casas decimais.|$ 400,55|  
 |`#TOVALUE`|Exibe o valor numérico real do campo de dados.|10000|  
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Exibe os valores numéricos reais do início e do fim do intervalo.|10 - 790|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Alterar legendas de mapa, escala de cores e regras associadas &#40;Construtor de Relatórios e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

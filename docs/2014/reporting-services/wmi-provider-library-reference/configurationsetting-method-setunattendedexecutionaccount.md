@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 095929c60d586fa0ed6c857412a369171acdaa10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097932"
 ---
-# <a name="setunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>Método SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting)
+# <a name="setunattendedexecutionaccount-method-wmi-msreportserver_configurationsetting"></a>Método SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting)
   Especifica a conta usada para executar relatórios autônomos.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,14 +40,14 @@ public void SetUnattendedExecutionAccount (string UserName,
     string Password, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- *UserName*  
+## <a name="parameters"></a>parâmetros  
+ *Usu*  
  Uma conta do Windows a ser usada para execuções autônomas.  
   
  *Senha*  
  A senha da conta especificada.  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -59,9 +59,9 @@ public void SetUnattendedExecutionAccount (string UserName,
  Não é possível usar o método SetUnattendedExecutionAccount para execuções autônomas no contexto do serviço Windows do servidor de relatório.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a47169bc3c628e4bf33fb9ed6a19e612320b585c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105273"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>Função First (Construtor de Relatórios e SSRS)
@@ -30,8 +30,8 @@ ms.locfileid: "66105273"
 First(expression, scope)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *Expressão*  
+#### <a name="parameters"></a>parâmetros  
+ *expressão*  
  (`Variant` ou `Binary`) A expressão na qual executar a agregação, por exemplo, `=Fields!FieldName.Value`.  
   
  *escopo*  
@@ -55,7 +55,7 @@ First(expression, scope)
   
 -   *Scope* para agregações aninhadas não pode ser o nome de um conjunto de dados.  
   
--   *Expressão* não deve conter `First`, `Last`, `Previous`, ou `RunningValue` funções.  
+-   A *expressão* não deve `First`conter `Last`funções `Previous`,, `RunningValue` ou.  
   
 -   *Expression* não deve conter agregações aninhadas que especifiquem *recursive*.  
   
@@ -70,7 +70,7 @@ First(expression, scope)
 =First(Fields!ProductNumber.Value, "Category")  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   

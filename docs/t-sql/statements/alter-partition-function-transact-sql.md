@@ -26,10 +26,10 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071255"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
@@ -40,7 +40,7 @@ Altera uma função de partição dividindo ou mesclando seus valores de limite.
 > [!CAUTION]  
 >  Mais de uma tabela ou índice podem usar a mesma função de partição. ALTER PARTITION FUNCTION afeta todos em uma única transação.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,7 +75,7 @@ Descarta uma partição e mescla os valores que existirem na partição em uma p
 > [!NOTE]  
 >  Limitações com índice columnstore: duas partições não vazias contendo um índice columnstore não podem ser mescladas. Você precisará remover ou desabilitar o índice columnstore antes de executar esta operação  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
 Sempre mantenha as partições vazias em ambas as extremidades do intervalo de partição. Mantenha as partições em ambas as extremidades para garantir que a divisão da partição e a mesclagem da partição não gerem nenhuma movimentação de dados. A divisão da partição ocorre no início e a mesclagem da partição ocorre no final. Evite dividir ou mesclar partições populadas. A divisão ou mesclagem de partições preenchidas pode ser ineficiente. Elas podem ser ineficientes porque a divisão ou mesclagem pode causar até quatro vezes mais geração de logs, e também pode causar bloqueio grave.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
@@ -111,7 +111,7 @@ Qualquer uma das permissões a seguir pode ser usada para executar ALTER PARTITI
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. Dividindo uma partição de uma tabela ou índice particionado em duas partições  
+### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>a. Dividindo uma partição de uma tabela ou índice particionado em duas partições  
 O exemplo a seguir cria uma função de partição para dividir uma tabela ou índice em quatro partições. `ALTER PARTITION FUNCTION` divide uma das partições em dois para criar um total de cinco partições.  
   
 ```sql  

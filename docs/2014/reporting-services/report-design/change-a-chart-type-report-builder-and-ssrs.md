@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e20363b7d26b2b668ca52d44615488e06573f730
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106376"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Alterar um tipo de gráfico (Construtor de Relatórios e SSRS)
-  Quando você primeiro inserir um gráfico em um relatório, o **Selecionar tipo de gráfico** caixa de diálogo é exibida. Se você cancelar essa caixa de diálogo, um tipo de gráfico Coluna será adicionado por padrão.  
+  Quando você insere um gráfico pela primeira vez em um relatório, a caixa de diálogo **Selecionar tipo de gráfico** é exibida. Se você cancelar essa caixa de diálogo, um tipo de gráfico Coluna será adicionado por padrão.  
   
  A qualquer momento durante a criação do relatório, é possível alterar o tipo de gráfico para aquele mais adequado ao relatório. É importante escolher o tipo de gráfico correto para o tipo de dados para que ele seja interpretado corretamente. Você deve entender as características de cada tipo de gráfico para determinar qual deles é o mais adequado para seus dados. Para obter mais informações, consulte [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66106376"
   
 2.  Na caixa de diálogo **Tipo SelectChart** , selecione um tipo de gráfico na lista.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Adicionar um gráfico a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  

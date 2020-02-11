@@ -1,5 +1,5 @@
 ---
-title: Comando SET EXCLUSIVE | Microsoft Docs
+title: Definir comando exclusivo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d1a37043d332b54d0d5c5ebb7b2ba9f3acce000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071765"
 ---
 # <a name="set-exclusive-command"></a>Comando SET EXCLUSIVE
@@ -30,14 +30,14 @@ SET EXCLUSIVE ON | OFF
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ON  
- Limita a acessibilidade de uma tabela aberta em uma rede para o usuário que abriu a ele. A tabela não está acessível para outros usuários na rede. SET exclusivos ON também impede que todos os outros usuários que têm acesso somente leitura.  
+ ATIVADO  
+ Limita a acessibilidade de uma tabela aberta em uma rede para o usuário que a abriu. A tabela não está acessível a outros usuários na rede. SET EXCLUSIVE ON também impede que todos os outros usuários tenham acesso somente leitura.  
   
  OFF  
- (Padrão para o driver; os padrões para o Visual FoxPro são ON para a sessão de dados globais e OFF para uma sessão de dados privados). Permite que uma tabela aberta em uma rede para ser compartilhado e modificada por qualquer usuário na rede.  
+ (O padrão para o driver; os padrões para o Visual FoxPro são ON para a sessão de dados global e OFF para uma sessão de dados privada.) Permite que uma tabela aberta em uma rede seja compartilhada e modificada por qualquer usuário na rede.  
   
 ## <a name="remarks"></a>Comentários  
- Alterando a configuração de um conjunto exclusivo não altera o status das tabelas abertos anteriormente. Por exemplo, se uma tabela é aberta com um conjunto exclusivo definido como ON e exclusivo definido mais tarde é alterado para OFF, a tabela retém seu status de uso exclusivo.  
+ Alterar a configuração de SET EXCLUSIVE não altera o status de tabelas abertas anteriormente. Por exemplo, se uma tabela for aberta com SET EXCLUSIVE Set como ON e SET EXCLUSIVE for alterado posteriormente para OFF, a tabela manterá seu status de uso exclusivo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Caixa de diálogo da instalação do Visual FoxPro do ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

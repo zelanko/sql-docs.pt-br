@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104064"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurar um servidor de relatórios (modo nativo do Reporting Services)
@@ -29,7 +29,7 @@ ms.locfileid: "66104064"
   
 -   Um banco de dados de servidor de relatório que armazena dados de aplicativo, relatórios e outros itens.  
   
- A instalação define as configurações mínimas, se você selecionar qualquer uma das seguintes opções de instalação: Configuração padrão do modo nativo ou configuração de padrão de modo integrado do SharePoint. Se você tiver instalado o servidor de relatório no modo somente arquivos (a opção **Instalar, mas não configurar** do assistente de Instalação), será configurada apenas a conta de serviço. A URL do serviço Web e o banco de dados do servidor de relatório devem ser configurados após o término da instalação.  
+ A Instalação define as configurações mínimas quando você seleciona uma das seguintes opções: configuração padrão do modo Nativo ou configuração padrão do modo integrado do SharePoint. Se você tiver instalado o servidor de relatório no modo somente arquivos (a opção **Instalar, mas não configurar** do assistente de Instalação), será configurada apenas a conta de serviço. A URL do serviço Web e o banco de dados do servidor de relatório devem ser configurados após o término da instalação.  
   
  O Gerenciador de Relatórios é um recurso opcional para um servidor de relatório no modo nativo, mas é recomendável configurá-lo de forma que você possa conceder acesso ao servidor de relatório ao usuário e gerenciar o conteúdo do servidor de relatório. Se você implantar um servidor de relatório no modo integrado do SharePoint, use o front-end da Web de um servidor SharePoint para conceder acesso.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "66104064"
   
  Verifique a instalação criando pastas, carregando itens e executando relatórios. Siga as instruções em [Verificar uma instalação do Reporting Services](../install-windows/verify-a-reporting-services-installation.md) para verificar a instalação.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciar um servidor de relatório de modo nativo do Reporting Services](manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)   
- [Configurar um servidor de relatório no modo nativo para administração local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciar um Reporting Services servidor de relatório no modo nativo](manage-a-reporting-services-native-mode-report-server.md)   
+ [Configurar um firewall para acesso ao servidor de relatório](configure-a-firewall-for-report-server-access.md)   
+ [Configurar um servidor de relatório no modo nativo para a administração local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [Configurar um servidor de relatório para administração remota](configure-a-report-server-for-remote-administration.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   

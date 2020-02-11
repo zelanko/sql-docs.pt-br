@@ -1,5 +1,5 @@
 ---
-title: Página Segurança (Configurações de Site - Gerenciador de relatórios) | Microsoft Docs
+title: Página Segurança (Configurações de Site - Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102179"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Página Segurança (Configurações de Site - Gerenciador de Relatórios)
@@ -33,26 +33,26 @@ ms.locfileid: "66102179"
   
 2.  Na parte superior da página, clique em **Configurações de Site**. Esse procedimento abre a página Propriedades Gerais do site.  
   
-3.  Selecione a guia **Segurança** .  
+3.  Selecione a guia **Segurança**.  
   
 ## <a name="options"></a>Opções  
  **Delete (excluir)**  
  Clique para excluir uma atribuição de função existente. Antes de clicar em **Excluir**, marque a caixa de seleção ao lado do nome do grupo ou usuário a ser removido. Você não poderá excluir uma atribuição de função se ela for a única. A exclusão de uma atribuição de função não exclui uma conta de grupo ou usuário, nem as definições da função.  
   
  **Nova atribuição de função**  
- Clique para abrir a página Atribuição de Nova Função do Sistema, a qual é usada para criar atribuições de função do sistema adicionais para o site do servidor de relatório. Para obter mais informações, consulte [novas atribuições de função do sistema: Editar página de atribuições de função do sistema &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ Clique para abrir a página Atribuição de Nova Função do Sistema, a qual é usada para criar atribuições de função do sistema adicionais para o site do servidor de relatório. Para obter mais informações, consulte [novas atribuições de função do sistema: página Editar atribuições de função do sistema &#40;Report Manager&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
  **Editar**  
- Clique para abrir a página Editar Atribuições de Função do Sistema, a qual é usada para editar atribuições de função do sistema individuais para o site do servidor de relatório. Para obter mais informações, consulte [novas atribuições de função do sistema: Editar página de atribuições de função do sistema &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ Clique para abrir a página Editar Atribuições de Função do Sistema, a qual é usada para editar atribuições de função do sistema individuais para o site do servidor de relatório. Para obter mais informações, consulte [novas atribuições de função do sistema: página Editar atribuições de função do sistema &#40;Report Manager&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
- **Grupo ou usuário**  
+ **Grupo ou Usuário**  
  Lista os grupos e usuários que fazem parte de uma atribuição de função existente. Atribuições de função existentes para a pasta atual são definidas para os grupos e usuários que aparecem nesta coluna. Clique em **Editar** ao lado de um grupo ou nome de usuário para exibir ou editar detalhes da atribuição da função.  
   
- **Roles**  
- Lista uma ou mais definições de função que fazem parte de uma atribuição de função existente. Se várias funções forem atribuídas a um grupo ou conta de usuário, esse grupo de usuários pode desempenhar todas as tarefas que pertencem a todas as funções. Para exibir o conjunto de tarefas a que cada função dá suporte, use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Você não pode exibir, criar, modificar ou excluir funções no Gerenciador de Relatórios. Para obter instruções, consulte [criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ **Funções**  
+ Lista uma ou mais definições de função que fazem parte de uma atribuição de função existente. Se várias funções forem atribuídas a um grupo ou conta de usuário, esse grupo de usuários pode desempenhar todas as tarefas que pertencem a todas as funções. Para exibir o conjunto de tarefas que cada função dá suporte, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]use. Você não pode exibir, criar, modificar ou excluir funções no Gerenciador de Relatórios. Para obter instruções, consulte [criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
  [Conceder permissões em um servidor de relatório no Modo Nativo](security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

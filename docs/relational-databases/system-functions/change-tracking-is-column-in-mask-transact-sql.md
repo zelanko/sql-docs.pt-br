@@ -20,18 +20,18 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a6f7e9d8d9ab99ebe4a7c5749033eacf85b8feb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042995"
 ---
-# <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
+# <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Interpreta o valor SYS_CHANGE_COLUMNS retornado pela função CHANGETABLE(CHANGES...). Permite que um aplicativo determine se a coluna especificada deve ser incluída nos valores retornados para SYS_CHANGE_COLUMNS.  
+  Interpreta o valor SYS_CHANGE_COLUMNS retornado pela função CHANGEtable (CHANGES...). Permite que um aplicativo determine se a coluna especificada deve ser incluída nos valores retornados para SYS_CHANGE_COLUMNS.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,10 +42,10 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
   
 ## <a name="arguments"></a>Argumentos  
  *column_id*  
- É a ID da coluna que está sendo verificada. A coluna ID pode ser obtida usando o [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) função.  
+ É a ID da coluna que está sendo verificada. A ID da coluna pode ser obtida usando a função [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) .  
   
  *change_columns*  
- São os dados binários da coluna SYS_CHANGE_COLUMNS dos [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) dados.  
+ São os dados binários da coluna SYS_CHANGE_COLUMNS dos dados [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) .  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **bit**  
@@ -53,16 +53,16 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>Valores de retorno  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK retorna os seguintes valores.  
   
-|Valor retornado|Descrição|  
+|Valor retornado|DESCRIÇÃO|  
 |------------------|-----------------|  
-|0|A coluna especificada não está no *change_columns* lista.|  
-|1|A coluna especificada está no *change_columns* lista.|  
+|0|A coluna especificada não está na lista de *change_columns* .|  
+|1|A coluna especificada está na lista de *change_columns* .|  
   
 ## <a name="remarks"></a>Comentários  
- CHANGE_TRACKING_IS_COLUMN_IN_MASK não executa nenhuma verificação para validar a *column_id* valor ou que o *change_columns* parâmetro foi obtido a tabela da qual o  *column_id* foi obtido.  
+ CHANGE_TRACKING_IS_COLUMN_IN_MASK não executa nenhuma verificação para validar o valor de *column_id* ou que o parâmetro *change_columns* foi obtido da tabela da qual o *column_id* foi obtido.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir determina se a coluna `Salary` da tabela `Employees` foi atualizada. O `COLUMNPROPERTY` função retorna a ID da coluna a `Salary` coluna. A variável local `@change_columns` deve ser definida para os resultados de uma consulta usando CHANGETABLE como fonte de dados.  
+ O exemplo a seguir determina se a coluna `Salary` da tabela `Employees` foi atualizada. A `COLUMNPROPERTY` função retorna a ID da coluna da `Salary` coluna. A variável local `@change_columns` deve ser definida para os resultados de uma consulta usando CHANGETABLE como fonte de dados.  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
@@ -70,7 +70,7 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
     ,@change_columns);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções do controle de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  

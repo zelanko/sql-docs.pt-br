@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106285"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Formatando a legenda em um gráfico (Construtor de Relatórios e SSRS)
@@ -76,10 +76,10 @@ ms.locfileid: "66106285"
 ## <a name="formatting-the-legend-text"></a>Formatando o texto da legenda  
  Você pode alterar a fonte, o tamanho, o estilo e a cor do texto da legenda na página **Fonte** da caixa de diálogo **Propriedades da Legenda** .  
   
- Por padrão, o texto da legenda não é otimizado para caber na área de legenda. Para fazer com que o texto da legenda caiba automaticamente o espaço alocado, defina a propriedade AutoFitTextDisabled como `False` e defina um tamanho de fonte mínimo para a propriedade MinFontSize como o menor tamanho de fonte que você acha que será apresentável e ainda permitir de legenda otimização.  
+ Por padrão, o texto da legenda não é otimizado para caber na área de legenda. Para fazer com que o texto da legenda se ajuste automaticamente ao espaço alocado, defina a `False` Propriedade AutoFitTextDisabled como e defina um tamanho mínimo de fonte para a propriedade MinFontSize com o menor tamanho de fonte que você acha que será apresentável e ainda permitirá a otimização da legenda.  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo Propriedades da Legenda, Geral &#40;Construtor de Relatórios e SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo Propriedades da legenda, &#40;geral Construtor de Relatórios e SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Alterar o texto de um item de legenda &#40;Construtor de Relatórios e SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

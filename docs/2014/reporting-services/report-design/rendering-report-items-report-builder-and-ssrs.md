@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105349"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Renderizando itens de relatório (Construtor de Relatórios e SSRS)
@@ -79,11 +79,11 @@ ms.locfileid: "66105349"
   
      Os cabeçalhos têm prioridade sobre os rodapés. Grupos repetidos internos têm prioridade sobre os grupos externos. Itens onde a propriedade `RepeatWith` é definida que estejam mais perto da região de dados de destino têm prioridade sobre os itens que estão mais longe da região de dados.  
   
--   Itens de relatório pequenos, como caixas de texto ou retângulos, com uma propriedade KeepTogether explícita definida como `true`.  
+-   Pequenos itens de relatório, como caixas de texto ou retângulos, com uma propriedade ManterJunto explícita definida `true`como.  
   
--   Itens de relatório grandes, como sub-relatórios ou um membro do tablix não interno, com uma propriedade KeepTogether explícita definida como `true`.  
+-   Itens de relatório grandes, como sub-relatórios ou um membro tablix não interno, com uma propriedade ManterJunto explícita definida como `true`.  
   
--   Regiões de dados Tablix com uma propriedade KeepTogether explícita definida como `true`.  
+-   Regiões de dados Tablix com uma propriedade ManterJunto explícita definida `true`como.  
   
 ### <a name="subreports"></a>Sub-relatórios  
  Um sub-relatório renderiza como um retângulo que contém outro relatório definido em um arquivo .rdl de relatório separado. O arquivo de sub-relatório deve ser publicado a um servidor de relatório antes de poder ser acessado pelo relatório pai.  
@@ -104,7 +104,7 @@ ms.locfileid: "66105349"
   
  Para obter mais informações sobre sub-relatórios, consulte [Sub-relatórios &#40;Construtor de Relatórios e SSRS&#41;](subreports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   

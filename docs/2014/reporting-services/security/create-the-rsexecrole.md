@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3a6bc5ecbd1c59a5dc03f9c28d36d2816e6a8d92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102027"
 ---
 # <a name="create-the-rsexecrole"></a>Criar o RSExecRole
-  O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma função de banco de dados predefinida chamada `RSExecRole` para conceder permissões de servidor de relatório ao banco de dados de servidor de relatório. O `RSExecRole` função é criada automaticamente com o banco de dados do servidor de relatório. Como regra geral, você nunca deve modificá-la ou atribuir outros usuários à função. No entanto, ao mover um banco de dados de servidor de relatório para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]novo ou diferente, recrie a função nos bancos de dados Mestre e MSDB do sistema.  
+  O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma função de banco de dados predefinida chamada `RSExecRole` para conceder permissões de servidor de relatório ao banco de dados de servidor de relatório. A `RSExecRole` função é criada automaticamente com o banco de dados do servidor de relatório. Como regra geral, você nunca deve modificá-la ou atribuir outros usuários à função. No entanto, quando você move um banco de dados do servidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]relatório para um novo ou diferente, o deve recriar a função nos bancos de dados do sistema mestre e msdb.  
   
  Usando as instruções a seguir, você executará estas etapas:  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66102027"
 > [!NOTE]  
 >  As instruções deste tópico são voltadas para os usuários que não desejam executar um script ou gravar um código WMI para provisionar o banco de dados de servidor de relatório. Se você gerenciar uma grande implantação e mover bancos de dados periodicamente, grave um script para automatizar estas etapas. Para obter mais informações, consulte [Acessar o provedor WMI do Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
-## <a name="before-you-start"></a>Antes de iniciar  
+## <a name="before-you-start"></a>Antes de começar  
   
 -   Faça backup das chaves de criptografia de forma que você possa restaurá-las depois que o banco de dados for movido. Essa etapa não afeta diretamente a possibilidade de criar e provisionar o `RSExecRole`, mas é necessário ter um backup das chaves para verificar seu trabalho. Para saber mais, confira [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
@@ -44,17 +44,18 @@ ms.locfileid: "66102027"
  As instruções para a criação manual do `RSExecRole` devem ser usadas no contexto de migração da instalação de um servidor de relatório. Tarefas importantes como o backup e a movimentação do banco de dados de servidor de relatórios não são descritas neste tópico, mas estão disponíveis na documentação do Mecanismo do Banco de Dados.  
   
 ## <a name="create-rsexecrole-in-master"></a>Criar o RSExecRole no Mestre  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa procedimentos armazenados estendidos para que o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent dê suporte a operações agendadas. As etapas a seguir explicam como conceder permissões Executar para os procedimentos da função `RSExecRole`.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa procedimentos armazenados estendidos para que o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent dê suporte a operações agendadas. As etapas a seguir explicam como conceder permissões Executar para os procedimentos da função `RSExecRole`.  
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Para criar o RSExecRole no banco de dados Mestre do sistema usando o Management Studio  
   
-1.  Inicie o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e estabeleça uma conexão com a instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] que hospeda o banco de dados do servidor de relatório.  
+1.  Inicie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o e conecte- [!INCLUDE[ssDE](../../../includes/ssde-md.md)] se à instância que hospeda o banco de dados do servidor de relatório.  
   
 2.  Abra **Bancos de Dados**.  
   
 3.  Abra **Bancos de Dados do Sistema**.  
   
-4.  Abra `Master`.  
+4.  Abra o `Master`.  
   
 5.  Abra **Segurança**.  
   
@@ -62,9 +63,9 @@ ms.locfileid: "66102027"
   
 7.  Clique com o botão direito do mouse em **Funções de Banco de Dados**e selecione **Nova Função de Banco de Dados**. A página Geral é exibida.  
   
-8.  Na **nome da função**, tipo `RSExecRole`.  
+8.  Em **nome da função**, `RSExecRole`digite.  
   
-9. Em **Proprietário**, digite **DBO**.  
+9. Em **proprietário**, digite **dbo**.  
   
 10. Clique em **Protegíveis**.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "66102027"
   
 12. Clique em **OK**. A caixa de diálogo **Selecionar Objetos** é exibida.  
   
-13. Clique em **Tipos de Objetos**.  
+13. Clique em **Tipos de Objeto**.  
   
 14. Clique em **Procedimentos Armazenados Estendidos**.  
   
@@ -103,7 +104,7 @@ ms.locfileid: "66102027"
   
 1.  Repita etapas semelhantes para conceder permissões a procedimentos armazenados e tabelas no MSDB. Para simplificar as etapas, você provisionará os procedimentos armazenados e as tabelas separadamente.  
   
-2.  Abra `MSDB`.  
+2.  Abra o `MSDB`.  
   
 3.  Abra **Segurança**.  
   
@@ -111,9 +112,9 @@ ms.locfileid: "66102027"
   
 5.  Clique com o botão direito do mouse em **Funções de Banco de Dados**e selecione **Nova Função de Banco de Dados**. A página Geral é exibida.  
   
-6.  Em nome de função, digite `RSExecRole`.  
+6.  Em nome da função, `RSExecRole`digite.  
   
-7.  Em Proprietário, digite **DBO**.  
+7.  Em proprietário, digite **dbo**.  
   
 8.  Clique em **Protegíveis**.  
   
@@ -121,7 +122,7 @@ ms.locfileid: "66102027"
   
 10. Clique em **OK**.  
   
-11. Clique em **Tipos de Objetos**.  
+11. Clique em **Tipos de Objeto**.  
   
 12. Clique em **Procedimentos Armazenados**.  
   
@@ -163,7 +164,7 @@ ms.locfileid: "66102027"
   
 21. Clique em **OK**.  
   
-22. Clique em **Tipos de Objetos**.  
+22. Clique em **Tipos de Objeto**.  
   
 23. Clique em **Tabelas**.  
   
@@ -186,7 +187,7 @@ ms.locfileid: "66102027"
 30. Repita para a tabela sysjobs. O RSExecRole deve obter permissões Selecionar para as duas tabelas.  
   
 ## <a name="move-the-report-server-database"></a>Mover o banco de dados do servidor de relatório  
- Depois de criar as funções, você pode mover o banco de dados de servidor de relatório para a nova instância do SQL Server. Para obter mais informações, consulte [Movendo os bancos de dados do servidor de relatório para outro computador &#40;modo nativo do SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+ Depois de criar as funções, você pode mover o banco de dados de servidor de relatório para a nova instância do SQL Server. Para obter mais informações, consulte [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
  Se você estiver atualizando o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], poderá atualizá-lo antes de ou depois de mover o banco de dados.  
   
@@ -209,11 +210,11 @@ ms.locfileid: "66102027"
   
 6.  Clique em **Testar Conexão**.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Em Banco de Dados, selecione o banco de dados de servidor de relatório.  
   
-9. Clique em **Avançar** e conclua o assistente.  
+9. Clique em **Próximo** e conclua o assistente.  
   
 10. Clique em **Chaves de Criptografia**.  
   
@@ -227,10 +228,10 @@ ms.locfileid: "66102027"
   
 15. Clique no link para abrir o Gerenciador de Relatórios. Você deve ver os itens de servidor de relatório do banco de dados de servidor de relatório.  
   
-## <a name="see-also"></a>Consulte também  
- [Movendo os bancos de dados do servidor de relatório para outro computador &#40;modo nativo do SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Mover os bancos de dados do servidor de relatório para outro computador &#40;modo nativo do SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [Criar um banco de dados do servidor de relatório no modo nativo &#40;Configuration Manager SSRS&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Fazer backup e restaurar as chave de criptografia do Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

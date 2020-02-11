@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bacb9387a4026fbf6a41f0b5d9cdd0b77594da97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100392"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Excluir itens do catálogo (Management Studio)
@@ -44,7 +44,7 @@ ms.locfileid: "66100392"
  **Erro**  
  Exibe um código de erro se um erro ocorrer durante a exclusão de um item.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Excluir um item &#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Servidor de Relatório na ajuda F1 do Management Studio](report-server-in-management-studio-f1-help.md)   
  [Criar, modificar e excluir agendas](../subscriptions/create-modify-and-delete-schedules.md)  

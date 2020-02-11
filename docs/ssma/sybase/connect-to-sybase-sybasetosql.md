@@ -10,23 +10,23 @@ ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083389"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Conectar-se ao Sybase (SybaseToSQL)
-Use o **conectar-se ao Sybase** caixa de diálogo para se conectar à instância do Sybase Adaptive Server Enterprise (ASE) que você deseja migrar.  
+Use a caixa de diálogo **conectar-se ao Sybase** para se conectar à instância de ase (Sybase Adaptive Server Enterprise) que você deseja migrar.  
   
-Para acessar essa caixa de diálogo sobre o **arquivo** menu, selecione **conectar-se ao Sybase**. Se você tiver se conectado anteriormente, o comando é **reconectar-se ao Sybase**.  
+Para acessar essa caixa de diálogo, no menu **arquivo** , selecione **conectar-se ao Sybase**. Se você tiver se conectado anteriormente, o comando será **reconectado ao Sybase**.  
   
 ## <a name="options"></a>Opções  
 **Provedor**  
-Selecione qualquer uma do provedor instalado no computador para conexão com o servidor do Sybase.  
+Selecione qualquer provedor instalado no computador para se conectar ao servidor Sybase.  
   
-**Modo**  
-Selecione qualquer um dos modos de conexão padrão ou avançado. No modo padrão, insira ou selecione valores para o nome do servidor, porta, nome de usuário e senha. No modo avançado, você deve fornecer uma cadeia de caracteres de conexão.  
+**Mode**  
+Selecione o modo de conexão Standard ou avançado. No modo padrão, você insere ou seleciona valores para o nome do servidor, a porta, o nome de usuário e a senha. No modo avançado, você fornece uma cadeia de conexão.  
   
 **Nome do servidor**  
 Insira ou selecione o nome ou endereço IP do servidor adaptável. O nome do servidor padrão é o mesmo que o nome do computador. Essa é uma opção de modo padrão.  
@@ -38,57 +38,57 @@ Se você estiver usando uma porta não padrão para conexões com o ASE, insira 
 Insira o nome de usuário que é usado para se conectar ao ASE. Essa é uma opção de modo padrão.  
   
 **Senha**  
-Digite a senha para o nome de usuário. Essa é uma opção de modo padrão.  
+Insira a senha para o nome de usuário. Essa é uma opção de modo padrão.  
   
 **Cadeia de conexão**  
-Insira a cadeia de conexão completa para a conexão para o ASE.  
+Insira a cadeia de conexão completa para a conexão com o ASE.  
   
-Cadeias de caracteres de Conexão consistem em pares de nome e valor do parâmetro. Os nomes dos parâmetros variam de acordo com o provedor que está sendo usado.  
+Cadeias de conexão consistem em pares de nome e valor de parâmetro. Os nomes dos parâmetros variam de acordo com o provedor que está sendo usado.  
   
-**Parâmetros de Conexão para vários provedores são da seguinte maneira:**  
+**Os parâmetros de conexão para vários provedores são os seguintes:**  
   
-1.  Parâmetros de Conexão para **provedor OLE DB**  
+1.  Parâmetros de conexão para o **provedor de OLE DB**  
   
     |Configuração|Parâmetro Sybase 12,5|Parâmetro Sybase 15|  
     |-----------|-------------------------|-----------------------|  
     |Nome do servidor|Nome do servidor|Servidor|  
-    |Port|Endereço da porta do servidor|Port|  
-    |Nome de usuário|ID de usuário|ID de usuário|  
+    |Porta|Endereço de porta do servidor|Porta|  
+    |Nome de usuário|Id de Usuário|Id de Usuário|  
     |Senha|Senha|Senha|  
     |Provedor|Provedor|Provedor|  
   
-    Para Sybase ASE 12.5, uma cadeia de caracteres de conexão de exemplo é o seguinte:  
+    Para Sybase ASE 12,5, um exemplo de cadeia de conexão é o seguinte:  
   
     `Server Name=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=Sybase.ASEOLEDBProvider;`  
   
-    Para 15 de ASE do Sybase, um exemplo de cadeia de conexão é da seguinte maneira:  
+    Para Sybase ASE 15, um exemplo de cadeia de conexão é o seguinte:  
   
     `Server=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=ASEOLEDB;Port=5000;`  
   
-2.  Parâmetros de Conexão para **provedor ODBC**  
+2.  Parâmetros de conexão para o **provedor ODBC**  
   
-    |Configuração|Parâmetro Sybase 12,5/15|  
+    |Configuração|Parâmetro Sybase 12.5/15|  
     |-----------|-----------------------------|  
     |Nome do driver|Driver|  
     |Nome do servidor|Servidor|  
-    |Nome do Usuário|UID|  
-    |Senha|pwd|  
-    |Número da Porta|Port|  
+    |Nome de usuário|UID|  
+    |Senha|Pwd|  
+    |Número da porta|Porta|  
   
-    Para Sybase ASE 12,5 ou 15, um exemplo de cadeia de conexão é da seguinte maneira:  
+    Para Sybase ASE 12,5 ou 15, um exemplo de cadeia de conexão é o seguinte:  
   
     `driver=Adaptive Server Enterprise;Server=sybserver;uid=MyUserID;pwd=MyP@$$word;Port=5000;`  
   
-3.  Parâmetros de Conexão para **provedor ADO.NET**  
+3.  Parâmetros de conexão para o **provedor ADO.net**  
   
-    |Configuração|Parâmetro Sybase 12,5/15|  
+    |Configuração|Parâmetro Sybase 12.5/15|  
     |-----------|-----------------------------|  
     |Nome do servidor|Servidor|  
-    |Nome do Usuário|UID|  
-    |Senha|pwd|  
-    |Número da Porta|Port|  
+    |Nome de usuário|UID|  
+    |Senha|Pwd|  
+    |Número da porta|Porta|  
   
-    Um exemplo da cadeia de Conexão de provedor do ADO.NET é como segue:  
+    Um exemplo da cadeia de conexão para o provedor ADO.NET é o seguinte:  
   
     `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   

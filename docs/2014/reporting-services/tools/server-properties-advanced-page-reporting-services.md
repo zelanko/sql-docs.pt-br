@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099662"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
@@ -35,7 +35,7 @@ ms.locfileid: "66099662"
  Determina se o controle ActiveX de RSClientPrint está disponível para download no servidor de relatório. Os valores válidos são `true` e `false`. O valor padrão é `true`. Para obter mais informações sobre configurações adicionais necessárias para esse controle, consulte [Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  **EnableExecutionLogging**  
- Indica se o log de execução de relatório está habilitado. O valor padrão é `true`. Para obter mais informações sobre o log de execução do servidor de relatório, consulte [Log de execução do servidor de relatório e exibição do ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Indica se o log de execução de relatório está habilitado. O valor padrão é `true`. Para obter mais informações sobre o log de execução do servidor de relatório, consulte [log de execução do servidor de relatório e a exibição ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
  O número de dias para manter informações de execução de relatório no log de execução. Os valores válidos para essa propriedade incluem `-1` até `2`,`147`,`483`,`647`. Se o valor for `-1` as entradas não serão excluídas da tabela de log de execução. O valor padrão é `60`.  
@@ -59,16 +59,16 @@ ms.locfileid: "66099662"
  Indica se o servidor de relatório dever usar cookies de sessão ao se comunicar com navegadores clientes. O valor padrão é `true`.  
   
  **ExternalImagesTimeout**  
- Determina a quantidade de tempo dentro do qual um arquivo de imagem externa deve ser recuperado antes que a conexão expire. O padrão é `600` segundos.  
+ Determina o período de tempo em que um arquivo de imagem externa deve ser recuperado antes de o tempo limite da conexão ser atingido. O padrão é `600` segundos.  
   
  **SnapshotCompression**  
  Define como os instantâneos são compactados. O valor padrão é `SQL`. Os valores válidos são os seguintes:  
   
- **SQL =** Instantâneos são compactados quando armazenados no banco de dados do servidor de relatórios. Esse é o comportamento atual.  
+ **SQL =** Os instantâneos são compactados quando armazenados no banco de dados do servidor de relatório. Esse é o comportamento atual.  
   
- **None** = Instantâneos não são compactados.  
+ **Nenhum** = instantâneos não são compactados.  
   
- **All =** Instantâneos são compactados para todas as opções de armazenamento que incluem o banco de dados do servidor de relatórios ou o sistema de arquivos.  
+ **Todos =** Os instantâneos são compactados para todas as opções de armazenamento, que incluem o banco de dados do servidor de relatório ou o sistema de arquivos.  
   
  **SystemReportTimeout**  
  O valor do tempo limite de processamento do relatório padrão, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de `-1` até `2`,`147`,`483`,`647`. Se o valor for `-1`, relatórios no namespace não expirarão durante o processamento. O valor padrão é `1800`.  
@@ -79,9 +79,11 @@ ms.locfileid: "66099662"
  **EnableIntegratedSecurity**  
  Determina se a segurança integrada do Windows tem suporte para conexões de fonte de dados de relatório. O padrão é `True`. Os valores válidos são os seguintes:  
   
- `True` = a segurança integrada do Windows está habilitada.  
+ 
+  `True` = a segurança integrada do Windows está habilitada.  
   
- `False` = a segurança integrada do Windows não está habilitada. Fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.  
+ 
+  `False` = a segurança integrada do Windows não está habilitada. Fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.  
   
  `EnableLoadReportDefinition`  
  Selecione essa opção para especificar se os usuários podem executar relatório ad hoc de um Construtor de Relatórios. A definição dessa opção determina o valor da propriedade `EnableLoadReportDefinition` no servidor de relatórios.  
@@ -100,15 +102,15 @@ ms.locfileid: "66099662"
  Especifica o número de entradas de cache de dados que podem estar ativas em uma sessão de edição de relatório. O número padrão é 5.  
   
  **EditSessionTimeout**  
- Especifica o número de segundos antes que o tempo limite de uma sessão de edição de relatório seja excedido. O valor padrão é 7200 segundos (2 horas).  
+ Especifica o número de segundos até que uma sessão de edição de relatório expire. O valor padrão é 7200 segundos (2 horas).  
   
  **EnableTestConnectionDetailedErrors**  
  Indica se são enviadas mensagens de erro detalhadas ao computador cliente quando os usuários testam as conexões de fonte de dados usando o servidor de relatório. O valor padrão é `true`. Se a opção for definida como `false`, apenas as mensagens de erro genéricas serão enviadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Conectar-se a um servidor de relatório no Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Propriedades do Reporting Services](../report-server-web-service/net-framework/reporting-services-properties.md)   
+ [Propriedades de Reporting Services](../report-server-web-service/net-framework/reporting-services-properties.md)   
  [Servidor de Relatório na ajuda F1 do Management Studio](report-server-in-management-studio-f1-help.md)   
  [Propriedades do sistema do servidor de relatório](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
  [Implantação de script e tarefas administrativas](script-deployment-and-administrative-tasks.md)   

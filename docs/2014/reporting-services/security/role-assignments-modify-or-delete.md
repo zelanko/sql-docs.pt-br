@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101956"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Modificar ou excluir uma atribuição de função (Gerenciador de Relatórios)
@@ -62,10 +62,10 @@ ms.locfileid: "66101956"
   
 6.  Para excluir uma atribuição de função, marque a caixa de seleção próximo ao nome de usuário ou grupo e clique em **Excluir**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  (create-and-manage-role-assignments.md)   
  [Atribuições de função](role-assignments.md)   
- [Página Configurações do Site &#40;Gerenciador de Relatórios&#41;](../site-settings-page-report-manager.md)   
- [Novas atribuições de função do sistema: Editar página de atribuições de função do sistema &#40;Gerenciador de relatórios&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [Página Configurações do site &#40;Report Manager&#41;](../site-settings-page-report-manager.md)   
+ [Atribuições de nova função do sistema: página Editar atribuições de função do sistema &#40;Report Manager&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

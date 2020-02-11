@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_missing_index_group_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_missing_index_group_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,20 +22,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051564"
 ---
-# <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
+# <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna informações resumidas sobre grupos de índices ausentes, excluindo índices espaciais.  
   
- No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém dados que não pertencem ao locatário conectado será filtrada.  
+ No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, todas as linhas que contêm dados que não pertencem ao locatário conectado serão filtradas.  
     
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**group_handle**|**int**|Identifica um grupo de índices ausentes. Esse identificador é exclusivo no servidor.<br /><br /> As outras colunas fornecem informações sobre todas as consultas para as quais o índice no grupo é considerado ausente.<br /><br /> Um grupo de índice contém apenas um índice.|  
 |**unique_compiles**|**bigint**|Número de compilações e recompilações que se beneficiariam deste grupo de índice ausente. Compilações e recompilações de muitas consultas diferentes podem contribuir para esse valor de coluna.|  
@@ -45,7 +45,7 @@ ms.locfileid: "68051564"
 |**last_user_scan**|**datetime**|Data e hora do último exame gerado por consultas de usuário para as quais o índice recomendado no grupo poderia ter sido usado.|  
 |**avg_total_user_cost**|**float**|Custo médio das consultas de usuário que poderia ser reduzido pelo índice no grupo.|  
 |**avg_user_impact**|**float**|Benefício da porcentagem média que as consultas de usuário poderiam experimentar se esse grupo de índices ausentes fosse implementado. O valor indica que o custo da consulta ficaria na média dessa porcentagem se esse grupo de índices ausentes fosse implementado.|  
-|**system_seeks**|**bigint**|Número de buscas geradas por consultas de sistema, como consultas de estatística automáticas, para as quais o índice recomendado no grupo poderia ter sido usado. Para obter mais informações, consulte [classe de evento Auto Stats](../../relational-databases/event-classes/auto-stats-event-class.md).|  
+|**system_seeks**|**bigint**|Número de buscas geradas por consultas de sistema, como consultas de estatística automáticas, para as quais o índice recomendado no grupo poderia ter sido usado. Para obter mais informações, consulte [classe de evento auto stats](../../relational-databases/event-classes/auto-stats-event-class.md).|  
 |**system_scans**|**bigint**|Número de exames gerados por consultas de sistema para as quais o índice recomendado no grupo poderia ter sido usado.|  
 |**last_system_seek**|**datetime**|Data e hora da última busca gerada no sistema por consultas de sistema para as quais o índice recomendado no grupo poderia ter sido usado.|  
 |**last_system_scan**|**datetime**|Data e hora do último exame gerado no sistema por consultas de sistema para as quais o índice recomendado no grupo poderia ter sido usado.|  
@@ -53,19 +53,19 @@ ms.locfileid: "68051564"
 |**avg_system_impact**|**float**|Benefício de porcentagem média que as consultas de sistema poderiam experimentar se esse grupo de índices ausentes fosse implementado. O valor indica que o custo da consulta ficaria na média dessa porcentagem se esse grupo de índices ausentes fosse implementado.|  
   
 ## <a name="remarks"></a>Comentários  
- Informações retornadas por **db_missing_index_group_stats** é atualizado por cada execução da consulta, não por cada compilação de consulta ou a recompilação. As estatísticas de uso não são persistentes e só serão mantidas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem manter as estatísticas de uso após o desligamento e a reinicialização do servidor.  
+ Informações retornadas por **sys.dm_db_missing_index_group_stats** são atualizadas por todas as execuções de consulta, não por todas as compilações ou recompilações de consulta. As estatísticas de uso não são persistentes e só serão mantidas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem manter as estatísticas de uso após o desligamento e a reinicialização do servidor.  
 
   >[!NOTE]
-  >Conjunto de resultados para essa DMV são limitado a 600 linhas. Cada linha contém um índice ausente. Se você tiver mais de 600 índices ausentes, você deve tratar os índices ausentes existentes para que você possa exibir, em seguida, as mais recentes.
+  >O conjunto de resultados para essa DMV é limitado a 600 linhas. Cada linha contém um índice ausente. Se você tiver mais de 600 índices ausentes, você deverá resolver os índices ausentes existentes para que possa exibir os mais recentes.
   
 ## <a name="permissions"></a>Permissões  
  Para consultar essa exibição de gerenciamento dinâmico, os usuários devem receber a permissão VIEW SERVER STATE ou qualquer permissão que implique essa permissão.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir ilustram como usar o **db_missing_index_group_stats** exibição de gerenciamento dinâmico.  
+ Os exemplos a seguir mostram como usar a exibição de gerenciamento dinâmico **sys.dm_db_missing_index_group_stats**.  
   
-### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Localizar os 10 índices ausentes com o aperfeiçoamento antecipado mais alto para consultas de usuário  
- A consulta seguinte determina quais os 10 índices ausentes que produziriam o aperfeiçoamento cumulativo antecipado mais alto, em ordem decrescente, para consultas de usuário.  
+### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>a. Localizar os 10 índices ausentes com o aperfeiçoamento antecipado mais alto para consultas de usuário  
+ A consulta a seguir determina quais os 10 índices ausentes que gerariam o aperfeiçoamento cumulativo antecipado mais alto, em ordem decrescente, para consultas de usuário.  
   
 ```  
 SELECT TOP 10 *  
@@ -86,12 +86,12 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- Esta consulta fornece o nome do banco de dados, do esquema e da tabela em que um índice está ausente. Fornece também os nomes das colunas que deveriam ser usadas para a chave de índice. Ao escrever a instrução CREATE INDEX DDL para implementar índices ausentes, liste primeiro as colunas de igualdade e, em seguida, as colunas de desigualdade em ON \< *table_name*> cláusula da instrução CREATE INDEX. As colunas incluídas devem ser listadas na cláusula INCLUDE da instrução CREATE INDEX. Para determinar uma ordem efetiva para as colunas iguais, ordene-as com base em sua seletividade, listando as colunas mais seletivas primeiro (a mais à esquerda na lista de colunas).  
+ Esta consulta fornece o nome do banco de dados, do esquema e da tabela em que um índice está ausente. Fornece também os nomes das colunas que deveriam ser usadas para a chave de índice. Ao gravar a instrução CREATE INDEX DDL para implementar índices ausentes, liste as colunas de igualdade primeiro e desigualdade na cláusula \<on *table_name*> da instrução CREATE index. As colunas incluídas devem ser listadas na cláusula INCLUDE da instrução CREATE INDEX. Para determinar uma ordem efetiva para as colunas iguais, ordene-as com base em sua seletividade, listando as colunas mais seletivas primeiro (a mais à esquerda na lista de colunas).  
   
-## <a name="see-also"></a>Consulte também  
- [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys. dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
+ [sys. dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys. dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093153"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Remover referências a tabelas do sistema não documentadas
@@ -26,7 +26,7 @@ ms.locfileid: "66093153"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  As seguintes tabelas do sistema não documentadas foram removidas:  
   
 -   **spt_datatype_info**  
@@ -80,16 +80,16 @@ ms.locfileid: "66093153"
 ## <a name="corrective-action"></a>Ação corretiva  
  Modifique seus aplicativos de acordo com a tabela a seguir:  
   
-|Em vez de|Use|  
+|Em vez de|Uso|  
 |----------------|---------|  
-|**sysfulltextnotify**|Propriedade**TableFulltextPendingChanges** da função OBJECTPROPERTYEX.|  
-|**syslocks**|Exibição de gerenciamento dinâmico**sys.dm_tran_locks** , sp_lock ou exibição de compatibilidade **sys.syslockinfo** .|  
-|**sysproperties**|Exibição de catálogo**sys.extended_properties** ou função **fn_listextendedproperty**|  
-|**sysxlogins**|Exibição de catálogo**sys.server_principals** ou exibição de compatibilidade **syslogins** .|  
+|**sysfulltextnotify**|Propriedade **TableFulltextPendingChanges** da função OBJECTPROPERTYEX.|  
+|**syslocks**|**Sys. dm_tran_locks** exibição de gerenciamento dinâmico, ou sp_lock, ou a exibição de compatibilidade **Sys. syslockinfo** .|  
+|**sysproperties**|a exibição de catálogo **Sys. extended_properties** ou a função **fn_listextendedproperty**|  
+|**sysxlogins**|exibição de catálogo **Sys. server_principals** ou exibição de compatibilidade **syslogins** .|  
 |Todas as tabelas **spt_** .|Não há substituição disponível.|  
   
-## <a name="see-also"></a>Consulte também  
- [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

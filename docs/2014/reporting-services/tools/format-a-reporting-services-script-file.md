@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df4585dfa4b1e45b2de9d396a59dcbf132b1a505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100248"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formatar um arquivo de script do Reporting Services
@@ -48,13 +48,13 @@ End Sub
 > [!IMPORTANT]  
 >  As credenciais de usuário são administradas pelo ambiente de script e passadas pelos argumentos de prompt de comando pelo uso do RS.exe. Embora seja possível usar a variável *rs* para definir a autenticação do serviço Web, é recomendável que você utilize o ambiente de script. Não é necessário autenticar o serviço Web no próprio arquivo de script. Para obter mais informações sobre a autenticação do ambiente de script, consulte [Utilitário RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
   
- Não declare namespaces dentro do arquivo de script. O ambiente de scripts torna diversos útil [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces disponíveis para você: **Web. Services**, **System.Web.Services.Protocols**, **System. XML**, e **System.IO**.  
+ Não declare namespaces dentro do arquivo de script. O ambiente de geração de scripts disponibiliza diversos namespaces úteis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para você: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**e **System.IO**.  
   
  Para obter exemplos de script, consulte [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>Consulte também  
- [serviço Web Servidor de Relatórios](../report-server-web-service/report-server-web-service.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Serviço Web Servidor de Relatórios](../report-server-web-service/report-server-web-service.md)   
  [Referência técnica &#40;SSRS&#41;](../technical-reference-ssrs.md)   
- [Utilitário RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
+ [Utilitário RS. exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
   
   

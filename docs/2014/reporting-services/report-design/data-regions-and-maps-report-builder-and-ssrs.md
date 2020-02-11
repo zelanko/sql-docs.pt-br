@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0b9722ad68107c626f0b4e569ac6e7cbf8c3bf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106086"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Regiões de dados e mapas (Construtor de Relatórios e SSRS)
@@ -27,22 +27,22 @@ ms.locfileid: "66106086"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Tabela  
  Uma tabela é uma região de dados que apresenta dados linha a linha. Colunas da tabela são estáticas: você determina o número de colunas quando você cria seu relatório. Linhas da tabela são dinâmicas: elas se expandem para baixo para acomodar os dados. Você pode adicionar grupos às tabelas, organizando os dados selecionados por campos ou expressões. Para obter informações sobre como adicionar uma tabela a um relatório, consulte [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md).  
   
 ## <a name="matrix"></a>Matriz  
- Uma matriz também é conhecida como uma tabela de referência cruzada. Uma região de dados de matriz contém as colunas e linhas dinâmicas: elas se expandem para acomodar os dados. As colunas e as linhas de uma matriz podem ser dinâmicas ou estáticas. As colunas ou as linhas podem conter outras colunas ou linhas e podem ser usadas para agrupar dados. Para obter informações sobre como adicionar uma matriz a um relatório, consulte [matrizes &#40;construtor de relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)  
+ Uma matriz também é conhecida como uma tabela de referência cruzada. Uma região de dados de matriz contém as colunas e linhas dinâmicas: elas se expandem para acomodar os dados. As colunas e as linhas de uma matriz podem ser dinâmicas ou estáticas. As colunas ou as linhas podem conter outras colunas ou linhas e podem ser usadas para agrupar dados. Para obter informações sobre como adicionar uma matriz a um relatório, consulte [matrizes &#40;Construtor de relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)  
   
 ## <a name="list"></a>Lista  
- Uma lista é uma região de dados que apresenta dados organizados de uma forma livre. Você pode organizar os itens de relatório para criar um formulário com caixas de texto, imagens e outras regiões de dados posicionadas em qualquer local dentro da lista. Para obter informações sobre como adicionar uma lista a um relatório, consulte [lista &#40;construtor de relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ Uma lista é uma região de dados que apresenta dados organizados de uma forma livre. Você pode organizar os itens de relatório para criar um formulário com caixas de texto, imagens e outras regiões de dados posicionadas em qualquer local dentro da lista. Para obter informações sobre como adicionar uma lista a um relatório, consulte [listas &#40;Construtor de relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 ## <a name="chart"></a>Gráfico  
- Um gráfico apresenta os dados de maneira gráfica. Os exemplos de gráficos incluem barra, pizza e gráficos de linhas, mas muitos outros estilos podem ser considerados. Para obter informações sobre como adicionar um gráfico a um relatório, consulte [gráficos &#40;construtor de relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Um gráfico apresenta os dados de maneira gráfica. Os exemplos de gráficos incluem barra, pizza e gráficos de linhas, mas muitos outros estilos podem ser considerados. Para obter informações sobre como adicionar um gráfico a um relatório, consulte [gráficos &#40;Construtor de relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 ## <a name="gauge"></a>Medidor  
- Um medidor apresenta os dados como um intervalo com um indicador apontando para um valor específico dentro do intervalo. Os indicadores são usados para exibir KPIs (indicadores chave de desempenho) e outras métricas. Os exemplos de medidores incluem linear e circular. Para obter mais informações sobre como adicionar um medidor a um relatório, consulte [medidores &#40;construtor de relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md).  
+ Um medidor apresenta os dados como um intervalo com um indicador apontando para um valor específico dentro do intervalo. Os indicadores são usados para exibir KPIs (indicadores chave de desempenho) e outras métricas. Os exemplos de medidores incluem linear e circular. Para obter mais informações sobre como adicionar um medidor a um relatório, consulte [medidores &#40;Construtor de relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
-## <a name="map"></a>Mapa  
+## <a name="map"></a>Mapeamento  
  Um mapa permite a você apresentar dados em relação a um plano de fundo geográfico. Dados de mapa podem ser dados espaciais de uma consulta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um arquivo de forma ESRI ou peças de mapa do Bing [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Os dados espaciais consistem em conjuntos de coordenadas que definem polígonos que representam formas ou áreas, linhas que representam rotas ou caminhos e pontos representados por marcadores. Você pode associar dados de agregação a elementos do mapa para variar a cor e o tamanho deles automaticamente. Por exemplo, você pode variar o tipo de marcador de uma loja com base na quantidade de vendas ou na cor de uma estrada com base no limite de velocidade. Para obter mais informações, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 ## <a name="data-regions-in-the-report-layout"></a>Regiões de dados no layout do relatório  
@@ -52,7 +52,7 @@ ms.locfileid: "66106086"
  É possível aninhar regiões de dados dentro de outras regiões de dados. Por exemplo, se quiser criar um registro de vendas para cada vendedor em um banco de dados, você poderá criar uma lista com caixas de texto e uma imagem para exibir as informações sobre o funcionário e, em seguida, adicionar a essa lista as regiões de dados de tabela e gráfico para mostrar o registro de vendas do funcionário. Para obter mais informações, consulte [Regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>Várias regiões de dados vinculadas ao mesmo conjunto de dados  
- Você pode vincular mais de uma região de dados ao mesmo conjunto de dados para fornecer diferentes exibições dos mesmos dados. Por exemplo, é possível mostrar os mesmos dados em uma tabela e em um gráfico. Você pode criar o relatório para fornecer botões de classificação interativos na tabela, de forma que, ao classificar a tabela, o gráfico seja classificado automaticamente. Para obter mais informações, consulte [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Você pode vincular mais de uma região de dados ao mesmo conjunto de dados para fornecer diferentes exibições dos mesmos dados. Por exemplo, é possível mostrar os mesmos dados em uma tabela e em um gráfico. Você pode criar o relatório para fornecer botões de classificação interativos na tabela, de forma que, ao classificar a tabela, o gráfico seja classificado automaticamente. Para obter mais informações, consulte [vinculando várias regiões de dados ao mesmo conjunto &#40;Construtor de relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
 ## <a name="data-for-a-data-region"></a>Dados para uma região de dados  
  Cada tablix, gráfico e medidor é criado para exibir dados de um único conjunto de dados. Um mapa exibe dados espaciais e dados analíticos dos mesmos conjuntos de dados ou de conjuntos de dados diferentes. Você também pode incluir valores de conjuntos de dados que não são vinculados à região de dados das seguintes maneiras:  
@@ -63,11 +63,11 @@ ms.locfileid: "66106086"
   
  Para obter mais informações, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Conceitos de criação de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Relatórios, partes de relatório e definições de relatório &#40;Construtor de Relatórios e SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Layout da página e renderização &#40;Construtor de Relatórios e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
- [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)   
+ [Layout de página e renderização &#40;Construtor de Relatórios e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [TUTORIAIS &#40;Construtor de Relatórios&#41;](../report-builder-tutorials.md)   
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
   

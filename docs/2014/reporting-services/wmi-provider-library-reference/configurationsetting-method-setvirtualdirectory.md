@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e68bb7c70d08fb07d3079436fafe5fd61ae104f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097915"
 ---
-# <a name="setvirtualdirectory-method-wmi-msreportserverconfigurationsetting"></a>Método SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)
+# <a name="setvirtualdirectory-method-wmi-msreportserver_configurationsetting"></a>Método SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)
   Define o nome do diretório virtual de um dado aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,20 +35,20 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
        int Lcid,out string Error, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *Aplicativo*  
  O nome do aplicativo para o qual é necessário definir o diretório virtual.  
   
  *VirtualDirectory*  
  O nome do diretório virtual.  
   
- *lcid*  
+ *LCID*  
  A identificação de localidade do diretório virtual.  
   
  *Erro*  
  [fora] A descrição do erro ocorrido.  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -62,9 +62,9 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  Atualiza o valor do elemento \Configuration\URLReservations\Application\VirtualDirectory. É bem-sucedido mesmo que nenhuma reserva de URL tenha sido criada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 29b3430e4a29130c4189fbce1a9a023b7a7f26da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101638"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger itens de conjuntos de dados compartilhados
@@ -48,7 +48,7 @@ ms.locfileid: "66101638"
   
  Para obter mais informações, consulte [Tarefas em nível de item](tasks-and-permissions-item-level-tasks.md) e [Funções predefinidas](role-definitions-predefined-roles.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar conjuntos de dados compartilhados](../report-data/manage-shared-datasets.md)   
  [Proteger pastas](secure-folders.md)   
  [Proteger relatórios e recursos](secure-reports-and-resources.md)   

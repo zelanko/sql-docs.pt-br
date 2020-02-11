@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098858"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
@@ -26,55 +26,55 @@ ms.locfileid: "66098858"
   
  Neste tutorial, você criará um relatório de mapa que exibe a localização de lojas em municípios estatais de Nova York.  
   
-##  <a name="BackToTop"></a> O que você aprenderá  
+##  <a name="BackToTop"></a>O que você aprenderá  
  Neste tutorial, você aprenderá a:  
   
-1.  [Criar um mapa com uma camada de polígono do Assistente de mapa](#Map)  
+1.  [Criar um mapa com uma camada de polígono usando o Assistente de Mapas](#Map)  
   
-2.  [Adicionar uma camada de ponto do mapa para locais de Store de exibição](#PointLayer)  
+2.  [Adicionar uma camada de ponto de mapa para exibir locais de loja](#PointLayer)  
   
-3.  [Adicionar uma camada de linha do mapa para exibir uma rota](#LineLayer)  
+3.  [Adicionar uma camada de linha de mapa para exibir uma rota](#LineLayer)  
   
-4.  [Adicionar um plano de fundo do Bing Maps](#TileLayer)  
+4.  [Adicionar um plano de fundo lado a lado do Bing Maps](#TileLayer)  
   
 5.  [Tornar uma camada transparente](#Transparent)  
   
 6.  [Variar as cores de municípios com base em vendas](#Vary)  
   
-    1.  [Crie uma relação entre dados espaciais e analíticos](#Relationship)  
+    1.  [Criar um relacionamento entre dados espaciais e analíticos](#Relationship)  
   
-    2.  [Especifique regras de cores para polígonos](#ColorRules)  
+    2.  [Especificar as regras de cores para polígonos](#ColorRules)  
   
     3.  [Formatar os dados na escala de cores como moeda](#ColorScale)  
   
     4.  [Criar uma nova legenda](#NewLegend)  
   
-    5.  [Regras de cores e legenda associada](#Associate)  
+    5.  [Associar regras de cores e legenda](#Associate)  
   
-    6.  [Limpar cores dos municípios sem dados](#NoData)  
+    6.  [Limpar cores dos municípios para os quais não há dados](#NoData)  
   
 7.  [Adicionar um ponto personalizado](#CustomPoint)  
   
-8.  [Centralizar a exibição de mapa](#CenterView)  
+8.  [Centralizar o modo de exibição de mapas](#CenterView)  
   
 9. [Adicionar um título de relatório](#Title)  
   
 10. [Salvar o relatório](#Save)  
   
 > [!NOTE]  
->  Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como navegar até um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, confira o primeiro tutorial desta série: [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo estimado para concluir este tutorial: 30 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
  Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Map"></a> 1. Criar um mapa com uma camada de polígono usando o Assistente de Mapas  
+##  <a name="Map"></a>1. criar um mapa com uma camada de polígono a partir do assistente de mapa  
  Adicionar um mapa em seu relatório a partir da galeria de mapas. O mapa tem uma camada que exibe os municípios do estado de Nova York. A forma de cada município é um polígono com base em dados espaciais inseridos no mapa a partir da galeria de mapas.  
   
 #### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>Para adicionar um mapa com o assistente de mapa em um novo relatório  
   
-1.  Clique em **inicie**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **construtor de relatórios**e, em seguida, clique em **construtor de relatórios**.  
+1.  Clique **em Iniciar**, aponte para **programas**, aponte [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]para **Construtor de relatórios**e, em seguida, clique em **Construtor de relatórios**.  
   
      A caixa de diálogo Guia de Introdução é exibida.  
   
@@ -87,17 +87,17 @@ ms.locfileid: "66098858"
   
 4.  Clique em **Criar**.  
   
-5.  Na página**Escolher uma fonte de dados espaciais** , verifique se a **Galeria de mapas** está selecionada.  
+5.  **Escolha uma fonte de dados espaciais** , verifique se a **Galeria de mapas** está selecionada.  
   
 6.  No painel de Galeria de Mapas, expanda **Estados por País** em **EUA**e clique em **Nova York**.  
   
      O painel de Visualização de Mapa exibe o mapa do município de Nova York.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página **Escolher as opções de dados espaciais e de exibição de mapa** , aceite os padrões. Por padrão, os elementos do mapa de uma galeria de mapas serão inseridos automaticamente na definição do relatório.  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 10. Na página **Escolher visualização do mapa** , verifique se **Mapa Básico** está selecionado e clique em **Avançar**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66098858"
   
 12. Se estiver selecionada, desmarque a opção **Mapa de cor única** .  
   
-13. Na lista suspensa **Campo de dados** , clique em #COUNTYNAME. O painel Visualização de Mapa no assistente exibe os seguintes itens:  
+13. Na lista suspensa **campo de dados** , clique em #COUNTYNAME. O painel Visualização de Mapa no assistente exibe os seguintes itens:  
   
     -   Um título com o texto **Título do Mapa**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "66098858"
   
  A legenda de mapa e a escala de cores ainda não são exibidos porque não há dados analíticos associados a cada município. Você adicionará dados analíticos posteriormente neste tutorial.  
   
-##  <a name="PointLayer"></a> 2. Adicionar uma camada de ponto de mapa para exibir locais de loja  
+##  <a name="PointLayer"></a>2. adicionar uma camada de ponto do mapa para exibir locais de armazenamento  
  Use o assistente de camada do mapa para adicionar uma camada de pontos que exibe a localização das lojas.  
   
 > [!NOTE]  
@@ -148,7 +148,7 @@ ms.locfileid: "66098858"
   
 1.  Alterne para o modo Design.  
   
-2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique no botão **Assistente de Nova Camada** ![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique no botão **Assistente de nova camada** ![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  Na página **Escolher uma fonte de dados espaciais** , selecione **Consulta espacial do SQL Server**e clique em **Avançar**.  
   
@@ -156,9 +156,9 @@ ms.locfileid: "66098858"
   
 5.  Na página **Escolha uma conexão com uma fonte de dados espaciais do SQL Server** , selecione uma fonte de dados existente ou navegue até o servidor de relatório e selecione uma fonte de dados.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
-7.  Na página Criar uma Consulta, clique em **Editar como Texto**.  
+7.  Na página Crie uma Consulta , clique em **Editar como Texto**.  
   
 8.  Cole o seguinte texto de consulta no painel da consulta:  
   
@@ -191,25 +191,25 @@ ms.locfileid: "66098858"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. Na barra de ferramentas do designer de consultas, clique em **Executar** ( **!** ).  
+9. Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**).  
   
      O conjunto de resultados exibe sete colunas: StoreKey, StoreName, SellingArea, City, County, Sales e SpatialLocation. Esses dados representam um conjunto de lojas no Estado de Nova York que vendem bens de consumo. Cada linha no conjunto de resultados contém um identificador de loja, o nome da loja, a área disponível para exibição do produto, a cidade e o município no qual a loja está localizada, o total de vendas e o local espacial em longitude e latitude. A área de exibição varia de 455 pés quadrados a 1.125 pés quadrados.  
   
-10. Clique em **Avançar**.  
+10. Clique em **Próximo**.  
   
      O conjunto de dados de relatório chamado DataSet1 é criado para você. Após a conclusão do assistente, você poderá usar os Dados do Relatório para exibir sua coleção de campos.  
   
-11. Sobre o **escolha dados espaciais e opções de exibição de mapa** página, verifique o **campo espacial** é `SpatialLocation` e que o **tipo de camada** é **ponto**. Aceite os outros padrões nesta página.  
+11. Na página **escolher as opções de dados espaciais e de exibição de mapa** , verifique se o `SpatialLocation` **campo espacial** é e se o tipo de **camada** é **ponto**. Aceite os outros padrões nesta página.  
   
      A exibição do mapa mostra círculos que marcam o local de cada loja.  
   
-12. Clique em **Avançar**.  
+12. Clique em **Próximo**.  
   
 13. Especifique um tipo de mapa que exiba marcadores que variem por dados analíticos. Na página Escolher visualização do mapa, clique em **Mapa de Marcador Analítico**e clique em **Avançar**.  
   
 14. Na página **Escolher o conjunto de dados analíticos** , clique em DataSet1. Esse conjunto de dados contém dados analíticos e dados espaciais que serão exibidos na nova camada de ponto.  
   
-15. Clique em **Avançar**.  
+15. Clique em **Próximo**.  
   
 16. Na página **Escolher o tema da cor e a visualização dos dados** , desmarque a opção **Usar cores de marcador para visualizar dados** e selecione **Usar tipos de marcador para visualizar dados**.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "66098858"
   
 19. Adicione um título à legenda. Clique com o botão direito do mouse no título e clique em **Propriedades do Título da Legenda**.  
   
-20. Exclua o título e digite a **Área de Exibição (Pés Quadrados)** .  
+20. Exclua o título e digite a **Área de Exibição (Pés Quadrados)**.  
   
 21. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -237,7 +237,7 @@ ms.locfileid: "66098858"
   
  O mapa exibe os locais de lojas no estado de Nova York. O tipo de marcador para cada loja se baseia na área de exibição. Foram calculados cinco intervalos de área de exibição automaticamente para você.  
   
-##  <a name="LineLayer"></a> 3. Adicionar uma camada de linha de mapa para exibir uma rota  
+##  <a name="LineLayer"></a>3. adicionar uma camada de linha de mapa para exibir uma rota  
  Use o assistente de camada do mapa para adicionar uma camada do mapa que exibe uma rota entre duas lojas. Neste tutorial, o caminho é criado de três locais de loja. Em um aplicativo comercial, o caminho pode ser a melhor rota entre lojas.  
   
 #### <a name="to-add-a-line-layer-to-map"></a>Para adicionar uma camada de linha ao mapa  
@@ -246,13 +246,13 @@ ms.locfileid: "66098858"
   
 2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique em **Assistente de nova camada**.  
   
-3.  Na página **Escolher uma fonte de dados espaciais** , selecione **Consulta espacial do SQL Server** e clique em **Avançar**.  
+3.  Na página **escolher uma fonte de dados espaciais** , selecione **SQL Server consulta espacial** e clique em **Avançar**.  
   
 4.  Na página **Escolher um conjunto de dados com dados espaciais do SQL Server** , clique em **Adicionar um novo conjunto de dados com dados espaciais do SQL Server** e clique em **Avançar**.  
   
 5.  Em **Escolher uma conexão com uma fonte de dados espaciais do SQL Server**, selecione DataSource1, a fonte de dados que você criou no primeiro procedimento.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 7.  Na página **Crie uma Consulta** , clique em **Editar como Texto**. O designer de consulta alterna para o modo baseado no texto.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "66098858"
        -73.4728622833178 44.7028831413324)' AS geography) as Route  
     ```  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
      Um caminho é exibido no mapa que conecta três lojas.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "66098858"
   
      A exibição de mapa exibe um caminho de uma loja na parte norte do estado de Nova York até uma loja na parte sul do estado de Nova York.  
   
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 12. Na página **Escolher visualização do mapa** , clique em **Mapa da Linha Básica**e clique em **Avançar**.  
   
@@ -283,14 +283,14 @@ ms.locfileid: "66098858"
   
  O mapa exibe uma nova camada de linha com o tipo de fonte de dados espaciais **DataSet**. Neste exemplo, os dados espaciais vêm de um conjunto de dados, mas nenhum dado analítico é associado à linha.  
   
-##  <a name="TileLayer"></a> 4. Adicionar um plano de fundo lado a lado do Bing Maps  
+##  <a name="TileLayer"></a>4. adicionar um plano de fundo de bloco do Bing Maps  
  Adicione uma camada do mapa que exibe um plano de fundo lado a lado do Bing Maps.  
   
 #### <a name="to-add-a-virtual-earth-tile-background"></a>Para adicionar plano de fundo lado a lado de Terra Virtual  
   
 1.  Alterne para o modo Design.  
   
-2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique em **Adicionar camada**![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
+2.  Clique duas vezes no mapa para exibir o painel **Camada do Mapa** . Na barra de ferramentas, clique em **adicionar**![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")de camada.  
   
 3.  Na lista suspensa, clique em **Camada do Bloco**.  
   
@@ -305,7 +305,7 @@ ms.locfileid: "66098858"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Transparent"></a> 5. Tornar uma camada transparente  
+##  <a name="Transparent"></a>5. tornar uma camada transparente  
  Para deixar que os itens em uma camada sejam exibidos por outra camada, você pode ajustar a ordem de camadas e a transparência de cada camada para obter o efeito desejado.  
   
 #### <a name="to-set-the-transparency-of-a-layer"></a>Para definir a transparência de uma camada  
@@ -318,18 +318,18 @@ ms.locfileid: "66098858"
   
 4.  Clique em **Visibilidade**.  
   
-5.  Em **Transparência (%)** , digite **30**.  
+5.  Em **Transparência (%)**, digite **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  A superfície de design exibe os municípios como semitransparentes.  
   
-##  <a name="Vary"></a> 6. Variar as cores de municípios com base em vendas  
+##  <a name="Vary"></a>6. variar a cor do município com base nas vendas  
  Cada município na camada do polígono tem uma cor diferente porque o processador de relatório atribui um valor de cor automaticamente da paleta de cores com base no tema que você escolheu na última página do assistente de mapa.  
   
  Nas etapas a seguir, especifique uma regra de cor para associar cores específicas a um intervalo de vendas de lojas para cada município. As cores vermelho-amarelo-verde indicam vendas altas-médias-baixas relativas. Formate a escala de cores para mostrar a moeda. Exiba os intervalos de vendas anuais em uma nova legenda. Para municípios que não contêm lojas, não use nenhuma cor para mostrar que não há dados associados.  
   
-###  <a name="Relationship"></a> 6a. Criar um relacionamento entre dados espaciais e analíticos  
+###  <a name="Relationship"></a>6a. Criar um relacionamento entre dados espaciais e analíticos  
  Para variar as formas do município por cor, com base em dados analíticos, primeiro associe os dados analíticos aos dados espaciais. Neste tutorial, você usará o nome do município para correspondência.  
   
 ##### <a name="to-build-a-relationship-between-spatial-data-and-analytical-data"></a>Para criar uma relação entre os dados espaciais e os dados analíticos  
@@ -358,7 +358,7 @@ ms.locfileid: "66098858"
   
  Cada município que contém uma loja tem uma cor baseada na paleta de cores para o estilo escolhido no assistente.  
   
-###  <a name="ColorRules"></a> 6b. Especificar as regras de cores para polígonos  
+###  <a name="ColorRules"></a>6B. Especificar as regras de cores para polígonos  
  Para criar uma regra que varia a cor de cada município baseada em vendas da loja, você deve especificar os valores de intervalo, o número de divisões dentro daquele intervalo que você deseja exibir, e as cores a serem usadas.  
   
 ##### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>Para especificar regras de cores para todos os polígonos com dados associados  
@@ -377,7 +377,7 @@ ms.locfileid: "66098858"
   
 7.  Altere **Cor final** para **Verde**.  
   
-     **Vermelho** representa baixos valores de vendas, **Amarelo** representa valores de vendas intermediários e **Verde** representa valores de vendas altos. O processador de relatório calcula um intervalo de cores com base nesses valores e as opções que você escolhe na página **Distribuição** .  
+     **Vermelho** representa baixos valores de vendas, **amarelo** representa valores de vendas intermediárias e **verde** representa valores de vendas altos. O processador de relatório calcula um intervalo de cores com base nesses valores e as opções que você escolhe na página **Distribuição** .  
   
 8.  Clique em **Distribuição**.  
   
@@ -395,7 +395,7 @@ ms.locfileid: "66098858"
   
  A escala de cores exibe cinco cores: vermelho, laranja, amarelo, verde-amarelado e verde. Cada cor representa um intervalo de vendas que é calculado automaticamente com base nas vendas por município.  
   
-###  <a name="ColorScale"></a> 6c. Formatar os dados na escala de cores como moeda  
+###  <a name="ColorScale"></a>6c. Formatar os dados na escala de cores como moeda  
  Por padrão, os dados têm um formato geral. Você pode aplicar formatos personalizados.  
   
 ##### <a name="to-set-the-format-for-the-color-scale"></a>Para definir o formato da escala de cores  
@@ -414,7 +414,7 @@ ms.locfileid: "66098858"
   
  A escala de cores exibe as vendas anuais no formato de moeda para cada intervalo.  
   
-###  <a name="NewLegend"></a> 6d. Criar uma nova legenda  
+###  <a name="NewLegend"></a>6D. Criar uma nova legenda  
  Por padrão, todas as regras são exibidas na primeira legenda. Para melhorar a exibição de um mapa, adicione legendas.  
   
  Para alterar a exibição padrão, há duas etapas: crie uma nova legenda e associe os resultados da regra para uma camada do mapa à nova legenda.  
@@ -437,7 +437,7 @@ ms.locfileid: "66098858"
   
  A legenda se expande para exibir o título.  
   
-###  <a name="Associate"></a> 6e. Associar regras de cores e legenda  
+###  <a name="Associate"></a>6e. Associar regras de cores e legenda  
  Cada legenda pode exibir um ou mais conjuntos de resultados de regra.  
   
 ##### <a name="to-associate-a-legend-with-color-rules"></a>Para associar uma legenda a regras de cores  
@@ -452,7 +452,7 @@ ms.locfileid: "66098858"
   
 5.  Em **Opções de legenda**, na lista suspensa, selecione Legend2. A opção de texto da legenda aparece. Por padrão, texto de legenda é formatado com uma cadeia de formato geral do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . Os 0 em N0 não especifica nenhum dígito decimal.  
   
-6.  Na **texto de legenda**, use o seguinte formato para especificar a moeda sem dígitos decimais: `#FROMVALUE {C0} - #TOVALUE {C0}`  
+6.  Em **texto da legenda**, use o seguinte formato para especificar a moeda sem dígitos decimais:`#FROMVALUE {C0} - #TOVALUE {C0}`  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -462,7 +462,7 @@ ms.locfileid: "66098858"
   
  Os municípios que têm lojas e vendas associadas são exibidos de acordo com as regras de cores. Municípios que não têm nenhuma venda não têm cores.  
   
-###  <a name="NoData"></a> 6f. Alterar a cor dos municípios para os quais não há dados  
+###  <a name="NoData"></a>6f. Alterar a cor dos municípios para os quais não há dados  
  Você pode definir as opções de exibição padrão para todos os elementos de mapas em uma camada. As regras de cores têm precedência sobre essas opções de exibição.  
   
 ##### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>Para definir as propriedades de exibição para todos os elementos em uma camada  
@@ -485,7 +485,7 @@ ms.locfileid: "66098858"
   
  Municípios sem dados associados são exibidos em azul. Somente os municípios com dados analíticos associados são exibidos nas cores de **Vermelho** a **Green** das regras de cores especificadas.  
   
-##  <a name="CustomPoint"></a> 7. Adicionar um ponto personalizado  
+##  <a name="CustomPoint"></a>7. adicionar um ponto personalizado  
  Para representar uma nova loja que ainda não foi construída, especifique um ponto e use o tipo de marcador **PushPin** .  
   
 #### <a name="to-add-a-custom-point"></a>Para adicionar um ponto personalizado  
@@ -534,7 +534,7 @@ ms.locfileid: "66098858"
   
  O rótulo aparece acima do local da loja.  
   
-##  <a name="CenterView"></a> Centralizar a exibição de mapa  
+##  <a name="CenterView"></a>Centralizar a exibição do mapa  
  Altere o centro do visor do mapa e o nível de zoom.  
   
 #### <a name="to-change-the-viewport"></a>Para alterar o visor  
@@ -555,7 +555,7 @@ ms.locfileid: "66098858"
   
  No modo Design, o mapa na superfície de exibição e a exibição se baseiam em dados de exemplo. No relatório renderizado, a exibição de mapa é centralizada na exibição especificada.  
   
-##  <a name="Title"></a> Adicionar um título de relatório  
+##  <a name="Title"></a>Adicionar um título de relatório  
   
 #### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
   
@@ -565,7 +565,7 @@ ms.locfileid: "66098858"
   
  Esse título aparecerá na parte superior do relatório. Os itens na parte superior do corpo do relatório quando não há cabeçalho de página definido são os equivalentes de um cabeçalho de relatório.  
   
-##  <a name="Save"></a> Salvar o relatório  
+##  <a name="Save"></a>Salvar o relatório  
   
 #### <a name="to-save-the-report"></a>Para salvar o relatório  
   
@@ -575,18 +575,18 @@ ms.locfileid: "66098858"
   
 3.  Em **Nome**, digite **Vendas nas Lojas de Nova York**.  
   
- Clique em **Salvar**.  
+ Clique em **Save** (Salvar).  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Isso conclui o passo a passo da adição de um mapa ao seu relatório.  
   
- Para obter mais informações, consulte [Maps &#40;construtor de relatórios e SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) e a entrada de blog [Cartographic Adjustment of Spatial Data para o SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) em blogs.msdn.com.  
+ Para obter mais informações, consulte [mapas &#40;Construtor de relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md) e a entrada de blog [cartográficas o ajuste de dados espaciais para SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) em Blogs.msdn.com.  
   
- Para obter mais tutoriais, consulte [tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md).  
+ Para obter mais tutoriais, consulte os [tutoriais &#40;Construtor de Relatórios&#41;](report-builder-tutorials.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
- [Construtor de relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
+## <a name="see-also"></a>Consulte Também  
+ [TUTORIAIS &#40;Construtor de Relatórios&#41;](report-builder-tutorials.md)   
+ [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Exibir ou excluir histórico de relatório (Gerenciador de relatórios) | Microsoft Docs
+title: Exibir ou excluir histórico de relatórios (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098706"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>Exibir ou excluir histórico de relatório (Gerenciador de Relatórios)
@@ -41,7 +41,7 @@ ms.locfileid: "66098706"
   
 2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** . Navegue até o relatório para o qual deseja criar ou exibir instantâneos de histórico e, em seguida, clique no relatório para abri-lo.  
   
-3.  Clique na guia **Histórico** . Os instantâneos de histórico são exibidos na **quando executar** coluna.  
+3.  Clique na guia **histórico** . Os instantâneos de histórico são exibidos na coluna **quando executar** .  
   
 4.  Para exibir o instantâneo de histórico, clique no instantâneo.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "66098706"
   
 1.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** . Navegue até o relatório para o qual deseja criar instantâneos de histórico e, em seguida, clique no relatório para abri-lo.  
   
-2.  Clique na guia **Histórico** . Os instantâneos de histórico são exibidos na **quando executar** coluna.  
+2.  Clique na guia **histórico** . Os instantâneos de histórico são exibidos na coluna **quando executar** .  
   
 3.  Marque a caixa de seleção ao lado do instantâneo de histórico que você deseja excluir e, em seguida, clique em **excluir**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Página de histórico de relatório &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
+ [Página de histórico de relatórios &#40;Report Manager&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [Definir as propriedades do processamento de relatórios](report-server/set-report-processing-properties.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Criar, modificar e excluir instantâneos no histórico de relatórios](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
+ [Criar, modificar e excluir instantâneos no histórico de relatório](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
   
   

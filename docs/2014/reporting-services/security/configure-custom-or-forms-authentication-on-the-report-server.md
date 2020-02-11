@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102141"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurar autenticação personalizada ou de formulários no servidor de relatório
@@ -47,7 +47,7 @@ ms.locfileid: "66102141"
     </Authentication>  
     ```  
   
-4.  Cole-a nas entradas existentes para <`Authentication`>.  
+4.  Cole-o nas entradas existentes para <`Authentication`>.  
   
      Observe que não é possível usar `Custom` com outros tipos de autenticação.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66102141"
   
 6.  Abra o arquivo Web.config do servidor de relatório. Por padrão, ele está localizado em \Arquivos de Programas\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer.  
   
-7.  Encontre `authentication mode` e defini-lo `Forms`.  
+7.  Localize `authentication mode` e defina- `Forms`o.  
   
     ```  
     <authentication mode = "Forms" />  
@@ -69,7 +69,7 @@ ms.locfileid: "66102141"
   
 9. Abra o arquivo Web.config para o Gerenciador de Relatórios. Por padrão, ele está localizado em \Arquivos de Programas\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportManager.  
   
-10. Encontre `authentication mode` e defini-lo `Forms`.  
+10. Localize `authentication mode` e defina- `Forms`o.  
   
     ```  
     <authentication mode = "Forms" />  
@@ -89,11 +89,11 @@ ms.locfileid: "66102141"
   
 15. Reinicie o servidor de relatório para terminar as sessões que estão atualmente abertas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementando uma extensão de segurança](../extensions/security-extension/implementing-a-security-extension.md)   
  [Autenticação com o servidor de relatório](authentication-with-the-report-server.md)   
  [Arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Configurar a autenticação Básica no servidor de relatório](configure-basic-authentication-on-the-report-server.md)   
+ [Configurar a autenticação básica no servidor de relatório](configure-basic-authentication-on-the-report-server.md)   
  [Configurar a Autenticação do Windows no servidor de relatório](configure-windows-authentication-on-the-report-server.md)  
   
   

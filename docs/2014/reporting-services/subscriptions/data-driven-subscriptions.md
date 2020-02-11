@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100872"
 ---
 # <a name="data-driven-subscriptions"></a>assinaturas controladas por dados
@@ -44,23 +44,23 @@ ms.locfileid: "66100872"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>Requisitos para usar assinaturas controladas por dados  
  A funcionalidade de assinatura controlada por dados não está disponível em todas as edições. Também há limitações para os tipos de fontes de dados que podem ser usadas para recuperar dados de assinatura em tempo de execução. A lista a seguir fornece mais informações sobre os requisitos:  
   
--   Para saber mais sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte à funcionalidade de assinatura controlada por dados, veja [Recursos compatíveis com as edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+-   Para obter mais informações sobre as edições [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do que dão suporte à funcionalidade de assinatura controlada por dados, consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
--   Para obter dados de assinatura, escolha uma fonte de dados que possa fornecer informações de esquema para o servidor de relatório. Alguns exemplos de tipos de fonte de dados com suporte incluem dados relacionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle, bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pacotes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , fontes de dados ODBC e fontes de dados OLE DB. Para obter mais informações sobre requisitos de fonte de dados do assinante, consulte [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+-   Para obter dados de assinatura, escolha uma fonte de dados que possa fornecer informações de esquema para o servidor de relatório. Exemplos de tipos de fonte de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com suporte incluem dados relacionais [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , Oracle, bancos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de dados, data de pacote, fontes de dados ODBC e OLE DB fontes de dados. Para obter mais informações sobre requisitos de fonte de dados do assinante, consulte [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## <a name="working-with-data-driven-subscriptions"></a>Trabalhando com assinaturas controladas por dados  
  Os tópicos a seguir fornecem mais informações sobre assinaturas controladas por dados.  
   
-|Tópicos|Descrição|  
+|Tópicos|DESCRIÇÃO|  
 |------------|-----------------|  
-|[Criar, modificar e excluir uma assinatura controlada por dados](data-driven-subscriptions.md)|Explica como criar, modificar ou excluir uma assinatura controlada por dados.|  
-|[Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Fornece informações sobre as fontes de dados que podem ser usadas para uma assinatura controlada por dados.|  
-|[Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|Fornece instruções passo a passo para aprender como criar uma assinatura controlada por dados.|  
+|[Create, Modify, and Delete a Data-Driven Subscription](data-driven-subscriptions.md)|Explica como criar, modificar ou excluir uma assinatura controlada por dados.|  
+|[Use uma fonte de dados externa para dados do assinante &#40;assinatura controlada por dados&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Fornece informações sobre as fontes de dados que podem ser usadas para uma assinatura controlada por dados.|  
+|[Criar uma assinatura controlada por dados &#40;tutorial do SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|Fornece instruções passo a passo para aprender como criar uma assinatura controlada por dados.|  
 |[Armazenando relatórios em cache &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|Descreve como usar o Provedor de Entrega Nulo com uma assinatura controlada por dados para pré-carregamento do cache.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Página Criar Assinatura Controlada por Dados &#40;Gerenciador de Relatórios&#41;](../create-data-driven-subscription-page-report-manager.md)   
- [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](../report-server/preload-the-cache-report-manager.md)  
+ [Página Criar assinatura controlada por dados &#40;Report Manager&#41;](../create-data-driven-subscription-page-report-manager.md)   
+ [Pré-carregar o cache &#40;Report Manager&#41;](../report-server/preload-the-cache-report-manager.md)  
   
   

@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f65926bf982574ee2ae856b5bc4138d065b534bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098329"
 ---
-# <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>Método ListSSLCertificates (WMI MSReportServer_ConfigurationSetting)
+# <a name="listsslcertificates-method-wmi-msreportserver_configurationsetting"></a>Método ListSSLCertificates (WMI MSReportServer_ConfigurationSetting)
   Retorna uma lista de certificados no computador do servidor de relatório.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,20 +36,20 @@ public void ListSSLCertificates(out string[] CertificateHash,
     out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- *CertificateHash[]*  
+## <a name="parameters"></a>parâmetros  
+ *CertificateHash []*  
  [fora] O certificado efetua hash.  
   
- *CertName[]*  
+ *CertName []*  
  [fora] Nomes do certificado.  
   
- *HostName[]*  
+ *Nome do host []*  
  [fora] Nomes de host dos certificados.  
   
  *Comprimento*  
  [out] Representa o comprimento das matrizes *CertificateHash*, *CertName* e *HostName* .  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -58,9 +58,9 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

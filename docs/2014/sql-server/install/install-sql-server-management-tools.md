@@ -1,5 +1,5 @@
 ---
-title: Instalar o SQL Server Management Tools | Microsoft Docs
+title: Instalar Ferramentas de Gerenciamento do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094426"
 ---
 # <a name="install-sql-server-management-tools"></a>Instalar Ferramentas de Gerenciamento do SQL Server
@@ -26,22 +26,22 @@ ms.locfileid: "66094426"
   
 -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Tuning Advisor  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Orientador de otimização de banco de dados  
   
 -   Ferramentas de prompt de comando, como sqlcmd.exe e osql.exe.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] suplementos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]suplementos para [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
  Observe que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] é uma opção separada durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Independentemente do número de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ou do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instaladas no computador, será instalada apenas uma cópia das Ferramentas de Gerenciamento do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Ferramentas de gerenciamento podem executar lado a lado no mesmo computador com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as ferramentas de gerenciamento.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]As ferramentas de gerenciamento podem ser executadas lado a lado no mesmo computador com versões anteriores das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramentas de gerenciamento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos com suporte nas edições do SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Edições e componentes do SQL Server 2014](../editions-and-components-of-sql-server-2016.md)   
- [Instalar o SQL Server 2014 do Assistente de instalação &#40;programa de instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;programa de instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Instale o SQL Server 2014 do assistente de instalação &#40;a instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [Atualize para o SQL Server 2014 usando o assistente de instalação &#40;a instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

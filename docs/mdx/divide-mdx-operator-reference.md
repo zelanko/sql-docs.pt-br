@@ -1,5 +1,5 @@
 ---
-title: (Divisão) (MDX) | Microsoft Docs
+title: Dividir (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8dd20a0b60e105ac48a54d533055717e3f07a006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049318"
 ---
-# <a name="divide---mdx-operator-reference"></a>Dividir - referência de operador MDX
+# <a name="divide---mdx-operator-reference"></a>Referência de operador de divisão-MDX
 
 
   Realiza uma operação aritmética que divide um número por outro.  
@@ -27,8 +27,8 @@ ms.locfileid: "68049318"
 Dividend / Divisor  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *Dividendo*  
+#### <a name="parameters"></a>parâmetros  
+ *Cheque*  
  Uma linguagem MDX válida que retorna um valor numérico.  
   
  *Divisor*  
@@ -38,9 +38,9 @@ Dividend / Divisor
  Um valor com o tipo de dados do parâmetro com prioridade maior.  
   
 ## <a name="remarks"></a>Comentários  
- O valor real retornado pelo **/ (divisão)** operador representa o quociente da primeira expressão dividido pela segunda expressão.  
+ O valor real retornado pelo operador **/(divisão)** representa o quociente da primeira expressão dividida pela segunda expressão.  
   
- As duas expressões devem ser do mesmo tipo de dados ou uma expressão deve poder ser convertida implicitamente no tipo de dados da outra expressão. Se *Divisor* é avaliada como um valor nulo, o operador gerará um erro. Se os dois *Divisor* e *dividendo* avaliar como um valor nulo, o operador retornará um valor nulo.  
+ As duas expressões devem ser do mesmo tipo de dados ou uma expressão deve poder ser convertida implicitamente no tipo de dados da outra expressão. Se o *divisor* for avaliado como um valor nulo, o operador gerará um erro. Se o *divisor* e o *dividendo* forem avaliados como um valor nulo, o operador retornará um valor nulo.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir demonstra o uso desse operador.  
@@ -98,8 +98,8 @@ WHERE
   
  `WHERE([Date].[Calendar].[Calendar Year].&[2001])`  
   
-## <a name="see-also"></a>Consulte também  
- [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#40;de&#41;MDX IIf](../mdx/iif-mdx.md)   
+ [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

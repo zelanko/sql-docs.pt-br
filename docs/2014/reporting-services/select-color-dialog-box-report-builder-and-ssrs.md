@@ -1,5 +1,5 @@
 ---
-title: Selecione a caixa de diálogo de cor (construtor de relatórios e SSRS) | Microsoft Docs
+title: Caixa de diálogo Selecionar cor (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101378"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Selecionar Cor (Construtor de Relatórios SSRS)
@@ -29,13 +29,13 @@ ms.locfileid: "66101378"
  **Seletor de cores**  
  Escolha três opções que especificam como você quer selecionar as cores:  
   
--   **Selecionador – Círculo de cor** Escolha uma cor que use valores de cores HSB (Matiz/Saturação/Brilho).  
+-   **Seletor-círculo de cor** Escolha uma cor usando valores de cor de matiz/saturação/brilho (HSB).  
   
--   **Selecionador – Quadrado de cores** Escolha uma cor que usa valores de cor RGB (Vermelho/Verde/Azul).  
+-   **Seletor-quadrado de cor** Escolha uma cor usando valores de cor RGB (vermelho/verde/azul).  
   
--   **Paleta – Cores padrão** Escolha uma cor de uma lista predefinida de valores de cor.  
+-   **Paleta-cores padrão** Escolha uma cor em uma lista predefinida de valores de cor.  
   
- **Círculo de cor**  
+ **Círculo de cores**  
  Use para as cores HSB pois são valores mapeados em um sistema cilíndrico coordenado. O matiz é a cor real, a saturação é a pureza da cor, e o brilho é o brilho ou escuridão relativa.  
   
  Ao selecionar uma cor, o centro do círculo determina a cor. Use o controle deslizante de cor para alterar o matiz. As coordenadas x e y representam respectivamente os valores da saturação e do brilho.  
@@ -46,7 +46,7 @@ ms.locfileid: "66101378"
  Quando você escolhe uma cor, o centro do quadrado determina a cor. Use o controle deslizante de cor para alterar o faixa da cor escolhida. As coordenadas x e y representam as outras duas cores. Por exemplo, se selecionar o verde, o controle deslizando mostra a faixas dos valores do verde, e as coordenadas x e y representam respectivamente os valores do vermelho e do azul.  
   
  **Cor da paleta padrão**  
- Use para as cores nomeadas dos [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` enumeração.  
+ Use para cores nomeadas da [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` enumeração.  
   
  **Sistema de cores**  
  Especifique as cores RGB ou HSB. Esta escolha altera a exibição para mostrar os valores de RGB ou HSB, que são atualizados interativamente ao usar um circulo de cores ou um quadrado de cores para o **Selecionador de cores**.  
@@ -62,13 +62,13 @@ ms.locfileid: "66101378"
  **Azul**  
  O valor decimal para a parte azul da cor de RGB. Use a caixa de rotação para alterar o valor ou digitar um valor entre 0 e 255.  
   
- **alfa**  
+ **Alpha**  
  O valor decimal para o alfa ou parte de transparência da cor. Quando este valor é ativado, você pode usar a opção de controle deslizante para ajustar o grau de transparência desejado.  
   
- **Matiz**  
+ **Hue**  
  O valor decimal para o matiz da cor HSB. Use a caixa de rotação para alterar o valor ou digitar um valor entre 0 e 255.  
   
- **saturação**  
+ **Saturação**  
  O valor decimal para a saturação da cor HSB. Use a caixa de rotação para alterar o valor ou digitar um valor entre 0 e 255.  
   
  **Brilho**  
@@ -77,7 +77,7 @@ ms.locfileid: "66101378"
  **Amostra de cor**  
  Mostra o cor atual na metade esquerda do painel e mostra interativamente a nova cor que está sendo selecionada na metade direita do painel. Se não houver nenhuma cor padrão, a metade esquerda do painel será branca. A maioria das propriedades de RDL não tem nenhuma cor padrão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   

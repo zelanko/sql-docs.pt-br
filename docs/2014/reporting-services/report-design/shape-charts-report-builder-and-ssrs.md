@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7194147f60fa039caab1f9a712b9f6f75e2617d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104944"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de forma (Construtor de Relatórios e SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66104944"
   
 -   Os gráficos de forma são mais eficientes para mostrar porcentagens proporcionais na ordem classificada. No entanto, para manter a consistência, o gráfico não classifica os valores no seu conjunto de dados por padrão. Considere classificar seus valores do mais alto para o mais baixo para representar com mais precisão seus dados como um funil ou uma pirâmide. Para obter mais informações, consulte [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   Valores nulos, vazios, negativos e zero não têm nenhum valor quando for calcular as razões. Por isso, esses valores não são mostrados em um gráfico de forma. Se quiser indicar visualmente esse tipo de valores no seu gráfico, mude o tipo de gráfico para algo diferente de gráfico de forma. Para obter mais informações sobre como adicionar pontos vazios a um gráfico sem forma, consulte [adicionar pontos vazios a gráfico de &#40;construtor de relatórios e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Valores nulos, vazios, negativos e zero não têm nenhum valor quando for calcular as razões. Por isso, esses valores não são mostrados em um gráfico de forma. Se quiser indicar visualmente esse tipo de valores no seu gráfico, mude o tipo de gráfico para algo diferente de gráfico de forma. Para obter mais informações sobre como adicionar pontos vazios a um gráfico de não forma, consulte [Adicionar pontos vazios ao gráfico &#40;Construtor de relatórios e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Se estiver definindo suas próprias cores em um gráfico de forma usando uma paleta personalizada, certifique-se de ter cores suficientes na sua paleta para realçar cada ponto de dados com sua própria cor exclusiva. Para obter mais informações, consulte [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66104944"
   
 -   Você pode aplicar estilos de desenho adicionais a gráficos de pizza e rosca para melhorar o impacto visual. Consulte [Formatando as cores de série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md) para obter mais informações.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

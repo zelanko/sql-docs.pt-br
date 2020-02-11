@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098726"
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
@@ -58,14 +58,14 @@ reportpath
   
 ### <a name="syntax-description"></a>Descrição da sintaxe  
  *rswebserviceurl*  
- A URL do serviço Web do servidor de relatório. No modo nativo, é a URL do serviço Web da instância do servidor de relatório configurada no Gerenciador de Configurações do Reporting Services (consulte [Configurar as URLs do Servidor de Relatório &#40; 	Gerenciador de Configurações do SSRS&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Por exemplo:   
+ A URL do serviço Web do servidor de relatório. No modo nativo, é a URL do serviço Web da instância do servidor de relatório configurada no Gerenciador de Configurações do Reporting Services (consulte [Configurar as URLs do Servidor de Relatório &#40; 	Gerenciador de Configurações do SSRS&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Por exemplo:  
   
 ```  
 http://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- No modo integrado do SharePoint, é a URL do proxy do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em um site do SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Por exemplo:   
+ No modo integrado do SharePoint, é a URL do proxy do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em um site do SharePoint integrado ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Por exemplo:  
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver  
@@ -77,13 +77,13 @@ http://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  O nome do caminho relativo do item no banco de dados do servidor de relatório no modo nativo ou a URL totalmente qualificada do item em um catálogo do SharePoint.  
   
- O caminho do item de catálogo. No modo nativo, é o caminho relativo do item no banco de dados do servidor de relatório, que começa com uma barra (`/`). Por exemplo:   
+ O caminho do item de catálogo. No modo nativo, é o caminho relativo do item no banco de dados do servidor de relatório, que começa com uma barra (`/`). Por exemplo:  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- No modo integrado do SharePoint, é a URL totalmente qualificada do item na biblioteca do SharePoint, incluindo a extensão do item. Por exemplo:   
+ No modo integrado do SharePoint, é a URL totalmente qualificada do item na biblioteca do SharePoint, incluindo a extensão do item. Por exemplo:  
   
 ```  
 http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
@@ -104,23 +104,23 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  O texto da URL correspondente ao valor do parâmetro usado.  
   
- **Observação:** Para obter uma lista de parâmetros de acesso a URL disponíveis, consulte [URL Access Parameter Reference](url-access-parameter-reference.md). Para obter exemplos de como transmitir parâmetros de relatório na URL, consulte [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
+ **Observação:** para obter uma lista dos parâmetros de acesso a URL disponíveis, consulte [URL Access Parameter Reference](url-access-parameter-reference.md). Para obter exemplos de como transmitir parâmetros de relatório na URL, consulte [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descrições das tarefas|Links|  
 |-----------------------|-----------|  
-|Acessar itens do servidor de relatório, como relatórios, fontes de dados compartilhadas e recursos.|[Acessar itens do Servidor de Relatório usando o acesso à URL](access-report-server-items-using-url-access.md)|  
-|Transmitir parâmetros de relatório a um relatório.|[Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)|  
-|Definir a localidade dos parâmetros de relatório na cadeia de caracteres de acesso à URL, o que define as interpretações de datas, moedas etc. específicas da localidade.|[Definir o idioma dos parâmetros do relatório em uma URL](set-the-language-for-report-parameters-in-a-url.md)|  
-|Enviar configurações específicas da extensão de renderização que personalizam como o relatório é renderizado.|[Especificar configurações de informações do dispositivo em uma URL](specify-device-information-settings-in-a-url.md)|  
+|Acessar itens do servidor de relatório, como relatórios, fontes de dados compartilhadas e recursos.|[Acessar itens de servidor de relatório com acesso à URL](access-report-server-items-using-url-access.md)|  
+|Transmitir parâmetros de relatório a um relatório.|[Passar um parâmetro de relatório em uma URL](pass-a-report-parameter-within-a-url.md)|  
+|Definir a localidade dos parâmetros de relatório na cadeia de caracteres de acesso à URL, o que define as interpretações de datas, moedas etc. específicas da localidade.|[Definir o idioma para parâmetros de relatório em uma URL](set-the-language-for-report-parameters-in-a-url.md)|  
+|Enviar configurações específicas da extensão de renderização que personalizam como o relatório é renderizado.|[Especificar configurações de informações de dispositivo em uma URL](specify-device-information-settings-in-a-url.md)|  
 |Exportar um relatório diretamente para um formato de arquivo sem exibi-lo no navegador.|[Exportar um relatório com acesso à URL](export-a-report-using-url-access.md)|  
 |Abrir um relatório e navegar diretamente ao local de uma cadeia de caracteres.|[Pesquisar um relatório com acesso à URL](search-a-report-using-url-access.md)|  
-|Renderizar um instantâneo de histórico de relatório específico.|[Renderizar instantâneo de histórico de relatório com o acesso à URL](render-a-report-history-snapshot-using-url-access.md)|  
+|Renderizar um instantâneo de histórico de relatório específico.|[Renderizar um instantâneo de histórico de relatório com acesso à URL](render-a-report-history-snapshot-using-url-access.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)   
- [Referência de parâmetro de acesso de URL](url-access-parameter-reference.md)   
+ [Referência de parâmetro de acesso à URL](url-access-parameter-reference.md)   
  [Integrando o Reporting Services usando o acesso à URL](application-integration/integrating-reporting-services-using-url-access.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

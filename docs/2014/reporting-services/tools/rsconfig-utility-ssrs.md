@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b78691b0300b6098dfa88c35b4b61c7aa63fed4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099817"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitário rsconfig (SSRS)
@@ -48,15 +48,15 @@ ms.locfileid: "66099817"
 |Termo|Opcional/Necessário|Definição|  
 |----------|------------------------|----------------|  
 |**-?**|Opcional.|Exibe a sintaxe de argumentos Rsconfig.exe.|  
-|`-c`|Obrigatório se `-e` não for usado.|Especifica a cadeia de conexão, credenciais e valores de fonte de dados usados para conectar um servidor de relatório ao banco de dados do servidor de relatório.<br /><br /> Esse argumento não exige um valor. Porém, devem ser especificados argumentos adicionais com ele para fornecer todos os valores de conexão exigidos.<br /><br /> Os argumentos que você pode especificar com `-c` incluem `-m`, **-s**, `-i`,`-d`,`-a`,`-u`,`-p`, e`-t`.|  
+|`-c`|Obrigatório se `-e` não for usado.|Especifica a cadeia de conexão, credenciais e valores de fonte de dados usados para conectar um servidor de relatório ao banco de dados do servidor de relatório.<br /><br /> Esse argumento não exige um valor. Porém, devem ser especificados argumentos adicionais com ele para fornecer todos os valores de conexão exigidos.<br /><br /> Argumentos que você pode especificar com `-c` include `-m`, **-s**, `-i`,`-d`,`-a`,`-u``-p`, e`-t`.|  
 |`-e`|Obrigatório se `-c` não for usado.|Especifica a conta de execução autônoma do relatório.<br /><br /> Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para especificar os valores criptografados no arquivo de configuração.<br /><br /> Argumentos que você pode especificar com `-e` incluem `-u` e `-p`. Você também pode definir `-t`.|  
-|`-m`  *computername*|Obrigatório se você estiver configurando uma instância de servidor de relatório remota.|Especifica o nome do computador que está hospedando o servidor de relatório. Se esse argumento for omitido, o padrão será `localhost`.|  
-|**-s**  *servername*|Obrigatórios.|Especifica a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório.|  
-|`-i`  *instancename*|Obrigatório se você estiver usando instâncias nomeadas.|Se você usou uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomeada para hospedar o banco de dados do servidor de relatório, esse valor especificará a instância nomeada.|  
-|`-d`  *databasename*|Obrigatórios.|Especifica o nome do banco de dados do servidor de relatório.|  
-|`-a`  *AuthMethod*|Obrigatórios.|Especifica o método de autenticação usado pelo servidor de relatório para se conectar ao banco de dados do servidor de relatório. Os valores válidos são `Windows` ou `SQL` (este argumento não diferencia maiúsculas de minúsculas).<br /><br /> O `Windows` especifica que o servidor de relatório usa a Autenticação do Windows.<br /><br /> O `SQL` especifica que o servidor de relatório usa a Autenticação do SQL Server.|  
-|`-u`  *[domain\\]username*|Obrigatório com `-e`, opcional com `-c`.|Especifica uma conta de usuário para a conexão de banco de dados do servidor de relatório ou para a conta autônoma.<br /><br /> Para **rsconfig -e**, esse argumento é obrigatório. Deve ser uma conta de usuário do domínio.<br /><br /> Para **rsconfig - c** e `-a SQL`, esse argumento deve especificar um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon.<br /><br /> Para **rsconfig - c** e `-a Windows`, este argumento pode especificar um usuário de domínio, uma conta interna ou as credenciais de conta de serviço. Se você estiver especificando uma conta de domínio, defina *domínio* e *nome de usuário* no formato *domínio\nomedeusuário*. Se você estiver usando uma conta interna, esse argumento será opcional. Se você quiser usar credenciais de conta de serviço, omita esse argumento.|  
-|`-p`  *password*|Obrigatório se `-u` for especificado.|Especifica a senha a ser usada com o argumento *username* . Você poderá definir esse argumento como um valor em branco se a conta não exigir uma senha. Esse valor diferencia maiúsculas de minúsculas em contas de domínio.|  
+|`-m`  *ComputerName*|Obrigatório se você estiver configurando uma instância de servidor de relatório remota.|Especifica o nome do computador que está hospedando o servidor de relatório. Se esse argumento for omitido, o padrão será `localhost`.|  
+|**-s**  *ServerName*|Obrigatórios.|Especifica a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório.|  
+|`-i`  *instância*|Obrigatório se você estiver usando instâncias nomeadas.|Se você usou uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomeada para hospedar o banco de dados do servidor de relatório, esse valor especificará a instância nomeada.|  
+|`-d`  *NomeDoBancoDeDados*|Obrigatórios.|Especifica o nome do banco de dados do servidor de relatório.|  
+|`-a`  *authmethod*|Obrigatórios.|Especifica o método de autenticação usado pelo servidor de relatório para se conectar ao banco de dados do servidor de relatório. Os valores válidos são `Windows` ou `SQL` (este argumento não diferencia maiúsculas de minúsculas).<br /><br /> O `Windows` especifica que o servidor de relatório usa a Autenticação do Windows.<br /><br /> O `SQL` especifica que o servidor de relatório usa a Autenticação do SQL Server.|  
+|`-u`  *nome de\\usuário [domínio]*|Obrigatório com `-e`, opcional com `-c`.|Especifica uma conta de usuário para a conexão de banco de dados do servidor de relatório ou para a conta autônoma.<br /><br /> Para **rsconfig -e**, esse argumento é obrigatório. Deve ser uma conta de usuário do domínio.<br /><br /> Para **rsconfig-c** e `-a SQL`, esse argumento deve especificar um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon.<br /><br /> Para **rsconfig-c** e `-a Windows`, esse argumento pode especificar um usuário de domínio, uma conta interna ou credenciais de conta de serviço. Se você estiver especificando uma conta de domínio, defina *domínio* e *nome de usuário* no formato *domínio\nomedeusuário*. Se você estiver usando uma conta interna, esse argumento será opcional. Se você quiser usar credenciais de conta de serviço, omita esse argumento.|  
+|`-p`  *la*|Obrigatório se `-u` for especificado.|Especifica a senha a ser usada com o argumento *username* . Você poderá definir esse argumento como um valor em branco se a conta não exigir uma senha. Esse valor diferencia maiúsculas de minúsculas em contas de domínio.|  
 |`-t`|Opcional.|Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
   
 ## <a name="permissions"></a>Permissões  
@@ -94,7 +94,7 @@ rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u
 ```  
   
 #### <a name="specifying-a-built-in-account"></a>Especificando uma conta interna  
- Este exemplo mostra como configurar um servidor de relatório para usar uma conta interna na conexão com um banco de dados do servidor de relatório local. Observe que `-u` não é usado. Exemplos de valores de conta interna com suporte incluem NT AUTHORITY\SYSTEM para Sistema Local e NT AUTHORITY\NETWORKSERVICE para Serviço de Rede (somente[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ).  
+ Este exemplo mostra como configurar um servidor de relatório para usar uma conta interna na conexão com um banco de dados do servidor de relatório local. Observe que `-u` não é usado. Exemplos de valores de conta interna com suporte incluem NT AUTHORITY\SYSTEM para sistema local e NT AUTHORITY\NetworkService para serviço de rede[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] (somente).  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  
@@ -121,13 +121,13 @@ rsconfig -e -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t
 rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurar uma conexão de banco de dados do servidor de relatório &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar a conta de execução autônoma &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Reporting Services servidor de relatório &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Armazene dados criptografados do servidor de relatório &#40;Configuration Manager SSRS&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Arquivos de configuração do Reporting Services](../report-server/reporting-services-configuration-files.md)   
  [Utilitários de prompt de comando do servidor de relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  
   
   

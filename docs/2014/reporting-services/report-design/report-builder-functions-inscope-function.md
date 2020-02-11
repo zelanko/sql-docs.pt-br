@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105247"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>Função InScope (Construtor de Relatórios e SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66105247"
 InScope(scope)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *escopo*  
  (`String`) O nome de um conjunto de dados, região de dados ou grupo que especifica um escopo.  
   
@@ -37,7 +37,7 @@ InScope(scope)
  Retorna um `Boolean`.  
   
 ## <a name="remarks"></a>Comentários  
- O `InScope` função testa o escopo da instância atual de um item de relatório para a associação no escopo especificado o *escopo*parâmetro.  
+ A `InScope` função testa o escopo da instância atual de um item de relatório para associação no escopo especificado pelo parâmetro de *escopo*.  
   
  O*Scope* não pode ser uma expressão.  
   
@@ -64,7 +64,7 @@ InScope(scope)
 =InScope("Product")  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   

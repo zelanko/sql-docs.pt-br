@@ -1,5 +1,5 @@
 ---
-title: Página de propriedades (Gerenciador de relatórios) opções de instantâneo | Microsoft Docs
+title: Página de propriedades opções de instantâneo (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101156"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Página de propriedades Opções de Instantâneo (Gerenciador de Relatórios)
   Use a página de propriedades Opções de Instantâneo para agendar instantâneos de relatório a serem adicionados ao histórico de relatórios e para definir limites do número de instantâneos de relatórios armazenados nesse histórico.  
   
 > [!NOTE]  
->  Este recurso não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma lista de recursos que têm suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [serviços de banco de dados adicionais](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices).  
+>  Este recurso não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]consulte [serviços de banco de dados adicionais](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices).  
   
 ## <a name="navigation"></a>Navegação  
  Use o procedimento a seguir para navegar para este local na interface do usuário.  
@@ -37,10 +37,10 @@ ms.locfileid: "66101156"
 4.  Selecione a guia **Opções de Instantâneo** .  
   
 ## <a name="options"></a>Opções  
- **Permitir que o histórico de relatório a ser criado manualmente**  
+ **Permitir a criação manual de histórico de relatórios**  
  Marque esta caixa de seleção para adicionar instantâneos ao histórico de relatório conforme necessário. Marcando esta caixa de seleção, o botão **Novo Instantâneo** aparecerá na página Histórico.  
   
- **Store todos os instantâneos de execução de relatório no histórico de relatórios**  
+ **Armazene todos os instantâneos de execução de relatório no histórico de relatórios**  
  Marque essa caixa de seleção para copiar um instantâneo de relatório gerado com base nas propriedades de execução de relatório no histórico do relatório. Você pode definir propriedades de execução de relatório para executar um relatório de um instantâneo gerado. Definindo essa propriedade de histórico de relatórios você pode manter um registro de todos os instantâneos gerados com o tempo, colocando cópias deles no histórico de relatórios.  
   
  **Use o agendamento a seguir para adicionar instantâneos ao histórico de relatórios**  
@@ -60,7 +60,7 @@ ms.locfileid: "66101156"
  **Aplicar**  
  Clique para salvar as alterações.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Criar, modificar e excluir instantâneos no histórico de relatório](report-server/create-modify-and-delete-snapshots-in-report-history.md)   

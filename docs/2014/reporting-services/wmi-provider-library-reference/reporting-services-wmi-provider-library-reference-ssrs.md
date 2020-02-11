@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a98ca22f9d34627e484a698dcf540b31808d07e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097018"
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Referência da Biblioteca do provedor WMI do Reporting Services (SSRS)
@@ -37,10 +37,10 @@ ms.locfileid: "66097018"
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
  Representa os parâmetros de instalação e de tempo de execução de uma instância do servidor de relatório. Esses parâmetros são armazenados no arquivo de configuração para o servidor de relatório.  
   
- Para obter mais informações sobre as operações WMI, consulte a documentação do SDK WMI incluída no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ Para obter mais informações sobre as operações do WMI, consulte a documentação do SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] do WMI incluída no SDK.  
   
-## <a name="see-also"></a>Consulte também  
- [Acessar o provedor WMI do Reporting Services](../tools/access-the-reporting-services-wmi-provider.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Acessar o provedor WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md)   
  [Referência técnica &#40;SSRS&#41;](../technical-reference-ssrs.md)  
   
   

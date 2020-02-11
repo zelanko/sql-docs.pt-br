@@ -14,26 +14,26 @@ ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9cb78dae32bb17598ee0e86c26e621be1b6362c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068547"
 ---
 # <a name="administration-program"></a>Programa de administração
 > [!NOTE]  
->  Começando com o Windows XP e Windows Server 2003, ODBC está incluído no sistema operacional Windows. Você deve instalar apenas explicitamente ODBC em versões anteriores do Windows.  
+>  A partir do Windows XP e do Windows Server 2003, o ODBC está incluído no sistema operacional Windows. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
   
- Um programa de administração, o administrador de ODBC é incluído com o SDK do MDAC/SDK do Windows. Esse programa e pode ser redistribuído por usuários do SDK. Além disso, os desenvolvedores podem escrever seus próprios programas de administração. Em geral, os desenvolvedores escrevem seus próprios programas de administração somente se eles desejam manter o controle completo sobre a configuração de fonte de dados, ou se estiver configurando a fontes de dados diretamente de um aplicativo que está atuando como um programa de administração. Por exemplo, um programa de planilha pode permitir aos usuários adicionar e, em seguida, usar fontes de dados em tempo de execução.  
+ Um programa de administração, o Administrador ODBC, está incluído no SDK do SDK do Windows/MDAC. Este programa e pode ser redistribuído por usuários do SDK. Além disso, os desenvolvedores podem escrever seus próprios programas de administração. Em geral, os desenvolvedores escrevem seus próprios programas de administração apenas se desejarem manter o controle completo sobre a configuração da fonte de dados ou se estiverem Configurando fontes de dados diretamente de um aplicativo que esteja agindo como um programa de administração. Por exemplo, um programa de planilha pode permitir que os usuários adicionem e, em seguida, usem fontes de dados em tempo de execução.  
   
- O programa de administração pela primeira vez carrega a DLL do instalador. Depois, ele chama funções no instalador do DLL para executar as seguintes tarefas:  
+ O programa de administração primeiro carrega a DLL do instalador. Em seguida, ele chama funções na DLL do instalador para executar as seguintes tarefas:  
   
--   **Adicionar, modificar ou excluir fontes de dados interativamente.** O programa de administração pode chamar **SQLManageDataSources**, **SQLCreateDataSource**, ou **SQLConfigDataSource**.  
+-   **Adicionar, modificar ou excluir fontes de dados interativamente.** O programa de administração pode chamar **SQLManageDataSources**, **SQLCreateDataSource**ou **SQLConfigDataSource**.  
   
-     **SQLManageDataSources** exibe uma caixa de diálogo com a qual o usuário pode adicionar, modificar, ou excluir fontes de dados e especifique as opções de rastreamento; essa função é chamada quando a DLL do instalador é invocado diretamente do painel de controle. **SQLCreateDataSource** exibe uma caixa de diálogo com a qual o usuário só pode adicionar fontes de dados. **SQLConfigDataSource** passará a chamada diretamente para a DLL de instalação do driver.  
+     **SQLManageDataSources** exibe uma caixa de diálogo com a qual o usuário pode adicionar, modificar ou excluir fontes de dados e especificar opções de rastreamento; Essa função é chamada quando a DLL do instalador é invocada diretamente do painel de controle. **SQLCreateDataSource** exibe uma caixa de diálogo com a qual o usuário só pode adicionar fontes de dados. **SQLConfigDataSource** passa a chamada diretamente para a DLL de instalação do driver.  
   
-     Em todos os casos, chama a DLL do instalador **ConfigDSN** na configuração do driver DLL, na verdade, adicionar, modificar ou excluir a fonte de dados. A DLL de instalação do driver pode solicitar que o usuário para obter informações adicionais.  
+     Em todos os casos, a DLL do instalador chama **ConfigDSN** na DLL de instalação do driver para, na verdade, adicionar, modificar ou excluir a fonte de dados. A DLL de instalação do driver pode solicitar informações adicionais ao usuário.  
   
--   **Adicionar, modificar ou excluir fontes de dados silenciosamente.** As chamadas do programa de administração **SQLConfigDataSource** na DLL do instalador e passa-la uma janela nula manipular, o nome de uma fonte de dados para adicionar, modificar ou excluir e uma lista de valores para o registro. As chamadas DLL do instalador **ConfigDSN** na configuração do driver DLL, na verdade, adicionar, modificar ou excluir a fonte de dados.  
+-   **Adicionar, modificar ou excluir fontes de dados silenciosamente.** O programa de administração chama **SQLConfigDataSource** na DLL do instalador e passa a ele um identificador de janela nulo, o nome de uma fonte de dados para adicionar, modificar ou excluir e uma lista de valores para o registro. A DLL do instalador chama **ConfigDSN** na DLL de instalação do driver para, na verdade, adicionar, modificar ou excluir a fonte de dados.  
   
--   **Adicionar, modificar ou excluir uma fonte de dados padrão.** A fonte de dados padrão é o mesmo que qualquer outra fonte de dados, exceto que seu nome é o padrão. Ele é adicionado, modificado ou excluído da mesma forma como qualquer outra fonte de dados.
+-   **Adicionar, modificar ou excluir uma fonte de dados padrão.** A fonte de dados padrão é igual a qualquer outra fonte de dados, exceto que seu nome é padrão. Ela é adicionada, modificada ou excluída da mesma maneira que qualquer outra fonte de dados.

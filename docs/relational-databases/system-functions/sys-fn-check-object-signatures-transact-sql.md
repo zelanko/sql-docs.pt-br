@@ -21,19 +21,19 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046314"
 ---
-# <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
+# <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Retorna uma lista de todos os objetos assináveis e indica se um objeto foi assinado por um determinado certificado ou chave assimétrica. Se o objeto foi assinado pelo certificado ou pela chave assimétrica especificada, também indicará se a assinatura do objeto é válida.  
   
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,30 +45,30 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- {'\@*classe*'}  
+ {'\@*Class*'}  
  Identifica o tipo da impressão digital fornecida:  
   
 -   'certificado'  
   
 -   'chave assimétrica'  
   
- \@*classe* está **sysname**.  
+ \@a *classe* é **sysname**.  
   
- { \@ *impressão digital* }  
- O hash SHA-1 do certificado com o qual a chave é criptografada, ou o GUID da chave assimétrica com a qual a chave é criptografada. \@*impressão digital* está **varbinary(20)** .  
+ { \@ *Thumbprint* }  
+ O hash SHA-1 do certificado com o qual a chave é criptografada, ou o GUID da chave assimétrica com a qual a chave é criptografada. \@a *impressão digital* é **varbinary (20)**.  
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
  A tabela a seguir lista as colunas que **fn_check_object_signatures** retorna.  
   
-|coluna|type|Descrição|  
+|Coluna|Type|DESCRIÇÃO|  
 |------------|----------|-----------------|  
-|type|**nvarchar(120)**|Retorna a descrição do tipo ou o assembly.|  
+|type|**nvarchar (120)**|Retorna a descrição do tipo ou o assembly.|  
 |entity_id|**int**|Retorna a id de objeto do objeto que está sendo avaliado.|  
 |is_signed|**int**|Retorna 0 quando o objeto não foi assinado pela impressão digital fornecida. Retorna 1 quando o objeto foi assinado pela impressão digital fornecida.|  
-|is_signature_valid|**int**|Quando o valor de is_signed é 1, retorna 0 quando a assinatura não é válida. Retorna 1 quando a assinatura é válida.<br /><br /> Quando o valor de is_signed é 0, sempre retorna 0.|  
+|is_signature_valid|**int**|Quando o valor is_signed é 1, retorna 0 quando a assinatura não é válida. Retorna 1 quando a assinatura é válida.<br /><br /> Quando o valor is_signed é 0, sempre retorna 0.|  
   
 ## <a name="remarks"></a>Comentários  
- Use **fn_check_object_signatures** para confirmar que usuários mal-intencionados não alterados com objetos.  
+ Use **fn_check_object_signatures** para confirmar que usuários mal-intencionados não violaram objetos.  
   
 ## <a name="permissions"></a>Permissões  
  Requer VIEW DEFINITION no certificado ou na chave assimétrica.  
@@ -91,7 +91,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

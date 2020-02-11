@@ -1,5 +1,5 @@
 ---
-title: Ajuda do Assistente de relatório | Microsoft Docs
+title: Ajuda do assistente de relatório | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102984"
 ---
 # <a name="report-wizard-help"></a>Ajuda do Assistente de Relatório
   Esta seção fornece Ajuda por meio da tecla F1 para o Assistente de Relatório. O Assistente de Relatório automatiza o processo de criação de relatórios tabulares e de matriz. A tabela a seguir descreve os tópicos dessa seção.  
   
- Para abrir o Assistente de relatório, nos **Project** menu, clique em **Adicionar Novo Item**.  
+ Para abrir o assistente de relatório, no menu **projeto** , clique em **Adicionar novo item**.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -35,11 +35,11 @@ ms.locfileid: "66102984"
   
 -   [Projetar a consulta](../../2014/reporting-services/design-the-query.md)  
   
--   [Construtor de consultas &#40;Assistente de relatório&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
+-   [Construtor de Consultas &#40;assistente de relatório&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
   
 -   [Selecionar o tipo de relatório](../../2014/reporting-services/select-the-report-type.md)  
   
--   [Projetar a tabela &#40;Assistente de relatório&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
+-   [Criar a tabela &#40;assistente de relatório&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
   
 -   [Escolher o layout da tabela](../../2014/reporting-services/choose-the-table-layout.md)  
   

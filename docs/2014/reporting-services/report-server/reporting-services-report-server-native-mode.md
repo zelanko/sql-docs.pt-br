@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3be08f0962b7440d5cd0812ad365a752aa1b89d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103308"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Um servidor de relatório configurado para o modo nativo como um servidor de aplicativo que fornece todos os recursos de processamento e gerenciamento exclusivamente através de componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou o Gerenciador de Relatórios para administrar relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para gerenciar um servidor de relatório em Modo Nativo.  
+ Você pode usar um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou Report Manager para gerenciar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] relatórios. Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para gerenciar um servidor de relatório em Modo Nativo.  
   
  Se o servidor de relatório estiver configurado no modo do SharePoint, será necessário usar as páginas de gerenciamento de conteúdo no site do SharePoint para gerenciar relatórios, fontes de dados compartilhadas e outros itens do servidor de relatório.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "66103308"
   
 -   [Gerenciando conteúdo](#bkmk_managecontent)  
   
--   [Gerenciamento e segurança de um recurso](#bkmk_manageresources)  
+-   [Protegendo e gerenciando um recurso](#bkmk_manageresources)  
   
 -   [Fazendo referência a um recurso de imagem de um relatório](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a> Resumo do modo nativo  
+##  <a name="bkmk_sum"></a>Resumo do modo nativo  
  Uma instalação em modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste em vários recursos do servidor que são necessários administrar e manter. Os recursos de servidor são os seguintes:  
   
 -   O serviço Web Servidor de Relatórios, executado dentro do serviço Servidor de Relatório.  
@@ -55,11 +55,11 @@ ms.locfileid: "66103308"
   
 -   Se você estiver instalando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um controlador de domínio, será necessário ser um administrador de domínio.  
   
-##  <a name="bkmk_managecontent"></a> Gerenciando conteúdo  
+##  <a name="bkmk_managecontent"></a>Gerenciando conteúdo  
  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo refere-se ao gerenciamento de relatórios, modelos, pastas, recursos e fontes de dados compartilhadas. Todos esses itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo.  
   
 > [!NOTE]  
->  O gerenciamento de conteúdo é diferente da administração de servidor de relatório. Para obter mais informações sobre como gerenciar o ambiente no qual um servidor de relatório é executado, consulte [administração (Reporting Services)](reporting-services-report-server-native-mode.md).  
+>  O gerenciamento de conteúdo é diferente da administração de servidor de relatório. Para obter mais informações sobre como gerenciar o ambiente no qual um servidor de relatório é executado, consulte [Administração (Reporting Services)](reporting-services-report-server-native-mode.md).  
   
  O gerenciamento de conteúdo inclui as seguintes tarefas:  
   
@@ -77,11 +77,12 @@ ms.locfileid: "66103308"
   
 -   Equilibrar as demandas de processamento de relatórios feitas pelo servidor agendando o processamento do relatório e especificando quais podem ser executados sob demanda e quais serão carregados a partir do cache.  
   
- Permissão para executar tarefas de gerenciamento é fornecida por duas funções predefinidas: **Administrador do sistema** e **Gerenciador de conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções. Para obter mais informações sobre essas funções predefinidas, consulte [Funções e permissões &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
+ A permissão para executar tarefas de gerenciamento é fornecida por duas funções predefinidas: **Administrador do Sistema** e **Gerenciador de Conteúdo**. O gerenciamento eficaz do conteúdo do servidor de relatório requer que você tenha as duas funções. Para obter mais informações sobre essas funções predefinidas, consulte [Funções e permissões &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
   
- Ferramentas para gerenciar o conteúdo do servidor de relatórios incluem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou Gerenciador de Relatórios. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O Gerenciador de Relatórios é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios.  
+ Ferramentas para gerenciar o conteúdo do servidor de relatórios incluem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou Gerenciador de Relatórios. 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite definir padrões e habilitar recursos. O Gerenciador de Relatórios é usado para conceder acesso a itens e operações do servidor de relatório, exibir e usar relatórios e outros tipos de conteúdo e exibir e usar todos os itens compartilhados e recursos de distribuição de relatórios.  
   
-##  <a name="bkmk_manageresources"></a> Gerenciamento e segurança de um recurso  
+##  <a name="bkmk_manageresources"></a>Protegendo e gerenciando um recurso  
  Um recurso é um item gerenciado armazenado, mas não processado, em um servidor de relatório. Normalmente, um recurso fornece conteúdo externo para usuários de relatórios. Alguns exemplos incluem uma imagem em um arquivo .jpg ou um arquivo HTML que descreve as regras de negócio usadas em um relatório. O arquivo JPG ou HTML é armazenado no servidor de relatórios, mas este passa o arquivo diretamente para o navegador, em vez de processá-lo antes.  
   
  Para adicionar um recurso a um servidor de relatórios, você carrega ou publica um arquivo:  
@@ -97,7 +98,7 @@ ms.locfileid: "66103308"
   
  Recursos existem em relatórios, fontes de dados compartilhadas, agendas compartilhadas e pastas como itens nomeados na hierarquia de pasta do servidor de relatório. É possível procurar, exibir, proteger e definir propriedades em recursos assim como acontece com qualquer outro item armazenado em um servidor de relatório. Para visualizar ou gerenciar um recurso, é necessário ter a tarefa Exibir recursos ou a tarefa Gerenciar recursos na sua atribuição de função.  
   
-##  <a name="bkmk_referenceimage"></a> Fazendo referência a um recurso de imagem de um relatório  
+##  <a name="bkmk_referenceimage"></a>Fazendo referência a um recurso de imagem de um relatório  
  Recursos podem conter uma imagem à qual você faz referência em um relatório. Se as exigências de relatório incluírem o uso de imagens externas, considere as seguintes vantagens de armazenar a imagem como recurso:  
   
 -   Armazenamento centralizado no banco de dados do servidor de relatório. Se você mover o banco de dados do servidor de relatório e seu conteúdo, a imagem externa permanecerá com o relatório. Não é necessário rastrear os arquivos de imagem armazenados em disco em computadores diferentes.  
@@ -106,7 +107,7 @@ ms.locfileid: "66103308"
   
  Para usar um recurso de imagem em um relatório, adicione o arquivo de imagem ao projeto e publique-o juntamente com o relatório. Quando a imagem for publicada, será possível atualizar a referência da imagem no relatório de modo que aponte para o recurso no servidor de relatório. Sendo assim, somente publique novamente o relatório para salvar as alterações. Você poderá atualizar subsequentemente a imagem, independentemente do relatório, republicando o recurso. O relatório usa a versão mais atual da imagem disponível no servidor de relatórios.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Solucionar um problema da instalação do Reporting Services](../install-windows/troubleshoot-a-reporting-services-installation.md)  
   

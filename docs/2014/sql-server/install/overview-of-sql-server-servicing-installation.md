@@ -1,5 +1,5 @@
 ---
-title: Visão geral da instalação de manutenção do SQL Server | Microsoft Docs
+title: Visão geral da instalação do serviço de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,31 +11,32 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8e9532c9d3ecbc32942e6a70d82f5837856a329
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093588"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Visão geral da instalação de manutenção do SQL Server
-  Você pode aplicar uma atualização a qualquer componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalado com uma atualização de manutenção do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Se o nível da versão de um componente existente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for posterior ao da versão de atualização, o programa de Instalação o excluirá da atualização. Para obter mais informações sobre como aplicar uma manutenção de atualização, consulte [instalar o SQL Server 2014 atualizações de serviço](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
+  Você pode aplicar uma atualização a qualquer componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalado com uma atualização de manutenção do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Se o nível da versão de um componente existente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for posterior ao da versão de atualização, o programa de Instalação o excluirá da atualização. Para obter mais informações sobre como aplicar uma atualização de serviço, consulte [instalar SQL Server atualizações de serviço 2014](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
   
  As seguintes considerações se aplicam à instalação de atualizações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
 -   Todos os recursos que pertencem a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser atualizados ao mesmo tempo. Por exemplo, quando atualizar o [!INCLUDE[ssDE](../../includes/ssde-md.md)], você também deverá atualizar os componentes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se eles estiverem instalados como parte da mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recursos compartilhados, como as Ferramentas de Gerenciamento, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], sempre devem ser atualizados para a versão mais recente. Se nenhuma instância ou nenhum componente da árvore de recursos estiver selecionado, ele não será atualizado.  
   
--   Por padrão, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] arquivos de log de atualização são salvos como % arquivos de programas %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\.  
+-   Por padrão, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] os arquivos de log de atualização são salvos em%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]arquivos de\\programas% \120\Setup Bootstrap\Log.  
   
 -   A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agora pode integrar uma atualização à mídia original para executar a mídia original e a atualização ao mesmo tempo. Para obter mais informações, consulte [o que há de novo na instalação do SQL Server](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md).  
   
 -   Antes de aplicar uma atualização de manutenção do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , é recomendável fazer backup dos dados.  
   
--   As atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão disponíveis por meio do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update. É recomendável que você procure atualizações regularmente para manter a sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualizada e segura. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 está sendo fornecido como uma instalação completa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em vez de fornecer o Service Pack no pacote executável do patch padrão a ser aplicado às instâncias do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] RTM, nesta versão é fornecido um pacote de instalação que consiste em 2 arquivos. Quando executado, ele instalará uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o SP1 pré-instalado.  
+-   As atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão disponíveis por meio do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update. É recomendável que você procure atualizações regularmente para manter a sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualizada e segura. 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 está sendo fornecido como uma instalação completa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em vez de fornecer o Service Pack no pacote executável do patch padrão a ser aplicado às instâncias do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] RTM, nesta versão é fornecido um pacote de instalação que consiste em 2 arquivos. Quando executado, ele instalará uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o SP1 pré-instalado.  
   
 ## <a name="requirements-and-known-issues"></a>Requisitos e problemas conhecidos  
  Os requisitos de espaço em disco recomendados são, aproximadamente, 2,5 vezes o tamanho do pacote para instalação, download e extração do pacote. Após instalar um service pack, você pode remover o pacote baixado. Todos os arquivos temporários serão removidos automaticamente.  
   
- **Examine os problemas conhecidos:** Para obter mais informações sobre os problemas conhecidos da versão atual, consulte o tópico notas versão correspondentes aqui: [Notas de versão do SQL Server](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
+ **Examine os problemas conhecidos:** Para obter mais informações sobre os problemas conhecidos da versão atual, consulte o tópico notas de versão correspondentes aqui: [SQL Server notas de versão](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
   
 ## <a name="installation-overview"></a>Visão geral da instalação  
  Esta seção aborda a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para atualizações cumulativas e service packs, inclusive como fazer o seguinte:  
@@ -49,27 +50,27 @@ ms.locfileid: "66093588"
 ### <a name="prepare-for-a-includesscurrentincludessscurrent-mdmd-update-installation"></a>Preparar-se para uma instalação de atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  É altamente recomendável que você faça o seguinte antes de instalar atualizações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] :  
   
--   **Fazer backup de seu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados do sistema** - antes de instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] atualizações, fazer backup de `master`, `msdb`, e `model` bancos de dados. A instalação de uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] altera esses bancos de dados, tornando-os incompatíveis com versões anteriores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Os backups desses bancos de dados serão necessários se você decidir reinstalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sem essas atualizações.  
+-   **Faça backup dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados do sistema** -antes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalar atualizações, faça backup `master`dos `msdb`bancos de `model` dados, e. A instalação de uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] altera esses bancos de dados, tornando-os incompatíveis com versões anteriores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Os backups desses bancos de dados serão necessários se você decidir reinstalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sem essas atualizações.  
   
      Também é recomendável fazer backup dos bancos de dados de usuário.  
   
     > [!IMPORTANT]  
     >  Ao aplicar atualizações a instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que participam de uma topologia de replicação, você deverá fazer backup dos bancos de dados replicados junto com os bancos de dados do sistema antes de aplicar a atualização.  
   
--   **Fazer backup de seu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bancos de dados, arquivo de configuração e repositório** – antes de atualizar uma instância de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você deve fazer backup do seguinte:  
+-   **Fazer backup de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seus bancos de dados, arquivo de configuração e repositório** -antes de atualizar uma instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]do, você deve fazer backup do seguinte:  
   
-    -   Bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por padrão, eles são instalados em C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Data\\. Para a instalação do WOW, o caminho padrão é C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Data\\.  
+    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bancos. Por padrão, eles são instalados em c:\Arquivos de\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]programas \MSAS12. \<InstanceId> \OLAP\Data\\. Para a instalação do Wow, o caminho padrão é C:\programfiles (x86 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) \ \MSAS12. \<InstanceId> \OLAP\Data\\.  
   
-    -   Parâmetro de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no arquivo de configuração msmdsrv.ini. Por padrão, ele fica localizado em C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Config\ directory.  
+    -   Parâmetro de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no arquivo de configuração msmdsrv.ini. Por padrão, isso está localizado na pasta C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12. \<InstanceId> o diretório \olap\config\.  
   
     -   (Opcional) O banco de dados que contém o repositório do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esta etapa será necessária somente se o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiver sido configurado para funcionar com a biblioteca de DSO (Decision Support Objects).  
   
     > [!NOTE]  
     >  Se não for feito o backup dos bancos de dados, do arquivo de configuração e do repositório do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , você não poderá reverter uma instância atualizada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para a versão anterior.  
   
--   **Verifique se os bancos de dados do sistema têm espaço livre suficiente** - se a opção de crescimento automático não estiver selecionada para o `master` e `msdb` bancos de dados do sistema, esses bancos de dados devem ter pelo menos 500 KB de espaço livre. Para verificar se os bancos de dados têm espaço suficiente, execute o procedimento armazenado do sistema `sp_spaceused` nos bancos de dados `master` e `msdb`. Se o espaço não alocado de um deles for inferior a 500 KB, aumente o tamanho do banco de dados.  
+-   **Verifique se os bancos de dados do sistema têm espaço livre suficiente** – se a opção de crescimento automático não estiver selecionada `master` para `msdb` os bancos de dados do e do sistema, esses bancos de dados deverão ter pelo menos 500 KB de espaço livre. Para verificar se os bancos de dados têm espaço suficiente, execute o procedimento armazenado do sistema `sp_spaceused` nos bancos de dados `master` e `msdb`. Se o espaço não alocado de um deles for inferior a 500 KB, aumente o tamanho do banco de dados.  
   
--   **Interromper serviços e aplicativos** - para evitar uma possível reinicialização do sistema, pare todos os aplicativos e serviços que estabelecem conexões com instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão sendo atualizadas, antes de instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] atualizações. Isso inclui o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter mais informações, consulte [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+-   **Parar serviços e aplicativos** -para evitar uma possível reinicialização do sistema, interrompa todos os aplicativos e serviços que fazem conexões com as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instâncias do que estão sendo atualizadas [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , antes de instalar as atualizações. Isso inclui o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter mais informações, consulte [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
     > [!NOTE]  
     >  Você não pode interromper serviços em um ambiente de cluster de failover. Para obter mais informações, consulte a seção de instalação de cluster de failover mais adiante neste tópico.  
@@ -87,19 +88,19 @@ ms.locfileid: "66093588"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>Iniciando uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Para instalar uma atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , execute o arquivo de pacote autoextraível.  
   
- Pacote de atualização cumulativa (CU): \<SQLServer2014>-KBxxxxxx-*PPP*.exe  
+ Pacote de atualização cumulativa (CU) \<: SQLServer2014>-KBxxxxxx-*PPP*. exe  
   
- Pacote de service pack (PCU): \<SQLServer2014>\<SPx> -KBxxxxxx-PPP-LLL.exe  
+ Pacote do Service Pack (PCU) \<: SQLServer2014 \<>SPX>-KBxxxxxx-PPP-LLL. exe  
   
 -   x indica o número do service pack  
   
 -   PPP indica a plataforma específica.  
   
--   LLL indica a abreviação de caracteres para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] idioma, por exemplo: LLL do inglês é ENU.  
+-   LLL indica a abreviação de caracteres do idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , por exemplo: o LLL do inglês é ENU.  
   
- Para aplicar as atualizações aos componentes do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que fazem parte de um cluster de failover, consulte a seção sobre a instalação de cluster de failover. Para obter mais informações sobre como executar uma instalação de atualização no modo autônomo, consulte [instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ Para aplicar as atualizações aos componentes do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que fazem parte de um cluster de failover, consulte a seção sobre a instalação de cluster de failover. Para obter mais informações sobre como executar uma instalação de atualização no modo autônomo, consulte [instalar SQL Server 2014 no prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
-####  <a name="Slipstream"></a> Atualizações de produto no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalação  
+####  <a name="Slipstream"></a>Atualizações de produto [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] na instalação  
  A Atualização de Produto é um recurso na Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Ela integra as últimas atualizações de produto com a instalação principal, para que o produto principal e suas atualizações aplicáveis sejam instalados ao mesmo tempo. A Atualização de Produto pode procurar as atualizações aplicáveis no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, no WSUS (Windows Server Update Services), em uma pasta local ou em um compartilhamento de rede.  Depois que a Instalação localizar as versões mais recentes das atualizações aplicáveis, ela baixará e integrará essas atualizações com o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual. A Atualização de Produto pode efetuar pull de uma atualização cumulativa, service pack ou service pack mais atualização cumulativa. A funcionalidade da Atualização de Produto é uma extensão da funcionalidade Instalação Integrada que estava disponível no PCU1 do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="updating-a-prepared-image-of-includessnoversionincludesssnoversion-mdmd"></a>Atualizando uma imagem preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
@@ -141,10 +142,10 @@ ms.locfileid: "66093588"
   
 -   Para cada instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] com a Atualização Cumulativa 1, o SP1 e a Atualização Cumulativa 2 instalados, desinstale a Atualização Cumulativa 2 primeiro e, em seguida, o SP1.  
   
-## <a name="see-also"></a>Consulte também  
- [Instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Instalar o SQL Server 2014 no prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Instalar atualizações de serviço do SQL Server 2014](../../database-engine/install-windows/install-sql-server-servicing-updates.md)   
- [Validar uma instalação do SQL Server](../../database-engine/install-windows/validate-a-sql-server-installation.md)   
+ [Validar uma instalação de SQL Server](../../database-engine/install-windows/validate-a-sql-server-installation.md)   
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

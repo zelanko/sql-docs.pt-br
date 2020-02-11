@@ -1,5 +1,5 @@
 ---
-title: Avisar o usuário para obter informações de Conexão | Microsoft Docs
+title: Solicitando informações de conexão ao usuário | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,31 +21,31 @@ ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dfc63aaa6f162d382d6d8b3c627ff078c76825c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079060"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Solicitar o usuário para informações de conexão
-Se o aplicativo usa **SQLConnect** e precisa solicitar ao usuário as informações de conexão, como um nome de usuário e senha, deverá fazê-lo em si. Enquanto isso permite que o aplicativo controlar seu "aparência", isso poderá forçar o aplicativo contenha código específico do driver. Isso ocorre quando o aplicativo precisa solicitar ao usuário informações de conexão específicas do driver. Isso apresenta uma situação impossível para aplicativos genéricos, que são projetados para funcionar com todos os drivers, incluindo drivers que não existem quando o aplicativo é escrito.  
+Se o aplicativo usar o **SQLConnect** e precisar solicitar informações de conexão ao usuário, como um nome de usuário e senha, ele deverá fazer isso por conta própria. Embora isso permita que o aplicativo controle sua "aparência", ele pode forçar o aplicativo a conter código específico do driver. Isso ocorre quando o aplicativo precisa solicitar informações de conexão específicas do driver ao usuário. Isso apresenta uma situação impossível para aplicativos genéricos, que são projetados para trabalhar com qualquer e todos os drivers, incluindo drivers que não existem quando o aplicativo é gravado.  
   
- **SQLDriverConnect** pode avisar o usuário para obter informações de conexão. Por exemplo, o programa personalizado, mencionado anteriormente poderia passar a seguinte cadeia de conexão para **SQLDriverConnect**:  
+ **SQLDriverConnect** pode solicitar informações de conexão ao usuário. Por exemplo, o programa personalizado mencionado anteriormente poderia passar a seguinte cadeia de conexão para **SQLDriverConnect**:  
   
 ```  
 DSN=XYZ Corp;  
 ```  
   
- O driver, em seguida, pode exibir uma caixa de diálogo que solicita IDs de usuário e senhas, semelhantes à ilustração a seguir.  
+ O driver pode exibir uma caixa de diálogo solicitando IDs de usuário e senhas, semelhante à ilustração a seguir.  
   
- ![Caixa de diálogo que solicita IDs de usuário e senhas](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
+ ![Caixa de diálogo que solicita IDs e senhas do usuário](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
   
- Se o driver pode solicitar informações de conexão é particularmente útil para aplicativos genéricos e verticais. Esses aplicativos não devem conter informações específicas de driver e ter o prompt de driver para as informações necessárias mantém essas informações fora do aplicativo. Isso é mostrado por dois exemplos anteriores. Quando o aplicativo passou apenas o nome da fonte de dados para o driver, o aplicativo não contém quaisquer informações específicas de driver e, portanto, não associado a um driver específico. Quando o aplicativo passou uma cadeia de caracteres de conexão completa para o driver, ele foi vinculado ao driver que poderia interpretar essa cadeia de caracteres.  
+ O driver pode solicitar informações de conexão é particularmente útil para aplicativos genéricos e verticais. Esses aplicativos não devem conter informações específicas do driver e ter o prompt do driver para as informações necessárias mantém essas informações fora do aplicativo. Isso é mostrado pelos dois exemplos anteriores. Quando o aplicativo passasse apenas o nome da fonte de dados para o driver, o aplicativo não continha nenhuma informação específica do driver e, portanto, não estava vinculado a um driver específico. Quando o aplicativo passa uma cadeia de conexão completa para o driver, ele estava vinculado ao driver que poderia interpretar essa cadeia de caracteres.  
   
- Um aplicativo genérico pode levar isso um passo além e nem mesmo especificar uma fonte de dados. Quando **SQLDriverConnect** recebe uma cadeia de caracteres de conexão vazia, o Gerenciador de Driver exibe a caixa de diálogo a seguir.  
+ Um aplicativo genérico pode levar isso um pouco além e nem mesmo especificar uma fonte de dados. Quando **SQLDriverConnect** recebe uma cadeia de conexão vazia, o Gerenciador de driver exibe a caixa de diálogo a seguir.  
   
- ![Marque a caixa de diálogo fonte de dados](../../../odbc/reference/develop-app/media/ch06a.gif "CH06A")  
+ ![Caixa de diálogo Selecionar Fonte de Dados](../../../odbc/reference/develop-app/media/ch06a.gif "CH06A")  
   
- Depois que o usuário seleciona uma fonte de dados, o Gerenciador de Driver constrói uma cadeia de caracteres de conexão especificando essa fonte de dados e o passa para o driver. O driver, em seguida, pode avisar o usuário para todas as informações adicionais necessárias.  
+ Depois que o usuário seleciona uma fonte de dados, o Gerenciador de driver constrói uma cadeia de conexão especificando essa fonte de dados e a passa para o driver. O driver pode solicitar ao usuário as informações adicionais necessárias.  
   
- As condições sob as quais o driver solicita ao usuário que são controladas pelo *DriverCompletion* sinalizador; há opções para sempre solicitar, solicitará que, se necessário ou para nunca solicitar. Para obter uma descrição completa desse sinalizador, consulte o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrição da função.
+ As condições sob as quais o driver solicita o usuário são controladas pelo sinalizador *DriverCompletion* ; Há opções para sempre solicitar, avisar se necessário ou nunca avisar. Para obter uma descrição completa desse sinalizador, consulte a descrição da função [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) .

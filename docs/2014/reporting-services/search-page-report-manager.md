@@ -1,5 +1,5 @@
 ---
-title: Procurar página (Gerenciador de relatórios) | Microsoft Docs
+title: Página de pesquisa (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102257"
 ---
 # <a name="search-page-report-manager"></a>Página Pesquisa (Gerenciador de Relatórios)
@@ -31,7 +31,7 @@ ms.locfileid: "66102257"
   
 1.  Abra o Gerenciador de Relatórios.  
   
-2.  Na parte superior da página, digite os critérios de pesquisa na caixa **Pesquisar** . Em seguida, pressione Enter ou clique na seta Pesquisar.  
+2.  Na parte superior da página, digite os critérios de pesquisa na caixa **Pesquisar**. Em seguida, pressione Enter ou clique na seta Pesquisar.  
   
 ## <a name="options"></a>Opções  
  **Delete (excluir)**  
@@ -40,20 +40,20 @@ ms.locfileid: "66102257"
 > [!NOTE]  
 >  Este botão só está disponível em **Exibição de Detalhes**. Porém, você pode focalizar um item e usar o menu para acessar a funcionalidade de exclusão em **Exibição de Detalhes** ou em **Exibição de Lista**.  
   
- **Migrar**  
+ **Mover**  
  Clique para realocar um item. Isso abre a página Mover Itens, onde você pode selecionar um local de pasta diferente.  
   
 > [!NOTE]  
 >  Este botão só está disponível em **Exibição de Detalhes**. Porém, você pode focalizar um item e usar o menu para acessar a funcionalidade de movimentação em **Exibição de Detalhes** ou em **Exibição de Lista**.  
   
- Caixa Pesquisar  
+ Caixa de pesquisa  
  Digite todo ou parte do nome de um item que você deseja localizar e clique em **Ir** para iniciar a pesquisa. A cadeia de caracteres mais longa que você pode pesquisar é de 128 caracteres.  
   
  Nomes de itens ou descrições que contêm toda a cadeia de caracteres da pesquisa em qualquer lugar do valor de texto serão incluídos nos resultados da pesquisa.  
   
  Os operadores boolianos como o caractere de adição (+) não têm suporte.  
   
- **Exibição de detalhes**  
+ **Exibição de Detalhes**  
  Clique para exibir a página Resultados da Pesquisa em uma lista que contém informações adicionais sobre os itens, como o tipo de item, o nome, a descrição, a pasta na qual o item está localizado e quando ele foi executado pela última vez. Em **Exibição de Detalhes**, é possível usar os botões **Excluir** e **Mover** para remover e realocar itens na pasta.  
   
  Focalize um item e clique na seta do menu suspenso para abri-lo e acessar e configurar as propriedades do item selecionado.  
@@ -63,7 +63,7 @@ ms.locfileid: "66102257"
   
  Focalize um item e clique na seta do menu suspenso para abri-lo e acessar e configurar as propriedades do item selecionado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   

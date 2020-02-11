@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101006"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint
@@ -30,11 +30,11 @@ ms.locfileid: "66101006"
   
  Ao criar uma assinatura, há três modos para especificar sua entrega:  
   
--   **Biblioteca de documentos**: Você pode criar uma assinatura que entregue um documento baseado no relatório original para uma biblioteca no mesmo site do SharePoint que o relatório original. Não é possível entregar o documento para uma biblioteca em outro servidor ou outro site na mesma coleção de sites. Para entregar o documento, você deve ter a permissão Adicionar Itens na biblioteca na qual o relatório será entregue.  
+-   **Biblioteca de documentos**: você pode criar uma assinatura que entregue um documento baseado no relatório original para uma biblioteca no mesmo site do SharePoint que o relatório original. Não é possível entregar o documento para uma biblioteca em outro servidor ou outro site na mesma coleção de sites. Para entregar o documento, você deve ter a permissão Adicionar Itens na biblioteca na qual o relatório será entregue.  
   
--   **Pasta de arquivos:** Você pode entregar um documento baseado no relatório original para uma pasta compartilhada no sistema de arquivos. Você deve selecionar uma pasta existente que possa ser acessada por uma conexão de rede.  
+-   **Pasta de arquivos:** você pode entregar um documento baseado no relatório original para uma pasta compartilhada no sistema de arquivos. Você deve selecionar uma pasta existente que possa ser acessada por uma conexão de rede.  
   
--   **E-mail:** Se o servidor de relatório estiver configurado para usar a extensão de entrega de email do servidor de relatório, você pode criar uma assinatura que envia um relatório ou um arquivo de relatório exportado (salvo em um formato de saída) para sua caixa de entrada. Para receber apenas a notificação sem o relatório ou a URL do mesmo, desmarque as caixas de seleção **Incluir um link no relatório** e **Mostrar relatório dentro da mensagem** .  
+-   **Email:** se o servidor de relatório estiver configurado para usar a extensão de entrega de Email do Servidor de Relatório, você poderá criar uma assinatura que envia um relatório ou um arquivo de relatório exportado (salvo em um formato de saída) para sua caixa de entrada. Para receber apenas a notificação sem o relatório ou a URL do mesmo, desmarque as caixas de seleção **Incluir um link no relatório** e **Mostrar relatório dentro da mensagem** .  
   
  **Neste tópico:**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66101006"
   
 2.  Clique na seta para baixo ao lado do relatório e, sem seguida, selecione **Gerenciar Assinaturas**.  
   
-3.  Clique em **Adicionar Assinatura**.  
+3.  Clique em **Adicionar assinatura**.  
   
 4.  Em **Extensão de Entrega**, selecione **Bibliotecas de Documentos SharePoint**.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66101006"
   
 2.  Clique na seta para baixo ao lado do relatório e, sem seguida, selecione **Gerenciar Assinaturas**.  
   
-3.  Clique em **Adicionar Assinatura**.  
+3.  Clique em **Adicionar assinatura**.  
   
 4.  Em **Extensão de Entrega**, selecione **Compartilhamento de Arquivos do Windows**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66101006"
   
 2.  Clique na seta para baixo ao lado do relatório e, sem seguida, selecione **Gerenciar Assinaturas**.  
   
-3.  Clique em **Adicionar Assinatura**.  
+3.  Clique em **Adicionar assinatura**.  
   
 4.  Em **Extensão de Entrega**, selecione **Email**.  
   
@@ -156,11 +156,11 @@ ms.locfileid: "66101006"
   
 3.  Clique na caixa de seleção próxima à assinatura e clique em **Excluir**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Entrega de email no Reporting Services](e-mail-delivery-in-reporting-services.md)   
  [Entrega de compartilhamento de arquivos no Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Entrega da biblioteca do SharePoint no Reporting Services](sharepoint-library-delivery-in-reporting-services.md)   
- [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

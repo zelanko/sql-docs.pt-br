@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098897"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
@@ -26,16 +26,16 @@ ms.locfileid: "66098897"
   
  Em uma etapa, você comete um erro de propósito, para poder ver o porquê do erro. Em seguida, você corrige o erro para obter o efeito desejado.  
   
- Uma versão aprimorada do relatório criado por você neste tutorial está disponível como um relatório de exemplo do Construtor de Relatórios da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [relatórios de exemplo do construtor de relatórios](https://go.microsoft.com/fwlink/?LinkId=184851).  
+ Uma versão aprimorada do relatório criado por você neste tutorial está disponível como um relatório de exemplo do Construtor de Relatórios da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter mais informações sobre como baixar este relatório de exemplo e outros, consulte [Construtor de relatórios relatórios de exemplo](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
-##  <a name="BackToTop"></a> O que você aprenderá  
+##  <a name="BackToTop"></a>O que você aprenderá  
   
 ### <a name="set-up-the-report"></a>Configurar o relatório  
- 1. [Criar um relatório em branco com um dado de origem e o conjunto de dados](#CreateReport)  
+ 1. [Criar um relatório em branco com uma fonte de dados e um conjunto de dados](#CreateReport)  
   
- 2. [Adicionar um campo à superfície de Design do relatório (incorretamente, em seguida, corretamente)](#AddField)  
+ 2. [Adicionar um campo à superfície de design do relatório (incorretamente e, em seguida, corretamente)](#AddField)  
   
- 3. [Adicionar uma tabela para a superfície de Design de relatório](#AddTable)  
+ 3. [Adicionar uma tabela ao Design Surface do relatório](#AddTable)  
   
 ### <a name="pick-and-choose"></a>Escolher e selecionar  
  [Adicionar um hiperlink ao relatório](#AddHyperlink)  
@@ -53,11 +53,11 @@ ms.locfileid: "66098897"
 ## <a name="requirements"></a>Requisitos  
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateReport"></a> Criar um relatório em branco com um dado de origem e o conjunto de dados  
+##  <a name="CreateReport"></a>Criar um relatório em branco com uma fonte de dados e um conjunto de dados  
   
 #### <a name="to-create-a-blank-report"></a>Para criar um relatório em branco  
   
-1.  Clique em **inicie**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **construtor de relatórios**e, em seguida, clique em **construtor de relatórios**.  
+1.  Clique **em Iniciar**, aponte para **programas**, aponte [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]para **Construtor de relatórios**e, em seguida, clique em **Construtor de relatórios**.  
   
     > [!NOTE]  
     >  A caixa de diálogo **Guia de Introdução** deve ser exibida. Se ela não for exibida, usando o botão do Construtor de Relatórios, clique em **Novo**.  
@@ -68,30 +68,30 @@ ms.locfileid: "66098897"
   
 #### <a name="to-create-a-data-source"></a>Para criar uma fonte de dados  
   
-1.  No painel de dados do relatório, clique em **Nova**e em **Fonte de Dados**.  
+1.  No painel dados do relatório, clique em **novo**e em **fonte de dados**.  
   
-2.  Na caixa **Nome**, digite: **TextDataSource**  
+2.  Na caixa **Nome** , digite: **TextDataSource**  
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
-4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão** , digite: **Fonte de Dados = \<nomedoservidor>**  
+4.  Verifique se o tipo de conexão é Microsoft SQL Server e, em seguida, na caixa **Cadeia de conexão**, digite: **Fonte de Dados = \<servername>**  
   
     > [!NOTE]  
-    >  A expressão \<servername >, por exemplo, Report001, especifica um computador no qual uma instância do mecanismo de banco de dados do SQL Server está instalada. Este tutorial não precisa de dados específicos; ele só precisa de uma conexão com um banco de dados [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para o próximo procedimento, “Para criar uma fonte de dados”. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    >  A expressão \<servername>, por exemplo, Report001, especifica um computador no qual uma instância do SQL Server mecanismo de banco de dados está instalada. Este tutorial não precisa de dados específicos; ele só precisa de uma conexão com um banco de dados [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para o próximo procedimento, “Para criar uma fonte de dados”. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### <a name="to-create-a-dataset"></a>Para criar um conjunto de dados  
   
-1.  No painel de dados do relatório, clique em **Novo**e em **Conjunto de Dados**.  
+1.  No painel dados do relatório, clique em **novo**e, em seguida, clique em **DataSet**.  
   
 2.  Verifique se a fonte de dados é **TextDataSource**.  
   
-3.  Na caixa **Nome**, digite: **TextDataset.**  
+3.  Na caixa **Nome** , digite: **TextDataset.**  
   
 4.  Verifique se o tipo de consulta **Texto** está selecionado e, em seguida, clique em **Designer de Consulta**.  
   
-5.  Clique em **Editar como Texto**.  
+5.  Clique em **Editar como texto**.  
   
 6.  Cole a seguinte consulta no painel de consulta:  
   
@@ -128,28 +128,28 @@ ms.locfileid: "66098897"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Clique em Executar ( **!** ) para executar a consulta.  
+7.  Clique em Executar (**!**) para executar a consulta.  
   
      Os resultados da consulta são os dados disponíveis a serem exibidos no relatório.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="AddField"></a> Adicionar um campo à superfície de Design do relatório  
+##  <a name="AddField"></a>Adicionar um campo ao Design Surface do relatório  
  Se você quiser que um campo do conjunto de dados seja exibido em um relatório, seu primeiro impulso poderá ser de arrastá-lo diretamente para a superfície de design. Este exercício aponta por que isso não funciona e o que fazer em vez disso.  
   
 #### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Para adicionar um campo ao relatório (e obter o resultado errado)  
   
 1.  Arraste o campo **FullName** do painel Dados do Relatório até a superfície de design.  
   
-     Construtor de relatórios cria uma caixa de texto com uma expressão, representada como \<Expr >.  
+     Construtor de Relatórios cria uma caixa de texto com uma expressão, representada como \<expr>.  
   
 2.  Clique em **Executar**.  
   
-     Observe que há apenas um registro, **Fernando Ross**, em ordem alfabética, que é o primeiro registro na consulta. O campo não se repete para mostrar os outros registros nesse campo.  
+     Observe que há apenas um registro, **Fernando Ross**, que é, em ordem alfabética, o primeiro registro na consulta. O campo não se repete para mostrar os outros registros nesse campo.  
   
 3.  Clique em **Design** para retornar à exibição de design.  
   
-4.  Selecione a expressão \<Expr > na caixa de texto.  
+4.  Selecione o> \<de expr de expressão na caixa de texto.  
   
 5.  No painel Propriedades, na propriedade **Valor** , você vê o seguinte (se o painel Propriedades não estiver visível, na guia **Exibir** , marque **Propriedades**):  
   
@@ -189,38 +189,38 @@ ms.locfileid: "66098897"
   
 7.  Selecione a caixa de listagem e pressione a tecla DEL.  
   
-##  <a name="AddTable"></a> Adicionar uma tabela para a superfície de Design de relatório  
- Crie essa tabela para que você tenha um local para colocar os hiperlinks e o texto girado.  
+##  <a name="AddTable"></a>Adicionar uma tabela ao Design Surface do relatório  
+ Crie essa tabela para que você tenha um lugar para colocar hiperlinks e texto girado.  
   
 #### <a name="to-add-a-table-to-the-report"></a>Para adicionar uma tabela ao relatório  
   
-1.  Sobre o **inserir** menu, clique em **tabela**e, em seguida, clique em **Assistente de tabela**.  
+1.  No menu **Inserir** , clique em **tabela**e, em seguida, clique em **Assistente de tabela**.  
   
-2.  Sobre o **escolher um conjunto de dados** página do Assistente de nova tabela ou matriz, clique em **escolha um conjunto de dados existente neste relatório ou um conjunto de dados compartilhado**e clique em **TextDataset (neste relatório)** e, em seguida, clique em **próxima**.  
+2.  Na página **escolher um conjunto** de dados do assistente de nova tabela ou matriz, clique em **escolher um conjunto de dados existente neste relatório ou em um conjunto**de dados compartilhado e clique em **TextDataset (neste relatório)** e, em seguida, clique em **Avançar**.  
   
-3.  Sobre o **organizar campos** página, arraste o **território**, **LinkText**, e **produto** campos para **degruposdelinhas**, arraste a **Sales** campo **valores**e, em seguida, clique em **próximo**.  
+3.  Na página **organizar campos** , arraste os campos **território**, **linkText**e **produto** para grupos de **linhas**, arraste o campo **vendas** para **valores**e clique em **Avançar**.  
   
-4.  Sobre o **escolher o layout** página, desmarque a **expandir/recolher grupos** caixa de seleção para que você pode ver toda a tabela e, em seguida, clique em **próxima**.  
+4.  Na página **escolher o layout** , desmarque a caixa de seleção **expandir/recolher grupos** para que você possa ver a tabela inteira e, em seguida, clique em **Avançar**.  
   
-5.  Sobre o **escolha um estilo** , clique em **Slate**e, em seguida, clique em **concluir**.  
+5.  Na página **escolher um estilo** , clique em **Tablet**e em **concluir**.  
   
 6.  Arraste a tabela para que ela esteja abaixo do bloco de título.  
   
 7.  Clique em **Executar**.  
   
-     A tabela parece correta, mas tem duas linhas totais. O **LinkText** campo não precisa de uma linha de Total.  
+     A tabela parece correta, mas tem duas linhas totais. O campo **linkText** não precisa de uma linha total.  
   
 8.  Clique em **Design** para retornar à exibição de design.  
   
-9. Clique na caixa de texto que contém `[LinkText]`e clique em **dividir células**.  
+9. Clique com o botão direito do mouse na `[LinkText]`caixa de texto que contém e clique em **dividir células**.  
   
-10. Selecione a célula vazia abaixo a `[LinkText]` de célula e, em seguida, mantenha pressionada a tecla SHIFT e selecione as duas células à direita: a **Total** célula a **produto** coluna e o `[Sum(Sales)]` célula em que o  **Vendas** coluna.  
+10. Selecione a célula vazia abaixo da `[LinkText]` célula e mantenha pressionada a tecla Shift e selecione as duas células à direita: a célula **total** na coluna **Product** e a `[Sum(Sales)]` célula na coluna **Sales** .  
   
-11. Com essas três células selecionadas, clique em um às células e clique em **Excluir linha**.  
+11. Com essas três células selecionadas, clique com o botão direito do mouse em uma dessas células e clique em **Excluir linha**.  
   
 12. Clique em **Executar**.  
   
-##  <a name="AddHyperlink"></a> Adicionar um hiperlink ao relatório  
+##  <a name="AddHyperlink"></a>Adicionar um hiperlink ao relatório  
  Nesta seção, você adiciona um hiperlink ao texto na tabela da seção anterior.  
   
 #### <a name="to-add-a-hyperlink-to-the-report"></a>Para adicionar um hiperlink ao relatório  
@@ -229,17 +229,17 @@ ms.locfileid: "66098897"
   
 2.  Clique com o botão direito do mouse na célula que contém `[LinkText]`e clique em **Propriedades da Caixa de Texto**.  
   
-3.  No **propriedades da caixa de texto** , clique em **ação**.  
+3.  Na caixa **Propriedades da caixa de texto** , clique em **ação**.  
   
 4.  Clique em **ir para URL**.  
   
-5.  No **Selecionar URL** , clique em **[URL]** e, em seguida, clique em **Okey**.  
+5.  Na caixa **selecionar URL** , clique em **[url]** e, em seguida, clique em **OK**.  
   
 6.  Observe que o texto não parece diferente. Você precisa fazê-lo parecer um texto de link.  
   
 7.  Selecione `[LinkText]`.  
   
-8.  No **fonte** seção o **Home** , clique no **sublinhado** botão e, em seguida, clique na seta suspensa ao lado a **cor** botão, e clique em **azul**.  
+8.  Na seção **fonte** da guia **início** , clique no botão **sublinhado** e, em seguida, clique na seta suspensa ao lado do botão **cor** e clique em **azul**.  
   
 9. Clique em **Executar**.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "66098897"
   
 10. Clique em um link. Se o computador estiver conectado à Internet, um navegador abrirá um tópico da Ajuda do Construtor de Relatórios.  
   
-##  <a name="RotateText"></a> Girar texto no relatório  
+##  <a name="RotateText"></a>Girar texto no relatório  
  Nesta seção, você gira um texto na tabela das seções anteriores.  
   
 #### <a name="to-rotate-text"></a>Para girar texto  
@@ -267,17 +267,17 @@ ms.locfileid: "66098897"
   
 6.  Na caixa de listagem, clique em **Rotate270**.  
   
-7.  No **Home** guia o **parágrafo** seção, clique no **intermediária** e **Center** botões para localizar o texto no centro da célula vertical e horizontalmente.  
+7.  Na guia **início** da seção **parágrafo** , **clique nos botões central e** **Centro** para localizar o texto no centro da célula, verticalmente e horizontalmente.  
   
-8.  Clique em Executar ( **!** ).  
+8.  Clique em executar (**!**).  
   
  Agora o texto na célula `[Territory]` é executado verticalmente da parte inferior para a parte superior das células.  
   
-##  <a name="FormatHTML"></a> Exibindo texto com formatação HTML  
+##  <a name="FormatHTML"></a>Exibindo texto com formatação HTML  
   
 #### <a name="to-display-text-formatted-as-html"></a>Para exibir texto formatado como HTML  
   
-1.  Clique em **Design** a fim de alternar para a exibição de design.  
+1.  Clique em **design** para alternar para o modo Design.  
   
 2.  Na guia **Inserir** , clique em **Caixa de Texto**e, na superfície de design, clique e arraste para criar uma caixa de texto abaixo da tabela, com cerca de 10 centímetros de largura e 8 centímetros de altura.  
   
@@ -305,40 +305,40 @@ ms.locfileid: "66098897"
   
 5.  Clique com o botão direito do mouse em todo o texto selecionado e clique em **Propriedades do Texto**.  
   
-6.  Sobre o **gerais** página, em **tipo de marcação**, clique em **HTML - interpretar marcas HTML como estilos**.  
+6.  Na página **geral** , em **tipo de marcação**, clique em **HTML-interpretar marcas HTML como estilos**.  
   
 7.  Clique em **OK**.  
   
-8.  Clique em Executar ( **!** ) para visualizar o relatório.  
+8.  Clique em Executar (**!**) para visualizar o relatório.  
   
  O texto na caixa de texto é exibido como um título, um parágrafo e uma lista com marcadores.  
   
-##  <a name="FormatCurrency"></a> Formatar moeda  
+##  <a name="FormatCurrency"></a>Formatar moeda  
   
 #### <a name="to-format-numbers-as-currency"></a>Para formatar números como moeda  
   
-1.  Clique em **Design** a fim de alternar para a exibição de design.  
+1.  Clique em **design** para alternar para o modo Design.  
   
 2.  Clique na célula da tabela superior que contenha `[Sum(Sales)]`, mantenha a tecla SHIFT pressionada e clique na célula da tabela inferior que contenha `[Sum(Sales)]`.  
   
 3.  Na guia **Início** , no grupo **Número** , clique no botão **Moeda** .  
   
-4.  (Opcional) No **Home** guia o **número** , clique no **estilos de espaço reservado** botão e clique em **valores de exemplo** para ver como os números serão ser formatado.  
+4.  Adicional Na guia **início** , no grupo **número** , clique no botão **estilos de espaço reservado** e clique em **valores de exemplo** para ver como os números serão formatados.  
   
 5.  (Opcional) Na guia **Início** , no grupo **Número** , clique no botão **Diminuir Decimais** duas vezes para exibir valores em dólares sem centavos.  
   
-6.  Clique em Executar ( **!** ) para visualizar o relatório.  
+6.  Clique em Executar (**!**) para visualizar o relatório.  
   
  O relatório agora exibe dados formatados e é mais fácil de ler.  
   
-##  <a name="Save"></a> Salvar o relatório  
+##  <a name="Save"></a>Salvar o relatório  
  É possível salvar relatórios em um servidor de relatório, em uma biblioteca do SharePoint ou no computador.  
   
  Neste tutorial, salve o relatório em um servidor de relatório. Se você não tiver acesso ao servidor de relatório, salve o relatório no computador.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
   
-1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
+1.  No botão **Construtor de relatórios** , clique em **salvar como**.  
   
 2.  Clique em **Sites e Servidores Recentes**.  
   
@@ -348,25 +348,25 @@ ms.locfileid: "66098897"
   
 4.  Em **Nome**, substitua o nome padrão por um nome de sua escolha.  
   
-5.  Clique em **Salvar**.  
+5.  Clique em **Save** (Salvar).  
   
  O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
 #### <a name="to-save-the-report-on-your-computer"></a>Para salvar o relatório no computador  
   
-1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
+1.  No botão **Construtor de relatórios** , clique em **salvar como**.  
   
 2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu Computador**e, em seguida, navegue até a pasta na qual você deseja salvar o relatório.  
   
 3.  Em **Nome**, substitua o nome padrão por um nome de sua escolha.  
   
-4.  Clique em **Salvar**.  
+4.  Clique em **Save** (Salvar).  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Há muitas maneiras de formatar texto no construtor de relatórios [Tutorial: Criando um relatório de forma livre &#40;construtor de relatórios&#41; ](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
+ Há várias maneiras de Formatar texto em Construtor de Relatórios [tutorial: Criando um relatório de formato livre &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
   
-## <a name="see-also"></a>Consulte também  
- [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
+## <a name="see-also"></a>Consulte Também  
+ [TUTORIAIS &#40;Construtor de Relatórios&#41;](report-builder-tutorials.md)   
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

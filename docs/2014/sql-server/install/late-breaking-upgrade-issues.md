@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22cd26b7e389cb71408c1b3df87d48aa62244f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094045"
 ---
 # <a name="late-breaking-upgrade-issues"></a>Problemas detectados recentemente que podem interromper a instalação
   A lógica de detecção pode ter sido melhorada ou alterada depois da conclusão da documentação. Caso tenha acessado este tópico a partir do Visualizador de Relatórios do Supervisor de Atualização ou se quiser verificar os itens recentes que podem interromper a atualização, verifique o arquivo Leiame instalado com o Supervisor de Atualização para obter mais informações.   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

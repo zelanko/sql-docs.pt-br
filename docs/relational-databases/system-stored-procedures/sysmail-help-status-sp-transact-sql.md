@@ -18,18 +18,18 @@ ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 764b6154885dbd361f7d7d4a09d8e340b4a62ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044466"
 ---
-# <a name="sysmailhelpstatussp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
+# <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Exibe o status das filas do Database Mail. Use **sysmail_start_sp** para iniciar as filas do Database Mail e **sysmail_stop_sp** pare de filas do Database Mail.  
+  Exibe o status das filas do Database Mail. Use **sysmail_start_sp** para iniciar as filas de Database Mail e **sysmail_stop_sp** para interromper as filas de Database Mail.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,12 +43,12 @@ sysmail_help_status_sp
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**Status**|**nvarchar(7)**|O status do Database Mail. Os valores possíveis são **iniciado** e **parado**.|  
+|**Status**|**nvarchar (7)**|O status do Database Mail. Os valores possíveis são **iniciados** e **interrompidos**.|  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, somente os membros dos **sysadmin** função de servidor fixa pode acessar esse procedimento.  
+ Por padrão, somente os membros da função de servidor fixa **sysadmin** podem acessar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir exibe o status do Database Mail.  
@@ -66,9 +66,9 @@ Status
 STARTED  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Programa externo do Database Mail](../../relational-databases/database-mail/database-mail-external-program.md)   
- [sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
- [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Database Mail programa externo](../../relational-databases/database-mail/database-mail-external-program.md)   
+ [&#41;&#40;Transact-SQL de sysmail_start_sp](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_stop_sp](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
   
   

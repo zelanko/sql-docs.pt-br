@@ -1,5 +1,5 @@
 ---
-title: Relatar a página de histórico (Gerenciador de relatórios) | Microsoft Docs
+title: Página Histórico de relatórios (Report Manager) | Microsoft Docs
 ms.prod: sql-server-2014
 ms.technology: reporting-services-native
 ms.topic: conceptual
@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104475"
 ---
 # <a name="report-history-page-report-manager"></a>Página Histórico de Relatório (Gerenciador de Relatórios)
@@ -39,7 +39,7 @@ Você pode clicar em um instantâneo de histórico de relatórios para exibi-lo.
   
 2.  Focalize o relatório e clique na seta do menu suspenso.  
   
-3.  No menu suspenso, clique em **Exibir Histórico de Relatórios**.  
+3.  No menu suspenso, clique em **Exibir Histórico de Relatório**.  
   
 ## <a name="options"></a>Opções  
  **Delete (excluir)**  
@@ -54,9 +54,9 @@ Você pode clicar em um instantâneo de histórico de relatórios para exibi-lo.
  **Tamanho**  
  Exibe o tamanho da definição do relatório mais os dados no relatório. Esse valor indica quanto espaço no banco de dados do servidor de relatórios é usado pela definição e dados do relatório. O tamanho do relatório renderizado, que inclui formatação, é maior, na verdade. O tamanho total, indicado entre parênteses, é igual à soma de todos os instantâneos no histórico de relatório para o relatório atual.  
   
-## <a name="see-also"></a>Consulte também  
- [Exibir ou excluir histórico de relatório &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exibir ou excluir o histórico de relatórios &#40;Report Manager&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
  [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Página Propriedades Gerais, Relatórios &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
- [Página de propriedades Opções de instantâneo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)
+ [Página Propriedades gerais, relatórios &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Página Propriedades de opções de instantâneo &#40;Report Manager&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

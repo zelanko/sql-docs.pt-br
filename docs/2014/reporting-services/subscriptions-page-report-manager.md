@@ -1,5 +1,5 @@
 ---
-title: Página de assinaturas (Gerenciador de relatórios) | Microsoft Docs
+title: Página assinaturas (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101084"
 ---
 # <a name="subscriptions-page-report-manager"></a>Página Assinaturas (Gerenciador de Relatórios)
   Use a página Assinaturas para listar todas as assinaturas para o relatório atual ou fonte de dados compartilhada. Se você tiver permissão adequada (como a contida na tarefa "Gerenciar todas as assinaturas"), você poderá exibir as assinaturas de todos os usuários. Caso contrário, essa página só mostrará as assinaturas que você possui.  
   
 > [!NOTE]  
->  Outras páginas também contêm informações de assinatura. Para obter mais informações, consulte [página Minhas assinaturas &#40;Gerenciador de relatórios&#41; ](../../2014/reporting-services/my-subscriptions-page-report-manager.md) para acessar todas as suas assinaturas em um único local ou o [página nova assinatura ou Editar assinatura &#40;Gerenciador de relatórios&#41; ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) para criar ou editar uma assinatura.  
+>  Outras páginas também contêm informações de assinatura. Para obter mais informações, consulte a [página minhas assinaturas &#40;Report Manager&#41;](../../2014/reporting-services/my-subscriptions-page-report-manager.md) para acessar todas as suas assinaturas em um único lugar ou a [página nova assinatura ou editar assinatura &#40;Report Manager&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) para criar ou editar uma assinatura.  
   
  Algumas opções só são visíveis se houver assinaturas existentes com as quais é possível trabalhar. Se nenhuma assinatura estiver definida e você estiver acessando essa página de um relatório, **Nova Assinatura** e **Nova Assinatura Orientada por Dados** serão as únicas opções na página.  
   
- Antes de criar uma nova assinatura, você deve verificar se a fonte de dados do relatório armazena credenciais. Use a página de propriedades da Fonte de Dados para armazenar credenciais. Para obter mais informações, consulte [página de propriedades de fontes de dados &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
+ Antes de criar uma nova assinatura, você deve verificar se a fonte de dados do relatório armazena credenciais. Use a página de propriedades da Fonte de Dados para armazenar credenciais. Para obter mais informações, consulte [página de propriedades de fontes de dados &#40;Report Manager&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
   
 > [!NOTE]  
 >  Este recurso não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "66101084"
  **Nova assinatura**  
  Clique para criar uma nova assinatura para o relatório atual. Esse botão é habilitado quando o relatório usa credenciais armazenadas ou nenhuma credencial. Esse botão não está disponível quando você abre a página Assinaturas para uma fonte de dados compartilhada.  
   
- **Nova assinatura controlada por dados**  
+ **Nova Assinatura Orientada por Dados**  
  Clique para gerar uma lista de assinantes e opções de entrega de um comando ou uma consulta em um repositório de dados que contenha essas informações. Esse botão é habilitado quando o relatório usa credenciais armazenadas ou nenhuma credencial. Esse botão não está disponível quando você abre a página Assinaturas para uma fonte de dados compartilhada.  
   
  **Editar**  
@@ -62,7 +62,7 @@ ms.locfileid: "66101084"
  **Descrição**  
  Mostra uma descrição da assinatura.  
   
- **Gatilho**  
+ **Of**  
  Identifica critérios que causam a execução da assinatura. Um gatilho **TimedSubscription** é baseado em uma agenda que define quando a assinatura é executada. Um gatilho **SnapshotUpdated** é baseado em uma atualização de um instantâneo de relatório.  
   
  **Proprietário**  
@@ -78,7 +78,7 @@ ms.locfileid: "66101084"
   
  Uma assinatura não poderá ser processada se tiver sido desativada. Para atualizar a assinatura e torná-la operacional, abra e depois salve a assinatura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo nativo&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Criar, modificar e excluir agendas](subscriptions/create-modify-and-delete-schedules.md)   

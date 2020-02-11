@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103731"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Mover ou excluir um item (Gerenciador de Relatórios)
@@ -28,20 +28,20 @@ ms.locfileid: "66103731"
   
  No Gerenciador de Relatórios, os itens que podem ser movidos estão indicados na hierarquia de pasta. A tabela a seguir mostra o ícone para cada item móvel.  
   
-|Ícone|Item móvel|  
+|ícone|Item móvel|  
 |----------|-------------------|  
-|![Ícone Relatório](../media/hlp-16doc.gif "Ícone Relatório")|Relatório|  
-|![Ícone Relatório vinculado](../media/hlp-16linked.gif "Ícone Relatório vinculado")|Relatório vinculado|  
-|![Ícone Pasta](../media/hlp-16folder.gif "Ícone Pasta")|Pasta|  
-|![Ícone Recurso genérico](../media/hlp-16file.gif "Ícone Recurso genérico")|Recurso genérico|  
-|![Ícone Fonte de dados compartilhada](../media/hlp-16datasource.png "Ícone Fonte de dados compartilhada")|Fonte de dados compartilhada|  
+|![Ícone de relatório](../media/hlp-16doc.gif "ícone de relatório")|Relatório|  
+|![Ícone de relatório vinculado](../media/hlp-16linked.gif "Ícone de relatório vinculado")|Relatório vinculado|  
+|![Ícone de pasta](../media/hlp-16folder.gif "Ícone de pasta")|Pasta|  
+|![ícone de recurso genérico](../media/hlp-16file.gif "ícone de recurso genérico")|Recurso genérico|  
+|![Ícone de fonte de dados compartilhada](../media/hlp-16datasource.png "Ícone de fonte de dados compartilhada")|Fonte de dados compartilhada|  
 ||Conjunto de dados compartilhado|  
   
- Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. Permissão para mover um item é concedida quando as tarefas a seguir são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciam pastas" e "Gerenciar fontes de dados".  
+ Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciar pastas" e "Gerenciar fontes de dados".  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>Para mover um item de dentro da página Conteúdo  
   
-1.  Iniciar [Gerenciador de relatórios &#40;modo nativo do SSRS&#41;]... / relatório-manager-ssrs-native-mode.md).  
+1.  Inicie o [Report Manager &#40;o modo nativo do SSRS&#41;].. /report-manager-ssrs-native-mode.md).  
   
 2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** e localize o item que você deseja mover.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "66103731"
  Como alternativa, navegue até o objeto que você deseja mover, clique em **Propriedades**e clique em **Mover** na parte superior da página.  
   
 ## <a name="delete-an-item"></a>Excluir um item  
- Antes de excluir um item, determine se ele é usado por outros itens. Por exemplo, se você excluir uma fonte de dados compartilhada, relatórios e modelos que usam essa fonte de dados não serão mais executados. Se um relatório for excluído, as assinaturas e o histórico de relatórios associados também são excluídos. Para localizar itens dependentes para um item, consulte [página itens dependentes &#40;Gerenciador de relatórios&#41;]... / dependente-itens-página-relatório-manager.md).  
+ Antes de excluir um item, determine se ele é usado por outros itens. Por exemplo, se você excluir uma fonte de dados compartilhada, relatórios e modelos que usam essa fonte de dados não serão mais executados. Se um relatório for excluído, as assinaturas e o histórico de relatórios associados também são excluídos. Para localizar itens dependentes de um item, consulte [página de itens dependentes &#40;Report Manager&#41;].. /dependent-items-page-report-manager.md).  
   
 #### <a name="to-delete-a-report-or-item"></a>Para excluir um relatório ou item  
   
-1.  Iniciar [Gerenciador de relatórios &#40;modo nativo do SSRS&#41;]... / relatório-manager-ssrs-native-mode.md).  
+1.  Inicie o [Report Manager &#40;o modo nativo do SSRS&#41;].. /report-manager-ssrs-native-mode.md).  
   
 2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** e localize o item que você deseja excluir.  
   
@@ -72,8 +72,8 @@ ms.locfileid: "66103731"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;]... / conteúdo-página de relatório manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Página de conteúdo &#40;Report Manager&#41;].. /contents-page-report-manager.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

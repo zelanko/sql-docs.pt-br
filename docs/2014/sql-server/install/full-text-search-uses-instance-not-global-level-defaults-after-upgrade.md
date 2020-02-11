@@ -1,5 +1,5 @@
 ---
-title: Atualização fará com que a pesquisa de texto completo usar o nível de instância, e não globais, os separadores de palavras e filtros por padrão | Microsoft Docs
+title: A atualização fará com que a pesquisa de texto completo use os separadores de palavras e os filtros em nível de instância, e não globais, por padrão | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c81892d6b83cef87a27a836d9691779a841104a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095057"
 ---
 # <a name="upgrading-will-cause-full-text-search-to-use-instance-level-not-global-word-breakers-and-filters-by-default"></a>Atualização fará com que a Pesquisa de Texto Completo use separadores de palavras e filtros em nível de instância, e não globais, por padrão
@@ -26,7 +26,7 @@ ms.locfileid: "66095057"
 ## <a name="component"></a>Componente  
  Pesquisa de Texto Completo  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o registro de novos separadores de palavras e filtros em nível de instância. Esse registro em nível de instância fornece isolamento funcional e de segurança entre instâncias.  
   
 ## <a name="corrective-action"></a>Ação corretiva  
@@ -34,7 +34,7 @@ ms.locfileid: "66095057"
   
  `sp_fulltext_service 'load_os_resources', 1`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhando com o Supervisor de Atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

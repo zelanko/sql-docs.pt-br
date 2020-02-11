@@ -1,5 +1,5 @@
 ---
-title: Após a atualização, palavras-chave reservadas novas não podem ser usadas como identificadores | Microsoft Docs
+title: Após a atualização, novas palavras-chave reservadas não podem ser usadas como identificadores | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096888"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>Depois de atualização, novas palavras-chave reservadas não poderão ser usadas como identificadores
@@ -27,12 +27,12 @@ ms.locfileid: "66096888"
 ## <a name="component"></a>Componente  
  Mecanismo de Banco de Dados  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  No nível de compatibilidade 90 ou inferior, as seguintes palavras não são palavras-chave reservadas e podem ser usadas como identificadores ou nomes de objeto em scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. No nível de compatibilidade 100, estas palavras são palavras-chave totalmente reservadas e não devem ser usadas como identificadores ou nomes de objeto.  
   
 -   EXTERNAL  
   
--   MERGE  
+-   MESCLAR  
   
 -   PIVOT  
   
@@ -49,14 +49,14 @@ ms.locfileid: "66096888"
   
 -   Mantenha a configuração do nível de compatibilidade do banco de dados como 90 ou inferior.  
   
--   Faça referência ao objeto usando identificadores delimitados. Por exemplo, a instrução `CREATE TABLE [MERGE] ([MERGE] int);` usa colchetes para delimitar o nome do objeto MERGE.  
+-   Faça referência ao objeto usando identificadores delimitados. Por exemplo, a instrução `CREATE TABLE [MERGE] ([MERGE] int);` usa colchetes para delimitar a mesclagem de nome de objeto.  
   
 ## <a name="external-resources"></a>Recursos externos  
- [Palavras-chave reservadas &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
+ [Palavras-chave reservadas &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   
- [Identificadores delimitados (mecanismo de banco de dados)](https://go.microsoft.com/fwlink/?LinkId=112509)  
+ [Identificadores delimitados (Mecanismo de Banco de Dados)](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

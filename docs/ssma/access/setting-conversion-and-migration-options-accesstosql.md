@@ -1,5 +1,5 @@
 ---
-title: Definindo opções de migração (AccessToSQL) e conversão | Microsoft Docs
+title: Configurando opções de conversão e migração (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,19 +17,19 @@ ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e89cfd6768aeedd970889cbaea46bb3e1ceae4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051502"
 ---
-# <a name="setting-conversion-and-migration-options-accesstosql"></a>Conversão de configuração e opções de migração (AccessToSQL)
-Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para tipos de dados de destino. Antes de converter objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure ou migrar os dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, verifique se as opções de configuração são adequadas para o projeto.  
+# <a name="setting-conversion-and-migration-options-accesstosql"></a>Configurando opções de conversão e migração (AccessToSQL)
+Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para os tipos de dados de destino. Antes de converter objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure ou migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o ou SQL Azure, verifique se as opções de configuração são apropriadas para o projeto.  
   
-## <a name="configuration-options-and-modes"></a>Modos e opções de configuração  
-O SSMA tem quatro conjuntos de definições de configuração e quatro modos para definir essas configurações: Padrão otimista, completo e personalizados. O modo padrão é recomendado para a maioria dos usuários. Use o modo otimista para conversões simples. Use o modo completo se você quiser ver todas as mensagens. No modo personalizado, você deve definir as opções.  
+## <a name="configuration-options-and-modes"></a>Opções de configuração e modos  
+O SSMA tem quatro conjuntos de parâmetros de configuração e quatro modos para definir essas configurações: padrão, otimista, completo e personalizado. O modo padrão é recomendado para a maioria dos usuários. Use o modo otimista para conversões simples. Use o modo completo se desejar ver todas as mensagens. No modo personalizado, você define as opções.  
   
-As configurações são descritas na seção "Referência de Interface do usuário" desta documentação. Para obter mais informações sobre as configurações e como as configurações são aplicadas em cada modo, consulte os tópicos a seguir:  
+As configurações são descritas na seção "referência da interface do usuário" desta documentação. Para obter mais informações sobre as configurações e como as configurações são aplicadas em cada modo, consulte os seguintes tópicos:  
   
 -   [Configurações do projeto (conversão)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
@@ -42,48 +42,48 @@ As configurações são descritas na seção "Referência de Interface do usuár
 -   [Configurações do projeto (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   
 ## <a name="setting-project-options"></a>Definir opções do projeto  
-No SSMA, você pode configurar as configurações padrão para todos os projetos. Essas configurações são salvas no arquivo de configuração do SSMA e aplicadas a qualquer novo projeto criado por você.  
+No SSMA, você pode definir as configurações padrão para todos os projetos. Essas configurações são salvas no arquivo de configuração do SSMA e aplicadas a qualquer novo projeto que você criar.  
   
 **Para definir opções de projeto padrão**  
   
-1.  Sobre o **ferramentas** menu, selecione **configurações do projeto padrão**.  
+1.  No menu **ferramentas** , selecione **configurações de projeto padrão**.  
   
-2.  No **configurações de projeto padrão** caixa de diálogo, faça o seguinte:  
+2.  Na caixa de diálogo **configurações de projeto padrão** , siga um destes procedimentos:  
   
-    -   Selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibida / alterado de **versão de destino de migração** lista suspensa, clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione **Conversão ou migração ou SQL Azure**.  
+    -   Selecione o tipo de projeto de migração para o qual as configurações devem ser exibidas/alteradas no menu suspenso **versão de destino de migração** , clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione **conversão ou migração ou SQL Azure**.  
   
         > [!NOTE]  
-        > Opção do SQL Azure está disponível na **geral** guia somente se o tipo de projeto criado é do SQL Azure.  
+        > SQL Azure opção estará disponível na guia **geral** somente se o tipo de projeto criado for SQL Azure.  
   
-    -   Para selecionar um modo predefinido, selecione **padrão**, **Optimistic**, ou **completo** no **modo** caixa suspensa.  
+    -   Para selecionar um modo predefinido, selecione **padrão**, **otimista**ou **completo** na caixa suspensa **modo** .  
   
-    -   Para especificar um modo personalizado, selecione **personalizado** na **modo** caixa, selecione uma opção no painel esquerdo, clique na configuração ou o valor no painel direito e, em seguida, selecione ou insira a nova configuração ou valor.  
+    -   Para especificar um modo personalizado, selecione **personalizado** na caixa **modo** , selecione uma opção no painel esquerdo, clique na configuração ou no valor no painel direito e, em seguida, selecione ou insira a nova configuração ou valor.  
   
-3.  Clique em **Okey** para salvar as configurações.  
+3.  Clique em **OK** para salvar as configurações.  
   
-Você também pode personalizar configurações para o projeto atual. Essas configurações são salvas no arquivo de projeto atual.  
+Você também pode personalizar as configurações para o projeto atual. Essas configurações são salvas no arquivo de projeto atual.  
   
-**Para personalizar as configurações para o projeto atual**  
+**Para personalizar as configurações do projeto atual**  
   
-1.  Sobre o **ferramentas** menu, selecione **configurações do projeto**.  
+1.  No menu **ferramentas** , selecione **configurações do projeto**.  
   
-2.  No **configurações do projeto** caixa de diálogo, faça o seguinte:  
+2.  Na caixa de diálogo **configurações do projeto** , siga um destes procedimentos:  
   
-    -   Para selecionar um modo predefinido, selecione **padrão**, **Optimistic**, ou **completo** no **modo** caixa suspensa.  
+    -   Para selecionar um modo predefinido, selecione **padrão**, **otimista**ou **completo** na caixa suspensa **modo** .  
   
-    -   Para especificar um modo personalizado, selecione **personalizado** na **modo** caixa, selecione uma opção no painel esquerdo, clique na configuração ou o valor no painel direito e, em seguida, selecione ou insira a nova configuração ou valor.  
+    -   Para especificar um modo personalizado, selecione **personalizado** na caixa **modo** , selecione uma opção no painel esquerdo, clique na configuração ou no valor no painel direito e, em seguida, selecione ou insira a nova configuração ou valor.  
   
-3.  Clique em **Okey** para salvar as configurações.  
+3.  Clique em **OK** para salvar as configurações.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-A próxima etapa da migração depende de suas necessidades de projeto:  
+A próxima etapa na migração depende de suas necessidades de projeto:  
   
--   Para personalizar o mapeamento de tipos de dados de origem e destino, consulte [tipos de dados de destino e origem do mapeamento](mapping-source-and-target-data-types-accesstosql.md)  
+-   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [mapeando tipos de dados de origem e de destino](mapping-source-and-target-data-types-accesstosql.md)  
   
--   Para personalizar o mapeamento de bancos de dados de origem e destino, consulte [bancos de dados de destino e origem do mapeamento](mapping-source-and-target-databases-accesstosql.md)  
+-   Para personalizar o mapeamento de bancos de dados de origem e de destino, consulte [mapeando bancos de dados de origem e de destino](mapping-source-and-target-databases-accesstosql.md)  
   
--   Caso contrário, você pode converter as definições de objeto de banco de dados do Access em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou definições de objeto do SQL Azure. Para obter mais informações, consulte [converter objetos de banco de dados do Access](converting-access-database-objects-accesstosql.md)  
+-   Caso contrário, você pode converter as definições de objeto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados do Access em ou SQL Azure definições de objeto. Para obter mais informações, consulte [convertendo objetos de banco de dados do Access](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>Consulte também  
-[Migrando bancos de dados do Access para o SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

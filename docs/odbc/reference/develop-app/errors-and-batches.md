@@ -17,21 +17,21 @@ ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6902b82c74e953d6009d7e5352608477d92122d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051134"
 ---
 # <a name="errors-and-batches"></a>Erros e lotes
-Quando ocorre um erro ao executar um lote de instruções SQL, uma das quatro seguintes resultados são possíveis. (Cada resultado possível é específico da fonte de dados e até mesmo pode depender das instruções incluídas no lote.)  
+Quando ocorre um erro durante a execução de um lote de instruções SQL, um dos quatro resultados a seguir é possível. (Cada resultado possível é específico da fonte de dados e pode até mesmo depender das instruções incluídas no lote.)  
   
--   Não há instruções no lote são executadas.  
+-   Nenhuma instrução no lote é executada.  
   
--   Nenhuma instrução no lote é executadas e a transação será revertida.  
+-   Nenhuma instrução no lote é executada e a transação é revertida.  
   
--   Todas as instruções antes da instrução de erro são executadas.  
+-   Todas as instruções antes da execução da instrução de erro.  
   
--   Todas as instruções, exceto a instrução de erro são executadas.  
+-   Todas as instruções, exceto a instrução de erro, são executadas.  
   
- Nos dois primeiros casos, **SQLExecute** e **SQLExecDirect** retornará SQL_ERROR. Os dois últimos casos, eles podem retornar SQL_SUCCESS_WITH_INFO ou SQL_SUCCESS, dependendo da implementação. Em todos os casos, ainda mais informações sobre o erro pode ser recuperado com **SQLGetDiagField**, **SQLGetDiagRec**, ou **SQLError**. No entanto, a natureza e a profundidade dessas informações é específico da fonte de dados. Além disso, essa informação é improvável identificar exatamente a instrução em erro.
+ Nos dois primeiros casos, **SQLExecute** e **SQLExecDirect** retornam SQL_ERROR. Nos dois últimos casos, eles podem retornar SQL_SUCCESS_WITH_INFO ou SQL_SUCCESS, dependendo da implementação. Em todos os casos, outras informações de erro podem ser recuperadas com **SQLGetDiagField**, **SQLGetDiagRec**ou **SqlError**. No entanto, a natureza e a profundidade dessas informações são específicas da fonte de dados. Além disso, é improvável que essas informações identifiquem exatamente a instrução em caso de erro.

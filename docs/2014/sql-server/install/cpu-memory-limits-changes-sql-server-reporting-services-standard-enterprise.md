@@ -1,5 +1,5 @@
 ---
-title: Alterações em limites de CPU e memória para o SQL Server Reporting Services Standard e Enterprise | Microsoft Docs
+title: Alterações nos limites de memória e CPU para SQL Server Reporting Services Standard e Enterprise | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4d8e18215c6078026b617e079879da1eadbca612
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095960"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-reporting-services-standard-and-enterprise"></a>Alterações nos limites de CPU e de memória para o SQL Server Reporting Services Standard e Enterprise
@@ -23,15 +23,15 @@ ms.locfileid: "66095960"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services edição Standard e Enterprise oferece suporte a no máximo 64 gigabytes de memória do sistema. Talvez seja necessário reconfigurar os parâmetros atuais do sistema para alinhá-los aos novos limites.  
   
- Para obter mais informações sobre os limites de CPU e memória de outras edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md), e [suporte de memória pelas edições do SQL Server](https://go.microsoft.com/fwlink/?LinkId=212633).  
+ Para obter mais informações sobre limites de memória e CPU para outras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]edições do, consulte [computar limites de capacidade por edição do SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)e [memória com suporte nas edições do SQL Server](https://go.microsoft.com/fwlink/?LinkId=212633).  
   
 ## <a name="corrective-action"></a>Ação corretiva  
- Talvez seja necessário reconfigurar os parâmetros atuais do sistema para alinhá-los aos novos limites de CPU e memória. Para obter mais informações, consulte [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql), e [opções de configuração de servidor Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
+ Talvez seja necessário reconfigurar os parâmetros atuais do sistema para alinhá-los aos novos limites de CPU e memória. Para obter mais informações, consulte [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)e [Opções de configuração do servidor de memória do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos com suporte nas edições do SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Compatibilidade com versões anteriores](../../../2014/getting-started/backward-compatibility.md)  
   

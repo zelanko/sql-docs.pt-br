@@ -14,26 +14,26 @@ ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68ed273989d738a768d8e5fffd116ea630d8043d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045048"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Modificar uma fonte de dados do Visual FoxPro
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>Para modificar uma fonte de dados do Visual FoxPro  
   
-1.  Em computadores que executam o Windows 2000, abra o painel de controle do Windows e clique duas vezes em Ferramentas administrativas.  
+1.  Em computadores que executam o Windows 2000, abra o painel de controle do Windows e clique duas vezes em ferramentas administrativas.  
   
-2.  Clique duas vezes em fontes de dados (ODBC) para abrir a caixa de diálogo Administrador de fonte de dados ODBC. Esse ícone está disponível depois de instalar o Driver de ODBC do Visual FoxPro ou qualquer software de driver ODBC.  
+2.  Clique duas vezes em fontes de dados (ODBC) para abrir a caixa de diálogo administrador de fonte de dados ODBC. Esse ícone estará disponível depois que você instalar o driver ODBC do Visual FoxPro ou qualquer software de driver ODBC.  
   
     > [!NOTE]  
-    >  Se você estiver executando uma versão anterior do Windows, abra o painel de controle do Windows e clique duas vezes em 32 bits ODBC ou ODBC para abrir a caixa de diálogo Administrador de fonte de dados ODBC.  
+    >  Se você estiver executando uma versão anterior do Windows, abra o painel de controle do Windows e clique duas vezes em ODBC de 32 bits ou ODBC para abrir a caixa de diálogo administrador de fonte de dados ODBC.  
   
-3.  Na guia DSN de usuário ou DSN de sistema, selecione o nome da fonte de dados que você deseja modificar e clique em configurar.  
+3.  Na guia DSN do usuário ou DSN do sistema, selecione o nome da fonte de dados que você deseja modificar e clique em configurar.  
   
-4.  No [caixa de diálogo de instalação do ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), selecionar e alterar os itens que você deseja modificar e, em seguida, clique em Okey.  
+4.  Na [caixa de diálogo configuração do ODBC do Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), selecione e altere os itens que você deseja modificar e clique em OK.  
   
-5.  Clique em Okey para salvar as alterações e fechar a caixa de diálogo Administrador de fonte de dados ODBC.  
+5.  Clique em OK para salvar as alterações e fechar a caixa de diálogo administrador de fonte de dados ODBC.  
   
- As alterações entrarão em vigor na próxima vez que acessar a fonte de dados de seu aplicativo.
+ Suas alterações entrarão em vigor na próxima vez que você acessar a fonte de dados do seu aplicativo.

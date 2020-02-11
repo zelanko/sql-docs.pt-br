@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c623130b02c082b099938823ccc12950333982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105559"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Várias séries em um gráfico (Construtor de Relatórios e SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66105559"
 ## <a name="using-chart-areas"></a>Usando áreas do gráfico  
  O gráfico é o contêiner de nível superior que inclui a borda exterior, o título e a legenda do gráfico. Por padrão, o gráfico contém uma área de gráfico padrão. A área do gráfico não é visível na superfície do gráfico, mas você pode imaginá-la como um contêiner que inclui somente os rótulos e o título dos eixos e a área de plotagem de uma ou mais séries. A ilustração a seguir mostra o conceito de áreas de gráfico dentro de um único gráfico.  
   
- ![Mostra um diagrama de uma área do gráfico](../media/chartareasdiagram.gif "Mostra um diagrama de uma área do gráfico")  
+ ![Mostra um diagrama de uma área de gráfico](../media/chartareasdiagram.gif "Mostra um diagrama de uma área de gráfico")  
   
  Usando a caixa de diálogo **Propriedades da Área do Gráfico** , você pode especificar a orientação 2D e 3D de todas as séries contidas na área do gráfico, alinhar várias áreas dentro do mesmo gráfico e formatar as cores da área de plotagem. Quando uma nova área do gráfico é definida em um gráfico que contém somente uma área de gráfico padrão, o espaço disponível para uma área do gráfico é dividido horizontalmente por dois, e a nova área do gráfico é posicionada abaixo da primeira área do gráfico.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "66105559"
 ## <a name="using-range-charts"></a>Usando gráficos de intervalo  
  Gráficos de intervalo têm dois valores por ponto de dados. Se o gráfico contiver duas séries que compartilham o mesmo eixo de categoria (x), você poderá usar um gráfico de intervalo para mostrar a diferença entre as duas séries. Gráficos de intervalo são mais adequados para exibir informações de máximo-mínimo ou superior-inferior. Por exemplo, se a primeira série contiver a venda mais alta de cada dia em janeiro, e a segunda série contiver a venda mais baixa do mesmo período, você poderá usar um gráfico de intervalo para mostrar a diferença entre a venda mais alta e a mais baixa de cada dia. Para obter mais informações, consulte [Gráficos de intervalo &#40;Construtor de Relatórios e SSRS&#41;](range-charts-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Como exibir uma série com vários intervalos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Exibindo uma série com vários intervalos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
   
   

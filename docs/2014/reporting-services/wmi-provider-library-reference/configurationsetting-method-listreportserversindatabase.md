@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c62e2793f11853158b7b31d1e79feb4ae59977de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098286"
 ---
-# <a name="listreportserversindatabase-method-wmi-msreportserverconfigurationsetting"></a>Método ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting)
+# <a name="listreportserversindatabase-method-wmi-msreportserver_configurationsetting"></a>Método ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting)
   Retorna a lista de instalações do servidor de relatório que estão presentes no banco de dados do servidor de relatório, independentemente de essas instalações terem acesso a informações seguras.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -44,23 +44,23 @@ public void ListReportServersInDatabase (out string[] MachineNames,
     out string[] ExtendedErrors);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- *MachineNames[]*  
+## <a name="parameters"></a>parâmetros  
+ *Computadornames []*  
  [fora] Uma matriz que contém os nomes de máquina das instalações do servidor de relatório no banco de dados.  
   
- *InstanceNames[]*  
+ *Instâncias de instância []*  
  [fora] Uma matriz que contém os nomes de instância de cada instalação do servidor de relatório no banco de dados.  
   
  *InstallationIDs[]*  
  [fora] Uma matriz que contém as IDs de instalação de cada instalação de servidor de relatório do banco de dados.  
   
- *IsInitialized[]*  
+ *IsInitialized []*  
  [fora] Uma matriz que contém o status de inicialização de cada instalação de servidor de relatório do banco de dados.  
   
  *Comprimento*  
  [fora] O tamanho das matrizes retornadas pelo método. Todas as matrizes retornadas têm o mesmo tamanho.  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
  *ExtendedErrors[]*  
@@ -73,9 +73,9 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  O ListReportServersInDatabase lista as instalações do servidor de relatório que estão presentes no banco de dados do servidor de relatório, independentemente de terem acesso a informações seguras e retorna um conjunto de matrizes correspondentes contendo informações sobre cada instalação.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

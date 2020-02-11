@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105785"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatando itens de relatório (Construtor de Relatórios e SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66105785"
   
  ![rs_FormattingReporttItems](../media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
   
- A. Caixa de texto com borda de linha dupla e uma grande variedade de estilos de formatação, inclusive um link.  
+ a. Caixa de texto com borda de linha dupla e uma grande variedade de estilos de formatação, inclusive um link.  
   
  B. Caixa de texto com borda tracejada, HTML bruto e HTML renderizado.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66105785"
   
  É possível alterar as opções de formatação selecionando o item a ser formatado e abrindo a caixa de diálogo Propriedades do item. Por exemplo, se você quiser formatar o conteúdo de uma caixa de texto inteira ou uma palavra selecionada nela, clique com o botão direito do mouse no item e selecione **Propriedades da Caixa de Texto**. Em seguida, aplique os estilos de formatação desejados.  
   
- Para começar rapidamente, confira [Tutorial: formatar o texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
+ Para começar a usar rapidamente, consulte [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -50,10 +50,10 @@ ms.locfileid: "66105785"
  [Formatando linhas, cores e imagens &#40;Construtor de Relatórios e SSRS&#41;](images-report-builder-and-ssrs.md)  
  Descreve como formatar linhas, linhas de grade, cores e imagens em itens de relatório e regiões de dados.  
   
- [Definir a localidade em um relatório ou caixa de texto &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Definir a localidade de um relatório ou caixa de texto &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Descreve como alterar a configuração para formatos de exibição de dados que diferem por idioma e região, como data, moeda e valores de número.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatar um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104644"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS
-  Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório, você deve compreender como especificá-las para dados detalhados, dados de grupo, além de rótulos e totais. Em muitos casos, é possível usar as estruturas padrão em uma tabela, matriz ou lista para exibir os dados. Para obter mais informações, consulte [tabelas &#40;construtor de relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md), [matrizes &#40;construtor de relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), ou [lista &#40;construtor de relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+  Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório, você deve compreender como especificá-las para dados detalhados, dados de grupo, além de rótulos e totais. Em muitos casos, é possível usar as estruturas padrão em uma tabela, matriz ou lista para exibir os dados. Para obter mais informações, consulte [tabelas &#40;Construtor de relatórios e ssrs&#41;](tables-report-builder-and-ssrs.md), [matrizes &#40;Construtor de Relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)ou [listas &#40;Construtor de relatórios e SSRS ](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)&#41;.  
   
  Uma região de dados tablix exibe dados detalhados em linhas e colunas detalhadas, além de dados agrupados em linhas e colunas agrupadas. Quando você adiciona grupos de linhas e de colunas a uma região de dados tablix, as linhas e as colunas nas quais os dados são exibidos são adicionadas automaticamente. É possível adicionar e remover manualmente linhas e colunas para personalizar uma região de dados tablix e controlar a forma como os dados são exibidos no relatório.  
   
@@ -38,12 +38,12 @@ ms.locfileid: "66104644"
 ### <a name="row-and-column-handles"></a>Identificadores de linha e de coluna  
  Quando você seleciona uma região de dados tablix, gráficos indicadores de linha e de coluna apontam o propósito de cada uma delas. Os identificadores mostram as linhas e as colunas que estão dentro ou fora de um grupo. A tabela a seguir mostra várias exibições de identificadores.  
   
-|Ícone|Descrição|  
+|ícone|DESCRIÇÃO|  
 |----------|-----------------|  
-|![Identificador de linha com três linhas paralelas para a linha de detalhes](../media/rs-icontablix-detailsrow.gif "Identificador de linha com três linhas paralelas para a linha de detalhes")|Apenas o grupo detalhado na hierarquia do grupo de linhas|  
+|![Identificador de linha com 3 linhas paralelas para linha de detalhes](../media/rs-icontablix-detailsrow.gif "Identificador de linha com 3 linhas paralelas para linha de detalhes")|Apenas o grupo detalhado na hierarquia do grupo de linhas|  
 |![Identificador de linha com linha de detalhes e um grupo externo](../media/rs-icontablix-groupwithdetails.gif "Identificador de linha com linha de detalhes e um grupo externo")|Um grupo externo e o grupo detalhado filho|  
 |![Dois colchetes paralelos mostrando grupos aninhados](../media/rs-icontablix-nestedgroupnodetails.gif "Dois colchetes paralelos mostrando grupos aninhados")|Um grupo externo, um grupo interno; nenhum grupo detalhado|  
-|![Dois colchetes e três linhas empilhadas para aninhadas e detalhes](../media/rs-icontablix-nestedgroupwithdetails.gif "Dois colchetes e três linhas empilhadas para aninhadas e detalhes")|Um grupo externo, um grupo interno e o grupo detalhado filho|  
+|![2 colchetes & 3 linhas empilhadas para detalhes de & aninhados](../media/rs-icontablix-nestedgroupwithdetails.gif "2 colchetes & 3 linhas empilhadas para aninhadas & detalhes")|Um grupo externo, um grupo interno e o grupo detalhado filho|  
 |![Um grupo externo com linha de rodapé, um grupo interno](../media/rs-icontablix-nestedgroupwithparentfooter.gif "Um grupo externo com linha de rodapé, um grupo interno")|Um grupo externo com uma linha de rodapé para totais e um grupo interno|  
 |![colchete de grupo externo, colchete de grupo interno, detalhes](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "colchete de grupo externo, colchete de grupo interno, detalhes")|Um grupo externo com uma linha de rodapé para totais, um grupo interno com uma linha de rodapé para totais e uma linha detalhada|  
 |![cabeçalho e rodapé pai e também grupo filho](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "cabeçalho e rodapé pai e também grupo filho")|Um grupo externo com um cabeçalho para rótulos e um rodapé para totais, além de um grupo interno; nenhum grupo detalhado|  
@@ -62,7 +62,7 @@ ms.locfileid: "66104644"
 ### <a name="total-rows"></a>Linhas de total  
  Após adicionar grupos de linhas e de colunas, é possível adicionar uma linha para exibir totais de colunas e uma coluna para exibir totais de linhas. A seguinte figura mostra uma matriz com grupos de linhas e de colunas, além de uma linha e uma coluna de total.  
   
- ![Região de dados Tablix](../media/rs-tablixparts.gif "Região de dados Tablix")  
+ ![região de dados Tablix](../media/rs-tablixparts.gif "região de dados Tablix")  
   
 ### <a name="grouping-pane"></a>Painel Agrupamento  
  O painel Agrupamento exibe os grupos de linhas e de colunas referentes à região de dados tablix selecionada na superfície de design no momento. A seguinte figura mostra o painel Agrupamento da região de dados tablix.  
@@ -84,11 +84,11 @@ ms.locfileid: "66104644"
   
  A seguinte figura mostra uma região de dados tablix com grupos de linhas aninhados e um grupo detalhado.  
   
- ![Modo de exibição de design, adicionar o total de linhas ao grupo e à tabela](../media/rs-basictablegroupstotalscolordesign.gif "Modo de exibição de design, adicionar o total de linhas ao grupo e à tabela")  
+ ![Modo de design, adicionar total de linhas ao grupo e à tabela](../media/rs-basictablegroupstotalscolordesign.gif "Modo de design, adicionar total de linhas ao grupo e à tabela")  
   
  Em uma região de dados tablix que exibe dados detalhados, o grupo detalhado é o grupo filho interno. As linhas adicionadas a um grupo detalhado se repetem uma vez por linha no conjunto de resultados da consulta referente ao conjunto de dados vinculado à região de dados tablix. A seguinte figura mostra a última página do relatório renderizado. Nela, é possível ver as últimas linhas detalhadas e a linha de subtotal referente ao último pedido.  
   
- ![Visualização, tabela com totais de grupo, últimas linhas](../media/rs-basictablegroupstotalscolorpreviewbottom.gif "Visualização, tabela com totais de grupo, últimas linhas")  
+ ![Visualização, Tabela com Totais de Grupo, últimas linhas](../media/rs-basictablegroupstotalscolorpreviewbottom.gif "Visualização, Tabela com Totais de Grupo, últimas linhas")  
   
  Para cada coluna de uma região de dados tablix, se aplicam os mesmos princípios. Por exemplo, uma coluna está dentro ou fora de cada grupo de colunas. Para exibir totais, adicione uma coluna fora do grupo.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66104644"
  As células na área do corpo tablix podem exibir dados detalhados quando a célula está em uma linha ou coluna detalhada e dados agregados quando ela se encontra em uma linha ou coluna do grupo. O escopo dos dados de uma célula é a interseção entre os grupos internos de linhas e de colunas aos quais a célula pertence.  
   
 > [!NOTE]  
->  Os dados reais exibidos referentes a cada célula formam a expressão avaliada do item de relatório que ela contém, normalmente uma caixa de texto. Em uma célula pertencente a uma linha ou coluna detalhada, a expressão usa como padrão os dados detalhados (por exemplo, **[LineTotal])** . Em uma célula não pertencente a uma linha ou coluna detalhada, a expressão usa como padrão uma função de agregação (por exemplo, **Sum[LineTotal])** . Caso uma expressão não especifique uma função de agregação mesmo que a célula pertença a uma linha ou coluna do grupo, é exibido o primeiro valor do grupo. Para obter mais informações sobre agregações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  Os dados reais exibidos referentes a cada célula formam a expressão avaliada do item de relatório que ela contém, normalmente uma caixa de texto. Em uma célula pertencente a uma linha ou coluna detalhada, a expressão usa como padrão os dados detalhados (por exemplo, **[LineTotal])**. Em uma célula não pertencente a uma linha ou coluna detalhada, a expressão usa como padrão uma função de agregação (por exemplo, **Sum[LineTotal])**. Caso uma expressão não especifique uma função de agregação mesmo que a célula pertença a uma linha ou coluna do grupo, é exibido o primeiro valor do grupo. Para obter mais informações sobre agregações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Mesclando e dividindo células  
  Em uma área tablix, é possível mesclar várias células adjacentes. Por exemplo, você pode criar células para rótulos que incluam várias colunas ou linhas.  
@@ -119,7 +119,7 @@ ms.locfileid: "66104644"
   
  É possível dividir uma célula mesclada previamente. Você pode dividir as células horizontalmente em colunas ou verticalmente em linhas. Para dividir uma célula em um bloco de células, divida primeiro a célula horizontalmente e divida verticalmente quantas vezes forem necessárias.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

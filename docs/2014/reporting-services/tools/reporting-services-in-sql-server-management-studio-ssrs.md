@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e148fa4f7a5340217a2efe2374312568eee43435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099925"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services no SQL Server Management Studio (SSRS)
@@ -40,12 +40,12 @@ ms.locfileid: "66099925"
   
 -   [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](../security/role-definitions-create-delete-or-modify.md)  
   
--   [Excluir um Item &#40;Management Studio&#41;](delete-an-item-management-studio.md)  
+-   [Excluir um item &#40;Management Studio&#41;](delete-an-item-management-studio.md)  
   
--   [Cancelar Trabalhos do Servidor de Relatório &#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
+-   [Cancelar trabalhos do servidor de relatório &#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Servidor de Relatório na ajuda F1 do Management Studio](report-server-in-management-studio-f1-help.md)   
- [Apresentando o SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
+ [Introdução ao SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
   

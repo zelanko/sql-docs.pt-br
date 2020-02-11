@@ -1,5 +1,5 @@
 ---
-title: 'Altera para o formato de armazenamento para tipos xs: DateTime, xs: Date e xs: time | Microsoft Docs'
+title: 'Alterações no formato de armazenamento para tipos xs: dateTime, xs: Date e xs: time | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096615"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Alterações no formato de armazenamento para os tipos xs:dateTime, xs:date e xs:time
@@ -28,10 +28,10 @@ ms.locfileid: "66096615"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Descrição  
- O formato de armazenamento no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para tipos xs: DateTime, xs: Date e xs: time foi alterado para dar suporte a valores com ou sem informações de fuso horário e para permitir a preservação do fuso horário.  
+## <a name="description"></a>DESCRIÇÃO  
+ O formato de armazenamento [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no para tipos xs: DateTime, xs: Date e xs: time foi alterado para dar suporte a valores com ou sem informações de fuso horário e para permitir a preservação do fuso horário.  
   
- Em uma Coleção de Esquemas XML que referencia um ou mais tipos, os índices XML em todas as colunas que são associados à coleção serão desabilitados depois da atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Você poderá consultá-los usando SELECT e/ou XQUERIES, mas o índice XML não será usado. Se um valor de ano negativo for encontrado, ocorrerá um erro de tempo de execução.  
+ Em uma Coleção de Esquemas XML que referencia um ou mais tipos, os índices XML em todas as colunas que são associados à coleção serão desabilitados depois da atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Você poderá consultá-los usando SELECT e/ou XQUERIES, mas o índice XML não será usado. Se um valor de ano negativo for encontrado, ocorrerá um erro de runtime.  
   
  Além disso, o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não aceita valores com anos negativos.  
   
@@ -185,7 +185,7 @@ EXECUTE DateTimeInvestigation 1;
   
  Para usar índices XML no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] depois da atualização, você deve recriar índices XML ou redigitar colunas XML para todas as colunas que usam xs:date, xs:time ou xs:dateTime.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

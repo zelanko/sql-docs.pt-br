@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ba4168f5417260b0857accdb9cf8fb3fa0f3c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103342"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>arquivo de configuração RSReportDesigner
@@ -60,15 +60,20 @@ ms.locfileid: "66103342"
 |`InstanceName`|Um identificador para o servidor de visualização prévia. Não modifique esse valor.|  
 |`SessionCookies`|Especifica se o servidor de relatório usa cookies de navegador para manter informações de sessão. Os valores válidos incluem `true` e `false`. O padrão é `true`. Se você definir este valor como falso, dados de sessão serão armazenados no banco de dados **reportservertempdb** .|  
 |`SessionTimeoutMinutes`|Especifica o período para o qual um cookie de sessão é válido. O padrão é 3 minutos.|  
-|`PolicyLevel`|Especifica o arquivo de configuração de política de segurança. O valor válido é Rspreviewpolicy.config. Para obter mais informações, consulte [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|  
+|`PolicyLevel`|Especifica o arquivo de configuração de política de segurança. O valor válido é RSPreviewPolicy. config. Para obter mais informações, consulte [usando Reporting Services arquivos de política de segurança](../extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |`CacheDataForPreview`|Quando definido como `True`, o Designer de Relatórios armazena dados em um arquivo de cache no computador local. Os valores válidos são `True` (padrão) e `False`. Para obter mais informações, consulte [Visualizando relatórios](../reports/previewing-reports.md).|  
-|`Render`|Enumera as extensões de renderização disponíveis ao Designer de Relatórios para propósitos de visualização prévia. O conjunto de extensões de renderização usado para a visualização prévia deve ser idêntico ao instalado com o servidor de relatório.<br /><br /> `Name` especifica a extensão de renderização. Se você estiver invocando uma extensão de renderização por código, use este valor para chamar uma extensão específica.<br /><br /> `Type` especifica o nome de classe totalmente qualificado da classe de extensão, além do nome de biblioteca, separado por vírgula.<br /><br /> `Visible` especifica se o nome será exibido em qualquer interface de usuário. Esse valor pode ser `True` (padrão) ou `False`. Se `True`, é exibido em interfaces de usuário.|  
-|`Data`|Enumera as extensões de processamento de dados disponíveis para o Designer de Relatórios para propósitos de conexão com fontes de dados que fornecem dados aos relatórios. O conjunto de extensões de processamento de dados usado no Designer de Relatórios pode ser idêntico ao instalado com o servidor de relatório. Se você estiver adicionando ou removendo extensões personalizadas, consulte [Implantando uma extensão de processamento de dados](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> `Name` especifica a extensão de processamento de dados.<br /><br /> `Type` especifica o nome de classe totalmente qualificado da classe de extensão, além do nome de biblioteca, separado por vírgula.|  
+|`Render`|Enumera as extensões de renderização disponíveis ao Designer de Relatórios para propósitos de visualização prévia. O conjunto de extensões de renderização usado para a visualização prévia deve ser idêntico ao instalado com o servidor de relatório.<br /><br /> 
+  `Name` especifica a extensão de renderização. Se você estiver invocando uma extensão de renderização por código, use este valor para chamar uma extensão específica.<br /><br /> 
+  `Type` especifica o nome de classe totalmente qualificado da classe de extensão, além do nome de biblioteca, separado por vírgula.<br /><br /> 
+  `Visible` especifica se o nome será exibido em qualquer interface de usuário. Esse valor pode ser `True` (padrão) ou `False`. Se `True`, é exibido em interfaces de usuário.|  
+|`Data`|Enumera as extensões de processamento de dados disponíveis para o Designer de Relatórios para propósitos de conexão com fontes de dados que fornecem dados aos relatórios. O conjunto de extensões de processamento de dados usado no Designer de Relatórios pode ser idêntico ao instalado com o servidor de relatório. Se você estiver adicionando ou removendo extensões personalizadas, consulte [Implantando uma extensão de processamento de dados](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> 
+  `Name` especifica a extensão de processamento de dados.<br /><br /> 
+  `Type` especifica o nome de classe totalmente qualificado da classe de extensão, além do nome de biblioteca, separado por vírgula.|  
 |`Designer`|Enumera os construtores de consulta disponíveis para o Designer de Relatórios. Construtores de consulta fornecem uma interface de usuário para construir consultas que recuperam dados usados em relatórios. Construtores de consulta podem variar de acordo com extensões de processamento de dados diferentes. Por padrão, o Reporting Services fornece uma interface de usuário de ferramenta de dados visuais para todas as extensões de processamento de dados incluídas no produto. Entretanto, se você estiver construindo ou usando extensões de processamento de dados de terceiros, outras interfaces de construtor de consulta poderão ser aplicáveis.|  
 |`PreviewProcessingServiceStartupTimeoutSeconds`|Especifica o período para esperar pelo serviço de processamento de visualização para começar antes de mostrar uma mensagem de erro. O padrão é 15 segundos.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivos de configuração do Reporting Services](reporting-services-configuration-files.md)   
- [Ferramentas de Design no Designer do SQL Server Data Tools de relatório de consulta &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)  
+ [Ferramentas de design de consulta no Report Designer SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)  
   
   

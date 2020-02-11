@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a2a33d7aa992fd434b29fd519c805f57b2b46fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098356"
 ---
-# <a name="listsslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>Método ListSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
+# <a name="listsslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>Método ListSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
   Retorna uma lista de certificados SSL instalados no computador.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,29 +38,29 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
     out Int32 length, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *LCID*  
  A localidade a ser usada para as mensagens de erro retornadas.  
   
- *Application[]*  
+ *Aplicativo []*  
  [fora] Os aplicativos que têm associações de certificado.  
   
- *CertificateHash[]*  
+ *CertificateHash []*  
  [fora] Os hashes dos certificados.  
   
- *IPAddress[]*  
+ *IPAddress []*  
  [fora] O endereço IP dos aplicativos.  
   
- *Port[]*  
+ *Porta []*  
  [fora] O número de porta armazenado na associação em rsreportserver.config.  
   
- *Errors[]*  
+ *Erros []*  
  [fora] As descrições dos erros ocorridos.  
   
  *Comprimento*  
  [fora] O tamanho da matriz retornada pelo método.  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -69,9 +69,9 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

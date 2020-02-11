@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades do espaço reservado, geral (construtor de relatórios e SSRS) | Microsoft Docs
+title: Caixa de diálogo Propriedades do espaço reservado, geral (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,35 +14,35 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108095"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades do Espaço Reservado, Geral (Construtor de Relatórios e SSRS)
   Use a caixa de diálogo **Propriedades do Espaço Reservado** para alterar o valor, a Dica de Ferramenta e as opções de marcação de um espaço reservado em uma caixa de texto.  
   
 ## <a name="options"></a>Opções  
- **Rótulo**  
+ **Chamada**  
  Digite um rótulo para o espaço reservado. O rótulo é exibido apenas na superfície de design.  
   
- **Value**  
- Digite o valor na caixa de texto. Pode ser uma expressão de campo, outra expressão ou um rótulo. Clique no botão **Expressão** (*fx*) para editar a expressão.  
+ **Valor**  
+ Digite o valor na caixa de texto. Pode ser uma expressão de campo, outra expressão ou um rótulo. Clique no botão **expressão** (*FX*) para editar a expressão.  
   
- **Dica de ferramenta**  
- Digite um texto ou uma expressão que seja avaliada como uma Dica de Ferramenta. Clique no botão **Expressão** (*fx*) para editar a expressão. A Dica de Ferramenta é exibida quando o usuário pausa o ponteiro sobre o item em um relatório renderizado.  
+ **Dessa**  
+ Digite um texto ou uma expressão que seja avaliada como uma Dica de Ferramenta. Clique no botão **expressão** (*FX*) para editar a expressão. A Dica de Ferramenta é exibida quando o usuário pausa o ponteiro sobre o item em um relatório renderizado.  
   
  **Tipo de marcação**  
  Selecione uma opção para indicar como o espaço reservado é renderizado.  
   
--   **Texto sem-Formatação** Exibe o espaço reservado como texto simples. O HTML é tratado como texto literal.  
+-   **Texto sem formatação** Exiba o espaço reservado como texto simples. O HTML é tratado como texto literal.  
   
--   **HTML**  Exibe o espaço reservado como HTML. Se o valor da expressão do espaço reservado contiver marcas HTML válidas, elas serão renderizadas como HTML.  
+-   **HTML**  Exiba o espaço reservado como HTML. Se o valor da expressão do espaço reservado contiver marcas HTML válidas, elas serão renderizadas como HTML.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [Adicionar um HTML a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
+ [Adicionar HTML a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   

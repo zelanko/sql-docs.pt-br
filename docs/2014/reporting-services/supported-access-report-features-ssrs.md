@@ -1,5 +1,5 @@
 ---
-title: Suporte para recursos de relatório do Access (SSRS) | Microsoft Docs
+title: Recursos de relatório de acesso com suporte (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,19 +19,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100582"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Recursos de relatórios do Access com suporte (SSRS)
   Quando você importa um relatório no Designer de Relatórios, o processo de importação converte o relatório do [!INCLUDE[msCoName](../includes/msconame-md.md)] Access em um arquivo de Linguagem RDL do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a vários recursos do Access. No entanto, devido às diferenças entre o Access e o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alguns itens são ligeiramente modificados ou não têm suporte. Este tópico descreve como os recursos de relatórios do Access são convertidos em RDL.  
   
-## <a name="importing-access-reports"></a>Importando relatórios de acesso  
+## <a name="importing-access-reports"></a>Importando relatórios do Access  
  Algumas consultas contêm código que é específico ao Access. O código do Access não é importado com o relatório. Além disso, se uma consulta contiver cadeias de caracteres internas, o relatório talvez não seja importado corretamente. Para corrigir isto, substitua as cadeias de caracteres por um código de caracteres. Por exemplo, substitua o caractere de vírgula (,) por CHAR (34).  
   
- O processo de importação não passa corretamente o ponto e vírgula (;) ou caracteres de marcação XML (\<, >, etc.) nas informações de cadeia de caracteres de conexão. Se uma cadeia de conexão contiver um ponto-e-vírgula ou um caractere de marcação XML, você precisará definir manualmente a senha no novo relatório após a importação do relatório.  
+ O processo de importação não passa corretamente o ponto-e-vírgula (;) ou caracteres de marcação XML\<(, >, etc.) em informações de cadeia de conexão. Se uma cadeia de conexão contiver um ponto-e-vírgula ou um caractere de marcação XML, você precisará definir manualmente a senha no novo relatório após a importação do relatório.  
   
  O processo de importação não importa as configurações de conexão ou tempo limite geral na cadeia de conexão. Talvez seja necessário ajustar essas configurações depois que o relatório for importado.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "66100582"
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a fontes de dados OLE DB, como [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se você estiver importando relatórios de um arquivo de projeto do Access (.adp), a cadeia de conexão para a fonte de dados será obtida da cadeia de conexão no arquivo .adp. Se você estiver importando relatórios de um arquivo de banco de dados do Access (.mdb ou .accdb), a cadeia de conexão poderá apontar para o banco de dados do Access e talvez seja necessário corrigi-la após a importação dos relatórios. Se a fonte de dados para o relatório do Access for uma consulta, as informações da consulta serão armazenadas sem modificações no RDL. Se a fonte de dados para o relatório do Access for uma tabela, o processo de conversão criará uma consulta baseada no nome da tabela e nos campos da tabela.  
   
 ## <a name="reports-with-custom-modules"></a>Relatórios com módulos personalizados  
- Se não houver personalizado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] código contido nos módulos, ele não será convertido. Se o Designer de relatórios encontrar código durante o processo de importação, um aviso será gerado e exibido na **lista de tarefas** janela.  
+ Se houver código personalizado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] contido nos módulos, ele não será convertido. Se Report Designer encontrar código durante o processo de importação, um aviso será gerado e exibido na janela **lista de tarefas** .  
   
 ## <a name="report-controls"></a>Controles de relatório  
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte aos controles do Access a seguir e os inclui em definições do relatório convertidas.  
   
 |||||  
 |-|-|-|-|  
-|Image|Rotular|Linha|Retângulo|  
-|SubForm|SubReport<br /><br /> **Observação** enquanto um controle SubReport seja convertido dentro do relatório principal, o sub-relatório em si é convertido separadamente.|TextBox||  
+|Imagem|Rótulo|Linha|Retângulo|  
+|SubForm|SubReport<br /><br /> **Observação** Embora um controle de sub-relatório seja convertido no relatório principal, o sub-relatório é convertido separadamente.|TextBox||  
   
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não dá suporte aos seguintes controles:  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66100582"
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
- Se o Designer de relatórios encontrar qualquer um desses controles durante o processo de importação, um aviso será gerado e exibido na **lista de tarefas** janela.  
+ Se Report Designer encontrar algum desses controles durante o processo de importação, um aviso será gerado e exibido na janela **lista de tarefas** .  
   
  Outros controles, como o ActiveX e Office Web Components, não serão importados. Por exemplo, se um relatório do Access contiver um controle OWC Chart, ele não será convertido quando o relatório for importado.  
   
@@ -108,14 +108,14 @@ ms.locfileid: "66100582"
 ### <a name="functions"></a>Funções  
  Uma definição de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usa o [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET como linguagem de expressão nativa, enquanto o Access 2002 usa o Visual Basic. As listas a seguir descrevem as funções suportadas pelo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-#### <a name="array-functions"></a>Funções de matriz  
+#### <a name="array-functions"></a>Funções de Matriz  
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte às seguintes funções de matriz:  
   
 -   LBound  
   
 -   UBound  
   
-#### <a name="conversion-functions"></a>Funções de conversão  
+#### <a name="conversion-functions"></a>Funções de Conversão  
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte às seguintes funções de conversão:  
   
 |||||  
@@ -156,12 +156,12 @@ ms.locfileid: "66100582"
   
 |||||  
 |-|-|-|-|  
-|Date|Date$|DateAdd|DateDiff|  
-|DatePart|DateSerial|DateValue|Day|  
+|Data|Date$|DateAdd|DateDiff|  
+|DatePart|DateSerial|DateValue|Dia|  
 |Hora|Minuto|Month|MonthName|  
-|Agora|Segundo|Time|Time$|  
-|Timer|TimeSerial|TimeValue|Dia de semana|  
-|WeekdayName|Year|||  
+|Now|Segundo|Hora|Time$|  
+|Timer|TimeSerial|TimeValue|Weekday|  
+|WeekdayName|Ano|||  
   
 #### <a name="ddeole-functions"></a>Funções DDE/OLE  
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não dá suporte às funções DDE/OLE a seguir.  
@@ -198,7 +198,7 @@ ms.locfileid: "66100582"
 |-|-|-|-|  
 |DDB|FV|IPmt|IRR|  
 |MIRR|NPer|NPV|Pmt|  
-|PPmt|PV|Rate|SLN|  
+|PPmt|PV|Tarifa|SLN|  
 |SYD||||  
   
 #### <a name="interaction-functions"></a>Funções de interação  
@@ -239,8 +239,8 @@ ms.locfileid: "66100582"
 |||||  
 |-|-|-|-|  
 |Abs|Atn|Cos|Exp|  
-|Fix|Int|Log|Rnd|  
-|Arredondamento|Sgn|Sin|Sqr|  
+|Correção|Int|Log|Rnd|  
+|Round|Sgn|Sin|Sqr|  
 |Tan||||  
   
 #### <a name="message-functions"></a>Funções de mensagem  
@@ -255,15 +255,15 @@ ms.locfileid: "66100582"
   
 |||||  
 |-|-|-|-|  
-|Choose|IIf|Alternar||  
+|Fechar|IIf|Opção||  
   
 #### <a name="sql-aggregate-functions"></a>Funções de agregação SQL  
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte às funções de agregação SQL a seguir.  
   
 |||||  
 |-|-|-|-|  
-|Avg|Count|Max|Mín|  
-|StDev|StDevP|Sum|Var|  
+|Avg|Contagem|Max|Mín|  
+|StDev|StDevP|SUM|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>Funções de texto  
@@ -274,15 +274,15 @@ ms.locfileid: "66100582"
 |Formatar|Format$|InStr|InStrRev|  
 |LCase|LCase$|Left (à esquerda)|Left$|  
 |Len|LTrim|LTrim$|Mid|  
-|Mid$|Substituir|Right (à direita)|Right$|  
-|RTrim|Space|Space$|StrComp|  
-|StrConv|Cadeia de caracteres|String$|StrReverse|  
+|Mid$|Substitua|Right|Right$|  
+|RTrim|Espaço|Space$|StrComp|  
+|StrConv|String|String$|StrReverse|  
 |Trim|Trim$|UCase|UCase$|  
   
 ### <a name="constants"></a>Constantes  
  O Access não dá suporte a constantes especiais do [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] (por exemplo, `vbTrue`) em expressões, assim nenhuma conversão é necessária. Porém, há uma exceção: a palavra-chave `Null` é convertida em `System.DbNull.Value`.  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>parâmetros  
  Durante o processo de importação, o Designer de Relatórios verifica cada expressão em um relatório à procura de variáveis que não correspondam a controles ou nomes de campos. Essas variáveis são adicionadas a parâmetros de relatório.  
   
  O tipo de dados para parâmetros de procedimento armazenado é sempre importado como cadeia de caracteres. Depois que o relatório é importado, você deve alterar o parâmetro manualmente para usar o tipo de dados correto.  
@@ -294,7 +294,7 @@ ms.locfileid: "66100582"
  Em uma definição de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], retângulos podem conter outros itens de relatório. Qualquer retângulo maior do que o item de relatório e que sobreponha mais de 90 por cento de sua área se torna um contêiner do item de relatório.  
   
 ## <a name="bitmaps"></a>Bitmaps  
- Todos os bitmaps inseridos em um relatório são convertidos no formato .bmp quando o relatório é importado, independentemente de seus formatos iniciais. Por exemplo, se o seu relatório incluir arquivos .jpg e .gif, os recursos resultantes importados com o relatório serão arquivos .bmp. Os bitmaps são armazenados como imagens inseridas no relatório. Para obter informações sobre imagens inseridas, consulte [imagens &#40;construtor de relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
+ Todos os bitmaps inseridos em um relatório são convertidos no formato .bmp quando o relatório é importado, independentemente de seus formatos iniciais. Por exemplo, se o seu relatório incluir arquivos .jpg e .gif, os recursos resultantes importados com o relatório serão arquivos .bmp. Os bitmaps são armazenados como imagens inseridas no relatório. Para obter informações sobre imagens inseridas, consulte [imagens &#40;Construtor de relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="other-considerations"></a>Outras considerações  
  Além dos itens anteriores, as seguintes informações se aplicam a relatórios importados do Access:  

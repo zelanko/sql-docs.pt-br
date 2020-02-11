@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27719888e994a9cfc9408901a7d89fcf28220c5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097033"
 ---
-# <a name="msreportserverinstance-properties"></a>Propriedades MSReportServer_Instance
+# <a name="msreportserver_instance-properties"></a>Propriedades MSReportServer_Instance
   A classe MSReportServer_Instance fornece informações básicas necessárias para um cliente se conectar a um servidor de relatório instalado.  
   
 ## <a name="public-properties"></a>Propriedades públicas  
@@ -39,7 +39,7 @@ ms.locfileid: "66097033"
 |[IsSharePointIntegrated](msreportserver-instance-properties-issharepointintegrated.md)|Indica se o servidor de relatório está configurado para o modo integrado do SharePoint.|  
 |[Versão](msreportserver-instance-properties-version.md)|Retorna a versão do servidor de relatório.|  
   
-## <a name="see-also"></a>Consulte também  
- [Membros MSReportServer_Instance](msreportserver-instance-members.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Membros de MSReportServer_Instance](msreportserver-instance-members.md)  
   
   

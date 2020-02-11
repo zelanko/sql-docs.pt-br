@@ -1,5 +1,5 @@
 ---
-title: 'Como fazer: Filtrar relatórios | Microsoft Docs'
+title: Como filtrar relatórios | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bad387683b2a093f680c00885a50b043e8a890cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094893"
 ---
-# <a name="how-to-filter-reports"></a>Como fazer: Para filtrar relatórios
-  Este tópico descreve como você pode usar o Visualizador de relatórios do Supervisor de atualização para aplicar filtros a um relatório.  
+# <a name="how-to-filter-reports"></a>Como filtrar relatórios
+  Este tópico descreve como você pode usar o Visualizador de relatórios do supervisor de atualização para aplicar filtros a um relatório.  
   
 ### <a name="to-filter-reports"></a>Para filtrar relatórios  
   
-1.  No visualizador de relatório, exiba o relatório que você quer filtrar. Para obter instruções, consulte [como: Exibir um relatório do Supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
+1.  No visualizador de relatório, exiba o relatório que você quer filtrar. Para obter instruções, consulte [como exibir um relatório do supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
   
-2.  No **filtrar por** , selecione um tipo de problema para exibir:  
+2.  Na lista **Filtrar por** , selecione um tipo de problema a ser exibido:  
   
     -   **Todos os problemas**. Exibe todos os assuntos que não foram marcados como solucionados.  
   
@@ -41,10 +41,10 @@ ms.locfileid: "66094893"
   
     -   **Problemas não resolvidos**. Exibe todos os problemas que ainda não foram solucionados.  
   
-## <a name="see-also"></a>Consulte também  
- [Como: Execute o Assistente para análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
- [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Tópicos de instruções sobre o Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Como executar o assistente de análise do supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Resolvendo problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
+ [Tópicos de instruções do supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Trabalhando com o Supervisor de Atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

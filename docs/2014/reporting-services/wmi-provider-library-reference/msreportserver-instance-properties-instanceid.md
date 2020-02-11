@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba254f3cf1e5104a4ac56ca2bed587b150ac824f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097212"
 ---
-# <a name="instanceid-property-wmi-msreportserverinstance"></a>Propriedade InstanceID (WMI MSReportServer_Instance)
+# <a name="instanceid-property-wmi-msreportserver_instance"></a>Propriedade InstanceID (WMI MSReportServer_Instance)
   Esse objeto dá suporte à infraestrutura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e não destina-se a ser usado diretamente em seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,9 +39,9 @@ public string InstanceID;
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Membros MSReportServer_Instance](msreportserver-instance-members.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Membros de MSReportServer_Instance](msreportserver-instance-members.md)  
   
   

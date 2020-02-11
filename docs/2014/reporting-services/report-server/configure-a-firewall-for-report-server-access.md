@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104159"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
@@ -45,25 +45,25 @@ ms.locfileid: "66104159"
   
 3.  Clique em **Regras de entrada**.  
   
-4.  Clique em **Nova Regra** na janela **Ações** **.**  
+4.  Clique em **nova regra** na janela **ações** **.**  
   
 5.  Clique em **Tipo de Regra** de **porta.**  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 7.  Na página **Protocolos e Portas** , clique em **TCP**.  
   
 8.  Selecione **Portas Locais Específicas** e digite um valor de **80**.  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 10. Na página **Ação** , clique em **Permitir a conexão**.  
   
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 12. Na página **Perfil** , clique nas opções adequadas para seu ambiente.  
   
-13. Clique em **Avançar**.  
+13. Clique em **Próximo**.  
   
 14. Na página **Nome** , digite o nome do**ReportServer (TCP na porta 80)**  
   
@@ -73,23 +73,23 @@ ms.locfileid: "66104159"
   
 #### <a name="to-open-port-80-on-windows-vista-or-windows-server-2008"></a>Para abrir a porta 80 no Windows Vista ou no Windows Server 2008  
   
-1.  Do **inicie** menu, clique em **painel de controle**, clique em **segurança**e, em seguida, clique em **Windows Firewall**.  
+1.  No menu **Iniciar** , clique em **painel de controle**, clique em **segurança**e, em seguida, clique em **Firewall do Windows**.  
   
-2.  Clique em **permitir um programa pelo Firewall do Windows**.  
+2.  Clique em **Permitir um programa pelo Firewall do Windows**.  
   
 3.  Clique em **Continuar**.  
   
-4.  Na guia Exceções, clique em **adicionar porta**.  
+4.  Na guia exceções, clique em **Adicionar porta**.  
   
-5.  Em nome, digite **ReportServer (TCP na porta 80)** .  
+5.  Em nome, digite **ReportServer (TCP na porta 80)**.  
   
-6.  Número da porta, digite **80**.  
+6.  Em número da porta, digite **80**.  
   
-7.  Verifique **TCP** está selecionado.  
+7.  Verifique se **TCP** está selecionado.  
   
-8.  Clique em **Alterar escopo**.  
+8.  Clique em **alterar escopo**.  
   
-9. Clique em **somente minha rede (sub-rede)** e, em seguida, clique em **Okey**.  
+9. Clique em **minha rede (sub-rede) somente**e, em seguida, clique em **OK**.  
   
 10. Clique em **OK** para fechar a caixa de diálogo.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66104159"
   
  Você também pode verificar se a porta está aberta corretamente iniciando o Gerenciador de Relatórios em um computador diferente. Para obter mais informações, consulte [Gerenciador de Relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   

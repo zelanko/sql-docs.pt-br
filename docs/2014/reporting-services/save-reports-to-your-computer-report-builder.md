@@ -1,5 +1,5 @@
 ---
-title: Salvar relatórios em seu computador (construtor de relatórios) | Microsoft Docs
+title: Salvar relatórios em seu computador (Construtor de Relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102305"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Salvar relatórios no computador (Construtor de Relatórios)
@@ -27,7 +27,7 @@ ms.locfileid: "66102305"
     > [!NOTE]  
     >  Se você estiver salvando um relatório de novo, ele será salvo novamente automaticamente em seu local anterior. Use a opção **Salvar como** para alterar o local.  
   
-2.  Opcionalmente, clique em **área de trabalho**, **Meus documentos**, ou **meu computador** para salvar o relatório em uma dessas pastas.  
+2.  Opcionalmente, clique em **área de trabalho**, **meus documentos**ou **meu computador** para salvar o relatório em uma dessas pastas.  
   
 3.  Vá para a pasta no computador local em que você deseja salvar o relatório. Em **Nome**, digite o nome do relatório.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "66102305"
   
 2.  Vá para a pasta no computador local em que você deseja salvar o relatório.  
   
-3.  Em **Nome**, digite o nome do relatório. Opcionalmente, clique em **área de trabalho**, **Meus documentos**, ou **meu computador** para salvar o relatório em uma dessas pastas.  
+3.  Em **Nome**, digite o nome do relatório. Opcionalmente, clique em **área de trabalho**, **meus documentos**ou **meu computador** para salvar o relatório em uma dessas pastas.  
   
 4.  Em **Itens de tipo**, selecione o tipo de item de relatório que você está salvando. O tipo de relatórios é Relatórios (*.rdl).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportando relatórios &#40;relatórios e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Salvando relatórios &#40;Construtor de Relatórios&#41;](report-builder/saving-reports-report-builder.md)   
  [Exportar um relatório como outro tipo de arquivo &#40;Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   

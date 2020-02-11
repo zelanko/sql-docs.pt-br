@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100104"
 ---
 # <a name="preview-view"></a>Modo Visualizar
@@ -30,19 +30,19 @@ ms.locfileid: "66100104"
 ## <a name="options"></a>Opções  
  Use a barra de ferramentas para gerenciar as funções de visualização.  
   
- **Mostrar ou ocultar mapa do documento**  
+ **Mostrar ou Ocultar Mapa do Documento**  
  Escolha essa opção para mostrar ou ocultar o mapa do documento, se houver.  
   
- **Mostrar ou ocultar área de parâmetros**  
+ **Mostrar ou Ocultar Área de Parâmetros**  
  Escolha essa opção para mostrar ou ocultar as caixas de parâmetros dos relatórios com parâmetros.  
   
- **Primeira página**  
+ **Primeira Página**  
  Escolha essa opção para ir para a primeira página do relatório.  
   
- **Página anterior**  
+ **Página Anterior**  
  Escolha essa opção para ir para a página anterior do relatório.  
   
- **Página atual**  
+ **Página Atual**  
  Exibe a página atual do relatório.  
   
  **Total de páginas**  
@@ -54,10 +54,10 @@ ms.locfileid: "66100104"
  **Última página**  
  Escolha essa opção para ir para a última página do relatório.  
   
- **Voltar ao relatório pai**  
+ **Voltar para o Relatório Pai**  
  Escolha essa opção para ir para o relatório pai. Essa opção é usada para navegar e extrair relatórios detalhados.  
   
- **Parar renderização**  
+ **Parar Renderização**  
  Escolha essa opção para parar o processo de renderização.  
   
  **Atualizar**  
@@ -66,29 +66,29 @@ ms.locfileid: "66100104"
  **Imprimir**  
  Escolha essa opção para imprimir o relatório.  
   
- **Layout de impressão**  
+ **Layout de Impressão**  
  Escolha essa opção para alternar entre a visualização de um relatório e como ele será exibido na página impressa.  
   
- **Configurar página**  
+ **Configurar Página**  
  Escolha essa opção para alterar as propriedades de páginas e de impressão. Use Layout de Impressão para exibir as alterações antes de imprimir.  
   
- **Exportar**  
+ **Exportação**  
  Escolha essa opção para exportar o relatório renderizado em um formato específico.  
   
  **Zoom**  
  Selecione um fator de zoom para ampliar ou reduzir o relatório.  
   
- **Texto de pesquisa**  
+ **Pesquisar texto**  
  Digite o texto para procurar uma correspondência no relatório. Não é possível usar operadores de pesquisa. Clique em **Localizar** para procurar a primeira instância.  
   
- **localizar**  
+ **Considerar**  
  Escolha essa opção para começar a procurar o texto de pesquisa no relatório.  
   
- **Localizar Próximo**  
+ **Localizar próximo**  
  Escolha essa opção para procurar a próxima instância do texto de pesquisa.  
   
-## <a name="see-also"></a>Consulte também  
- [Visualizar relatórios](../reports/previewing-reports.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Visualizando relatórios](../reports/previewing-reports.md)   
  [Ajuda F1 do Designer de Relatórios](report-designer-f1-help.md)  
   
   

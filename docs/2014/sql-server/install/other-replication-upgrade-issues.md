@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093642"
 ---
 # <a name="other-replication-upgrade-issues"></a>Outros problemas de atualização da replicação
@@ -49,11 +49,11 @@ ms.locfileid: "66093642"
   
 -   Todos os controles ActiveX são marcados como inseguros para gerar script e para inicialização.  
   
--   O controle ActiveX de Instantâneo foi descartado. Você pode criar e gerenciar instantâneos usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou programaticamente usando procedimentos armazenados de replicação. Para obter mais informações, consulte os tópicos "como: Criar e aplicar o instantâneo inicial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) "e" como: Criar o instantâneo inicial (programação Transact-SQL de replicação) "em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+-   O controle ActiveX de Instantâneo foi descartado. Você pode criar e gerenciar instantâneos usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou programaticamente usando procedimentos armazenados de replicação. Para obter mais informações, consulte os tópicos "Como criar e aplicar o instantâneo inicial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])" e "Como criar o instantâneo inicial (Programação Transact-SQL de replicação)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   O controle ActiveX de Distribuição e o controle ActiveX de Mesclagem foram preteridos. Uma funcionalidade semelhante é fornecida por aplicativos de código gerenciado que usam RMO (Replication Management Objects). Para obter mais informações, consulte "Sincronizando assinaturas (Programação RMO)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Problemas na atualização da replicação](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
   

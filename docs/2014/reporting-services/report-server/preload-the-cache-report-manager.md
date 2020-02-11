@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103586"
 ---
 # <a name="preload-the-cache-report-manager"></a>Pré-carregar o cache (Gerenciador de Relatórios)
@@ -84,7 +84,7 @@ ms.locfileid: "66103586"
     data source=<servername>; initial catalog=Subscribers  
     ```  
   
-8.  Clique em **Avançar**.  
+8.  Clique em **Próximo**.  
   
 9. Especifique a consulta ou o comando que recupera dados de assinante. Opcionalmente, aumente o período de tempo limite para as consultas que levam muito tempo para serem processadas. Por exemplo:  
   
@@ -115,14 +115,14 @@ ms.locfileid: "66103586"
   
     -   Para fazer com que uma cópia armazenada em cache expire depois de um período de tempo específico, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório após alguns minutos.** Digite o número de minutos para a validade do relatório.  
   
-    -   Para fazer com que a cópia armazenada em cache expire de acordo com um agendamento, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório no próximo agendamento.** Clique em **Configurar**ou selecione um agendamento compartilhado para definir um agendamento para a expiração do relatório.  
+    -   Para fazer com que a cópia armazenada em cache expire em um agendamento, clique em **Armazenar uma cópia temporária do relatório em cache. Expirar cópia de relatório no seguinte agendamento.** Clique em **Configurar**ou selecione um agendamento compartilhado para definir um agendamento para a expiração do relatório.  
   
 18. Clique em **Aplicar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
- [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Desempenho, instantâneos, caching &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
+ [Criar uma assinatura controlada por dados &#40;tutorial do SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Desempenho, instantâneos, cache &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
  [Definir as propriedades do processamento de relatórios](set-report-processing-properties.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](caching-reports-ssrs.md)  
   

@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100918"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Pausar o processamento de relatório e assinatura
@@ -46,9 +46,9 @@ ms.locfileid: "66100918"
 ## <a name="pause-a-shared-schedule"></a>Pausar uma agenda compartilhada  
  Se um relatório ou assinatura for executado a partir de uma agenda compartilhada, você pode pausar a agenda para impedir o processamento. Todos os processamentos de relatório e assinatura que são controlados pelo agendamento serão adiados até o agendamento ser retomado. Para obter mais informações, consulte [pausar e retomar agendas compartilhadas](schedules.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Reporting Services servidor de relatório &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Página Propriedades de Segurança, Itens &#40;Gerenciador de Relatórios&#41;](../security-properties-page-items-report-manager.md)  
+ [Página Propriedades de segurança, itens &#40;Report Manager&#41;](../security-properties-page-items-report-manager.md)  
   
   

@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098273"
 ---
-# <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>Método ListReservedURLs (WMI MSReportServer_ConfigurationSetting)
+# <a name="listreservedurls-method-wmi-msreportserver_configurationsetting"></a>Método ListReservedURLs (WMI MSReportServer_ConfigurationSetting)
   Lista as URLs reservadas para todos os aplicativos no servidor de relatório.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,23 +36,23 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
         out int[] Length, out int[] HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- *Application[]*  
+## <a name="parameters"></a>parâmetros  
+ *Aplicativo []*  
  [fora] Os aplicativos que têm reservas de URL.  
   
- *UrlString[]*  
+ *UrlString []*  
  [fora] As URLs que estão reservadas.  
   
- *Account[]*  
+ *Conta []*  
  [fora] Os nomes de conta associados com a conta para as reservas de URL.  
   
- *AccountSID[]*  
+ *AccountId []*  
  [out] Os SIDs da conta associados com a conta para as reservas de URL.  
   
  *Comprimento*  
  [fora] O tamanho das matrizes retornadas pelo método.  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -61,9 +61,9 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

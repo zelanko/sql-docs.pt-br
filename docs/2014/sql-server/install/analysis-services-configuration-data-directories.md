@@ -1,5 +1,5 @@
 ---
-title: Configuração - diretórios de dados do Analysis Services | Microsoft Docs
+title: Configuração de Analysis Services-diretórios de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 4ff1cd03eb260d892c22c36285fa07d912994510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096807"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Configuração do Analysis Services - diretórios de dados
@@ -22,12 +22,12 @@ ms.locfileid: "66096807"
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
   
-|Descrição|Diretório padrão|Recomendações|  
+|DESCRIÇÃO|Diretório padrão|Recomendações|  
 |-----------------|-----------------------|---------------------|  
-|Diretório raiz de dados|Server\MSAS12 SQL do C:\Program Files\Microsoft. \<InstanceID > \OLAP\Data\|Certifique-se de que a pasta \Program SQL Server \ está protegida com permissões limitadas. O desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, em muitas configurações, do desempenho do armazenamento no qual o diretório de dados está localizado. Coloque esse diretório no armazenamento de melhor desempenho conectado ao sistema. Para instalações de cluster de failover, verifique se os diretórios de dados estão colocados no disco compartilhado.|  
-|Diretório do arquivo de log|Server\MSAS12 SQL do C:\Program Files\Microsoft. \<InstanceID > \olap\log.\|esse é o diretório para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] arquivos de log e inclui o log do FlightRecorder. Se você aumentar a duração do registrador de voo, atente para que o diretório de logs tenha espaço suficiente.|  
-|Diretório temporário|Server\MSAS12 SQL do C:\Program Files\Microsoft. \<InstanceID > \olap\temp.\|colocar o diretório Temp no subsistema de armazenamento de alto desempenho.|  
-|Diretório de backup|Server\MSAS12 SQL do C:\Program Files\Microsoft. \<InstanceID > \olap\backup.\|esse é o diretório para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] arquivos de backup padrão. Em instalações do PowerPivot para SharePoint, também é onde os Serviços de Sistema PowerPivot armazenam em cache arquivos de dados PowerPivot.<br /><br /> Verifique se as permissões apropriadas estão definidas para impedir perda de dados e se o grupo de usuários do serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tem permissões suficientes para gravar no diretório de backup. O uso de uma unidade mapeada para diretórios de backup não tem suporte.|  
+|Diretório raiz de dados|C:\Arquivos de Programas\microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Data\|Verifique se a pasta \Program Files\Microsoft SQL Server \ está protegida com permissões limitadas. O desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, em muitas configurações, do desempenho do armazenamento no qual o diretório de dados está localizado. Coloque esse diretório no armazenamento de melhor desempenho conectado ao sistema. Para instalações de cluster de failover, verifique se os diretórios de dados estão colocados no disco compartilhado.|  
+|Diretório do arquivo de log|C:\Arquivos de Programas\microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Log\|esse é o diretório para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] arquivos de log e inclui o log FlightRecorder. Se você aumentar a duração do registrador de voo, atente para que o diretório de logs tenha espaço suficiente.|  
+|Diretório temporário|C:\Arquivos de Programas\microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Temp\|Coloque o diretório temp no subsistema de armazenamento de alto desempenho.|  
+|Diretório de backup|C:\Arquivos de Programas\microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Backup\|este é o diretório para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] arquivos de backup padrão. Em instalações do PowerPivot para SharePoint, também é onde os Serviços de Sistema PowerPivot armazenam em cache arquivos de dados PowerPivot.<br /><br /> Verifique se as permissões apropriadas estão definidas para impedir perda de dados e se o grupo de usuários do serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tem permissões suficientes para gravar no diretório de backup. O uso de uma unidade mapeada para diretórios de backup não tem suporte.|  
   
 ## <a name="notes"></a>Observações  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66096807"
   
     -   Em um diretório onde os arquivos do sistema estão localizados  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)  
   
   

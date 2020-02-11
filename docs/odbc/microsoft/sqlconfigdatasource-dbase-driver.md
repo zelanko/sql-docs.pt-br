@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Driver do dBASE) | Microsoft Docs
+title: SQLConfigDataSource (driver do dBASE) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 569a83110d7d5a3cd25eed8f68753d13793f8b10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054104"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (Driver do dBASE)
 > [!NOTE]  
->  Este tópico fornece informações específicas do Driver do dBASE. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas do driver do dBASE. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- O **SQLConfigDataSource** função que é usada para adicionar, modificar ou excluir uma fonte de dados usa as seguintes palavras-chave dinamicamente.  
+ A função **SQLConfigDataSource** que é usada para adicionar, modificar ou excluir uma fonte de dados usa dinamicamente as seguintes palavras-chave.  
   
-|Palavra-chave|Descrição|  
+|Palavra-chave|DESCRIÇÃO|  
 |-------------|-----------------|  
-|COLLATINGSEQUENCE|A sequência na qual os campos são classificados.<br /><br /> A sequência pode ser: ASCII (o padrão) ou internacional.<br /><br /> Isso define a mesma opção como **sequência de agrupamento** na caixa de diálogo de instalação.|  
+|COLLATINGSEQUENCE|A sequência na qual os campos são classificados.<br /><br /> A sequência pode ser: ASCII (o padrão) ou internacional.<br /><br /> Isso define a mesma opção que a **sequência de agrupamento** na caixa de diálogo de instalação.|  
 |DEFAULTDIR|A especificação de caminho para o diretório.|  
-|DELETED|Para o driver do dBASE, especifica se linhas que foram marcadas como excluídos podem ser recuperadas ou posicionadas no. Se definido como 1, linhas excluídas não é exibido; Se definido como 0, linhas excluídas é tratadas como linhas não excluídos.<br /><br /> Isso define a mesma opção como **Mostrar linhas excluídas** na caixa de diálogo de instalação.|  
-|DESCRIPTION|Uma descrição dos dados na fonte de dados.<br /><br /> Isso define a mesma opção como **descrição** na caixa de diálogo de instalação.|  
+|DELETED|Para o driver do dBASE, especifica se as linhas que foram marcadas como excluídas podem ser recuperadas ou posicionadas. Se definido como 1, as linhas excluídas não serão exibidas; Se definido como 0, as linhas excluídas serão tratadas da mesma forma que as linhas não excluídas.<br /><br /> Isso define a mesma opção que **Mostrar linhas excluídas** na caixa de diálogo de instalação.|  
+|DESCRIÇÃO|Uma descrição dos dados na fonte de dados.<br /><br /> Isso define a mesma opção que a **Descrição** na caixa de diálogo de instalação.|  
 |DRIVER|A especificação de caminho para a DLL do driver.|  
-|DRIVERID|Uma ID de inteiro para o driver.<br /><br /> 21 (dBASE III)<br /><br /> 277 (dBASE IV)<br /><br /> 533 (dBASE 5.0)|  
-|FIL|Arquivos dBase III, dBase IV ou dBase 5 de tipo|  
-|PAGETIMEOUT|Especifica o período de tempo, em décimos de segundo, que uma página (se não usado) permanece no buffer antes de serem removidos. O padrão é 600 décimos de segundo (60 segundos). Observe que essa opção se aplica a todas as fontes de dados que usam o driver ODBC.<br /><br /> Isso define a mesma opção como **Page Timeout** na caixa de diálogo de instalação.|  
-|READONLY|TRUE para tornar o arquivo somente leitura; FALSE para tornar o arquivo não é somente leitura.<br /><br /> Isso define a mesma opção como **somente leitura** na caixa de diálogo de instalação.|  
-|STATISTICS|Para o driver do dBASE, determina se as estatísticas de tamanho de tabela são aproximadas. Observe que essa opção se aplica a todas as fontes de dados que usam o driver ODBC.<br /><br /> Isso define a mesma opção como **contagem de linha aproximada** na caixa de diálogo de instalação.|  
-|THREADS|O número de threads em segundo plano para o mecanismo a ser usado. Esse valor é 3 e não pode ser alterado.<br /><br /> Isso define a mesma opção como **Threads** na caixa de diálogo de instalação.|
+|DRIVERid|Uma ID de inteiro para o driver.<br /><br /> 21 (dBASE III)<br /><br /> 277 (dBASE IV)<br /><br /> 533 (dBASE 5,0)|  
+|FIL|Tipo de arquivo dBase III, dBase IV ou dBase 5|  
+|PAGETIMEOUT|Especifica o período de tempo, em décimos de segundo, que uma página (se não usada) permanece no buffer antes de ser removida. O padrão é 600 décimos de segundo (60 segundos). Observe que essa opção se aplica a todas as fontes de dados que usam o driver ODBC.<br /><br /> Isso define a mesma opção como **tempo limite de página** na caixa de diálogo de instalação.|  
+|READONLY|TRUE para tornar o arquivo somente leitura; FALSE para tornar o arquivo não somente leitura.<br /><br /> Isso define a mesma opção como **somente leitura** na caixa de diálogo de instalação.|  
+|STATISTICS|Para o driver do dBASE, determina se as estatísticas de tamanho da tabela são aproximadas. Observe que essa opção se aplica a todas as fontes de dados que usam o driver ODBC.<br /><br /> Isso define a mesma opção que a **contagem aproximada de linhas** na caixa de diálogo de instalação.|  
+|THREADS|O número de threads em segundo plano a ser usado pelo mecanismo. Esse valor é 3 e não pode ser alterado.<br /><br /> Isso define a mesma opção que os **threads** na caixa de diálogo de instalação.|

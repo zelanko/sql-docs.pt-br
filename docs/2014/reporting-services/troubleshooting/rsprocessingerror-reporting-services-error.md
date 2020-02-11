@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099141"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erro do Reporting Services
@@ -25,16 +25,16 @@ ms.locfileid: "66099141"
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|rsProcessingError|  
-|Origem do evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
+|Origem do Evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto da mensagem|Ocorreram erros em processamento de relatório.|  
   
 ## <a name="explanation"></a>Explicação  
  Um ou mais erros foram encontrados durante a publicação, o processamento, a visualização local, a exibição a partir do servidor de relatórios ou a criação de uma assinatura para um relatório. Essa mensagem de erro indica que pelo menos um erro foi detectado.  
   
-### <a name="possible-causes"></a>Causas possíveis  
+### <a name="possible-causes"></a>Possíveis causas  
  As possíveis causas incluem:  
   
 -   Erro de processamento no servidor de relatórios.  
@@ -55,7 +55,7 @@ ms.locfileid: "66099141"
   
 -   Um parâmetro que tem a propriedade Nullable definida como `False` detectou um valor nulo no parâmetro.  
   
--   Uma expressão para a propriedade Hidden de uma região de dados contém um erro: Referência de objeto não definida para uma instância de um objeto.  
+-   Uma expressão da propriedade Hidden de uma região de dados que contém um erro: a referência do objeto não foi definida para uma instância de um objeto.  
   
 -   Expressão que incluiu uma chamada de função inválida ou erro de sintaxe.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66099141"
  Um parâmetro de vários valores não pode ser Nulo. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Relatório principal com sub-relatório que não possa ser processado  
- Um relatório com sub-relatórios deve ser processado pela mesma versão do processador de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante a atualização de relatórios para a versão atual do esquema de definição de relatórios, o relatório principal e os sub-relatórios poderão ou não ser atualizados ao mesmo tempo. Se a versão não for compatível entre um relatório e seus sub-relatórios, a seguinte mensagem será exibida: "Sub-relatório não pôde ser processado."  
+ Um relatório com sub-relatórios deve ser processado pela mesma versão do processador de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante a atualização de relatórios para a versão atual do esquema de definição de relatórios, o relatório principal e os sub-relatórios poderão ou não ser atualizados ao mesmo tempo. Se a versão não for compatível entre um relatório e seus sub-relatórios, a mensagem a seguir será exibida: "Não foi possível processar o sub-relatório".  
   
  Você deve alterar o relatório principal ou os sub-relatórios de forma que todos os relatórios possam ser processados pela mesma versão do processador de relatórios. Para obter informações sobre o motivo pelo qual um relatório falha ao ser atualizado, consulte [Atualizar relatórios](../install-windows/upgrade-reports.md).  
   
@@ -117,18 +117,18 @@ ms.locfileid: "66099141"
   
  Para funções de agregação que calculam os totais de execução (`Previous`, `RunningValue` ou `RowNumber`), você pode especificar um parâmetro de escopo que seja um nome de grupo de linha ou de coluna, mas não ambos. Isso se aplica à seguinte mensagem de erro:  
   
--   `Previous`, `RunningValue` ou `RowNumber` usadas nas células de dados de funções de agregação a  *\<tipo de item de relatório >* ' *\<nome do item de relatório >* ' fazem referência a escopos de agrupamento em colunas e linhas do  *\<tipo de item de relatório >* . Os parâmetros de escopo de todos os `Previous`, `RunningValue` e `RowNumber` agregar funções dentro de uma  *\<tipo de item de relatório >* pode fazer referência a agrupamentos de linhas ou agrupamentos de colunas de dados, mas não ambos.  
+-   `Previous``RunningValue` ou `RowNumber` as funções de agregação usadas nas células de dados do * \<tipo de item de relatório>* '*\<nome do item *de relatório>' referem-se a escopos de agrupamento nas colunas e nas linhas do tipo de item de * \<relatório>*. Os parâmetros de escopo de `Previous`All `RunningValue` e `RowNumber` funções de agregação dentro de um * \<tipo de item de relatório>* podem se referir a agrupamentos de linhas ou a grupos de colunas de dados, mas não a ambos.  
   
  Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>Escopo de conjunto de dados padrão para uma caixa de texto de nível superior  
  Não use um escopo padrão para uma caixa de texto adicionada à superfície do design de relatórios quando o relatório tiver mais de um conjunto de dados. Use uma expressão que inclui o nome do conjunto de dados como o escopo e uma função de agregação. Por exemplo, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtros geralmente usados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 924b450ab138df1cad3afcfa11cb9c0d1cc87a22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105115"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Função Union (Construtor de Relatórios e SSRS)
@@ -30,18 +30,19 @@ ms.locfileid: "66105115"
 Union(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *Expressão*  
+#### <a name="parameters"></a>parâmetros  
+ *expressão*  
  (`SqlGeometry` ou `SqlGeography`) A expressão na qual executar a agregação.  
   
  *escopo*  
  (`String`) Opcional. O nome de um conjunto de dados, um grupo ou uma região de dados que contém os itens de relatório aos quais a função de agregação deve ser aplicada. Se *scope* não estiver especificado, será usado o escopo atual.  
   
  *recursivos*  
- (**Enumerated Type**) Opcional. `Simple` (padrão) ou `RdlRecursive`. Especifica se a agregação deve ser executada recursivamente.  
+ (**Enumerated Type**) Opcional. 
+  `Simple` (padrão) ou `RdlRecursive`. Especifica se a agregação deve ser executada recursivamente.  
   
 ## <a name="return"></a>Retorno  
- Retorna um objeto espacial, `SqlGeometry` ou `SqlGeography`, com base no tipo de expressão. Para obter mais informações sobre `SqlGeometry` e `SqlGeography` tipos de dados espaciais, consulte [visão geral dos tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md).  
+ Retorna um objeto espacial, `SqlGeometry` ou `SqlGeography`, com base no tipo de expressão. Para obter mais informações `SqlGeometry` sobre `SqlGeography` os tipos de dados espaciais e, consulte [visão geral dos tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
 ## <a name="remarks"></a>Comentários  
  O conjunto de dados especificado na expressão deve ter o mesmo tipo de dados.  
@@ -54,7 +55,7 @@ Union(expression, scope, recursive)
   
 -   *Scope* para agregações aninhadas não pode ser o nome de um conjunto de dados.  
   
--   *Expressão* não deve conter `First`, `Last`, `Previous`, ou `RunningValue` funções.  
+-   A *expressão* não deve `First`conter `Last`funções `Previous`,, `RunningValue` ou.  
   
 -   *Expression* não deve conter agregações aninhadas que especifiquem *recursive*.  
   
@@ -77,7 +78,7 @@ Union(expression, scope, recursive)
 =Union(Fields!PolygonDefinition.Value, "Group1")  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   

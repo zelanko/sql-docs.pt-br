@@ -1,5 +1,5 @@
 ---
-title: Funções (Transact-SQL) e exibições de gerenciamento dinâmico relacionadas ao objeto | Microsoft Docs
+title: Exibições e funções de gerenciamento dinâmico relacionadas ao objeto (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: f9dfff29-2e68-4c76-9460-c46085dca2e8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 73004c08657f6e71617bfb0f54380b95250ce177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061932"
 ---
 # <a name="object-related-dynamic-management-views-and-functions-transact-sql"></a>Funções e exibições de gerenciamento dinâmico relacionadas ao objeto (Transact-SQL)
@@ -32,9 +32,9 @@ ms.locfileid: "68061932"
 |[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|| 
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Exibições do sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

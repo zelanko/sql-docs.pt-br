@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 747a811d1d355bd182b18f4c29f2d1bf9354fa55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103033"
 ---
 # <a name="windows-application-log"></a>Log de aplicativo do Windows
@@ -39,7 +39,7 @@ ms.locfileid: "66103033"
   
  A tabela a seguir descreve os tipos de evento que o servidor de relatório grava no log de eventos do aplicativo.  
   
-|Tipo de evento|Descrição|  
+|Tipo de evento|DESCRIÇÃO|  
 |----------------|-----------------|  
 |Informações|Um evento que descreve uma operação bem-sucedida (por exemplo, quando o serviço Servidor de Relatório é iniciado).|  
 |Aviso|Um evento que indica um possível problema (por exemplo, pouco espaço em disco).|  
@@ -47,7 +47,7 @@ ms.locfileid: "66103033"
 |Auditoria Bem-sucedida|Um evento de segurança que descreve um logon bem-sucedido.|  
 |Auditoria com Falha|Um evento que é registrado quando uma tentativa de logon falha.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

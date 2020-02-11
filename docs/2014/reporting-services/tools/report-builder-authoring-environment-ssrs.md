@@ -1,5 +1,5 @@
 ---
-title: (SSRS) do construtor de relatórios | Microsoft Docs
+title: Construtor de Relatórios (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b431dc6249cfabfb8e943b09304eeb7b10bc7e94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100123"
 ---
 # <a name="report-builder-ssrs"></a>Construtor de Relatórios (SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66100123"
   
  O Construtor de Relatórios e o Designer de Relatórios compartilham muitos recursos. Para obter mais informações sobre o Construtor de Relatórios, consulte a [Documentação do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) no msdn.microsoft.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar o acesso ao Construtor de Relatórios](../report-server/configure-report-builder-access.md)   
  [Ferramentas do Reporting Services](reporting-services-tools.md)   
  [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  

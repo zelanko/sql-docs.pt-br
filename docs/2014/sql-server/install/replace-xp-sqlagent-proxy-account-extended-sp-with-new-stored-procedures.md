@@ -1,5 +1,5 @@
 ---
-title: Substitua o uso do procedimento armazenado com novos procedimentos armazenados estendido xp_sqlagent_proxy_account por | Microsoft Docs
+title: Substituir o uso da xp_sqlagent_proxy_account procedimento armazenado estendido por novos procedimentos armazenados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092754"
 ---
-# <a name="replace-usage-of-the-xpsqlagentproxyaccount-extended-stored-procedure-with-new-stored-procedures"></a>Substituir a utilização do procedimento armazenado estendido xp_sqlagent_proxy_account por novos procedimentos armazenados
+# <a name="replace-usage-of-the-xp_sqlagent_proxy_account-extended-stored-procedure-with-new-stored-procedures"></a>Substituir a utilização do procedimento armazenado estendido xp_sqlagent_proxy_account por novos procedimentos armazenados
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent oferece suporte a vários proxies. Você define esses proxies usando um novo conjunto de procedimentos armazenados. Para obter mais informações sobre os novos procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte os seguintes tópicos dos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   ‘sp_add_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])’  
@@ -45,12 +45,12 @@ ms.locfileid: "66092754"
 -   ‘sp_update_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])’  
   
 > [!NOTE]  
->  Depois de atualizar para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], todas as instruções que usam o **xp_sqlagent_proxy_account** procedimento armazenado estendido não funcionará. Use **sp_xp_cmdshell_proxy_account** em vez de **xp_sqlagent_proxy_account** para definir o proxy para **xp_cmdshell**.  
+>  Depois de atualizar para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o, todas as instruções que usam o procedimento armazenado estendido **xp_sqlagent_proxy_account** não funcionarão. Use **sp_xp_cmdshell_proxy_account** em vez de **xp_sqlagent_proxy_account** para definir o proxy para **xp_cmdshell**.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Problemas de atualização do SQL Server Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

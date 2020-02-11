@@ -1,5 +1,5 @@
 ---
-title: Relatório de caixa de diálogo de propriedades de configuração de página (construtor de relatórios) | Microsoft Docs
+title: Caixa de diálogo Propriedades do relatório, Configurar página (Construtor de Relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4be5a0ba8575467467a6d73a7d6fac27e914463f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104365"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Caixa de diálogo Propriedades do Relatório, Configurar Página (Construtor de Relatórios)
-  Selecione **Configurar página** sobre o **propriedades do relatório**, caixa de diálogo para definir opções de página para todo o relatório.  
+  Selecione **configuração de página** na caixa de diálogo **Propriedades do relatório**para definir as opções de página para todo o relatório.  
   
 ## <a name="options"></a>Opções  
  **Polegadas**  
@@ -44,22 +44,22 @@ ms.locfileid: "66104365"
  **Height**  
  Exibe a altura do tamanho de papel selecionado na lista **Tipo de papel** .  
   
- **Top**  
+ **Início**  
  Define a distância entre a parte superior do relatório e a parte superior da primeira linha do relatório.  
   
- **parte inferior**  
+ **Inferior**  
  Define a distância entre a parte inferior do relatório e a parte inferior da última linha do relatório.  
   
- **Left**  
+ **Mantida**  
  Define a distância entre a borda esquerda do relatório e a borda esquerda das linhas do relatório.  
   
  **Certo**  
  Define a distância entre a borda direita do relatório e a borda direita das linhas do relatório.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Caixa de diálogo Propriedades de relatório de código &#40;construtor de relatórios&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
- [Caixa de diálogo Propriedades do relatório referências &#40;construtor de relatórios&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
+ [Caixa de diálogo Propriedades do relatório, &#40;de código Construtor de Relatórios&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
+ [Caixa de diálogo Propriedades do relatório, faz referência a &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
   
   
