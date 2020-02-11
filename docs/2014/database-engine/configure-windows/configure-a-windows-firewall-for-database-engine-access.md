@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812288"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados
@@ -64,32 +64,32 @@ ms.locfileid: "62812288"
   
 1.  No menu **Iniciar** , clique em **Executar**, digite **WF.msc**e clique em **OK**.  
   
-2.  No painel esquerdo do **Firewall do Windows com Segurança Avançada**, clique com o botão direito do mouse em **Regras de Entrada**e clique em **Nova Regra** no painel de ação.  
+2.  No **Firewall do Windows com Segurança Avançada**, no painel esquerdo, clique com o botão direito do mouse em **Regras de Entrada** e, em seguida, clique em **Nova Regra** no painel de ações.  
   
 3.  Na caixa de diálogo **Tipo de Regra** , selecione **Porta**e clique em **Avançar**.  
   
-4.  Na caixa de diálogo **Protocolo e Portas** , selecione **TCP**. Selecione **portas locais específicas**e, em seguida, digite o número da porta da instância das [!INCLUDE[ssDE](../../includes/ssde-md.md)], tais como `1433` para a instância padrão. Clique em **Avançar**.  
+4.  Na caixa de diálogo **Protocolo e Portas** , selecione **TCP**. Selecione **portas locais específicas**e, em seguida, digite o número da porta da instância [!INCLUDE[ssDE](../../includes/ssde-md.md)]do, como `1433` para a instância padrão. Clique em **Próximo**.  
   
-5.  Na caixa de diálogo **Ação** , selecione **Permitir a conexão**e clique em **Avançar**.  
+5.  Na caixa de diálogo **Ação**, selecione **Permitir a conexão** e clique em **Avançar**.  
   
 6.  Na caixa de diálogo **Perfil** , selecione quaisquer perfis que descrevam o ambiente de conexão do computador quando você deseja se conectar ao [!INCLUDE[ssDE](../../includes/ssde-md.md)]e clique em **Avançar**.  
   
-7.  Na caixa de diálogo **Nome** , digite um nome e a descrição desta e clique em **Concluir**.  
+7.  Na caixa de diálogo **Nome**, digite um nome e uma descrição para essa regra, e clique em **Concluir**.  
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>Para abrir o acesso ao SQL Server durante o uso de portas dinâmicas  
   
 1.  No menu **Iniciar** , clique em **Executar**, digite **WF.msc**e clique em **OK**.  
   
-2.  No painel esquerdo do **Firewall do Windows com Segurança Avançada**, clique com o botão direito do mouse em **Regras de Entrada**e clique em **Nova Regra** no painel de ação.  
+2.  No **Firewall do Windows com Segurança Avançada**, no painel esquerdo, clique com o botão direito do mouse em **Regras de Entrada** e, em seguida, clique em **Nova Regra** no painel de ações.  
   
 3.  Na caixa de diálogo **Tipo de Regra** , selecione **Programa**e clique em **Avançar**.  
   
-4.  Na caixa de diálogo **Programa** , selecione **Este caminho de programa**. Clique em **Procurar**, navegue até a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja acessar pelo firewall e clique em **Abrir**. Por padrão, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está no **C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Clique em **Avançar**.  
+4.  Na caixa de diálogo **Programa** , selecione **Este caminho de programa**. Clique em **Procurar**, navegue até a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja acessar pelo firewall e clique em **Abrir**. Por padrão, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em **C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Clique em **Próximo**.  
   
-5.  Na caixa de diálogo **Ação** , selecione **Permitir a conexão**e clique em **Avançar**.  
+5.  Na caixa de diálogo **Ação**, selecione **Permitir a conexão** e clique em **Avançar**.  
   
 6.  Na caixa de diálogo **Perfil** , selecione quaisquer perfis que descrevam o ambiente de conexão do computador quando você deseja se conectar ao [!INCLUDE[ssDE](../../includes/ssde-md.md)]e clique em **Avançar**.  
   
-7.  Na caixa de diálogo **Nome** , digite um nome e a descrição desta e clique em **Concluir**.  
+7.  Na caixa de diálogo **Nome**, digite um nome e uma descrição para essa regra, e clique em **Concluir**.  
   
   

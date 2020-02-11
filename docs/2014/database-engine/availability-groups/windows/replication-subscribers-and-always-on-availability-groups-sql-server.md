@@ -1,5 +1,5 @@
 ---
-title: Assinantes de replicação e grupos de disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
+title: Assinantes e Grupos de Disponibilidade AlwaysOn de replicação (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/16/2019
 ms.prod: sql-server-2014
@@ -15,17 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789142"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>Assinantes de replicação e grupos de disponibilidade AlwaysOn (SQL Server)
   Quando um grupo de disponibilidade AlwaysOn contendo um banco de dados que é um assinante de replicação executar failover, a assinatura de replicação poderá falhar. Para assinantes por push de replicação transacional, o agente de distribuição continuará a replicar automaticamente após um failover se a assinatura tiver sido criada usando o nome do ouvinte do grupo de disponibilidade. Para assinantes por pull de replicação transacional, o agente de distribuição continuará a replicar automaticamente após um failover se a assinatura tiver sido criada usando o nome do ouvinte do grupo de disponibilidade e o servidor original do assinante estiver em execução. Isso ocorre porque os trabalhos de agente de distribuição são criados somente no assinante original (réplica primária do grupo de disponibilidade). Para mesclar assinantes, um administrador de replicação deve reconfigurar o assinante manualmente, recriando a assinatura.  
   
 ## <a name="what-is-supported"></a>O que tem suporte  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte ao failover automático do publicador, ao failover automático dos assinantes transacionais e ao failover manual dos assinantes de mesclagem. Não há suporte para o failover de um distribuidor em um banco de dados de disponibilidade. AlwaysOn não pode ser combinado com cenários Websync e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte ao failover automático do publicador, ao failover automático dos assinantes transacionais e ao failover manual dos assinantes de mesclagem. Não há suporte para o failover de um distribuidor em um banco de dados de disponibilidade. AlwaysOn não pode ser combinado com cenários Websync e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact.  
   
  **Failover de uma assinatura pull de mesclagem**  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 998d42d262e3f980b4b35ed82b26904399d6b33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809377"
 ---
 # <a name="server-properties-advanced-page"></a>Propriedades do Servidor (página Avançado)
@@ -26,7 +26,7 @@ ms.locfileid: "62809377"
   
 -   [Exibir ou alterar as propriedades de servidor &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md)  
   
-## <a name="containment"></a>Containment  
+## <a name="containment"></a>Contenção  
  Habilitar bancos de dados independentes  
  Indica se esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite bancos de dados independentes. Quando definido como **True**, um banco de dados independente poderá ser criado, restaurado ou anexado. Quando definido como **False**, um banco de dados independente não pode ser criado, restaurado nem anexado a essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alterar a propriedade de contenção pode ter um impacto na segurança do banco de dados. Habilitar bancos de dados independentes permite que proprietários de banco de dados concedam acesso a esse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Desabilitar bancos de dados independentes pode impedir que os usuários se conectem. Para entender o impacto da propriedade de contenção, veja [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md) e [Práticas recomendadas de segurança com bancos de dados independentes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62809377"
  Mostra o nível de suporte de FILESTREAM atual configurado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para alterar o nível de acesso configurado, selecione um dos seguintes valores:  
   
  **Desabilitado**  
- Os dados BLOB (objeto grande binário) não podem ser armazenados em um sistema de arquivos. Este é o valor padrão.  
+ Os dados BLOB (objeto grande binário) não podem ser armazenados em um sistema de arquivos. Esse é o valor padrão.  
   
  **Acesso ao Transact-SQL habilitado**  
  Os dados de FILESTREAM podem ser acessados através do [!INCLUDE[tsql](../../includes/tsql-md.md)], mas não pelo sistema de arquivos.  
@@ -71,7 +71,7 @@ ms.locfileid: "62809377"
   
  As alternativas são como segue:  
   
- **Importar**  
+ **Importaçãoação**  
  Os catálogos de texto completo são importados. Essa operação é significativamente mais rápida que **Recriar**. No entanto, um catálogo de texto completo importado não usará os separadores de palavras novos e aprimorados introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Sendo assim, no final, talvez você deseje recriar os catálogos de texto completo.  
   
  Se um catálogo de texto completo não estiver disponível, os índices de texto completo associados serão recompilados. Essa opção está disponível apenas para bancos de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
@@ -116,7 +116,7 @@ ms.locfileid: "62809377"
  **Limite de Custo Para Paralelismo**  
  Especifica o limite sobre o qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e executa planos paralelos para consultas. O custo faz referência a um tempo decorrido estimado em segundos, exigido para a execução do plano serial em uma configuração de hardware específica. Só defina esta opção em multiprocessadores simétricos. Para obter mais informações, veja [Configurar a opção cost threshold for parallelism de configuração de servidor](configure-the-cost-threshold-for-parallelism-server-configuration-option.md).  
   
- **Locks**  
+ **Bloqueios**  
  Define o número máximo de bloqueios disponíveis, limitando assim a quantidade de memória que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa para eles. A configuração padrão é 0, a qual permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aloque e desaloque os bloqueios de forma dinâmica, baseado nas alterações de requisitos do sistema.  
   
  Recomenda-se permitir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use bloqueios dinamicamente. Para obter mais informações, veja [Configurar a opção locks de configuração de servidor](configure-the-locks-server-configuration-option.md).  
@@ -127,7 +127,7 @@ ms.locfileid: "62809377"
  **Espera da Consulta**  
  Especifica o tempo em segundos (de 0 a 2147483647) que uma consulta espera por recursos antes de acusar tempo limite. Se o valor padrão -1 for usado, o tempo limite será calculado como 25 vezes o custo estimado da consulta. Para obter mais informações, veja [Configurar a opção query wait de configuração de servidor](configure-the-query-wait-server-configuration-option.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831607"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote
-  As tarefas de criação de perfil e limpeza de dados não são candidatas a um processo automatizado em seus estágios iniciais. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a saída da tarefa Criação de Perfil de Dados normalmente exige uma análise visual e uma opinião humana para determinar se as violações relatadas são significativas ou demasiadas. Mesmo depois de reconhecer os problemas de qualidade dos dados, ainda é necessário fazer um planejamento cuidadoso para escolher a melhor abordagem de limpeza.  
+  As tarefas de criação de perfil e limpeza de dados não são candidatas a um processo automatizado em seus estágios iniciais. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a saída da tarefa criação de perfil de dados geralmente requer análise visual e julgamento humana para determinar se as violações relatadas são significativas ou excessivas. Mesmo depois de reconhecer os problemas de qualidade dos dados, ainda é necessário fazer um planejamento cuidadoso para escolher a melhor abordagem de limpeza.  
   
  No entanto, depois de estabelecer os critérios de qualidade dos dados, você talvez queira automatizar a análise e limpeza periódicas da fonte de dados. Considere estes cenários:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62831607"
   
  Ao incorporar a tarefa Criação de Perfil de Dados no fluxo de trabalho de um pacote, tenha esses dois recursos da tarefa em mente:  
   
--   **Saída da tarefa**. A tarefa Criação de Perfil de Dados grava sua saída em um arquivo ou uma variável de pacote em formato XML, de acordo com o esquema DataProfile.xsd. Portanto, é necessário consultar a saída XML se você desejar usar os resultados de perfil no fluxo de trabalho condicional de um pacote. Você pode usar a linguagem de consulta Xpath facilmente para consultar essa saída XML. Para estudar a estrutura dessa saída XML, você pode abrir um arquivo de saída de amostra ou o próprio esquema. Para abrir o arquivo de saída ou o esquema, use o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], outro editor de XML, ou um editor de texto como o Bloco de Notas.  
+-   **Saída da tarefa**. A tarefa Criação de Perfil de Dados grava sua saída em um arquivo ou uma variável de pacote em formato XML, de acordo com o esquema DataProfile.xsd. Portanto, é necessário consultar a saída XML se você desejar usar os resultados de perfil no fluxo de trabalho condicional de um pacote. Você pode usar a linguagem de consulta Xpath facilmente para consultar essa saída XML. Para estudar a estrutura dessa saída XML, você pode abrir um arquivo de saída de amostra ou o próprio esquema. Para abrir o arquivo ou esquema de saída, você pode [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]usar o, outro editor de XML ou um editor de texto, como o bloco de notas.  
   
     > [!NOTE]  
     >  Alguns resultados de perfil exibidos no Visualizador de Perfil de Dados são valores calculados que não são encontrados diretamente na saída. Por exemplo, a saída do Perfil de Razão Nula de Coluna contém o número total de linhas e o número de linhas que contêm valores nulos. É necessário consultar esses dois valores e, em seguida, calcular a porcentagem de linhas que contêm valores nulos para obter a razão nula de consulta.  
@@ -102,9 +102,9 @@ ms.locfileid: "62831607"
   
 -   Na janela **Variáveis** , adicione e configure as duas seguintes variáveis de pacote:  
   
-    -   Insira o nome `ProfileConnectionName`, para uma das variáveis e defina o tipo dessa variável como **cadeia de caracteres**.  
+    -   Insira o nome, `ProfileConnectionName`, para uma das variáveis e defina o tipo dessa variável como **String**.  
   
-    -   Insira o nome `AddressLine2NullRatio`, para a variável e defina o tipo dessa variável como **duplo**.  
+    -   Insira o nome, `AddressLine2NullRatio`, para a outra variável e defina o tipo dessa variável como **Double**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Configurar a tarefa Criação de Perfil de Dados  
  A tarefa Criação de Perfil de Dados deve ser configurada do seguinte modo:  
@@ -327,8 +327,8 @@ ms.locfileid: "62831607"
   
 7.  Nas restrições de precedência que conectam a tarefa Script às ramificações de downstream do fluxo de trabalho, grave expressões que usem os valores das variáveis para dirigir o fluxo de trabalho.  
   
-## <a name="see-also"></a>Consulte também  
- [Configuração da tarefa Criação de Perfil de Dados](data-profiling-task.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configuração da tarefa criação de perfil de dados](data-profiling-task.md)   
  [Visualizador de Perfil de Dados](data-profile-viewer.md)  
   
   

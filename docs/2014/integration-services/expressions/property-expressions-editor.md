@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768782"
 ---
 # <a name="property-expressions-editor"></a>Editor de Expressões de Propriedades
@@ -40,10 +40,10 @@ ms.locfileid: "62768782"
  **Delete (excluir)**  
  Selecione uma propriedade e clique em **Excluir**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Página Expressões](expressions-page.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services-ssis-variables.md)   
- [Variáveis do sistema](../system-variables.md)   
+ [Variáveis do Sistema](../system-variables.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](integration-services-ssis-expressions.md)   
  [Usar expressões de propriedade em pacotes](use-property-expressions-in-packages.md)  
   

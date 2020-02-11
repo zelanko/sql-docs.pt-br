@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: Adicionar configurações de pacote | Microsoft Docs'
+title: 'Etapa 4: adicionar configurações de pacote | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767638"
 ---
-# <a name="step-4-adding-package-configurations"></a>Etapa 4: Adicionar configurações de pacote
+# <a name="step-4-adding-package-configurations"></a>Etapa 4: Adicionando configurações de pacote
   Nessa tarefa, você adicionará uma configuração a cada pacote. As configurações atualizam os valores das propriedades e dos objetos do pacote em tempo de execução.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece uma variedade de tipos de configuração. Você pode armazenar configurações em variáveis de ambiente, entradas de Registro, variáveis definidas pelo usuário, tabelas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e arquivos XML. Para fornecer flexibilidade adicional, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oferece suporte ao uso de configurações indiretas. Isso significa que você usa uma variável de ambiente para especificar o local da configuração, que por sua vez especifica os valores reais. Os pacotes no projeto Tutorial de Implantação usam uma combinação de arquivos de configuração XML e configurações indiretas. Um arquivo de configuração XML pode incluir configurações para várias propriedades e, quando apropriado, pode ser mencionado por vários pacotes. Neste tutorial, você usará um arquivo de configuração separado para cada pacote.  
@@ -42,12 +42,12 @@ ms.locfileid: "62767638"
   
 5.  Na página inicial do Assistente de Configuração de Pacotes, clique em **Avançar**.  
   
-6.  Na página Selecionar tipo de configuração, selecione **arquivo de configuração XML** na **tipo de configuração** , selecione o **local de configuração está armazenado em uma variável de ambiente** opção e digite `DataTransfer,` ou selecione o **DataTransfer** variável de ambiente na lista.  
+6.  Na página Selecionar tipo de configuração, selecione **arquivo de configuração XML** na **lista tipo de configuração** , selecione a opção o local de **configuração está armazenado em uma variável** de `DataTransfer,` ambiente e digite ou selecione a variável de ambiente **DataTransfer** na lista.  
   
     > [!NOTE]  
     >  Para disponibilizar a variável de ambiente na lista, talvez você precise reiniciar o computador após a adição da variável. Se você não quiser reiniciar o computador, poderá digitar o nome da variável de ambiente.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página Concluindo o Assistente, digite **DataTransfer EV Configuration** na caixa **Nome da Configuração** , revise o conteúdo da configuração no painel **Visualização** e clique em **Concluir**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62767638"
   
 10. Em Gerenciadores de Conexões, expanda NewCustomers e marque a caixa de seleção **Cadeia de Conexão** .  
   
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 12. Na página Concluindo o Assistente, digite **DataTransfer Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   
@@ -93,12 +93,12 @@ ms.locfileid: "62767638"
   
 5.  Na página inicial do Assistente de Configuração de Pacotes, clique em **Avançar**.  
   
-6.  Na página Selecionar tipo de configuração, selecione **arquivo de configuração XML** na **tipo de configuração** , selecione o **local de configuração está armazenado em uma variável de ambiente** opção, digite `LoadXMLData` ou selecione o `LoadXMLData` variável de ambiente na lista.  
+6.  Na página Selecionar tipo de configuração, selecione **arquivo de configuração XML** na **lista tipo de configuração** , selecione a opção o local de **configuração está armazenado em uma variável de ambiente** , digite `LoadXMLData` ou selecione a `LoadXMLData` variável de ambiente na lista.  
   
     > [!NOTE]  
     >  Para disponibilizar a variável de ambiente na lista, talvez você precise reiniciar o computador após a adição da variável.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página Concluindo o Assistente, digite **LoadXMLData EV Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   
@@ -122,19 +122,19 @@ ms.locfileid: "62767638"
   
 9. Na página Selecionar Propriedades a Serem Exportadas, expanda LoadXMLData, Executáveis, Carregar Dados XML e Propriedades e marque as caixas de seleção **[XMLSource].[XMLData]** e **[XMLSource].[XMLSchemaDefinition]** .  
   
-10. Clique em **Avançar**.  
+10. Clique em **Próximo**.  
   
 11. Na página Concluindo o Assistente, digite **LoadXMLData Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   
 12. Na caixa de diálogo **Organizador de Configurações do Pacote** , verifique se a opção LoadXMLData EV Configuration é a primeira da lista e LoadXMLData Configuration é a segunda da lista e clique em **Fechar**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 5: Testar os pacotes atualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [Etapa 5: Testando os pacotes atualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurações do Pacote](../../2014/integration-services/package-configurations.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurações do pacote](../../2014/integration-services/package-configurations.md)   
  [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)   
  [Acesso aos arquivos usados por pacotes](../../2014/integration-services/access-to-files-used-by-packages.md)  
   

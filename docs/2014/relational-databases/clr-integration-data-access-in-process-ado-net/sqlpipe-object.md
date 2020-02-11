@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920061"
 ---
 # <a name="sqlpipe-object"></a>Objeto SqlPipe
@@ -29,7 +29,7 @@ ms.locfileid: "62920061"
  No caso dos objetos de banco de dados CLR (common language runtime) executados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível enviar resultados ao pipe conectado usando os métodos `Send` do objeto `SqlPipe`. Acesse a propriedade `Pipe` do objeto `SqlContext` para obter o objeto `SqlPipe`. A classe `SqlPipe` é conceitualmente semelhante à classe `Response` localizada no ASP.NET. Para obter mais informações, consulte a documentação de referência da classe SqlPipe no .NET Framework SDK (Software Development Kit).  
   
 ## <a name="returning-tabular-results-and-messages"></a>Retornando resultados tabulares e mensagens  
- A `SqlPipe` tem um método `Send` com três sobrecargas. São eles:  
+ A `SqlPipe` tem um método `Send` com três sobrecargas. Eles são:  
   
 -   `void Send(string message)`  
   
@@ -48,10 +48,12 @@ ms.locfileid: "62920061"
 ## <a name="returning-custom-result-sets"></a>Retornando conjuntos de resultados personalizados  
  Os procedimentos armazenados gerenciados podem enviar conjuntos de resultados que não vêm de um `SqlDataReader`. O método `SendResultsStart`, junto com `SendResultsRow` e `SendResultsEnd`, permite procedimentos armazenados para enviar conjuntos de resultados personalizados ao cliente.  
   
- `SendResultsStart` usa um `SqlDataRecord` como uma entrada. Ele marca o começo de um conjunto de resultados e usa os metadados de registro para criar os metadados que descrevem o conjunto de resultados. Ele não envia o valor do registro com `SendResultsStart`. Todas as linhas subsequentes, enviadas com `SendResultsRow`, devem corresponder àquela definição de metadados.  
+ 
+  `SendResultsStart` usa um `SqlDataRecord` como uma entrada. Ele marca o começo de um conjunto de resultados e usa os metadados de registro para criar os metadados que descrevem o conjunto de resultados. Ele não envia o valor do registro com `SendResultsStart`. Todas as linhas subsequentes, enviadas com `SendResultsRow`, devem corresponder àquela definição de metadados.  
   
 > [!NOTE]  
->  Depois de chamar o método `SendResultsStart` apenas `SendResultsRow` e `SendResultsEnd` podem ser chamados. Chamar qualquer outro método na mesma instância de `SqlPipe` resulta em um `InvalidOperationException`. `SendResultsEnd` define `SqlPipe` de volta ao estado original no qual outros métodos podem ser chamados.  
+>  Depois de chamar o método `SendResultsStart` apenas `SendResultsRow` e `SendResultsEnd` podem ser chamados. Chamar qualquer outro método na mesma instância de `SqlPipe` resulta em um `InvalidOperationException`. 
+  `SendResultsEnd` define `SqlPipe` de volta ao estado original no qual outros métodos podem ser chamados.  
   
 ### <a name="example"></a>Exemplo  
  O procedimento armazenado `uspGetProductLine` retorna o nome, o número do produto, a cor e o preço de tabela de todos os produtos de uma linha de produtos específica. Esse procedimento armazenado aceita correspondências exatas para *prodLine*.  
@@ -138,7 +140,7 @@ End Class
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto SqlDataRecord](sqldatarecord-object.md)   
  [Procedimentos armazenados CLR](../../database-engine/dev-guide/clr-stored-procedures.md)   
  [Extensões específicas em processo do SQL Server para o ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  

@@ -1,5 +1,5 @@
 ---
-title: Painel do utilitário (utilitário do SQL Server) | Microsoft Docs
+title: Painel do utilitário (Utilitário do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773808"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Painel do Utilitário (Utilitário do SQL Server)
@@ -102,9 +102,9 @@ ms.locfileid: "62773808"
  Utilização de armazenamento do Utilitário  
  No lado direito inferior do painel, o gráfico de pizza de utilização de armazenamento exibe a taxa de espaço utilizado para liberar espaço em volumes que residem em computadores contendo instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Os dados desta exibição são atualizados a cada 15 minutos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [Inscrever uma instância do SQL Server &#40;utilitário do SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
+ [Inscrever uma instância do SQL Server &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [Modificar uma definição de política de integridade de recursos &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   
   

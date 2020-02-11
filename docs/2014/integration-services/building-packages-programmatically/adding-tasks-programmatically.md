@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da9a2e5bf8338b8188f00f3c340d50ef32f1204f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771832"
 ---
 # <a name="adding-tasks-programmatically"></a>Adicionando tarefas programaticamente
@@ -36,7 +36,7 @@ ms.locfileid: "62771832"
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>  
   
- Essas classes são consideradas contêineres e todas herdam a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSequence.Executables%2A>. Os contêineres podem conter uma coleção de tarefas, que são objetos executáveis processados pelo tempo de execução durante a execução do contêiner. A ordem de execução dos objetos na coleção é determinada em qualquer conjunto <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> em cada tarefa dos contêineres. Restrições de precedência habilitam a ramificação da execução com base no êxito, falha ou conclusão de um <xref:Microsoft.SqlServer.Dts.Runtime.Executable> na coleção.  
+ Essas classes são consideradas contêineres e todas herdam a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSequence.Executables%2A>. Os contêineres podem conter uma coleção de tarefas, que são objetos executáveis processados pelo runtime durante a execução do contêiner. A ordem de execução dos objetos na coleção é determinada em qualquer conjunto <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> em cada tarefa dos contêineres. Restrições de precedência habilitam a ramificação da execução com base no êxito, falha ou conclusão de um <xref:Microsoft.SqlServer.Dts.Runtime.Executable> na coleção.  
   
  Cada contêiner tem uma coleção <xref:Microsoft.SqlServer.Dts.Runtime.Executables> que contém os objetos individuais <xref:Microsoft.SqlServer.Dts.Runtime.Executable>. Cada tarefa executável herda e implementa os métodos <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A>. Esses dois métodos são chamados pelo mecanismo de tempo de execução para processar cada <xref:Microsoft.SqlServer.Dts.Runtime.Executable>.  
   
@@ -412,9 +412,9 @@ End Module
 ## <a name="external-resources"></a>Recursos externos  
  Entrada no blog, [EzAPI – Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI – atualizado para o SQL Server 2012) em blogs.msdn.com.  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conectar tarefas programaticamente](../building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   

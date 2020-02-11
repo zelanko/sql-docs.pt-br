@@ -1,5 +1,5 @@
 ---
-title: Selecionar e configurar os objetos afetados (OracleToSQL) | Microsoft Docs
+title: Selecionando e configurando objetos afetados (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,26 +14,26 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266501"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selecionar e configurar os objetos afetados (OracleToSQL)
-Nessa página, você pode selecionar tabelas e chaves estrangeiras, as alterações no qual devem ser comparadas ao SSMA verifica os resultados da execução para os objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  
+Nesta página, você pode selecionar tabelas e chaves estrangeiras, alterações que devem ser comparadas quando o SSMA verifica os resultados da execução dos objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  
   
 ## <a name="selection-of-affected-objects"></a>Seleção de objetos afetados  
-Na árvore de objetos de Oracle localizado no lado esquerdo da janela, verifique as tabelas e chaves estrangeiras, as alterações na qual devem ser comparadas para serem idênticos.  
+Na árvore de objetos do Oracle, localizada no lado esquerdo da janela, verifique as tabelas e as chaves estrangeiras, as alterações que devem ser comparadas para serem idênticas.  
   
-Se o testador SSMA não é possível verificar qualquer um desses objetos, você verá o link rotulado **alguns objetos selecionados contêm erros** abaixo da árvore de objetos. Clique neste link para exibir as razões por que esses objetos não podem ser comparados e desmarque a seleção de objetos errados.  
+Se o SSMA Tester não puder verificar nenhum desses objetos, você verá que o link rotulado **alguns objetos selecionados contém erros** na árvore de objetos. Clique neste link para exibir os motivos pelos quais esses objetos não podem ser comparados e para limpar a seleção de objetos errados.  
   
 ## <a name="table"></a>Tabela  
-Na guia da tabela contém a exibição de grade da tabela selecionada. A grade contém as seguintes informações sobre a tabela selecionada:  
+A guia tabela contém a exibição de grade da tabela selecionada. A grade contém as seguintes informações sobre a tabela selecionada:  
   
 -   Nome da coluna  
   
--   Tipo de dados  
+-   Tipo de Dados  
   
 -   Precisão  
   
@@ -45,72 +45,72 @@ Na guia da tabela contém a exibição de grade da tabela selecionada. A grade c
   
 -   Identidade  
   
--   Anulável  
+-   Nullable  
   
 ## <a name="sql"></a>Sql  
-Guia SQL contém a tabela"criar" SQL da tabela selecionada.  
+A guia SQL contém o SQL "criar tabela" da tabela selecionada.  
   
-## <a name="data"></a>Data  
-Guia de dados exibe dados presentes na tabela selecionada.  
+## <a name="data"></a>data  
+Guia dados exibe os dados presentes na tabela selecionada.  
   
 ## <a name="properties"></a>Propriedades  
-Guia de propriedades exibe as propriedades da tabela selecionada. Os campos a seguir estão presentes na guia Propriedades:  
+A guia Propriedades exibe as propriedades da tabela selecionada. Os campos a seguir estão presentes na guia Propriedades:  
   
 -   Criado ou modificado pela última vez  
   
--   Object Name  
+-   Nome do Objeto  
   
 ## <a name="columns-comparison-settings"></a>Configurações de comparação de colunas  
-Estabelecer as regras de comparação para colunas de tabela no **comparação de colunas** página. Você pode fazer as seguintes configurações.  
+Estabelecer as regras de comparação para colunas de tabela na página de **comparação de colunas** . Você pode fazer as seguintes configurações.  
   
-### <a name="use-during-test-comparisons"></a>Use durante as comparações de teste  
-Determine se essa coluna farão parte de verificação de resultados de teste.  
+### <a name="use-during-test-comparisons"></a>Usar durante comparações de teste  
+Determine se esta coluna participará da verificação de resultados de teste.  
   
--   Se você escolher **verdadeira**, SSMA irá comparar o conteúdo desta coluna depois de executar o teste no Oracle com o conteúdo da coluna no SQL Server. 
+-   Se você escolher **true**, o SSMA comparará o conteúdo desta coluna depois de executar o teste no Oracle com o conteúdo da coluna em SQL Server. 
   
--   Se você escolher**falsos**, a coluna será excluída da verificação de resultados.  
+-   Se você escolher**false**, a coluna será excluída da verificação de resultados.  
   
 ### <a name="use-custom-scale"></a>Usar escala personalizada  
-Para colunas de tipo de dados numérico, você pode definir um dimensionamento personalizado para a comparação.  
+Para colunas de tipo de dados numéricos, você pode definir uma escala personalizada para a comparação.  
   
--   Se você escolher **verdadeira**, valores numéricos serão arredondados de acordo com o **comparando escala** valor antes de serem comparadas.  
+-   Se você escolher **true**, os valores numéricos serão arredondados de acordo com o valor de **escala de comparação** antes de serem comparados.  
   
--   Se você escolher**falsos**, a comparação numérica será ser exata.  
+-   Se você escolher**false**, a comparação numérica será exata.  
   
-### <a name="comparing-scale"></a>Comparação de escala  
+### <a name="comparing-scale"></a>Comparando escala  
   
--   Disponível somente se o **escala personalizada de uso** opção for definida como **verdadeiro**. Isso é a precisão de comparação numérica.  
+-   Disponível somente se a opção **usar escala personalizada** estiver definida como **true**. Essa é a precisão para comparação numérica.  
   
-### <a name="date-time-comparing"></a>Comparação de tempo de data  
-Define como a data/hora valores são comparados.  
+### <a name="date-time-comparing"></a>Comparação de data e hora  
+Define como os valores de data/hora são comparados.  
   
--   Se você selecionar **comparar todo data**, será executada uma comparação completa de valores de ambas as plataformas.  
+-   Se você selecionar **comparar data inteira**, a comparação completa de valores de ambas as plataformas será executada.  
   
--   Se você selecionar **comparar apenas data**, a hora em que parte será ignorada.  
+-   Se você selecionar **comparar somente data**, a parte de hora será ignorada.  
   
--   Se você selecionar **comparar apenas hora**, a data em que parte será ignorada.  
+-   Se você selecionar **comparar apenas hora**, a parte de data será ignorada.  
   
--   Se você selecionar **milissegundos ignorar**, os resultados serão comparados até segundos.  
+-   Se você selecionar **ignorar milissegundos**, os resultados serão comparados a até segundos.  
   
--   Se você selecionar **data ignorar e milissegundos**, o resultado será em comparação com apenas por parte do tempo e ignorando partes fracionárias de um segundo.  
+-   Se você selecionar **ignorar data e milissegundos**, o resultado será comparado apenas por parte do tempo e ignorando partes fracionárias de um segundo.  
   
-### <a name="ignore-strings-case"></a>Ignorar maiusculas e minúsculas de cadeias de caracteres  
-Controla a diferenciação de maiusculas da comparação.  
+### <a name="ignore-strings-case"></a>Ignorar caso de cadeia de caracteres  
+Controla a sensibilidade do caso de comparação.  
   
--   Se você escolher **verdadeira**, a comparação será diferencia maiusculas de minúsculas.  
+-   Se você escolher **true**, a comparação não diferenciará maiúsculas de minúsculas.  
   
--   Se você escolher **falsos**, a comparação considerará diferenciar maiusculas e minúsculas.  
+-   Se você escolher **false**, a comparação considerará o caso de letra.  
   
-## <a name="comparing-sql"></a>Comparando o SQL  
-Você pode exibir as instruções SELECT geradas pelo testador do SSMA na **comparando SQL** página. O testador comparará os conjuntos de resultados dessas instruções em uma base linha por linha. Cada linha seguinte de um conjunto de resultados do Oracle deve ser igual para a próxima linha do conjunto de resultados produzido no SQL Server.
+## <a name="comparing-sql"></a>Comparando SQL  
+Você pode exibir as instruções SELECT geradas pelo SSMA Tester na página **comparando SQL** . O testador irá comparar os conjuntos de resultados dessas instruções linha por linha. Cada linha seguinte de um conjunto de resultados Oracle deve ser igual à linha seguinte do conjunto de resultados produzido em SQL Server.
   
-Você pode editar essas instruções SELECT para fornecer verificação personalizada. Para salvar as alterações no Oracle e nas instruções do SQL Server, use o **aplicar** botões na origem e de destino SQL, de forma correspondente.  
+Você pode editar essas instruções SELECT para fornecer verificação personalizada. Para salvar as alterações no Oracle e em instruções SQL Server, use os botões **aplicar** sob o SQL de origem e de destino, de forma correspondente.  
   
 ## <a name="next-step"></a>Próxima etapa  
 [Personalizando a ordem das chamadas &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte também  
-[Concluir a preparação do caso de teste &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[Executar casos de teste &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Testar objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Concluindo a preparação do caso de teste &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[Executando casos de teste &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[Testando objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

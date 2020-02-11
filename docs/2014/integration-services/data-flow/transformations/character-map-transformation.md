@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770410"
 ---
 # <a name="character-map-transformation"></a>Transformação Mapas de Caracteres
@@ -36,7 +36,7 @@ ms.locfileid: "62770410"
 ## <a name="mapping-operations"></a>Mapeando operações  
  A tabela a seguir descreve as operações de mapeamento suportadas pela transformação Mapa de Caracteres.  
   
-|Operação|Descrição|  
+|Operação|DESCRIÇÃO|  
 |---------------|-----------------|  
 |Inversão de bytes|Inverte a ordem de bytes.|  
 |Largura inteira|Mapeia caracteres de meia largura para caracteres de largura inteira.|  
@@ -44,7 +44,7 @@ ms.locfileid: "62770410"
 |Hiragana|Mapeia caracteres katakana para caracteres hiragana.|  
 |Katakana|Mapeia caracteres hiragana para caracteres katakana.|  
 |Caixas linguísticas|Aplica caixas linguísticas em vez de regras do sistema. As caixas linguísticas se referem à funcionalidade fornecida pela API do Win32 para mapeamento de maiúsculas/minúsculas simples de Unicode de idiomas turcomanos e de outras localidades.|  
-|Minúscula|Converte caracteres em minúsculas.|  
+|Letras minúsculas|Converte caracteres em minúsculas.|  
 |Chinês simplificado|Mapeia caracteres de chinês tradicional para caracteres de chinês simplificado.|  
 |Chinês tradicional|Mapeia caracteres de chinês simplificado para caracteres de chinês tradicional.|  
 |Letras Maiúsculas|Converte caracteres em maiúsculas.|  
@@ -54,11 +54,11 @@ ms.locfileid: "62770410"
   
 |Operação A|Operação B|  
 |-----------------|-----------------|  
-|Minúscula|Letras Maiúsculas|  
+|Letras minúsculas|Letras Maiúsculas|  
 |Hiragana|Katakana|  
 |Meia largura|Largura inteira|  
 |Chinês tradicional|Chinês simplificado|  
-|Minúscula|Hiragana, katakana, meia largura, largura inteira|  
+|Letras minúsculas|Hiragana, katakana, meia largura, largura inteira|  
 |Letras Maiúsculas|Hiragana, katakana, meia largura, largura inteira|  
   
 ## <a name="configuration-of-the-character-map-transformation"></a>Configuração da transformação Mapa de Caracteres  

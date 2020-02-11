@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807444"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Espelhamento de banco de dados e envio de logs (SQL Server)
@@ -61,9 +61,9 @@ ms.locfileid: "62807444"
  Ao usar um monitor de envio de logs local, torna-se desnecessária qualquer consideração especial para acomodar esse cenário. Para obter informações sobre como usar uma instância de monitoramento remoto com esse cenário, consulte "O Impacto do espelhamento de banco de dados em uma instância de monitoramento remoto", mais adiante neste tópico.  
   
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Failover do banco de dados principal para o banco de dados espelho  
- A figura a seguir mostra como o envio de logs e o espelhamento de banco dados trabalham juntos quando o espelhamento está sendo executado em modo de alta segurança com failover automático. Inicialmente, o **Server_A** é o servidor principal do espelhamento e o servidor primário do envio de logs. O**Server_B** é o servidor espelho, mas também está configurado como um servidor primário, só que inativo no momento. O**Server_C** e o **Server_D** são servidores de envio de logs secundários. Para maximizar a disponibilidade da sessão de envio de logs, o local de backup fica em um diretório de compartilhamento em um computador host separado.  
+ A figura a seguir mostra como o envio de logs e o espelhamento de banco dados trabalham juntos quando o espelhamento está sendo executado em modo de alta segurança com failover automático. Inicialmente, o **Server_A** é o servidor principal do espelhamento e o servidor primário do envio de logs. **Server_B** é o servidor espelho e também é configurado como um servidor primário, que está inativo no momento. **Server_C** e **Server_D** são servidores secundários de envio de logs. Para maximizar a disponibilidade da sessão de envio de logs, o local de backup fica em um diretório de compartilhamento em um computador host separado.  
   
- ![Envio de logs e espelhamento de banco de dados](../media/logshipping-and-dbm-automatic-failover.gif "Log shipping and database mirroring")  
+ ![Envio de logs e espelhamento de banco de dados](../media/logshipping-and-dbm-automatic-failover.gif "Envio de logs e espelhamento de banco de dados")  
   
  Depois de um failover de espelhamento, o nome do servidor primário definido no servidor secundário permanece inalterado. .  
   

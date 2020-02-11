@@ -18,18 +18,18 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67896591"
 ---
-# <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
+# <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Define ou limpa um procedimento armazenado para execução automática. Um procedimento armazenado que é definido como execuções de execução automática sempre que uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado.  
+  Define ou limpa um procedimento armazenado para execução automática. Um procedimento armazenado definido como execução automática é executado toda vez que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,17 +41,17 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @ProcName = ] 'procedure'` É o nome do procedimento para o qual definir uma opção. *procedimento* está **nvarchar(776)** , sem padrão.  
+`[ @ProcName = ] 'procedure'`É o nome do procedimento para o qual definir uma opção. o *procedimento* é **nvarchar (776)**, sem padrão.  
   
-`[ @OptionName = ] 'option'` É o nome da opção a ser definido. O único valor para *opção* é **inicialização**.  
+`[ @OptionName = ] 'option'`É o nome da opção a ser definida. O único valor para a *opção* é **Startup**.  
   
-`[ @OptionValue = ] 'value'` Se deseja definir a opção on (**true** ou **na**) ou desativado (**false** ou **off**). *valor* está **varchar(12)** , sem padrão.  
+`[ @OptionValue = ] 'value'`É se a opção deve ser definida em (**true** ou **on**) ou off (**false** ou **off**). o *valor* é **varchar (12)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número de erro (falha)  
   
 ## <a name="remarks"></a>Comentários  
- Procedimentos de inicialização devem estar na **mestre** de banco de dados e não pode conter parâmetros de entrada ou saída. A execução dos procedimentos armazenados inicia quando todos os bancos de dados são recuperados e a mensagem "A recuperação foi concluída" é registrada na inicialização.  
+ Os procedimentos de inicialização devem estar no banco de dados **mestre** e não podem conter parâmetros de entrada ou saída. A execução dos procedimentos armazenados inicia quando todos os bancos de dados são recuperados e a mensagem "A recuperação foi concluída" é registrada na inicialização.  
   
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  
@@ -73,7 +73,7 @@ EXEC sp_procoption @ProcName = N'<procedure name>'
     , @OptionValue = 'off';   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Executar um procedimento armazenado](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

@@ -15,13 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4a4d4ce67d6087ca6efd2cb2285604a3d79d64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781022"
 ---
 # <a name="performing-transactions-odbc"></a>Executando transações (ODBC)
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o driver OBDC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oferecem suporte a funções de gerenciamento de transação de ODBC API. A [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte completo a transações locais em um servidor específico. O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client usa esses recursos para dar suporte às funções de ODBC API que gerenciam transações.  
   
  Com o uso do MS DTC (Microsoft Distributed Transaction Coordinator), o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pode participar de transações distribuídas em vários servidores.  

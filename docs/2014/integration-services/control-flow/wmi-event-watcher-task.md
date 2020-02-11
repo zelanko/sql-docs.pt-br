@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829501"
 ---
 # <a name="wmi-event-watcher-task"></a>Tarefa Detector de Eventos do WMI
@@ -75,9 +75,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   Definir como a tarefa responde ao evento. A tarefa pode ser configurada para ter êxito ou falhar, dependendo do evento, ou a tarefa pode apenas detectar o evento novamente.  
   
--   Especificar a ação que a tarefa adotará quando a consulta WMI expirar. Você pode registrar a expiração e o status após a expiração ou levantar um evento personalizado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , indicando que o evento WMI expirou e registrando a expiração e o status da expiração.  
+-   Especifique a ação que a tarefa executará quando a consulta WMI atingir o tempo limite. Você pode registrar o tempo limite e o status após o tempo limite ou gerar um evento personalizado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , indicando que o evento WMI atingiu o tempo limite e registrando em log o tempo limite e o status de tempo limite.  
   
--   Definir como a tarefa responde à expiração. A tarefa pode ser configurada para ter êxito ou falhar, ou a tarefa pode apenas detectar o evento novamente.  
+-   Defina como a tarefa responde ao tempo limite. A tarefa pode ser configurada para ser bem-sucedida ou falhar, ou a tarefa pode apenas inspecionar o evento novamente.  
   
 -   Especificar o número de vezes que a tarefa detecta o evento.  
   
@@ -91,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da Tarefa Detector de Eventos do WMI &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da tarefa Inspetor de eventos do WMI &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor do Detector de Eventos do WMI &#40;Página Opções do WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Editor da tarefa Inspetor de eventos do WMI &#40;página Opções do WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

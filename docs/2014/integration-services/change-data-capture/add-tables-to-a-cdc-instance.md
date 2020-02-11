@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 546f001ac4809a4fb8c455e37bf10f975d84dce8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771502"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Adicionar tabelas a uma instância CDC
@@ -27,14 +27,14 @@ ms.locfileid: "62771502"
  **Para pesquisar tabelas específicas**  
  Insira os critérios de pesquisa da seguinte maneira e clique em **Pesquisar**:  
   
--   **Esquema**: selecione um esquema de banco de dados na lista. Somente tabelas que têm esquema serão incluídas na lista.  
+-   **Esquema**: selecione um esquema de banco de dados da lista. Somente tabelas que têm esquema serão incluídas na lista.  
   
--   **Padrão de nome de tabela**: insira qualquer cadeia de caracteres. Somente tabelas que incluem a cadeia de caracteres inserida serão exibidas.  
+-   **Padrão de Nome de Tabela**: insira qualquer cadeia de caracteres. Somente tabelas que incluem a cadeia de caracteres inserida serão exibidas.  
   
 > [!NOTE]  
 >  Você pode inserir critérios em um ou ambos os campos.  
   
--   **Exibir as 1.000 primeiras tabelas correspondentes**: por padrão, esta caixa é selecionada. Limita o vídeo às primeiras 1000 tabelas compatíveis. Se você desmarcar a caixa de seleção, todas as tabelas que correspondem aos critérios serão exibidas. Se houver um número grande de tabelas, poderá levar muito tempo para exibir a lista.  
+-   **Exibir as 1000 primeiras tabelas correspondentes**: por padrão, esta caixa de seleção está marcada. Limita o vídeo às primeiras 1000 tabelas compatíveis. Se você desmarcar a caixa de seleção, todas as tabelas que correspondem aos critérios serão exibidas. Se houver um número grande de tabelas, poderá levar muito tempo para exibir a lista.  
   
  **Para selecionar tabelas a serem incluídas na instância CDC**  
  Clique na caixa de seleção ao lado de qualquer uma das tabelas que você quer incluir e clique em **Adicionar**. As tabelas são adicionadas à lista na página **Selecionar Tabelas e Colunas** do Assistente de Nova Instância.  
@@ -47,7 +47,7 @@ ms.locfileid: "62771502"
 > [!NOTE]  
 >  Você pode exibir a lista de tabelas no visualizador. Ao usar o visualizador, as informações serão somente leitura. O visualizador também inclui uma lista das colunas capturadas na tabela. Para obter mais informações sobre como acessar o visualizador, consulte [How to Manage a CDC Instance](manage-a-cdc-instance.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como editar as propriedades de instância CDC](how-to-edit-the-cdc-instance-properties.md)   
  [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [Selecionar as tabelas Oracle para capturar alterações](select-oracle-tables-for-capturing-changes.md)  

@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211963"
 ---
 # <a name="create-a-database-user"></a>Criar um usuário de banco de dados
@@ -37,11 +37,11 @@ ms.locfileid: "68211963"
   
 -   **Antes de começar:**  
   
-     [Plano de fundo](#Restrictions)  
+     [Segundo plano](#Restrictions)  
   
      [Segurança](#Security)  
   
--   **Para criar um usuário de banco de dados, usando:**  
+-   **Para criar um usuário de banco de dados usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -70,24 +70,24 @@ ms.locfileid: "68211963"
   
 2.  Expanda o banco de dados no qual o novo usuário de banco de dados será criado.  
   
-3.  Clique com o botão direito do mouse na pasta **Segurança**, aponte para **Novo** e selecione **Usuário...** .  
+3.  Clique com o botão direito do mouse na pasta **Segurança**, aponte para **Novo** e selecione **Usuário...**.  
   
-4.  Na caixa de diálogo **Usuário de banco de dados – Novo** da página **Geral**, selecione um dos seguintes tipos de usuário na lista **Tipo de usuário**: **Usuário do SQL com logon**, **usuário do SQL sem logon**, **usuário mapeado para um certificado**, **usuário mapeado para uma chave assimétrica**, ou **usuário do Windows** .  
+4.  Na caixa de diálogo **usuário do banco de dados – novo** , na página **geral** , selecione um dos seguintes tipos de usuário na lista **tipo de usuário** : **usuário do SQL com logon**, usuário do **SQL sem logon**, **usuário mapeado para um certificado**, **usuário mapeado para uma chave assimétrica**ou **usuário do Windows**.  
   
 5.  Na caixa **Nome do usuário** , digite um nome para o novo usuário. Se você tiver escolhido **Usuário do Windows** na lista **Tipo de usuário**, também poderá clicar nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo**.  
   
-6.  Na caixa **Nome de logon** , digite o logon do usuário. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Logon**. **Nome de logon** estará disponível se você ou selecionar **Usuário do SQL com logon** ou **Usuário do Windows** na lista **Tipo de usuário** .  
+6.  Na caixa **Nome de logon** , digite o logon do usuário. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Logon**. O **nome de logon** estará disponível se você selecionar usuário do **SQL com logon** ou **usuário do Windows** na lista tipo de **usuário** .  
   
-7.  Na caixa **Esquema padrão** , especifica o esquema que terá a propriedade dos objetos criados por esse usuário. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Esquema**. **Esquema padrão** estará disponível se você ou selecionar **Usuário do SQL com logon**, **Usuário do SQL sem logon**ou **Usuário do Windows** na lista **Tipo de usuário** .  
+7.  Na caixa **Esquema padrão** , especifica o esquema que terá a propriedade dos objetos criados por esse usuário. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Esquema**. O **esquema padrão** estará disponível se você selecionar **usuário do SQL com logon**, **usuário do SQL sem logon**ou **usuário do Windows** na lista **tipo de usuário** .  
   
-8.  Na caixa **Nome do certificado** , digite o certificado a ser usado para o usuário de banco de dados. Opcionalmente, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Certificado**. **Nome de certificado** estará disponível se você selecionar **Usuário mapeado para um certificado** na lista **Tipo de Usuário** .  
+8.  Na caixa **Nome do certificado** , digite o certificado a ser usado para o usuário de banco de dados. Opcionalmente, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Certificado**. O **nome do certificado** estará disponível se você selecionar **usuário mapeado para um certificado** na lista **tipo de usuário** .  
   
-9. Na caixa **Nome da chave assimétrica**  , digite a chave a ser usada para o usuário de banco de dados. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Chave Assimétrica**. **Nome da chave assimétrica** estará disponível se você selecionar **Usuário mapeado para uma chave assimétrica** na lista **Tipo de usuário** .  
+9. Na caixa **Nome da chave assimétrica**  , digite a chave a ser usada para o usuário de banco de dados. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Chave Assimétrica**. O **nome da chave assimétrica** estará disponível se você selecionar **usuário mapeado para uma chave assimétrica** na lista **tipo de usuário** .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opções adicionais  
- A caixa de diálogo **Usuário de banco de dados – Novo** também oferece opções em quatro páginas adicionais: **Esquemas Proprietários**, **Associação**, **Protegíveis** e **Propriedades Estendidas**.  
+ A caixa de diálogo **Usuário do Banco de Dados – Novo** também oferece opções em quatro páginas adicionais: **Esquemas Proprietários**, **Associação**, **Protegíveis** e **Propriedades Estendidas**.  
   
 -   A página **Esquemas Proprietários** lista todos os possíveis esquemas que podem ser possuídos pelo novo usuário de banco de dados. Para adicionar esquemas a ou removê-los de um usuário de banco de dados, sob **Esquemas possuídos por este usuário**, marque ou desmarque as caixas de seleção ao lado dos esquemas.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "68211963"
   
 -   A página **Propriedades estendidas** permite adicionar propriedades personalizadas a usuários de banco de dados. As opções a seguir estão disponíveis nesta página.  
   
-     **Banco de Dados**  
+     **Backup de banco de dados**  
      Exibe o nome do banco de dados selecionado. Esse campo é somente leitura.  
   
      **Ordenação**  
@@ -109,7 +109,7 @@ ms.locfileid: "68211963"
      **Reticências (...)**  
      Clique nas reticências **(...)** depois do **Valor** para abrir a caixa de diálogo **Valor da Propriedade Estendida**. Digite ou exiba o valor da propriedade estendida neste local maior. Para obter mais informações, consulte [Caixa de diálogo Valor da Propriedade Estendida](../../databases/value-for-extended-property-dialog-box.md).  
   
-     **Excluir**  
+     **Delete (excluir)**  
      Remove a propriedade estendida selecionada.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
@@ -135,7 +135,7 @@ ms.locfileid: "68211963"
   
  Para obter mais informações, consulte [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](principals-database-engine.md)  
   
   

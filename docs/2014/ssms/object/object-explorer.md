@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bd8009f3270c35f34c4cac87247263caac35854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999835"
 ---
 # <a name="object-explorer"></a>Pesquisador de Objetos
@@ -41,7 +41,7 @@ ms.locfileid: "62999835"
   
 ## <a name="object-explorer-tasks"></a>Tarefas do Pesquisador de Objetos  
   
-|Descrição|Tópico|  
+|DESCRIÇÃO|Tópico|  
 |-----------------|-----------|  
 |Descreve como abrir o Pesquisador de Objetos e configurar as opções que definem o comportamento do pesquisador.|[Abrir e configurar o Pesquisador de Objetos](open-and-configure-object-explorer.md)|  
 |Descreve como conectar o Pesquisador de Objetos a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Conectar-se a uma instância do Pesquisador de Objetos](connect-to-an-instance-from-object-explorer.md)|  

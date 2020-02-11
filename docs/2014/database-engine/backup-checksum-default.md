@@ -10,10 +10,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788795"
 ---
 # <a name="backup-checksum-default"></a>padrão de soma de verificação de backup
@@ -23,13 +23,13 @@ ms.locfileid: "62788795"
   
 |||  
 |-|-|  
-|**Value**|**Significado**|  
+|**Valor**|**Significado**|  
 |0|Desabilitado. Essa é a configuração padrão.|  
-|1|Enabled|  
+|1|habilitado|  
   
- A configuração é efetuada imediatamente.  
+ A configuração entra em vigor imediatamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Habilitar ou desabilitar as somas de verificação de backup durante backup ou restauração &#40;SQL Server&#41;](../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
   

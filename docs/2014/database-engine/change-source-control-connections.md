@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812785"
 ---
 # <a name="change-source-control-connections"></a>Alterar conexões de controle do código-fonte
@@ -31,10 +31,10 @@ ms.locfileid: "62812785"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>Para abrir a interface de usuário de controle do código-fonte do ambiente do Studio  
   
-1.  Sobre o **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **inicie o Microsoft Visual SourceSafe**.  
+1.  No menu **arquivo** , aponte para **controle do código-fonte**e clique em **iniciar o Microsoft Visual SourceSafe**.  
   
-## <a name="see-also"></a>Consulte também  
- [Noções básicas de controle do código-fonte](../../2014/database-engine/source-control-basics.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Noções básicas do controle do código-fonte](../../2014/database-engine/source-control-basics.md)   
  [Definir opções de controle do código-fonte](../../2014/database-engine/set-source-control-options.md)   
  [Excluir arquivos do controle do código-fonte](../../2014/database-engine/exclude-files-from-source-control.md)  
   

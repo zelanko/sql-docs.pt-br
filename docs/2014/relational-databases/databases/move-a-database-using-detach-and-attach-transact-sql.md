@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917075"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Mover um banco de dados utilizando Desanexar e Anexar (Transact-SQL)
@@ -46,12 +46,12 @@ ms.locfileid: "62917075"
     > [!NOTE]  
     >  Se você tentar anexar o banco de dados sem especificar o arquivo de log, a operação de anexação procurará o arquivo de log em seu local original. Se ainda existir uma cópia do log no local original, essa cópia será anexada. Para evitar a utilização do arquivo de log original, especifique o caminho do novo arquivo de log ou remova a cópia original do arquivo de log (depois de copiá-la para o novo local).  
   
-3.  Anexe os arquivos copiados. Para obter mais informações, consulte [Attach a Database](attach-a-database.md).  
+3.  Anexe os arquivos copiados. Para saber mais, veja [Anexar um banco de dados](attach-a-database.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria uma cópia do [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] as instruções são executadas em uma janela do Editor de consulta que está conectada à instância do servidor ao qual está anexada.  
+ O exemplo a seguir cria uma cópia das [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instruções que são executadas em uma janela do editor de consultas que está conectada à instância do servidor à qual está anexada.  
   
-1.  Desanexar o [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instruções:  
+1.  Desanexe [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] as instruções:  
   
     ```  
     USE master;  
@@ -60,7 +60,7 @@ ms.locfileid: "62917075"
     GO  
     ```  
   
-2.  Usando o método de sua escolha, copie os arquivos de banco de dados (AdventureWorks208R2_Data.mdf e AdventureWorks208R2_log) para: C:\MySQLServer\AdventureWorks208R2_Data.mdf e C:\MySQLServer\AdventureWorks208R2_Log.ldf, respectivamente.  
+2.  Utilizando o método de sua preferência, copie os arquivos de banco de dados (AdventureWorks208R2_Data.mdf e AdventureWorks208R2_log) para C:\MySQLServer\AdventureWorks208R2_Data.mdf e C:\MySQLServer\AdventureWorks208R2_Log.ldf, respectivamente.  
   
     > [!IMPORTANT]  
     >  Para um banco de dados de produção, coloque o banco de dados e o log de transações em discos separados.  
@@ -81,7 +81,7 @@ ms.locfileid: "62917075"
   
      No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um banco de dados anexado recentemente não fica imediatamente visível no Pesquisador de Objetos. Para exibir o banco de dados, no Pesquisador de Objetos, clique em **Exibir** e depois em **Atualizar**. Quando o nó **Bancos de Dados** for expandido no Pesquisador de Objetos, o banco de dados recentemente anexado será exibido na lista de bancos de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  
   
   

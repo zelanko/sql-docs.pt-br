@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829590"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,14 +25,14 @@ ms.locfileid: "62829590"
   
  A captura de tela a seguir mostra o **Editor da Tarefa XML** com as configurações necessárias para a validação de XML com a saída de erros.  
   
- ![Propriedades da Tarefa XML no Editor da Tarefa XML](../media/xmltaskproperties.jpg "Propriedades da Tarefa XML no Editor da Tarefa XML")  
+ ![Propriedades da tarefa XML no editor da tarefa XML](../media/xmltaskproperties.jpg "Propriedades da tarefa XML no editor da tarefa XML")  
   
  Antes da disponibilidade da propriedade `ValidationDetails`, a validação do XML pela tarefa XML retornava apenas um resultado true ou false, sem informações sobre erros ou suas localizações. Agora, quando você define `ValidationDetails` como true, o arquivo de saída contém informações detalhadas sobre cada erro, incluindo o número de linha e a posição. Você pode usar essas informações para entender, localizar e corrigir erros em documentos XML.  
   
  A funcionalidade de validação de XML é facilmente dimensionada para documentos XML e grandes números de erros. Como o arquivo de saída é em formato XML, você pode consultar e analisar a saída. Por exemplo, se a saída contiver um grande número de erros, você poderá agrupar os erros usando uma consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] , conforme descrito neste tópico.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduziu a `ValidationDetails` propriedade em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. A propriedade também está disponível no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e no SQL Server 2016.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduziu `ValidationDetails` a propriedade [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no Service Pack 2. A propriedade também está disponível no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e no SQL Server 2016.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Exemplo de saída de XML válida  
  Veja um arquivo de saída de exemplo com os resultados da validação para um arquivo XML válido.  
@@ -118,8 +118,8 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  ![Consulta para agrupar erros de XML no Management Studio](../media/queryforxmlerrors.jpg "Consulta para agrupar erros de XML no Management Studio")  
   
-## <a name="see-also"></a>Consulte também  
- [XML Task](xml-task.md)   
- [Editor da Tarefa XML &#40;página Geral&#41;](../xml-task-editor-general-page.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tarefa XML](xml-task.md)   
+ [Editor da tarefa XML &#40;página Geral&#41;](../xml-task-editor-general-page.md)  
   
   

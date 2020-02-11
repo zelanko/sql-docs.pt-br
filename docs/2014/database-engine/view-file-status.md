@@ -1,5 +1,5 @@
 ---
-title: Exibir o Status do arquivo | Microsoft Docs
+title: Exibir status do arquivo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773362"
 ---
 # <a name="view-file-status"></a>Exibir status de arquivos
@@ -40,11 +40,11 @@ ms.locfileid: "62773362"
   
 1.  No Gerenciador de Soluções, selecione um item.  
   
-2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e clique em **propriedades do SourceSafe**.  
+2.  No menu **arquivo** , aponte para **controle do código-fonte**e clique em **Propriedades do SourceSafe**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir e recuperar informações de versão](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Exibir histórico de projetos](../../2014/database-engine/view-project-history.md)   
+ [Exibir histórico do projeto](../../2014/database-engine/view-project-history.md)   
  [Recuperar arquivos](../../2014/database-engine/retrieve-files.md)   
  [Comparar arquivos](../../2014/database-engine/compare-files.md)  
   

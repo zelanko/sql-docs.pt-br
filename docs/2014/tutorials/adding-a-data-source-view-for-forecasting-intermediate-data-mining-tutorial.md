@@ -1,5 +1,5 @@
 ---
-title: Adicionando dados de um exibição da fonte para a previsão (Tutorial de mineração de dados intermediário) | Microsoft Docs
+title: Adicionando uma exibição da fonte de dados para previsão (tutorial de mineração de dados intermediários) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823126"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Adicionando uma exibição da fonte de dados para previsão (Tutorial de mineração de dados intermediário)
@@ -22,42 +22,42 @@ ms.locfileid: "62823126"
   
 ### <a name="to-add-a-data-source-view"></a>Para adicionar uma exibição da fonte de dados  
   
-1.  No Gerenciador de soluções, clique com botão direito **exibições da fonte de dados**e, em seguida, selecione **nova exibição da fonte de dados**.  
+1.  Em Gerenciador de Soluções, clique com o botão direito do mouse em **exibições da fonte de dados**e selecione **nova exibição da fonte de dados**.  
   
-2.  Na página **Bem-vindo ao Assistente de Exibição da Fonte de Dados** , clique em **Avançar**.  
+2.  Na página **Bem-vindo ao Assistente de Exibição da Fonte de Dados**, clique em **Próximo**.  
   
-3.  Sobre o **selecionar uma fonte de dados** página, em **fontes de dados relacionais**, selecione o [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] fonte de dados. Clique em **Avançar**.  
+3.  Na página **selecionar uma fonte de dados** , em **fontes de dados relacionais**, selecione [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] a fonte de dados. Clique em **Próximo**.  
   
     > [!NOTE]  
-    >  Se você não tiver essa fonte de dados, você pode encontrar as etapas para criar a fonte de dados na [Tutorial básico de mineração de dados](../../2014/tutorials/basic-data-mining-tutorial.md).  
+    >  Se você não tiver essa fonte de dados, poderá encontrar as etapas para criar a fonte de dados no [tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
-4.  Sobre o **selecionar tabelas e exibições** página, selecione a tabela vTimeSeries (dbo) e, em seguida, clique na seta à direita para adicioná-la à exibição de fonte de dados.  
+4.  Na página **selecionar tabelas e exibições** , selecione a tabela, vTimeSeries (dbo) e clique na seta para a direita para adicioná-la à exibição da fonte de dados.  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
-6.  Sobre o **Concluindo o assistente** página, por padrão, a exibição da fonte de dados é denominada [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Altere o nome para **SalesByRegion**e, em seguida, clique em **concluir**.  
+6.  Na página **concluindo o assistente** , por padrão, a exibição da fonte de [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]dados é denominada. Altere o nome para **SalesByRegion**e clique em **concluir**.  
   
-     Designer de exibição de fonte de dados é aberta e o **SalesByRegion** exibição da fonte de dados é exibida.  
+     O designer de exibição da fonte de dados é aberto e a exibição da fonte de dados **SalesByRegion** é exibida.  
   
 ## <a name="working-with-the-data-source-view"></a>Trabalhando com a exibição da fonte de dados  
  Depois de criar a exibição da fonte de dados, será possível explorar os dados das seguintes formas:  
   
--   Clique com botão direito na tabela vTimeSeries do designer e selecione **explorar dados** para abrir a tabela selecionada em uma grade.  
+-   Clique com o botão direito do mouse na tabela vTimeSeries no designer e selecione **explorar dados** para abrir a tabela selecionada em uma grade.  
   
--   Clique em **opções de amostragem** e, em seguida, usar o **opções de exploração de dados** caixa de diálogo para alterar o método de amostragem. Clique em **Refresh** para carregar dados na tabela usando as novas configurações de opção. Por exemplo, você pode especificar o número de linhas a serem geradas no exemplo, ou escolha as primeiras n linhas.  
+-   Clique em **Opções de amostragem** e use a caixa de diálogo opções de exploração de **dados** para alterar o método de amostragem. Clique em **Atualizar** para carregar os dados na tabela usando as novas configurações de opção. Por exemplo, você pode especificar o número de linhas a serem geradas no exemplo ou escolher as n linhas principais.  
   
--   Clique com botão direito na tabela vTimeSeries e selecione **propriedades** para atribuir um novo nome para a tabela. Você também pode selecionar colunas individuais na exibição da fonte de dados e modificar as propriedades de coluna.  
+-   Clique com o botão direito do mouse na tabela vTimeSeries e selecione **Propriedades** para atribuir um novo nome à tabela. Você também pode selecionar colunas individuais na exibição da fonte de dados e modificar as propriedades de coluna.  
   
 -   Clique em qualquer ponto na área de design de exibição da fonte de dados para criar uma nova consulta e atribuir um nome a ela, para criar relações entre tabelas ou para alterar o layout da área de design.  
   
--   Uma tabela com o botão direito e selecione **novo cálculo nomeado** para criar colunas derivadas, inclusive agregações. Você também pode adicionar novas tabelas e exibições da fonte de dados nesta exibição.  
+-   Clique com o botão direito do mouse em uma tabela e selecione **novo cálculo nomeado** para criar colunas derivadas, incluindo agregações. Você também pode adicionar novas tabelas e exibições da fonte de dados nesta exibição.  
   
  Na próxima tarefa, você irá explorar os dados da série temporal e determinar a melhor coluna a ser usada como o identificador de série temporal. Aprenderá também como tratar lacunas nos dados de série temporal.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Noções básicas sobre os requisitos para uma série de tempo de modelo &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
+ [Noções básicas sobre os requisitos de um modelo de série temporal &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

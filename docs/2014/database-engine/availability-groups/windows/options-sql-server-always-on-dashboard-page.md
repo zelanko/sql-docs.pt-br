@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789242"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>Opções (SQL Server AlwaysOn, página Painel)
@@ -37,7 +37,7 @@ ms.locfileid: "62789242"
  **Habilite sua política de AlwaysOn definida pelo usuário.**  
  Se você tiver definido sua própria política de AlwaysOn, clique nessa opção para habilitar sua política.  
   
-## <a name="see-also"></a>Consulte também  
- [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

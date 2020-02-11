@@ -21,26 +21,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62927051"
 ---
 # <a name="security-overview-integration-services"></a>Visão geral de segurança (Integration Services)
-  A segurança no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consiste em várias camadas que fornecem um ambiente de segurança rico e flexível. Estas camadas de segurança incluem o uso de assinaturas digitais, propriedades de pacote, funções de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permissões do sistema operacional. A maioria desses recursos de segurança se enquadram nas categorias de identidade e controle de acesso.  
+  A segurança [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no consiste em várias camadas que fornecem um ambiente de segurança rico e flexível. Estas camadas de segurança incluem o uso de assinaturas digitais, propriedades de pacote, funções de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permissões do sistema operacional. A maioria desses recursos de segurança se enquadram nas categorias de identidade e controle de acesso.  
   
 ## <a name="identity-features"></a>Recursos de identidade  
  Ao implementar recursos de identidade em seus pacotes, você pode alcançar o seguinte objetivo:  
   
- **Você só deve abrir e executar pacotes de fontes confiáveis**.  
+ **Certifique-se de abrir e executar pacotes somente de fontes confiáveis**.  
   
  Para assegurar que você só abra e execute pacotes de fontes confiáveis, primeiro identifique a fonte dos pacotes. Você pode identificar a fonte assinando pacotes com certificados. Em seguida, quando você abrir ou executar os pacotes, poderá fazer com que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verifique a presença e a validade das assinaturas digitais. Para obter mais informações, consulte [Identificar a origem de pacotes com assinaturas digitais](identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## <a name="access-control-features"></a>Recursos de controle de acesso  
  Ao implementar recursos de identidade em seus pacotes, você pode alcançar o seguinte objetivo:  
   
- **Apenas usuários autorizados devem abrir e executar pacotes**.  
+ **Certifique-se de que apenas os usuários autorizados abram e executem pacotes**.  
   
  Para assegurar que apenas usuários autorizados abram e executam pacotes, você deve controlar o acesso às seguintes informações:  
   
@@ -67,7 +67,9 @@ ms.locfileid: "62927051"
 #### <a name="saving-packages-to-the-msdb-database"></a>Salvando pacotes no banco de dados msdb  
  Salvar os pacotes no banco de dados msdb ajuda a fornecer segurança nos níveis de servidor, banco de dados e tabela. No banco de dados msdb, os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] são armazenados na tabela sysssispackages. Como os pacotes são salvos nas tabelas sysssispackages e sysdtspackages no banco de dados msdb, os pacotes são incluídos no backup automaticamente quando você faz backup do banco de dados msdb.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Os pacotes armazenados no banco de dados msdb também podem ser protegidos com a aplicação das funções no nível de banco de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui três funções fixas em nível do banco de dados, db_ssisadmin, db_ssisltduser e db_ssisoperator, para controlar o acesso aos pacotes. Uma função de leitor e gravador pode estar associada a cada pacote. Também é possível definir funções em nível de banco de dados personalizadas para uso em pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . As funções podem ser implementadas apenas em pacotes salvos no banco de dados msdb em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Funções do Integration Services &#40;Serviço do SSIS&#41;](integration-services-roles-ssis-service.md).  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Os pacotes armazenados no banco de dados msdb também podem ser protegidos com a aplicação das funções no nível de banco de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui três funções fixas em nível do banco de dados, db_ssisadmin, db_ssisltduser e db_ssisoperator, para controlar o acesso aos pacotes. Uma função de leitor e gravador pode estar associada a cada pacote. Também é possível definir funções em nível de banco de dados personalizadas para uso em pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . As funções podem ser implementadas apenas em pacotes salvos no banco de dados msdb em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Funções do Integration Services &#40;Serviço do SSIS&#41;](integration-services-roles-ssis-service.md).  
   
 #### <a name="saving-packages-to-the-file-system"></a>Salvando pacotes no sistema de arquivos  
  Se você armazenar pacotes no sistema de arquivos, em vez de no banco de dados msdb, não se esqueça de proteger os arquivos de pacote e as pastas que contêm arquivos de pacote.  
@@ -87,7 +89,8 @@ ms.locfileid: "62927051"
  Para obter mais informações sobre configurações, consulte [Package Configurations](../package-configurations.md).  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Controlando o acesso ao serviço Integration Services  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para listar pacotes armazenados. Para impedir que usuários não autorizados exibam informações sobre pacotes armazenados em computadores locais e remotos, e, assim, obtenham informações privadas, restrinja o acesso aos computadores que executam o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para listar pacotes armazenados. Para impedir que usuários não autorizados exibam informações sobre pacotes armazenados em computadores locais e remotos, e, assim, obtenham informações privadas, restrinja o acesso aos computadores que executam o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para obter mais informações, consulte [Acesso ao serviço Integration Services](../access-to-the-integration-services-service.md).  
   
@@ -104,7 +107,7 @@ ms.locfileid: "62927051"
   
 -   [Definir ou alterar o nível de proteção de pacotes](../set-or-change-the-protection-level-of-packages.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

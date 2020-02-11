@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781740"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>Mapear portas TCP/IP para nós NUMA (SQL Server)
@@ -48,13 +48,13 @@ ms.locfileid: "62781740"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>Para mapear uma porta de TCP/IP para um nó NUMA  
   
-1.  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, expanda **Configuração de Rede do SQL Server** e, depois, clique em **Protocolos de** *\<instance name>* .  
+1.  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, expanda **Configuração de Rede do SQL Server** e, depois, clique em **Protocolos de** *\<instance name>*.  
   
 2.  No painel de detalhes, clique duas vezes no **TCP/IP**.  
   
 3.  Na guia **IP Addresses** , na seção que corresponde ao endereço de IP para configurar, na caixa **TCP Port** , adicione o identificador do nó NUMA em parênteses depois do número da porta. Por exemplo, para TCP porta 1500 e nós 0, 2 e 5, use `1500[37]` ou `1500[0x25]`.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar o SQL Server para usar o Soft-NUMA &#40;SQL Server&#41;](soft-numa-sql-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar SQL Server para usar &#40;de soft-NUMA SQL Server&#41;](soft-numa-sql-server.md)  
   
   

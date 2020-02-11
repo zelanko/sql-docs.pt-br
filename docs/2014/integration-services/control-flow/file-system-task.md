@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831741"
 ---
 # <a name="file-system-task"></a>Tarefa Sistema de Arquivos
@@ -62,7 +62,7 @@ ms.locfileid: "62831741"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, consulte os tópicos a seguir:  
   
--   [Editor da Tarefa Sistema de Arquivos &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da tarefa sistema de arquivos &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -75,9 +75,10 @@ ms.locfileid: "62831741"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui uma tarefa que faz downloads e uploads de arquivos de dados e gerencia diretórios em servidores. Para obter mais informações, consulte [FTP Task](ftp-task.md).  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui uma tarefa que faz downloads e uploads de arquivos de dados e gerencia diretórios em servidores. Para obter mais informações, consulte [FTP Task](ftp-task.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](integration-services-tasks.md)   
  [Fluxo de Controle](control-flow.md)  
   

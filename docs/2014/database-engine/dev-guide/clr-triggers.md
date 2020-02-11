@@ -26,10 +26,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755251"
 ---
 # <a name="clr-triggers"></a>Gatilhos CLR
@@ -49,7 +49,7 @@ ms.locfileid: "62755251"
   
 -   Acessar informações sobre objetos de banco de dados afetados pela execução de instruções DDL.  
   
- Essas capacidades são fornecidas inerentemente na linguagem de consulta, ou pela classe `SqlTriggerContext`. Para obter informações sobre as vantagens da integração CLR e escolhendo entre o código gerenciado e [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [visão geral da integração CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ Essas capacidades são fornecidas inerentemente na linguagem de consulta, ou pela classe `SqlTriggerContext`. Para obter informações sobre as vantagens da integração CLR e como escolher entre código [!INCLUDE[tsql](../../includes/tsql-md.md)]gerenciado e, consulte [visão geral da integração do CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="using-the-sqltriggercontext-class"></a>Usando a classe SqlTriggerContext  
  A classe `SqlTriggerContext` não pode ser criada publicamente e só pode ser obtida por meio do acesso à propriedade `SqlContext.TriggerContext` dentro do corpo de um gatilho CLR. A classe `SqlTriggerContext` pode ser obtida do `SqlContext` ativo chamando a propriedade `SqlContext.TriggerContext`:  
@@ -72,9 +72,9 @@ ms.locfileid: "62755251"
 -   Para os gatilhos DDL, a lista de possíveis valores TriggerAction é consideravelmente mais longa. Consulte "TriggerAction Enumeration" no .NET Framework SDK para obter mais informações.  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>Usando as tabelas Inserted e Deleted  
- Duas tabelas especiais são usadas nas instruções de gatilho DML: a **inserido** tabela e o **excluído** tabela. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e gerencia automaticamente essas tabelas. Você pode usar essas tabelas temporárias para testar os efeitos de determinadas modificações de dados e definir condições para ações de gatilho DML; no entanto, você não pode alterar os dados diretamente nas tabelas.  
+ Duas tabelas especiais são usadas em instruções de gatilho DML: a tabela **inserida** e a tabela **excluída** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e gerencia automaticamente essas tabelas. Você pode usar essas tabelas temporárias para testar os efeitos de determinadas modificações de dados e definir condições para ações de gatilho DML; no entanto, você não pode alterar os dados diretamente nas tabelas.  
   
- Gatilhos CLR podem acessar o **inserido** e **excluído** tabelas por meio do provedor CLR em processo. Isso é feito obtendo-se um objeto `SqlCommand` do objeto SqlContext. Por exemplo:   
+ Os gatilhos CLR podem acessar as tabelas **inseridas** e **excluídas** por meio do provedor CLR em processo. Isso é feito obtendo-se um objeto `SqlCommand` do objeto SqlContext. Por exemplo:  
   
  C#  
   
@@ -480,7 +480,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- O [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução que cria o gatilho no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é o seguinte e pressupõe que o assembly **SQLCLRTest** já está registrado no atual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados.  
+ A [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução que cria o gatilho no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é a seguinte e pressupõe que o assembly **SQLCLRTest** já esteja registrado no banco [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados atual.  
   
 ```  
 CREATE TRIGGER EmailAudit  
@@ -655,12 +655,12 @@ DROP ASSEMBLY ValidationTriggers;
 DROP TABLE Table1;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [Gatilhos DML](../../relational-databases/triggers/dml-triggers.md)   
  [Gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [Criando objetos de banco de dados com o Common Language Runtime &#40;CLR&#41; integração](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
+ [Criando objetos de banco de dados com o Common Language Runtime &#40;integração de&#41; CLR](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   
   

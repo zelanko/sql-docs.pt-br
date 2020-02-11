@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771512"
 ---
 # <a name="advanced-connection-properties"></a>Propriedades Avançadas de Conexão
@@ -31,8 +31,8 @@ ms.locfileid: "62771512"
 > [!IMPORTANT]  
 >  Não inclua credenciais de logon na caixa de diálogo **Propriedades Avançadas de Conexão** . Eles não serão criptografados quando forem transmitidos pela rede.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acessar o CDC Designer Console](access-the-cdc-designer-console.md)   
- [Conexão de SQL Server para a criação de instância](sql-server-connection-for-instance-creation.md)  
+ [Conexão do SQL Server para a criação de instância](sql-server-connection-for-instance-creation.md)  
   
   

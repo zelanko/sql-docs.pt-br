@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775436"
 ---
 # <a name="install-sql-server-powershell"></a>Instalar o SQL Server PowerShell
@@ -29,17 +29,17 @@ ms.locfileid: "62775436"
   
     -   Um provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O provedor permite navegar pela hierarquia dos objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um caminho semelhante a um caminho de sistema de arquivos. Cada objeto é associado a uma classe de modelos de objeto de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Você pode usar os métodos e as propriedades da classe para realizar trabalhos nos objetos. Por exemplo, se você usar cd para um objeto do banco de dados em um caminho, poderá usar os métodos e as propriedades da classe Microsoft.SqlServer.Managment.SMO.Database para gerenciar o banco de dados.  
   
--   O **sqlps** módulo é importado para sessões do Windows PowerShell 2.0 para carregar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-ins.  
+-   O módulo **sqlps** que é importado para sessões do Windows PowerShell 2,0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para carregar os snap-ins.  
   
--   Preteridas **sqlps** utilitário que inicia uma sessão do Windows PowerShell 2.0 e importa o **sqlps** módulo.  
+-   O utilitário **sqlps** preterido que inicia uma sessão do Windows PowerShell 2,0 e importa o módulo **sqlps** .  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dá suporte à inicialização das sessões do Windows PowerShell por meio da árvore do Pesquisador de Objetos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dá suporte às etapas de trabalho do Windows PowerShell.  
   
- Se Windows PowerShell 2.0 não foi instalado ou foi desinstalado, você deve instalá-lo seguindo as instruções o [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) página.  
+ Se o Windows PowerShell 2,0 não tiver sido instalado ou tiver sido desinstalado, você deverá instalá-lo seguindo as instruções na página do [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) .  
   
  Se o Windows PowerShell for desinstalado após a conclusão da Instalação, os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell não funcionarão. O Windows PowerShell pode ser desinstalado pelos usuários do Windows, e a desinstalação pode ser exigida por algumas atualizações do sistema operacional Windows. Para usar os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, você deve reinstalar o PowerShell 2.0 usando o Windows Management Framework.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   
   

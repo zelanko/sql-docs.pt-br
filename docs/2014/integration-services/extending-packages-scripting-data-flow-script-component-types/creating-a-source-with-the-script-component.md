@@ -17,16 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4a038fcc9db891b2c0a0155ffa2aba39d2f3759
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768662"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Criando uma fonte com o componente Script
   Você usa um componente de origem no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para carregar dados de uma fonte de dados a serem passados para transformações e destinos downstream. Normalmente, você se conecta à fonte de dados por um gerenciador de conexões existente.  
   
- Para obter uma visão geral do componente Script, consulte [estendendo o fluxo de dados com o componente Script] (... / extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
+ Para obter uma visão geral do componente Script, consulte [estendendo o fluxo de dados com o componente Script] (.. /extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
   
  O componente Script e o código de infraestrutura gerado para você simplificam significativamente o processo de desenvolvimento de um componente de fluxo de dados personalizado. Contudo, para compreender o funcionamento do componente Script, talvez seja útil ler as etapas envolvidas no desenvolvimento de um componente de fluxo de dados personalizado. Consulte a seção [Desenvolvendo um componente de fluxo de dados personalizado](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), especialmente o tópico [Desenvolvendo um componente de origem personalizado](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62768662"
  Você também pode especificar a linguagem de script configurando a propriedade **ScriptLanguage** na página **Script** do **Editor de Transformação Scripts**.  
   
 > [!NOTE]  
->  Para definir a linguagem de scripts padrão para componentes de Script e Tarefas de Script, use a opção **Linguagem de scripts** na página **Geral** da caixa de diálogo **Opções**. Para obter mais informações, consulte [General Page](../general-page-of-integration-services-designers-options.md).  
+>  Para definir a linguagem de script padrão para componentes de script e tarefas de script, use a opção **linguagem de script** na página **geral** da caixa de diálogo **Opções** . Para obter mais informações, consulte [General Page](../general-page-of-integration-services-designers-options.md).  
   
 ### <a name="adding-connection-managers"></a>Adicionando gerenciadores de conexões  
  Em geral, um componente de origem usa um gerenciador de conexões existente para se conectar à fonte de dados da qual ele carrega dados para o fluxo de dados. Na página **Gerenciadores de Conexões** do **Editor de Transformação Scripts**, clique em **Adicionar** para adicionar o gerenciador de conexões apropriado.  
@@ -69,16 +69,16 @@ ms.locfileid: "62768662"
  Para obter mais informações sobre a página **Entradas e Saídas** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Entradas e Saídas&#41;](../script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Adicionando variáveis  
- Se houver quaisquer variáveis cujos valores você deseja usar em seu script, você pode adicioná-las a `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade o **Script** página do **Editor de transformação scripts**.  
+ Se houver qualquer variável existente cujos valores você deseja usar em seu script, você poderá adicioná-las nos campos de `ReadOnlyVariables` propriedade `ReadWriteVariables` e na página **script** do **Editor de transformação scripts**.  
   
- Ao inserir diversas variáveis nos campos de propriedade, separe os nomes delas por vírgulas. Você também pode inserir diversas variáveis clicando no botão de reticências ( **...** ) botão ao lado de `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade e selecionar as variáveis na **selecionar variáveis** caixa de diálogo.  
+ Ao inserir diversas variáveis nos campos de propriedade, separe os nomes delas por vírgulas. Você também pode inserir várias variáveis clicando no botão de reticências (**...**) ao lado `ReadOnlyVariables` dos `ReadWriteVariables` campos de propriedade e e selecionando variáveis na caixa de diálogo **Selecionar variáveis** .  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
  Para obter mais informações sobre a página **Script** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;Página Script&#41;](../script-transformation-editor-script-page.md).  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>Gerando scripts de um componente de origem em modo do design de código  
- Depois de configurar os metadados para o componente, abra o IDE do VSTA ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) para codificar o script personalizado. Para abrir o VSTA, clique em **Editar Script** na página **Script** do **Editor de Transformação Scripts**. Escreva seu script usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic ou o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#, dependendo da linguagem de script selecionada para a propriedade **ScriptLanguage**.  
+ Depois de configurar os metadados para seu componente, abra o IDE [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] do VSTA (Tools for Applications) para codificar o script personalizado. Para abrir o VSTA, clique em **Editar Script** na página **Script** do **Editor de Transformação Scripts**. Escreva seu script usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic ou o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#, dependendo da linguagem de script selecionada para a propriedade **ScriptLanguage**.  
   
  Para obter informações importantes que se aplicam a todos os tipos de componentes criados por meio do componente Script, consulte [Codificando e depurando o componente Script](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62768662"
   
  A classe `ScriptMain` inclui um stub para o método `CreateNewOutputRows`. O `CreateNewOutputRows` é o método mais importante em um componente de origem.  
   
- Se você abrir o **Explorador de projeto** janela no VSTA, você pode ver que o componente Script também gerou somente leitura `BufferWrapper` e `ComponentWrapper` itens de projeto. A classe `ScriptMain` herda da classe `UserComponent` no item de projeto `ComponentWrapper`.  
+ Se você abrir a janela **Explorador de projeto** no VSTA, poderá ver que o componente script também gerou itens de projeto e `BufferWrapper` `ComponentWrapper` somente leitura. A classe `ScriptMain` herda da classe `UserComponent` no item de projeto `ComponentWrapper`.  
   
  Em tempo de execução, o mecanismo de fluxo de dados invoca o método `PrimeOutput` na classe `UserComponent`, que substitui o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> da classe pai <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. O método `PrimeOutput`, por sua vez, chama os seguintes métodos:  
   
@@ -114,14 +114,14 @@ ms.locfileid: "62768662"
  Os exemplos a seguir demonstram o código personalizado que é requerido na classe `ScriptMain` para criar um componente de origem.  
   
 > [!NOTE]  
->  Esses exemplos usam o **Person. address** na tabela a `AdventureWorks` banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e **nvarchar (30) Cidade**colunas de, pelo fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
+>  Esses exemplos usam a tabela **Person. Address** no banco `AdventureWorks` de dados de exemplo e passam sua primeira e quarta colunas, as colunas City **intAddressID** e **nvarchar (30)** , por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
   
 ### <a name="adonet-source-example"></a>Exemplo de origem do ADO.NET  
  Esse exemplo demonstra um componente de origem que usa um gerenciador de conexões do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente para carregar dados de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no fluxo de dados.  
   
  Se você quiser executar esse código de exemplo, configure o pacote e o componente desta forma:  
   
-1.  Criar uma [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexão que usa o `SqlClient` provedor para conectar-se para o `AdventureWorks` banco de dados.  
+1.  Crie um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexões que use `SqlClient` o provedor para se conectar `AdventureWorks` ao banco de dados.  
   
 2.  Adicione um novo componente Script à superfície do designer Fluxo de Dados e configure-o como uma origem.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62768662"
   
 5.  Na página **Script**, clique em **Editar Script** e insira o script a seguir. Em seguida, feche o ambiente de desenvolvimento de script e o **Editor de Transformação Scripts**.  
   
-6.  Crie e configure um componente de destino, como um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o componente de destino de exemplo demonstrado em [Criando um destino com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), que espera as colunas **AddressID** e **City**. Depois, conecte o componente de origem ao destino. (Você pode conectar uma origem diretamente a um destino, sem transformações.) É possível criar uma tabela de destino executando o seguinte comando [!INCLUDE[tsql](../../includes/tsql-md.md)] no banco de dados do `AdventureWorks`:  
+6.  Crie e configure um componente de destino, como um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o componente de destino de exemplo demonstrado em [Criando um destino com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), que espera as colunas **AddressID** e **City**. Depois, conecte o componente de origem ao destino. (Você pode conectar uma fonte diretamente a um destino sem nenhuma transformação.) Você pode criar uma tabela de destino executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] comando no banco `AdventureWorks` de dados:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -255,7 +255,7 @@ ms.locfileid: "62768662"
   
  Se você quiser executar esse código de exemplo, configure o pacote e o componente desta forma:  
   
-1.  Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de importação e exportação para exportar o **Person. address** de tabela das `AdventureWorks` banco de dados de exemplo para um arquivo simples delimitado por vírgula. Esse exemplo usa o nome de arquivo ExportedAddresses.txt.  
+1.  Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assistente de importação e exportação do para exportar a tabela **Person. Address** do banco de dados de `AdventureWorks` exemplo para um arquivo simples delimitado por vírgula. Esse exemplo usa o nome de arquivo ExportedAddresses.txt.  
   
 2.  Crie um gerenciador de conexões de arquivos simples que se conecta ao arquivo de dados exportado.  
   
@@ -267,7 +267,7 @@ ms.locfileid: "62768662"
   
 6.  Na página **Script**, clique em **Editar Script** e insira o script a seguir. Em seguida, feche o ambiente de desenvolvimento de script e o **Editor de Transformação Scripts**.  
   
-7.  Crie e configure um componente de destino, como um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o componente de destino de exemplo demonstrado em [Criando um destino com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Depois, conecte o componente de origem ao destino. (Você pode conectar uma origem diretamente a um destino, sem transformações.) É possível criar uma tabela de destino executando o seguinte comando [!INCLUDE[tsql](../../includes/tsql-md.md)] no banco de dados do `AdventureWorks`:  
+7.  Crie e configure um componente de destino, como um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o componente de destino de exemplo demonstrado em [Criando um destino com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Depois, conecte o componente de origem ao destino. (Você pode conectar uma fonte diretamente a um destino sem nenhuma transformação.) Você pode criar uma tabela de destino executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] comando no banco `AdventureWorks` de dados:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -386,9 +386,9 @@ ms.locfileid: "62768662"
     }  
     ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando um destino com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [Desenvolvendo um componente de origem personalizado](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
   

@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 54702cd96ba9327fe8bba8e4c82275dbdaef1bf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767710"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Manipuladores de eventos do SSIS (Integration Services)
@@ -43,7 +43,7 @@ ms.locfileid: "62767710"
   
  O diagrama a seguir mostra um pacote simples que tem um contêiner Loop For que contém uma tarefa Executar SQL.  
   
- ![Pacote, Loop For, host da tarefa e tarefa Executar SQL](media/mw-dts-eventhandlerpkg.gif "Pacote, Loop For, host da tarefa e tarefa Executar SQL")  
+ ![Pacote, Loop For, host de tarefas e tarefa Executar SQL](media/mw-dts-eventhandlerpkg.gif "Pacote, Loop For, host de tarefas e tarefa Executar SQL")  
   
  Só o pacote tem um manipulador de eventos, para seu evento `OnError`. Se ocorrer um erro quando a tarefa Executar SQL for executada, o manipulador de eventos `OnError` do pacote entrará em execução. O diagrama a seguir mostra a sequência de chamadas que faz o manipulador de eventos `OnError` do pacote executar.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62767710"
 -   Especifique o modo de registro usado pelo manipulador de eventos.  
   
 ## <a name="event-handler-content"></a>Conteúdo do manipulador de eventos  
- Criar um manipulador de eventos é como criar um pacote; um manipulador de eventos possui tarefas e contêineres, que são colocados em sequência em um fluxo de controle, e um manipulador de eventos também pode incluir fluxos de dados. O Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] inclui a guia **Manipuladores de Eventos** para a criação de manipuladores de eventos personalizados. Para obter mais informações, consulte [manipuladores de eventos de pacote do SSIS](integration-services-ssis-event-handlers.md).  
+ Criar um manipulador de eventos é como criar um pacote; um manipulador de eventos possui tarefas e contêineres, que são colocados em sequência em um fluxo de controle, e um manipulador de eventos também pode incluir fluxos de dados. O Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] inclui a guia **Manipuladores de Eventos** para a criação de manipuladores de eventos personalizados. Para obter mais informações, consulte [manipuladores de eventos de pacote SSIS](integration-services-ssis-event-handlers.md).  
   
  Você também pode criar manipuladores de eventos programaticamente. Para obter mais informações, consulte [Manipulação de erros programaticamente](building-packages-programmatically/handling-events-programmatically.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62767710"
   
 |Manipulador de eventos|Evento|  
 |-------------------|-----------|  
-|`OnError`|O manipulador de eventos para o `OnError` eventos. Esse evento é gerado por um executável quando ocorre um erro.|  
+|`OnError`|O manipulador de eventos para `OnError` o evento. Esse evento é gerado por um executável quando ocorre um erro.|  
 |**OnExecStatusChanged**|Manipulador de eventos do evento **OnExecStatusChanged** . Esse evento é gerado por um executável quando seu status de execução é alterado.|  
 |**OnInformation**|Manipulador de eventos do evento **OnInformation** . Esse evento é gerado durante a validação e execução de um executável para fornecer informações. Esse evento transmite apenas informações, nenhum erro ou avisos.|  
 |**OnPostExecute**|Manipulador de eventos do evento **OnPostExecute** . Esse evento é gerado por um executável logo depois que este termina de ser executado.|  
@@ -83,7 +83,7 @@ ms.locfileid: "62767710"
 |**OnProgress**|Manipulador de eventos do evento **OnProgress** . Esse evento é gerado por um executável quando um progresso mensurável é feito pelo executável.|  
 |**OnQueryCancel**|Manipulador de eventos do evento **OnQueryCancel** . Esse evento é gerado por um executável para determinar se deve parar de ser executado.|  
 |**OnTaskFailed**|Manipulador de eventos do evento **OnTaskFailed** . Esse evento é gerado por uma tarefa quando ela falha.|  
-|**OnVariableValueChanged**|Manipulador de eventos do evento **OnVariableValueChanged** . Esse evento é gerado por um executável quando o valor de uma variável é alterado. O evento é gerado pelo executável no qual a variável está definida. Esse evento não será gerado se você definir a **RaiseChangeEvent** propriedade da variável como `False`. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|Manipulador de eventos do evento **OnVariableValueChanged** . Esse evento é gerado por um executável quando o valor de uma variável é alterado. O evento é gerado pelo executável no qual a variável está definida. Esse evento não será gerado se você definir a propriedade **RaiseChangeEvent** para a variável como `False`. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).|  
 |**OnWarning**|Manipulador de eventos do evento **OnWarning** . Esse evento é gerado por um executável quando ocorre um aviso.|  
   
 ## <a name="configuration-of-an-event-handler"></a>Configuração de um manipulador de eventos  

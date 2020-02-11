@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762341"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Criar um instantâneo do banco de dados (Transact-SQL)
@@ -28,16 +28,16 @@ ms.locfileid: "62762341"
   
      [Segurança](#Security)  
   
-     [Melhor prática: Nomeando instantâneos do banco de dados](#Naming)  
+     [Prática recomendada: nomenclatura de instantâneos de banco de dados](#Naming)  
   
--   **Para criar um banco de dados de instantâneo, usando:**  [Transact-SQL](#TsqlProcedure)  
+-   **Para criar um instantâneo do banco de dados usando:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
  O banco de dados de origem, que pode usar qualquer modelo de recuperação, deve atender aos seguintes pré-requisitos:  
   
--   A instância de servidor deve estar sendo executada em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte a instantâneos de banco de dados. Para obter informações sobre o suporte para instantâneos de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   A instância de servidor deve estar sendo executada em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte a instantâneos de banco de dados. Para obter informações sobre o suporte para instantâneos [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]de banco de dados no, consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   O banco de dados de origem precisa estar online, a menos que se trate de um banco de dados espelho dentro de uma sessão de espelhamento de banco de dados.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "62762341"
 ###  <a name="Recommendations"></a> Recomendações  
  Esta seção aborda as seguintes práticas recomendadas:  
   
--   [Melhor prática: Nomeando instantâneos do banco de dados](#Naming)  
+-   [Prática recomendada: nomenclatura de instantâneos de banco de dados](#Naming)  
   
--   [Melhor prática: Limitando o número de instantâneos do banco de dados](#Limiting_Number)  
+-   [Prática recomendada: limitando o número de instantâneos do banco de dados](#Limiting_Number)  
   
--   [Melhor prática: Conexões de cliente com um instantâneo do banco de dados](#Client_Connections)  
+-   [Prática recomendada: conexões de cliente com um instantâneo de banco de dados](#Client_Connections)  
   
-####  <a name="Naming"></a> Melhor prática: Nomeando instantâneos de banco de dados  
+####  <a name="Naming"></a>Prática recomendada: nomenclatura de instantâneos de banco de dados  
  Antes de criar instantâneos, é importante considerar como serão nomeados. Cada instantâneo de banco de dados requer um nome exclusivo de banco de dados. Para facilidade administrativa, o nome de um instantâneo pode inserir informações que identifiquem o banco de dados, como:  
   
 -   O nome do banco de dados de origem.  
@@ -82,13 +82,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> Melhor prática: Limitando o número de instantâneos de banco de dados  
+####  <a name="Limiting_Number"></a>Prática recomendada: limitando o número de instantâneos do banco de dados  
  Criar uma série de instantâneos do longo do tempo captura instantâneos sequenciais do banco de dados de origem. Cada instantâneo persiste até que seja explicitamente descartado. Como cada instantâneo continuará crescendo à medida que as páginas originais forem atualizadas, você pode preferir conservar espaço de disco excluindo um instantâneo mais antigo depois de criar um instantâneo novo.  
   
 > [!NOTE]  
 >  Se você quiser reverter a um instantâneo de banco de dados, precisará excluir qualquer outro instantâneo desse banco de dados.  
   
-####  <a name="Client_Connections"></a> Melhor prática: Conexões de cliente para um instantâneo de banco de dados  
+####  <a name="Client_Connections"></a>Prática recomendada: conexões de cliente com um instantâneo de banco de dados  
  Para usar um instantâneo de banco de dados, os clientes precisam saber onde encontrá-lo. Os usuários podem ler de um instantâneo de banco de dados enquanto outro está sendo criado ou excluído. Porém, quando você substituir um instantâneo novo por um já existente, será necessário redirecionar os clientes ao novo instantâneo. Os usuários podem se conectar manualmente a um instantâneo de banco de dados por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No entanto, para dar suporte a um ambiente de produção, você deverá criar uma solução programática que direcione de maneira transparente os clientes de gravação de relatório ao último instantâneo de banco de dados do banco de dados.  
   
 ###  <a name="Security"></a> Segurança  
@@ -96,7 +96,7 @@ AdventureWorks_snapshot_evening
 ####  <a name="Permissions"></a> Permissões  
  Qualquer usuário que possa criar um banco de dados pode criar um instantâneo de banco de dados, entretanto, para criar um instantâneo de um banco de dados espelho, você deve ser um membro da função de servidor fixa **sysadmin** .  
   
-##  <a name="TsqlProcedure"></a> Como criar um instantâneo de banco de dados (usando o Transact-SQL)  
+##  <a name="TsqlProcedure"></a>Como criar um instantâneo de banco de dados (usando Transact-SQL)  
  **Para criar um instantâneo do banco de dados**  
   
 > [!NOTE]  
@@ -104,15 +104,15 @@ AdventureWorks_snapshot_evening
   
 1.  Com base no tamanho atual do banco de dados de origem, verifique se você tem espaço em disco suficiente para suportar o instantâneo do banco de dados. O tamanho máximo de um instantâneo do banco de dados é o tamanho do banco de dados de origem no momento da criação do instantâneo. Para obter mais informações, consulte [Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40;Transact-SQL&#41;](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).  
   
-2.  Emita uma instrução CREATE DATABASE nos arquivos usando a cláusula AS SNAPSHOT OF. Criar um instantâneo requer especificar o nome lógico de cada arquivo de banco de dados do banco de dados de origem. A sintaxe é a seguinte:  
+2.  Emita uma instrução CREATE DATABASE nos arquivos usando a cláusula AS SNAPSHOT OF. Criar um instantâneo requer especificar o nome lógico de cada arquivo de banco de dados do banco de dados de origem. A sintaxe é mostrada a seguir:  
   
      CREATE DATABASE *database_snapshot_name*  
   
-     ON  
+     ATIVADO  
   
      (  
   
-     NAME =*logical_file_name*,  
+     NOME =*logical_file_name*,  
   
      FILENAME ='*os_file_name*'  
   
@@ -134,9 +134,9 @@ AdventureWorks_snapshot_evening
   
  Esta seção contém os seguintes exemplos:  
   
--   A. [Criando um instantâneo no banco de dados AdventureWorks](#Creating_on_AW)  
+-   a. [Criando um instantâneo no banco de dados AdventureWorks](#Creating_on_AW)  
   
--   B. [Criando um instantâneo no banco de dados Vendas](#Creating_on_Sales)  
+-   B. [Criando um instantâneo no banco de dados Sales](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Criando um instantâneo no banco de dados AdventureWorks  
  Este exemplo cria um instantâneo de banco de dados no banco de dados `AdventureWorks` . O nome do instantâneo, `AdventureWorks_dbss_1800`e o nome do arquivo de seu respectivo arquivo esparso, `AdventureWorks_data_1800.ss`, indicam a hora da criação, 18h00.  
@@ -150,7 +150,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. Criando um instantâneo no banco de dados Vendas  
- Este exemplo cria um instantâneo do banco de dados, `sales_snapshot1200`, no banco de dados `Sales` . Este banco de dados foi criado no exemplo, "Criando um banco de dados com grupos de arquivos," em [criar banco de dados &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
+ Este exemplo cria um instantâneo do banco de dados, `sales_snapshot1200`, no banco de dados `Sales` . Esse banco de dados foi criado no exemplo "criando um banco de dados que tem grupos de dados" em [create database &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -180,8 +180,8 @@ GO
   
 -   [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+## <a name="see-also"></a>Consulte Também  
+ [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Instantâneos de banco de dados &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

@@ -11,22 +11,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 06ae79e51fa7526ab0e6bad2747c32d0bc5ca6bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771593"
 ---
 # <a name="certification-by-sap"></a>Certificação pela SAP
   O Microsoft Connector 1.1 for SAP BW recebeu certificação da SAP para integração com o SAP NetWeaver.  
   
- ![Certificado pela SAP – Integração com o SAP NetWeaver](media/sapcertifiedforssis11.gif "Certificado pela SAP – Integração com o SAP NetWeaver")  
+ ![Certificado pela SAP - Integração com o SAP NetWeaver](media/sapcertifiedforssis11.gif "Certificado pela SAP - Integração com o SAP NetWeaver")  
   
  A tabela a seguir descreve os detalhes da certificação.  
   
 |Interface SAP|Níveis de versão SAP|Data da certificação|Componente relacionado|  
 |-------------------|------------------------|------------------------|-----------------------|  
-|BW_OHS 7.0 - SAP NetWeaver Business Intelligence - Open Hub Service 7.0|Business Intelligence 7.0|Dezembro de 2012|`Source`|  
-|BW-STA 3.5 - BAPIs de preparação para SAP BW 3.5|Business Intelligence 3.5, 7.0|Dezembro de 2012|Destino|  
+|BW_OHS 7.0 - SAP NetWeaver Business Intelligence - Open Hub Service 7.0|Business Intelligence 7.0|Dezembro de 2012|Fonte|  
+|BW-STA 3.5 - BAPIs de preparação para SAP BW 3.5|Business Intelligence 3.5, 7.0|Dezembro de 2012|Destination|  
   
   

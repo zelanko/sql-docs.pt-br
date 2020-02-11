@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768432"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Compreendendo o Component Object Model Script
-  Conforme discutido em [codificando e depurando o componente Script] (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, o projeto de componente de Script contém três itens de projeto:  
+  Conforme discutido em [codificando e Depurando o componente Script] (.. /Extending-Packages-scripting/data-Flow-script-Component/Coding-and-Debugging-The-script-Component.MD, o projeto de componente de script contém três itens de projeto:  
   
 1.  O item `ScriptMain`, que contém a classe `ScriptMain` na qual você escreve seu código. A classe `ScriptMain` herda da classe `UserComponent`.  
   
@@ -124,7 +124,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece  
  O item de projeto ComponentWrapper contém uma classe nomeada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe `ScriptMain` na qual você escreve seu código personalizado, por sua vez, deriva de `UserComponent`. A classe `UserComponent` contém os seguintes métodos:  
   
--   Uma implementação substituída do método `ProcessInput`. Esse é o método que o mecanismo de fluxo de dados chama em seguida no tempo de execução, depois do método `PreExecute`, e ele pode ser chamado várias vezes. `ProcessInput` entrega o processamento para o  **\<bufferdeentrada > _ProcessInput** método. Depois, o método `ProcessInput` verifica se o buffer de entrada chegou ao final e, em caso positivo, chama o método substituível `FinishOutputs` e o método particular `MarkOutputsAsFinished`. O `MarkOutputsAsFinished` , em seguida, chama um método `SetEndOfRowset` no último buffer de saída.  
+-   Uma implementação substituída do método `ProcessInput`. Esse é o método que o mecanismo de fluxo de dados chama em seguida no tempo de execução, depois do método `PreExecute`, e ele pode ser chamado várias vezes. `ProcessInput`transfere o processamento para o método de ** \<>_ProcessInput inputBuffer** . Depois, o método `ProcessInput` verifica se o buffer de entrada chegou ao final e, em caso positivo, chama o método substituível `FinishOutputs` e o método particular `MarkOutputsAsFinished`. O `MarkOutputsAsFinished` método então chama `SetEndOfRowset` o último buffer de saída.  
   
 -   Uma implementação substituível do método **\<bufferdeentrada>_ProcessInput**. Essa implementação padrão simplesmente executa um loop em cada linha de entrada e chama **\<inputbuffer>_ProcessInputRow**.  
   
@@ -135,7 +135,7 @@ public override void PreExecute()
   
 -   Substitua o **\<bufferdeentrada>_ProcessInputRow** para processar os dados em cada linha de entrada conforme ela passa.  
   
--   Só substitua o **\<bufferdeentrada>_ProcessInput** se você precisar fazer algo adicional enquanto executa um loop em linhas de entrada. (Por exemplo, verifique se o `EndOfRowset` executa outra ação após o processamento de todas as linhas.) Chame **\<bufferdeentrada>_ProcessInputRow** para executar o processamento de linha.  
+-   Só substitua o **\<bufferdeentrada>_ProcessInput** se você precisar fazer algo adicional enquanto executa um loop em linhas de entrada. (Por exemplo, você precisa testar para `EndOfRowset` para executar alguma outra ação depois que todas as linhas tiverem sido processadas.) Chame ** \<inputBuffer>_ProcessInputRow** para executar o processamento de linha.  
   
 -   Substitua o `FinishOutputs` se precisar fazer algo nas saídas antes de seu fechamento.  
   
@@ -149,16 +149,17 @@ public override void PreExecute()
   
 -   Propriedades do acessador nomeado, digitado, somente gravação para cada coluna de saída.  
   
--   Uma gravação somente  **\<coluna > _IsNull** propriedade para cada coluna de saída selecionada que você pode usar para definir o valor da coluna como `null`.  
+-   Uma ** \<coluna** somente gravação>_IsNull propriedade para cada coluna de saída selecionada que você pode usar para definir o valor da coluna `null`como.  
   
 -   Um método `AddRow` para adicionar uma linha nova vazia ao buffer de saída.  
   
--   Um método `SetEndOfRowset` para notificar o mecanismo de fluxo de dados buffers de que dados não são mais esperados. Também há uma função `EndOfRowset` para determinar se o buffer atual é o último buffer de dados. Você geralmente não precisa dessas funções ao usar os métodos implementados de processamento de entrada a `UserComponent` classe base.  
+-   Um método `SetEndOfRowset` para notificar o mecanismo de fluxo de dados buffers de que dados não são mais esperados. Também há uma função `EndOfRowset` para determinar se o buffer atual é o último buffer de dados. Geralmente, você não precisa dessas funções quando usa os métodos de processamento de entrada implementados `UserComponent` na classe base.  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece  
  O item de projeto ComponentWrapper contém uma classe nomeada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe `ScriptMain` na qual você escreve seu código personalizado, por sua vez, deriva de `UserComponent`. A classe `UserComponent` contém os seguintes métodos:  
   
--   Uma implementação substituída do método `PrimeOutput`. O mecanismo de fluxo de dados chama esse método antes do `ProcessInput` em tempo de execução e ele é chamado apenas uma vez. `PrimeOutput` entrega o processamento para o método `CreateNewOutputRows`. Depois, se o componente for uma origem (ou seja, se o componente não possuir entradas), o `PrimeOutput` chamará o método `FinishOutputs` substituível e o método `MarkOutputsAsFinished` particular. O método `MarkOutputsAsFinished` chama o `SetEndOfRowset` no último buffer de saída.  
+-   Uma implementação substituída do método `PrimeOutput`. O mecanismo de fluxo de dados chama esse método antes do `ProcessInput` em tempo de execução e ele é chamado apenas uma vez. 
+  `PrimeOutput` entrega o processamento para o método `CreateNewOutputRows`. Depois, se o componente for uma origem (ou seja, se o componente não possuir entradas), o `PrimeOutput` chamará o método `FinishOutputs` substituível e o método `MarkOutputsAsFinished` particular. O método `MarkOutputsAsFinished` chama o `SetEndOfRowset` no último buffer de saída.  
   
 -   Uma implementação substituível do método `CreateNewOutputRows`. A implementação padrão é vazia. Esse é o método que, em geral, você substituirá para escrever seu código de processamento de dados personalizado.  
   
@@ -175,7 +176,7 @@ public override void PreExecute()
  Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> sempre que houver processamento a ser executado uma só vez após o processamento das linhas de dados. Por exemplo, em uma origem, talvez você queira fechar o `System.Data.SqlClient.SqlDataReader` usado para carregar dados no fluxo de dados.  
   
 > [!IMPORTANT]  
->  A coleção de `ReadWriteVariables` só está disponível no método `PostExecute`. Portanto, não será possível incrementar diretamente o valor de uma variável de pacote ao processar cada linha de dados. Em vez disso, incremente o valor de uma variável local e defina o valor da variável de pacote como o valor da variável local no `PostExecute` método após todos os dados foram processado.  
+>  A coleção de `ReadWriteVariables` só está disponível no método `PostExecute`. Portanto, não será possível incrementar diretamente o valor de uma variável de pacote ao processar cada linha de dados. Em vez disso, aumente o valor de uma variável local e defina o valor da variável de pacote como o valor da variável local no `PostExecute` método depois que todos os dados tiverem sido processados.  
   
 ## <a name="releaseconnections-method"></a>Método ReleaseConnections  
  Origens e destinos geralmente precisam se conectar a uma fonte de dados externa. Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> para fechar e liberar a conexão aberta anteriormente no método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>.  
@@ -201,10 +202,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar o componente de Script no Editor de Componentes de Script](configuring-the-script-component-in-the-script-component-editor.md)   
- [Codificando e depurando o componente Script] (.. /Extending-Packages-Scripting/Data-Flow-script-Component/Coding-and-Debugging-the-script-Component.MD  
+## <a name="see-also"></a>Consulte Também  
+ [Configurando o componente script no editor de componentes de script](configuring-the-script-component-in-the-script-component-editor.md)   
+ [Codificando e Depurando o componente Script] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   
   

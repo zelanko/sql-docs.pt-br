@@ -1,5 +1,5 @@
 ---
-title: Representação e segurança da integração CLR | Microsoft Docs
+title: Representação e segurança de integração CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781124"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Representação e segurança de integração CLR
   Quando código gerenciado acessa recursos externos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não representa automaticamente o contexto de execução atual no qual a rotina está em execução. O código nos assemblies `EXTERNAL_ACCESS` e `UNSAFE` pode representar explicitamente o contexto de execução atual.  
   
 > [!NOTE]  
->  Para obter informações sobre alterações de comportamento na representação, consulte [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2014](../breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Para obter informações sobre alterações de comportamento na representação, consulte [alterações recentes em mecanismo de banco de dados recursos no SQL Server 2014](../breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
  O provedor de acesso a dados em processo oferece uma interface de programação de aplicativo, `SqlContext.WindowsIdentity`, que pode ser usada para recuperar o token associado ao contexto de segurança atual. O código gerenciado nos assemblies `EXTERNAL_ACCESS` e `UNSAFE` pode usar esse método para recuperar o contexto e usar o método `WindowsIdentity.Impersonate` do .NET Framework para representar esse contexto. As restrições seguintes se aplicam quando o código do usuário é representado explicitamente:  
   
@@ -41,8 +41,8 @@ ms.locfileid: "62781124"
   
  Os assemblies `EXTERNAL_ACCESS` e `UNSAFE` acessam recursos do sistema operacional usando a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que representem de maneira voluntária o contexto de segurança atual conforme a descrição. Por conta disso, os autores dos assemblies `EXTERNAL_ACCESS` exigem um nível de confiança mais elevado do que os de assemblies `SAFE`, especificado pela permissão em nível de logon `EXTERNAL ACCESS`. Apenas logons confiáveis para a execução de códigos na conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem receber a permissão `EXTERNAL ACCESS`.  
   
-## <a name="see-also"></a>Consulte também  
- [Segurança da integração CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Segurança de integração CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Representação e credenciais para conexões](../../relational-databases/clr-integration/data-access/impersonation-and-credentials-for-connections.md)  
   
   

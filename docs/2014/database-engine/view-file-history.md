@@ -1,5 +1,5 @@
 ---
-title: Exibir o histórico de arquivos | Microsoft Docs
+title: Exibir histórico de arquivos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773292"
 ---
 # <a name="view-file-history"></a>Exibir o histórico de arquivos
-  Você pode usar o **histórico** comando para exibir um histórico de versão para arquivos de controle do código-fonte. Esse histórico inclui a data e hora de quando o arquivo foi adicionado ou foi feito check-in no controle do código-fonte.  
+  Você pode usar o comando **history** para exibir um histórico de versão para arquivos de origem controlada. Esse histórico inclui a data e hora de quando o arquivo foi adicionado ou foi feito check-in no controle do código-fonte.  
   
 ### <a name="to-view-the-history-of-a-file"></a>Para exibir o histórico de um arquivo  
   
 1.  No Gerenciador de Soluções, selecione o arquivo.  
   
-2.  Sobre o **arquivo** , aponte para **controle do código-fonte** e clique em **histórico**.  
+2.  No menu **arquivo** , aponte para **controle do código-fonte** e clique em **histórico**.  
   
-3.  No **histórico de arquivos** caixa de diálogo caixa, execute uma das seguintes ações:  
+3.  Na caixa **de diálogo histórico de arquivo** , execute qualquer uma das seguintes ações:  
   
 4.  Exibir a versão selecionada.  
   
@@ -43,12 +43,12 @@ ms.locfileid: "62773292"
   
 9. Exportar o relatório de histórico para uma impressora, um arquivo ou para a área de transferência do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
- Para obter informações sobre como executar essas tarefas, clique o **ajudar** botão na **histórico de arquivos** caixa de diálogo.  
+ Para obter informações sobre como executar essas tarefas, clique no botão **ajuda** na caixa **de diálogo histórico de arquivos** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir e recuperar informações de versão](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Exibir histórico de projetos](../../2014/database-engine/view-project-history.md)   
- [Exibir o Status do arquivo](../../2014/database-engine/view-file-status.md)   
+ [Exibir histórico do projeto](../../2014/database-engine/view-project-history.md)   
+ [Exibir status do arquivo](../../2014/database-engine/view-file-status.md)   
  [Recuperar arquivos](../../2014/database-engine/retrieve-files.md)   
  [Comparar arquivos](../../2014/database-engine/compare-files.md)  
   

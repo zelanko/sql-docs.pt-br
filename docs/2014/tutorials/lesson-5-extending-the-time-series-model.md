@@ -1,5 +1,5 @@
 ---
-title: 'Lição 5: Estendendo a série temporal de modelo | Microsoft Docs'
+title: 'Lição 5: estendendo o modelo de série temporal | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62822054"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Lição 5: Como estender o modelo de série temporal
+# <a name="lesson-5-extending-the-time-series-model"></a>Lição 5: Estendendo o modelo de série temporal
   No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, é possível adicionar novos dados a um modelo de série temporal e incorporar automaticamente os novos dados no módulo. Você adiciona novos dados a um modelo de mineração de série temporal de um de dois modos:  
   
 -   Use PREDICTION JOIN para unir dados em uma fonte externa para os dados de treinamento.  
@@ -26,7 +26,7 @@ ms.locfileid: "62822054"
   
  Por exemplo, suponha que você treinou o modelo de mineração em dados de vendas existentes há alguns meses. Ao fazer novas vendas, talvez você queira atualizar as previsões de vendas para incorporá-las aos novos dados. É possível fazer isso em uma etapa, fornecendo os novos números de vendas como dados de entrada e gerando novas previsões baseadas no conjunto de dados composto.  
   
-## <a name="making-predictions-with-extendmodelcases"></a>Fazendo previsões com EXTEND_MODEL_CASES  
+## <a name="making-predictions-with-extend_model_cases"></a>Fazendo previsões com EXTEND_MODEL_CASES  
  A seguir, exemplos genéricos de uma previsão de série temporal usando EXTEND_MODEL_CASES. O primeiro exemplo permite que você especifique o número de previsões, começando pelo último período do modelo original:  
   
 ```  
@@ -49,7 +49,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>Como criar uma consulta de previsão singleton em um modelo de série temporal  
   
-1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+1.  No Pesquisador de **objetos**, clique com o botão [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]direito do mouse na instância do, aponte para **nova consulta**e clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   
@@ -138,15 +138,15 @@ PREDICTION JOIN <source query>
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-7.  Sobre o **arquivo** menu, clique em **salvar DMXQuery1.dmx como**.  
+7.  No menu **arquivo** , clique em **salvar DMXQuery1. DMX como**.  
   
-8.  No **Salvar como** caixa de diálogo, navegue até a pasta apropriada e nomeie o arquivo `Singleton_TimeSeries_Query.dmx`.  
+8.  Na caixa de diálogo **salvar como** , navegue até a pasta apropriada e nomeie o arquivo `Singleton_TimeSeries_Query.dmx`.  
   
-9. Na barra de ferramentas, clique o **Execute** botão.  
+9. Na barra de ferramentas, clique no botão **executar** .  
   
      A consulta retorna previsões de quantidade de vendas para as bicicletas M200 na Europa e nas regiões do Pacífico.  
   
-## <a name="understanding-prediction-start-with-extendmodelcases"></a>Compreendendo o início das previsões com EXTEND_MODEL_CASES  
+## <a name="understanding-prediction-start-with-extend_model_cases"></a>Compreendendo o início das previsões com EXTEND_MODEL_CASES  
  Agora que você criou previsões com base no modelo original, e com novos dados, poderá comparar os resultados para ver como a atualização dos dados de vendas afeta as previsões. Antes disso, examine o código recém-criado e observe o seguinte:  
   
 -   Você só forneceu novos dados para a região da Europa.  
@@ -155,7 +155,7 @@ PREDICTION JOIN <source query>
   
  A tabela a seguir mostra como os novos valores fornecidos para a M200 na Europa afetam as previsões. Você não forneceu dados novos para o produto M200 na região do Pacífico, mas essa série será apresentada para fins de comparação:  
   
- **Produto e região: M200 Europa**  
+ **Produto e região: Europa M200l**  
   
 |||||  
 |-|-|-|-|  
@@ -167,7 +167,7 @@ PREDICTION JOIN <source query>
 |M200 Europa|11/25/2008 12:00:00 AM|56|68|  
 |M200 Europa|12/25/2008 12:00:00 AM|74|89|  
   
- **Produto e região: M200 Pacific**  
+ **Produto e região: M200 Pacífico**  
   
 |||||  
 |-|-|-|-|  
@@ -177,7 +177,7 @@ PREDICTION JOIN <source query>
 |M200 Pacífico|9/25/2008 12:00:00 AM|38|38|  
 |M200 Pacífico|10/25/2008 12:00:00 AM|41|41|  
 |M200 Pacífico|11/25/2008 12:00:00 AM|36|36|  
-|M200 Pacífico|12/25/2008 12:00:00 AM|39|39|  
+|M200 Pacífico|12/25/2008 12:00:00 AM|11,8|11,8|  
   
  A partir desses resultados, você pode observar dois aspectos:  
   
@@ -192,7 +192,7 @@ PREDICTION JOIN <source query>
   
 -   Solicite previsões para quatro frações de tempo, onde o ponto inicial será 3 e o ponto final será a fração de tempo 6.  
   
- Em outras palavras, se seus novos dados contiverem n frações de tempo, e você solicitar previsões para períodos de 1 a n, as previsões coincidirão com o mesmo período dos dados novos. Para conseguir previsões para períodos de tempo não cobertos pelos seus dados, você deve iniciar as previsões na fração de tempo n+1 após a nova série de dados ou assegurar-se de solicitar frações de tempo adicionais.  
+ Em outras palavras, se os novos dados contiverem n frações de tempo e você solicitar previsões de etapas de 1 a n, as previsões coincidirão com o mesmo período que os novos dados. Para conseguir previsões para períodos de tempo não cobertos pelos seus dados, você deve iniciar as previsões na fração de tempo n+1 após a nova série de dados ou assegurar-se de solicitar frações de tempo adicionais.  
   
 > [!NOTE]  
 >  Não é possível fazer previsões históricas quando você adiciona novos dados.  
@@ -218,7 +218,7 @@ WHERE [ModelRegion] = 'M200 Europe'
   
  Os resultados da previsão começam na fração de tempo 3, que ocorre após os 2 meses de dados novos fornecidos por você.  
   
- **Produto e região: M200 Europa**  
+ **Produto e região: Europa M200l**  
   
  Modelo com dados atualizados (PredictTimeSeries com EXTEND_MODEL_CASES)  
   
@@ -229,11 +229,11 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europa|11/25/2008 12:00:00 AM|68|  
 |M200 Europa|12/25/2008 12:00:00 AM|89|  
   
-## <a name="making-predictions-with-replacemodelcases"></a>Fazendo previsões com REPLACE_MODEL_CASES  
- Substituir os casos de modelo é útil quando você desejar treinar um modelo em um conjunto de casos e, então, aplicar o modelo a uma série de dados diferente. Uma passo a passo detalhado desse cenário é apresentada na [lição 2: Criando um cenário de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+## <a name="making-predictions-with-replace_model_cases"></a>Fazendo previsões com REPLACE_MODEL_CASES  
+ Substituir os casos de modelo é útil quando você desejar treinar um modelo em um conjunto de casos e, então, aplicar o modelo a uma série de dados diferente. Uma explicação detalhada desse cenário é apresentada na [lição 2: Criando um cenário de previsão &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de consulta de modelo de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [&#41;&#40;DMX PredictTimeSeries](/sql/dmx/predicttimeseries-dmx)  
   
   

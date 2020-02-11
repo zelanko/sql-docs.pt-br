@@ -13,25 +13,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015788"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Caixa de diálogo Colunas de Índice (Visual Database Tools)
   Use essa caixa de diálogo para selecionar colunas de um índice e definir a ordem de classificação. Um índice pode usar uma ou mais colunas, que podem ser classificadas tanto na ordem crescente como decrescente. Para acessar essa caixa de diálogo, no diálogo **Índices/Chaves** , clique no botão de reticências da linha **Colunas** na seção **Geral** seção.  
   
 ## <a name="options"></a>Opções  
- **Nome da coluna**  
- Escolha as colunas que integram o índice. Selecione  **\<None >** para remover a coluna do índice...  
+ **Nome da Coluna**  
+ Escolha as colunas que integram o índice. Selecione ** \<nenhum>** para remover essa coluna do índice..  
   
  **Sort Order**  
  Selecione uma ordem de classificação para a coluna especificada. As opções disponíveis são **Crescente** ou **Decrescente**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Criar índices não clusterizados](../../relational-databases/indexes/create-nonclustered-indexes.md)   
- [Índices e teclas de caixa de diálogo &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Caixa de diálogo índices e chaves &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

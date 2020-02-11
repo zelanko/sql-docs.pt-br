@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833104"
 ---
 # <a name="odata-connection-manager"></a>Gerenciador de conexões do OData
@@ -27,7 +27,7 @@ ms.locfileid: "62833104"
   
 -   Clique com o botão direito na pasta **Gerenciadores de Conexões** no **Gerenciador de Soluções** e clique em **Novo Gerenciador de Conexões**. Selecione **ODATA** para o **Tipo de gerenciador de conexões**.  
   
--   Clique com botão direito no **gerenciadores de Conexão** painel na parte inferior do designer de pacote e selecione **nova Conexão...** . Selecione **ODATA** para o **Tipo de gerenciador de conexões**.  
+-   Clique com o botão direito do mouse no painel **gerenciadores de conexões** na parte inferior do designer de pacotes e selecione **nova conexão...**. Selecione **ODATA** para o **tipo de Gerenciador de conexões**.  
   
 ## <a name="connection-manager-authentication"></a>Autenticação do gerenciador de conexões  
  O gerenciador de conexões do OData oferece suporte a dois modos de autenticação.  
@@ -48,13 +48,13 @@ ms.locfileid: "62833104"
   
 |||  
 |-|-|  
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |Url|URL do documento de serviço.|  
 |UserName|Nome de usuário para ser usado na autenticação básica.|  
 |Senha|Senha a ser usada na autenticação básica.|  
 |ConnectionString|Reflete outras propriedades do gerenciador de conexões.|  
   
-## <a name="see-also"></a>Consulte também  
- [OData Connection Manager Editor](../odata-connection-manager-editor.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de Gerenciador de Conexões OData](../odata-connection-manager-editor.md)  
   
   

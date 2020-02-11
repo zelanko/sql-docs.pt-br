@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768832"
 ---
 # <a name="syntax-ssis"></a>Sintaxe (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62768832"
 > [!NOTE]  
 >  Em versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], havia um limite de 4000 caracteres no resultado da avaliação de uma expressão quando o resultado incluía o tipo de dados DT_WSTR ou DT_STR do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Esse limite foi removido.  
   
- Para obter expressões de amostra que utilizam operadores e funções específicos, confira o tópico sobre cada operador e função: [Operadores &#40;SSIS Expressão&#41;](operators-ssis-expression.md) e [Funções &#40;SSIS Expressão&#41;](functions-ssis-expression.md).  
+ Para obter expressões de amostra que utilizam operadores e funções específicos, consulte o tópico sobre cada operador e função: [Operadores &#40;Expressão SSIS&#41;](operators-ssis-expression.md) e [Funções &#40;Expressão SSIS&#41;](functions-ssis-expression.md).  
   
  Para obter expressões de amostra que usam os vários operadores e funções como também identificadores e literais, consulte [Exemplos de expressões avançadas do Integration Services](examples-of-advanced-integration-services-expressions.md).  
   

@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916870"
 ---
 # <a name="estimate-the-size-of-a-table"></a>Estimar o tamanho de uma tabela
@@ -41,7 +41,7 @@ ms.locfileid: "62916870"
   
 3.  Some os valores calculados nas etapas 1 e 2.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Estimar o tamanho de um banco de dados](estimate-the-size-of-a-database.md)   
  [Estimar o tamanho de um heap](estimate-the-size-of-a-heap.md)   
  [Estimar o tamanho de um índice clusterizado](estimate-the-size-of-a-clustered-index.md)   

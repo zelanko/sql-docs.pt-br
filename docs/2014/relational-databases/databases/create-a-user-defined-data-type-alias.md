@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917414"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Criar um alias de tipo de dados definido pelo usuário
@@ -71,7 +71,7 @@ ms.locfileid: "62917414"
      Não é exibido comprimento para tipos de dados `nvarchar(max)`, `varchar(max)`ou `varbinary(max)`.  
   
      **Nome**  
-     Se você estiver criando um novo alias de tipo de dados definido pelo usuário, digite um nome exclusivo a ser usado no banco de dados para representar o tipo de dados definido pelo usuário. O número máximo de caracteres deve corresponder ao sistema `sysname` tipo de dados. O nome de um alias de tipo de dados definido pelo usuário existente não é editável.  
+     Se você estiver criando um novo alias de tipo de dados definido pelo usuário, digite um nome exclusivo a ser usado no banco de dados para representar o tipo de dados definido pelo usuário. O número máximo de caracteres deve corresponder ao tipo `sysname` de dados do sistema. O nome de um alias de tipo de dados definido pelo usuário existente não é editável.  
   
      **Regra**  
      Opcionalmente, selecione uma regra para associar ao alias de tipo de dados definido pelo usuário.  
@@ -82,7 +82,7 @@ ms.locfileid: "62917414"
      **Esquema**  
      Selecione um esquema de uma lista de todos os esquemas disponíveis para o usuário atual. A seleção padrão é o esquema padrão do usuário atual.  
   
-     **Armazenamento**  
+     **Storage**  
      Exibe o tamanho de armazenamento máximo para o alias de tipo de dados definido pelo usuário. Os tamanhos máximos de armazenamento variam com base na precisão.  
   
     |||  
@@ -92,7 +92,7 @@ ms.locfileid: "62917414"
     |20 – 28|13|  
     |29 – 38|17|  
   
-     Para `nchar` e `nvarchar` tipos de dados, o valor de armazenamento sempre é duas vezes o valor de **comprimento**.  
+     Para `nchar` os `nvarchar` tipos de dados e, o valor de armazenamento é sempre duas vezes o valor em **comprimento**.  
   
      Não é exibido armazenamento para tipos de dados `nvarchar(max)`, `varchar(max)`ou `varbinary(max)`.  
   
@@ -123,7 +123,7 @@ CREATE TYPE ssn
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Identificadores de banco de dados](database-identifiers.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787031"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurar as opções de configuração de servidor user connections
@@ -40,7 +40,7 @@ ms.locfileid: "62787031"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [Depois de configurar a opção de configuração user options](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção user options configuration](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62787031"
     |256|QUOTED_IDENTIFIER|Faz a diferenciação entre aspas simples e duplas ao avaliar uma expressão.|  
     |512|NOCOUNT|Desativa a mensagem retornada ao término de cada instrução que declara quantas linhas foram afetadas.|  
     |1024|ANSI_NULL_DFLT_ON|Altera o comportamento da sessão para usar a compatibilidade ANSI para nulidade. Novas colunas definidas sem a nulidade explícita são definidas para permitir nulos.|  
-    |2048|ANSI_NULL_DFLT_OFF|Altera o comportamento da sessão, para não usar a compatibilidade ANSI para nulidade. Novas colunas definidas sem a nulidade explícita são definidas para não permitir nulos.|  
+    |2\.048|ANSI_NULL_DFLT_OFF|Altera o comportamento da sessão, para não usar a compatibilidade ANSI para nulidade. Novas colunas definidas sem a nulidade explícita são definidas para não permitir nulos.|  
     |4096|CONCAT_NULL_YIELDS_NULL|Retorna NULL ao concatenar um valor NULL com uma cadeia de caracteres.|  
     |8192|NUMERIC_ROUNDABORT|Gera um erro quando ocorre perda de precisão em uma expressão.|  
     |16384|XACT_ABORT|Reverte uma transação se uma instrução Transact-SQL ativar um erro em tempo de execução.|  
@@ -105,10 +105,10 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de configurar a opção de configuração user options  
+##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção user options configuration  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   

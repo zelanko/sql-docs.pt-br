@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9addd13deb4dcf3c81a4975e0ed33783799ae2a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769162"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (Expressão SSIS)
@@ -61,7 +61,7 @@ FLOOR(0.00)
   
  Retorna 0.00  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CEILING &#40;Expressão do SSIS&#41;](ceiling-ssis-expression.md)   
  [Funções &#40;Expressão do SSIS&#41;](functions-ssis-expression.md)  
   

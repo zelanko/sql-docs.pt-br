@@ -1,5 +1,5 @@
 ---
-title: Fornecendo comentários sobre o SQL Server 2014 | Microsoft Docs
+title: Fornecendo comentários para o SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -23,10 +23,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772272"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Fornecendo comentários sobre o SQL Server 2014
@@ -37,7 +37,7 @@ ms.locfileid: "62772272"
   
  É possível localizar a página de comentários do [!INCLUDE[msCoName](../includes/msconame-md.md)] no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Connect de várias maneiras.  
   
--   Vá para a [página da Web](https://go.microsoft.com/fwlink/?linkid=34178) de comentários [!INCLUDE[msCoName](../includes/msconame-md.md)] do Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   Vá para a [!INCLUDE[msCoName](../includes/msconame-md.md)]página da Web[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de comentários [ do Connect ](https://go.microsoft.com/fwlink/?linkid=34178).  
   
 -   Na barra de ferramentas da Ajuda do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], clique no botão **Enviar Comentários** ou selecione o comando **Comunidade/Enviar Comentários**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62772272"
   
 -   Acessar a Ajuda do utilitário.  
   
--   Selecione o **ajudar** caixa de seleção a **barras de ferramentas** guia do **ferramentas/personalizar...**  comando.  
+-   Marque a caixa de seleção **ajuda** na guia **barras de ferramentas** do comando **Ferramentas/Personalizar...** .  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Relatório automático de erro e uso  
  É possível habilitar recursos para relatar erros e enviar dados automaticamente sobre como você usa o software e os serviços do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A [!INCLUDE[msCoName](../includes/msconame-md.md)] usa essas informações para melhorar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Todos os dados são confidenciais.  

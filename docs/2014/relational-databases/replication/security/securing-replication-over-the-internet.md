@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960027"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
@@ -37,8 +37,8 @@ ms.locfileid: "62960027"
 ## <a name="web-synchronization-through-iis"></a>Sincronização da Web por IIS  
  A opção de sincronização da web para replicação de mesclagem fornece a capacidade de replicar dados usando o protocolo HTTPS, que pode ser uma abordagem conveniente para replicar dados através de um firewall. Para obter mais informações, consulte [Configurar sincronização da Web](../configure-web-synchronization.md) e [Arquitetura de segurança para sincronização da Web](security-architecture-for-web-synchronization.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Segurança de replicação do SQL Server](view-and-modify-replication-security-settings.md)  
+ [Segurança de Replicação do SQL Server](view-and-modify-replication-security-settings.md)  
   
   

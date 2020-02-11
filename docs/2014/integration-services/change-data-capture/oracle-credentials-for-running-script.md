@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771107"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Credenciais Oracle para executar script
@@ -25,14 +25,14 @@ ms.locfileid: "62771107"
   
  **Autenticação**  
   
- Selecione uma destas opções:  
+ Selecione uma das seguintes:  
   
--   **Autenticação do Windows**: Selecione essa opção para usar as credenciais de domínio atuais do Windows. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.  
+-   **Autenticação do Windows**: selecione isto para usar as credenciais de domínio atuais do Windows. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.  
   
--   **Autenticação do Oracle**: Se você selecionar essa opção, precisará digitar o **Nome de Usuário** e a **Senha** no banco de dados de origem do Oracle ao qual você está se conectando.  
+-   **Autenticação do Oracle**: se você selecionou esta opção, deve digitar o **Nome de usuário** e **Senha** para o usuário no banco de dados Oracle de origem ao qual você está se conectando.  
   
-## <a name="see-also"></a>Consulte também  
- [Como gerenciar uma instância CDC](manage-a-cdc-instance.md)   
+## <a name="see-also"></a>Consulte Também  
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [Examinar e gerar scripts de log suplementares](review-and-generate-supplemental-logging-scripts.md)  
   
   

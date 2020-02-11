@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917562"
 ---
 # <a name="contained-databases"></a>Bancos de dados independentes
@@ -37,15 +37,15 @@ ms.locfileid: "62917562"
   
  Este tópico inclui as seções a seguir.  
   
--   [Conceitos de banco de dados parcialmente independente](#Concepts)  
+-   [Conceitos de banco de dados parcialmente independentes](#Concepts)  
   
--   [Confinamento](#containment)  
+-   [Contenção](#containment)  
   
--   [Benefícios dos bancos de dados parcialmente contido](#benefits)  
+-   [Benefícios do uso de bancos de dados parcialmente independentes](#benefits)  
   
 -   [Limitações](#Limitations)  
   
--   [Identificando a contenção do banco de dados](#Identifying)  
+-   [Identificando a contenção de banco de dados](#Identifying)  
   
 ##  <a name="Concepts"></a> Conceitos de banco de dados parcialmente independente  
  Um banco de dados totalmente independente inclui todas as configurações e metadados necessários para definir o banco de dados e não tem nenhuma dependência de configuração da instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] onde o banco de dados está instalado. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], separar um banco de dados da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderia ser demorado e exigir conhecimento detalhado da relação entre o banco de dados e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os bancos de dados parcialmente independentes facilitam a separação de um banco de dados de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de outros bancos de dados.  
@@ -83,7 +83,7 @@ ms.locfileid: "62917562"
  Os usuários baseados em logons no banco de dados **mestre** podem receber acesso a um banco de dados independente, mas isso cria uma dependência na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, criar usuários com base em logons permite ver comentários sobre bancos de dados parcialmente independentes.  
   
 > [!IMPORTANT]  
->  Habilitar delegados de bancos de dados parcialmente independentes controla o acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os proprietários do banco de dados. Para saber mais, veja [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md).  
+>  Habilitar delegados de bancos de dados parcialmente independentes controla o acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os proprietários do banco de dados. Para obter mais informações, consulte [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md).  
   
  Limite de banco de dados  
  Como os bancos de dados parcialmente independentes separam a funcionalidade do banco de dados das funcionalidades da instância, há uma linha claramente definida entre esses dois elementos chamada de *limite de banco de dados*.  
@@ -152,18 +152,18 @@ ms.locfileid: "62917562"
 ##  <a name="Identifying"></a> Identificando a contenção do banco de dados  
  Há duas ferramentas para facilitar a identificação do status de contenção do banco de dados. O [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) é uma exibição que mostra todas as entidades potencialmente não contidas no banco de dados. O evento database_uncontained_usage ocorre quando qualquer entidade não contida real é identificada em tempo de execução.  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  Esta exibição mostra as entidades do banco de dados que têm potencial para não serem contidas, como aquelas que cruzam o limite de banco de dados. Isso inclui as entidades de usuário que possam usar objetos fora do modelo de banco de dados. Porém, como a contenção de algumas entidades (por exemplo, as que usam SQL dinâmico) não pode ser determinada até o tempo de execução, a exibição poderá mostrar algumas entidades que não estão contidas realmente. Para obter mais informações, consulte [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql).  
   
-### <a name="databaseuncontainedusage-event"></a>evento database_uncontained_usage  
+### <a name="database_uncontained_usage-event"></a>evento database_uncontained_usage  
  Esse XEvent ocorre sempre que uma entidade não contida é identificada no momento de execução. Isso inclui entidades originadas no código de cliente. Esse XEvent ocorrerá somente para entidades reais não contidas. No entanto, o evento ocorre somente no momento de execução. Portanto, qualquer entidade de usuário não contida não executada não será identificada por esse XEvent.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Recursos modificados &#40;banco de dados independente&#41;](modified-features-contained-database.md)  
+ [Recursos modificados &#40;Banco de Dados Contidos&#41;](modified-features-contained-database.md)  
   
  [Ordenações de banco de dados independentes](contained-database-collations.md)  
   
- [Melhores práticas de segurança com bancos de dados independentes](security-best-practices-with-contained-databases.md)  
+ [Práticas recomendadas de segurança com bancos de dados independentes](security-best-practices-with-contained-databases.md)  
   
  [Migrar para um banco de dados parcialmente independente](migrate-to-a-partially-contained-database.md)  
   

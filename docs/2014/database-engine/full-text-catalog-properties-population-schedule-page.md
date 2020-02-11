@@ -1,5 +1,5 @@
 ---
-title: Propriedades do catálogo de texto completo (página de agenda de população) | Microsoft Docs
+title: Propriedades do catálogo de texto completo (página agenda de população) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778818"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Catálogo de propriedades de texto completo (Página Agenda de População)
@@ -28,7 +28,7 @@ ms.locfileid: "62778818"
  **Nome**  
  Exibe o nome da agenda.  
   
- **Tipo de população**  
+ **Tipo de População**  
  Exiba ou modifique a operação de população: cheio, com incremento ou uma operação de otimização.  
   
  **Enabled**  
@@ -37,7 +37,7 @@ ms.locfileid: "62778818"
  **Descrição**  
  Descrição da operação agendada.  
   
- **Nova**  
+ **Novo**  
  Clique nesse botão para criar uma agenda de indexação nova. Esse botão expõe a caixa de diálogo **Agenda Nova de Catálogo de Indexação de Texto Completo** .  
   
  **Editar**  
@@ -46,7 +46,7 @@ ms.locfileid: "62778818"
  **Delete (excluir)**  
  Clique nesse botão para remover a agenda de população selecionada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

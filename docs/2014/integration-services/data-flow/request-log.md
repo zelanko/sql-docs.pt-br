@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770882"
 ---
 # <a name="request-log"></a>Log de solicitações
@@ -42,25 +42,25 @@ ms.locfileid: "62770882"
     >  Clicar em **Visualizar** também abre a caixa de diálogo **Visualizar** . Para obter mais informações sobre essa caixa de diálogo, consulte [Preview](preview.md).  
   
 ## <a name="options"></a>Opções  
- **Time**  
+ **Hora**  
  Exibe a hora em que o evento foi registrado em log.  
   
  **Tipo**  
  Exibe o tipo do evento que foi registrado em log. A tabela seguinte lista os possíveis tipos de evento.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|P|Mensagem de êxito.|  
+|S|Mensagem de êxito.|  
 |E|Mensagem de erro|  
-|L|Mensagem de aviso.|  
+|W|Mensagem de aviso.|  
 |I|Mensagem informativa.|  
 |Um|A operação foi anulada.|  
   
  **Mensagem**  
  Exibe o texto da mensagem associada ao evento de log.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Editor de Origem SAP BW &#40;Página Gerenciador de Conexões&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ajuda F1 do Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

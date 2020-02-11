@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fa30824e32faae5feee1612305c1ca292d44e8e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012015"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Exibir um log auditoria do SQL Server
@@ -49,13 +49,13 @@ ms.locfileid: "63012015"
   
 2.  Expanda a pasta **Auditorias** .  
   
-3.  Clique com o botão direito do mouse no log de auditoria que você deseja exibir e selecione **Exibir Logs de Auditoria**. Isso abre o **Visualizador do arquivo de Log -** _nome_do_servidor_ caixa de diálogo. Para obter mais informações, consulte [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
+3.  Clique com o botão direito do mouse no log de auditoria que você deseja exibir e selecione **Exibir Logs de Auditoria**. Isso abre a caixa de diálogo **Visualizador do arquivo de log-**_server_name_ . Para obter mais informações, consulte [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
   
 4.  Quando terminar, clique em **Fechar**.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda exibir o log de auditoria usando o Visualizador do Arquivo de Log. No entanto, se você estiver criando um sistema de monitoramento automatizado, as informações no arquivo de auditoria podem ser lidas diretamente usando a função [sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql). Ler o arquivo diretamente retorna dados em um formato ligeiramente diferente (não processado). Consulte **sys.fn_get_audit_file** para obter mais informações  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomenda exibir o log de auditoria usando o Visualizador do Arquivo de Log. No entanto, se você estiver criando um sistema de monitoramento automatizado, as informações no arquivo de auditoria podem ser lidas diretamente usando a função [sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql). Ler o arquivo diretamente retorna dados em um formato ligeiramente diferente (não processado). Consulte **Sys. fn_get_audit_file** para obter mais informações  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md)   
  [Gravar eventos de auditoria do SQL Server no log de segurança](write-sql-server-audit-events-to-the-security-log.md)  
   

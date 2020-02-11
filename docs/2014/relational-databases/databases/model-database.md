@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916942"
 ---
 # <a name="model-database"></a>Banco de dados modelo
@@ -56,9 +56,9 @@ ms.locfileid: "62916942"
 |ANSI_WARNINGS|OFF|Sim|  
 |ARITHABORT|OFF|Sim|  
 |AUTO_CLOSE|OFF|Sim|  
-|AUTO_CREATE_STATISTICS|ON|Sim|  
+|AUTO_CREATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_SHRINK|OFF|Sim|  
-|AUTO_UPDATE_STATISTICS|ON|Sim|  
+|AUTO_UPDATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
 |CHANGE_TRACKING|OFF|Não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
@@ -70,26 +70,26 @@ ms.locfileid: "62916942"
 |ENCRYPTION|OFF|Não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM|Sim|  
-|PARAMETERIZATION|SIMPLE|Sim|  
+|PARAMETERIZATION|SIMPLES|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
 |READ_COMMITTED_SNAPSHOT|OFF|Sim|  
-|RECOVERY|Depende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition<sup>1</sup>|Sim|  
+|RECOVERY|Depende da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edição<sup>1</sup>|Sim|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
 |Opções do Service Broker|DISABLE_BROKER|Não|  
 |TRUSTWORTHY|OFF|Não|  
   
- <sup>1</sup> para verificar se o modelo de recuperação atual do banco de dados, consulte [exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> para verificar o modelo de recuperação atual do banco de dados, confira [Exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys. databases &#40;&#41;do Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  Para obter uma descrição dessas opções de banco de dados, veja [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
  As operações a seguir não podem ser executadas no banco de dados **modelo** :  
   
 -   Adicionando arquivos ou grupos de arquivos.  
   
 -   Alteração de ordenação. A ordenação padrão é a ordenação do servidor.  
   
--   Alteração do proprietário do banco de dados. **modelo** pertence a **sa**.  
+-   Alteração do proprietário do banco de dados. o **modelo** pertence a **SA**.  
   
 -   Descartando o banco de dados.  
   

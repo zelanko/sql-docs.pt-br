@@ -20,16 +20,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768843"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expressões de propriedade em pacotes
   Uma expressão de propriedade é uma expressão atribuída a uma propriedade para ativar uma atualização dinâmica da propriedade no tempo de execução. Por exemplo, uma expressão de propriedade pode atualizar a linha Para se uma tarefa Enviar Email usar a inserção de emails que já estão armazenados em uma variável.  
   
- Uma expressão pode ser adicionada a um pacote, tarefa, Loop Foreach, Loop For, Sequência, enumerador Foreach, manipulador de eventos, gerenciador de conexões de um pacote ou nível de projeto ou provedor de logs. Qualquer propriedade desses objetos que são de leitura/gravação pode implementar uma expressão de propriedade. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] também dá suporte ao uso de expressões de propriedade em algumas propriedades personalizadas de componentes de fluxo de dados. As variáveis e as restrições de precedência não oferecem suporte às expressões de propriedade, mas elas incluem propriedades especiais que permitem o uso de expressões.  
+ Uma expressão pode ser adicionada a um pacote, tarefa, Loop Foreach, Loop For, Sequência, enumerador Foreach, manipulador de eventos, gerenciador de conexões de um pacote ou nível de projeto ou provedor de logs. Qualquer propriedade desses objetos que são de leitura/gravação pode implementar uma expressão de propriedade. 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] também dá suporte ao uso de expressões de propriedade em algumas propriedades personalizadas de componentes de fluxo de dados. As variáveis e as restrições de precedência não oferecem suporte às expressões de propriedade, mas elas incluem propriedades especiais que permitem o uso de expressões.  
   
  As expressões de propriedade podem ser atualizadas de diferentes maneiras:  
   
@@ -41,7 +42,7 @@ ms.locfileid: "62768843"
   
 -   As variáveis nas expressões podem ser atualizadas pelos scripts da tarefa Script e da execução do componente Script.  
   
- As expressões são criadas usando a linguagem da expressão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . As expressões podem usar variáveis de sistema ou definidas pelo usuário, junto com operadores, funções e conversões de tipo fornecidos pela linguagem da expressão.  
+ As expressões são criadas usando a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] linguagem de expressão. As expressões podem usar variáveis de sistema ou definidas pelo usuário, junto com operadores, funções e conversões de tipo fornecidos pela linguagem da expressão.  
   
 > [!NOTE]  
 >  Os nomes das variáveis do sistema e das variáveis definidas pelo usuário diferenciam maiúsculas de minúsculas.  
@@ -55,7 +56,8 @@ ms.locfileid: "62768843"
  Algumas propriedades são definidas usando valores de enumeradores. Ao fazer referência ao membro do enumerador em uma expressão de propriedade, é preciso usar valores numéricos equivalentes ao nome amigável do membro do enumerador. Por exemplo, se uma expressão de propriedade define a propriedade `LoggingMode`, que usa um valor da enumeração `DTSLoggingMode`, a expressão de propriedade deve usar 0, 1 ou 2 em vez dos nomes amigáveis `Enabled`, `Disabled` ou `UseParentSetting`. Para obter mais informações, consulte [Constantes enumeradas em expressões de propriedade](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interface de Usuário da Expressão de Propriedade  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece um conjunto de ferramentas para construir e gerenciar as expressões de propriedade.  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece um conjunto de ferramentas para construir e gerenciar as expressões de propriedade.  
   
 -   A página **Expressões** , localizada nos editores personalizados para tarefas, o contêiner do Loop For e os contêineres Foreach. A página **Expressões** permite editar as expressões e exibir uma lista de expressões de propriedade que usados por uma tarefa, por um Loop Foreach ou por um Loop For.  
   
@@ -67,7 +69,7 @@ ms.locfileid: "62768843"
   
  O diagrama a seguir mostra as interfaces de usuário usadas para adicionar, alterar e remover as expressões de propriedade.  
   
- ![A interface do usuário para expressões de propriedade](../media/ssis-propertyexpressionui.gif "A interface do usuário para expressões de propriedade")  
+ ![A interface de usuário para expressões de propriedade](../media/ssis-propertyexpressionui.gif "A interface de usuário para expressões de propriedade")  
   
  Na janela **Propriedades** e na página **Expressões**, clique no botão Procurar **(…)** no nível de coleção **Expressões** para abrir a caixa de diálogo **Editor de Expressões de Propriedade**. O Editor de Expressões de Propriedade permite mapear uma propriedade para uma expressão e digitar uma expressão de propriedade. Se desejar usar ferramentas gráficas de expressão para criar e validar uma expressão, clique no botão Procurar **(…)** no nível de expressão para abrir a caixa de diálogo **Construtor de Expressões** e crie ou modifique (e, se desejar, avalie) a expressão.  
   
@@ -92,7 +94,7 @@ ms.locfileid: "62768843"
  As expressões de propriedade são carregadas depois que as configurações de pacote são carregadas. Por exemplo, as variáveis são atualizadas primeiro pelas suas configurações e depois as expressões de propriedade que usam as variáveis são avaliadas e carregadas. Isso significa que as expressões de propriedade sempre usam os valores de variáveis que são definidos pelas configurações.  
   
 > [!NOTE]  
->  Não é possível usar o `Set` opção do **dtexec** utilitário para preencher uma expressão de propriedade.  
+>  Você não pode usar `Set` a opção do utilitário **dtexec** para popular uma expressão de propriedade.  
   
  A tabela a seguir resume quando expressões de propriedade de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] são avaliadas e carregadas.  
   
@@ -114,7 +116,7 @@ ms.locfileid: "62768843"
  As expressões de exemplo a seguir mostram como usar as variáveis de sistema, operadores, funções e literais de cadeia de caracteres em expressões de propriedade.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Expressão de Propriedade para a Propriedade LoggingMode de um Pacote  
- A expressão de propriedade a seguir pode ser usada para definir a propriedade LoggingMode de um pacote. A expressão usa as funções DAY e GETDATE para obter um valor inteiro que represente o dia em uma data. Se o dia for o 1º ou 15º, o log será ativado; caso contrário, será desativado. O valor 1 é o inteiro equivalente do membro do enumerador LoggingMode `Enabled`, e o valor 2 é o inteiro equivalente do membro `Disabled`. Na expressão, use o valor numérico em vez do nome de membro de enumerador.  
+ A expressão de propriedade a seguir pode ser usada para definir a propriedade LoggingMode de um pacote. A expressão usa as funções DAY e GETDATE para obter um valor inteiro que represente o dia em uma data. Se o dia for o 1º ou 15º, o log será ativado; caso contrário, será desativado. O valor 1 é o equivalente inteiro do membro `Enabled`do enumerador LoggingMode e o valor 2 é o equivalente inteiro do membro. `Disabled` Na expressão, use o valor numérico em vez do nome de membro de enumerador.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   
@@ -125,7 +127,7 @@ ms.locfileid: "62768843"
   
  Se o nome do pacote for EmailRowCountPP, se tiver sido executado em 04/03/2005, com duração de 9 segundos, a expressão avaliará a seguinte cadeia de caracteres.  
   
- PExpression--> Pacote: (EmailRowCountPP) Iniciado em:3/4/2005 11:06:18 AM Duração:9 segundos.  
+ PExpression-->Pacote: (EmailRowCountPP) Iniciado em:3/4/2005 11:06:18 AM Duração:9 segundos.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expressão de Propriedade para a Mensagem de uma Mensagem de Email  
  A expressão de propriedade a seguir pode ser usada para definir a propriedade MessageSource de uma tarefa Enviar Email. A expressão usa uma combinação de literais de cadeia de caracteres, variáveis definidas pelo usuário e o operador de concatenação (+). As variáveis definidas pelo usuário são chamadas de `nasdaqrawrows`, `nyserawrows`e `amexrawrows`. O "\n" da cadeia de caracteres indica um retorno de carro.  
@@ -167,11 +169,11 @@ ms.locfileid: "62768843"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   [Marca-texto de Expressão e Configuração (Projeto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Marca-texto de expressão e configuração (Projeto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
 -   Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar variáveis em pacotes](../use-variables-in-packages.md)  
   
   

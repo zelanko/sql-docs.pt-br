@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bfcd8337105766d91e097d35201d749c86ca840e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769023"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Não lógico) (Expressão do SSIS)
@@ -42,12 +42,12 @@ ms.locfileid: "62769023"
  DT_BOOL  
   
 ## <a name="remarks"></a>Comentários  
- A tabela a seguir mostra o resultado da operação publicação.  
+ A tabela a seguir mostra o resultado da operação operação.  
   
 |Expressão booliana original|Depois de aplicar o operador|  
 |---------------------------------|------------------------------------|  
 |TRUE|FALSE|  
-|NULL|NULL|  
+|NULO|NULO|  
 |FALSE|TRUE|  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  
@@ -63,7 +63,7 @@ ms.locfileid: "62769023"
 !(@MonthNumber != MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Precedência de operador e capacidade de associação](operator-precedence-and-associativity.md)   
  [Operadores &#40;Expressão do SSIS&#41;](operators-ssis-expression.md)  
   

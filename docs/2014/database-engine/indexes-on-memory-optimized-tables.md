@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dbb63c958b50d3fac51cd8686b8580c93dacdb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778956"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Índices em tabelas com otimização de memória
@@ -24,11 +24,11 @@ ms.locfileid: "62778956"
   
 -   [Índices de hash](hash-indexes.md)  
   
--   [Determinando o número de buckets correto para índices de hash](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)  
+-   [Determinando o número de buckets correto para índices de hash não clusterizados](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)  
   
 -   [Solução de problemas comuns de desempenho com índices de hash com otimização de memória](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OLTP in-memory &#40;Otimização na memória&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

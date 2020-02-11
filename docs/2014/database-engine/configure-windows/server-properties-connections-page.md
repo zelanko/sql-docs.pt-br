@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809344"
 ---
 # <a name="server-properties-connections-page"></a>Propriedades do servidor (página Conexões)
   Use esta página para exibir ou modificar suas opções de conexão.  
   
-## <a name="connections"></a>Conexões  
+## <a name="connections"></a>conexões  
  **Número máximo de conexões simultâneas (0 = ilimitado)**  
  Se definido como um valor diferente de zero, limita o número de conexões que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permitirá.  
   
@@ -70,8 +70,8 @@ ms.locfileid: "62809344"
  **Executando Valores**  
  Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
   
-## <a name="see-also"></a>Consulte também  
- [Opções de &#40;consulta de execução: SQL Server: página Avançado&#41;](../options-query-execution-sql-server-advanced-page.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Opções &#40;execução de consulta: SQL Server:&#41;de página avançado](../options-query-execution-sql-server-advanced-page.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

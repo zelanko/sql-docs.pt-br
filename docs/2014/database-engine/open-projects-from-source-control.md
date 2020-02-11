@@ -1,5 +1,5 @@
 ---
-title: Abrir projetos do controle de origem | Microsoft Docs
+title: Abrir projetos do controle do código-fonte | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec14f86b283fa8ccbc037feec4a8a54983126403
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774950"
 ---
 # <a name="open-projects-from-source-control"></a>Abrir projetos no controle do código-fonte
@@ -26,24 +26,24 @@ ms.locfileid: "62774950"
  Depois de abrir um projeto a partir do controle do código-fonte, você poderá fazer check-out e modificar os arquivos de projeto.  
   
 > [!NOTE]  
->  O procedimento a seguir só deve ser usado uma vez. Depois disso, você deve abrir o projeto como qualquer outro projeto (clicando **arquivo**, **abra**e então **projeto**).  
+>  O procedimento a seguir só deve ser usado uma vez. Depois disso, você deve abrir o projeto como qualquer outro projeto (clicando em **arquivo**, **abrir**e, em seguida, **projeto**).  
   
 ### <a name="to-open-a-project-from-source-control"></a>Para abrir um projeto no controle do código-fonte  
   
-1.  Sobre o **arquivo** , aponte para **controle do código-fonte**e clique em **abrir do controle de origem**.  
+1.  No menu **arquivo** , aponte para **controle do código-fonte**e clique em **Abrir do controle do código-fonte**.  
   
 2.  Se solicitado, faça logon no [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  
   
-3.  No **criar projeto local no SourceSafe** caixa de diálogo caixa, abra a pasta que contém o projeto para abrir.  
+3.  Na caixa de diálogo **criar projeto local do SourceSafe** , abra a pasta que contém o projeto a ser aberto.  
   
-4.  O **criar um novo projeto na pasta** caixa muda para identificar o diretório local em que o projeto será criado. Se você deseja colocar o projeto em um diretório diferente, digite o caminho para o diretório ou use o **procurar** botão para localizar o diretório em seu disco local.  
+4.  A caixa **criar um novo projeto na pasta** é alterada para identificar o diretório local no qual o projeto será criado. Se você quiser colocar o projeto em um diretório diferente, digite o caminho para o diretório ou use o botão **procurar** para localizar o diretório no disco local.  
   
-5.  No **criar um novo projeto na caixa pasta**, verifique se a pasta correta é exibida e, em seguida, clique em **Okey**.  
+5.  Na **caixa criar um novo projeto na pasta**, verifique se a pasta correta é exibida e clique em **OK**.  
   
-6.  No **Open Solution** diálogo caixa, selecione o projeto que você deseja abrir e, em seguida, clique em **abrir**.  
+6.  Na caixa de diálogo **Abrir solução** , selecione o projeto que você deseja abrir e clique em **abrir**.  
   
-## <a name="see-also"></a>Consulte também  
- [Abrir soluções e projetos de controle de origem](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Abrir soluções e projetos do controle do código-fonte](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)   
  [Abrir soluções no controle do código-fonte](../../2014/database-engine/open-solutions-from-source-control.md)  
   
   

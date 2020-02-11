@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809000"
 ---
 # <a name="server-properties-security-page"></a>Propriedades do Servidor (página Segurança)
@@ -36,7 +36,7 @@ ms.locfileid: "62809000"
 >  A alteração da configuração de segurança requer que o serviço seja reiniciado. Ao alterar a autenticação do servidor para o modo de autenticação do SQL Server e do Windows a conta SA não é habilitada automaticamente. Para usar a conta SA, execute [ALTER LOGIN](/sql/t-sql/statements/alter-login-transact-sql) com a opção ENABLE.  
   
 ## <a name="login-auditing"></a>Auditoria de logon  
- **Nenhum**  
+ **Nenhuma**  
  Desativa a auditoria de logon.  
   
  **Somente logons com falha**  
@@ -71,7 +71,7 @@ ms.locfileid: "62809000"
  **Encadeamento de propriedades de bancos de dados**  
  Selecione para permitir que o banco de dados seja a origem ou o destino de um encadeamento de propriedades de bancos de dados. Para obter mais informações, veja [Opção cross db ownership chaining de configuração de servidor](cross-db-ownership-chaining-server-configuration-option.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

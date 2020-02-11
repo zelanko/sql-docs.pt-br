@@ -11,36 +11,36 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774650"
 ---
 # <a name="upgrade-master-data-services"></a>Atualizar o Master Data Services
   Há quatro cenários para atualizar para o Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Escolha o cenário que se ajusta à sua situação.  
   
--   [Atualize sem a atualização do Mecanismo de Banco de Dados](#noengine)  
+-   [Atualizar sem Mecanismo de Banco de Dados atualização](#noengine)  
   
--   [Atualize com a atualização do Mecanismo de Banco de Dados](#engine)  
+-   [Atualizar com a atualização do Mecanismo de Banco de Dados](#engine)  
   
--   [Atualizar em Cenário de Dois Computadores](#twocomputer)  
+-   [Atualizar em cenário de dois computadores](#twocomputer)  
   
--   [Atualizar com Restaurar um banco de dados do backup](#restore)  
+-   [Atualizar com a restauração de um banco de dados do backup](#restore)  
   
 > [!IMPORTANT]
 >  -   A atualização da versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 para a versão CTP2 não tem suporte.  
 > -   Faça um backup do banco de dados antes de executar atualizações.  
 > -   O processo de atualização recria os procedimentos armazenados e atualiza tabelas usadas pelo [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Talvez você perca as personalizações feitas em um desses componentes.  
-> -   Pacotes de implantação de modelo só podem ser usados na edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual foram criados. Você não pode implantar pacotes de implantação de modelo criados no [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+> -   Pacotes de implantação de modelo só podem ser usados na edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual foram criados. Você não pode implantar pacotes de implantação de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] modelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]criados no para.  
 > -   Você pode continuar a usar a versão do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 do suplemento Master Data Services para Excel depois de atualizar o Master Data Services e o Data Quality Services para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. No entanto, qualquer versão anterior do suplemento Master Data Services para Excel não funcionará depois de atualizar para o SQL Server 2014 CTP2. Você pode baixar a versão do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 do suplemento Master Data Services para Excel [aqui](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
-##  <a name="noengine"></a> Atualize sem a atualização do Mecanismo de Banco de Dados  
- Esse cenário pode ser considerado uma instalação lado a lado, pois ambos [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] são instalados em paralelo, no mesmo computador ou em computadores separados.  
+##  <a name="noengine"></a>Atualizar sem Mecanismo de Banco de Dados atualização  
+ Esse cenário pode ser considerado uma instalação lado [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a lado, porque o e [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o são instalados em paralelo, no mesmo computador ou em computadores separados.  
   
  Neste cenário, você continua usando o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para hospedar seu banco de dados MDS. Entretanto, você precisa atualizar o esquema do banco de dados MDS e, depois, criar um aplicativo Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para acessar o banco de dados MDS. O banco de dados MDS não pode mais ser acessado pelo aplicativo Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Se você optar por instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e uma versão anterior do SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]/[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) no mesmo computador, você poderá fazer isso pois os arquivos são instalados em um local diferente.  
+ Se você optar por instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o e uma versão anterior do SQL Server[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]/[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]() no mesmo computador, poderá fazer isso porque os arquivos são instalados em um local diferente.  
   
 -   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], por padrão, os arquivos são instalados em *unidade*:\Arquivos de Programas\Microsoft SQL Server\120\Master Data Services.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62774650"
   
 1.  Instale o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] e outros recursos desejados.  
   
-    1.  Abra o assistente de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    1.  Abra o assistente de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     2.  No painel esquerdo, clique em **Instalação**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62774650"
   
     2.  No painel esquerdo, clique em **Configuração do Banco de Dados**.  
   
-    3.  No painel direito, clique em **Selecionar banco de dados** e especifique as informações para seus [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instância de banco de dados.  
+    3.  No painel direito, clique em **Selecionar Banco de dados** e especifique as informações [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sua instância do banco de dados do ou do.  
   
     4.  Clique em **Atualizar Banco de Dados** para iniciar o **Assistente para Atualizar Banco de Dados**. Para obter mais informações, consulte [Assistente para Fazer Upgrade de Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62774650"
   
     3.  No painel direito, na lista **Site** , selecione uma das seguintes opções:  
   
-        -   **Site Padrão da Web**e depois clique em **Criar Aplicativo**.  
+        -   **Site da Web padrão**e clique em **criar aplicativo**.  
   
         -   **Criar novo site**. Um novo aplicativo Web é criado automaticamente quando o site é criado.  
   
@@ -100,34 +100,34 @@ ms.locfileid: "62774650"
   
     3.  Clique em **Aplicar**.  
   
-##  <a name="engine"></a> Atualize com a atualização do Mecanismo de Banco de Dados  
+##  <a name="engine"></a>Atualizar com a atualização do Mecanismo de Banco de Dados  
  Neste cenário, você atualizará o mecanismo de banco de dados e o aplicativo [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou SQL Server 2012 para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Para executar esta tarefa, conclua as etapas a seguir.  
   
-1.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] apenas**: abra o **Painel de Controle** > **Programas e Recursos** e desinstale o Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Somente [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] para**o: Abra o **painel** > de controle**programas e recursos** e desinstale o Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Atualizar o mecanismo de banco de dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-    1.  Abra o assistente de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    1.  Abra o assistente de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     2.  No painel esquerdo, clique em **Instalação**.  
   
-    3.  No painel direito, clique em **atualizar do SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 ou SQL Server 2012**.  
+    3.  No painel direito, clique em **Atualizar do SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 ou SQL Server 2012**.  
   
     4.  Conclua o assistente.  
   
-3.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] apenas**: Quando a atualização for concluída, adicione a **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** recurso.  
+3.  **Somente [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] para**: quando a atualização for concluída, adicione o **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** recurso.  
   
-    1.  Abra o assistente de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    1.  Abra o assistente de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     2.  No painel esquerdo, clique em **Instalação**.  
   
     3.  No painel direito, clique em **Nova instalação autônoma do SQL Server ou adicionar recursos a uma instalação existente**.  
   
-    4.  Sobre o **tipo de instalação** página do assistente, selecione a **adicionar recursos a uma instância existente** opção e, em seguida, escolha a instância onde o banco de dados MDS está instalado.  
+    4.  Na página **tipo de instalação** do assistente, selecione a opção **Adicionar recursos a uma instância existente** e escolha a instância em que o banco de dados MDS está instalado.  
   
-    5.  Sobre o **seleção de recursos** página, em **recursos compartilhados**, selecione **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** .  
+    5.  Na página **seleção de recursos** , em **recursos compartilhados**, selecione **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
   
     6.  Conclua o assistente.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "62774650"
   
     2.  No painel esquerdo, clique em **Configuração do Banco de Dados**.  
   
-    3.  No painel direito, clique em **Selecionar banco de dados** e especifique as informações para sua instância de banco de dados.  
+    3.  No painel direito, clique em **Selecionar Banco de dados** e especifique as informações para sua instância de banco de dados.  
   
     4.  Clique em **Atualizar Banco de Dados** para iniciar o **Assistente para Atualizar Banco de Dados**. Para obter mais informações, consulte [Assistente para Fazer Upgrade de Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -154,7 +154,7 @@ ms.locfileid: "62774650"
   
     3.  No painel direito, na lista **Site** , selecione uma das seguintes opções:  
   
-        -   **Site Padrão da Web**e depois clique em **Criar Aplicativo**.  
+        -   **Site da Web padrão**e clique em **criar aplicativo**.  
   
         -   **Criar novo site**. Um novo aplicativo Web é criado automaticamente quando o site é criado.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "62774650"
   
     3.  Clique em **Aplicar**.  
   
-##  <a name="twocomputer"></a> Atualizar em Cenário de Dois Computadores  
+##  <a name="twocomputer"></a>Atualizar em cenário de dois computadores  
  Este cenário envolve a atualização de um sistema no qual o SQL Server está instalado em dois computadores: um com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e o outro com SQL Server 2008 R2 ou SQL Server 2012.  
   
  Se o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] estiver instalado, você continuará usando o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] respectivamente para hospedar seu banco de dados MDS em um computador. Entretanto, você precisa atualizar o esquema do banco de dados MDS e, depois, usar o aplicativo Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para acessar o banco de dados MDS. O banco de dados MDS não pode mais ser acessado pelo aplicativo Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -186,7 +186,7 @@ ms.locfileid: "62774650"
   
 1.  Instale o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] e outros recursos desejados.  
   
-    1.  Abra o assistente de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    1.  Abra o assistente de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     2.  No painel esquerdo, clique em **Instalação**.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "62774650"
   
     2.  No painel esquerdo, clique em **Configuração do Banco de Dados**.  
   
-    3.  No painel direito, clique em **Selecionar banco de dados** e especifique as informações para seus [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instância em outro computador, do banco de dados se [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] está instalado no outro computador.  
+    3.  No painel direito, clique em **Selecionar Banco de dados** e especifique as informações [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sua instância do ou do banco de dados [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] outro computador, se o ou o estiver instalado no outro computador.  
   
     4.  Clique em **Atualizar Banco de Dados** para iniciar o **Assistente para Atualizar Banco de Dados**. Para obter mais informações, consulte [Assistente para Fazer Upgrade de Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -217,7 +217,7 @@ ms.locfileid: "62774650"
   
     3.  No painel direito, na lista **Site** , selecione uma das seguintes opções:  
   
-        -   **Site Padrão da Web**e depois clique em **Criar Aplicativo**.  
+        -   **Site da Web padrão**e clique em **criar aplicativo**.  
   
         -   **Criar novo site**. Um novo aplicativo Web é criado automaticamente quando o site é criado.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "62774650"
   
     3.  Clique em **Aplicar**.  
   
-##  <a name="restore"></a> Atualizar com Restaurar um banco de dados do backup  
+##  <a name="restore"></a>Atualizar com a restauração de um banco de dados do backup  
  Neste cenário, o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é instalado junto com o SQL Server 2008 R2 ou SQL Server 2012 no mesmo computador ou em dois computadores diferentes. Além disso, um banco de dados foi armazenado em backup em uma versão anterior ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2, antes da atualização, e o banco de dados teve que ser restaurado.  
   
 -   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], por padrão, os arquivos são instalados em *unidade*:\Arquivos de Programas\Microsoft SQL Server\120\Master Data Services.  
@@ -247,7 +247,7 @@ ms.locfileid: "62774650"
   
 1.  Instale o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] e outros recursos desejados.  
   
-    1.  Abra o assistente de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    1.  Abra o assistente de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     2.  No painel esquerdo, clique em **Instalação**.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "62774650"
   
     2.  No painel esquerdo, clique em **Configuração do Banco de Dados**.  
   
-    3.  No painel direito, clique em **Selecionar banco de dados** e especifique as informações para seus [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instância de banco de dados.  
+    3.  No painel direito, clique em **Selecionar Banco de dados** e especifique as informações [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sua instância do banco de dados do ou do.  
   
     4.  Clique em **Atualizar Banco de Dados** para iniciar o **Assistente para Atualizar Banco de Dados**. Para obter mais informações, consulte [Assistente para Fazer Upgrade de Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -280,7 +280,7 @@ ms.locfileid: "62774650"
   
     3.  No painel direito, na lista **Site** , selecione uma das seguintes opções:  
   
-        -   **Site Padrão da Web**e depois clique em **Criar Aplicativo**.  
+        -   **Site da Web padrão**e clique em **criar aplicativo**.  
   
         -   **Criar novo site**. Um novo aplicativo Web é criado automaticamente quando o site é criado.  
   
@@ -298,13 +298,13 @@ ms.locfileid: "62774650"
     3.  Clique em **Aplicar**.  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
- **Problema:** Quando você abre o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo da web, uma mensagem de erro "versão do cliente não é compatível com a versão do banco de dados" é exibido.  
+ **Problema:** Quando você abre o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aplicativo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web ou, uma mensagem de erro "a versão do cliente não é compatível com a versão do banco de dados" é exibida.  
   
- **Solução:** Esse problema ocorre quando um [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aplicativo web Master Data Manager tenta acessar um banco de dados que foi atualizado para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. Você deve usar um aplicativo Web SQL [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+ **Solução:** Esse problema ocorre quando um [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Master Data Manager aplicativo Web tenta acessar um banco de dados que foi atualizado para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. Você deve usar um aplicativo Web SQL [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  O problema também poderá ocorrer se você não parar e reiniciar o **Pool de Aplicativos MDS** no IIS ao atualizar o esquema de banco de dados MDS. Reinicie o **Pool de Aplicativos MDS** para corrigir o problema.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d4aae8a264bd77d51c3365183ee510043ae814b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787181"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurar a opção max worker threads de configuração de servidor
@@ -62,7 +62,7 @@ ms.locfileid: "62787181"
     |16 processadores|352|704|  
     |32 processadores|480|960|  
     |64 processadores|736|1.472|  
-    |128 processadores|4.224|4.480|  
+    |128 processadores|4224|4480|  
     |256 processadores|8.320|8.576|  
   
     > [!NOTE]  
@@ -113,7 +113,7 @@ WHERE s.is_user_process = 0;
   
 2.  Clique no nó **Processadores** .  
   
-3.  Na caixa **Máximo de threads de trabalho** , digite ou selecione um valor entre 128 e 32767.  
+3.  Na caixa **máximo de threads de trabalho** , digite ou selecione um valor de 128 a 32767.  
   
      Use a opção **max worker threads** para configurar o número de threads de trabalho disponível para os processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A configuração padrão para **max worker threads** é a melhor para a maioria dos sistemas. No entanto, dependendo de sua configuração de sistema, definir **máximo de threads de trabalho** como um valor menor algumas vezes melhora o desempenho.  
   
@@ -146,7 +146,7 @@ GO
 ##  <a name="FollowUp"></a> Acompanhamento: Após você configurar a opção max worker threads  
  A alteração entrará em vigor imediatamente sem exigir que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] reinicie.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   

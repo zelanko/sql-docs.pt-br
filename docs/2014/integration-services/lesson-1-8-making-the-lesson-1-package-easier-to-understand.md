@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 8: Tornando o pacote da lição 1 mais fácil de compreender | Microsoft Docs'
+title: 'Etapa 8: Tornando o pacote da Lição 1 mais fácil de compreender | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767588"
 ---
-# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Etapa 8: Tornar o pacote da Lição 1 mais fácil de compreender
+# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Etapa 8: Tornando o pacote da Lição 1 mais fácil de compreender
   Agora que você concluiu a configuração do pacote da Lição 1, é uma boa ideia verificar o layout do pacote. Se as formas dos layouts de controle e dos fluxos de dados são de tamanhos aleatórias ou se as formas não estão alinhadas ou agrupadas, a funcionalidade de pacote pode ser mais difícil de ser entendida.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornecem recursos que facilitam e agilizam a formatação do layout do pacote. Os recursos de formatação incluem a capacidade de criar formas do mesmo tamanho, alinhar formas e manipular o espaçamento horizontal e vertical entre os espaçamentos.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornecem recursos que facilitam e agilizam a formatação do layout do pacote. Os recursos de formatação incluem a capacidade de criar formas do mesmo tamanho, alinhar formas e manipular o espaçamento horizontal e vertical entre os espaçamentos.  
   
  Outro modo para melhorar a compreensão de funcionalidade de pacote é adicionar anotações que descrevem a funcionalidade do pacote.  
   
@@ -44,13 +45,13 @@ ms.locfileid: "62767588"
   
 2.  Digite ou cole o texto a seguir na caixa de anotação.  
   
-     **O fluxo de dados extrai os dados de um arquivo, pesquisa valores na coluna CurrencyKey da tabela DimCurrency e na coluna DateKey da tabela DimDate, além de gravar os dados na tabela NewFactCurrencyRate.**  
+     **O fluxo de dados extrai dados de um arquivo, pesquisa valores na coluna CurrencyKey na tabela DimCurrency e na coluna DateKey da tabela DimDate e grava os dados na tabela NewFactCurrencyRate.**  
   
      Para usar a quebra de linhas no texto da caixa de anotação, posicione o cursor no local em que deseja começar uma nova linha e pressione a tecla Enter.  
   
      Se você não inserir um texto na caixa de anotação, essa caixa desaparecerá ao clicar fora dela.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Etapa 9: Testando o pacote de Tutorial da lição 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [Etapa 9: Testando o pacote de tutorial da Lição 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

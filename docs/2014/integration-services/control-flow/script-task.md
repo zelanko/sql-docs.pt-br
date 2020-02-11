@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830557"
 ---
 # <a name="script-task"></a>Tarefa Script
-  A tarefa Script fornece código para execução de funções que não estão disponíveis nas tarefas internas e transformações fornecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A tarefa Script também pode combinar funções em um script em vez de usar tarefas e transformações múltiplas. A tarefa Script é usada para trabalho que deve ser feito uma vez em um pacote (ou uma vez por objeto enumerado), e não para trabalho a ser feito uma vez por linha de dados.  
+  A tarefa Script fornece código para execução de funções que não estão disponíveis nas tarefas internas e transformações fornecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A tarefa Script também pode combinar funções em um script em vez de usar tarefas e transformações múltiplas. A tarefa Script é usada para trabalho que deve ser feito uma vez em um pacote (ou uma vez por objeto enumerado), e não para trabalho a ser feito uma vez por linha de dados.  
   
  A tarefa Script pode ser usada para os seguintes propósitos:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62830557"
   
 -   Forneça o script personalizado executado pela tarefa.  
   
--   Especifique o método no projeto VSTA que o tempo de execução [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] chama como o ponto de entrada no código da tarefa Script.  
+-   Especifique o método no projeto VSTA que o runtime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] chama como o ponto de entrada no código da tarefa Script.  
   
 -   Especifique a linguagem do script.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "62830557"
  Você pode definir essas propriedades com o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>Configurando a tarefa Script no Designer  
- A tabela a seguir descreve o evento `ScriptTaskLogEntry` que pode ser registrado para a tarefa Script. O `ScriptTaskLogEntry` evento é selecionado para o logon a **detalhes** guia dos **configurar Logs de SSIS** caixa de diálogo. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
+ A tabela a seguir descreve o evento `ScriptTaskLogEntry` que pode ser registrado para a tarefa Script. O `ScriptTaskLogEntry` evento é selecionado para registro na guia **detalhes** da caixa de diálogo **Configurar Logs do SSIS** . Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|Informa os resultados da implementação do registro em log no script. A tarefa grava uma entrada de log para cada chamada ao método `Log` do objeto `Dts`. A tarefa grava essas entradas quando o código é executado. Para obter mais informações, consulte [Registro em log na Tarefa Script](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   

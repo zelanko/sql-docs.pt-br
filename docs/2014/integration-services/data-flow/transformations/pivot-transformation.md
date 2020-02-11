@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770334"
 ---
 # <a name="pivot-transformation"></a>transformação Dinâmica
@@ -93,7 +93,7 @@ ms.locfileid: "62770334"
   
  A tabela a seguir mostra um conjunto de dados após a dinamização dos dados na coluna **Ano** .  
   
-|Ano|Nome do produto|Total|  
+|Ano|Nome do Produto|Total|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Tubo de pneu de estrada|35920.50|  
@@ -133,7 +133,7 @@ ms.locfileid: "62770334"
 ## <a name="related-content"></a>Conteúdo relacionado  
  Para obter informações sobre como definir as propriedades desse componente, consulte [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transformação não dinâmica](pivot-transformation.md)   
  [Fluxo de Dados](../data-flow.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916740"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar o tamanho de um heap
@@ -40,7 +40,7 @@ ms.locfileid: "62916740"
   
      ***Num_Variable_Cols***  = número de colunas de tamanho variável  
   
-     ***Max_Var_Size***  = total máximo em bytes de todas as colunas de tamanho variável  
+     ***Max_Var_Size*** = total máximo em bytes de todas as colunas de tamanho variável  
   
 3.  Parte da linha, conhecida como bitmap nulo, é reservada para gerenciar a nulabilidade da coluna. Calcule seu tamanho:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62916740"
      Os bytes adicionados a ***Max_Var_Size*** servem para acompanhar cada coluna de tamanho variável. Essa fórmula presume que todas as colunas de comprimento variável estão 100% completas. Se você prevê que um percentual menor do espaço de armazenamento da coluna de tamanho variável será usada, poderá ajustar o valor ***Max_Var_Size*** de acordo com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
   
     > [!NOTE]  
-    >  Você pode combinar as colunas `varchar`, `nvarchar`, `varbinary` ou `sql_variant` que fazem com que a largura total definida da tabela exceda 8.060 bytes. O comprimento de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para um `varchar`, `nvarchar,``varbinary`, ou `sql_variant` coluna. Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
+    >  Você pode combinar as colunas `varchar`, `nvarchar`, `varbinary` ou `sql_variant` que fazem com que a largura total definida da tabela exceda 8.060 bytes. O comprimento de cada uma dessas colunas ainda deve estar dentro do limite de 8.000 bytes para uma `varchar`coluna, `nvarchar,``varbinary`ou. `sql_variant` Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
   
      Se não houver colunas de tamanho variável, defina ***Variable_Data_Size*** como 0.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916740"
   
 7.  Calcule o número de páginas necessário para armazenar todas as linhas:  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
   
      O número de páginas estimado deve ser arredondado para cima, até a página inteira mais próxima.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62916740"
   
 -   Valores de LOB (Objeto Grande)  
   
-     O algoritmo para determinar exatamente quanto espaço será usado para armazenar os tipos de dados LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, **ntextxml**, e `image` valores é complexo. É suficiente apenas para adicionar o tamanho médio dos valores de LOB esperados e adicioná-lo ao tamanho do heap.  
+     O algoritmo para determinar exatamente quanto espaço será usado para armazenar os tipos `varchar(max)`de dados LOB, `varbinary(max)`, `nvarchar(max)` `text`,, **ntextxml**, e `image` os valores é complexo. É suficiente apenas para adicionar o tamanho médio dos valores de LOB esperados e adicioná-lo ao tamanho do heap.  
   
 -   Compactação  
   
@@ -105,7 +105,7 @@ ms.locfileid: "62916740"
   
      Para obter informações sobre os requisitos de espaço de colunas esparsas, consulte [Use Sparse Columns](../tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Heaps &#40;Tabelas sem índices clusterizados&#41;](../indexes/heaps-tables-without-clustered-indexes.md)   
  [Índices clusterizados e não clusterizados descritos](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [Criar índices clusterizados](../indexes/create-clustered-indexes.md)   

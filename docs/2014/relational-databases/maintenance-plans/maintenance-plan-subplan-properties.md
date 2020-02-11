@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806698"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plano de manutenção (Propriedades do Subplano)
@@ -33,7 +33,7 @@ ms.locfileid: "62806698"
  **Agenda**  
  Clique no ícone da agenda para especificar quando as tarefas do subplano devem ser executadas ou clique no ícone da agenda com um x vermelho para remover a agenda de subplano existente.  
   
-## <a name="see-also"></a>Consulte também  
- [Planos de Manutenção](maintenance-plans.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Planos de manutenção](maintenance-plans.md)  
   
   
