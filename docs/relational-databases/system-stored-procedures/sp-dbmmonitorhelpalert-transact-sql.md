@@ -19,18 +19,18 @@ ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899184"
 ---
-# <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
+# <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre limites de aviso em uma ou todas as várias métricas de desempenho do monitor de espelhamento de banco de dados principal.  
  
-  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ sp_dbmmonitorhelpalert database_name
 |4|Sobrecarga espelhada confirmada|Especifica o número de milissegundos de atraso médio por transação tolerado, antes que um aviso seja gerado no servidor principal. Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração. Esse valor é relevante somente no modo de alta segurança.|  
 |5|Período de retenção|Metadados que controlam quanto tempo as linhas na tabela de status de espelhamento de banco de dados são preservadas.|  
   
- Para obter informações sobre as IDs de eventos que correspondem aos avisos, consulte [alertas em métricas de desempenho de espelhamento e os limites de aviso de uso &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Para obter informações sobre as IDs de evento correspondentes aos avisos, consulte [usar limites de aviso e alertas sobre métricas de desempenho de espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhum  
@@ -65,19 +65,19 @@ sp_dbmmonitorhelpalert database_name
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Para cada alerta retornado, retorna uma fila que contém as colunas seguintes:  
   
-|coluna|Data type|Descrição|  
+|Coluna|Tipo de dados|DESCRIÇÃO|  
 |------------|---------------|-----------------|  
-|**alert_id**|**int**|A tabela abaixo lista os **alert_id** valor para cada métrica de desempenho e a unidade de medida da métrica exibida na **sp_dbmmonitorresults** conjunto de resultados:|  
-|**threshold**|**int**|O valor do limite para o aviso. Se um valor acima desse limite for retornado quando o status de espelhamento for atualizado, uma entrada será inserida no log de eventos do Windows. Esse valor representa KB, minutos ou milissegundos, dependendo do aviso. Se o limite não estiver definido atualmente, o valor será NULL.<br /><br /> **Observação:** Para exibir os valores atuais, execute as [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) procedimento armazenado.|  
+|**alert_id**|**int**|A tabela a seguir lista o valor de **alert_id** para cada métrica de desempenho e a unidade de medida da métrica exibida no conjunto de resultados de **sp_dbmmonitorresults** :|  
+|**os**|**int**|O valor do limite para o aviso. Se um valor acima desse limite for retornado quando o status de espelhamento for atualizado, uma entrada será inserida no log de eventos do Windows. Esse valor representa KB, minutos ou milissegundos, dependendo do aviso. Se o limite não estiver definido atualmente, o valor será NULL.<br /><br /> **Observação:** Para exibir os valores atuais, execute o procedimento armazenado [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) .|  
 |**habilitado**|**bit**|0 = Evento desabilitado.<br /><br /> 1 = Evento habilitado.<br /><br /> **Observação:** O período de retenção está sempre habilitado.|  
   
 |Valor|Métrica de desempenho|Unidade|  
 |-----------|------------------------|----------|  
-|1|Transação não enviada mais antiga|Minutes (minutos)|  
+|1|Transação não enviada mais antiga|minutos|  
 |2|Log não enviado|KB|  
 |3|Log não restaurado|KB|  
 |4|Sobrecarga espelhada confirmada|Milissegundos|  
-|5|Período de retenção|Hours (horas)|  
+|5|Período de retenção|Horas|  
   
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  
@@ -95,13 +95,13 @@ EXEC sp_dbmmonitorhelpalert AdventureWorks2012, 1 ;
 EXEC sp_dbmmonitorhelpalert AdventureWorks2012;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
- [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
- [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorchangealert](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitordropalert](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorupdate](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorhelpmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

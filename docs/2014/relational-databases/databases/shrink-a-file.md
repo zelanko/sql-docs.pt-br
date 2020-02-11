@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f567c92632e99bef38fc1a6eb7a0179929f467c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871203"
 ---
 # <a name="shrink-a-file"></a>Reduzir um arquivo
@@ -84,7 +84,7 @@ ms.locfileid: "62871203"
      **Nome do arquivo**  
      Selecione um arquivo da lista de arquivos disponíveis do grupo de arquivos e tipo de arquivos selecionados.  
   
-     **Local**  
+     **Localidade**  
      Exibe o caminho completo para o arquivo atualmente selecionado. O caminho não é editável, mas pode ser copiado para a área de transferência.  
   
      **Espaço alocado no momento**  
@@ -135,7 +135,7 @@ ms.locfileid: "62871203"
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql)   
  [Reduzir um banco de dados](shrink-a-database.md)   
  [Excluir arquivos de dados ou de log de um banco de dados](delete-data-or-log-files-from-a-database.md)   

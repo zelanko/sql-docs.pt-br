@@ -1,5 +1,5 @@
 ---
-title: Logons inativos do SQL Server 6.5 não podem ser atualizados | Microsoft Docs
+title: Os logons inativos SQL Server 6,5 não podem ser atualizados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e2865607f058c077fc3d12c2e3c2f778450511d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095396"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>Logons inativos do SQL Server 6.5 não podem ser atualizados
@@ -41,8 +41,8 @@ SELECT * FROM sysxlogins WHERE (xstatus & 2048) = 2048;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

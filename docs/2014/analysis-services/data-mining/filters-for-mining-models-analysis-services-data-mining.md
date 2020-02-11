@@ -1,5 +1,5 @@
 ---
-title: Filtros para modelos de mineração (Analysis Services - mineração de dados) | Microsoft Docs
+title: Filtros para modelos de mineração (Analysis Services-Mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084424"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de mineração (Analysis Services - Mineração de dados)
@@ -43,14 +43,14 @@ ms.locfileid: "66084424"
   
 -   Usando a guia **Modelos de Mineração** no Designer de Mineração de Dados para criar condições com a ajuda das caixas de diálogo do editor de filtros.  
   
--   Digitando uma expressão de filtro diretamente para o `Filter` propriedade do modelo de mineração.  
+-   Digitando uma expressão de filtro diretamente `Filter` na Propriedade do modelo de mineração.  
   
 -   Definindo condições de filtro em um modelo de forma programática usando AMO.  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Criando filtros de modelo usando o Designer de Mineração de Dados  
  Você filtra um modelo no Designer de Mineração de Dados alterando a propriedade `Filter` do modelo de mineração. É possível digitar uma expressão de filtro diretamente no painel **Propriedades** ou abrir uma caixa de diálogo de filtros para criar condições.  
   
- Há duas caixas de diálogo de filtro. A primeira permite criar condições aplicadas à tabela de casos. Se a fonte de dados contiver várias tabelas, primeiro você escolherá uma tabela e, em seguida, selecionará uma coluna e especificará os operadores e as condições que se aplicam àquela coluna. Você pode unir várias condições usando `AND` / `OR` operadores. Os operadores disponíveis para definir os valores dependem se a coluna contém valores discretos ou contínuos. Por exemplo, com valores contínuos, você pode usar os operadores `greater than` e `less than`. Porém, para valores discretos, você pode usar apenas os operadores `= (equal to)`, `!= (not equal to)`e `is null`.  
+ Há duas caixas de diálogo de filtro. A primeira permite criar condições aplicadas à tabela de casos. Se a fonte de dados contiver várias tabelas, primeiro você escolherá uma tabela e, em seguida, selecionará uma coluna e especificará os operadores e as condições que se aplicam àquela coluna. Você pode vincular várias condições usando `AND` / `OR` operadores. Os operadores disponíveis para definir os valores dependem se a coluna contém valores discretos ou contínuos. Por exemplo, com valores contínuos, você pode usar os operadores `greater than` e `less than`. Porém, para valores discretos, você pode usar apenas os operadores `= (equal to)`, `!= (not equal to)`e `is null`.  
   
 > [!NOTE]  
 >  Não há suporte para a palavra-chave `LIKE`. Para incluir vários atributos discretos, é preciso criar várias condições separadas e vinculá-las usando o operador `OR`.  
@@ -62,7 +62,8 @@ ms.locfileid: "66084424"
   
  Por exemplo, se a tabela de casos estiver relacionada a clientes e a tabela aninhada mostrar os produtos que um cliente comprou, você poderá criar um filtro para os clientes que compraram determinados itens usando a seguinte sintaxe no filtro de tabela aninhada: `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- Você também pode filtrar a existência de um determinado valor na tabela aninhada, usando as palavras-chave `EXISTS` ou `NOT EXISTS` e uma subconsulta. Isso permite que você crie condições como `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. `EXISTS SELECT(<subquery>)` retornará `true` se a tabela aninhada contiver pelo menos uma linha que inclua o valor `Water Bottle`.  
+ Você também pode filtrar a existência de um determinado valor na tabela aninhada, usando as palavras-chave `EXISTS` ou `NOT EXISTS` e uma subconsulta. Isso permite que você crie condições como `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. 
+  `EXISTS SELECT(<subquery>)` retornará `true` se a tabela aninhada contiver pelo menos uma linha que inclua o valor `Water Bottle`.  
   
  Você pode combinar condições na tabela de casos com as condições da tabela aninhada. Por exemplo, a sintaxe a seguir inclui uma condição na tabela de casos (`Age > 30` ), uma subconsulta na tabela aninhada (`EXISTS (SELECT * FROM Products)`) e várias condições na tabela aninhada (`WHERE ProductName='Milk'  AND Quantity>2`) ).  
   
@@ -82,7 +83,7 @@ ms.locfileid: "66084424"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>Como posso saber se um filtro está sendo usado?  
  Existem várias maneiras de determinar se um filtro é aplicado a um modelo:  
   
--   No designer, clique o **modelos de mineração** guia, abra **propriedades**e exibir o `Filter` propriedade do modelo de mineração.  
+-   No designer, clique na guia **modelos de mineração** , abra **Propriedades**e exiba a `Filter` Propriedade do modelo de mineração.  
   
 -   O DMV, DMSCHEMA_MINING_MODELS, gera uma coluna que contém o texto do filtro. Você pode usar a seguinte consulta em um DMV para retornar os nomes de modelos e seus filtros:  
   
@@ -99,7 +100,7 @@ ms.locfileid: "66084424"
 ### <a name="how-can-i-save-a-filter"></a>Como posso salvar um filtro?  
  A expressão de filtro é salva como um script armazenado com o modelo de mineração associado ou tabela aninhada. Se você excluir o texto de filtro, ele só poderá ser restaurado manualmente, recriando a expressão de filtro. Portanto, se você criar expressões de filtro complexas, deve criar uma cópia de backup do texto de filtro.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Por que não consigo ver todos os efeitos do filtro?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Por que não consigo ver nenhum efeito do filtro?  
  Sempre que você alterar ou adicionar uma expressão de filtro, deverá reprocessar a estrutura e o modelo antes de poder criar os efeitos do filtro.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>Por que vejo atributos filtrados em resultados de consulta de previsão?  
@@ -116,12 +117,12 @@ ms.locfileid: "66084424"
 -   Recolher valores excluídos em uma categoria como parte da definição da estrutura de mineração.  
   
 ## <a name="related-resources"></a>Recursos relacionados  
- Para obter mais informações sobre a sintaxe de filtro, bem como exemplos de expressões de filtro, consulte [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
+ Para obter mais informações sobre a sintaxe de filtro, bem como exemplos de expressões de filtro, consulte [Sintaxe de filtro de modelo e exemplos &#40;Analysis Services – Mineração de dados&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
   
  Para obter informações sobre como usar filtros de modelo quando você estiver testando um modelo de mineração, consulte [Escolher um tipo de gráfico de precisão e definir opções de gráfico](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Sintaxe de filtro de modelo e exemplos &#40;Analysis Services – Mineração de dados&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Sintaxe de filtro de modelo e exemplos &#40;mineração de dados Analysis Services&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)  
   
   

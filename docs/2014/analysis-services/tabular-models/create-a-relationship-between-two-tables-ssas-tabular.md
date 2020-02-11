@@ -1,5 +1,5 @@
 ---
-title: Criar uma relação entre duas tabelas (SSAS Tabular) | Microsoft Docs
+title: Criar uma relação entre duas tabelas (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067537"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Criar uma relação entre duas tabelas (SSAS tabular)
@@ -69,8 +69,8 @@ ms.locfileid: "66067537"
   
 6.  Clique em **Criar**.  
   
-## <a name="see-also"></a>Consulte também  
- [Excluir relações &#40;SSAS de Tabela&#41;](delete-relationships-ssas-tabular.md)   
- [Relações &#40;SSAS de Tabela&#41;](relationships-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Excluir relações &#40;SSAS de tabela&#41;](delete-relationships-ssas-tabular.md)   
+ [Relações &#40;SSAS de tabela&#41;](relationships-ssas-tabular.md)  
   
   

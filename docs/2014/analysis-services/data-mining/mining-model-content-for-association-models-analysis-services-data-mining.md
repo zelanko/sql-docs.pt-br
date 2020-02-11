@@ -1,5 +1,5 @@
 ---
-title: Mining Model Content para modelos de associação (Analysis Services - mineração de dados) | Microsoft Docs
+title: Conteúdo do modelo de mineração para modelos de associação (Analysis Services-Mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083685"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de associação (Analysis Services – Mineração de Dados)
@@ -29,13 +29,13 @@ ms.locfileid: "66083685"
 ## <a name="understanding-the-structure-of-an-association-model"></a>Entendendo a estrutura de um modelo de associação  
  Um modelo de associação tem uma estrutura simples. Cada modelo tem um único nó pai que representa o modelo e seus metadados, e cada nó pai possui uma lista simples de conjuntos de itens e regras. Os conjuntos de itens e as regras não são organizados em árvores, são ordenados com os conjuntos de itens primeiro e depois as regras, como mostra o diagrama a seguir.  
   
- ![estrutura do conteúdo do modelo para modelos de associação](../media/modelcontentstructure-assoc.gif "estrutura do conteúdo do modelo para modelos de associação")  
+ ![estrutura de conteúdo do modelo para modelos de associação](../media/modelcontentstructure-assoc.gif "estrutura de conteúdo do modelo para modelos de associação")  
   
  Cada conjunto de item é contido em seu próprio nó (NODE_TYPE = 7). O *nó* inclui a definição do conjunto de itens, o número de casos que contém esse conjunto de itens e outras informações.  
   
  Cada regra também é contida em seu próprio nó (NODE_TYPE = 8). Uma *regra* descreve um padrão geral de como os itens são associados. Uma regra é como uma instrução IF-THEN. O lado esquerdo da regra mostra uma condição existente ou um conjunto de condições. O lado direito da regra mostra o item em seu conjunto de dados que geralmente é associado às condições à esquerda.  
   
- **Observação** Para extrair regras ou conjuntos de itens, você pode usar uma consulta para retornar somente os tipos de nós desejados. Para obter mais informações, consulte [Exemplos de consulta de um modelo associação](association-model-query-examples.md).  
+ **Observação** Se você quiser extrair as regras ou os conjuntos de itens, poderá usar uma consulta para retornar apenas os tipos de nós desejados. Para obter mais informações, consulte [Exemplos de consulta de um modelo associação](association-model-query-examples.md).  
   
 ## <a name="model-content-for-an-association-model"></a>Conteúdo de um modelo de associação  
  Esta seção fornece detalhes e exemplos somente para as colunas de conteúdo do modelo de mineração que são relevantes para os modelos de associação.  
@@ -60,16 +60,16 @@ ms.locfileid: "66083685"
  NODE_TYPE  
  O modelo de associação produz apenas os seguintes tipos de nó:  
   
-|ID do tipo de nó|Tipo|  
+|ID do tipo de nó|Type|  
 |------------------|----------|  
 |1 (Modelo)|Raiz ou nó pai.|  
-|7 (Conjunto de itens)|Um conjunto de itens ou coleção de pares atributo-valor. Exemplos:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> ou em<br /><br /> `Gender = Male`.|  
+|7 (Conjunto de itens)|Um conjunto de itens ou coleção de pares atributo-valor. Exemplos:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> ou<br /><br /> `Gender = Male`.|  
 |8 (Regra)|Uma regra que define como itens relacionam-se entre si.<br /><br /> Exemplo:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  
  Um rótulo ou uma legenda associada ao nó.  
   
- **Nó do conjunto de itens** Uma lista de itens separada por vírgula.  
+ **Nó conjunto** Uma lista separada por vírgulas de itens.  
   
  **Nó de regra** Contém os lados esquerdo e direito da regra.  
   
@@ -81,34 +81,34 @@ ms.locfileid: "66083685"
 > [!NOTE]  
 >  Para obter uma análise da contagem de conjuntos de itens e regras, consulte NODE_DESCRIPTION do nó raiz do modelo.  
   
- **Nó do conjunto de itens ou de regra** Sempre 0.  
+ **Conjunto ou nó de regra** Sempre 0.  
   
  PARENT_UNIQUE_NAME  
  O nome exclusivo do nó pai.  
   
- **Nó pai** Sempre NULL.  
+ **Nó pai** Sempre nulo.  
   
- **Nó do conjunto de itens ou de regra** Sempre 0.  
+ **Conjunto ou nó de regra** Sempre 0.  
   
  NODE_DESCRIPTION  
  Uma descrição amigável do conteúdo do nó.  
   
- **Nó pai** Inclui uma lista separada por vírgula das seguintes informações sobre o modelo:  
+ **Nó pai** Inclui uma lista separada por vírgulas das seguintes informações sobre o modelo:  
   
-|Item|Descrição|  
+|Item|DESCRIÇÃO|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Contagem de todos os conjuntos de itens do modelo.|  
 |RULE_COUNT|Contagem de todas as regras do modelo.|  
-|MIN_SUPPORT|O suporte mínimo localizado para qualquer conjunto de itens único.<br /><br /> **Observação** Esse valor pode ser diferente daquele que você definiu para o parâmetro *MINIMUM_SUPPORT* .|  
-|MAX_SUPPORT|O suporte máximo localizado para qualquer conjunto de itens único.<br /><br /> **Observação** Esse valor pode ser diferente daquele que você definiu para o parâmetro *MAXIMUM_SUPPORT* .|  
+|MIN_SUPPORT|O suporte mínimo localizado para qualquer conjunto de itens único.<br /><br /> **Observação** Esse valor pode ser diferente do valor que você definiu para o parâmetro de *_SUPPORT mínimo* .|  
+|MAX_SUPPORT|O suporte máximo localizado para qualquer conjunto de itens único.<br /><br /> **Observação** Esse valor pode ser diferente do valor que você definiu para o parâmetro *MAXIMUM_SUPPORT* .|  
 |MIN_ITEMSET_SIZE|O tamanho do menor conjunto de itens, representado por uma contagem de itens.<br /><br /> Um valor de 0 indica que o estado `Missing` foi tratado como um item independente.<br /><br /> **Observação** O valor padrão do parâmetro *MINIMUM_ITEMSET_SIZE* é 1.|  
-|MAX_ITEMSET_SIZE|Indica o tamanho do maior conjunto de dados localizado.<br /><br /> **Observação** Esse valor é restrito pelo valor que você definiu para o parâmetro *MAX_ITEMSET_SIZE* ao criar o modelo. Esse valor nunca pode exceder aquele valor; no entanto, pode ser menor. O valor padrão é 3.|  
-|MIN_PROBABILITY|A probabilidade mínima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Exemplo: 0.400390625<br /><br /> **Observação** Para conjuntos de itens, esse valor é sempre maior que valor que você definiu para o parâmetro *MINIMUM_PROBABILITY* ao criar o modelo.|  
-|MAX_PROBABILITY|A probabilidade máxima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Exemplo: 1<br /><br /> **Observação** Não há nenhum parâmetro para restringir a probabilidade máxima de conjuntos de itens. Para eliminar itens que são muito frequentes, use o parâmetro *MAXIMUM_SUPPORT* .|  
-|MIN_LIFT|O valor mínimo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 0.14309369632511<br /><br /> Observação: Conhecer a comparação de precisão mínima pode ajudar a determinar se a comparação de precisão de qualquer conjunto de dados é significante.|  
-|MAX_LIFT|O valor máximo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 1,95758227647523 **Observação** saber a comparação de precisão máximo pode ajudá-lo a determinar se a comparação de precisão de qualquer conjunto de dados é significante.|  
+|MAX_ITEMSET_SIZE|Indica o tamanho do maior conjunto de dados localizado.<br /><br /> **Observação** Esse valor é restrito pelo valor que você definiu para o parâmetro *MAX_ITEMSET_SIZE* quando você criou o modelo. Esse valor nunca pode exceder aquele valor; no entanto, pode ser menor. O valor padrão é 3.|  
+|MIN_PROBABILITY|A probabilidade mínima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Exemplo: 0,400390625<br /><br /> **Observação** Para conjuntos de itens, esse valor é sempre maior que o valor que você definiu para o parâmetro *MINIMUM_PROBABILITY* quando você criou o modelo.|  
+|MAX_PROBABILITY|A probabilidade máxima detectada para qualquer conjunto de itens único ou regra do modelo.<br /><br /> Example: 1<br /><br /> **Observação** Não há nenhum parâmetro para restringir a probabilidade máxima de conjuntos de itens. Para eliminar itens que são muito frequentes, use o parâmetro *MAXIMUM_SUPPORT* .|  
+|MIN_LIFT|O valor mínimo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 0,14309369632511<br /><br /> Observação: saber o valor mínimo de comparação de precisão pode ajudar a determinar se a comparação de precisão de algum conjunto de dados é significativa.|  
+|MAX_LIFT|O valor máximo de comparação de precisão fornecido pelo modelo para qualquer conjunto de itens.<br /><br /> Exemplo: 1,95758227647523 **Observação** Saber o valor máximo de comparação de precisão pode ajudar a determinar se a comparação de precisão de qualquer conjunto de dados é significante.|  
   
- **Nó do conjunto de itens** Os nós de conjuntos de itens contêm uma lista dos itens, exibida como uma cadeia de caracteres de texto separada por vírgula.  
+ **Nó conjunto** Os nós conjunto contêm uma lista dos itens, exibidos como uma cadeia de caracteres de texto separada por vírgulas.  
   
  Exemplo:  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66083685"
   
  Significa que foram comprados juntamente pneus de passeio e garrafas de água.  
   
- **Nó de regra** Os nós de regras contêm um lado esquerdo e um direito, separados por uma seta.  
+ **Nó de regra** Os nós de regra contêm um lado esquerdo e direito da regra, separados por uma seta.  
   
  Exemplo: `Touring Tire = Existing, Water Bottle = Existing -> Cycling cap = Existing`  
   
@@ -125,11 +125,11 @@ ms.locfileid: "66083685"
  NODE_RULE  
  Um fragmento XML que descreve a regra ou o conjunto de itens que foi inserido no nó.  
   
- **Nó pai** Em branco.  
+ **Nó pai** Ficará.  
   
- **Nó do conjunto de itens** Em branco.  
+ **Nó conjunto** Ficará.  
   
- **Nó da regra** O fragmento XML inclui informações adicionais úteis sobre a regra, como suporte, confiança e o número de itens, e a ID do nó que representa o lado esquerdo da regra.  
+ **Nó de regra** O fragmento XML inclui informações úteis adicionais sobre a regra, como suporte, confiança e o número de itens, e a ID do nó que representa o lado esquerdo da regra.  
   
  MARGINAL_RULE  
  Em branco.  
@@ -139,9 +139,9 @@ ms.locfileid: "66083685"
   
  **Nó pai** Sempre 0.  
   
- **Nó do conjunto de itens** Probabilidade do conjunto de itens.  
+ **Nó conjunto** Probabilidade do conjunto.  
   
- **Nó da regra** Valor de confiança da regra.  
+ **Nó de regra** Valor de confiança para a regra.  
   
  MARGINAL_PROBABILITY  
  Mesmo que NODE_PROBABILITY.  
@@ -149,9 +149,9 @@ ms.locfileid: "66083685"
  NODE_DISTRIBUTION  
  A tabela contém informações muito diferentes, dependendo de o nó ser um conjunto de itens ou uma regra.  
   
- **Nó pai** Em branco.  
+ **Nó pai** Ficará.  
   
- **Nó do conjunto de itens** Lista cada item do conjunto de itens com uma probabilidade e um valor de suporte. Por exemplo, se o conjunto de itens contiver dois produtos, o nome de cada um será listado juntamente com a contagem de casos que incluem esses produtos.  
+ **Nó conjunto** Lista cada item no conjunto junto com um valor de probabilidade e suporte. Por exemplo, se o conjunto de itens contiver dois produtos, o nome de cada um será listado juntamente com a contagem de casos que incluem esses produtos.  
   
  **Nó de regra** Contém duas linhas. A primeira mostra o atributo do lado direito da regra, que é o item do predicado, com uma pontuação de confiança.  
   
@@ -166,25 +166,25 @@ ms.locfileid: "66083685"
   
  **Nó pai** Número de casos no modelo.  
   
- **Nó do conjunto de itens** Número de casos que contém todos os itens do conjunto de itens.  
+ **Nó conjunto** Número de casos que contém todos os itens no conjunto.  
   
- **Nó de regra** O número de casos que contém todos os itens incluídos na regra.  
+ **Nó de regra** O número de casos que contêm todos os itens incluídos na regra.  
   
  MSOLAP_MODEL_COLUMN  
  Contém informações diferentes que dependem de o nó se um conjunto de itens ou uma regra.  
   
- **Nó pai** Em branco.  
+ **Nó pai** Ficará.  
   
- **Nó do conjunto de itens** Em branco.  
+ **Nó conjunto** Ficará.  
   
- **Nó da regra** A ID do conjunto de itens que contém os itens do lado esquerdo da regra. Por exemplo, se a regra for `If {A,B} Then {C}`, essa coluna conterá a ID do conjunto de itens que contém apenas `{A,B}`.  
+ **Nó de regra** A ID do conjunto que contém os itens no lado esquerdo da regra. Por exemplo, se a regra for `If {A,B} Then {C}`, essa coluna conterá a ID do conjunto de itens que contém apenas `{A,B}`.  
   
  MSOLAP_NODE_SCORE  
- **Nó pai** Em branco.  
+ **Nó pai** Ficará.  
   
- **Nó do conjunto de itens** Pontuação de importância do conjunto de itens.  
+ **Nó conjunto** Pontuação de importância para o conjunto.  
   
- **Nó da regra** Pontuação de importância da regra.  
+ **Nó de regra** Pontuação de importância para a regra.  
   
 > [!NOTE]  
 >  A importância é calculada de forma diferente para conjuntos de itens e regras. Para obter mais informações, consulte [Referência técnica do algoritmo de associação da Microsoft](microsoft-association-algorithm-technical-reference.md).  
@@ -192,9 +192,9 @@ ms.locfileid: "66083685"
  MSOLAP_NODE_SHORT_CAPTION  
  Em branco.  
   
-## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo Associação da Microsoft](microsoft-association-algorithm.md)   
- [Exemplos de consulta de um modelo associação](association-model-query-examples.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conteúdo do modelo de mineração &#40;Analysis Services Mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Algoritmo de associação da Microsoft](microsoft-association-algorithm.md)   
+ [Exemplos de consulta de um modelo de associação](association-model-query-examples.md)  
   
   

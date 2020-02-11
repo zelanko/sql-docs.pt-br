@@ -43,10 +43,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242105"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
@@ -64,7 +64,7 @@ ms.locfileid: "75242105"
   
  Para publicar um banco de dados em um serviço de hospedagem Web, selecione a opção **Publicar no Serviço Web** na página **Definir Opções de Script** do assistente.  
   
-###  <a name="Permissions"></a>Permissões  
+###  <a name="Permissions"></a> Permissões  
  A permissão mínima para publicar um banco de dados é a associação à função de banco de dados fixa db_ddladmin no banco de dados de origem. A permissão mínima para publicar um script de banco de dados para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no provedor de hospedagem é a participação na função de banco de dados fixa db_ddladmin no banco de dados de destino.  
   
  O usuário também tem que fornecer um nome e uma senha do usuário para acessar a conta do provedor de hospedagem para publicação com o assistente. O banco de dados de destino deve ser criado no provedor de hospedagem antes da publicação do banco de dados de origem. A publicação substitui objetos naquele banco de dados existente.  
@@ -78,30 +78,30 @@ ms.locfileid: "75242105"
   
 3.  Conclua as etapas das caixas de diálogo do assistente:  
   
-    -   [Página de introdução](#Introduction)  
+    -   [Página de Introdução](#Introduction)  
   
-    -   [Página escolher objetos](#ChooseObjects)  
+    -   [Página Escolher Objetos](#ChooseObjects)  
   
-    -   [Página definir opções de script](#SetScriptOpt)  
+    -   [Página Definir Opções de Script](#SetScriptOpt)  
   
-    -   [Página opções de script avançadas](#AdvScriptOpt)  
+    -   [Página Opções de Script Avançadas](#AdvScriptOpt)  
   
-    -   [Página gerenciar provedores](#MgProviders)  
+    -   [Página Gerenciar Provedores](#MgProviders)  
   
-    -   [Página opções de publicação avançadas](#AdvPubOpts)  
+    -   [Página Opções de Publicação Avançadas](#AdvPubOpts)  
   
-    -   [Página de configuração do provedor](#ProvConfig)  
+    -   [Página Configuração do Provedor](#ProvConfig)  
   
-    -   [Página de resumo](#Summary)  
+    -   [Página de Resumo](#Summary)  
   
-    -   [Página salvar ou publicar scripts](#SavePubScripts)  
+    -   [Página Salvar ou Publicar Scripts](#SavePubScripts)  
   
-###  <a name="Introduction"></a>Página de introdução  
+###  <a name="Introduction"></a> Página de Introdução  
  Esta página descreve as etapas para gerar ou publicar um script.  
   
- **Não mostrar esta página novamente** – ignore esta página na próxima vez que iniciar o **Assistente para gerar e publicar scripts**.  
+ **Não mostrar esta página novamente** – Ignore esta página na próxima vez que iniciar o **Assistente para Gerar e Publicar Scripts**.  
   
- **Próximo >** -prossegue para a página **escolher método** .  
+ **Avançar >** : continua para a página **Escolher Método**.  
   
  **Cancelar** – finaliza o assistente sem gerar ou publicar um script do banco de dados.  
   
@@ -110,13 +110,13 @@ ms.locfileid: "75242105"
   
  **Opção script inteiro do banco de dados** – clique para gerar scripts para todos os objetos no banco de dados e para incluir um script para o próprio banco de dados.  
   
- **Selecionar objetos de banco de dados específicos** -clique para limitar o assistente para gerar scripts somente para os objetos específicos no banco de dados que você escolher:  
+ **Selecionar objetos de banco de dados específicos** – Clique para limitar o assistente para gerar scripts somente para os objetos específicos no banco de dados escolhido:  
   
--   **Objetos de banco de dados** – selecione pelo menos um objeto para incluir no script.  
+-   **Objetos de banco de dados** – Selecione, pelo menos, um objeto para incluir no script.  
   
--   **Selecionar tudo** – seleciona todas as caixas de seleção disponíveis.  
+-   **Selecionar Tudo** – Marca todas as caixas de seleção disponíveis.  
   
--   Desmarcar **tudo** – desmarca todas as caixas de seleção. Para continuar, selecione pelo menos um objeto de banco de dados.  
+-   **Desmarcar Tudo** – Limpa todas as caixas de seleção. Para continuar, selecione pelo menos um objeto de banco de dados.  
   
 ###  <a name="SetScriptOpt"></a>Página definir opções de script  
  Use esta página para especificar se você deseja que o assistente salve scripts no local de sua escolha ou use os scripts para publicar objetos de banco de dados em um provedor remoto de hospedagem Web. Para publicar, você precisa ter acesso a um serviço Web instalado usando os Serviços de Publicação de Banco de Dados.  
@@ -162,7 +162,7 @@ ms.locfileid: "75242105"
   
 -   **Incluir cabeçalhos descritivos** -quando **verdadeiro**, os comentários descritivos são adicionados ao script, separando o script em seções para cada objeto. O padrão é **falso**.  
   
--   **Incluir se não existir** -quando **for verdadeiro**, o script incluirá uma instrução para verificar se o objeto já existe no banco de dados e não tentará criar um novo objeto se o objeto já existir. O padrão é **falso**.  
+-   **Incluir se não existir** -quando **for verdadeiro**, o script incluirá uma instrução para verificar se o objeto já existe no banco de dados e não tentará criar um novo objeto se o objeto já existir. O padrão é **False**.  
   
 -   **Incluir nomes de restrição do sistema** -quando **for falso**, o valor padrão das restrições que foram nomeadas automaticamente no banco de dados de origem será automaticamente renomeado no banco de dados de destino. Se for **True**, as restrições terão o mesmo nome nos bancos de dados de origem e de destino.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "75242105"
   
 -   **Logons de script** – quando o objeto a ser criado em script é um usuário de banco de dados, essa opção cria os logons dos quais o usuário depende. O padrão é **falso**.  
   
--   **Script de permissões em nível de objeto** – inclui scripts para definir a permissão nos objetos no banco de dados. O padrão é **falso**.  
+-   **Script de permissões em nível de objeto** – inclui scripts para definir a permissão nos objetos no banco de dados. O padrão é **False**.  
   
 -   **Estatísticas de script** – quando definido como **Estatísticas de script**, essa opção `CREATE STATISTICS` inclui a instrução para recriar estatísticas no objeto. A opção **Gerar script de estatísticas e histogramas** também cria informações de histograma. O padrão é **Não gerar script de estatísticas**. Para obter mais informações, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
@@ -244,7 +244,7 @@ ms.locfileid: "75242105"
   
 3.  **Padrões de publicação** -inclui objetos padrão usados para definir valores padrão em colunas de tabela. O padrão é **true**. Para obter mais informações, veja [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
-4.  **Publicar objetos dependentes** – publica qualquer objeto que precise estar presente quando o script do objeto selecionado for executado. O padrão é **true**.  
+4.  **Publicar objetos dependentes** – publica qualquer objeto que precise estar presente quando o script do objeto selecionado for executado. O padrão é **True**.  
   
 5.  **Publicar propriedades estendidas** – inclui propriedades estendidas no script que são enviadas ao provedor para publicação, se o objeto tiver propriedades estendidas. O padrão é **true**.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "75242105"
   
  **Opções de tabela/exibição** – as opções a seguir se aplicam somente a tabelas ou exibições.  
   
-1.  **Publicar restrições check** – inclui a criação de `CHECK` restrições no processo de publicação. O padrão é **true**. Restrições `CHECK` exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Publicar restrições check** – inclui a criação de `CHECK` restrições no processo de publicação. O padrão é **True**. Restrições `CHECK` exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Publicar chaves estrangeiras** -inclui a criação de chaves estrangeiras no processo de publicação. O padrão é **true**. Chaves estrangeiras indicam e impõem relações entre tabelas. Para obter mais informações, consulte [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
@@ -276,7 +276,7 @@ ms.locfileid: "75242105"
   
 4.  **Publicar índices** – inclui índices em tabelas no processo de publicação. O padrão é **true**. Os índices ajudam você a localizar dados rapidamente.  
   
-5.  **Publicar chaves primárias** – inclui a criação de chaves primárias no processo de publicação. O padrão é **true**. Chaves primárias identificam com exclusividade cada linha de uma tabela. Para obter mais informações, consulte [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
+5.  **Publicar chaves primárias** – inclui a criação de chaves primárias no processo de publicação. O padrão é **True**. Chaves primárias identificam com exclusividade cada linha de uma tabela. Para obter mais informações, consulte [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
 6.  **Gatilhos de publicação** – inclui a criação de gatilhos DML no processo de publicação. O padrão é **true**. Um gatilho DML é uma ação programada para executar quando um evento de linguagem de manipulação de dados (DML) ocorre no servidor de banco de dados. Para obter mais informações, consulte [DML Triggers](../triggers/dml-triggers.md).  
   
@@ -319,7 +319,7 @@ ms.locfileid: "75242105"
   
  **Cancelar** – desfaça todas as alterações feitas nesta caixa de diálogo e retorne ao assistente.  
   
-###  <a name="Summary"></a>Página de resumo  
+###  <a name="Summary"></a> Página de Resumo  
  Essa página resume as opções selecionadas nesse assistente. Para alterar uma opção, clique em **Anterior**. Para começar a gerar scripts que serão salvos ou publicados, clique em **Avançar**.  
   
  **Examine suas seleções** – exibe as seleções feitas para cada página do assistente. Expanda um nó para ver as opções selecionadas para a página correspondente.  
@@ -329,11 +329,11 @@ ms.locfileid: "75242105"
   
  **Detalhes** -exiba a coluna **ação** para ver o progresso do assistente. Depois de gerar os scripts, o assistente salva os scripts em um arquivo ou os usa para publicar em um serviço Web, dependendo de suas seleções. Quando cada uma dessas etapas estiver completa, clique no valor na coluna **Resultado** para ver o resultado da etapa correspondente.  
   
- **Salvar relatório** -clique para salvar os resultados do progresso do assistente em um arquivo.  
+ **Salvar Relatório** – Clique para salvar os resultados do progresso do assistente em um arquivo.  
   
  **Cancelar** -clique para fechar o assistente antes da conclusão do processamento, ou se ocorrer um erro.  
   
- **Concluir** -clique para fechar o assistente após a conclusão do processamento, ou se ocorrer um erro.  
+ **Concluir** – Clique para fechar o assistente após a conclusão do processamento, ou se ocorrer um erro.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instalando o SMO](../server-management-objects-smo/installing-smo.md)   

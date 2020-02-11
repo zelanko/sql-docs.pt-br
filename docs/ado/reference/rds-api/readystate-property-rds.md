@@ -14,39 +14,39 @@ ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a2a3d22f30a865687e38aedfaf6e688e677efae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963594"
 ---
 # <a name="readystate-property-rds"></a>Propriedade ReadyState (RDS)
-Indica o progresso de uma [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto conforme ele recupera dados em seus [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Indica o progresso de um objeto [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) à medida que ele recupera dados em seu objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
+## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**adcReadyStateLoaded**|A consulta atual ainda está em execução e sem linhas foram buscadas. O **DataControl** do objeto **Recordset** não está disponível para uso.|  
-|**adcReadyStateInteractive**|Um conjunto inicial de linhas recuperadas pela consulta atual foi armazenado na **DataControl** do objeto **Recordset** e estão disponíveis para uso. As linhas restantes ainda estão sendo buscadas.|  
-|**adcReadyStateComplete**|Todas as linhas recuperadas pela consulta atual foram armazenadas em do **DataControl** do objeto **Recordset** e estão disponíveis para uso.<br /><br /> Esse estado também existirão se uma operação anulada devido a um erro ou se o **Recordset** objeto não foi inicializado.|  
+|**adcReadyStateLoaded**|A consulta atual ainda está em execução e nenhuma linha foi buscada. O **conjunto de registros** do objeto **DataControl** não está disponível para uso.|  
+|**adcReadyStateInteractive**|Um conjunto inicial de linhas recuperadas pela consulta atual foi armazenado no **conjunto de registros** do objeto **DataControl** e está disponível para uso. As linhas restantes ainda estão sendo buscadas.|  
+|**adcReadyStateComplete**|Todas as linhas recuperadas pela consulta atual foram armazenadas no **conjunto de registros** do objeto **DataControl** e estão disponíveis para uso.<br /><br /> Esse estado também existirá se uma operação for anulada devido a um erro ou se o objeto **Recordset** não for inicializado.|  
   
 > [!NOTE]
->  Cada arquivo executável do lado do cliente que usa constantes deve fornecer declarações para eles. Você pode recortar e colar as declarações de constante desejada do arquivo Adcvbs.inc, localizado na pasta de instalação padrão para a biblioteca RDS.  
+>  Cada arquivo executável do lado do cliente que usa essas constantes deve fornecer declarações para eles. Você pode recortar e colar as declarações de constante desejadas do arquivo Adcvbs. Inc, localizadas na pasta de instalação padrão da biblioteca do RDS.  
   
 ## <a name="remarks"></a>Comentários  
- Use o [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) evento para monitorar as alterações na **ReadyState** propriedade durante uma operação de consulta assíncrona. Isso é mais eficiente do que periodicamente para verificar o valor da propriedade.  
+ Use o evento [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) para monitorar as alterações na propriedade **ReadyState** durante uma operação de consulta assíncrona. Isso é mais eficiente do que verificar periodicamente o valor da propriedade.  
   
- Se ocorrer um erro durante uma operação assíncrona, o **ReadyState** alteração na propriedade **adcReadyStateComplete**, o [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade muda de **adStateExecuting** para **adStateClosed**e o **conjunto de registros** objeto [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade permanece *nada* .  
+ Se ocorrer um erro durante uma operação assíncrona, a propriedade **readyly** será alterada para **adcReadyStateComplete**, a propriedade [State](../../../ado/reference/ado-api/state-property-ado.md) mudará de **adStateExecuting** para **adStateClosed**e a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) do objeto **Recordset** permanecerá *Nothing*.  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo da propriedade ReadyState (VBScript)](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)   
  [Método Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [Propriedade ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)

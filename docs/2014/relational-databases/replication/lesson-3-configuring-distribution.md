@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721102"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lição 3: Configurando a distribuição
@@ -35,11 +35,11 @@ ms.locfileid: "62721102"
   
      O Assistente para Configuração de Distribuição é iniciado.  
   
-3.  Sobre o **distribuidor** página, selecione **'**_\<ServerName >_**' atuará como seu próprio distribuidor; SQL Server criará um banco de dados de distribuição e de log**e, em seguida, clique em **próxima**.  
+3.  Na página **distribuidor** , selecione **'**_\<ServerName>_ **' atuará como seu próprio distribuidor; SQL Server criará um banco de dados de distribuição e um log**e, em seguida, clique em **Avançar**.  
   
-4.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver sendo executado, na página inicial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent**, selecione **Sim** para configurar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente. Clique em **Avançar**.  
+4.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver sendo executado, na página inicial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent**, selecione **Sim** para configurar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente. Clique em **Próximo**.  
   
-5.  Insira **\\\\**\<_Machine_Name>_**\repldata** na caixa de texto **Pasta de instantâneos**, em que \<*Machine_Name>* é o nome do Publicador e, em seguida, clique em **Avançar**.  
+5.  Insira ** \\ ** \< _Machine_Name>_ **\repldata** na caixa de texto **pasta de instantâneo** , \<em que *Machine_Name>* é o nome do Publicador e clique em **Avançar**.  
   
 6.  Aceite os valores padrão das páginas restantes do assistente.  
   
@@ -47,23 +47,23 @@ ms.locfileid: "62721102"
   
 ### <a name="setting-database-permissions-at-the-publisher"></a>Definindo permissões de banco de dados no Publicador  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Segurança**, clique com o botão direito do mouse em **Logons**e selecione **Novo Logon**.  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **segurança**, clique com o botão direito do mouse em **logons**e selecione **novo logon**.  
   
-2.  Na página **Geral**, clique em **Pesquisar**, insira \<_Machine_Name>_**\repl_snapshot** na caixa **Inserir o nome do objeto a ser selecionado**, em que \<*Machine_Name>* é o nome do servidor do Publicador local. Em seguida, clique em **Verificar Nomes** e em **OK**.  
+2.  Na página **geral** , clique em **Pesquisar**, insira \< _Machine_Name>_ **\ repl_snapshot** na caixa **Inserir o nome do objeto a ser selecionado** , \<em que *Machine_Name>* é o nome do servidor do Publicador local, clique em **verificar nomes**e clique em **OK**.  
   
-3.  Na página **Mapeamento de Usuário** , na lista **Usuários mapeados para este logon** , selecione os bancos de dados de **distribuição** e de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
+3.  Na página **mapeamento de usuário** , na lista **Usuários mapeados para este logon** , selecione a **distribuição** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] os bancos de dados.  
   
-     No **associação de função de banco de dados** lista select a `db_owner` função para o logon para ambos os bancos de dados.  
+     Na lista **associação da função de banco** de `db_owner` dados, selecione a função para o logon para ambos os bancos.  
   
 4.  Clique em **OK** para criar o logon.  
   
-5.  Repita as Etapas 1a 4 para criar um logon para a conta repl_logreader local. Esse logon também deve ser mapeado para os usuários que são membros do `db_owner` função de banco de dados fixa na **distribuição** e **AdventureWorks** bancos de dados.  
+5.  Repita as Etapas 1a 4 para criar um logon para a conta repl_logreader local. Esse logon também deve ser mapeado para os usuários que são membros da `db_owner` função de banco de dados fixa na **distribuição** e no bancos de dados **AdventureWorks** .  
   
-6.  Repita as Etapas 1a 4 para criar um logon para a conta repl_distribution local. Esse logon deve ser mapeado para um usuário que seja membro do `db_owner` função de banco de dados fixa na **distribuição** banco de dados.  
+6.  Repita as Etapas 1a 4 para criar um logon para a conta repl_distribution local. Esse logon deve ser mapeado para um usuário que seja membro da função de `db_owner` banco de dados fixa no banco de dados de **distribuição** .  
   
 7.  Repita as etapas 1a 4 para criar um logon para a conta repl_merge local. Esse logon deve ter mapeamentos de usuário nos bancos de dados **distribuição** e **AdventureWorks** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar Distribuição](configure-distribution.md)   
  [Modelo de segurança do agente de replicação](security/replication-agent-security-model.md)  
   

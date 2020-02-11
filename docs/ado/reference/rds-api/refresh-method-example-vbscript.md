@@ -1,5 +1,5 @@
 ---
-title: (VBScript) de exemplo do método Refresh | Microsoft Docs
+title: Exemplo do método Refresh (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +15,17 @@ ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 46e9d4d7b7e74a3e3fff1af7428714603ea6d619
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963514"
 ---
 # <a name="refresh-method-example-vbscript"></a>Exemplo do método Refresh (VBScript)
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O exemplo a seguir mostra como definir os parâmetros necessários de [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) em tempo de execução. A maneira na qual um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) é recuperado usando o [atualize](../../../ado/reference/ado-api/refresh-method-ado.md) método é determinado pelas configurações do [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) e [FetchOptions ](../../../ado/reference/rds-api/fetchoptions-property-rds.md) propriedades. Para testar este exemplo, recortar e colar o código a seguir em um documento normal do ASP e denomine **RefreshVBS.asp**. Use **localizar** para localizar o arquivo Adovbs.inc e coloque-o no diretório que você planeja usar. Script ASP identificará o seu servidor.  
+ O exemplo a seguir mostra como definir os parâmetros necessários de [RDS. Controle](../../../ado/reference/rds-api/datacontrol-object-rds.md) de data em tempo de execução. A maneira na qual um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) é recuperado usando o método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) é determinado pelas configurações das propriedades [executeoptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) e [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) . Para testar este exemplo, recorte e cole o código a seguir em um documento ASP normal e nomeie-o **RefreshVBS. asp**. Use **Localizar** para localizar o arquivo Adovbs. Inc e colocá-lo no diretório que você planeja usar. O script ASP identificará seu servidor.  
   
 ```  
 <!-- BeginRefreshVBS -->  
@@ -174,11 +174,11 @@ End Sub
 <!-- EndRefreshVBS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Propriedade ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
+ [Propriedade executeoptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [Propriedade FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Método Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
 
 

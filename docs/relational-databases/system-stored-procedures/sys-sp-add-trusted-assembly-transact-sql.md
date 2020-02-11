@@ -19,18 +19,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bb34a814780a46c12c65948bd0b552effaacda4d
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72452880"
 ---
-# <a name="syssp_add_trusted_assembly-transact-sql"></a>sys. sp_add_trusted_assembly (Transact-SQL)  
+# <a name="syssp_add_trusted_assembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md.md)]
 
 Adiciona um assembly à lista de assemblies confiáveis para o servidor.
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
 ## <a name="syntax"></a>Sintaxe
@@ -40,25 +40,25 @@ sp_add_trusted_assembly
     [ , [ @description = ] 'description' ]
 ```  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 Este procedimento adiciona um assembly a [Sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## <a name="arguments"></a>Argumentos
 
-[@hash =] '*valor*'  
-O valor de hash SHA2_512 do assembly a ser adicionado à lista de assemblies confiáveis para o servidor. Os assemblies confiáveis podem ser carregados quando a [segurança estrita do CLR](../../database-engine/configure-windows/clr-strict-security.md) estiver habilitada, mesmo se o assembly não estiver assinado ou se o banco de dados não estiver marcado como confiável.
+[ @hash = ] '*valor*'  
+O SHA2_512 valor de hash do assembly a ser adicionado à lista de assemblies confiáveis para o servidor. Os assemblies confiáveis podem ser carregados quando a [segurança estrita do CLR](../../database-engine/configure-windows/clr-strict-security.md) estiver habilitada, mesmo se o assembly não estiver assinado ou se o banco de dados não estiver marcado como confiável.
 
-[@description =] '*Descrição*'  
-Descrição opcional definida pelo usuário do assembly. A Microsoft recomenda usar o nome canônico que codifica o nome simples, o número de versão, a cultura, a chave pública e a arquitetura do assembly para confiar. Esse valor identifica exclusivamente o assembly no lado Common Language Runtime (CLR) e é o mesmo que o valor clr_name em sys. assemblies. 
+[ @description = ] '*Descrição*'  
+Descrição opcional definida pelo usuário do assembly. A Microsoft recomenda usar o nome canônico que codifica o nome simples, o número de versão, a cultura, a chave pública e a arquitetura do assembly para confiar. Esse valor identifica exclusivamente o assembly no lado Common Language Runtime (CLR) e é o mesmo que o valor de clr_name em sys. assemblies. 
 
 ## <a name="permissions"></a>Permissões
 
-Requer associação na função de servidor fixa `sysadmin` ou na permissão `CONTROL SERVER`.
+Requer a associação à `sysadmin` função de servidor fixa `CONTROL SERVER` ou à permissão.
 
 ## <a name="examples"></a>Exemplos  
 
-O exemplo a seguir adiciona um assembly chamado `pointudt` à lista de assemblies confiáveis para o servidor. Esses valores estão disponíveis em [Sys. assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
+O exemplo a seguir adiciona um assembly `pointudt` chamado à lista de assemblies confiáveis para o servidor. Esses valores estão disponíveis em [Sys. assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
 
 ```  
 EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7BF3B5E8D8F09503F3E62370CE742BBC96FE3394477214B84C7C1B0F7A04DCC788FA99C2C09DFCCC, 
