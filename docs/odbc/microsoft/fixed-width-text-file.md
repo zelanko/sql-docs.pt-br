@@ -14,10 +14,10 @@ ms.assetid: 589e3240-a1a9-47ed-a559-abbf6d5ea9a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01acd5ab2101465cc0d891ba548a1af40f0edd5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085559"
 ---
 # <a name="fixed-width-text-file"></a>Arquivo de texto de largura fixa

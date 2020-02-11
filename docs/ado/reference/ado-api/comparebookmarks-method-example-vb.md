@@ -15,16 +15,16 @@ ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f14ad9d6605747b78109e517636e5864847881f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919603"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Exemplo do método CompareBookmarks (VB)
-Este exemplo demonstra a [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) método. O valor relativo de indicadores raramente é necessária, a menos que um indicador específico é alguma forma especial.  
+Este exemplo demonstra o método [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . O valor relativo dos indicadores raramente é necessário, a menos que um indicador específico seja de alguma forma especial.  
   
- Designar uma linha aleatória de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) deriva a ***autores*** tabela como o destino de uma pesquisa. Em seguida, exibe a posição de cada linha em relação ao que se destinam.  
+ Designe uma linha aleatória de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) derivado da tabela ***autores*** como o destino de uma pesquisa. Em seguida, exiba a posição de cada linha relativa a esse destino.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -132,7 +132,7 @@ End Sub
 'EndCompareBookmarksVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

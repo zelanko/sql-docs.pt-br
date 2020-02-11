@@ -1,5 +1,5 @@
 ---
-title: SQLTables (Driver ODBC do Visual FoxPro) | Microsoft Docs
+title: Sqltablenames (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,25 +13,25 @@ ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22e5f34a6accac3a2bb0d1ecefe7c1d5431cb562
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949001"
 ---
 # <a name="sqltables-visual-foxpro-odbc-driver"></a>SQLTables (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas do driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte a: Completo  
+ Suporte: completo  
   
- Conformidade com a API ODBC: Nível 1  
+ Conformidade da API ODBC: nível 1  
   
- Retorna a lista de nomes de tabela especificado pelo parâmetro na **SQLTables** instrução. Se nenhum parâmetro for especificado, retorna os nomes de tabela, armazenados na fonte de dados atual. O driver retorna as informações como um conjunto de resultados.  
+ Retorna a lista de nomes de tabela especificada pelo parâmetro na instrução **SQLTables** . Se nenhum parâmetro for especificado, retornará os nomes de tabela armazenados na fonte de dados atual. O driver retorna as informações como um conjunto de resultados.  
   
- Chamadas de tipo de enumeração não receberão uma entrada de conjunto de resultados para modos de exibição remotos ou locais exibições com parâmetros. No entanto, uma chamada para **SQLTables** com uma tabela exclusiva especificador de nome encontrará uma correspondência para um modo de exibição se estiver presente com esse nome; Isso permite que a API a ser usado para verificar se há conflitos de nome antes da criação de uma nova tabela.  
+ Chamadas de tipo de enumeração não receberão uma entrada de conjunto de resultados para exibições remotas ou exibições com parâmetros locais. No entanto, uma chamada para **SQLTables** com um especificador de nome de tabela exclusivo encontrará uma correspondência para tal exibição, se estiver presente com esse nome; Isso permite que a API seja usada para verificar se há conflitos de nome antes da criação de uma nova tabela.  
   
 > [!NOTE]  
->  O driver ODBC do Visual FoxPro diferencia [tabelas de banco de dados](../../odbc/microsoft/visual-foxpro-terminology.md) e [tabelas livres](../../odbc/microsoft/visual-foxpro-terminology.md), mesmo quando ambos os tipos de tabelas são armazenados no mesmo diretório em seu sistema. Se sua fonte de dados é um diretório de tabelas livres, o Driver de ODBC do Visual FoxPro do catálogo não ou retornar os nomes de todas as tabelas que estão associados um banco de dados.  
+>  O driver ODBC do Visual FoxPro diferencia entre [tabelas de banco de dados](../../odbc/microsoft/visual-foxpro-terminology.md) e [tabelas gratuitas](../../odbc/microsoft/visual-foxpro-terminology.md), mesmo quando ambos os tipos de tabelas são armazenados no mesmo diretório em seu sistema. Se sua fonte de dados for um diretório de tabelas livres, o driver ODBC do Visual FoxPro não catalogará nem retornará os nomes de todas as tabelas associadas a um banco de dados.  
   
  Para obter mais informações, consulte [SQLTables](../../odbc/reference/syntax/sqltables-function.md) na *referência do programador de ODBC*.

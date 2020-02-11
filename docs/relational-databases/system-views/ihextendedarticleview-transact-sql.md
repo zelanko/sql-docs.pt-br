@@ -18,41 +18,41 @@ ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029538"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **IHextendedArticleView** exibição expõe informações sobre artigos em uma publicação não SQL Server. Essa exibição é armazenada na **distribuição** banco de dados.  
+  A exibição **IHextendedArticleView** expõe informações sobre artigos em uma publicação não SQL Server. Essa exibição é armazenada no banco de dados de **distribuição** .  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|O identificador exclusivo para o Publicador.|  
 |**publication_id**|**int**|O identificador exclusivo para a publicação.|  
-|**article**|**sysname**|O nome do artigo.|  
+|**artigo**|**sysname**|O nome do artigo.|  
 |**destination_object**|**sysname**|O nome do objeto publicado no Assinante.|  
 |**source_owner**|**sysname**|O proprietário do objeto publicado no Assinante.|  
 |**source_object**|**sysname**|O nome do objeto publicado no Assinante.|  
-|**description**|**nvarchar(255)**|A descrição do artigo.|  
-|**creation_script**|**nvarchar(255)**|O script de criação de esquema para o artigo.|  
-|**del_cmd**|**nvarchar(255)**|O comando que é executado para um DELETE.|  
-|**filter**|**int**|O identificador de objeto do procedimento armazenado usado para definir a partição horizontal.|  
+|**ndescrição**|**nvarchar (255)**|A descrição do artigo.|  
+|**creation_script**|**nvarchar (255)**|O script de criação de esquema para o artigo.|  
+|**del_cmd**|**nvarchar (255)**|O comando que é executado para um DELETE.|  
+|**sem**|**int**|O identificador de objeto do procedimento armazenado usado para definir a partição horizontal.|  
 |**filter_clause**|**ntext**|A cláusula WHERE do artigo usada para filtragem horizontal.|  
-|**ins_cmd**|**nvarchar(255)**|O comando que é executado para um INSERT.|  
-|**pre_creation_cmd**|**tinyint**|O comando de pré-criação para DROP TABLE, DELETE TABLE ou TRUNCATE:<br /><br /> **0** = none.<br /><br /> **1** = DESCARTAR.<br /><br /> **2** = DELETE.<br /><br /> **3** = TRUNCAR.|  
-|**status**|**tinyint**|O bitmask de opções e status do artigo, que pode ser o resultado OR lógico bit a bit de um ou mais destes valores:<br /><br /> **1** = artigo está ativo.<br /><br /> **8** = incluir o nome da coluna em instruções INSERT.<br /><br /> **16** = usar instruções com parâmetros.<br /><br /> **24** = ambos incluir o nome da coluna em instruções INSERT e usar instruções com parâmetros.<br /><br /> Por exemplo, um artigo ativo que usa instruções com parâmetros teria um valor de **17** nesta coluna. Um valor de **0** significa que o artigo está inativo e nenhuma propriedade adicional está definida.|  
-|**type**|**tinyint**|O tipo de artigo:<br /><br /> **1** = artigo com base em log.<br /><br /> **3** = artigo com base em log com filtro manual.<br /><br /> **5** = artigo com base em log com exibição manual.<br /><br /> **7** = artigo com base em log com filtro manual e exibição manual.|  
-|**upd_cmd**|**nvarchar(255)**|O comando que é executado para um UPDATE.|  
-|**schema_option**|**binary**|Indica qual é a serem feitos. Ver [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) para obter uma lista das opções de esquema com suporte.|  
+|**ins_cmd**|**nvarchar (255)**|O comando que é executado para um INSERT.|  
+|**pre_creation_cmd**|**tinyint**|O comando de pré-criação para DROP TABLE, DELETE TABLE ou TRUNCATE:<br /><br /> **0** = nenhum.<br /><br /> **1** = descartar.<br /><br /> **2** = excluir.<br /><br /> **3** = truncar.|  
+|**status**|**tinyint**|O bitmask de opções e status do artigo, que pode ser o resultado OR lógico bit a bit de um ou mais destes valores:<br /><br /> **1** = o artigo está ativo.<br /><br /> **8** = incluir o nome da coluna em instruções INSERT.<br /><br /> **16** = usar instruções parametrizadas.<br /><br /> **24** = ambos incluem o nome da coluna em instruções INSERT e usam instruções parametrizadas.<br /><br /> Por exemplo, um artigo ativo usando instruções parametrizadas teria um valor de **17** nesta coluna. Um valor de **0** significa que o artigo está inativo e nenhuma propriedade adicional é definida.|  
+|**tipo**|**tinyint**|O tipo de artigo:<br /><br /> **1** = artigo baseado em log.<br /><br /> **3** = artigo baseado em log com filtro manual.<br /><br /> **5** = artigo baseado em log com exibição manual.<br /><br /> **7** = artigo baseado em log com filtro manual e exibição manual.|  
+|**upd_cmd**|**nvarchar (255)**|O comando que é executado para um UPDATE.|  
+|**schema_option**|**binary**|Indica o que será extraído do script. Consulte [sp_addarticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) para obter uma lista de opções de esquema com suporte.|  
 |**dest_owner**|**sysname**|O proprietário do objeto publicado no banco de dados de destino.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

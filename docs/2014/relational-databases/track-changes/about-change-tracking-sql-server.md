@@ -17,14 +17,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670910"
 ---
 # <a name="about-change-tracking-sql-server"></a>Sobre o controle de alterações (SQL Server)
-  O controle de alterações é uma solução leve que fornece um mecanismo de controle de alterações eficiente para aplicativos. Em geral, para permitir que os aplicativos consultassem as alterações nos dados de um banco de dados e acessassem as informações relacionadas às alterações, os desenvolvedores de aplicativos precisavam implementar mecanismos personalizados de controle de alterações. Criação desses mecanismos costumava envolver muito trabalho e com frequência usando uma combinação de gatilhos, `timestamp` colunas, novas tabelas para armazenar informações de controle e processos personalizados de limpeza.  
+  O controle de alterações é uma solução leve que fornece um mecanismo de controle de alterações eficiente para aplicativos. Em geral, para permitir que os aplicativos consultassem as alterações nos dados de um banco de dados e acessassem as informações relacionadas às alterações, os desenvolvedores de aplicativos precisavam implementar mecanismos personalizados de controle de alterações. A criação desses mecanismos geralmente envolvia muito trabalho e frequentemente envolvida usando uma combinação de gatilhos `timestamp` , colunas, novas tabelas para armazenar informações de rastreamento e processos de limpeza personalizados.  
   
  Tipos distintos de aplicativos têm requisitos diferentes quanto à quantidade de informações que precisam sobre as alterações. Os aplicativos podem usar o controle de alterações para responder às seguintes perguntas sobre as alterações feitas na tabela de um usuário:  
   
@@ -67,9 +67,9 @@ ms.locfileid: "62670910"
   
  As informações sobre a alteração feita em cada linha também podem ser obtidas usando o controle de alterações. Por exemplo, o tipo de operação DML que causou a alteração (inserção, atualização ou exclusão) ou as colunas que foram alteradas como parte de uma operação de atualização.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Habilitar e desabilitar o controle de alterações &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [Trabalhar com o controle de alterações &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
+ [Trabalhar com Controle de Alterações &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
  [Gerenciar o controle de alterações &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [Controle de alterações de dados &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)  
   

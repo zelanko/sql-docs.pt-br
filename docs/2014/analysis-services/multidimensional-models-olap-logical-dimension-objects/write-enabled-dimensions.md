@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727431"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensões habilitadas para gravação
@@ -28,7 +28,7 @@ ms.locfileid: "62727431"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- Os dados em uma dimensão são, geralmente, somente leitura. No entanto, em determinados cenários, talvez você queira habilitar uma dimensão para gravação. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], habilitar uma dimensão para gravação permite que os usuários empresariais modifiquem o conteúdo da dimensão e vejam o efeito imediato das alterações nas hierarquias da dimensão. Todas as dimensões com base em uma única tabela podem ser habilitadas para gravação. Em uma dimensão habilitada para gravação, os usuários empresariais e administrados podem alterar, mover, adicionar e excluir membros de atributo dentro da dimensão. Essas atualizações são referidas coletivamente como *write-back da dimensão*.  
+ Os dados em uma dimensão são, geralmente, somente leitura. No entanto, em determinados cenários, talvez você queira habilitar uma dimensão para gravação. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a habilitação de gravação de uma dimensão permite que os usuários empresariais modifiquem o conteúdo da dimensão e vejam o efeito imediato das alterações nas hierarquias da dimensão. Todas as dimensões com base em uma única tabela podem ser habilitadas para gravação. Em uma dimensão habilitada para gravação, os usuários empresariais e administrados podem alterar, mover, adicionar e excluir membros de atributo dentro da dimensão. Essas atualizações são referidas coletivamente como *write-back da dimensão*.  
   
  O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a write-back da dimensão em todos os atributos de dimensão e todos os membros de uma dimensão podem ser modificados. Para um cubo ou partição habilitada para gravação, as atualizações são armazenadas em uma tabela de write-back separada das tabelas de origem do cubo. No entanto, para uma dimensão habilitada para gravação, as atualizações são gravadas diretamente em uma tabela de dimensão. Além disso, se uma dimensão habilitada para gravação for incluída em um cubo com várias partições onde algumas ou todas as suas fontes de dados possuírem cópias da tabela da dimensão, apenas a tabela de dimensão original será atualizada durante o processo write-back.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "62727431"
   
  Usuários e grupos incluídos em uma função de Administrador podem atualizar os membros de atributo de uma dimensão habilitada para gravação, mesmo se a dimensão não estiver incluída em um cubo.  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades de dimensão do banco de dados](database-dimension-properties.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Propriedades da dimensão do banco de dados](database-dimension-properties.md)   
  [Partições habilitadas para gravação](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensões &#40;Analysis Services de dados multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

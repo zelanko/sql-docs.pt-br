@@ -14,32 +14,32 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082334"
 ---
 # <a name="define-a-new-attribute-manually"></a>Definir um novo atributo manualmente
-  Este procedimento descreve como criar um novo atributo em uma dimensão usando o **atributos** painel no Designer de dimensão.  
+  Este procedimento descreve como criar um novo atributo em uma dimensão usando o painel **atributos** no designer de dimensão.  
   
 ### <a name="to-create-a-new-attribute-manually"></a>Criar um novo atributo manualmente  
   
 1.  No Designer de Dimensão, abra a dimensão na qual você deseja criar o atributo.  
   
-2.  Certifique-se de que o **atributos** painel está no formato de grade.  
+2.  Verifique se o painel **atributos** está no formato de grade.  
   
-     Clique com botão direito do **atributos** painel, aponte para **Mostrar atributos em**e, em seguida, clique em **grade**.  
+     Clique com o botão direito do mouse no painel **atributos** , aponte para **Mostrar atributos em**e clique em **grade**.  
   
-3.  Role até a última linha da grade e, em seguida, clique em  **\<novo atributo >** .  
+3.  Role até a última linha da grade e clique em ** \<novo atributo>**.  
   
 4.  Digite um nome para o atributo para configurar a propriedade `Name` e pressione Enter.  
   
      Você pode aceitar os valores padrão para uso do atributo, tipo, coluna de chave e coluna de nome ou pode selecionar novos valores na lista suspensa.  
   
-5.  O atributo com o botão direito e, em seguida, clique em **propriedades** para configurar outras propriedades.  
+5.  Clique com o botão direito do mouse no atributo e clique em **Propriedades** para configurar suas outras propriedades.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Referência de propriedades de atributo de dimensão](multidimensional-models/dimension-attribute-properties-reference.md)  
   

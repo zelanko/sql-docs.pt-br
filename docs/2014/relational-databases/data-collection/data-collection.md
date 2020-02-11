@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd38517c80eb5a1eca697bbc1705880132f4ea62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919037"
 ---
-# <a name="data-collection"></a>Coleta de Dados
+# <a name="data-collection"></a>Coleta de dados
   O Coletor de Dados é um componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que coleta diferentes conjuntos de dados. A coleta de dados é executada constantemente ou em uma agenda definida pelo usuário. O coletor de dados armazena os dados coletados em um banco de dados relacional conhecido como data warehouse de gerenciamento.  
   
 ## <a name="benefits-of-data-collector"></a>Benefícios do Coletor de Dados  
@@ -36,11 +36,11 @@ ms.locfileid: "62919037"
 ## <a name="data-collector-concepts"></a>Conceitos do Coletor de Dados  
  O coletor de dados é integrado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], e os utiliza extensivamente. Antes de trabalhar com o coletor de dados, você precisa entender determinados conceitos relacionados a cada um desses componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agente é usado para programar e executar trabalhos de coleta. Você precisa entender os seguintes conceitos:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent é usado para agendar e executar trabalhos de coleta. Você precisa entender os seguintes conceitos:  
   
 -   Trabalho  
   
--   Etapa do trabalho  
+-   Etapa de trabalho  
   
 -   Agenda do trabalho  
   
@@ -50,17 +50,17 @@ ms.locfileid: "62919037"
   
  Para obter mais informações, consulte [Tarefas de administração automatizadas &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md).  
   
- O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) é usado para executar pacotes que coletam dados de provedores de dados individuais. Você precisa estar familiarizado com as seguintes ferramentas e conceitos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)]) é usado para executar pacotes que coletam dados de provedores de dados individuais. Você precisa estar familiarizado com as seguintes ferramentas e conceitos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
   
--   Pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]agrupa  
   
--   Configuração do pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]configuração do pacote  
   
  Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../../integration-services/integration-services-ssis-packages.md).  
   
 ## <a name="data-collector-terminology"></a>Terminologia do Coletor de Dados  
- target  
- Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte à Coleta de dados. Para obter mais informações sobre as edições com suporte, consulte a seção "Gerenciamento" de [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ destino  
+ Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferece suporte à Coleta de dados. Para obter mais informações sobre as edições com suporte, consulte a seção "gerenciabilidade" dos [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Uma *raiz de destino* define uma subárvore na hierarquia de destino. Um *conjunto de destinos* é o grupo de destinos resultante da aplicação de um filtro a uma subárvore definida por uma raiz de destino. Uma raiz de destino pode ser um banco de dados, uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou uma instância do computador.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62919037"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Descreve como gerenciar diferentes aspectos da coleta de dados; por exemplo, habilitar ou desabilitar a coleta de dados, alterar a configuração de um conjunto de coleta ou exibir dados no data warehouse de gerenciamento.|[Gerenciar coleta de dados](manage-data-collection.md)|  
-|Descreve como usar os relatórios para obter informações sobre o monitoramento da capacidade do sistema e a solução de problemas de desempenho do sistema.|[Relatórios do conjunto de coleta de dados do sistema](system-data-collection-set-reports.md)|  
-|Descreve como usar o Data Warehouse de Gerenciamento para coletar dados de um servidor que seja o destino da coleta de dados.|[Data warehouse de gerenciamento](management-data-warehouse.md)|  
+|Descreve como usar os relatórios para obter informações sobre o monitoramento da capacidade do sistema e a solução de problemas de desempenho do sistema.|[Relatórios do conjuntos de coleta de dados do sistema](system-data-collection-set-reports.md)|  
+|Descreve como usar o Data Warehouse de Gerenciamento para coletar dados de um servidor que seja o destino da coleta de dados.|[data warehouse de gerenciamento](management-data-warehouse.md)|  
   
   

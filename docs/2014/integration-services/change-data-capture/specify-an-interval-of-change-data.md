@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771189"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar um intervalo de dados de alteração
@@ -73,7 +73,7 @@ ms.locfileid: "62771189"
   
 -   **Calculando a data e hora inicial**. Usar a data e hora final da carga anterior como a data e hora inicial atual. Se você usar um intervalo fixo para cargas incrementais, calcule este valor usando as funções `datetime` da Transact-SQL ou da linguagem de expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Caso contrário, talvez seja preciso manter os pontos de extremidade entre execuções e usar uma tarefa Execute SQL ou uma tarefa Script para carregar o ponto de extremidade anterior.  
   
--   **Calculando a data e hora final**. Se você usar um intervalo fixo para cargas incrementais, calcule a data e hora final atual como um deslocamento da data e hora inicial. Novamente, você pode calcular esse valor usando o `datetime` funções do Transact-SQL ou do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguagem de expressão.  
+-   **Calculando a data e hora final**. Se você usar um intervalo fixo para cargas incrementais, calcule a data e hora final atual como um deslocamento da data e hora inicial. Novamente, você pode calcular esse valor usando as `datetime` funções do TRANSACT-SQL ou da linguagem de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expressão.  
   
  No procedimento seguinte, o intervalo de alteração usa um intervalo fixo e assume que o pacote de carga incremental é executado diariamente sem exceção. Caso contrário, os dados de alteração para intervalos ausentes seriam perdidos. O ponto inicial para o intervalo é meia-noite de anteontem, ou seja, entre 24 e 48 horas atrás. O ponto final para o intervalo é meia-noite de ontem, ou seja, a noite anterior, entre 0 e 24 horas atrás.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "62771189"
   
  **Próximo tópico:** [Determinar se os dados de alterações estão protos](determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar variáveis em pacotes](../use-variables-in-packages.md)   
- [Expressões do Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md)   
+ [Expressões do SSIS &#40;Integration Services&#41;](../expressions/integration-services-ssis-expressions.md)   
  [Tarefa Executar SQL](../control-flow/execute-sql-task.md)   
  [Tarefa Script](../control-flow/script-task.md)  
   

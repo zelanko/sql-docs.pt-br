@@ -1,5 +1,5 @@
 ---
-title: Adicionar expressões a restrições de precedência | Microsoft Docs
+title: Adicionar expressões às restrições de precedência | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061901"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Adicionar expressões a restrições de precedência
-  Uma restrição de precedência pode usar uma expressão para definir a restrição entre dois executáveis: o executável de precedência e o executável de restrição. Os executáveis podem ser tarefas ou contêineres. A expressão pode ser usada sozinha ou em combinação com o resultado de execução do executável da restrição. O resultado da execução de um executável pode ter sucesso ou falha. Quando você configura o resultado de execução de uma restrição de precedência, pode definir o resultado de execução como `Success`, `Failure` ou `Completion`. `Success` exige que o executável de precedência tenha sucesso, `Failure` exige que o executável de precedência falhe e `Completion` indica que o executável de restrição deve ser executado independentemente da tarefa de restrição ter sucesso ou falhar. Para obter informações, consulte [Restrições de precedência](control-flow/precedence-constraints.md).  
+  Uma restrição de precedência pode usar uma expressão para definir a restrição entre dois executáveis: o executável de precedência e o executável de restrição. Os executáveis podem ser tarefas ou contêineres. A expressão pode ser usada sozinha ou em combinação com o resultado de execução do executável da restrição. O resultado da execução de um executável pode ter sucesso ou falha. Quando você configura o resultado de execução de uma restrição de precedência, pode definir o resultado de execução como `Success`, `Failure` ou `Completion`. 
+  `Success` exige que o executável de precedência tenha sucesso, `Failure` exige que o executável de precedência falhe e `Completion` indica que o executável de restrição deve ser executado independentemente da tarefa de restrição ter sucesso ou falhar. Para obter informações, consulte [Restrições de precedência](control-flow/precedence-constraints.md).  
   
  A expressão deve avaliar como `True` ou `False` e deve ser uma expressão [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] válida. A expressão pode usar literais, variáveis personalizadas e de sistema e as funções e operadores que a gramática de expressão [!INCLUDE[ssIS](../includes/ssis-md.md)] fornece. Por exemplo, a expressão `@Count == SQRT(144) + 10` usa a variável `Count`, a função SQRT e os operadores de igual (==) e soma (+). Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
@@ -47,16 +48,16 @@ ms.locfileid: "66061901"
 |Operação de avaliação|A restrição avalia como|A expressão avalia como|O executável restrito executa|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
 |Constraint|True|N/D|True|  
-|Constraint|Falso|N/A|Falso|  
+|Constraint|Falso|N/D|Falso|  
 |Expression|N/D|True|True|  
 |Expression|N/D|Falso|Falso|  
 |Restrição e expressão|True|True|True|  
 |Restrição e expressão|True|Falso|Falso|  
-|Restrição e expressão|Falsa|True|Falso|  
+|Restrição e expressão|Falso|True|Falso|  
 |Restrição e expressão|Falso|Falso|Falso|  
-|Restrição ou expressão|True|True|Verdadeira|  
+|Restrição ou expressão|True|True|True|  
 |Restrição ou expressão|True|Falso|True|  
-|Restrição ou expressão|Falso|True|Verdadeira|  
+|Restrição ou expressão|Falso|True|True|  
 |Restrição ou expressão|Falso|Falso|Falso|  
   
 ### <a name="to-add-an-expression-to-a-precedence-constraint"></a>Como adicionar uma expressão a uma restrição de precedência  
@@ -68,7 +69,7 @@ ms.locfileid: "66061901"
 ## <a name="external-resources"></a>Recursos externos  
  Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Várias restrições de precedência](../../2014/integration-services/multiple-precedence-constraints.md)   
  [Restrições de precedência](control-flow/precedence-constraints.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Conectar um banco de dados do DB2 (SSAS) | Microsoft Docs
+title: Conectar-se a um banco de dados DB2 (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50818393a81cf3c6db1b54a0752e6fa098277709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087379"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>Conectar a um banco de dados DB2 (SSAS)
@@ -48,14 +48,14 @@ ms.locfileid: "66087379"
  **Nome do banco de dados**  
  Selecione um banco de dados da lista de bancos de dados.  
   
- **Coleção de pacotes**  
+ **Coleção de Pacotes**  
  Especifique o nome da coleção de pacotes DB2. Um provedor usa pacotes para emitir instruções SQL e chamar procedimentos armazenados.  
   
  **Esquema Padrão**  
  Especifique o nome do esquema padrão para o banco de dados selecionado.  
   
  **Avançado**  
- Defina as propriedades de conexão adicionais usando a caixa de diálogo **Definir Propriedades Avançadas** .  
+ Defina propriedades de conexão adicionais usando a caixa de diálogo **definir propriedades avançadas** .  
   
  **Testar Conexão**  
  Tente estabelecer uma conexão com a fonte de dados usando as configurações atuais. Uma mensagem que indica se a conexão foi bem-sucedida é exibida.  

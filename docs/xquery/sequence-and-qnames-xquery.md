@@ -18,10 +18,10 @@ ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fbb20c9e14c4e76b8862a23e8d758fcbba94da7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946343"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequência e QNames (XQuery)
@@ -52,7 +52,7 @@ WHERE ProductModelID=7;
   
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <step1> Step 1 description goes here </step1>  
@@ -101,7 +101,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  Todo identificador em um XQuery é um QName. Um QName é constituído de um prefixo de namespace e de um nome local. Nessa implementação, os nomes de variáveis no XQuery são QNames e eles não podem ter prefixos.  
   
- Considere o exemplo a seguir em que uma consulta é especificada em relação a uma não tipado **xml** variável:  
+ Considere o exemplo a seguir no qual uma consulta é especificada em uma variável **XML** não tipada:  
   
 ```  
 DECLARE @x xml;  
@@ -111,7 +111,7 @@ SELECT @x.query('/Root/a');
   
  Na expressão (`/Root/a`), `Root` e `a` são QNames.  
   
- No exemplo a seguir, uma consulta é especificada em relação a um tipado **xml** coluna. A consulta itera em todos os \<etapa > elementos no primeiro local de centro de trabalho.  
+ No exemplo a seguir, uma consulta é especificada em uma coluna **XML** com tipo. A consulta itera em todos os \<elementos da etapa> no primeiro local centro.  
   
 ```  
 SELECT Instructions.query('  
@@ -126,7 +126,9 @@ WHERE ProductModelID=7;
   
  Na expressão da consulta, observe o seguinte:  
   
--   `AWMI root`, `AWMI:Location`, `AWMI:step`e `$Step` são todos QNames. `AWMI` é um prefixo, e `root`, `Location` e `Step` são todos nomes de locais.  
+-   
+  `AWMI root`, `AWMI:Location`, `AWMI:step`e `$Step` são todos QNames. 
+  `AWMI` é um prefixo, e `root`, `Location` e `Step` são todos nomes de locais.  
   
 -   A variável `$step` é um QName e não tem um prefixo.  
   
@@ -140,15 +142,15 @@ WHERE ProductModelID=7;
 |fn|http://www.w3.org/2004/07/xpath-functions|  
 |(nenhum prefixo)|`urn:schemas-microsoft-com:xml-sql`|  
 |sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
-|xml|`http://www.w3.org/XML/1998/namespace`|  
+|Xml|`http://www.w3.org/XML/1998/namespace`|  
 |(nenhum prefixo)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- Cada banco de dados que você cria tem o **sys** coleção de esquemas XML. Ele reserva esses esquemas para que eles possam ser acessados de qualquer coleção de esquemas XML criadas pelo usuário.  
+ Cada banco de dados que você cria tem a coleção de esquema **Sys** XML. Ele reserva esses esquemas para que eles possam ser acessados de qualquer coleção de esquemas XML criadas pelo usuário.  
   
 > [!NOTE]  
->  Esta implementação não oferece suporte a `local` prefixo conforme descrito na especificação do XQuery em http://www.w3.org/2004/07/xquery-local-functions.  
+>  Essa implementação não oferece suporte ao `local` prefixo conforme descrito na especificação XQuery no http://www.w3.org/2004/07/xquery-local-functions.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fundamentos de XQuery](../xquery/xquery-basics.md)  
   
   

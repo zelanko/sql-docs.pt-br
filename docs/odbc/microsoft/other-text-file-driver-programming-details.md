@@ -1,5 +1,5 @@
 ---
-title: Outros detalhes de programação de Driver de arquivo de texto | Microsoft Docs
+title: Outros detalhes de programação de driver de arquivo de texto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f13193ba437d0da0ee15bd4072fe6f53c7db5b9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043783"
 ---
 # <a name="other-text-file-driver-programming-details"></a>Outros detalhes de programação de drivers de Arquivo de texto
 > [!NOTE]  
->  Esta seção fornece informações específicas de Driver de arquivo de texto sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado no [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Esta seção fornece informações específicas de driver de arquivo de texto sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Esta seção contém os seguintes tópicos:  
   
--   [Definindo o formato de texto (Driver de Arquivo de texto)](../../odbc/microsoft/defining-text-format-text-file-driver.md)  
+-   [Definir o formato de texto (Driver de Arquivo de texto)](../../odbc/microsoft/defining-text-format-text-file-driver.md)  
   
 -   [Schema (Driver de Arquivo de texto)](../../odbc/microsoft/schema-text-file-driver.md)  
   
@@ -55,6 +55,6 @@ ms.locfileid: "68043783"
   
 -   [SQLTransact (Driver de Arquivo de texto)](../../odbc/microsoft/sqltransact-text-file-driver.md)  
   
--   [Criando e abrindo tabelas (Driver de Arquivo de texto)](../../odbc/microsoft/creating-and-opening-tables-text-file-driver.md)  
+-   [Criar e abrir tabelas (Driver de Arquivo de texto)](../../odbc/microsoft/creating-and-opening-tables-text-file-driver.md)  
   
 -   [Status somente leitura (Driver de Arquivo de texto)](../../odbc/microsoft/read-only-status-text-file-driver.md)
