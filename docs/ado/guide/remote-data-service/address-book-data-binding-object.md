@@ -1,5 +1,5 @@
 ---
-title: O objeto de associação de dados do catálogo de endereços | Microsoft Docs
+title: Objeto de associação de dados do catálogo de endereços | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922971"
 ---
 # <a name="address-book-data-binding-object"></a>Objeto de associação de dados do catálogo de endereço
-O aplicativo de catálogo de endereços usa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto ao qual associar dados do banco de dados do SQL Server a um objeto visual (no caso, uma tabela DHTML) na página de cliente HTML do aplicativo. A lógica do programa de VBScript controlada por evento usa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para:  
+O aplicativo de catálogo de endereços usa o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para associar dados do banco de dado SQL Server a um objeto visual (nesse caso, uma tabela DHTML) na página HTML do cliente do aplicativo. A lógica do programa VBScript orientada por eventos usa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para:  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
--   Consultar o banco de dados, enviar atualizações para o banco de dados e atualizar a grade de dados.  
+-   Consulte o banco de dados, envie atualizações para o banco de dado e atualize a grade Data.  
   
--   Permitir que os usuários mover para o primeiro, em seguida, anterior, ou o último registro na grade de dados.  
+-   Permitir que os usuários movam para o primeiro registro, próximo, anterior ou último na grade de dados.  
   
- O código a seguir define o **RDS. DataControl** componente:  
+ O código a seguir define o **RDS. Componente DataControl** :  
   
 ```vb
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
@@ -41,30 +41,30 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 </OBJECT>  
 ```  
   
- A marca de objeto define o **RDS. DataControl** componente no programa. A marca inclui dois tipos de parâmetros:  
+ A marca OBJECT define o **RDS. Componente DataControl** no programa. A marca inclui dois tipos de parâmetros:  
   
--   Os associados com a marca de objeto genérica.  
+-   Os associados à marca de objeto genérico.  
   
--   Aqueles específicos para o **RDS. DataControl** objeto.  
+-   Aqueles específicos para o **RDS. Objeto DataControl** .  
   
-## <a name="generic-object-tag-parameters"></a>Parâmetros de Tag do objeto genérico  
- A tabela a seguir descreve os parâmetros associados à marca de objeto.  
+## <a name="generic-object-tag-parameters"></a>Parâmetros de marca de objeto genérico  
+ A tabela a seguir descreve os parâmetros associados à marca OBJECT.  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
-|***CLASSID***|Um número exclusivo, de 128 bits que identifica o tipo do objeto inserido no sistema. Esse identificador é mantido no registro do sistema do computador local. (Para as IDs de classe do **RDS. DataControl** do objeto, consulte [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
-|***ID***|Define um identificador de todo o documento para o objeto incorporado que é usado para identificá-lo no código.|  
+|***CLASSID***|Um número exclusivo de 128 bits que identifica o tipo de objeto inserido para o sistema. Esse identificador é mantido no registro do sistema do computador local. (Para as IDs de classe do **RDS. Objeto DataControl** , consulte [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
+|***SESSÃO***|Define um identificador de todo o documento para o objeto inserido que é usado para identificá-lo no código.|  
   
-## <a name="rdsdatacontrol-tag-parameters"></a>RDS. Parâmetros de Tag DataControl  
- A tabela a seguir descreve os parâmetros específicos para o **RDS. DataControl** objeto. (Para obter uma lista completa da **RDS. DataControl** parâmetros e quando implementá-los, consulte objeto [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)  
+## <a name="rdsdatacontrol-tag-parameters"></a>Serviços. Parâmetros de marca do DataControl  
+ A tabela a seguir descreve os parâmetros específicos para o **RDS. Objeto DataControl** . (Para obter uma lista completa de **RDS. **Parâmetros de objeto DataControl e quando implementá-los, consulte [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
-|[SERVIDOR](../../../ado/reference/rds-api/server-property-rds.md)|Se você estiver usando HTTP, o valor é o nome do computador servidor precedido por `https://`.|  
+|[SERVIDOR](../../../ado/reference/rds-api/server-property-rds.md)|Se você estiver usando HTTP, o valor será o nome do computador do servidor precedido por `https://`.|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Fornece as informações de conexão necessárias para o **RDS. DataControl** para se conectar ao SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Define ou retorna a cadeia de caracteres de consulta usada para recuperar o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Botões de comando do catálogo de endereços](../../../ado/guide/remote-data-service/address-book-command-buttons.md)
 
 

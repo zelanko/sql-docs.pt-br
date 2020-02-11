@@ -18,30 +18,30 @@ ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909066"
 ---
-# <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
+# <a name="msmerge_replinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_replinfo** tabela contém uma linha para cada assinatura. Essa tabela localiza informações sobre assinaturas. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
+  A tabela **MSmerge_replinfo** contém uma linha para cada assinatura. Essa tabela localiza informações sobre assinaturas. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**repid**|**uniqueidentifier**|A ID exclusiva da replicação.|  
-|**use_interactive_resolver**|**bit**|Especifica se o resolvedor interativo é usado durante a reconciliação.<br /><br /> **0** = não não usar o resolvedor interativo.<br /><br /> **1** = usar o resolvedor interativo.|  
-|**validation_level**|**int**|Tipo de validação para executar na assinatura. O nível de validação especificado pode ser um destes valores:<br /><br /> **0** não = nenhuma validação.<br /><br /> **1** = validação somente do número de linhas.<br /><br /> **2** = número de linhas e soma de verificação de validação.<br /><br /> **3** = número de linhas e soma de verificação binária.|  
+|**use_interactive_resolver**|**bit**|Especifica se o resolvedor interativo é usado durante a reconciliação.<br /><br /> **0** = não use o resolvedor interativo.<br /><br /> **1** = usar o resolvedor interativo.|  
+|**validation_level**|**int**|Tipo de validação para executar na assinatura. O nível de validação especificado pode ser um destes valores:<br /><br /> **0** = sem validação.<br /><br /> **1** = validação somente de número de linhas.<br /><br /> **2** = RowCount e a validação da soma de verificação.<br /><br /> **3** = RowCount e validação de soma de verificação binária.|  
 |**resync_gen**|**bigint**|O número de geração usado para nova sincronização da assinatura. Um valor de **-1** indica que a assinatura não está marcada para ressincronização.|  
 |**login_name**|**sysname**|O nome do usuário que criou a assinatura.|  
 |**nome do host**|**sysname**|O valor usado pelo filtro de linha com parâmetros ao gerar a partição para a assinatura.|  
-|**merge_jobid**|**binary(16)**|A ID do trabalho de mesclagem para esta assinatura.|  
-|**sync_info**|**int**|Interno-somente para uso.|  
+|**merge_jobid**|**Binary (16)**|A ID do trabalho de mesclagem para esta assinatura.|  
+|**sync_info**|**int**|Interno-somente uso.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

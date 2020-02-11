@@ -1,5 +1,5 @@
 ---
-title: O provedor OLE DB para publicação na Internet | Microsoft Docs
+title: O provedor de OLE DB para publicação na Internet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,20 +17,20 @@ ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80a373196f98a964bc3e522cc9329907a3392b95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923900"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>O Provedor OLE DB para publicação na Internet
-O ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos podem ser usados com o provedor Microsoft OLE DB para publicação na Internet (provedor de publicação da Internet) para acessar e manipular os recursos, como arquivos ou pastas da Web atendido pelo Microsoft FrontPage. Com o ADO, você pode especificar a origem de um **registro**, **Stream**, ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ser uma URL. Você pode, em seguida, carregar, baixar, mover, copiar e excluir recursos ou manipular diretamente as propriedades do recurso.  
+O [registro](../../../ado/reference/ado-api/record-object-ado.md) ADO e os objetos [Stream](../../../ado/reference/ado-api/stream-object-ado.md) podem ser usados com o provedor de OLE DB da Microsoft para publicação na Internet (provedor de publicação da Internet) para acessar e manipular recursos, como pastas da Web ou arquivos servidos pelo Microsoft FrontPage. Com o ADO, você pode especificar a origem de um **registro**, **fluxo**ou [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para ser uma URL. Em seguida, você pode carregar, baixar, mover, copiar e excluir recursos ou manipular diretamente as propriedades do recurso.  
   
- Por exemplo de código que usa **registros** e **fluxos** com o provedor de publicação de Internet, consulte a [cenário de publicação de Internet](../../../ado/guide/data/internet-publishing-scenario.md).  
+ Por exemplo, o código que usa **registros** e **fluxos** com o provedor de publicação na Internet, consulte o [cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md).  
   
- O provedor de publicação de Internet é instalado com o Microsoft Windows 2000. Versões anteriores do provedor de publicação de Internet também estão disponíveis com o Microsoft Office 2000 e o Microsoft Internet Explorer 5.0.  
+ O provedor de publicação da Internet é instalado com o Microsoft Windows 2000. As versões anteriores do provedor de publicação na Internet também estão disponíveis com o Microsoft Office 2000 e o Microsoft Internet Explorer 5,0.  
   
- Há três maneiras de conexão ADO com o provedor de publicação de Internet:  
+ Há três maneiras de conectar o ADO ao provedor de publicação da Internet:  
   
 -   Especifique "URL =" na cadeia de conexão. Por exemplo:  
   
@@ -38,13 +38,13 @@ O ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) e [Stream]
     objConn.Open "URL=https://servername"  
     ```  
   
--   Especifique Msdaipp.dso para o *provedor* palavra-chave da cadeia de caracteres de conexão. Por exemplo:  
+-   Especifique MSDAIPP. DSO para a palavra-chave *Provider* da cadeia de conexão. Por exemplo:  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
--   Especifique Msdaipp.dso para o [provedor](../../../ado/reference/ado-api/provider-property-ado.md) propriedade da [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Por exemplo:  
+-   Especifique MSDAIPP. DSO para a propriedade [Provider](../../../ado/reference/ado-api/provider-property-ado.md) do objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Por exemplo:  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
@@ -52,6 +52,6 @@ O ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) e [Stream]
     ```  
   
 > [!NOTE]
->  Se Msdaipp.dso for especificado explicitamente como o valor do provedor, com o *provedor* palavra-chave de cadeia de caracteres de conexão ou o **provedor** propriedade, você não pode usar "URL =" na cadeia de conexão. Se você fizer isso, ocorrerá um erro. Em vez disso, basta Especifica a URL conforme mostrado anteriormente.  
+>  Se MSDAIPP. DSO for explicitamente especificado como o valor do provedor, seja com a palavra-chave da cadeia de conexão do *provedor* ou com a propriedade do **provedor** , você não poderá usar "URL =" na cadeia de conexão. Se você fizer isso, ocorrerá um erro. Em vez disso, basta especificar a URL, conforme mostrado anteriormente.  
   
- Para obter informações mais específicas sobre o provedor de publicação de Internet, consulte [Microsoft OLE DB Provider para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), ou a documentação do provedor fornecido com o aplicativo de origem com o qual o provedor OLE DB para Publicação na Internet foi instalado: Windows 2000, o Office 2000 ou o Internet Explorer 5.0.
+ Para obter informações mais específicas sobre o provedor de publicação na Internet, consulte [provedor de OLE DB da Microsoft para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)ou a documentação do provedor fornecida com o aplicativo de origem com o qual o provedor de OLE DB para publicação na Internet foi instalado: Windows 2000, Office 2000 ou Internet Explorer 5,0.
