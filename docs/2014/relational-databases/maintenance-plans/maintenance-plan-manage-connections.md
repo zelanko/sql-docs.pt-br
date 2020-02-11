@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f56f084186e84ad4844dcae3f1b896f28f93bfac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183731"
 ---
 # <a name="maintenance-plan-manage-connections"></a>Plano de manutenção (Gerenciar Conexões)
@@ -29,7 +29,7 @@ ms.locfileid: "63183731"
  **Autenticação**  
  Indica se a conexão é feita com autenticação do Windows ou com autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Planos de Manutenção](maintenance-plans.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Planos de manutenção](maintenance-plans.md)  
   
   
